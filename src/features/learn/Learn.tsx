@@ -1,0 +1,132 @@
+import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { BookOpen, Sparkles } from 'lucide-react'
+import type { Word } from '@/types'
+import { useData } from '@/store/dataStore'
+import { useSettings } from '@/store/settingsStore'
+import { useStudy } from '@/store/studyStore'
+import { summarize, nextNewWords } from '@/lib/summary'
+import { buildDecks } from '@/lib/decks'
+import { phaseOf } from '@/lib/srs'
+import FlashcardSession from '@/components/FlashcardSession'
+import SessionComplete from '@/components/SessionComplete'
+import EmptyState from '@/components/EmptyState'
+import ProgressRing from '@/components/ProgressRing'
+
+export default function Learn() {
+  const pack = useData((s) => s.pack)!
+  const code = useSettings((s) => s.currentLang)
+  const dailyNewLimit = useSettings((s) => s.dailyNewLimit)
+  const progress = useStudy((s) => s.progress[code])
+  const recordAnswer = useStudy((s) => s.recordAnswer)
+
+  const [session, setSession] = useState<Word[] | null>(null)
+
+  const s = summarize(pack.words, progress, dailyNewLimit)
+  const cards = progress?.cards ?? {}
+  const decks = useMemo(() => buildDecks(pack.words, cards), [pack.words, cards])
+
+  if (session) {
+    return (
+      <FlashcardSession
+        words={session}
+        ttsLang={pack.meta.ttsLang}
+        onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        renderComplete={(correct, total) => (
+          <SessionComplete emoji="🌟" title="Học xong rồi!" correct={correct} total={total}>
+            <Link to="/review" className="btn-primary">
+              Ôn tập ngay
+            </Link>
+            <button className="btn-secondary" onClick={() => setSession(null)}>
+              Học tiếp
+            </button>
+          </SessionComplete>
+        )}
+      />
+    )
+  }
+
+  const startDaily = () => {
+    const batch = nextNewWords(pack.words, progress, s.newRemainingToday)
+    if (batch.length) setSession(batch)
+  }
+
+  const startDeck = (deckWords: Word[]) => {
+    // Study the deck's not-yet-mastered words (fresh + learning + review).
+    const list = deckWords.filter((w) => phaseOf(cards[w.id]) !== 'mastered')
+    if (list.length) setSession(list)
+  }
+
+  return (
+    <div className="space-y-8 animate-fade-in">
+      <header>
+        <h1 className="text-2xl font-extrabold tracking-tight">Học từ mới 📖</h1>
+        <p className="mt-1 text-slate-500">Lật thẻ, nghe phát âm, đọc ví dụ — rồi tự đánh giá đã nhớ hay chưa.</p>
+      </header>
+
+      {/* Today's lesson */}
+      <section className="card relative overflow-hidden p-6">
+        <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 opacity-10" />
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-white shadow">
+            <Sparkles className="h-6 w-6" />
+          </span>
+          <div>
+            <h2 className="text-lg font-bold">Bài học hôm nay</h2>
+            <p className="text-sm text-slate-400">
+              Đề xuất {s.newRemainingToday} từ mới · đã học {s.newDoneToday}/{dailyNewLimit}
+            </p>
+          </div>
+        </div>
+        {s.newRemainingToday > 0 ? (
+          <button onClick={startDaily} className="btn-primary mt-5 h-12 w-full sm:w-auto">
+            <BookOpen className="h-5 w-5" /> Bắt đầu học {s.newRemainingToday} từ
+          </button>
+        ) : (
+          <p className="mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+            🎯 Bạn đã hoàn thành hạn mức từ mới hôm nay. Hãy chuyển sang{' '}
+            <Link to="/review" className="font-semibold underline">
+              ôn tập
+            </Link>{' '}
+            hoặc quay lại vào ngày mai nhé!
+          </p>
+        )}
+      </section>
+
+      {/* Decks */}
+      <section>
+        <div className="mb-3 flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
+            Các bộ từ ({decks.length} bộ · {pack.meta.count} từ)
+          </h2>
+        </div>
+        {s.fresh === 0 && s.mastered === s.total ? (
+          <EmptyState emoji="🏆" title="Bạn đã thành thạo toàn bộ từ!" description="Quá xuất sắc. Hãy ôn lại định kỳ để giữ vững." />
+        ) : (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {decks.map((deck) => {
+              const pct = deck.words.length ? deck.mastered / deck.words.length : 0
+              const complete = deck.mastered === deck.words.length
+              return (
+                <button
+                  key={deck.index}
+                  onClick={() => startDeck(deck.words)}
+                  disabled={complete}
+                  className="card flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-0.5 hover:shadow-md disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-sm"
+                >
+                  <ProgressRing value={pct} size={64} stroke={6}>
+                    <span className="text-xs font-bold">{complete ? '✓' : `${Math.round(pct * 100)}%`}</span>
+                  </ProgressRing>
+                  <span className="text-sm font-semibold">{deck.title}</span>
+                  <span className="text-xs text-slate-400">
+                    {deck.mastered}/{deck.words.length} thành thạo
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        )}
+      </section>
+    </div>
+  )
+}

@@ -1,0 +1,139 @@
+import type { QuizMode, QuizOption, QuizQuestion, Word } from '@/types'
+
+// ============================================================================
+// Quiz generation. Produces multiple-choice and typing questions, drawing
+// distractors preferentially from words of the same part-of-speech so the
+// wrong options stay plausible.
+// ============================================================================
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function pick<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+const norm = (s: string) => s.trim().toLowerCase()
+
+/**
+ * Choose up to `n` distractor words: same posCategory first, then any.
+ * Distractors are deduplicated by the text that will actually be *displayed*
+ * (`displayOf`), including against the correct answer — otherwise words that
+ * share a Vietnamese meaning (many do) can produce two identical options.
+ */
+function chooseDistractors(target: Word, pool: Word[], n: number, displayOf: (w: Word) => string): Word[] {
+  const seen = new Set<string>([norm(displayOf(target))])
+  const out: Word[] = []
+  const take = (candidates: Word[]) => {
+    for (const w of candidates) {
+      if (out.length >= n) break
+      const key = norm(displayOf(w))
+      if (seen.has(key)) continue
+      seen.add(key)
+      out.push(w)
+    }
+  }
+  const others = pool.filter((w) => w.id !== target.id)
+  take(shuffle(others.filter((w) => w.posCategory === target.posCategory)))
+  take(shuffle(others.filter((w) => w.posCategory !== target.posCategory)))
+  return out
+}
+
+const CHOICE_MODES: QuizMode[] = ['en-to-vi', 'vi-to-en', 'listen']
+
+/** Build a gapped example sentence, hiding the target word. Returns null if not embeddable. */
+export function gapExample(word: Word): string | null {
+  if (!word.exampleEn) return null
+  // Match the (possibly multi-word) headword as whole words, case-insensitive.
+  const forms = word.word.split('/').map((s) => s.trim()).filter(Boolean)
+  for (const form of forms) {
+    const escaped = form.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const re = new RegExp(`\\b${escaped}\\b`, 'i')
+    if (re.test(word.exampleEn)) {
+      return word.exampleEn.replace(re, '_____')
+    }
+  }
+  return null
+}
+
+/** Generate a single question for a word in a given mode. */
+export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQuestion {
+  if (mode === 'fill') {
+    const gapped = gapExample(word)
+    return {
+      wordId: word.id,
+      mode,
+      prompt: gapped ?? word.meaning,
+      hint: gapped ? word.meaning : 'Gõ từ tiếng Anh tương ứng',
+      options: [],
+      answer: word.word,
+    }
+  }
+
+  // The displayed option text differs by mode; dedupe distractors on it.
+  const displayOf = mode === 'vi-to-en' ? (w: Word) => w.word : (w: Word) => w.meaning
+  const distractors = chooseDistractors(word, pool, 3, displayOf)
+  let options: QuizOption[]
+  let prompt: string
+  let hint: string | undefined
+  let answer: string
+
+  if (mode === 'vi-to-en') {
+    prompt = word.meaning
+    hint = word.pos
+    answer = word.word
+    options = shuffle([
+      { text: word.word, correct: true, wordId: word.id },
+      ...distractors.map((d) => ({ text: d.word, correct: false, wordId: d.id })),
+    ])
+  } else {
+    // en-to-vi and listen both ask for the Vietnamese meaning.
+    prompt = word.word
+    hint = mode === 'listen' ? '🔊 Nghe và chọn nghĩa đúng' : word.pos
+    answer = word.meaning
+    options = shuffle([
+      { text: word.meaning, correct: true, wordId: word.id },
+      ...distractors.map((d) => ({ text: d.meaning, correct: false, wordId: d.id })),
+    ])
+  }
+
+  return { wordId: word.id, mode, prompt, hint, options, answer }
+}
+
+export interface QuizConfig {
+  /** Words to be quizzed. */
+  words: Word[]
+  /** Larger pool to draw distractors from (usually the whole pack). */
+  pool: Word[]
+  /** Restrict to these modes; defaults to the three multiple-choice modes. */
+  modes?: QuizMode[]
+  /** Cap the number of questions. */
+  limit?: number
+}
+
+/** Build a full quiz: one randomly-typed question per word, shuffled. */
+export function generateQuiz(config: QuizConfig): QuizQuestion[] {
+  const modes = config.modes && config.modes.length ? config.modes : CHOICE_MODES
+  const chosen = shuffle(config.words)
+  const limited = config.limit ? chosen.slice(0, config.limit) : chosen
+  return limited.map((w) => {
+    // For very short words 'fill' can be trivial; still allowed if requested.
+    const mode = pick(modes)
+    return makeQuestion(w, config.pool, mode)
+  })
+}
+
+/** Flexible answer check for typing ('fill') questions. */
+export function checkFillAnswer(word: Word, input: string): boolean {
+  const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ')
+  const target = norm(input)
+  if (!target) return false
+  const forms = word.word.split('/').map((s) => norm(s))
+  return forms.some((f) => f === target)
+}

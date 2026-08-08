@@ -1,0 +1,67 @@
+import { RotateCw } from 'lucide-react'
+import type { Word } from '@/types'
+import SpeakButton from './SpeakButton'
+import PosBadge from './PosBadge'
+import HighlightExample from './HighlightExample'
+
+interface Props {
+  word: Word
+  ttsLang: string
+  flipped: boolean
+  onFlip: () => void
+}
+
+/** A 3D flip flashcard. Front = target word; back = meaning + example. */
+export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
+  return (
+    <div className="flip-scene w-full">
+      <div
+        role="button"
+        tabIndex={0}
+        aria-label={flipped ? 'Xem lại mặt trước' : 'Lật thẻ để xem nghĩa'}
+        onClick={onFlip}
+        onKeyDown={(e) => {
+          if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault()
+            onFlip()
+          }
+        }}
+        className={`flip-card min-h-[20rem] w-full cursor-pointer sm:min-h-[24rem] ${flipped ? 'is-flipped' : ''}`}
+      >
+        {/* FRONT */}
+        <div className="flip-face card flex min-h-[20rem] flex-col items-center justify-center gap-5 p-6 sm:min-h-[24rem]">
+          <PosBadge category={word.posCategory} raw={word.pos} />
+          <div className="flex items-center gap-3">
+            <h2 className="text-center text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+              {word.word}
+            </h2>
+          </div>
+          {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
+          <SpeakButton text={word.word} lang={ttsLang} size="lg" />
+          <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-slate-400">
+            <RotateCw className="h-4 w-4" /> Bấm để xem nghĩa
+          </p>
+        </div>
+
+        {/* BACK */}
+        <div className="flip-face flip-back card flex min-h-[20rem] flex-col justify-center gap-4 p-6 sm:min-h-[24rem]">
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-2xl font-bold text-slate-800 dark:text-slate-100">{word.word}</span>
+            <SpeakButton text={word.word} lang={ttsLang} size="sm" />
+          </div>
+          <p className="text-center text-3xl font-extrabold text-brand-600 dark:text-brand-300">{word.meaning}</p>
+
+          <div className="mt-2 space-y-2 rounded-xl bg-slate-50 p-4 dark:bg-slate-800/60">
+            <div className="flex items-start gap-2">
+              <SpeakButton text={word.exampleEn} lang={ttsLang} size="sm" className="mt-0.5 shrink-0" />
+              <p className="text-slate-700 dark:text-slate-200">
+                <HighlightExample sentence={word.exampleEn} word={word.word} />
+              </p>
+            </div>
+            <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">{word.exampleVi}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

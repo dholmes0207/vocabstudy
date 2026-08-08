@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "defaultLang": "en",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "Tiếng Anh",
+      "flag": "🇬🇧",
+      "learnerLang": "vi",
+      "learnerLangName": "Tiếng Việt",
+      "ttsLang": "en-US",
+      "count": 1000,
+      "file": "en.json",
+      "description": "1000 từ vựng tiếng Anh thông dụng nhất (chuẩn Oxford & Cambridge)."
+    }
+  ]
+}
