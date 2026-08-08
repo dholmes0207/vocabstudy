@@ -985,3 +985,20 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 ---
 
 *Tài liệu gốc: `docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`. Ba vai (Người học, BA, DEV) được tạo song song bằng quy trình role-play, phần D là tổng hợp & chốt quyết định của người tổng thầu.*
+
+---
+
+## PHẦN E — TÍNH NĂNG GHI NHỚ NÂNG CAO (bổ sung sau)
+
+*Role-play tiếp: Người học muốn luyện VIẾT/nhớ mặt chữ + động lực học.*
+
+**🧑 Người học:** "Nghe/nhìn thì nhận ra nhưng bảo viết là bí. Cho tôi gõ lại từ, lộ sẵn vài chữ (`abi__ty`), bí thì mở thêm chữ. Cho huy hiệu, pháo giấy để có hứng."
+
+**📊 BA — đánh giá cách `abi__ty`:** Hợp lý ở vai trò *scaffolding* (giảm tải, tăng tỉ lệ đúng → giữ động lực), nhưng blanks cố định dễ đoán mẹo. **Nâng cấp:** chế độ "Đánh vần" — khung chữ lộ đầu/cuối + xen kẽ giữa, gõ cả từ, **Gợi ý +1 chữ** lũy tiến, **chấm từng chữ cái**, **nghe audio** (gắn âm–chữ), nạp SRS. Gamification: **huy hiệu** theo cột mốc + **pháo giấy** cuối phiên.
+
+**💻 DEV — thiết kế đã chốt & hiện thực:**
+- `QuizMode` thêm `'spell'`; `buildSkeleton(word)` (lộ đầu/cuối + xen kẽ giữa, ẩn phần còn lại, tất định); renderer riêng trong `QuizRunner` (khung ô chữ, nút Gợi ý, chấm từng chữ cái, phát âm). Dùng lại phạm vi/số câu/SRS của Quiz.
+- `lib/achievements.ts`: 13 huy hiệu tính thuần từ `StudyStats` (không lưu thêm dữ liệu); lưới huy hiệu ở màn Thống kê.
+- `lib/confetti.ts`: pháo giấy canvas tự viết (không thư viện), tôn trọng `prefers-reduced-motion`; kích hoạt ở `SessionComplete`.
+
+**Đánh giá cuối:** cách `abi__ty` của bạn **được giữ làm lõi** và mở rộng thành chế độ Đánh vần đầy đủ — vừa dễ cho người lười (có gợi ý), vừa buộc chủ động nhớ mặt chữ (gõ + chấm từng chữ).

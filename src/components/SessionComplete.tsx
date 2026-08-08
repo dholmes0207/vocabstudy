@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { celebrate } from '@/lib/confetti'
 
 interface Props {
   title?: string
@@ -12,6 +14,12 @@ interface Props {
 export default function SessionComplete({ title = 'Hoàn thành!', emoji = '🎉', correct, total, children }: Props) {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0
   const praise = pct >= 90 ? 'Tuyệt vời!' : pct >= 70 ? 'Làm tốt lắm!' : pct >= 50 ? 'Cố lên nhé!' : 'Đừng nản, ôn lại nào!'
+
+  // Throw a little confetti to reward finishing (bigger burst for higher scores).
+  useEffect(() => {
+    if (total > 0) celebrate(0.6 + (pct / 100) * 0.8)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="mx-auto max-w-md animate-fade-in text-center">

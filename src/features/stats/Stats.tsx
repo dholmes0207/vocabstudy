@@ -7,6 +7,7 @@ import { useStudy, cardsOf, statsOf } from '@/store/studyStore'
 import { INTERVALS, MASTERED_BOX } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { today, formatDay } from '@/lib/date'
+import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
 
 const DAYS = 14
@@ -41,6 +42,16 @@ export default function Stats() {
 
   const accuracy = stats.totalReviews ? Math.round((stats.totalCorrect / stats.totalReviews) * 100) : 0
   const maxActivity = Math.max(1, ...activity.map((a) => a.reviews + a.news))
+
+  const achievements = evaluateAchievements({
+    learned: s.learned,
+    mastered: s.mastered,
+    streak: stats.streak,
+    xp: stats.xp,
+    totalReviews: stats.totalReviews,
+    accuracy,
+  })
+  const unlockedCount = achievements.filter((a) => a.unlocked).length
 
   if (s.learned === 0) {
     return (
@@ -133,6 +144,40 @@ export default function Stats() {
         <div className="mt-3 flex justify-center gap-4 text-xs text-slate-400">
           <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-full bg-emerald-400" /> Từ mới</span>
           <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-full bg-brand-500" /> Ôn tập</span>
+        </div>
+      </section>
+
+      {/* Achievements */}
+      <section className="card p-6">
+        <div className="mb-4 flex items-baseline justify-between">
+          <h2 className="font-bold">Huy hiệu 🏅</h2>
+          <span className="text-sm text-slate-400">
+            {unlockedCount}/{achievements.length}
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {achievements.map((a) => (
+            <div
+              key={a.id}
+              title={a.desc}
+              className={`flex items-center gap-3 rounded-xl border p-3 transition ${
+                a.unlocked
+                  ? 'border-amber-300 bg-amber-50 dark:border-amber-800/60 dark:bg-amber-950/40'
+                  : 'border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/40'
+              }`}
+            >
+              <span className={`text-2xl ${a.unlocked ? '' : 'opacity-30 grayscale'}`}>{a.icon}</span>
+              <div className="min-w-0 flex-1">
+                <p className={`truncate text-sm font-bold ${a.unlocked ? '' : 'text-slate-400'}`}>{a.title}</p>
+                <p className="truncate text-xs text-slate-400">{a.desc}</p>
+                {!a.unlocked && a.progress > 0 && (
+                  <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+                    <div className="h-full rounded-full bg-brand-400" style={{ width: `${a.progress * 100}%` }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

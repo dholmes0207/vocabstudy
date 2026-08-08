@@ -18,6 +18,7 @@ const MODE_LABELS: Record<QuizMode, string> = {
   'en-to-vi': 'Anh → Việt',
   'vi-to-en': 'Việt → Anh',
   listen: 'Nghe → chọn từ',
+  spell: 'Đánh vần (gõ từ) ✍️',
   fill: 'Điền từ vào câu',
 }
 

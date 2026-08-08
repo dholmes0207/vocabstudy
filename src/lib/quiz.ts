@@ -62,6 +62,32 @@ export function gapExample(word: Word): string | null {
   return null
 }
 
+export interface SkeletonCell {
+  ch: string
+  isLetter: boolean
+  /** Revealed by default (non-letters, first/last letter, and scaffold letters). */
+  revealed: boolean
+}
+
+/**
+ * Build a partial "abi__ty"-style skeleton for spelling practice: reveals the
+ * first & last letter plus alternating middle letters, hides the rest. Uses the
+ * first form of a slashed headword. Deterministic (no randomness).
+ */
+export function buildSkeleton(word: string): SkeletonCell[] {
+  const target = word.split('/')[0].trim()
+  const chars = [...target]
+  const isLetter = (c: string) => /[a-zA-Z]/.test(c)
+  const letters = chars.map((c, i) => (isLetter(c) ? i : -1)).filter((i) => i >= 0)
+  const hide = new Set<number>()
+  const middle = letters.slice(1, -1)
+  middle.forEach((idx, k) => {
+    if (k % 2 === 1) hide.add(idx) // hide 2nd, 4th, … middle letter
+  })
+  if (hide.size === 0 && letters.length >= 3) hide.add(letters[Math.floor(letters.length / 2)])
+  return chars.map((c, i) => ({ ch: c, isLetter: isLetter(c), revealed: !isLetter(c) || !hide.has(i) }))
+}
+
 /** Generate a single question for a word in a given mode. */
 export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQuestion {
   if (mode === 'fill') {
@@ -71,6 +97,17 @@ export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQues
       mode,
       prompt: gapped ?? word.meaning,
       hint: gapped ? word.meaning : 'Gõ từ tiếng Anh tương ứng',
+      options: [],
+      answer: word.word,
+    }
+  }
+
+  if (mode === 'spell') {
+    return {
+      wordId: word.id,
+      mode,
+      prompt: word.meaning,
+      hint: `${word.pos} · Nghe & gõ lại từ`,
       options: [],
       answer: word.word,
     }

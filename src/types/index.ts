@@ -144,6 +144,7 @@ export type QuizMode =
   | 'vi-to-en' // show Vietnamese meaning, pick English word
   | 'listen' // hear the word (TTS), pick the English word
   | 'fill' // type the word given meaning + gapped example
+  | 'spell' // type the whole word from a partial skeleton (abi__ty) + audio
 
 export interface QuizQuestion {
   wordId: number

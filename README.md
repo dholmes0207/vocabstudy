@@ -16,10 +16,12 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 | 🏠 **Trang chủ** | Kế hoạch hôm nay (từ cần ôn / từ mới), vòng tiến độ, streak & XP. |
 | 📖 **Học từ mới** | Thẻ lật 3D, phát âm, câu ví dụ Anh–Việt; tự đánh giá "Nhớ / Chưa". Chia **50 bộ ~20 từ**. |
 | 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng theo lịch **Ngày 1 → 2 → 5 → 14 → 30**. Mỗi ngày tự chọn danh sách cần ôn. |
-| 🎯 **Kiểm tra** | 4 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, Điền từ vào câu. Phản hồi tức thì + âm thanh. |
+| 🎯 **Kiểm tra** | 5 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, **Đánh vần (gõ từ ✍️)**, Điền từ vào câu. Phản hồi tức thì + âm thanh. |
+| ✍️ **Đánh vần** | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS. |
 | 📚 **Tra cứu** | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học. |
-| 📈 **Thống kê** | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP. |
-| ⚙️ **Cài đặt** | Giao diện sáng/tối, hạn mức từ/ngày, tốc độ đọc, sao lưu/khôi phục dữ liệu (JSON). |
+| 📈 **Thống kê** | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**. |
+| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên. |
+| ⚙️ **Cài đặt** | Giao diện sáng/tối, chọn giọng đọc, hạn mức từ/ngày, tốc độ đọc, sao lưu/khôi phục (JSON). |
 
 **Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
 
