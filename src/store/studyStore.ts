@@ -14,6 +14,8 @@ interface StudyState {
   newIntroducedToday: (code: string) => number
   /** Wipe all progress for one language. */
   resetLanguage: (code: string) => void
+  /** Replace one language's progress (used by server sync). */
+  setLanguageProgress: (code: string, lang: LanguageProgress) => void
   /** Replace the whole progress map (used by backup import). */
   replaceAll: (progress: Record<string, LanguageProgress>) => void
 }
@@ -86,6 +88,9 @@ export const useStudy = create<StudyState>()(
           progress: { ...state.progress, [code]: emptyProgress() },
         })),
 
+      setLanguageProgress: (code, lang) =>
+        set((state) => ({ progress: { ...state.progress, [code]: lang } })),
+
       replaceAll: (progress) => set({ progress }),
     }),
     {
@@ -109,6 +114,27 @@ function updateStreak(stats: StudyStats, day: number): Pick<StudyStats, 'streak'
 // ---------------------------------------------------------------------------
 // Convenience selectors (call with the current language's card list).
 // ---------------------------------------------------------------------------
+
+/**
+ * Coerce an arbitrary stored/synced blob into a well-formed LanguageProgress,
+ * filling any missing stats fields. Never trust external data blindly.
+ */
+export function normalizeProgress(data: unknown): LanguageProgress {
+  const d = (data ?? {}) as Partial<LanguageProgress>
+  const cards = d.cards && typeof d.cards === 'object' ? (d.cards as Record<number, SRSCard>) : {}
+  const s = (d.stats ?? {}) as Partial<StudyStats>
+  const base = emptyStats()
+  const stats: StudyStats = {
+    streak: s.streak ?? base.streak,
+    lastStudyDay: s.lastStudyDay ?? base.lastStudyDay,
+    totalReviews: s.totalReviews ?? base.totalReviews,
+    totalCorrect: s.totalCorrect ?? base.totalCorrect,
+    xp: s.xp ?? base.xp,
+    newByDay: s.newByDay ?? base.newByDay,
+    reviewsByDay: s.reviewsByDay ?? base.reviewsByDay,
+  }
+  return { cards, stats }
+}
 
 /** All cards for a language as an array (empty if none). */
 export function cardsOf(progress: Record<string, LanguageProgress>, code: string): SRSCard[] {

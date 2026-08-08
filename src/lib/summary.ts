@@ -43,8 +43,8 @@ export function summarize(
 
   const due = getDueCards(Object.values(cards), day).length
   const fresh = words.length - learned
-  const newDoneToday = stats?.newByDay[day] ?? 0
-  const reviewsDoneToday = stats?.reviewsByDay[day] ?? 0
+  const newDoneToday = stats?.newByDay?.[day] ?? 0
+  const reviewsDoneToday = stats?.reviewsByDay?.[day] ?? 0
   const newRemainingToday = Math.max(0, Math.min(dailyNewLimit - newDoneToday, fresh))
 
   return {

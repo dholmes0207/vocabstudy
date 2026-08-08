@@ -7,6 +7,8 @@ import { getDueCards } from '@/lib/srs'
 import { today } from '@/lib/date'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
+import UserMenu from './UserMenu'
+import { useProgressSync } from '@/hooks/useProgressSync'
 
 interface NavItem {
   to: string
@@ -26,6 +28,7 @@ const NAV: NavItem[] = [
 ]
 
 export default function Layout() {
+  useProgressSync()
   const currentLang = useSettings((s) => s.currentLang)
   const progress = useStudy((s) => s.progress)
   const stats = progress[currentLang]?.stats
@@ -54,6 +57,7 @@ export default function Layout() {
           <div className="ml-auto flex items-center gap-2">
             <LanguageSwitcher />
             <ThemeToggle />
+            <UserMenu />
           </div>
         </header>
 

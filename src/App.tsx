@@ -4,6 +4,7 @@ import { Loader2 } from 'lucide-react'
 import Layout from './components/Layout'
 import { useData } from './store/dataStore'
 import { useSettings } from './store/settingsStore'
+import { useAuth } from './store/authStore'
 
 const Dashboard = lazy(() => import('./features/dashboard/Dashboard'))
 const Learn = lazy(() => import('./features/learn/Learn'))
@@ -12,27 +13,43 @@ const Quiz = lazy(() => import('./features/quiz/Quiz'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
+const AuthPage = lazy(() => import('./features/auth/AuthPage'))
+const AdminPage = lazy(() => import('./features/admin/AdminPage'))
 
 export default function App() {
+  // Restore the session (HttpOnly cookie) on startup.
+  useEffect(() => {
+    useAuth.getState().bootstrap()
+  }, [])
+
   return (
     <HashRouter>
-      <DataGate>
-        <Suspense fallback={<CenterSpinner />}>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/learn" element={<Learn />} />
-              <Route path="/review" element={<Review />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/browse" element={<Browse />} />
-              <Route path="/stats" element={<Stats />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </DataGate>
+      <Suspense fallback={<CenterSpinner />}>
+        <Routes>
+          <Route path="/login" element={<AuthPage />} />
+          <Route element={<AppShell />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/browse" element={<Browse />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </HashRouter>
+  )
+}
+
+/** Data-loading gate + app chrome (Layout) for all main routes. */
+function AppShell() {
+  return (
+    <DataGate>
+      <Layout />
+    </DataGate>
   )
 }
 

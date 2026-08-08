@@ -63,20 +63,39 @@ Màn **Trợ lý** (`/tutor`) là gia sư hỏi–đáp dùng **OpenAI o4-mini**
 Yêu cầu: **Node.js ≥ 18** (khuyến nghị 20) và npm.
 
 ```bash
-# 1. Cài đặt
+# 1. Cài đặt (frontend + backend)
 npm install
 
-# 2. Chạy môi trường phát triển (mở http://localhost:5173)
-npm run dev
+# 2. Tạo file cấu hình server
+cp .env.example .env      # rồi đặt JWT_SECRET, (tuỳ chọn) OPENAI_API_KEY
 
-# 3. Build bản production (kết quả trong thư mục dist/)
+# 3. Chạy full-stack dev: Vite (web, cổng 5173) + Express (API, cổng 8787)
+npm run dev:all
+#   Chỉ frontend:  npm run dev
+#   Chỉ backend:   npm run dev:server
+
+# 4. Build production + chạy 1 tiến trình phục vụ cả web lẫn API
 npm run build
-
-# 4. Xem thử bản build
-npm run preview
+npm start                 # NODE_ENV=production, mở http://localhost:8787
 ```
 
-> 💡 Audio phát âm đã được tạo sẵn trong `public/audio/en/` (2000 file, ~28MB) nên chạy được ngay, kể cả offline.
+> 💡 Tài khoản **đầu tiên đăng ký sẽ là admin** (chủ hệ thống). Vào avatar góc phải → Quản trị để quản lý tài khoản & cắm API key AI (key nằm ở **server**, học viên không thấy).
+> Audio phát âm tạo sẵn trong `public/audio/en/` (~28MB) nên chạy được ngay, kể cả offline.
+
+## 🏗️ Kiến trúc production (multi-user)
+
+| Lớp | Công nghệ | Ghi chú |
+|---|---|---|
+| Frontend | React 18 + Vite + Tailwind (giữ nguyên) | Dev proxy `/api` → backend; prod được Express phục vụ tĩnh từ `dist/`. |
+| Backend | **Express + TypeScript** (chạy bằng `tsx`) | `server/` — routes: auth, progress, admin, ai. |
+| Database | **SQLite** (`better-sqlite3`) | File `server/data.sqlite`; đường lên **PostgreSQL** cho prod lớn (đổi tầng data). |
+| Auth | **JWT trong cookie HttpOnly** + **bcrypt** | RBAC `student`/`admin` — **quyền kiểm ở server**. User đầu tiên = admin. |
+| AI | **Proxy server-side** `/api/ai/chat` | Key OpenAI + guardrail + level + ngữ cảnh chạy ở server → **học viên không bao giờ thấy key**. Provider quản lý trong Admin hoặc `OPENAI_API_KEY`. |
+| Đồng bộ | `progress(userId, langCode, dataJson)` | Tải khi đăng nhập, lưu debounce khi đổi; **migrate localStorage → tài khoản** lần đăng nhập đầu. |
+
+**Deploy:** build rồi chạy `npm start` (một tiến trình Node phục vụ API + web). Có `Dockerfile` sẵn. Biến môi trường trong `.env` (xem `.env.example`): `JWT_SECRET` (bắt buộc ở prod), `OPENAI_API_KEY`, `DB_PATH`, `AI_DAILY_LIMIT`. Chi tiết thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần H).
+
+> ⚠️ **Bảo mật:** mật khẩu **bcrypt-hash**, key AI + phân quyền + guardrail đều **ở server**. Roadmap (ghi trong PLAN Phần H): Postgres + Drizzle migrations, refresh-token rotation, quên-mật-khẩu qua email, giới hạn AI theo lớp + usage log, quản lý lớp (mã lớp/CSV), helmet/HTTPS.
 
 ### Tạo lại / đổi giọng audio (tuỳ chọn)
 

@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Bot, KeyRound, Send, User2 } from 'lucide-react'
-import { getActiveProvider, useAI } from '@/store/aiStore'
+import { Bot, LogIn, Send, User2 } from 'lucide-react'
 import { useContextStore, type PageContext } from '@/store/contextStore'
-import { AIError, chat } from '@/lib/ai/openai'
+import { useAuth } from '@/store/authStore'
+import { api, ApiError } from '@/lib/api'
 import { preCheckInput } from '@/lib/ai/guardrail'
 import { suggestQuestions } from '@/lib/ai/suggestions'
-import { levelInfo } from '@/lib/level'
 
 interface Msg {
   id: number
@@ -30,27 +29,38 @@ function contextText(ctx: PageContext): string {
 }
 
 export default function TutorChat({ level, onClose }: { level: number; onClose?: () => void }) {
-  // Active provider (reactive).
-  const providers = useAI((s) => s.providers)
-  const selectedId = useAI((s) => s.selectedProviderId)
-  const provider = providers.find((p) => p.id === selectedId) ?? providers[0] ?? null
-  const configured = !!provider && provider.apiKey.length > 0
-
+  const user = useAuth((s) => s.user)
+  const authStatus = useAuth((s) => s.status)
   const ctx = useContextStore()
+
+  const [configured, setConfigured] = useState<null | boolean>(null)
   const [messages, setMessages] = useState<Msg[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [warn, setWarn] = useState<string | null>(null)
   const idRef = useRef(0)
-  const abortRef = useRef<AbortController | null>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
+
+  // Check server AI availability once logged in.
+  useEffect(() => {
+    if (!user) return
+    let alive = true
+    api
+      .aiProviders()
+      .then((r) => alive && setConfigured(r.configured))
+      .catch(() => alive && setConfigured(false))
+    return () => {
+      alive = false
+    }
+  }, [user])
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, loading])
-  useEffect(() => () => abortRef.current?.abort(), [])
 
-  if (!configured) return <NotConfigured onClose={onClose} />
+  if (authStatus === 'loading') return <Centered>Đang tải…</Centered>
+  if (!user) return <LoginPrompt onClose={onClose} />
+  if (configured === false) return <NotConfigured admin={user.role === 'admin'} onClose={onClose} />
 
   const nextId = () => ++idRef.current
 
@@ -68,22 +78,11 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
     setMessages((m) => [...m, userMsg])
     setInput('')
     setLoading(true)
-
-    abortRef.current?.abort()
-    const ac = new AbortController()
-    abortRef.current = ac
-    const active = getActiveProvider()!
     try {
-      const reply = await chat(
-        history,
-        { apiKey: active.apiKey, model: active.model, baseUrl: active.baseUrl },
-        { levelInstruction: levelInfo(level).aiInstruction, contextText: contextText(ctx) },
-        ac.signal,
-      )
+      const { reply } = await api.aiChat({ history, level, context: contextText(ctx) })
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: reply }])
     } catch (e) {
-      if (e instanceof DOMException && e.name === 'AbortError') return
-      const msg = e instanceof AIError ? e.message : 'Có lỗi khi gọi trợ lý. Thử lại nhé.'
+      const msg = e instanceof ApiError ? e.message : 'Có lỗi khi gọi trợ lý. Thử lại nhé.'
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: msg, isError: true }])
     } finally {
       setLoading(false)
@@ -94,7 +93,6 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
 
   return (
     <div className="flex h-full flex-col">
-      {/* Messages */}
       <div className="scroll-thin flex-1 space-y-4 overflow-y-auto p-4">
         <Bubble role="assistant" content={GREETING} />
         {ctx.word && messages.length === 0 && (
@@ -113,7 +111,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
             </span>
           </div>
         )}
-        {messages.length === 0 && !loading && (
+        {messages.length === 0 && !loading && configured && (
           <div className="pt-1">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">Gợi ý câu hỏi</p>
             <div className="flex flex-wrap gap-2">
@@ -132,7 +130,6 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
       <div className="border-t border-slate-200 p-3 dark:border-slate-800">
         {warn && <p className="mb-2 text-sm text-amber-600 dark:text-amber-400">{warn}</p>}
         <div className="flex items-end gap-2">
@@ -149,12 +146,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
             placeholder="Hỏi về một từ tiếng Anh…"
             className="max-h-28 min-h-[2.75rem] flex-1 resize-none rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-[15px] outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
           />
-          <button
-            onClick={() => send(input)}
-            disabled={loading || !input.trim()}
-            className="btn-primary h-11 w-11 shrink-0 !px-0"
-            aria-label="Gửi"
-          >
+          <button onClick={() => send(input)} disabled={loading || !input.trim()} className="btn-primary h-11 w-11 shrink-0 !px-0" aria-label="Gửi">
             <Send className="h-5 w-5" />
           </button>
         </div>
@@ -169,20 +161,14 @@ function Bubble({ role, content, isError }: { role: 'user' | 'assistant'; conten
     <div className={`flex gap-2.5 ${isUser ? 'flex-row-reverse' : ''}`}>
       <span
         className={`grid h-8 w-8 shrink-0 place-items-center rounded-full ${
-          isUser
-            ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200'
-            : 'bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300'
+          isUser ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200' : 'bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300'
         }`}
       >
         {isUser ? <User2 className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
       </span>
       <div
         className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-[15px] leading-relaxed ${
-          isUser
-            ? 'rounded-tr-sm bg-brand-600 text-white'
-            : isError
-              ? 'rounded-tl-sm bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-200'
-              : 'rounded-tl-sm bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
+          isUser ? 'rounded-tr-sm bg-brand-600 text-white' : isError ? 'rounded-tl-sm bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-200' : 'rounded-tl-sm bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
         }`}
       >
         {content}
@@ -195,8 +181,11 @@ function Dot({ delay = '0s' }: { delay?: string }) {
   return <span className="h-2 w-2 animate-bounce rounded-full bg-slate-400" style={{ animationDelay: delay }} />
 }
 
-function NotConfigured({ onClose }: { onClose?: () => void }) {
-  const admin = useAI((s) => s.adminPinHash === null || s.adminUnlocked)
+function Centered({ children }: { children: React.ReactNode }) {
+  return <div className="grid h-full place-items-center p-6 text-sm text-slate-400">{children}</div>
+}
+
+function LoginPrompt({ onClose }: { onClose?: () => void }) {
   return (
     <div className="grid h-full place-items-center p-6 text-center">
       <div>
@@ -204,17 +193,32 @@ function NotConfigured({ onClose }: { onClose?: () => void }) {
           <Bot className="h-7 w-7" />
         </span>
         <h2 className="mt-4 text-lg font-bold">Trợ lý AI học từ vựng</h2>
+        <p className="mt-2 text-sm text-slate-500">Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).</p>
+        <Link to="/login" onClick={onClose} className="btn-primary mt-4">
+          <LogIn className="h-4 w-4" /> Đăng nhập / Đăng ký
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+function NotConfigured({ admin, onClose }: { admin: boolean; onClose?: () => void }) {
+  return (
+    <div className="grid h-full place-items-center p-6 text-center">
+      <div>
+        <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow">
+          <Bot className="h-7 w-7" />
+        </span>
+        <h2 className="mt-4 text-lg font-bold">Trợ lý chưa sẵn sàng</h2>
         {admin ? (
           <>
-            <p className="mt-2 text-sm text-slate-500">Chưa có API key. Thêm trong Cài đặt để bật trợ lý (model o4-mini).</p>
-            <Link to="/settings" onClick={onClose} className="btn-primary mt-4">
-              <KeyRound className="h-4 w-4" /> Cấu hình trong Cài đặt
+            <p className="mt-2 text-sm text-slate-500">Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.</p>
+            <Link to="/admin" onClick={onClose} className="btn-primary mt-4">
+              Cấu hình trong Quản trị
             </Link>
           </>
         ) : (
-          <p className="mt-2 text-sm text-slate-500">
-            Trợ lý chưa được bật. Nhờ <b>quản trị viên</b> (giáo viên) cấu hình API key giúp bạn nhé.
-          </p>
+          <p className="mt-2 text-sm text-slate-500">Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.</p>
         )}
       </div>
     </div>

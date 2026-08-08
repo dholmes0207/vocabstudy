@@ -12,4 +12,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  server: {
+    // In dev, proxy API calls to the Express backend so the browser sees a
+    // single origin (HttpOnly auth cookies just work).
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8787',
+        changeOrigin: true,
+      },
+    },
+  },
 })

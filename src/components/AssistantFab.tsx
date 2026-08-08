@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Bot, X } from 'lucide-react'
 import TutorChat from '@/features/tutor/TutorChat'
-import { useAI } from '@/store/aiStore'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { levelInfo } from '@/lib/level'
 
@@ -9,9 +8,6 @@ export default function AssistantFab() {
   const [open, setOpen] = useState(false)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
-  const providers = useAI((s) => s.providers)
-  const selectedId = useAI((s) => s.selectedProviderId)
-  const provider = providers.find((p) => p.id === selectedId) ?? providers[0] ?? null
 
   return (
     <>
@@ -46,9 +42,7 @@ export default function AssistantFab() {
                     {info.tag} · {info.name}
                   </span>
                 </p>
-                <p className="truncate text-xs text-slate-400">
-                  {provider ? `${provider.label} · ${provider.model}` : 'Chưa cấu hình'} · Chỉ hỗ trợ học từ vựng
-                </p>
+                <p className="truncate text-xs text-slate-400">Chỉ hỗ trợ học từ vựng tiếng Anh</p>
               </div>
               <button onClick={() => setOpen(false)} className="btn-ghost h-9 w-9 !px-0" aria-label="Đóng">
                 <X className="h-5 w-5" />

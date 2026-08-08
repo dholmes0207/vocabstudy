@@ -1037,3 +1037,27 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 **Kết quả test (mock fetch):** request kèm cả guardrail + "PHÂN HÓA THEO TRÌNH ĐỘ" (đúng level) + "NGỮ CẢNH TRANG" (đúng từ đang xem); gợi ý bám từ+level; đặt PIN→Khóa→chế độ học sinh ẩn key, chỉ còn chọn model; PIN sai bị từ chối, đúng thì mở khóa; học sinh vẫn chat được. Build TypeScript sạch.
 
 > ⚠️ Client-side thuần: role/level/key đều nằm ở trình duyệt. Đây là ranh giới tổ chức; bảo mật thật cần proxy backend.
+
+
+---
+
+## PHẦN H — PRODUCTION HOÁ (multi-user, DB, auth, admin, deploy)
+
+*Role-play 3 vai đầy đủ lưu ở `docs/design/production-{user,ba,dev}.md`. Tóm tắt + quyết định v1:*
+
+**🧑 Người dùng:** tự học muốn tài khoản để **đồng bộ đa thiết bị** + không mất tiến độ (migrate localStorage khi đăng nhập lần đầu); giáo viên (admin) muốn **quản lý tài khoản học sinh**, cắm **API key ở server** (học sinh không thấy), giới hạn dùng AI, phân quyền THẬT (kiểm ở server); học sinh chỉ đăng nhập là học. Anti-features: không paywall/quảng cáo/thu thập dữ liệu thừa; xoá phải xác nhận; giữ nguyên trải nghiệm hiện tại.
+
+**📊 BA:** RBAC guest/student/admin; user stories đăng ký/đăng nhập/đăng xuất/đồng bộ/quản trị; NFR bảo mật: hash mật khẩu, JWT, HTTPS, rate-limit, quyền server-side, riêng tư.
+
+**💻 Dev (đề xuất):** Express + TS; SQLite→Postgres; Drizzle ORM; JWT access+refresh cookie HttpOnly; bcrypt; zod; AI proxy server-side giữ key + guardrail; Vite dev proxy; Docker deploy.
+
+**Quyết định v1 đã hiện thực (bám đề xuất, giản lược cho chạy chắc):**
+- Backend **Express + TypeScript** chạy bằng `tsx`; **SQLite (better-sqlite3)** truy vấn SQL trực tiếp (đường lên Postgres = thay tầng data). *Drizzle ORM để roadmap.*
+- **Auth**: JWT (1 token 30 ngày) trong **cookie HttpOnly**, **bcrypt** (cost 10), **zod** validate, **rate-limit đăng nhập** (in-memory). *Refresh-token rotation để roadmap.*
+- **RBAC server-side**: `student | admin`; **user đầu tiên đăng ký = admin**. Middleware `requireAuth`/`requireRole` — quyền quyết định ở SERVER.
+- **AI proxy server-side** `/api/ai/chat`: key + guardrail + level + context chạy ở server → **học sinh không bao giờ thấy key** (giải quyết triệt để điểm yếu client trước đây). Provider quản lý trong bảng `ai_providers` (admin) + fallback `OPENAI_API_KEY` env.
+- **Đồng bộ tiến độ**: bảng `progress(userId, langCode, dataJson)` — lưu blob JSON; migrate localStorage → server khi đăng nhập lần đầu.
+- **Admin**: quản lý tài khoản (list/khoá/mở/xoá/đổi vai/đặt lại mật khẩu), quản lý AI provider.
+- **Deploy**: 1 process Node phục vụ `/api` + static `dist`; `.env` (JWT_SECRET, OPENAI_API_KEY, DB_PATH); Dockerfile.
+
+**Roadmap (ghi từ design, chưa làm v1):** Drizzle + migrations, Postgres, refresh-token rotation, quên-mật-khẩu qua email, giới hạn lượt AI/học sinh + usage log, quản lý lớp (mã lớp, tạo hàng loạt, xem tiến độ lớp, xuất CSV), helmet/CORS hardening, HTTPS.
