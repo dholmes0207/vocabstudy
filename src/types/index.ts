@@ -8,8 +8,10 @@ export interface Word {
   id: number
   /** The headword, e.g. "ability" or "a / an". */
   word: string
-  /** IPA phonetic transcription. May be empty — pronunciation falls back to TTS. */
+  /** IPA phonetic transcription (General American), e.g. "əˈbɪləˌti". */
   ipa: string
+  /** Approximate Vietnamese-style reading ("cách đọc"), e.g. "ơ-BI-lơ-ti". */
+  viRead: string
   /** Raw part-of-speech label from the source, e.g. "n.", "v./n.". */
   pos: string
   /** Normalized primary part-of-speech category (noun/verb/adjective/...). */

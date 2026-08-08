@@ -23,6 +23,10 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 
 **Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
 
+### 🔤 Phiên âm & cách đọc
+
+Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). *Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural.*
+
 ### 🔊 Phát âm bằng giọng Neural
 
 Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong *Cài đặt → Phát âm*.
@@ -62,6 +66,13 @@ edge-tts --list-voices                                  # xem toàn bộ giọng
 ```
 
 Script **bỏ qua file đã có** (chạy lại an toàn) và tạo `<voiceKey>/wN.mp3` (từ) + `<voiceKey>/eN.mp3` (câu ví dụ) trong `public/audio/<code>/`, kèm manifest `index.json`. Sửa danh sách giọng ở biến `VOICES` trong script.
+
+### Tạo lại phiên âm / cách đọc (tuỳ chọn)
+
+```bash
+pip install eng-to-ipa cmudict
+python3 scripts/generate_phonetics.py    # điền ipa + viRead vào data/en.json & public/data/en.json
+```
 
 ---
 

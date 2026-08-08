@@ -167,6 +167,13 @@ function WordRow({
               <span className="truncate text-lg font-bold">{word.word}</span>
               <PosBadge category={word.posCategory} raw={word.pos} />
             </span>
+            {(word.ipa || word.viRead) && (
+              <span className="block truncate text-xs text-slate-400">
+                {word.ipa && <span className="font-mono">/{word.ipa}/</span>}
+                {word.ipa && word.viRead && <span className="mx-1">·</span>}
+                {word.viRead && <span>{word.viRead}</span>}
+              </span>
+            )}
             <span className="block truncate text-sm text-slate-500">{word.meaning}</span>
           </span>
         </button>
