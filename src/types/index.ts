@@ -65,6 +65,22 @@ export interface DataManifest {
   languages: LanguagePackMeta[]
 }
 
+/** A pre-rendered TTS voice available for a language (edge-tts). */
+export interface AudioVoice {
+  /** Folder name / stored settings value, e.g. "aria". */
+  key: string
+  /** Human label shown in the picker, e.g. "Aria — Nữ (Mỹ)". */
+  label: string
+  /** The underlying edge-tts voice id, e.g. "en-US-AriaNeural". */
+  voice: string
+}
+
+/** The audio manifest at /public/audio/<code>/index.json. */
+export interface AudioManifest {
+  default: string
+  voices: AudioVoice[]
+}
+
 // ============================================================================
 // Spaced-Repetition (SRS) types
 // ============================================================================
@@ -162,7 +178,9 @@ export interface Settings {
   dailyReviewLimit: number
   /** TTS playback rate (0.5 - 1.25). */
   ttsRate: number
-  /** Pinned TTS voice (voiceURI), or null to auto-select the best available. */
+  /** Selected pre-rendered voice key (edge-tts), e.g. "aria". */
+  audioVoice: string
+  /** Pinned browser-TTS voice (voiceURI) for the fallback when no audio exists. */
   ttsVoiceURI: string | null
   /** Whether to auto-play pronunciation when a flashcard is revealed. */
   autoSpeak: boolean

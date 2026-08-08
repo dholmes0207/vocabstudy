@@ -1,13 +1,15 @@
 import { create } from 'zustand'
-import type { DataManifest, LanguagePack } from '@/types'
+import type { AudioVoice, DataManifest, LanguagePack } from '@/types'
 import { loadManifest, loadPack } from '@/lib/dataLoader'
-import { setAudioLang } from '@/lib/audio'
+import { loadAudioManifest, setAudioLang, setAudioVoices } from '@/lib/audio'
 
 type Status = 'idle' | 'loading' | 'ready' | 'error'
 
 interface DataState {
   manifest: DataManifest | null
   pack: LanguagePack | null
+  /** Pre-rendered voices available for the active language (edge-tts). */
+  audioVoices: AudioVoice[]
   status: Status
   error: string | null
   ensureManifest: () => Promise<void>
@@ -17,6 +19,7 @@ interface DataState {
 export const useData = create<DataState>((set, get) => ({
   manifest: null,
   pack: null,
+  audioVoices: [],
   status: 'idle',
   error: null,
 
@@ -36,7 +39,12 @@ export const useData = create<DataState>((set, get) => ({
     try {
       const pack = await loadPack(code)
       setAudioLang(code)
-      set({ pack, status: 'ready' })
+      // Load the pre-rendered voice manifest (if any) so the app can prefer
+      // neural audio and offer a voice picker.
+      const audio = await loadAudioManifest(code)
+      const voices = audio?.voices ?? []
+      setAudioVoices(voices.map((v) => v.key), audio?.default ?? null)
+      set({ pack, audioVoices: voices, status: 'ready' })
     } catch (e) {
       set({ status: 'error', error: msg(e) })
     }

@@ -1,0 +1,15 @@
+{
+  "default": "aria",
+  "voices": [
+    {
+      "key": "aria",
+      "label": "Aria — Nữ (Mỹ) 🇺🇸",
+      "voice": "en-US-AriaNeural"
+    },
+    {
+      "key": "guy",
+      "label": "Guy — Nam (Mỹ) 🇺🇸",
+      "voice": "en-US-GuyNeural"
+    }
+  ]
+}

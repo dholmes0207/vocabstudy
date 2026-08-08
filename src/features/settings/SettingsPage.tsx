@@ -4,10 +4,12 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
+import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
 
 export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
+  const audioVoices = useData((s) => s.audioVoices)
   const settings = useSettings()
   const resetLanguage = useStudy((s) => s.resetLanguage)
 
@@ -15,6 +17,8 @@ export default function SettingsPage() {
   const [confirmReset, setConfirmReset] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
   const ttsOk = isTTSSupported()
+  const hasNeuralAudio = audioVoices.length > 0
+  const canPronounce = hasNeuralAudio || ttsOk
 
   // Installed voices load asynchronously; refresh when the browser reports them.
   const [voices, setVoices] = useState(() => listVoices(pack.meta.ttsLang))
@@ -91,42 +95,79 @@ export default function SettingsPage() {
 
       {/* Pronunciation */}
       <Section title="Phát âm">
-        {!ttsOk && (
-          <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-            ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc Safari.
-          </p>
-        )}
-        {ttsOk && voices.length === 0 && (
-          <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-            ⚠️ Máy chưa cài giọng đọc tiếng Anh nào nên phát âm có thể rất máy móc. Dùng <b>Google Chrome</b> (có sẵn
-            “Google US English”) hoặc cài gói giọng đọc tiếng Anh của hệ điều hành để nghe tự nhiên hơn.
-          </p>
-        )}
-        {ttsOk && voices.length > 0 && (
-          <Row label="Giọng đọc" hint="Chọn giọng nghe tự nhiên nhất. Giọng có chữ Google/Natural/Neural thường hay nhất.">
+        {/* Preferred: pre-rendered neural voices (edge-tts). */}
+        {hasNeuralAudio ? (
+          <Row label="Giọng đọc" hint="Giọng Neural bản xứ, nghe tự nhiên như người thật.">
             <div className="flex items-center gap-2">
               <select
-                value={settings.ttsVoiceURI ?? ''}
-                onChange={(e) => settings.setTtsVoiceURI(e.target.value || null)}
+                value={audioVoices.some((v) => v.key === settings.audioVoice) ? settings.audioVoice : audioVoices[0].key}
+                onChange={(e) => settings.setAudioVoice(e.target.value)}
                 aria-label="Chọn giọng đọc"
-                className="max-w-[13rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+                className="max-w-[15rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
               >
-                <option value="">Tự động (tốt nhất)</option>
-                {voices.map((v) => (
-                  <option key={v.voiceURI} value={v.voiceURI}>
-                    {v.name} ({v.lang})
+                {audioVoices.map((v) => (
+                  <option key={v.key} value={v.key}>
+                    {v.label}
                   </option>
                 ))}
               </select>
               <button
                 className="btn-secondary !px-3"
-                onClick={() => speak('Hello! This is how this voice sounds.', { lang: pack.meta.ttsLang, rate: settings.ttsRate })}
+                onClick={() =>
+                  pronounce({
+                    audioSrc: exampleAudio(1),
+                    text: 'She has a book and an apple.',
+                    lang: pack.meta.ttsLang,
+                    rate: settings.ttsRate,
+                  })
+                }
                 aria-label="Nghe thử giọng đã chọn"
               >
                 <Volume2 className="h-4 w-4" />
               </button>
             </div>
           </Row>
+        ) : (
+          <>
+            {/* Fallback: no pre-rendered audio -> pick the best browser voice. */}
+            {!ttsOk && (
+              <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
+                ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc Safari.
+              </p>
+            )}
+            {ttsOk && voices.length === 0 && (
+              <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
+                ⚠️ Chưa có audio dựng sẵn và máy cũng chưa cài giọng tiếng Anh. Chạy{' '}
+                <code>python3 scripts/generate_audio.py</code> để tạo giọng Neural, hoặc dùng Google Chrome.
+              </p>
+            )}
+            {ttsOk && voices.length > 0 && (
+              <Row label="Giọng đọc (trình duyệt)" hint="Chưa có audio dựng sẵn — dùng giọng của trình duyệt.">
+                <div className="flex items-center gap-2">
+                  <select
+                    value={settings.ttsVoiceURI ?? ''}
+                    onChange={(e) => settings.setTtsVoiceURI(e.target.value || null)}
+                    aria-label="Chọn giọng đọc trình duyệt"
+                    className="max-w-[13rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+                  >
+                    <option value="">Tự động (tốt nhất)</option>
+                    {voices.map((v) => (
+                      <option key={v.voiceURI} value={v.voiceURI}>
+                        {v.name} ({v.lang})
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    className="btn-secondary !px-3"
+                    onClick={() => speak('Hello! This is how this voice sounds.', { lang: pack.meta.ttsLang, rate: settings.ttsRate })}
+                    aria-label="Nghe thử giọng đã chọn"
+                  >
+                    <Volume2 className="h-4 w-4" />
+                  </button>
+                </div>
+              </Row>
+            )}
+          </>
         )}
         <Row label="Tốc độ đọc" hint="Chậm lại nếu bạn muốn nghe rõ từng âm.">
           <div className="flex items-center gap-3">
@@ -139,14 +180,21 @@ export default function SettingsPage() {
               onChange={(e) => settings.setTtsRate(Number(e.target.value))}
               aria-label="Tốc độ đọc"
               aria-valuetext={`${settings.ttsRate.toFixed(2)} lần`}
-              disabled={!ttsOk}
+              disabled={!canPronounce}
               className="w-40 accent-brand-600 disabled:opacity-40"
             />
             <span className="w-12 text-right font-bold tabular-nums">{settings.ttsRate.toFixed(2)}×</span>
             <button
               className="btn-secondary !px-3"
-              disabled={!ttsOk}
-              onClick={() => speak('Hello, this is a pronunciation test.', { lang: pack.meta.ttsLang, rate: settings.ttsRate })}
+              disabled={!canPronounce}
+              onClick={() =>
+                pronounce({
+                  audioSrc: exampleAudio(1),
+                  text: 'She has a book and an apple.',
+                  lang: pack.meta.ttsLang,
+                  rate: settings.ttsRate,
+                })
+              }
               aria-label="Nghe thử phát âm"
             >
               <Volume2 className="h-4 w-4" /> Nghe thử
@@ -154,7 +202,7 @@ export default function SettingsPage() {
           </div>
         </Row>
         <Row label="Tự động phát âm" hint="Đọc từ ngay khi hiện thẻ mới.">
-          <Toggle checked={ttsOk && settings.autoSpeak} onChange={settings.setAutoSpeak} label="Tự động phát âm" disabled={!ttsOk} />
+          <Toggle checked={canPronounce && settings.autoSpeak} onChange={settings.setAutoSpeak} label="Tự động phát âm" disabled={!canPronounce} />
         </Row>
       </Section>
 

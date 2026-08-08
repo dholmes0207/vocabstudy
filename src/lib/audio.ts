@@ -2,25 +2,60 @@
 // scripts/generate_audio.py via edge-tts), and transparently fall back to the
 // browser's Web Speech API when a file is missing or can't play.
 
+import type { AudioManifest } from '@/types'
 import { speak, stopSpeaking } from './tts'
 
-// The active language code, kept module-global because only one pack is active
-// at a time. Set by the data store when a pack loads.
+const base = import.meta.env.BASE_URL
+
+// Active audio context, kept module-global because only one pack is active at a
+// time. The data store sets the language + available voices; the settings store
+// pushes the user's chosen voice key.
 let currentCode = 'en'
+let availableVoiceKeys: string[] = []
+let defaultVoiceKey: string | null = null
+let selectedVoiceKey: string | null = null
+
 export function setAudioLang(code: string): void {
   currentCode = code
 }
 
-const base = import.meta.env.BASE_URL
-
-/** URL of the pre-rendered audio for a headword. */
-export function wordAudio(id: number, code: string = currentCode): string {
-  return `${base}audio/${code}/w${id}.mp3`
+export function setAudioVoices(voiceKeys: string[], defaultKey: string | null): void {
+  availableVoiceKeys = voiceKeys
+  defaultVoiceKey = defaultKey
 }
 
-/** URL of the pre-rendered audio for an example sentence. */
-export function exampleAudio(id: number, code: string = currentCode): string {
-  return `${base}audio/${code}/e${id}.mp3`
+export function setAudioVoiceKey(key: string | null): void {
+  selectedVoiceKey = key
+}
+
+/** The voice folder to use, honouring the user's choice then the default. */
+function effectiveVoice(): string | null {
+  if (selectedVoiceKey && availableVoiceKeys.includes(selectedVoiceKey)) return selectedVoiceKey
+  if (defaultVoiceKey && availableVoiceKeys.includes(defaultVoiceKey)) return defaultVoiceKey
+  return availableVoiceKeys[0] ?? null
+}
+
+/** Fetch the per-language audio voice manifest (null if none was generated). */
+export async function loadAudioManifest(code: string): Promise<AudioManifest | null> {
+  try {
+    const res = await fetch(`${base}audio/${code}/index.json`)
+    if (!res.ok) return null
+    return (await res.json()) as AudioManifest
+  } catch {
+    return null
+  }
+}
+
+/** URL of the pre-rendered audio for a headword ('' when no audio exists). */
+export function wordAudio(id: number): string {
+  const v = effectiveVoice()
+  return v ? `${base}audio/${currentCode}/${v}/w${id}.mp3` : ''
+}
+
+/** URL of the pre-rendered audio for an example sentence ('' when none). */
+export function exampleAudio(id: number): string {
+  const v = effectiveVoice()
+  return v ? `${base}audio/${currentCode}/${v}/e${id}.mp3` : ''
 }
 
 let current: HTMLAudioElement | null = null

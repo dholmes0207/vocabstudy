@@ -61,7 +61,7 @@ python3 scripts/generate_audio.py --voice en-GB-SoniaNeural --rate -10%   # gi�
 edge-tts --list-voices                                  # xem toàn bộ giọng có sẵn
 ```
 
-Script **bỏ qua file đã có** (chạy lại an toàn) và tự tạo `wN.mp3` (từ) + `eN.mp3` (câu ví dụ) trong `public/audio/<code>/`.
+Script **bỏ qua file đã có** (chạy lại an toàn) và tạo `<voiceKey>/wN.mp3` (từ) + `<voiceKey>/eN.mp3` (câu ví dụ) trong `public/audio/<code>/`, kèm manifest `index.json`. Sửa danh sách giọng ở biến `VOICES` trong script.
 
 ---
 

@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { Settings, ThemeSetting } from '@/types'
 import { setPreferredVoiceURI } from '@/lib/tts'
+import { setAudioVoiceKey } from '@/lib/audio'
 
 interface SettingsState extends Settings {
   setTheme: (t: ThemeSetting) => void
@@ -9,6 +10,7 @@ interface SettingsState extends Settings {
   setDailyNewLimit: (n: number) => void
   setDailyReviewLimit: (n: number) => void
   setTtsRate: (n: number) => void
+  setAudioVoice: (key: string) => void
   setTtsVoiceURI: (uri: string | null) => void
   setAutoSpeak: (b: boolean) => void
 }
@@ -19,6 +21,7 @@ const DEFAULTS: Settings = {
   dailyNewLimit: 15,
   dailyReviewLimit: 0,
   ttsRate: 0.9,
+  audioVoice: 'aria',
   ttsVoiceURI: null,
   autoSpeak: false,
 }
@@ -32,6 +35,7 @@ export const useSettings = create<SettingsState>()(
       setDailyNewLimit: (dailyNewLimit) => set({ dailyNewLimit: clamp(dailyNewLimit, 1, 100) }),
       setDailyReviewLimit: (dailyReviewLimit) => set({ dailyReviewLimit: clamp(dailyReviewLimit, 0, 500) }),
       setTtsRate: (ttsRate) => set({ ttsRate: clamp(ttsRate, 0.5, 1.25) }),
+      setAudioVoice: (audioVoice) => set({ audioVoice }),
       setTtsVoiceURI: (ttsVoiceURI) => set({ ttsVoiceURI }),
       setAutoSpeak: (autoSpeak) => set({ autoSpeak }),
     }),
@@ -65,13 +69,16 @@ export function applyTheme(theme: ThemeSetting): void {
 
 /** Wire up theme + TTS-voice reactivity. Call once at app startup. */
 export function initTheme(): void {
-  applyTheme(useSettings.getState().theme)
-  setPreferredVoiceURI(useSettings.getState().ttsVoiceURI)
+  const s0 = useSettings.getState()
+  applyTheme(s0.theme)
+  setPreferredVoiceURI(s0.ttsVoiceURI)
+  setAudioVoiceKey(s0.audioVoice)
 
   // React to setting changes.
   useSettings.subscribe((s) => {
     applyTheme(s.theme)
     setPreferredVoiceURI(s.ttsVoiceURI)
+    setAudioVoiceKey(s.audioVoice)
   })
 
   // React to OS changes while on "system".
