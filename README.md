@@ -21,8 +21,9 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 | 📚 **Tra cứu** | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học. |
 | 📈 **Thống kê** | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**. |
 | 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên. |
-| 🤖 **Trợ lý AI** | Gia sư hỏi–đáp (OpenAI **o4-mini**) **chỉ** về học từ vựng tiếng Anh — có **guardrail** từ chối mọi yêu cầu ngoài phạm vi. |
-| ⚙️ **Cài đặt** | Giao diện sáng/tối, chọn giọng đọc, hạn mức từ/ngày, tốc độ đọc, API key AI, sao lưu/khôi phục (JSON). |
+| 🤖 **Trợ lý AI** | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh. |
+| 🎚️ **Trình độ** | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10"). |
+| ⚙️ **Cài đặt** | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục. |
 
 **Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
 
@@ -46,9 +47,16 @@ Màn **Trợ lý** (`/tutor`) là gia sư hỏi–đáp dùng **OpenAI o4-mini**
 - **GR-4 Lớp client** (`src/lib/ai/guardrail.ts`) — chặn input rỗng/quá dài, giới hạn lịch sử gửi lên.
 - **GR-5 Fail-safe** — lỗi key/API được ánh xạ thành thông báo tiếng Việt thân thiện, không lộ chi tiết nhạy cảm.
 
-**Cấu hình:** Cài đặt → *Trợ lý AI* → nhập **OpenAI API key** của bạn (lấy ở `platform.openai.com`). Key lưu ở `localStorage` (store riêng `vocab-ai.v1`) — **không** đưa vào file sao lưu, chỉ gửi tới OpenAI khi chat. Model mặc định `o4-mini`, đổi được.
+**Cá nhân hoá theo trình độ** (`src/lib/level.ts`): 5 bậc A1→C1, tự ước lượng từ tiến độ (số từ thành thạo + độ chính xác), chỉnh tay được trong Cài đặt. Trình độ được chèn vào system prompt để trợ lý giảng đúng mức ("học 1 hiểu 2/3/5/10") và đổi **gợi ý câu hỏi**.
 
-> ⚠️ **Bảo mật:** đây là kiểu *bring-your-own-key* chạy phía client — phù hợp dùng cá nhân/nội bộ. Khi **deploy công khai**, nên đặt một **proxy backend** giữ key thay vì để lộ ở trình duyệt (chỉnh `baseUrl` trỏ về proxy).
+**Bong bóng nổi + đọc ngữ cảnh** (`src/components/AssistantFab.tsx`): trợ lý là 1 nút nổi ở mọi trang (thay vì mục sidebar). Mỗi màn đăng ký "ngữ cảnh" (`src/store/contextStore.ts`) — vd đang xem/ôn/kiểm tra từ nào — để trợ lý gợi ý và trả lời sát ngữ cảnh (ngữ cảnh được đưa vào prompt dưới dạng *tham khảo*, không phải mệnh lệnh).
+
+**Phân quyền (admin / học sinh)** (`src/store/aiStore.ts`):
+- **Admin** quản lý danh sách **provider** (nhiều model + API key), đặt **mã PIN** để khóa. Học sinh **chọn model** nhưng **không thấy/sửa key**.
+- Chưa đặt PIN = chế độ *thiết lập* (ai cũng là admin). Đặt PIN → khóa; mở lại bằng PIN.
+- Key lưu `localStorage` (store `vocab-ai.v1`) — **không** vào file sao lưu, chỉ gửi tới OpenAI khi chat.
+
+> ⚠️ **Bảo mật:** *bring-your-own-key* phía client + phân quyền chỉ là ranh giới **tổ chức/UX** (trình duyệt vẫn đọc được localStorage), phù hợp cá nhân/lớp học. Khi **deploy công khai**, đặt **proxy backend** giữ key & thực thi quyền server-side, rồi trỏ `baseUrl` của provider về proxy.
 
 ## 🚀 Chạy dự án
 

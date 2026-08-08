@@ -3,6 +3,7 @@ import { Check, X } from 'lucide-react'
 import type { Word } from '@/types'
 import Flashcard from './Flashcard'
 import { useSettings } from '@/store/settingsStore'
+import { useProvideContext } from '@/store/contextStore'
 import { pronounce, wordAudio } from '@/lib/audio'
 
 interface Props {
@@ -21,6 +22,14 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
   const [correct, setCorrect] = useState(0)
   const done = index >= words.length
   const current = words[index]
+
+  // Let the floating AI assistant know which word is on screen.
+  useProvideContext(
+    current ? `Đang học từ "${current.word}"` : 'Đang học từ vựng',
+    current
+      ? { word: current.word, meaning: current.meaning, ipa: current.ipa, pos: current.pos, exampleEn: current.exampleEn }
+      : undefined,
+  )
 
   // Auto-pronounce each new word when it appears (if enabled).
   useEffect(() => {

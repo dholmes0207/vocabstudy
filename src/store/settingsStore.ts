@@ -10,6 +10,8 @@ interface SettingsState extends Settings {
   setDailyNewLimit: (n: number) => void
   setDailyReviewLimit: (n: number) => void
   setTtsRate: (n: number) => void
+  setAutoLevel: (b: boolean) => void
+  setLevel: (n: number) => void
   setAudioVoice: (key: string) => void
   setTtsVoiceURI: (uri: string | null) => void
   setAutoSpeak: (b: boolean) => void
@@ -21,6 +23,8 @@ const DEFAULTS: Settings = {
   dailyNewLimit: 15,
   dailyReviewLimit: 0,
   ttsRate: 0.9,
+  autoLevel: true,
+  level: 1,
   audioVoice: 'aria',
   ttsVoiceURI: null,
   autoSpeak: false,
@@ -35,6 +39,8 @@ export const useSettings = create<SettingsState>()(
       setDailyNewLimit: (dailyNewLimit) => set({ dailyNewLimit: clamp(dailyNewLimit, 1, 100) }),
       setDailyReviewLimit: (dailyReviewLimit) => set({ dailyReviewLimit: clamp(dailyReviewLimit, 0, 500) }),
       setTtsRate: (ttsRate) => set({ ttsRate: clamp(ttsRate, 0.5, 1.25) }),
+      setAutoLevel: (autoLevel) => set({ autoLevel }),
+      setLevel: (level) => set({ level: clamp(level, 1, 5) }),
       setAudioVoice: (audioVoice) => set({ audioVoice }),
       setTtsVoiceURI: (ttsVoiceURI) => set({ ttsVoiceURI }),
       setAutoSpeak: (autoSpeak) => set({ autoSpeak }),

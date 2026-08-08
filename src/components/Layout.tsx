@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { BarChart3, Bot, BookOpen, GraduationCap, Library, Repeat2, Settings, Sparkles } from 'lucide-react'
+import { BarChart3, BookOpen, GraduationCap, Library, Repeat2, Settings, Sparkles } from 'lucide-react'
+import AssistantFab from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
 import { useSettings } from '@/store/settingsStore'
 import { getDueCards } from '@/lib/srs'
@@ -20,7 +21,6 @@ const NAV: NavItem[] = [
   { to: '/review', label: 'Ôn tập', icon: Repeat2, primary: true },
   { to: '/quiz', label: 'Kiểm tra', icon: GraduationCap, primary: true },
   { to: '/browse', label: 'Tra cứu', icon: Library, primary: true },
-  { to: '/tutor', label: 'Trợ lý', icon: Bot, primary: true },
   { to: '/stats', label: 'Thống kê', icon: BarChart3 },
   { to: '/settings', label: 'Cài đặt', icon: Settings },
 ]
@@ -68,6 +68,9 @@ export default function Layout() {
           <BottomLink key={item.to} item={item} badge={item.to === '/review' ? dueCount : 0} />
         ))}
       </nav>
+
+      {/* Floating AI assistant, available on every screen */}
+      <AssistantFab />
     </div>
   )
 }

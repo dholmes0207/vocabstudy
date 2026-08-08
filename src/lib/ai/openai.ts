@@ -1,4 +1,4 @@
-import { buildMessages, type ChatTurn } from './systemPrompt'
+import { buildMessages, type BuildOptions, type ChatTurn } from './systemPrompt'
 
 // ============================================================================
 // OpenAI Chat Completions client for the o4-mini study assistant.
@@ -35,7 +35,12 @@ function mapError(status: number, detail: string): string {
 }
 
 /** Send the conversation to the model and return the assistant's reply text. */
-export async function chat(history: ChatTurn[], cfg: AIConfig, signal?: AbortSignal): Promise<string> {
+export async function chat(
+  history: ChatTurn[],
+  cfg: AIConfig,
+  opts: BuildOptions = {},
+  signal?: AbortSignal,
+): Promise<string> {
   let res: Response
   try {
     res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
@@ -46,7 +51,7 @@ export async function chat(history: ChatTurn[], cfg: AIConfig, signal?: AbortSig
       },
       body: JSON.stringify({
         model: cfg.model,
-        messages: buildMessages(history),
+        messages: buildMessages(history, opts),
         // o4-mini is a reasoning model: use max_completion_tokens (not max_tokens),
         // keep effort low for fast, cheap tutor answers, and omit temperature.
         max_completion_tokens: 2000,

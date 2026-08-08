@@ -10,6 +10,7 @@ import SpeakButton from '@/components/SpeakButton'
 import PosBadge, { POS_LABEL } from '@/components/PosBadge'
 import HighlightExample from '@/components/HighlightExample'
 import { exampleAudio, wordAudio } from '@/lib/audio'
+import { useProvideContext } from '@/store/contextStore'
 
 const PAGE_SIZE = 24
 
@@ -50,6 +51,15 @@ export default function Browse() {
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const safePage = Math.min(page, pageCount - 1)
   const pageItems = filtered.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE)
+
+  // Tell the AI assistant which word (if any) is expanded.
+  const focused = expanded != null ? pack.words.find((w) => w.id === expanded) : undefined
+  useProvideContext(
+    focused ? `Đang xem từ "${focused.word}"` : 'Tra cứu từ vựng',
+    focused
+      ? { word: focused.word, meaning: focused.meaning, ipa: focused.ipa, pos: focused.pos, exampleEn: focused.exampleEn }
+      : undefined,
+  )
 
   const resetPage = () => setPage(0)
 

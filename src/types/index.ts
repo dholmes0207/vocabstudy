@@ -83,6 +83,19 @@ export interface AudioManifest {
   voices: AudioVoice[]
 }
 
+/** An AI provider preset the admin configures; students pick one by label. */
+export interface AIProvider {
+  id: string
+  /** Friendly name shown to students, e.g. "GPT o4-mini (lớp)". */
+  label: string
+  /** Model id, e.g. "o4-mini". */
+  model: string
+  /** API key — visible only to admin. */
+  apiKey: string
+  /** API base URL (OpenAI or a proxy). */
+  baseUrl: string
+}
+
 // ============================================================================
 // Spaced-Repetition (SRS) types
 // ============================================================================
@@ -181,6 +194,10 @@ export interface Settings {
   dailyReviewLimit: number
   /** TTS playback rate (0.5 - 1.25). */
   ttsRate: number
+  /** Auto-estimate the learner level from progress (vs. manual override). */
+  autoLevel: boolean
+  /** Manual level (1..5) used when autoLevel is off. */
+  level: number
   /** Selected pre-rendered voice key (edge-tts), e.g. "aria". */
   audioVoice: string
   /** Pinned browser-TTS voice (voiceURI) for the fallback when no audio exists. */

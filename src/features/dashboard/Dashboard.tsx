@@ -4,6 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { summarize } from '@/lib/summary'
+import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 
 export default function Dashboard() {
@@ -16,6 +17,8 @@ export default function Dashboard() {
   const s = summarize(pack.words, progress, dailyNewLimit)
   const masteredPct = s.total ? s.mastered / s.total : 0
   const learnedPct = s.total ? s.learned / s.total : 0
+
+  useProvideContext('Trang chủ')
 
   const hour = new Date().getHours()
   const greeting = hour < 11 ? 'Chào buổi sáng' : hour < 18 ? 'Chào buổi chiều' : 'Chào buổi tối'

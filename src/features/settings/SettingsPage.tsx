@@ -3,16 +3,19 @@ import { AlertTriangle, Download, Upload, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { useAI } from '@/store/aiStore'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
+import { LEVELS, levelInfo } from '@/lib/level'
+import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
+import { Row, Section, Toggle } from './ui'
+import AISettings from './AISettings'
 
 export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
   const audioVoices = useData((s) => s.audioVoices)
   const settings = useSettings()
-  const ai = useAI()
+  const effLevel = useEffectiveLevel()
   const resetLanguage = useStudy((s) => s.resetLanguage)
 
   const fileRef = useRef<HTMLInputElement>(null)
@@ -208,42 +211,38 @@ export default function SettingsPage() {
         </Row>
       </Section>
 
-      {/* AI assistant */}
-      <Section title="Trợ lý AI (học từ vựng)">
-        <p className="mb-1 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-500 dark:bg-slate-800/60">
-          🔒 Key được lưu <b>trên máy này</b> và chỉ gửi tới OpenAI khi bạn chat. Không đưa vào file sao lưu, không gửi đi
-          đâu khác. Đừng dùng trên máy công cộng. (Khi deploy công khai nên dùng proxy để giấu key.)
-        </p>
-        <Row label="OpenAI API key" hint={ai.apiKey ? '✓ Đã lưu key trên máy này.' : 'Lấy tại platform.openai.com → API keys.'}>
-          <div className="flex items-center gap-2">
-            <input
-              type="password"
-              value={ai.apiKey}
-              onChange={(e) => ai.setApiKey(e.target.value)}
-              placeholder="sk-…"
-              aria-label="OpenAI API key"
-              autoComplete="off"
-              spellCheck={false}
-              className="w-44 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
-            />
-            {ai.apiKey && (
-              <button className="btn-ghost !px-2 text-sm" onClick={() => ai.setApiKey('')}>
-                Xóa
-              </button>
-            )}
-          </div>
+      {/* Personalization level */}
+      <Section title="Trình độ (cá nhân hoá)">
+        <Row label="Tự động đánh giá trình độ" hint="Ước lượng theo số từ thành thạo & độ chính xác của bạn.">
+          <Toggle checked={settings.autoLevel} onChange={settings.setAutoLevel} label="Tự động đánh giá trình độ" />
         </Row>
-        <Row label="Model" hint="Mặc định o4-mini (model reasoning gọn, rẻ).">
-          <input
-            type="text"
-            value={ai.model}
-            onChange={(e) => ai.setModel(e.target.value)}
-            aria-label="Model AI"
-            spellCheck={false}
-            className="w-36 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
-          />
+        <Row
+          label="Trình độ hiện tại"
+          hint={`${levelInfo(effLevel).name} — ${levelInfo(effLevel).blurb}. Trợ lý AI sẽ giảng theo mức này.`}
+        >
+          {settings.autoLevel ? (
+            <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200">
+              {levelInfo(effLevel).tag} · {levelInfo(effLevel).name}
+            </span>
+          ) : (
+            <select
+              value={settings.level}
+              onChange={(e) => settings.setLevel(Number(e.target.value))}
+              aria-label="Chọn trình độ"
+              className="rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+            >
+              {LEVELS.map((l) => (
+                <option key={l.level} value={l.level}>
+                  {l.tag} · {l.name}
+                </option>
+              ))}
+            </select>
+          )}
         </Row>
       </Section>
+
+      {/* AI assistant (role-based) */}
+      <AISettings />
 
       {/* Data */}
       <Section title="Dữ liệu & sao lưu">
@@ -304,48 +303,3 @@ export default function SettingsPage() {
   )
 }
 
-function Section({ title, danger, children }: { title: string; danger?: boolean; children: React.ReactNode }) {
-  return (
-    <section className={`card p-5 ${danger ? 'border-rose-200 dark:border-rose-900/60' : ''}`}>
-      <h2 className={`mb-2 text-sm font-bold uppercase tracking-wide ${danger ? 'text-rose-500' : 'text-slate-400'}`}>{title}</h2>
-      <div className="divide-y divide-slate-100 dark:divide-slate-800">{children}</div>
-    </section>
-  )
-}
-
-function Row({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-wrap items-center justify-between gap-3 py-3.5">
-      <div className="min-w-0">
-        <p className="font-medium">{label}</p>
-        {hint && <p className="text-sm text-slate-400">{hint}</p>}
-      </div>
-      <div className="shrink-0">{children}</div>
-    </div>
-  )
-}
-
-function Toggle({
-  checked,
-  onChange,
-  label,
-  disabled,
-}: {
-  checked: boolean
-  onChange: (b: boolean) => void
-  label?: string
-  disabled?: boolean
-}) {
-  return (
-    <button
-      role="switch"
-      aria-checked={checked}
-      aria-label={label}
-      disabled={disabled}
-      onClick={() => onChange(!checked)}
-      className={`relative h-7 w-12 rounded-full transition disabled:opacity-40 ${checked ? 'bg-brand-600' : 'bg-slate-300 dark:bg-slate-700'}`}
-    >
-      <span className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all ${checked ? 'left-6' : 'left-1'}`} />
-    </button>
-  )
-}

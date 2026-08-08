@@ -5,6 +5,7 @@ import { buildSkeleton, checkFillAnswer } from '@/lib/quiz'
 import { pronounce, wordAudio } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useSettings } from '@/store/settingsStore'
+import { useProvideContext } from '@/store/contextStore'
 import HighlightExample from '@/components/HighlightExample'
 
 interface Props {
@@ -36,6 +37,13 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
   const hiddenPositions = useMemo(
     () => skeleton.map((c, i) => (!c.revealed ? i : -1)).filter((i) => i >= 0),
     [skeleton],
+  )
+
+  useProvideContext(
+    word ? `Đang kiểm tra từ "${word.word}"` : 'Đang làm quiz',
+    word
+      ? { word: word.word, meaning: word.meaning, ipa: word.ipa, pos: word.pos, exampleEn: word.exampleEn }
+      : undefined,
   )
 
   const play = () => pronounce({ audioSrc: wordAudio(q.wordId), text: word?.word ?? q.prompt, lang: ttsLang, rate: ttsRate })

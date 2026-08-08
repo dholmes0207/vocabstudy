@@ -1019,3 +1019,21 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 - `features/tutor/Tutor.tsx` — màn chat (`/tutor`): trạng thái chưa-key, gợi ý câu hỏi, loading, xử lý lỗi, xóa hội thoại. Mục cấu hình key/model trong Cài đặt.
 
 **Kết quả test (mock fetch, không cần key thật):** mọi request đều kèm `system` guardrail (đã kiểm chứng), model/tham số đúng; lỗi 401 → thông báo thân thiện; input quá dài bị chặn; **key không xuất hiện trong file sao lưu**. Việc từ chối chủ đề ngoài phạm vi do model o4-mini thực thi theo system prompt (cần key thật để thử trực tiếp — xem checklist trong phần bàn giao).
+
+---
+
+## PHẦN G — CÁ NHÂN HOÁ (LEVEL) · BONG BÓNG AI ĐỌC NGỮ CẢNH · PHÂN QUYỀN
+
+**🧑 Người học:** "Trình mình khác nhau — mới thì cần giảng dễ, giỏi thì học sâu (học 1 hiểu 5/10). Trợ lý nên biết mình đang xem từ nào mà gợi ý luôn. Ở lớp thì cô giáo cắm key, tụi mình chỉ học, không thấy key."
+
+**📊 BA:** (1) *Level* 5 bậc tự đánh giá từ tiến độ, override được, điều khiển độ sâu + gợi ý. (2) *Bong bóng AI* nổi mọi trang, đọc ngữ cảnh trang (từ đang xem/route) → gợi ý & trả lời theo ngữ cảnh + level. (3) *Phân quyền*: admin quản lý provider (model+key) + PIN; học sinh chỉ chọn model & học, không thấy key. ⚠️ **Trung thực:** phân quyền client-side là ranh giới tổ chức/UX, không phải bảo mật cứng — muốn chặt cần proxy backend (baseUrl trỏ về proxy).
+
+**💻 DEV (đã hiện thực & test):**
+- `lib/level.ts` — 5 bậc (A1→C1) + `computeLevel(mastered, learned, accuracy)`; `hooks/useEffectiveLevel.ts` (auto/override). Level chèn vào system prompt qua `buildMessages({levelInstruction})`.
+- `store/contextStore.ts` + `useProvideContext()` — mỗi màn (FlashcardSession, QuizRunner, Browse, Dashboard) đăng ký ngữ cảnh; `lib/ai/suggestions.ts` sinh gợi ý theo ngữ cảnh+level; ngữ cảnh chèn vào prompt như *tham khảo* (không phá guardrail).
+- `store/aiStore.ts` v2 — `providers[]` (label/model/apiKey/baseUrl), `selectedProviderId`, `adminPinHash` (djb2), `adminUnlocked` (session-only, không persist), migrate từ v1 single-key. `isAdmin = pin chưa đặt || đã mở khóa`.
+- `components/AssistantFab.tsx` + `features/tutor/TutorChat.tsx` (tách dùng chung) — bong bóng nổi mọi trang, panel responsive, badge level, header model; bỏ route/nav `/tutor` cũ. Cài đặt: `features/settings/AISettings.tsx` (admin: CRUD provider + PIN; học sinh: chọn model + mở khóa) + mục Trình độ.
+
+**Kết quả test (mock fetch):** request kèm cả guardrail + "PHÂN HÓA THEO TRÌNH ĐỘ" (đúng level) + "NGỮ CẢNH TRANG" (đúng từ đang xem); gợi ý bám từ+level; đặt PIN→Khóa→chế độ học sinh ẩn key, chỉ còn chọn model; PIN sai bị từ chối, đúng thì mở khóa; học sinh vẫn chat được. Build TypeScript sạch.
+
+> ⚠️ Client-side thuần: role/level/key đều nằm ở trình duyệt. Đây là ranh giới tổ chức; bảo mật thật cần proxy backend.
