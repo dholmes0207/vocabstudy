@@ -3,6 +3,7 @@ import { AlertTriangle, Download, Upload, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useAI } from '@/store/aiStore'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
@@ -11,6 +12,7 @@ export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
   const audioVoices = useData((s) => s.audioVoices)
   const settings = useSettings()
+  const ai = useAI()
   const resetLanguage = useStudy((s) => s.resetLanguage)
 
   const fileRef = useRef<HTMLInputElement>(null)
@@ -203,6 +205,43 @@ export default function SettingsPage() {
         </Row>
         <Row label="Tự động phát âm" hint="Đọc từ ngay khi hiện thẻ mới.">
           <Toggle checked={canPronounce && settings.autoSpeak} onChange={settings.setAutoSpeak} label="Tự động phát âm" disabled={!canPronounce} />
+        </Row>
+      </Section>
+
+      {/* AI assistant */}
+      <Section title="Trợ lý AI (học từ vựng)">
+        <p className="mb-1 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-500 dark:bg-slate-800/60">
+          🔒 Key được lưu <b>trên máy này</b> và chỉ gửi tới OpenAI khi bạn chat. Không đưa vào file sao lưu, không gửi đi
+          đâu khác. Đừng dùng trên máy công cộng. (Khi deploy công khai nên dùng proxy để giấu key.)
+        </p>
+        <Row label="OpenAI API key" hint={ai.apiKey ? '✓ Đã lưu key trên máy này.' : 'Lấy tại platform.openai.com → API keys.'}>
+          <div className="flex items-center gap-2">
+            <input
+              type="password"
+              value={ai.apiKey}
+              onChange={(e) => ai.setApiKey(e.target.value)}
+              placeholder="sk-…"
+              aria-label="OpenAI API key"
+              autoComplete="off"
+              spellCheck={false}
+              className="w-44 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+            />
+            {ai.apiKey && (
+              <button className="btn-ghost !px-2 text-sm" onClick={() => ai.setApiKey('')}>
+                Xóa
+              </button>
+            )}
+          </div>
+        </Row>
+        <Row label="Model" hint="Mặc định o4-mini (model reasoning gọn, rẻ).">
+          <input
+            type="text"
+            value={ai.model}
+            onChange={(e) => ai.setModel(e.target.value)}
+            aria-label="Model AI"
+            spellCheck={false}
+            className="w-36 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+          />
         </Row>
       </Section>
 

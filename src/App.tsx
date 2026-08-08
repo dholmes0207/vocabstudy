@@ -11,6 +11,7 @@ const Review = lazy(() => import('./features/review/Review'))
 const Quiz = lazy(() => import('./features/quiz/Quiz'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
+const Tutor = lazy(() => import('./features/tutor/Tutor'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
               <Route path="/review" element={<Review />} />
               <Route path="/quiz" element={<Quiz />} />
               <Route path="/browse" element={<Browse />} />
+              <Route path="/tutor" element={<Tutor />} />
               <Route path="/stats" element={<Stats />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />

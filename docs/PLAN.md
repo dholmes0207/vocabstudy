@@ -1002,3 +1002,20 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 - `lib/confetti.ts`: pháo giấy canvas tự viết (không thư viện), tôn trọng `prefers-reduced-motion`; kích hoạt ở `SessionComplete`.
 
 **Đánh giá cuối:** cách `abi__ty` của bạn **được giữ làm lõi** và mở rộng thành chế độ Đánh vần đầy đủ — vừa dễ cho người lười (có gợi ý), vừa buộc chủ động nhớ mặt chữ (gõ + chấm từng chữ).
+
+---
+
+## PHẦN F — TRỢ LÝ AI HỌC TỪ VỰNG (có Guardrail)
+
+**🧑 Người học:** "Muốn hỏi như hỏi gia sư (nghĩa, khác nhau, ví dụ, mẹo nhớ) bằng tiếng Việt. Nhưng phải chặn hỏi linh tinh (code/toán/chat) — vừa lệch mục đích vừa tốn tiền API. Nhập key 1 lần, nói rõ key lưu đâu."
+
+**📊 BA:** Gia sư từ vựng AI, hỏi–đáp tự nhiên **nhưng khóa trong phạm vi học từ vựng tiếng Anh**. Guardrail nhiều lớp: GR-1 định vị phạm vi (allow/deny list trong system prompt), GR-2 từ chối chuẩn, GR-3 chống prompt-injection, GR-4 lớp client (rỗng/dài/giới hạn lịch sử), GR-5 fail-safe (lỗi key/API → thông báo thân thiện). NFR: không backend, bring-your-own-key, **key tách khỏi backup**, model cấu hình được.
+
+**💻 DEV (đã hiện thực & test):**
+- `lib/ai/systemPrompt.ts` — guardrail lõi (allow/deny + cách từ chối + chống injection); `buildMessages()` luôn dẫn đầu bằng `system`, giới hạn 10 lượt.
+- `lib/ai/guardrail.ts` — pre-check client (rỗng/≤1000 ký tự) + gợi ý câu hỏi hợp lệ. (Không lọc từ khóa chủ đề vì dễ sai — vd "code" cũng là 1 từ vựng; để model quyết định phạm vi.)
+- `lib/ai/openai.ts` — gọi Chat Completions `o4-mini` (`max_completion_tokens`, `reasoning_effort: low`, không gửi `temperature`); ánh xạ lỗi 401/403/404/429/4xx/5xx sang tiếng Việt, không lộ key.
+- `store/aiStore.ts` — persist `vocab-ai.v1` (KHÔNG prefix `vocab.` ⇒ không lọt vào file backup).
+- `features/tutor/Tutor.tsx` — màn chat (`/tutor`): trạng thái chưa-key, gợi ý câu hỏi, loading, xử lý lỗi, xóa hội thoại. Mục cấu hình key/model trong Cài đặt.
+
+**Kết quả test (mock fetch, không cần key thật):** mọi request đều kèm `system` guardrail (đã kiểm chứng), model/tham số đúng; lỗi 401 → thông báo thân thiện; input quá dài bị chặn; **key không xuất hiện trong file sao lưu**. Việc từ chối chủ đề ngoài phạm vi do model o4-mini thực thi theo system prompt (cần key thật để thử trực tiếp — xem checklist trong phần bàn giao).

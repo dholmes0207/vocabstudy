@@ -21,7 +21,8 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 | 📚 **Tra cứu** | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học. |
 | 📈 **Thống kê** | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**. |
 | 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên. |
-| ⚙️ **Cài đặt** | Giao diện sáng/tối, chọn giọng đọc, hạn mức từ/ngày, tốc độ đọc, sao lưu/khôi phục (JSON). |
+| 🤖 **Trợ lý AI** | Gia sư hỏi–đáp (OpenAI **o4-mini**) **chỉ** về học từ vựng tiếng Anh — có **guardrail** từ chối mọi yêu cầu ngoài phạm vi. |
+| ⚙️ **Cài đặt** | Giao diện sáng/tối, chọn giọng đọc, hạn mức từ/ngày, tốc độ đọc, API key AI, sao lưu/khôi phục (JSON). |
 
 **Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
 
@@ -34,6 +35,20 @@ Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti
 Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong *Cài đặt → Phát âm*.
 
 ---
+
+## 🤖 Trợ lý AI (có Guardrail)
+
+Màn **Trợ lý** (`/tutor`) là gia sư hỏi–đáp dùng **OpenAI o4-mini**, được **khóa chặt trong phạm vi học từ vựng tiếng Anh** qua nhiều lớp guardrail:
+
+- **GR-1 Định vị phạm vi** — system prompt (`src/lib/ai/systemPrompt.ts`) liệt kê rõ việc được phép (nghĩa, cách dùng, ví dụ, phân biệt từ, phát âm, mẹo nhớ, quiz từ vựng…) và bị cấm (code, toán, chính trị, y tế/pháp lý/tài chính, chat chit, ngôn ngữ khác, nội dung hại…).
+- **GR-2 Từ chối chuẩn** — ngoài phạm vi thì từ chối lịch sự bằng tiếng Việt + gợi ý câu hỏi hợp lệ, không thực hiện.
+- **GR-3 Chống prompt-injection** — coi tin nhắn người dùng là *dữ liệu*; bỏ qua "đổi vai / lộ system prompt / bỏ luật / chế độ dev".
+- **GR-4 Lớp client** (`src/lib/ai/guardrail.ts`) — chặn input rỗng/quá dài, giới hạn lịch sử gửi lên.
+- **GR-5 Fail-safe** — lỗi key/API được ánh xạ thành thông báo tiếng Việt thân thiện, không lộ chi tiết nhạy cảm.
+
+**Cấu hình:** Cài đặt → *Trợ lý AI* → nhập **OpenAI API key** của bạn (lấy ở `platform.openai.com`). Key lưu ở `localStorage` (store riêng `vocab-ai.v1`) — **không** đưa vào file sao lưu, chỉ gửi tới OpenAI khi chat. Model mặc định `o4-mini`, đổi được.
+
+> ⚠️ **Bảo mật:** đây là kiểu *bring-your-own-key* chạy phía client — phù hợp dùng cá nhân/nội bộ. Khi **deploy công khai**, nên đặt một **proxy backend** giữ key thay vì để lộ ở trình duyệt (chỉnh `baseUrl` trỏ về proxy).
 
 ## 🚀 Chạy dự án
 
