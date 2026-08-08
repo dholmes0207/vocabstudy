@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Check, Volume2, X } from 'lucide-react'
 import type { QuizQuestion, Word } from '@/types'
 import { checkFillAnswer } from '@/lib/quiz'
-import { speak } from '@/lib/tts'
+import { pronounce, wordAudio } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useSettings } from '@/store/settingsStore'
 import HighlightExample from '@/components/HighlightExample'
@@ -32,7 +32,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
   // Auto-play audio for listen questions; focus the input for fill questions.
   useEffect(() => {
     if (done || !q) return
-    if (q.mode === 'listen') speak(q.prompt, { lang: ttsLang, rate: ttsRate })
+    if (q.mode === 'listen') pronounce({ audioSrc: wordAudio(q.wordId), text: q.prompt, lang: ttsLang, rate: ttsRate })
     if (q.mode === 'fill') inputRef.current?.focus()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, done])
@@ -92,7 +92,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
         <div className="mt-3">
           {q.mode === 'listen' ? (
             <button
-              onClick={() => speak(q.prompt, { lang: ttsLang, rate: ttsRate })}
+              onClick={() => pronounce({ audioSrc: wordAudio(q.wordId), text: q.prompt, lang: ttsLang, rate: ttsRate })}
               className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg transition active:scale-95"
               aria-label="Nghe lại"
             >
@@ -107,7 +107,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
               <h2 className="text-center text-3xl font-extrabold">{q.prompt}</h2>
               {q.mode === 'en-to-vi' && (
                 <button
-                  onClick={() => speak(q.prompt, { lang: ttsLang, rate: ttsRate })}
+                  onClick={() => pronounce({ audioSrc: wordAudio(q.wordId), text: q.prompt, lang: ttsLang, rate: ttsRate })}
                   className="rounded-full bg-brand-50 p-2 text-brand-600 dark:bg-brand-950 dark:text-brand-300"
                   aria-label="Phát âm"
                 >

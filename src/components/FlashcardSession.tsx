@@ -3,7 +3,7 @@ import { Check, X } from 'lucide-react'
 import type { Word } from '@/types'
 import Flashcard from './Flashcard'
 import { useSettings } from '@/store/settingsStore'
-import { speak } from '@/lib/tts'
+import { pronounce, wordAudio } from '@/lib/audio'
 
 interface Props {
   words: Word[]
@@ -24,7 +24,8 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
 
   // Auto-pronounce each new word when it appears (if enabled).
   useEffect(() => {
-    if (!done && autoSpeak && current) speak(current.word, { lang: ttsLang, rate: useSettings.getState().ttsRate })
+    if (!done && autoSpeak && current)
+      pronounce({ audioSrc: wordAudio(current.id), text: current.word, lang: ttsLang, rate: useSettings.getState().ttsRate })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, done])
 

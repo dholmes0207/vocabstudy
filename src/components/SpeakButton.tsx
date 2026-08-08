@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
-import { isTTSSupported, speak } from '@/lib/tts'
+import { isTTSSupported } from '@/lib/tts'
+import { pronounce } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 
 interface Props {
   text: string
   lang: string
+  /** Pre-rendered audio URL to prefer over Web Speech. */
+  audioSrc?: string
   /** Visual size of the button. */
   size?: 'sm' | 'md' | 'lg'
   label?: string
   className?: string
 }
 
-const supported = isTTSSupported()
+const speechSupported = isTTSSupported()
 
 const sizeMap = {
   sm: 'h-8 w-8 [&_svg]:h-4 [&_svg]:w-4',
@@ -20,13 +23,16 @@ const sizeMap = {
   lg: 'h-14 w-14 [&_svg]:h-7 [&_svg]:w-7',
 }
 
-export default function SpeakButton({ text, lang, size = 'md', label, className = '' }: Props) {
+export default function SpeakButton({ text, lang, audioSrc, size = 'md', label, className = '' }: Props) {
   const rate = useSettings((s) => s.ttsRate)
   const [speaking, setSpeaking] = useState(false)
 
   useEffect(() => () => setSpeaking(false), [text])
 
-  if (!supported) {
+  // A pre-rendered file can play even when the browser has no speech synthesis.
+  const canPlay = speechSupported || !!audioSrc
+
+  if (!canPlay) {
     return (
       <span
         title="Trình duyệt không hỗ trợ phát âm"
@@ -39,7 +45,9 @@ export default function SpeakButton({ text, lang, size = 'md', label, className 
 
   const handle = (e: React.MouseEvent) => {
     e.stopPropagation()
-    speak(text, {
+    pronounce({
+      audioSrc,
+      text,
       lang,
       rate,
       onStart: () => setSpeaking(true),

@@ -162,6 +162,8 @@ export interface Settings {
   dailyReviewLimit: number
   /** TTS playback rate (0.5 - 1.25). */
   ttsRate: number
+  /** Pinned TTS voice (voiceURI), or null to auto-select the best available. */
+  ttsVoiceURI: string | null
   /** Whether to auto-play pronunciation when a flashcard is revealed. */
   autoSpeak: boolean
 }

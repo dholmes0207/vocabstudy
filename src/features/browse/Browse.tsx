@@ -9,6 +9,7 @@ import type { CardPhase } from '@/types'
 import SpeakButton from '@/components/SpeakButton'
 import PosBadge, { POS_LABEL } from '@/components/PosBadge'
 import HighlightExample from '@/components/HighlightExample'
+import { exampleAudio, wordAudio } from '@/lib/audio'
 
 const PAGE_SIZE = 24
 
@@ -169,12 +170,12 @@ function WordRow({
             <span className="block truncate text-sm text-slate-500">{word.meaning}</span>
           </span>
         </button>
-        <SpeakButton text={word.word} lang={ttsLang} size="sm" className="shrink-0" />
+        <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="sm" className="shrink-0" />
       </div>
       {expanded && (
         <div className="space-y-2 border-t border-slate-100 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/40 animate-fade-in">
           <div className="flex items-start gap-2">
-            <SpeakButton text={word.exampleEn} lang={ttsLang} size="sm" className="mt-0.5 shrink-0" />
+            <SpeakButton text={word.exampleEn} lang={ttsLang} audioSrc={exampleAudio(word.id)} size="sm" className="mt-0.5 shrink-0" />
             <p className="text-slate-700 dark:text-slate-200">
               <HighlightExample sentence={word.exampleEn} word={word.word} />
             </p>

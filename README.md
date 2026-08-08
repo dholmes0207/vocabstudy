@@ -23,7 +23,9 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 
 **Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
 
-Phát âm dùng **Web Speech API (TTS)** của trình duyệt — không cần file âm thanh, không tốn phí.
+### 🔊 Phát âm bằng giọng Neural
+
+Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong *Cài đặt → Phát âm*.
 
 ---
 
@@ -45,7 +47,21 @@ npm run build
 npm run preview
 ```
 
-> 💡 TTS (phát âm) hoạt động tốt nhất trên Chrome/Edge/Safari. Trên một số trình duyệt cần bật giọng đọc tiếng Anh của hệ điều hành.
+> 💡 Audio phát âm đã được tạo sẵn trong `public/audio/en/` (2000 file, ~28MB) nên chạy được ngay, kể cả offline.
+
+### Tạo lại / đổi giọng audio (tuỳ chọn)
+
+Audio được sinh bằng `edge-tts` (Python). Cần khi bạn muốn đổi giọng, đổi tốc độ, hoặc tạo audio cho ngôn ngữ mới:
+
+```bash
+pip install edge-tts
+python3 scripts/generate_audio.py                       # giọng mặc định en-US-AriaNeural
+python3 scripts/generate_audio.py --voice en-US-JennyNeural   # đổi giọng
+python3 scripts/generate_audio.py --voice en-GB-SoniaNeural --rate -10%   # giọng Anh-Anh, chậm hơn
+edge-tts --list-voices                                  # xem toàn bộ giọng có sẵn
+```
+
+Script **bỏ qua file đã có** (chạy lại an toàn) và tự tạo `wN.mp3` (từ) + `eN.mp3` (câu ví dụ) trong `public/audio/<code>/`.
 
 ---
 
@@ -114,7 +130,13 @@ Kiến trúc "language pack" cho phép thêm ngôn ngữ **không cần sửa lo
      "count": 800, "file": "fr.json", "description": "…" }
    ```
 
-3. Xong! Ngôn ngữ mới tự xuất hiện trong bộ chọn ở góc phải header. Tiến độ được lưu **tách biệt theo từng ngôn ngữ** (khóa `vocab.progress.v1` → `progress[<code>]`).
+3. (Tuỳ chọn) Tạo audio phát âm cho ngôn ngữ mới:
+   ```bash
+   python3 scripts/generate_audio.py --code fr --voice fr-FR-DeniseNeural
+   ```
+   Nếu chưa có audio, app tự dùng giọng Web Speech của trình duyệt cho ngôn ngữ đó.
+
+4. Xong! Ngôn ngữ mới tự xuất hiện trong bộ chọn ở góc phải header. Tiến độ được lưu **tách biệt theo từng ngôn ngữ** (khóa `vocab.progress.v1` → `progress[<code>]`).
 
 `posCategory` nhận các giá trị: `noun, verb, adjective, adverb, preposition, conjunction, pronoun, determiner, article, other` (dùng để tô màu và sinh đáp án nhiễu cho quiz).
 
@@ -134,7 +156,7 @@ Chi tiết đầy đủ trong [`docs/PLAN.md`](docs/PLAN.md) — Phần C & D.
 
 ## 🛠️ Công nghệ
 
-React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (HashRouter) · lucide-react · Web Speech API.
+React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (HashRouter) · lucide-react · audio Neural tạo sẵn (edge-tts) + Web Speech API fallback.
 
 Deploy tĩnh dễ dàng lên GitHub Pages / Netlify / Vercel (đã đặt `base: './'` và dùng HashRouter nên không lo lỗi 404 khi refresh).
 

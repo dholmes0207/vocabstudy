@@ -9,6 +9,7 @@ import { generateQuiz } from '@/lib/quiz'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import SpeakButton from '@/components/SpeakButton'
+import { wordAudio } from '@/lib/audio'
 import QuizRunner from './QuizRunner'
 
 type Scope = 'learned' | 'hard' | 'all'
@@ -62,7 +63,7 @@ export default function Quiz() {
                     if (!w) return null
                     return (
                       <li key={id} className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm dark:bg-slate-800/60">
-                        <SpeakButton text={w.word} lang={pack.meta.ttsLang} size="sm" />
+                        <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
                         <b>{w.word}</b>
                         <span className="text-slate-400">—</span>
                         <span className="text-slate-600 dark:text-slate-300">{w.meaning}</span>

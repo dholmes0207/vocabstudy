@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import type { DataManifest, LanguagePack } from '@/types'
 import { loadManifest, loadPack } from '@/lib/dataLoader'
+import { setAudioLang } from '@/lib/audio'
 
 type Status = 'idle' | 'loading' | 'ready' | 'error'
 
@@ -34,6 +35,7 @@ export const useData = create<DataState>((set, get) => ({
     set({ status: 'loading', error: null })
     try {
       const pack = await loadPack(code)
+      setAudioLang(code)
       set({ pack, status: 'ready' })
     } catch (e) {
       set({ status: 'error', error: msg(e) })

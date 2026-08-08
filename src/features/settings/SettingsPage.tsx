@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AlertTriangle, Download, Upload, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { isTTSSupported, speak } from '@/lib/tts'
+import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { downloadBackup, importBackup } from '@/lib/backup'
 
 export default function SettingsPage() {
@@ -15,6 +15,16 @@ export default function SettingsPage() {
   const [confirmReset, setConfirmReset] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
   const ttsOk = isTTSSupported()
+
+  // Installed voices load asynchronously; refresh when the browser reports them.
+  const [voices, setVoices] = useState(() => listVoices(pack.meta.ttsLang))
+  useEffect(() => {
+    if (!ttsOk) return
+    const refresh = () => setVoices(listVoices(pack.meta.ttsLang))
+    refresh()
+    window.speechSynthesis.addEventListener('voiceschanged', refresh)
+    return () => window.speechSynthesis.removeEventListener('voiceschanged', refresh)
+  }, [pack.meta.ttsLang, ttsOk])
 
   const onImport = (file: File) => {
     const reader = new FileReader()
@@ -85,6 +95,38 @@ export default function SettingsPage() {
           <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
             ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc Safari.
           </p>
+        )}
+        {ttsOk && voices.length === 0 && (
+          <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
+            ⚠️ Máy chưa cài giọng đọc tiếng Anh nào nên phát âm có thể rất máy móc. Dùng <b>Google Chrome</b> (có sẵn
+            “Google US English”) hoặc cài gói giọng đọc tiếng Anh của hệ điều hành để nghe tự nhiên hơn.
+          </p>
+        )}
+        {ttsOk && voices.length > 0 && (
+          <Row label="Giọng đọc" hint="Chọn giọng nghe tự nhiên nhất. Giọng có chữ Google/Natural/Neural thường hay nhất.">
+            <div className="flex items-center gap-2">
+              <select
+                value={settings.ttsVoiceURI ?? ''}
+                onChange={(e) => settings.setTtsVoiceURI(e.target.value || null)}
+                aria-label="Chọn giọng đọc"
+                className="max-w-[13rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+              >
+                <option value="">Tự động (tốt nhất)</option>
+                {voices.map((v) => (
+                  <option key={v.voiceURI} value={v.voiceURI}>
+                    {v.name} ({v.lang})
+                  </option>
+                ))}
+              </select>
+              <button
+                className="btn-secondary !px-3"
+                onClick={() => speak('Hello! This is how this voice sounds.', { lang: pack.meta.ttsLang, rate: settings.ttsRate })}
+                aria-label="Nghe thử giọng đã chọn"
+              >
+                <Volume2 className="h-4 w-4" />
+              </button>
+            </div>
+          </Row>
         )}
         <Row label="Tốc độ đọc" hint="Chậm lại nếu bạn muốn nghe rõ từng âm.">
           <div className="flex items-center gap-3">
