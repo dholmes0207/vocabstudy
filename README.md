@@ -37,65 +37,47 @@ Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (
 
 ---
 
-## 🤖 Trợ lý AI (có Guardrail)
+## 🤖 Trợ lý AI (có Guardrail, chạy server-side)
 
-Màn **Trợ lý** (`/tutor`) là gia sư hỏi–đáp dùng **OpenAI o4-mini**, được **khóa chặt trong phạm vi học từ vựng tiếng Anh** qua nhiều lớp guardrail:
+Bong bóng trợ lý (`src/components/AssistantFab.tsx`) nổi ở mọi trang, dùng **OpenAI o4-mini** qua **Cloudflare Pages Function** `/api/ai/chat` — **key OpenAI là secret trên server, không bao giờ ra trình duyệt**. Khóa chặt trong phạm vi học từ vựng tiếng Anh:
 
-- **GR-1 Định vị phạm vi** — system prompt (`src/lib/ai/systemPrompt.ts`) liệt kê rõ việc được phép (nghĩa, cách dùng, ví dụ, phân biệt từ, phát âm, mẹo nhớ, quiz từ vựng…) và bị cấm (code, toán, chính trị, y tế/pháp lý/tài chính, chat chit, ngôn ngữ khác, nội dung hại…).
-- **GR-2 Từ chối chuẩn** — ngoài phạm vi thì từ chối lịch sự bằng tiếng Việt + gợi ý câu hỏi hợp lệ, không thực hiện.
-- **GR-3 Chống prompt-injection** — coi tin nhắn người dùng là *dữ liệu*; bỏ qua "đổi vai / lộ system prompt / bỏ luật / chế độ dev".
-- **GR-4 Lớp client** (`src/lib/ai/guardrail.ts`) — chặn input rỗng/quá dài, giới hạn lịch sử gửi lên.
-- **GR-5 Fail-safe** — lỗi key/API được ánh xạ thành thông báo tiếng Việt thân thiện, không lộ chi tiết nhạy cảm.
+- **Định vị phạm vi + từ chối chuẩn + chống prompt-injection** — system prompt (`src/lib/ai/systemPrompt.ts`) chạy **ở Function** (server), nên học viên mở DevTools cũng không gọi tắt được.
+- **Cá nhân hoá theo trình độ** (`src/lib/level.ts`): 5 bậc A1→C1, tự ước lượng từ tiến độ; chèn vào system prompt để giảng đúng mức ("học 1 hiểu 2/3/5/10").
+- **Đọc ngữ cảnh trang** (`src/store/contextStore.ts`): trợ lý biết đang xem/ôn/kiểm tra từ nào để gợi ý & trả lời sát hơn.
+- **Lớp client** (`src/lib/ai/guardrail.ts`): chặn input rỗng/quá dài trước khi gọi.
 
-**Cá nhân hoá theo trình độ** (`src/lib/level.ts`): 5 bậc A1→C1, tự ước lượng từ tiến độ (số từ thành thạo + độ chính xác), chỉnh tay được trong Cài đặt. Trình độ được chèn vào system prompt để trợ lý giảng đúng mức ("học 1 hiểu 2/3/5/10") và đổi **gợi ý câu hỏi**.
-
-**Bong bóng nổi + đọc ngữ cảnh** (`src/components/AssistantFab.tsx`): trợ lý là 1 nút nổi ở mọi trang (thay vì mục sidebar). Mỗi màn đăng ký "ngữ cảnh" (`src/store/contextStore.ts`) — vd đang xem/ôn/kiểm tra từ nào — để trợ lý gợi ý và trả lời sát ngữ cảnh (ngữ cảnh được đưa vào prompt dưới dạng *tham khảo*, không phải mệnh lệnh).
-
-**Phân quyền (admin / học sinh)** (`src/store/aiStore.ts`):
-- **Admin** quản lý danh sách **provider** (nhiều model + API key), đặt **mã PIN** để khóa. Học sinh **chọn model** nhưng **không thấy/sửa key**.
-- Chưa đặt PIN = chế độ *thiết lập* (ai cũng là admin). Đặt PIN → khóa; mở lại bằng PIN.
-- Key lưu `localStorage` (store `vocab-ai.v1`) — **không** vào file sao lưu, chỉ gửi tới OpenAI khi chat.
-
-> ⚠️ **Bảo mật:** *bring-your-own-key* phía client + phân quyền chỉ là ranh giới **tổ chức/UX** (trình duyệt vẫn đọc được localStorage), phù hợp cá nhân/lớp học. Khi **deploy công khai**, đặt **proxy backend** giữ key & thực thi quyền server-side, rồi trỏ `baseUrl` của provider về proxy.
+Yêu cầu **đăng nhập** để dùng AI. Cấu hình key = biến `OPENAI_API_KEY` trên Cloudflare (xem [DEPLOY.md](DEPLOY.md)).
 
 ## 🚀 Chạy dự án
 
 Yêu cầu: **Node.js ≥ 18** (khuyến nghị 20) và npm.
 
 ```bash
-# 1. Cài đặt (frontend + backend)
 npm install
+cp .env.example .env          # điền VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY (nếu dùng tài khoản)
+npm run dev                   # web (phần học + đăng nhập + đồng bộ Supabase)
 
-# 2. Tạo file cấu hình server
-cp .env.example .env      # rồi đặt JWT_SECRET, (tuỳ chọn) OPENAI_API_KEY
-
-# 3. Chạy full-stack dev: Vite (web, cổng 5173) + Express (API, cổng 8787)
-npm run dev:all
-#   Chỉ frontend:  npm run dev
-#   Chỉ backend:   npm run dev:server
-
-# 4. Build production + chạy 1 tiến trình phục vụ cả web lẫn API
-npm run build
-npm start                 # NODE_ENV=production, mở http://localhost:8787
+# Chạy đầy đủ cả API (AI, admin) ở local qua Cloudflare Functions:
+cp .dev.vars.example .dev.vars   # điền OPENAI_API_KEY + SUPABASE_* (secret local)
+npm run build && npm run pages:dev
 ```
 
-> 💡 Tài khoản **đầu tiên đăng ký sẽ là admin** (chủ hệ thống). Vào avatar góc phải → Quản trị để quản lý tài khoản & cắm API key AI (key nằm ở **server**, học viên không thấy).
-> Audio phát âm tạo sẵn trong `public/audio/en/` (~28MB) nên chạy được ngay, kể cả offline.
+> 💡 Chưa cấu hình Supabase → app vẫn chạy ở **chế độ khách** (tiến độ lưu localStorage). Tài khoản **đầu tiên đăng ký = admin**.
+> Audio phát âm tạo sẵn trong `public/audio/en/` (~56MB) nên chạy được ngay, kể cả offline.
 
-## 🏗️ Kiến trúc production (multi-user)
+## 🏗️ Kiến trúc (Cloudflare Pages + Supabase)
 
 | Lớp | Công nghệ | Ghi chú |
 |---|---|---|
-| Frontend | React 18 + Vite + Tailwind (giữ nguyên) | Dev proxy `/api` → backend; prod được Express phục vụ tĩnh từ `dist/`. |
-| Backend | **Express + TypeScript** (chạy bằng `tsx`) | `server/` — routes: auth, progress, admin, ai. |
-| Database | **SQLite** (`better-sqlite3`) | File `server/data.sqlite`; đường lên **PostgreSQL** cho prod lớn (đổi tầng data). |
-| Auth | **JWT trong cookie HttpOnly** + **bcrypt** | RBAC `student`/`admin` — **quyền kiểm ở server**. User đầu tiên = admin. |
-| AI | **Proxy server-side** `/api/ai/chat` | Key OpenAI + guardrail + level + ngữ cảnh chạy ở server → **học viên không bao giờ thấy key**. Provider quản lý trong Admin hoặc `OPENAI_API_KEY`. |
-| Đồng bộ | `progress(userId, langCode, dataJson)` | Tải khi đăng nhập, lưu debounce khi đổi; **migrate localStorage → tài khoản** lần đăng nhập đầu. |
+| Frontend | React 18 + Vite + Tailwind | Build tĩnh → **Cloudflare Pages**. |
+| Auth + DB | **Supabase** (Auth + Postgres + RLS) | Gọi từ browser bằng `@supabase/supabase-js`; RLS: mỗi user chỉ dữ liệu của mình. Schema: `supabase/schema.sql`. |
+| API (secret) | **Cloudflare Pages Functions** (`functions/`) | `/api/ai/chat` (AI proxy giữ key + guardrail), `/api/admin/users` (service-role, chỉ admin). |
+| Auth model | Supabase Auth + bảng `profiles` | RBAC `student`/`admin` kiểm **ở server**; user đầu tiên = admin (trigger). |
+| Đồng bộ | bảng `progress(user_id, lang_code, data jsonb)` | Tải khi đăng nhập, lưu debounce; **migrate localStorage → tài khoản** lần đầu. |
 
-**Deploy:** build rồi chạy `npm start` (một tiến trình Node phục vụ API + web). Có `Dockerfile` sẵn. Biến môi trường trong `.env` (xem `.env.example`): `JWT_SECRET` (bắt buộc ở prod), `OPENAI_API_KEY`, `DB_PATH`, `AI_DAILY_LIMIT`. Chi tiết thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần H).
+**Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocabstudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
 
-> ⚠️ **Bảo mật:** mật khẩu **bcrypt-hash**, key AI + phân quyền + guardrail đều **ở server**. Roadmap (ghi trong PLAN Phần H): Postgres + Drizzle migrations, refresh-token rotation, quên-mật-khẩu qua email, giới hạn AI theo lớp + usage log, quản lý lớp (mã lớp/CSV), helmet/HTTPS.
+> ⚠️ **Bảo mật:** mật khẩu do Supabase Auth quản lý; **RLS** chặn truy cập chéo; **key OpenAI + service-role chỉ ở Cloudflare secret**; quyền admin kiểm ở server. Roadmap: giới hạn lượt AI/học sinh, quản lý lớp (mã lớp/CSV), quên-mật-khẩu email.
 
 ### Tạo lại / đổi giọng audio (tuỳ chọn)
 

@@ -46,7 +46,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
     if (!user) return
     let alive = true
     api
-      .aiProviders()
+      .aiStatus()
       .then((r) => alive && setConfigured(r.configured))
       .catch(() => alive && setConfigured(false))
     return () => {

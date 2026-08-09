@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
-import { ApiError } from '@/lib/api'
 
 export default function AuthPage() {
   const navigate = useNavigate()
@@ -13,18 +12,29 @@ export default function AuthPage() {
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
   const [error, setError] = useState<string | null>(null)
+  const [info, setInfo] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
+    setInfo(null)
     setBusy(true)
     try {
-      if (mode === 'login') await login(email, password)
-      else await register(email, password, name)
-      navigate('/')
+      if (mode === 'login') {
+        await login(email, password)
+        navigate('/')
+      } else {
+        await register(email, password, name)
+        if (useAuth.getState().needsEmailConfirm) {
+          setInfo('Đã tạo tài khoản! Kiểm tra email để xác nhận, rồi quay lại đăng nhập nhé.')
+          setMode('login')
+        } else {
+          navigate('/')
+        }
+      }
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Có lỗi xảy ra, thử lại nhé.')
+      setError(err instanceof Error ? err.message : 'Có lỗi xảy ra, thử lại nhé.')
     } finally {
       setBusy(false)
     }
@@ -85,6 +95,7 @@ export default function AuthPage() {
             />
           </Field>
 
+          {info && <p className="rounded-lg bg-emerald-50 px-3 py-2 text-sm text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">{info}</p>}
           {error && <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-600 dark:bg-rose-950/60 dark:text-rose-300">{error}</p>}
 
           <button type="submit" disabled={busy} className="btn-primary h-11 w-full">

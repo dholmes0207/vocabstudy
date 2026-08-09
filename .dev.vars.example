@@ -1,0 +1,13 @@
+# Secrets for Cloudflare Pages Functions (server-side only — NEVER shipped to
+# the browser). Copy to `.dev.vars` for local `npm run pages:dev`, and set the
+# same as Encrypted environment variables in the Cloudflare Pages dashboard.
+
+# OpenAI (AI tutor). The key lives only here / on Cloudflare — students never see it.
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL=o4-mini
+OPENAI_BASE_URL=https://api.openai.com/v1
+
+# Supabase (for token verification + admin operations).
+SUPABASE_URL=https://YOUR-PROJECT.supabase.co
+SUPABASE_ANON_KEY=your-anon-public-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key

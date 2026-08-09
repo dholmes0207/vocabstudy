@@ -1061,3 +1061,18 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 - **Deploy**: 1 process Node phục vụ `/api` + static `dist`; `.env` (JWT_SECRET, OPENAI_API_KEY, DB_PATH); Dockerfile.
 
 **Roadmap (ghi từ design, chưa làm v1):** Drizzle + migrations, Postgres, refresh-token rotation, quên-mật-khẩu qua email, giới hạn lượt AI/học sinh + usage log, quản lý lớp (mã lớp, tạo hàng loạt, xem tiến độ lớp, xuất CSV), helmet/CORS hardening, HTTPS.
+
+---
+
+## PHẦN I — DEPLOY: CLOUDFLARE PAGES + SUPABASE (thay backend Express v1)
+
+Theo yêu cầu deploy lên **Cloudflare Pages** + **Supabase**, backend Express/SQLite ở Phần H **được thay** bằng kiến trúc serverless (Express không chạy trên Pages/Workers):
+
+- **Frontend tĩnh** → Cloudflare Pages.
+- **Supabase**: Auth (email/mật khẩu) + Postgres + **RLS** (`supabase/schema.sql`) — mỗi user chỉ dữ liệu của mình; `profiles` giữ role/status; trigger “user đầu tiên = admin”.
+- **Cloudflare Pages Functions** (`functions/`): `/api/ai/chat` (proxy OpenAI, guardrail + level + context, key = secret), `/api/ai/status`, `/api/admin/users` (service-role, chỉ admin).
+- **Đồng bộ**: bảng `progress(user_id, lang_code, data jsonb)` qua supabase-js; migrate localStorage → tài khoản.
+- Secret (OPENAI_API_KEY, SUPABASE_SERVICE_ROLE_KEY) chỉ ở Cloudflare; `VITE_SUPABASE_*` build-time.
+- Hướng dẫn từng bước: **`DEPLOY.md`**. Repo: github.com/dholmes0207/vocabstudy (private).
+
+*Ghi chú: mình không test trực tiếp được Supabase/Cloudflare (cần project + key của bạn); code đã build sạch (frontend + Functions type-check) và chạy chế độ khách OK. Live end-to-end xác minh sau khi bạn cắm Supabase + secret theo DEPLOY.md.*

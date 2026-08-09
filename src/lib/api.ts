@@ -1,28 +1,18 @@
-// Typed client for the backend API. Cookies (HttpOnly auth) ride along via
-// credentials: 'include'. Throws ApiError with a friendly message on failure.
+import { getAccessToken } from './supabase'
 
-export interface ApiUser {
-  id: number
+// Client for the Cloudflare Pages Functions API (server-side pieces that must
+// hold secrets): the AI proxy and admin operations. Auth and progress talk to
+// Supabase directly (see authStore / useProgressSync). Requests carry the
+// Supabase access token as a Bearer so the Function can verify the caller.
+
+export interface AdminUser {
+  id: string
   email: string
   name: string
   role: 'student' | 'admin'
   status: 'active' | 'locked'
-  createdAt: string
-  lastLoginAt: string | null
-}
-
-export interface ServerProvider {
-  id: number
-  label: string
-  model: string
-  isActive: boolean
-}
-
-/** Admin view of a provider (includes the key). */
-export interface AdminProvider extends ServerProvider {
-  apiKey: string
-  baseUrl: string
-  createdAt: string
+  created_at: string
+  last_sign_in_at: string | null
 }
 
 export class ApiError extends Error {
@@ -34,12 +24,16 @@ export class ApiError extends Error {
 }
 
 async function req<T>(path: string, options: RequestInit = {}): Promise<T> {
+  const token = await getAccessToken()
   let res: Response
   try {
     res = await fetch(`/api${path}`, {
-      credentials: 'include',
-      headers: { 'Content-Type': 'application/json', ...(options.headers ?? {}) },
       ...options,
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        ...(options.headers ?? {}),
+      },
     })
   } catch {
     throw new ApiError(0, 'Không kết nối được máy chủ. Kiểm tra mạng nhé.')
@@ -51,37 +45,17 @@ async function req<T>(path: string, options: RequestInit = {}): Promise<T> {
 }
 
 export const api = {
-  // Auth
-  register: (email: string, password: string, name?: string) =>
-    req<{ user: ApiUser }>('/auth/register', { method: 'POST', body: JSON.stringify({ email, password, name }) }),
-  login: (email: string, password: string) =>
-    req<{ user: ApiUser }>('/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) }),
-  logout: () => req<{ ok: true }>('/auth/logout', { method: 'POST' }),
-  me: () => req<{ user: ApiUser }>('/auth/me'),
+  // AI (Cloudflare Pages Function — OpenAI key stays a server-side secret)
+  aiStatus: () => req<{ configured: boolean; model: string }>('/ai/status'),
+  aiChat: (payload: { history: { role: 'user' | 'assistant'; content: string }[]; level?: number; context?: string }) =>
+    req<{ reply: string }>('/ai/chat', { method: 'POST', body: JSON.stringify(payload) }),
 
-  // Progress sync
-  getProgress: (lang: string) => req<{ data: unknown | null; updatedAt: string | null }>(`/progress/${lang}`),
-  putProgress: (lang: string, data: unknown) =>
-    req<{ updatedAt: string }>(`/progress/${lang}`, { method: 'PUT', body: JSON.stringify({ data }) }),
-
-  // AI (server proxy — key stays server-side)
-  aiProviders: () => req<{ configured: boolean; providers: ServerProvider[] }>('/ai/providers'),
-  aiChat: (payload: { history: { role: 'user' | 'assistant'; content: string }[]; level?: number; context?: string; providerId?: number }) =>
-    req<{ reply: string; remaining: number }>('/ai/chat', { method: 'POST', body: JSON.stringify(payload) }),
-
-  // Admin — users
-  adminUsers: () => req<{ users: ApiUser[] }>('/admin/users'),
-  adminPatchUser: (id: number, patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }) =>
-    req<{ user: ApiUser }>(`/admin/users/${id}`, { method: 'PATCH', body: JSON.stringify(patch) }),
-  adminResetPassword: (id: number, password: string) =>
-    req<{ ok: true }>(`/admin/users/${id}/reset-password`, { method: 'POST', body: JSON.stringify({ password }) }),
-  adminDeleteUser: (id: number) => req<{ ok: true }>(`/admin/users/${id}`, { method: 'DELETE' }),
-
-  // Admin — AI providers
-  adminProviders: () => req<{ providers: AdminProvider[] }>('/admin/ai-providers'),
-  adminAddProvider: (p: { label: string; model: string; apiKey: string; baseUrl: string }) =>
-    req<{ id: number }>('/admin/ai-providers', { method: 'POST', body: JSON.stringify(p) }),
-  adminPatchProvider: (id: number, patch: Partial<{ label: string; model: string; apiKey: string; baseUrl: string; isActive: boolean }>) =>
-    req<{ ok: true }>(`/admin/ai-providers/${id}`, { method: 'PATCH', body: JSON.stringify(patch) }),
-  adminDeleteProvider: (id: number) => req<{ ok: true }>(`/admin/ai-providers/${id}`, { method: 'DELETE' }),
+  // Admin (Function uses the Supabase service-role key to bypass RLS)
+  adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
+  adminPatchUser: (id: string, patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }) =>
+    req<{ ok: true }>('/admin/users', { method: 'PATCH', body: JSON.stringify({ id, ...patch }) }),
+  adminResetPassword: (id: string, password: string) =>
+    req<{ ok: true }>('/admin/users', { method: 'POST', body: JSON.stringify({ id, password }) }),
+  adminDeleteUser: (id: string) =>
+    req<{ ok: true }>('/admin/users', { method: 'DELETE', body: JSON.stringify({ id }) }),
 }

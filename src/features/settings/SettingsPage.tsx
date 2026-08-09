@@ -9,7 +9,6 @@ import { downloadBackup, importBackup } from '@/lib/backup'
 import { LEVELS, levelInfo } from '@/lib/level'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { Row, Section, Toggle } from './ui'
-import AISettings from './AISettings'
 
 export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
@@ -240,9 +239,6 @@ export default function SettingsPage() {
           )}
         </Row>
       </Section>
-
-      {/* AI assistant (role-based) */}
-      <AISettings />
 
       {/* Data */}
       <Section title="Dữ liệu & sao lưu">

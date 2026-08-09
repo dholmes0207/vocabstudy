@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { KeyRound, Plus, Trash2 } from 'lucide-react'
+import { Trash2 } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
-import { api, ApiError, type AdminProvider } from '@/lib/api'
+import { api, ApiError, type AdminUser } from '@/lib/api'
 
 export default function AdminPage() {
   const me = useAuth((s) => s.user)
-  const [tab, setTab] = useState<'users' | 'ai'>('users')
 
   if (me?.role !== 'admin') {
     return (
@@ -26,57 +25,39 @@ export default function AdminPage() {
     <div className="space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Quản trị 🛡️</h1>
-        <p className="mt-1 text-slate-500">Quản lý tài khoản và cấu hình trợ lý AI cho cả hệ thống.</p>
+        <p className="mt-1 text-slate-500">Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).</p>
       </header>
-      <div className="flex gap-2">
-        <TabBtn active={tab === 'users'} onClick={() => setTab('users')}>
-          Tài khoản
-        </TabBtn>
-        <TabBtn active={tab === 'ai'} onClick={() => setTab('ai')}>
-          Trợ lý AI (key server)
-        </TabBtn>
+
+      <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+        🔑 <b>API key AI</b> được đặt bằng biến môi trường <code>OPENAI_API_KEY</code> trên Cloudflare Pages (secret) — không nằm trong app,
+        học viên không bao giờ thấy. Đổi key/model ở Cloudflare → Settings → Environment variables.
       </div>
-      {tab === 'users' ? <UsersTab meId={me.id} /> : <ProvidersTab />}
+
+      <UsersTab meId={me.id} />
     </div>
   )
 }
 
-function TabBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${active ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}
-    >
-      {children}
-    </button>
-  )
-}
-
-function useAsync<T>(loader: () => Promise<T>, deps: unknown[] = []) {
-  const [data, setData] = useState<T | null>(null)
+function UsersTab({ meId }: { meId: string }) {
+  const [users, setUsers] = useState<AdminUser[]>([])
   const [error, setError] = useState<string | null>(null)
   const [reloadKey, setReloadKey] = useState(0)
+
   useEffect(() => {
     let alive = true
-    loader()
-      .then((d) => alive && setData(d))
+    api
+      .adminUsers()
+      .then((r) => alive && setUsers(r.users))
       .catch((e) => alive && setError(e instanceof ApiError ? e.message : 'Lỗi tải dữ liệu'))
     return () => {
       alive = false
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [...deps, reloadKey])
-  return { data, error, reload: () => setReloadKey((k) => k + 1) }
-}
-
-function UsersTab({ meId }: { meId: number }) {
-  const { data, error, reload } = useAsync(() => api.adminUsers())
-  const users = data?.users ?? []
+  }, [reloadKey])
 
   const act = async (fn: () => Promise<unknown>) => {
     try {
       await fn()
-      reload()
+      setReloadKey((k) => k + 1)
     } catch (e) {
       alert(e instanceof ApiError ? e.message : 'Thao tác thất bại')
     }
@@ -99,7 +80,9 @@ function UsersTab({ meId }: { meId: number }) {
           {users.map((u) => (
             <tr key={u.id} className={u.id === meId ? 'bg-brand-50/40 dark:bg-brand-950/20' : ''}>
               <td className="p-3">
-                <p className="font-medium">{u.name || '—'} {u.id === meId && <span className="text-xs text-slate-400">(bạn)</span>}</p>
+                <p className="font-medium">
+                  {u.name || '—'} {u.id === meId && <span className="text-xs text-slate-400">(bạn)</span>}
+                </p>
                 <p className="text-xs text-slate-400">{u.email}</p>
               </td>
               <td className="p-3">
@@ -137,6 +120,7 @@ function UsersTab({ meId }: { meId: number }) {
                       onClick={() => {
                         if (confirm(`Xoá tài khoản ${u.email}? Không thể hoàn tác.`)) act(() => api.adminDeleteUser(u.id))
                       }}
+                      aria-label="Xoá"
                     >
                       <Trash2 className="h-3.5 w-3.5" />
                     </button>
@@ -150,69 +134,3 @@ function UsersTab({ meId }: { meId: number }) {
     </div>
   )
 }
-
-function ProvidersTab() {
-  const { data, error, reload } = useAsync(() => api.adminProviders())
-  const providers: AdminProvider[] = data?.providers ?? []
-  const [form, setForm] = useState({ label: '', model: 'o4-mini', apiKey: '', baseUrl: 'https://api.openai.com/v1' })
-
-  const act = async (fn: () => Promise<unknown>) => {
-    try {
-      await fn()
-      reload()
-    } catch (e) {
-      alert(e instanceof ApiError ? e.message : 'Thao tác thất bại')
-    }
-  }
-
-  return (
-    <div className="space-y-4">
-      <p className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-        🔒 Key ở đây lưu trên <b>server</b> — học viên gọi trợ lý qua <code>/api/ai/chat</code>, không bao giờ thấy key.
-      </p>
-      {error && <p className="text-rose-500">{error}</p>}
-
-      <div className="space-y-2">
-        {providers.map((p) => (
-          <div key={p.id} className="card flex flex-wrap items-center gap-3 p-4">
-            <div className="min-w-0 flex-1">
-              <p className="font-semibold">{p.label} <span className="text-xs text-slate-400">· {p.model}</span></p>
-              <p className="truncate font-mono text-xs text-slate-400">{p.baseUrl} · key: ••••{p.apiKey.slice(-4)}</p>
-            </div>
-            <button className={`chip ${p.isActive ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`} onClick={() => act(() => api.adminPatchProvider(p.id, { isActive: !p.isActive }))}>
-              {p.isActive ? 'Đang bật' : 'Đang tắt'}
-            </button>
-            <button className="btn-ghost !px-2 text-rose-500" onClick={() => confirm(`Xoá provider "${p.label}"?`) && act(() => api.adminDeleteProvider(p.id))}>
-              <Trash2 className="h-4 w-4" />
-            </button>
-          </div>
-        ))}
-        {providers.length === 0 && <p className="text-sm text-slate-400">Chưa có provider. Thêm bên dưới để bật trợ lý AI.</p>}
-      </div>
-
-      <div className="card space-y-3 p-4">
-        <p className="flex items-center gap-2 font-semibold"><Plus className="h-4 w-4" /> Thêm provider</p>
-        <div className="grid gap-2 sm:grid-cols-2">
-          <input value={form.label} onChange={(e) => setForm({ ...form, label: e.target.value })} placeholder="Tên (vd: GPT lớp 10A)" className={inp} />
-          <input value={form.model} onChange={(e) => setForm({ ...form, model: e.target.value })} placeholder="model (o4-mini)" className={inp} />
-          <input type="password" value={form.apiKey} onChange={(e) => setForm({ ...form, apiKey: e.target.value })} placeholder="sk-… (API key)" autoComplete="off" className={`${inp} sm:col-span-2`} />
-          <input value={form.baseUrl} onChange={(e) => setForm({ ...form, baseUrl: e.target.value })} placeholder="Base URL" className={`${inp} sm:col-span-2`} />
-        </div>
-        <button
-          className="btn-primary"
-          disabled={!form.label.trim() || !form.apiKey.trim()}
-          onClick={() =>
-            act(async () => {
-              await api.adminAddProvider(form)
-              setForm({ label: '', model: 'o4-mini', apiKey: '', baseUrl: 'https://api.openai.com/v1' })
-            })
-          }
-        >
-          <KeyRound className="h-4 w-4" /> Lưu provider
-        </button>
-      </div>
-    </div>
-  )
-}
-
-const inp = 'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900'
