@@ -110,9 +110,10 @@ export type CardPhase = 'new' | 'learning' | 'review' | 'mastered'
 export interface SRSCard {
   id: number
   /**
-   * Leitner box index 0..INTERVALS.length. Box b means the card has passed b
-   * successful reviews and is waiting for INTERVALS[b] days (if b < length).
-   * When box === INTERVALS.length the card is mastered.
+   * Leitner box index 0..MASTERED_BOX. Box b means the card has passed b
+   * successful answers and is waiting for INTERVALS[b] days (if b < length).
+   * Mastery is `MASTERED_BOX` (= INTERVALS.length + 1), i.e. the card must also
+   * clear the final 30-day wait — see `src/lib/srs.ts`.
    */
   box: number
   /** Epoch day number (local) on which the card becomes due for review. */
