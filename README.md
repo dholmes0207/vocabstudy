@@ -20,6 +20,7 @@ Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline
 | 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng theo lịch **Ngày 1 → 2 → 5 → 14 → 30**. Mỗi ngày tự chọn danh sách cần ôn.                                                                                                          |
 | 🎯 **Kiểm tra**     | 5 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, **Đánh vần (gõ từ ✍️)**, Điền từ vào câu. Phản hồi tức thì + âm thanh.                                                                                     |
 | ✍️ **Đánh vần**     | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS.                                                         |
+| 🎙️ **Luyện nói**    | **Ghi âm giọng mình**, nghe đối chiếu A/B với giọng mẫu, chấm điểm **0–100** tự động. 3 mức khó. Kết quả nạp vào SRS.                                                                                  |
 | 📚 **Tra cứu**      | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học.                                                                                                                                         |
 | 📈 **Thống kê**     | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**.                                                                                                                     |
 | 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                            |
@@ -32,6 +33,24 @@ Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline
 ### 🔤 Phiên âm & cách đọc
 
 Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). _Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural._
+
+### 🎙️ Luyện nói (ghi âm + chấm điểm)
+
+Màn **Luyện nói** (`src/features/speaking/`) khép kín vòng học: **nghe mẫu → đọc vào micro → nghe lại giọng mình ngay cạnh giọng mẫu**. Thiết kế **2 lớp độc lập**, lớp này hỏng không kéo lớp kia chết:
+
+| Lớp                  | API                                       | Trình duyệt                                   | Nếu thiếu                                                                            |
+| -------------------- | ----------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Ghi âm & so sánh A/B | `MediaRecorder` (`src/lib/recorder.ts`)   | Chrome, Edge, Safari (iOS 14.3+), **Firefox** | Báo rõ và tắt màn hình                                                               |
+| Chấm điểm tự động    | `SpeechRecognition` (`src/lib/speech.ts`) | Chrome, Edge, Safari — **Firefox không có**   | Rơi về **tự chấm** (Giống rồi / Chưa giống), giống cơ chế "Nhớ / Chưa" của flashcard |
+
+**Chấm theo âm, không theo chữ.** Máy nhận dạng trả về _chữ viết_, nên đọc chuẩn `four` vẫn có thể bị ghi thành `for`. `src/lib/phonetic.ts` mã hoá cả hai bằng **Metaphone** — cùng mã ⇒ tính là đọc đúng. Bảng điểm (`src/lib/pronunciation.ts`):
+
+- **100 — “Chuẩn!”**: máy nghe đúng hẳn chữ (chấp nhận cả khi lẫn trong câu: _“uh, ability”_).
+- **88 — đồng âm**: khác chữ nhưng cùng mã ngữ âm. **Không bao giờ được “Chuẩn”**, vì Metaphone bỏ nguyên âm giữa nên `cat`/`cut` cũng cùng mã — luôn hiện _“máy nghe được: …”_ để người học tự đối chiếu.
+- **≤ 80 — gần đúng**: pha trộn khoảng cách chữ và khoảng cách ngữ âm.
+- Ngưỡng đạt: **Dễ 45 · Vừa 60 · Khó 80** (đổi trong _Cài đặt → Luyện nói_).
+
+Chỉ **lần thử đầu tiên** của mỗi từ được ghi vào SRS — nhớ ngay từ lần đầu mới là tín hiệu đúng cho lịch ôn; thử lại là để luyện.
 
 ### 🔊 Phát âm bằng giọng Neural
 
@@ -133,13 +152,14 @@ Vocabulary-Study/
 │  └─ api/                     # ai/chat, ai/status, admin/users
 ├─ src/
 │  ├─ types/                   # Kiểu dữ liệu dùng chung
-│  ├─ lib/                     # Logic thuần: srs, quiz, level, tts, date, summary, decks, backup…
+│  ├─ lib/                     # Logic thuần: srs, quiz, level, phonetic, pronunciation,
+│  │                           #   tts, speech, recorder, date, summary, decks, backup…
 │  │  └─ ai/                   # systemPrompt, guardrail, suggestions
 │  ├─ store/                   # Zustand: auth, settings, study, data, context
 │  ├─ hooks/                   # useEffectiveLevel, useProgressSync
 │  ├─ components/              # UI tái sử dụng: Layout, Flashcard, SpeakButton, ProgressRing…
-│  └─ features/                # Màn hình: dashboard, learn, review, quiz, browse, stats,
-│                              #           settings, auth, admin, tutor
+│  └─ features/                # Màn hình: dashboard, learn, review, quiz, speaking,
+│                              #           browse, stats, settings, auth, admin, tutor
 ├─ supabase/schema.sql         # Bảng profiles/progress, RLS, trigger admin đầu tiên
 ├─ scripts/                    # Python: sinh audio (edge-tts) & phiên âm IPA
 └─ (vite / tsconfig / tailwind / eslint / prettier configs)

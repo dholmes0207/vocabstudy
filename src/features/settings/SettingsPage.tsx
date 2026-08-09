@@ -7,8 +7,15 @@ import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
 import { LEVELS, levelInfo } from '@/lib/level'
+import { isRecognitionSupported } from '@/lib/speech'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { Row, Section, Toggle } from './ui'
+
+const STRICTNESS_OPTIONS = [
+  ['easy', 'Dễ'],
+  ['normal', 'Vừa'],
+  ['hard', 'Khó'],
+] as const
 
 export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
@@ -23,6 +30,7 @@ export default function SettingsPage() {
   const ttsOk = isTTSSupported()
   const hasNeuralAudio = audioVoices.length > 0
   const canPronounce = hasNeuralAudio || ttsOk
+  const canRecognize = isRecognitionSupported()
 
   // Installed voices load asynchronously; refresh when the browser reports them.
   const [voices, setVoices] = useState(() => listVoices(pack.meta.ttsLang))
@@ -236,6 +244,35 @@ export default function SettingsPage() {
             label="Tự động phát âm"
             disabled={!canPronounce}
           />
+        </Row>
+      </Section>
+
+      {/* Speaking practice */}
+      <Section title="Luyện nói">
+        <Row
+          label="Độ khó chấm điểm"
+          hint={
+            canRecognize
+              ? '“Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.'
+              : 'Trình duyệt này chưa chấm điểm tự động được — bạn ghi âm rồi tự so với giọng mẫu.'
+          }
+        >
+          <div className="flex gap-1.5">
+            {STRICTNESS_OPTIONS.map(([value, label]) => (
+              <button
+                key={value}
+                onClick={() => settings.setSpeechStrictness(value)}
+                disabled={!canRecognize}
+                className={`rounded-lg border-2 px-3 py-1.5 text-sm font-semibold transition disabled:opacity-40 ${
+                  settings.speechStrictness === value
+                    ? 'border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-200'
+                    : 'border-slate-200 dark:border-slate-700'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </Row>
       </Section>
 

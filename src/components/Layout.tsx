@@ -4,6 +4,7 @@ import {
   BookOpen,
   GraduationCap,
   Library,
+  Mic,
   Repeat2,
   Settings,
   Sparkles,
@@ -30,6 +31,7 @@ const NAV: NavItem[] = [
   { to: '/learn', label: 'Học mới', icon: BookOpen, primary: true },
   { to: '/review', label: 'Ôn tập', icon: Repeat2, primary: true },
   { to: '/quiz', label: 'Kiểm tra', icon: GraduationCap, primary: true },
+  { to: '/speaking', label: 'Luyện nói', icon: Mic, primary: true },
   { to: '/browse', label: 'Tra cứu', icon: Library, primary: true },
   { to: '/stats', label: 'Thống kê', icon: BarChart3 },
   { to: '/settings', label: 'Cài đặt', icon: Settings },
@@ -138,7 +140,7 @@ function BottomLink({ item, badge }: { item: NavItem; badge: number }) {
       }
     >
       <Icon className="h-5 w-5" />
-      <span>{item.label}</span>
+      <span className="whitespace-nowrap">{item.label}</span>
       {badge > 0 && (
         <span className="absolute right-1/2 top-1 translate-x-3 rounded-full bg-brand-600 px-1.5 text-[10px] font-bold text-white">
           {badge}

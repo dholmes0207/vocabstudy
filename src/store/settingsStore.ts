@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { Settings, ThemeSetting } from '@/types'
+import type { Settings, Strictness, ThemeSetting } from '@/types'
 import { setPreferredVoiceURI } from '@/lib/tts'
 import { setAudioVoiceKey } from '@/lib/audio'
 
@@ -15,6 +15,7 @@ interface SettingsState extends Settings {
   setAudioVoice: (key: string) => void
   setTtsVoiceURI: (uri: string | null) => void
   setAutoSpeak: (b: boolean) => void
+  setSpeechStrictness: (s: Strictness) => void
 }
 
 const DEFAULTS: Settings = {
@@ -28,6 +29,7 @@ const DEFAULTS: Settings = {
   audioVoice: 'aria',
   ttsVoiceURI: null,
   autoSpeak: false,
+  speechStrictness: 'normal',
 }
 
 export const useSettings = create<SettingsState>()(
@@ -45,6 +47,7 @@ export const useSettings = create<SettingsState>()(
       setAudioVoice: (audioVoice) => set({ audioVoice }),
       setTtsVoiceURI: (ttsVoiceURI) => set({ ttsVoiceURI }),
       setAutoSpeak: (autoSpeak) => set({ autoSpeak }),
+      setSpeechStrictness: (speechStrictness) => set({ speechStrictness }),
     }),
     {
       name: 'vocab.settings.v1',

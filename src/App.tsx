@@ -10,6 +10,7 @@ const Dashboard = lazy(() => import('./features/dashboard/Dashboard'))
 const Learn = lazy(() => import('./features/learn/Learn'))
 const Review = lazy(() => import('./features/review/Review'))
 const Quiz = lazy(() => import('./features/quiz/Quiz'))
+const Speaking = lazy(() => import('./features/speaking/Speaking'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/learn" element={<Learn />} />
             <Route path="/review" element={<Review />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route path="/speaking" element={<Speaking />} />
             <Route path="/browse" element={<Browse />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/settings" element={<SettingsPage />} />

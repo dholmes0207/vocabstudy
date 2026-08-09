@@ -185,6 +185,9 @@ export interface QuizOption {
 
 export type ThemeSetting = 'light' | 'dark' | 'system'
 
+/** How close a spoken attempt must be to count as correct (see lib/pronunciation). */
+export type Strictness = 'easy' | 'normal' | 'hard'
+
 export interface Settings {
   theme: ThemeSetting
   /** Active language code. */
@@ -205,4 +208,6 @@ export interface Settings {
   ttsVoiceURI: string | null
   /** Whether to auto-play pronunciation when a flashcard is revealed. */
   autoSpeak: boolean
+  /** How close a spoken attempt must be to count as correct. */
+  speechStrictness: Strictness
 }

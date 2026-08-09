@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BookOpen, GraduationCap, Library, Repeat2 } from 'lucide-react'
+import { ArrowRight, BookOpen, GraduationCap, Library, Mic, Repeat2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
@@ -110,6 +110,12 @@ export default function Dashboard() {
           icon={GraduationCap}
           title="Kiểm tra nhanh"
           desc="4 dạng quiz: chọn nghĩa, nghe, điền từ…"
+        />
+        <QuickLink
+          to="/speaking"
+          icon={Mic}
+          title="Luyện nói"
+          desc="Đọc vào micro, nghe lại và so với giọng mẫu."
         />
         <QuickLink
           to="/browse"
