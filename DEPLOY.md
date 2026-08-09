@@ -18,7 +18,7 @@ Browser (React)
 1. Tạo project tại https://supabase.com (chọn region gần VN, vd Singapore).
 2. Vào **SQL Editor** → dán toàn bộ [`supabase/schema.sql`](supabase/schema.sql) → **Run**. (Tạo bảng `profiles`, `progress`, RLS, trigger “user đầu tiên = admin”.)
 3. **Authentication → Providers → Email**: bật Email. Muốn đăng ký vào thẳng (không cần bấm link email) thì **tắt “Confirm email”** (Auth → Sign In / Providers). Nếu bật, người dùng phải xác nhận email trước khi đăng nhập.
-4. **Authentication → URL Configuration**: đặt **Site URL** = `https://vocabstudy.app` (và thêm vào Redirect URLs).
+4. **Authentication → URL Configuration**: đặt **Site URL** = `https://vocastudy.app` (và thêm vào Redirect URLs).
 5. Lấy khoá ở **Project Settings → API**:
    - `Project URL` → dùng cho `VITE_SUPABASE_URL` và `SUPABASE_URL`.
    - `anon public` → `VITE_SUPABASE_ANON_KEY` và `SUPABASE_ANON_KEY`.
@@ -49,9 +49,11 @@ Repo đã được push sẵn: **https://github.com/dholmes0207/vocabstudy** (pr
    > `VITE_*` được nhúng lúc **build** (phải set trước khi build). Các biến còn lại được **Pages Functions** đọc lúc chạy. Đổi biến xong nhớ **Retry deployment**.
 4. **Deploy**. Pages tự nhận thư mục `functions/` làm API (route `/api/*`), phục vụ `dist/` cho phần còn lại.
 
-## 4) Domain vocabstudy.app
+## 4) Domain vocastudy.app
 
-Pages → project → **Custom domains → Set up a domain** → nhập `vocabstudy.app` (DNS đã ở Cloudflare nên nó tự tạo bản ghi + cấp SSL). Thêm `www` nếu muốn.
+Pages → project → **Custom domains → Set up a domain** → nhập `vocastudy.app` (DNS đã ở Cloudflare nên nó tự tạo bản ghi + cấp SSL). Thêm `www` nếu muốn.
+
+> ⚠️ Domain phải khớp **chính xác** với **Site URL** ở bước 1.4 của Supabase, nếu không link xác nhận email / redirect sau đăng nhập sẽ trỏ sai.
 
 ## 5) Tài khoản admin
 

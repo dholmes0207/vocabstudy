@@ -1,8 +1,10 @@
 # 📚 VocabStudy — Học & ôn từ vựng thông minh
 
+🌐 **[vocastudy.app](https://vocastudy.app)**
+
 Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **1000 từ tiếng Anh thông dụng nhất** (chuẩn Oxford & Cambridge) dành cho **người Việt học tiếng Anh**.
 
-Ứng dụng chạy **hoàn toàn phía trình duyệt** — không cần đăng nhập, không backend, dùng được offline sau lần tải đầu, tiến độ lưu ngay trên máy bạn.
+Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline sau lần tải đầu). Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 
 > 📄 Tài liệu kế hoạch chi tiết (theo quy trình 3 vai: Người học → BA → DEV): [`docs/PLAN.md`](docs/PLAN.md)
 > 📖 Tài liệu nguồn: [`docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`](docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf)
@@ -75,7 +77,7 @@ npm run build && npm run pages:dev
 | Auth model | Supabase Auth + bảng `profiles` | RBAC `student`/`admin` kiểm **ở server**; user đầu tiên = admin (trigger). |
 | Đồng bộ | bảng `progress(user_id, lang_code, data jsonb)` | Tải khi đăng nhập, lưu debounce; **migrate localStorage → tài khoản** lần đầu. |
 
-**Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocabstudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
+**Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocastudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
 
 > ⚠️ **Bảo mật:** mật khẩu do Supabase Auth quản lý; **RLS** chặn truy cập chéo; **key OpenAI + service-role chỉ ở Cloudflare secret**; quyền admin kiểm ở server. Roadmap: giới hạn lượt AI/học sinh, quản lý lớp (mã lớp/CSV), quên-mật-khẩu email.
 
@@ -97,7 +99,7 @@ Script **bỏ qua file đã có** (chạy lại an toàn) và tạo `<voiceKey>/
 
 ```bash
 pip install eng-to-ipa cmudict
-python3 scripts/generate_phonetics.py    # điền ipa + viRead vào data/en.json & public/data/en.json
+python3 scripts/generate_phonetics.py    # điền ipa + viRead vào public/data/en.json
 ```
 
 ---
@@ -106,21 +108,30 @@ python3 scripts/generate_phonetics.py    # điền ipa + viRead vào data/en.jso
 
 ```
 Vocabulary-Study/
-├─ docs/                       # PLAN.md + tài liệu PDF gốc
-├─ data/en.json                # Dataset gốc (nguồn chân lý)
-├─ public/data/
-│  ├─ index.json               # Manifest liệt kê các ngôn ngữ
-│  └─ en.json                  # Gói ngôn ngữ tiếng Anh (app đọc qua fetch)
+├─ docs/                       # PLAN.md, thiết kế 3 vai (design/) + tài liệu PDF gốc
+├─ public/
+│  ├─ data/
+│  │  ├─ index.json            # Manifest liệt kê các ngôn ngữ
+│  │  └─ en.json               # Gói ngôn ngữ tiếng Anh (app đọc qua fetch) — nguồn chân lý
+│  └─ audio/en/                # MP3 giọng Neural sinh sẵn (~56MB) + index.json
+├─ functions/                  # Cloudflare Pages Functions — API giữ secret server-side
+│  ├─ _shared.ts               # Xác thực token Supabase, helper response
+│  └─ api/                     # ai/chat, ai/status, admin/users
 ├─ src/
 │  ├─ types/                   # Kiểu dữ liệu dùng chung
-│  ├─ lib/                     # Logic thuần: srs, quiz, tts, date, summary, decks, backup, sound
-│  ├─ store/                   # Zustand: settingsStore, studyStore, dataStore
+│  ├─ lib/                     # Logic thuần: srs, quiz, level, tts, date, summary, decks, backup…
+│  │  └─ ai/                   # systemPrompt, guardrail, suggestions
+│  ├─ store/                   # Zustand: auth, settings, study, data, context
+│  ├─ hooks/                   # useEffectiveLevel, useProgressSync
 │  ├─ components/              # UI tái sử dụng: Layout, Flashcard, SpeakButton, ProgressRing…
-│  └─ features/                # 7 màn: dashboard, learn, review, quiz, browse, stats, settings
-└─ (vite / tsconfig / tailwind configs)
+│  └─ features/                # Màn hình: dashboard, learn, review, quiz, browse, stats,
+│                              #           settings, auth, admin, tutor
+├─ supabase/schema.sql         # Bảng profiles/progress, RLS, trigger admin đầu tiên
+├─ scripts/                    # Python: sinh audio (edge-tts) & phiên âm IPA
+└─ (vite / tsconfig / tailwind / eslint / prettier configs)
 ```
 
-Nguyên tắc: **dữ liệu và logic (`src/lib`) độc lập với React** → dễ kiểm thử; **store** nối logic với UI và lo phần lưu trữ; **UI** chỉ render + phát sự kiện.
+Nguyên tắc: **dữ liệu và logic (`src/lib`) độc lập với React** → dễ kiểm thử (xem `src/lib/*.test.ts`); **store** nối logic với UI và lo phần lưu trữ; **UI** chỉ render + phát sự kiện.
 
 ---
 

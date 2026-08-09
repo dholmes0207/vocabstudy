@@ -7,8 +7,9 @@ Populate each word with:
 
 Also fixes a few PDF-extraction artifacts (words/examples split mid-word).
 
-Writes both data/en.json (source of truth) and public/data/en.json (app copy),
-and prints the audio files that must be re-generated because their text changed.
+Rewrites public/data/en.json in place (the single source of truth — the app
+fetches it directly) and prints the audio files that must be re-generated
+because their text changed.
 
 Requires: pip install eng-to-ipa cmudict
 """
@@ -99,7 +100,7 @@ def ipa_of(word: str) -> str:
 
 
 def main() -> None:
-    src = os.path.join(ROOT, "data", "en.json")
+    src = os.path.join(ROOT, "public", "data", "en.json")
     with open(src, encoding="utf-8") as f:
         pack = json.load(f)
 
@@ -129,10 +130,7 @@ def main() -> None:
 
     with open(src, "w", encoding="utf-8") as f:
         json.dump(pack, f, ensure_ascii=False, indent=2)
-    dst = os.path.join(ROOT, "public", "data", "en.json")
-    with open(dst, "w", encoding="utf-8") as f:
-        json.dump(pack, f, ensure_ascii=False, indent=2)
-    print(f"\nWrote {src} and {dst}")
+    print(f"\nWrote {src}")
 
     # Report audio to regenerate
     if changed_audio:
