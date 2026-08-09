@@ -52,7 +52,7 @@ Yêu cầu **đăng nhập** để dùng AI. Cấu hình key = biến `OPENAI_AP
 
 ## 🚀 Chạy dự án
 
-Yêu cầu: **Node.js ≥ 18** (khuyến nghị 20) và npm.
+Yêu cầu: **Node.js ≥ 20** (`.nvmrc` đã ghi sẵn — dùng `nvm use`) và npm.
 
 ```bash
 npm install
@@ -66,6 +66,20 @@ npm run build && npm run pages:dev
 
 > 💡 Chưa cấu hình Supabase → app vẫn chạy ở **chế độ khách** (tiến độ lưu localStorage). Tài khoản **đầu tiên đăng ký = admin**.
 > Audio phát âm tạo sẵn trong `public/audio/en/` (~56MB) nên chạy được ngay, kể cả offline.
+
+### 🧪 Kiểm tra trước khi push
+
+Đúng 5 lệnh mà CI sẽ chạy — chạy hết là gần như chắc CI xanh:
+
+```bash
+npm run format:check   # Prettier
+npm run lint           # ESLint (0 error, 0 warning)
+npm run typecheck      # tsc -b --noEmit
+npm test               # Vitest — unit test cho src/lib
+npm run build          # Vite production build
+```
+
+`npm run format` và `npm run lint:fix` để tự sửa; `npm run test:watch` khi đang viết logic.
 
 ## 🏗️ Kiến trúc (Cloudflare Pages + Supabase)
 
