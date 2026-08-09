@@ -1,0 +1,11 @@
+# Dependencies for the one-off content generation scripts in this folder.
+# Not needed to build or run the web app — only to regenerate audio/phonetics.
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r scripts/requirements.txt
+
+# generate_audio.py — Neural TTS via Microsoft Edge voices (no API key needed)
+edge-tts>=6.1.0
+
+# generate_phonetics.py — IPA transcription + CMU dictionary for viRead hints
+eng-to-ipa>=0.0.2
+cmudict>=1.0.0

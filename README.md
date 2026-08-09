@@ -204,12 +204,16 @@ Chi tiết đầy đủ trong [`docs/PLAN.md`](docs/PLAN.md) — Phần C & D.
 
 ## 🛠️ Công nghệ
 
-React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (HashRouter) · lucide-react · audio Neural tạo sẵn (edge-tts) + Web Speech API fallback.
+React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (HashRouter) · lucide-react · Supabase (Auth + Postgres + RLS) · Cloudflare Pages + Pages Functions · OpenAI o4-mini · audio Neural tạo sẵn (edge-tts) + Web Speech API fallback.
 
-Deploy tĩnh dễ dàng lên GitHub Pages / Netlify / Vercel (đã đặt `base: './'` và dùng HashRouter nên không lo lỗi 404 khi refresh).
+Chất lượng mã: ESLint + Prettier + TypeScript strict, unit test bằng Vitest, CI GitHub Actions chạy `lint → typecheck → test → build` trên mọi push/PR.
+
+> Phần `dist/` là tĩnh nên host ở đâu cũng chạy (`base: './'` + HashRouter, không lỗi 404 khi refresh), nhưng **AI và trang quản trị cần `functions/`** → phải deploy lên Cloudflare Pages (hoặc nền tảng có edge functions tương đương).
 
 ---
 
-## 📜 Nguồn & ghi công
+## 📜 Nguồn & giấy phép
 
 Dữ liệu từ vựng: *"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"* (chuẩn Oxford & Cambridge) — xem bản gốc trong `docs/`.
+
+**Mã nguồn**: [MIT](LICENSE). **Nội dung học** (PDF gốc, bộ từ vựng `public/data/`, audio `public/audio/`) là tài liệu bên thứ ba, đính kèm cho mục đích học tập và **không** thuộc phạm vi giấy phép MIT — xem phần ghi chú cuối [`LICENSE`](LICENSE).

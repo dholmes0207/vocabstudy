@@ -4,6 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "description": "VocabStudy — web học 1000 từ vựng tiếng Anh (React + Vite + Supabase + Cloudflare Pages).",
+  "license": "MIT",
+  "homepage": "https://vocastudy.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dholmes0207/vocabstudy.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
