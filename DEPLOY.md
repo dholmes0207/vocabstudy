@@ -36,15 +36,15 @@ Repo đã được push sẵn: **https://github.com/dholmes0207/vocabstudy** (pr
    - **Build command:** `npm run build`
    - **Build output directory:** `dist`
    - Node version: đặt biến `NODE_VERSION = 20` (Settings → Environment variables) nếu build cần.
-3. **Environment variables** (Settings → Environment variables → thêm cho cả *Production* và *Preview*):
-   | Tên | Loại | Giá trị |
-   |---|---|---|
-   | `VITE_SUPABASE_URL` | Plaintext | Project URL |
-   | `VITE_SUPABASE_ANON_KEY` | Plaintext | anon public key |
-   | `OPENAI_API_KEY` | **Secret (Encrypt)** | key OpenAI |
-   | `OPENAI_MODEL` | Plaintext | `o4-mini` |
-   | `SUPABASE_URL` | Plaintext | Project URL |
-   | `SUPABASE_ANON_KEY` | Plaintext | anon public key |
+3. **Environment variables** (Settings → Environment variables → thêm cho cả _Production_ và _Preview_):
+   | Tên                         | Loại                 | Giá trị          |
+   | --------------------------- | -------------------- | ---------------- |
+   | `VITE_SUPABASE_URL`         | Plaintext            | Project URL      |
+   | `VITE_SUPABASE_ANON_KEY`    | Plaintext            | anon public key  |
+   | `OPENAI_API_KEY`            | **Secret (Encrypt)** | key OpenAI       |
+   | `OPENAI_MODEL`              | Plaintext            | `o4-mini`        |
+   | `SUPABASE_URL`              | Plaintext            | Project URL      |
+   | `SUPABASE_ANON_KEY`         | Plaintext            | anon public key  |
    | `SUPABASE_SERVICE_ROLE_KEY` | **Secret (Encrypt)** | service_role key |
    > `VITE_*` được nhúng lúc **build** (phải set trước khi build). Các biến còn lại được **Pages Functions** đọc lúc chạy. Đổi biến xong nhớ **Retry deployment**.
 4. **Deploy**. Pages tự nhận thư mục `functions/` làm API (route `/api/*`), phục vụ `dist/` cho phần còn lại.
@@ -76,10 +76,12 @@ npm run build && npm run pages:dev   # chạy đầy đủ Functions + static b�
 - Chưa cấu hình Supabase? App vẫn chạy ở **chế độ khách** (tiến độ lưu localStorage), chỉ ẩn đăng nhập/AI.
 
 ## Bảo mật (đã áp dụng)
+
 - Mật khẩu do **Supabase Auth** quản lý (băm chuẩn), có thể bật xác nhận email.
 - **RLS**: mỗi user chỉ đọc/ghi `progress` + `profiles` của mình; không tự đổi được `role`.
 - **Key OpenAI + service-role** chỉ nằm ở Cloudflare (secret) → học viên không bao giờ thấy; guardrail chạy ở Function.
 - Thao tác admin kiểm quyền ở **server** (Function + service role), không phải chỉ ẩn nút.
 
 ## Roadmap
+
 Giới hạn lượt AI/học sinh + usage log (Cloudflare KV/Supabase), quản lý lớp (mã lớp, tạo hàng loạt, xuất CSV), quên-mật-khẩu qua email (Supabase built-in), rate-limit Functions, phân trang danh sách user.

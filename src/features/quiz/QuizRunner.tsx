@@ -16,7 +16,13 @@ interface Props {
   renderComplete: (correct: number, total: number, wrongIds: number[]) => React.ReactNode
 }
 
-export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, renderComplete }: Props) {
+export default function QuizRunner({
+  questions,
+  wordsById,
+  ttsLang,
+  onAnswer,
+  renderComplete,
+}: Props) {
   const ttsRate = useSettings((s) => s.ttsRate)
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
@@ -33,20 +39,35 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
   const word = q ? wordsById.get(q.wordId) : undefined
 
   // Spelling skeleton (abi__ty) + the positions the learner still must recall.
-  const skeleton = useMemo(() => (q?.mode === 'spell' && word ? buildSkeleton(word.word) : []), [q, word])
+  const skeleton = useMemo(
+    () => (q?.mode === 'spell' && word ? buildSkeleton(word.word) : []),
+    [q, word]
+  )
   const hiddenPositions = useMemo(
     () => skeleton.map((c, i) => (!c.revealed ? i : -1)).filter((i) => i >= 0),
-    [skeleton],
+    [skeleton]
   )
 
   useProvideContext(
     word ? `Đang kiểm tra từ "${word.word}"` : 'Đang làm quiz',
     word
-      ? { word: word.word, meaning: word.meaning, ipa: word.ipa, pos: word.pos, exampleEn: word.exampleEn }
-      : undefined,
+      ? {
+          word: word.word,
+          meaning: word.meaning,
+          ipa: word.ipa,
+          pos: word.pos,
+          exampleEn: word.exampleEn,
+        }
+      : undefined
   )
 
-  const play = () => pronounce({ audioSrc: wordAudio(q.wordId), text: word?.word ?? q.prompt, lang: ttsLang, rate: ttsRate })
+  const play = () =>
+    pronounce({
+      audioSrc: wordAudio(q.wordId),
+      text: word?.word ?? q.prompt,
+      lang: ttsLang,
+      rate: ttsRate,
+    })
 
   useEffect(() => {
     if (done || !q) return
@@ -99,7 +120,10 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
       {/* Progress */}
       <div className="mb-5 flex items-center gap-3">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-          <div className="h-full rounded-full bg-brand-500 transition-all" style={{ width: `${(idx / questions.length) * 100}%` }} />
+          <div
+            className="h-full rounded-full bg-brand-500 transition-all"
+            style={{ width: `${(idx / questions.length) * 100}%` }}
+          />
         </div>
         <span className="text-sm font-medium tabular-nums text-slate-500">
           {idx + 1}/{questions.length}
@@ -135,7 +159,13 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
                   <Volume2 className="h-5 w-5" />
                 </button>
               </div>
-              <Skeleton cells={skeleton} hiddenPositions={hiddenPositions} hintCount={hintCount} revealed={revealed} answer={answerForm} />
+              <Skeleton
+                cells={skeleton}
+                hiddenPositions={hiddenPositions}
+                hintCount={hintCount}
+                revealed={revealed}
+                answer={answerForm}
+              />
             </div>
           ) : (
             <div className="flex items-center justify-center gap-3">
@@ -170,10 +200,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
               spellCheck={false}
             />
             {q.mode === 'spell' && !revealed && hintCount < hiddenPositions.length && (
-              <button
-                onClick={() => setHintCount((h) => h + 1)}
-                className="btn-ghost mt-2 text-sm"
-              >
+              <button onClick={() => setHintCount((h) => h + 1)} className="btn-ghost mt-2 text-sm">
                 <Lightbulb className="h-4 w-4" /> Gợi ý (mở thêm 1 chữ)
               </button>
             )}
@@ -200,7 +227,13 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
         ) : (
           <div className="mt-6 grid gap-3">
             {q.options.map((opt, i) => {
-              const state = !revealed ? 'idle' : opt.correct ? 'correct' : selected === i ? 'wrong' : 'idle'
+              const state = !revealed
+                ? 'idle'
+                : opt.correct
+                  ? 'correct'
+                  : selected === i
+                    ? 'wrong'
+                    : 'idle'
               return (
                 <button
                   key={i}
@@ -226,12 +259,17 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
         {/* Footer action */}
         <div className="mt-6 min-h-[3rem]">
           {isTyping && !revealed ? (
-            <button onClick={submitTyping} disabled={!input.trim()} className="btn-primary h-12 w-full">
+            <button
+              onClick={submitTyping}
+              disabled={!input.trim()}
+              className="btn-primary h-12 w-full"
+            >
               Kiểm tra
             </button>
           ) : revealed ? (
             <button onClick={next} className="btn-primary h-12 w-full">
-              {idx + 1 >= questions.length ? 'Xem kết quả' : 'Câu tiếp theo'} <ArrowRight className="h-5 w-5" />
+              {idx + 1 >= questions.length ? 'Xem kết quả' : 'Câu tiếp theo'}{' '}
+              <ArrowRight className="h-5 w-5" />
             </button>
           ) : null}
         </div>
@@ -277,7 +315,7 @@ function Skeleton({
                   : 'border-dashed border-slate-300 text-transparent dark:border-slate-600'
             }`}
           >
-            {show ? (revealed && !cell.revealed ? answer[i] ?? cell.ch : cell.ch) : '_'}
+            {show ? (revealed && !cell.revealed ? (answer[i] ?? cell.ch) : cell.ch) : '_'}
           </span>
         )
       })}

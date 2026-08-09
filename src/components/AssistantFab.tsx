@@ -26,7 +26,10 @@ export default function AssistantFab() {
       {open && (
         <>
           {/* Backdrop */}
-          <div className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm" onClick={() => setOpen(false)} />
+          <div
+            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            onClick={() => setOpen(false)}
+          />
 
           {/* Panel: bottom sheet on mobile, right side panel on desktop */}
           <div className="fixed inset-x-0 bottom-0 z-50 flex h-[85dvh] flex-col rounded-t-2xl border-t border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-slate-900 lg:inset-y-0 lg:right-0 lg:left-auto lg:h-full lg:w-[26rem] lg:rounded-none lg:border-l lg:border-t-0 animate-fade-in">
@@ -38,13 +41,20 @@ export default function AssistantFab() {
               <div className="min-w-0 flex-1">
                 <p className="flex items-center gap-2 font-bold leading-tight">
                   Trợ lý AI
-                  <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200" title={info.blurb}>
+                  <span
+                    className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200"
+                    title={info.blurb}
+                  >
                     {info.tag} · {info.name}
                   </span>
                 </p>
                 <p className="truncate text-xs text-slate-400">Chỉ hỗ trợ học từ vựng tiếng Anh</p>
               </div>
-              <button onClick={() => setOpen(false)} className="btn-ghost h-9 w-9 !px-0" aria-label="Đóng">
+              <button
+                onClick={() => setOpen(false)}
+                className="btn-ghost h-9 w-9 !px-0"
+                aria-label="Đóng"
+              >
                 <X className="h-5 w-5" />
               </button>
             </div>

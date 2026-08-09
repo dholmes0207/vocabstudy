@@ -13,29 +13,29 @@ Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline
 
 ## ✨ Tính năng
 
-| Nhóm | Chi tiết |
-|---|---|
-| 🏠 **Trang chủ** | Kế hoạch hôm nay (từ cần ôn / từ mới), vòng tiến độ, streak & XP. |
-| 📖 **Học từ mới** | Thẻ lật 3D, phát âm, câu ví dụ Anh–Việt; tự đánh giá "Nhớ / Chưa". Chia **50 bộ ~20 từ**. |
-| 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng theo lịch **Ngày 1 → 2 → 5 → 14 → 30**. Mỗi ngày tự chọn danh sách cần ôn. |
-| 🎯 **Kiểm tra** | 5 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, **Đánh vần (gõ từ ✍️)**, Điền từ vào câu. Phản hồi tức thì + âm thanh. |
-| ✍️ **Đánh vần** | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS. |
-| 📚 **Tra cứu** | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học. |
-| 📈 **Thống kê** | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**. |
-| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên. |
-| 🤖 **Trợ lý AI** | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh. |
-| 🎚️ **Trình độ** | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10"). |
-| ⚙️ **Cài đặt** | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục. |
+| Nhóm                | Chi tiết                                                                                                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🏠 **Trang chủ**    | Kế hoạch hôm nay (từ cần ôn / từ mới), vòng tiến độ, streak & XP.                                                                                                                                      |
+| 📖 **Học từ mới**   | Thẻ lật 3D, phát âm, câu ví dụ Anh–Việt; tự đánh giá "Nhớ / Chưa". Chia **50 bộ ~20 từ**.                                                                                                              |
+| 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng theo lịch **Ngày 1 → 2 → 5 → 14 → 30**. Mỗi ngày tự chọn danh sách cần ôn.                                                                                                          |
+| 🎯 **Kiểm tra**     | 5 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, **Đánh vần (gõ từ ✍️)**, Điền từ vào câu. Phản hồi tức thì + âm thanh.                                                                                     |
+| ✍️ **Đánh vần**     | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS.                                                         |
+| 📚 **Tra cứu**      | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học.                                                                                                                                         |
+| 📈 **Thống kê**     | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**.                                                                                                                     |
+| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                            |
+| 🤖 **Trợ lý AI**    | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh. |
+| 🎚️ **Trình độ**     | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10").                                                                                                                   |
+| ⚙️ **Cài đặt**      | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục.                                                                                           |
 
-**Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: *Lặp lại ngắt quãng (SRS)*, *Học theo ngữ cảnh & câu ví dụ*, *Active Recall (10–15 từ/ngày)*, *Phân loại theo từ loại/bộ*.
+**Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: _Lặp lại ngắt quãng (SRS)_, _Học theo ngữ cảnh & câu ví dụ_, _Active Recall (10–15 từ/ngày)_, _Phân loại theo từ loại/bộ_.
 
 ### 🔤 Phiên âm & cách đọc
 
-Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). *Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural.*
+Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). _Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural._
 
 ### 🔊 Phát âm bằng giọng Neural
 
-Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong *Cài đặt → Phát âm*.
+Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong _Cài đặt → Phát âm_.
 
 ---
 
@@ -69,13 +69,13 @@ npm run build && npm run pages:dev
 
 ## 🏗️ Kiến trúc (Cloudflare Pages + Supabase)
 
-| Lớp | Công nghệ | Ghi chú |
-|---|---|---|
-| Frontend | React 18 + Vite + Tailwind | Build tĩnh → **Cloudflare Pages**. |
-| Auth + DB | **Supabase** (Auth + Postgres + RLS) | Gọi từ browser bằng `@supabase/supabase-js`; RLS: mỗi user chỉ dữ liệu của mình. Schema: `supabase/schema.sql`. |
-| API (secret) | **Cloudflare Pages Functions** (`functions/`) | `/api/ai/chat` (AI proxy giữ key + guardrail), `/api/admin/users` (service-role, chỉ admin). |
-| Auth model | Supabase Auth + bảng `profiles` | RBAC `student`/`admin` kiểm **ở server**; user đầu tiên = admin (trigger). |
-| Đồng bộ | bảng `progress(user_id, lang_code, data jsonb)` | Tải khi đăng nhập, lưu debounce; **migrate localStorage → tài khoản** lần đầu. |
+| Lớp          | Công nghệ                                       | Ghi chú                                                                                                         |
+| ------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Frontend     | React 18 + Vite + Tailwind                      | Build tĩnh → **Cloudflare Pages**.                                                                              |
+| Auth + DB    | **Supabase** (Auth + Postgres + RLS)            | Gọi từ browser bằng `@supabase/supabase-js`; RLS: mỗi user chỉ dữ liệu của mình. Schema: `supabase/schema.sql`. |
+| API (secret) | **Cloudflare Pages Functions** (`functions/`)   | `/api/ai/chat` (AI proxy giữ key + guardrail), `/api/admin/users` (service-role, chỉ admin).                    |
+| Auth model   | Supabase Auth + bảng `profiles`                 | RBAC `student`/`admin` kiểm **ở server**; user đầu tiên = admin (trigger).                                      |
+| Đồng bộ      | bảng `progress(user_id, lang_code, data jsonb)` | Tải khi đăng nhập, lưu debounce; **migrate localStorage → tài khoản** lần đầu.                                  |
 
 **Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocastudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
 
@@ -173,15 +173,26 @@ Kiến trúc "language pack" cho phép thêm ngôn ngữ **không cần sửa lo
 2. Thêm một mục vào `public/data/index.json`:
 
    ```json
-   { "code": "fr", "name": "French", "nativeName": "Tiếng Pháp", "flag": "🇫🇷",
-     "learnerLang": "vi", "learnerLangName": "Tiếng Việt", "ttsLang": "fr-FR",
-     "count": 800, "file": "fr.json", "description": "…" }
+   {
+     "code": "fr",
+     "name": "French",
+     "nativeName": "Tiếng Pháp",
+     "flag": "🇫🇷",
+     "learnerLang": "vi",
+     "learnerLangName": "Tiếng Việt",
+     "ttsLang": "fr-FR",
+     "count": 800,
+     "file": "fr.json",
+     "description": "…"
+   }
    ```
 
 3. (Tuỳ chọn) Tạo audio phát âm cho ngôn ngữ mới:
+
    ```bash
    python3 scripts/generate_audio.py --code fr --voice fr-FR-DeniseNeural
    ```
+
    Nếu chưa có audio, app tự dùng giọng Web Speech của trình duyệt cho ngôn ngữ đó.
 
 4. Xong! Ngôn ngữ mới tự xuất hiện trong bộ chọn ở góc phải header. Tiến độ được lưu **tách biệt theo từng ngôn ngữ** (khóa `vocab.progress.v1` → `progress[<code>]`).
@@ -214,6 +225,6 @@ Chất lượng mã: ESLint + Prettier + TypeScript strict, unit test bằng Vit
 
 ## 📜 Nguồn & giấy phép
 
-Dữ liệu từ vựng: *"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"* (chuẩn Oxford & Cambridge) — xem bản gốc trong `docs/`.
+Dữ liệu từ vựng: _"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"_ (chuẩn Oxford & Cambridge) — xem bản gốc trong `docs/`.
 
 **Mã nguồn**: [MIT](LICENSE). **Nội dung học** (PDF gốc, bộ từ vựng `public/data/`, audio `public/audio/`) là tài liệu bên thứ ba, đính kèm cho mục đích học tập và **không** thuộc phạm vi giấy phép MIT — xem phần ghi chú cuối [`LICENSE`](LICENSE).

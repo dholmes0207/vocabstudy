@@ -44,7 +44,9 @@ export default function AuthPage() {
     <div className="grid min-h-[100dvh] place-items-center bg-slate-50 p-4 dark:bg-slate-950">
       <div className="card w-full max-w-sm p-7 animate-fade-in">
         <div className="mb-5 text-center">
-          <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brand-600 text-2xl shadow">📚</span>
+          <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brand-600 text-2xl shadow">
+            📚
+          </span>
           <h1 className="mt-3 text-xl font-extrabold">VocabStudy</h1>
           <p className="text-sm text-slate-400">
             {mode === 'login' ? 'Đăng nhập để đồng bộ tiến độ' : 'Tạo tài khoản mới'}
@@ -69,7 +71,12 @@ export default function AuthPage() {
         <form onSubmit={submit} className="space-y-3">
           {mode === 'register' && (
             <Field label="Tên hiển thị (tuỳ chọn)">
-              <input value={name} onChange={(e) => setName(e.target.value)} className={inputCls} placeholder="Nguyễn Văn A" />
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className={inputCls}
+                placeholder="Nguyễn Văn A"
+              />
             </Field>
           )}
           <Field label="Email">
@@ -95,8 +102,16 @@ export default function AuthPage() {
             />
           </Field>
 
-          {info && <p className="rounded-lg bg-emerald-50 px-3 py-2 text-sm text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">{info}</p>}
-          {error && <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-600 dark:bg-rose-950/60 dark:text-rose-300">{error}</p>}
+          {info && (
+            <p className="rounded-lg bg-emerald-50 px-3 py-2 text-sm text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+              {info}
+            </p>
+          )}
+          {error && (
+            <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-600 dark:bg-rose-950/60 dark:text-rose-300">
+              {error}
+            </p>
+          )}
 
           <button type="submit" disabled={busy} className="btn-primary h-11 w-full">
             {mode === 'login' ? <LogIn className="h-4 w-4" /> : <UserPlus className="h-4 w-4" />}
@@ -118,7 +133,9 @@ const inputCls =
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1 block text-sm font-medium text-slate-600 dark:text-slate-300">{label}</span>
+      <span className="mb-1 block text-sm font-medium text-slate-600 dark:text-slate-300">
+        {label}
+      </span>
       {children}
     </label>
   )

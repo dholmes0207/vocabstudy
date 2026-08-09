@@ -52,7 +52,9 @@ export default function SettingsPage() {
     <div className="mx-auto max-w-2xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Cài đặt ⚙️</h1>
-        <p className="mt-1 text-slate-500">Điều chỉnh trải nghiệm học của bạn. Mọi dữ liệu chỉ lưu trên máy này.</p>
+        <p className="mt-1 text-slate-500">
+          Điều chỉnh trải nghiệm học của bạn. Mọi dữ liệu chỉ lưu trên máy này.
+        </p>
       </header>
 
       {notice && (
@@ -89,10 +91,16 @@ export default function SettingsPage() {
               value={settings.dailyReviewLimit}
               onChange={(e) => settings.setDailyReviewLimit(Number(e.target.value))}
               aria-label="Giới hạn số từ ôn mỗi phiên"
-              aria-valuetext={settings.dailyReviewLimit === 0 ? 'Không giới hạn' : `${settings.dailyReviewLimit} từ`}
+              aria-valuetext={
+                settings.dailyReviewLimit === 0
+                  ? 'Không giới hạn'
+                  : `${settings.dailyReviewLimit} từ`
+              }
               className="w-40 accent-brand-600"
             />
-            <span className="w-10 text-right font-bold tabular-nums">{settings.dailyReviewLimit || '∞'}</span>
+            <span className="w-10 text-right font-bold tabular-nums">
+              {settings.dailyReviewLimit || '∞'}
+            </span>
           </div>
         </Row>
       </Section>
@@ -104,7 +112,11 @@ export default function SettingsPage() {
           <Row label="Giọng đọc" hint="Giọng Neural bản xứ, nghe tự nhiên như người thật.">
             <div className="flex items-center gap-2">
               <select
-                value={audioVoices.some((v) => v.key === settings.audioVoice) ? settings.audioVoice : audioVoices[0].key}
+                value={
+                  audioVoices.some((v) => v.key === settings.audioVoice)
+                    ? settings.audioVoice
+                    : audioVoices[0].key
+                }
                 onChange={(e) => settings.setAudioVoice(e.target.value)}
                 aria-label="Chọn giọng đọc"
                 className="max-w-[15rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
@@ -136,17 +148,22 @@ export default function SettingsPage() {
             {/* Fallback: no pre-rendered audio -> pick the best browser voice. */}
             {!ttsOk && (
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc Safari.
+                ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc
+                Safari.
               </p>
             )}
             {ttsOk && voices.length === 0 && (
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
                 ⚠️ Chưa có audio dựng sẵn và máy cũng chưa cài giọng tiếng Anh. Chạy{' '}
-                <code>python3 scripts/generate_audio.py</code> để tạo giọng Neural, hoặc dùng Google Chrome.
+                <code>python3 scripts/generate_audio.py</code> để tạo giọng Neural, hoặc dùng Google
+                Chrome.
               </p>
             )}
             {ttsOk && voices.length > 0 && (
-              <Row label="Giọng đọc (trình duyệt)" hint="Chưa có audio dựng sẵn — dùng giọng của trình duyệt.">
+              <Row
+                label="Giọng đọc (trình duyệt)"
+                hint="Chưa có audio dựng sẵn — dùng giọng của trình duyệt."
+              >
                 <div className="flex items-center gap-2">
                   <select
                     value={settings.ttsVoiceURI ?? ''}
@@ -163,7 +180,12 @@ export default function SettingsPage() {
                   </select>
                   <button
                     className="btn-secondary !px-3"
-                    onClick={() => speak('Hello! This is how this voice sounds.', { lang: pack.meta.ttsLang, rate: settings.ttsRate })}
+                    onClick={() =>
+                      speak('Hello! This is how this voice sounds.', {
+                        lang: pack.meta.ttsLang,
+                        rate: settings.ttsRate,
+                      })
+                    }
                     aria-label="Nghe thử giọng đã chọn"
                   >
                     <Volume2 className="h-4 w-4" />
@@ -187,7 +209,9 @@ export default function SettingsPage() {
               disabled={!canPronounce}
               className="w-40 accent-brand-600 disabled:opacity-40"
             />
-            <span className="w-12 text-right font-bold tabular-nums">{settings.ttsRate.toFixed(2)}×</span>
+            <span className="w-12 text-right font-bold tabular-nums">
+              {settings.ttsRate.toFixed(2)}×
+            </span>
             <button
               className="btn-secondary !px-3"
               disabled={!canPronounce}
@@ -206,14 +230,26 @@ export default function SettingsPage() {
           </div>
         </Row>
         <Row label="Tự động phát âm" hint="Đọc từ ngay khi hiện thẻ mới.">
-          <Toggle checked={canPronounce && settings.autoSpeak} onChange={settings.setAutoSpeak} label="Tự động phát âm" disabled={!canPronounce} />
+          <Toggle
+            checked={canPronounce && settings.autoSpeak}
+            onChange={settings.setAutoSpeak}
+            label="Tự động phát âm"
+            disabled={!canPronounce}
+          />
         </Row>
       </Section>
 
       {/* Personalization level */}
       <Section title="Trình độ (cá nhân hoá)">
-        <Row label="Tự động đánh giá trình độ" hint="Ước lượng theo số từ thành thạo & độ chính xác của bạn.">
-          <Toggle checked={settings.autoLevel} onChange={settings.setAutoLevel} label="Tự động đánh giá trình độ" />
+        <Row
+          label="Tự động đánh giá trình độ"
+          hint="Ước lượng theo số từ thành thạo & độ chính xác của bạn."
+        >
+          <Toggle
+            checked={settings.autoLevel}
+            onChange={settings.setAutoLevel}
+            label="Tự động đánh giá trình độ"
+          />
         </Row>
         <Row
           label="Trình độ hiện tại"
@@ -267,7 +303,10 @@ export default function SettingsPage() {
 
       {/* Danger zone */}
       <Section title="Vùng nguy hiểm" danger>
-        <Row label={`Đặt lại tiến độ (${pack.meta.nativeName})`} hint="Xóa toàn bộ thẻ & thống kê của ngôn ngữ hiện tại. Không thể hoàn tác.">
+        <Row
+          label={`Đặt lại tiến độ (${pack.meta.nativeName})`}
+          hint="Xóa toàn bộ thẻ & thống kê của ngôn ngữ hiện tại. Không thể hoàn tác."
+        >
           {confirmReset ? (
             <div className="flex items-center gap-2">
               <button
@@ -285,7 +324,10 @@ export default function SettingsPage() {
               </button>
             </div>
           ) : (
-            <button className="btn bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300" onClick={() => setConfirmReset(true)}>
+            <button
+              className="btn bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300"
+              onClick={() => setConfirmReset(true)}
+            >
               Đặt lại
             </button>
           )}
@@ -298,4 +340,3 @@ export default function SettingsPage() {
     </div>
   )
 }
-

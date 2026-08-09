@@ -23,7 +23,11 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
 }
 
 export function isTTSSupported(): boolean {
-  return typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window
+  return (
+    typeof window !== 'undefined' &&
+    'speechSynthesis' in window &&
+    'SpeechSynthesisUtterance' in window
+  )
 }
 
 /** Pin a preferred voice by its voiceURI (or null to auto-select best). */
@@ -93,7 +97,7 @@ export function speak(text: string, opts: SpeakOptions = {}): boolean {
   utter.rate = clampRate(opts.rate ?? 1)
   utter.pitch = 1
   const voice = opts.voiceURI
-    ? loadVoices().find((v) => v.voiceURI === opts.voiceURI) ?? pickVoice(utter.lang)
+    ? (loadVoices().find((v) => v.voiceURI === opts.voiceURI) ?? pickVoice(utter.lang))
     : pickVoice(utter.lang)
   if (voice) {
     utter.voice = voice

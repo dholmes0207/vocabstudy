@@ -35,8 +35,9 @@ export default function Quiz() {
 
   const learnedWords = useMemo(() => pack.words.filter((w) => cards[w.id]), [pack.words, cards])
   const hardWords = useMemo(
-    () => pack.words.filter((w) => cards[w.id] && cards[w.id].wrongCount > cards[w.id].correctCount),
-    [pack.words, cards],
+    () =>
+      pack.words.filter((w) => cards[w.id] && cards[w.id].wrongCount > cards[w.id].correctCount),
+    [pack.words, cards]
   )
 
   const [scope, setScope] = useState<Scope>('learned')
@@ -44,7 +45,8 @@ export default function Quiz() {
   const [count, setCount] = useState(10)
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
 
-  const scopeWords: Word[] = scope === 'all' ? pack.words : scope === 'hard' ? hardWords : learnedWords
+  const scopeWords: Word[] =
+    scope === 'all' ? pack.words : scope === 'hard' ? hardWords : learnedWords
 
   if (questions) {
     return (
@@ -63,8 +65,16 @@ export default function Quiz() {
                     const w = wordsById.get(id)
                     if (!w) return null
                     return (
-                      <li key={id} className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm dark:bg-slate-800/60">
-                        <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
+                      <li
+                        key={id}
+                        className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm dark:bg-slate-800/60"
+                      >
+                        <SpeakButton
+                          text={w.word}
+                          lang={pack.meta.ttsLang}
+                          audioSrc={wordAudio(w.id)}
+                          size="sm"
+                        />
                         <b>{w.word}</b>
                         <span className="text-slate-400">—</span>
                         <span className="text-slate-600 dark:text-slate-300">{w.meaning}</span>
@@ -98,7 +108,9 @@ export default function Quiz() {
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Kiểm tra 🎯</h1>
-        <p className="mt-1 text-slate-500">Active recall — ép não nhớ lại. Kết quả được đưa vào lịch ôn tự động.</p>
+        <p className="mt-1 text-slate-500">
+          Active recall — ép não nhớ lại. Kết quả được đưa vào lịch ôn tự động.
+        </p>
       </header>
 
       {noLearned && scope !== 'all' ? (
@@ -119,10 +131,18 @@ export default function Quiz() {
           {/* Scope */}
           <Field label="Phạm vi">
             <div className="grid grid-cols-3 gap-2">
-              <Segment active={scope === 'learned'} onClick={() => setScope('learned')} disabled={noLearned}>
+              <Segment
+                active={scope === 'learned'}
+                onClick={() => setScope('learned')}
+                disabled={noLearned}
+              >
                 Đã học <span className="opacity-60">({learnedWords.length})</span>
               </Segment>
-              <Segment active={scope === 'hard'} onClick={() => setScope('hard')} disabled={hardWords.length === 0}>
+              <Segment
+                active={scope === 'hard'}
+                onClick={() => setScope('hard')}
+                disabled={hardWords.length === 0}
+              >
                 Hay sai <span className="opacity-60">({hardWords.length})</span>
               </Segment>
               <Segment active={scope === 'all'} onClick={() => setScope('all')}>
@@ -143,7 +163,12 @@ export default function Quiz() {
                       : 'border-slate-200 dark:border-slate-700'
                   }`}
                 >
-                  <input type="checkbox" className="accent-brand-600" checked={modes.includes(m)} onChange={() => toggleMode(m)} />
+                  <input
+                    type="checkbox"
+                    className="accent-brand-600"
+                    checked={modes.includes(m)}
+                    onChange={() => toggleMode(m)}
+                  />
                   {MODE_LABELS[m]}
                 </label>
               ))}
@@ -161,10 +186,16 @@ export default function Quiz() {
             </div>
           </Field>
 
-          <button onClick={start} disabled={modes.length === 0 || scopeWords.length === 0} className="btn-primary h-12 w-full">
+          <button
+            onClick={start}
+            disabled={modes.length === 0 || scopeWords.length === 0}
+            className="btn-primary h-12 w-full"
+          >
             <GraduationCap className="h-5 w-5" /> Bắt đầu ({Math.min(count, scopeWords.length)} câu)
           </button>
-          {modes.length === 0 && <p className="text-center text-sm text-rose-500">Chọn ít nhất một dạng câu hỏi.</p>}
+          {modes.length === 0 && (
+            <p className="text-center text-sm text-rose-500">Chọn ít nhất một dạng câu hỏi.</p>
+          )}
         </div>
       )}
     </div>

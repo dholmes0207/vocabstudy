@@ -41,7 +41,10 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
             {word.viRead && (
               <p className="text-sm text-slate-400">
-                cách đọc: <span className="font-semibold text-slate-500 dark:text-slate-300">{word.viRead}</span>
+                cách đọc:{' '}
+                <span className="font-semibold text-slate-500 dark:text-slate-300">
+                  {word.viRead}
+                </span>
               </p>
             )}
           </div>
@@ -54,7 +57,9 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
         {/* BACK */}
         <div className="flip-face flip-back card flex min-h-[20rem] flex-col justify-center gap-4 p-6 sm:min-h-[24rem]">
           <div className="flex items-center justify-center gap-3">
-            <span className="text-2xl font-bold text-slate-800 dark:text-slate-100">{word.word}</span>
+            <span className="text-2xl font-bold text-slate-800 dark:text-slate-100">
+              {word.word}
+            </span>
             <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="sm" />
           </div>
           {(word.ipa || word.viRead) && (
@@ -64,16 +69,26 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
               {word.viRead && <span>{word.viRead}</span>}
             </p>
           )}
-          <p className="text-center text-3xl font-extrabold text-brand-600 dark:text-brand-300">{word.meaning}</p>
+          <p className="text-center text-3xl font-extrabold text-brand-600 dark:text-brand-300">
+            {word.meaning}
+          </p>
 
           <div className="mt-2 space-y-2 rounded-xl bg-slate-50 p-4 dark:bg-slate-800/60">
             <div className="flex items-start gap-2">
-              <SpeakButton text={word.exampleEn} lang={ttsLang} audioSrc={exampleAudio(word.id)} size="sm" className="mt-0.5 shrink-0" />
+              <SpeakButton
+                text={word.exampleEn}
+                lang={ttsLang}
+                audioSrc={exampleAudio(word.id)}
+                size="sm"
+                className="mt-0.5 shrink-0"
+              />
               <p className="text-slate-700 dark:text-slate-200">
                 <HighlightExample sentence={word.exampleEn} word={word.word} />
               </p>
             </div>
-            <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">{word.exampleVi}</p>
+            <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">
+              {word.exampleVi}
+            </p>
           </div>
         </div>
       </div>

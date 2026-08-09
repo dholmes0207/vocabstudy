@@ -1,5 +1,13 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { BarChart3, BookOpen, GraduationCap, Library, Repeat2, Settings, Sparkles } from 'lucide-react'
+import {
+  BarChart3,
+  BookOpen,
+  GraduationCap,
+  Library,
+  Repeat2,
+  Settings,
+  Sparkles,
+} from 'lucide-react'
 import AssistantFab from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
 import { useSettings } from '@/store/settingsStore'
@@ -82,7 +90,9 @@ export default function Layout() {
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className="flex items-center gap-2.5">
-      <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 text-lg shadow-sm">📚</span>
+      <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 text-lg shadow-sm">
+        📚
+      </span>
       {!compact && (
         <div className="leading-tight">
           <p className="font-extrabold tracking-tight">VocabStudy</p>
@@ -110,9 +120,7 @@ function SideLink({ item, badge }: { item: NavItem; badge: number }) {
     >
       <Icon className="h-5 w-5" />
       <span className="flex-1">{item.label}</span>
-      {badge > 0 && (
-        <span className="chip bg-brand-600 text-white">{badge}</span>
-      )}
+      {badge > 0 && <span className="chip bg-brand-600 text-white">{badge}</span>}
     </NavLink>
   )
 }
@@ -146,7 +154,10 @@ function StreakPill({ streak, xp }: { streak: number; xp: number }) {
       <span className="flex items-center gap-1.5" title="Chuỗi ngày học liên tục">
         🔥 <b>{streak}</b> ngày
       </span>
-      <span className="flex items-center gap-1.5 text-brand-600 dark:text-brand-300" title="Điểm kinh nghiệm">
+      <span
+        className="flex items-center gap-1.5 text-brand-600 dark:text-brand-300"
+        title="Điểm kinh nghiệm"
+      >
         ⭐ {xp}
       </span>
     </div>

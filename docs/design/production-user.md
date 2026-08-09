@@ -5,6 +5,7 @@
 Mình là dân văn phòng, học tiếng Anh lúc rảnh: sáng trên điện thoại lúc chờ xe, tối mở laptop ôn lại. Cái mình sợ nhất bây giờ là **mất tiến độ**. Đang học tới ngày ôn thứ 14 của một loạt từ, lỡ xoá cache trình duyệt hoặc đổi máy là bay sạch lịch SRS, chuỗi ngày (streak) và huy hiệu. Nên mình rất muốn có tài khoản.
 
 Mong muốn của mình:
+
 - **Đăng ký nhanh, không phiền**: chỉ cần email + mật khẩu là xong, đừng bắt xác minh 5 bước, đừng bắt nhập số điện thoại hay thông tin cá nhân không liên quan đến việc học.
 - **Đăng nhập được ở nhiều nơi**: học dở trên máy tính cơ quan, về nhà mở điện thoại là tiến độ **đồng bộ ngay** — cùng lịch SRS, cùng từ đã thuộc / chưa thuộc, cùng level. Không phải học lại từ đầu.
 - **Không mất dữ liệu cũ**: mình đã học kha khá bằng localStorage rồi. Khi tạo tài khoản lần đầu, mình mong hệ thống **hỏi có muốn nhập (migrate) tiến độ đang lưu trên máy vào tài khoản không**, chứ đừng ghi đè hay bỏ trắng.
@@ -20,6 +21,7 @@ Kỳ vọng ngầm: đăng nhập xong thì **mọi thứ y hệt lúc chưa có
 Mình dạy một lớp tiếng Anh khoảng 30–40 học sinh. Mình cần công cụ **quản lý cả lớp**, không phải công cụ cá nhân.
 
 Việc mình cần làm được:
+
 - **Tạo tài khoản cho học sinh hàng loạt**: nhập danh sách (tên/email), hệ thống sinh tài khoản + mật khẩu tạm, hoặc tạo mã lớp để học sinh tự vào. Mình không muốn ngồi tạo tay từng em.
 - **Xem tiến độ cả lớp trong một màn hình**: em nào đang học tới đâu, thuộc bao nhiêu từ, ai bỏ học mấy hôm nay, điểm quiz trung bình, ai đang đuối. Có thể xem chi tiết một em khi cần, và **xuất được ra file** (CSV) để chấm/báo cáo.
 - **Cắm API key AI cho cả lớp mà học sinh KHÔNG thấy key**: đây là điều mình cực kỳ quan tâm. Mình bỏ tiền mua key OpenAI, nạp vào **một chỗ ở phía server**, cả lớp dùng chung trợ lý AI, nhưng **không em nào đọc/copy được key**. Key phải nằm server, không lộ ra trình duyệt, không nằm trong mã nguồn client.
@@ -36,6 +38,7 @@ Kỳ vọng vận hành: **deploy được lên một server** cho cả lớp tr
 Em là học sinh trong lớp. Em không rành kỹ thuật, em chỉ muốn **đăng nhập là học được ngay**.
 
 Em mong:
+
 - **Đăng nhập đơn giản**: thầy/cô đưa em tài khoản (hoặc mã lớp), em nhập vào là vào thẳng phần học — flashcard, quiz, tra từ. Không phải cài đặt gì thêm.
 - **Tiến độ tự lưu, không cần nghĩ**: em học ở lớp trên máy trường, về nhà mở điện thoại là **học tiếp đúng chỗ**, đúng lịch ôn. Em không muốn hiểu SRS là gì cũng chẳng sao, miễn nó nhắc em đúng từ cần ôn.
 - **Dùng trợ lý AI mà không phải lo key**: em hỏi nghĩa từ, xin ví dụ, luyện đánh vần — AI trả lời hợp với **level của em**. Em **không cần** và cũng **không nên thấy** cái API key nào cả; đó là việc của thầy cô.
@@ -49,12 +52,14 @@ Nỗi lo của em: sợ lỡ tay bấm gì đó mất hết tiến độ; sợ �
 Cả ba nhóm bọn mình đều có mấy nỗi sợ giống nhau, và có những thứ nếu sản phẩm làm thì bọn mình sẽ bỏ dùng.
 
 Bọn mình **sợ**:
+
 - **Lộ dữ liệu / mật khẩu**: mật khẩu phải được **băm (hash)** đàng hoàng ở server, không bao giờ lưu dạng chữ thô, không log ra console. Bọn mình sợ kiểu "lỡ hack một phát lộ hết".
 - **Lộ API key**: key OpenAI mà rò ra client là cô giáo mất tiền thật. Key phải ở server, guardrail cũng phải chạy ở server (chặn hỏi ngoài chủ đề từ vựng ngay tại backend), chứ chặn ở client thì học sinh mở DevTools là gọi thẳng được.
 - **Mất tiến độ khi đổi máy / xoá cache**: đây là lý do chính bọn mình muốn có tài khoản. Nếu có tài khoản mà vẫn mất thì còn tệ hơn cũ.
 - **Phân quyền giả**: "admin" mà chỉ ẩn nút ở client thì coi như không có. Bọn mình cần quyền được kiểm ở server.
 
 Những thứ **đừng làm (anti-features)**:
+
 - **Đừng bắt trả phí ngay / dựng paywall** mới cho học. Ít nhất phần học cốt lõi phải miễn phí; đừng vừa đăng nhập đã đòi nâng cấp Pro.
 - **Đừng nhét quảng cáo**, nhất là quảng cáo lạ chèn giữa lúc học hay lúc làm quiz.
 - **Đừng thu thập dữ liệu thừa**: đừng đòi số điện thoại, danh bạ, vị trí, quyền truy cập linh tinh. Chỉ xin đúng thứ cần cho việc học.

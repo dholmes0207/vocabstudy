@@ -12,17 +12,17 @@
 
 ## 1. Lựa chọn stack & lý do
 
-| Lớp | Công nghệ chọn | Lý do |
-|---|---|---|
-| Frontend | **Giữ nguyên** React 18 + Vite 5 + TS + Tailwind + zustand + react-router (HashRouter) | Ràng buộc bắt buộc. Không viết lại. Chỉ thêm `authStore`, guard route, màn Login/Register/Admin và đổi lớp gọi AI. |
-| Backend | **Node + Express 4 + TypeScript** | Express đơn giản, hệ sinh thái middleware lớn (helmet, cors, express-rate-limit), dev đã quen. Fastify nhanh hơn nhưng lợi thế không đáng kể ở quy mô lớp học/vài nghìn user; Express giảm rủi ro và thời gian. |
-| DB (dev) | **SQLite qua `better-sqlite3`** | Zero-config, chạy local 1 file `data/app.db`, đồng bộ (sync API) nên code đơn giản, test nhanh, không cần Docker/dịch vụ ngoài. |
-| DB (prod) | **PostgreSQL** | Đa kết nối, bền, có managed service (Render/Railway/Fly/Neon/Supabase). Đường di: đổi driver + `DATABASE_URL`, giữ nguyên schema/logic. |
-| Data layer / ORM | **Drizzle ORM + drizzle-kit** | TypeScript-first, "gần SQL", **hỗ trợ cùng lúc `better-sqlite3` và `pg`** với schema định nghĩa một lần → chuyển SQLite→Postgres ít ma sát nhất. Migration bằng `drizzle-kit generate/migrate`. (Prisma là phương án thay thế; loại vì engine nặng và trải nghiệm SQLite→PG kém mượt hơn cho use-case này.) |
-| Auth | **JWT ký server, phát qua cookie HttpOnly** (access 15', refresh 30 ngày có xoay vòng + thu hồi) | Xem giải thích bên dưới. |
-| Băm mật khẩu | **bcrypt** (cost 12) | Chuẩn công nghiệp, có salt sẵn, chịu brute-force. (argon2 tốt hơn nhưng bcrypt đủ và dễ build đa nền.) |
-| Validate | **zod** | Kiểm input mọi endpoint, suy ra type TS luôn. |
-| Mã hoá API key khi lưu DB | **AES-256-GCM** (`node:crypto`) với `ENCRYPTION_KEY` từ env | Không lưu key nhà cung cấp AI dạng plaintext. |
+| Lớp                       | Công nghệ chọn                                                                                   | Lý do                                                                                                                                                                                                                                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend                  | **Giữ nguyên** React 18 + Vite 5 + TS + Tailwind + zustand + react-router (HashRouter)           | Ràng buộc bắt buộc. Không viết lại. Chỉ thêm `authStore`, guard route, màn Login/Register/Admin và đổi lớp gọi AI.                                                                                                                                                                                          |
+| Backend                   | **Node + Express 4 + TypeScript**                                                                | Express đơn giản, hệ sinh thái middleware lớn (helmet, cors, express-rate-limit), dev đã quen. Fastify nhanh hơn nhưng lợi thế không đáng kể ở quy mô lớp học/vài nghìn user; Express giảm rủi ro và thời gian.                                                                                             |
+| DB (dev)                  | **SQLite qua `better-sqlite3`**                                                                  | Zero-config, chạy local 1 file `data/app.db`, đồng bộ (sync API) nên code đơn giản, test nhanh, không cần Docker/dịch vụ ngoài.                                                                                                                                                                             |
+| DB (prod)                 | **PostgreSQL**                                                                                   | Đa kết nối, bền, có managed service (Render/Railway/Fly/Neon/Supabase). Đường di: đổi driver + `DATABASE_URL`, giữ nguyên schema/logic.                                                                                                                                                                     |
+| Data layer / ORM          | **Drizzle ORM + drizzle-kit**                                                                    | TypeScript-first, "gần SQL", **hỗ trợ cùng lúc `better-sqlite3` và `pg`** với schema định nghĩa một lần → chuyển SQLite→Postgres ít ma sát nhất. Migration bằng `drizzle-kit generate/migrate`. (Prisma là phương án thay thế; loại vì engine nặng và trải nghiệm SQLite→PG kém mượt hơn cho use-case này.) |
+| Auth                      | **JWT ký server, phát qua cookie HttpOnly** (access 15', refresh 30 ngày có xoay vòng + thu hồi) | Xem giải thích bên dưới.                                                                                                                                                                                                                                                                                    |
+| Băm mật khẩu              | **bcrypt** (cost 12)                                                                             | Chuẩn công nghiệp, có salt sẵn, chịu brute-force. (argon2 tốt hơn nhưng bcrypt đủ và dễ build đa nền.)                                                                                                                                                                                                      |
+| Validate                  | **zod**                                                                                          | Kiểm input mọi endpoint, suy ra type TS luôn.                                                                                                                                                                                                                                                               |
+| Mã hoá API key khi lưu DB | **AES-256-GCM** (`node:crypto`) với `ENCRYPTION_KEY` từ env                                      | Không lưu key nhà cung cấp AI dạng plaintext.                                                                                                                                                                                                                                                               |
 
 ### Quyết định Auth: JWT-trong-cookie-HttpOnly (KHÔNG dùng localStorage)
 
@@ -147,6 +147,7 @@ CREATE INDEX idx_usage_user_time ON usage_logs(user_id, created_at);
 ```
 
 **Delta cho PostgreSQL:**
+
 - `id TEXT PRIMARY KEY` → `id UUID PRIMARY KEY DEFAULT gen_random_uuid()` (extension `pgcrypto`).
 - `datetime('now')` → `now()`; kiểu thời gian → `TIMESTAMPTZ`.
 - `is_active INTEGER 0/1` → `BOOLEAN`.
@@ -162,12 +163,14 @@ CREATE INDEX idx_usage_user_time ON usage_logs(user_id, created_at);
 Tiền tố `/api`. Content-Type `application/json`. Auth qua **cookie HttpOnly** (`access_token`, `refresh_token`) — client gọi `fetch(..., { credentials: 'include' })`. Không truyền token qua URL.
 
 ### Middleware
+
 - `requireAuth`: đọc `access_token` cookie → verify JWT (`JWT_SECRET`). Fail → `401`. Gắn `req.user = { id, role }`.
 - `requireRole('admin')`: sau `requireAuth`, kiểm `req.user.role === 'admin'`, nếu không → `403`.
 - `validate(zodSchema)`: parse `body`/`params`; fail → `400` `{ error, issues }`.
 - `authLimiter`: rate-limit `/auth/login` + `/auth/register` (vd 10 req / 15 phút / IP).
 
 ### Mã lỗi chuẩn
+
 `400` validate/thiếu field · `401` chưa/hết đăng nhập · `403` sai vai/`status!=active` · `404` không thấy · `409` email trùng · `429` quá nhiều request · `502` lỗi upstream OpenAI · `500` lỗi server. Body lỗi: `{ "error": "<mã máy>", "message": "<mô tả tiếng Việt>" }`.
 
 ### Auth
@@ -264,6 +267,7 @@ Body: {
 ```
 
 **Server phải làm (di từ client sang, tái dùng logic đã có):**
+
 1. `preCheckInput` (rỗng / quá dài) — port `src/lib/ai/guardrail.ts`.
 2. Ép `messages` chỉ gồm `user|assistant`; **loại mọi role `system` do client gửi** (chống prompt-injection).
 3. `buildMessages(history, { levelInstruction, contextText })` — port `src/lib/ai/systemPrompt.ts` (guardrail SYSTEM_PROMPT luôn ở server, client không đọc được).
@@ -354,6 +358,7 @@ VocabStudy/
 > Có thể chia sẻ type bằng cách import `../src/types` từ server, hoặc tách `packages/shared`. Tối giản: server tự khai lại vài type (`LanguageProgress`, `SRSCard`, `StudyStats`) hoặc dùng path alias tới `src/types`.
 
 **`server/.env.example`:**
+
 ```dotenv
 NODE_ENV=development
 PORT=8080
@@ -370,9 +375,11 @@ COOKIE_SECURE=false              # true ở prod (HTTPS)
 ```
 
 **Vite dev proxy** (thêm vào `vite.config.ts` hiện có — không phá `base:'./'`):
+
 ```ts
 server: { proxy: { '/api': { target: 'http://localhost:8080', changeOrigin: true } } }
 ```
+
 Dev chạy song song: `vite` (FE :5173) + `server` (:8080), FE gọi `/api` được proxy sang server → cookie cùng "origin ảo".
 
 ---
@@ -382,6 +389,7 @@ Dev chạy song song: `vite` (FE :5173) + `server` (:8080), FE gọi `/api` đư
 **Nguyên tắc:** prod chạy **1 process Node** vừa serve `dist/` (static + SPA fallback) vừa phục vụ `/api`. Cùng origin ⇒ cookie HttpOnly hoạt động mượt, không cần CORS chéo.
 
 `server/src/index.ts` (prod):
+
 ```ts
 if (env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve('dist')))
@@ -390,6 +398,7 @@ if (env.NODE_ENV === 'production') {
 ```
 
 **Dockerfile (multi-stage):**
+
 ```dockerfile
 # 1) build frontend
 FROM node:20-alpine AS fe
@@ -420,6 +429,7 @@ CMD ["node", "server/dist/index.js"]
 ```
 
 **Chạy prod local để test:**
+
 ```bash
 docker build -t vocabstudy .
 docker run -p 8080:8080 --env-file server/.env vocabstudy
@@ -429,6 +439,7 @@ docker run -p 8080:8080 --env-file server/.env vocabstudy
 **Đường lên PostgreSQL:** đổi `DB_DRIVER=pg` + `DATABASE_URL=postgres://...`, chạy `drizzle-kit migrate`. Không đổi code nghiệp vụ. `docker-compose.yml` có thể thêm service `postgres:16` để thử prod-like local.
 
 **Chọn nền tảng:**
+
 - **Render / Railway** — dễ nhất: 1 web service từ Dockerfile + 1 managed Postgres, set env, tự HTTPS. Khuyến nghị cho bắt đầu.
 - **Fly.io** — Docker-first, có Postgres, edge, phù hợp mở rộng.
 - **VPS (Ubuntu)** — `docker run` sau Nginx/Caddy reverse-proxy + TLS; toàn quyền, rẻ, tự lo backup/monitoring.
@@ -444,20 +455,25 @@ Hiện dữ liệu ở `localStorage`: `vocab.progress.v1` (tiến độ, shape 
 1. FE đọc `useStudy.getState().progress` (từ localStorage đã hydrate).
 2. `GET /api/progress/:lang` lấy dữ liệu server (có thể rỗng nếu user mới).
 3. **Merge per-card** (không đè mù) rồi `PUT`:
+
 ```ts
 function mergeProgress(local?: LanguageProgress, server?: LanguageProgress): LanguageProgress {
-  if (!server) return local ?? { cards:{}, stats: emptyStats() }
-  if (!local)  return server
+  if (!server) return local ?? { cards: {}, stats: emptyStats() }
+  if (!local) return server
   const cards: Record<number, SRSCard> = { ...server.cards }
   for (const [id, lc] of Object.entries(local.cards)) {
     const sc = cards[+id]
     // giữ card "học sâu hơn": box cao hơn, hoặc lastReviewedDay mới hơn
-    if (!sc || lc.box > sc.box ||
-        (lc.box === sc.box && (lc.lastReviewedDay ?? -1) > (sc.lastReviewedDay ?? -1))) {
+    if (
+      !sc ||
+      lc.box > sc.box ||
+      (lc.box === sc.box && (lc.lastReviewedDay ?? -1) > (sc.lastReviewedDay ?? -1))
+    ) {
       cards[+id] = lc
     }
   }
-  const stats: StudyStats = {                    // cộng dồn an toàn, lấy max cho streak/xp
+  const stats: StudyStats = {
+    // cộng dồn an toàn, lấy max cho streak/xp
     totalReviews: local.stats.totalReviews + server.stats.totalReviews,
     totalCorrect: local.stats.totalCorrect + server.stats.totalCorrect,
     xp: Math.max(local.stats.xp, server.stats.xp),
@@ -469,6 +485,7 @@ function mergeProgress(local?: LanguageProgress, server?: LanguageProgress): Lan
   return { cards, stats }
 }
 ```
+
 4. Sau merge: `useStudy.replaceAll({ [lang]: merged })` + `PUT /api/progress/:lang`.
 5. **Đánh dấu đã migrate** (`localStorage['vocab.migratedAt']`) để không chạy lại; từ đó server là nguồn chân lý, localStorage chỉ là cache offline.
 6. `settings.level` → đẩy lên `users.level`. Key AI cũ trong `vocab-ai.v1`: **xóa khỏi client** (không đẩy lên, không lưu) — key giờ chỉ ở server.
@@ -481,6 +498,7 @@ function mergeProgress(local?: LanguageProgress, server?: LanguageProgress): Lan
 ## 10. Definition of Done + Checklist bảo mật
 
 ### Definition of Done (kỹ thuật)
+
 - [ ] `npm run dev` (FE :5173) + `server` (:8080) chạy song song, proxy `/api` hoạt động.
 - [ ] Register → Login → `GET /me` → Logout hoạt động; access hết hạn tự refresh qua cookie.
 - [ ] Progress: học vài từ → reload/đăng nhập máy khác thấy tiến độ; xử lý `409 stale` bằng merge, không mất dữ liệu.
@@ -493,6 +511,7 @@ function mergeProgress(local?: LanguageProgress, server?: LanguageProgress): Lan
 - [ ] Test: unit cho `password`, `jwt`, `crypto`, `mergeProgress`, `preCheckInput`; integration (supertest) cho auth + progress + admin role + ai proxy (mock OpenAI); FE build `tsc -b` sạch.
 
 ### Checklist bảo mật
+
 - [ ] Mật khẩu **bcrypt** (cost ≥ 12); không log/trả hash; login sai email≡sai mật khẩu.
 - [ ] JWT trong cookie **HttpOnly; Secure(prod); SameSite=Lax**; access ngắn, refresh xoay vòng + lưu **hash** + thu hồi được; phát hiện tái dùng refresh ⇒ revoke cả cây.
 - [ ] `requireAuth` + `requireRole('admin')` phủ mọi endpoint nhạy cảm; mỗi request kiểm `status==='active'`.
@@ -508,6 +527,7 @@ function mergeProgress(local?: LanguageProgress, server?: LanguageProgress): Lan
 ---
 
 Các file thật cần bám khi triển khai (đường dẫn tuyệt đối):
+
 - `/home/dholmes/Project_personal/Vocabulary-Study/src/lib/ai/openai.ts`, `/home/dholmes/Project_personal/Vocabulary-Study/src/lib/ai/systemPrompt.ts`, `/home/dholmes/Project_personal/Vocabulary-Study/src/lib/ai/guardrail.ts` → **port sang `server/src/ai/`** (đây là nơi guardrail + key phải nằm).
 - `/home/dholmes/Project_personal/Vocabulary-Study/src/store/aiStore.ts` → rút gọn (bỏ `apiKey`, bỏ PIN djb2).
 - `/home/dholmes/Project_personal/Vocabulary-Study/src/store/studyStore.ts` (đã có `replaceAll` cho đồng bộ) và `/home/dholmes/Project_personal/Vocabulary-Study/src/types/index.ts` (`LanguageProgress`/`SRSCard`/`StudyStats` = shape của `data_json`).

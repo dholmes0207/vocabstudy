@@ -8,7 +8,8 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   const user = await requireUser(env, request)
   if (user instanceof Response) return user
 
-  if (!env.OPENAI_API_KEY) return json({ error: 'Trợ lý AI chưa được cấu hình. Liên hệ quản trị viên.' }, 503)
+  if (!env.OPENAI_API_KEY)
+    return json({ error: 'Trợ lý AI chưa được cấu hình. Liên hệ quản trị viên.' }, 503)
 
   let body: {
     history?: { role?: string; content?: string }[]
@@ -23,7 +24,13 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
 
   const raw = Array.isArray(body.history) ? body.history : []
   const turns: ChatTurn[] = raw
-    .filter((h) => h && (h.role === 'user' || h.role === 'assistant') && typeof h.content === 'string' && h.content.length <= 4000)
+    .filter(
+      (h) =>
+        h &&
+        (h.role === 'user' || h.role === 'assistant') &&
+        typeof h.content === 'string' &&
+        h.content.length <= 4000
+    )
     .map((h) => ({ role: h.role as 'user' | 'assistant', content: h.content as string }))
     .slice(-20)
   if (!turns.length) return json({ error: 'Yêu cầu không hợp lệ' }, 400)
@@ -42,8 +49,16 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   try {
     r = await fetch(`${base}/chat/completions`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${env.OPENAI_API_KEY}` },
-      body: JSON.stringify({ model, messages, max_completion_tokens: 2000, reasoning_effort: 'low' }),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        max_completion_tokens: 2000,
+        reasoning_effort: 'low',
+      }),
     })
   } catch {
     return json({ error: 'Không gọi được trợ lý AI. Thử lại nhé.' }, 502)

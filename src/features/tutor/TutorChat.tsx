@@ -74,7 +74,10 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
     }
     setWarn(null)
     const userMsg: Msg = { id: nextId(), role: 'user', content: text }
-    const history = [...messages.filter((m) => !m.isError), userMsg].map((m) => ({ role: m.role, content: m.content }))
+    const history = [...messages.filter((m) => !m.isError), userMsg].map((m) => ({
+      role: m.role,
+      content: m.content,
+    }))
     setMessages((m) => [...m, userMsg])
     setInput('')
     setLoading(true)
@@ -96,7 +99,9 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
       <div className="scroll-thin flex-1 space-y-4 overflow-y-auto p-4">
         <Bubble role="assistant" content={GREETING} />
         {ctx.word && messages.length === 0 && (
-          <p className="text-center text-xs text-slate-400">💡 Mình biết bạn đang xem từ "{ctx.word.word}".</p>
+          <p className="text-center text-xs text-slate-400">
+            💡 Mình biết bạn đang xem từ "{ctx.word.word}".
+          </p>
         )}
         {messages.map((m) => (
           <Bubble key={m.id} role={m.role} content={m.content} isError={m.isError} />
@@ -113,7 +118,9 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         )}
         {messages.length === 0 && !loading && configured && (
           <div className="pt-1">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">Gợi ý câu hỏi</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+              Gợi ý câu hỏi
+            </p>
             <div className="flex flex-wrap gap-2">
               {suggestions.map((p) => (
                 <button
@@ -146,7 +153,12 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
             placeholder="Hỏi về một từ tiếng Anh…"
             className="max-h-28 min-h-[2.75rem] flex-1 resize-none rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-[15px] outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
           />
-          <button onClick={() => send(input)} disabled={loading || !input.trim()} className="btn-primary h-11 w-11 shrink-0 !px-0" aria-label="Gửi">
+          <button
+            onClick={() => send(input)}
+            disabled={loading || !input.trim()}
+            className="btn-primary h-11 w-11 shrink-0 !px-0"
+            aria-label="Gửi"
+          >
             <Send className="h-5 w-5" />
           </button>
         </div>
@@ -155,20 +167,34 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   )
 }
 
-function Bubble({ role, content, isError }: { role: 'user' | 'assistant'; content: string; isError?: boolean }) {
+function Bubble({
+  role,
+  content,
+  isError,
+}: {
+  role: 'user' | 'assistant'
+  content: string
+  isError?: boolean
+}) {
   const isUser = role === 'user'
   return (
     <div className={`flex gap-2.5 ${isUser ? 'flex-row-reverse' : ''}`}>
       <span
         className={`grid h-8 w-8 shrink-0 place-items-center rounded-full ${
-          isUser ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200' : 'bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300'
+          isUser
+            ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200'
+            : 'bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300'
         }`}
       >
         {isUser ? <User2 className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
       </span>
       <div
         className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-[15px] leading-relaxed ${
-          isUser ? 'rounded-tr-sm bg-brand-600 text-white' : isError ? 'rounded-tl-sm bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-200' : 'rounded-tl-sm bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
+          isUser
+            ? 'rounded-tr-sm bg-brand-600 text-white'
+            : isError
+              ? 'rounded-tl-sm bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-200'
+              : 'rounded-tl-sm bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
         }`}
       >
         {content}
@@ -178,7 +204,12 @@ function Bubble({ role, content, isError }: { role: 'user' | 'assistant'; conten
 }
 
 function Dot({ delay = '0s' }: { delay?: string }) {
-  return <span className="h-2 w-2 animate-bounce rounded-full bg-slate-400" style={{ animationDelay: delay }} />
+  return (
+    <span
+      className="h-2 w-2 animate-bounce rounded-full bg-slate-400"
+      style={{ animationDelay: delay }}
+    />
+  )
 }
 
 function Centered({ children }: { children: React.ReactNode }) {
@@ -193,7 +224,9 @@ function LoginPrompt({ onClose }: { onClose?: () => void }) {
           <Bot className="h-7 w-7" />
         </span>
         <h2 className="mt-4 text-lg font-bold">Trợ lý AI học từ vựng</h2>
-        <p className="mt-2 text-sm text-slate-500">Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).</p>
+        <p className="mt-2 text-sm text-slate-500">
+          Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).
+        </p>
         <Link to="/login" onClick={onClose} className="btn-primary mt-4">
           <LogIn className="h-4 w-4" /> Đăng nhập / Đăng ký
         </Link>
@@ -212,13 +245,17 @@ function NotConfigured({ admin, onClose }: { admin: boolean; onClose?: () => voi
         <h2 className="mt-4 text-lg font-bold">Trợ lý chưa sẵn sàng</h2>
         {admin ? (
           <>
-            <p className="mt-2 text-sm text-slate-500">Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.</p>
+            <p className="mt-2 text-sm text-slate-500">
+              Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.
+            </p>
             <Link to="/admin" onClick={onClose} className="btn-primary mt-4">
               Cấu hình trong Quản trị
             </Link>
           </>
         ) : (
-          <p className="mt-2 text-sm text-slate-500">Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.</p>
+          <p className="mt-2 text-sm text-slate-500">
+            Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.
+          </p>
         )}
       </div>
     </div>

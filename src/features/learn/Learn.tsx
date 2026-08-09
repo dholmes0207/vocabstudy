@@ -61,7 +61,9 @@ export default function Learn() {
     <div className="space-y-8 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Học từ mới 📖</h1>
-        <p className="mt-1 text-slate-500">Lật thẻ, nghe phát âm, đọc ví dụ — rồi tự đánh giá đã nhớ hay chưa.</p>
+        <p className="mt-1 text-slate-500">
+          Lật thẻ, nghe phát âm, đọc ví dụ — rồi tự đánh giá đã nhớ hay chưa.
+        </p>
       </header>
 
       {/* Today's lesson */}
@@ -101,7 +103,11 @@ export default function Learn() {
           </h2>
         </div>
         {s.fresh === 0 && s.mastered === s.total ? (
-          <EmptyState emoji="🏆" title="Bạn đã thành thạo toàn bộ từ!" description="Quá xuất sắc. Hãy ôn lại định kỳ để giữ vững." />
+          <EmptyState
+            emoji="🏆"
+            title="Bạn đã thành thạo toàn bộ từ!"
+            description="Quá xuất sắc. Hãy ôn lại định kỳ để giữ vững."
+          />
         ) : (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {decks.map((deck) => {
@@ -115,7 +121,9 @@ export default function Learn() {
                   className="card flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-0.5 hover:shadow-md disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-sm"
                 >
                   <ProgressRing value={pct} size={64} stroke={6}>
-                    <span className="text-xs font-bold">{complete ? '✓' : `${Math.round(pct * 100)}%`}</span>
+                    <span className="text-xs font-bold">
+                      {complete ? '✓' : `${Math.round(pct * 100)}%`}
+                    </span>
                   </ProgressRing>
                   <span className="text-sm font-semibold">{deck.title}</span>
                   <span className="text-xs text-slate-400">

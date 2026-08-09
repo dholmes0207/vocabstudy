@@ -11,9 +11,22 @@ interface Props {
 }
 
 /** Friendly end-of-session celebration with a light accuracy readout. */
-export default function SessionComplete({ title = 'Hoàn thành!', emoji = '🎉', correct, total, children }: Props) {
+export default function SessionComplete({
+  title = 'Hoàn thành!',
+  emoji = '🎉',
+  correct,
+  total,
+  children,
+}: Props) {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0
-  const praise = pct >= 90 ? 'Tuyệt vời!' : pct >= 70 ? 'Làm tốt lắm!' : pct >= 50 ? 'Cố lên nhé!' : 'Đừng nản, ôn lại nào!'
+  const praise =
+    pct >= 90
+      ? 'Tuyệt vời!'
+      : pct >= 70
+        ? 'Làm tốt lắm!'
+        : pct >= 50
+          ? 'Cố lên nhé!'
+          : 'Đừng nản, ôn lại nào!'
 
   // Throw a little confetti to reward finishing (bigger burst for higher scores).
   useEffect(() => {

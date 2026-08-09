@@ -45,7 +45,9 @@ export default function Dashboard() {
 
       {/* Today's plan */}
       <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">Kế hoạch hôm nay</h2>
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+          Kế hoạch hôm nay
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <ActionCard
             to="/review"
@@ -89,7 +91,10 @@ export default function Dashboard() {
           <Metric label="Chưa học" value={s.fresh} tone="text-slate-400" />
           <div className="col-span-2 sm:col-span-4">
             <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-              <div className="h-full rounded-full bg-brand-500 transition-all" style={{ width: `${learnedPct * 100}%` }} />
+              <div
+                className="h-full rounded-full bg-brand-500 transition-all"
+                style={{ width: `${learnedPct * 100}%` }}
+              />
             </div>
             <p className="mt-1.5 text-xs text-slate-400">
               Bạn đã chạm tới {s.learned}/{s.total} từ.
@@ -100,8 +105,18 @@ export default function Dashboard() {
 
       {/* Quick links */}
       <section className="grid gap-4 sm:grid-cols-2">
-        <QuickLink to="/quiz" icon={GraduationCap} title="Kiểm tra nhanh" desc="4 dạng quiz: chọn nghĩa, nghe, điền từ…" />
-        <QuickLink to="/browse" icon={Library} title="Tra cứu 1000 từ" desc="Tìm kiếm & lọc toàn bộ danh sách từ vựng." />
+        <QuickLink
+          to="/quiz"
+          icon={GraduationCap}
+          title="Kiểm tra nhanh"
+          desc="4 dạng quiz: chọn nghĩa, nghe, điền từ…"
+        />
+        <QuickLink
+          to="/browse"
+          icon={Library}
+          title="Tra cứu 1000 từ"
+          desc="Tìm kiếm & lọc toàn bộ danh sách từ vựng."
+        />
       </section>
     </div>
   )
@@ -129,18 +144,20 @@ function ActionCard({
   hint: string
 }) {
   const toneCls =
-    tone === 'brand'
-      ? 'from-brand-500 to-brand-700'
-      : 'from-emerald-500 to-emerald-700'
+    tone === 'brand' ? 'from-brand-500 to-brand-700' : 'from-emerald-500 to-emerald-700'
   const inner = (
     <div
       className={`card relative overflow-hidden p-5 transition ${
         disabled ? 'opacity-70' : 'hover:-translate-y-0.5 hover:shadow-md'
       }`}
     >
-      <div className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${toneCls} opacity-10`} />
+      <div
+        className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${toneCls} opacity-10`}
+      />
       <div className="flex items-center gap-3">
-        <span className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow`}>
+        <span
+          className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow`}
+        >
           <Icon className="h-6 w-6" />
         </span>
         <h3 className="text-lg font-bold">{title}</h3>
@@ -150,7 +167,9 @@ function ActionCard({
         <span className="text-slate-500">{unit}</span>
       </p>
       <p className="mt-1 text-xs text-slate-400">{hint}</p>
-      <div className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-400' : 'text-brand-600 dark:text-brand-300'}`}>
+      <div
+        className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-400' : 'text-brand-600 dark:text-brand-300'}`}
+      >
         {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
       </div>
     </div>
@@ -158,7 +177,17 @@ function ActionCard({
   return disabled ? <div>{inner}</div> : <Link to={to}>{inner}</Link>
 }
 
-function Metric({ label, value, total, tone }: { label: string; value: number; total?: number; tone: string }) {
+function Metric({
+  label,
+  value,
+  total,
+  tone,
+}: {
+  label: string
+  value: number
+  total?: number
+  tone: string
+}) {
   return (
     <div>
       <p className={`text-2xl font-extrabold ${tone}`}>
@@ -170,9 +199,22 @@ function Metric({ label, value, total, tone }: { label: string; value: number; t
   )
 }
 
-function QuickLink({ to, icon: Icon, title, desc }: { to: string; icon: typeof BookOpen; title: string; desc: string }) {
+function QuickLink({
+  to,
+  icon: Icon,
+  title,
+  desc,
+}: {
+  to: string
+  icon: typeof BookOpen
+  title: string
+  desc: string
+}) {
   return (
-    <Link to={to} className="card flex items-center gap-4 p-5 transition hover:-translate-y-0.5 hover:shadow-md">
+    <Link
+      to={to}
+      className="card flex items-center gap-4 p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+    >
       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
         <Icon className="h-6 w-6" />
       </span>

@@ -47,12 +47,18 @@ async function req<T>(path: string, options: RequestInit = {}): Promise<T> {
 export const api = {
   // AI (Cloudflare Pages Function — OpenAI key stays a server-side secret)
   aiStatus: () => req<{ configured: boolean; model: string }>('/ai/status'),
-  aiChat: (payload: { history: { role: 'user' | 'assistant'; content: string }[]; level?: number; context?: string }) =>
-    req<{ reply: string }>('/ai/chat', { method: 'POST', body: JSON.stringify(payload) }),
+  aiChat: (payload: {
+    history: { role: 'user' | 'assistant'; content: string }[]
+    level?: number
+    context?: string
+  }) => req<{ reply: string }>('/ai/chat', { method: 'POST', body: JSON.stringify(payload) }),
 
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
-  adminPatchUser: (id: string, patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }) =>
+  adminPatchUser: (
+    id: string,
+    patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }
+  ) =>
     req<{ ok: true }>('/admin/users', { method: 'PATCH', body: JSON.stringify({ id, ...patch }) }),
   adminResetPassword: (id: string, password: string) =>
     req<{ ok: true }>('/admin/users', { method: 'POST', body: JSON.stringify({ id, password }) }),

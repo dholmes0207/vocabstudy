@@ -19,7 +19,8 @@ export default function UserMenu() {
     return () => document.removeEventListener('mousedown', onDoc)
   }, [])
 
-  if (status === 'loading') return <div className="h-9 w-9 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
+  if (status === 'loading')
+    return <div className="h-9 w-9 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
 
   if (!user) {
     return (
@@ -43,7 +44,10 @@ export default function UserMenu() {
         {initial}
       </button>
       {open && (
-        <div className="card absolute right-0 z-40 mt-2 w-56 overflow-hidden p-1 animate-fade-in" role="menu">
+        <div
+          className="card absolute right-0 z-40 mt-2 w-56 overflow-hidden p-1 animate-fade-in"
+          role="menu"
+        >
           <div className="border-b border-slate-100 px-3 py-2.5 dark:border-slate-800">
             <p className="truncate text-sm font-semibold">{user.name || 'Người học'}</p>
             <p className="truncate text-xs text-slate-400">{user.email}</p>

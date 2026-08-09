@@ -44,7 +44,8 @@ export default function Browse() {
     return pack.words.filter((w) => {
       if (pos !== 'all' && w.posCategory !== pos) return false
       if (phaseFilter !== 'all' && phaseOf(cards[w.id]) !== phaseFilter) return false
-      if (q && !w.word.toLowerCase().includes(q) && !w.meaning.toLowerCase().includes(q)) return false
+      if (q && !w.word.toLowerCase().includes(q) && !w.meaning.toLowerCase().includes(q))
+        return false
       return true
     })
   }, [pack.words, query, pos, phaseFilter, cards])
@@ -58,8 +59,14 @@ export default function Browse() {
   useProvideContext(
     focused ? `Đang xem từ "${focused.word}"` : 'Tra cứu từ vựng',
     focused
-      ? { word: focused.word, meaning: focused.meaning, ipa: focused.ipa, pos: focused.pos, exampleEn: focused.exampleEn }
-      : undefined,
+      ? {
+          word: focused.word,
+          meaning: focused.meaning,
+          ipa: focused.ipa,
+          pos: focused.pos,
+          exampleEn: focused.exampleEn,
+        }
+      : undefined
   )
 
   const resetPage = () => setPage(0)
@@ -73,7 +80,10 @@ export default function Browse() {
 
       {/* Search */}
       <div className="relative">
-        <Search aria-hidden className="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+        <Search
+          aria-hidden
+          className="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+        />
         <input
           type="search"
           value={query}
@@ -89,21 +99,49 @@ export default function Browse() {
 
       {/* Filters */}
       <div className="flex flex-wrap gap-2">
-        <FilterChip active={pos === 'all'} onClick={() => { setPos('all'); resetPage() }}>
+        <FilterChip
+          active={pos === 'all'}
+          onClick={() => {
+            setPos('all')
+            resetPage()
+          }}
+        >
           Tất cả từ loại
         </FilterChip>
         {categories.map((c) => (
-          <FilterChip key={c} active={pos === c} onClick={() => { setPos(c); resetPage() }}>
+          <FilterChip
+            key={c}
+            active={pos === c}
+            onClick={() => {
+              setPos(c)
+              resetPage()
+            }}
+          >
             {POS_LABEL[c]}
           </FilterChip>
         ))}
       </div>
       <div className="flex flex-wrap gap-2">
-        <FilterChip active={phaseFilter === 'all'} onClick={() => { setPhaseFilter('all'); resetPage() }} subtle>
+        <FilterChip
+          active={phaseFilter === 'all'}
+          onClick={() => {
+            setPhaseFilter('all')
+            resetPage()
+          }}
+          subtle
+        >
           Mọi trạng thái
         </FilterChip>
         {(Object.keys(PHASE_META) as CardPhase[]).map((p) => (
-          <FilterChip key={p} active={phaseFilter === p} onClick={() => { setPhaseFilter(p); resetPage() }} subtle>
+          <FilterChip
+            key={p}
+            active={phaseFilter === p}
+            onClick={() => {
+              setPhaseFilter(p)
+              resetPage()
+            }}
+            subtle
+          >
             <span className={`h-2 w-2 rounded-full ${PHASE_META[p].dot}`} />
             {PHASE_META[p].label}
           </FilterChip>
@@ -111,7 +149,8 @@ export default function Browse() {
       </div>
 
       <p className="text-sm text-slate-400">
-        {filtered.length} kết quả{filtered.length > PAGE_SIZE ? ` · trang ${safePage + 1}/${pageCount}` : ''}
+        {filtered.length} kết quả
+        {filtered.length > PAGE_SIZE ? ` · trang ${safePage + 1}/${pageCount}` : ''}
       </p>
 
       {/* Results */}
@@ -135,13 +174,21 @@ export default function Browse() {
       {/* Pagination */}
       {pageCount > 1 && (
         <div className="flex items-center justify-center gap-3 pt-2">
-          <button className="btn-secondary" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>
+          <button
+            className="btn-secondary"
+            disabled={safePage === 0}
+            onClick={() => setPage(safePage - 1)}
+          >
             <ChevronLeft className="h-4 w-4" /> Trước
           </button>
           <span className="text-sm tabular-nums text-slate-500">
             {safePage + 1} / {pageCount}
           </span>
-          <button className="btn-secondary" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>
+          <button
+            className="btn-secondary"
+            disabled={safePage >= pageCount - 1}
+            onClick={() => setPage(safePage + 1)}
+          >
             Sau <ChevronRight className="h-4 w-4" />
           </button>
         </div>
@@ -172,7 +219,10 @@ function WordRow({
           aria-expanded={expanded}
           className="flex min-w-0 flex-1 items-center gap-3 text-left"
         >
-          <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${PHASE_META[phase].dot}`} title={PHASE_META[phase].label} />
+          <span
+            className={`h-2.5 w-2.5 shrink-0 rounded-full ${PHASE_META[phase].dot}`}
+            title={PHASE_META[phase].label}
+          />
           <span className="min-w-0 flex-1">
             <span className="flex items-center gap-2">
               <span className="truncate text-lg font-bold">{word.word}</span>
@@ -188,12 +238,24 @@ function WordRow({
             <span className="block truncate text-sm text-slate-500">{word.meaning}</span>
           </span>
         </button>
-        <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="sm" className="shrink-0" />
+        <SpeakButton
+          text={word.word}
+          lang={ttsLang}
+          audioSrc={wordAudio(word.id)}
+          size="sm"
+          className="shrink-0"
+        />
       </div>
       {expanded && (
         <div className="space-y-2 border-t border-slate-100 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/40 animate-fade-in">
           <div className="flex items-start gap-2">
-            <SpeakButton text={word.exampleEn} lang={ttsLang} audioSrc={exampleAudio(word.id)} size="sm" className="mt-0.5 shrink-0" />
+            <SpeakButton
+              text={word.exampleEn}
+              lang={ttsLang}
+              audioSrc={exampleAudio(word.id)}
+              size="sm"
+              className="mt-0.5 shrink-0"
+            />
             <p className="text-slate-700 dark:text-slate-200">
               <HighlightExample sentence={word.exampleEn} word={word.word} />
             </p>

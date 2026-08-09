@@ -27,14 +27,25 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
   useProvideContext(
     current ? `Đang học từ "${current.word}"` : 'Đang học từ vựng',
     current
-      ? { word: current.word, meaning: current.meaning, ipa: current.ipa, pos: current.pos, exampleEn: current.exampleEn }
-      : undefined,
+      ? {
+          word: current.word,
+          meaning: current.meaning,
+          ipa: current.ipa,
+          pos: current.pos,
+          exampleEn: current.exampleEn,
+        }
+      : undefined
   )
 
   // Auto-pronounce each new word when it appears (if enabled).
   useEffect(() => {
     if (!done && autoSpeak && current)
-      pronounce({ audioSrc: wordAudio(current.id), text: current.word, lang: ttsLang, rate: useSettings.getState().ttsRate })
+      pronounce({
+        audioSrc: wordAudio(current.id),
+        text: current.word,
+        lang: ttsLang,
+        rate: useSettings.getState().ttsRate,
+      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, done])
 
@@ -46,7 +57,7 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
       setFlipped(false)
       setIndex((i) => i + 1)
     },
-    [current, done, onAnswer],
+    [current, done, onAnswer]
   )
 
   // Global keyboard shortcuts. We skip events whose target is an interactive
@@ -90,17 +101,28 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
         </span>
       </div>
 
-      <Flashcard word={current} ttsLang={ttsLang} flipped={flipped} onFlip={() => setFlipped((f) => !f)} />
+      <Flashcard
+        word={current}
+        ttsLang={ttsLang}
+        flipped={flipped}
+        onFlip={() => setFlipped((f) => !f)}
+      />
 
       {/* Rating */}
       <div className="mt-6 min-h-[3.5rem]">
         {flipped ? (
           <div className="grid grid-cols-2 gap-3 animate-fade-in">
-            <button onClick={() => answer(false)} className="btn h-14 bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300">
+            <button
+              onClick={() => answer(false)}
+              className="btn h-14 bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300"
+            >
               <X className="h-5 w-5" /> Chưa nhớ
               <kbd className="ml-1 hidden rounded bg-black/10 px-1.5 text-xs sm:inline">1</kbd>
             </button>
-            <button onClick={() => answer(true)} className="btn h-14 bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-950 dark:text-emerald-300">
+            <button
+              onClick={() => answer(true)}
+              className="btn h-14 bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-950 dark:text-emerald-300"
+            >
               <Check className="h-5 w-5" /> Đã nhớ
               <kbd className="ml-1 hidden rounded bg-black/10 px-1.5 text-xs sm:inline">2</kbd>
             </button>

@@ -11,8 +11,16 @@ export function suggestQuestions(ctx: PageContext, level: number): string[] {
     if (level <= 2) return [...base, `Mẹo ghi nhớ từ "${w}"`, `Đặt 1 câu đơn giản với "${w}"`]
     if (level === 3) return [...base, `Collocation hay gặp với "${w}"`, `Từ cùng họ với "${w}"`]
     if (level === 4)
-      return [`Sắc thái & ngữ vực của "${w}"`, `Idiom/phrasal verb liên quan "${w}"`, `Phân biệt "${w}" với từ gần nghĩa`]
-    return [`Gốc từ (etymology) của "${w}"`, `Collocation nâng cao với "${w}"`, `Nuance của "${w}" so với từ gần nghĩa`]
+      return [
+        `Sắc thái & ngữ vực của "${w}"`,
+        `Idiom/phrasal verb liên quan "${w}"`,
+        `Phân biệt "${w}" với từ gần nghĩa`,
+      ]
+    return [
+      `Gốc từ (etymology) của "${w}"`,
+      `Collocation nâng cao với "${w}"`,
+      `Nuance của "${w}" so với từ gần nghĩa`,
+    ]
   }
 
   // No focused word — general suggestions by level.

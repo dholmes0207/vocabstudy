@@ -37,7 +37,8 @@ export const useSettings = create<SettingsState>()(
       setTheme: (theme) => set({ theme }),
       setCurrentLang: (currentLang) => set({ currentLang }),
       setDailyNewLimit: (dailyNewLimit) => set({ dailyNewLimit: clamp(dailyNewLimit, 1, 100) }),
-      setDailyReviewLimit: (dailyReviewLimit) => set({ dailyReviewLimit: clamp(dailyReviewLimit, 0, 500) }),
+      setDailyReviewLimit: (dailyReviewLimit) =>
+        set({ dailyReviewLimit: clamp(dailyReviewLimit, 0, 500) }),
       setTtsRate: (ttsRate) => set({ ttsRate: clamp(ttsRate, 0.5, 1.25) }),
       setAutoLevel: (autoLevel) => set({ autoLevel }),
       setLevel: (level) => set({ level: clamp(level, 1, 5) }),
@@ -48,8 +49,8 @@ export const useSettings = create<SettingsState>()(
     {
       name: 'vocab.settings.v1',
       version: 1,
-    },
-  ),
+    }
+  )
 )
 
 function clamp(n: number, lo: number, hi: number): number {

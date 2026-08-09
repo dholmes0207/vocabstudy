@@ -23,7 +23,14 @@ const sizeMap = {
   lg: 'h-14 w-14 [&_svg]:h-7 [&_svg]:w-7',
 }
 
-export default function SpeakButton({ text, lang, audioSrc, size = 'md', label, className = '' }: Props) {
+export default function SpeakButton({
+  text,
+  lang,
+  audioSrc,
+  size = 'md',
+  label,
+  className = '',
+}: Props) {
   const rate = useSettings((s) => s.ttsRate)
   const [speaking, setSpeaking] = useState(false)
 

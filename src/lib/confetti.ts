@@ -10,7 +10,8 @@ export function celebrate(power = 1): void {
   const dpr = window.devicePixelRatio || 1
 
   const canvas = document.createElement('canvas')
-  canvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999'
+  canvas.style.cssText =
+    'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999'
   canvas.width = W * dpr
   canvas.height = H * dpr
   const ctx = canvas.getContext('2d')

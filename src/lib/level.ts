@@ -62,7 +62,11 @@ export function levelInfo(level: number): LevelInfo {
 }
 
 /** Auto-estimate the learner's level from their progress. */
-export function computeLevel(input: { mastered: number; learned: number; accuracy: number }): number {
+export function computeLevel(input: {
+  mastered: number
+  learned: number
+  accuracy: number
+}): number {
   const { mastered, learned, accuracy } = input
   if (learned < 25) return 1
   if (mastered < 30) return 2

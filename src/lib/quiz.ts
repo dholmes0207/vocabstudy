@@ -27,7 +27,12 @@ const norm = (s: string) => s.trim().toLowerCase()
  * (`displayOf`), including against the correct answer — otherwise words that
  * share a Vietnamese meaning (many do) can produce two identical options.
  */
-function chooseDistractors(target: Word, pool: Word[], n: number, displayOf: (w: Word) => string): Word[] {
+function chooseDistractors(
+  target: Word,
+  pool: Word[],
+  n: number,
+  displayOf: (w: Word) => string
+): Word[] {
   const seen = new Set<string>([norm(displayOf(target))])
   const out: Word[] = []
   const take = (candidates: Word[]) => {
@@ -51,7 +56,10 @@ const CHOICE_MODES: QuizMode[] = ['en-to-vi', 'vi-to-en', 'listen']
 export function gapExample(word: Word): string | null {
   if (!word.exampleEn) return null
   // Match the (possibly multi-word) headword as whole words, case-insensitive.
-  const forms = word.word.split('/').map((s) => s.trim()).filter(Boolean)
+  const forms = word.word
+    .split('/')
+    .map((s) => s.trim())
+    .filter(Boolean)
   for (const form of forms) {
     const escaped = form.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const re = new RegExp(`\\b${escaped}\\b`, 'i')
@@ -85,7 +93,11 @@ export function buildSkeleton(word: string): SkeletonCell[] {
     if (k % 2 === 1) hide.add(idx) // hide 2nd, 4th, … middle letter
   })
   if (hide.size === 0 && letters.length >= 3) hide.add(letters[Math.floor(letters.length / 2)])
-  return chars.map((c, i) => ({ ch: c, isLetter: isLetter(c), revealed: !isLetter(c) || !hide.has(i) }))
+  return chars.map((c, i) => ({
+    ch: c,
+    isLetter: isLetter(c),
+    revealed: !isLetter(c) || !hide.has(i),
+  }))
 }
 
 /** Generate a single question for a word in a given mode. */

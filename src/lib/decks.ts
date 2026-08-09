@@ -14,7 +14,11 @@ export interface Deck {
 }
 
 /** Split an ordered word list into fixed-size decks, annotated with progress. */
-export function buildDecks(words: Word[], cards: Record<number, SRSCard>, size = DECK_SIZE): Deck[] {
+export function buildDecks(
+  words: Word[],
+  cards: Record<number, SRSCard>,
+  size = DECK_SIZE
+): Deck[] {
   const decks: Deck[] = []
   for (let i = 0; i < words.length; i += size) {
     const slice = words.slice(i, i + size)

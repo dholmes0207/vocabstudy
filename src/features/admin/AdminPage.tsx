@@ -25,12 +25,15 @@ export default function AdminPage() {
     <div className="space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Quản trị 🛡️</h1>
-        <p className="mt-1 text-slate-500">Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).</p>
+        <p className="mt-1 text-slate-500">
+          Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).
+        </p>
       </header>
 
       <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-        🔑 <b>API key AI</b> được đặt bằng biến môi trường <code>OPENAI_API_KEY</code> trên Cloudflare Pages (secret) — không nằm trong app,
-        học viên không bao giờ thấy. Đổi key/model ở Cloudflare → Settings → Environment variables.
+        🔑 <b>API key AI</b> được đặt bằng biến môi trường <code>OPENAI_API_KEY</code> trên
+        Cloudflare Pages (secret) — không nằm trong app, học viên không bao giờ thấy. Đổi key/model
+        ở Cloudflare → Settings → Environment variables.
       </div>
 
       <UsersTab meId={me.id} />
@@ -81,17 +84,22 @@ function UsersTab({ meId }: { meId: string }) {
             <tr key={u.id} className={u.id === meId ? 'bg-brand-50/40 dark:bg-brand-950/20' : ''}>
               <td className="p-3">
                 <p className="font-medium">
-                  {u.name || '—'} {u.id === meId && <span className="text-xs text-slate-400">(bạn)</span>}
+                  {u.name || '—'}{' '}
+                  {u.id === meId && <span className="text-xs text-slate-400">(bạn)</span>}
                 </p>
                 <p className="text-xs text-slate-400">{u.email}</p>
               </td>
               <td className="p-3">
-                <span className={`chip ${u.role === 'admin' ? 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}>
+                <span
+                  className={`chip ${u.role === 'admin' ? 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
+                >
                   {u.role === 'admin' ? 'Admin' : 'Học viên'}
                 </span>
               </td>
               <td className="p-3">
-                <span className={`chip ${u.status === 'active' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'}`}>
+                <span
+                  className={`chip ${u.status === 'active' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'}`}
+                >
                   {u.status === 'active' ? 'Hoạt động' : 'Đã khoá'}
                 </span>
               </td>
@@ -100,10 +108,28 @@ function UsersTab({ meId }: { meId: string }) {
                   <span className="block text-right text-xs text-slate-400">—</span>
                 ) : (
                   <div className="flex flex-wrap justify-end gap-1.5">
-                    <button className="btn-ghost !px-2 text-xs" onClick={() => act(() => api.adminPatchUser(u.id, { role: u.role === 'admin' ? 'student' : 'admin' }))}>
+                    <button
+                      className="btn-ghost !px-2 text-xs"
+                      onClick={() =>
+                        act(() =>
+                          api.adminPatchUser(u.id, {
+                            role: u.role === 'admin' ? 'student' : 'admin',
+                          })
+                        )
+                      }
+                    >
                       {u.role === 'admin' ? '↓ Học viên' : '↑ Admin'}
                     </button>
-                    <button className="btn-ghost !px-2 text-xs" onClick={() => act(() => api.adminPatchUser(u.id, { status: u.status === 'active' ? 'locked' : 'active' }))}>
+                    <button
+                      className="btn-ghost !px-2 text-xs"
+                      onClick={() =>
+                        act(() =>
+                          api.adminPatchUser(u.id, {
+                            status: u.status === 'active' ? 'locked' : 'active',
+                          })
+                        )
+                      }
+                    >
                       {u.status === 'active' ? 'Khoá' : 'Mở khoá'}
                     </button>
                     <button
@@ -118,7 +144,8 @@ function UsersTab({ meId }: { meId: string }) {
                     <button
                       className="btn-ghost !px-2 text-xs text-rose-500"
                       onClick={() => {
-                        if (confirm(`Xoá tài khoản ${u.email}? Không thể hoàn tác.`)) act(() => api.adminDeleteUser(u.id))
+                        if (confirm(`Xoá tài khoản ${u.email}? Không thể hoàn tác.`))
+                          act(() => api.adminDeleteUser(u.id))
                       }}
                       aria-label="Xoá"
                     >

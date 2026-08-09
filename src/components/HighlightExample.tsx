@@ -31,7 +31,7 @@ export default function HighlightExample({ sentence, word }: Props) {
           </mark>
         ) : (
           <Fragment key={i}>{part}</Fragment>
-        ),
+        )
       )}
     </>
   )

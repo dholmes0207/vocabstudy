@@ -27,7 +27,11 @@ interface AuthState {
 
 async function loadProfile(userId: string, email: string): Promise<AuthUser | null> {
   if (!supabase) return null
-  const { data } = await supabase.from('profiles').select('name, role, status').eq('id', userId).single()
+  const { data } = await supabase
+    .from('profiles')
+    .select('name, role, status')
+    .eq('id', userId)
+    .single()
   if (!data) return { id: userId, email, name: '', role: 'student', status: 'active' }
   return { id: userId, email, name: data.name ?? '', role: data.role, status: data.status }
 }
@@ -79,10 +83,17 @@ export const useAuth = create<AuthState>((set, get) => ({
 
   register: async (email, password, name) => {
     if (!supabase) throw new Error('Chưa cấu hình Supabase.')
-    const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { name: name ?? '' } } })
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { name: name ?? '' } },
+    })
     if (error) throw new Error(mapAuthError(error.message))
     if (data.session?.user) {
-      set({ user: await loadProfile(data.session.user.id, data.session.user.email ?? ''), needsEmailConfirm: false })
+      set({
+        user: await loadProfile(data.session.user.id, data.session.user.email ?? ''),
+        needsEmailConfirm: false,
+      })
     } else {
       // Email confirmation required by the project settings.
       set({ needsEmailConfirm: true })
@@ -100,7 +111,8 @@ export const isAdmin = (u: AuthUser | null): boolean => u?.role === 'admin'
 function mapAuthError(msg: string): string {
   const m = msg.toLowerCase()
   if (m.includes('invalid login')) return 'Email hoặc mật khẩu không đúng.'
-  if (m.includes('already registered') || m.includes('already exists')) return 'Email đã được đăng ký.'
+  if (m.includes('already registered') || m.includes('already exists'))
+    return 'Email đã được đăng ký.'
   if (m.includes('password')) return 'Mật khẩu chưa hợp lệ (tối thiểu 6 ký tự).'
   if (m.includes('email')) return 'Email không hợp lệ.'
   return msg

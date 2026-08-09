@@ -25,14 +25,26 @@ export function useProgressSync(): void {
     const key = `${userId}:${lang}`
     ;(async () => {
       try {
-        const { data } = await sb.from('progress').select('data').eq('user_id', userId).eq('lang_code', lang).maybeSingle()
+        const { data } = await sb
+          .from('progress')
+          .select('data')
+          .eq('user_id', userId)
+          .eq('lang_code', lang)
+          .maybeSingle()
         if (!alive) return
         if (data?.data) {
           useStudy.getState().setLanguageProgress(lang, normalizeProgress(data.data))
         } else {
           const local = useStudy.getState().progress[lang]
           if (local && Object.keys(local.cards).length > 0) {
-            await sb.from('progress').upsert({ user_id: userId, lang_code: lang, data: local, updated_at: new Date().toISOString() })
+            await sb
+              .from('progress')
+              .upsert({
+                user_id: userId,
+                lang_code: lang,
+                data: local,
+                updated_at: new Date().toISOString(),
+              })
           }
         }
         syncedKey.current = key
@@ -57,7 +69,15 @@ export function useProgressSync(): void {
       clearTimeout(timer)
       timer = setTimeout(() => {
         const lp = useStudy.getState().progress[lang]
-        if (lp) void sb.from('progress').upsert({ user_id: userId, lang_code: lang, data: lp, updated_at: new Date().toISOString() })
+        if (lp)
+          void sb
+            .from('progress')
+            .upsert({
+              user_id: userId,
+              lang_code: lang,
+              data: lp,
+              updated_at: new Date().toISOString(),
+            })
       }, 1500)
     })
     return () => {

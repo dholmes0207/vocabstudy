@@ -17,11 +17,17 @@ export interface Ctx {
 }
 
 export function json(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } })
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { 'Content-Type': 'application/json' },
+  })
 }
 
 /** Verify the Supabase access token in the Authorization header → the user. */
-export async function getUser(env: Env, request: Request): Promise<{ id: string; email: string } | null> {
+export async function getUser(
+  env: Env,
+  request: Request
+): Promise<{ id: string; email: string } | null> {
   const header = request.headers.get('Authorization') ?? ''
   const token = header.startsWith('Bearer ') ? header.slice(7) : ''
   if (!token || !env.SUPABASE_URL || !env.SUPABASE_ANON_KEY) return null
@@ -59,7 +65,10 @@ export function adminAuth(env: Env, path: string, init: RequestInit = {}): Promi
   })
 }
 
-export async function getProfile(env: Env, userId: string): Promise<{ role: string; status: string } | null> {
+export async function getProfile(
+  env: Env,
+  userId: string
+): Promise<{ role: string; status: string } | null> {
   const r = await adminRest(env, `/profiles?id=eq.${userId}&select=role,status`)
   if (!r.ok) return null
   const rows = (await r.json()) as { role: string; status: string }[]
@@ -67,7 +76,10 @@ export async function getProfile(env: Env, userId: string): Promise<{ role: stri
 }
 
 /** Require a logged-in, active user; returns the user or a Response to return. */
-export async function requireUser(env: Env, request: Request): Promise<{ id: string; email: string } | Response> {
+export async function requireUser(
+  env: Env,
+  request: Request
+): Promise<{ id: string; email: string } | Response> {
   const user = await getUser(env, request)
   if (!user) return json({ error: 'Chưa đăng nhập.' }, 401)
   const profile = await getProfile(env, user.id)

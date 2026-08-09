@@ -103,8 +103,8 @@ export const useStudy = create<StudyState>()(
     {
       name: 'vocab.progress.v1',
       version: 1,
-    },
-  ),
+    }
+  )
 )
 
 function bump(rec: Record<number, number>, day: number): Record<number, number> {

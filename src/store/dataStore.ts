@@ -43,7 +43,10 @@ export const useData = create<DataState>((set, get) => ({
       // neural audio and offer a voice picker.
       const audio = await loadAudioManifest(code)
       const voices = audio?.voices ?? []
-      setAudioVoices(voices.map((v) => v.key), audio?.default ?? null)
+      setAudioVoices(
+        voices.map((v) => v.key),
+        audio?.default ?? null
+      )
       set({ pack, audioVoices: voices, status: 'ready' })
     } catch (e) {
       set({ status: 'error', error: msg(e) })

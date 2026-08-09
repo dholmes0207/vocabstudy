@@ -24,7 +24,7 @@ export function summarize(
   words: Word[],
   progress: LanguageProgress | undefined,
   dailyNewLimit: number,
-  day: number = todayFn(),
+  day: number = todayFn()
 ): StudySummary {
   const cards = progress?.cards ?? {}
   const stats: StudyStats | undefined = progress?.stats
@@ -61,7 +61,11 @@ export function summarize(
 }
 
 /** The next batch of never-studied words, in id order. */
-export function nextNewWords(words: Word[], progress: LanguageProgress | undefined, limit: number): Word[] {
+export function nextNewWords(
+  words: Word[],
+  progress: LanguageProgress | undefined,
+  limit: number
+): Word[] {
   const cards = progress?.cards ?? {}
   const fresh = words.filter((w) => !cards[w.id])
   return fresh.slice(0, Math.max(0, limit))
