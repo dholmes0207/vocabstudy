@@ -1,0 +1,6 @@
+# Các commit thuần định dạng — bỏ qua khi chạy git blame.
+# Bật cho repo local:  git config blame.ignoreRevsFile .git-blame-ignore-revs
+# (GitHub tự đọc file này.)
+
+# style: format toàn bộ repo bằng Prettier
+cf07434746b454ba5795794c7ae051189fb8df0c
