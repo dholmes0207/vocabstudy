@@ -4,7 +4,7 @@ import { BookOpen, Sparkles } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { useStudy } from '@/store/studyStore'
+import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
 import { buildDecks } from '@/lib/decks'
 import { phaseOf } from '@/lib/srs'
@@ -23,7 +23,7 @@ export default function Learn() {
   const [session, setSession] = useState<Word[] | null>(null)
 
   const s = summarize(pack.words, progress, dailyNewLimit)
-  const cards = progress?.cards ?? {}
+  const cards = progress?.cards ?? NO_CARDS
   const decks = useMemo(() => buildDecks(pack.words, cards), [pack.words, cards])
 
   if (session) {

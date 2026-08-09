@@ -25,7 +25,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
   const [lastCorrect, setLastCorrect] = useState(false)
   const [correctCount, setCorrectCount] = useState(0)
   const [hintCount, setHintCount] = useState(0)
-  const wrongIds = useRef<number[]>([])
+  const [wrongIds, setWrongIds] = useState<number[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
   const done = idx >= questions.length
@@ -55,7 +55,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, done])
 
-  if (done) return <>{renderComplete(correctCount, questions.length, wrongIds.current)}</>
+  if (done) return <>{renderComplete(correctCount, questions.length, wrongIds)}</>
 
   const isTyping = q.mode === 'fill' || q.mode === 'spell'
 
@@ -66,7 +66,7 @@ export default function QuizRunner({ questions, wordsById, ttsLang, onAnswer, re
       setCorrectCount((c) => c + 1)
       playCorrect()
     } else {
-      wrongIds.current.push(q.wordId)
+      setWrongIds((ids) => [...ids, q.wordId])
       playWrong()
     }
     onAnswer(q.wordId, correct)

@@ -4,7 +4,7 @@ import { GraduationCap } from 'lucide-react'
 import type { QuizMode, QuizQuestion, Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { useStudy } from '@/store/studyStore'
+import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { generateQuiz } from '@/lib/quiz'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
@@ -30,7 +30,7 @@ export default function Quiz() {
   const progress = useStudy((s) => s.progress[code])
   const recordAnswer = useStudy((s) => s.recordAnswer)
 
-  const cards = progress?.cards ?? {}
+  const cards = progress?.cards ?? NO_CARDS
   const wordsById = useMemo(() => new Map(pack.words.map((w) => [w.id, w] as const)), [pack.words])
 
   const learnedWords = useMemo(() => pack.words.filter((w) => cards[w.id]), [pack.words, cards])

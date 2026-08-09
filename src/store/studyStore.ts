@@ -4,6 +4,13 @@ import type { LanguageProgress, SRSCard, StudyStats } from '@/types'
 import { newCard, review } from '@/lib/srs'
 import { today } from '@/lib/date'
 
+/**
+ * Stable stand-in for "this language has no progress yet". Screens read
+ * `progress?.cards ?? NO_CARDS`; a fresh `{}` there would be a new reference on
+ * every render and would silently defeat every `useMemo` that depends on it.
+ */
+export const NO_CARDS: Readonly<Record<number, SRSCard>> = Object.freeze({})
+
 interface StudyState {
   /** Progress keyed by language code, so each language is independent. */
   progress: Record<string, LanguageProgress>

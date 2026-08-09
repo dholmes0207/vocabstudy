@@ -1,4 +1,5 @@
 import type { PosCategory } from '@/types'
+import { POS_LABEL } from '@/lib/pos'
 
 const STYLES: Record<PosCategory, string> = {
   noun: 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300',
@@ -11,19 +12,6 @@ const STYLES: Record<PosCategory, string> = {
   determiner: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300',
   article: 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300',
   other: 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300',
-}
-
-export const POS_LABEL: Record<PosCategory, string> = {
-  noun: 'Danh từ',
-  verb: 'Động từ',
-  adjective: 'Tính từ',
-  adverb: 'Trạng từ',
-  preposition: 'Giới từ',
-  conjunction: 'Liên từ',
-  pronoun: 'Đại từ',
-  determiner: 'Từ hạn định',
-  article: 'Mạo từ',
-  other: 'Khác',
 }
 
 interface Props {

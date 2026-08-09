@@ -3,11 +3,12 @@ import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import type { PosCategory, Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { useStudy } from '@/store/studyStore'
+import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { phaseOf } from '@/lib/srs'
 import type { CardPhase } from '@/types'
 import SpeakButton from '@/components/SpeakButton'
-import PosBadge, { POS_LABEL } from '@/components/PosBadge'
+import PosBadge from '@/components/PosBadge'
+import { POS_LABEL } from '@/lib/pos'
 import HighlightExample from '@/components/HighlightExample'
 import { exampleAudio, wordAudio } from '@/lib/audio'
 import { useProvideContext } from '@/store/contextStore'
@@ -24,7 +25,7 @@ const PHASE_META: Record<CardPhase, { label: string; dot: string }> = {
 export default function Browse() {
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
-  const cards = useStudy((s) => s.progress[code]?.cards) ?? {}
+  const cards = useStudy((s) => s.progress[code]?.cards) ?? NO_CARDS
 
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState<PosCategory | 'all'>('all')

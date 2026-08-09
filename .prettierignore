@@ -1,0 +1,11 @@
+dist/
+node_modules/
+coverage/
+*.tsbuildinfo
+
+# Generated content — reformatting these creates enormous, meaningless diffs.
+public/data/
+public/audio/
+
+# Keeps package-lock.json byte-identical to what npm writes.
+package-lock.json
