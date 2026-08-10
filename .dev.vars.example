@@ -6,6 +6,8 @@
 OPENAI_API_KEY=sk-...
 OPENAI_MODEL=o4-mini
 OPENAI_BASE_URL=https://api.openai.com/v1
+# Độ "suy nghĩ" của o4-mini: low | medium | high. Cao hơn = thông minh hơn nhưng chậm/đắt hơn.
+OPENAI_REASONING_EFFORT=medium
 
 # Supabase (for token verification + admin operations).
 SUPABASE_URL=https://YOUR-PROJECT.supabase.co

@@ -44,6 +44,8 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
 
   const base = (env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '')
   const model = env.OPENAI_MODEL || 'o4-mini'
+  // Default to "medium" reasoning for smarter, clearer answers (configurable).
+  const effort = env.OPENAI_REASONING_EFFORT || 'medium'
 
   let r: Response
   try {
@@ -56,8 +58,8 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
       body: JSON.stringify({
         model,
         messages,
-        max_completion_tokens: 2000,
-        reasoning_effort: 'low',
+        max_completion_tokens: 3000,
+        reasoning_effort: effort,
       }),
     })
   } catch {

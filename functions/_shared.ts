@@ -6,6 +6,7 @@ export interface Env {
   OPENAI_API_KEY?: string
   OPENAI_MODEL?: string
   OPENAI_BASE_URL?: string
+  OPENAI_REASONING_EFFORT?: string
   SUPABASE_URL?: string
   SUPABASE_ANON_KEY?: string
   SUPABASE_SERVICE_ROLE_KEY?: string

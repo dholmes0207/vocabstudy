@@ -20,7 +20,7 @@ export const LEVELS: LevelInfo[] = [
     tag: 'A1',
     blurb: 'Học nghĩa & mặt chữ cơ bản',
     aiInstruction:
-      'Người học MỚI BẮT ĐẦU. Giải thích nghĩa thật đơn giản bằng tiếng Việt, chỉ 1 ví dụ ngắn dễ hiểu (kèm dịch). Tập trung giúp NHỚ MẶT CHỮ và NGHĨA cơ bản. Tránh thuật ngữ ngôn ngữ học, tránh liệt kê dài.',
+      'Người học MỚI BẮT ĐẦU, gần như mất gốc. Chỉ cần: nói NGHĨA bằng tiếng Việt thật đơn giản + đúng 1 ví dụ ngắn, đời thường (kèm nghĩa tiếng Việt). Dùng từ dễ nhất, KHÔNG thuật ngữ, KHÔNG liệt kê nhiều. Có thể thêm cách đọc gần đúng kiểu Việt để bạn ấy đọc theo.',
   },
   {
     level: 2,
@@ -28,23 +28,23 @@ export const LEVELS: LevelInfo[] = [
     tag: 'A2',
     blurb: 'Nghĩa + ví dụ + từ liên quan cơ bản',
     aiInstruction:
-      'Trình độ SƠ CẤP. Cho nghĩa + 1–2 ví dụ (kèm dịch) + 1 từ đồng nghĩa hoặc trái nghĩa cơ bản. Ngôn ngữ vẫn đơn giản, khích lệ.',
+      'Trình độ SƠ CẤP. Nói nghĩa + 1–2 ví dụ đời thường (kèm dịch) + 1 từ gần nghĩa hoặc trái nghĩa (giới thiệu mộc mạc, ví dụ "gần nghĩa với…", "ngược với…"). Vẫn thật dễ hiểu và khích lệ.',
   },
   {
     level: 3,
     name: 'Trung cấp',
     tag: 'B1',
-    blurb: '“Học 1 hiểu 3”: collocation, họ từ',
+    blurb: '“Học 1 hiểu 3”: từ hay đi chung, từ cùng gốc',
     aiInstruction:
-      'Trình độ TRUNG CẤP — dạy theo tinh thần "học 1 hiểu 3": ngoài nghĩa & ví dụ, bổ sung 1–2 collocation phổ biến, word family (danh/động/tính từ liên quan), và phân biệt ngắn gọn với 1 từ gần nghĩa.',
+      'Trình độ TRUNG CẤP — "học 1 hiểu 3". Ngoài nghĩa & ví dụ, thêm (diễn đạt thuần Việt, mỗi ý một dòng): 1–2 "từ/cụm hay đi chung với nó", vài "từ cùng gốc" (danh từ/động từ/tính từ liên quan), và so sánh ngắn với 1 từ dễ nhầm. Không dùng thuật ngữ.',
   },
   {
     level: 4,
     name: 'Trung cao',
     tag: 'B2',
-    blurb: '“Học 1 hiểu 5”: sắc thái, ngữ vực, idiom',
+    blurb: '“Học 1 hiểu 5”: sắc thái, trang trọng/thân mật, thành ngữ',
     aiInstruction:
-      'Trình độ TRUNG CAO — "học 1 hiểu 5": thêm sắc thái nghĩa, ngữ vực (trang trọng/thân mật), phrasal verb/idiom liên quan, và 2–3 ví dụ ở các ngữ cảnh khác nhau. Có thể hỏi lại để thử thách người học.',
+      'Trình độ TRUNG CAO — "học 1 hiểu 5". Thêm: sắc thái nghĩa; khi nào dùng trong tình huống trang trọng, khi nào thân mật; 1–2 cụm động từ/thành ngữ liên quan (kèm nghĩa); và 2–3 ví dụ ở các tình huống khác nhau. Giải thích khác biệt bằng lời thường, có ví dụ minh hoạ, KHÔNG liệt kê khô khan.',
   },
   {
     level: 5,
@@ -52,7 +52,7 @@ export const LEVELS: LevelInfo[] = [
     tag: 'C1',
     blurb: '“Học 1 hiểu 10”: gốc từ, mở rộng sâu',
     aiInstruction:
-      'Trình độ NÂNG CAO — "học 1 hiểu 10": khai thác gốc từ (etymology) khi hữu ích, họ từ mở rộng, collocation nâng cao, cách dùng học thuật/chuyên ngành, và nuance tinh tế giữa các từ gần nghĩa. Khuyến khích tư duy, đặt câu hỏi mở.',
+      'Trình độ NÂNG CAO — "học 1 hiểu 10". Đào sâu nhưng vẫn GIẢNG rõ ràng và có ví dụ: gốc của từ (nếu thú vị & giúp nhớ), các từ cùng gốc mở rộng, cách dùng trong văn viết/học thuật, và phân biệt tinh tế giữa vài từ gần nghĩa (nói rõ khi nào dùng từ nào). Tránh viết như từ điển; kết bằng 1 câu hỏi mở để bạn ấy luyện tư duy.',
   },
 ]
 
