@@ -6,6 +6,7 @@ import { useAuth } from '@/store/authStore'
 import { api, ApiError } from '@/lib/api'
 import { preCheckInput } from '@/lib/ai/guardrail'
 import { suggestQuestions } from '@/lib/ai/suggestions'
+import Markdown from '@/components/Markdown'
 
 interface Msg {
   id: number
@@ -96,7 +97,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
 
   return (
     <div className="flex h-full flex-col">
-      <div className="scroll-thin flex-1 space-y-4 overflow-y-auto p-4">
+      <div className="scroll-thin flex-1 space-y-4 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-950/40">
         <Bubble role="assistant" content={GREETING} />
         {ctx.word && messages.length === 0 && (
           <p className="text-center text-xs text-slate-400">
@@ -180,24 +181,24 @@ function Bubble({
   return (
     <div className={`flex gap-2.5 ${isUser ? 'flex-row-reverse' : ''}`}>
       <span
-        className={`grid h-8 w-8 shrink-0 place-items-center rounded-full ${
+        className={`grid h-8 w-8 shrink-0 place-items-center rounded-full shadow-sm ${
           isUser
             ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200'
-            : 'bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300'
+            : 'bg-gradient-to-br from-brand-500 to-brand-700 text-white'
         }`}
       >
         {isUser ? <User2 className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
       </span>
       <div
-        className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-[15px] leading-relaxed ${
+        className={`max-w-[85%] rounded-2xl px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
           isUser
-            ? 'rounded-tr-sm bg-brand-600 text-white'
+            ? 'rounded-br-md bg-brand-600 text-white'
             : isError
-              ? 'rounded-tl-sm bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-200'
-              : 'rounded-tl-sm bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
+              ? 'rounded-bl-md bg-rose-50 text-rose-700 ring-1 ring-rose-200 dark:bg-rose-950/50 dark:text-rose-200 dark:ring-rose-900/60'
+              : 'rounded-bl-md bg-white text-slate-700 ring-1 ring-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700'
         }`}
       >
-        {content}
+        {isUser || isError ? <p className="whitespace-pre-wrap">{content}</p> : <Markdown content={content} />}
       </div>
     </div>
   )
