@@ -210,4 +210,6 @@ export interface Settings {
   autoSpeak: boolean
   /** How close a spoken attempt must be to count as correct. */
   speechStrictness: Strictness
+  /** Play the correct/wrong feedback blips during quizzes. */
+  soundEnabled: boolean
 }

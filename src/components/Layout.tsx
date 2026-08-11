@@ -134,8 +134,8 @@ function BottomLink({ item, badge }: { item: NavItem; badge: number }) {
       to={item.to}
       end={item.to === '/'}
       className={({ isActive }) =>
-        `relative flex flex-1 flex-col items-center gap-0.5 py-2.5 text-[11px] font-medium transition ${
-          isActive ? 'text-brand-600 dark:text-brand-300' : 'text-slate-400'
+        `relative flex flex-1 flex-col items-center gap-0.5 py-2.5 text-xs font-medium transition ${
+          isActive ? 'text-brand-600 dark:text-brand-300' : 'text-slate-500 dark:text-slate-400'
         }`
       }
     >

@@ -24,6 +24,7 @@ export default function QuizRunner({
   renderComplete,
 }: Props) {
   const ttsRate = useSettings((s) => s.ttsRate)
+  const soundEnabled = useSettings((s) => s.soundEnabled)
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [input, setInput] = useState('')
@@ -85,10 +86,10 @@ export default function QuizRunner({
     setLastCorrect(correct)
     if (correct) {
       setCorrectCount((c) => c + 1)
-      playCorrect()
+      if (soundEnabled) playCorrect()
     } else {
       setWrongIds((ids) => [...ids, q.wordId])
-      playWrong()
+      if (soundEnabled) playWrong()
     }
     onAnswer(q.wordId, correct)
   }

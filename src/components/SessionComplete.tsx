@@ -7,6 +7,14 @@ interface Props {
   emoji?: string
   correct: number
   total: number
+  /**
+   * Show the accuracy read-out + score-based praise. Off for "Học mới" sessions,
+   * where scoring a first encounter as a pass/fail feels like a failed exam. When
+   * off, we show an encouraging `note` instead. See F5.
+   */
+  showScore?: boolean
+  /** Encouraging line shown when `showScore` is false. */
+  note?: string
   children?: React.ReactNode
 }
 
@@ -16,11 +24,14 @@ export default function SessionComplete({
   emoji = '🎉',
   correct,
   total,
+  showScore = true,
+  note,
   children,
 }: Props) {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0
-  const praise =
-    pct >= 90
+  const praise = !showScore
+    ? (note ?? 'Cứ đều đặn mỗi ngày nhé!')
+    : pct >= 90
       ? 'Tuyệt vời!'
       : pct >= 70
         ? 'Làm tốt lắm!'
@@ -28,9 +39,14 @@ export default function SessionComplete({
           ? 'Cố lên nhé!'
           : 'Đừng nản, ôn lại nào!'
 
-  // Throw a little confetti to reward finishing (bigger burst for higher scores).
+  // Throw a little confetti to reward finishing. For learning sessions there's
+  // no "score" to scale by, so give a generous, fixed celebration.
   useEffect(() => {
-    if (total > 0) celebrate(0.6 + (pct / 100) * 0.8)
+    if (showScore) {
+      if (total > 0) celebrate(0.6 + (pct / 100) * 0.8)
+    } else {
+      celebrate(1.2)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -41,7 +57,7 @@ export default function SessionComplete({
         <h1 className="mt-4 text-2xl font-extrabold">{title}</h1>
         <p className="mt-1 text-slate-500">{praise}</p>
 
-        {total > 0 && (
+        {showScore && total > 0 && (
           <div className="mt-6 grid grid-cols-3 gap-3">
             <Stat label="Đúng" value={`${correct}`} tone="text-emerald-600" />
             <Stat label="Tổng" value={`${total}`} tone="text-slate-700 dark:text-slate-200" />

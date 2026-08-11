@@ -16,6 +16,7 @@ interface SettingsState extends Settings {
   setTtsVoiceURI: (uri: string | null) => void
   setAutoSpeak: (b: boolean) => void
   setSpeechStrictness: (s: Strictness) => void
+  setSoundEnabled: (b: boolean) => void
 }
 
 const DEFAULTS: Settings = {
@@ -30,6 +31,7 @@ const DEFAULTS: Settings = {
   ttsVoiceURI: null,
   autoSpeak: false,
   speechStrictness: 'normal',
+  soundEnabled: true,
 }
 
 export const useSettings = create<SettingsState>()(
@@ -48,6 +50,7 @@ export const useSettings = create<SettingsState>()(
       setTtsVoiceURI: (ttsVoiceURI) => set({ ttsVoiceURI }),
       setAutoSpeak: (autoSpeak) => set({ autoSpeak }),
       setSpeechStrictness: (speechStrictness) => set({ speechStrictness }),
+      setSoundEnabled: (soundEnabled) => set({ soundEnabled }),
     }),
     {
       name: 'vocab.settings.v1',

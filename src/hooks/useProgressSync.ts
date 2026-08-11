@@ -11,6 +11,13 @@ import { supabase } from '@/lib/supabase'
 //  - on subsequent local changes: debounced upsert.
 // Guests (or when Supabase isn't configured) keep using localStorage only.
 
+/**
+ * One-shot sessionStorage flag set by "Khôi phục" (backup import) when the user
+ * is logged in. On the next sync after reload we push local up instead of
+ * pulling server down, so a restored backup isn't clobbered. See F3.
+ */
+export const RESTORE_FLAG = 'vocab.restoredBackup'
+
 export function useProgressSync(): void {
   const userId = useAuth((s) => s.user?.id ?? null)
   const lang = useSettings((s) => s.currentLang)
@@ -25,6 +32,30 @@ export function useProgressSync(): void {
     const key = `${userId}:${lang}`
     ;(async () => {
       try {
+        // Just restored a backup while logged in? The freshly-imported local
+        // data must WIN — push every language up to the server instead of
+        // pulling the (older) server rows down over it. Otherwise the restore
+        // would be silently overwritten right after the reload.
+        if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem(RESTORE_FLAG)) {
+          sessionStorage.removeItem(RESTORE_FLAG)
+          const all = useStudy.getState().progress
+          const stamp = new Date().toISOString()
+          await Promise.all(
+            Object.entries(all).map(([lc, lp]) =>
+              lp
+                ? sb.from('progress').upsert({
+                    user_id: userId,
+                    lang_code: lc,
+                    data: lp,
+                    updated_at: stamp,
+                  })
+                : Promise.resolve()
+            )
+          )
+          if (!alive) return
+          syncedKey.current = key
+          return
+        }
         const { data } = await sb
           .from('progress')
           .select('data')

@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import { Bot, X } from 'lucide-react'
 import TutorChat from '@/features/tutor/TutorChat'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
+import { useAuth } from '@/store/authStore'
 import { levelInfo } from '@/lib/level'
 
 export default function AssistantFab() {
   const [open, setOpen] = useState(false)
+  const user = useAuth((s) => s.user)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
 
@@ -23,11 +25,16 @@ export default function AssistantFab() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          aria-label="Mở trợ lý AI"
+          aria-label={user ? 'Mở trợ lý AI' : 'Trợ lý AI (cần đăng nhập)'}
+          title={user ? 'Trợ lý AI học từ vựng' : 'Trợ lý AI — cần đăng nhập'}
           className="fixed bottom-20 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-600/30 transition hover:scale-105 active:scale-95 lg:bottom-6 lg:right-6"
         >
           <Bot className="h-7 w-7" />
-          <span className="absolute -right-0.5 -top-0.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-400 dark:border-slate-900" />
+          {/* "Online" dot only when the assistant is actually usable (logged in),
+              so guests aren't invited then blocked. See F10. */}
+          {user && (
+            <span className="absolute -right-0.5 -top-0.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-400 dark:border-slate-900" />
+          )}
         </button>
       )}
 

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
@@ -11,6 +11,7 @@ import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 
 export default function Review() {
+  const navigate = useNavigate()
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const reviewLimit = useSettings((s) => s.dailyReviewLimit)
@@ -57,6 +58,7 @@ export default function Review() {
         words={queue}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        onExit={() => navigate('/')}
         renderComplete={(correct, total) => (
           <SessionComplete emoji="🎉" title="Ôn xong hôm nay!" correct={correct} total={total}>
             <Link to="/quiz" className="btn-primary">

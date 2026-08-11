@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Check, X } from 'lucide-react'
+import { Check, LogOut, X } from 'lucide-react'
 import type { Word } from '@/types'
 import Flashcard from './Flashcard'
 import { useSettings } from '@/store/settingsStore'
@@ -13,9 +13,11 @@ interface Props {
   onAnswer: (word: Word, correct: boolean) => void
   /** Rendered when all cards are done. */
   renderComplete: (correct: number, total: number) => React.ReactNode
+  /** Optional "end early" handler. Answers already given are kept (recorded per card). */
+  onExit?: () => void
 }
 
-export default function FlashcardSession({ words, ttsLang, onAnswer, renderComplete }: Props) {
+export default function FlashcardSession({ words, ttsLang, onAnswer, renderComplete, onExit }: Props) {
   const autoSpeak = useSettings((s) => s.autoSpeak)
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
@@ -90,6 +92,16 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
     <div className="mx-auto max-w-xl">
       {/* Progress */}
       <div className="mb-4 flex items-center gap-3">
+        {onExit && (
+          <button
+            onClick={onExit}
+            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+            aria-label="Kết thúc phiên học"
+            title="Kết thúc phiên (tiến độ đã lưu)"
+          >
+            <LogOut className="h-4 w-4" /> Thoát
+          </button>
+        )}
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div
             className="h-full rounded-full bg-brand-500 transition-all"

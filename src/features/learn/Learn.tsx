@@ -12,6 +12,7 @@ import FlashcardSession from '@/components/FlashcardSession'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
+import { Segment } from '@/components/Choice'
 
 export default function Learn() {
   const pack = useData((s) => s.pack)!
@@ -21,6 +22,9 @@ export default function Learn() {
   const recordAnswer = useStudy((s) => s.recordAnswer)
 
   const [session, setSession] = useState<Word[] | null>(null)
+  // Quick session length so busy learners can grab a short set without opening
+  // Settings. 'all' = however many new words remain today. See F6.
+  const [pick, setPick] = useState<number | 'all'>('all')
 
   const s = summarize(pack.words, progress, dailyNewLimit)
   const cards = progress?.cards ?? NO_CARDS
@@ -32,8 +36,16 @@ export default function Learn() {
         words={session}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
-        renderComplete={(correct, total) => (
-          <SessionComplete emoji="🌟" title="Học xong rồi!" correct={correct} total={total}>
+        onExit={() => setSession(null)}
+        renderComplete={(_correct, total) => (
+          <SessionComplete
+            emoji="🌟"
+            title="Học xong rồi!"
+            correct={total}
+            total={total}
+            showScore={false}
+            note={`Bạn vừa học ${total} từ mới. Tuyệt lắm — đều đặn mỗi ngày là nhớ chắc!`}
+          >
             <Link to="/review" className="btn-primary">
               Ôn tập ngay
             </Link>
@@ -46,8 +58,11 @@ export default function Learn() {
     )
   }
 
+  const plannedCount =
+    pick === 'all' ? s.newRemainingToday : Math.min(pick, s.newRemainingToday)
+
   const startDaily = () => {
-    const batch = nextNewWords(pack.words, progress, s.newRemainingToday)
+    const batch = nextNewWords(pack.words, progress, plannedCount)
     if (batch.length) setSession(batch)
   }
 
@@ -81,9 +96,29 @@ export default function Learn() {
           </div>
         </div>
         {s.newRemainingToday > 0 ? (
-          <button onClick={startDaily} className="btn-primary mt-5 h-12 w-full sm:w-auto">
-            <BookOpen className="h-5 w-5" /> Bắt đầu học {s.newRemainingToday} từ
-          </button>
+          <>
+            {s.newRemainingToday > 5 && (
+              <div className="mt-4">
+                <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  Học bao nhiêu từ?
+                </p>
+                <div className="grid max-w-xs grid-cols-3 gap-2">
+                  <Segment active={pick === 5} onClick={() => setPick(5)}>
+                    5 từ
+                  </Segment>
+                  <Segment active={pick === 10} onClick={() => setPick(10)} disabled={s.newRemainingToday < 10}>
+                    10 từ
+                  </Segment>
+                  <Segment active={pick === 'all'} onClick={() => setPick('all')}>
+                    Tất cả ({s.newRemainingToday})
+                  </Segment>
+                </div>
+              </div>
+            )}
+            <button onClick={startDaily} className="btn-primary mt-5 h-12 w-full sm:w-auto">
+              <BookOpen className="h-5 w-5" /> Bắt đầu học {plannedCount} từ
+            </button>
+          </>
         ) : (
           <p className="mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
             🎯 Bạn đã hoàn thành hạn mức từ mới hôm nay. Hãy chuyển sang{' '}

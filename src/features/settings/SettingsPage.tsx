@@ -3,11 +3,14 @@ import { AlertTriangle, Download, Upload, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useAuth } from '@/store/authStore'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
 import { LEVELS, levelInfo } from '@/lib/level'
 import { isRecognitionSupported } from '@/lib/speech'
+import { supabaseConfigured } from '@/lib/supabase'
+import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { Row, Section, Toggle } from './ui'
 
@@ -21,6 +24,8 @@ export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
   const audioVoices = useData((s) => s.audioVoices)
   const settings = useSettings()
+  const user = useAuth((s) => s.user)
+  const syncing = Boolean(user && supabaseConfigured)
   const effLevel = useEffectiveLevel()
   const resetLanguage = useStudy((s) => s.resetLanguage)
 
@@ -47,7 +52,14 @@ export default function SettingsPage() {
     reader.onload = () => {
       try {
         const n = importBackup(String(reader.result))
-        setNotice(`Đã khôi phục ${n} mục. Đang tải lại…`)
+        // When logged in, mark this so the sync after reload pushes the restored
+        // data UP instead of pulling the old server copy down over it (F3).
+        if (syncing) sessionStorage.setItem(RESTORE_FLAG, '1')
+        setNotice(
+          syncing
+            ? `Đã khôi phục ${n} mục và đang đồng bộ lên tài khoản. Đang tải lại…`
+            : `Đã khôi phục ${n} mục. Đang tải lại…`
+        )
         setTimeout(() => location.reload(), 800)
       } catch (e) {
         setNotice(e instanceof Error ? e.message : 'Không đọc được file.')
@@ -61,7 +73,10 @@ export default function SettingsPage() {
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Cài đặt ⚙️</h1>
         <p className="mt-1 text-slate-500">
-          Điều chỉnh trải nghiệm học của bạn. Mọi dữ liệu chỉ lưu trên máy này.
+          Điều chỉnh trải nghiệm học của bạn.{' '}
+          {syncing
+            ? 'Tiến độ được đồng bộ lên tài khoản của bạn (có kèm bản sao trên máy này).'
+            : 'Dữ liệu hiện lưu trên máy này — đăng nhập để đồng bộ lên tài khoản.'}
         </p>
       </header>
 
@@ -110,6 +125,13 @@ export default function SettingsPage() {
               {settings.dailyReviewLimit || '∞'}
             </span>
           </div>
+        </Row>
+        <Row label="Âm thanh khi kiểm tra" hint="Tiếng “tinh” khi đúng / “tút” khi sai lúc làm quiz.">
+          <Toggle
+            checked={settings.soundEnabled}
+            onChange={settings.setSoundEnabled}
+            label="Âm thanh khi kiểm tra"
+          />
         </Row>
       </Section>
 
@@ -162,9 +184,8 @@ export default function SettingsPage() {
             )}
             {ttsOk && voices.length === 0 && (
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                ⚠️ Chưa có audio dựng sẵn và máy cũng chưa cài giọng tiếng Anh. Chạy{' '}
-                <code>python3 scripts/generate_audio.py</code> để tạo giọng Neural, hoặc dùng Google
-                Chrome.
+                ⚠️ Máy bạn chưa có giọng đọc tiếng Anh. Hãy mở trang bằng Google Chrome hoặc
+                Microsoft Edge (bản mới) để nghe được phát âm nhé.
               </p>
             )}
             {ttsOk && voices.length > 0 && (
