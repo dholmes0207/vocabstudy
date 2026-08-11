@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Bot, X } from 'lucide-react'
 import TutorChat from '@/features/tutor/TutorChat'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
@@ -8,6 +8,14 @@ export default function AssistantFab() {
   const [open, setOpen] = useState(false)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
+
+  // Đóng bằng phím Esc (trang phía sau vẫn dùng được, không bị che mờ).
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
 
   return (
     <>
@@ -25,14 +33,17 @@ export default function AssistantFab() {
 
       {open && (
         <>
-          {/* Backdrop */}
+          {/* Bắt chạm ra ngoài để đóng — CHỈ trên mobile, và trong suốt (không
+              làm mờ/tối trang). Trên desktop không có lớp phủ: trang vẫn dùng
+              được bình thường như popup chat Messenger. */}
           <div
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-40 lg:hidden"
             onClick={() => setOpen(false)}
           />
 
-          {/* Panel: bottom sheet on mobile, right side panel on desktop */}
-          <div className="fixed inset-x-0 bottom-0 z-50 flex h-[85dvh] flex-col rounded-t-2xl border-t border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-slate-900 lg:inset-y-0 lg:right-0 lg:left-auto lg:h-full lg:w-[26rem] lg:rounded-none lg:border-l lg:border-t-0 animate-fade-in">
+          {/* Popup: bottom sheet trên mobile, thẻ nổi góc phải-dưới trên desktop.
+              Không có backdrop tối/mờ — chỉ "hiện lên" trên nội dung trang. */}
+          <div className="fixed inset-x-0 bottom-0 z-50 flex h-[85dvh] flex-col overflow-hidden rounded-t-2xl border border-slate-200 bg-white shadow-2xl ring-1 ring-black/5 origin-bottom animate-chat-in dark:border-slate-800 dark:bg-slate-900 lg:inset-x-auto lg:bottom-6 lg:right-6 lg:h-[min(85vh,42rem)] lg:w-[24rem] lg:rounded-2xl lg:origin-bottom-right">
             {/* Header */}
             <div className="flex items-center gap-3 border-b border-slate-200 p-3 dark:border-slate-800">
               <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white">

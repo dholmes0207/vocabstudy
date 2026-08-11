@@ -36,11 +36,16 @@ export default {
           '0%': { transform: 'rotateY(90deg)', opacity: '0' },
           '100%': { transform: 'rotateY(0)', opacity: '1' },
         },
+        'chat-in': {
+          '0%': { opacity: '0', transform: 'translateY(12px) scale(0.98)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.35s ease-out both',
         pop: 'pop 0.25s ease-out',
         'flip-in': 'flip-in 0.3s ease-out both',
+        'chat-in': 'chat-in 0.22s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
     },
   },
