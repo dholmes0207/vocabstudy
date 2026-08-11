@@ -118,7 +118,7 @@ export default function Quiz() {
         <EmptyState
           emoji="📝"
           title="Bạn chưa học từ nào"
-          description="Hãy học vài từ trước, hoặc chọn phạm vi “Toàn bộ 1000 từ” để kiểm tra thử."
+          description={`Hãy học vài từ trước, hoặc chọn phạm vi “Toàn bộ ${pack.meta.count} từ” để kiểm tra thử.`}
         >
           <Link to="/learn" className="btn-primary">
             Học từ mới

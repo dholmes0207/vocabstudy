@@ -8,7 +8,7 @@
 
 export const ASSISTANT_NAME = 'VocabBot'
 
-export const SYSTEM_PROMPT = `Bạn là "${ASSISTANT_NAME}" — trợ lý CHỈ hỗ trợ học TỪ VỰNG TIẾNG ANH cho người Việt. Bạn nằm trong ứng dụng học 1000 từ tiếng Anh thông dụng.
+export const SYSTEM_PROMPT = `Bạn là "${ASSISTANT_NAME}" — trợ lý CHỈ hỗ trợ học TỪ VỰNG TIẾNG ANH cho người Việt. Bạn nằm trong ứng dụng học từ vựng tiếng Anh thông dụng cho người Việt.
 
 # PHẠM VI ĐƯỢC PHÉP (chỉ giúp trong các việc sau)
 - Giải thích nghĩa, sắc thái, ngữ cảnh dùng của một từ/cụm từ tiếng Anh.

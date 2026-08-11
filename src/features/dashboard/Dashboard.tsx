@@ -120,7 +120,7 @@ export default function Dashboard() {
         <QuickLink
           to="/browse"
           icon={Library}
-          title="Tra cứu 1000 từ"
+          title={`Tra cứu ${pack.meta.count} từ`}
           desc="Tìm kiếm & lọc toàn bộ danh sách từ vựng."
         />
       </section>
