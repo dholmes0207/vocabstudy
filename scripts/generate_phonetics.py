@@ -24,13 +24,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CMU = cmudict.dict()
 
 # --- Fix extraction artifacts (word wrapped across a line -> stray space) ------
+# NOTE: keyed by the ORIGINAL padded-dataset ids. Ids 442/668/894 were
+# duplicate "deep" rows removed in the F2 dedup — dropped here so they can't
+# collide with (and clobber) the freshly-added words that now reuse those ids.
 CORRECTIONS = {
     23: {"word": "administration", "exampleEn": "She works in business administration."},
     139: {"exampleEn": "The audience applauded enthusiastically."},
     216: {"exampleEn": "Deep understanding."},
-    442: {"exampleEn": "Deep understanding."},
-    668: {"exampleEn": "Deep understanding."},
-    894: {"exampleEn": "Deep understanding."},
 }
 
 # --- ARPAbet -> Vietnamese approximation ---------------------------------------
