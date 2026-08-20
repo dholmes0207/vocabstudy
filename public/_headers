@@ -1,0 +1,25 @@
+# Cloudflare Pages response headers.
+#
+# WHY: without this file Pages serves every non-fingerprinted asset with
+# `max-age=0, must-revalidate`, so each app open re-validates data/en.json and
+# EVERY pronunciation clip — one network round-trip per tap. On mobile (iOS
+# Safari on 4G) that is the difference between instant audio and a visible wait.
+#
+# Deliberately contains cache rules only. A Content-Security-Policy would have
+# to allow the Supabase and OpenAI origins or it silently breaks login and the
+# AI tutor — that is a separate, explicit decision.
+
+# Pronunciation clips: content for a given id changes only when we regenerate
+# it, so cache hard but not "immutable" (a month, then revalidate in the
+# background) — a re-recorded clip still reaches learners within 30 days.
+/audio/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Language packs: new words should show up the same day, but a repeat visit
+# within the hour must not re-download 280 KB.
+/data/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+
+# Vite fingerprints these — the filename changes whenever the bytes do.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

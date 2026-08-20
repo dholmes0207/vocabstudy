@@ -58,6 +58,24 @@ export function exampleAudio(id: number): string {
   return v ? `${base}audio/${currentCode}/${v}/e${id}.mp3` : ''
 }
 
+// Clips already pulled into the HTTP cache this session, so a learner tapping
+// back and forth doesn't re-issue requests.
+const prefetched = new Set<string>()
+
+/**
+ * Warm the browser cache for clips that are about to be needed. Without this
+ * the first tap on a speaker pays a full round-trip — very visible on iOS
+ * Safari over mobile data. Failures are ignored: playback still falls back to
+ * Web Speech on its own.
+ */
+export function prefetchAudio(urls: (string | undefined | null)[]): void {
+  for (const url of urls) {
+    if (!url || prefetched.has(url)) continue
+    prefetched.add(url)
+    void fetch(url, { cache: 'force-cache' }).catch(() => {})
+  }
+}
+
 let current: HTMLAudioElement | null = null
 
 function clampRate(rate: number): number {

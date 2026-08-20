@@ -4,7 +4,7 @@ import type { Word } from '@/types'
 import Flashcard from './Flashcard'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
-import { pronounce, wordAudio } from '@/lib/audio'
+import { exampleAudio, prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 
 interface Props {
   words: Word[]
@@ -17,7 +17,13 @@ interface Props {
   onExit?: () => void
 }
 
-export default function FlashcardSession({ words, ttsLang, onAnswer, renderComplete, onExit }: Props) {
+export default function FlashcardSession({
+  words,
+  ttsLang,
+  onAnswer,
+  renderComplete,
+  onExit,
+}: Props) {
   const autoSpeak = useSettings((s) => s.autoSpeak)
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
@@ -50,6 +56,13 @@ export default function FlashcardSession({ words, ttsLang, onAnswer, renderCompl
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, done])
+
+  // Pull the upcoming clips into cache while the learner is still reading this
+  // card, so the speaker button responds instantly on the next one.
+  useEffect(() => {
+    const upcoming = words.slice(index, index + 3)
+    prefetchAudio(upcoming.flatMap((w) => [wordAudio(w.id), exampleAudio(w.id)]))
+  }, [words, index])
 
   const answer = useCallback(
     (isCorrect: boolean) => {

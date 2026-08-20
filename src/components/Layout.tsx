@@ -60,7 +60,7 @@ export default function Layout() {
       {/* Main column */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Header */}
-        <header className="sticky top-0 z-20 flex items-center gap-3 border-b border-slate-200 bg-white/80 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
+        <header className="sticky top-0 z-20 flex items-center gap-3 border-b border-slate-200 bg-white px-4 py-3 dark:border-slate-800 dark:bg-slate-900 lg:bg-white/80 lg:backdrop-blur lg:dark:bg-slate-900/80">
           <div className="lg:hidden">
             <Brand compact />
           </div>
@@ -77,7 +77,7 @@ export default function Layout() {
       </div>
 
       {/* Mobile bottom navigation */}
-      <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 lg:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 lg:hidden">
         {NAV.filter((n) => n.primary).map((item) => (
           <BottomLink key={item.to} item={item} badge={item.to === '/review' ? dueCount : 0} />
         ))}
