@@ -56,6 +56,22 @@ const DEFS: Def[] = [
     target: 200,
   },
   {
+    id: 'learn500',
+    icon: '🏅',
+    title: 'Nửa chặng đường',
+    desc: 'Chạm tới 500 từ',
+    value: (m) => m.learned,
+    target: 500,
+  },
+  {
+    id: 'learn1000',
+    icon: '🏆',
+    title: 'Trọn bộ 1000',
+    desc: 'Chạm tới đủ 1000 từ',
+    value: (m) => m.learned,
+    target: 1000,
+  },
+  {
     id: 'streak3',
     icon: '🔥',
     title: 'Bén lửa',

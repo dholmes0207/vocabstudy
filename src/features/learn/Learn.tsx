@@ -25,6 +25,9 @@ export default function Learn() {
   // Quick session length so busy learners can grab a short set without opening
   // Settings. 'all' = however many new words remain today. See F6.
   const [pick, setPick] = useState<number | 'all'>('all')
+  // With 1000 words the pack is 50 decks — dumping all of them on the page
+  // overwhelms a beginner, so show the stretch they are actually on.
+  const [showAllDecks, setShowAllDecks] = useState(false)
 
   const s = summarize(pack.words, progress, dailyNewLimit)
   const cards = progress?.cards ?? NO_CARDS
@@ -58,13 +61,21 @@ export default function Learn() {
     )
   }
 
-  const plannedCount =
-    pick === 'all' ? s.newRemainingToday : Math.min(pick, s.newRemainingToday)
+  const plannedCount = pick === 'all' ? s.newRemainingToday : Math.min(pick, s.newRemainingToday)
 
   const startDaily = () => {
     const batch = nextNewWords(pack.words, progress, plannedCount)
     if (batch.length) setSession(batch)
   }
+
+  const firstUnfinished = Math.max(
+    0,
+    decks.findIndex((d) => d.mastered < d.words.length)
+  )
+  const DECK_WINDOW = 8
+  const visibleDecks = showAllDecks
+    ? decks
+    : decks.slice(firstUnfinished, firstUnfinished + DECK_WINDOW)
 
   const startDeck = (deckWords: Word[]) => {
     // Study the deck's not-yet-mastered words (fresh + learning + review).
@@ -106,7 +117,11 @@ export default function Learn() {
                   <Segment active={pick === 5} onClick={() => setPick(5)}>
                     5 từ
                   </Segment>
-                  <Segment active={pick === 10} onClick={() => setPick(10)} disabled={s.newRemainingToday < 10}>
+                  <Segment
+                    active={pick === 10}
+                    onClick={() => setPick(10)}
+                    disabled={s.newRemainingToday < 10}
+                  >
                     10 từ
                   </Segment>
                   <Segment active={pick === 'all'} onClick={() => setPick('all')}>
@@ -145,7 +160,7 @@ export default function Learn() {
           />
         ) : (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {decks.map((deck) => {
+            {visibleDecks.map((deck) => {
               const pct = deck.words.length ? deck.mastered / deck.words.length : 0
               const complete = deck.mastered === deck.words.length
               return (
@@ -168,6 +183,14 @@ export default function Learn() {
               )
             })}
           </div>
+        )}
+        {decks.length > DECK_WINDOW && !(s.fresh === 0 && s.mastered === s.total) && (
+          <button
+            onClick={() => setShowAllDecks((v) => !v)}
+            className="btn-secondary mt-3 w-full sm:w-auto"
+          >
+            {showAllDecks ? 'Thu gọn' : `Xem tất cả ${decks.length} bộ`}
+          </button>
         )}
       </section>
     </div>
