@@ -41,13 +41,16 @@ export default function Browse() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
-    return pack.words.filter((w) => {
+    // The pack is stored in learning order (most common words first); a lookup
+    // screen wants the alphabet instead.
+    const list = pack.words.filter((w) => {
       if (pos !== 'all' && w.posCategory !== pos) return false
       if (phaseFilter !== 'all' && phaseOf(cards[w.id]) !== phaseFilter) return false
       if (q && !w.word.toLowerCase().includes(q) && !w.meaning.toLowerCase().includes(q))
         return false
       return true
     })
+    return list.sort((x, y) => x.word.localeCompare(y.word, 'en'))
   }, [pack.words, query, pos, phaseFilter, cards])
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))

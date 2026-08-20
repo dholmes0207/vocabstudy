@@ -47,6 +47,16 @@ describe('en.json dataset integrity', () => {
     expect(ids[ids.length - 1]).toBe(1000)
   })
 
+  // Learn/decks walk the array in order, so array order IS the curriculum: the
+  // first lesson a beginner ever sees must be the commonest words in English,
+  // not whatever happens to sort first alphabetically.
+  it('opens the curriculum with the highest-frequency words', () => {
+    const firstDeck = pack.words.slice(0, 20).map((w) => w.word.toLowerCase())
+    for (const w of ['the', 'of', 'to', 'you', 'is']) {
+      expect(firstDeck, `"${w}" phải nằm trong bộ đầu tiên`).toContain(w)
+    }
+  })
+
   it('every word carries the fields the UI needs', () => {
     for (const w of pack.words) {
       expect(w.word.trim(), `id ${w.id}`).not.toBe('')

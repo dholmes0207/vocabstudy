@@ -264,6 +264,8 @@ Dữ liệu từ vựng — **1000 từ, không trùng lặp**, xây theo hai ng
 1. **374 từ** trích từ _"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"_ (chuẩn Oxford & Cambridge, bản gốc trong `docs/`). PDF này **đánh số tới 1000 nhưng bị lặp** — chỉ có 374 từ thật, mỗi từ xuất hiện ~2,7 lần; bản trùng đã được dọn.
 2. **626 từ** do dự án bổ sung để đủ 1000, chọn từ **nhóm tần suất cao dành cho người mới** (Fry / Oxford 3000 bậc A1–A2) và các chủ đề đời sống: gia đình, màu sắc, con số, cơ thể, đồ ăn, nhà cửa, thời gian, trường học, nghề nghiệp. Nghĩa tiếng Việt, câu ví dụ Anh–Việt, IPA, cách đọc và audio đều được sinh & duyệt trong repo này.
 
+**Thứ tự lưu trong `en.json` chính là lộ trình học** (màn Học từ mới và các bộ 20 từ đi theo đúng thứ tự này): nhóm tần suất cao nhất trước (_the, of, to, in, is, you…_) → từ đời sống A1–A2 (_water, bread, mother…_) → nhóm học thuật hơn từ tài liệu gốc. Riêng màn **Tra cứu** xếp theo bảng chữ cái cho dễ tìm.
+
 > Bộ kiểm thử `src/lib/dataset.test.ts` khoá các cam kết trên: đúng 1000 từ, id liên tục 1–1000, không trùng từ, **mọi từ đều có IPA + cách đọc + đủ 4 file audio** (từ & ví dụ × 2 giọng).
 
 **Mã nguồn**: [MIT](LICENSE). **Nội dung học** (PDF gốc, bộ từ vựng `public/data/`, audio `public/audio/`) là tài liệu bên thứ ba, đính kèm cho mục đích học tập và **không** thuộc phạm vi giấy phép MIT — xem phần ghi chú cuối [`LICENSE`](LICENSE).
