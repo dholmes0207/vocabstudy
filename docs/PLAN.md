@@ -23,7 +23,9 @@
 
 **Điểm nhấn:** phát âm bằng **Web Speech API (TTS)** (thay cho IPA còn trống trong nguồn), **dark mode**, **mobile-first**, **streak & tiến độ trực quan**, và kiến trúc **"language pack" JSON** để **mở rộng đa ngôn ngữ** không cần sửa logic.
 
-**Dữ liệu:** đã trích xuất sạch **đúng 1000 từ** từ PDF (STT 1–1000, không trùng/thiếu) → `data/en.json` (bản gốc) và `public/data/en.json` (bản app dùng).
+**Dữ liệu:** trích xuất từ PDF → `public/data/en.json`.
+
+> ⚠️ **Đính chính (11/08/2026):** giả định "PDF có đúng 1000 từ" ở đây **sai**. Kiểm lại thì PDF đánh số tới 1000 nhưng **chỉ có 374 từ thật**, lặp ~2,7 lần. Bộ dữ liệu đã được dọn trùng rồi **bổ sung 626 từ tần suất cao bậc A1–A2** để đủ 1000 từ thật. Xem phần "Nguồn & giấy phép" trong README.
 
 ---
 
@@ -1035,7 +1037,7 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 
 ### D.7 Definition of Done
 
-- [x] Trích xuất đủ 1000 từ, dataset sạch, đưa vào repo.
+- [x] Dataset sạch, đủ 1000 từ thật trong repo (374 từ từ PDF sau khi dọn trùng + 626 từ A1–A2 bổ sung).
 - [x] Lưu PDF gốc vào `docs/`.
 - [x] Plan 3 vai + tổng hợp (`docs/PLAN.md`).
 - [ ] Build TypeScript sạch (`npm run build`), chạy `npm run dev` không lỗi console.

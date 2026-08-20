@@ -7,7 +7,7 @@ Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **100
 Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline sau lần tải đầu). Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 
 > 📄 Tài liệu kế hoạch chi tiết (theo quy trình 3 vai: Người học → BA → DEV): [`docs/PLAN.md`](docs/PLAN.md)
-> 📖 Tài liệu nguồn: [`docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`](docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf)
+> 📖 Tài liệu nguồn: [`docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`](docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf) — xem ghi chú về [nguồn dữ liệu](#-nguồn--giấy-phép)
 
 ---
 
@@ -23,7 +23,7 @@ Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline
 | 🎙️ **Luyện nói**    | **Ghi âm giọng mình**, nghe đối chiếu A/B với giọng mẫu, chấm điểm **0–100** tự động. 3 mức khó. Kết quả nạp vào SRS.                                                                                  |
 | 📚 **Tra cứu**      | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học.                                                                                                                                         |
 | 📈 **Thống kê**     | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**.                                                                                                                     |
-| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **13 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                            |
+| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **15 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                            |
 | 🤖 **Trợ lý AI**    | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh. |
 | 🎚️ **Trình độ**     | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10").                                                                                                                   |
 | ⚙️ **Cài đặt**      | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục.                                                                                           |
@@ -259,6 +259,11 @@ Chất lượng mã: ESLint + Prettier + TypeScript strict, unit test bằng Vit
 
 ## 📜 Nguồn & giấy phép
 
-Dữ liệu từ vựng: _"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"_ (chuẩn Oxford & Cambridge) — xem bản gốc trong `docs/`.
+Dữ liệu từ vựng — **1000 từ, không trùng lặp**, xây theo hai nguồn:
+
+1. **374 từ** trích từ _"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"_ (chuẩn Oxford & Cambridge, bản gốc trong `docs/`). PDF này **đánh số tới 1000 nhưng bị lặp** — chỉ có 374 từ thật, mỗi từ xuất hiện ~2,7 lần; bản trùng đã được dọn.
+2. **626 từ** do dự án bổ sung để đủ 1000, chọn từ **nhóm tần suất cao dành cho người mới** (Fry / Oxford 3000 bậc A1–A2) và các chủ đề đời sống: gia đình, màu sắc, con số, cơ thể, đồ ăn, nhà cửa, thời gian, trường học, nghề nghiệp. Nghĩa tiếng Việt, câu ví dụ Anh–Việt, IPA, cách đọc và audio đều được sinh & duyệt trong repo này.
+
+> Bộ kiểm thử `src/lib/dataset.test.ts` khoá các cam kết trên: đúng 1000 từ, id liên tục 1–1000, không trùng từ, **mọi từ đều có IPA + cách đọc + đủ 4 file audio** (từ & ví dụ × 2 giọng).
 
 **Mã nguồn**: [MIT](LICENSE). **Nội dung học** (PDF gốc, bộ từ vựng `public/data/`, audio `public/audio/`) là tài liệu bên thứ ba, đính kèm cho mục đích học tập và **không** thuộc phạm vi giấy phép MIT — xem phần ghi chú cuối [`LICENSE`](LICENSE).
