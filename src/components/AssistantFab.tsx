@@ -43,10 +43,7 @@ export default function AssistantFab() {
           {/* Bắt chạm ra ngoài để đóng — CHỈ trên mobile, và trong suốt (không
               làm mờ/tối trang). Trên desktop không có lớp phủ: trang vẫn dùng
               được bình thường như popup chat Messenger. */}
-          <div
-            className="fixed inset-0 z-40 lg:hidden"
-            onClick={() => setOpen(false)}
-          />
+          <div className="fixed inset-0 z-40 lg:hidden" onClick={() => setOpen(false)} />
 
           {/* Popup: bottom sheet trên mobile, thẻ nổi góc phải-dưới trên desktop.
               Không có backdrop tối/mờ — chỉ "hiện lên" trên nội dung trang. */}

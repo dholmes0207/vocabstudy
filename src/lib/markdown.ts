@@ -20,11 +20,15 @@ const HEADING = /^(#{1,6})\s+(.*)$/
 
 /** Split markdown into block-level nodes. */
 export function parseBlocks(md: string): Block[] {
-  const lines = md.replace(/\r/g, '').replace(/\*\*\*/g, '**').split('\n')
+  const lines = md
+    .replace(/\r/g, '')
+    .replace(/\*\*\*/g, '**')
+    .split('\n')
   const blocks: Block[] = []
   let i = 0
 
-  const depthOf = (indent: string) => Math.min(2, Math.floor(indent.replace(/\t/g, '  ').length / 2))
+  const depthOf = (indent: string) =>
+    Math.min(2, Math.floor(indent.replace(/\t/g, '  ').length / 2))
 
   while (i < lines.length) {
     const line = lines[i]
@@ -57,7 +61,13 @@ export function parseBlocks(md: string): Block[] {
 
     // Paragraph: gather consecutive plain lines (soft line breaks kept).
     const para: string[] = []
-    while (i < lines.length && lines[i].trim() && !BULLET.test(lines[i]) && !ORDERED.test(lines[i]) && !HEADING.test(lines[i])) {
+    while (
+      i < lines.length &&
+      lines[i].trim() &&
+      !BULLET.test(lines[i]) &&
+      !ORDERED.test(lines[i]) &&
+      !HEADING.test(lines[i])
+    ) {
       para.push(lines[i].trim())
       i++
     }

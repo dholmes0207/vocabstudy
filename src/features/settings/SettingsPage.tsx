@@ -126,7 +126,10 @@ export default function SettingsPage() {
             </span>
           </div>
         </Row>
-        <Row label="Âm thanh khi kiểm tra" hint="Tiếng “tinh” khi đúng / “tút” khi sai lúc làm quiz.">
+        <Row
+          label="Âm thanh khi kiểm tra"
+          hint="Tiếng “tinh” khi đúng / “tút” khi sai lúc làm quiz."
+        >
           <Toggle
             checked={settings.soundEnabled}
             onChange={settings.setSoundEnabled}

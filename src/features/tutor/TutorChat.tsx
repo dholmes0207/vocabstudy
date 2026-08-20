@@ -198,7 +198,11 @@ function Bubble({
               : 'rounded-bl-md bg-white text-slate-700 ring-1 ring-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700'
         }`}
       >
-        {isUser || isError ? <p className="whitespace-pre-wrap">{content}</p> : <Markdown content={content} />}
+        {isUser || isError ? (
+          <p className="whitespace-pre-wrap">{content}</p>
+        ) : (
+          <Markdown content={content} />
+        )}
       </div>
     </div>
   )

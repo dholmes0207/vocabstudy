@@ -233,7 +233,9 @@ function WordRow({
                 {word.ipa && <span className="font-mono">/{word.ipa}/</span>}
                 {word.ipa && word.viRead && <span className="mx-1">·</span>}
                 {word.viRead && (
-                  <span className="font-medium text-slate-600 dark:text-slate-300">{word.viRead}</span>
+                  <span className="font-medium text-slate-600 dark:text-slate-300">
+                    {word.viRead}
+                  </span>
                 )}
               </span>
             )}

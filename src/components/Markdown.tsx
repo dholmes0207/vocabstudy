@@ -8,11 +8,19 @@ function Inline({ text }: { text: string }) {
   return (
     <>
       {parseInline(text).map((tok, i) => {
-        if (tok.t === 'strong') return <strong key={i} className="font-semibold text-slate-900 dark:text-white">{withBreaks(tok.v)}</strong>
+        if (tok.t === 'strong')
+          return (
+            <strong key={i} className="font-semibold text-slate-900 dark:text-white">
+              {withBreaks(tok.v)}
+            </strong>
+          )
         if (tok.t === 'em') return <em key={i}>{withBreaks(tok.v)}</em>
         if (tok.t === 'code')
           return (
-            <code key={i} className="rounded bg-slate-200/70 px-1 py-0.5 font-mono text-[0.85em] dark:bg-slate-700/70">
+            <code
+              key={i}
+              className="rounded bg-slate-200/70 px-1 py-0.5 font-mono text-[0.85em] dark:bg-slate-700/70"
+            >
               {tok.v}
             </code>
           )
@@ -40,7 +48,10 @@ export default function Markdown({ content }: { content: string }) {
       {blocks.map((b, i) => {
         if (b.type === 'h') {
           return (
-            <p key={i} className={`${b.level <= 2 ? 'text-[15px] font-bold' : 'text-sm font-semibold'} mt-1 text-slate-800 dark:text-slate-100`}>
+            <p
+              key={i}
+              className={`${b.level <= 2 ? 'text-[15px] font-bold' : 'text-sm font-semibold'} mt-1 text-slate-800 dark:text-slate-100`}
+            >
               <Inline text={b.text} />
             </p>
           )
@@ -61,7 +72,9 @@ export default function Markdown({ content }: { content: string }) {
               return (
                 <li key={j} className="flex gap-2" style={{ paddingLeft: it.depth * 16 }}>
                   {b.ordered && it.depth === 0 ? (
-                    <span className="min-w-[1.15em] shrink-0 font-semibold text-brand-500">{n}.</span>
+                    <span className="min-w-[1.15em] shrink-0 font-semibold text-brand-500">
+                      {n}.
+                    </span>
                   ) : (
                     <span className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-400" />
                   )}
