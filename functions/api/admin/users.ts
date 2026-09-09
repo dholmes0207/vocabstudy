@@ -1,18 +1,15 @@
-import { type Ctx, adminAuth, adminRest, getProfile, getUser, json } from '../../_shared'
+import { isUuid } from '../../../src/lib/authz'
+import { type Ctx, adminAuth, adminRest, json, requireAdmin } from '../../_shared'
 
 // /api/admin/users — user management. Enforced server-side: the caller must be
 // an admin (checked against the profiles table via the service-role key).
-
-async function requireAdmin(ctx: Ctx): Promise<{ id: string } | Response> {
-  const u = await getUser(ctx.env, ctx.request)
-  if (!u) return json({ error: 'Chưa đăng nhập.' }, 401)
-  const p = await getProfile(ctx.env, u.id)
-  if (p?.role !== 'admin') return json({ error: 'Không có quyền truy cập.' }, 403)
-  return { id: u.id }
-}
+//
+// Every caller-supplied id is checked against the UUID shape before it reaches
+// a query: these ids are interpolated into PostgREST filters, so a value
+// carrying `&` or `,` would otherwise become extra query syntax.
 
 export const onRequestGet = async (ctx: Ctx): Promise<Response> => {
-  const admin = await requireAdmin(ctx)
+  const admin = await requireAdmin(ctx.env, ctx.request)
   if (admin instanceof Response) return admin
   const r = await adminRest(
     ctx.env,
@@ -24,21 +21,21 @@ export const onRequestGet = async (ctx: Ctx): Promise<Response> => {
 }
 
 export const onRequestPatch = async (ctx: Ctx): Promise<Response> => {
-  const admin = await requireAdmin(ctx)
+  const admin = await requireAdmin(ctx.env, ctx.request)
   if (admin instanceof Response) return admin
   const b = (await ctx.request.json().catch(() => ({}))) as {
     id?: string
     role?: string
     status?: string
   }
-  if (!b.id || (b.role === undefined && b.status === undefined))
+  if (!isUuid(b.id) || (b.role === undefined && b.status === undefined))
     return json({ error: 'Dữ liệu không hợp lệ' }, 400)
   if (b.id === admin.id) return json({ error: 'Không thể tự đổi vai/khoá chính mình.' }, 400)
   const patch: Record<string, string> = {}
   if (b.role === 'student' || b.role === 'admin') patch.role = b.role
   if (b.status === 'active' || b.status === 'locked') patch.status = b.status
   if (!Object.keys(patch).length) return json({ error: 'Dữ liệu không hợp lệ' }, 400)
-  const r = await adminRest(ctx.env, `/profiles?id=eq.${b.id}`, {
+  const r = await adminRest(ctx.env, `/profiles?id=eq.${encodeURIComponent(b.id)}`, {
     method: 'PATCH',
     headers: { Prefer: 'return=minimal' },
     body: JSON.stringify(patch),
@@ -49,12 +46,12 @@ export const onRequestPatch = async (ctx: Ctx): Promise<Response> => {
 
 // Reset a user's password.
 export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
-  const admin = await requireAdmin(ctx)
+  const admin = await requireAdmin(ctx.env, ctx.request)
   if (admin instanceof Response) return admin
   const b = (await ctx.request.json().catch(() => ({}))) as { id?: string; password?: string }
-  if (!b.id || typeof b.password !== 'string' || b.password.length < 6)
+  if (!isUuid(b.id) || typeof b.password !== 'string' || b.password.length < 6)
     return json({ error: 'Mật khẩu mới tối thiểu 6 ký tự' }, 400)
-  const r = await adminAuth(ctx.env, `/users/${b.id}`, {
+  const r = await adminAuth(ctx.env, `/users/${encodeURIComponent(b.id)}`, {
     method: 'PUT',
     body: JSON.stringify({ password: b.password }),
   })
@@ -63,12 +60,12 @@ export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
 }
 
 export const onRequestDelete = async (ctx: Ctx): Promise<Response> => {
-  const admin = await requireAdmin(ctx)
+  const admin = await requireAdmin(ctx.env, ctx.request)
   if (admin instanceof Response) return admin
   const b = (await ctx.request.json().catch(() => ({}))) as { id?: string }
-  if (!b.id) return json({ error: 'Thiếu id' }, 400)
+  if (!isUuid(b.id)) return json({ error: 'Thiếu id hợp lệ' }, 400)
   if (b.id === admin.id) return json({ error: 'Không thể tự xoá chính mình.' }, 400)
-  const r = await adminAuth(ctx.env, `/users/${b.id}`, { method: 'DELETE' })
+  const r = await adminAuth(ctx.env, `/users/${encodeURIComponent(b.id)}`, { method: 'DELETE' })
   if (!r.ok) return json({ error: 'Xoá thất bại' }, 502)
   return json({ ok: true })
 }

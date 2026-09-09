@@ -1,3 +1,11 @@
+import {
+  accessDecision,
+  adminDecision,
+  isUuid,
+  type ProfileLookup,
+  type Role,
+} from '../src/lib/authz'
+
 // Shared helpers for Cloudflare Pages Functions (Workers runtime).
 // Secrets live in Cloudflare env: OPENAI_API_KEY, SUPABASE_URL,
 // SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY.
@@ -66,24 +74,48 @@ export function adminAuth(env: Env, path: string, init: RequestInit = {}): Promi
   })
 }
 
-export async function getProfile(
-  env: Env,
-  userId: string
-): Promise<{ role: string; status: string } | null> {
-  const r = await adminRest(env, `/profiles?id=eq.${userId}&select=role,status`)
-  if (!r.ok) return null
-  const rows = (await r.json()) as { role: string; status: string }[]
-  return rows[0] ?? null
+/**
+ * Look a profile up, keeping "the lookup failed" distinct from "there is no
+ * row". Collapsing the two (the previous `getProfile` returned null for both)
+ * meant a Supabase blip silently re-admitted locked accounts.
+ */
+export async function lookupProfile(env: Env, userId: string): Promise<ProfileLookup> {
+  if (!isUuid(userId)) return { ok: true, profile: null }
+  let r: Response
+  try {
+    r = await adminRest(env, `/profiles?id=eq.${encodeURIComponent(userId)}&select=role,status`)
+  } catch {
+    return { ok: false }
+  }
+  if (!r.ok) return { ok: false }
+  try {
+    const rows = (await r.json()) as { role: string; status: string }[]
+    return { ok: true, profile: rows[0] ?? null }
+  } catch {
+    return { ok: false }
+  }
 }
 
-/** Require a logged-in, active user; returns the user or a Response to return. */
-export async function requireUser(
-  env: Env,
-  request: Request
-): Promise<{ id: string; email: string } | Response> {
+export interface AuthedUser {
+  id: string
+  email: string
+  role: Role
+}
+
+/** Require a signed-in, non-locked user; returns the user or a Response. */
+export async function requireUser(env: Env, request: Request): Promise<AuthedUser | Response> {
   const user = await getUser(env, request)
   if (!user) return json({ error: 'Chưa đăng nhập.' }, 401)
-  const profile = await getProfile(env, user.id)
-  if (profile?.status === 'locked') return json({ error: 'Tài khoản đã bị khoá.' }, 403)
-  return user
+  const decision = accessDecision(await lookupProfile(env, user.id))
+  if (!decision.allow) return json({ error: decision.error }, decision.status)
+  return { ...user, role: decision.role }
+}
+
+/** Require a signed-in admin; returns the admin or a Response. */
+export async function requireAdmin(env: Env, request: Request): Promise<AuthedUser | Response> {
+  const user = await getUser(env, request)
+  if (!user) return json({ error: 'Chưa đăng nhập.' }, 401)
+  const decision = adminDecision(await lookupProfile(env, user.id))
+  if (!decision.allow) return json({ error: decision.error }, decision.status)
+  return { ...user, role: decision.role }
 }
