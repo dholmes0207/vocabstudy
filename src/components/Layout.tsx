@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import {
   BarChart3,
   BookOpen,
@@ -17,6 +17,7 @@ import { today } from '@/lib/date'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import UserMenu from './UserMenu'
+import ErrorBoundary from './ErrorBoundary'
 import { useProgressSync } from '@/hooks/useProgressSync'
 
 interface NavItem {
@@ -43,6 +44,7 @@ export default function Layout() {
   const progress = useStudy((s) => s.progress)
   const stats = progress[currentLang]?.stats
   const dueCount = getDueCards(cardsOf(progress, currentLang), today()).length
+  const { pathname } = useLocation()
 
   return (
     <div className="min-h-[100dvh] lg:flex">
@@ -72,7 +74,11 @@ export default function Layout() {
         </header>
 
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-28 pt-6 lg:pb-10">
-          <Outlet />
+          {/* Keyed by path so a crash on one screen clears the moment the
+              learner taps another tab — the nav around it keeps working. */}
+          <ErrorBoundary key={pathname}>
+            <Outlet />
+          </ErrorBoundary>
         </main>
       </div>
 

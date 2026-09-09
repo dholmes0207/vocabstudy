@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
 import Layout from './components/Layout'
+import ErrorBoundary from './components/ErrorBoundary'
 import { useData } from './store/dataStore'
 import { useSettings } from './store/settingsStore'
 import { useAuth } from './store/authStore'
@@ -25,23 +26,27 @@ export default function App() {
 
   return (
     <HashRouter>
-      <Suspense fallback={<CenterSpinner />}>
-        <Routes>
-          <Route path="/login" element={<AuthPage />} />
-          <Route element={<AppShell />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/review" element={<Review />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/speaking" element={<Speaking />} />
-            <Route path="/browse" element={<Browse />} />
-            <Route path="/stats" element={<Stats />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      {/* Last line of defence: a throw in Layout, DataGate or a lazy chunk used
+          to unmount everything and leave a blank white page. */}
+      <ErrorBoundary>
+        <Suspense fallback={<CenterSpinner />}>
+          <Routes>
+            <Route path="/login" element={<AuthPage />} />
+            <Route element={<AppShell />}>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/learn" element={<Learn />} />
+              <Route path="/review" element={<Review />} />
+              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/speaking" element={<Speaking />} />
+              <Route path="/browse" element={<Browse />} />
+              <Route path="/stats" element={<Stats />} />
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </HashRouter>
   )
 }

@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitest/config'
 import { fileURLToPath } from 'node:url'
 
-// Tests cover the pure logic in src/lib only — no DOM, so no jsdom needed.
+// Most tests cover pure logic and run in Node. Component tests opt into a DOM
+// per file with a `@vitest-environment jsdom` docblock, so the fast majority
+// never pays for jsdom startup.
 export default defineConfig({
   resolve: {
     alias: {
@@ -12,6 +14,6 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 })
