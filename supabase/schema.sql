@@ -64,3 +64,37 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
+
+-- ---- ai_usage: daily cap for the AI tutor ----------------------------------
+-- /api/ai/chat spends the project's own OpenAI key, so each learner gets a
+-- daily allowance. Only the Pages Functions (service role) touch this table —
+-- there is deliberately no user-facing RLS policy.
+create table if not exists public.ai_usage (
+  user_id uuid not null references auth.users(id) on delete cascade,
+  day     date not null,
+  used    integer not null default 0,
+  primary key (user_id, day)
+);
+
+alter table public.ai_usage enable row level security;
+
+-- Atomic "count one more request today and tell me the new total". Doing the
+-- read and the write in one statement keeps two tabs from racing past the cap.
+-- The day rolls over at local midnight in Vietnam, not UTC, because that is
+-- where the learners are.
+create or replace function public.bump_ai_usage(p_user uuid)
+returns integer
+language plpgsql
+security definer set search_path = public
+as $$
+declare
+  n integer;
+  d date := (now() at time zone 'Asia/Ho_Chi_Minh')::date;
+begin
+  insert into public.ai_usage (user_id, day, used)
+  values (p_user, d, 1)
+  on conflict (user_id, day) do update set used = public.ai_usage.used + 1
+  returning used into n;
+  return n;
+end;
+$$;

@@ -12,6 +12,8 @@ import {
 
 export interface Env {
   OPENAI_API_KEY?: string
+  /** Daily AI requests per learner; "0" disables the cap. Default 30. */
+  AI_DAILY_LIMIT?: string
   OPENAI_MODEL?: string
   OPENAI_BASE_URL?: string
   OPENAI_REASONING_EFFORT?: string
@@ -118,4 +120,28 @@ export async function requireAdmin(env: Env, request: Request): Promise<AuthedUs
   const decision = adminDecision(await lookupProfile(env, user.id))
   if (!decision.allow) return json({ error: decision.error }, decision.status)
   return { ...user, role: decision.role }
+}
+
+/**
+ * Count one AI request for today and return the learner's new total, or null
+ * when the counter is unavailable.
+ *
+ * Null deliberately means "carry on without a cap": if the migration adding
+ * public.ai_usage has not been run yet, or Postgres is briefly unreachable, the
+ * tutor must keep answering rather than appear broken. Losing the cap for the
+ * duration of an outage is the cheaper failure.
+ */
+export async function bumpAiUsage(env: Env, userId: string): Promise<number | null> {
+  if (!isUuid(userId) || !env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) return null
+  try {
+    const r = await adminRest(env, '/rpc/bump_ai_usage', {
+      method: 'POST',
+      body: JSON.stringify({ p_user: userId }),
+    })
+    if (!r.ok) return null
+    const n = await r.json()
+    return typeof n === 'number' ? n : null
+  } catch {
+    return null
+  }
 }

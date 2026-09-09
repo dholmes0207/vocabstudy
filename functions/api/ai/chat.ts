@@ -1,6 +1,7 @@
 import { buildMessages, type ChatTurn } from '../../../src/lib/ai/systemPrompt'
 import { levelInfo } from '../../../src/lib/level'
-import { type Ctx, json, requireUser } from '../../_shared'
+import { parseDailyLimit, quotaVerdict } from '../../../src/lib/quota'
+import { bumpAiUsage, type Ctx, json, requireUser } from '../../_shared'
 
 // POST /api/ai/chat — server-side AI proxy. The OpenAI key never leaves the
 // Worker; the guardrail (system prompt) + level + page context are applied here.
@@ -41,6 +42,18 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
     levelInstruction: level ? levelInfo(level).aiInstruction : undefined,
     contextText: context,
   })
+
+  // Daily allowance. The counter is bumped first and judged after, so two
+  // tabs cannot race past the cap; a request refused here still costs a slot,
+  // which is the conservative direction for a spend limit.
+  const limit = parseDailyLimit(env.AI_DAILY_LIMIT, 30)
+  if (limit > 0) {
+    const used = await bumpAiUsage(env, user.id)
+    if (used !== null) {
+      const verdict = quotaVerdict(used, limit)
+      if (!verdict.allowed) return json({ error: verdict.message }, 429)
+    }
+  }
 
   const base = (env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '')
   const model = env.OPENAI_MODEL || 'o4-mini'
