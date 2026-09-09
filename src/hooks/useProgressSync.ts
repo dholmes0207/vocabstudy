@@ -3,6 +3,7 @@ import { useAuth } from '@/store/authStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy, normalizeProgress } from '@/store/studyStore'
 import { supabase } from '@/lib/supabase'
+import { mergeProgress } from '@/lib/sync'
 
 // Syncs the active language's progress with Supabase (table `progress`, guarded
 // by RLS so each user only sees their own rows):
@@ -63,18 +64,31 @@ export function useProgressSync(): void {
           .eq('lang_code', lang)
           .maybeSingle()
         if (!alive) return
+        const local = useStudy.getState().progress[lang]
         if (data?.data) {
-          useStudy.getState().setLanguageProgress(lang, normalizeProgress(data.data))
-        } else {
-          const local = useStudy.getState().progress[lang]
-          if (local && Object.keys(local.cards).length > 0) {
+          // MERGE, never overwrite. A blind `setLanguageProgress(remote)` here
+          // erased work done while the connection was flaky (the earlier pull
+          // failed, so pushes stayed blocked and the session lived only on this
+          // device) and work done on a second device. See src/lib/sync.ts.
+          const remote = normalizeProgress(data.data)
+          const merged = mergeProgress(local, remote)
+          useStudy.getState().setLanguageProgress(lang, merged)
+          // Only write back when this device actually contributed something.
+          if (JSON.stringify(merged) !== JSON.stringify(remote)) {
             await sb.from('progress').upsert({
               user_id: userId,
               lang_code: lang,
-              data: local,
+              data: merged,
               updated_at: new Date().toISOString(),
             })
           }
+        } else if (local && Object.keys(local.cards).length > 0) {
+          await sb.from('progress').upsert({
+            user_id: userId,
+            lang_code: lang,
+            data: local,
+            updated_at: new Date().toISOString(),
+          })
         }
         syncedKey.current = key
       } catch {
