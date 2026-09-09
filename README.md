@@ -4,7 +4,7 @@
 
 Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **1000 từ tiếng Anh thông dụng nhất** (chuẩn Oxford & Cambridge) dành cho **người Việt học tiếng Anh**.
 
-Phần học chạy **hoàn toàn phía trình duyệt** (dùng được offline sau lần tải đầu). Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
+Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker** nên sau lần tải đầu, từ vựng và file phát âm đã nghe qua vẫn dùng được **khi mất mạng**; phần vỏ ứng dụng luôn ưu tiên tải bản mới nên không bao giờ bị kẹt ở bản cũ. Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 
 > 📄 Tài liệu kế hoạch chi tiết (theo quy trình 3 vai: Người học → BA → DEV): [`docs/PLAN.md`](docs/PLAN.md)
 > 📖 Tài liệu nguồn: [`docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`](docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf) — xem ghi chú về [nguồn dữ liệu](#-nguồn--giấy-phép)

@@ -7,6 +7,13 @@ import path from 'node:path'
 export default defineConfig({
   base: './',
   plugins: [react()],
+  build: {
+    // The service worker precaches every emitted chunk at install so the app
+    // boots offline; this manifest is the only list that stays correct as
+    // code-split routes come and go. Named without a leading dot because hosts
+    // (Cloudflare Pages among them) can skip dot-directories.
+    manifest: 'asset-manifest.json',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

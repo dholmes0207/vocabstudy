@@ -81,7 +81,30 @@ npm run build && npm run pages:dev   # chạy đầy đủ Functions + static b�
 - **RLS**: mỗi user chỉ đọc/ghi `progress` + `profiles` của mình; không tự đổi được `role`.
 - **Key OpenAI + service-role** chỉ nằm ở Cloudflare (secret) → học viên không bao giờ thấy; guardrail chạy ở Function.
 - Thao tác admin kiểm quyền ở **server** (Function + service role), không phải chỉ ẩn nút.
+- **Fail-closed**: nếu không kiểm tra được hồ sơ (Supabase lỗi) thì từ chối kèm 503 chứ không cho qua — trước đây một cú trục trặc là tài khoản đã khoá vẫn vào được.
+- Mọi id gửi lên endpoint admin phải **đúng dạng UUID** trước khi chạm tới truy vấn PostgREST.
+- Trợ lý AI có **hạn mức `AI_DAILY_LIMIT` lượt/học sinh/ngày** (mặc định 30). Cần chạy `supabase/schema.sql` để tạo `ai_usage` + `bump_ai_usage`; chưa chạy thì trợ lý vẫn hoạt động, chỉ là chưa bị chặn.
+
+## Service worker (offline)
+
+`public/sw.js` cho phép học khi mất mạng. Nguyên tắc:
+
+| Loại                        | Chiến lược         | Vì sao                                                          |
+| --------------------------- | ------------------ | --------------------------------------------------------------- |
+| Tài liệu, JS, CSS           | **network-first**  | Deploy mới luôn thắng — không bao giờ kẹt người học ở bản cũ    |
+| `/audio/*`, `/data/*`       | **cache-first**    | Nặng, gần như không đổi, và đây chính là thứ cần có khi offline |
+| `/api/*` và mọi origin khác | **không đụng tới** | Trả lời của AI và Supabase không được cache                     |
+
+Lúc cài đặt, worker precache vỏ app (đọc `asset-manifest.json` do Vite sinh, nên
+gồm cả các chunk lazy) + gói từ vựng ≈ **875 KB**. **Không** precache audio (57 MB)
+— audio chỉ được cache khi người học đã nghe qua.
+
+**Kill switch:** nếu service worker gây sự cố, sửa `DISABLED = false` thành `true`
+trong `public/sw.js` rồi deploy. Lần vào tiếp theo worker sẽ tự gỡ đăng ký và xoá
+sạch cache của mình, trả mọi người về hành vi online bình thường — không ai phải
+tự xoá dữ liệu trang. Đổi `VERSION` để ép làm mới toàn bộ cache (ví dụ sau khi
+dựng lại audio).
 
 ## Roadmap
 
-Giới hạn lượt AI/học sinh + usage log (Cloudflare KV/Supabase), quản lý lớp (mã lớp, tạo hàng loạt, xuất CSV), quên-mật-khẩu qua email (Supabase built-in), rate-limit Functions, phân trang danh sách user.
+Quản lý lớp (mã lớp, tạo hàng loạt, xuất CSV), quên-mật-khẩu qua email (Supabase built-in), rate-limit theo IP cho Functions, phân trang danh sách user, hiển thị số lượt AI còn lại cho học sinh.
