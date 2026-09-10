@@ -138,10 +138,23 @@ export async function bumpAiUsage(env: Env, userId: string): Promise<number | nu
       method: 'POST',
       body: JSON.stringify({ p_user: userId }),
     })
-    if (!r.ok) return null
+    if (!r.ok) {
+      // Loud in the Pages Functions log, because failing open is otherwise
+      // completely invisible: a stale PostgREST schema cache right after the
+      // migration looks exactly like a working cap. A 404 here means the
+      // function is not visible to the API — run `notify pgrst, 'reload schema';`
+      const detail = await r.text().catch(() => '')
+      console.warn(`[ai-quota] bump_ai_usage ${r.status}: ${detail}`.slice(0, 300))
+      return null
+    }
     const n = await r.json()
-    return typeof n === 'number' ? n : null
-  } catch {
+    if (typeof n !== 'number') {
+      console.warn(`[ai-quota] bump_ai_usage returned ${typeof n}, expected a number`)
+      return null
+    }
+    return n
+  } catch (err) {
+    console.warn('[ai-quota] bump_ai_usage unreachable:', err)
     return null
   }
 }
