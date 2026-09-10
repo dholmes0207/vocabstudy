@@ -47,11 +47,15 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   // tabs cannot race past the cap; a request refused here still costs a slot,
   // which is the conservative direction for a spend limit.
   const limit = parseDailyLimit(env.AI_DAILY_LIMIT, 30)
+  // Stays null when there is no cap, or when the counter could not be reached —
+  // the client shows nothing rather than inventing a number.
+  let remaining: number | null = null
   if (limit > 0) {
     const used = await bumpAiUsage(env, user.id)
     if (used !== null) {
       const verdict = quotaVerdict(used, limit)
       if (!verdict.allowed) return json({ error: verdict.message }, 429)
+      remaining = verdict.remaining
     }
   }
 
@@ -98,5 +102,5 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   const data = (await r.json()) as { choices?: { message?: { content?: string } }[] }
   const reply = data?.choices?.[0]?.message?.content?.trim()
   if (!reply) return json({ error: 'Trợ lý chưa trả lời được. Thử hỏi ngắn gọn hơn nhé.' }, 502)
-  return json({ reply })
+  return json(remaining === null ? { reply } : { reply, remaining })
 }

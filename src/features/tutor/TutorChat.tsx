@@ -6,6 +6,7 @@ import { useAuth } from '@/store/authStore'
 import { api, ApiError } from '@/lib/api'
 import { preCheckInput } from '@/lib/ai/guardrail'
 import { suggestQuestions } from '@/lib/ai/suggestions'
+import { quotaHint } from '@/lib/quota'
 import Markdown from '@/components/Markdown'
 
 interface Msg {
@@ -39,6 +40,9 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [warn, setWarn] = useState<string | null>(null)
+  // Set from the server's reply; null whenever there is no cap or the
+  // counter was unreachable, in which case the learner is told nothing.
+  const [quotaNote, setQuotaNote] = useState<string | null>(null)
   const idRef = useRef(0)
   const bottomRef = useRef<HTMLDivElement>(null)
 
@@ -83,8 +87,13 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
     setInput('')
     setLoading(true)
     try {
-      const { reply } = await api.aiChat({ history, level, context: contextText(ctx) })
+      const { reply, remaining } = await api.aiChat({
+        history,
+        level,
+        context: contextText(ctx),
+      })
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: reply }])
+      setQuotaNote(quotaHint(remaining))
     } catch (e) {
       const msg = e instanceof ApiError ? e.message : 'Có lỗi khi gọi trợ lý. Thử lại nhé.'
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: msg, isError: true }])
@@ -107,6 +116,9 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         {messages.map((m) => (
           <Bubble key={m.id} role={m.role} content={m.content} isError={m.isError} />
         ))}
+        {quotaNote && !loading && (
+          <p className="text-center text-xs text-amber-600 dark:text-amber-400">⏳ {quotaNote}</p>
+        )}
         {loading && (
           <div className="flex items-center gap-2 text-slate-400">
             <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300">

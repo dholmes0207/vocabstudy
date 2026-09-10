@@ -84,6 +84,7 @@ npm run build && npm run pages:dev   # chạy đầy đủ Functions + static b�
 - **Fail-closed**: nếu không kiểm tra được hồ sơ (Supabase lỗi) thì từ chối kèm 503 chứ không cho qua — trước đây một cú trục trặc là tài khoản đã khoá vẫn vào được.
 - Mọi id gửi lên endpoint admin phải **đúng dạng UUID** trước khi chạm tới truy vấn PostgREST.
 - Trợ lý AI có **hạn mức `AI_DAILY_LIMIT` lượt/học sinh/ngày** (mặc định 30). Cần chạy `supabase/schema.sql` để tạo `ai_usage` + `bump_ai_usage`; chưa chạy thì trợ lý vẫn hoạt động, chỉ là chưa bị chặn.
+  **Kiểm tra hạn mức có thật sự chạy không:** vào trang **Quản trị** — thẻ "Hạn mức trợ lý AI" hiện "✓ Đang đếm" kèm số lượt hôm nay, hoặc "✕ Không đếm được" kèm lý do. Gặp lỗi 404 nghĩa là PostgREST chưa thấy bảng → chạy `notify pgrst, 'reload schema';`. Trong log Functions, mọi lần hỏng đều ghi dòng bắt đầu bằng `[ai-quota]`.
 
 ## Service worker (offline)
 

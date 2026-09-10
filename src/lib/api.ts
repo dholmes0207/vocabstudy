@@ -15,6 +15,17 @@ export interface AdminUser {
   last_sign_in_at: string | null
 }
 
+/** Whether the AI daily cap is actually counting, plus today's figures. */
+export interface AiUsageReport {
+  limit: number
+  /** The day being reported, on Vietnam time (matches the SQL counter). */
+  day: string
+  /** False means the cap is silently inactive — requests are not being counted. */
+  reachable: boolean
+  today: { users: number; requests: number }
+  error?: string
+}
+
 export class ApiError extends Error {
   status: number
   constructor(status: number, message: string) {
@@ -51,10 +62,15 @@ export const api = {
     history: { role: 'user' | 'assistant'; content: string }[]
     level?: number
     context?: string
-  }) => req<{ reply: string }>('/ai/chat', { method: 'POST', body: JSON.stringify(payload) }),
+  }) =>
+    req<{ reply: string; remaining?: number }>('/ai/chat', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
 
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
+  adminAiUsage: () => req<AiUsageReport>('/admin/ai-usage'),
   adminPatchUser: (
     id: string,
     patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }

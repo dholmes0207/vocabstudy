@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Trash2 } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
-import { api, ApiError, type AdminUser } from '@/lib/api'
+import { api, ApiError, type AdminUser, type AiUsageReport } from '@/lib/api'
 
 export default function AdminPage() {
   const me = useAuth((s) => s.user)
@@ -36,7 +36,89 @@ export default function AdminPage() {
         ở Cloudflare → Settings → Environment variables.
       </div>
 
+      <AiQuotaPanel />
+
       <UsersTab meId={me.id} />
+    </div>
+  )
+}
+
+/**
+ * Is the AI daily cap actually counting?
+ *
+ * The cap fails open on purpose, so a missing migration or a stale PostgREST
+ * schema cache leaves it silently inactive while everything still looks fine.
+ * The only hard proof it works is today's request count going up.
+ */
+export function AiQuotaPanel() {
+  const [report, setReport] = useState<AiUsageReport | null>(null)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let alive = true
+    api
+      .adminAiUsage()
+      .then((r) => alive && setReport(r))
+      .catch((e) => alive && setError(e instanceof ApiError ? e.message : 'Lỗi tải bộ đếm AI'))
+    return () => {
+      alive = false
+    }
+  }, [])
+
+  if (error) {
+    return (
+      <div className="card p-4 text-sm text-rose-600 dark:text-rose-400">
+        ⚠️ Không đọc được tình trạng hạn mức AI: {error}
+      </div>
+    )
+  }
+  if (!report)
+    return <div className="card p-4 text-sm text-slate-400">Đang kiểm tra hạn mức AI…</div>
+
+  const off = report.limit === 0
+  const broken = !report.reachable
+  const counted = report.today.requests > 0
+
+  return (
+    <div className="card p-4">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="font-bold">Hạn mức trợ lý AI</h2>
+        <span
+          className={`chip px-3 py-1 text-xs font-semibold ${
+            broken
+              ? 'bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300'
+              : off
+                ? 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'
+                : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
+          }`}
+        >
+          {broken ? '✕ Không đếm được' : off ? '○ Đã tắt hạn mức' : '✓ Đang đếm'}
+        </span>
+      </div>
+
+      <p className="mt-2 text-sm text-slate-500">
+        {off
+          ? 'AI_DAILY_LIMIT đang là 0 — học sinh hỏi không giới hạn.'
+          : `Mỗi học sinh ${report.limit} lượt/ngày, mốc sang ngày theo giờ Việt Nam.`}
+      </p>
+
+      {broken ? (
+        <p className="mt-3 rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">
+          Hạn mức <b>đang không có tác dụng</b> — trợ lý vẫn trả lời nhưng không ai bị chặn.
+          {report.error ? ` ${report.error}` : ''}
+        </p>
+      ) : (
+        <p className="mt-3 text-sm">
+          Hôm nay ({report.day}): <b>{report.today.requests}</b> lượt hỏi từ{' '}
+          <b>{report.today.users}</b> học sinh.
+          {!off && !counted && (
+            <span className="text-slate-400">
+              {' '}
+              Chưa có lượt nào — hỏi thử một câu rồi tải lại trang để chắc chắn bộ đếm chạy.
+            </span>
+          )}
+        </p>
+      )}
     </div>
   )
 }

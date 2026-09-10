@@ -112,7 +112,7 @@ npm run build          # Vite production build
 
 **Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocastudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
 
-> ⚠️ **Bảo mật:** mật khẩu do Supabase Auth quản lý; **RLS** chặn truy cập chéo; **key OpenAI + service-role chỉ ở Cloudflare secret**; quyền admin kiểm ở server (fail-closed — Supabase lỗi thì từ chối kèm 503 chứ không cho qua); mọi id gửi lên endpoint admin phải đúng dạng UUID. Trợ lý AI có **hạn mức `AI_DAILY_LIMIT` lượt/học sinh/ngày** (mặc định 30, đếm nguyên tử trong Postgres, mốc ngày theo giờ Việt Nam). Roadmap: quản lý lớp (mã lớp/CSV), quên-mật-khẩu email.
+> ⚠️ **Bảo mật:** mật khẩu do Supabase Auth quản lý; **RLS** chặn truy cập chéo; **key OpenAI + service-role chỉ ở Cloudflare secret**; quyền admin kiểm ở server (fail-closed — Supabase lỗi thì từ chối kèm 503 chứ không cho qua); mọi id gửi lên endpoint admin phải đúng dạng UUID. Trợ lý AI có **hạn mức `AI_DAILY_LIMIT` lượt/học sinh/ngày** (mặc định 30, đếm nguyên tử trong Postgres, mốc ngày theo giờ Việt Nam). Học sinh được nhắc số lượt còn lại khi sắp hết; admin xem được hạn mức có đang đếm thật hay không ngay ở trang Quản trị. Roadmap: quản lý lớp (mã lớp/CSV), quên-mật-khẩu email.
 
 ### Tạo lại / đổi giọng audio (tuỳ chọn)
 

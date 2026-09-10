@@ -44,3 +44,54 @@ export function quotaVerdict(used: number, limit: number): QuotaVerdict {
     message: `Bạn đã dùng hết ${limit} lượt hỏi trợ lý AI cho hôm nay. Hẹn gặp lại vào ngày mai nhé!`,
   }
 }
+
+/** One row of public.ai_usage as PostgREST returns it. */
+export interface UsageRow {
+  user_id?: unknown
+  used?: unknown
+}
+
+export interface UsageSummary {
+  /** Distinct learners who asked the tutor anything today. */
+  users: number
+  /** Total requests counted today. */
+  requests: number
+}
+
+/**
+ * Roll today's usage rows into the two numbers an admin actually needs.
+ *
+ * `requests > 0` is the only hard proof the whole path works: the cap fails
+ * open, so a silent counter and a working one look identical from outside.
+ */
+export function summarizeUsage(rows: unknown): UsageSummary {
+  if (!Array.isArray(rows)) return { users: 0, requests: 0 }
+  const seen = new Set<string>()
+  let requests = 0
+  for (const row of rows) {
+    if (!row || typeof row !== 'object') continue
+    const { user_id: id, used } = row as UsageRow
+    if (typeof id !== 'string' || !id) continue
+    if (typeof used !== 'number' || !Number.isFinite(used)) continue
+    seen.add(id)
+    requests += used
+  }
+  return { users: seen.size, requests }
+}
+
+/** Warn the learner this many requests before the cap. */
+const HINT_THRESHOLD = 5
+
+/**
+ * A short nudge about the remaining allowance, or null when there is nothing
+ * worth saying. Silence is the right answer whenever the server did not report
+ * a real number — no cap configured, or the counter was unreachable — because
+ * guessing at a number the learner will be judged against is worse than saying
+ * nothing.
+ */
+export function quotaHint(remaining: number | null | undefined): string | null {
+  if (typeof remaining !== 'number' || !Number.isFinite(remaining)) return null
+  if (remaining > HINT_THRESHOLD) return null
+  if (remaining <= 0) return 'Đó là lượt hỏi cuối cùng hôm nay. Hẹn gặp lại ngày mai nhé!'
+  return `Còn ${remaining} lượt hỏi trợ lý hôm nay.`
+}
