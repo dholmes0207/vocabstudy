@@ -20931,7 +20931,28 @@
       "meaning": "lo lắng, bồn chồn",
       "exampleEn": "Parents are often anxious about their kids.",
       "exampleVi": "Cha mẹ thường lo lắng cho con cái.",
-      "viRead": "ENG-kshơs"
+      "viRead": "ENG-kshơs",
+      "collocations": [
+        {
+          "en": "anxious about",
+          "vi": "lo lắng về"
+        },
+        {
+          "en": "feel anxious",
+          "vi": "cảm thấy bồn chồn"
+        },
+        {
+          "en": "anxious to",
+          "vi": "nóng lòng muốn"
+        }
+      ],
+      "family": [
+        {
+          "word": "anxiety",
+          "vi": "sự lo âu"
+        }
+      ],
+      "tip": "anxious about = lo về; anxious to do = nóng lòng muốn làm: I'm anxious to see the result."
     },
     {
       "id": 76,
@@ -20942,7 +20963,22 @@
       "meaning": "bất kỳ, nào",
       "exampleEn": "Do you have any questions for me?",
       "exampleVi": "Bạn có câu hỏi nào cho tôi không?",
-      "viRead": "E-ni"
+      "viRead": "E-ni",
+      "collocations": [
+        {
+          "en": "any questions?",
+          "vi": "có câu hỏi nào không?"
+        },
+        {
+          "en": "any time",
+          "vi": "bất cứ lúc nào"
+        },
+        {
+          "en": "not any",
+          "vi": "không … nào"
+        }
+      ],
+      "tip": "any dùng trong câu hỏi và phủ định: Do you have any money? / I don't have any. Câu khẳng định: any = bất kỳ: Take any seat."
     },
     {
       "id": 77,
@@ -20953,7 +20989,22 @@
       "meaning": "bất kỳ ai",
       "exampleEn": "Is anyone present in the classroom?",
       "exampleVi": "Có ai ở trong lớp học không?",
-      "viRead": "E-ni-bơ-đi / E-ni-wơn"
+      "viRead": "E-ni-bơ-đi / E-ni-wơn",
+      "collocations": [
+        {
+          "en": "is anyone here?",
+          "vi": "có ai ở đây không?"
+        },
+        {
+          "en": "anybody else",
+          "vi": "ai khác"
+        },
+        {
+          "en": "don't tell anyone",
+          "vi": "đừng kể với ai"
+        }
+      ],
+      "tip": "anyone = anybody (bất kỳ ai), đi với động từ số ít: Is anyone home? Câu khẳng định dùng someone."
     },
     {
       "id": 78,
@@ -20964,7 +21015,22 @@
       "meaning": "bất cứ thứ gì",
       "exampleEn": "Is there anything I can do to help?",
       "exampleVi": "Có bất cứ điều gì tôi có thể giúp không?",
-      "viRead": "E-ni-thing"
+      "viRead": "E-ni-thing",
+      "collocations": [
+        {
+          "en": "anything else?",
+          "vi": "còn gì nữa không?"
+        },
+        {
+          "en": "anything is possible",
+          "vi": "mọi thứ đều có thể"
+        },
+        {
+          "en": "not anything",
+          "vi": "không gì cả"
+        }
+      ],
+      "tip": "Anything else? = Còn gì nữa không? — câu người bán hàng hay hỏi. Trả lời: That's all, thanks."
     },
     {
       "id": 79,
@@ -20975,7 +21041,22 @@
       "meaning": "dù sao đi nữa",
       "exampleEn": "Thanks for inviting me anyway.",
       "exampleVi": "Dù sao cũng cảm ơn bạn đã mời tôi.",
-      "viRead": "E-ni-wây"
+      "viRead": "E-ni-wây",
+      "collocations": [
+        {
+          "en": "thanks anyway",
+          "vi": "dù sao cũng cảm ơn"
+        },
+        {
+          "en": "anyway, …",
+          "vi": "mà thôi, …"
+        },
+        {
+          "en": "I'll go anyway",
+          "vi": "dù sao tôi vẫn đi"
+        }
+      ],
+      "tip": "anyway đầu câu dùng để chuyển chủ đề: Anyway, let's eat! (Thôi, ăn đi!)."
     },
     {
       "id": 80,
@@ -20986,7 +21067,22 @@
       "meaning": "bất kỳ đâu",
       "exampleEn": "You can sit anywhere you like.",
       "exampleVi": "Bạn có thể ngồi ở bất kỳ đâu bạn thích.",
-      "viRead": "E-ni-wer"
+      "viRead": "E-ni-wer",
+      "collocations": [
+        {
+          "en": "anywhere you like",
+          "vi": "bất cứ đâu bạn thích"
+        },
+        {
+          "en": "not anywhere",
+          "vi": "không ở đâu cả"
+        },
+        {
+          "en": "anywhere else",
+          "vi": "nơi nào khác"
+        }
+      ],
+      "tip": "Giống any: câu hỏi/phủ định dùng anywhere, câu khẳng định dùng somewhere: I left it somewhere."
     },
     {
       "id": 81,
@@ -20997,7 +21093,22 @@
       "meaning": "tách biệt, rời ra",
       "exampleEn": "The two houses are 100 meters apart.",
       "exampleVi": "Hai ngôi nhà cách nhau 100 mét.",
-      "viRead": "ơ-PART"
+      "viRead": "ơ-PART",
+      "collocations": [
+        {
+          "en": "apart from",
+          "vi": "ngoài … ra"
+        },
+        {
+          "en": "live apart",
+          "vi": "sống xa nhau"
+        },
+        {
+          "en": "fall apart",
+          "vi": "vỡ vụn"
+        }
+      ],
+      "tip": "apart from = ngoài ra (trừ): Apart from Tom, everyone came. Đừng nhầm với apartment."
     },
     {
       "id": 82,
@@ -21008,7 +21119,23 @@
       "meaning": "căn hộ",
       "exampleEn": "They rent a small apartment in town.",
       "exampleVi": "Họ thuê một căn hộ nhỏ trong thành phố.",
-      "viRead": "ơ-PAR-tmơnt"
+      "viRead": "ơ-PAR-tmơnt",
+      "collocations": [
+        {
+          "en": "rent an apartment",
+          "vi": "thuê căn hộ"
+        },
+        {
+          "en": "apartment building",
+          "vi": "tòa chung cư"
+        },
+        {
+          "en": "a two-bedroom apartment",
+          "vi": "căn hộ hai phòng ngủ"
+        }
+      ],
+      "tip": "Mỹ: apartment; Anh: flat. Tòa chung cư = apartment building.",
+      "emoji": "🏢"
     },
     {
       "id": 83,
@@ -21019,7 +21146,28 @@
       "meaning": "xin lỗi",
       "exampleEn": "He apologized for being late.",
       "exampleVi": "Anh ấy đã xin lỗi vì đến muộn.",
-      "viRead": "ơ-PA-lơ-giaid"
+      "viRead": "ơ-PA-lơ-giaid",
+      "collocations": [
+        {
+          "en": "apologize for",
+          "vi": "xin lỗi vì"
+        },
+        {
+          "en": "apologize to",
+          "vi": "xin lỗi (ai)"
+        },
+        {
+          "en": "I apologize",
+          "vi": "tôi xin lỗi"
+        }
+      ],
+      "family": [
+        {
+          "word": "apology",
+          "vi": "lời xin lỗi"
+        }
+      ],
+      "tip": "apologize to + người + for + việc: I apologized to her for being late. Trang trọng hơn I'm sorry."
     },
     {
       "id": 84,
@@ -21030,7 +21178,28 @@
       "meaning": "rõ ràng, hiển nhiên",
       "exampleEn": "It was apparent that she was upset.",
       "exampleVi": "Hiển nhiên là cô ấy đang buồn.",
-      "viRead": "ơ-PE-rơnt"
+      "viRead": "ơ-PE-rơnt",
+      "collocations": [
+        {
+          "en": "for no apparent reason",
+          "vi": "không rõ lý do"
+        },
+        {
+          "en": "it is apparent that",
+          "vi": "rõ ràng là"
+        },
+        {
+          "en": "apparent mistake",
+          "vi": "lỗi hiển nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "apparently",
+          "vi": "nghe nói là, hình như"
+        }
+      ],
+      "tip": "apparently hay dùng hơn apparent, nghĩa là 'nghe nói/hình như': Apparently, she is getting married."
     },
     {
       "id": 85,
@@ -21041,7 +21210,28 @@
       "meaning": "sự lôi cuốn, kêu gọi",
       "exampleEn": "The idea has a strong appeal to young people.",
       "exampleVi": "Ý tưởng này có sự lôi cuốn mạnh mẽ với giới trẻ.",
-      "viRead": "ơ-PIL"
+      "viRead": "ơ-PIL",
+      "collocations": [
+        {
+          "en": "appeal to",
+          "vi": "hấp dẫn đối với"
+        },
+        {
+          "en": "an appeal for help",
+          "vi": "lời kêu gọi giúp đỡ"
+        },
+        {
+          "en": "sex appeal",
+          "vi": "sự quyến rũ"
+        }
+      ],
+      "family": [
+        {
+          "word": "appealing",
+          "vi": "hấp dẫn"
+        }
+      ],
+      "tip": "appeal to + người = hấp dẫn ai: The idea appeals to young people."
     },
     {
       "id": 86,
@@ -21052,7 +21242,32 @@
       "meaning": "xuất hiện, hình như",
       "exampleEn": "A rainbow appeared in the sky.",
       "exampleVi": "Cầu vồng xuất hiện trên bầu trời.",
-      "viRead": "ơ-PIR"
+      "viRead": "ơ-PIR",
+      "collocations": [
+        {
+          "en": "appear on TV",
+          "vi": "xuất hiện trên TV"
+        },
+        {
+          "en": "it appears that",
+          "vi": "có vẻ như"
+        },
+        {
+          "en": "suddenly appear",
+          "vi": "đột nhiên xuất hiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "appearance",
+          "vi": "diện mạo"
+        },
+        {
+          "word": "disappear",
+          "vi": "biến mất"
+        }
+      ],
+      "tip": "dis- + appear = disappear (biến mất). appear + tính từ = trông có vẻ: She appears calm."
     },
     {
       "id": 87,
@@ -21063,7 +21278,28 @@
       "meaning": "diện mạo, sự xuất hiện",
       "exampleEn": "Do not judge people by their appearance.",
       "exampleVi": "Đừng đánh giá người khác qua diện mạo.",
-      "viRead": "ơ-PI-rơns"
+      "viRead": "ơ-PI-rơns",
+      "collocations": [
+        {
+          "en": "physical appearance",
+          "vi": "ngoại hình"
+        },
+        {
+          "en": "make an appearance",
+          "vi": "xuất hiện, lộ diện"
+        },
+        {
+          "en": "first appearance",
+          "vi": "lần đầu xuất hiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "appear",
+          "vi": "xuất hiện"
+        }
+      ],
+      "tip": "Don't judge by appearances = Đừng trông mặt mà bắt hình dong."
     },
     {
       "id": 88,
@@ -21074,7 +21310,23 @@
       "meaning": "quả táo",
       "exampleEn": "An apple a day keeps the doctor away.",
       "exampleVi": "Ăn một quả táo mỗi ngày giúp tránh xa bệnh tật.",
-      "viRead": "E-pơl"
+      "viRead": "E-pơl",
+      "collocations": [
+        {
+          "en": "an apple a day",
+          "vi": "mỗi ngày một quả táo"
+        },
+        {
+          "en": "apple juice",
+          "vi": "nước táo"
+        },
+        {
+          "en": "apple pie",
+          "vi": "bánh táo"
+        }
+      ],
+      "tip": "an apple (không phải a apple) vì bắt đầu bằng nguyên âm. the apple of my eye = người tôi yêu quý nhất.",
+      "emoji": "🍎"
     },
     {
       "id": 89,
@@ -21085,7 +21337,32 @@
       "meaning": "đơn xin, ứng dụng",
       "exampleEn": "Submit your job application online.",
       "exampleVi": "Hãy nộp đơn xin việc của bạn trực tuyến.",
-      "viRead": "ep-lơ-KÂY-shơn"
+      "viRead": "ep-lơ-KÂY-shơn",
+      "collocations": [
+        {
+          "en": "job application",
+          "vi": "đơn xin việc"
+        },
+        {
+          "en": "fill in an application",
+          "vi": "điền đơn"
+        },
+        {
+          "en": "mobile application",
+          "vi": "ứng dụng di động"
+        }
+      ],
+      "family": [
+        {
+          "word": "apply",
+          "vi": "nộp đơn"
+        },
+        {
+          "word": "app",
+          "vi": "ứng dụng (nói ngắn)"
+        }
+      ],
+      "tip": "app chính là viết tắt của application. application form = mẫu đơn."
     },
     {
       "id": 90,
@@ -21096,7 +21373,32 @@
       "meaning": "nộp đơn, áp dụng",
       "exampleEn": "She decided to apply for the scholarship.",
       "exampleVi": "Cô ấy quyết định nộp đơn xin học bổng.",
-      "viRead": "ơp-LAI"
+      "viRead": "ơp-LAI",
+      "collocations": [
+        {
+          "en": "apply for a job",
+          "vi": "xin việc"
+        },
+        {
+          "en": "apply to",
+          "vi": "áp dụng cho; nộp đơn vào"
+        },
+        {
+          "en": "apply cream",
+          "vi": "bôi kem"
+        }
+      ],
+      "family": [
+        {
+          "word": "application",
+          "vi": "đơn xin; ứng dụng"
+        },
+        {
+          "word": "applicant",
+          "vi": "ứng viên"
+        }
+      ],
+      "tip": "apply FOR + vị trí (apply for a job), apply TO + nơi (apply to a university)."
     },
     {
       "id": 91,
@@ -21107,7 +21409,28 @@
       "meaning": "bổ nhiệm, chỉ định",
       "exampleEn": "He was appointed as the new manager.",
       "exampleVi": "Anh ấy được bổ nhiệm làm quản lý mới.",
-      "viRead": "ơ-POINT"
+      "viRead": "ơ-POINT",
+      "collocations": [
+        {
+          "en": "appoint a manager",
+          "vi": "bổ nhiệm quản lý"
+        },
+        {
+          "en": "be appointed as",
+          "vi": "được bổ nhiệm làm"
+        },
+        {
+          "en": "appointed time",
+          "vi": "giờ đã hẹn"
+        }
+      ],
+      "family": [
+        {
+          "word": "appointment",
+          "vi": "cuộc hẹn; sự bổ nhiệm"
+        }
+      ],
+      "tip": "appoint thường dùng ở bị động: She was appointed (as) director."
     },
     {
       "id": 92,
@@ -21118,7 +21441,29 @@
       "meaning": "cuộc hẹn",
       "exampleEn": "I have a dentist appointment at 3 PM.",
       "exampleVi": "Tôi có một cuộc hẹn khám răng lúc 3 giờ chiều.",
-      "viRead": "ơ-POIN-tmơnt"
+      "viRead": "ơ-POIN-tmơnt",
+      "collocations": [
+        {
+          "en": "make an appointment",
+          "vi": "đặt lịch hẹn"
+        },
+        {
+          "en": "doctor's appointment",
+          "vi": "lịch khám bác sĩ"
+        },
+        {
+          "en": "by appointment",
+          "vi": "theo lịch hẹn"
+        }
+      ],
+      "family": [
+        {
+          "word": "appoint",
+          "vi": "bổ nhiệm"
+        }
+      ],
+      "tip": "appointment là hẹn công việc (bác sĩ, ngân hàng); hẹn hò yêu đương là a date.",
+      "emoji": "📅"
     },
     {
       "id": 93,
@@ -21129,7 +21474,28 @@
       "meaning": "trân trọng, cảm kích",
       "exampleEn": "I really appreciate your kind support.",
       "exampleVi": "Tôi rất trân trọng sự hỗ trợ tận tình của bạn.",
-      "viRead": "ơp-RI-shi-âyt"
+      "viRead": "ơp-RI-shi-âyt",
+      "collocations": [
+        {
+          "en": "I appreciate it",
+          "vi": "tôi rất cảm kích"
+        },
+        {
+          "en": "appreciate your help",
+          "vi": "cảm ơn sự giúp đỡ"
+        },
+        {
+          "en": "appreciate art",
+          "vi": "biết thưởng thức nghệ thuật"
+        }
+      ],
+      "family": [
+        {
+          "word": "appreciation",
+          "vi": "sự cảm kích"
+        }
+      ],
+      "tip": "I really appreciate it = Tôi rất biết ơn — cách cảm ơn lịch sự, sâu sắc hơn thank you."
     },
     {
       "id": 94,
@@ -21140,7 +21506,22 @@
       "meaning": "tiếp cận, phương pháp",
       "exampleEn": "We need a flexible approach to problem solving.",
       "exampleVi": "Chúng ta cần phương pháp linh hoạt để giải quyết vấn đề.",
-      "viRead": "ơp-RÂUCH"
+      "viRead": "ơp-RÂUCH",
+      "collocations": [
+        {
+          "en": "a new approach",
+          "vi": "cách tiếp cận mới"
+        },
+        {
+          "en": "approach the problem",
+          "vi": "tiếp cận vấn đề"
+        },
+        {
+          "en": "as winter approaches",
+          "vi": "khi mùa đông đến gần"
+        }
+      ],
+      "tip": "approach đi thẳng với tân ngữ: approach the house ✓ (approach to the house ✗). Danh từ: an approach to learning."
     },
     {
       "id": 95,
@@ -21151,7 +21532,28 @@
       "meaning": "phù hợp, thích hợp",
       "exampleEn": "Dress in appropriate clothes for the interview.",
       "exampleVi": "Mặc trang phục phù hợp cho buổi phỏng vấn.",
-      "viRead": "ơp-RÂUP-ri-ơt"
+      "viRead": "ơp-RÂUP-ri-ơt",
+      "collocations": [
+        {
+          "en": "appropriate clothes",
+          "vi": "trang phục phù hợp"
+        },
+        {
+          "en": "if appropriate",
+          "vi": "nếu thích hợp"
+        },
+        {
+          "en": "appropriate for children",
+          "vi": "phù hợp với trẻ em"
+        }
+      ],
+      "family": [
+        {
+          "word": "inappropriate",
+          "vi": "không phù hợp"
+        }
+      ],
+      "tip": "appropriate for + người/dịp: This film is not appropriate for kids. Thêm in- → inappropriate."
     },
     {
       "id": 96,
@@ -21162,7 +21564,28 @@
       "meaning": "sự phê duyệt, tán thành",
       "exampleEn": "The plan requires executive approval.",
       "exampleVi": "Kế hoạch cần có sự phê duyệt của ban điều hành.",
-      "viRead": "ơp-RU-vơl"
+      "viRead": "ơp-RU-vơl",
+      "collocations": [
+        {
+          "en": "need approval",
+          "vi": "cần phê duyệt"
+        },
+        {
+          "en": "get approval",
+          "vi": "được chấp thuận"
+        },
+        {
+          "en": "with approval",
+          "vi": "với sự tán thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "approve",
+          "vi": "phê duyệt"
+        }
+      ],
+      "tip": "Đuôi -al biến động từ thành danh từ: approve → approval, arrive → arrival."
     },
     {
       "id": 97,
@@ -21173,7 +21596,28 @@
       "meaning": "phê duyệt, chấp thuận",
       "exampleEn": "The committee approved the budget proposal.",
       "exampleVi": "Ủy ban đã phê duyệt đề xuất ngân sách.",
-      "viRead": "ơp-RUV"
+      "viRead": "ơp-RUV",
+      "collocations": [
+        {
+          "en": "approve of",
+          "vi": "tán thành"
+        },
+        {
+          "en": "approve a plan",
+          "vi": "phê duyệt kế hoạch"
+        },
+        {
+          "en": "officially approved",
+          "vi": "được phê duyệt chính thức"
+        }
+      ],
+      "family": [
+        {
+          "word": "approval",
+          "vi": "sự phê duyệt"
+        }
+      ],
+      "tip": "approve of = tán thành (thái độ): My parents don't approve of my boyfriend."
     },
     {
       "id": 98,
@@ -21184,7 +21628,28 @@
       "meaning": "xấp xỉ, khoảng",
       "exampleEn": "The approximate cost will be 50 dollars.",
       "exampleVi": "Chi phí xấp xỉ sẽ là 50 đô la.",
-      "viRead": "ơp-RAK-sơ-mơt"
+      "viRead": "ơp-RAK-sơ-mơt",
+      "collocations": [
+        {
+          "en": "approximate cost",
+          "vi": "chi phí ước tính"
+        },
+        {
+          "en": "approximate time",
+          "vi": "thời gian xấp xỉ"
+        },
+        {
+          "en": "an approximate number",
+          "vi": "con số ước lượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "approximately",
+          "vi": "khoảng, xấp xỉ"
+        }
+      ],
+      "tip": "Trạng từ approximately = about: approximately 100 people."
     },
     {
       "id": 99,
@@ -21195,7 +21660,22 @@
       "meaning": "khu vực, diện tích",
       "exampleEn": "This area is reserved for parking.",
       "exampleVi": "Khu vực này dành riêng cho việc đỗ xe.",
-      "viRead": "E-ri-ơ"
+      "viRead": "E-ri-ơ",
+      "collocations": [
+        {
+          "en": "parking area",
+          "vi": "khu đỗ xe"
+        },
+        {
+          "en": "in this area",
+          "vi": "ở khu vực này"
+        },
+        {
+          "en": "living area",
+          "vi": "khu sinh hoạt"
+        }
+      ],
+      "tip": "area đọc 'E-ri-ơ' (3 âm tiết). area còn là diện tích: the area of the room."
     },
     {
       "id": 100,
@@ -21206,7 +21686,28 @@
       "meaning": "tranh luận, cãi nhau",
       "exampleEn": "They argue about small things often.",
       "exampleVi": "Họ thường tranh luận về những điều nhỏ nhặt.",
-      "viRead": "AR-gyu"
+      "viRead": "AR-gyu",
+      "collocations": [
+        {
+          "en": "argue with",
+          "vi": "cãi nhau với"
+        },
+        {
+          "en": "argue about",
+          "vi": "tranh cãi về"
+        },
+        {
+          "en": "argue that",
+          "vi": "lập luận rằng"
+        }
+      ],
+      "family": [
+        {
+          "word": "argument",
+          "vi": "cuộc tranh cãi; lý lẽ"
+        }
+      ],
+      "tip": "argue with + người, about + chuyện: They always argue about money."
     },
     {
       "id": 101,
@@ -21217,7 +21718,28 @@
       "meaning": "cuộc tranh luận, lý lẽ",
       "exampleEn": "He presented a convincing argument.",
       "exampleVi": "Anh ấy đã đưa ra một lý lẽ đầy thuyết phục.",
-      "viRead": "AR-gyơ-mơnt"
+      "viRead": "AR-gyơ-mơnt",
+      "collocations": [
+        {
+          "en": "have an argument",
+          "vi": "cãi nhau"
+        },
+        {
+          "en": "a strong argument",
+          "vi": "lý lẽ vững"
+        },
+        {
+          "en": "win an argument",
+          "vi": "thắng trong tranh luận"
+        }
+      ],
+      "family": [
+        {
+          "word": "argue",
+          "vi": "tranh cãi"
+        }
+      ],
+      "tip": "Chính tả: argue bỏ e khi thêm -ment: argument ✓ (arguement ✗)."
     },
     {
       "id": 102,
@@ -21228,7 +21750,22 @@
       "meaning": "nảy sinh, phát sinh",
       "exampleEn": "If any problems arise, please call me.",
       "exampleVi": "Nếu có vấn đề gì phát sinh, hãy gọi cho tôi.",
-      "viRead": "ơ-AID"
+      "viRead": "ơ-AID",
+      "collocations": [
+        {
+          "en": "problems arise",
+          "vi": "vấn đề phát sinh"
+        },
+        {
+          "en": "if the need arises",
+          "vi": "nếu cần"
+        },
+        {
+          "en": "questions arise",
+          "vi": "câu hỏi nảy sinh"
+        }
+      ],
+      "tip": "arise – arose – arisen. Chủ ngữ thường là vấn đề/tình huống, không phải người."
     },
     {
       "id": 103,
@@ -21239,7 +21776,29 @@
       "meaning": "cánh tay",
       "exampleEn": "He broke his left arm playing football.",
       "exampleVi": "Anh ấy bị gãy cánh tay trái khi đá bóng.",
-      "viRead": "ARM"
+      "viRead": "ARM",
+      "collocations": [
+        {
+          "en": "arm in arm",
+          "vi": "khoác tay nhau"
+        },
+        {
+          "en": "break an arm",
+          "vi": "gãy tay"
+        },
+        {
+          "en": "with open arms",
+          "vi": "dang rộng vòng tay chào đón"
+        }
+      ],
+      "family": [
+        {
+          "word": "armchair",
+          "vi": "ghế bành"
+        }
+      ],
+      "tip": "arm là cánh tay (vai → cổ tay); hand là bàn tay. arm + chair = ghế có tay vịn.",
+      "emoji": "💪"
     },
     {
       "id": 104,
@@ -21250,7 +21809,32 @@
       "meaning": "vũ trang",
       "exampleEn": "Armed police secured the perimeter.",
       "exampleVi": "Cảnh sát vũ trang đã bảo vệ vòng ngoài.",
-      "viRead": "ARMĐ"
+      "viRead": "ARMĐ",
+      "collocations": [
+        {
+          "en": "armed police",
+          "vi": "cảnh sát vũ trang"
+        },
+        {
+          "en": "armed forces",
+          "vi": "lực lượng vũ trang"
+        },
+        {
+          "en": "armed robbery",
+          "vi": "cướp có vũ khí"
+        }
+      ],
+      "family": [
+        {
+          "word": "army",
+          "vi": "quân đội"
+        },
+        {
+          "word": "arms",
+          "vi": "vũ khí"
+        }
+      ],
+      "tip": "arms (số nhiều) còn nghĩa là vũ khí; armed = có vũ khí."
     },
     {
       "id": 105,
@@ -21261,7 +21845,29 @@
       "meaning": "quân đội",
       "exampleEn": "He joined the army after high school.",
       "exampleVi": "Anh ấy nhập ngũ quân đội sau khi tốt nghiệp cấp ba.",
-      "viRead": "AR-mi"
+      "viRead": "AR-mi",
+      "collocations": [
+        {
+          "en": "join the army",
+          "vi": "nhập ngũ"
+        },
+        {
+          "en": "in the army",
+          "vi": "trong quân đội"
+        },
+        {
+          "en": "army officer",
+          "vi": "sĩ quan quân đội"
+        }
+      ],
+      "family": [
+        {
+          "word": "armed",
+          "vi": "vũ trang"
+        }
+      ],
+      "tip": "army = lục quân/quân đội; navy = hải quân; air force = không quân.",
+      "emoji": "🪖"
     },
     {
       "id": 106,
@@ -21272,7 +21878,22 @@
       "meaning": "xung quanh, khoảng",
       "exampleEn": "We took a walk around the park.",
       "exampleVi": "Chúng tôi đi dạo xung quanh công viên.",
-      "viRead": "ơ-AONĐ"
+      "viRead": "ơ-AONĐ",
+      "collocations": [
+        {
+          "en": "around the world",
+          "vi": "vòng quanh thế giới"
+        },
+        {
+          "en": "around 5 o'clock",
+          "vi": "khoảng 5 giờ"
+        },
+        {
+          "en": "look around",
+          "vi": "nhìn quanh"
+        }
+      ],
+      "tip": "around = xung quanh và khoảng (= about): around 20 people. turn around = quay lại."
     },
     {
       "id": 107,
@@ -21283,7 +21904,28 @@
       "meaning": "sắp xếp, thu xếp",
       "exampleEn": "I will arrange a meeting for tomorrow.",
       "exampleVi": "Tôi sẽ thu xếp một cuộc họp cho ngày mai.",
-      "viRead": "ơ-ÂYNGI"
+      "viRead": "ơ-ÂYNGI",
+      "collocations": [
+        {
+          "en": "arrange a meeting",
+          "vi": "sắp xếp cuộc họp"
+        },
+        {
+          "en": "arrange flowers",
+          "vi": "cắm hoa"
+        },
+        {
+          "en": "arrange for",
+          "vi": "thu xếp cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrangement",
+          "vi": "sự sắp xếp"
+        }
+      ],
+      "tip": "arrange to do = thu xếp để làm: We arranged to meet at 6."
     },
     {
       "id": 108,
@@ -21294,7 +21936,28 @@
       "meaning": "sự sắp xếp, thỏa thuận",
       "exampleEn": "The flower arrangement looks beautiful.",
       "exampleVi": "Sự sắp xếp hoa nhìn rất đẹp mắt.",
-      "viRead": "ơ-ÂYN-gimơnt"
+      "viRead": "ơ-ÂYN-gimơnt",
+      "collocations": [
+        {
+          "en": "make arrangements",
+          "vi": "thu xếp"
+        },
+        {
+          "en": "flower arrangement",
+          "vi": "cắm hoa"
+        },
+        {
+          "en": "travel arrangements",
+          "vi": "thu xếp chuyến đi"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrange",
+          "vi": "sắp xếp"
+        }
+      ],
+      "tip": "make arrangements for = lo thu xếp: make arrangements for the trip."
     },
     {
       "id": 109,
@@ -21305,7 +21968,23 @@
       "meaning": "bắt giữ",
       "exampleEn": "Police arrested the suspect quickly.",
       "exampleVi": "Cảnh sát đã bắt giữ nghi phạm nhanh chóng.",
-      "viRead": "ơ-EST"
+      "viRead": "ơ-EST",
+      "collocations": [
+        {
+          "en": "under arrest",
+          "vi": "bị bắt"
+        },
+        {
+          "en": "arrest a thief",
+          "vi": "bắt kẻ trộm"
+        },
+        {
+          "en": "be arrested for",
+          "vi": "bị bắt vì"
+        }
+      ],
+      "tip": "You're under arrest = Anh đã bị bắt (câu quen thuộc trong phim).",
+      "emoji": "🚓"
     },
     {
       "id": 110,
@@ -21316,7 +21995,28 @@
       "meaning": "sự đến nơi",
       "exampleEn": "We await the arrival of our guests.",
       "exampleVi": "Chúng tôi đang chờ khách đến.",
-      "viRead": "ơ-AI-vơl"
+      "viRead": "ơ-AI-vơl",
+      "collocations": [
+        {
+          "en": "on arrival",
+          "vi": "khi đến nơi"
+        },
+        {
+          "en": "arrival time",
+          "vi": "giờ đến"
+        },
+        {
+          "en": "new arrivals",
+          "vi": "hàng mới về"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrive",
+          "vi": "đến"
+        }
+      ],
+      "tip": "Ở sân bay: Arrivals (khu đến) và Departures (khu đi). new arrivals trong cửa hàng = hàng mới về."
     },
     {
       "id": 111,
@@ -21327,7 +22027,28 @@
       "meaning": "đến nơi",
       "exampleEn": "What time does the train arrive?",
       "exampleVi": "Mấy giờ chuyến tàu đến nơi?",
-      "viRead": "ơ-AIV"
+      "viRead": "ơ-AIV",
+      "collocations": [
+        {
+          "en": "arrive at",
+          "vi": "đến (nơi nhỏ)"
+        },
+        {
+          "en": "arrive in",
+          "vi": "đến (thành phố, nước)"
+        },
+        {
+          "en": "arrive on time",
+          "vi": "đến đúng giờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrival",
+          "vi": "sự đến"
+        }
+      ],
+      "tip": "arrive AT (sân bay, trường), arrive IN (Hà Nội, Việt Nam) — không bao giờ arrive to. Riêng home: arrive home."
     },
     {
       "id": 112,
@@ -21338,7 +22059,33 @@
       "meaning": "nghệ thuật",
       "exampleEn": "She is studying modern art history.",
       "exampleVi": "Cô ấy đang học lịch sử nghệ thuật hiện đại.",
-      "viRead": "ART"
+      "viRead": "ART",
+      "collocations": [
+        {
+          "en": "modern art",
+          "vi": "nghệ thuật hiện đại"
+        },
+        {
+          "en": "art gallery",
+          "vi": "phòng tranh"
+        },
+        {
+          "en": "work of art",
+          "vi": "tác phẩm nghệ thuật"
+        }
+      ],
+      "family": [
+        {
+          "word": "artist",
+          "vi": "nghệ sĩ"
+        },
+        {
+          "word": "artistic",
+          "vi": "có tính nghệ thuật"
+        }
+      ],
+      "tip": "the arts = các môn khoa học xã hội, nghệ thuật (khác science). arts and crafts = thủ công mỹ nghệ.",
+      "emoji": "🎨"
     },
     {
       "id": 113,
@@ -21349,7 +22096,22 @@
       "meaning": "bài báo, mạo từ",
       "exampleEn": "I read an interesting article on AI.",
       "exampleVi": "Tôi đã đọc một bài báo thú vị về Trí tuệ nhân tạo.",
-      "viRead": "AR-tơ-kơl"
+      "viRead": "AR-tơ-kơl",
+      "collocations": [
+        {
+          "en": "read an article",
+          "vi": "đọc bài báo"
+        },
+        {
+          "en": "newspaper article",
+          "vi": "bài báo"
+        },
+        {
+          "en": "definite article",
+          "vi": "mạo từ xác định (the)"
+        }
+      ],
+      "tip": "article vừa là bài báo, vừa là 'mạo từ' trong ngữ pháp: a/an/the là articles."
     },
     {
       "id": 114,
@@ -21360,7 +22122,29 @@
       "meaning": "nghệ sĩ",
       "exampleEn": "The artist painted a lovely portrait.",
       "exampleVi": "Nghệ sĩ đã vẽ một bức chân dung đáng yêu.",
-      "viRead": "AR-tơst"
+      "viRead": "AR-tơst",
+      "collocations": [
+        {
+          "en": "a famous artist",
+          "vi": "nghệ sĩ nổi tiếng"
+        },
+        {
+          "en": "street artist",
+          "vi": "nghệ sĩ đường phố"
+        },
+        {
+          "en": "makeup artist",
+          "vi": "chuyên viên trang điểm"
+        }
+      ],
+      "family": [
+        {
+          "word": "art",
+          "vi": "nghệ thuật"
+        }
+      ],
+      "tip": "Đuôi -ist chỉ người: art → artist, piano → pianist, science → scientist.",
+      "emoji": "🧑‍🎨"
     },
     {
       "id": 115,
@@ -21371,7 +22155,22 @@
       "meaning": "như, khi, vì",
       "exampleEn": "He works as a software engineer.",
       "exampleVi": "Anh ấy làm việc với tư cách là kỹ sư phần mềm.",
-      "viRead": "ED"
+      "viRead": "ED",
+      "collocations": [
+        {
+          "en": "as soon as",
+          "vi": "ngay khi"
+        },
+        {
+          "en": "as well as",
+          "vi": "cũng như"
+        },
+        {
+          "en": "work as a teacher",
+          "vi": "làm giáo viên"
+        }
+      ],
+      "tip": "as + nghề = với tư cách: She works as a nurse. as … as = bằng: as tall as me."
     },
     {
       "id": 116,
@@ -21382,7 +22181,22 @@
       "meaning": "hỏi, yêu cầu",
       "exampleEn": "Feel free to ask if you need help.",
       "exampleVi": "Đừng ngần ngại hỏi nếu bạn cần trợ giúp.",
-      "viRead": "ESK"
+      "viRead": "ESK",
+      "collocations": [
+        {
+          "en": "ask a question",
+          "vi": "đặt câu hỏi"
+        },
+        {
+          "en": "ask for help",
+          "vi": "nhờ giúp đỡ"
+        },
+        {
+          "en": "ask someone out",
+          "vi": "rủ ai đi chơi"
+        }
+      ],
+      "tip": "ask for + thứ muốn xin: ask for the bill. Không cần for khi hỏi người: ask him (không ask for him)."
     },
     {
       "id": 117,
@@ -21393,7 +22207,33 @@
       "meaning": "đang ngủ",
       "exampleEn": "The baby fell asleep instantly.",
       "exampleVi": "Em bé đã ngủ thiếp đi ngay lập tức.",
-      "viRead": "ơs-LIP"
+      "viRead": "ơs-LIP",
+      "collocations": [
+        {
+          "en": "fall asleep",
+          "vi": "ngủ thiếp đi"
+        },
+        {
+          "en": "fast asleep",
+          "vi": "ngủ say"
+        },
+        {
+          "en": "half asleep",
+          "vi": "ngái ngủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "sleep",
+          "vi": "ngủ"
+        },
+        {
+          "word": "sleepy",
+          "vi": "buồn ngủ"
+        }
+      ],
+      "tip": "asleep chỉ đứng sau động từ: The baby is asleep ✓ (an asleep baby ✗ → a sleeping baby ✓).",
+      "emoji": "😴"
     },
     {
       "id": 118,
@@ -21404,7 +22244,22 @@
       "meaning": "khía cạnh",
       "exampleEn": "We considered every aspect of the project.",
       "exampleVi": "Chúng tôi xem xét mọi khía cạnh của dự án.",
-      "viRead": "ES-pekt"
+      "viRead": "ES-pekt",
+      "collocations": [
+        {
+          "en": "every aspect",
+          "vi": "mọi khía cạnh"
+        },
+        {
+          "en": "an important aspect",
+          "vi": "khía cạnh quan trọng"
+        },
+        {
+          "en": "in all aspects",
+          "vi": "về mọi mặt"
+        }
+      ],
+      "tip": "aspect đọc 'ÁT-xpekt', nhấn âm đầu. Hay đi với of: aspects of life."
     },
     {
       "id": 119,
@@ -21415,7 +22270,28 @@
       "meaning": "đánh giá",
       "exampleEn": "Teachers assess student progress weekly.",
       "exampleVi": "Giáo viên đánh giá sự tiến bộ của học sinh hàng tuần.",
-      "viRead": "ơ-SES"
+      "viRead": "ơ-SES",
+      "collocations": [
+        {
+          "en": "assess the damage",
+          "vi": "đánh giá thiệt hại"
+        },
+        {
+          "en": "assess students",
+          "vi": "đánh giá học sinh"
+        },
+        {
+          "en": "assess the risk",
+          "vi": "đánh giá rủi ro"
+        }
+      ],
+      "family": [
+        {
+          "word": "assessment",
+          "vi": "sự đánh giá"
+        }
+      ],
+      "tip": "Chính tả: assess có 4 chữ s (as-sess). Danh từ: assessment."
     },
     {
       "id": 120,
@@ -21426,7 +22302,22 @@
       "meaning": "tài sản, thế mạnh",
       "exampleEn": "Good health is your greatest asset.",
       "exampleVi": "Sức khỏe tốt là tài sản lớn nhất của bạn.",
-      "viRead": "E-set"
+      "viRead": "E-set",
+      "collocations": [
+        {
+          "en": "a great asset",
+          "vi": "tài sản quý"
+        },
+        {
+          "en": "assets and liabilities",
+          "vi": "tài sản và nợ"
+        },
+        {
+          "en": "valuable asset",
+          "vi": "tài sản giá trị"
+        }
+      ],
+      "tip": "asset còn dùng cho người/phẩm chất: She's an asset to the team (Cô ấy là nhân tố quý của đội)."
     },
     {
       "id": 121,
@@ -21437,7 +22328,28 @@
       "meaning": "giao việc, phân công",
       "exampleEn": "The manager assigned tasks to everyone.",
       "exampleVi": "Quản lý đã phân công công việc cho mọi người.",
-      "viRead": "ơ-SAIN"
+      "viRead": "ơ-SAIN",
+      "collocations": [
+        {
+          "en": "assign a task",
+          "vi": "giao nhiệm vụ"
+        },
+        {
+          "en": "assign homework",
+          "vi": "giao bài tập"
+        },
+        {
+          "en": "be assigned to",
+          "vi": "được phân công vào"
+        }
+      ],
+      "family": [
+        {
+          "word": "assignment",
+          "vi": "bài tập được giao"
+        }
+      ],
+      "tip": "g câm: 'ơ-XAI-n'. assignment = bài tập lớn thầy cô giao."
     },
     {
       "id": 122,
@@ -21448,7 +22360,32 @@
       "meaning": "hỗ trợ, giúp đỡ",
       "exampleEn": "She was asked to assist the director.",
       "exampleVi": "Cô ấy được yêu cầu hỗ trợ giám đốc.",
-      "viRead": "ơ-SIST"
+      "viRead": "ơ-SIST",
+      "collocations": [
+        {
+          "en": "assist in",
+          "vi": "hỗ trợ trong việc"
+        },
+        {
+          "en": "assist customers",
+          "vi": "hỗ trợ khách hàng"
+        },
+        {
+          "en": "assist with",
+          "vi": "giúp việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "assistant",
+          "vi": "trợ lý"
+        },
+        {
+          "word": "assistance",
+          "vi": "sự hỗ trợ"
+        }
+      ],
+      "tip": "assist trang trọng hơn help. Trong bóng đá, an assist = pha kiến tạo."
     },
     {
       "id": 123,
@@ -21459,7 +22396,28 @@
       "meaning": "trợ lý",
       "exampleEn": "His personal assistant handles his schedule.",
       "exampleVi": "Trợ lý cá nhân xử lý lịch trình của anh ấy.",
-      "viRead": "ơ-SIS-tơnt"
+      "viRead": "ơ-SIS-tơnt",
+      "collocations": [
+        {
+          "en": "personal assistant",
+          "vi": "trợ lý riêng"
+        },
+        {
+          "en": "shop assistant",
+          "vi": "nhân viên bán hàng"
+        },
+        {
+          "en": "teaching assistant",
+          "vi": "trợ giảng"
+        }
+      ],
+      "family": [
+        {
+          "word": "assist",
+          "vi": "hỗ trợ"
+        }
+      ],
+      "tip": "shop assistant (Anh) = nhân viên bán hàng. Trợ lý ảo = virtual assistant."
     },
     {
       "id": 124,
@@ -21470,7 +22428,28 @@
       "meaning": "liên kết, cộng sự",
       "exampleEn": "We associate summer with warm weather.",
       "exampleVi": "Chúng ta liên tưởng mùa hè với thời tiết ấm áp.",
-      "viRead": "ơ-SÂU-si-ơt"
+      "viRead": "ơ-SÂU-si-ơt",
+      "collocations": [
+        {
+          "en": "associate with",
+          "vi": "liên tưởng đến; giao du với"
+        },
+        {
+          "en": "closely associated",
+          "vi": "liên quan chặt chẽ"
+        },
+        {
+          "en": "business associate",
+          "vi": "đối tác làm ăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "association",
+          "vi": "hiệp hội"
+        }
+      ],
+      "tip": "associate A with B = liên tưởng A với B: I associate this song with my childhood."
     },
     {
       "id": 125,
@@ -21481,7 +22460,28 @@
       "meaning": "hiệp hội, sự kết hợp",
       "exampleEn": "He is a member of the medical association.",
       "exampleVi": "Anh ấy là thành viên của hiệp hội y khoa.",
-      "viRead": "ơ-sâu-si-ÂY-shơn"
+      "viRead": "ơ-sâu-si-ÂY-shơn",
+      "collocations": [
+        {
+          "en": "in association with",
+          "vi": "phối hợp với"
+        },
+        {
+          "en": "football association",
+          "vi": "liên đoàn bóng đá"
+        },
+        {
+          "en": "join an association",
+          "vi": "tham gia hiệp hội"
+        }
+      ],
+      "family": [
+        {
+          "word": "associate",
+          "vi": "liên kết"
+        }
+      ],
+      "tip": "FA = Football Association. Đuôi -tion tạo danh từ từ động từ: associate → association."
     },
     {
       "id": 126,
@@ -21492,7 +22492,28 @@
       "meaning": "giả định, cho rằng",
       "exampleEn": "Don't assume everything you read is true.",
       "exampleVi": "Đừng giả định mọi thứ bạn đọc đều đúng.",
-      "viRead": "ơ-SUM"
+      "viRead": "ơ-SUM",
+      "collocations": [
+        {
+          "en": "I assume that",
+          "vi": "tôi cho là"
+        },
+        {
+          "en": "assume the worst",
+          "vi": "nghĩ đến điều tệ nhất"
+        },
+        {
+          "en": "let's assume",
+          "vi": "giả sử"
+        }
+      ],
+      "family": [
+        {
+          "word": "assumption",
+          "vi": "giả định"
+        }
+      ],
+      "tip": "assume = cho là đúng mà không có bằng chứng. Đừng nhầm với ensure (đảm bảo)."
     },
     {
       "id": 127,
@@ -21503,7 +22524,22 @@
       "meaning": "cam đoan, đảm bảo",
       "exampleEn": "I assure you that your data is safe.",
       "exampleVi": "Tôi cam đoan với bạn rằng dữ liệu của bạn an toàn.",
-      "viRead": "ơ-SHUR"
+      "viRead": "ơ-SHUR",
+      "collocations": [
+        {
+          "en": "I assure you",
+          "vi": "tôi cam đoan với bạn"
+        },
+        {
+          "en": "rest assured",
+          "vi": "cứ yên tâm"
+        },
+        {
+          "en": "assure someone that",
+          "vi": "đảm bảo với ai rằng"
+        }
+      ],
+      "tip": "assure + người (trấn an ai); ensure + việc (đảm bảo việc xảy ra); insure = mua bảo hiểm."
     },
     {
       "id": 128,
@@ -21514,7 +22550,22 @@
       "meaning": "tại, vào lúc",
       "exampleEn": "We meet at 9 AM tomorrow.",
       "exampleVi": "Chúng ta gặp nhau vào lúc 9 giờ sáng mai.",
-      "viRead": "ET"
+      "viRead": "ET",
+      "collocations": [
+        {
+          "en": "at home",
+          "vi": "ở nhà"
+        },
+        {
+          "en": "at 7 o'clock",
+          "vi": "lúc 7 giờ"
+        },
+        {
+          "en": "at the door",
+          "vi": "ở cửa"
+        }
+      ],
+      "tip": "at dùng cho điểm cụ thể (at the bus stop) và giờ (at 7). Mẹo: at giờ, on ngày, in tháng/năm."
     },
     {
       "id": 129,
@@ -21525,7 +22576,33 @@
       "meaning": "vận động viên",
       "exampleEn": "The athlete trained hard for the Olympics.",
       "exampleVi": "Vận động viên tập luyện chăm chỉ cho Olympic.",
-      "viRead": "ETH-lit"
+      "viRead": "ETH-lit",
+      "collocations": [
+        {
+          "en": "a professional athlete",
+          "vi": "vận động viên chuyên nghiệp"
+        },
+        {
+          "en": "top athlete",
+          "vi": "vận động viên hàng đầu"
+        },
+        {
+          "en": "Olympic athlete",
+          "vi": "vận động viên Olympic"
+        }
+      ],
+      "family": [
+        {
+          "word": "athletic",
+          "vi": "khỏe mạnh, thể thao"
+        },
+        {
+          "word": "athletics",
+          "vi": "điền kinh"
+        }
+      ],
+      "tip": "Đọc 2 âm tiết 'ÁTH-lít' — không chèn âm giữa thành 'a-thơ-lít'.",
+      "emoji": "🏃"
     },
     {
       "id": 130,
@@ -21536,7 +22613,22 @@
       "meaning": "bầu không khí",
       "exampleEn": "The restaurant has a warm atmosphere.",
       "exampleVi": "Nhà hàng có một bầu không khí ấm cúng.",
-      "viRead": "ET-mơs-phir"
+      "viRead": "ET-mơs-phir",
+      "collocations": [
+        {
+          "en": "a friendly atmosphere",
+          "vi": "không khí thân thiện"
+        },
+        {
+          "en": "the Earth's atmosphere",
+          "vi": "khí quyển Trái Đất"
+        },
+        {
+          "en": "relaxed atmosphere",
+          "vi": "không khí thoải mái"
+        }
+      ],
+      "tip": "atmosphere dùng cho cả 'bầu khí quyển' và 'bầu không khí' ở một nơi: The café has a nice atmosphere."
     },
     {
       "id": 131,
@@ -21547,7 +22639,28 @@
       "meaning": "đính kèm, gắn",
       "exampleEn": "Please attach your CV to the email.",
       "exampleVi": "Vui lòng đính kèm CV của bạn vào email.",
-      "viRead": "ơ-TECH"
+      "viRead": "ơ-TECH",
+      "collocations": [
+        {
+          "en": "attach a file",
+          "vi": "đính kèm tệp"
+        },
+        {
+          "en": "attached to",
+          "vi": "gắn bó với"
+        },
+        {
+          "en": "please find attached",
+          "vi": "xin gửi kèm"
+        }
+      ],
+      "family": [
+        {
+          "word": "attachment",
+          "vi": "tệp đính kèm"
+        }
+      ],
+      "tip": "Viết email: Please find attached my CV (Xin gửi kèm CV). File đính kèm = attachment."
     },
     {
       "id": 132,
@@ -21558,7 +22671,28 @@
       "meaning": "tấn công",
       "exampleEn": "The computer system was under attack.",
       "exampleVi": "Hệ thống máy tính đã bị tấn công.",
-      "viRead": "ơ-TEK"
+      "viRead": "ơ-TEK",
+      "collocations": [
+        {
+          "en": "heart attack",
+          "vi": "cơn đau tim"
+        },
+        {
+          "en": "under attack",
+          "vi": "bị tấn công"
+        },
+        {
+          "en": "attack the problem",
+          "vi": "giải quyết vấn đề"
+        }
+      ],
+      "family": [
+        {
+          "word": "attacker",
+          "vi": "kẻ tấn công"
+        }
+      ],
+      "tip": "heart attack = nhồi máu cơ tim. Chính tả: attack (2 t, kết thúc -ck)."
     },
     {
       "id": 133,
@@ -21569,7 +22703,22 @@
       "meaning": "nỗ lực, thử sức",
       "exampleEn": "She made an attempt to solve the puzzle.",
       "exampleVi": "Cô ấy đã nỗ lực giải câu đố.",
-      "viRead": "ơ-TEMPT"
+      "viRead": "ơ-TEMPT",
+      "collocations": [
+        {
+          "en": "make an attempt",
+          "vi": "cố gắng thử"
+        },
+        {
+          "en": "first attempt",
+          "vi": "lần thử đầu"
+        },
+        {
+          "en": "attempt to",
+          "vi": "cố gắng để"
+        }
+      ],
+      "tip": "attempt trang trọng hơn try: He attempted to climb Everest. Thi đỗ ngay lần đầu = pass on the first attempt."
     },
     {
       "id": 134,
@@ -21580,7 +22729,28 @@
       "meaning": "tham dự",
       "exampleEn": "All members must attend the meeting.",
       "exampleVi": "Tất cả thành viên phải tham dự cuộc họp.",
-      "viRead": "ơ-TENĐ"
+      "viRead": "ơ-TENĐ",
+      "collocations": [
+        {
+          "en": "attend a meeting",
+          "vi": "dự họp"
+        },
+        {
+          "en": "attend school",
+          "vi": "đi học"
+        },
+        {
+          "en": "attend a wedding",
+          "vi": "dự đám cưới"
+        }
+      ],
+      "family": [
+        {
+          "word": "attendance",
+          "vi": "sự có mặt, điểm danh"
+        }
+      ],
+      "tip": "attend đi thẳng với nơi/sự kiện: attend the class ✓ (attend to the class ✗ — attend to = chăm sóc, xử lý)."
     },
     {
       "id": 135,
@@ -21591,7 +22761,32 @@
       "meaning": "sự chú ý",
       "exampleEn": "Pay close attention to instructions.",
       "exampleVi": "Hãy chú ý kỹ đến các hướng dẫn.",
-      "viRead": "ơ-TEN-shơn"
+      "viRead": "ơ-TEN-shơn",
+      "collocations": [
+        {
+          "en": "pay attention",
+          "vi": "chú ý"
+        },
+        {
+          "en": "attention please",
+          "vi": "xin chú ý"
+        },
+        {
+          "en": "get attention",
+          "vi": "thu hút sự chú ý"
+        }
+      ],
+      "family": [
+        {
+          "word": "attend",
+          "vi": "tham dự"
+        },
+        {
+          "word": "attentive",
+          "vi": "chăm chú"
+        }
+      ],
+      "tip": "pay attention to = chú ý đến (dùng pay, không dùng give): Pay attention to the teacher."
     },
     {
       "id": 136,
@@ -21602,7 +22797,22 @@
       "meaning": "thái độ",
       "exampleEn": "A positive attitude helps you succeed.",
       "exampleVi": "Thái độ tích cực giúp bạn thành công.",
-      "viRead": "E-tơ-tuđ"
+      "viRead": "E-tơ-tuđ",
+      "collocations": [
+        {
+          "en": "a positive attitude",
+          "vi": "thái độ tích cực"
+        },
+        {
+          "en": "change your attitude",
+          "vi": "thay đổi thái độ"
+        },
+        {
+          "en": "attitude to work",
+          "vi": "thái độ với công việc"
+        }
+      ],
+      "tip": "attitude towards/to + điều gì. Your attitude determines your altitude = Thái độ quyết định bạn bay cao đến đâu."
     },
     {
       "id": 137,
@@ -21613,7 +22823,32 @@
       "meaning": "thu hút",
       "exampleEn": "Bright lights attract insects at night.",
       "exampleVi": "Ánh đèn sáng thu hút côn trùng vào ban đêm.",
-      "viRead": "ơt-REKT"
+      "viRead": "ơt-REKT",
+      "collocations": [
+        {
+          "en": "attract tourists",
+          "vi": "thu hút du khách"
+        },
+        {
+          "en": "attract attention",
+          "vi": "thu hút sự chú ý"
+        },
+        {
+          "en": "be attracted to",
+          "vi": "bị cuốn hút bởi"
+        }
+      ],
+      "family": [
+        {
+          "word": "attraction",
+          "vi": "điểm tham quan; sức hút"
+        },
+        {
+          "word": "attractive",
+          "vi": "hấp dẫn"
+        }
+      ],
+      "tip": "tourist attraction = điểm du lịch. be attracted to someone = cảm thấy bị ai hấp dẫn."
     },
     {
       "id": 138,
@@ -21624,7 +22859,28 @@
       "meaning": "hấp dẫn, thu hút",
       "exampleEn": "It is an attractive investment opportunity.",
       "exampleVi": "Đó là một cơ hội đầu tư hấp dẫn.",
-      "viRead": "ơt-REK-tiv"
+      "viRead": "ơt-REK-tiv",
+      "collocations": [
+        {
+          "en": "an attractive offer",
+          "vi": "lời mời hấp dẫn"
+        },
+        {
+          "en": "attractive price",
+          "vi": "giá hấp dẫn"
+        },
+        {
+          "en": "very attractive",
+          "vi": "rất cuốn hút"
+        }
+      ],
+      "family": [
+        {
+          "word": "attract",
+          "vi": "thu hút"
+        }
+      ],
+      "tip": "attractive dùng khen người (ưa nhìn) và đồ vật/đề nghị (hấp dẫn)."
     },
     {
       "id": 139,
@@ -21635,7 +22891,23 @@
       "meaning": "khán giả",
       "exampleEn": "The audience applauded enthusiastically.",
       "exampleVi": "Khán giả vỗ tay nhiệt liệt.",
-      "viRead": "A-đi-ơns"
+      "viRead": "A-đi-ơns",
+      "collocations": [
+        {
+          "en": "a large audience",
+          "vi": "đông khán giả"
+        },
+        {
+          "en": "target audience",
+          "vi": "khán giả mục tiêu"
+        },
+        {
+          "en": "the audience clapped",
+          "vi": "khán giả vỗ tay"
+        }
+      ],
+      "tip": "audience là danh từ tập hợp: The audience was/were excited. Gốc audi- = nghe (audio).",
+      "emoji": "👏"
     },
     {
       "id": 140,
@@ -21646,7 +22918,29 @@
       "meaning": "tác giả",
       "exampleEn": "She is the author of several bestsellers.",
       "exampleVi": "Cô ấy là tác giả của nhiều cuốn sách bán chạy.",
-      "viRead": "O-thơ"
+      "viRead": "O-thơ",
+      "collocations": [
+        {
+          "en": "a famous author",
+          "vi": "tác giả nổi tiếng"
+        },
+        {
+          "en": "the author of",
+          "vi": "tác giả của"
+        },
+        {
+          "en": "best-selling author",
+          "vi": "tác giả sách bán chạy"
+        }
+      ],
+      "family": [
+        {
+          "word": "authority",
+          "vi": "quyền lực"
+        }
+      ],
+      "tip": "author = tác giả (sách, bài viết); writer = người viết nói chung. th thổi hơi: 'O-thơ'.",
+      "emoji": "✍️"
     },
     {
       "id": 141,
@@ -21657,7 +22951,28 @@
       "meaning": "chính quyền, nhà chức trách; quyền lực",
       "exampleEn": "The local authorities closed the road.",
       "exampleVi": "Chính quyền địa phương đã đóng con đường.",
-      "viRead": "ơ-THO-rơ-ti"
+      "viRead": "ơ-THO-rơ-ti",
+      "collocations": [
+        {
+          "en": "local authorities",
+          "vi": "chính quyền địa phương"
+        },
+        {
+          "en": "in authority",
+          "vi": "có quyền"
+        },
+        {
+          "en": "an authority on",
+          "vi": "chuyên gia về"
+        }
+      ],
+      "family": [
+        {
+          "word": "authorize",
+          "vi": "ủy quyền"
+        }
+      ],
+      "tip": "the authorities (số nhiều) = nhà chức trách. an authority on something = người có uy tín về lĩnh vực nào đó."
     },
     {
       "id": 142,
@@ -21668,7 +22983,28 @@
       "meaning": "có sẵn, rảnh rỗi",
       "exampleEn": "This product is available online.",
       "exampleVi": "Sản phẩm này có sẵn trực tuyến.",
-      "viRead": "ơ-VÂY-lơ-bơl"
+      "viRead": "ơ-VÂY-lơ-bơl",
+      "collocations": [
+        {
+          "en": "available online",
+          "vi": "có sẵn trên mạng"
+        },
+        {
+          "en": "are you available?",
+          "vi": "bạn rảnh không?"
+        },
+        {
+          "en": "not available",
+          "vi": "không có sẵn; bận"
+        }
+      ],
+      "family": [
+        {
+          "word": "availability",
+          "vi": "tình trạng còn trống"
+        }
+      ],
+      "tip": "available dùng cho người = rảnh: Are you available tomorrow? Cho hàng = còn hàng."
     },
     {
       "id": 143,
@@ -21679,7 +23015,22 @@
       "meaning": "trung bình",
       "exampleEn": "The average temperature in summer is 30°C.",
       "exampleVi": "Nhiệt độ trung bình mùa hè là 30°C.",
-      "viRead": "E-vơ-igi"
+      "viRead": "E-vơ-igi",
+      "collocations": [
+        {
+          "en": "on average",
+          "vi": "trung bình"
+        },
+        {
+          "en": "above average",
+          "vi": "trên trung bình"
+        },
+        {
+          "en": "average age",
+          "vi": "độ tuổi trung bình"
+        }
+      ],
+      "tip": "on average = tính trung bình: On average, I sleep 7 hours. Đọc 'AV-rịch'."
     },
     {
       "id": 144,
@@ -21690,7 +23041,22 @@
       "meaning": "tránh né",
       "exampleEn": "You should avoid eating late at night.",
       "exampleVi": "Bạn nên tránh ăn muộn vào ban đêm.",
-      "viRead": "ơ-VOIĐ"
+      "viRead": "ơ-VOIĐ",
+      "collocations": [
+        {
+          "en": "avoid traffic",
+          "vi": "tránh kẹt xe"
+        },
+        {
+          "en": "avoid eating late",
+          "vi": "tránh ăn khuya"
+        },
+        {
+          "en": "avoid mistakes",
+          "vi": "tránh sai lầm"
+        }
+      ],
+      "tip": "avoid + V-ing: avoid going out ✓ (avoid to go ✗)."
     },
     {
       "id": 145,
@@ -21701,7 +23067,29 @@
       "meaning": "giải thưởng, trao thưởng",
       "exampleEn": "He won an award for excellence.",
       "exampleVi": "Anh ấy đã giành giải thưởng về sự xuất sắc.",
-      "viRead": "ơ-WORĐ"
+      "viRead": "ơ-WORĐ",
+      "collocations": [
+        {
+          "en": "win an award",
+          "vi": "giành giải"
+        },
+        {
+          "en": "award ceremony",
+          "vi": "lễ trao giải"
+        },
+        {
+          "en": "be awarded",
+          "vi": "được trao"
+        }
+      ],
+      "family": [
+        {
+          "word": "reward",
+          "vi": "phần thưởng"
+        }
+      ],
+      "tip": "award = giải thưởng chính thức (lễ trao giải); reward = phần thưởng cho việc tốt.",
+      "emoji": "🏆"
     },
     {
       "id": 146,
@@ -21712,7 +23100,32 @@
       "meaning": "nhận thức được",
       "exampleEn": "Are you aware of the new regulations?",
       "exampleVi": "Bạn có nhận thức được các quy định mới không?",
-      "viRead": "ơ-WER"
+      "viRead": "ơ-WER",
+      "collocations": [
+        {
+          "en": "be aware of",
+          "vi": "nhận thức được"
+        },
+        {
+          "en": "as far as I'm aware",
+          "vi": "theo như tôi biết"
+        },
+        {
+          "en": "become aware",
+          "vi": "nhận ra"
+        }
+      ],
+      "family": [
+        {
+          "word": "awareness",
+          "vi": "nhận thức"
+        },
+        {
+          "word": "unaware",
+          "vi": "không biết"
+        }
+      ],
+      "tip": "aware of + điều gì: Are you aware of the risk? awareness = sự nhận thức (raise awareness = nâng cao nhận thức)."
     },
     {
       "id": 147,
@@ -21723,7 +23136,22 @@
       "meaning": "xa, đi xa",
       "exampleEn": "Keep away from dangerous chemicals.",
       "exampleVi": "Hãy tránh xa các hóa chất nguy hiểm.",
-      "viRead": "ơ-WÂY"
+      "viRead": "ơ-WÂY",
+      "collocations": [
+        {
+          "en": "go away",
+          "vi": "đi đi"
+        },
+        {
+          "en": "far away",
+          "vi": "xa xôi"
+        },
+        {
+          "en": "right away",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "tip": "right away = ngay lập tức: I'll do it right away. throw away = vứt đi; give away = cho đi."
     },
     {
       "id": 148,
@@ -21734,7 +23162,28 @@
       "meaning": "tồi tệ, khủng khiếp",
       "exampleEn": "The weather was awful all weekend.",
       "exampleVi": "Thời tiết tồi tệ suốt cả cuối tuần.",
-      "viRead": "A-phơl"
+      "viRead": "A-phơl",
+      "collocations": [
+        {
+          "en": "awful weather",
+          "vi": "thời tiết tồi tệ"
+        },
+        {
+          "en": "feel awful",
+          "vi": "thấy rất mệt / áy náy"
+        },
+        {
+          "en": "an awful lot",
+          "vi": "rất nhiều"
+        }
+      ],
+      "family": [
+        {
+          "word": "awfully",
+          "vi": "cực kỳ"
+        }
+      ],
+      "tip": "awful = rất tệ; nhưng an awful lot of = rất nhiều (không mang nghĩa xấu)."
     },
     {
       "id": 149,
@@ -21745,7 +23194,29 @@
       "meaning": "em bé",
       "exampleEn": "The baby is sleeping peacefully.",
       "exampleVi": "Em bé đang ngủ rất bình yên.",
-      "viRead": "BÂY-bi"
+      "viRead": "BÂY-bi",
+      "collocations": [
+        {
+          "en": "a baby girl",
+          "vi": "bé gái"
+        },
+        {
+          "en": "have a baby",
+          "vi": "sinh em bé"
+        },
+        {
+          "en": "baby food",
+          "vi": "đồ ăn dặm"
+        }
+      ],
+      "family": [
+        {
+          "word": "babysitter",
+          "vi": "người giữ trẻ"
+        }
+      ],
+      "tip": "have a baby = sinh con. Người yêu cũng gọi nhau là baby. Số nhiều: babies.",
+      "emoji": "👶"
     },
     {
       "id": 150,
@@ -21756,7 +23227,32 @@
       "meaning": "lưng; phía sau; trở lại",
       "exampleEn": "I will be back in five minutes.",
       "exampleVi": "Tôi sẽ trở lại trong 5 phút.",
-      "viRead": "BEK"
+      "viRead": "BEK",
+      "collocations": [
+        {
+          "en": "come back",
+          "vi": "quay lại"
+        },
+        {
+          "en": "back pain",
+          "vi": "đau lưng"
+        },
+        {
+          "en": "at the back",
+          "vi": "ở phía sau"
+        }
+      ],
+      "family": [
+        {
+          "word": "background",
+          "vi": "phông nền"
+        },
+        {
+          "word": "backpack",
+          "vi": "ba lô"
+        }
+      ],
+      "tip": "back sau động từ = trở lại: call back (gọi lại), give back (trả lại). I'll be right back = Tôi quay lại ngay."
     },
     {
       "id": 151,
@@ -21767,7 +23263,32 @@
       "meaning": "nền, phông nền; lý lịch",
       "exampleEn": "The photo has a white background.",
       "exampleVi": "Bức ảnh có nền màu trắng.",
-      "viRead": "BEK-graonđ"
+      "viRead": "BEK-graonđ",
+      "collocations": [
+        {
+          "en": "family background",
+          "vi": "hoàn cảnh gia đình"
+        },
+        {
+          "en": "background music",
+          "vi": "nhạc nền"
+        },
+        {
+          "en": "in the background",
+          "vi": "phía sau, ở hậu cảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "back",
+          "vi": "phía sau"
+        },
+        {
+          "word": "ground",
+          "vi": "mặt đất"
+        }
+      ],
+      "tip": "back (sau) + ground (nền) = background. background music = nhạc nền."
     },
     {
       "id": 152,
@@ -21778,7 +23299,36 @@
       "meaning": "xấu, tồi",
       "exampleEn": "Bad habits are hard to break.",
       "exampleVi": "Thói quen xấu rất khó bỏ.",
-      "viRead": "BEĐ"
+      "viRead": "BEĐ",
+      "collocations": [
+        {
+          "en": "bad news",
+          "vi": "tin xấu"
+        },
+        {
+          "en": "not bad",
+          "vi": "không tệ"
+        },
+        {
+          "en": "too bad",
+          "vi": "tiếc quá"
+        }
+      ],
+      "family": [
+        {
+          "word": "badly",
+          "vi": "tồi tệ"
+        },
+        {
+          "word": "worse",
+          "vi": "tệ hơn"
+        },
+        {
+          "word": "worst",
+          "vi": "tệ nhất"
+        }
+      ],
+      "tip": "So sánh bất quy tắc: bad → worse → worst. Not bad = khá tốt (khen nhẹ)."
     },
     {
       "id": 153,
@@ -21789,7 +23339,33 @@
       "meaning": "túi, cặp, giỏ",
       "exampleEn": "She put her books in her bag.",
       "exampleVi": "Cô ấy cho sách vào cặp.",
-      "viRead": "BEG"
+      "viRead": "BEG",
+      "collocations": [
+        {
+          "en": "school bag",
+          "vi": "cặp sách"
+        },
+        {
+          "en": "plastic bag",
+          "vi": "túi ni-lông"
+        },
+        {
+          "en": "pack your bags",
+          "vi": "thu dọn hành lý"
+        }
+      ],
+      "family": [
+        {
+          "word": "handbag",
+          "vi": "túi xách"
+        },
+        {
+          "word": "baggage",
+          "vi": "hành lý"
+        }
+      ],
+      "tip": "plastic bag = túi ni-lông. Hành lý ở sân bay: baggage/luggage (không đếm được).",
+      "emoji": "🎒"
     },
     {
       "id": 154,
@@ -21800,7 +23376,22 @@
       "meaning": "sự cân bằng; giữ thăng bằng",
       "exampleEn": "Try to keep a balance between work and rest.",
       "exampleVi": "Hãy cố giữ cân bằng giữa làm việc và nghỉ ngơi.",
-      "viRead": "BE-lơns"
+      "viRead": "BE-lơns",
+      "collocations": [
+        {
+          "en": "work-life balance",
+          "vi": "cân bằng công việc và cuộc sống"
+        },
+        {
+          "en": "lose your balance",
+          "vi": "mất thăng bằng"
+        },
+        {
+          "en": "bank balance",
+          "vi": "số dư tài khoản"
+        }
+      ],
+      "tip": "balance còn là số dư tài khoản: check your balance. keep your balance = giữ thăng bằng."
     },
     {
       "id": 155,
@@ -21811,7 +23402,23 @@
       "meaning": "ngân hàng",
       "exampleEn": "I opened a bank account.",
       "exampleVi": "Tôi đã mở một tài khoản ngân hàng.",
-      "viRead": "BENGK"
+      "viRead": "BENGK",
+      "collocations": [
+        {
+          "en": "bank account",
+          "vi": "tài khoản ngân hàng"
+        },
+        {
+          "en": "go to the bank",
+          "vi": "ra ngân hàng"
+        },
+        {
+          "en": "river bank",
+          "vi": "bờ sông"
+        }
+      ],
+      "tip": "bank còn nghĩa 'bờ sông': the bank of the river. Ngân hàng nói chung có the: I went to the bank.",
+      "emoji": "🏦"
     },
     {
       "id": 156,
@@ -21822,7 +23429,32 @@
       "meaning": "cơ bản",
       "exampleEn": "Reading is a basic skill.",
       "exampleVi": "Đọc sách là một kỹ năng cơ bản.",
-      "viRead": "BÂY-sik"
+      "viRead": "BÂY-sik",
+      "collocations": [
+        {
+          "en": "basic skills",
+          "vi": "kỹ năng cơ bản"
+        },
+        {
+          "en": "basic English",
+          "vi": "tiếng Anh cơ bản"
+        },
+        {
+          "en": "the basics",
+          "vi": "những điều cơ bản"
+        }
+      ],
+      "family": [
+        {
+          "word": "basically",
+          "vi": "về cơ bản"
+        },
+        {
+          "word": "base",
+          "vi": "nền tảng"
+        }
+      ],
+      "tip": "Học lại từ đầu = go back to basics. basically = nói tóm lại (rất hay dùng khi nói)."
     },
     {
       "id": 157,
@@ -21833,7 +23465,33 @@
       "meaning": "xinh đẹp",
       "exampleEn": "What a beautiful day!",
       "exampleVi": "Thật là một ngày tuyệt đẹp!",
-      "viRead": "BYU-tơ-phơl"
+      "viRead": "BYU-tơ-phơl",
+      "collocations": [
+        {
+          "en": "a beautiful day",
+          "vi": "một ngày đẹp trời"
+        },
+        {
+          "en": "beautiful girl",
+          "vi": "cô gái xinh đẹp"
+        },
+        {
+          "en": "look beautiful",
+          "vi": "trông đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "beauty",
+          "vi": "vẻ đẹp"
+        },
+        {
+          "word": "beautifully",
+          "vi": "một cách đẹp đẽ"
+        }
+      ],
+      "tip": "Chính tả: beautiful (eau đọc 'iu'). beautiful cho nữ/vật; nam thì khen handsome.",
+      "emoji": "🌸"
     },
     {
       "id": 158,
@@ -21844,7 +23502,22 @@
       "meaning": "bởi vì",
       "exampleEn": "We stayed home because it was raining.",
       "exampleVi": "Chúng tôi ở nhà vì trời đang mưa.",
-      "viRead": "bi-KOD"
+      "viRead": "bi-KOD",
+      "collocations": [
+        {
+          "en": "because of",
+          "vi": "vì (+ danh từ)"
+        },
+        {
+          "en": "just because",
+          "vi": "chỉ vì"
+        },
+        {
+          "en": "because I was tired",
+          "vi": "vì tôi mệt"
+        }
+      ],
+      "tip": "because + câu (because it rained); because of + danh từ (because of the rain). Không dùng because … so trong cùng một câu."
     },
     {
       "id": 159,
@@ -21855,7 +23528,22 @@
       "meaning": "trở thành",
       "exampleEn": "He wants to become a doctor.",
       "exampleVi": "Anh ấy muốn trở thành bác sĩ.",
-      "viRead": "bi-KƠM"
+      "viRead": "bi-KƠM",
+      "collocations": [
+        {
+          "en": "become a doctor",
+          "vi": "trở thành bác sĩ"
+        },
+        {
+          "en": "become friends",
+          "vi": "trở thành bạn"
+        },
+        {
+          "en": "become famous",
+          "vi": "trở nên nổi tiếng"
+        }
+      ],
+      "tip": "become – became – become (dạng 1 và 3 giống nhau). What has become of him? = Anh ta giờ ra sao rồi?"
     },
     {
       "id": 160,
@@ -21866,7 +23554,32 @@
       "meaning": "bắt đầu",
       "exampleEn": "Class begins at 8 AM.",
       "exampleVi": "Lớp học bắt đầu lúc 8 giờ sáng.",
-      "viRead": "bi-GIN"
+      "viRead": "bi-GIN",
+      "collocations": [
+        {
+          "en": "begin with",
+          "vi": "bắt đầu bằng"
+        },
+        {
+          "en": "begin to",
+          "vi": "bắt đầu (làm gì)"
+        },
+        {
+          "en": "to begin with",
+          "vi": "trước hết"
+        }
+      ],
+      "family": [
+        {
+          "word": "beginner",
+          "vi": "người mới bắt đầu"
+        },
+        {
+          "word": "beginning",
+          "vi": "sự bắt đầu"
+        }
+      ],
+      "tip": "begin – began – begun, -ing gấp đôi n: beginning. beginner = người mới học — đúng là bạn đấy!"
     },
     {
       "id": 161,
@@ -21877,7 +23590,32 @@
       "meaning": "tin, tin tưởng",
       "exampleEn": "I believe you can do it.",
       "exampleVi": "Tôi tin bạn làm được.",
-      "viRead": "bi-LIV"
+      "viRead": "bi-LIV",
+      "collocations": [
+        {
+          "en": "believe in",
+          "vi": "tin vào"
+        },
+        {
+          "en": "I believe so",
+          "vi": "tôi tin là vậy"
+        },
+        {
+          "en": "can't believe it",
+          "vi": "không thể tin nổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "belief",
+          "vi": "niềm tin"
+        },
+        {
+          "word": "unbelievable",
+          "vi": "không thể tin được"
+        }
+      ],
+      "tip": "believe + người/lời nói (tin điều họ nói); believe in + điều gì (tin vào sự tồn tại/giá trị): believe in yourself."
     },
     {
       "id": 162,
@@ -21888,7 +23626,28 @@
       "meaning": "lợi ích; có lợi cho",
       "exampleEn": "Walking every day has many health benefits.",
       "exampleVi": "Đi bộ mỗi ngày có nhiều lợi ích cho sức khỏe.",
-      "viRead": "BE-nơ-phit"
+      "viRead": "BE-nơ-phit",
+      "collocations": [
+        {
+          "en": "health benefits",
+          "vi": "lợi ích sức khỏe"
+        },
+        {
+          "en": "benefit from",
+          "vi": "được lợi từ"
+        },
+        {
+          "en": "for the benefit of",
+          "vi": "vì lợi ích của"
+        }
+      ],
+      "family": [
+        {
+          "word": "beneficial",
+          "vi": "có lợi"
+        }
+      ],
+      "tip": "benefit from = hưởng lợi từ: You'll benefit from regular exercise."
     },
     {
       "id": 163,
@@ -21899,7 +23658,32 @@
       "meaning": "tốt nhất, giỏi nhất",
       "exampleEn": "She is my best friend.",
       "exampleVi": "Cô ấy là bạn thân nhất của tôi.",
-      "viRead": "BEST"
+      "viRead": "BEST",
+      "collocations": [
+        {
+          "en": "best friend",
+          "vi": "bạn thân nhất"
+        },
+        {
+          "en": "do your best",
+          "vi": "cố gắng hết sức"
+        },
+        {
+          "en": "all the best",
+          "vi": "chúc mọi điều tốt đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "good",
+          "vi": "tốt"
+        },
+        {
+          "word": "better",
+          "vi": "tốt hơn"
+        }
+      ],
+      "tip": "good → better → best. All the best! = Chúc mọi điều tốt lành (cuối thư)."
     },
     {
       "id": 164,
@@ -21910,7 +23694,32 @@
       "meaning": "tốt hơn, khá hơn",
       "exampleEn": "I feel much better today.",
       "exampleVi": "Hôm nay tôi thấy khỏe hơn nhiều.",
-      "viRead": "BE-tơ"
+      "viRead": "BE-tơ",
+      "collocations": [
+        {
+          "en": "feel better",
+          "vi": "thấy khỏe hơn"
+        },
+        {
+          "en": "better than",
+          "vi": "tốt hơn"
+        },
+        {
+          "en": "you'd better",
+          "vi": "bạn nên (kẻo)"
+        }
+      ],
+      "family": [
+        {
+          "word": "good",
+          "vi": "tốt"
+        },
+        {
+          "word": "best",
+          "vi": "tốt nhất"
+        }
+      ],
+      "tip": "You'd better go = Bạn nên đi đi (hàm ý nếu không sẽ có chuyện). Get well soon / Get better soon = Mau khỏe nhé."
     },
     {
       "id": 165,
@@ -21921,7 +23730,22 @@
       "meaning": "ở giữa (hai người, hai vật)",
       "exampleEn": "The bank is between the school and the park.",
       "exampleVi": "Ngân hàng nằm giữa trường học và công viên.",
-      "viRead": "bit-WIN"
+      "viRead": "bit-WIN",
+      "collocations": [
+        {
+          "en": "between you and me",
+          "vi": "giữa bạn và tôi (bí mật)"
+        },
+        {
+          "en": "between 2 and 3",
+          "vi": "từ 2 đến 3 giờ"
+        },
+        {
+          "en": "the difference between",
+          "vi": "sự khác nhau giữa"
+        }
+      ],
+      "tip": "between A and B cho hai thứ; ba trở lên dùng among. Between you and me = Chỉ nói riêng với bạn thôi."
     },
     {
       "id": 166,
@@ -21932,7 +23756,32 @@
       "meaning": "to lớn",
       "exampleEn": "They live in a big city.",
       "exampleVi": "Họ sống ở thành phố lớn.",
-      "viRead": "BIG"
+      "viRead": "BIG",
+      "collocations": [
+        {
+          "en": "a big city",
+          "vi": "thành phố lớn"
+        },
+        {
+          "en": "big brother",
+          "vi": "anh cả"
+        },
+        {
+          "en": "a big deal",
+          "vi": "chuyện lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "bigger",
+          "vi": "lớn hơn"
+        },
+        {
+          "word": "biggest",
+          "vi": "lớn nhất"
+        }
+      ],
+      "tip": "big → bigger → biggest (gấp đôi g). It's no big deal = Có gì to tát đâu."
     },
     {
       "id": 167,
@@ -21943,7 +23792,33 @@
       "meaning": "quyển sách; đặt (vé, phòng)",
       "exampleEn": "I read a book before bed every night.",
       "exampleVi": "Tối nào tôi cũng đọc sách trước khi ngủ.",
-      "viRead": "BUK"
+      "viRead": "BUK",
+      "collocations": [
+        {
+          "en": "read a book",
+          "vi": "đọc sách"
+        },
+        {
+          "en": "book a table",
+          "vi": "đặt bàn"
+        },
+        {
+          "en": "book a ticket",
+          "vi": "đặt vé"
+        }
+      ],
+      "family": [
+        {
+          "word": "booking",
+          "vi": "sự đặt chỗ"
+        },
+        {
+          "word": "bookstore",
+          "vi": "hiệu sách"
+        }
+      ],
+      "tip": "book là động từ 'đặt trước': book a room (đặt phòng). Đặt vé online = booking.",
+      "emoji": "📖"
     },
     {
       "id": 168,
@@ -21954,7 +23829,33 @@
       "meaning": "việc kinh doanh; doanh nghiệp",
       "exampleEn": "My uncle runs a small business in Da Nang.",
       "exampleVi": "Chú tôi làm chủ một doanh nghiệp nhỏ ở Đà Nẵng.",
-      "viRead": "BID-nơs"
+      "viRead": "BID-nơs",
+      "collocations": [
+        {
+          "en": "run a business",
+          "vi": "làm chủ doanh nghiệp"
+        },
+        {
+          "en": "business trip",
+          "vi": "chuyến công tác"
+        },
+        {
+          "en": "none of your business",
+          "vi": "không phải việc của bạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "businessman",
+          "vi": "doanh nhân"
+        },
+        {
+          "word": "busy",
+          "vi": "bận"
+        }
+      ],
+      "tip": "u trong business đọc 'i': 'BIZ-nịt'. Mind your own business = Lo việc của bạn đi.",
+      "emoji": "💼"
     },
     {
       "id": 169,
@@ -21965,7 +23866,28 @@
       "meaning": "bận rộn",
       "exampleEn": "I am busy with work.",
       "exampleVi": "Tôi bận rộn với công việc.",
-      "viRead": "BI-di"
+      "viRead": "BI-di",
+      "collocations": [
+        {
+          "en": "busy with work",
+          "vi": "bận việc"
+        },
+        {
+          "en": "a busy street",
+          "vi": "con phố đông đúc"
+        },
+        {
+          "en": "the line is busy",
+          "vi": "máy bận"
+        }
+      ],
+      "family": [
+        {
+          "word": "business",
+          "vi": "việc kinh doanh"
+        }
+      ],
+      "tip": "u đọc 'i': 'BI-zi'. busy + V-ing: I'm busy cooking. a busy road = đường đông."
     },
     {
       "id": 170,
@@ -21976,7 +23898,22 @@
       "meaning": "gọi (điện); gọi là; cuộc gọi",
       "exampleEn": "Call me when you arrive.",
       "exampleVi": "Gọi cho tôi khi bạn đến.",
-      "viRead": "KOL"
+      "viRead": "KOL",
+      "collocations": [
+        {
+          "en": "call me",
+          "vi": "gọi cho tôi"
+        },
+        {
+          "en": "make a call",
+          "vi": "gọi điện"
+        },
+        {
+          "en": "be called",
+          "vi": "được gọi là"
+        }
+      ],
+      "tip": "What do you call this in English? = Cái này tiếng Anh gọi là gì? — câu hỏi cực hữu ích cho người học."
     },
     {
       "id": 171,
@@ -21987,7 +23924,23 @@
       "meaning": "máy ảnh",
       "exampleEn": "I took a lot of photos with my new camera.",
       "exampleVi": "Tôi đã chụp rất nhiều ảnh bằng máy ảnh mới.",
-      "viRead": "KE-mơ-ơ"
+      "viRead": "KE-mơ-ơ",
+      "collocations": [
+        {
+          "en": "digital camera",
+          "vi": "máy ảnh kỹ thuật số"
+        },
+        {
+          "en": "camera phone",
+          "vi": "điện thoại có camera"
+        },
+        {
+          "en": "on camera",
+          "vi": "trước ống kính"
+        }
+      ],
+      "tip": "camera nhấn âm đầu: 'KAM-rơ' (thường nuốt âm e giữa).",
+      "emoji": "📷"
     },
     {
       "id": 172,
@@ -21998,7 +23951,22 @@
       "meaning": "có thể",
       "exampleEn": "I can speak English.",
       "exampleVi": "Tôi có thể nói tiếng Anh.",
-      "viRead": "KEN"
+      "viRead": "KEN",
+      "collocations": [
+        {
+          "en": "can you…?",
+          "vi": "bạn có thể…?"
+        },
+        {
+          "en": "I can swim",
+          "vi": "tôi biết bơi"
+        },
+        {
+          "en": "can't wait",
+          "vi": "rất mong chờ"
+        }
+      ],
+      "tip": "can + động từ nguyên thể, không thêm -s: She can swim ✓ (She cans swims ✗). can còn là cái lon: a can of Coke."
     },
     {
       "id": 173,
@@ -22009,7 +23977,23 @@
       "meaning": "xe ô tô",
       "exampleEn": "My father drives a blue car.",
       "exampleVi": "Bố tôi lái một chiếc ô tô màu xanh.",
-      "viRead": "KAR"
+      "viRead": "KAR",
+      "collocations": [
+        {
+          "en": "drive a car",
+          "vi": "lái ô tô"
+        },
+        {
+          "en": "by car",
+          "vi": "bằng ô tô"
+        },
+        {
+          "en": "car park",
+          "vi": "bãi đỗ xe"
+        }
+      ],
+      "tip": "Đi bằng ô tô: by car (không có the/a). Xe máy là motorbike, không phải car.",
+      "emoji": "🚗"
     },
     {
       "id": 174,
@@ -22020,7 +24004,32 @@
       "meaning": "sự chăm sóc; quan tâm",
       "exampleEn": "Take care of yourself.",
       "exampleVi": "Hãy tự chăm sóc bản thân nhé.",
-      "viRead": "KER"
+      "viRead": "KER",
+      "collocations": [
+        {
+          "en": "take care",
+          "vi": "bảo trọng"
+        },
+        {
+          "en": "take care of",
+          "vi": "chăm sóc"
+        },
+        {
+          "en": "I don't care",
+          "vi": "tôi không quan tâm"
+        }
+      ],
+      "family": [
+        {
+          "word": "careful",
+          "vi": "cẩn thận"
+        },
+        {
+          "word": "careless",
+          "vi": "cẩu thả"
+        }
+      ],
+      "tip": "Take care! = Bảo trọng nhé (câu chào khi chia tay). Who cares? = Ai thèm quan tâm?"
     },
     {
       "id": 175,
