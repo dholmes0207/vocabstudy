@@ -83,7 +83,11 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
                 className="mt-0.5 shrink-0"
               />
               <p className="text-slate-700 dark:text-slate-200">
-                <HighlightExample sentence={word.exampleEn} word={word.word} />
+                <HighlightExample
+                  sentence={word.exampleEn}
+                  word={word.word}
+                  pos={word.posCategory}
+                />
               </p>
             </div>
             <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">

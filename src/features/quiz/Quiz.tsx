@@ -20,7 +20,8 @@ const MODE_LABELS: Record<QuizMode, string> = {
   'vi-to-en': 'Việt → Anh',
   listen: 'Nghe → chọn từ',
   spell: 'Đánh vần (gõ từ) ✍️',
-  fill: 'Điền từ vào câu',
+  context: 'Chọn từ điền vào câu',
+  fill: 'Gõ từ vào câu',
 }
 
 const COUNTS = [10, 20, 30]

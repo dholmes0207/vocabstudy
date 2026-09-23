@@ -45,6 +45,22 @@ describe('gapExample', () => {
     expect(gapExample(word({ id: 1, word: 'ability', exampleEn: 'Nothing here.' }))).toBeNull()
   })
 
+  it('blanks an inflected form too — "hands" is the word "hand" in use', () => {
+    const w = word({ id: 1, word: 'hand', exampleEn: 'She washed her hands before dinner.' })
+    expect(gapExample(w)).toBe('She washed her _____ before dinner.')
+  })
+
+  it('blanks an irregular form', () => {
+    const w = word({
+      id: 1,
+      word: 'go',
+      pos: 'v.',
+      posCategory: 'verb',
+      exampleEn: 'They went home.',
+    })
+    expect(gapExample(w)).toBe('They _____ home.')
+  })
+
   it('does not blow up on a headword containing regex metacharacters', () => {
     const w = word({ id: 1, word: 'e.g.', exampleEn: 'Use e.g. sparingly.' })
     expect(() => gapExample(w)).not.toThrow()
@@ -98,6 +114,13 @@ describe('checkFillAnswer', () => {
   it('ignores case, surrounding space and repeated inner spaces', () => {
     const ice = word({ id: 2, word: 'ice cream' })
     expect(checkFillAnswer(ice, '  ICE   cream ')).toBe(true)
+  })
+
+  it('accepts the form used in the sentence as well as the headword', () => {
+    const hand = word({ id: 3, word: 'hand' })
+    expect(checkFillAnswer(hand, 'hands', 'hands')).toBe(true)
+    expect(checkFillAnswer(hand, 'hand', 'hands')).toBe(true)
+    expect(checkFillAnswer(hand, 'hans', 'hands')).toBe(false)
   })
 
   it('rejects empty, whitespace-only and wrong answers', () => {
@@ -159,6 +182,45 @@ describe('makeQuestion', () => {
     for (const mode of ['fill', 'spell'] as const) {
       expect(makeQuestion(pool[0], pool, mode).options).toEqual([])
     }
+  })
+
+  it('records the hidden form so the checker and the feedback can use it', () => {
+    const hand = word({ id: 50, word: 'hand', exampleEn: 'Wash your hands.' })
+    expect(makeQuestion(hand, [hand, ...pool], 'fill')).toMatchObject({
+      prompt: 'Wash your _____.',
+      surface: 'hands',
+    })
+  })
+
+  describe('context mode (pick the word that fits the sentence)', () => {
+    const hand = word({
+      id: 50,
+      word: 'hand',
+      meaning: 'bàn tay',
+      exampleEn: 'Wash your hands.',
+      exampleVi: 'Rửa tay đi.',
+    })
+    const p = [hand, ...pool]
+
+    it('shows the gapped sentence and offers four English words', () => {
+      const q = makeQuestion(hand, p, 'context')
+      expect(q.prompt).toBe('Wash your _____.')
+      expect(q.answer).toBe('hand')
+      expect(q.surface).toBe('hands')
+      expect(q.options).toHaveLength(4)
+      expect(q.options.find((o) => o.correct)?.text).toBe('hand')
+    })
+
+    it('gives the Vietnamese sentence as the hint, so the learner reasons from meaning', () => {
+      expect(makeQuestion(hand, p, 'context').hint).toBe('Rửa tay đi.')
+    })
+
+    it('falls back to picking the English word when the example cannot be gapped', () => {
+      const bare = word({ id: 51, word: 'ability', meaning: 'khả năng' })
+      const q = makeQuestion(bare, [bare, ...pool], 'context')
+      expect(q.mode).toBe('vi-to-en')
+      expect(q.prompt).toBe('khả năng')
+    })
   })
 
   it('falls back to the meaning when fill mode cannot gap the example', () => {

@@ -102,7 +102,7 @@ export default function QuizRunner({
 
   const submitTyping = () => {
     if (revealed || !input.trim() || !word) return
-    commit(checkFillAnswer(word, input))
+    commit(checkFillAnswer(word, input, q.surface))
   }
 
   const next = () => {
@@ -144,7 +144,7 @@ export default function QuizRunner({
             >
               <Volume2 className="h-9 w-9" />
             </button>
-          ) : q.mode === 'fill' ? (
+          ) : q.mode === 'fill' || q.mode === 'context' ? (
             <p className="text-xl font-medium leading-relaxed">
               <HighlightExample sentence={q.prompt} word="_____" />
             </p>

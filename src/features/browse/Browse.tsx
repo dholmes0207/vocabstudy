@@ -264,7 +264,7 @@ function WordRow({
               className="mt-0.5 shrink-0"
             />
             <p className="text-slate-700 dark:text-slate-200">
-              <HighlightExample sentence={word.exampleEn} word={word.word} />
+              <HighlightExample sentence={word.exampleEn} word={word.word} pos={word.posCategory} />
             </p>
           </div>
           <p className="pl-10 italic text-slate-500">{word.exampleVi}</p>

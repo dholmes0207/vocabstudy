@@ -159,6 +159,7 @@ export type QuizMode =
   | 'listen' // hear the word (TTS), pick the English word
   | 'fill' // type the word given meaning + gapped example
   | 'spell' // type the whole word from a partial skeleton (abi__ty) + audio
+  | 'context' // pick the English word that fits the gapped example sentence
 
 export interface QuizQuestion {
   wordId: number
@@ -171,6 +172,11 @@ export interface QuizQuestion {
   options: QuizOption[]
   /** The correct answer string (used for `fill` and to mark options). */
   answer: string
+  /**
+   * The exact form hidden in a gapped sentence ("hands" for the word "hand"),
+   * for `fill` / `context` questions. Typing it is as correct as the headword.
+   */
+  surface?: string
 }
 
 export interface QuizOption {

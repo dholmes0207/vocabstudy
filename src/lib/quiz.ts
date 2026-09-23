@@ -1,4 +1,5 @@
 import type { QuizMode, QuizOption, QuizQuestion, Word } from '@/types'
+import { findWordInSentence } from './wordForms'
 
 // ============================================================================
 // Quiz generation. Produces multiple-choice and typing questions, drawing
@@ -52,22 +53,30 @@ function chooseDistractors(
 
 const CHOICE_MODES: QuizMode[] = ['en-to-vi', 'vi-to-en', 'listen']
 
+export interface GappedSentence {
+  /** The example with the word replaced by a blank. */
+  gapped: string
+  /** The form that was hidden, as written in the sentence ("hands"). */
+  surface: string
+}
+
+export const GAP = '_____'
+
+/**
+ * Hide the target word in its example sentence — in whatever form the sentence
+ * uses it (hands, cried, went). Returns null if the word is not in the example.
+ */
+export function gapSentence(word: Word): GappedSentence | null {
+  if (!word.exampleEn) return null
+  const hit = findWordInSentence(word.word, word.exampleEn, word.posCategory)
+  if (!hit) return null
+  const s = word.exampleEn
+  return { gapped: s.slice(0, hit.start) + GAP + s.slice(hit.end), surface: hit.surface }
+}
+
 /** Build a gapped example sentence, hiding the target word. Returns null if not embeddable. */
 export function gapExample(word: Word): string | null {
-  if (!word.exampleEn) return null
-  // Match the (possibly multi-word) headword as whole words, case-insensitive.
-  const forms = word.word
-    .split('/')
-    .map((s) => s.trim())
-    .filter(Boolean)
-  for (const form of forms) {
-    const escaped = form.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-    const re = new RegExp(`\\b${escaped}\\b`, 'i')
-    if (re.test(word.exampleEn)) {
-      return word.exampleEn.replace(re, '_____')
-    }
-  }
-  return null
+  return gapSentence(word)?.gapped ?? null
 }
 
 export interface SkeletonCell {
@@ -103,14 +112,35 @@ export function buildSkeleton(word: string): SkeletonCell[] {
 /** Generate a single question for a word in a given mode. */
 export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQuestion {
   if (mode === 'fill') {
-    const gapped = gapExample(word)
+    const gap = gapSentence(word)
     return {
       wordId: word.id,
       mode,
-      prompt: gapped ?? word.meaning,
-      hint: gapped ? word.meaning : 'Gõ từ tiếng Anh tương ứng',
+      prompt: gap?.gapped ?? word.meaning,
+      hint: gap ? word.meaning : 'Gõ từ tiếng Anh tương ứng',
       options: [],
       answer: word.word,
+      surface: gap?.surface,
+    }
+  }
+
+  if (mode === 'context') {
+    const gap = gapSentence(word)
+    // No sentence to reason from → the closest recall question is picking the
+    // English word for the meaning.
+    if (!gap) return makeQuestion(word, pool, 'vi-to-en')
+    const distractors = chooseDistractors(word, pool, 3, (w) => w.word)
+    return {
+      wordId: word.id,
+      mode,
+      prompt: gap.gapped,
+      hint: word.exampleVi || word.meaning,
+      options: shuffle([
+        { text: word.word, correct: true, wordId: word.id },
+        ...distractors.map((d) => ({ text: d.word, correct: false, wordId: d.id })),
+      ]),
+      answer: word.word,
+      surface: gap.surface,
     }
   }
 
@@ -178,11 +208,16 @@ export function generateQuiz(config: QuizConfig): QuizQuestion[] {
   })
 }
 
-/** Flexible answer check for typing ('fill') questions. */
-export function checkFillAnswer(word: Word, input: string): boolean {
+/**
+ * Flexible answer check for typing questions. Any form of a slashed headword
+ * counts, and so does the exact form the sentence used (`surface`) — typing
+ * "hands" into "Wash your _____." is as right as typing "hand".
+ */
+export function checkFillAnswer(word: Word, input: string, surface?: string): boolean {
   const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ')
   const target = norm(input)
   if (!target) return false
   const forms = word.word.split('/').map((s) => norm(s))
+  if (surface) forms.push(norm(surface))
   return forms.some((f) => f === target)
 }
