@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
+import { findWordInSentence } from './wordForms'
 
 // Guards the shipped English pack against the F2 regression: the file once
 // claimed 1000 words but held only 374 unique ones (the rest were exact
@@ -77,6 +78,19 @@ describe('en.json pronunciation coverage', () => {
     ).toEqual([])
   })
 
+  // A rewritten example with its old clip is worse than no clip: the learner
+  // hears one sentence while reading another. generate_audio.py records which
+  // sentence each clip was made from and re-records any that changed.
+  it('every example clip says the sentence the card shows', () => {
+    const recorded: Record<string, string> = JSON.parse(
+      readFileSync(url('../../scripts/audio-texts/en.json'), 'utf-8')
+    )
+    const stale = pack.words
+      .filter((w) => recorded[String(w.id)] !== w.exampleEn)
+      .map((w) => `${w.id}:${w.word}`)
+    expect(stale, 'chạy lại scripts/generate_audio.py').toEqual([])
+  })
+
   it('every word has a headword + example clip for every voice', () => {
     const missing: string[] = []
     for (const v of manifest.voices) {
@@ -88,5 +102,39 @@ describe('en.json pronunciation coverage', () => {
       }
     }
     expect(missing.slice(0, 20), `thiếu ${missing.length} file audio`).toEqual([])
+  })
+})
+
+// The depth fields are optional, but when present they must be usable as-is.
+describe('en.json depth fields', () => {
+  it('collocations, family, tip and emoji have the expected shape', () => {
+    const bad: string[] = []
+    const pairs = (v: unknown, a: string, b: string) =>
+      Array.isArray(v) &&
+      v.length > 0 &&
+      v.every(
+        (x) =>
+          x &&
+          typeof x === 'object' &&
+          typeof (x as Record<string, unknown>)[a] === 'string' &&
+          typeof (x as Record<string, unknown>)[b] === 'string'
+      )
+    for (const w of pack.words) {
+      if (w.collocations !== undefined && !pairs(w.collocations, 'en', 'vi'))
+        bad.push(`${w.id} collocations`)
+      if (w.family !== undefined && !pairs(w.family, 'word', 'vi')) bad.push(`${w.id} family`)
+      if (w.tip !== undefined && !w.tip.trim()) bad.push(`${w.id} tip`)
+      if (w.emoji !== undefined && !w.emoji.trim()) bad.push(`${w.id} emoji`)
+    }
+    expect(bad).toEqual([])
+  })
+
+  it('every collocation actually contains its word, so it teaches the word', () => {
+    const bad = pack.words.flatMap((w) =>
+      (w.collocations ?? [])
+        .filter((c) => !findWordInSentence(w.word, c.en, w.posCategory))
+        .map((c) => `${w.id}:${w.word} → "${c.en}"`)
+    )
+    expect(bad).toEqual([])
   })
 })

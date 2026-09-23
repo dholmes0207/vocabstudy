@@ -9,3 +9,6 @@ public/audio/
 
 # Keeps package-lock.json byte-identical to what npm writes.
 package-lock.json
+
+# Record of the sentence each example clip was recorded from (generate_audio.py).
+scripts/audio-texts/
