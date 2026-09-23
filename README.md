@@ -13,22 +13,23 @@ Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker**
 
 ## ✨ Tính năng
 
-| Nhóm                | Chi tiết                                                                                                                                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 🏠 **Trang chủ**    | Kế hoạch hôm nay (từ cần ôn / từ mới), vòng tiến độ, streak & XP.                                                                                                                                      |
-| 📖 **Học từ mới**   | Thẻ lật 3D, phát âm, câu ví dụ Anh–Việt; tự đánh giá "Nhớ / Chưa". Chia **50 bộ ~20 từ**.                                                                                                              |
-| 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng theo lịch **Ngày 1 → 2 → 5 → 14 → 30**. Mỗi ngày tự chọn danh sách cần ôn.                                                                                                          |
-| 🎯 **Kiểm tra**     | 5 dạng quiz: Anh→Việt, Việt→Anh, Nghe→chọn, **Đánh vần (gõ từ ✍️)**, Điền từ vào câu. Phản hồi tức thì + âm thanh.                                                                                     |
-| ✍️ **Đánh vần**     | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS.                                                         |
-| 🎙️ **Luyện nói**    | **Ghi âm giọng mình**, nghe đối chiếu A/B với giọng mẫu, chấm điểm **0–100** tự động. 3 mức khó. Kết quả nạp vào SRS.                                                                                  |
-| 📚 **Tra cứu**      | Tìm kiếm & lọc toàn bộ 1000 từ theo từ loại và trạng thái học.                                                                                                                                         |
-| 📈 **Thống kê**     | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**.                                                                                                                     |
-| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **15 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                            |
-| 🤖 **Trợ lý AI**    | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh. |
-| 🎚️ **Trình độ**     | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10").                                                                                                                   |
-| ⚙️ **Cài đặt**      | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục.                                                                                           |
+| Nhóm                | Chi tiết                                                                                                                                                                                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🏠 **Trang chủ**    | Kế hoạch hôm nay (từ cần ôn / từ mới), vòng tiến độ, streak & XP.                                                                                                                                          |
+| 📖 **Học từ mới**   | Từng **nhóm 5 từ**: _Làm quen_ (phát âm, câu ví dụ, cụm hay đi chung, từ cùng họ, mẹo nhớ) → _Luyện nhớ_ ngay (chọn nghĩa, rồi chọn từ hợp với câu). Sai thì được giảng và làm lại. Chia **50 bộ ~20 từ**. |
+| 🔁 **Ôn tập (SRS)** | Lặp lại ngắt quãng **Ngày 1 → 2 → 5 → 14 → 30**. Mặc định **tự nhớ lại**, câu hỏi khó dần theo tuổi thẻ (chọn nghĩa → chọn từ → gõ từ); quên thì học lại ngay trong buổi. Vẫn có kiểu **Lật thẻ**.         |
+| 🎯 **Kiểm tra**     | 6 dạng: Anh→Việt, Việt→Anh, Nghe→chọn, **Chọn từ hợp với câu**, Gõ từ vào câu, **Đánh vần ✍️**. Sai thì giảng: _"Bạn chọn X — đó là nghĩa của từ Y"_ + thẻ tóm tắt từ đúng.                                |
+| ✍️ **Đánh vần**     | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS.                                                             |
+| 🎙️ **Luyện nói**    | **Ghi âm giọng mình**, nghe đối chiếu A/B với giọng mẫu, chấm điểm **0–100** tự động. 3 mức khó. Kết quả nạp vào SRS.                                                                                      |
+| 📚 **Tra cứu**      | Tìm kiếm & lọc 1000 từ theo từ loại và trạng thái; mở một từ để xem cụm đi kèm, từ cùng họ, mẹo và **tự đặt câu**.                                                                                         |
+| ✍️ **Câu của bạn**  | Tự đặt 1 câu với từ mới (chỉ lưu khi câu thật sự dùng từ đó); câu được nhắc lại mỗi khi gặp lại từ; đã đăng nhập thì **nhờ AI xem câu** bằng một chạm.                                                     |
+| 📈 **Thống kê**     | Phân bố bậc ghi nhớ, hoạt động 14 ngày, độ chính xác, streak, XP, **huy hiệu 🏅**.                                                                                                                         |
+| 🏅 **Gamification** | Streak 🔥, điểm XP ⭐, **15 huy hiệu** theo cột mốc, **pháo giấy 🎉** khi hoàn thành phiên.                                                                                                                |
+| 🤖 **Trợ lý AI**    | **Bong bóng nổi** ở mọi trang (OpenAI **o4-mini**), **đọc ngữ cảnh** trang đang xem + **cá nhân hoá theo trình độ** (5 bậc). Có **guardrail** từ chối ngoài phạm vi, và **phân quyền** admin/học sinh.     |
+| 🎚️ **Trình độ**     | Tự đánh giá 5 bậc (A1→C1) từ tiến độ; trợ lý giảng theo mức ("học 1 hiểu 2/3/5/10").                                                                                                                       |
+| ⚙️ **Cài đặt**      | Giao diện sáng/tối, giọng đọc, hạn mức từ/ngày, tốc độ đọc, trình độ, quản lý AI (admin), sao lưu/khôi phục.                                                                                               |
 
-**Phương pháp học** được nhúng vào sản phẩm theo đúng tài liệu gốc: _Lặp lại ngắt quãng (SRS)_, _Học theo ngữ cảnh & câu ví dụ_, _Active Recall (10–15 từ/ngày)_, _Phân loại theo từ loại/bộ_.
+**Phương pháp học** — _học sâu, nhớ lâu_ cho người mất gốc (thiết kế: [`docs/design/learning-depth.md`](docs/design/learning-depth.md)): _tự nhớ lại_ thay cho tự chấm, _độ khó tăng dần_ theo độ "già" của thẻ, _giãn cách thật_ (trả lời đúng khi chưa tới hạn không làm từ "thành thạo" nhanh hơn), _sai là để học_ (giảng + làm lại trong buổi), _học trong ngữ cảnh & cụm từ_, _tự tạo câu_, và emoji minh hoạ cho từ cụ thể.
 
 ### 🔤 Phiên âm & cách đọc
 
@@ -127,6 +128,18 @@ edge-tts --list-voices                                  # xem toàn bộ giọng
 ```
 
 Script **bỏ qua file đã có** (chạy lại an toàn) và tạo `<voiceKey>/wN.mp3` (từ) + `<voiceKey>/eN.mp3` (câu ví dụ) trong `public/audio/<code>/`, kèm manifest `index.json`. Sửa danh sách giọng ở biến `VOICES` trong script.
+
+Câu mà mỗi clip ví dụ được đọc từ đó được ghi ở `scripts/audio-texts/<code>.json`: **sửa câu ví dụ rồi chạy lại script là nó tự đọc lại đúng clip đó** (mọi giọng). Test dataset fail nếu clip lệch câu; app gắn `?v=<hash câu>` vào URL clip nên người học không nghe nhầm bản cũ trong cache.
+
+### Sửa / bổ sung nội dung một từ
+
+```bash
+python3 scripts/patch_words.py patch.json --dry-run   # xem trước
+python3 scripts/patch_words.py patch.json             # ghi vào public/data/en.json
+python3 scripts/generate_audio.py                     # nếu có đổi câu ví dụ
+```
+
+`patch.json` là `{ "<id>": { "meaning": …, "exampleEn": …, "exampleVi": …, "collocations": [{"en","vi"}], "family": [{"word","vi"}], "tip": …, "emoji": … } }`. Script từ chối cả patch nếu có id lạ, đổi `id`/`word`, hoặc sai kiểu dữ liệu. Test kiểm tra thêm: mỗi câu ví dụ và mỗi cụm đi kèm phải chứa đúng từ đó.
 
 ### Tạo lại phiên âm / cách đọc (tuỳ chọn)
 
@@ -238,8 +251,10 @@ Kiến trúc "language pack" cho phép thêm ngôn ngữ **không cần sửa lo
 ## 🧠 Thuật toán SRS (tóm tắt)
 
 - 5 bậc khoảng cách ôn: `INTERVALS = [1, 2, 5, 14, 30]` ngày.
-- Trả lời **đúng** → lên 1 bậc, hẹn ôn sau `INTERVALS[bậc]` ngày. Qua hết 5 bậc → **thành thạo**.
-- Trả lời **sai** → về bậc 0, ôn lại ngay hôm nay.
+- Trả lời **đúng khi đã tới hạn** → lên 1 bậc, hẹn ôn sau `INTERVALS[bậc]` ngày. Qua hết 5 bậc → **thành thạo**.
+- Trả lời **đúng khi chưa tới hạn** (làm quiz, lượt thứ hai trong buổi học) → được tính lượt đúng & XP nhưng **không đổi bậc/lịch** — chống "nhồi" ra thành thạo giả.
+- Trả lời **sai** (bất cứ lúc nào) → về bậc 0, ôn lại ngay hôm nay; học lại đúng trong ngày → mai ôn.
+- Dạng câu hỏi khi ôn theo bậc: 0–1 chọn nghĩa/nghe · 2–3 chọn từ/chọn từ hợp câu · ≥4 gõ từ vào câu/đánh vần (`src/lib/practice.ts`).
 - "Cần ôn hôm nay" = thẻ đã học, chưa thành thạo, có `dueDay ≤ hôm nay`.
 - Giới hạn từ mới/ngày mặc định **15** (chỉnh trong Cài đặt).
 
