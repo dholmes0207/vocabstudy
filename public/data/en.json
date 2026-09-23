@@ -14872,7 +14872,29 @@
       "posCategory": "verb",
       "meaning": "cảm ơn",
       "exampleEn": "Thank you for your help.",
-      "exampleVi": "Cảm ơn bạn đã giúp đỡ."
+      "exampleVi": "Cảm ơn bạn đã giúp đỡ.",
+      "collocations": [
+        {
+          "en": "thank you",
+          "vi": "cảm ơn bạn"
+        },
+        {
+          "en": "thanks a lot",
+          "vi": "cảm ơn nhiều"
+        },
+        {
+          "en": "thank you for",
+          "vi": "cảm ơn vì"
+        }
+      ],
+      "family": [
+        {
+          "word": "thankful",
+          "vi": "biết ơn"
+        }
+      ],
+      "tip": "thank you for + V-ing/danh từ: Thank you for helping me. Đáp lại: You're welcome / No problem.",
+      "emoji": "🙏"
     },
     {
       "id": 876,
@@ -14883,7 +14905,22 @@
       "posCategory": "adjective",
       "meaning": "dày",
       "exampleEn": "This book is very thick.",
-      "exampleVi": "Quyển sách này rất dày."
+      "exampleVi": "Quyển sách này rất dày.",
+      "collocations": [
+        {
+          "en": "a thick book",
+          "vi": "cuốn sách dày"
+        },
+        {
+          "en": "thick fog",
+          "vi": "sương mù dày đặc"
+        },
+        {
+          "en": "thick hair",
+          "vi": "tóc dày"
+        }
+      ],
+      "tip": "thick (dày) ↔ thin (mỏng). Âm th thổi hơi qua răng: 'thik' — đừng đọc 'tích'."
     },
     {
       "id": 877,
@@ -14894,7 +14931,22 @@
       "posCategory": "adjective",
       "meaning": "mỏng; gầy",
       "exampleEn": "The ice is too thin.",
-      "exampleVi": "Lớp băng quá mỏng."
+      "exampleVi": "Lớp băng quá mỏng.",
+      "collocations": [
+        {
+          "en": "thin and tall",
+          "vi": "gầy và cao"
+        },
+        {
+          "en": "a thin slice",
+          "vi": "lát mỏng"
+        },
+        {
+          "en": "get thin",
+          "vi": "gầy đi"
+        }
+      ],
+      "tip": "thin vừa là 'mỏng' vừa là 'gầy'. Khen ai thon thả, lịch sự hơn: slim."
     },
     {
       "id": 878,
@@ -14905,7 +14957,28 @@
       "posCategory": "determiner",
       "meaning": "thứ ba",
       "exampleEn": "My room is on the third floor.",
-      "exampleVi": "Phòng tôi ở tầng ba."
+      "exampleVi": "Phòng tôi ở tầng ba.",
+      "collocations": [
+        {
+          "en": "third floor",
+          "vi": "tầng ba"
+        },
+        {
+          "en": "third time",
+          "vi": "lần thứ ba"
+        },
+        {
+          "en": "one third",
+          "vi": "một phần ba"
+        }
+      ],
+      "family": [
+        {
+          "word": "three",
+          "vi": "ba"
+        }
+      ],
+      "tip": "Ba số thứ tự đặc biệt: first, second, third. Từ số 4 thêm -th: fourth, fifth…"
     },
     {
       "id": 879,
@@ -14916,7 +14989,22 @@
       "posCategory": "determiner",
       "meaning": "những cái đó, những người đó",
       "exampleEn": "Those books are mine.",
-      "exampleVi": "Những quyển sách đó là của tôi."
+      "exampleVi": "Những quyển sách đó là của tôi.",
+      "collocations": [
+        {
+          "en": "those days",
+          "vi": "những ngày đó"
+        },
+        {
+          "en": "those shoes",
+          "vi": "đôi giày kia"
+        },
+        {
+          "en": "those who",
+          "vi": "những ai"
+        }
+      ],
+      "tip": "those = số nhiều của that (những cái kia, ở xa). Gần mình thì dùng these."
     },
     {
       "id": 880,
@@ -14927,7 +15015,22 @@
       "posCategory": "conjunction",
       "meaning": "mặc dù",
       "exampleEn": "Though it is late, he is still working.",
-      "exampleVi": "Mặc dù đã muộn, anh ấy vẫn đang làm việc."
+      "exampleVi": "Mặc dù đã muộn, anh ấy vẫn đang làm việc.",
+      "collocations": [
+        {
+          "en": "even though",
+          "vi": "mặc dù"
+        },
+        {
+          "en": "as though",
+          "vi": "như thể"
+        },
+        {
+          "en": "I like it, though",
+          "vi": "dù vậy tôi vẫn thích"
+        }
+      ],
+      "tip": "though ở cuối câu nói thường = 'dù vậy': It's expensive. I like it, though. gh câm: đọc 'đâu'."
     },
     {
       "id": 881,
@@ -14938,7 +15041,22 @@
       "posCategory": "determiner",
       "meaning": "một nghìn",
       "exampleEn": "This app teaches one thousand words.",
-      "exampleVi": "Ứng dụng này dạy một nghìn từ."
+      "exampleVi": "Ứng dụng này dạy một nghìn từ.",
+      "collocations": [
+        {
+          "en": "a thousand",
+          "vi": "một nghìn"
+        },
+        {
+          "en": "a thousand times",
+          "vi": "cả nghìn lần"
+        },
+        {
+          "en": "two thousand dong",
+          "vi": "hai nghìn đồng"
+        }
+      ],
+      "tip": "Giống hundred: two thousand ✓ (two thousands ✗). Chỉ 'hàng nghìn' mới thêm s: thousands of people."
     },
     {
       "id": 882,
@@ -14949,7 +15067,22 @@
       "posCategory": "verb",
       "meaning": "ném",
       "exampleEn": "He throws the ball to me.",
-      "exampleVi": "Cậu ấy ném quả bóng cho tôi."
+      "exampleVi": "Cậu ấy ném quả bóng cho tôi.",
+      "collocations": [
+        {
+          "en": "throw away",
+          "vi": "vứt đi"
+        },
+        {
+          "en": "throw a ball",
+          "vi": "ném bóng"
+        },
+        {
+          "en": "throw a party",
+          "vi": "tổ chức tiệc"
+        }
+      ],
+      "tip": "throw – threw – thrown. throw away = vứt bỏ: Don't throw away plastic bottles."
     },
     {
       "id": 883,
@@ -14960,7 +15093,23 @@
       "posCategory": "noun",
       "meaning": "cà vạt; buộc, thắt",
       "exampleEn": "He wears a blue tie to work.",
-      "exampleVi": "Anh ấy đeo cà vạt xanh đi làm."
+      "exampleVi": "Anh ấy đeo cà vạt xanh đi làm.",
+      "collocations": [
+        {
+          "en": "wear a tie",
+          "vi": "đeo cà vạt"
+        },
+        {
+          "en": "tie your shoes",
+          "vi": "buộc dây giày"
+        },
+        {
+          "en": "a tie game",
+          "vi": "trận hòa"
+        }
+      ],
+      "tip": "tie còn nghĩa 'hòa' trong thi đấu: The game ended in a tie. -ing: tying (ie → y).",
+      "emoji": "👔"
     },
     {
       "id": 884,
@@ -14971,7 +15120,29 @@
       "posCategory": "adjective",
       "meaning": "mệt",
       "exampleEn": "I am tired after a long day.",
-      "exampleVi": "Tôi mệt sau một ngày dài."
+      "exampleVi": "Tôi mệt sau một ngày dài.",
+      "collocations": [
+        {
+          "en": "I'm tired",
+          "vi": "tôi mệt"
+        },
+        {
+          "en": "tired of",
+          "vi": "chán"
+        },
+        {
+          "en": "dead tired",
+          "vi": "mệt rã rời"
+        }
+      ],
+      "family": [
+        {
+          "word": "tiring",
+          "vi": "gây mệt mỏi"
+        }
+      ],
+      "tip": "I'm tired (người cảm thấy) ≠ It's tiring (việc gây mệt). tired of = chán ngấy: I'm tired of waiting.",
+      "emoji": "😩"
     },
     {
       "id": 885,
@@ -14982,7 +15153,22 @@
       "posCategory": "adverb",
       "meaning": "cùng nhau",
       "exampleEn": "We study together every evening.",
-      "exampleVi": "Chúng tôi học cùng nhau mỗi tối."
+      "exampleVi": "Chúng tôi học cùng nhau mỗi tối.",
+      "collocations": [
+        {
+          "en": "work together",
+          "vi": "làm việc cùng nhau"
+        },
+        {
+          "en": "get together",
+          "vi": "tụ họp"
+        },
+        {
+          "en": "all together",
+          "vi": "tất cả cùng nhau"
+        }
+      ],
+      "tip": "Mẹo nhớ chính tả: to + get + her → together. get-together = buổi họp mặt."
     },
     {
       "id": 886,
@@ -14993,7 +15179,22 @@
       "posCategory": "adverb",
       "meaning": "ngày mai",
       "exampleEn": "Tomorrow is my birthday.",
-      "exampleVi": "Ngày mai là sinh nhật tôi."
+      "exampleVi": "Ngày mai là sinh nhật tôi.",
+      "collocations": [
+        {
+          "en": "see you tomorrow",
+          "vi": "mai gặp nhé"
+        },
+        {
+          "en": "tomorrow morning",
+          "vi": "sáng mai"
+        },
+        {
+          "en": "the day after tomorrow",
+          "vi": "ngày kia"
+        }
+      ],
+      "tip": "tomorrow không cần giới từ: I'll call you tomorrow ✓ (on tomorrow ✗). Ngày kia = the day after tomorrow."
     },
     {
       "id": 887,
@@ -15004,7 +15205,29 @@
       "posCategory": "adverb",
       "meaning": "tối nay",
       "exampleEn": "We watch a movie tonight.",
-      "exampleVi": "Tối nay chúng tôi xem phim."
+      "exampleVi": "Tối nay chúng tôi xem phim.",
+      "collocations": [
+        {
+          "en": "see you tonight",
+          "vi": "tối nay gặp nhé"
+        },
+        {
+          "en": "tonight's dinner",
+          "vi": "bữa tối nay"
+        },
+        {
+          "en": "what's on tonight?",
+          "vi": "tối nay có gì?"
+        }
+      ],
+      "family": [
+        {
+          "word": "night",
+          "vi": "đêm"
+        }
+      ],
+      "tip": "tonight = tối nay (không nói this night). Không cần giới từ: I'm free tonight.",
+      "emoji": "🌙"
     },
     {
       "id": 888,
@@ -15015,7 +15238,37 @@
       "posCategory": "noun",
       "meaning": "cái răng",
       "exampleEn": "Brush your teeth after meals.",
-      "exampleVi": "Hãy đánh răng sau bữa ăn."
+      "exampleVi": "Hãy đánh răng sau bữa ăn.",
+      "collocations": [
+        {
+          "en": "brush your teeth",
+          "vi": "đánh răng"
+        },
+        {
+          "en": "a sweet tooth",
+          "vi": "thích đồ ngọt"
+        },
+        {
+          "en": "a loose tooth",
+          "vi": "răng lung lay"
+        }
+      ],
+      "family": [
+        {
+          "word": "teeth",
+          "vi": "số nhiều của tooth"
+        },
+        {
+          "word": "toothbrush",
+          "vi": "bàn chải đánh răng"
+        },
+        {
+          "word": "toothpaste",
+          "vi": "kem đánh răng"
+        }
+      ],
+      "tip": "Số nhiều bất quy tắc: tooth → teeth (như foot → feet). have a sweet tooth = hảo ngọt.",
+      "emoji": "🦷"
     },
     {
       "id": 889,
@@ -15026,7 +15279,22 @@
       "posCategory": "verb",
       "meaning": "chạm vào",
       "exampleEn": "Please don't touch the glass.",
-      "exampleVi": "Làm ơn đừng chạm vào tấm kính."
+      "exampleVi": "Làm ơn đừng chạm vào tấm kính.",
+      "collocations": [
+        {
+          "en": "don't touch",
+          "vi": "đừng chạm vào"
+        },
+        {
+          "en": "keep in touch",
+          "vi": "giữ liên lạc"
+        },
+        {
+          "en": "touch screen",
+          "vi": "màn hình cảm ứng"
+        }
+      ],
+      "tip": "keep in touch = giữ liên lạc. touch đọc 'tắt-ch', ou đọc như 'ă'."
     },
     {
       "id": 890,
@@ -15037,7 +15305,22 @@
       "posCategory": "preposition",
       "meaning": "về phía",
       "exampleEn": "He walks toward the door.",
-      "exampleVi": "Anh ấy đi về phía cửa."
+      "exampleVi": "Anh ấy đi về phía cửa.",
+      "collocations": [
+        {
+          "en": "walk toward",
+          "vi": "đi về phía"
+        },
+        {
+          "en": "toward the end",
+          "vi": "về cuối"
+        },
+        {
+          "en": "toward the sea",
+          "vi": "hướng ra biển"
+        }
+      ],
+      "tip": "Mỹ viết toward, Anh viết towards — đều đúng. Chỉ hướng di chuyển, chưa chắc đã đến nơi."
     },
     {
       "id": 891,
@@ -15048,7 +15331,32 @@
       "posCategory": "noun",
       "meaning": "thị trấn",
       "exampleEn": "There is only one bank in our town.",
-      "exampleVi": "Thị trấn của chúng tôi chỉ có một ngân hàng."
+      "exampleVi": "Thị trấn của chúng tôi chỉ có một ngân hàng.",
+      "collocations": [
+        {
+          "en": "in town",
+          "vi": "trong thị trấn"
+        },
+        {
+          "en": "small town",
+          "vi": "thị trấn nhỏ"
+        },
+        {
+          "en": "go into town",
+          "vi": "vào phố"
+        }
+      ],
+      "family": [
+        {
+          "word": "downtown",
+          "vi": "trung tâm thành phố"
+        },
+        {
+          "word": "hometown",
+          "vi": "quê nhà"
+        }
+      ],
+      "tip": "town lớn hơn village (làng), nhỏ hơn city (thành phố). hometown = quê nhà."
     },
     {
       "id": 892,
@@ -15059,7 +15367,33 @@
       "posCategory": "noun",
       "meaning": "tàu hoả",
       "exampleEn": "The train leaves at eight.",
-      "exampleVi": "Tàu khởi hành lúc tám giờ."
+      "exampleVi": "Tàu khởi hành lúc tám giờ.",
+      "collocations": [
+        {
+          "en": "by train",
+          "vi": "bằng tàu hỏa"
+        },
+        {
+          "en": "catch a train",
+          "vi": "bắt kịp chuyến tàu"
+        },
+        {
+          "en": "train station",
+          "vi": "ga tàu"
+        }
+      ],
+      "family": [
+        {
+          "word": "training",
+          "vi": "sự đào tạo"
+        },
+        {
+          "word": "trainer",
+          "vi": "huấn luyện viên"
+        }
+      ],
+      "tip": "Động từ train = tập luyện, đào tạo: train hard. Đi tàu: by train (không có the).",
+      "emoji": "🚆"
     },
     {
       "id": 893,
@@ -15070,7 +15404,29 @@
       "posCategory": "verb",
       "meaning": "đi du lịch, đi xa",
       "exampleEn": "I want to travel to Japan.",
-      "exampleVi": "Tôi muốn đi du lịch Nhật Bản."
+      "exampleVi": "Tôi muốn đi du lịch Nhật Bản.",
+      "collocations": [
+        {
+          "en": "travel abroad",
+          "vi": "đi nước ngoài"
+        },
+        {
+          "en": "travel by plane",
+          "vi": "đi bằng máy bay"
+        },
+        {
+          "en": "travel agency",
+          "vi": "công ty du lịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "traveler",
+          "vi": "du khách"
+        }
+      ],
+      "tip": "travel là động từ/danh từ chung; một chuyến cụ thể là a trip: I love travel / How was your trip?",
+      "emoji": "🧳"
     },
     {
       "id": 894,
@@ -15081,7 +15437,23 @@
       "posCategory": "noun",
       "meaning": "chuyến đi",
       "exampleEn": "We plan a trip to the beach.",
-      "exampleVi": "Chúng tôi lên kế hoạch cho chuyến đi biển."
+      "exampleVi": "Chúng tôi lên kế hoạch cho chuyến đi biển.",
+      "collocations": [
+        {
+          "en": "a business trip",
+          "vi": "chuyến công tác"
+        },
+        {
+          "en": "take a trip",
+          "vi": "đi một chuyến"
+        },
+        {
+          "en": "round trip",
+          "vi": "chuyến khứ hồi"
+        }
+      ],
+      "tip": "Đi một chuyến = take/go on a trip (không nói make a trip). Have a nice trip! = Chúc đi vui vẻ!",
+      "emoji": "🧳"
     },
     {
       "id": 895,
@@ -15092,7 +15464,22 @@
       "posCategory": "noun",
       "meaning": "rắc rối",
       "exampleEn": "I have trouble with this word.",
-      "exampleVi": "Tôi gặp khó khăn với từ này."
+      "exampleVi": "Tôi gặp khó khăn với từ này.",
+      "collocations": [
+        {
+          "en": "in trouble",
+          "vi": "gặp rắc rối"
+        },
+        {
+          "en": "no trouble",
+          "vi": "không phiền gì"
+        },
+        {
+          "en": "have trouble with",
+          "vi": "gặp khó khăn với"
+        }
+      ],
+      "tip": "have trouble + V-ing: I have trouble sleeping (Tôi khó ngủ). It's no trouble = Không phiền gì đâu."
     },
     {
       "id": 896,
@@ -15103,7 +15490,32 @@
       "posCategory": "adjective",
       "meaning": "đúng, thật",
       "exampleEn": "That story is true.",
-      "exampleVi": "Câu chuyện đó là thật."
+      "exampleVi": "Câu chuyện đó là thật.",
+      "collocations": [
+        {
+          "en": "that's true",
+          "vi": "đúng vậy"
+        },
+        {
+          "en": "come true",
+          "vi": "thành sự thật"
+        },
+        {
+          "en": "a true story",
+          "vi": "chuyện có thật"
+        }
+      ],
+      "family": [
+        {
+          "word": "truth",
+          "vi": "sự thật"
+        },
+        {
+          "word": "truly",
+          "vi": "thật sự"
+        }
+      ],
+      "tip": "Dreams come true = Giấc mơ thành hiện thực. Danh từ: truth (tell the truth = nói thật)."
     },
     {
       "id": 897,
@@ -15114,7 +15526,32 @@
       "posCategory": "determiner",
       "meaning": "số mười hai",
       "exampleEn": "Lunch is at twelve o'clock.",
-      "exampleVi": "Bữa trưa lúc mười hai giờ."
+      "exampleVi": "Bữa trưa lúc mười hai giờ.",
+      "collocations": [
+        {
+          "en": "twelve o'clock",
+          "vi": "mười hai giờ"
+        },
+        {
+          "en": "twelve months",
+          "vi": "mười hai tháng"
+        },
+        {
+          "en": "twelve years old",
+          "vi": "mười hai tuổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "twelfth",
+          "vi": "thứ mười hai"
+        },
+        {
+          "word": "dozen",
+          "vi": "một tá (12)"
+        }
+      ],
+      "tip": "twelve → twelfth (ve đổi thành f). a dozen = một tá (12 cái): a dozen eggs."
     },
     {
       "id": 898,
@@ -15125,7 +15562,28 @@
       "posCategory": "determiner",
       "meaning": "số hai mươi",
       "exampleEn": "There are twenty words in this set.",
-      "exampleVi": "Có hai mươi từ trong bộ này."
+      "exampleVi": "Có hai mươi từ trong bộ này.",
+      "collocations": [
+        {
+          "en": "twenty years",
+          "vi": "hai mươi năm"
+        },
+        {
+          "en": "twenty minutes",
+          "vi": "hai mươi phút"
+        },
+        {
+          "en": "twenty-one",
+          "vi": "hai mươi mốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "twentieth",
+          "vi": "thứ hai mươi"
+        }
+      ],
+      "tip": "Số 21–99 có gạch nối: twenty-one, thirty-five. in my twenties = trong độ tuổi 20–29 (lúc này thêm -ies)."
     },
     {
       "id": 899,
@@ -15136,7 +15594,32 @@
       "posCategory": "noun",
       "meaning": "loại, kiểu; đánh máy",
       "exampleEn": "What type of music do you like?",
-      "exampleVi": "Bạn thích loại nhạc nào?"
+      "exampleVi": "Bạn thích loại nhạc nào?",
+      "collocations": [
+        {
+          "en": "blood type",
+          "vi": "nhóm máu"
+        },
+        {
+          "en": "type of music",
+          "vi": "thể loại nhạc"
+        },
+        {
+          "en": "type a message",
+          "vi": "gõ tin nhắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "typical",
+          "vi": "điển hình"
+        },
+        {
+          "word": "typist",
+          "vi": "người đánh máy"
+        }
+      ],
+      "tip": "type vừa là 'loại' (What type of…?) vừa là 'gõ phím'. He's not my type = Anh ấy không phải gu của tôi."
     },
     {
       "id": 900,
@@ -15147,7 +15630,22 @@
       "posCategory": "preposition",
       "meaning": "cho đến khi",
       "exampleEn": "I study until ten every night.",
-      "exampleVi": "Tôi học đến mười giờ mỗi tối."
+      "exampleVi": "Tôi học đến mười giờ mỗi tối.",
+      "collocations": [
+        {
+          "en": "until tomorrow",
+          "vi": "đến tận mai"
+        },
+        {
+          "en": "wait until",
+          "vi": "chờ đến khi"
+        },
+        {
+          "en": "not until",
+          "vi": "mãi đến khi… mới"
+        }
+      ],
+      "tip": "until + hiện tại để nói tương lai: Wait until I come back. Viết tắt thân mật: till."
     },
     {
       "id": 901,
@@ -15158,7 +15656,22 @@
       "posCategory": "preposition",
       "meaning": "trên, lên trên (trang trọng)",
       "exampleEn": "Once upon a time, there was a king.",
-      "exampleVi": "Ngày xửa ngày xưa, có một vị vua."
+      "exampleVi": "Ngày xửa ngày xưa, có một vị vua.",
+      "collocations": [
+        {
+          "en": "once upon a time",
+          "vi": "ngày xửa ngày xưa"
+        },
+        {
+          "en": "upon arrival",
+          "vi": "ngay khi đến"
+        },
+        {
+          "en": "depend upon",
+          "vi": "phụ thuộc vào"
+        }
+      ],
+      "tip": "upon = on nhưng trang trọng hơn. Gặp nhiều nhất trong Once upon a time… (mở đầu truyện cổ tích)."
     },
     {
       "id": 902,
@@ -15169,7 +15682,32 @@
       "posCategory": "adjective",
       "meaning": "thường lệ, như thường",
       "exampleEn": "I take the usual bus to work.",
-      "exampleVi": "Tôi đi chuyến xe buýt quen thuộc đến chỗ làm."
+      "exampleVi": "Tôi đi chuyến xe buýt quen thuộc đến chỗ làm.",
+      "collocations": [
+        {
+          "en": "as usual",
+          "vi": "như thường lệ"
+        },
+        {
+          "en": "than usual",
+          "vi": "hơn thường lệ"
+        },
+        {
+          "en": "the usual",
+          "vi": "như mọi khi (khi gọi món)"
+        }
+      ],
+      "family": [
+        {
+          "word": "usually",
+          "vi": "thường thường"
+        },
+        {
+          "word": "unusual",
+          "vi": "khác thường"
+        }
+      ],
+      "tip": "as usual = như mọi khi: He was late as usual. Khách quen gọi món: The usual, please!"
     },
     {
       "id": 903,
@@ -15180,7 +15718,29 @@
       "posCategory": "noun",
       "meaning": "ngôi làng",
       "exampleEn": "My grandparents live in a village.",
-      "exampleVi": "Ông bà tôi sống ở một ngôi làng."
+      "exampleVi": "Ông bà tôi sống ở một ngôi làng.",
+      "collocations": [
+        {
+          "en": "a small village",
+          "vi": "ngôi làng nhỏ"
+        },
+        {
+          "en": "village life",
+          "vi": "cuộc sống làng quê"
+        },
+        {
+          "en": "fishing village",
+          "vi": "làng chài"
+        }
+      ],
+      "family": [
+        {
+          "word": "villager",
+          "vi": "dân làng"
+        }
+      ],
+      "tip": "age cuối đọc 'ịch': 'vi-lịch'. village < town < city.",
+      "emoji": "🏘️"
     },
     {
       "id": 904,
@@ -15191,7 +15751,28 @@
       "posCategory": "verb",
       "meaning": "thăm, ghé thăm",
       "exampleEn": "I visit my family every month.",
-      "exampleVi": "Tôi về thăm gia đình mỗi tháng."
+      "exampleVi": "Tôi về thăm gia đình mỗi tháng.",
+      "collocations": [
+        {
+          "en": "visit my parents",
+          "vi": "thăm bố mẹ"
+        },
+        {
+          "en": "pay a visit",
+          "vi": "ghé thăm"
+        },
+        {
+          "en": "visit Hanoi",
+          "vi": "đi thăm Hà Nội"
+        }
+      ],
+      "family": [
+        {
+          "word": "visitor",
+          "vi": "khách tham quan"
+        }
+      ],
+      "tip": "visit đi thẳng với người/nơi: visit Hue ✓ (visit to Hue ✗ — trừ khi là danh từ: a visit to Hue)."
     },
     {
       "id": 905,
@@ -15202,7 +15783,33 @@
       "posCategory": "verb",
       "meaning": "đợi, chờ",
       "exampleEn": "Please wait for me here.",
-      "exampleVi": "Làm ơn đợi tôi ở đây."
+      "exampleVi": "Làm ơn đợi tôi ở đây.",
+      "collocations": [
+        {
+          "en": "wait for",
+          "vi": "chờ đợi"
+        },
+        {
+          "en": "wait a minute",
+          "vi": "chờ một chút"
+        },
+        {
+          "en": "can't wait",
+          "vi": "rất mong chờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "waiter",
+          "vi": "bồi bàn"
+        },
+        {
+          "word": "waiting room",
+          "vi": "phòng chờ"
+        }
+      ],
+      "tip": "wait for + người/vật: I'm waiting for the bus (wait the bus ✗). I can't wait! = Mong quá đi!",
+      "emoji": "⏳"
     },
     {
       "id": 906,
@@ -15213,7 +15820,33 @@
       "posCategory": "verb",
       "meaning": "thức dậy, đánh thức",
       "exampleEn": "Please wake me up at seven.",
-      "exampleVi": "Làm ơn đánh thức tôi lúc bảy giờ."
+      "exampleVi": "Làm ơn đánh thức tôi lúc bảy giờ.",
+      "collocations": [
+        {
+          "en": "wake up",
+          "vi": "thức dậy"
+        },
+        {
+          "en": "wake me up",
+          "vi": "đánh thức tôi"
+        },
+        {
+          "en": "wake up early",
+          "vi": "dậy sớm"
+        }
+      ],
+      "family": [
+        {
+          "word": "awake",
+          "vi": "thức"
+        },
+        {
+          "word": "awaken",
+          "vi": "đánh thức"
+        }
+      ],
+      "tip": "wake up = tỉnh giấc; get up = ra khỏi giường. wake – woke – woken.",
+      "emoji": "⏰"
     },
     {
       "id": 907,
@@ -15224,7 +15857,23 @@
       "posCategory": "noun",
       "meaning": "bức tường",
       "exampleEn": "There is a picture on the wall.",
-      "exampleVi": "Có một bức tranh trên tường."
+      "exampleVi": "Có một bức tranh trên tường.",
+      "collocations": [
+        {
+          "en": "on the wall",
+          "vi": "trên tường"
+        },
+        {
+          "en": "the Great Wall",
+          "vi": "Vạn Lý Trường Thành"
+        },
+        {
+          "en": "hit a wall",
+          "vi": "gặp bế tắc"
+        }
+      ],
+      "tip": "Tranh treo trên tường: on the wall. Tường rào bằng gạch cũng là wall; hàng rào gỗ là fence.",
+      "emoji": "🧱"
     },
     {
       "id": 908,
@@ -15235,7 +15884,22 @@
       "posCategory": "noun",
       "meaning": "chiến tranh",
       "exampleEn": "The war ended many years ago.",
-      "exampleVi": "Chiến tranh đã kết thúc từ nhiều năm trước."
+      "exampleVi": "Chiến tranh đã kết thúc từ nhiều năm trước.",
+      "collocations": [
+        {
+          "en": "world war",
+          "vi": "chiến tranh thế giới"
+        },
+        {
+          "en": "after the war",
+          "vi": "sau chiến tranh"
+        },
+        {
+          "en": "price war",
+          "vi": "cuộc chiến giá cả"
+        }
+      ],
+      "tip": "war đọc 'wo' (giống 'wore'), không đọc 'wa'. Trái nghĩa: peace."
     },
     {
       "id": 909,
@@ -15246,7 +15910,29 @@
       "posCategory": "adjective",
       "meaning": "ấm áp",
       "exampleEn": "The water is warm.",
-      "exampleVi": "Nước ấm."
+      "exampleVi": "Nước ấm.",
+      "collocations": [
+        {
+          "en": "warm weather",
+          "vi": "thời tiết ấm"
+        },
+        {
+          "en": "warm up",
+          "vi": "khởi động; hâm nóng"
+        },
+        {
+          "en": "a warm welcome",
+          "vi": "sự đón tiếp nồng hậu"
+        }
+      ],
+      "family": [
+        {
+          "word": "warmth",
+          "vi": "hơi ấm"
+        }
+      ],
+      "tip": "warm up = khởi động trước khi tập, hoặc hâm nóng đồ ăn. ar đọc 'o': 'wom'.",
+      "emoji": "🧣"
     },
     {
       "id": 910,
@@ -15257,7 +15943,22 @@
       "posCategory": "verb",
       "meaning": "rửa, giặt",
       "exampleEn": "I wash my car every Sunday.",
-      "exampleVi": "Chủ nhật nào tôi cũng rửa xe."
+      "exampleVi": "Chủ nhật nào tôi cũng rửa xe.",
+      "collocations": [
+        {
+          "en": "wash your hands",
+          "vi": "rửa tay"
+        },
+        {
+          "en": "wash the dishes",
+          "vi": "rửa bát"
+        },
+        {
+          "en": "washing machine",
+          "vi": "máy giặt"
+        }
+      ],
+      "tip": "wash dùng cho cả rửa lẫn giặt: wash clothes (giặt đồ). Rửa bát còn nói do the dishes."
     },
     {
       "id": 911,
@@ -15268,7 +15969,23 @@
       "posCategory": "verb",
       "meaning": "xem; đồng hồ đeo tay",
       "exampleEn": "We watch TV after dinner.",
-      "exampleVi": "Chúng tôi xem TV sau bữa tối."
+      "exampleVi": "Chúng tôi xem TV sau bữa tối.",
+      "collocations": [
+        {
+          "en": "watch TV",
+          "vi": "xem TV"
+        },
+        {
+          "en": "watch out!",
+          "vi": "coi chừng!"
+        },
+        {
+          "en": "wear a watch",
+          "vi": "đeo đồng hồ"
+        }
+      ],
+      "tip": "watch = xem chăm chú (TV, phim, trận đấu); see = tự nhiên thấy. Watch out! = Cẩn thận!",
+      "emoji": "⌚"
     },
     {
       "id": 912,
@@ -15279,7 +15996,23 @@
       "posCategory": "noun",
       "meaning": "nước",
       "exampleEn": "Drink a lot of water every day.",
-      "exampleVi": "Hãy uống nhiều nước mỗi ngày."
+      "exampleVi": "Hãy uống nhiều nước mỗi ngày.",
+      "collocations": [
+        {
+          "en": "drink water",
+          "vi": "uống nước"
+        },
+        {
+          "en": "a bottle of water",
+          "vi": "một chai nước"
+        },
+        {
+          "en": "hot water",
+          "vi": "nước nóng"
+        }
+      ],
+      "tip": "water không đếm được: some water, a glass of water. Mỹ đọc 'wo-đơ' (t đọc như đ nhẹ).",
+      "emoji": "💧"
     },
     {
       "id": 913,
@@ -15290,7 +16023,23 @@
       "posCategory": "noun",
       "meaning": "con sóng; vẫy tay",
       "exampleEn": "The waves are big today.",
-      "exampleVi": "Hôm nay sóng lớn."
+      "exampleVi": "Hôm nay sóng lớn.",
+      "collocations": [
+        {
+          "en": "wave goodbye",
+          "vi": "vẫy tay chào"
+        },
+        {
+          "en": "big waves",
+          "vi": "sóng lớn"
+        },
+        {
+          "en": "heat wave",
+          "vi": "đợt nắng nóng"
+        }
+      ],
+      "tip": "wave vừa là con sóng vừa là vẫy tay: She waved at me. heat wave = đợt nóng kéo dài.",
+      "emoji": "👋"
     },
     {
       "id": 914,
@@ -15301,7 +16050,22 @@
       "posCategory": "verb",
       "meaning": "mặc, đeo, đội",
       "exampleEn": "She wears a white shirt to work.",
-      "exampleVi": "Cô ấy mặc áo sơ mi trắng đi làm."
+      "exampleVi": "Cô ấy mặc áo sơ mi trắng đi làm.",
+      "collocations": [
+        {
+          "en": "wear a hat",
+          "vi": "đội mũ"
+        },
+        {
+          "en": "wear glasses",
+          "vi": "đeo kính"
+        },
+        {
+          "en": "what to wear",
+          "vi": "mặc gì"
+        }
+      ],
+      "tip": "wear dùng cho mọi thứ trên người: mặc áo, đội mũ, đeo kính, đi giày. wear = đang mặc; put on = mặc vào. Quá khứ: wore."
     },
     {
       "id": 915,
@@ -15312,7 +16076,23 @@
       "posCategory": "noun",
       "meaning": "thời tiết",
       "exampleEn": "The weather is nice today.",
-      "exampleVi": "Hôm nay thời tiết đẹp."
+      "exampleVi": "Hôm nay thời tiết đẹp.",
+      "collocations": [
+        {
+          "en": "good weather",
+          "vi": "thời tiết đẹp"
+        },
+        {
+          "en": "weather forecast",
+          "vi": "dự báo thời tiết"
+        },
+        {
+          "en": "under the weather",
+          "vi": "hơi mệt"
+        }
+      ],
+      "tip": "weather không đếm được: What's the weather like? (không nói a weather). under the weather = hơi ốm.",
+      "emoji": "🌦️"
     },
     {
       "id": 916,
@@ -15323,7 +16103,29 @@
       "posCategory": "noun",
       "meaning": "cân nặng, trọng lượng",
       "exampleEn": "What is the weight of this box?",
-      "exampleVi": "Cái hộp này nặng bao nhiêu?"
+      "exampleVi": "Cái hộp này nặng bao nhiêu?",
+      "collocations": [
+        {
+          "en": "lose weight",
+          "vi": "giảm cân"
+        },
+        {
+          "en": "gain weight",
+          "vi": "tăng cân"
+        },
+        {
+          "en": "your weight",
+          "vi": "cân nặng của bạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "weigh",
+          "vi": "cân nặng (động từ)"
+        }
+      ],
+      "tip": "gh câm: weight đọc 'wây-t', giống wait. Động từ: How much do you weigh?",
+      "emoji": "⚖️"
     },
     {
       "id": 917,
@@ -15334,7 +16136,22 @@
       "posCategory": "verb",
       "meaning": "chào đón; được hoan nghênh",
       "exampleEn": "Welcome to our school!",
-      "exampleVi": "Chào mừng bạn đến trường chúng tôi!"
+      "exampleVi": "Chào mừng bạn đến trường chúng tôi!",
+      "collocations": [
+        {
+          "en": "welcome to…",
+          "vi": "chào mừng đến…"
+        },
+        {
+          "en": "you're welcome",
+          "vi": "không có gì"
+        },
+        {
+          "en": "a warm welcome",
+          "vi": "sự đón tiếp nồng hậu"
+        }
+      ],
+      "tip": "You're welcome = Không có gì (đáp lại Thank you). Welcome to Vietnam! = Chào mừng đến Việt Nam!"
     },
     {
       "id": 918,
@@ -15345,7 +16162,29 @@
       "posCategory": "noun",
       "meaning": "hướng tây",
       "exampleEn": "The sun goes down in the west.",
-      "exampleVi": "Mặt trời lặn ở hướng tây."
+      "exampleVi": "Mặt trời lặn ở hướng tây.",
+      "collocations": [
+        {
+          "en": "the West",
+          "vi": "phương Tây"
+        },
+        {
+          "en": "west of",
+          "vi": "phía tây của"
+        },
+        {
+          "en": "go west",
+          "vi": "đi về phía tây"
+        }
+      ],
+      "family": [
+        {
+          "word": "western",
+          "vi": "thuộc phương tây"
+        }
+      ],
+      "tip": "Mặt trời lặn ở phía tây: The sun sets in the west. western food = đồ ăn Tây.",
+      "emoji": "🧭"
     },
     {
       "id": 919,
@@ -15356,7 +16195,23 @@
       "posCategory": "adjective",
       "meaning": "ướt",
       "exampleEn": "My shoes are wet from the rain.",
-      "exampleVi": "Giày tôi ướt vì mưa."
+      "exampleVi": "Giày tôi ướt vì mưa.",
+      "collocations": [
+        {
+          "en": "get wet",
+          "vi": "bị ướt"
+        },
+        {
+          "en": "wet paint",
+          "vi": "sơn còn ướt"
+        },
+        {
+          "en": "wet season",
+          "vi": "mùa mưa"
+        }
+      ],
+      "tip": "wet ↔ dry. Mùa mưa = the wet/rainy season. -ter: wetter (gấp đôi t).",
+      "emoji": "💦"
     },
     {
       "id": 920,
@@ -15367,7 +16222,29 @@
       "posCategory": "noun",
       "meaning": "bánh xe",
       "exampleEn": "A car has four wheels.",
-      "exampleVi": "Một chiếc ô tô có bốn bánh xe."
+      "exampleVi": "Một chiếc ô tô có bốn bánh xe.",
+      "collocations": [
+        {
+          "en": "steering wheel",
+          "vi": "vô lăng"
+        },
+        {
+          "en": "four wheels",
+          "vi": "bốn bánh xe"
+        },
+        {
+          "en": "at the wheel",
+          "vi": "cầm lái"
+        }
+      ],
+      "family": [
+        {
+          "word": "wheelchair",
+          "vi": "xe lăn"
+        }
+      ],
+      "tip": "wheelchair = xe lăn. wh đọc 'w': 'wi-l'.",
+      "emoji": "🛞"
     },
     {
       "id": 921,
@@ -15378,7 +16255,22 @@
       "posCategory": "conjunction",
       "meaning": "liệu có… hay không",
       "exampleEn": "I don't know whether she is at home.",
-      "exampleVi": "Tôi không biết liệu cô ấy có ở nhà không."
+      "exampleVi": "Tôi không biết liệu cô ấy có ở nhà không.",
+      "collocations": [
+        {
+          "en": "whether or not",
+          "vi": "dù có hay không"
+        },
+        {
+          "en": "ask whether",
+          "vi": "hỏi liệu"
+        },
+        {
+          "en": "whether you like it",
+          "vi": "dù bạn có thích"
+        }
+      ],
+      "tip": "whether (liệu… hay không) đọc giống weather (thời tiết). I don't know whether he will come."
     },
     {
       "id": 922,
@@ -15389,7 +16281,22 @@
       "posCategory": "conjunction",
       "meaning": "trong khi",
       "exampleEn": "He listens to music while he works.",
-      "exampleVi": "Anh ấy nghe nhạc trong khi làm việc."
+      "exampleVi": "Anh ấy nghe nhạc trong khi làm việc.",
+      "collocations": [
+        {
+          "en": "for a while",
+          "vi": "một lúc"
+        },
+        {
+          "en": "while I was sleeping",
+          "vi": "trong khi tôi đang ngủ"
+        },
+        {
+          "en": "once in a while",
+          "vi": "thỉnh thoảng"
+        }
+      ],
+      "tip": "while + câu (while I was cooking); during + danh từ (during dinner). once in a while = thỉnh thoảng."
     },
     {
       "id": 923,
@@ -15400,7 +16307,23 @@
       "posCategory": "adjective",
       "meaning": "màu trắng",
       "exampleEn": "The walls are white.",
-      "exampleVi": "Những bức tường màu trắng."
+      "exampleVi": "Những bức tường màu trắng.",
+      "collocations": [
+        {
+          "en": "white shirt",
+          "vi": "áo sơ mi trắng"
+        },
+        {
+          "en": "black and white",
+          "vi": "đen trắng"
+        },
+        {
+          "en": "white wine",
+          "vi": "rượu vang trắng"
+        }
+      ],
+      "tip": "wh đọc 'w', h câm: 'wai-t'. Người Anh nói black and white (đen trước, trắng sau).",
+      "emoji": "⚪"
     },
     {
       "id": 924,
@@ -15411,7 +16334,22 @@
       "posCategory": "adjective",
       "meaning": "toàn bộ, cả",
       "exampleEn": "He eats the whole cake.",
-      "exampleVi": "Cậu ấy ăn hết cả cái bánh."
+      "exampleVi": "Cậu ấy ăn hết cả cái bánh.",
+      "collocations": [
+        {
+          "en": "the whole day",
+          "vi": "cả ngày"
+        },
+        {
+          "en": "the whole world",
+          "vi": "cả thế giới"
+        },
+        {
+          "en": "as a whole",
+          "vi": "nói chung"
+        }
+      ],
+      "tip": "whole (toàn bộ) đọc giống hole (cái lỗ). the whole + danh từ số ít: the whole family."
     },
     {
       "id": 925,
@@ -15422,7 +16360,22 @@
       "posCategory": "determiner",
       "meaning": "của ai",
       "exampleEn": "Whose bag is this?",
-      "exampleVi": "Đây là túi của ai?"
+      "exampleVi": "Đây là túi của ai?",
+      "collocations": [
+        {
+          "en": "whose bag?",
+          "vi": "túi của ai?"
+        },
+        {
+          "en": "whose turn",
+          "vi": "lượt của ai"
+        },
+        {
+          "en": "the man whose car…",
+          "vi": "người đàn ông mà xe của anh ta…"
+        }
+      ],
+      "tip": "whose (của ai) đọc giống who's (= who is). Whose phone is this? — It's mine."
     },
     {
       "id": 926,
@@ -15433,7 +16386,36 @@
       "posCategory": "adjective",
       "meaning": "rộng",
       "exampleEn": "This street is very wide.",
-      "exampleVi": "Con phố này rất rộng."
+      "exampleVi": "Con phố này rất rộng.",
+      "collocations": [
+        {
+          "en": "a wide road",
+          "vi": "con đường rộng"
+        },
+        {
+          "en": "wide open",
+          "vi": "mở toang"
+        },
+        {
+          "en": "two meters wide",
+          "vi": "rộng hai mét"
+        }
+      ],
+      "family": [
+        {
+          "word": "width",
+          "vi": "chiều rộng"
+        },
+        {
+          "word": "widely",
+          "vi": "rộng rãi"
+        },
+        {
+          "word": "worldwide",
+          "vi": "khắp thế giới"
+        }
+      ],
+      "tip": "wide ↔ narrow (hẹp). Nói kích thước: The road is ten meters wide (rộng 10 mét)."
     },
     {
       "id": 927,
@@ -15444,7 +16426,32 @@
       "posCategory": "noun",
       "meaning": "người vợ",
       "exampleEn": "His wife is a doctor.",
-      "exampleVi": "Vợ anh ấy là bác sĩ."
+      "exampleVi": "Vợ anh ấy là bác sĩ.",
+      "collocations": [
+        {
+          "en": "my wife",
+          "vi": "vợ tôi"
+        },
+        {
+          "en": "husband and wife",
+          "vi": "vợ chồng"
+        },
+        {
+          "en": "his wife",
+          "vi": "vợ anh ấy"
+        }
+      ],
+      "family": [
+        {
+          "word": "wives",
+          "vi": "số nhiều của wife"
+        },
+        {
+          "word": "husband",
+          "vi": "chồng"
+        }
+      ],
+      "tip": "Số nhiều: wife → wives (f đổi thành ves), giống knife → knives, life → lives."
     },
     {
       "id": 928,
@@ -15455,7 +16462,29 @@
       "posCategory": "adjective",
       "meaning": "hoang dã",
       "exampleEn": "Wild animals live in the forest.",
-      "exampleVi": "Động vật hoang dã sống trong rừng."
+      "exampleVi": "Động vật hoang dã sống trong rừng.",
+      "collocations": [
+        {
+          "en": "wild animals",
+          "vi": "động vật hoang dã"
+        },
+        {
+          "en": "in the wild",
+          "vi": "ngoài tự nhiên"
+        },
+        {
+          "en": "go wild",
+          "vi": "phát cuồng, phấn khích"
+        }
+      ],
+      "family": [
+        {
+          "word": "wildlife",
+          "vi": "động vật hoang dã"
+        }
+      ],
+      "tip": "wild đọc 'wai-lđ'. The crowd went wild = Đám đông phấn khích tột độ.",
+      "emoji": "🐅"
     },
     {
       "id": 929,
@@ -15466,7 +16495,33 @@
       "posCategory": "noun",
       "meaning": "gió",
       "exampleEn": "The wind is strong today.",
-      "exampleVi": "Hôm nay gió mạnh."
+      "exampleVi": "Hôm nay gió mạnh.",
+      "collocations": [
+        {
+          "en": "strong wind",
+          "vi": "gió mạnh"
+        },
+        {
+          "en": "wind power",
+          "vi": "năng lượng gió"
+        },
+        {
+          "en": "in the wind",
+          "vi": "trong gió"
+        }
+      ],
+      "family": [
+        {
+          "word": "windy",
+          "vi": "có gió"
+        },
+        {
+          "word": "window",
+          "vi": "cửa sổ"
+        }
+      ],
+      "tip": "wind (gió) đọc 'win-đ'; động từ wind (lên dây cót, uốn khúc) đọc 'wai-nđ'. It's windy = trời nhiều gió.",
+      "emoji": "🌬️"
     },
     {
       "id": 930,
@@ -15477,7 +16532,23 @@
       "posCategory": "noun",
       "meaning": "cửa sổ",
       "exampleEn": "Please close the window.",
-      "exampleVi": "Làm ơn đóng cửa sổ lại."
+      "exampleVi": "Làm ơn đóng cửa sổ lại.",
+      "collocations": [
+        {
+          "en": "open the window",
+          "vi": "mở cửa sổ"
+        },
+        {
+          "en": "window seat",
+          "vi": "ghế cạnh cửa sổ"
+        },
+        {
+          "en": "look out of the window",
+          "vi": "nhìn ra ngoài cửa sổ"
+        }
+      ],
+      "tip": "look out of the window = nhìn ra ngoài cửa sổ. window shopping = đi ngắm hàng (không mua).",
+      "emoji": "🪟"
     },
     {
       "id": 931,
@@ -15488,7 +16559,23 @@
       "posCategory": "noun",
       "meaning": "rượu vang",
       "exampleEn": "They drink red wine at dinner.",
-      "exampleVi": "Họ uống rượu vang đỏ trong bữa tối."
+      "exampleVi": "Họ uống rượu vang đỏ trong bữa tối.",
+      "collocations": [
+        {
+          "en": "red wine",
+          "vi": "vang đỏ"
+        },
+        {
+          "en": "a glass of wine",
+          "vi": "một ly rượu vang"
+        },
+        {
+          "en": "wine and dine",
+          "vi": "chiêu đãi"
+        }
+      ],
+      "tip": "wine là rượu vang (nho); rượu mạnh là spirits, bia là beer. Đọc 'wai-n'.",
+      "emoji": "🍷"
     },
     {
       "id": 932,
@@ -15499,7 +16586,23 @@
       "posCategory": "noun",
       "meaning": "cánh (chim, máy bay)",
       "exampleEn": "The bird has a broken wing.",
-      "exampleVi": "Con chim bị gãy một bên cánh."
+      "exampleVi": "Con chim bị gãy một bên cánh.",
+      "collocations": [
+        {
+          "en": "bird's wings",
+          "vi": "cánh chim"
+        },
+        {
+          "en": "chicken wings",
+          "vi": "cánh gà"
+        },
+        {
+          "en": "take under your wing",
+          "vi": "che chở ai"
+        }
+      ],
+      "tip": "chicken wings = cánh gà (món nhậu). wing còn là cánh (khu) của tòa nhà: the east wing.",
+      "emoji": "🪽"
     },
     {
       "id": 933,
@@ -15510,7 +16613,23 @@
       "posCategory": "noun",
       "meaning": "mùa đông",
       "exampleEn": "It is cold in winter.",
-      "exampleVi": "Trời lạnh vào mùa đông."
+      "exampleVi": "Trời lạnh vào mùa đông.",
+      "collocations": [
+        {
+          "en": "in winter",
+          "vi": "vào mùa đông"
+        },
+        {
+          "en": "cold winter",
+          "vi": "mùa đông lạnh"
+        },
+        {
+          "en": "winter clothes",
+          "vi": "quần áo mùa đông"
+        }
+      ],
+      "tip": "Tên mùa không viết hoa: winter, spring, summer, autumn (fall).",
+      "emoji": "⛄"
     },
     {
       "id": 934,
@@ -15521,7 +16640,28 @@
       "posCategory": "noun",
       "meaning": "dây kim loại, dây điện",
       "exampleEn": "Don't touch that wire.",
-      "exampleVi": "Đừng chạm vào sợi dây điện đó."
+      "exampleVi": "Đừng chạm vào sợi dây điện đó.",
+      "collocations": [
+        {
+          "en": "electric wire",
+          "vi": "dây điện"
+        },
+        {
+          "en": "wire fence",
+          "vi": "hàng rào dây thép"
+        },
+        {
+          "en": "cut the wire",
+          "vi": "cắt dây"
+        }
+      ],
+      "family": [
+        {
+          "word": "wireless",
+          "vi": "không dây"
+        }
+      ],
+      "tip": "wire + less (không) = wireless: không dây (wireless headphones = tai nghe không dây)."
     },
     {
       "id": 935,
@@ -15532,7 +16672,32 @@
       "posCategory": "adjective",
       "meaning": "khôn ngoan, sáng suốt",
       "exampleEn": "My grandfather is a wise man.",
-      "exampleVi": "Ông tôi là một người khôn ngoan."
+      "exampleVi": "Ông tôi là một người khôn ngoan.",
+      "collocations": [
+        {
+          "en": "a wise man",
+          "vi": "người khôn ngoan"
+        },
+        {
+          "en": "a wise choice",
+          "vi": "lựa chọn sáng suốt"
+        },
+        {
+          "en": "wise words",
+          "vi": "lời khôn ngoan"
+        }
+      ],
+      "family": [
+        {
+          "word": "wisdom",
+          "vi": "sự khôn ngoan"
+        },
+        {
+          "word": "wisely",
+          "vi": "một cách khôn ngoan"
+        }
+      ],
+      "tip": "wise → wisdom (danh từ). Không giống clever (lanh lợi) — wise là khôn ngoan nhờ trải nghiệm."
     },
     {
       "id": 936,
@@ -15543,7 +16708,22 @@
       "posCategory": "verb",
       "meaning": "ước, mong",
       "exampleEn": "I wish you a happy birthday.",
-      "exampleVi": "Tôi chúc bạn sinh nhật vui vẻ."
+      "exampleVi": "Tôi chúc bạn sinh nhật vui vẻ.",
+      "collocations": [
+        {
+          "en": "best wishes",
+          "vi": "những lời chúc tốt đẹp"
+        },
+        {
+          "en": "make a wish",
+          "vi": "ước một điều"
+        },
+        {
+          "en": "I wish you…",
+          "vi": "chúc bạn…"
+        }
+      ],
+      "tip": "wish = chúc hoặc ước: I wish you a happy new year. Ước điều không có thật: I wish I were rich."
     },
     {
       "id": 937,
@@ -15554,7 +16734,22 @@
       "posCategory": "preposition",
       "meaning": "trong vòng, trong phạm vi",
       "exampleEn": "Please answer within two days.",
-      "exampleVi": "Làm ơn trả lời trong vòng hai ngày."
+      "exampleVi": "Làm ơn trả lời trong vòng hai ngày.",
+      "collocations": [
+        {
+          "en": "within a week",
+          "vi": "trong vòng một tuần"
+        },
+        {
+          "en": "within walking distance",
+          "vi": "đi bộ được"
+        },
+        {
+          "en": "within reach",
+          "vi": "trong tầm với"
+        }
+      ],
+      "tip": "within + thời gian = không quá: Reply within 24 hours (Trả lời trong vòng 24 giờ)."
     },
     {
       "id": 938,
@@ -15565,7 +16760,22 @@
       "posCategory": "preposition",
       "meaning": "không có, thiếu",
       "exampleEn": "I can't read without my glasses.",
-      "exampleVi": "Tôi không đọc được nếu không có kính."
+      "exampleVi": "Tôi không đọc được nếu không có kính.",
+      "collocations": [
+        {
+          "en": "coffee without sugar",
+          "vi": "cà phê không đường"
+        },
+        {
+          "en": "without you",
+          "vi": "không có bạn"
+        },
+        {
+          "en": "without saying goodbye",
+          "vi": "không chào tạm biệt"
+        }
+      ],
+      "tip": "without + V-ing: He left without saying anything. Trái nghĩa: with."
     },
     {
       "id": 939,
@@ -15576,7 +16786,33 @@
       "posCategory": "noun",
       "meaning": "người phụ nữ",
       "exampleEn": "The woman is my teacher.",
-      "exampleVi": "Người phụ nữ đó là cô giáo của tôi."
+      "exampleVi": "Người phụ nữ đó là cô giáo của tôi.",
+      "collocations": [
+        {
+          "en": "a young woman",
+          "vi": "một phụ nữ trẻ"
+        },
+        {
+          "en": "a woman doctor",
+          "vi": "nữ bác sĩ"
+        },
+        {
+          "en": "an old woman",
+          "vi": "một bà cụ"
+        }
+      ],
+      "family": [
+        {
+          "word": "women",
+          "vi": "số nhiều của woman"
+        },
+        {
+          "word": "man",
+          "vi": "đàn ông"
+        }
+      ],
+      "tip": "woman đọc 'wu-mần', còn women (số nhiều) đọc 'wi-mìn' — viết khác một chữ mà đọc khác hẳn.",
+      "emoji": "👩"
     },
     {
       "id": 940,
@@ -15587,7 +16823,29 @@
       "posCategory": "noun",
       "meaning": "những người phụ nữ (số nhiều của 'woman')",
       "exampleEn": "Three women work in this office.",
-      "exampleVi": "Ba người phụ nữ làm việc ở văn phòng này."
+      "exampleVi": "Ba người phụ nữ làm việc ở văn phòng này.",
+      "collocations": [
+        {
+          "en": "men and women",
+          "vi": "nam và nữ"
+        },
+        {
+          "en": "women's day",
+          "vi": "ngày Phụ nữ"
+        },
+        {
+          "en": "young women",
+          "vi": "những phụ nữ trẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "woman",
+          "vi": "một người phụ nữ"
+        }
+      ],
+      "tip": "women là số nhiều của woman, đọc 'wi-mìn'. Ngày 8/3 = International Women's Day.",
+      "emoji": "👩‍👩"
     },
     {
       "id": 941,
@@ -15598,7 +16856,28 @@
       "posCategory": "verb",
       "meaning": "tự hỏi, băn khoăn",
       "exampleEn": "I wonder where she is.",
-      "exampleVi": "Tôi tự hỏi cô ấy đang ở đâu."
+      "exampleVi": "Tôi tự hỏi cô ấy đang ở đâu.",
+      "collocations": [
+        {
+          "en": "I wonder why",
+          "vi": "tôi tự hỏi tại sao"
+        },
+        {
+          "en": "no wonder",
+          "vi": "thảo nào"
+        },
+        {
+          "en": "the wonders of nature",
+          "vi": "những kỳ quan thiên nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "wonderful",
+          "vi": "tuyệt vời"
+        }
+      ],
+      "tip": "No wonder! = Thảo nào! wonderful = full of wonder (đầy kỳ diệu) = tuyệt vời."
     },
     {
       "id": 942,
@@ -15609,7 +16888,29 @@
       "posCategory": "noun",
       "meaning": "gỗ",
       "exampleEn": "The table is made of wood.",
-      "exampleVi": "Cái bàn được làm bằng gỗ."
+      "exampleVi": "Cái bàn được làm bằng gỗ.",
+      "collocations": [
+        {
+          "en": "made of wood",
+          "vi": "làm bằng gỗ"
+        },
+        {
+          "en": "a piece of wood",
+          "vi": "một mẩu gỗ"
+        },
+        {
+          "en": "in the woods",
+          "vi": "trong rừng"
+        }
+      ],
+      "family": [
+        {
+          "word": "wooden",
+          "vi": "bằng gỗ"
+        }
+      ],
+      "tip": "wood (gỗ) không đếm được; the woods = khu rừng nhỏ. Tính từ: wooden (a wooden table).",
+      "emoji": "🪵"
     },
     {
       "id": 943,
@@ -15620,7 +16921,29 @@
       "posCategory": "verb",
       "meaning": "lo lắng",
       "exampleEn": "Don't worry, everything is fine.",
-      "exampleVi": "Đừng lo, mọi chuyện đều ổn."
+      "exampleVi": "Đừng lo, mọi chuyện đều ổn.",
+      "collocations": [
+        {
+          "en": "don't worry",
+          "vi": "đừng lo"
+        },
+        {
+          "en": "worry about",
+          "vi": "lo lắng về"
+        },
+        {
+          "en": "no worries",
+          "vi": "không sao đâu"
+        }
+      ],
+      "family": [
+        {
+          "word": "worried",
+          "vi": "lo lắng"
+        }
+      ],
+      "tip": "worry about + điều lo: Don't worry about me. I'm worried = Tôi đang lo.",
+      "emoji": "😟"
     },
     {
       "id": 944,
@@ -15631,7 +16954,22 @@
       "posCategory": "adjective",
       "meaning": "sai",
       "exampleEn": "My answer is wrong.",
-      "exampleVi": "Câu trả lời của tôi sai rồi."
+      "exampleVi": "Câu trả lời của tôi sai rồi.",
+      "collocations": [
+        {
+          "en": "wrong answer",
+          "vi": "câu trả lời sai"
+        },
+        {
+          "en": "what's wrong?",
+          "vi": "có chuyện gì vậy?"
+        },
+        {
+          "en": "go wrong",
+          "vi": "hỏng, trục trặc"
+        }
+      ],
+      "tip": "w câm: wrong đọc 'rong'. What's wrong? = Có chuyện gì thế? (khi thấy ai đó buồn/lo)."
     },
     {
       "id": 945,
@@ -15642,7 +16980,22 @@
       "posCategory": "noun",
       "meaning": "cái sân",
       "exampleEn": "The children play in the yard.",
-      "exampleVi": "Bọn trẻ chơi ngoài sân."
+      "exampleVi": "Bọn trẻ chơi ngoài sân.",
+      "collocations": [
+        {
+          "en": "in the yard",
+          "vi": "ngoài sân"
+        },
+        {
+          "en": "the front yard",
+          "vi": "sân trước"
+        },
+        {
+          "en": "play in the yard",
+          "vi": "chơi ngoài sân"
+        }
+      ],
+      "tip": "yard còn là đơn vị đo (≈ 0,9 m). Mỹ gọi sân vườn nhà mình là the yard."
     },
     {
       "id": 946,
@@ -15653,7 +17006,23 @@
       "posCategory": "adjective",
       "meaning": "màu vàng",
       "exampleEn": "The sun looks yellow in the picture.",
-      "exampleVi": "Mặt trời trông màu vàng trong bức tranh."
+      "exampleVi": "Mặt trời trông màu vàng trong bức tranh.",
+      "collocations": [
+        {
+          "en": "yellow flowers",
+          "vi": "hoa vàng"
+        },
+        {
+          "en": "light yellow",
+          "vi": "vàng nhạt"
+        },
+        {
+          "en": "the yellow line",
+          "vi": "vạch vàng"
+        }
+      ],
+      "tip": "Màu vàng là yellow, còn vàng (kim loại) là gold. Đọc 'ye-lâu'.",
+      "emoji": "🟡"
     },
     {
       "id": 947,
@@ -15664,7 +17033,22 @@
       "posCategory": "adverb",
       "meaning": "vâng, đúng vậy",
       "exampleEn": "Yes, I understand the lesson.",
-      "exampleVi": "Vâng, tôi hiểu bài học."
+      "exampleVi": "Vâng, tôi hiểu bài học.",
+      "collocations": [
+        {
+          "en": "yes, please",
+          "vi": "vâng, cho tôi xin"
+        },
+        {
+          "en": "say yes",
+          "vi": "đồng ý"
+        },
+        {
+          "en": "yes or no",
+          "vi": "có hay không"
+        }
+      ],
+      "tip": "Câu hỏi phủ định trả lời theo sự thật: Don't you like it? — Yes (= tôi CÓ thích) / No (= tôi không thích). Khác cách trả lời 'có/không' của tiếng Việt!"
     },
     {
       "id": 948,
@@ -15675,7 +17059,22 @@
       "posCategory": "adverb",
       "meaning": "hôm qua",
       "exampleEn": "I studied English yesterday.",
-      "exampleVi": "Hôm qua tôi đã học tiếng Anh."
+      "exampleVi": "Hôm qua tôi đã học tiếng Anh.",
+      "collocations": [
+        {
+          "en": "yesterday morning",
+          "vi": "sáng hôm qua"
+        },
+        {
+          "en": "the day before yesterday",
+          "vi": "hôm kia"
+        },
+        {
+          "en": "only yesterday",
+          "vi": "mới hôm qua thôi"
+        }
+      ],
+      "tip": "yesterday không cần giới từ: I saw him yesterday (on yesterday ✗). Động từ chia quá khứ."
     },
     {
       "id": 949,
@@ -15686,7 +17085,22 @@
       "posCategory": "adverb",
       "meaning": "chưa; vẫn chưa",
       "exampleEn": "I have not finished my homework yet.",
-      "exampleVi": "Tôi vẫn chưa làm xong bài tập."
+      "exampleVi": "Tôi vẫn chưa làm xong bài tập.",
+      "collocations": [
+        {
+          "en": "not yet",
+          "vi": "chưa"
+        },
+        {
+          "en": "have you eaten yet?",
+          "vi": "bạn ăn chưa?"
+        },
+        {
+          "en": "yet again",
+          "vi": "lại một lần nữa"
+        }
+      ],
+      "tip": "yet dùng trong câu hỏi và phủ định, đặt cuối câu: Have you finished yet? — Not yet (Chưa)."
     },
     {
       "id": 950,
@@ -15697,7 +17111,32 @@
       "posCategory": "adjective",
       "meaning": "trẻ",
       "exampleEn": "She is young and healthy.",
-      "exampleVi": "Cô ấy trẻ và khoẻ mạnh."
+      "exampleVi": "Cô ấy trẻ và khoẻ mạnh.",
+      "collocations": [
+        {
+          "en": "young people",
+          "vi": "giới trẻ"
+        },
+        {
+          "en": "when I was young",
+          "vi": "khi tôi còn trẻ"
+        },
+        {
+          "en": "young at heart",
+          "vi": "trẻ trung trong tâm hồn"
+        }
+      ],
+      "family": [
+        {
+          "word": "youth",
+          "vi": "tuổi trẻ"
+        },
+        {
+          "word": "younger",
+          "vi": "trẻ hơn; em (younger brother)"
+        }
+      ],
+      "tip": "young đọc 'yăng' (ou như 'ă'). younger brother = em trai."
     },
     {
       "id": 951,
@@ -15708,7 +17147,23 @@
       "posCategory": "determiner",
       "meaning": "số không",
       "exampleEn": "The temperature is zero today.",
-      "exampleVi": "Hôm nay nhiệt độ là không độ."
+      "exampleVi": "Hôm nay nhiệt độ là không độ.",
+      "collocations": [
+        {
+          "en": "zero degrees",
+          "vi": "không độ"
+        },
+        {
+          "en": "below zero",
+          "vi": "dưới 0 độ"
+        },
+        {
+          "en": "zero waste",
+          "vi": "không rác thải"
+        }
+      ],
+      "tip": "Số 0 có nhiều cách đọc: zero (chung), oh (trong số điện thoại: 0912 = 'oh nine one two'), nil (tỉ số bóng đá, Anh).",
+      "emoji": "0️⃣"
     },
     {
       "id": 952,
@@ -15719,7 +17174,22 @@
       "posCategory": "noun",
       "meaning": "cô, dì, bác gái",
       "exampleEn": "My aunt lives near my house.",
-      "exampleVi": "Cô tôi sống gần nhà tôi."
+      "exampleVi": "Cô tôi sống gần nhà tôi.",
+      "collocations": [
+        {
+          "en": "my aunt",
+          "vi": "cô/dì tôi"
+        },
+        {
+          "en": "aunt and uncle",
+          "vi": "cô chú, dì dượng"
+        },
+        {
+          "en": "an aunt of mine",
+          "vi": "một người cô của tôi"
+        }
+      ],
+      "tip": "Tiếng Anh gộp cô, dì, bác gái, mợ… thành một từ aunt. Mỹ đọc 'en-t', Anh đọc 'an-t'."
     },
     {
       "id": 953,
@@ -15730,7 +17200,22 @@
       "posCategory": "noun",
       "meaning": "chú, bác, cậu",
       "exampleEn": "My uncle is a taxi driver.",
-      "exampleVi": "Chú tôi là tài xế taxi."
+      "exampleVi": "Chú tôi là tài xế taxi.",
+      "collocations": [
+        {
+          "en": "my uncle",
+          "vi": "chú/bác tôi"
+        },
+        {
+          "en": "uncle and aunt",
+          "vi": "chú thím, cậu mợ"
+        },
+        {
+          "en": "Uncle Ho",
+          "vi": "Bác Hồ"
+        }
+      ],
+      "tip": "Tiếng Anh gộp chú, bác, cậu, dượng… thành một từ uncle. Bác Hồ = Uncle Ho."
     },
     {
       "id": 954,
@@ -15741,7 +17226,23 @@
       "posCategory": "noun",
       "meaning": "sinh nhật",
       "exampleEn": "Happy birthday to you!",
-      "exampleVi": "Chúc mừng sinh nhật bạn!"
+      "exampleVi": "Chúc mừng sinh nhật bạn!",
+      "collocations": [
+        {
+          "en": "happy birthday",
+          "vi": "chúc mừng sinh nhật"
+        },
+        {
+          "en": "birthday party",
+          "vi": "tiệc sinh nhật"
+        },
+        {
+          "en": "birthday cake",
+          "vi": "bánh sinh nhật"
+        }
+      ],
+      "tip": "Ngày sinh nhật dùng on: on my birthday. birth (sự ra đời) + day = birthday.",
+      "emoji": "🎂"
     },
     {
       "id": 955,
@@ -15752,7 +17253,29 @@
       "posCategory": "noun",
       "meaning": "đồng hồ (treo, để bàn)",
       "exampleEn": "The clock on the wall is slow.",
-      "exampleVi": "Cái đồng hồ trên tường chạy chậm."
+      "exampleVi": "Cái đồng hồ trên tường chạy chậm.",
+      "collocations": [
+        {
+          "en": "alarm clock",
+          "vi": "đồng hồ báo thức"
+        },
+        {
+          "en": "around the clock",
+          "vi": "suốt ngày đêm"
+        },
+        {
+          "en": "the clock is fast",
+          "vi": "đồng hồ chạy nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "o'clock",
+          "vi": "giờ đúng"
+        }
+      ],
+      "tip": "clock là đồng hồ treo tường/để bàn; đồng hồ đeo tay là watch. seven o'clock = 7 giờ đúng.",
+      "emoji": "🕰️"
     },
     {
       "id": 956,
@@ -15763,7 +17286,23 @@
       "posCategory": "noun",
       "meaning": "quần áo",
       "exampleEn": "I wash my clothes on Sunday.",
-      "exampleVi": "Tôi giặt quần áo vào Chủ nhật."
+      "exampleVi": "Tôi giặt quần áo vào Chủ nhật.",
+      "collocations": [
+        {
+          "en": "new clothes",
+          "vi": "quần áo mới"
+        },
+        {
+          "en": "change clothes",
+          "vi": "thay đồ"
+        },
+        {
+          "en": "clothes shop",
+          "vi": "cửa hàng quần áo"
+        }
+      ],
+      "tip": "clothes luôn số nhiều, không có a clothe. Đọc 'klâu-đz' (không đọc 'clô-thịt').",
+      "emoji": "👕"
     },
     {
       "id": 957,
@@ -15774,7 +17313,28 @@
       "posCategory": "adjective",
       "meaning": "rẻ",
       "exampleEn": "This shirt is cheap and nice.",
-      "exampleVi": "Chiếc áo này rẻ mà đẹp."
+      "exampleVi": "Chiếc áo này rẻ mà đẹp.",
+      "collocations": [
+        {
+          "en": "cheap price",
+          "vi": "giá rẻ"
+        },
+        {
+          "en": "dirt cheap",
+          "vi": "rẻ như cho"
+        },
+        {
+          "en": "cheap and good",
+          "vi": "ngon bổ rẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheaply",
+          "vi": "một cách rẻ"
+        }
+      ],
+      "tip": "cheap ↔ expensive. Muốn lịch sự khi mặc cả: Can you make it cheaper? (Bớt chút được không?)"
     },
     {
       "id": 958,
@@ -15785,7 +17345,22 @@
       "posCategory": "adjective",
       "meaning": "đắt",
       "exampleEn": "That phone is too expensive for me.",
-      "exampleVi": "Chiếc điện thoại đó quá đắt với tôi."
+      "exampleVi": "Chiếc điện thoại đó quá đắt với tôi.",
+      "collocations": [
+        {
+          "en": "too expensive",
+          "vi": "đắt quá"
+        },
+        {
+          "en": "an expensive car",
+          "vi": "chiếc xe đắt tiền"
+        },
+        {
+          "en": "very expensive",
+          "vi": "rất đắt"
+        }
+      ],
+      "tip": "Không nói more cheap, nhưng phải nói more expensive (tính từ dài): Gold is more expensive than silver."
     },
     {
       "id": 959,
@@ -15796,7 +17371,23 @@
       "posCategory": "noun",
       "meaning": "bệnh viện",
       "exampleEn": "My sister works in a hospital.",
-      "exampleVi": "Chị tôi làm việc trong bệnh viện."
+      "exampleVi": "Chị tôi làm việc trong bệnh viện.",
+      "collocations": [
+        {
+          "en": "go to hospital",
+          "vi": "vào viện"
+        },
+        {
+          "en": "in hospital",
+          "vi": "đang nằm viện"
+        },
+        {
+          "en": "hospital bed",
+          "vi": "giường bệnh"
+        }
+      ],
+      "tip": "Anh nói in hospital (không the) = đang nằm viện; Mỹ nói in the hospital. h đọc rõ: 'hót-pi-tồ'.",
+      "emoji": "🏥"
     },
     {
       "id": 960,
@@ -15807,7 +17398,33 @@
       "posCategory": "noun",
       "meaning": "điện thoại",
       "exampleEn": "I study English on my phone.",
-      "exampleVi": "Tôi học tiếng Anh trên điện thoại."
+      "exampleVi": "Tôi học tiếng Anh trên điện thoại.",
+      "collocations": [
+        {
+          "en": "phone number",
+          "vi": "số điện thoại"
+        },
+        {
+          "en": "on the phone",
+          "vi": "đang nghe điện thoại"
+        },
+        {
+          "en": "phone call",
+          "vi": "cuộc gọi"
+        }
+      ],
+      "family": [
+        {
+          "word": "smartphone",
+          "vi": "điện thoại thông minh"
+        },
+        {
+          "word": "headphones",
+          "vi": "tai nghe"
+        }
+      ],
+      "tip": "ph đọc 'f': 'phâu-n'. Động từ phone = gọi điện: I'll phone you later.",
+      "emoji": "📱"
     },
     {
       "id": 961,
@@ -15818,7 +17435,23 @@
       "posCategory": "noun",
       "meaning": "nhà hàng",
       "exampleEn": "We eat at a small restaurant.",
-      "exampleVi": "Chúng tôi ăn ở một nhà hàng nhỏ."
+      "exampleVi": "Chúng tôi ăn ở một nhà hàng nhỏ.",
+      "collocations": [
+        {
+          "en": "a Vietnamese restaurant",
+          "vi": "nhà hàng Việt"
+        },
+        {
+          "en": "go to a restaurant",
+          "vi": "đi ăn nhà hàng"
+        },
+        {
+          "en": "restaurant bill",
+          "vi": "hóa đơn nhà hàng"
+        }
+      ],
+      "tip": "Chính tả khó: restaurant (có au). Đọc 'rét-sờ-rân(t)', nhấn âm đầu.",
+      "emoji": "🍽️"
     },
     {
       "id": 962,
@@ -15829,7 +17462,23 @@
       "posCategory": "noun",
       "meaning": "cảnh sát",
       "exampleEn": "The police help people every day.",
-      "exampleVi": "Cảnh sát giúp đỡ mọi người mỗi ngày."
+      "exampleVi": "Cảnh sát giúp đỡ mọi người mỗi ngày.",
+      "collocations": [
+        {
+          "en": "call the police",
+          "vi": "gọi cảnh sát"
+        },
+        {
+          "en": "police officer",
+          "vi": "cảnh sát viên"
+        },
+        {
+          "en": "police station",
+          "vi": "đồn công an"
+        }
+      ],
+      "tip": "police luôn là số nhiều: The police ARE coming. Một người là a police officer.",
+      "emoji": "👮"
     },
     {
       "id": 963,
@@ -15840,7 +17489,23 @@
       "posCategory": "noun",
       "meaning": "cuối tuần",
       "exampleEn": "I visit my parents at the weekend.",
-      "exampleVi": "Tôi về thăm bố mẹ vào cuối tuần."
+      "exampleVi": "Tôi về thăm bố mẹ vào cuối tuần.",
+      "collocations": [
+        {
+          "en": "at the weekend",
+          "vi": "vào cuối tuần (Anh)"
+        },
+        {
+          "en": "on the weekend",
+          "vi": "vào cuối tuần (Mỹ)"
+        },
+        {
+          "en": "have a nice weekend",
+          "vi": "cuối tuần vui vẻ"
+        }
+      ],
+      "tip": "Anh nói at the weekend, Mỹ nói on the weekend — đều đúng. Have a nice weekend! = câu chào thứ Sáu.",
+      "emoji": "🗓️"
     },
     {
       "id": 964,
@@ -15851,7 +17516,23 @@
       "posCategory": "noun",
       "meaning": "con gà; thịt gà",
       "exampleEn": "We eat chicken and rice for lunch.",
-      "exampleVi": "Chúng tôi ăn cơm gà vào bữa trưa."
+      "exampleVi": "Chúng tôi ăn cơm gà vào bữa trưa.",
+      "collocations": [
+        {
+          "en": "fried chicken",
+          "vi": "gà rán"
+        },
+        {
+          "en": "chicken soup",
+          "vi": "súp gà"
+        },
+        {
+          "en": "chicken rice",
+          "vi": "cơm gà"
+        }
+      ],
+      "tip": "chicken vừa là con gà vừa là thịt gà (không đếm được khi là thịt: some chicken). Người nhát gan cũng bị gọi là chicken.",
+      "emoji": "🐔"
     },
     {
       "id": 965,
@@ -15862,7 +17543,29 @@
       "posCategory": "noun",
       "meaning": "rau củ",
       "exampleEn": "Eat more vegetables every day.",
-      "exampleVi": "Hãy ăn nhiều rau hơn mỗi ngày."
+      "exampleVi": "Hãy ăn nhiều rau hơn mỗi ngày.",
+      "collocations": [
+        {
+          "en": "fresh vegetables",
+          "vi": "rau tươi"
+        },
+        {
+          "en": "vegetable soup",
+          "vi": "canh rau"
+        },
+        {
+          "en": "eat your vegetables",
+          "vi": "ăn rau đi"
+        }
+      ],
+      "family": [
+        {
+          "word": "vegetarian",
+          "vi": "người ăn chay"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: vegetables (nói tắt veggies). Đọc 3 âm tiết 'vé-giơ-tơ-bồ'. Người ăn chay = vegetarian.",
+      "emoji": "🥦"
     },
     {
       "id": 966,
@@ -15873,7 +17576,22 @@
       "posCategory": "pronoun",
       "meaning": "mọi người, tất cả mọi người",
       "exampleEn": "Everyone in my class studies hard.",
-      "exampleVi": "Mọi người trong lớp tôi đều học chăm."
+      "exampleVi": "Mọi người trong lớp tôi đều học chăm.",
+      "collocations": [
+        {
+          "en": "hello everyone",
+          "vi": "chào mọi người"
+        },
+        {
+          "en": "everyone knows",
+          "vi": "ai cũng biết"
+        },
+        {
+          "en": "everyone else",
+          "vi": "mọi người khác"
+        }
+      ],
+      "tip": "everyone đi với động từ số ít: Everyone IS here ✓ (Everyone are ✗). = everybody."
     },
     {
       "id": 967,
@@ -15884,7 +17602,22 @@
       "posCategory": "pronoun",
       "meaning": "mọi thứ",
       "exampleEn": "Everything is ready for the party.",
-      "exampleVi": "Mọi thứ đã sẵn sàng cho bữa tiệc."
+      "exampleVi": "Mọi thứ đã sẵn sàng cho bữa tiệc.",
+      "collocations": [
+        {
+          "en": "everything is fine",
+          "vi": "mọi thứ ổn cả"
+        },
+        {
+          "en": "thanks for everything",
+          "vi": "cảm ơn vì tất cả"
+        },
+        {
+          "en": "everything else",
+          "vi": "mọi thứ khác"
+        }
+      ],
+      "tip": "everything đi với động từ số ít: Everything is ready. Money isn't everything = Tiền không phải là tất cả."
     },
     {
       "id": 968,
@@ -15895,7 +17628,29 @@
       "posCategory": "adjective",
       "meaning": "yêu thích nhất",
       "exampleEn": "Blue is my favorite color.",
-      "exampleVi": "Xanh dương là màu tôi thích nhất."
+      "exampleVi": "Xanh dương là màu tôi thích nhất.",
+      "collocations": [
+        {
+          "en": "my favorite food",
+          "vi": "món ăn yêu thích"
+        },
+        {
+          "en": "favorite color",
+          "vi": "màu yêu thích"
+        },
+        {
+          "en": "a big favorite",
+          "vi": "rất được yêu thích"
+        }
+      ],
+      "family": [
+        {
+          "word": "favor",
+          "vi": "ơn, sự giúp đỡ"
+        }
+      ],
+      "tip": "Mỹ viết favorite, Anh viết favourite. Không nói most favorite (vì đã là 'thích nhất').",
+      "emoji": "💖"
     },
     {
       "id": 969,
@@ -15906,7 +17661,29 @@
       "posCategory": "adjective",
       "meaning": "nổi tiếng",
       "exampleEn": "He is a famous singer.",
-      "exampleVi": "Anh ấy là một ca sĩ nổi tiếng."
+      "exampleVi": "Anh ấy là một ca sĩ nổi tiếng.",
+      "collocations": [
+        {
+          "en": "a famous singer",
+          "vi": "ca sĩ nổi tiếng"
+        },
+        {
+          "en": "famous for",
+          "vi": "nổi tiếng về"
+        },
+        {
+          "en": "world famous",
+          "vi": "nổi tiếng thế giới"
+        }
+      ],
+      "family": [
+        {
+          "word": "fame",
+          "vi": "danh tiếng"
+        }
+      ],
+      "tip": "famous for + điều làm nên tiếng: Hanoi is famous for pho. Danh từ: fame.",
+      "emoji": "🌟"
     },
     {
       "id": 970,
@@ -15917,7 +17694,28 @@
       "posCategory": "verb",
       "meaning": "quên",
       "exampleEn": "Don't forget your keys.",
-      "exampleVi": "Đừng quên chìa khoá của bạn."
+      "exampleVi": "Đừng quên chìa khoá của bạn.",
+      "collocations": [
+        {
+          "en": "don't forget",
+          "vi": "đừng quên"
+        },
+        {
+          "en": "forget about it",
+          "vi": "quên chuyện đó đi"
+        },
+        {
+          "en": "forget to do",
+          "vi": "quên làm gì"
+        }
+      ],
+      "family": [
+        {
+          "word": "forgetful",
+          "vi": "hay quên"
+        }
+      ],
+      "tip": "forget – forgot – forgotten. forget to do = quên làm (việc chưa làm): Don't forget to lock the door."
     },
     {
       "id": 971,
@@ -15928,7 +17726,23 @@
       "posCategory": "noun",
       "meaning": "bông hoa",
       "exampleEn": "She gives me a red flower.",
-      "exampleVi": "Cô ấy tặng tôi một bông hoa đỏ."
+      "exampleVi": "Cô ấy tặng tôi một bông hoa đỏ.",
+      "collocations": [
+        {
+          "en": "a bunch of flowers",
+          "vi": "một bó hoa"
+        },
+        {
+          "en": "flower shop",
+          "vi": "cửa hàng hoa"
+        },
+        {
+          "en": "in flower",
+          "vi": "đang nở hoa"
+        }
+      ],
+      "tip": "flower (hoa) đọc giống flour (bột mì) — /ˈflaʊər/. Nhìn chữ để phân biệt.",
+      "emoji": "🌸"
     },
     {
       "id": 972,
@@ -15939,7 +17753,29 @@
       "posCategory": "noun",
       "meaning": "thư viện",
       "exampleEn": "I read books in the library.",
-      "exampleVi": "Tôi đọc sách ở thư viện."
+      "exampleVi": "Tôi đọc sách ở thư viện.",
+      "collocations": [
+        {
+          "en": "go to the library",
+          "vi": "đến thư viện"
+        },
+        {
+          "en": "library card",
+          "vi": "thẻ thư viện"
+        },
+        {
+          "en": "school library",
+          "vi": "thư viện trường"
+        }
+      ],
+      "family": [
+        {
+          "word": "librarian",
+          "vi": "thủ thư"
+        }
+      ],
+      "tip": "library là thư viện (mượn sách), không phải nhà sách — nhà sách là bookstore/bookshop.",
+      "emoji": "📚"
     },
     {
       "id": 973,
@@ -15950,7 +17786,29 @@
       "posCategory": "noun",
       "meaning": "thuốc",
       "exampleEn": "Take this medicine after dinner.",
-      "exampleVi": "Hãy uống thuốc này sau bữa tối."
+      "exampleVi": "Hãy uống thuốc này sau bữa tối.",
+      "collocations": [
+        {
+          "en": "take medicine",
+          "vi": "uống thuốc"
+        },
+        {
+          "en": "cough medicine",
+          "vi": "thuốc ho"
+        },
+        {
+          "en": "Chinese medicine",
+          "vi": "thuốc bắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "medical",
+          "vi": "thuộc y khoa"
+        }
+      ],
+      "tip": "'Uống thuốc' dùng take medicine (không dùng drink). Đọc 'mé-đi-xần'.",
+      "emoji": "💊"
     },
     {
       "id": 974,
@@ -15961,7 +17819,23 @@
       "posCategory": "noun",
       "meaning": "vé",
       "exampleEn": "I buy two tickets for the train.",
-      "exampleVi": "Tôi mua hai vé tàu."
+      "exampleVi": "Tôi mua hai vé tàu.",
+      "collocations": [
+        {
+          "en": "buy a ticket",
+          "vi": "mua vé"
+        },
+        {
+          "en": "a train ticket",
+          "vi": "vé tàu"
+        },
+        {
+          "en": "one-way ticket",
+          "vi": "vé một chiều"
+        }
+      ],
+      "tip": "one-way ticket = vé một chiều; return (round-trip) ticket = vé khứ hồi. Vé phạt giao thông cũng là a ticket.",
+      "emoji": "🎫"
     },
     {
       "id": 975,
