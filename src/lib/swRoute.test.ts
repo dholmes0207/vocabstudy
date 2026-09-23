@@ -17,6 +17,10 @@ interface SwInternals {
   assetUrlsFrom: (html: string, baseUrl: string, origin: string) => string[]
   packUrlsFrom: (manifest: unknown, baseUrl: string) => string[]
   chunkUrlsFrom: (manifest: unknown, baseUrl: string) => string[]
+  staleWhileRevalidate: (
+    request: unknown,
+    waitUntil: (p: Promise<unknown>) => void
+  ) => Promise<unknown>
 }
 
 function loadServiceWorker(): SwInternals {
@@ -52,22 +56,86 @@ describe('service worker — what it refuses to touch', () => {
   })
 })
 
-describe('service worker — cache-first for study content', () => {
+describe('service worker — cache-first for pronunciation clips', () => {
   it('serves pronunciation clips from cache (the whole point of offline study)', () => {
     expect(route('/audio/en/aria/w1.mp3')).toBe('cache-first')
     expect(route('/audio/en/guy/e1000.mp3')).toBe('cache-first')
     expect(route('/audio/en/index.json')).toBe('cache-first')
   })
 
-  it('serves the language pack from cache', () => {
-    expect(route('/data/en.json')).toBe('cache-first')
-    expect(route('/data/index.json')).toBe('cache-first')
-  })
-
   it('still works when the app is hosted under a sub-path', () => {
     expect(route('/vocab/audio/en/aria/w1.mp3')).toBe('cache-first')
-    expect(route('/vocab/data/en.json')).toBe('cache-first')
+    expect(route('/vocab/data/en.json')).toBe('stale-while-revalidate')
     expect(route('/vocab/api/ai/chat')).toBe('passthrough')
+  })
+})
+
+// The language pack used to be cache-first too, with nothing ever refreshing
+// it: a learner who installed the worker kept the pack from that day forever —
+// fixed examples, new words and all the depth fields never reached them.
+describe('service worker — the language pack is served instantly AND refreshed', () => {
+  it('routes the pack and its manifest to stale-while-revalidate', () => {
+    expect(route('/data/en.json')).toBe('stale-while-revalidate')
+    expect(route('/data/index.json')).toBe('stale-while-revalidate')
+  })
+
+  const OLD = 'old pack'
+  const NEW = 'new pack'
+
+  function stubCaches(initial: string | null) {
+    let stored = initial
+    const cache = { put: async (_req: unknown, res: { body: string }) => void (stored = res.body) }
+    const g = globalThis as Record<string, unknown>
+    g.caches = {
+      match: async () => (stored === null ? undefined : { body: stored, clone: () => ({}) }),
+      open: async () => cache,
+    }
+    return { read: () => stored }
+  }
+
+  const response = (body: string, ok = true) => ({ body, ok, clone: () => ({ body }) })
+
+  it('answers from cache at once and stores the fresh copy for next time', async () => {
+    const store = stubCaches(OLD)
+    ;(globalThis as Record<string, unknown>).fetch = async () => response(NEW)
+    const pending: Promise<unknown>[] = []
+    const res = (await sw.staleWhileRevalidate('/data/en.json', (p) => pending.push(p))) as {
+      body: string
+    }
+    expect(res.body).toBe(OLD)
+    await Promise.all(pending)
+    expect(store.read()).toBe(NEW)
+  })
+
+  it('goes to the network (and caches) when nothing is cached yet', async () => {
+    const store = stubCaches(null)
+    ;(globalThis as Record<string, unknown>).fetch = async () => response(NEW)
+    const res = (await sw.staleWhileRevalidate('/data/en.json', () => {})) as { body: string }
+    expect(res.body).toBe(NEW)
+    expect(store.read()).toBe(NEW)
+  })
+
+  it('keeps working offline: a failed refresh never breaks the cached answer', async () => {
+    const store = stubCaches(OLD)
+    ;(globalThis as Record<string, unknown>).fetch = async () => {
+      throw new TypeError('offline')
+    }
+    const pending: Promise<unknown>[] = []
+    const res = (await sw.staleWhileRevalidate('/data/en.json', (p) => pending.push(p))) as {
+      body: string
+    }
+    expect(res.body).toBe(OLD)
+    await expect(Promise.all(pending)).resolves.toBeDefined()
+    expect(store.read()).toBe(OLD)
+  })
+
+  it('does not overwrite a good cached pack with an error page', async () => {
+    const store = stubCaches(OLD)
+    ;(globalThis as Record<string, unknown>).fetch = async () => response('500', false)
+    const pending: Promise<unknown>[] = []
+    await sw.staleWhileRevalidate('/data/en.json', (p) => pending.push(p))
+    await Promise.all(pending)
+    expect(store.read()).toBe(OLD)
   })
 })
 
@@ -84,7 +152,8 @@ describe('service worker — network-first for the app itself', () => {
   it('is not confused by query strings or hash routes', () => {
     expect(route('/?utm=x')).toBe('network-first')
     expect(route('/#/learn')).toBe('network-first')
-    expect(route('/data/en.json?v=2')).toBe('cache-first')
+    expect(route('/data/en.json?v=2')).toBe('stale-while-revalidate')
+    expect(route('/audio/en/aria/e1.mp3?v=abc12')).toBe('cache-first')
   })
 })
 

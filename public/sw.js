@@ -6,8 +6,13 @@
 //     wins; the cache is only a fallback for when the network is gone. This is
 //     what stops the classic service-worker disaster of pinning every learner
 //     to an old broken build.
-//   * study content (/audio/*, /data/*) is CACHE-FIRST. It is large, it barely
-//     changes, and it is exactly what has to be there on a train with no signal.
+//   * pronunciation clips (/audio/*) are CACHE-FIRST. They are large, a clip's
+//     URL changes whenever its sentence does (?v=<hash>), and they are exactly
+//     what has to be there on a train with no signal.
+//   * the language pack (/data/*) is STALE-WHILE-REVALIDATE: answered from the
+//     cache instantly (and offline), then refreshed in the background so the
+//     next visit has the latest words. It used to be cache-first as well, which
+//     pinned every learner to the pack of the day they installed the worker.
 //   * everything else — other origins (Supabase, OpenAI) and /api/* — is left
 //     completely alone.
 //
@@ -18,7 +23,10 @@
 const DISABLED = false
 
 // Bump to invalidate every cache at once (e.g. after regenerating audio).
-const VERSION = 'v1'
+// v2: the pack moved to stale-while-revalidate; flushing v1 hands every learner
+// the current pack on their next visit and drops example clips cached under
+// their old, unversioned URLs.
+const VERSION = 'v2'
 const SHELL_CACHE = `vocabstudy-shell-${VERSION}`
 const CONTENT_CACHE = `vocabstudy-content-${VERSION}`
 const CACHES = [SHELL_CACHE, CONTENT_CACHE]
@@ -40,7 +48,8 @@ function strategyFor(rawUrl, method, origin) {
   // (https://host/vocab/…) is routed the same way.
   const path = url.pathname
   if (path.includes('/api/')) return 'passthrough'
-  if (path.includes('/audio/') || path.includes('/data/')) return 'cache-first'
+  if (path.includes('/audio/')) return 'cache-first'
+  if (path.includes('/data/')) return 'stale-while-revalidate'
   return 'network-first'
 }
 
@@ -138,7 +147,15 @@ function chunkUrlsFrom(manifest, baseUrl) {
 }
 
 // Expose the internals for the unit tests (a classic worker cannot `export`).
-self.__swInternals = { VERSION, CACHES, strategyFor, assetUrlsFrom, packUrlsFrom, chunkUrlsFrom }
+self.__swInternals = {
+  VERSION,
+  CACHES,
+  strategyFor,
+  assetUrlsFrom,
+  packUrlsFrom,
+  chunkUrlsFrom,
+  staleWhileRevalidate,
+}
 
 // Cached responses carry `Vary: Origin` (and hosts often add
 // `Vary: Accept-Encoding`). The browser asks for a module script with a CORS
@@ -157,6 +174,29 @@ async function cacheFirst(request) {
     await cache.put(request, response.clone())
   }
   return response
+}
+
+/**
+ * Answer from the cache when possible and refresh it in the background; go to
+ * the network only when nothing is cached yet. `waitUntil` keeps the worker
+ * alive until the refresh is stored. A failed refresh (offline, 5xx) is
+ * swallowed — the learner already has an answer — and never replaces a good
+ * cached copy.
+ */
+async function staleWhileRevalidate(request, waitUntil) {
+  const cached = await caches.match(request, MATCH)
+  const refresh = fetch(request).then(async (response) => {
+    if (response && response.ok) {
+      const cache = await caches.open(CONTENT_CACHE)
+      await cache.put(request, response.clone())
+    }
+    return response
+  })
+  if (cached) {
+    waitUntil(refresh.catch(() => undefined))
+    return cached
+  }
+  return refresh
 }
 
 async function networkFirst(request) {
@@ -260,6 +300,10 @@ self.addEventListener('fetch', (event) => {
   const strategy = strategyFor(event.request.url, event.request.method, self.location.origin)
   if (strategy === 'passthrough') return
   event.respondWith(
-    strategy === 'cache-first' ? cacheFirst(event.request) : networkFirst(event.request)
+    strategy === 'cache-first'
+      ? cacheFirst(event.request)
+      : strategy === 'stale-while-revalidate'
+        ? staleWhileRevalidate(event.request, (p) => event.waitUntil(p))
+        : networkFirst(event.request)
   )
 })
