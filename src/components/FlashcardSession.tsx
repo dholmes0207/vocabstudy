@@ -61,7 +61,7 @@ export default function FlashcardSession({
   // card, so the speaker button responds instantly on the next one.
   useEffect(() => {
     const upcoming = words.slice(index, index + 3)
-    prefetchAudio(upcoming.flatMap((w) => [wordAudio(w.id), exampleAudio(w.id)]))
+    prefetchAudio(upcoming.flatMap((w) => [wordAudio(w.id), exampleAudio(w.id, w.exampleEn)]))
   }, [words, index])
 
   const answer = useCallback(

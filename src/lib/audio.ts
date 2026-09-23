@@ -4,6 +4,7 @@
 
 import type { AudioManifest } from '@/types'
 import { speak, stopSpeaking } from './tts'
+import { textHash } from './textHash'
 
 const base = import.meta.env.BASE_URL
 
@@ -52,10 +53,16 @@ export function wordAudio(id: number): string {
   return v ? `${base}audio/${currentCode}/${v}/w${id}.mp3` : ''
 }
 
-/** URL of the pre-rendered audio for an example sentence ('' when none). */
-export function exampleAudio(id: number): string {
+/**
+ * URL of the pre-rendered audio for an example sentence ('' when none).
+ * Pass the sentence text: the URL then carries its fingerprint, so a rewritten
+ * sentence never plays a stale cached clip (see textHash).
+ */
+export function exampleAudio(id: number, text?: string): string {
   const v = effectiveVoice()
-  return v ? `${base}audio/${currentCode}/${v}/e${id}.mp3` : ''
+  if (!v) return ''
+  const url = `${base}audio/${currentCode}/${v}/e${id}.mp3`
+  return text ? `${url}?v=${textHash(text)}` : url
 }
 
 // Clips already pulled into the HTTP cache this session, so a learner tapping

@@ -8,7 +8,7 @@ import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
 import { buildDecks } from '@/lib/decks'
 import { phaseOf } from '@/lib/srs'
-import FlashcardSession from '@/components/FlashcardSession'
+import LearnSession from './LearnSession'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
@@ -35,19 +35,20 @@ export default function Learn() {
 
   if (session) {
     return (
-      <FlashcardSession
+      <LearnSession
         words={session}
+        pool={pack.words}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
         onExit={() => setSession(null)}
-        renderComplete={(_correct, total) => (
+        renderComplete={(total) => (
           <SessionComplete
             emoji="🌟"
             title="Học xong rồi!"
             correct={total}
             total={total}
             showScore={false}
-            note={`Bạn vừa học ${total} từ mới. Tuyệt lắm — đều đặn mỗi ngày là nhớ chắc!`}
+            note={`Bạn vừa làm quen và tự nhớ lại ${total} từ. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`}
           >
             <Link to="/review" className="btn-primary">
               Ôn tập ngay
@@ -88,7 +89,8 @@ export default function Learn() {
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Học từ mới 📖</h1>
         <p className="mt-1 text-slate-500">
-          Lật thẻ, nghe phát âm, đọc ví dụ — rồi tự đánh giá đã nhớ hay chưa.
+          Mỗi lần 5 từ: làm quen (nghe, đọc câu ví dụ, xem cụm hay đi chung) rồi tự nhớ lại ngay —
+          sai thì được giải thích và làm lại.
         </p>
       </header>
 

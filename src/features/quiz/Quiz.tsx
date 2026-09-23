@@ -11,7 +11,7 @@ import EmptyState from '@/components/EmptyState'
 import SpeakButton from '@/components/SpeakButton'
 import { Field, Segment } from '@/components/Choice'
 import { wordAudio } from '@/lib/audio'
-import QuizRunner from './QuizRunner'
+import QuizRunner from '@/components/QuizRunner'
 
 type Scope = 'learned' | 'hard' | 'all'
 
@@ -43,7 +43,7 @@ export default function Quiz() {
   )
 
   const [scope, setScope] = useState<Scope>('learned')
-  const [modes, setModes] = useState<QuizMode[]>(['en-to-vi', 'vi-to-en', 'listen'])
+  const [modes, setModes] = useState<QuizMode[]>(['en-to-vi', 'vi-to-en', 'listen', 'context'])
   const [count, setCount] = useState(10)
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
 

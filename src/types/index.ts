@@ -22,6 +22,27 @@ export interface Word {
   exampleEn: string
   /** Translation of the example sentence into the learner's language. */
   exampleVi: string
+
+  // --- Depth ("hiểu sâu"). All optional: a pack without them is still valid. ---
+
+  /** Common chunks the word lives in ("từ hay đi chung"), e.g. make a decision. */
+  collocations?: WordChunk[]
+  /** Related words from the same root ("từ cùng họ"), e.g. decide → decision. */
+  family?: WordRelative[]
+  /** One short note in the learner's language: a memory hook, a usage pattern or a typical mistake. */
+  tip?: string
+  /** A visual anchor for concrete words (dual coding), e.g. "🍎". */
+  emoji?: string
+}
+
+export interface WordChunk {
+  en: string
+  vi: string
+}
+
+export interface WordRelative {
+  word: string
+  vi: string
 }
 
 export type PosCategory =
@@ -191,6 +212,12 @@ export interface QuizOption {
 
 export type ThemeSetting = 'light' | 'dark' | 'system'
 
+/**
+ * How due words are reviewed: `recall` asks a question (harder as the card
+ * matures); `flip` is the classic flashcard with self-grading.
+ */
+export type ReviewStyle = 'recall' | 'flip'
+
 /** How close a spoken attempt must be to count as correct (see lib/pronunciation). */
 export type Strictness = 'easy' | 'normal' | 'hard'
 
@@ -218,4 +245,6 @@ export interface Settings {
   speechStrictness: Strictness
   /** Play the correct/wrong feedback blips during quizzes. */
   soundEnabled: boolean
+  /** Review by answering questions (default) or by flipping cards. */
+  reviewStyle: ReviewStyle
 }

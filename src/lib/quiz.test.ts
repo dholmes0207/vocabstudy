@@ -88,6 +88,13 @@ describe('buildSkeleton', () => {
     }
   })
 
+  it('hides the last letter of a two-letter word, so "is" is not given away', () => {
+    const rendered = buildSkeleton('is')
+      .map((c) => (c.revealed ? c.ch : '_'))
+      .join('')
+    expect(rendered).toBe('i_')
+  })
+
   it('never hides a non-letter character', () => {
     for (const c of buildSkeleton('ice cream')) {
       if (!c.isLetter) expect(c.revealed).toBe(true)

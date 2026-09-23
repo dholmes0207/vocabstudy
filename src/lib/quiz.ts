@@ -102,6 +102,8 @@ export function buildSkeleton(word: string): SkeletonCell[] {
     if (k % 2 === 1) hide.add(idx) // hide 2nd, 4th, … middle letter
   })
   if (hide.size === 0 && letters.length >= 3) hide.add(letters[Math.floor(letters.length / 2)])
+  // Two letters have no middle — hide the last, or "is" would be given away.
+  if (letters.length === 2) hide.add(letters[1])
   return chars.map((c, i) => ({
     ch: c,
     isLetter: isLetter(c),

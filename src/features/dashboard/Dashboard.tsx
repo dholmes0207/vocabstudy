@@ -109,7 +109,7 @@ export default function Dashboard() {
           to="/quiz"
           icon={GraduationCap}
           title="Kiểm tra nhanh"
-          desc="4 dạng quiz: chọn nghĩa, nghe, điền từ…"
+          desc="6 dạng câu hỏi: chọn nghĩa, nghe, điền vào câu, gõ từ…"
         />
         <QuickLink
           to="/speaking"

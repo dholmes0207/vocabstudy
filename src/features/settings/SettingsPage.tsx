@@ -164,7 +164,7 @@ export default function SettingsPage() {
                 className="btn-secondary !px-3"
                 onClick={() =>
                   pronounce({
-                    audioSrc: exampleAudio(1),
+                    audioSrc: exampleAudio(1, 'She has a book and an apple.'),
                     text: 'She has a book and an apple.',
                     lang: pack.meta.ttsLang,
                     rate: settings.ttsRate,
@@ -249,7 +249,7 @@ export default function SettingsPage() {
               disabled={!canPronounce}
               onClick={() =>
                 pronounce({
-                  audioSrc: exampleAudio(1),
+                  audioSrc: exampleAudio(1, 'She has a book and an apple.'),
                   text: 'She has a book and an apple.',
                   lang: pack.meta.ttsLang,
                   rate: settings.ttsRate,

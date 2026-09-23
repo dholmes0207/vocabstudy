@@ -78,7 +78,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
               <SpeakButton
                 text={word.exampleEn}
                 lang={ttsLang}
-                audioSrc={exampleAudio(word.id)}
+                audioSrc={exampleAudio(word.id, word.exampleEn)}
                 size="sm"
                 className="mt-0.5 shrink-0"
               />
