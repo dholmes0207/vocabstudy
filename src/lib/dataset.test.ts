@@ -58,6 +58,26 @@ describe('en.json dataset integrity', () => {
     }
   })
 
+  // The sentence is where the word is understood, and where the context
+  // questions come from — it has to contain the word (in any form).
+  it('every example sentence uses its own word', () => {
+    const missing = pack.words
+      .filter((w) => !findWordInSentence(w.word, w.exampleEn, w.posCategory))
+      .map((w) => `${w.id}:${w.word} → "${w.exampleEn}"`)
+    expect(missing).toEqual([])
+  })
+
+  it('no two words share an example sentence', () => {
+    const seen = new Map<string, number>()
+    const dups: string[] = []
+    for (const w of pack.words) {
+      const key = w.exampleEn.trim().toLowerCase()
+      if (seen.has(key)) dups.push(`${seen.get(key)} & ${w.id}: "${w.exampleEn}"`)
+      else seen.set(key, w.id)
+    }
+    expect(dups).toEqual([])
+  })
+
   it('every word carries the fields the UI needs', () => {
     for (const w of pack.words) {
       expect(w.word.trim(), `id ${w.id}`).not.toBe('')
