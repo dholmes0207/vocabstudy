@@ -110,7 +110,9 @@ export default function Quiz() {
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">Kiểm tra 🎯</h1>
         <p className="mt-1 text-slate-500">
-          Active recall — ép não nhớ lại. Kết quả được đưa vào lịch ôn tự động.
+          Tự nhớ lại là cách nhớ lâu nhất. Câu sai sẽ được đưa vào lịch ôn lại; câu đúng khi từ chưa
+          tới hạn ôn thì không làm từ &quot;thành thạo&quot; nhanh hơn — nhớ sâu cần thời gian giãn
+          cách.
         </p>
       </header>
 

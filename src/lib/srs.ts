@@ -10,6 +10,12 @@ import { today } from './date'
 // the next review and advances to box b+1. A card that has advanced past the
 // last interval (box === INTERVALS.length) is "mastered".
 // A wrong answer sends the card back to box 0 (relearn the ladder).
+//
+// Only an answer given ON or AFTER the due day moves a card up. Answering a
+// card early (a quiz, a second pass in the same lesson) says the word is still
+// in short-term memory — which is not what the ladder measures — so a correct
+// early answer is counted but leaves the schedule alone. A wrong answer always
+// counts: forgetting is real information whenever it happens.
 // ============================================================================
 
 /** Review intervals in days, matching Day 1 -> 2 -> 5 -> 14 -> 30. */
@@ -46,6 +52,10 @@ export function newCard(id: number, day: number = today()): SRSCard {
  * @param day     the epoch day of the review (defaults to today)
  */
 export function review(card: SRSCard, correct: boolean, day: number = today()): SRSCard {
+  if (correct && !isDue(card, day)) {
+    // Early and right: the learner gets the credit, the schedule stays put.
+    return { ...card, lastReviewedDay: day, correctCount: card.correctCount + 1 }
+  }
   if (correct) {
     const nextBox = Math.min(card.box + 1, MASTERED_BOX)
     // Interval to wait is keyed by the box we just cleared.
@@ -66,6 +76,14 @@ export function review(card: SRSCard, correct: boolean, day: number = today()): 
     lastReviewedDay: day,
     wrongCount: card.wrongCount + 1,
   }
+}
+
+/**
+ * Whether an answer on `day` counts toward the schedule. A never-answered card
+ * is always due (its first study); otherwise the due day must have arrived.
+ */
+export function isDue(card: SRSCard, day: number = today()): boolean {
+  return card.lastReviewedDay === null || card.dueDay <= day
 }
 
 /** Derive the human-facing lifecycle phase of a card. */

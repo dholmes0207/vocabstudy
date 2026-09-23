@@ -85,6 +85,56 @@ describe('review', () => {
     expect(c.correctCount).toBe(beforeWrong) // a miss never adds to correctCount
   })
 
+  // Spacing is the whole point: an answer given before the card is due proves
+  // the learner still has it in short-term memory, nothing more. Letting it
+  // climb the ladder meant three quizzes in one evening "mastered" a word.
+  describe('answers given before the card is due', () => {
+    it('a correct answer does not advance the box or push the due date', () => {
+      let c = review(newCard(1, DAY), true, DAY) // box 1, due DAY+1
+      const before = c
+      c = review(c, true, DAY) // same evening, again
+      expect(c.box).toBe(before.box)
+      expect(c.dueDay).toBe(before.dueDay)
+    })
+
+    it('still counts the correct answer and the activity', () => {
+      let c = review(newCard(1, DAY), true, DAY)
+      c = review(c, true, DAY)
+      expect(c.correctCount).toBe(2)
+      expect(c.lastReviewedDay).toBe(DAY)
+    })
+
+    it('cannot reach mastery by drilling one day over and over', () => {
+      let c = newCard(1, DAY)
+      for (let i = 0; i < 20; i++) c = review(c, true, DAY)
+      expect(c.box).toBe(1)
+      expect(phaseOf(c)).not.toBe('mastered')
+    })
+
+    it('a wrong answer always counts — forgetting early is real information', () => {
+      let c = review(newCard(1, DAY), true, DAY) // box 1
+      c = review(c, true, c.dueDay) // box 2, due in 2 days
+      const day = c.dueDay - 1 // not due yet
+      c = review(c, false, day)
+      expect(c.box).toBe(0)
+      expect(c.dueDay).toBe(day)
+    })
+
+    it('a card relearnt the same day (wrong, then right) is checked again tomorrow', () => {
+      let c = review(newCard(1, DAY), false, DAY) // box 0, due today
+      c = review(c, true, DAY)
+      expect(c.box).toBe(1)
+      expect(c.dueDay).toBe(DAY + INTERVALS[0])
+    })
+
+    it('an overdue card advances normally', () => {
+      let c = review(newCard(1, DAY), true, DAY) // due DAY+1
+      c = review(c, true, DAY + 10)
+      expect(c.box).toBe(2)
+      expect(c.dueDay).toBe(DAY + 10 + INTERVALS[1])
+    })
+  })
+
   it('keeps a mastered card at MASTERED_BOX instead of overflowing', () => {
     const mastered: SRSCard = { ...newCard(1, DAY), box: MASTERED_BOX }
     const after = review(mastered, true, DAY)
