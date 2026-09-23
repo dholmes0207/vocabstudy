@@ -4,6 +4,8 @@ import SpeakButton from './SpeakButton'
 import PosBadge from './PosBadge'
 import HighlightExample from './HighlightExample'
 import { exampleAudio, wordAudio } from '@/lib/audio'
+import { useSettings } from '@/store/settingsStore'
+import { useMySentence } from '@/store/notesStore'
 
 interface Props {
   word: Word
@@ -11,8 +13,10 @@ interface Props {
   /**
    * `full` — the card a learner meets a word on: everything, word first.
    * `compact` — feedback after an answer: a headline, the sentence and the tip.
+   * `details` — everything below the headline, for places that already show
+   *   the word (a lookup row, the back of a flashcard).
    */
-  variant?: 'full' | 'compact'
+  variant?: 'full' | 'compact' | 'details'
   className?: string
 }
 
@@ -24,9 +28,12 @@ interface Props {
  */
 export default function WordInsight({ word, ttsLang, variant = 'full', className = '' }: Props) {
   const full = variant === 'full'
+  const deep = variant !== 'compact'
+  const lang = useSettings((s) => s.currentLang)
+  const mine = useMySentence(lang, word.id)
   return (
     <div className={`space-y-4 ${className}`}>
-      {full ? (
+      {variant === 'details' ? null : full ? (
         <div className="flex flex-col items-center gap-2 text-center">
           <PosBadge category={word.posCategory} raw={word.pos} />
           <div className="flex items-center gap-3">
@@ -88,7 +95,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
         </div>
       )}
 
-      {full && word.collocations && word.collocations.length > 0 && (
+      {deep && word.collocations && word.collocations.length > 0 && (
         <Section icon={Link2} title="Hay đi chung với">
           <ul className="space-y-1.5">
             {word.collocations.map((c) => (
@@ -110,7 +117,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
         </Section>
       )}
 
-      {full && word.family && word.family.length > 0 && (
+      {deep && word.family && word.family.length > 0 && (
         <Section icon={Sprout} title="Cùng họ với">
           <ul className="flex flex-wrap gap-2">
             {word.family.map((f) => (
@@ -124,6 +131,15 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
             ))}
           </ul>
         </Section>
+      )}
+
+      {variant === 'compact' && mine && (
+        <p className="rounded-xl bg-emerald-50/60 px-3.5 py-2.5 text-left text-sm text-slate-700 dark:bg-emerald-950/30 dark:text-slate-200">
+          <span className="font-semibold text-emerald-700 dark:text-emerald-300">
+            ✍️ Câu của bạn:{' '}
+          </span>
+          <HighlightExample sentence={mine.text} word={word.word} pos={word.posCategory} />
+        </p>
       )}
 
       {word.tip && (

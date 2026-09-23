@@ -8,6 +8,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
 import QuizRunner from '@/components/QuizRunner'
 import WordInsight from '@/components/WordInsight'
+import MySentence from '@/components/MySentence'
 
 // A learning session for a beginner, in small groups:
 //
@@ -168,6 +169,7 @@ function MeetCards({
   onExit: () => void
 }) {
   const autoSpeak = useSettings((s) => s.autoSpeak)
+  const lang = useSettings((s) => s.currentLang)
   const word = group[index]
   const last = index + 1 >= group.length
 
@@ -240,8 +242,9 @@ function MeetCards({
         dụ, rồi bấm Tiếp.
       </p>
 
-      <div className="card p-6">
+      <div className="card space-y-4 p-6">
         <WordInsight key={word.id} word={word} ttsLang={ttsLang} variant="full" />
+        <MySentence key={`mine-${word.id}`} word={word} lang={lang} />
       </div>
 
       <div className="mt-5 flex gap-3">

@@ -46,26 +46,9 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   const idRef = useRef(0)
   const bottomRef = useRef<HTMLDivElement>(null)
 
-  // Check server AI availability once logged in.
-  useEffect(() => {
-    if (!user) return
-    let alive = true
-    api
-      .aiStatus()
-      .then((r) => alive && setConfigured(r.configured))
-      .catch(() => alive && setConfigured(false))
-    return () => {
-      alive = false
-    }
-  }, [user])
-
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, loading])
-
-  if (authStatus === 'loading') return <Centered>Đang tải…</Centered>
-  if (!user) return <LoginPrompt onClose={onClose} />
-  if (configured === false) return <NotConfigured admin={user.role === 'admin'} onClose={onClose} />
 
   const nextId = () => ++idRef.current
 
@@ -101,6 +84,44 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
       setLoading(false)
     }
   }
+
+  // Check server AI availability once logged in.
+  useEffect(() => {
+    if (!user) return
+    let alive = true
+    api
+      .aiStatus()
+      .then((r) => {
+        if (!alive) return
+        setConfigured(r.configured)
+        // Opened by a screen with a question ready (contextStore.ask)? Ask it.
+        const queued = r.configured ? useContextStore.getState().takeAsk() : null
+        if (queued) void send(queued)
+      })
+      .catch(() => alive && setConfigured(false))
+    return () => {
+      alive = false
+    }
+    // `send` is recreated every render; only a new user should re-check.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user])
+
+  // A question queued by another screen (contextStore.ask) while the chat is
+  // already open: send it as it arrives. One queued before the chat opened is
+  // sent when the availability check comes back (see above).
+  useEffect(() => {
+    if (!user || configured !== true) return
+    return useContextStore.subscribe((s) => {
+      if (!s.pendingAsk || loading) return
+      const text = useContextStore.getState().takeAsk()
+      if (text) void send(text)
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, configured, loading, messages])
+
+  if (authStatus === 'loading') return <Centered>Đang tải…</Centered>
+  if (!user) return <LoginPrompt onClose={onClose} />
+  if (configured === false) return <NotConfigured admin={user.role === 'admin'} onClose={onClose} />
 
   const suggestions = suggestQuestions(ctx, level)
 

@@ -22,12 +22,32 @@ export interface PageContext {
 
 interface ContextState extends PageContext {
   setContext: (ctx: PageContext) => void
+  /**
+   * A question some screen wants the assistant to answer (e.g. "is my sentence
+   * right?"). The floating assistant opens itself and sends it once.
+   */
+  pendingAsk: string | null
+  ask: (text: string) => void
+  /** Hand over the pending question exactly once. */
+  takeAsk: () => string | null
+  /** Whether the floating assistant is open (lives here so ask() can open it). */
+  assistantOpen: boolean
+  setAssistantOpen: (open: boolean) => void
 }
 
-export const useContextStore = create<ContextState>((set) => ({
+export const useContextStore = create<ContextState>((set, get) => ({
   title: 'Trang chủ',
   word: undefined,
   setContext: (ctx) => set({ title: ctx.title, word: ctx.word }),
+  pendingAsk: null,
+  ask: (text) => set({ pendingAsk: text, assistantOpen: true }),
+  takeAsk: () => {
+    const text = get().pendingAsk
+    if (text !== null) set({ pendingAsk: null })
+    return text
+  },
+  assistantOpen: false,
+  setAssistantOpen: (assistantOpen) => set({ assistantOpen }),
 }))
 
 /**

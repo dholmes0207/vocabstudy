@@ -2,8 +2,8 @@ import { RotateCw } from 'lucide-react'
 import type { Word } from '@/types'
 import SpeakButton from './SpeakButton'
 import PosBadge from './PosBadge'
-import HighlightExample from './HighlightExample'
-import { exampleAudio, wordAudio } from '@/lib/audio'
+import WordInsight from './WordInsight'
+import { wordAudio } from '@/lib/audio'
 
 interface Props {
   word: Word
@@ -55,7 +55,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
         </div>
 
         {/* BACK */}
-        <div className="flip-face flip-back card flex min-h-[20rem] flex-col justify-center gap-4 p-6 sm:min-h-[24rem]">
+        <div className="flip-face flip-back card scroll-thin flex min-h-[20rem] flex-col gap-4 overflow-y-auto p-6 sm:min-h-[24rem]">
           <div className="flex items-center justify-center gap-3">
             <span className="text-2xl font-bold text-slate-800 dark:text-slate-100">
               {word.word}
@@ -73,27 +73,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             {word.meaning}
           </p>
 
-          <div className="mt-2 space-y-2 rounded-xl bg-slate-50 p-4 dark:bg-slate-800/60">
-            <div className="flex items-start gap-2">
-              <SpeakButton
-                text={word.exampleEn}
-                lang={ttsLang}
-                audioSrc={exampleAudio(word.id, word.exampleEn)}
-                size="sm"
-                className="mt-0.5 shrink-0"
-              />
-              <p className="text-slate-700 dark:text-slate-200">
-                <HighlightExample
-                  sentence={word.exampleEn}
-                  word={word.word}
-                  pos={word.posCategory}
-                />
-              </p>
-            </div>
-            <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">
-              {word.exampleVi}
-            </p>
-          </div>
+          <WordInsight word={word} ttsLang={ttsLang} variant="details" className="mt-2 text-sm" />
         </div>
       </div>
     </div>

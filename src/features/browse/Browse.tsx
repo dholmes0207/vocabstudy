@@ -9,8 +9,9 @@ import type { CardPhase } from '@/types'
 import SpeakButton from '@/components/SpeakButton'
 import PosBadge from '@/components/PosBadge'
 import { POS_LABEL } from '@/lib/pos'
-import HighlightExample from '@/components/HighlightExample'
-import { exampleAudio, wordAudio } from '@/lib/audio'
+import WordInsight from '@/components/WordInsight'
+import MySentence from '@/components/MySentence'
+import { wordAudio } from '@/lib/audio'
 import { useProvideContext } from '@/store/contextStore'
 
 const PAGE_SIZE = 24
@@ -166,6 +167,7 @@ export default function Browse() {
               key={w.id}
               word={w}
               ttsLang={pack.meta.ttsLang}
+              lang={code}
               phase={phaseOf(cards[w.id])}
               expanded={expanded === w.id}
               onToggle={() => setExpanded((e) => (e === w.id ? null : w.id))}
@@ -203,12 +205,14 @@ export default function Browse() {
 function WordRow({
   word,
   ttsLang,
+  lang,
   phase,
   expanded,
   onToggle,
 }: {
   word: Word
   ttsLang: string
+  lang: string
   phase: CardPhase
   expanded: boolean
   onToggle: () => void
@@ -254,20 +258,9 @@ function WordRow({
         />
       </div>
       {expanded && (
-        <div className="space-y-2 border-t border-slate-100 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/40 animate-fade-in">
-          <div className="flex items-start gap-2">
-            <SpeakButton
-              text={word.exampleEn}
-              lang={ttsLang}
-              audioSrc={exampleAudio(word.id, word.exampleEn)}
-              size="sm"
-              className="mt-0.5 shrink-0"
-            />
-            <p className="text-slate-700 dark:text-slate-200">
-              <HighlightExample sentence={word.exampleEn} word={word.word} pos={word.posCategory} />
-            </p>
-          </div>
-          <p className="pl-10 italic text-slate-500">{word.exampleVi}</p>
+        <div className="space-y-4 border-t border-slate-100 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/40 animate-fade-in">
+          <WordInsight word={word} ttsLang={ttsLang} variant="details" />
+          <MySentence word={word} lang={lang} />
         </div>
       )}
     </li>

@@ -1,12 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Bot, X } from 'lucide-react'
 import TutorChat from '@/features/tutor/TutorChat'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { useAuth } from '@/store/authStore'
 import { levelInfo } from '@/lib/level'
+import { useContextStore } from '@/store/contextStore'
 
 export default function AssistantFab() {
-  const [open, setOpen] = useState(false)
+  // Kept in the store so another screen can open the assistant with a
+  // question (contextStore.ask) — e.g. "is my sentence right?".
+  const open = useContextStore((s) => s.assistantOpen)
+  const setOpen = useContextStore((s) => s.setAssistantOpen)
   const user = useAuth((s) => s.user)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
@@ -17,7 +21,7 @@ export default function AssistantFab() {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [open])
+  }, [open, setOpen])
 
   return (
     <>
