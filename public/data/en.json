@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1559,
+    "count": 1609,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -45741,6 +45741,1276 @@
       ],
       "tip": "extremely = cực kỳ (mạnh hơn very): extremely hot.",
       "emoji": "🌡️",
+      "stage": 2
+    },
+    {
+      "id": 1560,
+      "word": "fair",
+      "ipa": "fɛr",
+      "viRead": "PHER",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "công bằng; khá",
+      "exampleEn": "It's not fair! He got more than me.",
+      "exampleVi": "Không công bằng! Anh ấy được nhiều hơn tôi.",
+      "collocations": [
+        {
+          "en": "it's not fair",
+          "vi": "không công bằng"
+        },
+        {
+          "en": "a fair price",
+          "vi": "giá hợp lý"
+        }
+      ],
+      "family": [
+        {
+          "word": "fairly",
+          "vi": "khá; công bằng"
+        }
+      ],
+      "tip": "fair còn là 'hội chợ' (job fair = hội chợ việc làm). fairly = khá: fairly easy.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 1561,
+      "word": "fake",
+      "ipa": "feɪk",
+      "viRead": "PHÂYK",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giả",
+      "exampleEn": "Be careful, that watch might be fake.",
+      "exampleVi": "Cẩn thận, cái đồng hồ đó có thể là hàng giả.",
+      "collocations": [
+        {
+          "en": "fake news",
+          "vi": "tin giả"
+        },
+        {
+          "en": "a fake bag",
+          "vi": "túi hàng nhái"
+        }
+      ],
+      "tip": "fake news = tin giả. fake ↔ real/genuine.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 1562,
+      "word": "false",
+      "ipa": "fɔls",
+      "viRead": "PHOLS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sai, không đúng",
+      "exampleEn": "Is this sentence true or false?",
+      "exampleVi": "Câu này đúng hay sai?",
+      "collocations": [
+        {
+          "en": "true or false",
+          "vi": "đúng hay sai"
+        },
+        {
+          "en": "false information",
+          "vi": "thông tin sai lệch"
+        }
+      ],
+      "tip": "true or false = dạng bài Đúng/Sai quen thuộc. false ↔ true.",
+      "emoji": "❎",
+      "stage": 2
+    },
+    {
+      "id": 1563,
+      "word": "fan",
+      "ipa": "fæn",
+      "viRead": "PHEN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người hâm mộ; cái quạt",
+      "exampleEn": "I'm a big fan of Vietnamese food.",
+      "exampleVi": "Tôi là fan cuồng đồ ăn Việt.",
+      "collocations": [
+        {
+          "en": "a big fan of",
+          "vi": "rất hâm mộ"
+        },
+        {
+          "en": "turn on the fan",
+          "vi": "bật quạt"
+        }
+      ],
+      "tip": "fan vừa là người hâm mộ vừa là cái quạt. I'm not a fan of… = Tôi không thích lắm… (nói nhẹ nhàng).",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 1564,
+      "word": "fancy",
+      "ipa": "ˈfænsi",
+      "viRead": "PHEN-si",
+      "pos": "adj./v.",
+      "posCategory": "adjective",
+      "meaning": "sang trọng; thích",
+      "exampleEn": "We had dinner at a fancy restaurant.",
+      "exampleVi": "Chúng tôi ăn tối ở một nhà hàng sang trọng.",
+      "collocations": [
+        {
+          "en": "a fancy hotel",
+          "vi": "khách sạn sang trọng"
+        },
+        {
+          "en": "fancy a coffee?",
+          "vi": "làm ly cà phê không? (Anh)"
+        }
+      ],
+      "tip": "Fancy a coffee? (Anh) = Uống cà phê không? fancy dress = đồ hóa trang.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 1565,
+      "word": "fantastic",
+      "ipa": "fænˈtæstɪk",
+      "viRead": "phen-TES-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt vời",
+      "exampleEn": "You did a fantastic job!",
+      "exampleVi": "Bạn làm tuyệt lắm!",
+      "collocations": [
+        {
+          "en": "a fantastic idea",
+          "vi": "ý tưởng tuyệt vời"
+        },
+        {
+          "en": "sounds fantastic",
+          "vi": "nghe tuyệt đấy"
+        }
+      ],
+      "family": [
+        {
+          "word": "fantasy",
+          "vi": "sự tưởng tượng"
+        }
+      ],
+      "tip": "fantastic = rất tốt (khen mạnh), không nói very fantastic.",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 1566,
+      "word": "fare",
+      "ipa": "fɛr",
+      "viRead": "PHER",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giá vé (xe, tàu)",
+      "exampleEn": "The bus fare is 7,000 dong.",
+      "exampleVi": "Giá vé xe buýt là 7.000 đồng.",
+      "collocations": [
+        {
+          "en": "bus fare",
+          "vi": "giá vé xe buýt"
+        },
+        {
+          "en": "taxi fare",
+          "vi": "tiền taxi"
+        }
+      ],
+      "tip": "fare = giá vé đi lại; fee = lệ phí; price = giá hàng hóa. fare đọc giống fair.",
+      "emoji": "🎫",
+      "stage": 2
+    },
+    {
+      "id": 1567,
+      "word": "fault",
+      "ipa": "fɔlt",
+      "viRead": "PHOLT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lỗi (trách nhiệm)",
+      "exampleEn": "It's not your fault, don't worry.",
+      "exampleVi": "Không phải lỗi của bạn đâu, đừng lo.",
+      "collocations": [
+        {
+          "en": "my fault",
+          "vi": "lỗi của tôi"
+        },
+        {
+          "en": "whose fault is it?",
+          "vi": "lỗi của ai?"
+        }
+      ],
+      "tip": "It's my fault = Lỗi của tôi (nhận trách nhiệm). mistake = sai sót; fault = trách nhiệm.",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 1568,
+      "word": "feature",
+      "ipa": "ˈfiʧər",
+      "viRead": "PHI-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đặc điểm; tính năng",
+      "exampleEn": "This phone has a lot of useful features.",
+      "exampleVi": "Chiếc điện thoại này có nhiều tính năng hữu ích.",
+      "collocations": [
+        {
+          "en": "new features",
+          "vi": "tính năng mới"
+        },
+        {
+          "en": "key feature",
+          "vi": "đặc điểm chính"
+        }
+      ],
+      "tip": "feature = tính năng (app, máy). ea đọc 'i': 'FI-chơ'.",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 1569,
+      "word": "fee",
+      "ipa": "fi",
+      "viRead": "PHI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lệ phí, học phí",
+      "exampleEn": "The school fee is paid every month.",
+      "exampleVi": "Học phí được đóng mỗi tháng.",
+      "collocations": [
+        {
+          "en": "school fees",
+          "vi": "học phí"
+        },
+        {
+          "en": "entrance fee",
+          "vi": "phí vào cửa"
+        }
+      ],
+      "tip": "fee = phí dịch vụ (học phí, phí vào cửa); fare = giá vé xe.",
+      "emoji": "💵",
+      "stage": 2
+    },
+    {
+      "id": 1570,
+      "word": "female",
+      "ipa": "ˈfiˌmeɪl",
+      "viRead": "PHI-mâyl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "nữ, giống cái",
+      "exampleEn": "Most of the nurses here are female.",
+      "exampleVi": "Phần lớn y tá ở đây là nữ.",
+      "collocations": [
+        {
+          "en": "female student",
+          "vi": "nữ sinh"
+        },
+        {
+          "en": "male and female",
+          "vi": "nam và nữ"
+        }
+      ],
+      "family": [
+        {
+          "word": "male",
+          "vi": "nam"
+        }
+      ],
+      "tip": "female/male dùng trên giấy tờ (giới tính). Đọc 'FI-mêu'.",
+      "emoji": "♀️",
+      "stage": 2
+    },
+    {
+      "id": 1571,
+      "word": "fiction",
+      "ipa": "ˈfɪkʃən",
+      "viRead": "PHIK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "truyện hư cấu",
+      "exampleEn": "I prefer fiction to history books.",
+      "exampleVi": "Tôi thích truyện hư cấu hơn sách lịch sử.",
+      "collocations": [
+        {
+          "en": "science fiction",
+          "vi": "khoa học viễn tưởng"
+        },
+        {
+          "en": "fiction and non-fiction",
+          "vi": "hư cấu và phi hư cấu"
+        }
+      ],
+      "tip": "science fiction (sci-fi) = khoa học viễn tưởng. non-fiction = sách thực tế.",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 1572,
+      "word": "figure",
+      "ipa": "ˈfɪgjər",
+      "viRead": "PHIG-yơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con số; dáng người",
+      "exampleEn": "Sales figures went up this year.",
+      "exampleVi": "Doanh số năm nay tăng.",
+      "collocations": [
+        {
+          "en": "sales figures",
+          "vi": "số liệu doanh thu"
+        },
+        {
+          "en": "figure out",
+          "vi": "tìm ra, hiểu ra"
+        }
+      ],
+      "tip": "figure out = hiểu ra, giải được: I can't figure it out. Đọc 'FI-gơ' (Mỹ 'FI-giơ').",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 1573,
+      "word": "final",
+      "ipa": "ˈfaɪnəl",
+      "viRead": "PHAI-nơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "cuối cùng; trận chung kết",
+      "exampleEn": "This is my final answer.",
+      "exampleVi": "Đây là câu trả lời cuối cùng của tôi.",
+      "collocations": [
+        {
+          "en": "final exam",
+          "vi": "thi cuối kỳ"
+        },
+        {
+          "en": "the World Cup final",
+          "vi": "chung kết World Cup"
+        }
+      ],
+      "family": [
+        {
+          "word": "finally",
+          "vi": "cuối cùng thì"
+        }
+      ],
+      "tip": "finally = cuối cùng thì (sau khi chờ). the final = trận chung kết.",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 1574,
+      "word": "flag",
+      "ipa": "flæg",
+      "viRead": "PHLEG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lá cờ",
+      "exampleEn": "The Vietnamese flag is red with a yellow star.",
+      "exampleVi": "Quốc kỳ Việt Nam màu đỏ có ngôi sao vàng.",
+      "collocations": [
+        {
+          "en": "national flag",
+          "vi": "quốc kỳ"
+        },
+        {
+          "en": "red flag",
+          "vi": "dấu hiệu cảnh báo"
+        }
+      ],
+      "tip": "red flag = dấu hiệu đáng lo (trong quan hệ, công việc).",
+      "emoji": "🇻🇳",
+      "stage": 2
+    },
+    {
+      "id": 1575,
+      "word": "flat",
+      "ipa": "flæt",
+      "viRead": "PHLET",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "phẳng; căn hộ (Anh)",
+      "exampleEn": "The road is long and flat.",
+      "exampleVi": "Con đường dài và bằng phẳng.",
+      "collocations": [
+        {
+          "en": "a flat tire",
+          "vi": "lốp xẹp"
+        },
+        {
+          "en": "a small flat",
+          "vi": "căn hộ nhỏ"
+        }
+      ],
+      "tip": "flat (Anh) = căn hộ = apartment (Mỹ). flat tire = xẹp lốp.",
+      "emoji": "🛞",
+      "stage": 2
+    },
+    {
+      "id": 1576,
+      "word": "flavor",
+      "ipa": "ˈfleɪvər",
+      "viRead": "PHLÂY-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hương vị",
+      "exampleEn": "What flavor of ice cream do you want?",
+      "exampleVi": "Bạn muốn kem vị gì?",
+      "collocations": [
+        {
+          "en": "strong flavor",
+          "vi": "vị đậm"
+        },
+        {
+          "en": "chocolate flavor",
+          "vi": "vị sô-cô-la"
+        }
+      ],
+      "tip": "Mỹ viết flavor, Anh viết flavour. What flavor? = Vị gì?",
+      "emoji": "🍦",
+      "stage": 2
+    },
+    {
+      "id": 1577,
+      "word": "flood",
+      "ipa": "fləd",
+      "viRead": "PHLƠĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lũ lụt",
+      "exampleEn": "The flood destroyed many houses.",
+      "exampleVi": "Trận lũ phá hủy nhiều ngôi nhà.",
+      "collocations": [
+        {
+          "en": "heavy floods",
+          "vi": "lũ lụt nặng"
+        },
+        {
+          "en": "flood water",
+          "vi": "nước lũ"
+        }
+      ],
+      "tip": "oo đọc 'ă': 'flắđ' (như blood). Miền Trung thường có floods mùa mưa.",
+      "emoji": "🌊",
+      "stage": 2
+    },
+    {
+      "id": 1578,
+      "word": "flour",
+      "ipa": "flaʊər",
+      "viRead": "PHLAO-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bột mì",
+      "exampleEn": "Mix the flour with water and eggs.",
+      "exampleVi": "Trộn bột mì với nước và trứng.",
+      "collocations": [
+        {
+          "en": "rice flour",
+          "vi": "bột gạo"
+        },
+        {
+          "en": "a bag of flour",
+          "vi": "một túi bột"
+        }
+      ],
+      "tip": "flour (bột mì) đọc giống flower (bông hoa) — /flaʊər/.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 1579,
+      "word": "flu",
+      "ipa": "flu",
+      "viRead": "PHLU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bệnh cúm",
+      "exampleEn": "I stayed home because I had the flu.",
+      "exampleVi": "Tôi ở nhà vì bị cúm.",
+      "collocations": [
+        {
+          "en": "have the flu",
+          "vi": "bị cúm"
+        },
+        {
+          "en": "flu vaccine",
+          "vi": "vắc-xin cúm"
+        }
+      ],
+      "tip": "have the flu (có the). flu là nói tắt của influenza.",
+      "emoji": "🤧",
+      "stage": 2
+    },
+    {
+      "id": 1580,
+      "word": "fog",
+      "ipa": "fɔg",
+      "viRead": "PHAG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sương mù",
+      "exampleEn": "The fog was so thick we couldn't see the road.",
+      "exampleVi": "Sương mù dày đến mức không thấy đường.",
+      "collocations": [
+        {
+          "en": "thick fog",
+          "vi": "sương mù dày"
+        },
+        {
+          "en": "morning fog",
+          "vi": "sương sớm"
+        }
+      ],
+      "family": [
+        {
+          "word": "foggy",
+          "vi": "có sương mù"
+        }
+      ],
+      "tip": "foggy = nhiều sương mù. Sa Pa hay có fog vào sáng sớm.",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 1581,
+      "word": "fond",
+      "ipa": "fɑnd",
+      "viRead": "PHANĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thích, trìu mến",
+      "exampleEn": "I'm very fond of my grandmother's cooking.",
+      "exampleVi": "Tôi rất thích món bà nấu.",
+      "collocations": [
+        {
+          "en": "fond of",
+          "vi": "thích, quý mến"
+        },
+        {
+          "en": "fond memories",
+          "vi": "kỷ niệm đẹp"
+        }
+      ],
+      "tip": "be fond of + danh từ/V-ing = thích (nhẹ nhàng, lâu dài).",
+      "emoji": "🥰",
+      "stage": 2
+    },
+    {
+      "id": 1582,
+      "word": "forbid",
+      "ipa": "fərˈbɪd",
+      "viRead": "phơ-BIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cấm",
+      "exampleEn": "My parents forbid me to stay out late.",
+      "exampleVi": "Bố mẹ cấm tôi đi chơi khuya.",
+      "collocations": [
+        {
+          "en": "forbid smoking",
+          "vi": "cấm hút thuốc"
+        },
+        {
+          "en": "forbid someone to",
+          "vi": "cấm ai làm gì"
+        }
+      ],
+      "tip": "forbid – forbade – forbidden. Strictly forbidden = Nghiêm cấm.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 1583,
+      "word": "forever",
+      "ipa": "fərˈɛvər",
+      "viRead": "phơ-E-vơ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "mãi mãi",
+      "exampleEn": "I will remember this day forever.",
+      "exampleVi": "Tôi sẽ nhớ ngày này mãi mãi.",
+      "collocations": [
+        {
+          "en": "last forever",
+          "vi": "kéo dài mãi"
+        },
+        {
+          "en": "forever young",
+          "vi": "trẻ mãi"
+        }
+      ],
+      "family": [
+        {
+          "word": "ever",
+          "vi": "từng"
+        }
+      ],
+      "tip": "for + ever = mãi mãi. It took forever = Lâu kinh khủng.",
+      "emoji": "♾️",
+      "stage": 2
+    },
+    {
+      "id": 1584,
+      "word": "former",
+      "ipa": "ˈfɔrmər",
+      "viRead": "PHOR-mơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trước đây, cũ",
+      "exampleEn": "He is my former boss.",
+      "exampleVi": "Ông ấy là sếp cũ của tôi.",
+      "collocations": [
+        {
+          "en": "former teacher",
+          "vi": "thầy cũ"
+        },
+        {
+          "en": "the former president",
+          "vi": "cựu tổng thống"
+        }
+      ],
+      "tip": "former = cũ, trước đây (chức vụ, quan hệ). the former … the latter = cái trước … cái sau.",
+      "emoji": "⏪",
+      "stage": 2
+    },
+    {
+      "id": 1585,
+      "word": "fountain",
+      "ipa": "ˈfaʊntən",
+      "viRead": "PHAON-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đài phun nước",
+      "exampleEn": "Children are playing near the fountain.",
+      "exampleVi": "Bọn trẻ đang chơi gần đài phun nước.",
+      "collocations": [
+        {
+          "en": "water fountain",
+          "vi": "vòi nước uống"
+        },
+        {
+          "en": "the fountain in the park",
+          "vi": "đài phun nước trong công viên"
+        }
+      ],
+      "tip": "ou đọc 'ao': 'FAO-tần'.",
+      "emoji": "⛲",
+      "stage": 2
+    },
+    {
+      "id": 1586,
+      "word": "frame",
+      "ipa": "freɪm",
+      "viRead": "PHRÂYM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khung (ảnh, cửa)",
+      "exampleEn": "I bought a frame for our family photo.",
+      "exampleVi": "Tôi mua một cái khung cho ảnh gia đình.",
+      "collocations": [
+        {
+          "en": "photo frame",
+          "vi": "khung ảnh"
+        },
+        {
+          "en": "time frame",
+          "vi": "khung thời gian"
+        }
+      ],
+      "tip": "frames = gọng kính. time frame = khoảng thời gian cho phép.",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 1587,
+      "word": "freeze",
+      "ipa": "friz",
+      "viRead": "PHRID",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đông cứng; đóng băng",
+      "exampleEn": "Water freezes at zero degrees.",
+      "exampleVi": "Nước đóng băng ở không độ.",
+      "collocations": [
+        {
+          "en": "freeze to death",
+          "vi": "chết cóng"
+        },
+        {
+          "en": "I'm freezing",
+          "vi": "tôi lạnh cóng"
+        }
+      ],
+      "family": [
+        {
+          "word": "frozen",
+          "vi": "đông lạnh"
+        },
+        {
+          "word": "freezer",
+          "vi": "ngăn đá"
+        }
+      ],
+      "tip": "freeze – froze – frozen. I'm freezing! = Lạnh cóng rồi! Freeze! = Đứng yên!",
+      "emoji": "🥶",
+      "stage": 2
+    },
+    {
+      "id": 1588,
+      "word": "frog",
+      "ipa": "frɑg",
+      "viRead": "PHRAG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ếch",
+      "exampleEn": "We heard frogs singing after the rain.",
+      "exampleVi": "Chúng tôi nghe tiếng ếch kêu sau cơn mưa.",
+      "collocations": [
+        {
+          "en": "a green frog",
+          "vi": "con ếch xanh"
+        },
+        {
+          "en": "frog legs",
+          "vi": "đùi ếch"
+        }
+      ],
+      "tip": "a frog in my throat = bị khàn tiếng (như có con ếch trong họng).",
+      "emoji": "🐸",
+      "stage": 2
+    },
+    {
+      "id": 1589,
+      "word": "fuel",
+      "ipa": "fjuəl",
+      "viRead": "PHYU-ơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiên liệu",
+      "exampleEn": "The price of fuel has gone up again.",
+      "exampleVi": "Giá nhiên liệu lại tăng.",
+      "collocations": [
+        {
+          "en": "fuel price",
+          "vi": "giá xăng dầu"
+        },
+        {
+          "en": "run out of fuel",
+          "vi": "hết xăng"
+        }
+      ],
+      "tip": "fuel = nhiên liệu nói chung (xăng = gas/petrol). Đọc 'FIU-ồ'.",
+      "emoji": "⛽",
+      "stage": 2
+    },
+    {
+      "id": 1590,
+      "word": "fund",
+      "ipa": "fənd",
+      "viRead": "PHƠNĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quỹ, tiền vốn",
+      "exampleEn": "We raised funds for the flood victims.",
+      "exampleVi": "Chúng tôi quyên góp quỹ cho nạn nhân lũ lụt.",
+      "collocations": [
+        {
+          "en": "raise funds",
+          "vi": "gây quỹ"
+        },
+        {
+          "en": "funds for",
+          "vi": "quỹ cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "funding",
+          "vi": "kinh phí"
+        }
+      ],
+      "tip": "raise funds = gây quỹ. refund = hoàn tiền (re + fund).",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 1591,
+      "word": "funeral",
+      "ipa": "fˈjunərəl",
+      "viRead": "PHYU-nơ-ơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đám tang",
+      "exampleEn": "Many people came to his funeral.",
+      "exampleVi": "Nhiều người đến dự đám tang ông ấy.",
+      "collocations": [
+        {
+          "en": "attend a funeral",
+          "vi": "dự đám tang"
+        },
+        {
+          "en": "funeral service",
+          "vi": "lễ tang"
+        }
+      ],
+      "tip": "Nhấn âm đầu: FIU-nơ-rồ. Chia buồn: I'm sorry for your loss.",
+      "emoji": "🕯️",
+      "stage": 2
+    },
+    {
+      "id": 1592,
+      "word": "gallery",
+      "ipa": "ˈgæləri",
+      "viRead": "GE-lơ-i",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phòng trưng bày",
+      "exampleEn": "We visited an art gallery on Sunday.",
+      "exampleVi": "Chủ nhật chúng tôi đi xem phòng tranh.",
+      "collocations": [
+        {
+          "en": "art gallery",
+          "vi": "phòng tranh"
+        },
+        {
+          "en": "photo gallery",
+          "vi": "thư viện ảnh"
+        }
+      ],
+      "tip": "Trên điện thoại: Gallery = thư viện ảnh.",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 1593,
+      "word": "gap",
+      "ipa": "gæp",
+      "viRead": "GEP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoảng trống, khoảng cách",
+      "exampleEn": "Mind the gap between the train and the platform.",
+      "exampleVi": "Chú ý khoảng trống giữa tàu và sân ga.",
+      "collocations": [
+        {
+          "en": "mind the gap",
+          "vi": "chú ý khoảng trống"
+        },
+        {
+          "en": "gap year",
+          "vi": "năm nghỉ giữa chừng"
+        }
+      ],
+      "tip": "gap year = năm nghỉ trước/sau đại học để đi trải nghiệm. generation gap = khoảng cách thế hệ.",
+      "emoji": "🕳️",
+      "stage": 2
+    },
+    {
+      "id": 1594,
+      "word": "garage",
+      "ipa": "gərɑʒ",
+      "viRead": "gơ-AZH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ga-ra, nhà để xe",
+      "exampleEn": "He parks his car in the garage.",
+      "exampleVi": "Anh ấy đỗ xe trong ga-ra.",
+      "collocations": [
+        {
+          "en": "in the garage",
+          "vi": "trong ga-ra"
+        },
+        {
+          "en": "garage sale",
+          "vi": "bán đồ cũ tại nhà"
+        }
+      ],
+      "tip": "Mỹ đọc 'gơ-RAJ', Anh đọc 'GA-rij'. garage còn là tiệm sửa xe.",
+      "emoji": "🚗",
+      "stage": 2
+    },
+    {
+      "id": 1595,
+      "word": "garlic",
+      "ipa": "ˈgɑrlɪk",
+      "viRead": "GAR-lik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tỏi",
+      "exampleEn": "Vietnamese dishes often use garlic.",
+      "exampleVi": "Món Việt thường dùng tỏi.",
+      "collocations": [
+        {
+          "en": "a clove of garlic",
+          "vi": "một tép tỏi"
+        },
+        {
+          "en": "garlic bread",
+          "vi": "bánh mì bơ tỏi"
+        }
+      ],
+      "tip": "garlic không đếm được: some garlic. a clove of garlic = một tép tỏi.",
+      "emoji": "🧄",
+      "stage": 2
+    },
+    {
+      "id": 1596,
+      "word": "gas",
+      "ipa": "gæs",
+      "viRead": "GES",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khí; xăng (Mỹ)",
+      "exampleEn": "We need to stop for gas on the way.",
+      "exampleVi": "Chúng ta cần dừng đổ xăng dọc đường.",
+      "collocations": [
+        {
+          "en": "gas station",
+          "vi": "cây xăng"
+        },
+        {
+          "en": "gas stove",
+          "vi": "bếp ga"
+        }
+      ],
+      "tip": "Mỹ: gas = xăng; Anh: petrol. gas station = cây xăng.",
+      "emoji": "⛽",
+      "stage": 2
+    },
+    {
+      "id": 1597,
+      "word": "gather",
+      "ipa": "ˈgæðər",
+      "viRead": "GE-đơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tụ tập; thu thập",
+      "exampleEn": "The family gathers together at Tet.",
+      "exampleVi": "Cả gia đình quây quần bên nhau dịp Tết.",
+      "collocations": [
+        {
+          "en": "gather together",
+          "vi": "quây quần"
+        },
+        {
+          "en": "gather information",
+          "vi": "thu thập thông tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "gathering",
+          "vi": "buổi họp mặt"
+        }
+      ],
+      "tip": "th rung: 'GA-đơ'. family gathering = buổi họp mặt gia đình.",
+      "emoji": "👨‍👩‍👧‍👦",
+      "stage": 2
+    },
+    {
+      "id": 1598,
+      "word": "gentle",
+      "ipa": "ˈʤɛnəl",
+      "viRead": "GIEN-tơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hiền lành, nhẹ nhàng",
+      "exampleEn": "He is very gentle with children.",
+      "exampleVi": "Anh ấy rất hiền với trẻ con.",
+      "collocations": [
+        {
+          "en": "a gentle voice",
+          "vi": "giọng nói dịu dàng"
+        },
+        {
+          "en": "gentle with",
+          "vi": "nhẹ nhàng với"
+        }
+      ],
+      "family": [
+        {
+          "word": "gently",
+          "vi": "nhẹ nhàng"
+        }
+      ],
+      "tip": "g đọc 'gi': 'GIEN-tồ'. gentleman = quý ông.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 1599,
+      "word": "genuine",
+      "ipa": "ˈʤɛnjuˌaɪn",
+      "viRead": "GIEN-yơ-wơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thật, chân thành",
+      "exampleEn": "This is a genuine leather bag.",
+      "exampleVi": "Đây là túi da thật.",
+      "collocations": [
+        {
+          "en": "genuine leather",
+          "vi": "da thật"
+        },
+        {
+          "en": "a genuine smile",
+          "vi": "nụ cười chân thành"
+        }
+      ],
+      "tip": "genuine = thật (không giả); cũng là 'chân thành'. Đọc 'GIEN-diu-in'.",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 1600,
+      "word": "gesture",
+      "ipa": "ˈʤɛsʧər",
+      "viRead": "GIES-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cử chỉ",
+      "exampleEn": "Waving is a friendly gesture.",
+      "exampleVi": "Vẫy tay là một cử chỉ thân thiện.",
+      "collocations": [
+        {
+          "en": "a kind gesture",
+          "vi": "cử chỉ tử tế"
+        },
+        {
+          "en": "hand gestures",
+          "vi": "cử chỉ tay"
+        }
+      ],
+      "tip": "Đọc 'GIES-chơ'. body language gồm cả gestures.",
+      "emoji": "👋",
+      "stage": 2
+    },
+    {
+      "id": 1601,
+      "word": "ghost",
+      "ipa": "goʊst",
+      "viRead": "GÂUST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ma",
+      "exampleEn": "Do you believe in ghosts?",
+      "exampleVi": "Bạn có tin có ma không?",
+      "collocations": [
+        {
+          "en": "ghost story",
+          "vi": "truyện ma"
+        },
+        {
+          "en": "see a ghost",
+          "vi": "thấy ma"
+        }
+      ],
+      "tip": "h câm: 'gâust'. ghosting = đột ngột cắt liên lạc không lời giải thích.",
+      "emoji": "👻",
+      "stage": 2
+    },
+    {
+      "id": 1602,
+      "word": "giant",
+      "ipa": "ʤaɪənt",
+      "viRead": "GIAI-ơnt",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "khổng lồ",
+      "exampleEn": "There is a giant tree in front of the temple.",
+      "exampleVi": "Có một cây cổ thụ khổng lồ trước ngôi đền.",
+      "collocations": [
+        {
+          "en": "a giant panda",
+          "vi": "gấu trúc lớn"
+        },
+        {
+          "en": "tech giant",
+          "vi": "ông lớn công nghệ"
+        }
+      ],
+      "tip": "g đọc 'gi': 'GIAI-ần(t)'. tech giants = các hãng công nghệ lớn.",
+      "emoji": "🦕",
+      "stage": 2
+    },
+    {
+      "id": 1603,
+      "word": "glad",
+      "ipa": "glæd",
+      "viRead": "GLEĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vui, mừng",
+      "exampleEn": "I'm glad you could come.",
+      "exampleVi": "Tôi mừng vì bạn đến được.",
+      "collocations": [
+        {
+          "en": "glad to hear",
+          "vi": "mừng khi nghe"
+        },
+        {
+          "en": "glad to help",
+          "vi": "rất vui được giúp"
+        }
+      ],
+      "tip": "glad chỉ đứng sau động từ: I'm glad ✓ (a glad boy ✗). Glad to help! = Rất sẵn lòng!",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 1604,
+      "word": "glove",
+      "ipa": "gləv",
+      "viRead": "GLƠV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "găng tay",
+      "exampleEn": "Wear gloves when you wash the dishes.",
+      "exampleVi": "Đeo găng tay khi rửa bát.",
+      "collocations": [
+        {
+          "en": "a pair of gloves",
+          "vi": "một đôi găng"
+        },
+        {
+          "en": "rubber gloves",
+          "vi": "găng cao su"
+        }
+      ],
+      "tip": "o đọc 'ă': 'glắv'. fit like a glove = vừa khít.",
+      "emoji": "🧤",
+      "stage": 2
+    },
+    {
+      "id": 1605,
+      "word": "glue",
+      "ipa": "glu",
+      "viRead": "GLU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "keo dán",
+      "exampleEn": "I fixed the cup with glue.",
+      "exampleVi": "Tôi dán lại cái cốc bằng keo.",
+      "collocations": [
+        {
+          "en": "super glue",
+          "vi": "keo 502"
+        },
+        {
+          "en": "a tube of glue",
+          "vi": "một tuýp keo"
+        }
+      ],
+      "tip": "glue vừa là danh từ (keo) vừa là động từ (dán). ue đọc 'u': 'glu'.",
+      "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 1606,
+      "word": "goat",
+      "ipa": "goʊt",
+      "viRead": "GÂUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con dê",
+      "exampleEn": "The farmer keeps goats and chickens.",
+      "exampleVi": "Người nông dân nuôi dê và gà.",
+      "collocations": [
+        {
+          "en": "goat milk",
+          "vi": "sữa dê"
+        },
+        {
+          "en": "mountain goat",
+          "vi": "dê núi"
+        }
+      ],
+      "tip": "GOAT (viết hoa) = Greatest Of All Time — người giỏi nhất mọi thời đại.",
+      "emoji": "🐐",
+      "stage": 2
+    },
+    {
+      "id": 1607,
+      "word": "grab",
+      "ipa": "græb",
+      "viRead": "GREB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chộp, lấy nhanh",
+      "exampleEn": "Let's grab a coffee before work.",
+      "exampleVi": "Làm ly cà phê trước giờ làm nhé.",
+      "collocations": [
+        {
+          "en": "grab a bite",
+          "vi": "ăn vội chút gì"
+        },
+        {
+          "en": "grab a taxi",
+          "vi": "bắt taxi"
+        }
+      ],
+      "tip": "grab a coffee/bite = uống/ăn nhanh (thân mật). grabbed (gấp đôi b).",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 1608,
+      "word": "grade",
+      "ipa": "greɪd",
+      "viRead": "GRÂYĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điểm; lớp (Mỹ)",
+      "exampleEn": "She got good grades in English.",
+      "exampleVi": "Cô ấy được điểm tiếng Anh cao.",
+      "collocations": [
+        {
+          "en": "good grades",
+          "vi": "điểm cao"
+        },
+        {
+          "en": "fifth grade",
+          "vi": "lớp năm"
+        }
+      ],
+      "tip": "grade (Mỹ) = điểm số và khối lớp: My son is in fifth grade.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 1609,
+      "word": "graduate",
+      "ipa": "ˈgræʤəˌweɪt",
+      "viRead": "GRE-giu-wâyt",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "tốt nghiệp",
+      "exampleEn": "She graduated from university last year.",
+      "exampleVi": "Cô ấy tốt nghiệp đại học năm ngoái.",
+      "collocations": [
+        {
+          "en": "graduate from",
+          "vi": "tốt nghiệp (trường)"
+        },
+        {
+          "en": "a new graduate",
+          "vi": "sinh viên mới ra trường"
+        }
+      ],
+      "family": [
+        {
+          "word": "graduation",
+          "vi": "lễ tốt nghiệp"
+        }
+      ],
+      "tip": "graduate FROM + trường. Động từ đọc 'GRA-giu-ây(t)', danh từ 'GRA-giu-ợt'.",
+      "emoji": "🎓",
       "stage": 2
     }
   ]
