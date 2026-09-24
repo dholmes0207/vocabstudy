@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2358,
+    "count": 2408,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -67379,6 +67379,1410 @@
       ],
       "tip": "dipping sauce = nước chấm. dip → dipped.",
       "emoji": "🥢",
+      "stage": 2
+    },
+    {
+      "id": 2359,
+      "word": "differ",
+      "ipa": "ˈdɪfər",
+      "viRead": "ĐI-phơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khác nhau",
+      "exampleEn": "Our opinions differ on this.",
+      "exampleVi": "Ý kiến chúng ta khác nhau về chuyện này.",
+      "collocations": [
+        {
+          "en": "differ from",
+          "vi": "khác với"
+        },
+        {
+          "en": "differ greatly",
+          "vi": "khác nhau nhiều"
+        }
+      ],
+      "family": [
+        {
+          "word": "different",
+          "vi": "khác"
+        },
+        {
+          "word": "difference",
+          "vi": "sự khác biệt"
+        }
+      ],
+      "tip": "differ (v) → different (adj) → difference (n).",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 2360,
+      "word": "dimension",
+      "ipa": "dɪˈmɛnʃən",
+      "viRead": "đi-MEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kích thước; khía cạnh",
+      "exampleEn": "What are the dimensions of the room?",
+      "exampleVi": "Kích thước căn phòng là bao nhiêu?",
+      "collocations": [
+        {
+          "en": "three dimensions",
+          "vi": "ba chiều"
+        },
+        {
+          "en": "a new dimension",
+          "vi": "khía cạnh mới"
+        }
+      ],
+      "tip": "3D = three-dimensional = ba chiều.",
+      "emoji": "📐",
+      "stage": 2
+    },
+    {
+      "id": 2361,
+      "word": "diploma",
+      "ipa": "dɪˈploʊmə",
+      "viRead": "đi-PLÂU-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bằng tốt nghiệp",
+      "exampleEn": "She received her diploma last June.",
+      "exampleVi": "Cô ấy nhận bằng tốt nghiệp tháng Sáu năm ngoái.",
+      "collocations": [
+        {
+          "en": "high school diploma",
+          "vi": "bằng tốt nghiệp THPT"
+        },
+        {
+          "en": "get a diploma",
+          "vi": "lấy bằng"
+        }
+      ],
+      "tip": "Đọc 'đi-PLÂU-mơ'.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2362,
+      "word": "direct",
+      "ipa": "dɪˈrɛkt",
+      "viRead": "đơ-REKT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trực tiếp; thẳng",
+      "exampleEn": "Is there a direct flight to Da Nang?",
+      "exampleVi": "Có chuyến bay thẳng tới Đà Nẵng không?",
+      "collocations": [
+        {
+          "en": "a direct flight",
+          "vi": "chuyến bay thẳng"
+        },
+        {
+          "en": "direct contact",
+          "vi": "liên lạc trực tiếp"
+        }
+      ],
+      "family": [
+        {
+          "word": "directly",
+          "vi": "trực tiếp"
+        },
+        {
+          "word": "director",
+          "vi": "giám đốc; đạo diễn"
+        }
+      ],
+      "tip": "direct (v) = chỉ đường, đạo diễn phim.",
+      "emoji": "➡️",
+      "stage": 2
+    },
+    {
+      "id": 2363,
+      "word": "dirt",
+      "ipa": "dərt",
+      "viRead": "ĐƠT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bụi bẩn, đất",
+      "exampleEn": "There's dirt on your shoes.",
+      "exampleVi": "Giày bạn dính bẩn.",
+      "collocations": [
+        {
+          "en": "dirt road",
+          "vi": "đường đất"
+        },
+        {
+          "en": "dirt cheap",
+          "vi": "rẻ như bèo"
+        }
+      ],
+      "family": [
+        {
+          "word": "dirty",
+          "vi": "bẩn"
+        }
+      ],
+      "tip": "dirt cheap = rẻ như cho. dirt (n) → dirty (adj).",
+      "emoji": "🟫",
+      "stage": 2
+    },
+    {
+      "id": 2364,
+      "word": "disadvantage",
+      "ipa": "ˌdɪsədˈvæntɪʤ",
+      "viRead": "đi-sơđ-VEN-tigi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bất lợi, nhược điểm",
+      "exampleEn": "What are the disadvantages of living in a city?",
+      "exampleVi": "Sống ở thành phố có những bất lợi gì?",
+      "collocations": [
+        {
+          "en": "advantages and disadvantages",
+          "vi": "ưu và nhược điểm"
+        },
+        {
+          "en": "at a disadvantage",
+          "vi": "ở thế bất lợi"
+        }
+      ],
+      "family": [
+        {
+          "word": "advantage",
+          "vi": "lợi thế"
+        }
+      ],
+      "tip": "dis (không) + advantage (lợi thế). Hay gặp trong bài viết IELTS.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2365,
+      "word": "disagree",
+      "ipa": "ˌdɪsəˈgri",
+      "viRead": "đi-sơ-GRI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "không đồng ý",
+      "exampleEn": "I disagree with you.",
+      "exampleVi": "Tôi không đồng ý với bạn.",
+      "collocations": [
+        {
+          "en": "disagree with",
+          "vi": "không đồng ý với"
+        },
+        {
+          "en": "strongly disagree",
+          "vi": "hoàn toàn phản đối"
+        }
+      ],
+      "family": [
+        {
+          "word": "disagreement",
+          "vi": "sự bất đồng"
+        }
+      ],
+      "tip": "dis + agree. I'm afraid I disagree = Tôi e là tôi không đồng ý (lịch sự).",
+      "emoji": "🙅",
+      "stage": 2
+    },
+    {
+      "id": 2366,
+      "word": "disappear",
+      "ipa": "ˌdɪsəˈpɪr",
+      "viRead": "đi-sơ-PIR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "biến mất",
+      "exampleEn": "The sun disappeared behind the clouds.",
+      "exampleVi": "Mặt trời khuất sau những đám mây.",
+      "collocations": [
+        {
+          "en": "disappear from",
+          "vi": "biến mất khỏi"
+        },
+        {
+          "en": "suddenly disappear",
+          "vi": "đột nhiên biến mất"
+        }
+      ],
+      "family": [
+        {
+          "word": "appear",
+          "vi": "xuất hiện"
+        }
+      ],
+      "tip": "dis + appear. Chính tả: 1 s, 2 p.",
+      "emoji": "🫥",
+      "stage": 2
+    },
+    {
+      "id": 2367,
+      "word": "disappoint",
+      "ipa": "ˌdɪsəˈpɔɪnt",
+      "viRead": "đi-sơ-POINT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm thất vọng",
+      "exampleEn": "I don't want to disappoint my parents.",
+      "exampleVi": "Tôi không muốn làm bố mẹ thất vọng.",
+      "collocations": [
+        {
+          "en": "disappoint someone",
+          "vi": "làm ai thất vọng"
+        },
+        {
+          "en": "be disappointed with",
+          "vi": "thất vọng về"
+        }
+      ],
+      "family": [
+        {
+          "word": "disappointed",
+          "vi": "thất vọng"
+        },
+        {
+          "word": "disappointing",
+          "vi": "đáng thất vọng"
+        }
+      ],
+      "tip": "disappointed (người thấy) – disappointing (thứ gây ra).",
+      "emoji": "😞",
+      "stage": 2
+    },
+    {
+      "id": 2368,
+      "word": "disaster",
+      "ipa": "dɪˈzæstər",
+      "viRead": "đi-DES-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thảm họa",
+      "exampleEn": "The flood was a disaster for farmers.",
+      "exampleVi": "Trận lũ là thảm họa với nông dân.",
+      "collocations": [
+        {
+          "en": "natural disaster",
+          "vi": "thiên tai"
+        },
+        {
+          "en": "a total disaster",
+          "vi": "thảm họa hoàn toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "disastrous",
+          "vi": "thảm khốc"
+        }
+      ],
+      "tip": "natural disaster = thiên tai.",
+      "emoji": "🌊",
+      "stage": 2
+    },
+    {
+      "id": 2369,
+      "word": "discipline",
+      "ipa": "ˈdɪsəplɪn",
+      "viRead": "ĐI-sơ-plin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỷ luật",
+      "exampleEn": "Learning a language needs discipline.",
+      "exampleVi": "Học ngoại ngữ cần có kỷ luật.",
+      "collocations": [
+        {
+          "en": "self discipline",
+          "vi": "tự kỷ luật"
+        },
+        {
+          "en": "strict discipline",
+          "vi": "kỷ luật nghiêm"
+        }
+      ],
+      "tip": "Học mỗi ngày 10 phút = self-discipline. Đọc 'ĐI-sơ-plin'.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2370,
+      "word": "discourage",
+      "ipa": "dɪˈskərɪʤ",
+      "viRead": "đis-KƠ-rigi",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm nản lòng",
+      "exampleEn": "Don't let one mistake discourage you.",
+      "exampleVi": "Đừng để một lỗi sai làm bạn nản lòng.",
+      "collocations": [
+        {
+          "en": "discourage someone from",
+          "vi": "ngăn ai làm"
+        },
+        {
+          "en": "feel discouraged",
+          "vi": "thấy nản"
+        }
+      ],
+      "family": [
+        {
+          "word": "encourage",
+          "vi": "khuyến khích"
+        }
+      ],
+      "tip": "discourage ↔ encourage (khuyến khích).",
+      "emoji": "😔",
+      "stage": 2
+    },
+    {
+      "id": 2371,
+      "word": "discovery",
+      "ipa": "dɪˈskəvəri",
+      "viRead": "đis-KƠ-vơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự khám phá",
+      "exampleEn": "The discovery of penicillin saved millions of lives.",
+      "exampleVi": "Việc phát hiện ra penicillin đã cứu hàng triệu người.",
+      "collocations": [
+        {
+          "en": "make a discovery",
+          "vi": "có phát hiện"
+        },
+        {
+          "en": "a new discovery",
+          "vi": "phát hiện mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "discover",
+          "vi": "khám phá"
+        }
+      ],
+      "tip": "discover (v) → discovery (n).",
+      "emoji": "🔭",
+      "stage": 2
+    },
+    {
+      "id": 2372,
+      "word": "disguise",
+      "ipa": "dɪsˈgaɪz",
+      "viRead": "đis-GAID",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự cải trang",
+      "exampleEn": "The spy wore a disguise.",
+      "exampleVi": "Tên gián điệp cải trang.",
+      "collocations": [
+        {
+          "en": "in disguise",
+          "vi": "cải trang"
+        },
+        {
+          "en": "a blessing in disguise",
+          "vi": "trong cái rủi có cái may"
+        }
+      ],
+      "tip": "a blessing in disguise = trong cái rủi có cái may. u câm: 'đis-GAID'.",
+      "emoji": "🥸",
+      "stage": 2
+    },
+    {
+      "id": 2373,
+      "word": "dislike",
+      "ipa": "dɪsˈlaɪk",
+      "viRead": "đis-LAIK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "không thích",
+      "exampleEn": "I dislike getting up early.",
+      "exampleVi": "Tôi không thích dậy sớm.",
+      "collocations": [
+        {
+          "en": "dislike doing",
+          "vi": "không thích làm"
+        },
+        {
+          "en": "likes and dislikes",
+          "vi": "sở thích và điều không thích"
+        }
+      ],
+      "family": [
+        {
+          "word": "like",
+          "vi": "thích"
+        }
+      ],
+      "tip": "dislike + V-ing. dislike = not like (trang trọng hơn).",
+      "emoji": "👎",
+      "stage": 2
+    },
+    {
+      "id": 2374,
+      "word": "dismiss",
+      "ipa": "dɪsˈmɪs",
+      "viRead": "đis-MIS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gạt bỏ; cho nghỉ",
+      "exampleEn": "The teacher dismissed the class early.",
+      "exampleVi": "Cô giáo cho lớp nghỉ sớm.",
+      "collocations": [
+        {
+          "en": "dismiss an idea",
+          "vi": "gạt bỏ ý tưởng"
+        },
+        {
+          "en": "dismiss the class",
+          "vi": "cho lớp tan"
+        }
+      ],
+      "tip": "dismiss = bác bỏ, sa thải, cho về (trang trọng).",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 2375,
+      "word": "display",
+      "ipa": "dɪˈspleɪ",
+      "viRead": "đis-PLÂY",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự trưng bày; màn hình",
+      "exampleEn": "The new phones are on display.",
+      "exampleVi": "Những chiếc điện thoại mới đang được trưng bày.",
+      "collocations": [
+        {
+          "en": "on display",
+          "vi": "được trưng bày"
+        },
+        {
+          "en": "display screen",
+          "vi": "màn hình hiển thị"
+        }
+      ],
+      "tip": "on display = đang trưng bày. display = màn hình (điện thoại).",
+      "emoji": "🖥️",
+      "stage": 2
+    },
+    {
+      "id": 2376,
+      "word": "dispute",
+      "ipa": "dɪˈspjut",
+      "viRead": "đis-PYUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc tranh chấp",
+      "exampleEn": "They had a dispute over the land.",
+      "exampleVi": "Họ tranh chấp về mảnh đất.",
+      "collocations": [
+        {
+          "en": "a land dispute",
+          "vi": "tranh chấp đất đai"
+        },
+        {
+          "en": "settle a dispute",
+          "vi": "giải quyết tranh chấp"
+        }
+      ],
+      "tip": "dispute = tranh chấp (pháp lý, đất đai...). Nhấn âm 2: đis-PIUT.",
+      "emoji": "⚔️",
+      "stage": 2
+    },
+    {
+      "id": 2377,
+      "word": "distant",
+      "ipa": "ˈdɪstənt",
+      "viRead": "ĐIS-tơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xa xôi",
+      "exampleEn": "We heard distant thunder.",
+      "exampleVi": "Chúng tôi nghe tiếng sấm xa xa.",
+      "collocations": [
+        {
+          "en": "a distant place",
+          "vi": "nơi xa xôi"
+        },
+        {
+          "en": "distant relative",
+          "vi": "họ hàng xa"
+        }
+      ],
+      "family": [
+        {
+          "word": "distance",
+          "vi": "khoảng cách"
+        }
+      ],
+      "tip": "distance (n) → distant (adj). the distant future = tương lai xa.",
+      "emoji": "🔭",
+      "stage": 2
+    },
+    {
+      "id": 2378,
+      "word": "distinct",
+      "ipa": "dɪˈstɪŋkt",
+      "viRead": "đis-TINGKT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "riêng biệt, rõ ràng",
+      "exampleEn": "Each region has its own distinct food.",
+      "exampleVi": "Mỗi vùng có món ăn đặc trưng riêng.",
+      "collocations": [
+        {
+          "en": "a distinct difference",
+          "vi": "khác biệt rõ ràng"
+        },
+        {
+          "en": "distinct from",
+          "vi": "khác biệt với"
+        }
+      ],
+      "family": [
+        {
+          "word": "distinction",
+          "vi": "sự khác biệt"
+        }
+      ],
+      "tip": "distinct = rõ nét, khác biệt hẳn.",
+      "emoji": "🔹",
+      "stage": 2
+    },
+    {
+      "id": 2379,
+      "word": "distinguish",
+      "ipa": "dɪˈstɪŋgwɪʃ",
+      "viRead": "đis-TING-gwish",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phân biệt",
+      "exampleEn": "Can you distinguish between the twins?",
+      "exampleVi": "Bạn có phân biệt được hai anh em sinh đôi không?",
+      "collocations": [
+        {
+          "en": "distinguish between",
+          "vi": "phân biệt giữa"
+        },
+        {
+          "en": "distinguish right from wrong",
+          "vi": "phân biệt đúng sai"
+        }
+      ],
+      "tip": "distinguish A from B = phân biệt A với B.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 2380,
+      "word": "distribute",
+      "ipa": "dɪˈstrɪbjut",
+      "viRead": "đis-TRIB-yut",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phân phát",
+      "exampleEn": "They distributed food to the poor.",
+      "exampleVi": "Họ phát thức ăn cho người nghèo.",
+      "collocations": [
+        {
+          "en": "distribute food",
+          "vi": "phát thức ăn"
+        },
+        {
+          "en": "distribute leaflets",
+          "vi": "phát tờ rơi"
+        }
+      ],
+      "family": [
+        {
+          "word": "distribution",
+          "vi": "sự phân phối"
+        }
+      ],
+      "tip": "Nhấn âm 2: đis-TRI-biut.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 2381,
+      "word": "district",
+      "ipa": "ˈdɪstrɪkt",
+      "viRead": "ĐIS-trikt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quận, huyện",
+      "exampleEn": "She lives in District 1.",
+      "exampleVi": "Cô ấy sống ở Quận 1.",
+      "collocations": [
+        {
+          "en": "District 1",
+          "vi": "Quận 1"
+        },
+        {
+          "en": "school district",
+          "vi": "khu học chánh"
+        }
+      ],
+      "tip": "District 1 = Quận 1. ward = phường.",
+      "emoji": "🏙️",
+      "stage": 2
+    },
+    {
+      "id": 2382,
+      "word": "disturb",
+      "ipa": "dɪˈstərb",
+      "viRead": "đis-TƠB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm phiền",
+      "exampleEn": "Please do not disturb.",
+      "exampleVi": "Vui lòng không làm phiền.",
+      "collocations": [
+        {
+          "en": "do not disturb",
+          "vi": "xin đừng làm phiền"
+        },
+        {
+          "en": "sorry to disturb you",
+          "vi": "xin lỗi đã làm phiền"
+        }
+      ],
+      "family": [
+        {
+          "word": "disturbing",
+          "vi": "gây lo lắng"
+        }
+      ],
+      "tip": "Tấm biển 'Do Not Disturb' treo ở cửa khách sạn.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 2383,
+      "word": "dive",
+      "ipa": "daɪv",
+      "viRead": "ĐAIV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lặn; nhảy xuống nước",
+      "exampleEn": "We went diving in Nha Trang.",
+      "exampleVi": "Chúng tôi đi lặn ở Nha Trang.",
+      "collocations": [
+        {
+          "en": "go diving",
+          "vi": "đi lặn"
+        },
+        {
+          "en": "scuba diving",
+          "vi": "lặn bình khí"
+        }
+      ],
+      "family": [
+        {
+          "word": "diver",
+          "vi": "thợ lặn"
+        }
+      ],
+      "tip": "dive – dived (Mỹ: dove) – dived.",
+      "emoji": "🤿",
+      "stage": 2
+    },
+    {
+      "id": 2384,
+      "word": "divorce",
+      "ipa": "dɪˈvɔrs",
+      "viRead": "đi-VORS",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự ly hôn",
+      "exampleEn": "Their divorce was difficult for the children.",
+      "exampleVi": "Việc ly hôn của họ khó khăn cho bọn trẻ.",
+      "collocations": [
+        {
+          "en": "get a divorce",
+          "vi": "ly hôn"
+        },
+        {
+          "en": "get divorced",
+          "vi": "ly dị"
+        }
+      ],
+      "family": [
+        {
+          "word": "divorced",
+          "vi": "đã ly hôn"
+        }
+      ],
+      "tip": "get divorced = ly hôn. Nhấn âm 2: đi-VORS.",
+      "emoji": "💔",
+      "stage": 2
+    },
+    {
+      "id": 2385,
+      "word": "domestic",
+      "ipa": "dəˈmɛstɪk",
+      "viRead": "đơ-MES-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trong nước; trong nhà",
+      "exampleEn": "We took a domestic flight to Hue.",
+      "exampleVi": "Chúng tôi bay nội địa đến Huế.",
+      "collocations": [
+        {
+          "en": "domestic flight",
+          "vi": "chuyến bay nội địa"
+        },
+        {
+          "en": "domestic animals",
+          "vi": "vật nuôi"
+        }
+      ],
+      "tip": "domestic ↔ international. domestic violence = bạo lực gia đình.",
+      "emoji": "✈️",
+      "stage": 2
+    },
+    {
+      "id": 2386,
+      "word": "dominate",
+      "ipa": "ˈdɑməˌneɪt",
+      "viRead": "ĐA-mơ-nâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thống trị, chiếm ưu thế",
+      "exampleEn": "Our team dominated the whole game.",
+      "exampleVi": "Đội chúng tôi áp đảo cả trận.",
+      "collocations": [
+        {
+          "en": "dominate the market",
+          "vi": "thống trị thị trường"
+        },
+        {
+          "en": "dominate the game",
+          "vi": "áp đảo trận đấu"
+        }
+      ],
+      "family": [
+        {
+          "word": "dominant",
+          "vi": "chiếm ưu thế"
+        }
+      ],
+      "tip": "Nhấn âm đầu: ĐA-mơ-nâyt.",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 2387,
+      "word": "donate",
+      "ipa": "ˈdoʊˌneɪt",
+      "viRead": "ĐÂU-nâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "quyên góp, hiến",
+      "exampleEn": "She donates blood every year.",
+      "exampleVi": "Cô ấy hiến máu mỗi năm.",
+      "collocations": [
+        {
+          "en": "donate blood",
+          "vi": "hiến máu"
+        },
+        {
+          "en": "donate money",
+          "vi": "quyên góp tiền"
+        }
+      ],
+      "family": [
+        {
+          "word": "donation",
+          "vi": "sự quyên góp"
+        }
+      ],
+      "tip": "donate (v) → donation (n) → donor (người hiến).",
+      "emoji": "🩸",
+      "stage": 2
+    },
+    {
+      "id": 2388,
+      "word": "draft",
+      "ipa": "dræft",
+      "viRead": "ĐREPHT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bản nháp",
+      "exampleEn": "This is only the first draft.",
+      "exampleVi": "Đây mới chỉ là bản nháp đầu tiên.",
+      "collocations": [
+        {
+          "en": "first draft",
+          "vi": "bản nháp đầu"
+        },
+        {
+          "en": "save as draft",
+          "vi": "lưu nháp"
+        }
+      ],
+      "tip": "Drafts trong email = thư nháp.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 2389,
+      "word": "drag",
+      "ipa": "dræg",
+      "viRead": "ĐREG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kéo lê",
+      "exampleEn": "Drag the file into the folder.",
+      "exampleVi": "Kéo tệp vào thư mục.",
+      "collocations": [
+        {
+          "en": "drag and drop",
+          "vi": "kéo và thả"
+        },
+        {
+          "en": "drag your feet",
+          "vi": "lề mề"
+        }
+      ],
+      "tip": "drag and drop = kéo thả (máy tính). What a drag! = Chán thật!",
+      "emoji": "🖱️",
+      "stage": 2
+    },
+    {
+      "id": 2390,
+      "word": "drain",
+      "ipa": "dreɪn",
+      "viRead": "ĐRÂYN",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cống thoát nước",
+      "exampleEn": "The drain is blocked.",
+      "exampleVi": "Cống bị tắc.",
+      "collocations": [
+        {
+          "en": "blocked drain",
+          "vi": "cống tắc"
+        },
+        {
+          "en": "brain drain",
+          "vi": "chảy máu chất xám"
+        }
+      ],
+      "tip": "brain drain = chảy máu chất xám.",
+      "emoji": "🚰",
+      "stage": 2
+    },
+    {
+      "id": 2391,
+      "word": "drama",
+      "ipa": "ˈdrɑmə",
+      "viRead": "ĐRA-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kịch; phim truyền hình",
+      "exampleEn": "I love watching Korean dramas.",
+      "exampleVi": "Tôi thích xem phim truyền hình Hàn Quốc.",
+      "collocations": [
+        {
+          "en": "Korean drama",
+          "vi": "phim Hàn"
+        },
+        {
+          "en": "drama queen",
+          "vi": "người hay làm quá"
+        }
+      ],
+      "family": [
+        {
+          "word": "dramatic",
+          "vi": "kịch tính"
+        }
+      ],
+      "tip": "K-drama = phim Hàn. No drama! = Đừng làm to chuyện!",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 2392,
+      "word": "dramatic",
+      "ipa": "drəˈmætɪk",
+      "viRead": "đrơ-ME-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kịch tính; đột ngột",
+      "exampleEn": "There was a dramatic change in the weather.",
+      "exampleVi": "Thời tiết thay đổi đột ngột.",
+      "collocations": [
+        {
+          "en": "a dramatic change",
+          "vi": "thay đổi đột ngột"
+        },
+        {
+          "en": "a dramatic ending",
+          "vi": "cái kết kịch tính"
+        }
+      ],
+      "family": [
+        {
+          "word": "drama",
+          "vi": "kịch"
+        }
+      ],
+      "tip": "Don't be so dramatic! = Đừng làm quá thế!",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 2393,
+      "word": "drift",
+      "ipa": "drɪft",
+      "viRead": "ĐRIPHT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trôi dạt",
+      "exampleEn": "The boat drifted out to sea.",
+      "exampleVi": "Chiếc thuyền trôi dạt ra biển.",
+      "collocations": [
+        {
+          "en": "drift apart",
+          "vi": "xa cách dần"
+        },
+        {
+          "en": "drift off to sleep",
+          "vi": "thiếp đi"
+        }
+      ],
+      "tip": "drift apart = (bạn bè) dần xa nhau.",
+      "emoji": "🛶",
+      "stage": 2
+    },
+    {
+      "id": 2394,
+      "word": "drip",
+      "ipa": "drɪp",
+      "viRead": "ĐRIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhỏ giọt",
+      "exampleEn": "Water is dripping from the ceiling.",
+      "exampleVi": "Nước đang nhỏ giọt từ trần nhà.",
+      "collocations": [
+        {
+          "en": "drip coffee",
+          "vi": "cà phê phin"
+        },
+        {
+          "en": "drip from",
+          "vi": "nhỏ giọt từ"
+        }
+      ],
+      "tip": "Vietnamese drip coffee = cà phê phin!",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 2395,
+      "word": "dump",
+      "ipa": "dəmp",
+      "viRead": "ĐƠMP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vứt, đổ bỏ",
+      "exampleEn": "Don't dump rubbish in the river.",
+      "exampleVi": "Đừng đổ rác xuống sông.",
+      "collocations": [
+        {
+          "en": "dump rubbish",
+          "vi": "đổ rác"
+        },
+        {
+          "en": "dump someone",
+          "vi": "đá (người yêu)"
+        }
+      ],
+      "tip": "dump someone = chia tay, 'đá' người yêu.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 2396,
+      "word": "dust",
+      "ipa": "dəst",
+      "viRead": "ĐƠST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bụi",
+      "exampleEn": "The table is covered in dust.",
+      "exampleVi": "Cái bàn phủ đầy bụi.",
+      "collocations": [
+        {
+          "en": "covered in dust",
+          "vi": "phủ bụi"
+        },
+        {
+          "en": "dust mask",
+          "vi": "khẩu trang chống bụi"
+        }
+      ],
+      "family": [
+        {
+          "word": "dusty",
+          "vi": "bụi bặm"
+        }
+      ],
+      "tip": "dust (n) → dusty (adj).",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 2397,
+      "word": "dye",
+      "ipa": "daɪ",
+      "viRead": "ĐAI",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhuộm",
+      "exampleEn": "She dyed her hair brown.",
+      "exampleVi": "Cô ấy nhuộm tóc màu nâu.",
+      "collocations": [
+        {
+          "en": "dye your hair",
+          "vi": "nhuộm tóc"
+        },
+        {
+          "en": "hair dye",
+          "vi": "thuốc nhuộm tóc"
+        }
+      ],
+      "tip": "dye (nhuộm) đọc giống die (chết). dyed ≠ died!",
+      "emoji": "🎨",
+      "stage": 2
+    },
+    {
+      "id": 2398,
+      "word": "eager",
+      "ipa": "ˈigər",
+      "viRead": "I-gơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "háo hức",
+      "exampleEn": "The students are eager to learn.",
+      "exampleVi": "Học sinh háo hức được học.",
+      "collocations": [
+        {
+          "en": "eager to",
+          "vi": "háo hức"
+        },
+        {
+          "en": "an eager learner",
+          "vi": "người ham học"
+        }
+      ],
+      "tip": "eager to + V = háo hức làm gì.",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 2399,
+      "word": "ease",
+      "ipa": "iz",
+      "viRead": "ID",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự dễ dàng; thoải mái",
+      "exampleEn": "She passed the test with ease.",
+      "exampleVi": "Cô ấy vượt qua bài kiểm tra dễ dàng.",
+      "collocations": [
+        {
+          "en": "with ease",
+          "vi": "một cách dễ dàng"
+        },
+        {
+          "en": "at ease",
+          "vi": "thoải mái"
+        }
+      ],
+      "family": [
+        {
+          "word": "easy",
+          "vi": "dễ"
+        }
+      ],
+      "tip": "Feel at ease = cảm thấy thoải mái, không căng thẳng.",
+      "emoji": "😌",
+      "stage": 2
+    },
+    {
+      "id": 2400,
+      "word": "eastern",
+      "ipa": "ˈistərn",
+      "viRead": "IS-tơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc phía đông",
+      "exampleEn": "Vietnam is in Eastern Asia.",
+      "exampleVi": "Việt Nam ở khu vực phía Đông châu Á.",
+      "collocations": [
+        {
+          "en": "eastern side",
+          "vi": "phía đông"
+        },
+        {
+          "en": "Eastern culture",
+          "vi": "văn hóa phương Đông"
+        }
+      ],
+      "family": [
+        {
+          "word": "east",
+          "vi": "phía đông"
+        }
+      ],
+      "tip": "east → eastern; west → western.",
+      "emoji": "🧭",
+      "stage": 2
+    },
+    {
+      "id": 2401,
+      "word": "economic",
+      "ipa": "ˌɛkəˈnɑmɪk",
+      "viRead": "e-kơ-NA-mik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc kinh tế",
+      "exampleEn": "The country has strong economic growth.",
+      "exampleVi": "Đất nước có tăng trưởng kinh tế mạnh.",
+      "collocations": [
+        {
+          "en": "economic growth",
+          "vi": "tăng trưởng kinh tế"
+        },
+        {
+          "en": "economic crisis",
+          "vi": "khủng hoảng kinh tế"
+        }
+      ],
+      "family": [
+        {
+          "word": "economy",
+          "vi": "nền kinh tế"
+        }
+      ],
+      "tip": "economic (thuộc kinh tế) ≠ economical (tiết kiệm).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2402,
+      "word": "economy",
+      "ipa": "ɪˈkɑnəmi",
+      "viRead": "i-KA-nơ-mi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nền kinh tế",
+      "exampleEn": "Tourism helps the local economy.",
+      "exampleVi": "Du lịch giúp kinh tế địa phương.",
+      "collocations": [
+        {
+          "en": "the global economy",
+          "vi": "kinh tế toàn cầu"
+        },
+        {
+          "en": "economy class",
+          "vi": "hạng phổ thông"
+        }
+      ],
+      "family": [
+        {
+          "word": "economic",
+          "vi": "thuộc kinh tế"
+        }
+      ],
+      "tip": "economy class = vé hạng phổ thông. Nhấn âm 2: i-KA-nơ-mi.",
+      "emoji": "💹",
+      "stage": 2
+    },
+    {
+      "id": 2403,
+      "word": "educate",
+      "ipa": "ˈɛʤəˌkeɪt",
+      "viRead": "E-giơ-kâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giáo dục",
+      "exampleEn": "Parents should educate children about money.",
+      "exampleVi": "Cha mẹ nên dạy con về tiền bạc.",
+      "collocations": [
+        {
+          "en": "educate children",
+          "vi": "giáo dục trẻ"
+        },
+        {
+          "en": "educate the public",
+          "vi": "nâng cao nhận thức cộng đồng"
+        }
+      ],
+      "family": [
+        {
+          "word": "education",
+          "vi": "giáo dục"
+        }
+      ],
+      "tip": "educate (v) → education (n) → educational (adj).",
+      "emoji": "🏫",
+      "stage": 2
+    },
+    {
+      "id": 2404,
+      "word": "educated",
+      "ipa": "ˈɛʤəˌkeɪtɪd",
+      "viRead": "E-giơ-kây-tiđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có học thức",
+      "exampleEn": "She is a well educated woman.",
+      "exampleVi": "Cô ấy là người phụ nữ có học thức.",
+      "collocations": [
+        {
+          "en": "well educated",
+          "vi": "có học vấn cao"
+        },
+        {
+          "en": "an educated guess",
+          "vi": "phỏng đoán có cơ sở"
+        }
+      ],
+      "family": [
+        {
+          "word": "educate",
+          "vi": "giáo dục"
+        }
+      ],
+      "tip": "an educated guess = đoán dựa trên hiểu biết.",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 2405,
+      "word": "elect",
+      "ipa": "ɪˈlɛkt",
+      "viRead": "i-LEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bầu chọn",
+      "exampleEn": "We will elect a new class president.",
+      "exampleVi": "Chúng ta sẽ bầu lớp trưởng mới.",
+      "collocations": [
+        {
+          "en": "elect a leader",
+          "vi": "bầu lãnh đạo"
+        },
+        {
+          "en": "be elected",
+          "vi": "được bầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "election",
+          "vi": "cuộc bầu cử"
+        }
+      ],
+      "tip": "elect (v) → election (n).",
+      "emoji": "🗳️",
+      "stage": 2
+    },
+    {
+      "id": 2406,
+      "word": "election",
+      "ipa": "ɪˈlɛkʃən",
+      "viRead": "i-LEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc bầu cử",
+      "exampleEn": "The election will be held next month.",
+      "exampleVi": "Cuộc bầu cử sẽ được tổ chức tháng tới.",
+      "collocations": [
+        {
+          "en": "win an election",
+          "vi": "thắng cử"
+        },
+        {
+          "en": "general election",
+          "vi": "tổng tuyển cử"
+        }
+      ],
+      "family": [
+        {
+          "word": "elect",
+          "vi": "bầu"
+        }
+      ],
+      "tip": "hold an election = tổ chức bầu cử.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 2407,
+      "word": "electricity",
+      "ipa": "ɪˌlɛkˈtrɪsəti",
+      "viRead": "i-lek-TRI-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điện",
+      "exampleEn": "The storm cut off the electricity.",
+      "exampleVi": "Cơn bão làm mất điện.",
+      "collocations": [
+        {
+          "en": "save electricity",
+          "vi": "tiết kiệm điện"
+        },
+        {
+          "en": "electricity bill",
+          "vi": "hóa đơn tiền điện"
+        }
+      ],
+      "family": [
+        {
+          "word": "electric",
+          "vi": "chạy bằng điện"
+        }
+      ],
+      "tip": "Nhấn âm 3: i-lek-TRI-sơ-ti.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 2408,
+      "word": "electronic",
+      "ipa": "ɪˌlɛkˈtrɑnɪk",
+      "viRead": "i-lek-TRA-nik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "điện tử",
+      "exampleEn": "I read electronic books on my phone.",
+      "exampleVi": "Tôi đọc sách điện tử trên điện thoại.",
+      "collocations": [
+        {
+          "en": "electronic devices",
+          "vi": "thiết bị điện tử"
+        },
+        {
+          "en": "electronic music",
+          "vi": "nhạc điện tử"
+        }
+      ],
+      "family": [
+        {
+          "word": "electronics",
+          "vi": "đồ điện tử"
+        }
+      ],
+      "tip": "e-book = electronic book; e-mail = electronic mail.",
+      "emoji": "📱",
       "stage": 2
     }
   ]
