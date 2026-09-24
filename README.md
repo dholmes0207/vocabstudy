@@ -2,7 +2,7 @@
 
 🌐 **[vocastudy.app](https://vocastudy.app)**
 
-Website học và ôn **từ vựng đa ngôn ngữ**, khởi đầu với **1000 từ tiếng Anh thông dụng nhất** (chuẩn Oxford & Cambridge) dành cho **người Việt học tiếng Anh**.
+Website học và ôn **từ vựng đa ngôn ngữ**, gồm **1000 từ tiếng Anh thông dụng nhất** (chuẩn Oxford & Cambridge) làm lõi, cộng **phần mở rộng bậc B1** (tổng hơn 2000 từ), dành cho **người Việt học tiếng Anh**.
 
 Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker** nên sau lần tải đầu, từ vựng và file phát âm đã nghe qua vẫn dùng được **khi mất mạng**; phần vỏ ứng dụng luôn ưu tiên tải bản mới nên không bao giờ bị kẹt ở bản cũ. Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 
@@ -21,7 +21,7 @@ Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker**
 | 🎯 **Kiểm tra**     | 6 dạng: Anh→Việt, Việt→Anh, Nghe→chọn, **Chọn từ hợp với câu**, Gõ từ vào câu, **Đánh vần ✍️**. Sai thì giảng: _"Bạn chọn X — đó là nghĩa của từ Y"_ + thẻ tóm tắt từ đúng.                                          |
 | ✍️ **Đánh vần**     | Nghe + nhìn nghĩa rồi **gõ lại từ** với khung gợi ý `abi__ty`, nút **"Gợi ý +1 chữ"**, chấm **từng chữ cái** — luyện nhớ mặt chữ. Nạp vào SRS.                                                                       |
 | 🎙️ **Luyện nói**    | **Ghi âm giọng mình**, nghe đối chiếu A/B với giọng mẫu, chấm điểm **0–100** tự động. 3 mức khó. Kết quả nạp vào SRS.                                                                                                |
-| 📚 **Tra cứu**      | Tìm kiếm & lọc 1000 từ theo từ loại và trạng thái; mở một từ để xem cụm đi kèm, từ cùng họ, mẹo và **tự đặt câu**.                                                                                                   |
+| 📚 **Tra cứu**      | Tìm kiếm & lọc toàn bộ kho từ theo từ loại và trạng thái; mở một từ để xem cụm đi kèm, từ cùng họ, mẹo và **tự đặt câu**.                                                                                            |
 | ✍️ **Câu của bạn**  | Tự đặt 1 câu với từ mới (chỉ lưu khi câu thật sự dùng từ đó); câu được nhắc lại mỗi khi gặp lại từ; đã đăng nhập thì **nhờ AI xem câu** bằng một chạm.                                                               |
 | 🎮 **Trò chơi**     | **Ghép cặp** (6 cặp từ–nghĩa, đua giờ, kỷ lục cá nhân) và **Xếp câu** (xếp mảnh thành câu ví dụ). Cộng XP & giữ chuỗi ngày, không đụng lịch ôn SRS. **Từ của ngày** trên Trang chủ, **combo 🔥** khi đúng liên tiếp. |
 | 📱 **Điện thoại**   | 5 tab (Trang chủ · Học · Ôn tập · Luyện tập · Tra cứu); **chế độ tập trung** khi đang học (ẩn thanh dưới, nút hành động dính đáy màn hình); **cài được lên màn hình chính** (PWA).                                   |
@@ -276,13 +276,14 @@ Chất lượng mã: ESLint + Prettier + TypeScript strict, unit test bằng Vit
 
 ## 📜 Nguồn & giấy phép
 
-Dữ liệu từ vựng — **1000 từ, không trùng lặp**, xây theo hai nguồn:
+Dữ liệu từ vựng — **1000 từ lõi + phần mở rộng B1, không trùng lặp**, xây theo ba nguồn:
 
 1. **374 từ** trích từ _"Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất"_ (chuẩn Oxford & Cambridge, bản gốc trong `docs/`). PDF này **đánh số tới 1000 nhưng bị lặp** — chỉ có 374 từ thật, mỗi từ xuất hiện ~2,7 lần; bản trùng đã được dọn.
 2. **626 từ** do dự án bổ sung để đủ 1000, chọn từ **nhóm tần suất cao dành cho người mới** (Fry / Oxford 3000 bậc A1–A2) và các chủ đề đời sống: gia đình, màu sắc, con số, cơ thể, đồ ăn, nhà cửa, thời gian, trường học, nghề nghiệp. Nghĩa tiếng Việt, câu ví dụ Anh–Việt, IPA, cách đọc và audio đều được sinh & duyệt trong repo này.
+3. **Phần mở rộng B1** (id từ 1001 trở đi, `stage: 2`): từ thông dụng bậc B1 (Oxford 3000) bổ sung theo từng lô 50 từ, mỗi từ đều có **cụm đi kèm, mẹo nhớ, IPA, cách đọc và audio**. Trên lộ trình học, phần này nằm sau 1000 từ lõi và các bộ của nó được gắn nhãn "B1".
 
 **Thứ tự lưu trong `en.json` chính là lộ trình học** (màn Học từ mới và các bộ 20 từ đi theo đúng thứ tự này): nhóm tần suất cao nhất trước (_the, of, to, in, is, you…_) → từ đời sống A1–A2 (_water, bread, mother…_) → nhóm học thuật hơn từ tài liệu gốc. Riêng màn **Tra cứu** xếp theo bảng chữ cái cho dễ tìm.
 
-> Bộ kiểm thử `src/lib/dataset.test.ts` khoá các cam kết trên: đúng 1000 từ, id liên tục 1–1000, không trùng từ, **mọi từ đều có IPA + cách đọc + đủ 4 file audio** (từ & ví dụ × 2 giọng).
+> Bộ kiểm thử `src/lib/dataset.test.ts` khoá các cam kết trên: ít nhất 1000 từ, id liên tục từ 1, 1000 từ đầu là lõi (`stage: 1`) và phần sau là B1 (`stage: 2`, bắt buộc có cụm đi kèm + mẹo), không trùng từ, **mọi từ đều có IPA + cách đọc + đủ 4 file audio** (từ & ví dụ × 2 giọng).
 
 **Mã nguồn**: [MIT](LICENSE). **Nội dung học** (PDF gốc, bộ từ vựng `public/data/`, audio `public/audio/`) là tài liệu bên thứ ba, đính kèm cho mục đích học tập và **không** thuộc phạm vi giấy phép MIT — xem phần ghi chú cuối [`LICENSE`](LICENSE).
