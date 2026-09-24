@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1295,
+    "count": 1315,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -38615,6 +38615,574 @@
       ],
       "tip": "oo đọc 'u' dài: 'pu-l'. car pool = đi chung xe.",
       "emoji": "🏊",
+      "stage": 2
+    },
+    {
+      "id": 1296,
+      "word": "pot",
+      "ipa": "pɑt",
+      "viRead": "PAT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái nồi; chậu (cây)",
+      "exampleEn": "Cook the rice in a small pot.",
+      "exampleVi": "Nấu cơm trong một cái nồi nhỏ.",
+      "collocations": [
+        {
+          "en": "a pot of tea",
+          "vi": "một ấm trà"
+        },
+        {
+          "en": "flower pot",
+          "vi": "chậu hoa"
+        }
+      ],
+      "family": [
+        {
+          "word": "teapot",
+          "vi": "ấm trà"
+        }
+      ],
+      "tip": "pot = nồi/ấm/chậu (sâu); pan = chảo (nông).",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 1297,
+      "word": "pour",
+      "ipa": "pɔr",
+      "viRead": "POR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rót, đổ",
+      "exampleEn": "Pour the tea into the cups.",
+      "exampleVi": "Rót trà vào các tách.",
+      "collocations": [
+        {
+          "en": "pour water",
+          "vi": "rót nước"
+        },
+        {
+          "en": "it's pouring",
+          "vi": "mưa như trút"
+        }
+      ],
+      "tip": "It's pouring (with rain) = Mưa như trút nước. our đọc 'o': 'po'.",
+      "emoji": "🫖",
+      "stage": 2
+    },
+    {
+      "id": 1298,
+      "word": "pressure",
+      "ipa": "ˈprɛʃər",
+      "viRead": "PRE-shơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áp lực; áp suất",
+      "exampleEn": "There is a lot of pressure at work this month.",
+      "exampleVi": "Tháng này công việc rất nhiều áp lực.",
+      "collocations": [
+        {
+          "en": "under pressure",
+          "vi": "chịu áp lực"
+        },
+        {
+          "en": "blood pressure",
+          "vi": "huyết áp"
+        }
+      ],
+      "family": [
+        {
+          "word": "press",
+          "vi": "ấn, ép"
+        }
+      ],
+      "tip": "ss đọc 'sh': 'PRE-shơ'. high blood pressure = cao huyết áp.",
+      "emoji": "🧯",
+      "stage": 2
+    },
+    {
+      "id": 1299,
+      "word": "pride",
+      "ipa": "praɪd",
+      "viRead": "PRAIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "niềm tự hào",
+      "exampleEn": "Parents feel great pride in their children.",
+      "exampleVi": "Cha mẹ rất tự hào về con cái.",
+      "collocations": [
+        {
+          "en": "take pride in",
+          "vi": "tự hào về"
+        },
+        {
+          "en": "national pride",
+          "vi": "niềm tự hào dân tộc"
+        }
+      ],
+      "family": [
+        {
+          "word": "proud",
+          "vi": "tự hào (tính từ)"
+        }
+      ],
+      "tip": "pride (danh từ) ↔ proud (tính từ): I'm proud of you / You are my pride.",
+      "emoji": "🦚",
+      "stage": 2
+    },
+    {
+      "id": 1300,
+      "word": "priority",
+      "ipa": "praɪˈɔrəti",
+      "viRead": "prai-O-rơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ưu tiên",
+      "exampleEn": "Your health should be your top priority.",
+      "exampleVi": "Sức khỏe nên là ưu tiên hàng đầu của bạn.",
+      "collocations": [
+        {
+          "en": "top priority",
+          "vi": "ưu tiên hàng đầu"
+        },
+        {
+          "en": "priority seat",
+          "vi": "ghế ưu tiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "prior",
+          "vi": "trước"
+        }
+      ],
+      "tip": "priority seat = ghế ưu tiên trên xe buýt. Nhấn âm hai: prai-O-rợ-ti.",
+      "emoji": "🥇",
+      "stage": 2
+    },
+    {
+      "id": 1301,
+      "word": "prison",
+      "ipa": "ˈprɪzən",
+      "viRead": "PRI-dơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà tù",
+      "exampleEn": "He spent five years in prison.",
+      "exampleVi": "Anh ta ngồi tù năm năm.",
+      "collocations": [
+        {
+          "en": "in prison",
+          "vi": "ở tù"
+        },
+        {
+          "en": "go to prison",
+          "vi": "vào tù"
+        }
+      ],
+      "family": [
+        {
+          "word": "prisoner",
+          "vi": "tù nhân"
+        }
+      ],
+      "tip": "in prison / go to prison (không có the) khi nói về việc ở tù.",
+      "emoji": "⛓️",
+      "stage": 2
+    },
+    {
+      "id": 1302,
+      "word": "produce",
+      "ipa": "ˈproʊdus",
+      "viRead": "prơ-ĐUS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sản xuất",
+      "exampleEn": "This factory produces cars.",
+      "exampleVi": "Nhà máy này sản xuất ô tô.",
+      "collocations": [
+        {
+          "en": "produce food",
+          "vi": "sản xuất lương thực"
+        },
+        {
+          "en": "mass produce",
+          "vi": "sản xuất hàng loạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "product",
+          "vi": "sản phẩm"
+        },
+        {
+          "word": "production",
+          "vi": "sự sản xuất"
+        }
+      ],
+      "tip": "Động từ nhấn sau: prơ-ĐIUS. Họ từ: produce → product → production → productive.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 1303,
+      "word": "profit",
+      "ipa": "ˈprɑfɪt",
+      "viRead": "PRA-phơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lợi nhuận",
+      "exampleEn": "The company made a big profit this year.",
+      "exampleVi": "Năm nay công ty lãi lớn.",
+      "collocations": [
+        {
+          "en": "make a profit",
+          "vi": "có lãi"
+        },
+        {
+          "en": "profit and loss",
+          "vi": "lãi và lỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "profitable",
+          "vi": "có lãi"
+        }
+      ],
+      "tip": "make a profit = có lãi (không dùng do). Trái nghĩa: loss (lỗ).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1304,
+      "word": "progress",
+      "ipa": "ˈprɑˌgrɛs",
+      "viRead": "PRAG-res",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tiến bộ",
+      "exampleEn": "You've made great progress in English!",
+      "exampleVi": "Bạn tiến bộ tiếng Anh nhiều lắm!",
+      "collocations": [
+        {
+          "en": "make progress",
+          "vi": "tiến bộ"
+        },
+        {
+          "en": "in progress",
+          "vi": "đang tiến hành"
+        }
+      ],
+      "tip": "progress KHÔNG đếm được: make a lot of progress (không nói a progress / progresses).",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 1305,
+      "word": "pronounce",
+      "ipa": "prəˈnaʊns",
+      "viRead": "prơ-NAONS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phát âm",
+      "exampleEn": "How do you pronounce this word?",
+      "exampleVi": "Từ này phát âm thế nào?",
+      "collocations": [
+        {
+          "en": "pronounce correctly",
+          "vi": "phát âm đúng"
+        },
+        {
+          "en": "hard to pronounce",
+          "vi": "khó phát âm"
+        }
+      ],
+      "family": [
+        {
+          "word": "pronunciation",
+          "vi": "cách phát âm"
+        }
+      ],
+      "tip": "Bẫy chính tả: pronounce → pronunciation (mất chữ o: pro-NUN-ci-ation).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 1306,
+      "word": "protect",
+      "ipa": "prəˈtɛkt",
+      "viRead": "prơ-TEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bảo vệ",
+      "exampleEn": "Wear a hat to protect your face from the sun.",
+      "exampleVi": "Đội mũ để bảo vệ mặt khỏi nắng.",
+      "collocations": [
+        {
+          "en": "protect from",
+          "vi": "bảo vệ khỏi"
+        },
+        {
+          "en": "protect the environment",
+          "vi": "bảo vệ môi trường"
+        }
+      ],
+      "family": [
+        {
+          "word": "protection",
+          "vi": "sự bảo vệ"
+        }
+      ],
+      "tip": "protect A FROM B: protect your skin from the sun.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 1307,
+      "word": "pupil",
+      "ipa": "ˈpjupəl",
+      "viRead": "PYU-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "học sinh (nhỏ tuổi)",
+      "exampleEn": "There are thirty pupils in the class.",
+      "exampleVi": "Lớp có ba mươi học sinh.",
+      "collocations": [
+        {
+          "en": "primary school pupils",
+          "vi": "học sinh tiểu học"
+        },
+        {
+          "en": "a new pupil",
+          "vi": "học sinh mới"
+        }
+      ],
+      "tip": "pupil (Anh) thường chỉ học sinh nhỏ tuổi; student dùng chung. pupil còn là con ngươi mắt.",
+      "emoji": "🧒",
+      "stage": 2
+    },
+    {
+      "id": 1308,
+      "word": "puzzle",
+      "ipa": "ˈpəzəl",
+      "viRead": "PƠ-dơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "câu đố, trò xếp hình",
+      "exampleEn": "My son loves doing jigsaw puzzles.",
+      "exampleVi": "Con trai tôi mê chơi xếp hình.",
+      "collocations": [
+        {
+          "en": "jigsaw puzzle",
+          "vi": "trò xếp hình"
+        },
+        {
+          "en": "solve a puzzle",
+          "vi": "giải câu đố"
+        }
+      ],
+      "family": [
+        {
+          "word": "puzzled",
+          "vi": "bối rối"
+        }
+      ],
+      "tip": "I'm puzzled = Tôi thấy khó hiểu. Crossword puzzle = ô chữ.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 1309,
+      "word": "quantity",
+      "ipa": "kˈwɑntəti",
+      "viRead": "KWAN-tơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "số lượng",
+      "exampleEn": "We need a large quantity of rice for the party.",
+      "exampleVi": "Chúng ta cần một lượng gạo lớn cho bữa tiệc.",
+      "collocations": [
+        {
+          "en": "a large quantity",
+          "vi": "số lượng lớn"
+        },
+        {
+          "en": "quality and quantity",
+          "vi": "chất và lượng"
+        }
+      ],
+      "tip": "quantity (số lượng) ≠ quality (chất lượng) — chỉ khác 'nti' và 'li'.",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 1310,
+      "word": "quarter",
+      "ipa": "kˈwɔrtər",
+      "viRead": "KWOR-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "một phần tư; 15 phút",
+      "exampleEn": "I'll meet you at a quarter past six.",
+      "exampleVi": "Tôi gặp bạn lúc sáu giờ mười lăm.",
+      "collocations": [
+        {
+          "en": "a quarter past",
+          "vi": "… giờ 15"
+        },
+        {
+          "en": "a quarter to",
+          "vi": "… giờ kém 15"
+        }
+      ],
+      "tip": "a quarter past six = 6:15; a quarter to six = 5:45. old quarter = khu phố cổ.",
+      "emoji": "🕒",
+      "stage": 2
+    },
+    {
+      "id": 1311,
+      "word": "rainbow",
+      "ipa": "ˈreɪnˌboʊ",
+      "viRead": "RÂYN-bâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cầu vồng",
+      "exampleEn": "Look, there's a rainbow after the rain!",
+      "exampleVi": "Nhìn kìa, có cầu vồng sau mưa!",
+      "collocations": [
+        {
+          "en": "a double rainbow",
+          "vi": "cầu vồng đôi"
+        },
+        {
+          "en": "rainbow colors",
+          "vi": "bảy sắc cầu vồng"
+        }
+      ],
+      "family": [
+        {
+          "word": "rain",
+          "vi": "mưa"
+        }
+      ],
+      "tip": "rain (mưa) + bow (cung) = cầu vồng.",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 1312,
+      "word": "rare",
+      "ipa": "rɛr",
+      "viRead": "RER",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hiếm; tái (thịt)",
+      "exampleEn": "This is a rare bird in Vietnam.",
+      "exampleVi": "Đây là loài chim hiếm ở Việt Nam.",
+      "collocations": [
+        {
+          "en": "a rare chance",
+          "vi": "cơ hội hiếm có"
+        },
+        {
+          "en": "rare steak",
+          "vi": "bít tết tái"
+        }
+      ],
+      "family": [
+        {
+          "word": "rarely",
+          "vi": "hiếm khi"
+        }
+      ],
+      "tip": "rarely = hiếm khi (đứng trước động từ): I rarely eat fast food.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 1313,
+      "word": "raw",
+      "ipa": "rɑ",
+      "viRead": "RA",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sống (chưa nấu); thô",
+      "exampleEn": "Don't eat raw meat.",
+      "exampleVi": "Đừng ăn thịt sống.",
+      "collocations": [
+        {
+          "en": "raw fish",
+          "vi": "cá sống"
+        },
+        {
+          "en": "raw materials",
+          "vi": "nguyên liệu thô"
+        }
+      ],
+      "tip": "raw = chưa nấu (raw vegetables = rau sống); aw đọc 'o': 'ro'.",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 1314,
+      "word": "recycle",
+      "ipa": "riˈsaɪkəl",
+      "viRead": "ri-SAI-kơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tái chế",
+      "exampleEn": "We recycle paper and plastic bottles.",
+      "exampleVi": "Chúng tôi tái chế giấy và chai nhựa.",
+      "collocations": [
+        {
+          "en": "recycle waste",
+          "vi": "tái chế rác"
+        },
+        {
+          "en": "recycling bin",
+          "vi": "thùng rác tái chế"
+        }
+      ],
+      "family": [
+        {
+          "word": "recycling",
+          "vi": "việc tái chế"
+        }
+      ],
+      "tip": "re (lại) + cycle (vòng) = quay vòng lại → tái chế.",
+      "emoji": "♻️",
+      "stage": 2
+    },
+    {
+      "id": 1315,
+      "word": "regular",
+      "ipa": "ˈrɛgjələr",
+      "viRead": "REG-yơ-lơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đều đặn; thông thường",
+      "exampleEn": "Regular exercise keeps you strong.",
+      "exampleVi": "Tập thể dục đều đặn giúp bạn khỏe mạnh.",
+      "collocations": [
+        {
+          "en": "a regular customer",
+          "vi": "khách quen"
+        },
+        {
+          "en": "regular size",
+          "vi": "cỡ thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "regularly",
+          "vi": "đều đặn"
+        }
+      ],
+      "tip": "regular verbs = động từ có quy tắc (thêm -ed); irregular = bất quy tắc (go → went).",
+      "emoji": "🔁",
       "stage": 2
     }
   ]
