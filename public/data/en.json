@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1809,
+    "count": 1859,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -52483,6 +52483,1374 @@
       ],
       "tip": "personality = tính cách (cả con người); character cũng dùng nhưng nghiêng về đạo đức.",
       "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 1810,
+      "word": "phrase",
+      "ipa": "freɪz",
+      "viRead": "PHRÂYD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cụm từ",
+      "exampleEn": "Learn useful phrases for travelling.",
+      "exampleVi": "Hãy học những cụm từ hữu ích khi đi du lịch.",
+      "collocations": [
+        {
+          "en": "a useful phrase",
+          "vi": "cụm từ hữu ích"
+        },
+        {
+          "en": "phrase book",
+          "vi": "sổ tay hội thoại"
+        }
+      ],
+      "tip": "Học theo phrase (cụm) nhớ lâu hơn học từ đơn lẻ. ph đọc 'f': 'phrâyz'.",
+      "emoji": "💬",
+      "stage": 2
+    },
+    {
+      "id": 1811,
+      "word": "physics",
+      "ipa": "ˈfɪzɪks",
+      "viRead": "PHI-diks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vật lý",
+      "exampleEn": "Physics was my hardest subject at school.",
+      "exampleVi": "Vật lý là môn khó nhất của tôi hồi đi học.",
+      "collocations": [
+        {
+          "en": "study physics",
+          "vi": "học vật lý"
+        },
+        {
+          "en": "physics teacher",
+          "vi": "giáo viên vật lý"
+        }
+      ],
+      "family": [
+        {
+          "word": "physical",
+          "vi": "thuộc thể chất; vật lý"
+        }
+      ],
+      "tip": "physics có s nhưng là danh từ số ít: Physics IS hard.",
+      "emoji": "⚛️",
+      "stage": 2
+    },
+    {
+      "id": 1812,
+      "word": "pie",
+      "ipa": "paɪ",
+      "viRead": "PAI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh nướng nhân",
+      "exampleEn": "My grandma makes the best apple pie.",
+      "exampleVi": "Bà tôi làm bánh táo ngon nhất.",
+      "collocations": [
+        {
+          "en": "apple pie",
+          "vi": "bánh táo"
+        },
+        {
+          "en": "a piece of pie",
+          "vi": "một miếng bánh"
+        }
+      ],
+      "tip": "easy as pie = dễ như ăn bánh. pie đọc 'pai'.",
+      "emoji": "🥧",
+      "stage": 2
+    },
+    {
+      "id": 1813,
+      "word": "pig",
+      "ipa": "pɪg",
+      "viRead": "PIG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con lợn",
+      "exampleEn": "The farmer has ten pigs.",
+      "exampleVi": "Người nông dân có mười con lợn.",
+      "collocations": [
+        {
+          "en": "pig farm",
+          "vi": "trại lợn"
+        },
+        {
+          "en": "eat like a pig",
+          "vi": "ăn như heo"
+        }
+      ],
+      "family": [
+        {
+          "word": "piggy bank",
+          "vi": "con lợn đất (tiết kiệm)"
+        }
+      ],
+      "tip": "pig = con lợn; pork = thịt lợn. piggy bank = lợn đất.",
+      "emoji": "🐷",
+      "stage": 2
+    },
+    {
+      "id": 1814,
+      "word": "pilot",
+      "ipa": "ˈpaɪlət",
+      "viRead": "PAI-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phi công",
+      "exampleEn": "He dreams of becoming a pilot.",
+      "exampleVi": "Anh ấy mơ trở thành phi công.",
+      "collocations": [
+        {
+          "en": "airline pilot",
+          "vi": "phi công hãng bay"
+        },
+        {
+          "en": "pilot project",
+          "vi": "dự án thí điểm"
+        }
+      ],
+      "tip": "pilot project = dự án thử nghiệm. Đọc 'PAI-lợt'.",
+      "emoji": "👨‍✈️",
+      "stage": 2
+    },
+    {
+      "id": 1815,
+      "word": "pin",
+      "ipa": "pɪn",
+      "viRead": "PIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ghim; mã PIN",
+      "exampleEn": "Enter your PIN at the ATM.",
+      "exampleVi": "Nhập mã PIN tại cây ATM.",
+      "collocations": [
+        {
+          "en": "PIN code",
+          "vi": "mã PIN"
+        },
+        {
+          "en": "safety pin",
+          "vi": "kim băng"
+        }
+      ],
+      "tip": "PIN = Personal Identification Number. pin (động từ) = ghim (pin a post = ghim bài).",
+      "emoji": "📌",
+      "stage": 2
+    },
+    {
+      "id": 1816,
+      "word": "pink",
+      "ipa": "pɪŋk",
+      "viRead": "PINGK",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu hồng",
+      "exampleEn": "She painted her room pink.",
+      "exampleVi": "Cô ấy sơn phòng màu hồng.",
+      "collocations": [
+        {
+          "en": "light pink",
+          "vi": "hồng nhạt"
+        },
+        {
+          "en": "pink flowers",
+          "vi": "hoa màu hồng"
+        }
+      ],
+      "tip": "in the pink = rất khỏe mạnh (thành ngữ).",
+      "emoji": "🩷",
+      "stage": 2
+    },
+    {
+      "id": 1817,
+      "word": "pipe",
+      "ipa": "paɪp",
+      "viRead": "PAIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ống (nước)",
+      "exampleEn": "A water pipe burst under the street.",
+      "exampleVi": "Một đường ống nước bị vỡ dưới lòng đường.",
+      "collocations": [
+        {
+          "en": "water pipe",
+          "vi": "ống nước"
+        },
+        {
+          "en": "gas pipe",
+          "vi": "ống ga"
+        }
+      ],
+      "tip": "pipe còn là tẩu thuốc. Đọc 'paip'.",
+      "emoji": "🚰",
+      "stage": 2
+    },
+    {
+      "id": 1818,
+      "word": "pity",
+      "ipa": "ˈpɪti",
+      "viRead": "PI-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điều đáng tiếc; lòng thương",
+      "exampleEn": "What a pity you can't come!",
+      "exampleVi": "Tiếc quá bạn không đến được!",
+      "collocations": [
+        {
+          "en": "what a pity",
+          "vi": "tiếc quá"
+        },
+        {
+          "en": "feel pity for",
+          "vi": "thương hại"
+        }
+      ],
+      "tip": "What a pity! = It's a shame! = Tiếc quá!",
+      "emoji": "🥺",
+      "stage": 2
+    },
+    {
+      "id": 1819,
+      "word": "planet",
+      "ipa": "ˈplænət",
+      "viRead": "PLE-nơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hành tinh",
+      "exampleEn": "Earth is the planet we live on.",
+      "exampleVi": "Trái Đất là hành tinh chúng ta sống.",
+      "collocations": [
+        {
+          "en": "save the planet",
+          "vi": "cứu hành tinh"
+        },
+        {
+          "en": "planet Earth",
+          "vi": "hành tinh Trái Đất"
+        }
+      ],
+      "tip": "Nhấn âm đầu: PLA-nợt.",
+      "emoji": "🪐",
+      "stage": 2
+    },
+    {
+      "id": 1820,
+      "word": "plenty",
+      "ipa": "ˈplɛnti",
+      "viRead": "PLEN-ti",
+      "pos": "n./pron.",
+      "posCategory": "noun",
+      "meaning": "nhiều, dư dả",
+      "exampleEn": "Don't hurry, we have plenty of time.",
+      "exampleVi": "Đừng vội, chúng ta còn nhiều thời gian.",
+      "collocations": [
+        {
+          "en": "plenty of",
+          "vi": "nhiều"
+        },
+        {
+          "en": "plenty of time",
+          "vi": "còn nhiều thời gian"
+        }
+      ],
+      "tip": "plenty of = nhiều hơn mức cần (dùng cho cả đếm được và không đếm được).",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 1821,
+      "word": "plot",
+      "ipa": "plɑt",
+      "viRead": "PLAT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cốt truyện; mảnh đất",
+      "exampleEn": "The plot of the film is very interesting.",
+      "exampleVi": "Cốt truyện bộ phim rất hay.",
+      "collocations": [
+        {
+          "en": "the plot of",
+          "vi": "cốt truyện của"
+        },
+        {
+          "en": "a plot of land",
+          "vi": "mảnh đất"
+        }
+      ],
+      "tip": "plot twist = tình tiết bất ngờ trong phim.",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 1822,
+      "word": "plus",
+      "ipa": "pləs",
+      "viRead": "PLƠS",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "cộng, thêm",
+      "exampleEn": "Two plus three is five.",
+      "exampleVi": "Hai cộng ba là năm.",
+      "collocations": [
+        {
+          "en": "two plus two",
+          "vi": "hai cộng hai"
+        },
+        {
+          "en": "plus tax",
+          "vi": "cộng thuế"
+        }
+      ],
+      "tip": "plus (+) ↔ minus (−). A plus = điểm A+ (rất tốt).",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 1823,
+      "word": "poet",
+      "ipa": "poʊət",
+      "viRead": "PÂU-ơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà thơ",
+      "exampleEn": "Nguyen Du is a famous Vietnamese poet.",
+      "exampleVi": "Nguyễn Du là nhà thơ nổi tiếng của Việt Nam.",
+      "collocations": [
+        {
+          "en": "a famous poet",
+          "vi": "nhà thơ nổi tiếng"
+        },
+        {
+          "en": "national poet",
+          "vi": "đại thi hào"
+        }
+      ],
+      "family": [
+        {
+          "word": "poem",
+          "vi": "bài thơ"
+        },
+        {
+          "word": "poetry",
+          "vi": "thơ ca"
+        }
+      ],
+      "tip": "poet (người) → poem (bài thơ) → poetry (thơ ca). Đọc 'PÂU-ợt'.",
+      "emoji": "✒️",
+      "stage": 2
+    },
+    {
+      "id": 1824,
+      "word": "poison",
+      "ipa": "ˈpɔɪzən",
+      "viRead": "POI-dơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất độc",
+      "exampleEn": "Keep poison away from children.",
+      "exampleVi": "Để chất độc xa tầm tay trẻ em.",
+      "collocations": [
+        {
+          "en": "rat poison",
+          "vi": "thuốc chuột"
+        },
+        {
+          "en": "food poisoning",
+          "vi": "ngộ độc thực phẩm"
+        }
+      ],
+      "family": [
+        {
+          "word": "poisonous",
+          "vi": "có độc"
+        }
+      ],
+      "tip": "food poisoning = ngộ độc thực phẩm. oi đọc 'oi': 'POI-zần'.",
+      "emoji": "☠️",
+      "stage": 2
+    },
+    {
+      "id": 1825,
+      "word": "polish",
+      "ipa": "ˈpɑlɪʃ",
+      "viRead": "PA-lish",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đánh bóng; trau chuốt",
+      "exampleEn": "He polished his shoes before the interview.",
+      "exampleVi": "Anh ấy đánh bóng giày trước buổi phỏng vấn.",
+      "collocations": [
+        {
+          "en": "polish shoes",
+          "vi": "đánh giày"
+        },
+        {
+          "en": "polish your English",
+          "vi": "trau chuốt tiếng Anh"
+        }
+      ],
+      "tip": "polish (đánh bóng) viết thường; Polish (người Ba Lan) viết hoa, đọc khác: 'PÂU-lish'.",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 1826,
+      "word": "politics",
+      "ipa": "ˈpɑləˌtɪks",
+      "viRead": "PA-lơ-tiks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chính trị",
+      "exampleEn": "He's not interested in politics.",
+      "exampleVi": "Anh ấy không quan tâm đến chính trị.",
+      "collocations": [
+        {
+          "en": "talk politics",
+          "vi": "bàn chuyện chính trị"
+        },
+        {
+          "en": "office politics",
+          "vi": "chính trị công sở"
+        }
+      ],
+      "family": [
+        {
+          "word": "political",
+          "vi": "thuộc chính trị"
+        },
+        {
+          "word": "politician",
+          "vi": "chính trị gia"
+        }
+      ],
+      "tip": "Nhấn âm đầu: PO-lơ-tiks. politics có s nhưng thường là số ít.",
+      "emoji": "🗳️",
+      "stage": 2
+    },
+    {
+      "id": 1827,
+      "word": "poll",
+      "ipa": "poʊl",
+      "viRead": "PÂUL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc thăm dò",
+      "exampleEn": "The poll shows most people like the idea.",
+      "exampleVi": "Cuộc thăm dò cho thấy đa số thích ý tưởng này.",
+      "collocations": [
+        {
+          "en": "opinion poll",
+          "vi": "thăm dò ý kiến"
+        },
+        {
+          "en": "take a poll",
+          "vi": "thăm dò"
+        }
+      ],
+      "tip": "poll đọc 'pâul' (giống pole). Tạo poll trong nhóm chat = bình chọn.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 1828,
+      "word": "portrait",
+      "ipa": "ˈpɔrtrət",
+      "viRead": "POR-trơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chân dung",
+      "exampleEn": "She painted a portrait of her mother.",
+      "exampleVi": "Cô ấy vẽ chân dung mẹ mình.",
+      "collocations": [
+        {
+          "en": "a family portrait",
+          "vi": "ảnh chân dung gia đình"
+        },
+        {
+          "en": "portrait mode",
+          "vi": "chế độ chụp chân dung"
+        }
+      ],
+      "tip": "portrait mode = chế độ chụp chân dung (xóa phông).",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 1829,
+      "word": "pose",
+      "ipa": "poʊz",
+      "viRead": "PÂUD",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "tạo dáng; gây ra",
+      "exampleEn": "Let's pose for a photo in front of the lake.",
+      "exampleVi": "Tạo dáng chụp ảnh trước hồ nhé.",
+      "collocations": [
+        {
+          "en": "pose for a photo",
+          "vi": "tạo dáng chụp ảnh"
+        },
+        {
+          "en": "pose a risk",
+          "vi": "gây ra rủi ro"
+        }
+      ],
+      "tip": "strike a pose = tạo dáng. pose a problem = gây ra vấn đề.",
+      "emoji": "📸",
+      "stage": 2
+    },
+    {
+      "id": 1830,
+      "word": "possess",
+      "ipa": "pəˈzɛs",
+      "viRead": "pơ-DES",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sở hữu",
+      "exampleEn": "He possesses great talent.",
+      "exampleVi": "Anh ấy sở hữu tài năng lớn.",
+      "collocations": [
+        {
+          "en": "possess a skill",
+          "vi": "sở hữu kỹ năng"
+        },
+        {
+          "en": "possess a car",
+          "vi": "sở hữu xe"
+        }
+      ],
+      "family": [
+        {
+          "word": "possession",
+          "vi": "tài sản"
+        }
+      ],
+      "tip": "Chính tả: 4 chữ s (po-ss-e-ss). possess = own (trang trọng).",
+      "emoji": "👜",
+      "stage": 2
+    },
+    {
+      "id": 1831,
+      "word": "post",
+      "ipa": "poʊst",
+      "viRead": "PÂUST",
+      "pos": "n./v.",
+      "posCategory": "verb",
+      "meaning": "đăng (bài); gửi (thư)",
+      "exampleEn": "I posted some photos on Facebook.",
+      "exampleVi": "Tôi đăng vài tấm ảnh lên Facebook.",
+      "collocations": [
+        {
+          "en": "post a photo",
+          "vi": "đăng ảnh"
+        },
+        {
+          "en": "post office",
+          "vi": "bưu điện"
+        }
+      ],
+      "family": [
+        {
+          "word": "postcard",
+          "vi": "bưu thiếp"
+        }
+      ],
+      "tip": "post (Anh) = gửi thư; trên mạng = đăng bài. a post = một bài đăng.",
+      "emoji": "📮",
+      "stage": 2
+    },
+    {
+      "id": 1832,
+      "word": "poverty",
+      "ipa": "ˈpɑvərti",
+      "viRead": "PA-vơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nghèo đói",
+      "exampleEn": "Many families live in poverty.",
+      "exampleVi": "Nhiều gia đình sống trong nghèo khó.",
+      "collocations": [
+        {
+          "en": "live in poverty",
+          "vi": "sống trong nghèo khó"
+        },
+        {
+          "en": "reduce poverty",
+          "vi": "giảm nghèo"
+        }
+      ],
+      "family": [
+        {
+          "word": "poor",
+          "vi": "nghèo"
+        }
+      ],
+      "tip": "poor (tính từ) → poverty (danh từ).",
+      "emoji": "🏚️",
+      "stage": 2
+    },
+    {
+      "id": 1833,
+      "word": "powder",
+      "ipa": "ˈpaʊdər",
+      "viRead": "PAO-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bột",
+      "exampleEn": "Add a spoon of chili powder.",
+      "exampleVi": "Thêm một thìa ớt bột.",
+      "collocations": [
+        {
+          "en": "milk powder",
+          "vi": "sữa bột"
+        },
+        {
+          "en": "washing powder",
+          "vi": "bột giặt"
+        }
+      ],
+      "tip": "baby powder = phấn rôm. ow đọc 'ao': 'PAO-đơ'.",
+      "emoji": "🧂",
+      "stage": 2
+    },
+    {
+      "id": 1834,
+      "word": "practical",
+      "ipa": "ˈpræktɪkəl",
+      "viRead": "PREK-tơ-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thực tế, thiết thực",
+      "exampleEn": "This bag is cheap and practical.",
+      "exampleVi": "Cái túi này rẻ và thiết thực.",
+      "collocations": [
+        {
+          "en": "practical advice",
+          "vi": "lời khuyên thiết thực"
+        },
+        {
+          "en": "practical skills",
+          "vi": "kỹ năng thực hành"
+        }
+      ],
+      "family": [
+        {
+          "word": "practice",
+          "vi": "thực hành"
+        }
+      ],
+      "tip": "practical = hữu dụng thực tế; practically = gần như (practically impossible).",
+      "emoji": "🧰",
+      "stage": 2
+    },
+    {
+      "id": 1835,
+      "word": "praise",
+      "ipa": "preɪz",
+      "viRead": "PRÂYD",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "khen ngợi",
+      "exampleEn": "The teacher praised her for her hard work.",
+      "exampleVi": "Giáo viên khen cô ấy vì sự chăm chỉ.",
+      "collocations": [
+        {
+          "en": "praise someone for",
+          "vi": "khen ai vì"
+        },
+        {
+          "en": "high praise",
+          "vi": "lời khen cao"
+        }
+      ],
+      "tip": "praise + người + for + việc. ai đọc 'ây': 'prâyz'.",
+      "emoji": "👏",
+      "stage": 2
+    },
+    {
+      "id": 1836,
+      "word": "precious",
+      "ipa": "ˈprɛʃəs",
+      "viRead": "PRE-shơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "quý giá",
+      "exampleEn": "Time with family is precious.",
+      "exampleVi": "Thời gian bên gia đình thật quý giá.",
+      "collocations": [
+        {
+          "en": "precious time",
+          "vi": "thời gian quý báu"
+        },
+        {
+          "en": "precious stones",
+          "vi": "đá quý"
+        }
+      ],
+      "tip": "c đọc 'sh': 'PRE-shợs'.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 1837,
+      "word": "precise",
+      "ipa": "prɪˈsaɪs",
+      "viRead": "pri-SAIS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chính xác, rõ ràng",
+      "exampleEn": "Please give me precise directions.",
+      "exampleVi": "Làm ơn chỉ đường chính xác cho tôi.",
+      "collocations": [
+        {
+          "en": "to be precise",
+          "vi": "nói chính xác là"
+        },
+        {
+          "en": "precise details",
+          "vi": "chi tiết chính xác"
+        }
+      ],
+      "family": [
+        {
+          "word": "precisely",
+          "vi": "chính xác"
+        }
+      ],
+      "tip": "to be precise = nói cho chính xác thì. Precisely! = Chính xác!",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 1838,
+      "word": "predict",
+      "ipa": "prɪˈdɪkt",
+      "viRead": "pri-ĐIKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dự đoán",
+      "exampleEn": "Nobody can predict the future.",
+      "exampleVi": "Không ai có thể đoán trước tương lai.",
+      "collocations": [
+        {
+          "en": "predict the weather",
+          "vi": "dự báo thời tiết"
+        },
+        {
+          "en": "hard to predict",
+          "vi": "khó đoán"
+        }
+      ],
+      "family": [
+        {
+          "word": "prediction",
+          "vi": "lời dự đoán"
+        },
+        {
+          "word": "unpredictable",
+          "vi": "khó đoán"
+        }
+      ],
+      "tip": "pre (trước) + dict (nói) = nói trước.",
+      "emoji": "🔮",
+      "stage": 2
+    },
+    {
+      "id": 1839,
+      "word": "pregnant",
+      "ipa": "ˈprɛgnənt",
+      "viRead": "PREG-nơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có thai",
+      "exampleEn": "My sister is pregnant with her first baby.",
+      "exampleVi": "Chị tôi đang mang thai đứa con đầu lòng.",
+      "collocations": [
+        {
+          "en": "get pregnant",
+          "vi": "có thai"
+        },
+        {
+          "en": "six months pregnant",
+          "vi": "mang thai sáu tháng"
+        }
+      ],
+      "family": [
+        {
+          "word": "pregnancy",
+          "vi": "thai kỳ"
+        }
+      ],
+      "tip": "She's expecting = Cô ấy đang có bầu (nói tế nhị).",
+      "emoji": "🤰",
+      "stage": 2
+    },
+    {
+      "id": 1840,
+      "word": "presence",
+      "ipa": "ˈprɛzəns",
+      "viRead": "PRE-dơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự có mặt",
+      "exampleEn": "Thank you for your presence today.",
+      "exampleVi": "Cảm ơn sự có mặt của bạn hôm nay.",
+      "collocations": [
+        {
+          "en": "in the presence of",
+          "vi": "trước sự có mặt của"
+        },
+        {
+          "en": "online presence",
+          "vi": "sự hiện diện trên mạng"
+        }
+      ],
+      "family": [
+        {
+          "word": "present",
+          "vi": "có mặt"
+        }
+      ],
+      "tip": "presence (sự có mặt) đọc giống presents (những món quà).",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 1841,
+      "word": "preserve",
+      "ipa": "prɪˈzərv",
+      "viRead": "prơ-DƠV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bảo tồn, giữ gìn",
+      "exampleEn": "We must preserve our traditions.",
+      "exampleVi": "Chúng ta phải giữ gìn truyền thống.",
+      "collocations": [
+        {
+          "en": "preserve food",
+          "vi": "bảo quản thực phẩm"
+        },
+        {
+          "en": "preserve culture",
+          "vi": "bảo tồn văn hóa"
+        }
+      ],
+      "family": [
+        {
+          "word": "preservation",
+          "vi": "sự bảo tồn"
+        }
+      ],
+      "tip": "preserve = giữ gìn nguyên trạng; protect = bảo vệ khỏi nguy hại.",
+      "emoji": "🏺",
+      "stage": 2
+    },
+    {
+      "id": 1842,
+      "word": "press",
+      "ipa": "prɛs",
+      "viRead": "PRES",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhấn, ấn; báo chí",
+      "exampleEn": "Press the green button to start.",
+      "exampleVi": "Nhấn nút xanh để bắt đầu.",
+      "collocations": [
+        {
+          "en": "press a button",
+          "vi": "nhấn nút"
+        },
+        {
+          "en": "the press",
+          "vi": "báo chí"
+        }
+      ],
+      "family": [
+        {
+          "word": "pressure",
+          "vi": "áp lực"
+        }
+      ],
+      "tip": "press conference = họp báo. press vs push: press = ấn nút; push = đẩy.",
+      "emoji": "🔘",
+      "stage": 2
+    },
+    {
+      "id": 1843,
+      "word": "prince",
+      "ipa": "prɪns",
+      "viRead": "PRINS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoàng tử",
+      "exampleEn": "The prince married a beautiful princess.",
+      "exampleVi": "Hoàng tử cưới một nàng công chúa xinh đẹp.",
+      "collocations": [
+        {
+          "en": "Prince Charming",
+          "vi": "hoàng tử trong mộng"
+        },
+        {
+          "en": "the little prince",
+          "vi": "hoàng tử bé"
+        }
+      ],
+      "family": [
+        {
+          "word": "princess",
+          "vi": "công chúa"
+        }
+      ],
+      "tip": "prince + ss = princess (thêm -ess chỉ nữ).",
+      "emoji": "🤴",
+      "stage": 2
+    },
+    {
+      "id": 1844,
+      "word": "principle",
+      "ipa": "ˈprɪnsəpəl",
+      "viRead": "PRIN-sơ-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nguyên tắc",
+      "exampleEn": "He never lies; it's a matter of principle.",
+      "exampleVi": "Anh ấy không bao giờ nói dối; đó là nguyên tắc.",
+      "collocations": [
+        {
+          "en": "in principle",
+          "vi": "về nguyên tắc"
+        },
+        {
+          "en": "basic principles",
+          "vi": "nguyên tắc cơ bản"
+        }
+      ],
+      "tip": "principle (nguyên tắc) đọc giống principal (hiệu trưởng).",
+      "emoji": "📐",
+      "stage": 2
+    },
+    {
+      "id": 1845,
+      "word": "print",
+      "ipa": "prɪnt",
+      "viRead": "PRINT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "in",
+      "exampleEn": "Can you print this document for me?",
+      "exampleVi": "Bạn in giúp tôi tài liệu này nhé?",
+      "collocations": [
+        {
+          "en": "print a photo",
+          "vi": "in ảnh"
+        },
+        {
+          "en": "small print",
+          "vi": "chữ in nhỏ (điều khoản)"
+        }
+      ],
+      "family": [
+        {
+          "word": "printer",
+          "vi": "máy in"
+        }
+      ],
+      "tip": "read the small print = đọc kỹ điều khoản nhỏ trong hợp đồng.",
+      "emoji": "🖨️",
+      "stage": 2
+    },
+    {
+      "id": 1846,
+      "word": "prisoner",
+      "ipa": "ˈprɪzənər",
+      "viRead": "PRI-dơ-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tù nhân",
+      "exampleEn": "The prisoner escaped last night.",
+      "exampleVi": "Tên tù nhân đã trốn thoát tối qua.",
+      "collocations": [
+        {
+          "en": "a political prisoner",
+          "vi": "tù chính trị"
+        },
+        {
+          "en": "release a prisoner",
+          "vi": "thả tù nhân"
+        }
+      ],
+      "family": [
+        {
+          "word": "prison",
+          "vi": "nhà tù"
+        }
+      ],
+      "tip": "prison (nhà tù) + er = tù nhân.",
+      "emoji": "🔒",
+      "stage": 2
+    },
+    {
+      "id": 1847,
+      "word": "privacy",
+      "ipa": "ˈpraɪvəsi",
+      "viRead": "PRAI-vơ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự riêng tư",
+      "exampleEn": "Please respect my privacy.",
+      "exampleVi": "Làm ơn tôn trọng sự riêng tư của tôi.",
+      "collocations": [
+        {
+          "en": "privacy settings",
+          "vi": "cài đặt quyền riêng tư"
+        },
+        {
+          "en": "invade someone's privacy",
+          "vi": "xâm phạm đời tư"
+        }
+      ],
+      "family": [
+        {
+          "word": "private",
+          "vi": "riêng tư"
+        }
+      ],
+      "tip": "Mỹ đọc 'PRAI-vơ-si', Anh 'PRI-vơ-si'.",
+      "emoji": "🔏",
+      "stage": 2
+    },
+    {
+      "id": 1848,
+      "word": "probable",
+      "ipa": "ˈprɑbəbəl",
+      "viRead": "PRA-bơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có thể xảy ra",
+      "exampleEn": "It's probable that it will rain later.",
+      "exampleVi": "Nhiều khả năng lát nữa trời sẽ mưa.",
+      "collocations": [
+        {
+          "en": "highly probable",
+          "vi": "rất có khả năng"
+        },
+        {
+          "en": "a probable cause",
+          "vi": "nguyên nhân có thể"
+        }
+      ],
+      "family": [
+        {
+          "word": "probably",
+          "vi": "có lẽ"
+        }
+      ],
+      "tip": "Người ta dùng probably (trạng từ) nhiều hơn probable.",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 1849,
+      "word": "procedure",
+      "ipa": "prəˈsiʤər",
+      "viRead": "prơ-SI-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thủ tục, quy trình",
+      "exampleEn": "Follow the safety procedure carefully.",
+      "exampleVi": "Làm theo quy trình an toàn cẩn thận.",
+      "collocations": [
+        {
+          "en": "safety procedure",
+          "vi": "quy trình an toàn"
+        },
+        {
+          "en": "medical procedure",
+          "vi": "thủ thuật y khoa"
+        }
+      ],
+      "family": [
+        {
+          "word": "process",
+          "vi": "quá trình"
+        }
+      ],
+      "tip": "Đọc 'prơ-XI-giơ'. Thủ tục hành chính = administrative procedures.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 1850,
+      "word": "proof",
+      "ipa": "pruf",
+      "viRead": "PRUPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bằng chứng",
+      "exampleEn": "Do you have any proof?",
+      "exampleVi": "Bạn có bằng chứng nào không?",
+      "collocations": [
+        {
+          "en": "proof of payment",
+          "vi": "bằng chứng thanh toán"
+        },
+        {
+          "en": "proof of identity",
+          "vi": "giấy tờ tùy thân"
+        }
+      ],
+      "family": [
+        {
+          "word": "prove",
+          "vi": "chứng minh"
+        }
+      ],
+      "tip": "prove (động từ) → proof (danh từ). waterproof = chống nước.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 1851,
+      "word": "property",
+      "ipa": "ˈprɑpərti",
+      "viRead": "PRA-pơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tài sản; bất động sản",
+      "exampleEn": "This property belongs to the school.",
+      "exampleVi": "Tài sản này thuộc về nhà trường.",
+      "collocations": [
+        {
+          "en": "private property",
+          "vi": "tài sản tư nhân"
+        },
+        {
+          "en": "property prices",
+          "vi": "giá bất động sản"
+        }
+      ],
+      "tip": "property = tài sản / nhà đất. Nhấn âm đầu: PRO-pơ-ti.",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 1852,
+      "word": "proposal",
+      "ipa": "prəˈpoʊzəl",
+      "viRead": "prơ-PÂU-dơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đề xuất; lời cầu hôn",
+      "exampleEn": "The boss accepted my proposal.",
+      "exampleVi": "Sếp đã chấp nhận đề xuất của tôi.",
+      "collocations": [
+        {
+          "en": "make a proposal",
+          "vi": "đưa ra đề xuất"
+        },
+        {
+          "en": "marriage proposal",
+          "vi": "lời cầu hôn"
+        }
+      ],
+      "family": [
+        {
+          "word": "propose",
+          "vi": "đề xuất; cầu hôn"
+        }
+      ],
+      "tip": "propose = đề xuất / cầu hôn: He proposed to her.",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 1853,
+      "word": "protest",
+      "ipa": "ˈproʊˌtɛst",
+      "viRead": "PRÂU-test",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cuộc biểu tình; sự phản đối",
+      "exampleEn": "Thousands joined the protest.",
+      "exampleVi": "Hàng nghìn người tham gia cuộc biểu tình.",
+      "collocations": [
+        {
+          "en": "a peaceful protest",
+          "vi": "biểu tình ôn hòa"
+        },
+        {
+          "en": "in protest",
+          "vi": "để phản đối"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: PRÂU-test; động từ nhấn sau: prơ-TEST.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 1854,
+      "word": "publish",
+      "ipa": "ˈpəblɪʃ",
+      "viRead": "PƠB-lish",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xuất bản; đăng",
+      "exampleEn": "Her first book was published last year.",
+      "exampleVi": "Cuốn sách đầu tay của cô ấy được xuất bản năm ngoái.",
+      "collocations": [
+        {
+          "en": "publish a book",
+          "vi": "xuất bản sách"
+        },
+        {
+          "en": "publish online",
+          "vi": "đăng trực tuyến"
+        }
+      ],
+      "family": [
+        {
+          "word": "publisher",
+          "vi": "nhà xuất bản"
+        }
+      ],
+      "tip": "publish = xuất bản/công bố; post = đăng (mạng xã hội).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 1855,
+      "word": "pumpkin",
+      "ipa": "ˈpəmpkɪn",
+      "viRead": "PƠM-pkin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả bí ngô",
+      "exampleEn": "We made soup with a big pumpkin.",
+      "exampleVi": "Chúng tôi nấu canh với một quả bí ngô to.",
+      "collocations": [
+        {
+          "en": "pumpkin soup",
+          "vi": "súp bí đỏ"
+        },
+        {
+          "en": "pumpkin seeds",
+          "vi": "hạt bí"
+        }
+      ],
+      "tip": "pumpkin = bí ngô (bí đỏ). Halloween hay khắc bí ngô.",
+      "emoji": "🎃",
+      "stage": 2
+    },
+    {
+      "id": 1856,
+      "word": "punish",
+      "ipa": "ˈpənɪʃ",
+      "viRead": "PƠ-nish",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trừng phạt",
+      "exampleEn": "The teacher punished the boy for cheating.",
+      "exampleVi": "Giáo viên phạt cậu bé vì gian lận.",
+      "collocations": [
+        {
+          "en": "punish someone for",
+          "vi": "phạt ai vì"
+        },
+        {
+          "en": "be punished",
+          "vi": "bị phạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "punishment",
+          "vi": "hình phạt"
+        }
+      ],
+      "tip": "punish + người + for + V-ing.",
+      "emoji": "⚠️",
+      "stage": 2
+    },
+    {
+      "id": 1857,
+      "word": "pure",
+      "ipa": "pjʊr",
+      "viRead": "PYUR",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nguyên chất, tinh khiết",
+      "exampleEn": "This juice is 100% pure.",
+      "exampleVi": "Nước ép này nguyên chất 100%.",
+      "collocations": [
+        {
+          "en": "pure water",
+          "vi": "nước tinh khiết"
+        },
+        {
+          "en": "pure luck",
+          "vi": "hoàn toàn may mắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "purely",
+          "vi": "hoàn toàn"
+        }
+      ],
+      "tip": "by pure luck = hoàn toàn do may mắn. Đọc 'piua'.",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 1858,
+      "word": "purple",
+      "ipa": "ˈpərpəl",
+      "viRead": "PƠ-pơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu tím",
+      "exampleEn": "She loves purple flowers.",
+      "exampleVi": "Cô ấy thích hoa màu tím.",
+      "collocations": [
+        {
+          "en": "dark purple",
+          "vi": "tím đậm"
+        },
+        {
+          "en": "purple sweet potato",
+          "vi": "khoai lang tím"
+        }
+      ],
+      "tip": "purple = tím; violet = tím nhạt (hoa violet). Đọc 'PƠ-pồ'.",
+      "emoji": "🟣",
+      "stage": 2
+    },
+    {
+      "id": 1859,
+      "word": "purse",
+      "ipa": "pərs",
+      "viRead": "PƠS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ví (nữ); túi xách (Mỹ)",
+      "exampleEn": "She took some money out of her purse.",
+      "exampleVi": "Cô ấy lấy ít tiền từ ví ra.",
+      "collocations": [
+        {
+          "en": "a leather purse",
+          "vi": "ví da"
+        },
+        {
+          "en": "lose your purse",
+          "vi": "mất ví"
+        }
+      ],
+      "tip": "purse (Anh) = ví nữ; (Mỹ) = túi xách nữ. Ví nam = wallet.",
+      "emoji": "👛",
       "stage": 2
     }
   ]
