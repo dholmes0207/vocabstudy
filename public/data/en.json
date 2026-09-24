@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2258,
+    "count": 2308,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -64687,6 +64687,1342 @@
       ],
       "tip": "civil engineer = kỹ sư xây dựng.",
       "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2259,
+      "word": "claim",
+      "ipa": "kleɪm",
+      "viRead": "KLÂYM",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "khẳng định; đòi (quyền lợi)",
+      "exampleEn": "He claims that he saw a ghost.",
+      "exampleVi": "Anh ta khẳng định đã thấy ma.",
+      "collocations": [
+        {
+          "en": "claim that",
+          "vi": "khẳng định rằng"
+        },
+        {
+          "en": "baggage claim",
+          "vi": "khu nhận hành lý"
+        }
+      ],
+      "tip": "baggage claim = nơi lấy hành lý ở sân bay.",
+      "emoji": "🧳",
+      "stage": 2
+    },
+    {
+      "id": 2260,
+      "word": "clap",
+      "ipa": "klæp",
+      "viRead": "KLEP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vỗ tay",
+      "exampleEn": "Everyone clapped at the end of the show.",
+      "exampleVi": "Mọi người vỗ tay khi buổi diễn kết thúc.",
+      "collocations": [
+        {
+          "en": "clap your hands",
+          "vi": "vỗ tay"
+        },
+        {
+          "en": "clap along",
+          "vi": "vỗ tay theo"
+        }
+      ],
+      "tip": "clap → clapped. If you're happy and you know it, clap your hands!",
+      "emoji": "👏",
+      "stage": 2
+    },
+    {
+      "id": 2261,
+      "word": "classic",
+      "ipa": "ˈklæsɪk",
+      "viRead": "KLE-sik",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "kinh điển",
+      "exampleEn": "Titanic is a classic film.",
+      "exampleVi": "Titanic là một bộ phim kinh điển.",
+      "collocations": [
+        {
+          "en": "a classic film",
+          "vi": "phim kinh điển"
+        },
+        {
+          "en": "a classic mistake",
+          "vi": "lỗi kinh điển"
+        }
+      ],
+      "family": [
+        {
+          "word": "classical",
+          "vi": "cổ điển"
+        }
+      ],
+      "tip": "classic = kinh điển, hay mãi; classical music = nhạc cổ điển.",
+      "emoji": "🎞️",
+      "stage": 2
+    },
+    {
+      "id": 2262,
+      "word": "classify",
+      "ipa": "ˈklæsəˌfaɪ",
+      "viRead": "KLE-sơ-phai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phân loại",
+      "exampleEn": "Classify these words by part of speech.",
+      "exampleVi": "Hãy phân loại các từ này theo từ loại.",
+      "collocations": [
+        {
+          "en": "classify into",
+          "vi": "phân loại thành"
+        },
+        {
+          "en": "classified ads",
+          "vi": "rao vặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "class",
+          "vi": "loại, lớp"
+        }
+      ],
+      "tip": "classified = mật (tài liệu) hoặc rao vặt.",
+      "emoji": "🗂️",
+      "stage": 2
+    },
+    {
+      "id": 2263,
+      "word": "clay",
+      "ipa": "kleɪ",
+      "viRead": "KLÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đất sét",
+      "exampleEn": "The children made animals out of clay.",
+      "exampleVi": "Bọn trẻ nặn các con vật bằng đất sét.",
+      "collocations": [
+        {
+          "en": "clay pot",
+          "vi": "nồi đất"
+        },
+        {
+          "en": "modelling clay",
+          "vi": "đất nặn"
+        }
+      ],
+      "tip": "Bát Tràng nổi tiếng với đồ gốm làm từ clay.",
+      "emoji": "🏺",
+      "stage": 2
+    },
+    {
+      "id": 2264,
+      "word": "clip",
+      "ipa": "klɪp",
+      "viRead": "KLIP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "đoạn phim ngắn; kẹp",
+      "exampleEn": "Watch this short video clip.",
+      "exampleVi": "Xem đoạn clip ngắn này.",
+      "collocations": [
+        {
+          "en": "video clip",
+          "vi": "đoạn clip"
+        },
+        {
+          "en": "paper clip",
+          "vi": "kẹp giấy"
+        }
+      ],
+      "tip": "paper clip = kẹp giấy. clip (động từ) = kẹp, cắt.",
+      "emoji": "📎",
+      "stage": 2
+    },
+    {
+      "id": 2265,
+      "word": "clue",
+      "ipa": "klu",
+      "viRead": "KLU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "manh mối, gợi ý",
+      "exampleEn": "The police found a clue at the scene.",
+      "exampleVi": "Cảnh sát tìm thấy manh mối tại hiện trường.",
+      "collocations": [
+        {
+          "en": "a clue to",
+          "vi": "manh mối về"
+        },
+        {
+          "en": "no clue",
+          "vi": "không biết gì"
+        }
+      ],
+      "tip": "I have no clue = I have no idea = Tôi chịu, không biết.",
+      "emoji": "🔎",
+      "stage": 2
+    },
+    {
+      "id": 2266,
+      "word": "coal",
+      "ipa": "koʊl",
+      "viRead": "KÂUL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "than đá",
+      "exampleEn": "The factory burns coal.",
+      "exampleVi": "Nhà máy đốt than đá.",
+      "collocations": [
+        {
+          "en": "coal mine",
+          "vi": "mỏ than"
+        },
+        {
+          "en": "burn coal",
+          "vi": "đốt than"
+        }
+      ],
+      "tip": "Quảng Ninh nổi tiếng với coal mines (mỏ than).",
+      "emoji": "⚫",
+      "stage": 2
+    },
+    {
+      "id": 2267,
+      "word": "coast",
+      "ipa": "koʊst",
+      "viRead": "KÂUST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bờ biển",
+      "exampleEn": "Nha Trang is on the south central coast.",
+      "exampleVi": "Nha Trang nằm ở bờ biển Nam Trung Bộ.",
+      "collocations": [
+        {
+          "en": "on the coast",
+          "vi": "ven biển"
+        },
+        {
+          "en": "coast guard",
+          "vi": "cảnh sát biển"
+        }
+      ],
+      "family": [
+        {
+          "word": "coastal",
+          "vi": "ven biển"
+        }
+      ],
+      "tip": "coast = bờ biển (vùng đất); beach = bãi biển (bãi cát).",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 2268,
+      "word": "collapse",
+      "ipa": "kəˈlæps",
+      "viRead": "kơ-LEPS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sụp đổ; ngã quỵ",
+      "exampleEn": "The old bridge collapsed in the storm.",
+      "exampleVi": "Cây cầu cũ sập trong cơn bão.",
+      "collocations": [
+        {
+          "en": "the building collapsed",
+          "vi": "tòa nhà sụp"
+        },
+        {
+          "en": "collapse from exhaustion",
+          "vi": "ngã quỵ vì kiệt sức"
+        }
+      ],
+      "tip": "Nhấn âm 2: kơ-LEPS.",
+      "emoji": "🏚️",
+      "stage": 2
+    },
+    {
+      "id": 2269,
+      "word": "collar",
+      "ipa": "ˈkɑlər",
+      "viRead": "KA-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cổ áo; vòng cổ (chó)",
+      "exampleEn": "The dog has a red collar.",
+      "exampleVi": "Con chó đeo vòng cổ màu đỏ.",
+      "collocations": [
+        {
+          "en": "shirt collar",
+          "vi": "cổ áo sơ mi"
+        },
+        {
+          "en": "white collar",
+          "vi": "dân văn phòng"
+        }
+      ],
+      "tip": "white-collar = dân văn phòng; blue-collar = công nhân.",
+      "emoji": "👔",
+      "stage": 2
+    },
+    {
+      "id": 2270,
+      "word": "comb",
+      "ipa": "koʊm",
+      "viRead": "KÂUM",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cái lược",
+      "exampleEn": "Can I borrow your comb?",
+      "exampleVi": "Cho tôi mượn cái lược được không?",
+      "collocations": [
+        {
+          "en": "a hair comb",
+          "vi": "lược chải tóc"
+        },
+        {
+          "en": "comb your hair",
+          "vi": "chải tóc"
+        }
+      ],
+      "tip": "b câm: 'kâum'.",
+      "emoji": "🪮",
+      "stage": 2
+    },
+    {
+      "id": 2271,
+      "word": "comfort",
+      "ipa": "ˈkəmfərt",
+      "viRead": "KƠM-phơt",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự thoải mái; an ủi",
+      "exampleEn": "I want to travel in comfort.",
+      "exampleVi": "Tôi muốn đi lại thoải mái.",
+      "collocations": [
+        {
+          "en": "in comfort",
+          "vi": "một cách thoải mái"
+        },
+        {
+          "en": "comfort food",
+          "vi": "món ăn quen thuộc"
+        }
+      ],
+      "family": [
+        {
+          "word": "comfortable",
+          "vi": "thoải mái"
+        }
+      ],
+      "tip": "comfort zone = vùng an toàn. comfort (v) = an ủi.",
+      "emoji": "🛋️",
+      "stage": 2
+    },
+    {
+      "id": 2272,
+      "word": "command",
+      "ipa": "kəˈmænd",
+      "viRead": "kơ-MENĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "mệnh lệnh; câu lệnh",
+      "exampleEn": "The dog knows simple commands.",
+      "exampleVi": "Con chó hiểu những mệnh lệnh đơn giản.",
+      "collocations": [
+        {
+          "en": "give a command",
+          "vi": "ra lệnh"
+        },
+        {
+          "en": "voice command",
+          "vi": "lệnh giọng nói"
+        }
+      ],
+      "tip": "command = lệnh (máy tính, quân đội).",
+      "emoji": "🫡",
+      "stage": 2
+    },
+    {
+      "id": 2273,
+      "word": "commit",
+      "ipa": "kəˈmɪt",
+      "viRead": "kơ-MIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phạm (tội); cam kết",
+      "exampleEn": "He committed a crime.",
+      "exampleVi": "Anh ta đã phạm tội.",
+      "collocations": [
+        {
+          "en": "commit a crime",
+          "vi": "phạm tội"
+        },
+        {
+          "en": "commit to",
+          "vi": "cam kết với"
+        }
+      ],
+      "family": [
+        {
+          "word": "commitment",
+          "vi": "sự cam kết"
+        }
+      ],
+      "tip": "commit → committed (gấp đôi t).",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2274,
+      "word": "committee",
+      "ipa": "kəˈmɪti",
+      "viRead": "kơ-MI-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ủy ban, ban",
+      "exampleEn": "She is on the school committee.",
+      "exampleVi": "Cô ấy ở trong ban đại diện của trường.",
+      "collocations": [
+        {
+          "en": "a committee member",
+          "vi": "ủy viên"
+        },
+        {
+          "en": "organizing committee",
+          "vi": "ban tổ chức"
+        }
+      ],
+      "tip": "Chính tả: 2 m, 2 t, 2 e. Nhấn âm 2: kơ-MI-ti.",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 2275,
+      "word": "companion",
+      "ipa": "kəmˈpænjən",
+      "viRead": "kơm-PEN-yơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người bạn đồng hành",
+      "exampleEn": "My dog is my best companion.",
+      "exampleVi": "Con chó là bạn đồng hành tốt nhất của tôi.",
+      "collocations": [
+        {
+          "en": "travel companion",
+          "vi": "bạn đồng hành"
+        },
+        {
+          "en": "a loyal companion",
+          "vi": "bạn trung thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "company",
+          "vi": "sự bầu bạn"
+        }
+      ],
+      "tip": "com (cùng) + pan (bánh mì): người cùng ăn bánh mì.",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 2276,
+      "word": "compete",
+      "ipa": "kəmˈpit",
+      "viRead": "kơm-PIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cạnh tranh; thi đấu",
+      "exampleEn": "Ten teams will compete in the final round.",
+      "exampleVi": "Mười đội sẽ thi đấu ở vòng chung kết.",
+      "collocations": [
+        {
+          "en": "compete with",
+          "vi": "cạnh tranh với"
+        },
+        {
+          "en": "compete for",
+          "vi": "tranh giành"
+        }
+      ],
+      "family": [
+        {
+          "word": "competition",
+          "vi": "cuộc thi"
+        },
+        {
+          "word": "competitor",
+          "vi": "đối thủ"
+        }
+      ],
+      "tip": "compete (v) → competition (n) → competitive (adj).",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 2277,
+      "word": "complex",
+      "ipa": "ˈkɑmplɛks",
+      "viRead": "KAM-pleks",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "phức tạp",
+      "exampleEn": "The human brain is very complex.",
+      "exampleVi": "Não bộ con người rất phức tạp.",
+      "collocations": [
+        {
+          "en": "a complex problem",
+          "vi": "vấn đề phức tạp"
+        },
+        {
+          "en": "apartment complex",
+          "vi": "khu chung cư"
+        }
+      ],
+      "family": [
+        {
+          "word": "complicated",
+          "vi": "rắc rối"
+        }
+      ],
+      "tip": "complex ≈ complicated. apartment complex = khu phức hợp.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 2278,
+      "word": "compose",
+      "ipa": "kəmˈpoʊz",
+      "viRead": "kơm-PÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sáng tác; soạn",
+      "exampleEn": "Trinh Cong Son composed many beautiful songs.",
+      "exampleVi": "Trịnh Công Sơn đã sáng tác nhiều bài hát hay.",
+      "collocations": [
+        {
+          "en": "compose music",
+          "vi": "sáng tác nhạc"
+        },
+        {
+          "en": "compose an email",
+          "vi": "soạn email"
+        }
+      ],
+      "family": [
+        {
+          "word": "composer",
+          "vi": "nhà soạn nhạc"
+        }
+      ],
+      "tip": "be composed of = được tạo thành từ.",
+      "emoji": "🎼",
+      "stage": 2
+    },
+    {
+      "id": 2279,
+      "word": "concept",
+      "ipa": "ˈkɑnsɛpt",
+      "viRead": "KAN-sept",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khái niệm",
+      "exampleEn": "It's a difficult concept to understand.",
+      "exampleVi": "Đó là một khái niệm khó hiểu.",
+      "collocations": [
+        {
+          "en": "basic concept",
+          "vi": "khái niệm cơ bản"
+        },
+        {
+          "en": "a new concept",
+          "vi": "ý tưởng mới"
+        }
+      ],
+      "tip": "concept = ý niệm, ý tưởng. Nhấn âm đầu: KAN-sept.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 2280,
+      "word": "concern",
+      "ipa": "kənˈsərn",
+      "viRead": "kơn-SƠN",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "mối lo ngại",
+      "exampleEn": "Pollution is a major concern.",
+      "exampleVi": "Ô nhiễm là mối lo ngại lớn.",
+      "collocations": [
+        {
+          "en": "a major concern",
+          "vi": "mối lo lớn"
+        },
+        {
+          "en": "concerned about",
+          "vi": "lo lắng về"
+        }
+      ],
+      "tip": "be concerned about = lo lắng về. As far as I'm concerned = Theo tôi thì...",
+      "emoji": "😟",
+      "stage": 2
+    },
+    {
+      "id": 2281,
+      "word": "conclude",
+      "ipa": "kənˈklud",
+      "viRead": "kơn-KLUĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kết luận; kết thúc",
+      "exampleEn": "The doctor concluded that I was healthy.",
+      "exampleVi": "Bác sĩ kết luận tôi khỏe mạnh.",
+      "collocations": [
+        {
+          "en": "conclude that",
+          "vi": "kết luận rằng"
+        },
+        {
+          "en": "to conclude",
+          "vi": "tóm lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "conclusion",
+          "vi": "kết luận"
+        }
+      ],
+      "tip": "To conclude, ... = Để kết luận, ... (dùng trong bài viết).",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 2282,
+      "word": "concrete",
+      "ipa": "ˈkɑnkrit",
+      "viRead": "KAN-krit",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "bê tông; cụ thể",
+      "exampleEn": "The wall is made of concrete.",
+      "exampleVi": "Bức tường làm bằng bê tông.",
+      "collocations": [
+        {
+          "en": "concrete wall",
+          "vi": "tường bê tông"
+        },
+        {
+          "en": "concrete example",
+          "vi": "ví dụ cụ thể"
+        }
+      ],
+      "family": [
+        {
+          "word": "abstract",
+          "vi": "trừu tượng"
+        }
+      ],
+      "tip": "concrete (adj) = cụ thể ↔ abstract (trừu tượng).",
+      "emoji": "🏗️",
+      "stage": 2
+    },
+    {
+      "id": 2283,
+      "word": "condition",
+      "ipa": "kənˈdɪʃən",
+      "viRead": "kơn-ĐI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điều kiện; tình trạng",
+      "exampleEn": "The car is in good condition.",
+      "exampleVi": "Chiếc xe còn trong tình trạng tốt.",
+      "collocations": [
+        {
+          "en": "in good condition",
+          "vi": "trong tình trạng tốt"
+        },
+        {
+          "en": "on condition that",
+          "vi": "với điều kiện là"
+        }
+      ],
+      "tip": "air conditioner = máy lạnh (điều hòa).",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 2284,
+      "word": "conduct",
+      "ipa": "kənˈdəkt",
+      "viRead": "kơn-ĐƠKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tiến hành; chỉ huy (dàn nhạc)",
+      "exampleEn": "They conducted a survey of students.",
+      "exampleVi": "Họ tiến hành khảo sát học sinh.",
+      "collocations": [
+        {
+          "en": "conduct research",
+          "vi": "tiến hành nghiên cứu"
+        },
+        {
+          "en": "conduct an orchestra",
+          "vi": "chỉ huy dàn nhạc"
+        }
+      ],
+      "family": [
+        {
+          "word": "conductor",
+          "vi": "nhạc trưởng; người soát vé"
+        }
+      ],
+      "tip": "Động từ nhấn sau: kơn-ĐƠKT; danh từ (hạnh kiểm) nhấn đầu.",
+      "emoji": "🎻",
+      "stage": 2
+    },
+    {
+      "id": 2285,
+      "word": "conference",
+      "ipa": "ˈkɑnfərəns",
+      "viRead": "KAN-phơ-rơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội nghị",
+      "exampleEn": "She's speaking at an international conference.",
+      "exampleVi": "Cô ấy phát biểu tại một hội nghị quốc tế.",
+      "collocations": [
+        {
+          "en": "press conference",
+          "vi": "họp báo"
+        },
+        {
+          "en": "video conference",
+          "vi": "họp trực tuyến"
+        }
+      ],
+      "tip": "Nhấn âm đầu: KAN-phơ-rần-s.",
+      "emoji": "🎙️",
+      "stage": 2
+    },
+    {
+      "id": 2286,
+      "word": "confidence",
+      "ipa": "ˈkɑnfədəns",
+      "viRead": "KAN-phơ-đơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tự tin",
+      "exampleEn": "Learning English gave her more confidence.",
+      "exampleVi": "Học tiếng Anh giúp cô ấy tự tin hơn.",
+      "collocations": [
+        {
+          "en": "self confidence",
+          "vi": "sự tự tin"
+        },
+        {
+          "en": "lack confidence",
+          "vi": "thiếu tự tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "confident",
+          "vi": "tự tin"
+        }
+      ],
+      "tip": "confident (adj) → confidence (n).",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 2287,
+      "word": "conflict",
+      "ipa": "ˈkɑnflɪkt",
+      "viRead": "KAN-phlikt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xung đột",
+      "exampleEn": "There's a conflict between the two groups.",
+      "exampleVi": "Có xung đột giữa hai nhóm.",
+      "collocations": [
+        {
+          "en": "in conflict with",
+          "vi": "xung đột với"
+        },
+        {
+          "en": "family conflict",
+          "vi": "mâu thuẫn gia đình"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: KAN-phlikt.",
+      "emoji": "⚔️",
+      "stage": 2
+    },
+    {
+      "id": 2288,
+      "word": "conscious",
+      "ipa": "ˈkɑnʃəs",
+      "viRead": "KAN-shơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tỉnh táo; có ý thức",
+      "exampleEn": "He was conscious after the accident.",
+      "exampleVi": "Anh ấy vẫn tỉnh sau vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "health conscious",
+          "vi": "chú ý sức khỏe"
+        },
+        {
+          "en": "be conscious of",
+          "vi": "ý thức được"
+        }
+      ],
+      "family": [
+        {
+          "word": "unconscious",
+          "vi": "bất tỉnh"
+        }
+      ],
+      "tip": "sc đọc 'sh': 'KAN-shợs'.",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 2289,
+      "word": "consequence",
+      "ipa": "ˈkɑnsəkwəns",
+      "viRead": "KAN-sơk-wơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hậu quả",
+      "exampleEn": "You must accept the consequences.",
+      "exampleVi": "Bạn phải chấp nhận hậu quả.",
+      "collocations": [
+        {
+          "en": "as a consequence",
+          "vi": "do đó"
+        },
+        {
+          "en": "serious consequences",
+          "vi": "hậu quả nghiêm trọng"
+        }
+      ],
+      "tip": "consequence = hậu quả (thường xấu); result = kết quả.",
+      "emoji": "🌊",
+      "stage": 2
+    },
+    {
+      "id": 2290,
+      "word": "conservative",
+      "ipa": "kənˈsərvətɪv",
+      "viRead": "kơn-SƠ-vơ-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bảo thủ",
+      "exampleEn": "My grandparents are quite conservative.",
+      "exampleVi": "Ông bà tôi khá bảo thủ.",
+      "collocations": [
+        {
+          "en": "a conservative view",
+          "vi": "quan điểm bảo thủ"
+        },
+        {
+          "en": "conservative estimate",
+          "vi": "ước tính thận trọng"
+        }
+      ],
+      "tip": "conservative ↔ liberal (cởi mở).",
+      "emoji": "👴",
+      "stage": 2
+    },
+    {
+      "id": 2291,
+      "word": "consist",
+      "ipa": "kənˈsɪst",
+      "viRead": "kơn-SIST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bao gồm",
+      "exampleEn": "The team consists of five players.",
+      "exampleVi": "Đội gồm năm cầu thủ.",
+      "collocations": [
+        {
+          "en": "consist of",
+          "vi": "gồm có"
+        },
+        {
+          "en": "consist mainly of",
+          "vi": "chủ yếu gồm"
+        }
+      ],
+      "tip": "consist of (KHÔNG dùng bị động): The class consists of 30 students.",
+      "emoji": "🧮",
+      "stage": 2
+    },
+    {
+      "id": 2292,
+      "word": "constant",
+      "ipa": "ˈkɑnstənt",
+      "viRead": "KAN-stơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "liên tục, không đổi",
+      "exampleEn": "The baby needs constant care.",
+      "exampleVi": "Em bé cần được chăm sóc liên tục.",
+      "collocations": [
+        {
+          "en": "constant noise",
+          "vi": "tiếng ồn liên tục"
+        },
+        {
+          "en": "constant speed",
+          "vi": "tốc độ không đổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "constantly",
+          "vi": "liên tục"
+        }
+      ],
+      "tip": "constantly = lúc nào cũng: He's constantly on his phone.",
+      "emoji": "♾️",
+      "stage": 2
+    },
+    {
+      "id": 2293,
+      "word": "construct",
+      "ipa": "kənˈstrəkt",
+      "viRead": "kơn-STRƠKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xây dựng",
+      "exampleEn": "They plan to construct a new bridge.",
+      "exampleVi": "Họ dự định xây dựng một cây cầu mới.",
+      "collocations": [
+        {
+          "en": "construct a building",
+          "vi": "xây tòa nhà"
+        },
+        {
+          "en": "construct a sentence",
+          "vi": "đặt câu"
+        }
+      ],
+      "family": [
+        {
+          "word": "construction",
+          "vi": "công trình xây dựng"
+        }
+      ],
+      "tip": "construction site = công trường. Under construction = Đang thi công.",
+      "emoji": "🏗️",
+      "stage": 2
+    },
+    {
+      "id": 2294,
+      "word": "consult",
+      "ipa": "kənˈsəlt",
+      "viRead": "kơn-SƠLT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tham khảo ý kiến",
+      "exampleEn": "You should consult a doctor.",
+      "exampleVi": "Bạn nên hỏi ý kiến bác sĩ.",
+      "collocations": [
+        {
+          "en": "consult a doctor",
+          "vi": "hỏi ý kiến bác sĩ"
+        },
+        {
+          "en": "consult a dictionary",
+          "vi": "tra từ điển"
+        }
+      ],
+      "family": [
+        {
+          "word": "consultant",
+          "vi": "chuyên gia tư vấn"
+        }
+      ],
+      "tip": "consultant = tư vấn viên.",
+      "emoji": "🩺",
+      "stage": 2
+    },
+    {
+      "id": 2295,
+      "word": "consume",
+      "ipa": "kənˈsum",
+      "viRead": "kơn-SUM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tiêu thụ",
+      "exampleEn": "This car consumes a lot of fuel.",
+      "exampleVi": "Chiếc xe này tốn rất nhiều nhiên liệu.",
+      "collocations": [
+        {
+          "en": "consume energy",
+          "vi": "tiêu thụ năng lượng"
+        },
+        {
+          "en": "time consuming",
+          "vi": "tốn thời gian"
+        }
+      ],
+      "family": [
+        {
+          "word": "consumer",
+          "vi": "người tiêu dùng"
+        }
+      ],
+      "tip": "time-consuming = tốn thời gian.",
+      "emoji": "⛽",
+      "stage": 2
+    },
+    {
+      "id": 2296,
+      "word": "content",
+      "ipa": "ˈkɑntɛnt",
+      "viRead": "KAN-tent",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nội dung",
+      "exampleEn": "The content of this website is useful.",
+      "exampleVi": "Nội dung của trang web này rất hữu ích.",
+      "collocations": [
+        {
+          "en": "content creator",
+          "vi": "người sáng tạo nội dung"
+        },
+        {
+          "en": "table of contents",
+          "vi": "mục lục"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: KAN-tent. Tính từ content (hài lòng) nhấn sau: kơn-TENT.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 2297,
+      "word": "contest",
+      "ipa": "ˈkɑntɛst",
+      "viRead": "KAN-test",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc thi",
+      "exampleEn": "She won a singing contest.",
+      "exampleVi": "Cô ấy thắng một cuộc thi hát.",
+      "collocations": [
+        {
+          "en": "singing contest",
+          "vi": "cuộc thi hát"
+        },
+        {
+          "en": "beauty contest",
+          "vi": "cuộc thi sắc đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "contestant",
+          "vi": "thí sinh"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: KAN-test. contestant = thí sinh.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 2298,
+      "word": "context",
+      "ipa": "ˈkɑntɛkst",
+      "viRead": "KAN-tekst",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngữ cảnh",
+      "exampleEn": "Guess the meaning from the context.",
+      "exampleVi": "Đoán nghĩa từ ngữ cảnh.",
+      "collocations": [
+        {
+          "en": "in context",
+          "vi": "trong ngữ cảnh"
+        },
+        {
+          "en": "out of context",
+          "vi": "tách khỏi ngữ cảnh"
+        }
+      ],
+      "tip": "Học từ trong context = hiểu sâu, nhớ lâu!",
+      "emoji": "🧭",
+      "stage": 2
+    },
+    {
+      "id": 2299,
+      "word": "contrast",
+      "ipa": "ˈkɑntræst",
+      "viRead": "KAN-trest",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tương phản",
+      "exampleEn": "There's a big contrast between rich and poor.",
+      "exampleVi": "Có sự tương phản lớn giữa giàu và nghèo.",
+      "collocations": [
+        {
+          "en": "in contrast",
+          "vi": "ngược lại"
+        },
+        {
+          "en": "a sharp contrast",
+          "vi": "sự tương phản rõ"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: KAN-trest; động từ nhấn sau: kơn-TREST.",
+      "emoji": "🌗",
+      "stage": 2
+    },
+    {
+      "id": 2300,
+      "word": "contribute",
+      "ipa": "kənˈtrɪbjut",
+      "viRead": "kơn-TRIB-yut",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đóng góp",
+      "exampleEn": "Everyone contributed to the party.",
+      "exampleVi": "Mọi người đều góp phần cho bữa tiệc.",
+      "collocations": [
+        {
+          "en": "contribute to",
+          "vi": "đóng góp vào"
+        },
+        {
+          "en": "contribute money",
+          "vi": "góp tiền"
+        }
+      ],
+      "family": [
+        {
+          "word": "contribution",
+          "vi": "sự đóng góp"
+        }
+      ],
+      "tip": "Nhấn âm 2: kơn-TRI-biut.",
+      "emoji": "🤲",
+      "stage": 2
+    },
+    {
+      "id": 2301,
+      "word": "convince",
+      "ipa": "kənˈvɪns",
+      "viRead": "kơn-VINS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thuyết phục",
+      "exampleEn": "She convinced me to join the club.",
+      "exampleVi": "Cô ấy thuyết phục tôi tham gia câu lạc bộ.",
+      "collocations": [
+        {
+          "en": "convince someone to",
+          "vi": "thuyết phục ai làm"
+        },
+        {
+          "en": "be convinced that",
+          "vi": "tin chắc rằng"
+        }
+      ],
+      "family": [
+        {
+          "word": "convincing",
+          "vi": "thuyết phục"
+        }
+      ],
+      "tip": "convince + người + to V.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2302,
+      "word": "cooker",
+      "ipa": "ˈkʊkər",
+      "viRead": "KU-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nồi nấu; bếp",
+      "exampleEn": "We cook rice in a rice cooker.",
+      "exampleVi": "Chúng tôi nấu cơm bằng nồi cơm điện.",
+      "collocations": [
+        {
+          "en": "rice cooker",
+          "vi": "nồi cơm điện"
+        },
+        {
+          "en": "pressure cooker",
+          "vi": "nồi áp suất"
+        }
+      ],
+      "family": [
+        {
+          "word": "cook",
+          "vi": "đầu bếp; nấu"
+        }
+      ],
+      "tip": "BẪY: cooker = cái nồi/bếp; cook = người nấu ăn!",
+      "emoji": "🍚",
+      "stage": 2
+    },
+    {
+      "id": 2303,
+      "word": "cope",
+      "ipa": "koʊp",
+      "viRead": "KÂUP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đương đầu, xoay xở",
+      "exampleEn": "How do you cope with stress?",
+      "exampleVi": "Bạn đối phó với căng thẳng thế nào?",
+      "collocations": [
+        {
+          "en": "cope with",
+          "vi": "đương đầu với"
+        },
+        {
+          "en": "hard to cope",
+          "vi": "khó xoay xở"
+        }
+      ],
+      "tip": "cope with = deal with = xoay xở với.",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 2304,
+      "word": "copper",
+      "ipa": "ˈkɑpər",
+      "viRead": "KA-pơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng (kim loại)",
+      "exampleEn": "These pots are made of copper.",
+      "exampleVi": "Những chiếc nồi này làm bằng đồng.",
+      "collocations": [
+        {
+          "en": "copper wire",
+          "vi": "dây đồng"
+        },
+        {
+          "en": "copper pot",
+          "vi": "nồi đồng"
+        }
+      ],
+      "tip": "copper = đồng đỏ; bronze = đồng thau.",
+      "emoji": "🥉",
+      "stage": 2
+    },
+    {
+      "id": 2305,
+      "word": "core",
+      "ipa": "kɔr",
+      "viRead": "KOR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lõi; cốt lõi",
+      "exampleEn": "Honesty is a core value.",
+      "exampleVi": "Trung thực là giá trị cốt lõi.",
+      "collocations": [
+        {
+          "en": "core values",
+          "vi": "giá trị cốt lõi"
+        },
+        {
+          "en": "apple core",
+          "vi": "lõi táo"
+        }
+      ],
+      "tip": "core = phần quan trọng nhất ở giữa.",
+      "emoji": "🍎",
+      "stage": 2
+    },
+    {
+      "id": 2306,
+      "word": "cottage",
+      "ipa": "ˈkɑtɪʤ",
+      "viRead": "KA-tơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà tranh, nhà nhỏ ở quê",
+      "exampleEn": "They live in a small cottage by the lake.",
+      "exampleVi": "Họ sống trong một căn nhà nhỏ bên hồ.",
+      "collocations": [
+        {
+          "en": "a country cottage",
+          "vi": "nhà quê"
+        },
+        {
+          "en": "cottage cheese",
+          "vi": "phô mai tươi"
+        }
+      ],
+      "tip": "cottage = nhà nhỏ xinh ở vùng quê.",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 2307,
+      "word": "council",
+      "ipa": "ˈkaʊnsəl",
+      "viRead": "KAON-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội đồng",
+      "exampleEn": "The city council will meet tomorrow.",
+      "exampleVi": "Hội đồng thành phố sẽ họp vào ngày mai.",
+      "collocations": [
+        {
+          "en": "city council",
+          "vi": "hội đồng thành phố"
+        },
+        {
+          "en": "student council",
+          "vi": "hội học sinh"
+        }
+      ],
+      "tip": "council (hội đồng) đọc giống counsel (tư vấn).",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2308,
+      "word": "countryside",
+      "ipa": "ˈkəntriˌsaɪd",
+      "viRead": "KƠN-tri-saiđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vùng quê",
+      "exampleEn": "I love the peace of the countryside.",
+      "exampleVi": "Tôi yêu sự yên bình của vùng quê.",
+      "collocations": [
+        {
+          "en": "in the countryside",
+          "vi": "ở vùng quê"
+        },
+        {
+          "en": "beautiful countryside",
+          "vi": "vùng quê đẹp"
+        }
+      ],
+      "tip": "country (quê) + side. in the countryside = ở quê.",
+      "emoji": "🌾",
       "stage": 2
     }
   ]
