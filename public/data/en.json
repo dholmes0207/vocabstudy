@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2603,
+    "count": 2648,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -74257,6 +74257,1258 @@
       ],
       "tip": "Necessity is the mother of invention = Cái khó ló cái khôn.",
       "emoji": "⚙️",
+      "stage": 2
+    },
+    {
+      "id": 2604,
+      "word": "investigate",
+      "ipa": "ɪnˈvɛstəˌgeɪt",
+      "viRead": "in-VES-tơ-gâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "điều tra",
+      "exampleEn": "The police are investigating the accident.",
+      "exampleVi": "Cảnh sát đang điều tra vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "investigate a crime",
+          "vi": "điều tra tội phạm"
+        },
+        {
+          "en": "investigate the cause",
+          "vi": "tìm hiểu nguyên nhân"
+        }
+      ],
+      "family": [
+        {
+          "word": "investigation",
+          "vi": "cuộc điều tra"
+        }
+      ],
+      "tip": "investigate (v) → investigation (n) → investigator (điều tra viên).",
+      "emoji": "🔎",
+      "stage": 2
+    },
+    {
+      "id": 2605,
+      "word": "investment",
+      "ipa": "ɪnˈvɛstmənt",
+      "viRead": "in-VEST-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đầu tư",
+      "exampleEn": "Learning English is a good investment.",
+      "exampleVi": "Học tiếng Anh là một khoản đầu tư tốt.",
+      "collocations": [
+        {
+          "en": "a good investment",
+          "vi": "khoản đầu tư tốt"
+        },
+        {
+          "en": "foreign investment",
+          "vi": "đầu tư nước ngoài"
+        }
+      ],
+      "family": [
+        {
+          "word": "invest",
+          "vi": "đầu tư"
+        },
+        {
+          "word": "investor",
+          "vi": "nhà đầu tư"
+        }
+      ],
+      "tip": "invest in + lĩnh vực: invest in yourself = đầu tư cho bản thân.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2606,
+      "word": "invisible",
+      "ipa": "ɪnˈvɪzəbəl",
+      "viRead": "in-VI-dơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vô hình",
+      "exampleEn": "The virus is invisible to the eye.",
+      "exampleVi": "Virus mắt thường không nhìn thấy được.",
+      "collocations": [
+        {
+          "en": "invisible to",
+          "vi": "vô hình với"
+        },
+        {
+          "en": "invisible man",
+          "vi": "người vô hình"
+        }
+      ],
+      "family": [
+        {
+          "word": "visible",
+          "vi": "nhìn thấy được"
+        }
+      ],
+      "tip": "in (không) + visible (thấy được).",
+      "emoji": "👻",
+      "stage": 2
+    },
+    {
+      "id": 2607,
+      "word": "involve",
+      "ipa": "ɪnˈvɑlv",
+      "viRead": "in-VALV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bao gồm; liên quan",
+      "exampleEn": "The job involves a lot of travel.",
+      "exampleVi": "Công việc đòi hỏi đi lại nhiều.",
+      "collocations": [
+        {
+          "en": "be involved in",
+          "vi": "tham gia vào"
+        },
+        {
+          "en": "involve risk",
+          "vi": "có rủi ro"
+        }
+      ],
+      "family": [
+        {
+          "word": "involvement",
+          "vi": "sự tham gia"
+        }
+      ],
+      "tip": "get involved in = tham gia vào (hoạt động).",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 2608,
+      "word": "iron",
+      "ipa": "ˈaɪərn",
+      "viRead": "AI-ơn",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sắt; bàn là",
+      "exampleEn": "She uses an iron to press her shirts.",
+      "exampleVi": "Cô ấy dùng bàn là để ủi áo.",
+      "collocations": [
+        {
+          "en": "iron a shirt",
+          "vi": "ủi áo"
+        },
+        {
+          "en": "strike while the iron is hot",
+          "vi": "việc hôm nay chớ để ngày mai"
+        }
+      ],
+      "tip": "BẪY đọc: r câm: 'AI-ơn'.",
+      "emoji": "🧲",
+      "stage": 2
+    },
+    {
+      "id": 2609,
+      "word": "ironic",
+      "ipa": "aɪˈrɑnɪk",
+      "viRead": "ai-RA-nik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trớ trêu",
+      "exampleEn": "It's ironic that the fire station burned down.",
+      "exampleVi": "Thật trớ trêu khi trạm cứu hỏa bị cháy.",
+      "collocations": [
+        {
+          "en": "how ironic",
+          "vi": "thật trớ trêu"
+        },
+        {
+          "en": "an ironic smile",
+          "vi": "nụ cười mỉa mai"
+        }
+      ],
+      "family": [
+        {
+          "word": "irony",
+          "vi": "sự trớ trêu"
+        }
+      ],
+      "tip": "ironic = trớ trêu, ngược đời.",
+      "emoji": "🙃",
+      "stage": 2
+    },
+    {
+      "id": 2610,
+      "word": "irritate",
+      "ipa": "ˈɪrɪˌteɪt",
+      "viRead": "I-ri-tâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm khó chịu; kích ứng",
+      "exampleEn": "His loud voice irritates me.",
+      "exampleVi": "Giọng nói to của anh ta làm tôi khó chịu.",
+      "collocations": [
+        {
+          "en": "irritate the skin",
+          "vi": "kích ứng da"
+        },
+        {
+          "en": "be irritated by",
+          "vi": "bực mình vì"
+        }
+      ],
+      "family": [
+        {
+          "word": "irritating",
+          "vi": "gây khó chịu"
+        }
+      ],
+      "tip": "irritated (thấy khó chịu) – irritating (gây khó chịu).",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 2611,
+      "word": "isolate",
+      "ipa": "ˈaɪsəˌleɪt",
+      "viRead": "AI-sơ-lâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cách ly, cô lập",
+      "exampleEn": "Sick patients were isolated from others.",
+      "exampleVi": "Bệnh nhân được cách ly khỏi người khác.",
+      "collocations": [
+        {
+          "en": "isolate from",
+          "vi": "cách ly khỏi"
+        },
+        {
+          "en": "feel isolated",
+          "vi": "thấy cô đơn, lạc lõng"
+        }
+      ],
+      "family": [
+        {
+          "word": "isolation",
+          "vi": "sự cách ly"
+        }
+      ],
+      "tip": "self-isolate = tự cách ly.",
+      "emoji": "🏝️",
+      "stage": 2
+    },
+    {
+      "id": 2612,
+      "word": "issue",
+      "ipa": "ˈɪʃu",
+      "viRead": "I-shu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vấn đề; số (báo)",
+      "exampleEn": "Pollution is a big issue in big cities.",
+      "exampleVi": "Ô nhiễm là vấn đề lớn ở các thành phố lớn.",
+      "collocations": [
+        {
+          "en": "a serious issue",
+          "vi": "vấn đề nghiêm trọng"
+        },
+        {
+          "en": "the latest issue",
+          "vi": "số mới nhất"
+        }
+      ],
+      "tip": "ss đọc 'sh': 'I-shu'. No issue! = Không vấn đề gì!",
+      "emoji": "❗",
+      "stage": 2
+    },
+    {
+      "id": 2613,
+      "word": "jewel",
+      "ipa": "ʤuəl",
+      "viRead": "GIU-ơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ trang sức; viên ngọc",
+      "exampleEn": "Ha Long Bay is the jewel of Vietnam.",
+      "exampleVi": "Vịnh Hạ Long là viên ngọc của Việt Nam.",
+      "collocations": [
+        {
+          "en": "a precious jewel",
+          "vi": "viên ngọc quý"
+        },
+        {
+          "en": "crown jewels",
+          "vi": "báu vật hoàng gia"
+        }
+      ],
+      "family": [
+        {
+          "word": "jewelry",
+          "vi": "đồ trang sức"
+        }
+      ],
+      "tip": "jewel = viên ngọc; jewelry = đồ trang sức nói chung.",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 2614,
+      "word": "joint",
+      "ipa": "ʤɔɪnt",
+      "viRead": "GIOINT",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "khớp xương; chung",
+      "exampleEn": "My knee joint hurts when it rains.",
+      "exampleVi": "Khớp gối tôi đau khi trời mưa.",
+      "collocations": [
+        {
+          "en": "joint pain",
+          "vi": "đau khớp"
+        },
+        {
+          "en": "a joint account",
+          "vi": "tài khoản chung"
+        }
+      ],
+      "family": [
+        {
+          "word": "join",
+          "vi": "tham gia"
+        }
+      ],
+      "tip": "joint (adj) = chung: a joint decision.",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 2615,
+      "word": "journal",
+      "ipa": "ˈʤərnəl",
+      "viRead": "GIƠ-nơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhật ký; tạp chí",
+      "exampleEn": "I write in my journal every night.",
+      "exampleVi": "Tối nào tôi cũng viết nhật ký.",
+      "collocations": [
+        {
+          "en": "keep a journal",
+          "vi": "viết nhật ký"
+        },
+        {
+          "en": "science journal",
+          "vi": "tạp chí khoa học"
+        }
+      ],
+      "family": [
+        {
+          "word": "journalist",
+          "vi": "nhà báo"
+        }
+      ],
+      "tip": "journal → journalist (nhà báo).",
+      "emoji": "📓",
+      "stage": 2
+    },
+    {
+      "id": 2616,
+      "word": "judgment",
+      "ipa": "ˈʤəʤmənt",
+      "viRead": "GIƠGI-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phán xét; óc phán đoán",
+      "exampleEn": "Trust your own judgment.",
+      "exampleVi": "Hãy tin vào phán đoán của chính bạn.",
+      "collocations": [
+        {
+          "en": "good judgment",
+          "vi": "óc phán đoán tốt"
+        },
+        {
+          "en": "pass judgment",
+          "vi": "phán xét"
+        }
+      ],
+      "family": [
+        {
+          "word": "judge",
+          "vi": "thẩm phán; đánh giá"
+        }
+      ],
+      "tip": "Mỹ viết judgment, Anh viết judgement.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2617,
+      "word": "jury",
+      "ipa": "ˈʤʊri",
+      "viRead": "GIU-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bồi thẩm đoàn; ban giám khảo",
+      "exampleEn": "The jury gave the singer full marks.",
+      "exampleVi": "Ban giám khảo cho ca sĩ điểm tuyệt đối.",
+      "collocations": [
+        {
+          "en": "the jury decided",
+          "vi": "bồi thẩm đoàn quyết định"
+        },
+        {
+          "en": "on the jury",
+          "vi": "trong ban giám khảo"
+        }
+      ],
+      "tip": "Đọc 'GIU-ri'.",
+      "emoji": "👩‍⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2618,
+      "word": "justify",
+      "ipa": "ˈʤəstəˌfaɪ",
+      "viRead": "GIƠS-tơ-phai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "biện minh",
+      "exampleEn": "Nothing can justify violence.",
+      "exampleVi": "Không gì có thể biện minh cho bạo lực.",
+      "collocations": [
+        {
+          "en": "justify a decision",
+          "vi": "biện minh cho quyết định"
+        },
+        {
+          "en": "hard to justify",
+          "vi": "khó biện minh"
+        }
+      ],
+      "family": [
+        {
+          "word": "justice",
+          "vi": "công lý"
+        }
+      ],
+      "tip": "justify (v) → justification (n).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2619,
+      "word": "kidnap",
+      "ipa": "ˈkɪdˌnæp",
+      "viRead": "KIĐ-nep",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bắt cóc",
+      "exampleEn": "The boy was kidnapped on his way home.",
+      "exampleVi": "Cậu bé bị bắt cóc trên đường về nhà.",
+      "collocations": [
+        {
+          "en": "kidnap a child",
+          "vi": "bắt cóc trẻ em"
+        },
+        {
+          "en": "be kidnapped",
+          "vi": "bị bắt cóc"
+        }
+      ],
+      "family": [
+        {
+          "word": "kidnapper",
+          "vi": "kẻ bắt cóc"
+        }
+      ],
+      "tip": "kid (trẻ con) + nap (bắt) = bắt cóc.",
+      "emoji": "🚐",
+      "stage": 2
+    },
+    {
+      "id": 2620,
+      "word": "kidney",
+      "ipa": "ˈkɪdni",
+      "viRead": "KIĐ-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả thận",
+      "exampleEn": "Drink water to keep your kidneys healthy.",
+      "exampleVi": "Uống nước để giữ thận khỏe.",
+      "collocations": [
+        {
+          "en": "kidney disease",
+          "vi": "bệnh thận"
+        },
+        {
+          "en": "kidney beans",
+          "vi": "đậu tây"
+        }
+      ],
+      "tip": "kidney beans = đậu đỏ tây (hình quả thận).",
+      "emoji": "🫘",
+      "stage": 2
+    },
+    {
+      "id": 2621,
+      "word": "kindness",
+      "ipa": "ˈkaɪndnəs",
+      "viRead": "KAIND-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng tốt",
+      "exampleEn": "Thank you for your kindness.",
+      "exampleVi": "Cảm ơn lòng tốt của bạn.",
+      "collocations": [
+        {
+          "en": "an act of kindness",
+          "vi": "một hành động tử tế"
+        },
+        {
+          "en": "show kindness",
+          "vi": "thể hiện lòng tốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "kind",
+          "vi": "tốt bụng"
+        }
+      ],
+      "tip": "kind (adj) + ness = kindness (n).",
+      "emoji": "💝",
+      "stage": 2
+    },
+    {
+      "id": 2622,
+      "word": "kingdom",
+      "ipa": "ˈkɪŋdəm",
+      "viRead": "KING-đơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vương quốc",
+      "exampleEn": "The United Kingdom has four countries.",
+      "exampleVi": "Vương quốc Anh gồm bốn xứ.",
+      "collocations": [
+        {
+          "en": "the United Kingdom",
+          "vi": "Vương quốc Anh"
+        },
+        {
+          "en": "animal kingdom",
+          "vi": "giới động vật"
+        }
+      ],
+      "family": [
+        {
+          "word": "king",
+          "vi": "vua"
+        }
+      ],
+      "tip": "UK = United Kingdom.",
+      "emoji": "🏰",
+      "stage": 2
+    },
+    {
+      "id": 2623,
+      "word": "knee",
+      "ipa": "ni",
+      "viRead": "NI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầu gối",
+      "exampleEn": "I hurt my knee playing football.",
+      "exampleVi": "Tôi bị đau đầu gối khi đá bóng.",
+      "collocations": [
+        {
+          "en": "knee injury",
+          "vi": "chấn thương đầu gối"
+        },
+        {
+          "en": "on your knees",
+          "vi": "quỳ gối"
+        }
+      ],
+      "family": [
+        {
+          "word": "kneel",
+          "vi": "quỳ"
+        }
+      ],
+      "tip": "k câm: 'ni'.",
+      "emoji": "🦵",
+      "stage": 2
+    },
+    {
+      "id": 2624,
+      "word": "knit",
+      "ipa": "nɪt",
+      "viRead": "NIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đan (len)",
+      "exampleEn": "My grandmother knitted me a scarf.",
+      "exampleVi": "Bà đan cho tôi một chiếc khăn.",
+      "collocations": [
+        {
+          "en": "knit a sweater",
+          "vi": "đan áo len"
+        },
+        {
+          "en": "close knit",
+          "vi": "gắn bó khăng khít"
+        }
+      ],
+      "tip": "k câm: 'nit'. a close-knit family = gia đình gắn bó.",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 2625,
+      "word": "laboratory",
+      "ipa": "ˈlæbrəˌtɔri",
+      "viRead": "LE-brơ-to-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phòng thí nghiệm",
+      "exampleEn": "The scientists work in a laboratory.",
+      "exampleVi": "Các nhà khoa học làm việc trong phòng thí nghiệm.",
+      "collocations": [
+        {
+          "en": "science laboratory",
+          "vi": "phòng thí nghiệm khoa học"
+        },
+        {
+          "en": "language laboratory",
+          "vi": "phòng lab ngoại ngữ"
+        }
+      ],
+      "tip": "Viết tắt: lab. Mỹ đọc 'LE-brơ-to-ri'.",
+      "emoji": "🔬",
+      "stage": 2
+    },
+    {
+      "id": 2626,
+      "word": "largely",
+      "ipa": "ˈlɑrʤli",
+      "viRead": "LARGI-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "phần lớn",
+      "exampleEn": "The success was largely due to hard work.",
+      "exampleVi": "Thành công phần lớn nhờ chăm chỉ.",
+      "collocations": [
+        {
+          "en": "largely due to",
+          "vi": "phần lớn là do"
+        },
+        {
+          "en": "largely ignored",
+          "vi": "hầu như bị bỏ qua"
+        }
+      ],
+      "family": [
+        {
+          "word": "large",
+          "vi": "lớn"
+        }
+      ],
+      "tip": "largely = mainly (chủ yếu), KHÔNG phải 'một cách rộng lớn'.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 2627,
+      "word": "laser",
+      "ipa": "ˈleɪzər",
+      "viRead": "LÂY-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tia laser",
+      "exampleEn": "The doctor used a laser to fix my eyes.",
+      "exampleVi": "Bác sĩ dùng tia laser chữa mắt cho tôi.",
+      "collocations": [
+        {
+          "en": "laser pointer",
+          "vi": "bút laser"
+        },
+        {
+          "en": "laser treatment",
+          "vi": "điều trị bằng laser"
+        }
+      ],
+      "tip": "Đọc 'LÂY-dơ'.",
+      "emoji": "🔴",
+      "stage": 2
+    },
+    {
+      "id": 2628,
+      "word": "latter",
+      "ipa": "ˈlætər",
+      "viRead": "LE-tơ",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "cái sau (trong hai cái)",
+      "exampleEn": "Of tea and coffee, I prefer the latter.",
+      "exampleVi": "Giữa trà và cà phê, tôi thích cái sau hơn.",
+      "collocations": [
+        {
+          "en": "the latter",
+          "vi": "cái sau"
+        },
+        {
+          "en": "the former and the latter",
+          "vi": "cái trước và cái sau"
+        }
+      ],
+      "family": [
+        {
+          "word": "former",
+          "vi": "cái trước"
+        }
+      ],
+      "tip": "the former = cái trước; the latter = cái sau. latter ≠ later.",
+      "emoji": "2️⃣",
+      "stage": 2
+    },
+    {
+      "id": 2629,
+      "word": "league",
+      "ipa": "lig",
+      "viRead": "LIG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "liên đoàn; giải đấu",
+      "exampleEn": "He plays in the Premier League.",
+      "exampleVi": "Anh ấy chơi ở giải Ngoại hạng Anh.",
+      "collocations": [
+        {
+          "en": "Premier League",
+          "vi": "Ngoại hạng Anh"
+        },
+        {
+          "en": "out of my league",
+          "vi": "ngoài tầm với"
+        }
+      ],
+      "tip": "She's out of my league = Cô ấy quá tầm với tôi. ue câm: 'lig'.",
+      "emoji": "⚽",
+      "stage": 2
+    },
+    {
+      "id": 2630,
+      "word": "lean",
+      "ipa": "lin",
+      "viRead": "LIN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dựa, nghiêng",
+      "exampleEn": "Don't lean on the door.",
+      "exampleVi": "Đừng dựa vào cửa.",
+      "collocations": [
+        {
+          "en": "lean on",
+          "vi": "dựa vào"
+        },
+        {
+          "en": "lean forward",
+          "vi": "nghiêng người về trước"
+        }
+      ],
+      "tip": "lean (adj) = nạc: lean meat = thịt nạc.",
+      "emoji": "🧍",
+      "stage": 2
+    },
+    {
+      "id": 2631,
+      "word": "leap",
+      "ipa": "lip",
+      "viRead": "LIP",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhảy vọt",
+      "exampleEn": "Look before you leap.",
+      "exampleVi": "Hãy nhìn trước khi nhảy (suy nghĩ kỹ trước khi làm).",
+      "collocations": [
+        {
+          "en": "leap year",
+          "vi": "năm nhuận"
+        },
+        {
+          "en": "a big leap",
+          "vi": "bước nhảy vọt"
+        }
+      ],
+      "tip": "leap year = năm nhuận (tháng 2 có 29 ngày). leap – leapt – leapt.",
+      "emoji": "🐸",
+      "stage": 2
+    },
+    {
+      "id": 2632,
+      "word": "leather",
+      "ipa": "ˈlɛðər",
+      "viRead": "LE-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "da (thuộc)",
+      "exampleEn": "I bought a leather jacket.",
+      "exampleVi": "Tôi mua một chiếc áo khoác da.",
+      "collocations": [
+        {
+          "en": "leather jacket",
+          "vi": "áo khoác da"
+        },
+        {
+          "en": "leather shoes",
+          "vi": "giày da"
+        }
+      ],
+      "tip": "ea đọc 'e': 'LE-đơ'.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 2633,
+      "word": "legal",
+      "ipa": "ˈligəl",
+      "viRead": "LI-gơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hợp pháp",
+      "exampleEn": "Is it legal to drive at 16?",
+      "exampleVi": "16 tuổi lái xe có hợp pháp không?",
+      "collocations": [
+        {
+          "en": "legal age",
+          "vi": "tuổi hợp pháp"
+        },
+        {
+          "en": "legal advice",
+          "vi": "tư vấn pháp lý"
+        }
+      ],
+      "family": [
+        {
+          "word": "illegal",
+          "vi": "bất hợp pháp"
+        }
+      ],
+      "tip": "legal ↔ illegal. Đọc 'LI-gồ'.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2634,
+      "word": "legend",
+      "ipa": "ˈlɛʤənd",
+      "viRead": "LE-giơnđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "truyền thuyết; huyền thoại",
+      "exampleEn": "The legend of Hoan Kiem Lake is famous.",
+      "exampleVi": "Truyền thuyết Hồ Hoàn Kiếm rất nổi tiếng.",
+      "collocations": [
+        {
+          "en": "a living legend",
+          "vi": "huyền thoại sống"
+        },
+        {
+          "en": "according to legend",
+          "vi": "theo truyền thuyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "legendary",
+          "vi": "huyền thoại"
+        }
+      ],
+      "tip": "legend = truyền thuyết / người huyền thoại.",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 2635,
+      "word": "liberal",
+      "ipa": "ˈlɪbərəl",
+      "viRead": "LI-bơ-rơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cởi mở, phóng khoáng",
+      "exampleEn": "My parents are quite liberal.",
+      "exampleVi": "Bố mẹ tôi khá cởi mở.",
+      "collocations": [
+        {
+          "en": "liberal views",
+          "vi": "quan điểm cởi mở"
+        },
+        {
+          "en": "liberal arts",
+          "vi": "khoa học xã hội và nhân văn"
+        }
+      ],
+      "family": [
+        {
+          "word": "conservative",
+          "vi": "bảo thủ"
+        }
+      ],
+      "tip": "liberal ↔ conservative.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 2636,
+      "word": "liberty",
+      "ipa": "ˈlɪbərti",
+      "viRead": "LI-bơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tự do",
+      "exampleEn": "The Statue of Liberty is in New York.",
+      "exampleVi": "Tượng Nữ thần Tự do ở New York.",
+      "collocations": [
+        {
+          "en": "the Statue of Liberty",
+          "vi": "Tượng Nữ thần Tự do"
+        },
+        {
+          "en": "at liberty",
+          "vi": "được tự do"
+        }
+      ],
+      "tip": "liberty ≈ freedom.",
+      "emoji": "🗽",
+      "stage": 2
+    },
+    {
+      "id": 2637,
+      "word": "librarian",
+      "ipa": "laɪˈbrɛriən",
+      "viRead": "lai-BRE-ri-ơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thủ thư",
+      "exampleEn": "Ask the librarian for help.",
+      "exampleVi": "Hãy hỏi thủ thư để được giúp.",
+      "collocations": [
+        {
+          "en": "school librarian",
+          "vi": "thủ thư trường"
+        },
+        {
+          "en": "a friendly librarian",
+          "vi": "thủ thư thân thiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "library",
+          "vi": "thư viện"
+        }
+      ],
+      "tip": "library (thư viện) → librarian (thủ thư).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 2638,
+      "word": "lifetime",
+      "ipa": "ˈlaɪfˌtaɪm",
+      "viRead": "LAIPH-taim",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cả đời",
+      "exampleEn": "It's the trip of a lifetime.",
+      "exampleVi": "Đó là chuyến đi để đời.",
+      "collocations": [
+        {
+          "en": "in my lifetime",
+          "vi": "trong đời tôi"
+        },
+        {
+          "en": "once in a lifetime",
+          "vi": "có một không hai"
+        }
+      ],
+      "family": [
+        {
+          "word": "life",
+          "vi": "cuộc sống"
+        }
+      ],
+      "tip": "once in a lifetime = cả đời chỉ có một lần.",
+      "emoji": "⏳",
+      "stage": 2
+    },
+    {
+      "id": 2639,
+      "word": "limb",
+      "ipa": "lɪm",
+      "viRead": "LIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chân tay",
+      "exampleEn": "He broke a limb in the accident.",
+      "exampleVi": "Anh ấy bị gãy chân tay trong vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "arms and limbs",
+          "vi": "chân tay"
+        },
+        {
+          "en": "out on a limb",
+          "vi": "liều lĩnh một mình"
+        }
+      ],
+      "tip": "b câm: 'lim'.",
+      "emoji": "🦾",
+      "stage": 2
+    },
+    {
+      "id": 2640,
+      "word": "literally",
+      "ipa": "ˈlɪtərəli",
+      "viRead": "LI-tơ-rơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "theo nghĩa đen; thật sự",
+      "exampleEn": "I was literally shaking with fear.",
+      "exampleVi": "Tôi thật sự run lên vì sợ.",
+      "collocations": [
+        {
+          "en": "literally true",
+          "vi": "đúng theo nghĩa đen"
+        },
+        {
+          "en": "take it literally",
+          "vi": "hiểu theo nghĩa đen"
+        }
+      ],
+      "family": [
+        {
+          "word": "literal",
+          "vi": "nghĩa đen"
+        }
+      ],
+      "tip": "Giới trẻ dùng literally để nhấn mạnh: I literally died laughing!",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 2641,
+      "word": "lively",
+      "ipa": "ˈlaɪvli",
+      "viRead": "LAIV-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sôi nổi, náo nhiệt",
+      "exampleEn": "The night market is very lively.",
+      "exampleVi": "Chợ đêm rất náo nhiệt.",
+      "collocations": [
+        {
+          "en": "a lively town",
+          "vi": "thị trấn nhộn nhịp"
+        },
+        {
+          "en": "lively discussion",
+          "vi": "thảo luận sôi nổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "live",
+          "vi": "sống"
+        }
+      ],
+      "tip": "BẪY: lively là tính từ, đọc 'LAIV-li' (không phải 'LIV-li').",
+      "emoji": "🎊",
+      "stage": 2
+    },
+    {
+      "id": 2642,
+      "word": "load",
+      "ipa": "loʊd",
+      "viRead": "LÂUĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "gánh nặng; lượng hàng",
+      "exampleEn": "The truck carries a heavy load.",
+      "exampleVi": "Xe tải chở một khối hàng nặng.",
+      "collocations": [
+        {
+          "en": "a heavy load",
+          "vi": "hàng nặng"
+        },
+        {
+          "en": "loads of",
+          "vi": "rất nhiều"
+        }
+      ],
+      "tip": "loads of = rất nhiều (thân mật). Loading... = Đang tải...",
+      "emoji": "🚚",
+      "stage": 2
+    },
+    {
+      "id": 2643,
+      "word": "locate",
+      "ipa": "ˈloʊˌkeɪt",
+      "viRead": "LÂU-kâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xác định vị trí; đặt ở",
+      "exampleEn": "The hotel is located near the beach.",
+      "exampleVi": "Khách sạn nằm gần bãi biển.",
+      "collocations": [
+        {
+          "en": "be located in",
+          "vi": "nằm ở"
+        },
+        {
+          "en": "locate the problem",
+          "vi": "xác định vấn đề"
+        }
+      ],
+      "family": [
+        {
+          "word": "location",
+          "vi": "vị trí"
+        }
+      ],
+      "tip": "be located in/near = nằm ở.",
+      "emoji": "📍",
+      "stage": 2
+    },
+    {
+      "id": 2644,
+      "word": "logic",
+      "ipa": "ˈlɑʤɪk",
+      "viRead": "LA-gik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lô-gic, lý lẽ",
+      "exampleEn": "There's no logic in his argument.",
+      "exampleVi": "Lập luận của anh ta chẳng có lô-gic gì.",
+      "collocations": [
+        {
+          "en": "simple logic",
+          "vi": "lô-gic đơn giản"
+        },
+        {
+          "en": "the logic behind",
+          "vi": "lý do đằng sau"
+        }
+      ],
+      "family": [
+        {
+          "word": "logical",
+          "vi": "hợp lý"
+        }
+      ],
+      "tip": "logic (n) → logical (adj).",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 2645,
+      "word": "loyal",
+      "ipa": "lɔɪəl",
+      "viRead": "LOI-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trung thành",
+      "exampleEn": "Dogs are loyal animals.",
+      "exampleVi": "Chó là loài vật trung thành.",
+      "collocations": [
+        {
+          "en": "loyal to",
+          "vi": "trung thành với"
+        },
+        {
+          "en": "loyal customer",
+          "vi": "khách hàng thân thiết"
+        }
+      ],
+      "family": [
+        {
+          "word": "loyalty",
+          "vi": "lòng trung thành"
+        }
+      ],
+      "tip": "loyalty card = thẻ khách hàng thân thiết.",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 2646,
+      "word": "lung",
+      "ipa": "ləŋ",
+      "viRead": "LƠNG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phổi",
+      "exampleEn": "Smoking damages your lungs.",
+      "exampleVi": "Hút thuốc làm hại phổi.",
+      "collocations": [
+        {
+          "en": "lung cancer",
+          "vi": "ung thư phổi"
+        },
+        {
+          "en": "healthy lungs",
+          "vi": "phổi khỏe"
+        }
+      ],
+      "tip": "Số nhiều: lungs (hai lá phổi).",
+      "emoji": "🫁",
+      "stage": 2
+    },
+    {
+      "id": 2647,
+      "word": "lyrics",
+      "ipa": "ˈlɪrɪks",
+      "viRead": "LI-riks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời bài hát",
+      "exampleEn": "Do you know the lyrics of this song?",
+      "exampleVi": "Bạn có thuộc lời bài hát này không?",
+      "collocations": [
+        {
+          "en": "song lyrics",
+          "vi": "lời bài hát"
+        },
+        {
+          "en": "learn the lyrics",
+          "vi": "học lời bài hát"
+        }
+      ],
+      "tip": "Học tiếng Anh qua lyrics = học qua lời bài hát.",
+      "emoji": "🎵",
+      "stage": 2
+    },
+    {
+      "id": 2648,
+      "word": "lottery",
+      "ipa": "ˈlɑtəri",
+      "viRead": "LA-tơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xổ số",
+      "exampleEn": "He won the lottery last year.",
+      "exampleVi": "Năm ngoái anh ấy trúng xổ số.",
+      "collocations": [
+        {
+          "en": "win the lottery",
+          "vi": "trúng xổ số"
+        },
+        {
+          "en": "lottery ticket",
+          "vi": "vé số"
+        }
+      ],
+      "tip": "lottery ticket = vé số.",
+      "emoji": "🎟️",
       "stage": 2
     }
   ]
