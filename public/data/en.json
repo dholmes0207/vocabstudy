@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2695,
+    "count": 2743,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -76793,6 +76793,1320 @@
       ],
       "tip": "myth = chuyện hoang đường / niềm tin sai phổ biến.",
       "emoji": "🐉",
+      "stage": 2
+    },
+    {
+      "id": 2696,
+      "word": "naked",
+      "ipa": "ˈneɪkəd",
+      "viRead": "NÂY-kơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trần truồng; trần trụi",
+      "exampleEn": "You can't see bacteria with the naked eye.",
+      "exampleVi": "Không thể nhìn thấy vi khuẩn bằng mắt thường.",
+      "collocations": [
+        {
+          "en": "the naked eye",
+          "vi": "mắt thường"
+        },
+        {
+          "en": "naked truth",
+          "vi": "sự thật trần trụi"
+        }
+      ],
+      "tip": "with the naked eye = bằng mắt thường. Đọc 2 âm: 'NÂY-kịt'.",
+      "emoji": "👁️",
+      "stage": 2
+    },
+    {
+      "id": 2697,
+      "word": "nasty",
+      "ipa": "ˈnæsti",
+      "viRead": "NES-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khó chịu, xấu tính",
+      "exampleEn": "This medicine has a nasty taste.",
+      "exampleVi": "Thuốc này có vị khó chịu.",
+      "collocations": [
+        {
+          "en": "a nasty smell",
+          "vi": "mùi kinh"
+        },
+        {
+          "en": "nasty weather",
+          "vi": "thời tiết xấu"
+        }
+      ],
+      "tip": "nasty = rất khó chịu, xấu xa.",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 2698,
+      "word": "nationality",
+      "ipa": "ˌnæʃəˈnælɪti",
+      "viRead": "ne-shơ-NE-lơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quốc tịch",
+      "exampleEn": "What's your nationality? — I'm Vietnamese.",
+      "exampleVi": "Quốc tịch của bạn là gì? — Tôi là người Việt Nam.",
+      "collocations": [
+        {
+          "en": "Vietnamese nationality",
+          "vi": "quốc tịch Việt Nam"
+        },
+        {
+          "en": "dual nationality",
+          "vi": "hai quốc tịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "nation",
+          "vi": "quốc gia"
+        }
+      ],
+      "tip": "Hỏi quốc tịch: What's your nationality? / Where are you from?",
+      "emoji": "🛂",
+      "stage": 2
+    },
+    {
+      "id": 2699,
+      "word": "necessarily",
+      "ipa": "ˌnɛsəˈsɛrəli",
+      "viRead": "ne-sơ-SE-rơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nhất thiết",
+      "exampleEn": "Expensive food is not necessarily good.",
+      "exampleVi": "Đồ ăn đắt không nhất thiết là ngon.",
+      "collocations": [
+        {
+          "en": "not necessarily",
+          "vi": "không nhất thiết"
+        },
+        {
+          "en": "necessarily true",
+          "vi": "nhất thiết đúng"
+        }
+      ],
+      "family": [
+        {
+          "word": "necessary",
+          "vi": "cần thiết"
+        }
+      ],
+      "tip": "Not necessarily = Chưa chắc.",
+      "emoji": "🤷",
+      "stage": 2
+    },
+    {
+      "id": 2700,
+      "word": "necessity",
+      "ipa": "nəˈsɛsɪti",
+      "viRead": "nơ-SE-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cần thiết; nhu yếu phẩm",
+      "exampleEn": "A phone is a necessity these days.",
+      "exampleVi": "Ngày nay điện thoại là thứ thiết yếu.",
+      "collocations": [
+        {
+          "en": "a basic necessity",
+          "vi": "nhu cầu cơ bản"
+        },
+        {
+          "en": "out of necessity",
+          "vi": "vì bắt buộc"
+        }
+      ],
+      "family": [
+        {
+          "word": "necessary",
+          "vi": "cần thiết"
+        }
+      ],
+      "tip": "Necessity is the mother of invention = Cái khó ló cái khôn.",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 2701,
+      "word": "neglect",
+      "ipa": "nɪˈglɛkt",
+      "viRead": "ni-GLEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bỏ bê, sao nhãng",
+      "exampleEn": "Don't neglect your health.",
+      "exampleVi": "Đừng bỏ bê sức khỏe.",
+      "collocations": [
+        {
+          "en": "neglect your health",
+          "vi": "bỏ bê sức khỏe"
+        },
+        {
+          "en": "neglect your studies",
+          "vi": "sao nhãng học hành"
+        }
+      ],
+      "tip": "neglect = không quan tâm đúng mức.",
+      "emoji": "🥀",
+      "stage": 2
+    },
+    {
+      "id": 2702,
+      "word": "neighborhood",
+      "ipa": "ˈneɪbərˌhʊd",
+      "viRead": "NÂY-bơ-huđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khu phố",
+      "exampleEn": "I live in a quiet neighborhood.",
+      "exampleVi": "Tôi sống trong một khu phố yên tĩnh.",
+      "collocations": [
+        {
+          "en": "a quiet neighborhood",
+          "vi": "khu phố yên tĩnh"
+        },
+        {
+          "en": "in the neighborhood",
+          "vi": "ở gần đây"
+        }
+      ],
+      "family": [
+        {
+          "word": "neighbor",
+          "vi": "hàng xóm"
+        }
+      ],
+      "tip": "Anh viết neighbourhood. gh câm: 'NÂY-bơ-huđ'.",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 2703,
+      "word": "nerve",
+      "ipa": "nərv",
+      "viRead": "NƠV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây thần kinh; can đảm",
+      "exampleEn": "It takes nerve to speak in public.",
+      "exampleVi": "Cần can đảm để nói trước đám đông.",
+      "collocations": [
+        {
+          "en": "lose your nerve",
+          "vi": "mất bình tĩnh"
+        },
+        {
+          "en": "get on my nerves",
+          "vi": "làm tôi bực"
+        }
+      ],
+      "family": [
+        {
+          "word": "nervous",
+          "vi": "lo lắng"
+        }
+      ],
+      "tip": "You get on my nerves! = Bạn làm tôi phát bực!",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 2704,
+      "word": "neutral",
+      "ipa": "ˈnutrəl",
+      "viRead": "NU-trơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trung lập",
+      "exampleEn": "Switzerland is a neutral country.",
+      "exampleVi": "Thụy Sĩ là một nước trung lập.",
+      "collocations": [
+        {
+          "en": "stay neutral",
+          "vi": "giữ trung lập"
+        },
+        {
+          "en": "neutral colors",
+          "vi": "màu trung tính"
+        }
+      ],
+      "tip": "neutral colors = màu trung tính (be, xám, trắng).",
+      "emoji": "⚪",
+      "stage": 2
+    },
+    {
+      "id": 2705,
+      "word": "nevertheless",
+      "ipa": "ˌnɛvərðəˈlɛs",
+      "viRead": "ne-vơ-đơ-LES",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "tuy nhiên",
+      "exampleEn": "It was raining; nevertheless, we went out.",
+      "exampleVi": "Trời mưa; tuy vậy, chúng tôi vẫn ra ngoài.",
+      "collocations": [
+        {
+          "en": "but nevertheless",
+          "vi": "nhưng dù sao"
+        },
+        {
+          "en": "nevertheless, it is",
+          "vi": "dù vậy, nó"
+        }
+      ],
+      "tip": "nevertheless = however (trang trọng, văn viết).",
+      "emoji": "↩️",
+      "stage": 2
+    },
+    {
+      "id": 2706,
+      "word": "noble",
+      "ipa": "ˈnoʊbəl",
+      "viRead": "NÂU-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cao quý, cao thượng",
+      "exampleEn": "Teaching is a noble job.",
+      "exampleVi": "Dạy học là một nghề cao quý.",
+      "collocations": [
+        {
+          "en": "a noble cause",
+          "vi": "mục đích cao cả"
+        },
+        {
+          "en": "noble family",
+          "vi": "gia đình quý tộc"
+        }
+      ],
+      "tip": "noble = cao quý; nobleman = quý tộc.",
+      "emoji": "👑",
+      "stage": 2
+    },
+    {
+      "id": 2707,
+      "word": "noisy",
+      "ipa": "ˈnɔɪzi",
+      "viRead": "NOI-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ồn ào",
+      "exampleEn": "The street outside is very noisy.",
+      "exampleVi": "Con phố bên ngoài rất ồn ào.",
+      "collocations": [
+        {
+          "en": "a noisy street",
+          "vi": "con phố ồn ào"
+        },
+        {
+          "en": "noisy neighbors",
+          "vi": "hàng xóm ồn ào"
+        }
+      ],
+      "family": [
+        {
+          "word": "noise",
+          "vi": "tiếng ồn"
+        }
+      ],
+      "tip": "noise (n) → noisy (adj) ↔ quiet.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 2708,
+      "word": "normally",
+      "ipa": "ˈnɔrməli",
+      "viRead": "NOR-mơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thông thường",
+      "exampleEn": "I normally get up at six.",
+      "exampleVi": "Tôi thường dậy lúc sáu giờ.",
+      "collocations": [
+        {
+          "en": "normally speaking",
+          "vi": "thông thường mà nói"
+        },
+        {
+          "en": "work normally",
+          "vi": "hoạt động bình thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "normal",
+          "vi": "bình thường"
+        }
+      ],
+      "tip": "normally = usually.",
+      "emoji": "🕕",
+      "stage": 2
+    },
+    {
+      "id": 2709,
+      "word": "notion",
+      "ipa": "ˈnoʊʃən",
+      "viRead": "NÂU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khái niệm, ý niệm",
+      "exampleEn": "I have no notion of what he means.",
+      "exampleVi": "Tôi không hiểu anh ấy muốn nói gì.",
+      "collocations": [
+        {
+          "en": "the notion of",
+          "vi": "khái niệm về"
+        },
+        {
+          "en": "have no notion",
+          "vi": "không có ý niệm"
+        }
+      ],
+      "tip": "notion ≈ idea, concept.",
+      "emoji": "💭",
+      "stage": 2
+    },
+    {
+      "id": 2710,
+      "word": "nuclear",
+      "ipa": "ˈnukliər",
+      "viRead": "NU-kli-ơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hạt nhân",
+      "exampleEn": "The country uses nuclear energy.",
+      "exampleVi": "Đất nước sử dụng năng lượng hạt nhân.",
+      "collocations": [
+        {
+          "en": "nuclear energy",
+          "vi": "năng lượng hạt nhân"
+        },
+        {
+          "en": "nuclear family",
+          "vi": "gia đình hạt nhân"
+        }
+      ],
+      "tip": "nuclear family = gia đình chỉ gồm bố mẹ và con.",
+      "emoji": "☢️",
+      "stage": 2
+    },
+    {
+      "id": 2711,
+      "word": "nuisance",
+      "ipa": "ˈnusəns",
+      "viRead": "NU-sơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điều phiền toái",
+      "exampleEn": "The mosquitoes are a real nuisance.",
+      "exampleVi": "Lũ muỗi thật là phiền toái.",
+      "collocations": [
+        {
+          "en": "a real nuisance",
+          "vi": "phiền toái thật sự"
+        },
+        {
+          "en": "make a nuisance of yourself",
+          "vi": "gây phiền"
+        }
+      ],
+      "tip": "ui đọc 'u': 'NU-sơns'.",
+      "emoji": "🦟",
+      "stage": 2
+    },
+    {
+      "id": 2712,
+      "word": "numerous",
+      "ipa": "ˈnumərəs",
+      "viRead": "NU-mơ-rơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều, đông đảo",
+      "exampleEn": "I've been there numerous times.",
+      "exampleVi": "Tôi đã đến đó nhiều lần.",
+      "collocations": [
+        {
+          "en": "numerous times",
+          "vi": "nhiều lần"
+        },
+        {
+          "en": "numerous reasons",
+          "vi": "nhiều lý do"
+        }
+      ],
+      "family": [
+        {
+          "word": "number",
+          "vi": "con số"
+        }
+      ],
+      "tip": "numerous = many (trang trọng).",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 2713,
+      "word": "nursery",
+      "ipa": "ˈnərsəri",
+      "viRead": "NƠ-sơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà trẻ",
+      "exampleEn": "My daughter goes to nursery school.",
+      "exampleVi": "Con gái tôi đi nhà trẻ.",
+      "collocations": [
+        {
+          "en": "nursery school",
+          "vi": "nhà trẻ"
+        },
+        {
+          "en": "nursery rhyme",
+          "vi": "bài đồng dao"
+        }
+      ],
+      "family": [
+        {
+          "word": "nurse",
+          "vi": "y tá"
+        }
+      ],
+      "tip": "nursery rhyme = bài đồng dao cho trẻ em.",
+      "emoji": "🧸",
+      "stage": 2
+    },
+    {
+      "id": 2714,
+      "word": "nutrition",
+      "ipa": "nuˈtrɪʃən",
+      "viRead": "nu-TRI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dinh dưỡng",
+      "exampleEn": "Good nutrition is important for children.",
+      "exampleVi": "Dinh dưỡng tốt rất quan trọng với trẻ em.",
+      "collocations": [
+        {
+          "en": "good nutrition",
+          "vi": "dinh dưỡng tốt"
+        },
+        {
+          "en": "nutrition facts",
+          "vi": "thông tin dinh dưỡng"
+        }
+      ],
+      "family": [
+        {
+          "word": "nutritious",
+          "vi": "bổ dưỡng"
+        }
+      ],
+      "tip": "nutrition facts = bảng thành phần dinh dưỡng trên bao bì.",
+      "emoji": "🥦",
+      "stage": 2
+    },
+    {
+      "id": 2715,
+      "word": "objective",
+      "ipa": "əˈbʤɛktɪv",
+      "viRead": "ơb-GIEK-tiv",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "mục tiêu; khách quan",
+      "exampleEn": "Our main objective is to learn 20 words a week.",
+      "exampleVi": "Mục tiêu chính của chúng ta là học 20 từ mỗi tuần.",
+      "collocations": [
+        {
+          "en": "main objective",
+          "vi": "mục tiêu chính"
+        },
+        {
+          "en": "be objective",
+          "vi": "khách quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "subjective",
+          "vi": "chủ quan"
+        }
+      ],
+      "tip": "objective (adj) = khách quan ↔ subjective (chủ quan).",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2716,
+      "word": "obligation",
+      "ipa": "ˌɑbləˈgeɪʃən",
+      "viRead": "a-blơ-GÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghĩa vụ",
+      "exampleEn": "You have no obligation to buy.",
+      "exampleVi": "Bạn không có nghĩa vụ phải mua.",
+      "collocations": [
+        {
+          "en": "no obligation",
+          "vi": "không bắt buộc"
+        },
+        {
+          "en": "a moral obligation",
+          "vi": "nghĩa vụ đạo đức"
+        }
+      ],
+      "family": [
+        {
+          "word": "oblige",
+          "vi": "bắt buộc"
+        }
+      ],
+      "tip": "feel obliged to = thấy có nghĩa vụ phải.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2717,
+      "word": "obstacle",
+      "ipa": "ˈɑbstəkəl",
+      "viRead": "AB-stơ-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chướng ngại",
+      "exampleEn": "Fear is the biggest obstacle to learning.",
+      "exampleVi": "Sợ hãi là chướng ngại lớn nhất khi học.",
+      "collocations": [
+        {
+          "en": "overcome obstacles",
+          "vi": "vượt qua trở ngại"
+        },
+        {
+          "en": "an obstacle to",
+          "vi": "trở ngại cho"
+        }
+      ],
+      "tip": "obstacle course = đường vượt chướng ngại vật.",
+      "emoji": "🚧",
+      "stage": 2
+    },
+    {
+      "id": 2718,
+      "word": "obviously",
+      "ipa": "ˈɑbviəsli",
+      "viRead": "AB-vi-ơs-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "rõ ràng",
+      "exampleEn": "Obviously, you need to practice more.",
+      "exampleVi": "Rõ ràng là bạn cần luyện tập nhiều hơn.",
+      "collocations": [
+        {
+          "en": "obviously not",
+          "vi": "rõ ràng là không"
+        },
+        {
+          "en": "quite obviously",
+          "vi": "hiển nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "obvious",
+          "vi": "rõ ràng"
+        }
+      ],
+      "tip": "Obviously! = Hiển nhiên rồi!",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 2719,
+      "word": "occasionally",
+      "ipa": "əˈkeɪʒənəli",
+      "viRead": "ơ-KÂY-zhơ-nơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thỉnh thoảng",
+      "exampleEn": "I occasionally eat fast food.",
+      "exampleVi": "Thỉnh thoảng tôi ăn đồ ăn nhanh.",
+      "collocations": [
+        {
+          "en": "only occasionally",
+          "vi": "chỉ thỉnh thoảng"
+        },
+        {
+          "en": "occasionally visit",
+          "vi": "thỉnh thoảng ghé thăm"
+        }
+      ],
+      "family": [
+        {
+          "word": "occasion",
+          "vi": "dịp"
+        }
+      ],
+      "tip": "Chính tả: 2 c, 1 s (o-cc-a-s-ionally).",
+      "emoji": "🌦️",
+      "stage": 2
+    },
+    {
+      "id": 2720,
+      "word": "occupation",
+      "ipa": "ˌɑkjəˈpeɪʃən",
+      "viRead": "ak-yơ-PÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghề nghiệp",
+      "exampleEn": "Please write your name and occupation.",
+      "exampleVi": "Vui lòng ghi tên và nghề nghiệp.",
+      "collocations": [
+        {
+          "en": "your occupation",
+          "vi": "nghề nghiệp của bạn"
+        },
+        {
+          "en": "main occupation",
+          "vi": "nghề chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "occupy",
+          "vi": "chiếm"
+        }
+      ],
+      "tip": "occupation = job (trang trọng, hay gặp trong đơn từ).",
+      "emoji": "👷",
+      "stage": 2
+    },
+    {
+      "id": 2721,
+      "word": "occupy",
+      "ipa": "ˈɑkjəˌpaɪ",
+      "viRead": "AK-yơ-pai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chiếm; làm bận",
+      "exampleEn": "This seat is occupied.",
+      "exampleVi": "Ghế này có người ngồi rồi.",
+      "collocations": [
+        {
+          "en": "be occupied",
+          "vi": "có người"
+        },
+        {
+          "en": "occupy your time",
+          "vi": "chiếm thời gian"
+        }
+      ],
+      "family": [
+        {
+          "word": "occupation",
+          "vi": "nghề nghiệp"
+        }
+      ],
+      "tip": "Occupied = Có người (trên cửa nhà vệ sinh).",
+      "emoji": "🚻",
+      "stage": 2
+    },
+    {
+      "id": 2722,
+      "word": "odds",
+      "ipa": "ɑdz",
+      "viRead": "AĐD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khả năng, tỷ lệ",
+      "exampleEn": "The odds of winning are very low.",
+      "exampleVi": "Khả năng thắng là rất thấp.",
+      "collocations": [
+        {
+          "en": "against the odds",
+          "vi": "bất chấp khó khăn"
+        },
+        {
+          "en": "the odds are",
+          "vi": "nhiều khả năng là"
+        }
+      ],
+      "family": [
+        {
+          "word": "odd",
+          "vi": "kỳ quặc; lẻ"
+        }
+      ],
+      "tip": "against all odds = bất chấp mọi khó khăn.",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 2723,
+      "word": "offensive",
+      "ipa": "əˈfɛnsɪv",
+      "viRead": "ơ-PHEN-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xúc phạm",
+      "exampleEn": "His joke was offensive.",
+      "exampleVi": "Câu đùa của anh ta mang tính xúc phạm.",
+      "collocations": [
+        {
+          "en": "offensive language",
+          "vi": "ngôn từ xúc phạm"
+        },
+        {
+          "en": "find it offensive",
+          "vi": "thấy bị xúc phạm"
+        }
+      ],
+      "family": [
+        {
+          "word": "offend",
+          "vi": "xúc phạm"
+        }
+      ],
+      "tip": "offend (v) → offensive (adj).",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 2724,
+      "word": "offline",
+      "ipa": "ˈɔfˌlaɪn",
+      "viRead": "OPH-lain",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "ngoại tuyến",
+      "exampleEn": "You can study offline after the first visit.",
+      "exampleVi": "Sau lần đầu truy cập bạn có thể học ngoại tuyến.",
+      "collocations": [
+        {
+          "en": "go offline",
+          "vi": "ngắt mạng"
+        },
+        {
+          "en": "offline mode",
+          "vi": "chế độ ngoại tuyến"
+        }
+      ],
+      "family": [
+        {
+          "word": "online",
+          "vi": "trực tuyến"
+        }
+      ],
+      "tip": "App này vẫn chạy offline nhờ service worker!",
+      "emoji": "📴",
+      "stage": 2
+    },
+    {
+      "id": 2725,
+      "word": "online",
+      "ipa": "ˈɔnˌlaɪn",
+      "viRead": "ON-lain",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "trực tuyến",
+      "exampleEn": "I take English classes online.",
+      "exampleVi": "Tôi học tiếng Anh trực tuyến.",
+      "collocations": [
+        {
+          "en": "online shopping",
+          "vi": "mua sắm trực tuyến"
+        },
+        {
+          "en": "go online",
+          "vi": "lên mạng"
+        }
+      ],
+      "family": [
+        {
+          "word": "offline",
+          "vi": "ngoại tuyến"
+        }
+      ],
+      "tip": "online ↔ offline.",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 2726,
+      "word": "operation",
+      "ipa": "ˌɑpəˈreɪʃən",
+      "viRead": "a-pơ-RÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ca phẫu thuật; sự vận hành",
+      "exampleEn": "He had an operation on his knee.",
+      "exampleVi": "Anh ấy phẫu thuật đầu gối.",
+      "collocations": [
+        {
+          "en": "have an operation",
+          "vi": "phẫu thuật"
+        },
+        {
+          "en": "in operation",
+          "vi": "đang hoạt động"
+        }
+      ],
+      "family": [
+        {
+          "word": "operate",
+          "vi": "vận hành; mổ"
+        }
+      ],
+      "tip": "operate (v) → operation (n) → operator (người vận hành).",
+      "emoji": "🏥",
+      "stage": 2
+    },
+    {
+      "id": 2727,
+      "word": "opponent",
+      "ipa": "əˈpoʊnənt",
+      "viRead": "ơ-PÂU-nơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đối thủ",
+      "exampleEn": "Our opponent is very strong.",
+      "exampleVi": "Đối thủ của chúng ta rất mạnh.",
+      "collocations": [
+        {
+          "en": "a strong opponent",
+          "vi": "đối thủ mạnh"
+        },
+        {
+          "en": "political opponent",
+          "vi": "đối thủ chính trị"
+        }
+      ],
+      "family": [
+        {
+          "word": "oppose",
+          "vi": "phản đối"
+        }
+      ],
+      "tip": "Nhấn âm 2: ơ-PÂU-nơnt.",
+      "emoji": "🤺",
+      "stage": 2
+    },
+    {
+      "id": 2728,
+      "word": "oral",
+      "ipa": "ˈɔrəl",
+      "viRead": "O-rơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bằng lời nói; thuộc miệng",
+      "exampleEn": "We have an oral exam tomorrow.",
+      "exampleVi": "Ngày mai chúng tôi thi vấn đáp.",
+      "collocations": [
+        {
+          "en": "oral exam",
+          "vi": "thi vấn đáp"
+        },
+        {
+          "en": "oral health",
+          "vi": "sức khỏe răng miệng"
+        }
+      ],
+      "tip": "oral = bằng miệng; written = bằng viết.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2729,
+      "word": "orbit",
+      "ipa": "ˈɔrbət",
+      "viRead": "OR-bơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quỹ đạo",
+      "exampleEn": "The Moon is in orbit around the Earth.",
+      "exampleVi": "Mặt Trăng ở trên quỹ đạo quanh Trái Đất.",
+      "collocations": [
+        {
+          "en": "in orbit",
+          "vi": "trên quỹ đạo"
+        },
+        {
+          "en": "orbit the Earth",
+          "vi": "quay quanh Trái Đất"
+        }
+      ],
+      "tip": "orbit (v) = bay quanh quỹ đạo.",
+      "emoji": "🛰️",
+      "stage": 2
+    },
+    {
+      "id": 2730,
+      "word": "organ",
+      "ipa": "ˈɔrgən",
+      "viRead": "OR-gơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơ quan (cơ thể); đàn organ",
+      "exampleEn": "The heart is a vital organ.",
+      "exampleVi": "Tim là một cơ quan quan trọng.",
+      "collocations": [
+        {
+          "en": "body organ",
+          "vi": "cơ quan cơ thể"
+        },
+        {
+          "en": "organ donor",
+          "vi": "người hiến tạng"
+        }
+      ],
+      "family": [
+        {
+          "word": "organic",
+          "vi": "hữu cơ"
+        }
+      ],
+      "tip": "organ donor = người hiến tạng.",
+      "emoji": "🫀",
+      "stage": 2
+    },
+    {
+      "id": 2731,
+      "word": "otherwise",
+      "ipa": "ˈəðərˌwaɪz",
+      "viRead": "Ơ-đơ-waid",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nếu không thì",
+      "exampleEn": "Hurry up, otherwise we'll miss the bus.",
+      "exampleVi": "Nhanh lên, nếu không mình sẽ lỡ xe buýt.",
+      "collocations": [
+        {
+          "en": "or otherwise",
+          "vi": "hay cách khác"
+        },
+        {
+          "en": "unless otherwise stated",
+          "vi": "trừ khi có ghi chú khác"
+        }
+      ],
+      "tip": "otherwise = if not (nếu không thì).",
+      "emoji": "🔀",
+      "stage": 2
+    },
+    {
+      "id": 2732,
+      "word": "outer",
+      "ipa": "ˈaʊtər",
+      "viRead": "AO-tơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bên ngoài",
+      "exampleEn": "He works on the outer edge of the city.",
+      "exampleVi": "Anh ấy làm việc ở rìa ngoài thành phố.",
+      "collocations": [
+        {
+          "en": "outer space",
+          "vi": "không gian vũ trụ"
+        },
+        {
+          "en": "outer layer",
+          "vi": "lớp ngoài"
+        }
+      ],
+      "family": [
+        {
+          "word": "inner",
+          "vi": "bên trong"
+        }
+      ],
+      "tip": "outer space = không gian vũ trụ.",
+      "emoji": "🌌",
+      "stage": 2
+    },
+    {
+      "id": 2733,
+      "word": "outline",
+      "ipa": "ˈaʊtˌlaɪn",
+      "viRead": "AOT-lain",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dàn ý; đường viền",
+      "exampleEn": "Write an outline before your essay.",
+      "exampleVi": "Viết dàn ý trước khi viết bài luận.",
+      "collocations": [
+        {
+          "en": "an outline of",
+          "vi": "dàn ý của"
+        },
+        {
+          "en": "in outline",
+          "vi": "sơ lược"
+        }
+      ],
+      "tip": "outline = dàn bài / phác thảo.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 2734,
+      "word": "output",
+      "ipa": "ˈaʊtˌpʊt",
+      "viRead": "AOT-put",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sản lượng; đầu ra",
+      "exampleEn": "The factory's output has doubled.",
+      "exampleVi": "Sản lượng của nhà máy đã tăng gấp đôi.",
+      "collocations": [
+        {
+          "en": "daily output",
+          "vi": "sản lượng hằng ngày"
+        },
+        {
+          "en": "input and output",
+          "vi": "đầu vào và đầu ra"
+        }
+      ],
+      "family": [
+        {
+          "word": "input",
+          "vi": "đầu vào"
+        }
+      ],
+      "tip": "output ↔ input.",
+      "emoji": "📤",
+      "stage": 2
+    },
+    {
+      "id": 2735,
+      "word": "outstanding",
+      "ipa": "ˌaʊtˈstændɪŋ",
+      "viRead": "aot-STEN-đing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xuất sắc; còn tồn đọng",
+      "exampleEn": "She is an outstanding student.",
+      "exampleVi": "Cô ấy là một học sinh xuất sắc.",
+      "collocations": [
+        {
+          "en": "an outstanding student",
+          "vi": "học sinh xuất sắc"
+        },
+        {
+          "en": "outstanding debt",
+          "vi": "khoản nợ chưa trả"
+        }
+      ],
+      "tip": "outstanding = nổi bật, xuất sắc.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 2736,
+      "word": "oval",
+      "ipa": "ˈoʊvəl",
+      "viRead": "ÂU-vơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "hình bầu dục",
+      "exampleEn": "She has an oval face.",
+      "exampleVi": "Cô ấy có khuôn mặt trái xoan.",
+      "collocations": [
+        {
+          "en": "oval face",
+          "vi": "mặt trái xoan"
+        },
+        {
+          "en": "the Oval Office",
+          "vi": "Phòng Bầu dục (Nhà Trắng)"
+        }
+      ],
+      "tip": "oval face = mặt trái xoan. Đọc 'ÂU-vồ'.",
+      "emoji": "🥚",
+      "stage": 2
+    },
+    {
+      "id": 2737,
+      "word": "overall",
+      "ipa": "ˈoʊvərˌɔl",
+      "viRead": "ÂU-vơ-ol",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "tổng thể",
+      "exampleEn": "Overall, it was a good trip.",
+      "exampleVi": "Nhìn chung, đó là một chuyến đi tốt.",
+      "collocations": [
+        {
+          "en": "overall result",
+          "vi": "kết quả chung"
+        },
+        {
+          "en": "overall winner",
+          "vi": "người thắng chung cuộc"
+        }
+      ],
+      "tip": "Overall, ... = Nhìn chung, ... (dùng tóm tắt).",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 2738,
+      "word": "overcome",
+      "ipa": "ˌoʊvərˈkəm",
+      "viRead": "âu-vơ-KƠM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vượt qua",
+      "exampleEn": "You can overcome your fear of speaking English.",
+      "exampleVi": "Bạn có thể vượt qua nỗi sợ nói tiếng Anh.",
+      "collocations": [
+        {
+          "en": "overcome fear",
+          "vi": "vượt qua nỗi sợ"
+        },
+        {
+          "en": "overcome difficulties",
+          "vi": "vượt qua khó khăn"
+        }
+      ],
+      "tip": "overcome – overcame – overcome.",
+      "emoji": "🧗",
+      "stage": 2
+    },
+    {
+      "id": 2739,
+      "word": "overlook",
+      "ipa": "ˌoʊvərˈlʊk",
+      "viRead": "âu-vơ-LUK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bỏ sót; nhìn ra",
+      "exampleEn": "The hotel overlooks the sea.",
+      "exampleVi": "Khách sạn nhìn ra biển.",
+      "collocations": [
+        {
+          "en": "overlook the sea",
+          "vi": "nhìn ra biển"
+        },
+        {
+          "en": "overlook a mistake",
+          "vi": "bỏ qua lỗi"
+        }
+      ],
+      "tip": "overlook = nhìn ra (từ trên cao) hoặc bỏ sót.",
+      "emoji": "🌅",
+      "stage": 2
+    },
+    {
+      "id": 2740,
+      "word": "overnight",
+      "ipa": "ˌoʊvərˈnaɪt",
+      "viRead": "ÂU-vơ-NAIT",
+      "pos": "adv./adj.",
+      "posCategory": "adverb",
+      "meaning": "qua đêm; chỉ sau một đêm",
+      "exampleEn": "We stayed overnight in Sa Pa.",
+      "exampleVi": "Chúng tôi ở lại qua đêm ở Sa Pa.",
+      "collocations": [
+        {
+          "en": "stay overnight",
+          "vi": "ở lại qua đêm"
+        },
+        {
+          "en": "overnight success",
+          "vi": "thành công chỉ sau một đêm"
+        }
+      ],
+      "tip": "overnight success = nổi tiếng chỉ sau một đêm.",
+      "emoji": "🌙",
+      "stage": 2
+    },
+    {
+      "id": 2741,
+      "word": "overweight",
+      "ipa": "ˌoʊvərˈweɪt",
+      "viRead": "âu-vơ-WÂYT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thừa cân",
+      "exampleEn": "The doctor says I'm a little overweight.",
+      "exampleVi": "Bác sĩ nói tôi hơi thừa cân.",
+      "collocations": [
+        {
+          "en": "a bit overweight",
+          "vi": "hơi thừa cân"
+        },
+        {
+          "en": "overweight luggage",
+          "vi": "hành lý quá cân"
+        }
+      ],
+      "family": [
+        {
+          "word": "weight",
+          "vi": "cân nặng"
+        }
+      ],
+      "tip": "overweight ↔ underweight (thiếu cân).",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2742,
+      "word": "owl",
+      "ipa": "aʊl",
+      "viRead": "AOL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con cú",
+      "exampleEn": "Owls hunt at night.",
+      "exampleVi": "Cú săn mồi vào ban đêm.",
+      "collocations": [
+        {
+          "en": "night owl",
+          "vi": "cú đêm (người thức khuya)"
+        },
+        {
+          "en": "wise old owl",
+          "vi": "con cú già thông thái"
+        }
+      ],
+      "tip": "night owl = cú đêm (người hay thức khuya). ow đọc 'ao': 'aol'.",
+      "emoji": "🦉",
+      "stage": 2
+    },
+    {
+      "id": 2743,
+      "word": "ownership",
+      "ipa": "ˈoʊnərˌʃɪp",
+      "viRead": "ÂU-nơ-ship",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quyền sở hữu",
+      "exampleEn": "Home ownership is a dream for many young people.",
+      "exampleVi": "Sở hữu nhà là giấc mơ của nhiều người trẻ.",
+      "collocations": [
+        {
+          "en": "home ownership",
+          "vi": "sở hữu nhà"
+        },
+        {
+          "en": "take ownership",
+          "vi": "nhận trách nhiệm"
+        }
+      ],
+      "family": [
+        {
+          "word": "owner",
+          "vi": "chủ sở hữu"
+        }
+      ],
+      "tip": "own → owner → ownership.",
+      "emoji": "🔑",
       "stage": 2
     }
   ]
