@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2505,
+    "count": 2553,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -71517,6 +71517,1304 @@
       ],
       "tip": "Đọc 'GIN-yơs' (g đọc 'j'). genius = thiên tài; genie = thần đèn.",
       "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 2506,
+      "word": "glance",
+      "ipa": "glæns",
+      "viRead": "GLENS",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "liếc nhìn",
+      "exampleEn": "She glanced at her watch.",
+      "exampleVi": "Cô ấy liếc nhìn đồng hồ.",
+      "collocations": [
+        {
+          "en": "glance at",
+          "vi": "liếc nhìn"
+        },
+        {
+          "en": "at first glance",
+          "vi": "thoạt nhìn"
+        }
+      ],
+      "tip": "glance = nhìn nhanh; stare = nhìn chằm chằm.",
+      "emoji": "👀",
+      "stage": 2
+    },
+    {
+      "id": 2507,
+      "word": "glimpse",
+      "ipa": "glɪmps",
+      "viRead": "GLIMPS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái nhìn thoáng qua",
+      "exampleEn": "I caught a glimpse of the singer.",
+      "exampleVi": "Tôi thoáng thấy ca sĩ.",
+      "collocations": [
+        {
+          "en": "catch a glimpse",
+          "vi": "thoáng thấy"
+        },
+        {
+          "en": "a glimpse of",
+          "vi": "cái nhìn thoáng qua về"
+        }
+      ],
+      "tip": "catch a glimpse of = thoáng nhìn thấy.",
+      "emoji": "🫣",
+      "stage": 2
+    },
+    {
+      "id": 2508,
+      "word": "global",
+      "ipa": "ˈgloʊbəl",
+      "viRead": "GLÂU-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "toàn cầu",
+      "exampleEn": "Global warming is a serious problem.",
+      "exampleVi": "Nóng lên toàn cầu là vấn đề nghiêm trọng.",
+      "collocations": [
+        {
+          "en": "global warming",
+          "vi": "nóng lên toàn cầu"
+        },
+        {
+          "en": "global market",
+          "vi": "thị trường toàn cầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "globe",
+          "vi": "quả địa cầu"
+        }
+      ],
+      "tip": "globe (quả địa cầu) → global.",
+      "emoji": "🌍",
+      "stage": 2
+    },
+    {
+      "id": 2509,
+      "word": "glory",
+      "ipa": "ˈglɔri",
+      "viRead": "GLO-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vinh quang",
+      "exampleEn": "The team fought for glory.",
+      "exampleVi": "Đội bóng chiến đấu vì vinh quang.",
+      "collocations": [
+        {
+          "en": "fame and glory",
+          "vi": "danh vọng và vinh quang"
+        },
+        {
+          "en": "in all its glory",
+          "vi": "trong toàn bộ vẻ lộng lẫy"
+        }
+      ],
+      "family": [
+        {
+          "word": "glorious",
+          "vi": "vẻ vang"
+        }
+      ],
+      "tip": "glorious = rực rỡ, vẻ vang.",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 2510,
+      "word": "glow",
+      "ipa": "gloʊ",
+      "viRead": "GLÂU",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "phát sáng",
+      "exampleEn": "The stars glow in the dark.",
+      "exampleVi": "Các ngôi sao phát sáng trong bóng tối.",
+      "collocations": [
+        {
+          "en": "glow in the dark",
+          "vi": "phát sáng trong tối"
+        },
+        {
+          "en": "a warm glow",
+          "vi": "ánh sáng ấm áp"
+        }
+      ],
+      "tip": "glow up = lột xác (đẹp lên) — tiếng lóng giới trẻ.",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 2511,
+      "word": "golden",
+      "ipa": "ˈgoʊldən",
+      "viRead": "GÂUL-đơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bằng vàng; màu vàng óng",
+      "exampleEn": "The fields are golden at harvest time.",
+      "exampleVi": "Cánh đồng vàng óng vào mùa gặt.",
+      "collocations": [
+        {
+          "en": "golden rule",
+          "vi": "quy tắc vàng"
+        },
+        {
+          "en": "golden opportunity",
+          "vi": "cơ hội vàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "gold",
+          "vi": "vàng"
+        }
+      ],
+      "tip": "a golden opportunity = cơ hội vàng.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2512,
+      "word": "gossip",
+      "ipa": "ˈgɑsəp",
+      "viRead": "GA-sơp",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "chuyện ngồi lê đôi mách",
+      "exampleEn": "Don't listen to gossip.",
+      "exampleVi": "Đừng nghe chuyện ngồi lê đôi mách.",
+      "collocations": [
+        {
+          "en": "office gossip",
+          "vi": "chuyện tầm phào công sở"
+        },
+        {
+          "en": "gossip about",
+          "vi": "buôn chuyện về"
+        }
+      ],
+      "tip": "gossip = buôn dưa lê (nói chuyện người khác).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2513,
+      "word": "govern",
+      "ipa": "ˈgəvərn",
+      "viRead": "GƠ-vơn",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cai trị, điều hành",
+      "exampleEn": "The country is governed by an elected government.",
+      "exampleVi": "Đất nước được điều hành bởi chính phủ do dân bầu.",
+      "collocations": [
+        {
+          "en": "govern a country",
+          "vi": "điều hành đất nước"
+        },
+        {
+          "en": "be governed by",
+          "vi": "được chi phối bởi"
+        }
+      ],
+      "family": [
+        {
+          "word": "government",
+          "vi": "chính phủ"
+        }
+      ],
+      "tip": "govern (v) → government (n) → governor (thống đốc).",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2514,
+      "word": "gradual",
+      "ipa": "ˈgræʤuəl",
+      "viRead": "GRE-giu-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dần dần",
+      "exampleEn": "There has been a gradual change in the weather.",
+      "exampleVi": "Thời tiết thay đổi dần dần.",
+      "collocations": [
+        {
+          "en": "a gradual change",
+          "vi": "thay đổi từ từ"
+        },
+        {
+          "en": "gradual progress",
+          "vi": "tiến bộ từ từ"
+        }
+      ],
+      "family": [
+        {
+          "word": "gradually",
+          "vi": "dần dần"
+        }
+      ],
+      "tip": "gradual ↔ sudden (đột ngột).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2515,
+      "word": "gradually",
+      "ipa": "ˈgræʤuəli",
+      "viRead": "GRE-giu-ơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "dần dần",
+      "exampleEn": "Your English will gradually improve.",
+      "exampleVi": "Tiếng Anh của bạn sẽ dần tiến bộ.",
+      "collocations": [
+        {
+          "en": "gradually improve",
+          "vi": "tiến bộ dần"
+        },
+        {
+          "en": "gradually increase",
+          "vi": "tăng dần"
+        }
+      ],
+      "family": [
+        {
+          "word": "gradual",
+          "vi": "dần dần"
+        }
+      ],
+      "tip": "Học đều mỗi ngày, bạn sẽ gradually nhớ lâu.",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 2516,
+      "word": "grain",
+      "ipa": "greɪn",
+      "viRead": "GRÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạt ngũ cốc; hạt",
+      "exampleEn": "A grain of rice fell on the floor.",
+      "exampleVi": "Một hạt gạo rơi xuống sàn.",
+      "collocations": [
+        {
+          "en": "a grain of rice",
+          "vi": "một hạt gạo"
+        },
+        {
+          "en": "whole grain",
+          "vi": "ngũ cốc nguyên cám"
+        }
+      ],
+      "tip": "a grain of truth = một chút sự thật.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2517,
+      "word": "grammar",
+      "ipa": "ˈgræmər",
+      "viRead": "GRE-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngữ pháp",
+      "exampleEn": "Vocabulary is as important as grammar.",
+      "exampleVi": "Từ vựng quan trọng không kém ngữ pháp.",
+      "collocations": [
+        {
+          "en": "English grammar",
+          "vi": "ngữ pháp tiếng Anh"
+        },
+        {
+          "en": "grammar mistakes",
+          "vi": "lỗi ngữ pháp"
+        }
+      ],
+      "family": [
+        {
+          "word": "grammatical",
+          "vi": "thuộc ngữ pháp"
+        }
+      ],
+      "tip": "Chính tả: grammAR (không phải grammer).",
+      "emoji": "📘",
+      "stage": 2
+    },
+    {
+      "id": 2518,
+      "word": "grand",
+      "ipa": "grænd",
+      "viRead": "GRENĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hoành tráng, lớn",
+      "exampleEn": "They had a grand wedding.",
+      "exampleVi": "Họ tổ chức một đám cưới hoành tráng.",
+      "collocations": [
+        {
+          "en": "grand opening",
+          "vi": "khai trương"
+        },
+        {
+          "en": "grand prize",
+          "vi": "giải đặc biệt"
+        }
+      ],
+      "tip": "grand opening = lễ khai trương. grandmother = bà.",
+      "emoji": "🎉",
+      "stage": 2
+    },
+    {
+      "id": 2519,
+      "word": "grant",
+      "ipa": "grænt",
+      "viRead": "GRENT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cấp, ban cho",
+      "exampleEn": "The bank granted him a loan.",
+      "exampleVi": "Ngân hàng cho anh ấy vay.",
+      "collocations": [
+        {
+          "en": "take for granted",
+          "vi": "coi là đương nhiên"
+        },
+        {
+          "en": "research grant",
+          "vi": "khoản tài trợ nghiên cứu"
+        }
+      ],
+      "tip": "take something for granted = coi là hiển nhiên (không trân trọng).",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2520,
+      "word": "grave",
+      "ipa": "greɪv",
+      "viRead": "GRÂYV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngôi mộ",
+      "exampleEn": "We visited my grandfather's grave.",
+      "exampleVi": "Chúng tôi viếng mộ ông.",
+      "collocations": [
+        {
+          "en": "visit a grave",
+          "vi": "viếng mộ"
+        },
+        {
+          "en": "a grave mistake",
+          "vi": "sai lầm nghiêm trọng"
+        }
+      ],
+      "tip": "grave (adj) = nghiêm trọng. Tết thanh minh đi tảo mộ = visit graves.",
+      "emoji": "🪦",
+      "stage": 2
+    },
+    {
+      "id": 2521,
+      "word": "grief",
+      "ipa": "grif",
+      "viRead": "GRIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nỗi đau buồn",
+      "exampleEn": "She was full of grief after her dog died.",
+      "exampleVi": "Cô ấy vô cùng đau buồn khi chú chó mất.",
+      "collocations": [
+        {
+          "en": "deep grief",
+          "vi": "nỗi đau sâu sắc"
+        },
+        {
+          "en": "good grief",
+          "vi": "trời đất ơi"
+        }
+      ],
+      "family": [
+        {
+          "word": "grieve",
+          "vi": "đau buồn"
+        }
+      ],
+      "tip": "Good grief! = Trời ơi! (ngạc nhiên, bực mình).",
+      "emoji": "😢",
+      "stage": 2
+    },
+    {
+      "id": 2522,
+      "word": "grin",
+      "ipa": "grɪn",
+      "viRead": "GRIN",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cười toe toét",
+      "exampleEn": "He grinned when he saw his score.",
+      "exampleVi": "Cậu ấy cười toe toét khi thấy điểm.",
+      "collocations": [
+        {
+          "en": "grin from ear to ear",
+          "vi": "cười ngoác đến mang tai"
+        },
+        {
+          "en": "a big grin",
+          "vi": "nụ cười toe toét"
+        }
+      ],
+      "tip": "grin = cười toe (lộ răng); smile = mỉm cười.",
+      "emoji": "😁",
+      "stage": 2
+    },
+    {
+      "id": 2523,
+      "word": "grip",
+      "ipa": "grɪp",
+      "viRead": "GRIP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự nắm chặt",
+      "exampleEn": "Keep a firm grip on the rope.",
+      "exampleVi": "Nắm chắc sợi dây.",
+      "collocations": [
+        {
+          "en": "a firm grip",
+          "vi": "nắm chắc"
+        },
+        {
+          "en": "get a grip",
+          "vi": "bình tĩnh lại"
+        }
+      ],
+      "tip": "Get a grip! = Bình tĩnh lại đi!",
+      "emoji": "✊",
+      "stage": 2
+    },
+    {
+      "id": 2524,
+      "word": "guarantee",
+      "ipa": "ˌgɛrənˈti",
+      "viRead": "ge-rơn-TI",
+      "pos": "v./n.",
+      "posCategory": "noun",
+      "meaning": "sự bảo đảm; bảo hành",
+      "exampleEn": "The phone has a one year guarantee.",
+      "exampleVi": "Điện thoại được bảo hành một năm.",
+      "collocations": [
+        {
+          "en": "money back guarantee",
+          "vi": "cam kết hoàn tiền"
+        },
+        {
+          "en": "under guarantee",
+          "vi": "còn bảo hành"
+        }
+      ],
+      "tip": "u câm: 'ge-rơn-TI'.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 2525,
+      "word": "guard",
+      "ipa": "gɑrd",
+      "viRead": "GARĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "người bảo vệ",
+      "exampleEn": "The guard checked our tickets.",
+      "exampleVi": "Người bảo vệ kiểm tra vé của chúng tôi.",
+      "collocations": [
+        {
+          "en": "security guard",
+          "vi": "bảo vệ"
+        },
+        {
+          "en": "on guard",
+          "vi": "cảnh giác"
+        }
+      ],
+      "tip": "u câm: 'gard'. bodyguard = vệ sĩ.",
+      "emoji": "💂",
+      "stage": 2
+    },
+    {
+      "id": 2526,
+      "word": "guilty",
+      "ipa": "ˈgɪlti",
+      "viRead": "GIL-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có tội; áy náy",
+      "exampleEn": "I feel guilty about eating so much.",
+      "exampleVi": "Tôi thấy áy náy vì ăn quá nhiều.",
+      "collocations": [
+        {
+          "en": "feel guilty",
+          "vi": "thấy áy náy"
+        },
+        {
+          "en": "guilty pleasure",
+          "vi": "thú vui 'tội lỗi'"
+        }
+      ],
+      "family": [
+        {
+          "word": "guilt",
+          "vi": "cảm giác tội lỗi"
+        }
+      ],
+      "tip": "guilty ↔ innocent (vô tội). u câm: 'GIL-ti'.",
+      "emoji": "😣",
+      "stage": 2
+    },
+    {
+      "id": 2527,
+      "word": "halt",
+      "ipa": "hɔlt",
+      "viRead": "HOLT",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự dừng lại",
+      "exampleEn": "The car came to a halt.",
+      "exampleVi": "Chiếc xe dừng lại.",
+      "collocations": [
+        {
+          "en": "come to a halt",
+          "vi": "dừng lại"
+        },
+        {
+          "en": "bring to a halt",
+          "vi": "làm dừng"
+        }
+      ],
+      "tip": "halt = dừng hẳn (trang trọng hơn stop).",
+      "emoji": "🛑",
+      "stage": 2
+    },
+    {
+      "id": 2528,
+      "word": "handy",
+      "ipa": "ˈhændi",
+      "viRead": "HEN-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tiện dụng",
+      "exampleEn": "This small bag is very handy.",
+      "exampleVi": "Cái túi nhỏ này rất tiện.",
+      "collocations": [
+        {
+          "en": "come in handy",
+          "vi": "có lúc dùng đến"
+        },
+        {
+          "en": "a handy tool",
+          "vi": "dụng cụ tiện lợi"
+        }
+      ],
+      "tip": "It might come in handy = Có khi sẽ có ích đấy.",
+      "emoji": "🧰",
+      "stage": 2
+    },
+    {
+      "id": 2529,
+      "word": "hardly",
+      "ipa": "ˈhɑrdli",
+      "viRead": "HARĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hầu như không",
+      "exampleEn": "I can hardly hear you.",
+      "exampleVi": "Tôi gần như không nghe thấy bạn.",
+      "collocations": [
+        {
+          "en": "hardly ever",
+          "vi": "hầu như không bao giờ"
+        },
+        {
+          "en": "hardly any",
+          "vi": "hầu như không có"
+        }
+      ],
+      "family": [
+        {
+          "word": "hard",
+          "vi": "chăm chỉ; khó"
+        }
+      ],
+      "tip": "BẪY: hardly = hầu như không, KHÔNG phải 'một cách chăm chỉ' (= hard).",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 2530,
+      "word": "harmful",
+      "ipa": "ˈhɑrmfəl",
+      "viRead": "HARM-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có hại",
+      "exampleEn": "Smoking is harmful to your health.",
+      "exampleVi": "Hút thuốc có hại cho sức khỏe.",
+      "collocations": [
+        {
+          "en": "harmful to",
+          "vi": "có hại cho"
+        },
+        {
+          "en": "harmful effects",
+          "vi": "tác hại"
+        }
+      ],
+      "family": [
+        {
+          "word": "harm",
+          "vi": "sự tổn hại"
+        },
+        {
+          "word": "harmless",
+          "vi": "vô hại"
+        }
+      ],
+      "tip": "harmful ↔ harmless.",
+      "emoji": "☠️",
+      "stage": 2
+    },
+    {
+      "id": 2531,
+      "word": "hatred",
+      "ipa": "ˈheɪtrəd",
+      "viRead": "HÂY-trơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng căm thù",
+      "exampleEn": "There is no hatred in her heart.",
+      "exampleVi": "Trong lòng cô ấy không có sự thù hận.",
+      "collocations": [
+        {
+          "en": "hatred of",
+          "vi": "căm ghét"
+        },
+        {
+          "en": "deep hatred",
+          "vi": "căm thù sâu sắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "hate",
+          "vi": "ghét"
+        }
+      ],
+      "tip": "hate (v) → hatred (n).",
+      "emoji": "💢",
+      "stage": 2
+    },
+    {
+      "id": 2532,
+      "word": "haunt",
+      "ipa": "hɔnt",
+      "viRead": "HONT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ám (ma); ám ảnh",
+      "exampleEn": "People say the old house is haunted.",
+      "exampleVi": "Người ta nói ngôi nhà cũ bị ma ám.",
+      "collocations": [
+        {
+          "en": "haunted house",
+          "vi": "nhà ma"
+        },
+        {
+          "en": "come back to haunt",
+          "vi": "quay lại ám ảnh"
+        }
+      ],
+      "tip": "haunted house = nhà ma (trò chơi ở công viên).",
+      "emoji": "👻",
+      "stage": 2
+    },
+    {
+      "id": 2533,
+      "word": "hay",
+      "ipa": "heɪ",
+      "viRead": "HÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cỏ khô",
+      "exampleEn": "The horse is eating hay.",
+      "exampleVi": "Con ngựa đang ăn cỏ khô.",
+      "collocations": [
+        {
+          "en": "make hay",
+          "vi": "phơi cỏ"
+        },
+        {
+          "en": "a bale of hay",
+          "vi": "một kiện cỏ khô"
+        }
+      ],
+      "tip": "Make hay while the sun shines = Việc hôm nay chớ để ngày mai.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2534,
+      "word": "heap",
+      "ipa": "hip",
+      "viRead": "HIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đống",
+      "exampleEn": "There's a heap of clothes on the floor.",
+      "exampleVi": "Có một đống quần áo trên sàn.",
+      "collocations": [
+        {
+          "en": "a heap of",
+          "vi": "một đống"
+        },
+        {
+          "en": "in a heap",
+          "vi": "thành đống"
+        }
+      ],
+      "tip": "heap ≈ pile (đống lộn xộn).",
+      "emoji": "🗻",
+      "stage": 2
+    },
+    {
+      "id": 2535,
+      "word": "heaven",
+      "ipa": "ˈhɛvən",
+      "viRead": "HE-vơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thiên đường",
+      "exampleEn": "This beach is heaven on earth.",
+      "exampleVi": "Bãi biển này là thiên đường trên mặt đất.",
+      "collocations": [
+        {
+          "en": "heaven on earth",
+          "vi": "thiên đường trần gian"
+        },
+        {
+          "en": "thank heaven",
+          "vi": "ơn trời"
+        }
+      ],
+      "family": [
+        {
+          "word": "hell",
+          "vi": "địa ngục"
+        }
+      ],
+      "tip": "ea đọc 'e': 'HE-vần'. For heaven's sake! = Trời đất ơi!",
+      "emoji": "☁️",
+      "stage": 2
+    },
+    {
+      "id": 2536,
+      "word": "heel",
+      "ipa": "hil",
+      "viRead": "HIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gót chân; gót giày",
+      "exampleEn": "My new shoes hurt my heels.",
+      "exampleVi": "Đôi giày mới làm đau gót chân tôi.",
+      "collocations": [
+        {
+          "en": "high heels",
+          "vi": "giày cao gót"
+        },
+        {
+          "en": "heel pain",
+          "vi": "đau gót chân"
+        }
+      ],
+      "tip": "heel (gót) đọc giống heal (chữa lành).",
+      "emoji": "👠",
+      "stage": 2
+    },
+    {
+      "id": 2537,
+      "word": "height",
+      "ipa": "haɪt",
+      "viRead": "HAIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiều cao",
+      "exampleEn": "What is your height?",
+      "exampleVi": "Bạn cao bao nhiêu?",
+      "collocations": [
+        {
+          "en": "height and weight",
+          "vi": "chiều cao và cân nặng"
+        },
+        {
+          "en": "afraid of heights",
+          "vi": "sợ độ cao"
+        }
+      ],
+      "family": [
+        {
+          "word": "high",
+          "vi": "cao"
+        }
+      ],
+      "tip": "BẪY đọc: height = 'hait' (không phải 'hây-t'). high → height.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2538,
+      "word": "hesitate",
+      "ipa": "ˈhɛzəˌteɪt",
+      "viRead": "HE-dơ-tâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "do dự",
+      "exampleEn": "Don't hesitate to ask questions.",
+      "exampleVi": "Đừng ngần ngại đặt câu hỏi.",
+      "collocations": [
+        {
+          "en": "don't hesitate to",
+          "vi": "đừng ngần ngại"
+        },
+        {
+          "en": "hesitate before",
+          "vi": "do dự trước khi"
+        }
+      ],
+      "family": [
+        {
+          "word": "hesitation",
+          "vi": "sự do dự"
+        }
+      ],
+      "tip": "Please don't hesitate to contact me = Đừng ngại liên hệ tôi (cuối email).",
+      "emoji": "🤔",
+      "stage": 2
+    },
+    {
+      "id": 2539,
+      "word": "hint",
+      "ipa": "hɪnt",
+      "viRead": "HINT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gợi ý",
+      "exampleEn": "Give me a hint!",
+      "exampleVi": "Gợi ý cho tôi đi!",
+      "collocations": [
+        {
+          "en": "give a hint",
+          "vi": "đưa gợi ý"
+        },
+        {
+          "en": "take a hint",
+          "vi": "hiểu ý"
+        }
+      ],
+      "tip": "Nút 'Gợi ý' trong app = Hint.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 2540,
+      "word": "historic",
+      "ipa": "hɪˈstɔrɪk",
+      "viRead": "his-TO-rik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mang tính lịch sử",
+      "exampleEn": "Today is a historic day.",
+      "exampleVi": "Hôm nay là một ngày lịch sử.",
+      "collocations": [
+        {
+          "en": "historic building",
+          "vi": "công trình lịch sử"
+        },
+        {
+          "en": "historic moment",
+          "vi": "khoảnh khắc lịch sử"
+        }
+      ],
+      "family": [
+        {
+          "word": "history",
+          "vi": "lịch sử"
+        }
+      ],
+      "tip": "historic = quan trọng trong lịch sử; historical = thuộc về lịch sử.",
+      "emoji": "🏯",
+      "stage": 2
+    },
+    {
+      "id": 2541,
+      "word": "historical",
+      "ipa": "hɪˈstɔrɪkəl",
+      "viRead": "his-TO-ri-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc về lịch sử",
+      "exampleEn": "I love historical films.",
+      "exampleVi": "Tôi thích phim lịch sử.",
+      "collocations": [
+        {
+          "en": "historical film",
+          "vi": "phim lịch sử"
+        },
+        {
+          "en": "historical site",
+          "vi": "di tích lịch sử"
+        }
+      ],
+      "family": [
+        {
+          "word": "history",
+          "vi": "lịch sử"
+        }
+      ],
+      "tip": "historical site = di tích lịch sử.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2542,
+      "word": "hollow",
+      "ipa": "ˈhɑloʊ",
+      "viRead": "HA-lâu",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rỗng",
+      "exampleEn": "The tree trunk is hollow.",
+      "exampleVi": "Thân cây bị rỗng.",
+      "collocations": [
+        {
+          "en": "hollow inside",
+          "vi": "rỗng bên trong"
+        },
+        {
+          "en": "hollow promises",
+          "vi": "lời hứa suông"
+        }
+      ],
+      "tip": "hollow ↔ solid (đặc).",
+      "emoji": "🕳️",
+      "stage": 2
+    },
+    {
+      "id": 2543,
+      "word": "holy",
+      "ipa": "ˈhoʊli",
+      "viRead": "HÂU-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thiêng liêng",
+      "exampleEn": "This is a holy place for Buddhists.",
+      "exampleVi": "Đây là nơi linh thiêng với Phật tử.",
+      "collocations": [
+        {
+          "en": "holy place",
+          "vi": "nơi linh thiêng"
+        },
+        {
+          "en": "Holy Bible",
+          "vi": "Kinh Thánh"
+        }
+      ],
+      "tip": "Holy cow! = Trời đất ơi! (cảm thán).",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 2544,
+      "word": "honesty",
+      "ipa": "ˈɑnəsti",
+      "viRead": "A-nơs-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự trung thực",
+      "exampleEn": "Honesty is the best policy.",
+      "exampleVi": "Trung thực là thượng sách.",
+      "collocations": [
+        {
+          "en": "in all honesty",
+          "vi": "thành thật mà nói"
+        },
+        {
+          "en": "honesty and trust",
+          "vi": "trung thực và tin tưởng"
+        }
+      ],
+      "family": [
+        {
+          "word": "honest",
+          "vi": "trung thực"
+        }
+      ],
+      "tip": "h câm: 'A-nơs-ti'.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 2545,
+      "word": "honor",
+      "ipa": "ˈɑnər",
+      "viRead": "A-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh dự; vinh dự",
+      "exampleEn": "It's an honor to meet you.",
+      "exampleVi": "Thật vinh dự được gặp ông.",
+      "collocations": [
+        {
+          "en": "an honor",
+          "vi": "một vinh dự"
+        },
+        {
+          "en": "in honor of",
+          "vi": "để tôn vinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "honorable",
+          "vi": "đáng kính"
+        }
+      ],
+      "tip": "h câm: 'A-nơ'. Anh viết honour.",
+      "emoji": "🎖️",
+      "stage": 2
+    },
+    {
+      "id": 2546,
+      "word": "hopeful",
+      "ipa": "ˈhoʊpfəl",
+      "viRead": "HÂUP-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đầy hy vọng",
+      "exampleEn": "I'm hopeful about the future.",
+      "exampleVi": "Tôi đầy hy vọng về tương lai.",
+      "collocations": [
+        {
+          "en": "hopeful about",
+          "vi": "hy vọng về"
+        },
+        {
+          "en": "remain hopeful",
+          "vi": "vẫn hy vọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "hope",
+          "vi": "hy vọng"
+        },
+        {
+          "word": "hopeless",
+          "vi": "vô vọng"
+        }
+      ],
+      "tip": "hopeful ↔ hopeless.",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 2547,
+      "word": "horizon",
+      "ipa": "həˈraɪzən",
+      "viRead": "hơ-RAI-dơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường chân trời",
+      "exampleEn": "The sun rose above the horizon.",
+      "exampleVi": "Mặt trời mọc trên đường chân trời.",
+      "collocations": [
+        {
+          "en": "on the horizon",
+          "vi": "sắp tới"
+        },
+        {
+          "en": "broaden your horizons",
+          "vi": "mở rộng tầm mắt"
+        }
+      ],
+      "tip": "broaden your horizons = mở mang hiểu biết. Nhấn âm 2: hơ-RAI-dơn.",
+      "emoji": "🌅",
+      "stage": 2
+    },
+    {
+      "id": 2548,
+      "word": "horn",
+      "ipa": "hɔrn",
+      "viRead": "HORN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sừng; còi xe",
+      "exampleEn": "The driver kept sounding his horn.",
+      "exampleVi": "Tài xế cứ bóp còi liên tục.",
+      "collocations": [
+        {
+          "en": "sound the horn",
+          "vi": "bóp còi"
+        },
+        {
+          "en": "the horn of a buffalo",
+          "vi": "sừng trâu"
+        }
+      ],
+      "tip": "honk the horn = bấm còi (xe máy Việt Nam!).",
+      "emoji": "📯",
+      "stage": 2
+    },
+    {
+      "id": 2549,
+      "word": "horrible",
+      "ipa": "ˈhɔrəbəl",
+      "viRead": "HO-rơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kinh khủng",
+      "exampleEn": "The weather was horrible.",
+      "exampleVi": "Thời tiết thật kinh khủng.",
+      "collocations": [
+        {
+          "en": "a horrible smell",
+          "vi": "mùi kinh khủng"
+        },
+        {
+          "en": "feel horrible",
+          "vi": "thấy rất tệ"
+        }
+      ],
+      "family": [
+        {
+          "word": "horror",
+          "vi": "sự kinh hoàng"
+        }
+      ],
+      "tip": "horrible = terrible = awful (rất tệ).",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 2550,
+      "word": "hostile",
+      "ipa": "ˈhɑstəl",
+      "viRead": "HAS-tơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thù địch",
+      "exampleEn": "The dog was hostile to strangers.",
+      "exampleVi": "Con chó tỏ ra thù địch với người lạ.",
+      "collocations": [
+        {
+          "en": "hostile to",
+          "vi": "thù địch với"
+        },
+        {
+          "en": "a hostile look",
+          "vi": "ánh nhìn thù địch"
+        }
+      ],
+      "tip": "hostile ↔ friendly.",
+      "emoji": "😾",
+      "stage": 2
+    },
+    {
+      "id": 2551,
+      "word": "household",
+      "ipa": "ˈhaʊsˌhoʊld",
+      "viRead": "HAOS-hâulđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hộ gia đình; việc nhà",
+      "exampleEn": "Every household has a TV.",
+      "exampleVi": "Hộ gia đình nào cũng có TV.",
+      "collocations": [
+        {
+          "en": "household chores",
+          "vi": "việc nhà"
+        },
+        {
+          "en": "household items",
+          "vi": "đồ gia dụng"
+        }
+      ],
+      "tip": "house + hold. household chores = việc nhà.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 2552,
+      "word": "housing",
+      "ipa": "ˈhaʊzɪŋ",
+      "viRead": "HAO-ding",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà ở",
+      "exampleEn": "Housing is very expensive in big cities.",
+      "exampleVi": "Nhà ở rất đắt ở các thành phố lớn.",
+      "collocations": [
+        {
+          "en": "social housing",
+          "vi": "nhà ở xã hội"
+        },
+        {
+          "en": "housing prices",
+          "vi": "giá nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "house",
+          "vi": "ngôi nhà"
+        }
+      ],
+      "tip": "housing (không đếm được) = nhà ở nói chung.",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 2553,
+      "word": "hunger",
+      "ipa": "ˈhəŋgər",
+      "viRead": "HƠNG-gơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơn đói; nạn đói",
+      "exampleEn": "Millions of people suffer from hunger.",
+      "exampleVi": "Hàng triệu người chịu cảnh đói.",
+      "collocations": [
+        {
+          "en": "die of hunger",
+          "vi": "chết đói"
+        },
+        {
+          "en": "hunger strike",
+          "vi": "tuyệt thực"
+        }
+      ],
+      "family": [
+        {
+          "word": "hungry",
+          "vi": "đói"
+        }
+      ],
+      "tip": "hunger (n) → hungry (adj). The Hunger Games = Đấu trường sinh tử.",
+      "emoji": "🍽️",
       "stage": 2
     }
   ]
