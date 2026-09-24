@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2308,
+    "count": 2358,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -66023,6 +66023,1362 @@
       ],
       "tip": "country (quê) + side. in the countryside = ở quê.",
       "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2309,
+      "word": "counter",
+      "ipa": "ˈkaʊntər",
+      "viRead": "KAON-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quầy",
+      "exampleEn": "Please pay at the counter.",
+      "exampleVi": "Vui lòng thanh toán tại quầy.",
+      "collocations": [
+        {
+          "en": "check-in counter",
+          "vi": "quầy làm thủ tục"
+        },
+        {
+          "en": "over the counter",
+          "vi": "không cần kê đơn"
+        }
+      ],
+      "tip": "over-the-counter medicine = thuốc không cần kê đơn.",
+      "emoji": "🛎️",
+      "stage": 2
+    },
+    {
+      "id": 2310,
+      "word": "court",
+      "ipa": "kɔrt",
+      "viRead": "KORT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tòa án; sân (thể thao)",
+      "exampleEn": "They play badminton on the court every evening.",
+      "exampleVi": "Tối nào họ cũng chơi cầu lông trên sân.",
+      "collocations": [
+        {
+          "en": "tennis court",
+          "vi": "sân quần vợt"
+        },
+        {
+          "en": "go to court",
+          "vi": "ra tòa"
+        }
+      ],
+      "tip": "court = sân (tennis, cầu lông, bóng rổ); pitch/field = sân bóng đá.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2311,
+      "word": "crack",
+      "ipa": "kræk",
+      "viRead": "KREK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "vết nứt",
+      "exampleEn": "There's a crack in my phone screen.",
+      "exampleVi": "Màn hình điện thoại của tôi có một vết nứt.",
+      "collocations": [
+        {
+          "en": "a crack in the wall",
+          "vi": "vết nứt trên tường"
+        },
+        {
+          "en": "crack a joke",
+          "vi": "pha trò"
+        }
+      ],
+      "tip": "crack a joke = kể chuyện cười. crack the code = giải mã.",
+      "emoji": "💔",
+      "stage": 2
+    },
+    {
+      "id": 2312,
+      "word": "craft",
+      "ipa": "kræft",
+      "viRead": "KREPHT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghề thủ công",
+      "exampleEn": "Bat Trang is famous for its pottery craft.",
+      "exampleVi": "Bát Tràng nổi tiếng với nghề gốm.",
+      "collocations": [
+        {
+          "en": "arts and crafts",
+          "vi": "thủ công mỹ nghệ"
+        },
+        {
+          "en": "craft village",
+          "vi": "làng nghề"
+        }
+      ],
+      "family": [
+        {
+          "word": "craftsman",
+          "vi": "thợ thủ công"
+        }
+      ],
+      "tip": "craft village = làng nghề (Vạn Phúc, Bát Tràng...).",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 2313,
+      "word": "creature",
+      "ipa": "ˈkriʧər",
+      "viRead": "KRI-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sinh vật",
+      "exampleEn": "The ocean is full of strange creatures.",
+      "exampleVi": "Đại dương đầy những sinh vật kỳ lạ.",
+      "collocations": [
+        {
+          "en": "living creature",
+          "vi": "sinh vật sống"
+        },
+        {
+          "en": "sea creature",
+          "vi": "sinh vật biển"
+        }
+      ],
+      "family": [
+        {
+          "word": "create",
+          "vi": "tạo ra"
+        }
+      ],
+      "tip": "creature of habit = người sống theo thói quen.",
+      "emoji": "🐙",
+      "stage": 2
+    },
+    {
+      "id": 2314,
+      "word": "crew",
+      "ipa": "kru",
+      "viRead": "KRU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phi hành đoàn, đội",
+      "exampleEn": "The crew welcomed us on board.",
+      "exampleVi": "Phi hành đoàn chào đón chúng tôi lên máy bay.",
+      "collocations": [
+        {
+          "en": "cabin crew",
+          "vi": "tiếp viên"
+        },
+        {
+          "en": "film crew",
+          "vi": "đoàn làm phim"
+        }
+      ],
+      "tip": "crew = cả nhóm làm việc trên tàu, máy bay, phim trường.",
+      "emoji": "👩‍✈️",
+      "stage": 2
+    },
+    {
+      "id": 2315,
+      "word": "criminal",
+      "ipa": "ˈkrɪmənəl",
+      "viRead": "KRI-mơ-nơl",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "tội phạm",
+      "exampleEn": "The police caught the criminal.",
+      "exampleVi": "Cảnh sát đã bắt được tên tội phạm.",
+      "collocations": [
+        {
+          "en": "a dangerous criminal",
+          "vi": "tội phạm nguy hiểm"
+        },
+        {
+          "en": "criminal record",
+          "vi": "tiền án"
+        }
+      ],
+      "family": [
+        {
+          "word": "crime",
+          "vi": "tội ác"
+        }
+      ],
+      "tip": "crime (tội ác) → criminal (kẻ phạm tội).",
+      "emoji": "🚔",
+      "stage": 2
+    },
+    {
+      "id": 2316,
+      "word": "crisis",
+      "ipa": "ˈkraɪsəs",
+      "viRead": "KRAI-sơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khủng hoảng",
+      "exampleEn": "The country is in an economic crisis.",
+      "exampleVi": "Đất nước đang khủng hoảng kinh tế.",
+      "collocations": [
+        {
+          "en": "economic crisis",
+          "vi": "khủng hoảng kinh tế"
+        },
+        {
+          "en": "in crisis",
+          "vi": "đang khủng hoảng"
+        }
+      ],
+      "tip": "Số nhiều: crises. Đọc 'KRAI-sis'.",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 2317,
+      "word": "critic",
+      "ipa": "ˈkrɪtɪk",
+      "viRead": "KRI-tik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà phê bình",
+      "exampleEn": "Film critics loved the new movie.",
+      "exampleVi": "Các nhà phê bình điện ảnh rất thích bộ phim mới.",
+      "collocations": [
+        {
+          "en": "film critic",
+          "vi": "nhà phê bình phim"
+        },
+        {
+          "en": "food critic",
+          "vi": "nhà phê bình ẩm thực"
+        }
+      ],
+      "family": [
+        {
+          "word": "criticize",
+          "vi": "chỉ trích"
+        },
+        {
+          "word": "critical",
+          "vi": "phê phán; quan trọng"
+        }
+      ],
+      "tip": "critic (người) → criticize (v) → criticism (n).",
+      "emoji": "🧐",
+      "stage": 2
+    },
+    {
+      "id": 2318,
+      "word": "criticize",
+      "ipa": "ˈkrɪtɪˌsaɪz",
+      "viRead": "KRI-ti-said",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chỉ trích, phê bình",
+      "exampleEn": "Don't criticize others in public.",
+      "exampleVi": "Đừng chỉ trích người khác nơi công cộng.",
+      "collocations": [
+        {
+          "en": "criticize someone for",
+          "vi": "chỉ trích ai vì"
+        },
+        {
+          "en": "be criticized",
+          "vi": "bị chỉ trích"
+        }
+      ],
+      "family": [
+        {
+          "word": "criticism",
+          "vi": "lời chỉ trích"
+        }
+      ],
+      "tip": "criticize + người + for + V-ing.",
+      "emoji": "👎",
+      "stage": 2
+    },
+    {
+      "id": 2319,
+      "word": "crown",
+      "ipa": "kraʊn",
+      "viRead": "KRAON",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vương miện",
+      "exampleEn": "The queen wore a golden crown.",
+      "exampleVi": "Nữ hoàng đội vương miện vàng.",
+      "collocations": [
+        {
+          "en": "wear a crown",
+          "vi": "đội vương miện"
+        },
+        {
+          "en": "crown prince",
+          "vi": "thái tử"
+        }
+      ],
+      "tip": "ow đọc 'ao': 'kraon'.",
+      "emoji": "👑",
+      "stage": 2
+    },
+    {
+      "id": 2320,
+      "word": "crucial",
+      "ipa": "ˈkruʃəl",
+      "viRead": "KRU-shơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cực kỳ quan trọng",
+      "exampleEn": "Sleep is crucial for memory.",
+      "exampleVi": "Giấc ngủ cực kỳ quan trọng cho trí nhớ.",
+      "collocations": [
+        {
+          "en": "crucial role",
+          "vi": "vai trò then chốt"
+        },
+        {
+          "en": "a crucial moment",
+          "vi": "thời điểm quyết định"
+        }
+      ],
+      "tip": "crucial = rất quan trọng, mang tính quyết định. c đọc 'sh': 'KRU-shơl'.",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 2321,
+      "word": "crush",
+      "ipa": "krəʃ",
+      "viRead": "KRƠSH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nghiền nát; cảm nắng",
+      "exampleEn": "Crush the garlic before cooking.",
+      "exampleVi": "Đập dập tỏi trước khi nấu.",
+      "collocations": [
+        {
+          "en": "crush garlic",
+          "vi": "đập tỏi"
+        },
+        {
+          "en": "have a crush on",
+          "vi": "cảm nắng ai"
+        }
+      ],
+      "tip": "have a crush on someone = thầm thích ai.",
+      "emoji": "😍",
+      "stage": 2
+    },
+    {
+      "id": 2322,
+      "word": "cure",
+      "ipa": "kjʊr",
+      "viRead": "KYUR",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cách chữa; chữa khỏi",
+      "exampleEn": "There is no cure for the common cold.",
+      "exampleVi": "Không có thuốc chữa khỏi cảm lạnh thông thường.",
+      "collocations": [
+        {
+          "en": "a cure for",
+          "vi": "cách chữa"
+        },
+        {
+          "en": "find a cure",
+          "vi": "tìm ra cách chữa"
+        }
+      ],
+      "tip": "Prevention is better than cure = Phòng bệnh hơn chữa bệnh.",
+      "emoji": "💊",
+      "stage": 2
+    },
+    {
+      "id": 2323,
+      "word": "curly",
+      "ipa": "ˈkərli",
+      "viRead": "KƠ-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xoăn",
+      "exampleEn": "She has long curly hair.",
+      "exampleVi": "Cô ấy có mái tóc dài xoăn.",
+      "collocations": [
+        {
+          "en": "curly hair",
+          "vi": "tóc xoăn"
+        },
+        {
+          "en": "curly fries",
+          "vi": "khoai tây chiên xoắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "curl",
+          "vi": "lọn tóc xoăn"
+        }
+      ],
+      "tip": "curly ↔ straight (thẳng).",
+      "emoji": "👩‍🦱",
+      "stage": 2
+    },
+    {
+      "id": 2324,
+      "word": "currency",
+      "ipa": "ˈkərənsi",
+      "viRead": "KƠ-rơn-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền tệ",
+      "exampleEn": "The currency of Vietnam is the dong.",
+      "exampleVi": "Đơn vị tiền tệ của Việt Nam là đồng.",
+      "collocations": [
+        {
+          "en": "foreign currency",
+          "vi": "ngoại tệ"
+        },
+        {
+          "en": "currency exchange",
+          "vi": "đổi tiền"
+        }
+      ],
+      "tip": "Nhấn âm đầu: KƠ-rơn-si.",
+      "emoji": "💱",
+      "stage": 2
+    },
+    {
+      "id": 2325,
+      "word": "current",
+      "ipa": "ˈkərənt",
+      "viRead": "KƠ-rơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hiện tại",
+      "exampleEn": "What is your current address?",
+      "exampleVi": "Địa chỉ hiện tại của bạn là gì?",
+      "collocations": [
+        {
+          "en": "current job",
+          "vi": "công việc hiện tại"
+        },
+        {
+          "en": "current events",
+          "vi": "thời sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "currently",
+          "vi": "hiện nay"
+        }
+      ],
+      "tip": "current (n) = dòng chảy, dòng điện. currently = hiện tại.",
+      "emoji": "🕐",
+      "stage": 2
+    },
+    {
+      "id": 2326,
+      "word": "curve",
+      "ipa": "kərv",
+      "viRead": "KƠV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường cong",
+      "exampleEn": "Slow down, there's a sharp curve ahead.",
+      "exampleVi": "Chạy chậm lại, phía trước có khúc cua gắt.",
+      "collocations": [
+        {
+          "en": "a sharp curve",
+          "vi": "khúc cua gắt"
+        },
+        {
+          "en": "learning curve",
+          "vi": "quá trình làm quen"
+        }
+      ],
+      "tip": "a steep learning curve = phải học nhiều thứ mới rất nhanh.",
+      "emoji": "↪️",
+      "stage": 2
+    },
+    {
+      "id": 2327,
+      "word": "custom",
+      "ipa": "ˈkəstəm",
+      "viRead": "KƠS-tơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phong tục",
+      "exampleEn": "It's a Vietnamese custom to give lucky money at Tet.",
+      "exampleVi": "Lì xì dịp Tết là phong tục của người Việt.",
+      "collocations": [
+        {
+          "en": "local customs",
+          "vi": "phong tục địa phương"
+        },
+        {
+          "en": "an old custom",
+          "vi": "phong tục xưa"
+        }
+      ],
+      "family": [
+        {
+          "word": "customs",
+          "vi": "hải quan"
+        }
+      ],
+      "tip": "customs (số nhiều) = hải quan ở sân bay!",
+      "emoji": "🧧",
+      "stage": 2
+    },
+    {
+      "id": 2328,
+      "word": "cemetery",
+      "ipa": "ˈsɛmɪˌtɛri",
+      "viRead": "SE-mơ-te-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghĩa trang",
+      "exampleEn": "We visit the cemetery every year.",
+      "exampleVi": "Chúng tôi viếng nghĩa trang hằng năm.",
+      "collocations": [
+        {
+          "en": "a military cemetery",
+          "vi": "nghĩa trang liệt sĩ"
+        },
+        {
+          "en": "an old cemetery",
+          "vi": "nghĩa trang cũ"
+        }
+      ],
+      "tip": "Chính tả: c-e-m-e-t-e-r-y (toàn e).",
+      "emoji": "🪦",
+      "stage": 2
+    },
+    {
+      "id": 2329,
+      "word": "damp",
+      "ipa": "dæmp",
+      "viRead": "ĐEMP",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ẩm ướt",
+      "exampleEn": "The towel is still damp.",
+      "exampleVi": "Khăn tắm vẫn còn ẩm.",
+      "collocations": [
+        {
+          "en": "damp clothes",
+          "vi": "quần áo ẩm"
+        },
+        {
+          "en": "damp weather",
+          "vi": "thời tiết ẩm"
+        }
+      ],
+      "tip": "damp = hơi ướt (khó chịu); wet = ướt hẳn.",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 2330,
+      "word": "darkness",
+      "ipa": "ˈdɑrknəs",
+      "viRead": "ĐARK-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bóng tối",
+      "exampleEn": "The room was in complete darkness.",
+      "exampleVi": "Căn phòng chìm trong bóng tối hoàn toàn.",
+      "collocations": [
+        {
+          "en": "in darkness",
+          "vi": "trong bóng tối"
+        },
+        {
+          "en": "total darkness",
+          "vi": "tối đen"
+        }
+      ],
+      "family": [
+        {
+          "word": "dark",
+          "vi": "tối"
+        }
+      ],
+      "tip": "dark (adj) + ness = darkness (n).",
+      "emoji": "🌑",
+      "stage": 2
+    },
+    {
+      "id": 2331,
+      "word": "database",
+      "ipa": "ˈdeɪtəˌbeɪs",
+      "viRead": "ĐÂY-tơ-bâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơ sở dữ liệu",
+      "exampleEn": "All customers are saved in the database.",
+      "exampleVi": "Mọi khách hàng đều được lưu trong cơ sở dữ liệu.",
+      "collocations": [
+        {
+          "en": "a customer database",
+          "vi": "cơ sở dữ liệu khách hàng"
+        },
+        {
+          "en": "update the database",
+          "vi": "cập nhật cơ sở dữ liệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "data",
+          "vi": "dữ liệu"
+        }
+      ],
+      "tip": "data + base. Đọc 'ĐÂY-tơ-bâys'.",
+      "emoji": "🗄️",
+      "stage": 2
+    },
+    {
+      "id": 2332,
+      "word": "deaf",
+      "ipa": "dɛf",
+      "viRead": "ĐEPH",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "điếc",
+      "exampleEn": "My grandfather is a little deaf.",
+      "exampleVi": "Ông tôi hơi nặng tai.",
+      "collocations": [
+        {
+          "en": "go deaf",
+          "vi": "bị điếc"
+        },
+        {
+          "en": "deaf and dumb",
+          "vi": "câm điếc"
+        }
+      ],
+      "tip": "ea đọc 'e': 'đeph'. fall on deaf ears = nói như nước đổ lá khoai.",
+      "emoji": "🦻",
+      "stage": 2
+    },
+    {
+      "id": 2333,
+      "word": "debate",
+      "ipa": "dəˈbeɪt",
+      "viRead": "đơ-BÂYT",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cuộc tranh luận",
+      "exampleEn": "We had a debate about social media.",
+      "exampleVi": "Chúng tôi tranh luận về mạng xã hội.",
+      "collocations": [
+        {
+          "en": "a heated debate",
+          "vi": "cuộc tranh luận gay gắt"
+        },
+        {
+          "en": "debate about",
+          "vi": "tranh luận về"
+        }
+      ],
+      "tip": "Nhấn âm 2: đi-BÂYT.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2334,
+      "word": "decade",
+      "ipa": "ˈdɛkeɪd",
+      "viRead": "ĐE-kâyđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thập kỷ",
+      "exampleEn": "Prices have doubled in the last decade.",
+      "exampleVi": "Giá cả đã tăng gấp đôi trong thập kỷ qua.",
+      "collocations": [
+        {
+          "en": "the last decade",
+          "vi": "thập kỷ qua"
+        },
+        {
+          "en": "for decades",
+          "vi": "hàng chục năm"
+        }
+      ],
+      "tip": "decade = 10 năm; century = 100 năm.",
+      "emoji": "🔟",
+      "stage": 2
+    },
+    {
+      "id": 2335,
+      "word": "decay",
+      "ipa": "dɪˈkeɪ",
+      "viRead": "đi-KÂY",
+      "pos": "v./n.",
+      "posCategory": "noun",
+      "meaning": "sự mục nát; sâu (răng)",
+      "exampleEn": "Sugar causes tooth decay.",
+      "exampleVi": "Đường gây sâu răng.",
+      "collocations": [
+        {
+          "en": "tooth decay",
+          "vi": "sâu răng"
+        },
+        {
+          "en": "fall into decay",
+          "vi": "mục nát"
+        }
+      ],
+      "tip": "tooth decay = sâu răng.",
+      "emoji": "🦷",
+      "stage": 2
+    },
+    {
+      "id": 2336,
+      "word": "declare",
+      "ipa": "dɪˈklɛr",
+      "viRead": "đi-KLER",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tuyên bố; khai báo",
+      "exampleEn": "Do you have anything to declare?",
+      "exampleVi": "Bạn có gì cần khai báo không?",
+      "collocations": [
+        {
+          "en": "declare war",
+          "vi": "tuyên chiến"
+        },
+        {
+          "en": "declare independence",
+          "vi": "tuyên bố độc lập"
+        }
+      ],
+      "family": [
+        {
+          "word": "declaration",
+          "vi": "bản tuyên ngôn"
+        }
+      ],
+      "tip": "Declaration of Independence = Tuyên ngôn Độc lập.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 2337,
+      "word": "decline",
+      "ipa": "dɪˈklaɪn",
+      "viRead": "đi-KLAIN",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "giảm; từ chối",
+      "exampleEn": "The number of visitors declined last year.",
+      "exampleVi": "Số lượng khách giảm vào năm ngoái.",
+      "collocations": [
+        {
+          "en": "decline an invitation",
+          "vi": "từ chối lời mời"
+        },
+        {
+          "en": "in decline",
+          "vi": "đang suy giảm"
+        }
+      ],
+      "tip": "decline = từ chối lịch sự (Decline trên điện thoại = từ chối cuộc gọi).",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 2338,
+      "word": "deeply",
+      "ipa": "ˈdipli",
+      "viRead": "ĐIP-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sâu sắc",
+      "exampleEn": "I'm deeply sorry for your loss.",
+      "exampleVi": "Tôi vô cùng thương tiếc trước mất mát của bạn.",
+      "collocations": [
+        {
+          "en": "deeply sorry",
+          "vi": "vô cùng xin lỗi"
+        },
+        {
+          "en": "breathe deeply",
+          "vi": "hít thở sâu"
+        }
+      ],
+      "family": [
+        {
+          "word": "deep",
+          "vi": "sâu"
+        }
+      ],
+      "tip": "deeply dùng cho cảm xúc: deeply moved = xúc động sâu sắc.",
+      "emoji": "🫶",
+      "stage": 2
+    },
+    {
+      "id": 2339,
+      "word": "defend",
+      "ipa": "dɪˈfɛnd",
+      "viRead": "đi-PHENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bảo vệ, phòng thủ",
+      "exampleEn": "Soldiers defend the country.",
+      "exampleVi": "Quân nhân bảo vệ đất nước.",
+      "collocations": [
+        {
+          "en": "defend yourself",
+          "vi": "tự vệ"
+        },
+        {
+          "en": "defend a title",
+          "vi": "bảo vệ danh hiệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "defense",
+          "vi": "sự phòng thủ"
+        }
+      ],
+      "tip": "defend (v) → defense (n) ↔ attack.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 2340,
+      "word": "definite",
+      "ipa": "ˈdɛfənət",
+      "viRead": "ĐE-phơ-nơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rõ ràng, chắc chắn",
+      "exampleEn": "I need a definite answer by Friday.",
+      "exampleVi": "Tôi cần câu trả lời dứt khoát trước thứ Sáu.",
+      "collocations": [
+        {
+          "en": "a definite answer",
+          "vi": "câu trả lời dứt khoát"
+        },
+        {
+          "en": "definite article",
+          "vi": "mạo từ xác định (the)"
+        }
+      ],
+      "family": [
+        {
+          "word": "definitely",
+          "vi": "chắc chắn"
+        }
+      ],
+      "tip": "the = definite article; a/an = indefinite article.",
+      "emoji": "✔️",
+      "stage": 2
+    },
+    {
+      "id": 2341,
+      "word": "definitely",
+      "ipa": "ˈdɛfənətli",
+      "viRead": "ĐE-phơ-nơt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chắc chắn",
+      "exampleEn": "I'll definitely come to your party.",
+      "exampleVi": "Tôi chắc chắn sẽ đến dự tiệc của bạn.",
+      "collocations": [
+        {
+          "en": "definitely not",
+          "vi": "chắc chắn không"
+        },
+        {
+          "en": "most definitely",
+          "vi": "hoàn toàn chắc chắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "definite",
+          "vi": "rõ ràng"
+        }
+      ],
+      "tip": "Chính tả hay sai: defin-I-tely (không phải definAtely).",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 2342,
+      "word": "deliberately",
+      "ipa": "dɪˈlɪbərətli",
+      "viRead": "đi-LI-bơ-rơt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cố ý",
+      "exampleEn": "He broke the vase deliberately.",
+      "exampleVi": "Anh ta cố ý làm vỡ bình hoa.",
+      "collocations": [
+        {
+          "en": "deliberately ignore",
+          "vi": "cố tình phớt lờ"
+        },
+        {
+          "en": "do it deliberately",
+          "vi": "làm cố ý"
+        }
+      ],
+      "tip": "deliberately = on purpose (cố ý) ↔ by accident.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2343,
+      "word": "delicate",
+      "ipa": "ˈdɛləkət",
+      "viRead": "ĐE-lơ-kơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mỏng manh, tinh tế",
+      "exampleEn": "Be careful, these glasses are delicate.",
+      "exampleVi": "Cẩn thận, mấy cái ly này dễ vỡ.",
+      "collocations": [
+        {
+          "en": "delicate skin",
+          "vi": "làn da mỏng manh"
+        },
+        {
+          "en": "a delicate situation",
+          "vi": "tình huống tế nhị"
+        }
+      ],
+      "tip": "Đọc 'ĐE-li-kợt'.",
+      "emoji": "🥂",
+      "stage": 2
+    },
+    {
+      "id": 2344,
+      "word": "delight",
+      "ipa": "dɪˈlaɪt",
+      "viRead": "đi-LAIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "niềm vui sướng",
+      "exampleEn": "The kids screamed with delight.",
+      "exampleVi": "Lũ trẻ hét lên sung sướng.",
+      "collocations": [
+        {
+          "en": "with delight",
+          "vi": "đầy vui sướng"
+        },
+        {
+          "en": "to my delight",
+          "vi": "tôi vui mừng là"
+        }
+      ],
+      "family": [
+        {
+          "word": "delighted",
+          "vi": "vui mừng"
+        },
+        {
+          "word": "delightful",
+          "vi": "thú vị"
+        }
+      ],
+      "tip": "I'd be delighted to come = Tôi rất vui được đến.",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 2345,
+      "word": "democracy",
+      "ipa": "dɪˈmɑkrəsi",
+      "viRead": "đi-MAK-rơ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nền dân chủ",
+      "exampleEn": "Voting is part of democracy.",
+      "exampleVi": "Bầu cử là một phần của nền dân chủ.",
+      "collocations": [
+        {
+          "en": "a democracy",
+          "vi": "một nền dân chủ"
+        },
+        {
+          "en": "freedom and democracy",
+          "vi": "tự do và dân chủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "democratic",
+          "vi": "dân chủ"
+        }
+      ],
+      "tip": "demo (dân) + cracy (quyền lực). Nhấn âm 2: đi-MAK-rơ-si.",
+      "emoji": "🗳️",
+      "stage": 2
+    },
+    {
+      "id": 2346,
+      "word": "demonstrate",
+      "ipa": "ˈdɛmənˌstreɪt",
+      "viRead": "ĐE-mơn-strâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chứng minh; biểu diễn",
+      "exampleEn": "Let me demonstrate how it works.",
+      "exampleVi": "Để tôi minh họa cách nó hoạt động.",
+      "collocations": [
+        {
+          "en": "demonstrate how",
+          "vi": "minh họa cách"
+        },
+        {
+          "en": "demonstrate skills",
+          "vi": "thể hiện kỹ năng"
+        }
+      ],
+      "family": [
+        {
+          "word": "demonstration",
+          "vi": "sự trình diễn; biểu tình"
+        }
+      ],
+      "tip": "demo = viết tắt của demonstration.",
+      "emoji": "🧑‍🏫",
+      "stage": 2
+    },
+    {
+      "id": 2347,
+      "word": "departure",
+      "ipa": "dɪˈpɑrʧər",
+      "viRead": "đi-PAR-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự khởi hành",
+      "exampleEn": "Please arrive two hours before departure.",
+      "exampleVi": "Vui lòng đến trước giờ khởi hành hai tiếng.",
+      "collocations": [
+        {
+          "en": "departure time",
+          "vi": "giờ khởi hành"
+        },
+        {
+          "en": "departure lounge",
+          "vi": "phòng chờ lên máy bay"
+        }
+      ],
+      "family": [
+        {
+          "word": "depart",
+          "vi": "khởi hành"
+        },
+        {
+          "word": "arrival",
+          "vi": "sự đến"
+        }
+      ],
+      "tip": "Departures (sân bay) = khu đi; Arrivals = khu đến.",
+      "emoji": "🛫",
+      "stage": 2
+    },
+    {
+      "id": 2348,
+      "word": "depth",
+      "ipa": "dɛpθ",
+      "viRead": "ĐEPTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "độ sâu",
+      "exampleEn": "What is the depth of the lake?",
+      "exampleVi": "Hồ sâu bao nhiêu?",
+      "collocations": [
+        {
+          "en": "in depth",
+          "vi": "sâu, kỹ lưỡng"
+        },
+        {
+          "en": "the depth of",
+          "vi": "độ sâu của"
+        }
+      ],
+      "family": [
+        {
+          "word": "deep",
+          "vi": "sâu"
+        }
+      ],
+      "tip": "deep (adj) → depth (n). in-depth = chuyên sâu.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2349,
+      "word": "deserve",
+      "ipa": "dɪˈzərv",
+      "viRead": "đi-DƠV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xứng đáng",
+      "exampleEn": "You deserve a holiday after all that work.",
+      "exampleVi": "Bạn xứng đáng được nghỉ sau ngần ấy việc.",
+      "collocations": [
+        {
+          "en": "deserve a break",
+          "vi": "xứng đáng được nghỉ"
+        },
+        {
+          "en": "well deserved",
+          "vi": "hoàn toàn xứng đáng"
+        }
+      ],
+      "tip": "You deserve it! = Bạn xứng đáng mà!",
+      "emoji": "🏅",
+      "stage": 2
+    },
+    {
+      "id": 2350,
+      "word": "desire",
+      "ipa": "dɪˈzaɪər",
+      "viRead": "đi-DAI-ơ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "khát khao",
+      "exampleEn": "She has a strong desire to travel.",
+      "exampleVi": "Cô ấy khao khát được đi du lịch.",
+      "collocations": [
+        {
+          "en": "a desire to",
+          "vi": "khát khao"
+        },
+        {
+          "en": "a strong desire",
+          "vi": "mong muốn mãnh liệt"
+        }
+      ],
+      "tip": "desire = mong muốn mạnh (trang trọng hơn want).",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 2351,
+      "word": "desperate",
+      "ipa": "ˈdɛspərɪt",
+      "viRead": "ĐES-pơ-rơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt vọng; rất cần",
+      "exampleEn": "I'm desperate for a cup of coffee.",
+      "exampleVi": "Tôi đang thèm một ly cà phê kinh khủng.",
+      "collocations": [
+        {
+          "en": "desperate for",
+          "vi": "rất cần"
+        },
+        {
+          "en": "a desperate situation",
+          "vi": "tình thế tuyệt vọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "desperately",
+          "vi": "tuyệt vọng"
+        }
+      ],
+      "tip": "desperate for = cực kỳ cần. Đọc 'ĐES-pơ-rợt'.",
+      "emoji": "😩",
+      "stage": 2
+    },
+    {
+      "id": 2352,
+      "word": "detect",
+      "ipa": "dɪˈtɛkt",
+      "viRead": "đi-TEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phát hiện",
+      "exampleEn": "The machine can detect metal.",
+      "exampleVi": "Máy có thể phát hiện kim loại.",
+      "collocations": [
+        {
+          "en": "detect a problem",
+          "vi": "phát hiện vấn đề"
+        },
+        {
+          "en": "detect early",
+          "vi": "phát hiện sớm"
+        }
+      ],
+      "family": [
+        {
+          "word": "detective",
+          "vi": "thám tử"
+        }
+      ],
+      "tip": "detect → detective (thám tử) → detector (máy dò): smoke detector = máy báo khói.",
+      "emoji": "🕵️",
+      "stage": 2
+    },
+    {
+      "id": 2353,
+      "word": "determine",
+      "ipa": "dɪˈtərmən",
+      "viRead": "đơ-TƠ-mơn",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xác định; quyết định",
+      "exampleEn": "Your habits determine your future.",
+      "exampleVi": "Thói quen quyết định tương lai của bạn.",
+      "collocations": [
+        {
+          "en": "determine the cause",
+          "vi": "xác định nguyên nhân"
+        },
+        {
+          "en": "be determined to",
+          "vi": "quyết tâm"
+        }
+      ],
+      "family": [
+        {
+          "word": "determination",
+          "vi": "sự quyết tâm"
+        }
+      ],
+      "tip": "be determined to + V = quyết tâm làm.",
+      "emoji": "🧭",
+      "stage": 2
+    },
+    {
+      "id": 2354,
+      "word": "devote",
+      "ipa": "dɪˈvoʊt",
+      "viRead": "đi-VÂUT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cống hiến, dành",
+      "exampleEn": "She devoted her life to teaching.",
+      "exampleVi": "Bà ấy cống hiến cả đời cho nghề dạy học.",
+      "collocations": [
+        {
+          "en": "devote time to",
+          "vi": "dành thời gian cho"
+        },
+        {
+          "en": "devote yourself to",
+          "vi": "cống hiến cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "devoted",
+          "vi": "tận tụy"
+        }
+      ],
+      "tip": "devote + to + V-ing/danh từ.",
+      "emoji": "💖",
+      "stage": 2
+    },
+    {
+      "id": 2355,
+      "word": "diagram",
+      "ipa": "ˈdaɪəˌgræm",
+      "viRead": "ĐAI-ơ-grem",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sơ đồ, biểu đồ",
+      "exampleEn": "Look at the diagram on the board.",
+      "exampleVi": "Nhìn sơ đồ trên bảng.",
+      "collocations": [
+        {
+          "en": "draw a diagram",
+          "vi": "vẽ sơ đồ"
+        },
+        {
+          "en": "a simple diagram",
+          "vi": "sơ đồ đơn giản"
+        }
+      ],
+      "tip": "Đọc 'ĐAI-ơ-grem'.",
+      "emoji": "📐",
+      "stage": 2
+    },
+    {
+      "id": 2356,
+      "word": "dialogue",
+      "ipa": "ˈdaɪəˌlɔg",
+      "viRead": "ĐAI-ơ-log",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đoạn hội thoại",
+      "exampleEn": "Listen to the dialogue and repeat.",
+      "exampleVi": "Nghe đoạn hội thoại và nhắc lại.",
+      "collocations": [
+        {
+          "en": "a short dialogue",
+          "vi": "đoạn hội thoại ngắn"
+        },
+        {
+          "en": "open a dialogue",
+          "vi": "mở cuộc đối thoại"
+        }
+      ],
+      "tip": "Mỹ viết dialog. Đọc 'ĐAI-ơ-log'.",
+      "emoji": "💬",
+      "stage": 2
+    },
+    {
+      "id": 2357,
+      "word": "diamond",
+      "ipa": "ˈdaɪmənd",
+      "viRead": "ĐAI-mơnđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kim cương",
+      "exampleEn": "She got a diamond ring for her birthday.",
+      "exampleVi": "Cô ấy được tặng nhẫn kim cương dịp sinh nhật.",
+      "collocations": [
+        {
+          "en": "diamond ring",
+          "vi": "nhẫn kim cương"
+        },
+        {
+          "en": "rough diamond",
+          "vi": "kim cương thô"
+        }
+      ],
+      "tip": "Đọc 'ĐAI-mợnđ'.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 2358,
+      "word": "dip",
+      "ipa": "dɪp",
+      "viRead": "ĐIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhúng, chấm",
+      "exampleEn": "Dip the spring rolls in fish sauce.",
+      "exampleVi": "Chấm chả giò vào nước mắm.",
+      "collocations": [
+        {
+          "en": "dip in",
+          "vi": "nhúng vào"
+        },
+        {
+          "en": "dipping sauce",
+          "vi": "nước chấm"
+        }
+      ],
+      "tip": "dipping sauce = nước chấm. dip → dipped.",
+      "emoji": "🥢",
       "stage": 2
     }
   ]
