@@ -85,6 +85,8 @@ export default function QuizRunner({
   const [correctCount, setCorrectCount] = useState(0)
   const [hintCount, setHintCount] = useState(0)
   const [wrongIds, setWrongIds] = useState<number[]>([])
+  // Right answers in a row — a little momentum makes a session feel like a game.
+  const [combo, setCombo] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
   const nextRef = useRef<HTMLButtonElement>(null)
 
@@ -151,6 +153,7 @@ export default function QuizRunner({
       if (correct) setCorrectCount((c) => c + 1)
       else setWrongIds((ids) => (ids.includes(q.wordId) ? ids : [...ids, q.wordId]))
     }
+    setCombo((c) => (correct ? c + 1 : 0))
     if (soundEnabled) (correct ? playCorrect : playWrong)()
     const retry = !correct && requeueWrong && item.attempt < MAX_ATTEMPTS
     setWillReturn(retry)
@@ -249,6 +252,15 @@ export default function QuizRunner({
           </p>
           {word && (q.mode === 'en-to-vi' || q.mode === 'vi-to-en') && (
             <PosBadge category={word.posCategory} />
+          )}
+          {combo >= 3 && (
+            <span
+              key={combo}
+              className="chip ml-auto animate-pop bg-orange-100 font-bold text-orange-700 dark:bg-orange-950 dark:text-orange-300"
+              title="Số câu đúng liên tiếp"
+            >
+              🔥 x{combo}
+            </span>
           )}
           {!caption && item.attempt > 1 && (
             <span className="chip bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">

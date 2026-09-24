@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import type { PosCategory, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -28,11 +29,16 @@ export default function Browse() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards) ?? NO_CARDS
 
-  const [query, setQuery] = useState('')
+  // ?q= lets other screens (Từ của ngày) open the lookup on one word.
+  const [params] = useSearchParams()
+  const [query, setQuery] = useState(() => params.get('q') ?? '')
   const [pos, setPos] = useState<PosCategory | 'all'>('all')
   const [phaseFilter, setPhaseFilter] = useState<CardPhase | 'all'>('all')
   const [page, setPage] = useState(0)
-  const [expanded, setExpanded] = useState<number | null>(null)
+  const [expanded, setExpanded] = useState<number | null>(() => {
+    const q = params.get('q')?.trim().toLowerCase()
+    return q ? (pack.words.find((w) => w.word.toLowerCase() === q)?.id ?? null) : null
+  })
 
   const categories = useMemo(() => {
     const set = new Set<PosCategory>()

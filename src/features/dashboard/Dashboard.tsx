@@ -6,6 +6,7 @@ import { useStudy } from '@/store/studyStore'
 import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
+import WordOfDay from './WordOfDay'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -103,26 +104,45 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* Quick links */}
-      <section className="grid gap-4 sm:grid-cols-2">
-        <QuickLink
-          to="/quiz"
-          icon={GraduationCap}
-          title="Kiểm tra nhanh"
-          desc="6 dạng câu hỏi: chọn nghĩa, nghe, điền vào câu, gõ từ…"
-        />
-        <QuickLink
-          to="/speaking"
-          icon={Mic}
-          title="Luyện nói"
-          desc="Đọc vào micro, nghe lại và so với giọng mẫu."
-        />
-        <QuickLink
+      <WordOfDay />
+
+      {/* Play & practise */}
+      <section>
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+          Chơi mà học
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <QuickLink
+            to="/games/match"
+            emoji="🧩"
+            title="Ghép cặp"
+            desc="6 cặp từ – nghĩa, đua với đồng hồ."
+          />
+          <QuickLink
+            to="/games/order"
+            emoji="🔤"
+            title="Xếp câu"
+            desc="Xếp mảnh thành câu tiếng Anh đúng."
+          />
+          <QuickLink
+            to="/quiz"
+            icon={GraduationCap}
+            title="Kiểm tra nhanh"
+            desc="6 dạng câu hỏi: chọn nghĩa, nghe, điền câu…"
+          />
+          <QuickLink
+            to="/speaking"
+            icon={Mic}
+            title="Luyện nói"
+            desc="Đọc vào micro, so với giọng mẫu."
+          />
+        </div>
+        <Link
           to="/browse"
-          icon={Library}
-          title={`Tra cứu ${pack.meta.count} từ`}
-          desc="Tìm kiếm & lọc toàn bộ danh sách từ vựng."
-        />
+          className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-300"
+        >
+          <Library className="h-4 w-4" /> Tra cứu {pack.meta.count} từ
+        </Link>
       </section>
     </div>
   )
@@ -208,27 +228,29 @@ function Metric({
 function QuickLink({
   to,
   icon: Icon,
+  emoji,
   title,
   desc,
 }: {
   to: string
-  icon: typeof BookOpen
+  icon?: typeof BookOpen
+  emoji?: string
   title: string
   desc: string
 }) {
   return (
     <Link
       to={to}
-      className="card flex items-center gap-4 p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+      className="card flex items-center gap-4 p-4 transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
     >
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-        <Icon className="h-6 w-6" />
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-slate-100 text-2xl text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+        {emoji ?? (Icon && <Icon className="h-6 w-6" />)}
       </span>
       <div className="min-w-0">
         <h3 className="font-bold">{title}</h3>
-        <p className="truncate text-sm text-slate-400">{desc}</p>
+        <p className="text-sm text-slate-400">{desc}</p>
       </div>
-      <ArrowRight className="ml-auto h-5 w-5 text-slate-300" />
+      <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-slate-300" />
     </Link>
   )
 }

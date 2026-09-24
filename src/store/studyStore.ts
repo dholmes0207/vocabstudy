@@ -17,6 +17,11 @@ interface StudyState {
 
   /** Record a review/answer for a word; creates the card if it is new. */
   recordAnswer: (code: string, wordId: number, correct: boolean) => void
+  /**
+   * XP from play (games): counts as a study day for the streak but never
+   * touches an SRS card — see lib/games.ts.
+   */
+  addPlayXp: (code: string, xp: number) => void
   /** How many brand-new words have been introduced today for a language. */
   newIntroducedToday: (code: string) => number
   /** Wipe all progress for one language. */
@@ -81,6 +86,20 @@ export const useStudy = create<StudyState>()(
               },
             },
           }
+        })
+      },
+
+      addPlayXp: (code, xp) => {
+        if (!(xp > 0)) return
+        const day = today()
+        set((state) => {
+          const lang = state.progress[code] ?? emptyProgress()
+          const stats: StudyStats = {
+            ...lang.stats,
+            xp: lang.stats.xp + Math.round(xp),
+            ...updateStreak(lang.stats, day),
+          }
+          return { progress: { ...state.progress, [code]: { cards: lang.cards, stats } } }
         })
       },
 
