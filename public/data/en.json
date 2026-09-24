@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1859,
+    "count": 1909,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -53851,6 +53851,1452 @@
       ],
       "tip": "purse (Anh) = ví nữ; (Mỹ) = túi xách nữ. Ví nam = wallet.",
       "emoji": "👛",
+      "stage": 2
+    },
+    {
+      "id": 1860,
+      "word": "qualify",
+      "ipa": "ˈkwɑləˌfaɪ",
+      "viRead": "KWA-lơ-phai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đủ điều kiện; đạt chuẩn",
+      "exampleEn": "Our team qualified for the final.",
+      "exampleVi": "Đội chúng tôi đã giành quyền vào chung kết.",
+      "collocations": [
+        {
+          "en": "qualify for",
+          "vi": "đủ điều kiện cho"
+        },
+        {
+          "en": "qualify as a doctor",
+          "vi": "trở thành bác sĩ (có bằng)"
+        }
+      ],
+      "family": [
+        {
+          "word": "qualification",
+          "vi": "bằng cấp"
+        },
+        {
+          "word": "qualified",
+          "vi": "đủ trình độ"
+        }
+      ],
+      "tip": "qualify for + giải/việc; qualified = có bằng cấp, đủ trình độ.",
+      "emoji": "🏅",
+      "stage": 2
+    },
+    {
+      "id": 1861,
+      "word": "queen",
+      "ipa": "kwin",
+      "viRead": "KWIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nữ hoàng",
+      "exampleEn": "The queen waved to the crowd.",
+      "exampleVi": "Nữ hoàng vẫy tay chào đám đông.",
+      "collocations": [
+        {
+          "en": "the Queen of England",
+          "vi": "Nữ hoàng Anh"
+        },
+        {
+          "en": "beauty queen",
+          "vi": "hoa hậu"
+        }
+      ],
+      "family": [
+        {
+          "word": "king",
+          "vi": "vua"
+        }
+      ],
+      "tip": "king ↔ queen. drama queen = người hay làm quá.",
+      "emoji": "👑",
+      "stage": 2
+    },
+    {
+      "id": 1862,
+      "word": "quit",
+      "ipa": "kwɪt",
+      "viRead": "KWIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bỏ, thôi (việc)",
+      "exampleEn": "He quit his job to travel the world.",
+      "exampleVi": "Anh ấy bỏ việc để đi du lịch khắp thế giới.",
+      "collocations": [
+        {
+          "en": "quit smoking",
+          "vi": "bỏ thuốc lá"
+        },
+        {
+          "en": "quit your job",
+          "vi": "nghỉ việc"
+        }
+      ],
+      "tip": "quit – quit – quit (không đổi). quit + V-ing: quit smoking.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 1863,
+      "word": "quote",
+      "ipa": "kwoʊt",
+      "viRead": "KWÂUT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "trích dẫn; báo giá",
+      "exampleEn": "She quoted a famous poem in her speech.",
+      "exampleVi": "Cô ấy trích dẫn một bài thơ nổi tiếng trong bài phát biểu.",
+      "collocations": [
+        {
+          "en": "quote someone",
+          "vi": "trích lời ai"
+        },
+        {
+          "en": "a price quote",
+          "vi": "bảng báo giá"
+        }
+      ],
+      "family": [
+        {
+          "word": "quotation",
+          "vi": "câu trích dẫn"
+        }
+      ],
+      "tip": "quote còn là báo giá: Can you give me a quote? = Báo giá giúp tôi nhé.",
+      "emoji": "❝",
+      "stage": 2
+    },
+    {
+      "id": 1864,
+      "word": "rail",
+      "ipa": "reɪl",
+      "viRead": "RÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường ray; tay vịn",
+      "exampleEn": "Travelling by rail is cheap and relaxing.",
+      "exampleVi": "Đi tàu hỏa vừa rẻ vừa thư thái.",
+      "collocations": [
+        {
+          "en": "by rail",
+          "vi": "bằng tàu hỏa"
+        },
+        {
+          "en": "hold the rail",
+          "vi": "vịn tay vịn"
+        }
+      ],
+      "family": [
+        {
+          "word": "railway",
+          "vi": "đường sắt"
+        }
+      ],
+      "tip": "railway (Anh) = railroad (Mỹ) = đường sắt.",
+      "emoji": "🛤️",
+      "stage": 2
+    },
+    {
+      "id": 1865,
+      "word": "random",
+      "ipa": "ˈrændəm",
+      "viRead": "REN-đơm",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngẫu nhiên",
+      "exampleEn": "The winner was chosen at random.",
+      "exampleVi": "Người thắng được chọn ngẫu nhiên.",
+      "collocations": [
+        {
+          "en": "at random",
+          "vi": "một cách ngẫu nhiên"
+        },
+        {
+          "en": "a random number",
+          "vi": "số ngẫu nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "randomly",
+          "vi": "ngẫu nhiên"
+        }
+      ],
+      "tip": "Giới trẻ hay nói 'so random!' = thật bất chợt, chẳng liên quan.",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 1866,
+      "word": "range",
+      "ipa": "reɪnʤ",
+      "viRead": "RÂYNGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phạm vi; loại (hàng)",
+      "exampleEn": "The shop sells a wide range of shoes.",
+      "exampleVi": "Cửa hàng bán rất nhiều loại giày.",
+      "collocations": [
+        {
+          "en": "a wide range of",
+          "vi": "nhiều loại"
+        },
+        {
+          "en": "price range",
+          "vi": "khoảng giá"
+        }
+      ],
+      "tip": "What's your price range? = Bạn định chi khoảng bao nhiêu? a đọc 'ây': 'rêynj'.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 1867,
+      "word": "rank",
+      "ipa": "ræŋk",
+      "viRead": "RENGK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "thứ hạng",
+      "exampleEn": "Our school has a high rank in the city.",
+      "exampleVi": "Trường chúng tôi có thứ hạng cao trong thành phố.",
+      "collocations": [
+        {
+          "en": "high rank",
+          "vi": "thứ hạng cao"
+        },
+        {
+          "en": "be ranked first",
+          "vi": "xếp hạng nhất"
+        }
+      ],
+      "family": [
+        {
+          "word": "ranking",
+          "vi": "bảng xếp hạng"
+        }
+      ],
+      "tip": "ranking = bảng xếp hạng (FIFA ranking).",
+      "emoji": "🥇",
+      "stage": 2
+    },
+    {
+      "id": 1868,
+      "word": "rapid",
+      "ipa": "ˈræpɪd",
+      "viRead": "RE-pơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhanh chóng",
+      "exampleEn": "The city has seen rapid growth.",
+      "exampleVi": "Thành phố đã phát triển nhanh chóng.",
+      "collocations": [
+        {
+          "en": "rapid growth",
+          "vi": "tăng trưởng nhanh"
+        },
+        {
+          "en": "rapid test",
+          "vi": "xét nghiệm nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "rapidly",
+          "vi": "nhanh chóng"
+        }
+      ],
+      "tip": "rapid = fast nhưng trang trọng hơn, hay đi với thay đổi, tăng trưởng.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 1869,
+      "word": "rarely",
+      "ipa": "ˈrɛrli",
+      "viRead": "RER-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hiếm khi",
+      "exampleEn": "I rarely eat fast food.",
+      "exampleVi": "Tôi hiếm khi ăn đồ ăn nhanh.",
+      "collocations": [
+        {
+          "en": "very rarely",
+          "vi": "rất hiếm khi"
+        },
+        {
+          "en": "rarely see",
+          "vi": "hiếm khi gặp"
+        }
+      ],
+      "family": [
+        {
+          "word": "rare",
+          "vi": "hiếm"
+        }
+      ],
+      "tip": "Vị trí: đứng trước động từ thường, sau be: She is rarely late.",
+      "emoji": "🦄",
+      "stage": 2
+    },
+    {
+      "id": 1870,
+      "word": "rate",
+      "ipa": "reɪt",
+      "viRead": "RÂYT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tỉ lệ; mức (giá)",
+      "exampleEn": "The exchange rate changes every day.",
+      "exampleVi": "Tỷ giá thay đổi mỗi ngày.",
+      "collocations": [
+        {
+          "en": "exchange rate",
+          "vi": "tỷ giá"
+        },
+        {
+          "en": "at any rate",
+          "vi": "dù sao đi nữa"
+        }
+      ],
+      "tip": "heart rate = nhịp tim; interest rate = lãi suất.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1871,
+      "word": "rather",
+      "ipa": "ˈræðər",
+      "viRead": "RE-đơ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khá; thà ... hơn",
+      "exampleEn": "I'd rather stay home tonight.",
+      "exampleVi": "Tối nay tôi thà ở nhà còn hơn.",
+      "collocations": [
+        {
+          "en": "would rather",
+          "vi": "thà ... hơn"
+        },
+        {
+          "en": "rather than",
+          "vi": "thay vì"
+        }
+      ],
+      "tip": "I'd rather + V nguyên mẫu (không có to): I'd rather walk.",
+      "emoji": "🤔",
+      "stage": 2
+    },
+    {
+      "id": 1872,
+      "word": "react",
+      "ipa": "riˈækt",
+      "viRead": "ri-EKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phản ứng",
+      "exampleEn": "How did she react to the news?",
+      "exampleVi": "Cô ấy phản ứng thế nào với tin đó?",
+      "collocations": [
+        {
+          "en": "react to",
+          "vi": "phản ứng với"
+        },
+        {
+          "en": "react quickly",
+          "vi": "phản ứng nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "reaction",
+          "vi": "sự phản ứng"
+        }
+      ],
+      "tip": "react to + điều gì. Thả react trên Facebook cũng là react.",
+      "emoji": "😮",
+      "stage": 2
+    },
+    {
+      "id": 1873,
+      "word": "reaction",
+      "ipa": "riˈækʃən",
+      "viRead": "ri-EK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phản ứng",
+      "exampleEn": "His first reaction was to laugh.",
+      "exampleVi": "Phản ứng đầu tiên của anh ấy là bật cười.",
+      "collocations": [
+        {
+          "en": "a quick reaction",
+          "vi": "phản ứng nhanh"
+        },
+        {
+          "en": "allergic reaction",
+          "vi": "phản ứng dị ứng"
+        }
+      ],
+      "family": [
+        {
+          "word": "react",
+          "vi": "phản ứng"
+        }
+      ],
+      "tip": "react (động từ) → reaction (danh từ).",
+      "emoji": "😲",
+      "stage": 2
+    },
+    {
+      "id": 1874,
+      "word": "reader",
+      "ipa": "ˈridər",
+      "viRead": "RI-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người đọc, độc giả",
+      "exampleEn": "She is a big reader of novels.",
+      "exampleVi": "Cô ấy đọc tiểu thuyết rất nhiều.",
+      "collocations": [
+        {
+          "en": "a keen reader",
+          "vi": "người mê đọc"
+        },
+        {
+          "en": "dear readers",
+          "vi": "các bạn độc giả thân mến"
+        }
+      ],
+      "family": [
+        {
+          "word": "read",
+          "vi": "đọc"
+        }
+      ],
+      "tip": "read + er = người đọc. e-reader = máy đọc sách.",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 1875,
+      "word": "reality",
+      "ipa": "riˈæləti",
+      "viRead": "ri-E-lơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thực tế, hiện thực",
+      "exampleEn": "In reality, the job was very hard.",
+      "exampleVi": "Trên thực tế, công việc rất vất vả.",
+      "collocations": [
+        {
+          "en": "in reality",
+          "vi": "trên thực tế"
+        },
+        {
+          "en": "virtual reality",
+          "vi": "thực tế ảo"
+        }
+      ],
+      "family": [
+        {
+          "word": "real",
+          "vi": "thật"
+        },
+        {
+          "word": "realistic",
+          "vi": "thực tế"
+        }
+      ],
+      "tip": "reality show = chương trình truyền hình thực tế.",
+      "emoji": "🌍",
+      "stage": 2
+    },
+    {
+      "id": 1876,
+      "word": "realize",
+      "ipa": "ˈriəˌlaɪz",
+      "viRead": "RI-ơ-laid",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhận ra",
+      "exampleEn": "I didn't realize it was so late.",
+      "exampleVi": "Tôi không nhận ra đã muộn thế.",
+      "collocations": [
+        {
+          "en": "suddenly realize",
+          "vi": "chợt nhận ra"
+        },
+        {
+          "en": "realize a dream",
+          "vi": "thực hiện ước mơ"
+        }
+      ],
+      "family": [
+        {
+          "word": "real",
+          "vi": "thật"
+        }
+      ],
+      "tip": "realize ≠ recognize: realize = nhận ra một sự thật; recognize = nhận ra người/vật quen.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1877,
+      "word": "reasonable",
+      "ipa": "ˈrizənəbəl",
+      "viRead": "RI-dơ-nơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hợp lý; phải chăng",
+      "exampleEn": "The prices here are very reasonable.",
+      "exampleVi": "Giá cả ở đây rất phải chăng.",
+      "collocations": [
+        {
+          "en": "a reasonable price",
+          "vi": "giá phải chăng"
+        },
+        {
+          "en": "be reasonable",
+          "vi": "biết điều"
+        }
+      ],
+      "family": [
+        {
+          "word": "reason",
+          "vi": "lý do"
+        }
+      ],
+      "tip": "Be reasonable! = Biết điều chút đi! reason + able.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 1878,
+      "word": "receipt",
+      "ipa": "rɪˈsit",
+      "viRead": "ri-SIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hóa đơn, biên lai",
+      "exampleEn": "Keep the receipt in case you want to return it.",
+      "exampleVi": "Giữ hóa đơn phòng khi bạn muốn đổi trả.",
+      "collocations": [
+        {
+          "en": "keep the receipt",
+          "vi": "giữ hóa đơn"
+        },
+        {
+          "en": "ask for a receipt",
+          "vi": "xin hóa đơn"
+        }
+      ],
+      "family": [
+        {
+          "word": "receive",
+          "vi": "nhận"
+        }
+      ],
+      "tip": "Chữ p câm: 'ri-SÍT'.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 1879,
+      "word": "recent",
+      "ipa": "ˈrisənt",
+      "viRead": "RI-sơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gần đây",
+      "exampleEn": "Have you seen his recent photos?",
+      "exampleVi": "Bạn đã xem những tấm ảnh gần đây của anh ấy chưa?",
+      "collocations": [
+        {
+          "en": "in recent years",
+          "vi": "trong những năm gần đây"
+        },
+        {
+          "en": "recent news",
+          "vi": "tin mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "recently",
+          "vi": "gần đây"
+        }
+      ],
+      "tip": "recent (tính từ) đứng trước danh từ; recently (trạng từ) bổ nghĩa cho động từ.",
+      "emoji": "🆕",
+      "stage": 2
+    },
+    {
+      "id": 1880,
+      "word": "recently",
+      "ipa": "ˈrisəntli",
+      "viRead": "RI-sơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "gần đây",
+      "exampleEn": "I've recently started learning English.",
+      "exampleVi": "Gần đây tôi mới bắt đầu học tiếng Anh.",
+      "collocations": [
+        {
+          "en": "until recently",
+          "vi": "cho đến gần đây"
+        },
+        {
+          "en": "only recently",
+          "vi": "mới gần đây"
+        }
+      ],
+      "family": [
+        {
+          "word": "recent",
+          "vi": "gần đây"
+        }
+      ],
+      "tip": "recently hay đi với thì hiện tại hoàn thành: I have recently moved.",
+      "emoji": "🕐",
+      "stage": 2
+    },
+    {
+      "id": 1881,
+      "word": "recipe",
+      "ipa": "ˈrɛsəpi",
+      "viRead": "RE-sơ-pi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công thức nấu ăn",
+      "exampleEn": "Can you share your pho recipe?",
+      "exampleVi": "Bạn chia sẻ công thức nấu phở được không?",
+      "collocations": [
+        {
+          "en": "a recipe for",
+          "vi": "công thức làm"
+        },
+        {
+          "en": "follow a recipe",
+          "vi": "làm theo công thức"
+        }
+      ],
+      "tip": "Đọc 3 âm: 'RE-xợ-pi' (không phải 'ri-xip').",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 1882,
+      "word": "recognize",
+      "ipa": "ˈrɛkəgˌnaɪz",
+      "viRead": "RE-kơg-naid",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhận ra (người, vật quen)",
+      "exampleEn": "I didn't recognize you with short hair!",
+      "exampleVi": "Tôi không nhận ra bạn khi để tóc ngắn!",
+      "collocations": [
+        {
+          "en": "recognize someone",
+          "vi": "nhận ra ai"
+        },
+        {
+          "en": "hardly recognize",
+          "vi": "suýt không nhận ra"
+        }
+      ],
+      "family": [
+        {
+          "word": "recognition",
+          "vi": "sự nhận ra; công nhận"
+        }
+      ],
+      "tip": "recognize = nhận ra thứ đã biết; còn nghĩa công nhận (recognize her work).",
+      "emoji": "👀",
+      "stage": 2
+    },
+    {
+      "id": 1883,
+      "word": "recover",
+      "ipa": "rɪˈkəvər",
+      "viRead": "ri-KƠ-vơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hồi phục; lấy lại",
+      "exampleEn": "She is recovering from a cold.",
+      "exampleVi": "Cô ấy đang hồi phục sau cảm lạnh.",
+      "collocations": [
+        {
+          "en": "recover from",
+          "vi": "hồi phục sau"
+        },
+        {
+          "en": "recover data",
+          "vi": "khôi phục dữ liệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "recovery",
+          "vi": "sự hồi phục"
+        }
+      ],
+      "tip": "re (lại) + cover. recover from + bệnh/cú sốc.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 1884,
+      "word": "refer",
+      "ipa": "rɪˈfər",
+      "viRead": "ri-PHƠ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhắc đến; tham khảo",
+      "exampleEn": "Who are you referring to?",
+      "exampleVi": "Bạn đang nói tới ai vậy?",
+      "collocations": [
+        {
+          "en": "refer to",
+          "vi": "nhắc đến"
+        },
+        {
+          "en": "refer to a dictionary",
+          "vi": "tra từ điển"
+        }
+      ],
+      "family": [
+        {
+          "word": "reference",
+          "vi": "sự tham khảo"
+        }
+      ],
+      "tip": "refer → referred, referring (gấp đôi r vì nhấn âm 2).",
+      "emoji": "👉",
+      "stage": 2
+    },
+    {
+      "id": 1885,
+      "word": "reflect",
+      "ipa": "rɪˈflɛkt",
+      "viRead": "ri-PHLEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phản chiếu; phản ánh",
+      "exampleEn": "The trees are reflected in the lake.",
+      "exampleVi": "Hàng cây soi bóng xuống mặt hồ.",
+      "collocations": [
+        {
+          "en": "reflect on",
+          "vi": "suy ngẫm về"
+        },
+        {
+          "en": "reflect light",
+          "vi": "phản chiếu ánh sáng"
+        }
+      ],
+      "family": [
+        {
+          "word": "reflection",
+          "vi": "hình phản chiếu; sự suy ngẫm"
+        }
+      ],
+      "tip": "reflect on + việc = suy ngẫm, nhìn lại.",
+      "emoji": "🪞",
+      "stage": 2
+    },
+    {
+      "id": 1886,
+      "word": "region",
+      "ipa": "ˈriʤən",
+      "viRead": "RI-giơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vùng, khu vực",
+      "exampleEn": "The Mekong Delta is a rich farming region.",
+      "exampleVi": "Đồng bằng sông Cửu Long là vùng nông nghiệp trù phú.",
+      "collocations": [
+        {
+          "en": "in the region",
+          "vi": "trong khu vực"
+        },
+        {
+          "en": "mountain region",
+          "vi": "vùng núi"
+        }
+      ],
+      "family": [
+        {
+          "word": "regional",
+          "vi": "thuộc khu vực"
+        }
+      ],
+      "tip": "g đọc 'j': 'RI-jần'.",
+      "emoji": "🗺️",
+      "stage": 2
+    },
+    {
+      "id": 1887,
+      "word": "relate",
+      "ipa": "rɪˈleɪt",
+      "viRead": "ri-LÂYT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "liên quan; đồng cảm",
+      "exampleEn": "I can relate to your story.",
+      "exampleVi": "Tôi rất đồng cảm với câu chuyện của bạn.",
+      "collocations": [
+        {
+          "en": "relate to",
+          "vi": "liên quan đến; đồng cảm với"
+        },
+        {
+          "en": "closely related",
+          "vi": "liên quan chặt chẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "relation",
+          "vi": "mối quan hệ"
+        },
+        {
+          "word": "relative",
+          "vi": "họ hàng"
+        }
+      ],
+      "tip": "I can relate! = Tôi hiểu cảm giác đó (vì từng trải qua).",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 1888,
+      "word": "release",
+      "ipa": "riˈlis",
+      "viRead": "ri-LIS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phát hành; thả ra",
+      "exampleEn": "The band will release a new song next week.",
+      "exampleVi": "Ban nhạc sẽ ra bài mới vào tuần sau.",
+      "collocations": [
+        {
+          "en": "release a film",
+          "vi": "công chiếu phim"
+        },
+        {
+          "en": "be released from prison",
+          "vi": "được ra tù"
+        }
+      ],
+      "tip": "release date = ngày phát hành. se đọc 's': 'ri-LÍS'.",
+      "emoji": "🎵",
+      "stage": 2
+    },
+    {
+      "id": 1889,
+      "word": "relevant",
+      "ipa": "ˈrɛləvənt",
+      "viRead": "RE-lơ-vơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "liên quan, phù hợp",
+      "exampleEn": "Your answer is not relevant to the question.",
+      "exampleVi": "Câu trả lời của bạn không liên quan đến câu hỏi.",
+      "collocations": [
+        {
+          "en": "relevant to",
+          "vi": "liên quan đến"
+        },
+        {
+          "en": "relevant information",
+          "vi": "thông tin liên quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "irrelevant",
+          "vi": "không liên quan"
+        }
+      ],
+      "tip": "relevant ↔ irrelevant (không liên quan).",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 1890,
+      "word": "relief",
+      "ipa": "rɪˈlif",
+      "viRead": "ri-LIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nhẹ nhõm; cứu trợ",
+      "exampleEn": "What a relief! I found my keys.",
+      "exampleVi": "Nhẹ cả người! Tôi tìm thấy chìa khóa rồi.",
+      "collocations": [
+        {
+          "en": "what a relief",
+          "vi": "nhẹ cả người"
+        },
+        {
+          "en": "pain relief",
+          "vi": "giảm đau"
+        }
+      ],
+      "family": [
+        {
+          "word": "relieved",
+          "vi": "nhẹ nhõm"
+        }
+      ],
+      "tip": "What a relief! = May quá! relief (danh từ) – relieved (tính từ).",
+      "emoji": "😮‍💨",
+      "stage": 2
+    },
+    {
+      "id": 1891,
+      "word": "religion",
+      "ipa": "rɪˈlɪʤən",
+      "viRead": "ri-LI-giơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tôn giáo",
+      "exampleEn": "People of different religions live together here.",
+      "exampleVi": "Người thuộc nhiều tôn giáo khác nhau sống cùng nhau ở đây.",
+      "collocations": [
+        {
+          "en": "freedom of religion",
+          "vi": "tự do tôn giáo"
+        },
+        {
+          "en": "world religions",
+          "vi": "các tôn giáo lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "religious",
+          "vi": "thuộc tôn giáo; sùng đạo"
+        }
+      ],
+      "tip": "g đọc 'j': 'ri-LI-jần'.",
+      "emoji": "🛕",
+      "stage": 2
+    },
+    {
+      "id": 1892,
+      "word": "remain",
+      "ipa": "rɪˈmeɪn",
+      "viRead": "ri-MÂYN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vẫn còn; ở lại",
+      "exampleEn": "Please remain seated until the plane stops.",
+      "exampleVi": "Vui lòng ngồi yên tại chỗ cho đến khi máy bay dừng.",
+      "collocations": [
+        {
+          "en": "remain calm",
+          "vi": "giữ bình tĩnh"
+        },
+        {
+          "en": "remain the same",
+          "vi": "vẫn như cũ"
+        }
+      ],
+      "family": [
+        {
+          "word": "remains",
+          "vi": "phần còn lại"
+        }
+      ],
+      "tip": "remain + tính từ = vẫn: remain silent (vẫn im lặng).",
+      "emoji": "⏸️",
+      "stage": 2
+    },
+    {
+      "id": 1893,
+      "word": "remark",
+      "ipa": "rɪˈmɑrk",
+      "viRead": "ri-MARK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời nhận xét",
+      "exampleEn": "He made a rude remark about her dress.",
+      "exampleVi": "Anh ta buông lời nhận xét thô lỗ về chiếc váy của cô ấy.",
+      "collocations": [
+        {
+          "en": "make a remark",
+          "vi": "đưa ra nhận xét"
+        },
+        {
+          "en": "a funny remark",
+          "vi": "câu nói vui"
+        }
+      ],
+      "family": [
+        {
+          "word": "remarkable",
+          "vi": "đáng chú ý"
+        }
+      ],
+      "tip": "remarkable = đáng chú ý, phi thường.",
+      "emoji": "💭",
+      "stage": 2
+    },
+    {
+      "id": 1894,
+      "word": "remove",
+      "ipa": "riˈmuv",
+      "viRead": "ri-MUV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gỡ bỏ, lấy ra",
+      "exampleEn": "Please remove your shoes before entering.",
+      "exampleVi": "Vui lòng cởi giày trước khi vào.",
+      "collocations": [
+        {
+          "en": "remove a stain",
+          "vi": "tẩy vết bẩn"
+        },
+        {
+          "en": "remove from the list",
+          "vi": "xóa khỏi danh sách"
+        }
+      ],
+      "family": [
+        {
+          "word": "removal",
+          "vi": "sự dỡ bỏ"
+        }
+      ],
+      "tip": "make-up remover = nước tẩy trang.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 1895,
+      "word": "represent",
+      "ipa": "ˌrɛprɪˈzɛnt",
+      "viRead": "rep-ri-DENT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đại diện; tượng trưng",
+      "exampleEn": "She will represent our school at the contest.",
+      "exampleVi": "Cô ấy sẽ đại diện trường ta tại cuộc thi.",
+      "collocations": [
+        {
+          "en": "represent a country",
+          "vi": "đại diện một quốc gia"
+        },
+        {
+          "en": "represent peace",
+          "vi": "tượng trưng cho hòa bình"
+        }
+      ],
+      "family": [
+        {
+          "word": "representative",
+          "vi": "người đại diện"
+        }
+      ],
+      "tip": "re + present. Nhấn âm 3: re-pri-ZENT.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 1896,
+      "word": "reputation",
+      "ipa": "ˌrɛpjəˈteɪʃən",
+      "viRead": "rep-yơ-TÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh tiếng",
+      "exampleEn": "The restaurant has a good reputation.",
+      "exampleVi": "Nhà hàng có danh tiếng tốt.",
+      "collocations": [
+        {
+          "en": "a good reputation",
+          "vi": "danh tiếng tốt"
+        },
+        {
+          "en": "damage your reputation",
+          "vi": "làm tổn hại thanh danh"
+        }
+      ],
+      "tip": "Nhấn âm 3: re-piu-TÂY-shần.",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 1897,
+      "word": "require",
+      "ipa": "rɪˈkwaɪər",
+      "viRead": "ri-KWAI-ơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đòi hỏi, yêu cầu",
+      "exampleEn": "This job requires good English.",
+      "exampleVi": "Công việc này đòi hỏi tiếng Anh tốt.",
+      "collocations": [
+        {
+          "en": "be required to",
+          "vi": "bắt buộc phải"
+        },
+        {
+          "en": "require attention",
+          "vi": "cần chú ý"
+        }
+      ],
+      "family": [
+        {
+          "word": "requirement",
+          "vi": "yêu cầu"
+        }
+      ],
+      "tip": "require = need nhưng trang trọng; hay gặp trong tin tuyển dụng.",
+      "emoji": "📌",
+      "stage": 2
+    },
+    {
+      "id": 1898,
+      "word": "research",
+      "ipa": "ˈrisərʧ",
+      "viRead": "RI-sơch",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "nghiên cứu",
+      "exampleEn": "She is doing research on climate change.",
+      "exampleVi": "Cô ấy đang nghiên cứu về biến đổi khí hậu.",
+      "collocations": [
+        {
+          "en": "do research",
+          "vi": "làm nghiên cứu"
+        },
+        {
+          "en": "research on",
+          "vi": "nghiên cứu về"
+        }
+      ],
+      "family": [
+        {
+          "word": "researcher",
+          "vi": "nhà nghiên cứu"
+        }
+      ],
+      "tip": "research không đếm được: do research (KHÔNG nói a research).",
+      "emoji": "🔬",
+      "stage": 2
+    },
+    {
+      "id": 1899,
+      "word": "reserve",
+      "ipa": "rɪˈzərv",
+      "viRead": "ri-DƠV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đặt trước; dành riêng",
+      "exampleEn": "I'd like to reserve a table for four.",
+      "exampleVi": "Tôi muốn đặt bàn cho bốn người.",
+      "collocations": [
+        {
+          "en": "reserve a table",
+          "vi": "đặt bàn"
+        },
+        {
+          "en": "reserve a room",
+          "vi": "đặt phòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "reservation",
+          "vi": "sự đặt chỗ"
+        }
+      ],
+      "tip": "reserve = book (đặt chỗ). Reserved = đã có người đặt.",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 1900,
+      "word": "resident",
+      "ipa": "ˈrɛzɪdənt",
+      "viRead": "RE-di-đơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cư dân",
+      "exampleEn": "Residents are angry about the noise.",
+      "exampleVi": "Cư dân bực tức vì tiếng ồn.",
+      "collocations": [
+        {
+          "en": "local residents",
+          "vi": "cư dân địa phương"
+        },
+        {
+          "en": "permanent resident",
+          "vi": "thường trú nhân"
+        }
+      ],
+      "family": [
+        {
+          "word": "reside",
+          "vi": "cư trú"
+        }
+      ],
+      "tip": "resident = người sống ở một nơi; President = tổng thống (khác p).",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 1901,
+      "word": "resign",
+      "ipa": "rɪˈzaɪn",
+      "viRead": "ri-DAIN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "từ chức, xin nghỉ việc",
+      "exampleEn": "The manager resigned last month.",
+      "exampleVi": "Quản lý đã xin nghỉ việc tháng trước.",
+      "collocations": [
+        {
+          "en": "resign from",
+          "vi": "từ chức khỏi"
+        },
+        {
+          "en": "resign as director",
+          "vi": "từ chức giám đốc"
+        }
+      ],
+      "family": [
+        {
+          "word": "resignation",
+          "vi": "sự từ chức; đơn xin nghỉ"
+        }
+      ],
+      "tip": "g câm: 'ri-ZAIN'. letter of resignation = đơn xin nghỉ việc.",
+      "emoji": "📤",
+      "stage": 2
+    },
+    {
+      "id": 1902,
+      "word": "resist",
+      "ipa": "rɪˈzɪst",
+      "viRead": "ri-DIST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cưỡng lại, chống lại",
+      "exampleEn": "I can't resist chocolate cake.",
+      "exampleVi": "Tôi không cưỡng lại được bánh sô-cô-la.",
+      "collocations": [
+        {
+          "en": "can't resist",
+          "vi": "không cưỡng lại được"
+        },
+        {
+          "en": "resist change",
+          "vi": "chống lại thay đổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "resistance",
+          "vi": "sự kháng cự"
+        }
+      ],
+      "tip": "can't resist + V-ing/danh từ: I can't resist buying it.",
+      "emoji": "🍫",
+      "stage": 2
+    },
+    {
+      "id": 1903,
+      "word": "respond",
+      "ipa": "rɪˈspɑnd",
+      "viRead": "ris-PANĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trả lời; phản hồi",
+      "exampleEn": "She didn't respond to my message.",
+      "exampleVi": "Cô ấy không trả lời tin nhắn của tôi.",
+      "collocations": [
+        {
+          "en": "respond to",
+          "vi": "phản hồi"
+        },
+        {
+          "en": "respond quickly",
+          "vi": "phản hồi nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "response",
+          "vi": "câu trả lời"
+        }
+      ],
+      "tip": "respond to + tin nhắn/câu hỏi (trang trọng hơn reply).",
+      "emoji": "↩️",
+      "stage": 2
+    },
+    {
+      "id": 1904,
+      "word": "result",
+      "ipa": "rɪˈzəlt",
+      "viRead": "ri-DƠLT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kết quả",
+      "exampleEn": "I'm waiting for my exam results.",
+      "exampleVi": "Tôi đang chờ kết quả thi.",
+      "collocations": [
+        {
+          "en": "as a result",
+          "vi": "do đó"
+        },
+        {
+          "en": "exam results",
+          "vi": "kết quả thi"
+        }
+      ],
+      "tip": "as a result = kết quả là, vì thế. result in = dẫn đến.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 1905,
+      "word": "retire",
+      "ipa": "ˌriˈtaɪər",
+      "viRead": "ri-TAIR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nghỉ hưu",
+      "exampleEn": "My father retired at sixty.",
+      "exampleVi": "Bố tôi nghỉ hưu năm sáu mươi tuổi.",
+      "collocations": [
+        {
+          "en": "retire early",
+          "vi": "nghỉ hưu sớm"
+        },
+        {
+          "en": "retire from work",
+          "vi": "nghỉ làm"
+        }
+      ],
+      "family": [
+        {
+          "word": "retirement",
+          "vi": "sự nghỉ hưu"
+        }
+      ],
+      "tip": "retired = đã nghỉ hưu: a retired teacher.",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 1906,
+      "word": "reveal",
+      "ipa": "rɪˈvil",
+      "viRead": "ri-VIL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tiết lộ",
+      "exampleEn": "She finally revealed her secret.",
+      "exampleVi": "Cuối cùng cô ấy cũng tiết lộ bí mật.",
+      "collocations": [
+        {
+          "en": "reveal a secret",
+          "vi": "tiết lộ bí mật"
+        },
+        {
+          "en": "reveal the truth",
+          "vi": "hé lộ sự thật"
+        }
+      ],
+      "tip": "gender reveal party = tiệc công bố giới tính em bé.",
+      "emoji": "🎁",
+      "stage": 2
+    },
+    {
+      "id": 1907,
+      "word": "reward",
+      "ipa": "rɪˈwɔrd",
+      "viRead": "ri-WORĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "phần thưởng",
+      "exampleEn": "Good students get a small reward.",
+      "exampleVi": "Học sinh ngoan được một phần thưởng nhỏ.",
+      "collocations": [
+        {
+          "en": "a reward for",
+          "vi": "phần thưởng cho"
+        },
+        {
+          "en": "reward yourself",
+          "vi": "tự thưởng cho mình"
+        }
+      ],
+      "family": [
+        {
+          "word": "rewarding",
+          "vi": "bõ công"
+        }
+      ],
+      "tip": "a rewarding job = công việc bõ công, đem lại niềm vui.",
+      "emoji": "🎖️",
+      "stage": 2
+    },
+    {
+      "id": 1908,
+      "word": "rhythm",
+      "ipa": "ˈrɪðəm",
+      "viRead": "RI-đơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhịp điệu",
+      "exampleEn": "Clap your hands to the rhythm.",
+      "exampleVi": "Vỗ tay theo nhịp điệu nhé.",
+      "collocations": [
+        {
+          "en": "a sense of rhythm",
+          "vi": "cảm nhịp"
+        },
+        {
+          "en": "the rhythm of the music",
+          "vi": "nhịp nhạc"
+        }
+      ],
+      "tip": "Chính tả khó: r-h-y-t-h-m (không có nguyên âm a/e/i/o/u).",
+      "emoji": "🥁",
+      "stage": 2
+    },
+    {
+      "id": 1909,
+      "word": "ridiculous",
+      "ipa": "rɪˈdɪkjələs",
+      "viRead": "ri-ĐIK-yơ-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lố bịch, vô lý",
+      "exampleEn": "That's a ridiculous price for a coffee!",
+      "exampleVi": "Giá đó cho một ly cà phê thật vô lý!",
+      "collocations": [
+        {
+          "en": "look ridiculous",
+          "vi": "trông lố bịch"
+        },
+        {
+          "en": "a ridiculous idea",
+          "vi": "ý tưởng vô lý"
+        }
+      ],
+      "tip": "ridiculous = rất vô lý đến buồn cười. Nhấn âm 2: ri-ĐI-kiu-lợs.",
+      "emoji": "🤪",
       "stage": 2
     }
   ]
