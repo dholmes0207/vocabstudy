@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2158,
+    "count": 2208,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -62067,6 +62067,1330 @@
       ],
       "tip": "acquire = get (trang trọng). c câm: 'ơ-KWAI-ơ'.",
       "emoji": "📥",
+      "stage": 2
+    },
+    {
+      "id": 2159,
+      "word": "addicted",
+      "ipa": "əˈdɪktɪd",
+      "viRead": "ơ-ĐIK-tiđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nghiện",
+      "exampleEn": "He is addicted to his phone.",
+      "exampleVi": "Anh ấy nghiện điện thoại.",
+      "collocations": [
+        {
+          "en": "addicted to",
+          "vi": "nghiện"
+        },
+        {
+          "en": "become addicted",
+          "vi": "trở nên nghiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "addiction",
+          "vi": "sự nghiện"
+        }
+      ],
+      "tip": "addicted to + danh từ/V-ing: addicted to gaming.",
+      "emoji": "📱",
+      "stage": 2
+    },
+    {
+      "id": 2160,
+      "word": "adequate",
+      "ipa": "ˈædəkwət",
+      "viRead": "E-đơ-kwơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đủ, thỏa đáng",
+      "exampleEn": "The room is small but adequate.",
+      "exampleVi": "Căn phòng nhỏ nhưng đủ dùng.",
+      "collocations": [
+        {
+          "en": "adequate time",
+          "vi": "đủ thời gian"
+        },
+        {
+          "en": "adequate sleep",
+          "vi": "ngủ đủ giấc"
+        }
+      ],
+      "tip": "adequate = đủ (không thừa). Đọc 'E-đơ-kwợt'.",
+      "emoji": "👌",
+      "stage": 2
+    },
+    {
+      "id": 2161,
+      "word": "adjust",
+      "ipa": "əˈʤəst",
+      "viRead": "ơ-GIƠST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "điều chỉnh; thích nghi",
+      "exampleEn": "You can adjust the height of the chair.",
+      "exampleVi": "Bạn có thể chỉnh độ cao của ghế.",
+      "collocations": [
+        {
+          "en": "adjust to",
+          "vi": "thích nghi với"
+        },
+        {
+          "en": "adjust the volume",
+          "vi": "chỉnh âm lượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "adjustment",
+          "vi": "sự điều chỉnh"
+        }
+      ],
+      "tip": "d câm: 'ơ-JƠST'. adjust to a new life = thích nghi cuộc sống mới.",
+      "emoji": "🎚️",
+      "stage": 2
+    },
+    {
+      "id": 2162,
+      "word": "adopt",
+      "ipa": "əˈdɑpt",
+      "viRead": "ơ-ĐAPT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhận nuôi; áp dụng",
+      "exampleEn": "They adopted a baby girl.",
+      "exampleVi": "Họ nhận nuôi một bé gái.",
+      "collocations": [
+        {
+          "en": "adopt a child",
+          "vi": "nhận con nuôi"
+        },
+        {
+          "en": "adopt a pet",
+          "vi": "nhận nuôi thú cưng"
+        }
+      ],
+      "family": [
+        {
+          "word": "adoption",
+          "vi": "sự nhận nuôi"
+        }
+      ],
+      "tip": "Adopt, don't shop! = Hãy nhận nuôi, đừng mua thú cưng.",
+      "emoji": "🐶",
+      "stage": 2
+    },
+    {
+      "id": 2163,
+      "word": "aggressive",
+      "ipa": "əˈgrɛsɪv",
+      "viRead": "ơ-GRE-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hung hăng; quyết liệt",
+      "exampleEn": "That dog can be aggressive.",
+      "exampleVi": "Con chó đó có thể hung dữ.",
+      "collocations": [
+        {
+          "en": "aggressive behavior",
+          "vi": "hành vi hung hăng"
+        },
+        {
+          "en": "aggressive driver",
+          "vi": "tài xế hung hăng"
+        }
+      ],
+      "tip": "Chính tả: 2 g, 2 s.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 2164,
+      "word": "agriculture",
+      "ipa": "ˈægrɪˌkəlʧər",
+      "viRead": "EG-ri-kơl-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nông nghiệp",
+      "exampleEn": "Rice is very important in Vietnamese agriculture.",
+      "exampleVi": "Lúa gạo rất quan trọng trong nông nghiệp Việt Nam.",
+      "collocations": [
+        {
+          "en": "modern agriculture",
+          "vi": "nông nghiệp hiện đại"
+        },
+        {
+          "en": "agriculture and fishing",
+          "vi": "nông nghiệp và đánh bắt cá"
+        }
+      ],
+      "family": [
+        {
+          "word": "agricultural",
+          "vi": "thuộc nông nghiệp"
+        }
+      ],
+      "tip": "agri (đồng ruộng) + culture (trồng trọt).",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2165,
+      "word": "alien",
+      "ipa": "ˈeɪliən",
+      "viRead": "ÂY-li-ơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người ngoài hành tinh",
+      "exampleEn": "Do you believe in aliens?",
+      "exampleVi": "Bạn có tin có người ngoài hành tinh không?",
+      "collocations": [
+        {
+          "en": "alien life",
+          "vi": "sự sống ngoài hành tinh"
+        },
+        {
+          "en": "an illegal alien",
+          "vi": "người nhập cư trái phép"
+        }
+      ],
+      "tip": "Đọc 'ÂY-li-ơn'. alien còn là người nước ngoài (giấy tờ).",
+      "emoji": "👽",
+      "stage": 2
+    },
+    {
+      "id": 2166,
+      "word": "alternative",
+      "ipa": "ɔlˈtərnətɪv",
+      "viRead": "ol-TƠ-nơ-tiv",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "lựa chọn thay thế",
+      "exampleEn": "Is there an alternative to plastic bags?",
+      "exampleVi": "Có gì thay thế túi ni-lông không?",
+      "collocations": [
+        {
+          "en": "an alternative to",
+          "vi": "sự thay thế cho"
+        },
+        {
+          "en": "alternative energy",
+          "vi": "năng lượng thay thế"
+        }
+      ],
+      "tip": "We have no alternative = Chúng ta không còn cách nào khác.",
+      "emoji": "🔁",
+      "stage": 2
+    },
+    {
+      "id": 2167,
+      "word": "amateur",
+      "ipa": "ˈæməˌʧər",
+      "viRead": "E-mơ-chơ",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "nghiệp dư",
+      "exampleEn": "He is an amateur photographer.",
+      "exampleVi": "Anh ấy là nhiếp ảnh gia nghiệp dư.",
+      "collocations": [
+        {
+          "en": "amateur player",
+          "vi": "cầu thủ nghiệp dư"
+        },
+        {
+          "en": "amateur level",
+          "vi": "trình độ nghiệp dư"
+        }
+      ],
+      "family": [
+        {
+          "word": "professional",
+          "vi": "chuyên nghiệp"
+        }
+      ],
+      "tip": "amateur ↔ professional. Đọc 'E-mơ-chơ'.",
+      "emoji": "📷",
+      "stage": 2
+    },
+    {
+      "id": 2168,
+      "word": "amazed",
+      "ipa": "əˈmeɪzd",
+      "viRead": "ơ-MÂYDĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kinh ngạc",
+      "exampleEn": "I was amazed by the view.",
+      "exampleVi": "Tôi kinh ngạc trước cảnh đẹp.",
+      "collocations": [
+        {
+          "en": "amazed by",
+          "vi": "kinh ngạc vì"
+        },
+        {
+          "en": "amazed at",
+          "vi": "ngạc nhiên về"
+        }
+      ],
+      "family": [
+        {
+          "word": "amazing",
+          "vi": "tuyệt vời"
+        }
+      ],
+      "tip": "amazed (người cảm thấy) – amazing (thứ gây ra cảm giác).",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 2169,
+      "word": "amused",
+      "ipa": "əmˈjuzd",
+      "viRead": "ơ-MYUDĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thích thú, buồn cười",
+      "exampleEn": "The kids were amused by the clown.",
+      "exampleVi": "Lũ trẻ thích thú với chú hề.",
+      "collocations": [
+        {
+          "en": "amused by",
+          "vi": "thích thú vì"
+        },
+        {
+          "en": "look amused",
+          "vi": "trông buồn cười"
+        }
+      ],
+      "family": [
+        {
+          "word": "amusing",
+          "vi": "thú vị"
+        },
+        {
+          "word": "amusement",
+          "vi": "sự vui thú"
+        }
+      ],
+      "tip": "amusement park = công viên giải trí.",
+      "emoji": "😄",
+      "stage": 2
+    },
+    {
+      "id": 2170,
+      "word": "ancestor",
+      "ipa": "ˈænˌsɛstər",
+      "viRead": "EN-ses-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tổ tiên",
+      "exampleEn": "We honor our ancestors at Tet.",
+      "exampleVi": "Chúng tôi tưởng nhớ tổ tiên vào dịp Tết.",
+      "collocations": [
+        {
+          "en": "our ancestors",
+          "vi": "tổ tiên chúng ta"
+        },
+        {
+          "en": "ancestor worship",
+          "vi": "thờ cúng tổ tiên"
+        }
+      ],
+      "tip": "ancestor worship = thờ cúng tổ tiên (văn hóa Việt).",
+      "emoji": "🕯️",
+      "stage": 2
+    },
+    {
+      "id": 2171,
+      "word": "applause",
+      "ipa": "əˈplɔz",
+      "viRead": "ơ-PLOD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiếng vỗ tay",
+      "exampleEn": "The singer got loud applause.",
+      "exampleVi": "Ca sĩ nhận được tràng pháo tay lớn.",
+      "collocations": [
+        {
+          "en": "a round of applause",
+          "vi": "một tràng vỗ tay"
+        },
+        {
+          "en": "loud applause",
+          "vi": "tiếng vỗ tay lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "applaud",
+          "vi": "vỗ tay"
+        }
+      ],
+      "tip": "Let's give her a round of applause! = Hãy cho cô ấy một tràng pháo tay!",
+      "emoji": "👏",
+      "stage": 2
+    },
+    {
+      "id": 2172,
+      "word": "artificial",
+      "ipa": "ˌɑrtəˈfɪʃəl",
+      "viRead": "ar-tơ-PHI-shơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhân tạo",
+      "exampleEn": "This app uses artificial intelligence.",
+      "exampleVi": "Ứng dụng này dùng trí tuệ nhân tạo.",
+      "collocations": [
+        {
+          "en": "artificial intelligence",
+          "vi": "trí tuệ nhân tạo (AI)"
+        },
+        {
+          "en": "artificial flowers",
+          "vi": "hoa giả"
+        }
+      ],
+      "family": [
+        {
+          "word": "natural",
+          "vi": "tự nhiên"
+        }
+      ],
+      "tip": "AI = Artificial Intelligence. Nhấn âm 3: ar-ti-PHI-shơl.",
+      "emoji": "🤖",
+      "stage": 2
+    },
+    {
+      "id": 2173,
+      "word": "ashamed",
+      "ipa": "əˈʃeɪmd",
+      "viRead": "ơ-SHÂYMĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xấu hổ",
+      "exampleEn": "He was ashamed of his lie.",
+      "exampleVi": "Anh ấy xấu hổ vì lời nói dối của mình.",
+      "collocations": [
+        {
+          "en": "ashamed of",
+          "vi": "xấu hổ vì"
+        },
+        {
+          "en": "feel ashamed",
+          "vi": "cảm thấy xấu hổ"
+        }
+      ],
+      "family": [
+        {
+          "word": "shame",
+          "vi": "sự xấu hổ"
+        }
+      ],
+      "tip": "ashamed = xấu hổ vì làm sai; embarrassed = ngượng.",
+      "emoji": "😳",
+      "stage": 2
+    },
+    {
+      "id": 2174,
+      "word": "auction",
+      "ipa": "ˈɔkʃən",
+      "viRead": "OK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc đấu giá",
+      "exampleEn": "The painting was sold at auction.",
+      "exampleVi": "Bức tranh được bán đấu giá.",
+      "collocations": [
+        {
+          "en": "at auction",
+          "vi": "qua đấu giá"
+        },
+        {
+          "en": "online auction",
+          "vi": "đấu giá trực tuyến"
+        }
+      ],
+      "tip": "au đọc 'o': 'OK-shần'.",
+      "emoji": "🔨",
+      "stage": 2
+    },
+    {
+      "id": 2175,
+      "word": "automatic",
+      "ipa": "ˌɔtəˈmætɪk",
+      "viRead": "o-tơ-ME-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tự động",
+      "exampleEn": "The doors are automatic.",
+      "exampleVi": "Cửa này tự động.",
+      "collocations": [
+        {
+          "en": "automatic door",
+          "vi": "cửa tự động"
+        },
+        {
+          "en": "automatic car",
+          "vi": "xe số tự động"
+        }
+      ],
+      "family": [
+        {
+          "word": "automatically",
+          "vi": "một cách tự động"
+        }
+      ],
+      "tip": "auto = tự. automatic ↔ manual (thủ công, số sàn).",
+      "emoji": "⚙️",
+      "stage": 2
+    },
+    {
+      "id": 2176,
+      "word": "awkward",
+      "ipa": "ˈɔkwərd",
+      "viRead": "OK-wơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngượng ngùng; vụng về",
+      "exampleEn": "There was an awkward silence.",
+      "exampleVi": "Có một khoảng lặng ngượng ngùng.",
+      "collocations": [
+        {
+          "en": "an awkward moment",
+          "vi": "khoảnh khắc ngượng"
+        },
+        {
+          "en": "feel awkward",
+          "vi": "thấy ngại"
+        }
+      ],
+      "tip": "awkward = khó xử, ngại ngùng. Đọc 'OK-wợđ'.",
+      "emoji": "😬",
+      "stage": 2
+    },
+    {
+      "id": 2177,
+      "word": "bacteria",
+      "ipa": "bækˈtɪriə",
+      "viRead": "bek-TI-ri-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vi khuẩn",
+      "exampleEn": "Wash your hands to kill bacteria.",
+      "exampleVi": "Rửa tay để diệt vi khuẩn.",
+      "collocations": [
+        {
+          "en": "harmful bacteria",
+          "vi": "vi khuẩn có hại"
+        },
+        {
+          "en": "good bacteria",
+          "vi": "lợi khuẩn"
+        }
+      ],
+      "tip": "bacteria là số nhiều (số ít: bacterium).",
+      "emoji": "🦠",
+      "stage": 2
+    },
+    {
+      "id": 2178,
+      "word": "badly",
+      "ipa": "ˈbædli",
+      "viRead": "BEĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "tệ; rất nhiều",
+      "exampleEn": "He was badly hurt in the accident.",
+      "exampleVi": "Anh ấy bị thương nặng trong vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "badly hurt",
+          "vi": "bị thương nặng"
+        },
+        {
+          "en": "need it badly",
+          "vi": "rất cần"
+        }
+      ],
+      "family": [
+        {
+          "word": "bad",
+          "vi": "tệ"
+        }
+      ],
+      "tip": "badly còn có nghĩa 'rất': I badly need a holiday.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 2179,
+      "word": "ban",
+      "ipa": "bæn",
+      "viRead": "BEN",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cấm",
+      "exampleEn": "The city banned plastic bags.",
+      "exampleVi": "Thành phố cấm túi ni-lông.",
+      "collocations": [
+        {
+          "en": "ban smoking",
+          "vi": "cấm hút thuốc"
+        },
+        {
+          "en": "a ban on",
+          "vi": "lệnh cấm"
+        }
+      ],
+      "tip": "ban → banned (gấp đôi n). be banned from = bị cấm.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 2180,
+      "word": "bandage",
+      "ipa": "ˈbændɪʤ",
+      "viRead": "BEN-đigi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "băng (y tế)",
+      "exampleEn": "The nurse put a bandage on my arm.",
+      "exampleVi": "Y tá băng tay cho tôi.",
+      "collocations": [
+        {
+          "en": "put on a bandage",
+          "vi": "băng bó"
+        },
+        {
+          "en": "a clean bandage",
+          "vi": "băng sạch"
+        }
+      ],
+      "tip": "band-aid = băng cá nhân.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 2181,
+      "word": "barrier",
+      "ipa": "ˈbɛriər",
+      "viRead": "BE-ri-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rào cản",
+      "exampleEn": "Language can be a barrier.",
+      "exampleVi": "Ngôn ngữ có thể là một rào cản.",
+      "collocations": [
+        {
+          "en": "language barrier",
+          "vi": "rào cản ngôn ngữ"
+        },
+        {
+          "en": "a barrier to",
+          "vi": "rào cản đối với"
+        }
+      ],
+      "tip": "language barrier = rào cản ngôn ngữ — học từ vựng để phá rào!",
+      "emoji": "🚧",
+      "stage": 2
+    },
+    {
+      "id": 2182,
+      "word": "basis",
+      "ipa": "ˈbeɪsɪs",
+      "viRead": "BÂY-sơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơ sở, nền tảng",
+      "exampleEn": "I go to the gym on a regular basis.",
+      "exampleVi": "Tôi đến phòng gym đều đặn.",
+      "collocations": [
+        {
+          "en": "on a daily basis",
+          "vi": "hằng ngày"
+        },
+        {
+          "en": "on a regular basis",
+          "vi": "thường xuyên"
+        }
+      ],
+      "family": [
+        {
+          "word": "basic",
+          "vi": "cơ bản"
+        }
+      ],
+      "tip": "on a daily/weekly basis = hằng ngày/hằng tuần.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 2183,
+      "word": "bat",
+      "ipa": "bæt",
+      "viRead": "BET",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con dơi; cây gậy",
+      "exampleEn": "Bats fly at night.",
+      "exampleVi": "Dơi bay vào ban đêm.",
+      "collocations": [
+        {
+          "en": "baseball bat",
+          "vi": "gậy bóng chày"
+        },
+        {
+          "en": "a fruit bat",
+          "vi": "dơi ăn quả"
+        }
+      ],
+      "tip": "bat vừa là con dơi vừa là gậy đánh bóng.",
+      "emoji": "🦇",
+      "stage": 2
+    },
+    {
+      "id": 2184,
+      "word": "battle",
+      "ipa": "ˈbætəl",
+      "viRead": "BE-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trận chiến",
+      "exampleEn": "The battle of Dien Bien Phu was in 1954.",
+      "exampleVi": "Trận Điện Biên Phủ diễn ra năm 1954.",
+      "collocations": [
+        {
+          "en": "win a battle",
+          "vi": "thắng trận"
+        },
+        {
+          "en": "battle against",
+          "vi": "cuộc chiến chống"
+        }
+      ],
+      "tip": "battle = trận đánh; war = cả cuộc chiến tranh.",
+      "emoji": "⚔️",
+      "stage": 2
+    },
+    {
+      "id": 2185,
+      "word": "bay",
+      "ipa": "beɪ",
+      "viRead": "BÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vịnh",
+      "exampleEn": "Ha Long Bay is a World Heritage Site.",
+      "exampleVi": "Vịnh Hạ Long là Di sản Thế giới.",
+      "collocations": [
+        {
+          "en": "Ha Long Bay",
+          "vi": "Vịnh Hạ Long"
+        },
+        {
+          "en": "a quiet bay",
+          "vi": "vịnh yên tĩnh"
+        }
+      ],
+      "tip": "bay = vịnh (nhỏ hơn gulf).",
+      "emoji": "🏝️",
+      "stage": 2
+    },
+    {
+      "id": 2186,
+      "word": "beam",
+      "ipa": "bim",
+      "viRead": "BIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tia (sáng); xà nhà",
+      "exampleEn": "A beam of light came through the window.",
+      "exampleVi": "Một tia sáng lọt qua cửa sổ.",
+      "collocations": [
+        {
+          "en": "a beam of light",
+          "vi": "tia sáng"
+        },
+        {
+          "en": "laser beam",
+          "vi": "tia laser"
+        }
+      ],
+      "tip": "beam (động từ) = cười rạng rỡ: She beamed with joy.",
+      "emoji": "🔦",
+      "stage": 2
+    },
+    {
+      "id": 2187,
+      "word": "bean",
+      "ipa": "bin",
+      "viRead": "BIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạt đậu",
+      "exampleEn": "I love coffee beans from Buon Ma Thuot.",
+      "exampleVi": "Tôi thích hạt cà phê Buôn Ma Thuột.",
+      "collocations": [
+        {
+          "en": "coffee beans",
+          "vi": "hạt cà phê"
+        },
+        {
+          "en": "green beans",
+          "vi": "đậu que"
+        }
+      ],
+      "tip": "bean sprouts = giá đỗ. Mr Bean = ông Bean.",
+      "emoji": "🫘",
+      "stage": 2
+    },
+    {
+      "id": 2188,
+      "word": "beat",
+      "ipa": "bit",
+      "viRead": "BIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đánh bại; đập",
+      "exampleEn": "Vietnam beat Thailand two to one.",
+      "exampleVi": "Việt Nam thắng Thái Lan hai – một.",
+      "collocations": [
+        {
+          "en": "beat the record",
+          "vi": "phá kỷ lục"
+        },
+        {
+          "en": "heart beat",
+          "vi": "nhịp tim"
+        }
+      ],
+      "tip": "beat – beat – beaten. beat + đối thủ; win + trận đấu.",
+      "emoji": "🥁",
+      "stage": 2
+    },
+    {
+      "id": 2189,
+      "word": "beg",
+      "ipa": "bɛg",
+      "viRead": "BEG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cầu xin; ăn xin",
+      "exampleEn": "He begged me to stay.",
+      "exampleVi": "Anh ấy van nài tôi ở lại.",
+      "collocations": [
+        {
+          "en": "beg for",
+          "vi": "cầu xin"
+        },
+        {
+          "en": "I beg your pardon",
+          "vi": "xin lỗi, bạn nói gì cơ?"
+        }
+      ],
+      "family": [
+        {
+          "word": "beggar",
+          "vi": "người ăn xin"
+        }
+      ],
+      "tip": "I beg your pardon? = Xin lỗi, bạn nói lại được không?",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 2190,
+      "word": "behavior",
+      "ipa": "bɪˈheɪvjər",
+      "viRead": "bi-HÂYV-yơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hành vi, cách cư xử",
+      "exampleEn": "His behavior at the party was terrible.",
+      "exampleVi": "Cách cư xử của anh ta ở bữa tiệc thật tệ.",
+      "collocations": [
+        {
+          "en": "good behavior",
+          "vi": "cư xử tốt"
+        },
+        {
+          "en": "bad behavior",
+          "vi": "hành vi xấu"
+        }
+      ],
+      "family": [
+        {
+          "word": "behave",
+          "vi": "cư xử"
+        }
+      ],
+      "tip": "behave (v) → behavior (n). Anh viết behaviour.",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 2191,
+      "word": "belief",
+      "ipa": "bɪˈlif",
+      "viRead": "bi-LIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "niềm tin",
+      "exampleEn": "She has a strong belief in God.",
+      "exampleVi": "Cô ấy có đức tin mạnh vào Chúa.",
+      "collocations": [
+        {
+          "en": "a strong belief",
+          "vi": "niềm tin mạnh"
+        },
+        {
+          "en": "beyond belief",
+          "vi": "khó tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "believe",
+          "vi": "tin"
+        }
+      ],
+      "tip": "believe (v) → belief (n). Số nhiều: beliefs.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 2192,
+      "word": "bench",
+      "ipa": "bɛnʧ",
+      "viRead": "BENCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ghế băng, ghế dài",
+      "exampleEn": "We sat on a bench in the park.",
+      "exampleVi": "Chúng tôi ngồi trên ghế đá trong công viên.",
+      "collocations": [
+        {
+          "en": "park bench",
+          "vi": "ghế công viên"
+        },
+        {
+          "en": "on the bench",
+          "vi": "ngồi dự bị"
+        }
+      ],
+      "tip": "on the bench (bóng đá) = ngồi ghế dự bị.",
+      "emoji": "🪑",
+      "stage": 2
+    },
+    {
+      "id": 2193,
+      "word": "bend",
+      "ipa": "bɛnd",
+      "viRead": "BENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cúi; uốn cong",
+      "exampleEn": "Bend your knees when you lift heavy things.",
+      "exampleVi": "Hãy khuỵu gối khi nâng vật nặng.",
+      "collocations": [
+        {
+          "en": "bend down",
+          "vi": "cúi xuống"
+        },
+        {
+          "en": "bend the rules",
+          "vi": "lách luật"
+        }
+      ],
+      "tip": "bend – bent – bent. bend the rules = linh động luật lệ.",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 2194,
+      "word": "bet",
+      "ipa": "bɛt",
+      "viRead": "BET",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cá cược; dám chắc",
+      "exampleEn": "I bet you can't do it!",
+      "exampleVi": "Tớ cá là cậu không làm được!",
+      "collocations": [
+        {
+          "en": "I bet",
+          "vi": "tôi dám chắc"
+        },
+        {
+          "en": "You bet!",
+          "vi": "Chắc chắn rồi!"
+        }
+      ],
+      "tip": "bet – bet – bet. You bet! = Chắc chắn rồi!",
+      "emoji": "🎰",
+      "stage": 2
+    },
+    {
+      "id": 2195,
+      "word": "beyond",
+      "ipa": "bɪˈjɑnd",
+      "viRead": "bi-YANĐ",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "vượt quá; ở bên kia",
+      "exampleEn": "The house is just beyond the bridge.",
+      "exampleVi": "Ngôi nhà ở ngay bên kia cây cầu.",
+      "collocations": [
+        {
+          "en": "beyond the bridge",
+          "vi": "bên kia cầu"
+        },
+        {
+          "en": "beyond my control",
+          "vi": "ngoài tầm kiểm soát"
+        }
+      ],
+      "tip": "beyond = xa hơn / vượt ngoài. go beyond = vượt qua.",
+      "emoji": "🌅",
+      "stage": 2
+    },
+    {
+      "id": 2196,
+      "word": "biology",
+      "ipa": "baɪˈɑləʤi",
+      "viRead": "bai-A-lơ-gi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sinh học",
+      "exampleEn": "Biology is the study of living things.",
+      "exampleVi": "Sinh học là môn nghiên cứu các sinh vật sống.",
+      "collocations": [
+        {
+          "en": "study biology",
+          "vi": "học sinh học"
+        },
+        {
+          "en": "biology class",
+          "vi": "giờ sinh học"
+        }
+      ],
+      "family": [
+        {
+          "word": "biologist",
+          "vi": "nhà sinh học"
+        }
+      ],
+      "tip": "bio (sự sống) + logy (môn học).",
+      "emoji": "🧬",
+      "stage": 2
+    },
+    {
+      "id": 2197,
+      "word": "bite",
+      "ipa": "baɪt",
+      "viRead": "BAIT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cắn",
+      "exampleEn": "Does your dog bite?",
+      "exampleVi": "Chó nhà bạn có cắn không?",
+      "collocations": [
+        {
+          "en": "mosquito bite",
+          "vi": "vết muỗi đốt"
+        },
+        {
+          "en": "a bite to eat",
+          "vi": "ăn chút gì"
+        }
+      ],
+      "tip": "bite – bit – bitten. grab a bite = ăn nhanh cái gì.",
+      "emoji": "🦷",
+      "stage": 2
+    },
+    {
+      "id": 2198,
+      "word": "bitter",
+      "ipa": "ˈbɪtər",
+      "viRead": "BI-tơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đắng; cay đắng",
+      "exampleEn": "This medicine tastes bitter.",
+      "exampleVi": "Thuốc này có vị đắng.",
+      "collocations": [
+        {
+          "en": "bitter taste",
+          "vi": "vị đắng"
+        },
+        {
+          "en": "bitter melon",
+          "vi": "mướp đắng"
+        }
+      ],
+      "family": [
+        {
+          "word": "sweet",
+          "vi": "ngọt"
+        }
+      ],
+      "tip": "bitter melon = mướp đắng (khổ qua).",
+      "emoji": "☕",
+      "stage": 2
+    },
+    {
+      "id": 2199,
+      "word": "blank",
+      "ipa": "blæŋk",
+      "viRead": "BLENGK",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trống, để trắng",
+      "exampleEn": "Fill in the blank with the right word.",
+      "exampleVi": "Điền vào chỗ trống từ phù hợp.",
+      "collocations": [
+        {
+          "en": "fill in the blank",
+          "vi": "điền vào chỗ trống"
+        },
+        {
+          "en": "a blank page",
+          "vi": "trang giấy trắng"
+        }
+      ],
+      "tip": "My mind went blank = Đầu óc tôi trống rỗng (quên sạch).",
+      "emoji": "⬜",
+      "stage": 2
+    },
+    {
+      "id": 2200,
+      "word": "bless",
+      "ipa": "blɛs",
+      "viRead": "BLES",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ban phước",
+      "exampleEn": "Bless you!",
+      "exampleVi": "Chúa phù hộ bạn!",
+      "collocations": [
+        {
+          "en": "bless you",
+          "vi": "chúc bạn khỏe (khi hắt hơi)"
+        },
+        {
+          "en": "God bless",
+          "vi": "Chúa phù hộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "blessing",
+          "vi": "phước lành"
+        }
+      ],
+      "tip": "Người Anh nói 'Bless you!' khi ai đó hắt hơi.",
+      "emoji": "😇",
+      "stage": 2
+    },
+    {
+      "id": 2201,
+      "word": "block",
+      "ipa": "blɑk",
+      "viRead": "BLAK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "khối; dãy nhà",
+      "exampleEn": "I live two blocks from here.",
+      "exampleVi": "Tôi sống cách đây hai dãy phố.",
+      "collocations": [
+        {
+          "en": "a block of flats",
+          "vi": "tòa chung cư"
+        },
+        {
+          "en": "block someone",
+          "vi": "chặn ai (mạng xã hội)"
+        }
+      ],
+      "tip": "block (động từ) = chặn: block a number.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 2202,
+      "word": "blow",
+      "ipa": "bloʊ",
+      "viRead": "BLÂU",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thổi",
+      "exampleEn": "Blow out the candles!",
+      "exampleVi": "Thổi nến đi!",
+      "collocations": [
+        {
+          "en": "blow out the candles",
+          "vi": "thổi nến"
+        },
+        {
+          "en": "blow your nose",
+          "vi": "hỉ mũi"
+        }
+      ],
+      "tip": "blow – blew – blown. blow your nose = hỉ mũi.",
+      "emoji": "🌬️",
+      "stage": 2
+    },
+    {
+      "id": 2203,
+      "word": "blush",
+      "ipa": "bləʃ",
+      "viRead": "BLƠSH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đỏ mặt",
+      "exampleEn": "She blushed when he smiled at her.",
+      "exampleVi": "Cô ấy đỏ mặt khi anh ấy mỉm cười với cô.",
+      "collocations": [
+        {
+          "en": "blush with embarrassment",
+          "vi": "đỏ mặt vì ngượng"
+        },
+        {
+          "en": "make someone blush",
+          "vi": "làm ai đỏ mặt"
+        }
+      ],
+      "tip": "blush (danh từ) = phấn má hồng.",
+      "emoji": "☺️",
+      "stage": 2
+    },
+    {
+      "id": 2204,
+      "word": "boast",
+      "ipa": "boʊst",
+      "viRead": "BÂUST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khoe khoang",
+      "exampleEn": "He always boasts about his car.",
+      "exampleVi": "Anh ta lúc nào cũng khoe xe.",
+      "collocations": [
+        {
+          "en": "boast about",
+          "vi": "khoe về"
+        },
+        {
+          "en": "nothing to boast about",
+          "vi": "chẳng có gì đáng khoe"
+        }
+      ],
+      "tip": "boast = show off (khoe).",
+      "emoji": "🦚",
+      "stage": 2
+    },
+    {
+      "id": 2205,
+      "word": "bold",
+      "ipa": "boʊld",
+      "viRead": "BÂULĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "táo bạo; in đậm",
+      "exampleEn": "That's a bold decision.",
+      "exampleVi": "Đó là một quyết định táo bạo.",
+      "collocations": [
+        {
+          "en": "a bold move",
+          "vi": "nước đi táo bạo"
+        },
+        {
+          "en": "in bold",
+          "vi": "in đậm"
+        }
+      ],
+      "tip": "bold = in đậm (B trong Word); italic = in nghiêng.",
+      "emoji": "🅱️",
+      "stage": 2
+    },
+    {
+      "id": 2206,
+      "word": "bond",
+      "ipa": "bɑnd",
+      "viRead": "BANĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mối gắn kết",
+      "exampleEn": "There's a strong bond between the sisters.",
+      "exampleVi": "Hai chị em có mối gắn kết bền chặt.",
+      "collocations": [
+        {
+          "en": "a strong bond",
+          "vi": "mối gắn kết chặt"
+        },
+        {
+          "en": "bond with",
+          "vi": "gắn kết với"
+        }
+      ],
+      "tip": "James Bond = điệp viên 007. bond = sợi dây tình cảm.",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 2207,
+      "word": "bone",
+      "ipa": "boʊn",
+      "viRead": "BÂUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xương",
+      "exampleEn": "He broke a bone in his leg.",
+      "exampleVi": "Anh ấy bị gãy một khúc xương chân.",
+      "collocations": [
+        {
+          "en": "broken bone",
+          "vi": "xương gãy"
+        },
+        {
+          "en": "chicken bone",
+          "vi": "xương gà"
+        }
+      ],
+      "tip": "bony = gầy trơ xương. Đọc 'bâun'.",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 2208,
+      "word": "boring",
+      "ipa": "ˈbɔrɪŋ",
+      "viRead": "BO-ring",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhàm chán",
+      "exampleEn": "The film was so boring that I fell asleep.",
+      "exampleVi": "Bộ phim chán đến mức tôi ngủ gật.",
+      "collocations": [
+        {
+          "en": "a boring job",
+          "vi": "công việc nhàm chán"
+        },
+        {
+          "en": "really boring",
+          "vi": "chán thật"
+        }
+      ],
+      "family": [
+        {
+          "word": "bored",
+          "vi": "thấy chán"
+        }
+      ],
+      "tip": "BẪY: I'm bored (tôi thấy chán) ≠ I'm boring (tôi là người nhạt nhẽo)!",
+      "emoji": "🥱",
       "stage": 2
     }
   ]
