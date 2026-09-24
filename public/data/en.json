@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2109,
+    "count": 2158,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -60727,6 +60727,1346 @@
       ],
       "tip": "urban (thành thị) ↔ rural (nông thôn).",
       "emoji": "🏙️",
+      "stage": 2
+    },
+    {
+      "id": 2110,
+      "word": "urge",
+      "ipa": "ərʤ",
+      "viRead": "ƠGI",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "thúc giục; sự thôi thúc",
+      "exampleEn": "Doctors urge people to exercise more.",
+      "exampleVi": "Các bác sĩ thúc giục mọi người tập thể dục nhiều hơn.",
+      "collocations": [
+        {
+          "en": "urge someone to",
+          "vi": "giục ai"
+        },
+        {
+          "en": "a strong urge",
+          "vi": "sự thôi thúc mạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "urgent",
+          "vi": "khẩn cấp"
+        }
+      ],
+      "tip": "urge + người + to V. have an urge to = rất muốn làm gì.",
+      "emoji": "📣",
+      "stage": 2
+    },
+    {
+      "id": 2111,
+      "word": "useless",
+      "ipa": "ˈjusləs",
+      "viRead": "YUS-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vô dụng",
+      "exampleEn": "This old phone is useless now.",
+      "exampleVi": "Chiếc điện thoại cũ này giờ vô dụng rồi.",
+      "collocations": [
+        {
+          "en": "completely useless",
+          "vi": "hoàn toàn vô dụng"
+        },
+        {
+          "en": "useless information",
+          "vi": "thông tin vô ích"
+        }
+      ],
+      "family": [
+        {
+          "word": "useful",
+          "vi": "hữu ích"
+        }
+      ],
+      "tip": "use + less (không có) = vô dụng ↔ useful.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 2112,
+      "word": "valley",
+      "ipa": "ˈvæli",
+      "viRead": "VE-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thung lũng",
+      "exampleEn": "The village lies in a green valley.",
+      "exampleVi": "Ngôi làng nằm trong một thung lũng xanh.",
+      "collocations": [
+        {
+          "en": "a deep valley",
+          "vi": "thung lũng sâu"
+        },
+        {
+          "en": "Silicon Valley",
+          "vi": "Thung lũng Silicon"
+        }
+      ],
+      "tip": "Silicon Valley = trung tâm công nghệ của Mỹ.",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 2113,
+      "word": "valuable",
+      "ipa": "ˈvæljəbəl",
+      "viRead": "VEL-yơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có giá trị, quý",
+      "exampleEn": "Thank you for your valuable advice.",
+      "exampleVi": "Cảm ơn lời khuyên quý giá của bạn.",
+      "collocations": [
+        {
+          "en": "valuable advice",
+          "vi": "lời khuyên quý"
+        },
+        {
+          "en": "valuable time",
+          "vi": "thời gian quý báu"
+        }
+      ],
+      "family": [
+        {
+          "word": "value",
+          "vi": "giá trị"
+        }
+      ],
+      "tip": "valuables = đồ quý giá (tư trang). Nhấn âm đầu: VE-liu-ơ-bồ.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 2114,
+      "word": "van",
+      "ipa": "væn",
+      "viRead": "VEN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe tải nhỏ, xe van",
+      "exampleEn": "We rented a van to move house.",
+      "exampleVi": "Chúng tôi thuê xe van để chuyển nhà.",
+      "collocations": [
+        {
+          "en": "delivery van",
+          "vi": "xe giao hàng"
+        },
+        {
+          "en": "drive a van",
+          "vi": "lái xe van"
+        }
+      ],
+      "tip": "van = xe thùng nhỏ; truck = xe tải lớn.",
+      "emoji": "🚐",
+      "stage": 2
+    },
+    {
+      "id": 2115,
+      "word": "variety",
+      "ipa": "vəˈraɪəti",
+      "viRead": "vơ-RAI-ơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đa dạng",
+      "exampleEn": "The market sells a variety of fruit.",
+      "exampleVi": "Chợ bán nhiều loại trái cây.",
+      "collocations": [
+        {
+          "en": "a variety of",
+          "vi": "nhiều loại"
+        },
+        {
+          "en": "variety show",
+          "vi": "chương trình tạp kỹ"
+        }
+      ],
+      "family": [
+        {
+          "word": "various",
+          "vi": "khác nhau"
+        },
+        {
+          "word": "vary",
+          "vi": "thay đổi"
+        }
+      ],
+      "tip": "a variety of = nhiều loại khác nhau. Đọc 'vơ-RAI-ơ-ti'.",
+      "emoji": "🍇",
+      "stage": 2
+    },
+    {
+      "id": 2116,
+      "word": "vary",
+      "ipa": "ˈvɛri",
+      "viRead": "VE-ri",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thay đổi, khác nhau",
+      "exampleEn": "Prices vary from shop to shop.",
+      "exampleVi": "Giá cả khác nhau tùy cửa hàng.",
+      "collocations": [
+        {
+          "en": "vary from",
+          "vi": "khác nhau từ"
+        },
+        {
+          "en": "vary greatly",
+          "vi": "khác nhau nhiều"
+        }
+      ],
+      "family": [
+        {
+          "word": "variety",
+          "vi": "sự đa dạng"
+        }
+      ],
+      "tip": "vary (thay đổi) đọc giống very (rất) — nghe kỹ ngữ cảnh.",
+      "emoji": "🔀",
+      "stage": 2
+    },
+    {
+      "id": 2117,
+      "word": "vast",
+      "ipa": "væst",
+      "viRead": "VEST",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rộng lớn, bao la",
+      "exampleEn": "The desert is vast and empty.",
+      "exampleVi": "Sa mạc rộng lớn và trống trải.",
+      "collocations": [
+        {
+          "en": "a vast area",
+          "vi": "vùng rộng lớn"
+        },
+        {
+          "en": "the vast majority",
+          "vi": "phần lớn"
+        }
+      ],
+      "tip": "the vast majority = đại đa số.",
+      "emoji": "🏜️",
+      "stage": 2
+    },
+    {
+      "id": 2118,
+      "word": "vehicle",
+      "ipa": "ˈviɪkəl",
+      "viRead": "VI-ơ-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phương tiện, xe cộ",
+      "exampleEn": "No vehicles are allowed in this street.",
+      "exampleVi": "Không phương tiện nào được vào con phố này.",
+      "collocations": [
+        {
+          "en": "motor vehicle",
+          "vi": "xe cơ giới"
+        },
+        {
+          "en": "electric vehicle",
+          "vi": "xe điện"
+        }
+      ],
+      "tip": "h câm: 'VI-ơ-kồ'.",
+      "emoji": "🚗",
+      "stage": 2
+    },
+    {
+      "id": 2119,
+      "word": "version",
+      "ipa": "ˈvərʒən",
+      "viRead": "VƠ-zhơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phiên bản",
+      "exampleEn": "Update to the latest version of the app.",
+      "exampleVi": "Cập nhật lên phiên bản mới nhất của ứng dụng.",
+      "collocations": [
+        {
+          "en": "the latest version",
+          "vi": "phiên bản mới nhất"
+        },
+        {
+          "en": "English version",
+          "vi": "bản tiếng Anh"
+        }
+      ],
+      "tip": "version đọc 'VƠ-zhần'.",
+      "emoji": "🆕",
+      "stage": 2
+    },
+    {
+      "id": 2120,
+      "word": "victory",
+      "ipa": "ˈvɪktəri",
+      "viRead": "VIK-tơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiến thắng",
+      "exampleEn": "The team celebrated their victory.",
+      "exampleVi": "Cả đội ăn mừng chiến thắng.",
+      "collocations": [
+        {
+          "en": "win a victory",
+          "vi": "giành chiến thắng"
+        },
+        {
+          "en": "victory over",
+          "vi": "chiến thắng trước"
+        }
+      ],
+      "tip": "V-sign ✌️ = biểu tượng victory. victory ↔ defeat.",
+      "emoji": "✌️",
+      "stage": 2
+    },
+    {
+      "id": 2121,
+      "word": "video",
+      "ipa": "ˈvɪdioʊ",
+      "viRead": "VI-đi-âu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "video",
+      "exampleEn": "She watches cooking videos every night.",
+      "exampleVi": "Tối nào cô ấy cũng xem video nấu ăn.",
+      "collocations": [
+        {
+          "en": "watch a video",
+          "vi": "xem video"
+        },
+        {
+          "en": "video call",
+          "vi": "gọi video"
+        }
+      ],
+      "tip": "video call = gọi video. Đọc 'VI-đi-âu'.",
+      "emoji": "📹",
+      "stage": 2
+    },
+    {
+      "id": 2122,
+      "word": "violence",
+      "ipa": "ˈvaɪələns",
+      "viRead": "VAI-ơ-lơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bạo lực",
+      "exampleEn": "There is too much violence in that film.",
+      "exampleVi": "Bộ phim đó có quá nhiều cảnh bạo lực.",
+      "collocations": [
+        {
+          "en": "domestic violence",
+          "vi": "bạo lực gia đình"
+        },
+        {
+          "en": "school violence",
+          "vi": "bạo lực học đường"
+        }
+      ],
+      "family": [
+        {
+          "word": "violent",
+          "vi": "bạo lực"
+        }
+      ],
+      "tip": "violence (danh từ) → violent (tính từ).",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 2123,
+      "word": "violent",
+      "ipa": "ˈvaɪələnt",
+      "viRead": "VAI-ơ-lơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bạo lực, dữ dội",
+      "exampleEn": "Violent games are not for children.",
+      "exampleVi": "Trò chơi bạo lực không dành cho trẻ em.",
+      "collocations": [
+        {
+          "en": "a violent storm",
+          "vi": "cơn bão dữ dội"
+        },
+        {
+          "en": "violent crime",
+          "vi": "tội phạm bạo lực"
+        }
+      ],
+      "family": [
+        {
+          "word": "violence",
+          "vi": "bạo lực"
+        }
+      ],
+      "tip": "Đọc 'VAI-ơ-lợnt'.",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 2124,
+      "word": "virus",
+      "ipa": "ˈvaɪrəs",
+      "viRead": "VAI-rơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "virus",
+      "exampleEn": "The virus spreads quickly.",
+      "exampleVi": "Loại virus lây lan nhanh.",
+      "collocations": [
+        {
+          "en": "computer virus",
+          "vi": "virus máy tính"
+        },
+        {
+          "en": "catch a virus",
+          "vi": "nhiễm virus"
+        }
+      ],
+      "tip": "Đọc 'VAI-rợs' (không đọc 'vi-rút').",
+      "emoji": "🦠",
+      "stage": 2
+    },
+    {
+      "id": 2125,
+      "word": "vision",
+      "ipa": "ˈvɪʒən",
+      "viRead": "VI-zhơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thị lực; tầm nhìn",
+      "exampleEn": "He has poor vision in his left eye.",
+      "exampleVi": "Mắt trái của anh ấy nhìn kém.",
+      "collocations": [
+        {
+          "en": "poor vision",
+          "vi": "thị lực kém"
+        },
+        {
+          "en": "a clear vision",
+          "vi": "tầm nhìn rõ ràng"
+        }
+      ],
+      "family": [
+        {
+          "word": "visual",
+          "vi": "thuộc thị giác"
+        }
+      ],
+      "tip": "vision = tầm nhìn (tương lai công ty) hoặc thị lực.",
+      "emoji": "👓",
+      "stage": 2
+    },
+    {
+      "id": 2126,
+      "word": "visual",
+      "ipa": "ˈvɪʒuəl",
+      "viRead": "VI-zhu-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc thị giác",
+      "exampleEn": "I'm a visual learner, I learn best with pictures.",
+      "exampleVi": "Tôi học bằng hình ảnh, tôi học tốt nhất với tranh.",
+      "collocations": [
+        {
+          "en": "visual learner",
+          "vi": "người học qua hình ảnh"
+        },
+        {
+          "en": "visual effects",
+          "vi": "hiệu ứng hình ảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "vision",
+          "vi": "thị lực"
+        }
+      ],
+      "tip": "visual effects (VFX) = kỹ xảo điện ảnh. Đọc 'VI-zhu-ơl'.",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 2127,
+      "word": "vital",
+      "ipa": "ˈvaɪtəl",
+      "viRead": "VAI-tơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thiết yếu, sống còn",
+      "exampleEn": "Water is vital for life.",
+      "exampleVi": "Nước là thiết yếu cho sự sống.",
+      "collocations": [
+        {
+          "en": "vital for",
+          "vi": "thiết yếu cho"
+        },
+        {
+          "en": "vital role",
+          "vi": "vai trò quan trọng"
+        }
+      ],
+      "tip": "vital = cực kỳ quan trọng (mạnh hơn important).",
+      "emoji": "❤️",
+      "stage": 2
+    },
+    {
+      "id": 2128,
+      "word": "vivid",
+      "ipa": "ˈvɪvɪd",
+      "viRead": "VI-vơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sống động, rực rỡ",
+      "exampleEn": "I have a vivid memory of my first day at school.",
+      "exampleVi": "Tôi nhớ rất rõ ngày đầu tiên đi học.",
+      "collocations": [
+        {
+          "en": "vivid colours",
+          "vi": "màu sắc rực rỡ"
+        },
+        {
+          "en": "a vivid memory",
+          "vi": "ký ức sống động"
+        }
+      ],
+      "tip": "vivid = sống động, rõ nét như thật.",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 2129,
+      "word": "volume",
+      "ipa": "ˈvɑljum",
+      "viRead": "VAL-yum",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "âm lượng; tập (sách)",
+      "exampleEn": "Can you turn the volume down?",
+      "exampleVi": "Bạn vặn nhỏ âm lượng được không?",
+      "collocations": [
+        {
+          "en": "turn up the volume",
+          "vi": "tăng âm lượng"
+        },
+        {
+          "en": "volume two",
+          "vi": "tập hai"
+        }
+      ],
+      "tip": "turn up/down the volume = tăng/giảm âm lượng.",
+      "emoji": "🔊",
+      "stage": 2
+    },
+    {
+      "id": 2130,
+      "word": "wander",
+      "ipa": "ˈwɑndər",
+      "viRead": "WAN-đơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đi lang thang",
+      "exampleEn": "We wandered around the old town.",
+      "exampleVi": "Chúng tôi lang thang quanh phố cổ.",
+      "collocations": [
+        {
+          "en": "wander around",
+          "vi": "đi lang thang"
+        },
+        {
+          "en": "mind wanders",
+          "vi": "tâm trí lơ đãng"
+        }
+      ],
+      "tip": "wander (lang thang) ≠ wonder (tự hỏi). a đọc 'a/o': 'WAN-đơ', còn wonder đọc 'WƠN-đơ'.",
+      "emoji": "🚶",
+      "stage": 2
+    },
+    {
+      "id": 2131,
+      "word": "warning",
+      "ipa": "ˈwɔrnɪŋ",
+      "viRead": "WOR-ning",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời cảnh báo",
+      "exampleEn": "The sign gives a warning about sharks.",
+      "exampleVi": "Tấm biển cảnh báo có cá mập.",
+      "collocations": [
+        {
+          "en": "a warning sign",
+          "vi": "biển cảnh báo"
+        },
+        {
+          "en": "without warning",
+          "vi": "không báo trước"
+        }
+      ],
+      "family": [
+        {
+          "word": "warn",
+          "vi": "cảnh báo"
+        }
+      ],
+      "tip": "warn (v) → warning (n). ar đọc 'or': 'WOR-ning'.",
+      "emoji": "⚠️",
+      "stage": 2
+    },
+    {
+      "id": 2132,
+      "word": "weakness",
+      "ipa": "ˈwiknəs",
+      "viRead": "WIK-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điểm yếu",
+      "exampleEn": "Chocolate is my weakness.",
+      "exampleVi": "Sô-cô-la là điểm yếu của tôi.",
+      "collocations": [
+        {
+          "en": "strengths and weaknesses",
+          "vi": "điểm mạnh và điểm yếu"
+        },
+        {
+          "en": "a weakness for",
+          "vi": "sự mê (thứ gì)"
+        }
+      ],
+      "family": [
+        {
+          "word": "weak",
+          "vi": "yếu"
+        }
+      ],
+      "tip": "have a weakness for = rất mê, khó cưỡng.",
+      "emoji": "🍫",
+      "stage": 2
+    },
+    {
+      "id": 2133,
+      "word": "weigh",
+      "ipa": "weɪ",
+      "viRead": "WÂY",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cân; nặng",
+      "exampleEn": "How much do you weigh?",
+      "exampleVi": "Bạn nặng bao nhiêu cân?",
+      "collocations": [
+        {
+          "en": "weigh yourself",
+          "vi": "tự cân"
+        },
+        {
+          "en": "weigh 50 kilos",
+          "vi": "nặng 50 cân"
+        }
+      ],
+      "family": [
+        {
+          "word": "weight",
+          "vi": "cân nặng"
+        }
+      ],
+      "tip": "weigh (động từ) → weight (danh từ). gh câm: 'wây'.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2134,
+      "word": "welfare",
+      "ipa": "ˈwɛlˌfɛr",
+      "viRead": "WEL-pher",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phúc lợi",
+      "exampleEn": "The company cares about staff welfare.",
+      "exampleVi": "Công ty quan tâm đến phúc lợi nhân viên.",
+      "collocations": [
+        {
+          "en": "animal welfare",
+          "vi": "quyền lợi động vật"
+        },
+        {
+          "en": "social welfare",
+          "vi": "phúc lợi xã hội"
+        }
+      ],
+      "tip": "welfare = sự no ấm, phúc lợi. well + fare.",
+      "emoji": "🤲",
+      "stage": 2
+    },
+    {
+      "id": 2135,
+      "word": "whistle",
+      "ipa": "ˈwɪsəl",
+      "viRead": "WI-sơl",
+      "pos": "v./n.",
+      "posCategory": "noun",
+      "meaning": "cái còi; tiếng huýt sáo",
+      "exampleEn": "The referee blew the whistle.",
+      "exampleVi": "Trọng tài thổi còi.",
+      "collocations": [
+        {
+          "en": "blow a whistle",
+          "vi": "thổi còi"
+        },
+        {
+          "en": "whistle a song",
+          "vi": "huýt sáo một bài"
+        }
+      ],
+      "tip": "t câm: 'WI-sồ'. whistleblower = người tố giác.",
+      "emoji": "📯",
+      "stage": 2
+    },
+    {
+      "id": 2136,
+      "word": "widely",
+      "ipa": "ˈwaɪdli",
+      "viRead": "WAIĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "rộng rãi",
+      "exampleEn": "English is widely spoken around the world.",
+      "exampleVi": "Tiếng Anh được nói rộng rãi khắp thế giới.",
+      "collocations": [
+        {
+          "en": "widely used",
+          "vi": "được dùng rộng rãi"
+        },
+        {
+          "en": "widely known",
+          "vi": "được biết đến rộng rãi"
+        }
+      ],
+      "family": [
+        {
+          "word": "wide",
+          "vi": "rộng"
+        }
+      ],
+      "tip": "widely + quá khứ phân từ: widely used/known/spoken.",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 2137,
+      "word": "wildlife",
+      "ipa": "ˈwaɪldˌlaɪf",
+      "viRead": "WAILĐ-laiph",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "động vật hoang dã",
+      "exampleEn": "Cuc Phuong is home to a lot of wildlife.",
+      "exampleVi": "Cúc Phương là nhà của nhiều động vật hoang dã.",
+      "collocations": [
+        {
+          "en": "protect wildlife",
+          "vi": "bảo vệ động vật hoang dã"
+        },
+        {
+          "en": "wildlife park",
+          "vi": "công viên hoang dã"
+        }
+      ],
+      "family": [
+        {
+          "word": "wild",
+          "vi": "hoang dã"
+        }
+      ],
+      "tip": "wild + life. Không đếm được: a lot of wildlife.",
+      "emoji": "🦌",
+      "stage": 2
+    },
+    {
+      "id": 2138,
+      "word": "willing",
+      "ipa": "ˈwɪlɪŋ",
+      "viRead": "WI-ling",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sẵn lòng",
+      "exampleEn": "Are you willing to help?",
+      "exampleVi": "Bạn có sẵn lòng giúp không?",
+      "collocations": [
+        {
+          "en": "willing to",
+          "vi": "sẵn lòng"
+        },
+        {
+          "en": "more than willing",
+          "vi": "rất sẵn lòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "unwilling",
+          "vi": "không muốn"
+        }
+      ],
+      "tip": "be willing to + V = sẵn sàng làm.",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 2139,
+      "word": "winner",
+      "ipa": "ˈwɪnər",
+      "viRead": "WI-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người chiến thắng",
+      "exampleEn": "The winner gets a gold medal.",
+      "exampleVi": "Người chiến thắng nhận huy chương vàng.",
+      "collocations": [
+        {
+          "en": "the winner of",
+          "vi": "người thắng"
+        },
+        {
+          "en": "a clear winner",
+          "vi": "người thắng rõ ràng"
+        }
+      ],
+      "family": [
+        {
+          "word": "win",
+          "vi": "thắng"
+        },
+        {
+          "word": "loser",
+          "vi": "kẻ thua"
+        }
+      ],
+      "tip": "win → winner (gấp đôi n) ↔ loser.",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 2140,
+      "word": "wipe",
+      "ipa": "waɪp",
+      "viRead": "WAIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lau, chùi",
+      "exampleEn": "Wipe your feet before coming in.",
+      "exampleVi": "Chùi chân trước khi vào nhà.",
+      "collocations": [
+        {
+          "en": "wipe the table",
+          "vi": "lau bàn"
+        },
+        {
+          "en": "wet wipes",
+          "vi": "khăn ướt"
+        }
+      ],
+      "tip": "wet wipes = khăn giấy ướt. wipe out = xóa sạch.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 2141,
+      "word": "wit",
+      "ipa": "wɪt",
+      "viRead": "WIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự dí dỏm, trí thông minh",
+      "exampleEn": "She is famous for her wit.",
+      "exampleVi": "Cô ấy nổi tiếng vì sự dí dỏm.",
+      "collocations": [
+        {
+          "en": "quick wit",
+          "vi": "nhanh trí"
+        },
+        {
+          "en": "at your wits' end",
+          "vi": "hết cách"
+        }
+      ],
+      "family": [
+        {
+          "word": "witty",
+          "vi": "dí dỏm"
+        }
+      ],
+      "tip": "witty = dí dỏm, hóm hỉnh.",
+      "emoji": "🤓",
+      "stage": 2
+    },
+    {
+      "id": 2142,
+      "word": "witness",
+      "ipa": "ˈwɪtnəs",
+      "viRead": "WIT-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân chứng",
+      "exampleEn": "The police are looking for witnesses.",
+      "exampleVi": "Cảnh sát đang tìm nhân chứng.",
+      "collocations": [
+        {
+          "en": "an eye witness",
+          "vi": "nhân chứng tận mắt"
+        },
+        {
+          "en": "witness the accident",
+          "vi": "chứng kiến vụ tai nạn"
+        }
+      ],
+      "tip": "witness (động từ) = chứng kiến.",
+      "emoji": "👁️",
+      "stage": 2
+    },
+    {
+      "id": 2143,
+      "word": "wolf",
+      "ipa": "wʊlf",
+      "viRead": "WULPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con sói",
+      "exampleEn": "The wolf howled at the moon.",
+      "exampleVi": "Con sói tru dưới ánh trăng.",
+      "collocations": [
+        {
+          "en": "a pack of wolves",
+          "vi": "bầy sói"
+        },
+        {
+          "en": "the wolf and the lamb",
+          "vi": "sói và cừu non"
+        }
+      ],
+      "tip": "Số nhiều: wolves. Đọc 'wulf'.",
+      "emoji": "🐺",
+      "stage": 2
+    },
+    {
+      "id": 2144,
+      "word": "wooden",
+      "ipa": "ˈwʊdən",
+      "viRead": "WU-đơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bằng gỗ",
+      "exampleEn": "We have a wooden table in the kitchen.",
+      "exampleVi": "Chúng tôi có một cái bàn gỗ trong bếp.",
+      "collocations": [
+        {
+          "en": "wooden house",
+          "vi": "nhà gỗ"
+        },
+        {
+          "en": "wooden spoon",
+          "vi": "thìa gỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "wood",
+          "vi": "gỗ"
+        }
+      ],
+      "tip": "wood (danh từ) → wooden (tính từ): a wooden chair.",
+      "emoji": "🪵",
+      "stage": 2
+    },
+    {
+      "id": 2145,
+      "word": "wool",
+      "ipa": "wʊl",
+      "viRead": "WUL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "len",
+      "exampleEn": "This sweater is made of wool.",
+      "exampleVi": "Chiếc áo len này làm bằng len.",
+      "collocations": [
+        {
+          "en": "wool sweater",
+          "vi": "áo len"
+        },
+        {
+          "en": "pure wool",
+          "vi": "len nguyên chất"
+        }
+      ],
+      "family": [
+        {
+          "word": "woollen",
+          "vi": "bằng len"
+        }
+      ],
+      "tip": "Đọc 'wul' (ngắn).",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 2146,
+      "word": "worm",
+      "ipa": "wərm",
+      "viRead": "WƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con sâu, giun",
+      "exampleEn": "The early bird catches the worm.",
+      "exampleVi": "Chim dậy sớm thì bắt được sâu.",
+      "collocations": [
+        {
+          "en": "earth worm",
+          "vi": "giun đất"
+        },
+        {
+          "en": "book worm",
+          "vi": "mọt sách"
+        }
+      ],
+      "tip": "bookworm = mọt sách. The early bird catches the worm = Trâu chậm uống nước đục.",
+      "emoji": "🪱",
+      "stage": 2
+    },
+    {
+      "id": 2147,
+      "word": "worried",
+      "ipa": "ˈwərid",
+      "viRead": "WƠ-riđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lo lắng",
+      "exampleEn": "I'm worried about my exam.",
+      "exampleVi": "Tôi lo về kỳ thi.",
+      "collocations": [
+        {
+          "en": "worried about",
+          "vi": "lo lắng về"
+        },
+        {
+          "en": "don't be worried",
+          "vi": "đừng lo"
+        }
+      ],
+      "family": [
+        {
+          "word": "worry",
+          "vi": "lo lắng"
+        }
+      ],
+      "tip": "worried (cảm thấy lo) – worrying (đáng lo).",
+      "emoji": "😟",
+      "stage": 2
+    },
+    {
+      "id": 2148,
+      "word": "wound",
+      "ipa": "wund",
+      "viRead": "WUNĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vết thương",
+      "exampleEn": "Clean the wound with water.",
+      "exampleVi": "Rửa vết thương bằng nước.",
+      "collocations": [
+        {
+          "en": "a deep wound",
+          "vi": "vết thương sâu"
+        },
+        {
+          "en": "heal a wound",
+          "vi": "chữa lành vết thương"
+        }
+      ],
+      "family": [
+        {
+          "word": "wounded",
+          "vi": "bị thương"
+        }
+      ],
+      "tip": "wound (vết thương) đọc 'wund'; wound (quá khứ của wind) đọc 'waond'.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 2149,
+      "word": "wrist",
+      "ipa": "rɪst",
+      "viRead": "RIST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cổ tay",
+      "exampleEn": "He wears a watch on his left wrist.",
+      "exampleVi": "Anh ấy đeo đồng hồ ở cổ tay trái.",
+      "collocations": [
+        {
+          "en": "wrist watch",
+          "vi": "đồng hồ đeo tay"
+        },
+        {
+          "en": "broken wrist",
+          "vi": "gãy cổ tay"
+        }
+      ],
+      "tip": "w câm: 'rist'.",
+      "emoji": "⌚",
+      "stage": 2
+    },
+    {
+      "id": 2150,
+      "word": "yell",
+      "ipa": "jɛl",
+      "viRead": "YEL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "la hét",
+      "exampleEn": "Don't yell at me!",
+      "exampleVi": "Đừng quát tôi!",
+      "collocations": [
+        {
+          "en": "yell at",
+          "vi": "quát ai"
+        },
+        {
+          "en": "yell for help",
+          "vi": "la kêu cứu"
+        }
+      ],
+      "tip": "yell at = quát mắng; yell = shout to.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 2151,
+      "word": "abandon",
+      "ipa": "əˈbændən",
+      "viRead": "ơ-BEN-đơn",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bỏ rơi, từ bỏ",
+      "exampleEn": "Never abandon a pet.",
+      "exampleVi": "Đừng bao giờ bỏ rơi thú cưng.",
+      "collocations": [
+        {
+          "en": "abandon a plan",
+          "vi": "từ bỏ kế hoạch"
+        },
+        {
+          "en": "an abandoned house",
+          "vi": "ngôi nhà bỏ hoang"
+        }
+      ],
+      "tip": "abandoned = bị bỏ hoang/bỏ rơi.",
+      "emoji": "🏚️",
+      "stage": 2
+    },
+    {
+      "id": 2152,
+      "word": "absorb",
+      "ipa": "əbˈzɔrb",
+      "viRead": "ơb-DORB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hấp thụ, thấm",
+      "exampleEn": "Plants absorb water through their roots.",
+      "exampleVi": "Cây hấp thụ nước qua rễ.",
+      "collocations": [
+        {
+          "en": "absorb water",
+          "vi": "hút nước"
+        },
+        {
+          "en": "absorb information",
+          "vi": "tiếp thu thông tin"
+        }
+      ],
+      "tip": "be absorbed in = mải mê, chìm đắm vào.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 2153,
+      "word": "abstract",
+      "ipa": "ˈæbˌstrækt",
+      "viRead": "EB-strekt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trừu tượng",
+      "exampleEn": "Love is an abstract idea.",
+      "exampleVi": "Tình yêu là một khái niệm trừu tượng.",
+      "collocations": [
+        {
+          "en": "abstract art",
+          "vi": "nghệ thuật trừu tượng"
+        },
+        {
+          "en": "abstract noun",
+          "vi": "danh từ trừu tượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "concrete",
+          "vi": "cụ thể"
+        }
+      ],
+      "tip": "abstract ↔ concrete (cụ thể).",
+      "emoji": "🎨",
+      "stage": 2
+    },
+    {
+      "id": 2154,
+      "word": "academic",
+      "ipa": "ˌækəˈdɛmɪk",
+      "viRead": "e-kơ-ĐE-mik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc học thuật",
+      "exampleEn": "The academic year starts in September.",
+      "exampleVi": "Năm học bắt đầu vào tháng Chín.",
+      "collocations": [
+        {
+          "en": "academic year",
+          "vi": "năm học"
+        },
+        {
+          "en": "academic results",
+          "vi": "kết quả học tập"
+        }
+      ],
+      "family": [
+        {
+          "word": "academy",
+          "vi": "học viện"
+        }
+      ],
+      "tip": "Nhấn âm 3: e-kơ-ĐE-mik.",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 2155,
+      "word": "accent",
+      "ipa": "ˈækˌsɛnt",
+      "viRead": "EK-sent",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giọng (vùng miền)",
+      "exampleEn": "She speaks English with a British accent.",
+      "exampleVi": "Cô ấy nói tiếng Anh giọng Anh.",
+      "collocations": [
+        {
+          "en": "a strong accent",
+          "vi": "giọng nặng"
+        },
+        {
+          "en": "British accent",
+          "vi": "giọng Anh"
+        }
+      ],
+      "tip": "Có accent là bình thường — quan trọng là người nghe hiểu bạn!",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2156,
+      "word": "accuse",
+      "ipa": "əˈkjuz",
+      "viRead": "ơ-KYUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "buộc tội",
+      "exampleEn": "They accused him of stealing.",
+      "exampleVi": "Họ buộc tội anh ta ăn trộm.",
+      "collocations": [
+        {
+          "en": "accuse someone of",
+          "vi": "buộc tội ai về"
+        },
+        {
+          "en": "be accused of",
+          "vi": "bị buộc tội"
+        }
+      ],
+      "family": [
+        {
+          "word": "accusation",
+          "vi": "lời buộc tội"
+        }
+      ],
+      "tip": "accuse + người + of + V-ing.",
+      "emoji": "👉",
+      "stage": 2
+    },
+    {
+      "id": 2157,
+      "word": "achievement",
+      "ipa": "əˈʧivmənt",
+      "viRead": "ơ-CHIV-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thành tựu",
+      "exampleEn": "Finishing the marathon was a big achievement.",
+      "exampleVi": "Hoàn thành cuộc marathon là một thành tựu lớn.",
+      "collocations": [
+        {
+          "en": "a great achievement",
+          "vi": "thành tựu lớn"
+        },
+        {
+          "en": "sense of achievement",
+          "vi": "cảm giác thành công"
+        }
+      ],
+      "family": [
+        {
+          "word": "achieve",
+          "vi": "đạt được"
+        }
+      ],
+      "tip": "achieve (v) → achievement (n). Huy hiệu trong app cũng gọi là achievements!",
+      "emoji": "🏅",
+      "stage": 2
+    },
+    {
+      "id": 2158,
+      "word": "acquire",
+      "ipa": "əˈkwaɪər",
+      "viRead": "ơ-KWAI-ơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đạt được, thu nhận",
+      "exampleEn": "It takes time to acquire a new language.",
+      "exampleVi": "Cần thời gian để tiếp thu một ngôn ngữ mới.",
+      "collocations": [
+        {
+          "en": "acquire skills",
+          "vi": "có được kỹ năng"
+        },
+        {
+          "en": "acquire a company",
+          "vi": "mua lại công ty"
+        }
+      ],
+      "family": [
+        {
+          "word": "acquisition",
+          "vi": "sự tiếp thu"
+        }
+      ],
+      "tip": "acquire = get (trang trọng). c câm: 'ơ-KWAI-ơ'.",
+      "emoji": "📥",
       "stage": 2
     }
   ]
