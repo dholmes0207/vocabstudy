@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2208,
+    "count": 2258,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -63391,6 +63391,1302 @@
       ],
       "tip": "BẪY: I'm bored (tôi thấy chán) ≠ I'm boring (tôi là người nhạt nhẽo)!",
       "emoji": "🥱",
+      "stage": 2
+    },
+    {
+      "id": 2209,
+      "word": "bounce",
+      "ipa": "baʊns",
+      "viRead": "BAONS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nảy lên",
+      "exampleEn": "The ball bounced off the wall.",
+      "exampleVi": "Quả bóng nảy ra khỏi bức tường.",
+      "collocations": [
+        {
+          "en": "bounce back",
+          "vi": "hồi phục nhanh"
+        },
+        {
+          "en": "bounce a ball",
+          "vi": "đập bóng cho nảy"
+        }
+      ],
+      "tip": "bounce back = vực dậy sau thất bại.",
+      "emoji": "🏀",
+      "stage": 2
+    },
+    {
+      "id": 2210,
+      "word": "branch",
+      "ipa": "brænʧ",
+      "viRead": "BRENCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cành cây; chi nhánh",
+      "exampleEn": "A bird is sitting on the branch.",
+      "exampleVi": "Một con chim đang đậu trên cành.",
+      "collocations": [
+        {
+          "en": "tree branch",
+          "vi": "cành cây"
+        },
+        {
+          "en": "bank branch",
+          "vi": "chi nhánh ngân hàng"
+        }
+      ],
+      "tip": "branch = chi nhánh công ty/ngân hàng.",
+      "emoji": "🌿",
+      "stage": 2
+    },
+    {
+      "id": 2211,
+      "word": "breath",
+      "ipa": "brɛθ",
+      "viRead": "BRETH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hơi thở",
+      "exampleEn": "Take a deep breath and relax.",
+      "exampleVi": "Hít một hơi thật sâu và thư giãn.",
+      "collocations": [
+        {
+          "en": "take a deep breath",
+          "vi": "hít thở sâu"
+        },
+        {
+          "en": "out of breath",
+          "vi": "hụt hơi"
+        }
+      ],
+      "family": [
+        {
+          "word": "breathe",
+          "vi": "thở"
+        }
+      ],
+      "tip": "breath (danh từ, 'breθ') ≠ breathe (động từ, 'briđ').",
+      "emoji": "🌬️",
+      "stage": 2
+    },
+    {
+      "id": 2212,
+      "word": "breed",
+      "ipa": "brid",
+      "viRead": "BRIĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "giống (vật nuôi)",
+      "exampleEn": "What breed is your dog?",
+      "exampleVi": "Chó nhà bạn giống gì?",
+      "collocations": [
+        {
+          "en": "dog breed",
+          "vi": "giống chó"
+        },
+        {
+          "en": "a rare breed",
+          "vi": "giống hiếm"
+        }
+      ],
+      "tip": "breed – bred – bred (động từ) = nhân giống, sinh sản.",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 2213,
+      "word": "brick",
+      "ipa": "brɪk",
+      "viRead": "BRIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "viên gạch",
+      "exampleEn": "The old house is made of red brick.",
+      "exampleVi": "Ngôi nhà cổ xây bằng gạch đỏ.",
+      "collocations": [
+        {
+          "en": "red brick",
+          "vi": "gạch đỏ"
+        },
+        {
+          "en": "brick wall",
+          "vi": "tường gạch"
+        }
+      ],
+      "tip": "like talking to a brick wall = nói như nước đổ lá khoai.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 2214,
+      "word": "brief",
+      "ipa": "brif",
+      "viRead": "BRIPH",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngắn gọn",
+      "exampleEn": "Please keep your answer brief.",
+      "exampleVi": "Hãy trả lời ngắn gọn thôi.",
+      "collocations": [
+        {
+          "en": "a brief meeting",
+          "vi": "cuộc họp ngắn"
+        },
+        {
+          "en": "in brief",
+          "vi": "tóm lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "briefly",
+          "vi": "ngắn gọn"
+        }
+      ],
+      "tip": "brief = short (về thời gian, lời nói).",
+      "emoji": "⏱️",
+      "stage": 2
+    },
+    {
+      "id": 2215,
+      "word": "bright",
+      "ipa": "braɪt",
+      "viRead": "BRAIT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sáng; thông minh",
+      "exampleEn": "The room is bright and sunny.",
+      "exampleVi": "Căn phòng sáng sủa và đầy nắng.",
+      "collocations": [
+        {
+          "en": "bright colors",
+          "vi": "màu tươi sáng"
+        },
+        {
+          "en": "a bright student",
+          "vi": "học sinh sáng dạ"
+        }
+      ],
+      "family": [
+        {
+          "word": "brightness",
+          "vi": "độ sáng"
+        }
+      ],
+      "tip": "bright còn nghĩa là thông minh: a bright kid. gh câm: 'brait'.",
+      "emoji": "☀️",
+      "stage": 2
+    },
+    {
+      "id": 2216,
+      "word": "broad",
+      "ipa": "brɔd",
+      "viRead": "BROĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rộng",
+      "exampleEn": "He has broad shoulders.",
+      "exampleVi": "Anh ấy có bờ vai rộng.",
+      "collocations": [
+        {
+          "en": "broad shoulders",
+          "vi": "vai rộng"
+        },
+        {
+          "en": "a broad range",
+          "vi": "phạm vi rộng"
+        }
+      ],
+      "family": [
+        {
+          "word": "breadth",
+          "vi": "bề rộng"
+        }
+      ],
+      "tip": "broad ≈ wide. oa đọc 'o': 'brođ'.",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 2217,
+      "word": "bump",
+      "ipa": "bəmp",
+      "viRead": "BƠMP",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "va, đụng",
+      "exampleEn": "I bumped my head on the door.",
+      "exampleVi": "Tôi đụng đầu vào cửa.",
+      "collocations": [
+        {
+          "en": "bump into",
+          "vi": "tình cờ gặp; va vào"
+        },
+        {
+          "en": "a bump on the head",
+          "vi": "cục u trên đầu"
+        }
+      ],
+      "tip": "bump into someone = tình cờ gặp ai.",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 2218,
+      "word": "bunch",
+      "ipa": "bənʧ",
+      "viRead": "BƠNCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bó, chùm",
+      "exampleEn": "He gave her a bunch of flowers.",
+      "exampleVi": "Anh ấy tặng cô ấy một bó hoa.",
+      "collocations": [
+        {
+          "en": "a bunch of flowers",
+          "vi": "một bó hoa"
+        },
+        {
+          "en": "a bunch of bananas",
+          "vi": "một nải chuối"
+        }
+      ],
+      "tip": "a bunch of = nhiều (thân mật): a bunch of people.",
+      "emoji": "💐",
+      "stage": 2
+    },
+    {
+      "id": 2219,
+      "word": "burden",
+      "ipa": "ˈbərdən",
+      "viRead": "BƠ-đơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gánh nặng",
+      "exampleEn": "I don't want to be a burden to my children.",
+      "exampleVi": "Tôi không muốn là gánh nặng cho con cái.",
+      "collocations": [
+        {
+          "en": "a heavy burden",
+          "vi": "gánh nặng"
+        },
+        {
+          "en": "a burden on",
+          "vi": "gánh nặng cho"
+        }
+      ],
+      "tip": "burden = thứ nặng nề phải mang (nghĩa đen và nghĩa bóng).",
+      "emoji": "🎒",
+      "stage": 2
+    },
+    {
+      "id": 2220,
+      "word": "burst",
+      "ipa": "bərst",
+      "viRead": "BƠST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vỡ tung; bật (khóc, cười)",
+      "exampleEn": "She burst into tears.",
+      "exampleVi": "Cô ấy bật khóc.",
+      "collocations": [
+        {
+          "en": "burst into tears",
+          "vi": "òa khóc"
+        },
+        {
+          "en": "burst out laughing",
+          "vi": "phá lên cười"
+        }
+      ],
+      "tip": "burst – burst – burst. burst into tears = òa khóc.",
+      "emoji": "🎈",
+      "stage": 2
+    },
+    {
+      "id": 2221,
+      "word": "bury",
+      "ipa": "ˈbɛri",
+      "viRead": "BE-ri",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chôn",
+      "exampleEn": "The dog buried a bone in the garden.",
+      "exampleVi": "Con chó chôn khúc xương trong vườn.",
+      "collocations": [
+        {
+          "en": "bury a treasure",
+          "vi": "chôn kho báu"
+        },
+        {
+          "en": "be buried",
+          "vi": "được chôn cất"
+        }
+      ],
+      "family": [
+        {
+          "word": "burial",
+          "vi": "sự chôn cất"
+        }
+      ],
+      "tip": "u đọc 'e': 'BE-ri' (giống berry).",
+      "emoji": "⚱️",
+      "stage": 2
+    },
+    {
+      "id": 2222,
+      "word": "bush",
+      "ipa": "bʊʃ",
+      "viRead": "BUSH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bụi cây",
+      "exampleEn": "The cat is hiding in the bush.",
+      "exampleVi": "Con mèo đang trốn trong bụi cây.",
+      "collocations": [
+        {
+          "en": "a rose bush",
+          "vi": "bụi hồng"
+        },
+        {
+          "en": "beat around the bush",
+          "vi": "vòng vo tam quốc"
+        }
+      ],
+      "tip": "Don't beat around the bush! = Đừng vòng vo nữa! u đọc 'u' ngắn: 'bush'.",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 2223,
+      "word": "cabin",
+      "ipa": "ˈkæbən",
+      "viRead": "KE-bơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cabin; nhà gỗ nhỏ",
+      "exampleEn": "We stayed in a wooden cabin in Da Lat.",
+      "exampleVi": "Chúng tôi ở một căn nhà gỗ nhỏ ở Đà Lạt.",
+      "collocations": [
+        {
+          "en": "log cabin",
+          "vi": "nhà gỗ"
+        },
+        {
+          "en": "cabin crew",
+          "vi": "tiếp viên"
+        }
+      ],
+      "tip": "cabin crew = phi hành đoàn/tiếp viên.",
+      "emoji": "🛖",
+      "stage": 2
+    },
+    {
+      "id": 2224,
+      "word": "cable",
+      "ipa": "ˈkeɪbəl",
+      "viRead": "KÂY-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây cáp",
+      "exampleEn": "I need a charging cable for my phone.",
+      "exampleVi": "Tôi cần một dây sạc cho điện thoại.",
+      "collocations": [
+        {
+          "en": "charging cable",
+          "vi": "dây sạc"
+        },
+        {
+          "en": "cable car",
+          "vi": "cáp treo"
+        }
+      ],
+      "tip": "cable car = cáp treo (như ở Bà Nà).",
+      "emoji": "🔌",
+      "stage": 2
+    },
+    {
+      "id": 2225,
+      "word": "cage",
+      "ipa": "keɪʤ",
+      "viRead": "KÂYGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái lồng",
+      "exampleEn": "The bird is singing in its cage.",
+      "exampleVi": "Con chim đang hót trong lồng.",
+      "collocations": [
+        {
+          "en": "bird cage",
+          "vi": "lồng chim"
+        },
+        {
+          "en": "in a cage",
+          "vi": "trong lồng"
+        }
+      ],
+      "tip": "a đọc 'ây': 'kâyj'.",
+      "emoji": "🐦",
+      "stage": 2
+    },
+    {
+      "id": 2226,
+      "word": "calculate",
+      "ipa": "ˈkælkjəˌleɪt",
+      "viRead": "KEL-kyơ-lâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tính toán",
+      "exampleEn": "Calculate the total cost.",
+      "exampleVi": "Hãy tính tổng chi phí.",
+      "collocations": [
+        {
+          "en": "calculate the cost",
+          "vi": "tính chi phí"
+        },
+        {
+          "en": "calculate quickly",
+          "vi": "tính nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "calculator",
+          "vi": "máy tính bỏ túi"
+        }
+      ],
+      "tip": "calculator = máy tính bỏ túi.",
+      "emoji": "🧮",
+      "stage": 2
+    },
+    {
+      "id": 2227,
+      "word": "campaign",
+      "ipa": "kæmˈpeɪn",
+      "viRead": "kem-PÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiến dịch",
+      "exampleEn": "They started a campaign to clean the beach.",
+      "exampleVi": "Họ khởi động chiến dịch làm sạch bãi biển.",
+      "collocations": [
+        {
+          "en": "an advertising campaign",
+          "vi": "chiến dịch quảng cáo"
+        },
+        {
+          "en": "election campaign",
+          "vi": "chiến dịch tranh cử"
+        }
+      ],
+      "tip": "g câm: 'kem-PÂYN'.",
+      "emoji": "📣",
+      "stage": 2
+    },
+    {
+      "id": 2228,
+      "word": "cancer",
+      "ipa": "ˈkænsər",
+      "viRead": "KEN-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bệnh ung thư",
+      "exampleEn": "Smoking can cause cancer.",
+      "exampleVi": "Hút thuốc có thể gây ung thư.",
+      "collocations": [
+        {
+          "en": "lung cancer",
+          "vi": "ung thư phổi"
+        },
+        {
+          "en": "fight cancer",
+          "vi": "chống lại ung thư"
+        }
+      ],
+      "tip": "Cancer còn là cung Cự Giải.",
+      "emoji": "🎗️",
+      "stage": 2
+    },
+    {
+      "id": 2229,
+      "word": "capital",
+      "ipa": "ˈkæpɪtəl",
+      "viRead": "KE-pơ-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thủ đô; chữ hoa; vốn",
+      "exampleEn": "Hanoi is the capital of Vietnam.",
+      "exampleVi": "Hà Nội là thủ đô của Việt Nam.",
+      "collocations": [
+        {
+          "en": "capital city",
+          "vi": "thủ đô"
+        },
+        {
+          "en": "capital letter",
+          "vi": "chữ in hoa"
+        }
+      ],
+      "tip": "capital letter = chữ viết hoa. capital = vốn (kinh doanh).",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2230,
+      "word": "captain",
+      "ipa": "ˈkæptən",
+      "viRead": "KEP-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thuyền trưởng; đội trưởng",
+      "exampleEn": "He is the captain of our football team.",
+      "exampleVi": "Anh ấy là đội trưởng đội bóng của chúng tôi.",
+      "collocations": [
+        {
+          "en": "team captain",
+          "vi": "đội trưởng"
+        },
+        {
+          "en": "Captain America",
+          "vi": "Đội trưởng Mỹ"
+        }
+      ],
+      "tip": "captain = cơ trưởng (máy bay), thuyền trưởng, đội trưởng.",
+      "emoji": "👨‍✈️",
+      "stage": 2
+    },
+    {
+      "id": 2231,
+      "word": "capture",
+      "ipa": "ˈkæpʧər",
+      "viRead": "KEP-chơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bắt giữ; ghi lại",
+      "exampleEn": "The photo captures the beauty of Hoi An.",
+      "exampleVi": "Bức ảnh ghi lại vẻ đẹp của Hội An.",
+      "collocations": [
+        {
+          "en": "capture a moment",
+          "vi": "ghi lại khoảnh khắc"
+        },
+        {
+          "en": "capture the thief",
+          "vi": "bắt tên trộm"
+        }
+      ],
+      "tip": "screen capture = chụp màn hình.",
+      "emoji": "📸",
+      "stage": 2
+    },
+    {
+      "id": 2232,
+      "word": "carbon",
+      "ipa": "ˈkɑrbən",
+      "viRead": "KAR-bơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "các-bon",
+      "exampleEn": "Trees take in carbon dioxide.",
+      "exampleVi": "Cây hấp thụ khí các-bon-níc.",
+      "collocations": [
+        {
+          "en": "carbon dioxide",
+          "vi": "khí CO₂"
+        },
+        {
+          "en": "carbon footprint",
+          "vi": "dấu chân các-bon"
+        }
+      ],
+      "tip": "carbon footprint = lượng khí thải bạn gây ra.",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 2233,
+      "word": "careless",
+      "ipa": "ˈkɛrləs",
+      "viRead": "KER-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bất cẩn",
+      "exampleEn": "It was a careless mistake.",
+      "exampleVi": "Đó là một lỗi bất cẩn.",
+      "collocations": [
+        {
+          "en": "a careless mistake",
+          "vi": "lỗi bất cẩn"
+        },
+        {
+          "en": "careless driving",
+          "vi": "lái xe ẩu"
+        }
+      ],
+      "family": [
+        {
+          "word": "careful",
+          "vi": "cẩn thận"
+        }
+      ],
+      "tip": "care + less (không) = không cẩn thận ↔ careful.",
+      "emoji": "🙈",
+      "stage": 2
+    },
+    {
+      "id": 2234,
+      "word": "carrot",
+      "ipa": "ˈkɛrət",
+      "viRead": "KE-rơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cà rốt",
+      "exampleEn": "Rabbits love carrots.",
+      "exampleVi": "Thỏ rất thích cà rốt.",
+      "collocations": [
+        {
+          "en": "carrot cake",
+          "vi": "bánh cà rốt"
+        },
+        {
+          "en": "carrot and stick",
+          "vi": "cây gậy và củ cà rốt"
+        }
+      ],
+      "tip": "carrot and stick = vừa thưởng vừa phạt.",
+      "emoji": "🥕",
+      "stage": 2
+    },
+    {
+      "id": 2235,
+      "word": "casual",
+      "ipa": "ˈkæʒuəl",
+      "viRead": "KE-zhu-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thường ngày; thoải mái",
+      "exampleEn": "You can wear casual clothes to work on Friday.",
+      "exampleVi": "Thứ Sáu bạn có thể mặc đồ thường đi làm.",
+      "collocations": [
+        {
+          "en": "casual clothes",
+          "vi": "quần áo thường ngày"
+        },
+        {
+          "en": "a casual chat",
+          "vi": "trò chuyện xã giao"
+        }
+      ],
+      "family": [
+        {
+          "word": "casually",
+          "vi": "tùy ý"
+        }
+      ],
+      "tip": "casual ↔ formal (trang trọng). s đọc 'zh': 'KE-zhu-ơl'.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 2236,
+      "word": "cave",
+      "ipa": "keɪv",
+      "viRead": "KÂYV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hang động",
+      "exampleEn": "Son Doong is the world's largest cave.",
+      "exampleVi": "Sơn Đoòng là hang động lớn nhất thế giới.",
+      "collocations": [
+        {
+          "en": "explore a cave",
+          "vi": "khám phá hang"
+        },
+        {
+          "en": "cave man",
+          "vi": "người tiền sử"
+        }
+      ],
+      "tip": "Phong Nha có nhiều cave nổi tiếng. a đọc 'ây': 'kâyv'.",
+      "emoji": "🕳️",
+      "stage": 2
+    },
+    {
+      "id": 2237,
+      "word": "cell",
+      "ipa": "sɛl",
+      "viRead": "SEL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tế bào; phòng giam",
+      "exampleEn": "The body is made of millions of cells.",
+      "exampleVi": "Cơ thể được tạo nên từ hàng triệu tế bào.",
+      "collocations": [
+        {
+          "en": "cell phone",
+          "vi": "điện thoại di động (Mỹ)"
+        },
+        {
+          "en": "blood cell",
+          "vi": "tế bào máu"
+        }
+      ],
+      "tip": "cell phone (Mỹ) = mobile phone (Anh).",
+      "emoji": "🔬",
+      "stage": 2
+    },
+    {
+      "id": 2238,
+      "word": "ceremony",
+      "ipa": "ˈsɛrəˌmoʊni",
+      "viRead": "SE-rơ-mâu-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghi lễ, buổi lễ",
+      "exampleEn": "The wedding ceremony starts at ten.",
+      "exampleVi": "Lễ cưới bắt đầu lúc mười giờ.",
+      "collocations": [
+        {
+          "en": "wedding ceremony",
+          "vi": "lễ cưới"
+        },
+        {
+          "en": "opening ceremony",
+          "vi": "lễ khai mạc"
+        }
+      ],
+      "tip": "Nhấn âm đầu: SE-rơ-mâu-ni.",
+      "emoji": "🎊",
+      "stage": 2
+    },
+    {
+      "id": 2239,
+      "word": "chalk",
+      "ipa": "ʧɔk",
+      "viRead": "CHOK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phấn",
+      "exampleEn": "The teacher wrote on the board with chalk.",
+      "exampleVi": "Cô giáo viết lên bảng bằng phấn.",
+      "collocations": [
+        {
+          "en": "a piece of chalk",
+          "vi": "một viên phấn"
+        },
+        {
+          "en": "chalk board",
+          "vi": "bảng đen"
+        }
+      ],
+      "tip": "l câm: 'chok'.",
+      "emoji": "🖍️",
+      "stage": 2
+    },
+    {
+      "id": 2240,
+      "word": "chaos",
+      "ipa": "ˈkeɪɑs",
+      "viRead": "KÂY-as",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hỗn loạn",
+      "exampleEn": "The traffic was in chaos after the rain.",
+      "exampleVi": "Giao thông hỗn loạn sau cơn mưa.",
+      "collocations": [
+        {
+          "en": "in chaos",
+          "vi": "trong hỗn loạn"
+        },
+        {
+          "en": "total chaos",
+          "vi": "hỗn loạn hoàn toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "chaotic",
+          "vi": "hỗn loạn"
+        }
+      ],
+      "tip": "ch đọc 'k': 'KÂY-as'.",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 2241,
+      "word": "chapter",
+      "ipa": "ˈʧæptər",
+      "viRead": "CHEP-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chương (sách)",
+      "exampleEn": "Read chapter three for homework.",
+      "exampleVi": "Về nhà đọc chương ba.",
+      "collocations": [
+        {
+          "en": "chapter one",
+          "vi": "chương một"
+        },
+        {
+          "en": "a new chapter",
+          "vi": "chương mới (cuộc đời)"
+        }
+      ],
+      "tip": "start a new chapter = bắt đầu một giai đoạn mới.",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 2242,
+      "word": "charm",
+      "ipa": "ʧɑrm",
+      "viRead": "CHARM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sức quyến rũ",
+      "exampleEn": "The old town has a lot of charm.",
+      "exampleVi": "Phố cổ có rất nhiều nét quyến rũ.",
+      "collocations": [
+        {
+          "en": "full of charm",
+          "vi": "đầy quyến rũ"
+        },
+        {
+          "en": "lucky charm",
+          "vi": "bùa may mắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "charming",
+          "vi": "duyên dáng"
+        }
+      ],
+      "tip": "charming = duyên dáng, dễ mến.",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 2243,
+      "word": "chart",
+      "ipa": "ʧɑrt",
+      "viRead": "CHART",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biểu đồ; bảng xếp hạng",
+      "exampleEn": "Look at the chart on page five.",
+      "exampleVi": "Hãy xem biểu đồ ở trang năm.",
+      "collocations": [
+        {
+          "en": "pie chart",
+          "vi": "biểu đồ tròn"
+        },
+        {
+          "en": "top of the charts",
+          "vi": "đứng đầu bảng xếp hạng"
+        }
+      ],
+      "tip": "bar chart = biểu đồ cột; pie chart = biểu đồ tròn.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 2244,
+      "word": "chase",
+      "ipa": "ʧeɪs",
+      "viRead": "CHÂYS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đuổi theo",
+      "exampleEn": "The dog chased the cat up a tree.",
+      "exampleVi": "Con chó đuổi con mèo lên cây.",
+      "collocations": [
+        {
+          "en": "chase after",
+          "vi": "đuổi theo"
+        },
+        {
+          "en": "chase your dreams",
+          "vi": "theo đuổi ước mơ"
+        }
+      ],
+      "tip": "chase = rượt đuổi. Cut to the chase = vào thẳng vấn đề.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 2245,
+      "word": "cheat",
+      "ipa": "ʧit",
+      "viRead": "CHIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gian lận; lừa dối",
+      "exampleEn": "It's wrong to cheat in exams.",
+      "exampleVi": "Gian lận trong thi cử là sai.",
+      "collocations": [
+        {
+          "en": "cheat in exams",
+          "vi": "gian lận thi cử"
+        },
+        {
+          "en": "cheat on someone",
+          "vi": "lừa dối (ngoại tình)"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheater",
+          "vi": "kẻ gian lận"
+        }
+      ],
+      "tip": "cheat sheet = tài liệu tóm tắt nhanh (hoặc phao thi).",
+      "emoji": "🙅",
+      "stage": 2
+    },
+    {
+      "id": 2246,
+      "word": "chemical",
+      "ipa": "ˈkɛmɪkəl",
+      "viRead": "KE-mơ-kơl",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "hóa chất",
+      "exampleEn": "Don't use strong chemicals on your skin.",
+      "exampleVi": "Đừng dùng hóa chất mạnh lên da.",
+      "collocations": [
+        {
+          "en": "chemical reaction",
+          "vi": "phản ứng hóa học"
+        },
+        {
+          "en": "harmful chemicals",
+          "vi": "hóa chất độc hại"
+        }
+      ],
+      "family": [
+        {
+          "word": "chemistry",
+          "vi": "hóa học"
+        }
+      ],
+      "tip": "ch đọc 'k': 'KE-mi-kồ'.",
+      "emoji": "⚗️",
+      "stage": 2
+    },
+    {
+      "id": 2247,
+      "word": "chemistry",
+      "ipa": "ˈkɛmɪstri",
+      "viRead": "KE-mơs-tri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hóa học; sự hợp nhau",
+      "exampleEn": "We have chemistry on Monday.",
+      "exampleVi": "Thứ Hai chúng tôi có tiết hóa.",
+      "collocations": [
+        {
+          "en": "chemistry lesson",
+          "vi": "tiết hóa"
+        },
+        {
+          "en": "great chemistry",
+          "vi": "rất hợp nhau"
+        }
+      ],
+      "family": [
+        {
+          "word": "chemical",
+          "vi": "hóa chất"
+        }
+      ],
+      "tip": "There's chemistry between them = Hai người rất 'tới'.",
+      "emoji": "🧪",
+      "stage": 2
+    },
+    {
+      "id": 2248,
+      "word": "chew",
+      "ipa": "ʧu",
+      "viRead": "CHU",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhai",
+      "exampleEn": "Chew your food slowly.",
+      "exampleVi": "Nhai chậm thức ăn.",
+      "collocations": [
+        {
+          "en": "chew gum",
+          "vi": "nhai kẹo cao su"
+        },
+        {
+          "en": "chewing gum",
+          "vi": "kẹo cao su"
+        }
+      ],
+      "tip": "chewing gum = kẹo cao su.",
+      "emoji": "😋",
+      "stage": 2
+    },
+    {
+      "id": 2249,
+      "word": "chief",
+      "ipa": "ʧif",
+      "viRead": "CHIPH",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "người đứng đầu; chính",
+      "exampleEn": "He is the chief of the village.",
+      "exampleVi": "Ông ấy là trưởng làng.",
+      "collocations": [
+        {
+          "en": "chief executive",
+          "vi": "giám đốc điều hành"
+        },
+        {
+          "en": "chief cook",
+          "vi": "bếp trưởng"
+        }
+      ],
+      "tip": "CEO = Chief Executive Officer. ie đọc 'i': 'chiph'.",
+      "emoji": "🧑‍💼",
+      "stage": 2
+    },
+    {
+      "id": 2250,
+      "word": "childhood",
+      "ipa": "ˈʧaɪldˌhʊd",
+      "viRead": "CHAILĐ-huđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thời thơ ấu",
+      "exampleEn": "I had a happy childhood in the countryside.",
+      "exampleVi": "Tôi có tuổi thơ hạnh phúc ở quê.",
+      "collocations": [
+        {
+          "en": "childhood memories",
+          "vi": "kỷ niệm tuổi thơ"
+        },
+        {
+          "en": "in my childhood",
+          "vi": "hồi còn nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "child",
+          "vi": "đứa trẻ"
+        }
+      ],
+      "tip": "child + hood (giai đoạn). neighborhood, adulthood cũng vậy.",
+      "emoji": "🪁",
+      "stage": 2
+    },
+    {
+      "id": 2251,
+      "word": "chin",
+      "ipa": "ʧɪn",
+      "viRead": "CHIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cằm",
+      "exampleEn": "He has a beard on his chin.",
+      "exampleVi": "Anh ấy có râu ở cằm.",
+      "collocations": [
+        {
+          "en": "double chin",
+          "vi": "nọng cằm"
+        },
+        {
+          "en": "chin up",
+          "vi": "ngẩng cao đầu"
+        }
+      ],
+      "tip": "Chin up! = Vui lên nào!",
+      "emoji": "🧔",
+      "stage": 2
+    },
+    {
+      "id": 2252,
+      "word": "chip",
+      "ipa": "ʧɪp",
+      "viRead": "CHIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoai tây chiên; con chip",
+      "exampleEn": "Do you want some chips?",
+      "exampleVi": "Bạn ăn khoai tây chiên không?",
+      "collocations": [
+        {
+          "en": "potato chips",
+          "vi": "khoai tây lát chiên"
+        },
+        {
+          "en": "computer chip",
+          "vi": "chip máy tính"
+        }
+      ],
+      "tip": "Mỹ: chips = khoai tây lát (snack); Anh: chips = khoai tây chiên que.",
+      "emoji": "🍟",
+      "stage": 2
+    },
+    {
+      "id": 2253,
+      "word": "choir",
+      "ipa": "kwaɪər",
+      "viRead": "KWAI-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dàn hợp xướng",
+      "exampleEn": "She sings in the school choir.",
+      "exampleVi": "Cô ấy hát trong dàn hợp xướng của trường.",
+      "collocations": [
+        {
+          "en": "school choir",
+          "vi": "dàn hợp xướng trường"
+        },
+        {
+          "en": "join a choir",
+          "vi": "tham gia hợp xướng"
+        }
+      ],
+      "tip": "Đọc lạ: 'KWAI-ơ' (ch → kw).",
+      "emoji": "🎶",
+      "stage": 2
+    },
+    {
+      "id": 2254,
+      "word": "chop",
+      "ipa": "ʧɑp",
+      "viRead": "CHAP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chặt, thái",
+      "exampleEn": "Chop the onions into small pieces.",
+      "exampleVi": "Thái hành thành miếng nhỏ.",
+      "collocations": [
+        {
+          "en": "chop wood",
+          "vi": "chặt củi"
+        },
+        {
+          "en": "chop onions",
+          "vi": "thái hành"
+        }
+      ],
+      "family": [
+        {
+          "word": "chopsticks",
+          "vi": "đôi đũa"
+        }
+      ],
+      "tip": "chop → chopped. chopsticks = đũa.",
+      "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 2255,
+      "word": "chorus",
+      "ipa": "ˈkɔrəs",
+      "viRead": "KO-rơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điệp khúc; đồng ca",
+      "exampleEn": "Everyone sang the chorus together.",
+      "exampleVi": "Mọi người cùng hát điệp khúc.",
+      "collocations": [
+        {
+          "en": "sing the chorus",
+          "vi": "hát điệp khúc"
+        },
+        {
+          "en": "in chorus",
+          "vi": "đồng thanh"
+        }
+      ],
+      "tip": "ch đọc 'k': 'KO-rơs'.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 2256,
+      "word": "circle",
+      "ipa": "ˈsərkəl",
+      "viRead": "SƠ-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình tròn; vòng",
+      "exampleEn": "Draw a circle on the paper.",
+      "exampleVi": "Vẽ một hình tròn lên giấy.",
+      "collocations": [
+        {
+          "en": "draw a circle",
+          "vi": "vẽ hình tròn"
+        },
+        {
+          "en": "circle of friends",
+          "vi": "nhóm bạn"
+        }
+      ],
+      "tip": "circle of friends = vòng bạn bè. Đọc 'SƠ-kồ'.",
+      "emoji": "⭕",
+      "stage": 2
+    },
+    {
+      "id": 2257,
+      "word": "circus",
+      "ipa": "ˈsərkəs",
+      "viRead": "SƠ-kơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rạp xiếc",
+      "exampleEn": "We took the kids to the circus.",
+      "exampleVi": "Chúng tôi đưa bọn trẻ đi xem xiếc.",
+      "collocations": [
+        {
+          "en": "go to the circus",
+          "vi": "đi xem xiếc"
+        },
+        {
+          "en": "circus show",
+          "vi": "buổi diễn xiếc"
+        }
+      ],
+      "tip": "Đọc 'SƠ-kợs'.",
+      "emoji": "🎪",
+      "stage": 2
+    },
+    {
+      "id": 2258,
+      "word": "civil",
+      "ipa": "ˈsɪvəl",
+      "viRead": "SI-vơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc dân sự; lịch sự",
+      "exampleEn": "He works as a civil engineer.",
+      "exampleVi": "Anh ấy là kỹ sư xây dựng dân dụng.",
+      "collocations": [
+        {
+          "en": "civil war",
+          "vi": "nội chiến"
+        },
+        {
+          "en": "civil rights",
+          "vi": "quyền công dân"
+        }
+      ],
+      "family": [
+        {
+          "word": "civilization",
+          "vi": "nền văn minh"
+        }
+      ],
+      "tip": "civil engineer = kỹ sư xây dựng.",
+      "emoji": "🏛️",
       "stage": 2
     }
   ]
