@@ -111,6 +111,17 @@ describe('en.json pronunciation coverage', () => {
     ).toEqual([])
   })
 
+  // The auto-transcriber sometimes drops the stress mark inside the opening
+  // consonant cluster (mˈjuzɪk, kˈwɛʃən): it reads as if the word began on
+  // a stray consonant. Stress always goes before the whole cluster.
+  it('no IPA puts the stress mark inside the opening consonant cluster', () => {
+    const split = pack.words.filter((w) => /^[^ˈˌɪəiæɛɔɑʊuaeoʌɜ\s]+ˈ/.test(w.ipa))
+    expect(
+      split.map((w) => `${w.id}:${w.word} ${w.ipa}`),
+      'dấu trọng âm nằm giữa cụm phụ âm đầu'
+    ).toEqual([])
+  })
+
   // A rewritten example with its old clip is worse than no clip: the learner
   // hears one sentence while reading another. generate_audio.py records which
   // sentence each clip was made from and re-records any that changed.

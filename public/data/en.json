@@ -9613,7 +9613,7 @@
     {
       "id": 703,
       "word": "music",
-      "ipa": "mˈjuzɪk",
+      "ipa": "ˈmjuzɪk",
       "viRead": "MYU-dik",
       "pos": "n.",
       "posCategory": "noun",
@@ -11185,7 +11185,7 @@
     {
       "id": 755,
       "word": "question",
-      "ipa": "kˈwɛʃən",
+      "ipa": "ˈkwɛsʧən",
       "viRead": "KWES-chơn",
       "pos": "n.",
       "posCategory": "noun",
@@ -15556,7 +15556,7 @@
     {
       "id": 898,
       "word": "twenty",
-      "ipa": "tˈwɛnti",
+      "ipa": "ˈtwɛnti",
       "viRead": "TWEN-ti",
       "pos": "det./n.",
       "posCategory": "determiner",
@@ -17840,7 +17840,7 @@
     {
       "id": 975,
       "word": "umbrella",
-      "ipa": "ˈəmˌbrɛlə",
+      "ipa": "əmˈbrɛlə",
       "viRead": "ơm-BRE-lơ",
       "pos": "n.",
       "posCategory": "noun",
@@ -19433,7 +19433,7 @@
     {
       "id": 25,
       "word": "adult",
-      "ipa": "ˈædəlt",
+      "ipa": "əˈdəlt",
       "pos": "n./adj.",
       "posCategory": "noun",
       "meaning": "người trưởng thành",
@@ -25362,7 +25362,7 @@
     {
       "id": 218,
       "word": "detail",
-      "ipa": "ˈditeɪl",
+      "ipa": "dɪˈteɪl",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "chi tiết",
@@ -25879,7 +25879,7 @@
     {
       "id": 234,
       "word": "effective",
-      "ipa": "ˈifɛktɪv",
+      "ipa": "ɪˈfɛktɪv",
       "pos": "adj.",
       "posCategory": "adjective",
       "meaning": "hiệu quả, có tác dụng",
@@ -26855,7 +26855,7 @@
     {
       "id": 265,
       "word": "future",
-      "ipa": "fˈjuʧər",
+      "ipa": "ˈfjuʧər",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "tương lai",
@@ -28457,7 +28457,7 @@
     {
       "id": 317,
       "word": "quality",
-      "ipa": "kˈwɑləti",
+      "ipa": "ˈkwɑləti",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "chất lượng",
@@ -32238,8 +32238,8 @@
     {
       "id": 1066,
       "word": "perfect",
-      "ipa": "ˈpərˌfɪkt",
-      "viRead": "pơ-PHEKT",
+      "ipa": "ˈpərfɪkt",
+      "viRead": "PƠ-phikt",
       "pos": "adj.",
       "posCategory": "adjective",
       "meaning": "hoàn hảo",
@@ -32658,8 +32658,8 @@
     {
       "id": 1080,
       "word": "refuse",
-      "ipa": "ˈrɛfˌjuz",
-      "viRead": "rơph-YUD",
+      "ipa": "rɪˈfjuz",
+      "viRead": "ri-PHYUD",
       "pos": "v.",
       "posCategory": "verb",
       "meaning": "từ chối",
@@ -33452,7 +33452,7 @@
     {
       "id": 1107,
       "word": "upset",
-      "ipa": "ˈəpˌsɛt",
+      "ipa": "əpˈsɛt",
       "viRead": "ơp-SET",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -34176,7 +34176,7 @@
     {
       "id": 1133,
       "word": "emergency",
-      "ipa": "ˈimərʤənsi",
+      "ipa": "ɪˈmərʤənsi",
       "viRead": "i-MƠ-giơn-si",
       "pos": "n.",
       "posCategory": "noun",
@@ -34500,7 +34500,7 @@
     {
       "id": 1145,
       "word": "museum",
-      "ipa": "mˈjuziəm",
+      "ipa": "mjuˈziəm",
       "viRead": "myu-DI-ơm",
       "pos": "n.",
       "posCategory": "noun",
@@ -35115,7 +35115,7 @@
       "id": 1167,
       "word": "subject",
       "ipa": "ˈsəbʤɪkt",
-      "viRead": "sơb-GIEKT",
+      "viRead": "SƠB-giekt",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "môn học; chủ đề",
@@ -35311,7 +35311,7 @@
       "id": 1174,
       "word": "discount",
       "ipa": "ˈdɪskaʊnt",
-      "viRead": "đis-KAONT",
+      "viRead": "ĐIS-kaont",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "sự giảm giá",
@@ -38996,7 +38996,7 @@
     {
       "id": 1309,
       "word": "quantity",
-      "ipa": "kˈwɑntəti",
+      "ipa": "ˈkwɑntəti",
       "viRead": "KWAN-tơ-ti",
       "pos": "n.",
       "posCategory": "noun",
@@ -39020,7 +39020,7 @@
     {
       "id": 1310,
       "word": "quarter",
-      "ipa": "kˈwɔrtər",
+      "ipa": "ˈkwɔrtər",
       "viRead": "KWOR-tơ",
       "pos": "n.",
       "posCategory": "noun",
@@ -41055,7 +41055,7 @@
       "id": 1386,
       "word": "transport",
       "ipa": "ˈtrænspɔrt",
-      "viRead": "tren-SPORT",
+      "viRead": "TRENS-port",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "giao thông, phương tiện",
@@ -43537,7 +43537,7 @@
       "id": 1478,
       "word": "costume",
       "ipa": "ˈkɑstum",
-      "viRead": "kas-TUM",
+      "viRead": "KAS-tum",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "trang phục (hóa trang, biểu diễn)",
@@ -45352,8 +45352,8 @@
     {
       "id": 1546,
       "word": "essay",
-      "ipa": "ˈɛˌseɪ",
-      "viRead": "e-SÂY",
+      "ipa": "ˈɛseɪ",
+      "viRead": "E-sây",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "bài luận",
@@ -46542,7 +46542,7 @@
     {
       "id": 1591,
       "word": "funeral",
-      "ipa": "fˈjunərəl",
+      "ipa": "ˈfjunərəl",
       "viRead": "PHYU-nơ-ơl",
       "pos": "n.",
       "posCategory": "noun",
