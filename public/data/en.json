@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3041,
+    "count": 3091,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -86063,6 +86063,1314 @@
       ],
       "tip": "Arc de Triomphe = Khải Hoàn Môn (Paris).",
       "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 3042,
+      "word": "blouse",
+      "ipa": "blaʊs",
+      "viRead": "BLAOS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo cánh (nữ)",
+      "exampleEn": "She wore a white blouse to the interview.",
+      "exampleVi": "Cô ấy mặc áo sơ mi trắng đi phỏng vấn.",
+      "collocations": [
+        {
+          "en": "a silk blouse",
+          "vi": "áo lụa nữ"
+        },
+        {
+          "en": "white blouse",
+          "vi": "áo cánh trắng"
+        }
+      ],
+      "tip": "blouse = áo sơ mi nữ; shirt = áo sơ mi (chung).",
+      "emoji": "👚",
+      "stage": 2
+    },
+    {
+      "id": 3043,
+      "word": "coat",
+      "ipa": "koʊt",
+      "viRead": "KÂUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo khoác",
+      "exampleEn": "Take your coat; it's cold outside.",
+      "exampleVi": "Mang áo khoác theo, ngoài trời lạnh đấy.",
+      "collocations": [
+        {
+          "en": "a winter coat",
+          "vi": "áo khoác mùa đông"
+        },
+        {
+          "en": "put on your coat",
+          "vi": "mặc áo khoác"
+        }
+      ],
+      "tip": "coat (dài, dày) vs jacket (ngắn, nhẹ). raincoat = áo mưa.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 3044,
+      "word": "hoodie",
+      "ipa": "ˈhʊdi",
+      "viRead": "HU-đi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo nỉ có mũ",
+      "exampleEn": "He always wears a black hoodie.",
+      "exampleVi": "Anh ấy lúc nào cũng mặc áo hoodie đen.",
+      "collocations": [
+        {
+          "en": "a black hoodie",
+          "vi": "áo hoodie đen"
+        },
+        {
+          "en": "zip-up hoodie",
+          "vi": "áo hoodie khóa kéo"
+        }
+      ],
+      "family": [
+        {
+          "word": "hood",
+          "vi": "mũ trùm"
+        }
+      ],
+      "tip": "hood (mũ trùm) + ie.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 3045,
+      "word": "pajamas",
+      "ipa": "pəˈʤɑməz",
+      "viRead": "pơ-GIA-mơd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ đồ ngủ",
+      "exampleEn": "The kids are already in their pajamas.",
+      "exampleVi": "Bọn trẻ đã mặc đồ ngủ rồi.",
+      "collocations": [
+        {
+          "en": "a pair of pajamas",
+          "vi": "một bộ đồ ngủ"
+        },
+        {
+          "en": "in your pajamas",
+          "vi": "mặc đồ ngủ"
+        }
+      ],
+      "tip": "Anh viết pyjamas. Luôn số nhiều.",
+      "emoji": "🛌",
+      "stage": 2
+    },
+    {
+      "id": 3046,
+      "word": "sweater",
+      "ipa": "ˈswɛtər",
+      "viRead": "SWE-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo len",
+      "exampleEn": "Grandma knitted me a red sweater.",
+      "exampleVi": "Bà đan cho tôi chiếc áo len đỏ.",
+      "collocations": [
+        {
+          "en": "a wool sweater",
+          "vi": "áo len lông cừu"
+        },
+        {
+          "en": "a warm sweater",
+          "vi": "áo len ấm"
+        }
+      ],
+      "family": [
+        {
+          "word": "sweat",
+          "vi": "mồ hôi"
+        }
+      ],
+      "tip": "sweater (Mỹ) = jumper (Anh).",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 3047,
+      "word": "underwear",
+      "ipa": "ˈəndərˌwɛr",
+      "viRead": "ƠN-đơ-wer",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ lót",
+      "exampleEn": "Pack enough underwear for the trip.",
+      "exampleVi": "Mang đủ đồ lót cho chuyến đi.",
+      "collocations": [
+        {
+          "en": "clean underwear",
+          "vi": "đồ lót sạch"
+        },
+        {
+          "en": "thermal underwear",
+          "vi": "đồ giữ nhiệt"
+        }
+      ],
+      "tip": "underwear không đếm được.",
+      "emoji": "🩲",
+      "stage": 2
+    },
+    {
+      "id": 3048,
+      "word": "vest",
+      "ipa": "vɛst",
+      "viRead": "VEST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo gi-lê; áo ba lỗ",
+      "exampleEn": "He wore a vest under his shirt.",
+      "exampleVi": "Anh ấy mặc áo lót bên trong sơ mi.",
+      "collocations": [
+        {
+          "en": "life vest",
+          "vi": "áo phao"
+        },
+        {
+          "en": "a suit and vest",
+          "vi": "com-lê và gi-lê"
+        }
+      ],
+      "tip": "Mỹ: vest = áo gi-lê; Anh: vest = áo ba lỗ.",
+      "emoji": "🦺",
+      "stage": 2
+    },
+    {
+      "id": 3049,
+      "word": "ankle",
+      "ipa": "ˈæŋkəl",
+      "viRead": "ENG-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mắt cá chân",
+      "exampleEn": "I twisted my ankle while running.",
+      "exampleVi": "Tôi bị trẹo mắt cá khi chạy.",
+      "collocations": [
+        {
+          "en": "ankle boots",
+          "vi": "bốt cổ ngắn"
+        },
+        {
+          "en": "a broken ankle",
+          "vi": "gãy mắt cá"
+        }
+      ],
+      "tip": "ankle ≠ angle (góc).",
+      "emoji": "🦶",
+      "stage": 2
+    },
+    {
+      "id": 3050,
+      "word": "cheek",
+      "ipa": "ʧik",
+      "viRead": "CHIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "má",
+      "exampleEn": "The baby has chubby cheeks.",
+      "exampleVi": "Em bé có đôi má phúng phính.",
+      "collocations": [
+        {
+          "en": "rosy cheeks",
+          "vi": "má hồng"
+        },
+        {
+          "en": "cheek to cheek",
+          "vi": "má kề má"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheeky",
+          "vi": "hỗn láo, tinh nghịch"
+        }
+      ],
+      "tip": "cheeky = láu lỉnh, hỗn.",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 3051,
+      "word": "eyebrow",
+      "ipa": "ˈaɪˌbraʊ",
+      "viRead": "AI-brao",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lông mày",
+      "exampleEn": "She raised her eyebrows in surprise.",
+      "exampleVi": "Cô ấy nhướn mày ngạc nhiên.",
+      "collocations": [
+        {
+          "en": "raise your eyebrows",
+          "vi": "nhướn mày"
+        },
+        {
+          "en": "thick eyebrows",
+          "vi": "lông mày rậm"
+        }
+      ],
+      "family": [
+        {
+          "word": "eye",
+          "vi": "mắt"
+        }
+      ],
+      "tip": "raise eyebrows = khiến người ta ngạc nhiên.",
+      "emoji": "🤨",
+      "stage": 2
+    },
+    {
+      "id": 3052,
+      "word": "eyelash",
+      "ipa": "ˈaɪˌlæʃ",
+      "viRead": "AI-lesh",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lông mi",
+      "exampleEn": "She has long eyelashes.",
+      "exampleVi": "Cô ấy có hàng lông mi dài.",
+      "collocations": [
+        {
+          "en": "long eyelashes",
+          "vi": "lông mi dài"
+        },
+        {
+          "en": "false eyelashes",
+          "vi": "mi giả"
+        }
+      ],
+      "family": [
+        {
+          "word": "eye",
+          "vi": "mắt"
+        }
+      ],
+      "tip": "Viết tắt: lashes.",
+      "emoji": "👁️",
+      "stage": 2
+    },
+    {
+      "id": 3053,
+      "word": "hip",
+      "ipa": "hɪp",
+      "viRead": "HIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hông",
+      "exampleEn": "She put her hands on her hips.",
+      "exampleVi": "Cô ấy chống nạnh.",
+      "collocations": [
+        {
+          "en": "hands on hips",
+          "vi": "chống nạnh"
+        },
+        {
+          "en": "hip hop",
+          "vi": "nhạc hip hop"
+        }
+      ],
+      "tip": "hands on hips = chống nạnh.",
+      "emoji": "💃",
+      "stage": 2
+    },
+    {
+      "id": 3054,
+      "word": "spine",
+      "ipa": "spaɪn",
+      "viRead": "SPAIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cột sống",
+      "exampleEn": "Sit up straight to protect your spine.",
+      "exampleVi": "Ngồi thẳng lưng để bảo vệ cột sống.",
+      "collocations": [
+        {
+          "en": "spine injury",
+          "vi": "chấn thương cột sống"
+        },
+        {
+          "en": "the spine of a book",
+          "vi": "gáy sách"
+        }
+      ],
+      "tip": "spine = xương sống / gáy sách.",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 3055,
+      "word": "thigh",
+      "ipa": "θaɪ",
+      "viRead": "THAI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đùi",
+      "exampleEn": "I hurt my thigh playing football.",
+      "exampleVi": "Tôi bị đau đùi khi đá bóng.",
+      "collocations": [
+        {
+          "en": "chicken thigh",
+          "vi": "đùi gà"
+        },
+        {
+          "en": "thigh muscle",
+          "vi": "cơ đùi"
+        }
+      ],
+      "tip": "gh câm: 'thai'.",
+      "emoji": "🍗",
+      "stage": 2
+    },
+    {
+      "id": 3056,
+      "word": "cafe",
+      "ipa": "kəˈfeɪ",
+      "viRead": "kơ-PHÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quán cà phê",
+      "exampleEn": "Let's meet at the cafe on the corner.",
+      "exampleVi": "Gặp nhau ở quán cà phê góc phố nhé.",
+      "collocations": [
+        {
+          "en": "a street cafe",
+          "vi": "quán cà phê vỉa hè"
+        },
+        {
+          "en": "internet cafe",
+          "vi": "tiệm net"
+        }
+      ],
+      "tip": "Viết cafe hoặc café. Đọc 'kơ-PHÂY'.",
+      "emoji": "☕",
+      "stage": 2
+    },
+    {
+      "id": 3057,
+      "word": "cinema",
+      "ipa": "ˈsɪnəmə",
+      "viRead": "SI-nơ-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rạp chiếu phim",
+      "exampleEn": "We went to the cinema last night.",
+      "exampleVi": "Tối qua chúng tôi đi xem phim ở rạp.",
+      "collocations": [
+        {
+          "en": "go to the cinema",
+          "vi": "đi xem phim"
+        },
+        {
+          "en": "cinema ticket",
+          "vi": "vé xem phim"
+        }
+      ],
+      "family": [
+        {
+          "word": "movie",
+          "vi": "phim"
+        }
+      ],
+      "tip": "cinema (Anh) = movie theater (Mỹ).",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 3058,
+      "word": "motel",
+      "ipa": "moʊˈtɛl",
+      "viRead": "mâu-TEL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà nghỉ",
+      "exampleEn": "We stayed at a cheap motel.",
+      "exampleVi": "Chúng tôi ở một nhà nghỉ rẻ.",
+      "collocations": [
+        {
+          "en": "a roadside motel",
+          "vi": "nhà nghỉ ven đường"
+        },
+        {
+          "en": "cheap motel",
+          "vi": "nhà nghỉ rẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "hotel",
+          "vi": "khách sạn"
+        }
+      ],
+      "tip": "motel = motor + hotel (nhà nghỉ ven đường).",
+      "emoji": "🏨",
+      "stage": 2
+    },
+    {
+      "id": 3059,
+      "word": "playground",
+      "ipa": "ˈpleɪˌgraʊnd",
+      "viRead": "PLÂY-graonđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sân chơi",
+      "exampleEn": "The children are on the playground.",
+      "exampleVi": "Bọn trẻ đang ở sân chơi.",
+      "collocations": [
+        {
+          "en": "school playground",
+          "vi": "sân trường"
+        },
+        {
+          "en": "children's playground",
+          "vi": "khu vui chơi trẻ em"
+        }
+      ],
+      "tip": "play + ground (khu đất).",
+      "emoji": "🛝",
+      "stage": 2
+    },
+    {
+      "id": 3060,
+      "word": "stadium",
+      "ipa": "ˈsteɪdiəm",
+      "viRead": "STÂY-đi-ơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sân vận động",
+      "exampleEn": "My Dinh Stadium is in Hanoi.",
+      "exampleVi": "Sân vận động Mỹ Đình ở Hà Nội.",
+      "collocations": [
+        {
+          "en": "football stadium",
+          "vi": "sân bóng"
+        },
+        {
+          "en": "national stadium",
+          "vi": "sân vận động quốc gia"
+        }
+      ],
+      "tip": "Đọc 'STÂY-đi-ơm'.",
+      "emoji": "🏟️",
+      "stage": 2
+    },
+    {
+      "id": 3061,
+      "word": "bus",
+      "ipa": "bəs",
+      "viRead": "BƠS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe buýt",
+      "exampleEn": "I take the bus to school.",
+      "exampleVi": "Tôi đi xe buýt đến trường.",
+      "collocations": [
+        {
+          "en": "take the bus",
+          "vi": "đi xe buýt"
+        },
+        {
+          "en": "bus stop",
+          "vi": "trạm xe buýt"
+        }
+      ],
+      "tip": "take the bus / by bus. Số nhiều: buses.",
+      "emoji": "🚌",
+      "stage": 2
+    },
+    {
+      "id": 3062,
+      "word": "ferry",
+      "ipa": "ˈfɛri",
+      "viRead": "PHE-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phà",
+      "exampleEn": "We took a ferry to Cat Ba island.",
+      "exampleVi": "Chúng tôi đi phà ra đảo Cát Bà.",
+      "collocations": [
+        {
+          "en": "take a ferry",
+          "vi": "đi phà"
+        },
+        {
+          "en": "ferry port",
+          "vi": "bến phà"
+        }
+      ],
+      "tip": "ferry = phà (chở người và xe qua sông, biển).",
+      "emoji": "⛴️",
+      "stage": 2
+    },
+    {
+      "id": 3063,
+      "word": "helicopter",
+      "ipa": "ˈhɛlɪˌkɑptər",
+      "viRead": "HE-li-kap-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trực thăng",
+      "exampleEn": "A helicopter flew over the city.",
+      "exampleVi": "Một chiếc trực thăng bay qua thành phố.",
+      "collocations": [
+        {
+          "en": "rescue helicopter",
+          "vi": "trực thăng cứu hộ"
+        },
+        {
+          "en": "by helicopter",
+          "vi": "bằng trực thăng"
+        }
+      ],
+      "tip": "Nhấn âm đầu: HE-li-kap-tơ.",
+      "emoji": "🚁",
+      "stage": 2
+    },
+    {
+      "id": 3064,
+      "word": "scooter",
+      "ipa": "ˈskutər",
+      "viRead": "SKU-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe tay ga",
+      "exampleEn": "She rides a scooter to work.",
+      "exampleVi": "Cô ấy đi xe tay ga đi làm.",
+      "collocations": [
+        {
+          "en": "ride a scooter",
+          "vi": "đi xe tay ga"
+        },
+        {
+          "en": "electric scooter",
+          "vi": "xe scooter điện"
+        }
+      ],
+      "tip": "scooter = xe tay ga; motorbike = xe máy (nói chung).",
+      "emoji": "🛵",
+      "stage": 2
+    },
+    {
+      "id": 3065,
+      "word": "subway",
+      "ipa": "ˈsəbˌweɪ",
+      "viRead": "SƠB-wây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tàu điện ngầm",
+      "exampleEn": "Take the subway to get there faster.",
+      "exampleVi": "Đi tàu điện ngầm để đến nhanh hơn.",
+      "collocations": [
+        {
+          "en": "subway station",
+          "vi": "ga tàu điện ngầm"
+        },
+        {
+          "en": "take the subway",
+          "vi": "đi tàu điện ngầm"
+        }
+      ],
+      "tip": "subway (Mỹ) = underground / tube (Anh) = metro.",
+      "emoji": "🚇",
+      "stage": 2
+    },
+    {
+      "id": 3066,
+      "word": "tractor",
+      "ipa": "ˈtræktər",
+      "viRead": "TREK-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy cày",
+      "exampleEn": "The farmer drives a tractor.",
+      "exampleVi": "Người nông dân lái máy cày.",
+      "collocations": [
+        {
+          "en": "drive a tractor",
+          "vi": "lái máy cày"
+        },
+        {
+          "en": "farm tractor",
+          "vi": "máy kéo nông nghiệp"
+        }
+      ],
+      "tip": "tractor = máy kéo, máy cày.",
+      "emoji": "🚜",
+      "stage": 2
+    },
+    {
+      "id": 3067,
+      "word": "yacht",
+      "ipa": "jɑt",
+      "viRead": "YAT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "du thuyền",
+      "exampleEn": "They spent the weekend on a yacht.",
+      "exampleVi": "Họ nghỉ cuối tuần trên du thuyền.",
+      "collocations": [
+        {
+          "en": "a luxury yacht",
+          "vi": "du thuyền hạng sang"
+        },
+        {
+          "en": "yacht club",
+          "vi": "câu lạc bộ du thuyền"
+        }
+      ],
+      "tip": "BẪY đọc: 'yat' (ch câm).",
+      "emoji": "🛥️",
+      "stage": 2
+    },
+    {
+      "id": 3068,
+      "word": "cloudy",
+      "ipa": "ˈklaʊdi",
+      "viRead": "KLAO-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều mây",
+      "exampleEn": "It's cloudy today; it might rain.",
+      "exampleVi": "Hôm nay trời nhiều mây, có thể mưa.",
+      "collocations": [
+        {
+          "en": "a cloudy day",
+          "vi": "ngày nhiều mây"
+        },
+        {
+          "en": "partly cloudy",
+          "vi": "có mây rải rác"
+        }
+      ],
+      "family": [
+        {
+          "word": "cloud",
+          "vi": "mây"
+        }
+      ],
+      "tip": "cloud (n) + y = cloudy (adj).",
+      "emoji": "☁️",
+      "stage": 2
+    },
+    {
+      "id": 3069,
+      "word": "foggy",
+      "ipa": "ˈfɑgi",
+      "viRead": "PHA-gi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có sương mù",
+      "exampleEn": "It's foggy in Da Lat this morning.",
+      "exampleVi": "Sáng nay Đà Lạt có sương mù.",
+      "collocations": [
+        {
+          "en": "a foggy morning",
+          "vi": "buổi sáng sương mù"
+        },
+        {
+          "en": "foggy weather",
+          "vi": "thời tiết sương mù"
+        }
+      ],
+      "family": [
+        {
+          "word": "fog",
+          "vi": "sương mù"
+        }
+      ],
+      "tip": "fog (n) + gy = foggy (gấp đôi g).",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 3070,
+      "word": "windy",
+      "ipa": "ˈwɪndi",
+      "viRead": "WIN-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có gió",
+      "exampleEn": "It's too windy to fly a kite.",
+      "exampleVi": "Gió to quá không thả diều được.",
+      "collocations": [
+        {
+          "en": "a windy day",
+          "vi": "ngày nhiều gió"
+        },
+        {
+          "en": "windy weather",
+          "vi": "thời tiết lộng gió"
+        }
+      ],
+      "family": [
+        {
+          "word": "wind",
+          "vi": "gió"
+        }
+      ],
+      "tip": "wind (n) + y = windy (adj).",
+      "emoji": "🌬️",
+      "stage": 2
+    },
+    {
+      "id": 3071,
+      "word": "rainy",
+      "ipa": "ˈreɪni",
+      "viRead": "RÂY-ni",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có mưa",
+      "exampleEn": "Saigon has a rainy season and a dry season.",
+      "exampleVi": "Sài Gòn có mùa mưa và mùa khô.",
+      "collocations": [
+        {
+          "en": "rainy season",
+          "vi": "mùa mưa"
+        },
+        {
+          "en": "a rainy day",
+          "vi": "ngày mưa"
+        }
+      ],
+      "family": [
+        {
+          "word": "rain",
+          "vi": "mưa"
+        }
+      ],
+      "tip": "save for a rainy day = để dành phòng lúc khó khăn.",
+      "emoji": "🌧️",
+      "stage": 2
+    },
+    {
+      "id": 3072,
+      "word": "stormy",
+      "ipa": "ˈstɔrmi",
+      "viRead": "STOR-mi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có bão, giông tố",
+      "exampleEn": "The sea is stormy today.",
+      "exampleVi": "Hôm nay biển động.",
+      "collocations": [
+        {
+          "en": "stormy weather",
+          "vi": "thời tiết giông bão"
+        },
+        {
+          "en": "a stormy night",
+          "vi": "đêm giông bão"
+        }
+      ],
+      "family": [
+        {
+          "word": "storm",
+          "vi": "cơn bão"
+        }
+      ],
+      "tip": "stormy relationship = mối quan hệ sóng gió.",
+      "emoji": "⛈️",
+      "stage": 2
+    },
+    {
+      "id": 3073,
+      "word": "thunderstorm",
+      "ipa": "ˈθəndərˌstɔrm",
+      "viRead": "THƠN-đơ-storm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơn giông",
+      "exampleEn": "A thunderstorm hit the city last night.",
+      "exampleVi": "Một cơn giông đổ xuống thành phố tối qua.",
+      "collocations": [
+        {
+          "en": "a heavy thunderstorm",
+          "vi": "cơn giông lớn"
+        },
+        {
+          "en": "during a thunderstorm",
+          "vi": "trong cơn giông"
+        }
+      ],
+      "family": [
+        {
+          "word": "thunder",
+          "vi": "sấm"
+        }
+      ],
+      "tip": "thunder + storm = giông có sấm sét.",
+      "emoji": "🌩️",
+      "stage": 2
+    },
+    {
+      "id": 3074,
+      "word": "sunrise",
+      "ipa": "ˈsənˌraɪz",
+      "viRead": "SƠN-raid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bình minh",
+      "exampleEn": "We got up early to watch the sunrise.",
+      "exampleVi": "Chúng tôi dậy sớm ngắm bình minh.",
+      "collocations": [
+        {
+          "en": "watch the sunrise",
+          "vi": "ngắm bình minh"
+        },
+        {
+          "en": "at sunrise",
+          "vi": "lúc bình minh"
+        }
+      ],
+      "family": [
+        {
+          "word": "sunset",
+          "vi": "hoàng hôn"
+        }
+      ],
+      "tip": "sunrise ↔ sunset.",
+      "emoji": "🌅",
+      "stage": 2
+    },
+    {
+      "id": 3075,
+      "word": "sunset",
+      "ipa": "ˈsənˌsɛt",
+      "viRead": "SƠN-set",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoàng hôn",
+      "exampleEn": "The sunset over the river was beautiful.",
+      "exampleVi": "Hoàng hôn trên sông thật đẹp.",
+      "collocations": [
+        {
+          "en": "watch the sunset",
+          "vi": "ngắm hoàng hôn"
+        },
+        {
+          "en": "at sunset",
+          "vi": "lúc hoàng hôn"
+        }
+      ],
+      "family": [
+        {
+          "word": "sunrise",
+          "vi": "bình minh"
+        }
+      ],
+      "tip": "sun + set (lặn).",
+      "emoji": "🌇",
+      "stage": 2
+    },
+    {
+      "id": 3076,
+      "word": "breeze",
+      "ipa": "briz",
+      "viRead": "BRID",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "làn gió nhẹ",
+      "exampleEn": "A cool breeze came from the sea.",
+      "exampleVi": "Một làn gió mát thổi từ biển vào.",
+      "collocations": [
+        {
+          "en": "a cool breeze",
+          "vi": "gió mát"
+        },
+        {
+          "en": "sea breeze",
+          "vi": "gió biển"
+        }
+      ],
+      "tip": "It's a breeze! = Dễ ợt!",
+      "emoji": "🍃",
+      "stage": 2
+    },
+    {
+      "id": 3077,
+      "word": "puddle",
+      "ipa": "ˈpədəl",
+      "viRead": "PƠ-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vũng nước",
+      "exampleEn": "The kids jumped in the puddles.",
+      "exampleVi": "Bọn trẻ nhảy vào các vũng nước.",
+      "collocations": [
+        {
+          "en": "a muddy puddle",
+          "vi": "vũng bùn"
+        },
+        {
+          "en": "jump in puddles",
+          "vi": "nhảy vào vũng nước"
+        }
+      ],
+      "tip": "puddle = vũng nước nhỏ sau mưa.",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 3078,
+      "word": "volcano",
+      "ipa": "vɑlˈkeɪnoʊ",
+      "viRead": "val-KÂY-nâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "núi lửa",
+      "exampleEn": "The volcano erupted last year.",
+      "exampleVi": "Núi lửa phun trào năm ngoái.",
+      "collocations": [
+        {
+          "en": "an active volcano",
+          "vi": "núi lửa đang hoạt động"
+        },
+        {
+          "en": "volcano erupts",
+          "vi": "núi lửa phun trào"
+        }
+      ],
+      "family": [
+        {
+          "word": "volcanic",
+          "vi": "thuộc núi lửa"
+        }
+      ],
+      "tip": "Số nhiều: volcanoes.",
+      "emoji": "🌋",
+      "stage": 2
+    },
+    {
+      "id": 3079,
+      "word": "waterfall",
+      "ipa": "ˈwɔtərˌfɔl",
+      "viRead": "WO-tơ-phol",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thác nước",
+      "exampleEn": "Ban Gioc is a famous waterfall.",
+      "exampleVi": "Bản Giốc là một thác nước nổi tiếng.",
+      "collocations": [
+        {
+          "en": "a beautiful waterfall",
+          "vi": "thác nước đẹp"
+        },
+        {
+          "en": "Ban Gioc waterfall",
+          "vi": "thác Bản Giốc"
+        }
+      ],
+      "tip": "water + fall (rơi) = thác nước.",
+      "emoji": "💦",
+      "stage": 2
+    },
+    {
+      "id": 3080,
+      "word": "pebble",
+      "ipa": "ˈpɛbəl",
+      "viRead": "PE-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "viên sỏi",
+      "exampleEn": "The beach is covered with pebbles.",
+      "exampleVi": "Bãi biển phủ đầy sỏi.",
+      "collocations": [
+        {
+          "en": "a smooth pebble",
+          "vi": "viên sỏi nhẵn"
+        },
+        {
+          "en": "pebble beach",
+          "vi": "bãi sỏi"
+        }
+      ],
+      "tip": "pebble = viên sỏi tròn nhẵn.",
+      "emoji": "🪨",
+      "stage": 2
+    },
+    {
+      "id": 3081,
+      "word": "seashell",
+      "ipa": "ˈsiˌʃɛl",
+      "viRead": "SI-shel",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vỏ sò",
+      "exampleEn": "The kids collected seashells on the beach.",
+      "exampleVi": "Bọn trẻ nhặt vỏ sò trên bãi biển.",
+      "collocations": [
+        {
+          "en": "collect seashells",
+          "vi": "nhặt vỏ sò"
+        },
+        {
+          "en": "a pretty seashell",
+          "vi": "vỏ sò đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "shell",
+          "vi": "vỏ"
+        }
+      ],
+      "tip": "She sells seashells by the seashore — câu luyện phát âm nổi tiếng!",
+      "emoji": "🐚",
+      "stage": 2
+    },
+    {
+      "id": 3082,
+      "word": "bamboo",
+      "ipa": "bæmˈbu",
+      "viRead": "bem-BU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây tre",
+      "exampleEn": "The village is surrounded by bamboo.",
+      "exampleVi": "Ngôi làng được bao quanh bởi lũy tre.",
+      "collocations": [
+        {
+          "en": "bamboo tree",
+          "vi": "cây tre"
+        },
+        {
+          "en": "bamboo shoots",
+          "vi": "măng"
+        }
+      ],
+      "tip": "bamboo shoots = măng tre. Cây tre là biểu tượng làng quê Việt.",
+      "emoji": "🎋",
+      "stage": 2
+    },
+    {
+      "id": 3083,
+      "word": "lotus",
+      "ipa": "ˈloʊtəs",
+      "viRead": "LÂU-tơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa sen",
+      "exampleEn": "The lotus is Vietnam's national flower.",
+      "exampleVi": "Hoa sen là quốc hoa của Việt Nam.",
+      "collocations": [
+        {
+          "en": "lotus flower",
+          "vi": "hoa sen"
+        },
+        {
+          "en": "lotus tea",
+          "vi": "trà sen"
+        }
+      ],
+      "tip": "lotus seeds = hạt sen.",
+      "emoji": "🪷",
+      "stage": 2
+    },
+    {
+      "id": 3084,
+      "word": "butterfly",
+      "ipa": "ˈbətərˌflaɪ",
+      "viRead": "BƠ-tơ-phlai",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bướm",
+      "exampleEn": "A butterfly landed on the flower.",
+      "exampleVi": "Một con bướm đậu trên bông hoa.",
+      "collocations": [
+        {
+          "en": "a colorful butterfly",
+          "vi": "bướm sặc sỡ"
+        },
+        {
+          "en": "butterflies in my stomach",
+          "vi": "hồi hộp, bồn chồn"
+        }
+      ],
+      "tip": "have butterflies in your stomach = hồi hộp, run.",
+      "emoji": "🦋",
+      "stage": 2
+    },
+    {
+      "id": 3085,
+      "word": "dragonfly",
+      "ipa": "ˈdrægənˌflaɪ",
+      "viRead": "ĐRE-gơn-phlai",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con chuồn chuồn",
+      "exampleEn": "A dragonfly is flying over the pond.",
+      "exampleVi": "Một con chuồn chuồn đang bay trên ao.",
+      "collocations": [
+        {
+          "en": "a red dragonfly",
+          "vi": "chuồn chuồn đỏ"
+        },
+        {
+          "en": "dragonfly wings",
+          "vi": "cánh chuồn chuồn"
+        }
+      ],
+      "tip": "dragon (rồng) + fly (con ruồi).",
+      "emoji": "🪰",
+      "stage": 2
+    },
+    {
+      "id": 3086,
+      "word": "mosquito",
+      "ipa": "məˈskitoʊ",
+      "viRead": "mơ-SKI-tâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con muỗi",
+      "exampleEn": "I got bitten by a mosquito.",
+      "exampleVi": "Tôi bị muỗi đốt.",
+      "collocations": [
+        {
+          "en": "mosquito bite",
+          "vi": "vết muỗi đốt"
+        },
+        {
+          "en": "mosquito net",
+          "vi": "màn chống muỗi"
+        }
+      ],
+      "tip": "Số nhiều: mosquitoes. mosquito net = cái màn.",
+      "emoji": "🦟",
+      "stage": 2
+    },
+    {
+      "id": 3087,
+      "word": "ant",
+      "ipa": "ænt",
+      "viRead": "ENT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con kiến",
+      "exampleEn": "Ants are very hard-working.",
+      "exampleVi": "Kiến rất chăm chỉ.",
+      "collocations": [
+        {
+          "en": "an ant nest",
+          "vi": "tổ kiến"
+        },
+        {
+          "en": "red ant",
+          "vi": "kiến đỏ"
+        }
+      ],
+      "tip": "ant (kiến) đọc giống aunt (cô, dì) ở Mỹ.",
+      "emoji": "🐜",
+      "stage": 2
+    },
+    {
+      "id": 3088,
+      "word": "bee",
+      "ipa": "bi",
+      "viRead": "BI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ong",
+      "exampleEn": "Bees make honey.",
+      "exampleVi": "Ong làm ra mật.",
+      "collocations": [
+        {
+          "en": "busy as a bee",
+          "vi": "bận như ong"
+        },
+        {
+          "en": "bee sting",
+          "vi": "vết ong đốt"
+        }
+      ],
+      "tip": "busy as a bee = bận rộn.",
+      "emoji": "🐝",
+      "stage": 2
+    },
+    {
+      "id": 3089,
+      "word": "turtle",
+      "ipa": "ˈtərtəl",
+      "viRead": "TƠ-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con rùa",
+      "exampleEn": "There's a legend about the turtle in Hoan Kiem Lake.",
+      "exampleVi": "Có một truyền thuyết về con rùa ở hồ Hoàn Kiếm.",
+      "collocations": [
+        {
+          "en": "sea turtle",
+          "vi": "rùa biển"
+        },
+        {
+          "en": "slow as a turtle",
+          "vi": "chậm như rùa"
+        }
+      ],
+      "tip": "turtle (rùa nước) – tortoise (rùa cạn).",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 3090,
+      "word": "rooster",
+      "ipa": "ˈrustər",
+      "viRead": "RUS-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gà trống",
+      "exampleEn": "The rooster crows every morning.",
+      "exampleVi": "Gà trống gáy mỗi sáng.",
+      "collocations": [
+        {
+          "en": "a rooster crows",
+          "vi": "gà trống gáy"
+        },
+        {
+          "en": "Year of the Rooster",
+          "vi": "năm Dậu"
+        }
+      ],
+      "family": [
+        {
+          "word": "hen",
+          "vi": "gà mái"
+        }
+      ],
+      "tip": "rooster (gà trống) – hen (gà mái) – chick (gà con).",
+      "emoji": "🐓",
+      "stage": 2
+    },
+    {
+      "id": 3091,
+      "word": "buffalo",
+      "ipa": "ˈbəfəˌloʊ",
+      "viRead": "BƠ-phơ-lâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con trâu",
+      "exampleEn": "The farmer ploughs with a buffalo.",
+      "exampleVi": "Người nông dân cày ruộng bằng trâu.",
+      "collocations": [
+        {
+          "en": "water buffalo",
+          "vi": "trâu nước"
+        },
+        {
+          "en": "buffalo fighting",
+          "vi": "chọi trâu"
+        }
+      ],
+      "tip": "Số nhiều: buffaloes. Trâu là bạn nhà nông!",
+      "emoji": "🐃",
       "stage": 2
     }
   ]
