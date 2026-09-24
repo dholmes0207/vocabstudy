@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1050,
+    "count": 1100,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -31767,6 +31767,1504 @@
       ],
       "tip": "Động từ nhấn sau: in-CREASE; danh từ nhấn trước: IN-crease. Trái nghĩa: decrease/reduce.",
       "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1051,
+      "word": "independent",
+      "ipa": "ˌɪndɪˈpɛndənt",
+      "viRead": "in-đi-PEN-đơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "độc lập, tự lập",
+      "exampleEn": "She moved out and became more independent.",
+      "exampleVi": "Cô ấy dọn ra ở riêng và tự lập hơn.",
+      "collocations": [
+        {
+          "en": "independent of",
+          "vi": "không phụ thuộc vào"
+        },
+        {
+          "en": "an independent woman",
+          "vi": "người phụ nữ độc lập"
+        }
+      ],
+      "family": [
+        {
+          "word": "independence",
+          "vi": "sự độc lập"
+        },
+        {
+          "word": "depend",
+          "vi": "phụ thuộc"
+        }
+      ],
+      "tip": "in- (không) + dependent (phụ thuộc) = độc lập. Ngày Độc lập = Independence Day.",
+      "emoji": "🦅",
+      "stage": 2
+    },
+    {
+      "id": 1052,
+      "word": "injure",
+      "ipa": "ˈɪnʤər",
+      "viRead": "IN-giơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm bị thương",
+      "exampleEn": "He injured his leg while playing football.",
+      "exampleVi": "Anh ấy bị thương ở chân khi đá bóng.",
+      "collocations": [
+        {
+          "en": "be injured",
+          "vi": "bị thương"
+        },
+        {
+          "en": "badly injured",
+          "vi": "bị thương nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "injury",
+          "vi": "vết thương, chấn thương"
+        }
+      ],
+      "tip": "injure thường dùng khi tai nạn/thể thao; hurt dùng chung chung hơn. Chấn thương = injury.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 1053,
+      "word": "invite",
+      "ipa": "ˌɪnˈvaɪt",
+      "viRead": "in-VAIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "mời",
+      "exampleEn": "They invited me to their wedding.",
+      "exampleVi": "Họ mời tôi dự đám cưới của họ.",
+      "collocations": [
+        {
+          "en": "invite someone to",
+          "vi": "mời ai đến"
+        },
+        {
+          "en": "invite friends over",
+          "vi": "mời bạn đến nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "invitation",
+          "vi": "lời mời, thiệp mời"
+        }
+      ],
+      "tip": "invite + người + to + sự kiện: invite me to the party. Thiệp mời = invitation.",
+      "emoji": "💌",
+      "stage": 2
+    },
+    {
+      "id": 1054,
+      "word": "lazy",
+      "ipa": "ˈleɪzi",
+      "viRead": "LÂY-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lười biếng",
+      "exampleEn": "I feel lazy on Sunday mornings.",
+      "exampleVi": "Sáng Chủ nhật tôi thấy lười.",
+      "collocations": [
+        {
+          "en": "a lazy day",
+          "vi": "một ngày lười biếng"
+        },
+        {
+          "en": "too lazy to",
+          "vi": "lười đến mức không"
+        }
+      ],
+      "family": [
+        {
+          "word": "laziness",
+          "vi": "sự lười biếng"
+        }
+      ],
+      "tip": "too lazy to + V: I'm too lazy to cook tonight (Tối nay lười nấu quá).",
+      "emoji": "🦥",
+      "stage": 2
+    },
+    {
+      "id": 1055,
+      "word": "local",
+      "ipa": "ˈloʊkəl",
+      "viRead": "LÂU-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc địa phương",
+      "exampleEn": "We ate at a small local restaurant.",
+      "exampleVi": "Chúng tôi ăn ở một quán ăn địa phương nhỏ.",
+      "collocations": [
+        {
+          "en": "local people",
+          "vi": "người dân địa phương"
+        },
+        {
+          "en": "local food",
+          "vi": "đồ ăn địa phương"
+        },
+        {
+          "en": "local time",
+          "vi": "giờ địa phương"
+        }
+      ],
+      "family": [
+        {
+          "word": "locally",
+          "vi": "tại địa phương"
+        }
+      ],
+      "tip": "a local = một người dân bản xứ: Ask a local for directions.",
+      "emoji": "📍",
+      "stage": 2
+    },
+    {
+      "id": 1056,
+      "word": "lonely",
+      "ipa": "ˈloʊnli",
+      "viRead": "LÂUN-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cô đơn",
+      "exampleEn": "He felt lonely in the big city.",
+      "exampleVi": "Anh ấy cảm thấy cô đơn ở thành phố lớn.",
+      "collocations": [
+        {
+          "en": "feel lonely",
+          "vi": "cảm thấy cô đơn"
+        },
+        {
+          "en": "a lonely place",
+          "vi": "nơi hiu quạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "loneliness",
+          "vi": "nỗi cô đơn"
+        },
+        {
+          "word": "alone",
+          "vi": "một mình"
+        }
+      ],
+      "tip": "alone = một mình (sự thật); lonely = cô đơn (cảm xúc). Có thể alone mà không lonely.",
+      "emoji": "🥀",
+      "stage": 2
+    },
+    {
+      "id": 1057,
+      "word": "manage",
+      "ipa": "ˈmænɪʤ",
+      "viRead": "ME-nơgi",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xoay xở được; quản lý",
+      "exampleEn": "I managed to finish my work on time.",
+      "exampleVi": "Tôi đã xoay xở làm xong việc đúng hạn.",
+      "collocations": [
+        {
+          "en": "manage to do",
+          "vi": "xoay xở làm được"
+        },
+        {
+          "en": "manage a team",
+          "vi": "quản lý một nhóm"
+        },
+        {
+          "en": "manage time",
+          "vi": "quản lý thời gian"
+        }
+      ],
+      "family": [
+        {
+          "word": "manager",
+          "vi": "người quản lý"
+        },
+        {
+          "word": "management",
+          "vi": "sự quản lý"
+        }
+      ],
+      "tip": "manage to + V = cuối cùng cũng làm được (dù khó): I managed to pass!",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 1058,
+      "word": "mention",
+      "ipa": "ˈmɛnʃən",
+      "viRead": "MEN-shơn",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhắc đến, đề cập",
+      "exampleEn": "She didn't mention the price.",
+      "exampleVi": "Cô ấy không nhắc đến giá cả.",
+      "collocations": [
+        {
+          "en": "don't mention it",
+          "vi": "không có gì đâu"
+        },
+        {
+          "en": "mention that",
+          "vi": "nói rằng"
+        }
+      ],
+      "tip": "Don't mention it! = Không có gì (đáp lại lời cảm ơn). mention đi thẳng với tân ngữ: mention it ✓ (mention about it ✗).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 1059,
+      "word": "mess",
+      "ipa": "mɛs",
+      "viRead": "MES",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bừa bộn",
+      "exampleEn": "Sorry, my room is a mess.",
+      "exampleVi": "Xin lỗi, phòng tôi bừa bộn quá.",
+      "collocations": [
+        {
+          "en": "make a mess",
+          "vi": "bày bừa"
+        },
+        {
+          "en": "clean up the mess",
+          "vi": "dọn đống bừa bộn"
+        },
+        {
+          "en": "what a mess!",
+          "vi": "bừa quá!"
+        }
+      ],
+      "family": [
+        {
+          "word": "messy",
+          "vi": "bừa bộn"
+        }
+      ],
+      "tip": "be a mess = rất bừa. messy (tính từ): a messy desk.",
+      "emoji": "🧹",
+      "stage": 2
+    },
+    {
+      "id": 1060,
+      "word": "mistake",
+      "ipa": "mɪˈsteɪk",
+      "viRead": "mis-TÂYK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lỗi, sai lầm",
+      "exampleEn": "Everyone makes mistakes when learning.",
+      "exampleVi": "Ai học cũng mắc lỗi.",
+      "collocations": [
+        {
+          "en": "make a mistake",
+          "vi": "mắc lỗi"
+        },
+        {
+          "en": "by mistake",
+          "vi": "do nhầm"
+        }
+      ],
+      "family": [
+        {
+          "word": "mistaken",
+          "vi": "nhầm lẫn"
+        }
+      ],
+      "tip": "MAKE a mistake (không dùng do). by mistake = do nhầm: I took your bag by mistake.",
+      "emoji": "❗",
+      "stage": 2
+    },
+    {
+      "id": 1061,
+      "word": "nervous",
+      "ipa": "ˈnərvəs",
+      "viRead": "NƠ-vơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lo lắng, hồi hộp",
+      "exampleEn": "I always feel nervous before an exam.",
+      "exampleVi": "Tôi luôn hồi hộp trước kỳ thi.",
+      "collocations": [
+        {
+          "en": "feel nervous",
+          "vi": "cảm thấy hồi hộp"
+        },
+        {
+          "en": "nervous about",
+          "vi": "lo lắng về"
+        }
+      ],
+      "family": [
+        {
+          "word": "nervously",
+          "vi": "một cách lo lắng"
+        }
+      ],
+      "tip": "nervous = hồi hộp (trước việc sắp tới), không phải 'nổi nóng' (angry).",
+      "emoji": "😬",
+      "stage": 2
+    },
+    {
+      "id": 1062,
+      "word": "obvious",
+      "ipa": "ˈɑbviəs",
+      "viRead": "AB-vi-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rõ ràng, hiển nhiên",
+      "exampleEn": "It's obvious that she likes you.",
+      "exampleVi": "Rõ ràng là cô ấy thích bạn.",
+      "collocations": [
+        {
+          "en": "it's obvious that",
+          "vi": "rõ ràng là"
+        },
+        {
+          "en": "an obvious mistake",
+          "vi": "lỗi hiển nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "obviously",
+          "vi": "rõ ràng là"
+        }
+      ],
+      "tip": "Obviously! = Hiển nhiên rồi! Đọc 'ÓP-vi-ợs'.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1063,
+      "word": "opinion",
+      "ipa": "əˈpɪnjən",
+      "viRead": "ơ-PIN-yơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ý kiến, quan điểm",
+      "exampleEn": "In my opinion, this film is boring.",
+      "exampleVi": "Theo ý tôi, bộ phim này chán.",
+      "collocations": [
+        {
+          "en": "in my opinion",
+          "vi": "theo ý kiến của tôi"
+        },
+        {
+          "en": "give an opinion",
+          "vi": "đưa ra ý kiến"
+        }
+      ],
+      "tip": "In my opinion… (không nói According to me). Hỏi ý kiến: What's your opinion?",
+      "emoji": "💭",
+      "stage": 2
+    },
+    {
+      "id": 1064,
+      "word": "organize",
+      "ipa": "ˈɔrgəˌnaɪz",
+      "viRead": "OR-gơ-naid",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tổ chức; sắp xếp",
+      "exampleEn": "We organized a party for her birthday.",
+      "exampleVi": "Chúng tôi tổ chức một bữa tiệc cho sinh nhật cô ấy.",
+      "collocations": [
+        {
+          "en": "organize a meeting",
+          "vi": "tổ chức cuộc họp"
+        },
+        {
+          "en": "well organized",
+          "vi": "ngăn nắp, có tổ chức"
+        }
+      ],
+      "family": [
+        {
+          "word": "organization",
+          "vi": "tổ chức"
+        }
+      ],
+      "tip": "Mỹ viết organize, Anh viết organise. well organized = gọn gàng, bài bản.",
+      "emoji": "🗂️",
+      "stage": 2
+    },
+    {
+      "id": 1065,
+      "word": "patient",
+      "ipa": "ˈpeɪʃənt",
+      "viRead": "PÂY-shơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kiên nhẫn",
+      "exampleEn": "Be patient, you will speak English well.",
+      "exampleVi": "Kiên nhẫn nhé, bạn sẽ nói tiếng Anh giỏi.",
+      "collocations": [
+        {
+          "en": "be patient",
+          "vi": "hãy kiên nhẫn"
+        },
+        {
+          "en": "patient with",
+          "vi": "kiên nhẫn với"
+        }
+      ],
+      "family": [
+        {
+          "word": "patience",
+          "vi": "sự kiên nhẫn"
+        },
+        {
+          "word": "impatient",
+          "vi": "thiếu kiên nhẫn"
+        }
+      ],
+      "tip": "patient còn là danh từ 'bệnh nhân': The doctor has many patients.",
+      "emoji": "⏳",
+      "stage": 2
+    },
+    {
+      "id": 1066,
+      "word": "perfect",
+      "ipa": "ˈpərˌfɪkt",
+      "viRead": "pơ-PHEKT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hoàn hảo",
+      "exampleEn": "Your pronunciation is perfect!",
+      "exampleVi": "Phát âm của bạn hoàn hảo!",
+      "collocations": [
+        {
+          "en": "perfect timing",
+          "vi": "đúng lúc quá"
+        },
+        {
+          "en": "nobody's perfect",
+          "vi": "không ai hoàn hảo"
+        }
+      ],
+      "family": [
+        {
+          "word": "perfectly",
+          "vi": "một cách hoàn hảo"
+        }
+      ],
+      "tip": "perfect đã là tuyệt đối, không nói very perfect. Practice makes perfect = Có công mài sắt có ngày nên kim.",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 1067,
+      "word": "permission",
+      "ipa": "pərˈmɪʃən",
+      "viRead": "pơ-MI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cho phép",
+      "exampleEn": "You need permission to take photos here.",
+      "exampleVi": "Bạn cần được cho phép mới được chụp ảnh ở đây.",
+      "collocations": [
+        {
+          "en": "ask for permission",
+          "vi": "xin phép"
+        },
+        {
+          "en": "without permission",
+          "vi": "không được phép"
+        }
+      ],
+      "family": [
+        {
+          "word": "permit",
+          "vi": "cho phép; giấy phép"
+        }
+      ],
+      "tip": "permission không đếm được: ask for permission (không nói a permission).",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 1068,
+      "word": "persuade",
+      "ipa": "pərsˈweɪd",
+      "viRead": "pơs-WÂYĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thuyết phục",
+      "exampleEn": "I persuaded my dad to buy a new phone.",
+      "exampleVi": "Tôi đã thuyết phục bố mua điện thoại mới.",
+      "collocations": [
+        {
+          "en": "persuade someone to",
+          "vi": "thuyết phục ai làm gì"
+        },
+        {
+          "en": "hard to persuade",
+          "vi": "khó thuyết phục"
+        }
+      ],
+      "family": [
+        {
+          "word": "persuasive",
+          "vi": "có sức thuyết phục"
+        }
+      ],
+      "tip": "u đọc 'w': 'pơ-SWÂY-đ'. persuade + người + to V.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 1069,
+      "word": "polite",
+      "ipa": "pəˈlaɪt",
+      "viRead": "pơ-LAIT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lịch sự",
+      "exampleEn": "It's polite to say thank you.",
+      "exampleVi": "Nói cảm ơn là lịch sự.",
+      "collocations": [
+        {
+          "en": "be polite",
+          "vi": "lịch sự"
+        },
+        {
+          "en": "a polite reply",
+          "vi": "câu trả lời lịch sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "politely",
+          "vi": "một cách lịch sự"
+        },
+        {
+          "word": "impolite",
+          "vi": "bất lịch sự"
+        }
+      ],
+      "tip": "Muốn lịch sự: thêm please, dùng Could you…? thay vì Can you…?",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 1070,
+      "word": "popular",
+      "ipa": "ˈpɑpjələr",
+      "viRead": "PAP-yơ-lơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "phổ biến, được yêu thích",
+      "exampleEn": "Pho is very popular in Vietnam.",
+      "exampleVi": "Phở rất được ưa chuộng ở Việt Nam.",
+      "collocations": [
+        {
+          "en": "popular with",
+          "vi": "được … yêu thích"
+        },
+        {
+          "en": "a popular song",
+          "vi": "bài hát nổi tiếng"
+        }
+      ],
+      "family": [
+        {
+          "word": "popularity",
+          "vi": "sự nổi tiếng"
+        }
+      ],
+      "tip": "popular with + nhóm người: popular with young people.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 1071,
+      "word": "prefer",
+      "ipa": "prɪˈfər",
+      "viRead": "prơ-PHƠ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thích hơn",
+      "exampleEn": "I prefer tea to coffee.",
+      "exampleVi": "Tôi thích trà hơn cà phê.",
+      "collocations": [
+        {
+          "en": "prefer A to B",
+          "vi": "thích A hơn B"
+        },
+        {
+          "en": "I'd prefer to",
+          "vi": "tôi muốn … hơn"
+        }
+      ],
+      "family": [
+        {
+          "word": "preference",
+          "vi": "sự ưa thích"
+        }
+      ],
+      "tip": "prefer A TO B (không dùng than): I prefer tea to coffee ✓ (prefer tea than coffee ✗). preferred (gấp đôi r).",
+      "emoji": "👍",
+      "stage": 2
+    },
+    {
+      "id": 1072,
+      "word": "prepare",
+      "ipa": "priˈpɛr",
+      "viRead": "pri-PER",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chuẩn bị",
+      "exampleEn": "I need to prepare for the interview.",
+      "exampleVi": "Tôi cần chuẩn bị cho buổi phỏng vấn.",
+      "collocations": [
+        {
+          "en": "prepare for",
+          "vi": "chuẩn bị cho"
+        },
+        {
+          "en": "prepare dinner",
+          "vi": "nấu bữa tối"
+        }
+      ],
+      "family": [
+        {
+          "word": "preparation",
+          "vi": "sự chuẩn bị"
+        },
+        {
+          "word": "prepared",
+          "vi": "sẵn sàng"
+        }
+      ],
+      "tip": "prepare for + sự kiện (prepare for the exam); prepare + đồ (prepare food).",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 1073,
+      "word": "pretend",
+      "ipa": "priˈtɛnd",
+      "viRead": "pri-TENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giả vờ",
+      "exampleEn": "He pretended to be asleep.",
+      "exampleVi": "Anh ấy giả vờ ngủ.",
+      "collocations": [
+        {
+          "en": "pretend to be",
+          "vi": "giả vờ là"
+        },
+        {
+          "en": "pretend that",
+          "vi": "giả vờ rằng"
+        }
+      ],
+      "tip": "pretend = giả vờ, không phải 'mong đợi'. pretend + to V.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 1074,
+      "word": "prevent",
+      "ipa": "prɪˈvɛnt",
+      "viRead": "pri-VENT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngăn ngừa, phòng tránh",
+      "exampleEn": "Washing your hands can prevent illness.",
+      "exampleVi": "Rửa tay có thể phòng bệnh.",
+      "collocations": [
+        {
+          "en": "prevent someone from",
+          "vi": "ngăn ai làm gì"
+        },
+        {
+          "en": "prevent accidents",
+          "vi": "phòng tránh tai nạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "prevention",
+          "vi": "sự phòng ngừa"
+        }
+      ],
+      "tip": "prevent + người + FROM + V-ing: The rain prevented us from going out.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 1075,
+      "word": "private",
+      "ipa": "ˈpraɪvət",
+      "viRead": "PRAI-vơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "riêng tư",
+      "exampleEn": "This is a private conversation.",
+      "exampleVi": "Đây là cuộc nói chuyện riêng.",
+      "collocations": [
+        {
+          "en": "private life",
+          "vi": "đời tư"
+        },
+        {
+          "en": "private school",
+          "vi": "trường tư"
+        },
+        {
+          "en": "in private",
+          "vi": "riêng tư"
+        }
+      ],
+      "family": [
+        {
+          "word": "privacy",
+          "vi": "sự riêng tư"
+        }
+      ],
+      "tip": "i đọc 'ai': 'PRAI-vợt'. private ↔ public.",
+      "emoji": "🔒",
+      "stage": 2
+    },
+    {
+      "id": 1076,
+      "word": "proud",
+      "ipa": "praʊd",
+      "viRead": "PRAOĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tự hào",
+      "exampleEn": "I'm proud of you!",
+      "exampleVi": "Mình tự hào về bạn!",
+      "collocations": [
+        {
+          "en": "proud of",
+          "vi": "tự hào về"
+        },
+        {
+          "en": "a proud moment",
+          "vi": "khoảnh khắc đáng tự hào"
+        }
+      ],
+      "family": [
+        {
+          "word": "pride",
+          "vi": "niềm tự hào"
+        }
+      ],
+      "tip": "proud OF (không dùng about/with). Học xong 1000 từ, hãy proud of yourself!",
+      "emoji": "🥹",
+      "stage": 2
+    },
+    {
+      "id": 1077,
+      "word": "provide",
+      "ipa": "prəˈvaɪd",
+      "viRead": "prơ-VAIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cung cấp",
+      "exampleEn": "The hotel provides free breakfast.",
+      "exampleVi": "Khách sạn có bữa sáng miễn phí.",
+      "collocations": [
+        {
+          "en": "provide someone with",
+          "vi": "cung cấp cho ai"
+        },
+        {
+          "en": "provide information",
+          "vi": "cung cấp thông tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "provider",
+          "vi": "nhà cung cấp"
+        }
+      ],
+      "tip": "provide + người + WITH + vật: provide students with books.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 1078,
+      "word": "purpose",
+      "ipa": "ˈpərpəs",
+      "viRead": "PƠ-pơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mục đích",
+      "exampleEn": "What's the purpose of your visit?",
+      "exampleVi": "Mục đích chuyến thăm của bạn là gì?",
+      "collocations": [
+        {
+          "en": "on purpose",
+          "vi": "cố ý"
+        },
+        {
+          "en": "the purpose of",
+          "vi": "mục đích của"
+        }
+      ],
+      "tip": "on purpose = cố tình (ngược với by accident). Ở sân bay hay hỏi: purpose of your visit.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 1079,
+      "word": "reduce",
+      "ipa": "rɪˈdus",
+      "viRead": "rơ-ĐUS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giảm",
+      "exampleEn": "We should reduce the use of plastic bags.",
+      "exampleVi": "Chúng ta nên giảm dùng túi ni-lông.",
+      "collocations": [
+        {
+          "en": "reduce costs",
+          "vi": "giảm chi phí"
+        },
+        {
+          "en": "reduce stress",
+          "vi": "giảm căng thẳng"
+        }
+      ],
+      "family": [
+        {
+          "word": "reduction",
+          "vi": "sự giảm"
+        }
+      ],
+      "tip": "reduce = làm giảm (có tân ngữ); decrease vừa làm giảm vừa tự giảm.",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 1080,
+      "word": "refuse",
+      "ipa": "ˈrɛfˌjuz",
+      "viRead": "rơph-YUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "từ chối",
+      "exampleEn": "She refused to answer the question.",
+      "exampleVi": "Cô ấy từ chối trả lời câu hỏi.",
+      "collocations": [
+        {
+          "en": "refuse to do",
+          "vi": "từ chối làm"
+        },
+        {
+          "en": "refuse an offer",
+          "vi": "từ chối lời đề nghị"
+        }
+      ],
+      "family": [
+        {
+          "word": "refusal",
+          "vi": "sự từ chối"
+        }
+      ],
+      "tip": "refuse + to V. Nhấn âm sau: ri-FIUZ.",
+      "emoji": "🙅",
+      "stage": 2
+    },
+    {
+      "id": 1081,
+      "word": "regret",
+      "ipa": "rɪˈgrɛt",
+      "viRead": "rơg-RET",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hối tiếc",
+      "exampleEn": "I regret not studying harder at school.",
+      "exampleVi": "Tôi hối tiếc vì hồi đi học không chăm hơn.",
+      "collocations": [
+        {
+          "en": "regret doing",
+          "vi": "hối tiếc đã làm"
+        },
+        {
+          "en": "no regrets",
+          "vi": "không hối tiếc"
+        }
+      ],
+      "tip": "regret + V-ing = tiếc vì đã làm. regretted (gấp đôi t).",
+      "emoji": "😔",
+      "stage": 2
+    },
+    {
+      "id": 1082,
+      "word": "relax",
+      "ipa": "rɪˈlæks",
+      "viRead": "ri-LEKS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thư giãn",
+      "exampleEn": "I like to relax with music after work.",
+      "exampleVi": "Tôi thích thư giãn với âm nhạc sau giờ làm.",
+      "collocations": [
+        {
+          "en": "relax at home",
+          "vi": "thư giãn ở nhà"
+        },
+        {
+          "en": "just relax",
+          "vi": "cứ thả lỏng"
+        }
+      ],
+      "family": [
+        {
+          "word": "relaxed",
+          "vi": "thoải mái"
+        },
+        {
+          "word": "relaxing",
+          "vi": "dễ chịu, thư giãn"
+        }
+      ],
+      "tip": "I'm relaxed (tôi thấy thư thái) ≠ It's relaxing (nó giúp thư giãn).",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 1083,
+      "word": "rely",
+      "ipa": "rɪˈlaɪ",
+      "viRead": "ri-LAI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dựa vào, tin cậy",
+      "exampleEn": "You can always rely on me.",
+      "exampleVi": "Bạn luôn có thể tin cậy ở tôi.",
+      "collocations": [
+        {
+          "en": "rely on",
+          "vi": "dựa vào"
+        },
+        {
+          "en": "rely heavily on",
+          "vi": "phụ thuộc nhiều vào"
+        }
+      ],
+      "family": [
+        {
+          "word": "reliable",
+          "vi": "đáng tin cậy"
+        }
+      ],
+      "tip": "rely luôn đi với on. reliable = đáng tin: a reliable friend.",
+      "emoji": "🤲",
+      "stage": 2
+    },
+    {
+      "id": 1084,
+      "word": "remind",
+      "ipa": "riˈmaɪnd",
+      "viRead": "ri-MAINĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhắc nhở",
+      "exampleEn": "Please remind me to call my mom.",
+      "exampleVi": "Làm ơn nhắc tôi gọi cho mẹ.",
+      "collocations": [
+        {
+          "en": "remind someone to",
+          "vi": "nhắc ai làm gì"
+        },
+        {
+          "en": "remind me of",
+          "vi": "làm tôi nhớ đến"
+        }
+      ],
+      "family": [
+        {
+          "word": "reminder",
+          "vi": "lời nhắc"
+        }
+      ],
+      "tip": "remember = tự nhớ; remind = nhắc NGƯỜI KHÁC nhớ. This song reminds me of my hometown.",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 1085,
+      "word": "rent",
+      "ipa": "rɛnt",
+      "viRead": "RENT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "thuê; tiền thuê",
+      "exampleEn": "We rent a small flat near the city center.",
+      "exampleVi": "Chúng tôi thuê một căn hộ nhỏ gần trung tâm.",
+      "collocations": [
+        {
+          "en": "rent a car",
+          "vi": "thuê xe"
+        },
+        {
+          "en": "pay the rent",
+          "vi": "trả tiền thuê nhà"
+        },
+        {
+          "en": "for rent",
+          "vi": "cho thuê"
+        }
+      ],
+      "tip": "FOR RENT = cho thuê (biển treo trước nhà). rent vừa là 'thuê' vừa là 'tiền thuê'.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 1086,
+      "word": "replace",
+      "ipa": "ˌriˈpleɪs",
+      "viRead": "rip-LÂYS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thay thế",
+      "exampleEn": "I need to replace my old phone.",
+      "exampleVi": "Tôi cần thay chiếc điện thoại cũ.",
+      "collocations": [
+        {
+          "en": "replace A with B",
+          "vi": "thay A bằng B"
+        },
+        {
+          "en": "hard to replace",
+          "vi": "khó thay thế"
+        }
+      ],
+      "family": [
+        {
+          "word": "replacement",
+          "vi": "sự thay thế"
+        }
+      ],
+      "tip": "replace A WITH B: replace the old battery with a new one.",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 1087,
+      "word": "reply",
+      "ipa": "rɪˈplaɪ",
+      "viRead": "rip-LAI",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "trả lời, hồi âm",
+      "exampleEn": "Please reply to my email soon.",
+      "exampleVi": "Làm ơn sớm trả lời email của tôi.",
+      "collocations": [
+        {
+          "en": "reply to",
+          "vi": "trả lời (tin nhắn, thư)"
+        },
+        {
+          "en": "quick reply",
+          "vi": "trả lời nhanh"
+        }
+      ],
+      "tip": "reply TO + tin nhắn/thư: reply to a message. Nút 'Reply all' = trả lời tất cả.",
+      "emoji": "↩️",
+      "stage": 2
+    },
+    {
+      "id": 1088,
+      "word": "request",
+      "ipa": "rɪkˈwɛst",
+      "viRead": "rik-WEST",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "yêu cầu, đề nghị",
+      "exampleEn": "We received your request yesterday.",
+      "exampleVi": "Chúng tôi đã nhận yêu cầu của bạn hôm qua.",
+      "collocations": [
+        {
+          "en": "make a request",
+          "vi": "đưa ra yêu cầu"
+        },
+        {
+          "en": "on request",
+          "vi": "khi có yêu cầu"
+        }
+      ],
+      "tip": "request trang trọng hơn ask. Trên app: friend request = lời mời kết bạn.",
+      "emoji": "📨",
+      "stage": 2
+    },
+    {
+      "id": 1089,
+      "word": "respect",
+      "ipa": "rɪˈspɛkt",
+      "viRead": "ris-PEKT",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự tôn trọng",
+      "exampleEn": "Children should show respect to older people.",
+      "exampleVi": "Trẻ em nên thể hiện sự tôn trọng với người lớn tuổi.",
+      "collocations": [
+        {
+          "en": "show respect",
+          "vi": "thể hiện sự tôn trọng"
+        },
+        {
+          "en": "with respect",
+          "vi": "với sự tôn trọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "respectful",
+          "vi": "lễ phép"
+        }
+      ],
+      "tip": "respect vừa là danh từ vừa là động từ: I respect my teachers.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 1090,
+      "word": "responsible",
+      "ipa": "riˈspɑnsəbəl",
+      "viRead": "ris-PAN-sơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có trách nhiệm",
+      "exampleEn": "Who is responsible for this project?",
+      "exampleVi": "Ai chịu trách nhiệm dự án này?",
+      "collocations": [
+        {
+          "en": "responsible for",
+          "vi": "chịu trách nhiệm về"
+        },
+        {
+          "en": "a responsible person",
+          "vi": "người có trách nhiệm"
+        }
+      ],
+      "family": [
+        {
+          "word": "responsibility",
+          "vi": "trách nhiệm"
+        }
+      ],
+      "tip": "responsible FOR + việc/người. Danh từ: responsibility (dài 6 âm tiết!).",
+      "emoji": "📌",
+      "stage": 2
+    },
+    {
+      "id": 1091,
+      "word": "rude",
+      "ipa": "rud",
+      "viRead": "RUĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thô lỗ, bất lịch sự",
+      "exampleEn": "It's rude to talk with your mouth full.",
+      "exampleVi": "Vừa nhai vừa nói là bất lịch sự.",
+      "collocations": [
+        {
+          "en": "rude to",
+          "vi": "thô lỗ với"
+        },
+        {
+          "en": "don't be rude",
+          "vi": "đừng vô lễ"
+        }
+      ],
+      "family": [
+        {
+          "word": "rudely",
+          "vi": "một cách thô lỗ"
+        }
+      ],
+      "tip": "rude ↔ polite. It's rude to + V = … là bất lịch sự.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 1092,
+      "word": "satisfied",
+      "ipa": "ˈsætɪsˌfaɪd",
+      "viRead": "SE-tơs-phaiđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hài lòng",
+      "exampleEn": "Are you satisfied with the service?",
+      "exampleVi": "Bạn có hài lòng với dịch vụ không?",
+      "collocations": [
+        {
+          "en": "satisfied with",
+          "vi": "hài lòng với"
+        },
+        {
+          "en": "fully satisfied",
+          "vi": "hoàn toàn hài lòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "satisfaction",
+          "vi": "sự hài lòng"
+        }
+      ],
+      "tip": "satisfied WITH. Khảo sát khách hàng hay hỏi: How satisfied are you?",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 1093,
+      "word": "schedule",
+      "ipa": "ˈskɛʤʊl",
+      "viRead": "SKE-giul",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lịch trình",
+      "exampleEn": "My schedule is very busy this week.",
+      "exampleVi": "Lịch của tôi tuần này rất kín.",
+      "collocations": [
+        {
+          "en": "on schedule",
+          "vi": "đúng tiến độ"
+        },
+        {
+          "en": "a busy schedule",
+          "vi": "lịch dày đặc"
+        }
+      ],
+      "tip": "Mỹ đọc 'SKE-giul', Anh đọc 'SHE-diul' — đều đúng. behind schedule = chậm tiến độ.",
+      "emoji": "📅",
+      "stage": 2
+    },
+    {
+      "id": 1094,
+      "word": "separate",
+      "ipa": "ˈsɛpərˌeɪt",
+      "viRead": "SE-pơ-âyt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "riêng biệt",
+      "exampleEn": "Keep the meat separate from the vegetables.",
+      "exampleVi": "Để thịt riêng khỏi rau.",
+      "collocations": [
+        {
+          "en": "separate rooms",
+          "vi": "phòng riêng"
+        },
+        {
+          "en": "separate from",
+          "vi": "tách khỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "separately",
+          "vi": "riêng rẽ"
+        }
+      ],
+      "tip": "Chính tả hay sai: separate có 'par' ở giữa (se-PAR-ate).",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 1095,
+      "word": "serious",
+      "ipa": "ˈsɪriəs",
+      "viRead": "SI-ri-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nghiêm túc; nghiêm trọng",
+      "exampleEn": "Are you serious or just joking?",
+      "exampleVi": "Bạn nói thật hay đùa vậy?",
+      "collocations": [
+        {
+          "en": "are you serious?",
+          "vi": "bạn nghiêm túc đấy à?"
+        },
+        {
+          "en": "a serious problem",
+          "vi": "vấn đề nghiêm trọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "seriously",
+          "vi": "nghiêm túc"
+        }
+      ],
+      "tip": "Seriously? = Thật á? (ngạc nhiên). serious illness = bệnh nặng.",
+      "emoji": "🧐",
+      "stage": 2
+    },
+    {
+      "id": 1096,
+      "word": "shy",
+      "ipa": "ʃaɪ",
+      "viRead": "SHAI",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhút nhát, ngại",
+      "exampleEn": "Don't be shy, just try to speak.",
+      "exampleVi": "Đừng ngại, cứ thử nói đi.",
+      "collocations": [
+        {
+          "en": "too shy to",
+          "vi": "ngại đến mức không"
+        },
+        {
+          "en": "a shy smile",
+          "vi": "nụ cười bẽn lẽn"
+        }
+      ],
+      "family": [
+        {
+          "word": "shyness",
+          "vi": "sự rụt rè"
+        }
+      ],
+      "tip": "Người học tiếng Anh hay shy khi nói — sai cũng không sao, cứ nói!",
+      "emoji": "🙈",
+      "stage": 2
+    },
+    {
+      "id": 1097,
+      "word": "similar",
+      "ipa": "ˈsɪmələr",
+      "viRead": "SI-mơ-lơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tương tự, giống",
+      "exampleEn": "Your bag is similar to mine.",
+      "exampleVi": "Cái túi của bạn giống của tôi.",
+      "collocations": [
+        {
+          "en": "similar to",
+          "vi": "giống với"
+        },
+        {
+          "en": "very similar",
+          "vi": "rất giống"
+        }
+      ],
+      "family": [
+        {
+          "word": "similarity",
+          "vi": "điểm giống nhau"
+        }
+      ],
+      "tip": "similar TO (không dùng with): similar to mine ✓. Giống hệt thì dùng the same as.",
+      "emoji": "👯",
+      "stage": 2
+    },
+    {
+      "id": 1098,
+      "word": "suggest",
+      "ipa": "səˈʤɛst",
+      "viRead": "sơ-GIEST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gợi ý, đề xuất",
+      "exampleEn": "I suggest going by train.",
+      "exampleVi": "Tôi đề xuất đi bằng tàu.",
+      "collocations": [
+        {
+          "en": "suggest doing",
+          "vi": "gợi ý làm gì"
+        },
+        {
+          "en": "suggest that",
+          "vi": "đề nghị rằng"
+        }
+      ],
+      "family": [
+        {
+          "word": "suggestion",
+          "vi": "lời gợi ý"
+        }
+      ],
+      "tip": "suggest + V-ing (suggest going ✓, suggest to go ✗). Hoặc: I suggest that we go.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1099,
+      "word": "suitable",
+      "ipa": "ˈsutəbəl",
+      "viRead": "SU-tơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "phù hợp",
+      "exampleEn": "This film is not suitable for children.",
+      "exampleVi": "Bộ phim này không phù hợp với trẻ em.",
+      "collocations": [
+        {
+          "en": "suitable for",
+          "vi": "phù hợp với"
+        },
+        {
+          "en": "a suitable time",
+          "vi": "thời điểm phù hợp"
+        }
+      ],
+      "family": [
+        {
+          "word": "suit",
+          "vi": "hợp; bộ com-lê"
+        }
+      ],
+      "tip": "suitable FOR. Động từ suit: That dress suits you (Váy đó hợp với bạn).",
+      "emoji": "👗",
+      "stage": 2
+    },
+    {
+      "id": 1100,
+      "word": "survive",
+      "ipa": "sərˈvaɪv",
+      "viRead": "sơ-VAIV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sống sót, vượt qua",
+      "exampleEn": "Only one person survived the accident.",
+      "exampleVi": "Chỉ một người sống sót sau vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "survive a crash",
+          "vi": "sống sót sau tai nạn"
+        },
+        {
+          "en": "survive on",
+          "vi": "sống nhờ vào"
+        }
+      ],
+      "family": [
+        {
+          "word": "survivor",
+          "vi": "người sống sót"
+        },
+        {
+          "word": "survival",
+          "vi": "sự sống còn"
+        }
+      ],
+      "tip": "survive đi thẳng với biến cố, không cần from: survive the storm ✓.",
+      "emoji": "🆘",
       "stage": 2
     }
   ]
