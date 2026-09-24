@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1409,
+    "count": 1459,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -41713,6 +41713,1310 @@
       ],
       "tip": "young (tính từ) → youth (danh từ). Đoàn Thanh niên = the Youth Union.",
       "emoji": "🧑",
+      "stage": 2
+    },
+    {
+      "id": 1410,
+      "word": "absent",
+      "ipa": "ˈæbsənt",
+      "viRead": "EB-sơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vắng mặt",
+      "exampleEn": "Three students were absent today.",
+      "exampleVi": "Hôm nay ba học sinh vắng mặt.",
+      "collocations": [
+        {
+          "en": "absent from",
+          "vi": "vắng mặt ở"
+        },
+        {
+          "en": "absent-minded",
+          "vi": "đãng trí"
+        }
+      ],
+      "family": [
+        {
+          "word": "absence",
+          "vi": "sự vắng mặt"
+        }
+      ],
+      "tip": "absent ↔ present (có mặt). absent-minded = đãng trí, hay quên.",
+      "emoji": "🪑",
+      "stage": 2
+    },
+    {
+      "id": 1411,
+      "word": "accommodation",
+      "ipa": "əˌkɑməˈdeɪʃən",
+      "viRead": "ơ-ka-mơ-ĐÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chỗ ở",
+      "exampleEn": "We need to find accommodation in Da Lat.",
+      "exampleVi": "Chúng tôi cần tìm chỗ ở tại Đà Lạt.",
+      "collocations": [
+        {
+          "en": "cheap accommodation",
+          "vi": "chỗ ở giá rẻ"
+        },
+        {
+          "en": "book accommodation",
+          "vi": "đặt chỗ ở"
+        }
+      ],
+      "tip": "Chính tả khó: 2 c, 2 m (a-cc-o-mm-odation). Anh dùng không đếm được: accommodation (không thêm s).",
+      "emoji": "🏨",
+      "stage": 2
+    },
+    {
+      "id": 1412,
+      "word": "accurate",
+      "ipa": "ˈækjərət",
+      "viRead": "EK-yơ-ơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chính xác",
+      "exampleEn": "The weather forecast was accurate today.",
+      "exampleVi": "Dự báo thời tiết hôm nay chính xác.",
+      "collocations": [
+        {
+          "en": "accurate information",
+          "vi": "thông tin chính xác"
+        },
+        {
+          "en": "100% accurate",
+          "vi": "chính xác 100%"
+        }
+      ],
+      "family": [
+        {
+          "word": "accuracy",
+          "vi": "độ chính xác"
+        }
+      ],
+      "tip": "accurate (chính xác về số liệu, thông tin) ≈ exact. Nhấn âm đầu: Á-kiu-rợt.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 1413,
+      "word": "admire",
+      "ipa": "ædˈmaɪr",
+      "viRead": "eđ-MAIR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngưỡng mộ",
+      "exampleEn": "I really admire my grandmother.",
+      "exampleVi": "Tôi thật sự ngưỡng mộ bà tôi.",
+      "collocations": [
+        {
+          "en": "admire someone for",
+          "vi": "ngưỡng mộ ai vì"
+        },
+        {
+          "en": "admire the view",
+          "vi": "ngắm cảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "admiration",
+          "vi": "sự ngưỡng mộ"
+        }
+      ],
+      "tip": "admire the view = ngắm cảnh (thích thú). admire + người + for + điều gì.",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 1414,
+      "word": "airline",
+      "ipa": "ˈɛˌrlaɪn",
+      "viRead": "ER-lain",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hãng hàng không",
+      "exampleEn": "Which airline are you flying with?",
+      "exampleVi": "Bạn bay hãng nào?",
+      "collocations": [
+        {
+          "en": "budget airline",
+          "vi": "hãng giá rẻ"
+        },
+        {
+          "en": "airline ticket",
+          "vi": "vé máy bay"
+        }
+      ],
+      "family": [
+        {
+          "word": "air",
+          "vi": "không khí"
+        }
+      ],
+      "tip": "budget airline = hãng bay giá rẻ. fly with + tên hãng.",
+      "emoji": "✈️",
+      "stage": 2
+    },
+    {
+      "id": 1415,
+      "word": "bath",
+      "ipa": "bæθ",
+      "viRead": "BETH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bồn tắm; sự tắm",
+      "exampleEn": "I take a hot bath after a long day.",
+      "exampleVi": "Tôi tắm nước nóng sau một ngày dài.",
+      "collocations": [
+        {
+          "en": "take a bath",
+          "vi": "tắm (bồn)"
+        },
+        {
+          "en": "bath towel",
+          "vi": "khăn tắm"
+        }
+      ],
+      "family": [
+        {
+          "word": "bathroom",
+          "vi": "phòng tắm"
+        },
+        {
+          "word": "bathe",
+          "vi": "tắm (động từ)"
+        }
+      ],
+      "tip": "take a bath = tắm bồn; take a shower = tắm vòi sen.",
+      "emoji": "🛁",
+      "stage": 2
+    },
+    {
+      "id": 1416,
+      "word": "beard",
+      "ipa": "bɪrd",
+      "viRead": "BIRĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "râu (cằm)",
+      "exampleEn": "My uncle has a long white beard.",
+      "exampleVi": "Chú tôi có bộ râu dài màu trắng.",
+      "collocations": [
+        {
+          "en": "grow a beard",
+          "vi": "để râu"
+        },
+        {
+          "en": "shave your beard",
+          "vi": "cạo râu"
+        }
+      ],
+      "tip": "beard = râu cằm; mustache = ria mép. ea đọc 'ia': 'bia-đ'.",
+      "emoji": "🧔",
+      "stage": 2
+    },
+    {
+      "id": 1417,
+      "word": "beauty",
+      "ipa": "ˈbjuti",
+      "viRead": "BYU-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vẻ đẹp",
+      "exampleEn": "The beauty of Ha Long Bay is amazing.",
+      "exampleVi": "Vẻ đẹp của vịnh Hạ Long thật tuyệt vời.",
+      "collocations": [
+        {
+          "en": "natural beauty",
+          "vi": "vẻ đẹp tự nhiên"
+        },
+        {
+          "en": "beauty salon",
+          "vi": "tiệm làm đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "beautiful",
+          "vi": "đẹp"
+        }
+      ],
+      "tip": "beauty (danh từ) → beautiful (tính từ). eau đọc 'iu': 'BIU-ti'.",
+      "emoji": "🌺",
+      "stage": 2
+    },
+    {
+      "id": 1418,
+      "word": "bell",
+      "ipa": "bɛl",
+      "viRead": "BEL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái chuông",
+      "exampleEn": "The school bell rings at seven.",
+      "exampleVi": "Chuông trường reo lúc bảy giờ.",
+      "collocations": [
+        {
+          "en": "ring the bell",
+          "vi": "bấm chuông"
+        },
+        {
+          "en": "door bell",
+          "vi": "chuông cửa"
+        }
+      ],
+      "tip": "That rings a bell = Nghe quen quen (gợi nhớ điều gì).",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 1419,
+      "word": "belt",
+      "ipa": "bɛlt",
+      "viRead": "BELT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thắt lưng; dây đai",
+      "exampleEn": "Fasten your seat belt, please.",
+      "exampleVi": "Vui lòng thắt dây an toàn.",
+      "collocations": [
+        {
+          "en": "seat belt",
+          "vi": "dây an toàn"
+        },
+        {
+          "en": "leather belt",
+          "vi": "thắt lưng da"
+        }
+      ],
+      "tip": "seat belt = dây an toàn. Fasten your seat belt! (trên máy bay, ô tô).",
+      "emoji": "🪢",
+      "stage": 2
+    },
+    {
+      "id": 1420,
+      "word": "bin",
+      "ipa": "bɪn",
+      "viRead": "BIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thùng rác",
+      "exampleEn": "Throw your rubbish in the bin.",
+      "exampleVi": "Vứt rác vào thùng.",
+      "collocations": [
+        {
+          "en": "rubbish bin",
+          "vi": "thùng rác"
+        },
+        {
+          "en": "recycling bin",
+          "vi": "thùng rác tái chế"
+        }
+      ],
+      "tip": "bin (Anh) = trash can (Mỹ). Thùng rác trên máy tính = Recycle Bin.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 1421,
+      "word": "biscuit",
+      "ipa": "ˈbɪskət",
+      "viRead": "BIS-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh quy",
+      "exampleEn": "Would you like a biscuit with your tea?",
+      "exampleVi": "Bạn ăn bánh quy với trà không?",
+      "collocations": [
+        {
+          "en": "a packet of biscuits",
+          "vi": "một gói bánh quy"
+        },
+        {
+          "en": "chocolate biscuit",
+          "vi": "bánh quy sô-cô-la"
+        }
+      ],
+      "tip": "Anh: biscuit; Mỹ: cookie. u câm: 'BIS-kịt'.",
+      "emoji": "🍪",
+      "stage": 2
+    },
+    {
+      "id": 1422,
+      "word": "blind",
+      "ipa": "blaɪnd",
+      "viRead": "BLAINĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mù",
+      "exampleEn": "He is blind in one eye.",
+      "exampleVi": "Ông ấy bị mù một mắt.",
+      "collocations": [
+        {
+          "en": "go blind",
+          "vi": "bị mù"
+        },
+        {
+          "en": "blind date",
+          "vi": "buổi hẹn giấu mặt"
+        }
+      ],
+      "tip": "blind date = buổi hẹn với người chưa từng gặp. Đọc 'blai-nđ'.",
+      "emoji": "🦯",
+      "stage": 2
+    },
+    {
+      "id": 1423,
+      "word": "blood",
+      "ipa": "bləd",
+      "viRead": "BLƠĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máu",
+      "exampleEn": "He gives blood twice a year.",
+      "exampleVi": "Anh ấy hiến máu hai lần một năm.",
+      "collocations": [
+        {
+          "en": "give blood",
+          "vi": "hiến máu"
+        },
+        {
+          "en": "blood type",
+          "vi": "nhóm máu"
+        }
+      ],
+      "family": [
+        {
+          "word": "bleed",
+          "vi": "chảy máu"
+        },
+        {
+          "word": "bloody",
+          "vi": "đầy máu"
+        }
+      ],
+      "tip": "oo đọc 'ă': 'blắđ' (khác food, moon). give blood = hiến máu.",
+      "emoji": "🩸",
+      "stage": 2
+    },
+    {
+      "id": 1424,
+      "word": "board",
+      "ipa": "bɔrd",
+      "viRead": "BORĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tấm bảng; lên (tàu, xe)",
+      "exampleEn": "The teacher wrote the answer on the board.",
+      "exampleVi": "Giáo viên viết đáp án lên bảng.",
+      "collocations": [
+        {
+          "en": "on the board",
+          "vi": "trên bảng"
+        },
+        {
+          "en": "on board",
+          "vi": "trên tàu/máy bay"
+        },
+        {
+          "en": "board game",
+          "vi": "trò chơi bàn cờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "boarding pass",
+          "vi": "thẻ lên máy bay"
+        }
+      ],
+      "tip": "boarding pass = thẻ lên máy bay. Welcome on board! = Chào mừng quý khách lên máy bay.",
+      "emoji": "🧑‍🏫",
+      "stage": 2
+    },
+    {
+      "id": 1425,
+      "word": "boot",
+      "ipa": "but",
+      "viRead": "BUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ủng, bốt",
+      "exampleEn": "Wear your boots, it's raining.",
+      "exampleVi": "Đi ủng vào, trời đang mưa.",
+      "collocations": [
+        {
+          "en": "a pair of boots",
+          "vi": "một đôi bốt"
+        },
+        {
+          "en": "rain boots",
+          "vi": "ủng đi mưa"
+        }
+      ],
+      "tip": "boot (Anh) còn là cốp xe ô tô. Khởi động máy tính = boot up.",
+      "emoji": "🥾",
+      "stage": 2
+    },
+    {
+      "id": 1426,
+      "word": "border",
+      "ipa": "ˈbɔrdər",
+      "viRead": "BOR-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biên giới; đường viền",
+      "exampleEn": "We crossed the border into Laos.",
+      "exampleVi": "Chúng tôi qua biên giới sang Lào.",
+      "collocations": [
+        {
+          "en": "cross the border",
+          "vi": "qua biên giới"
+        },
+        {
+          "en": "border control",
+          "vi": "kiểm soát biên giới"
+        }
+      ],
+      "tip": "border = biên giới giữa hai nước, cũng là đường viền (của ảnh, vải).",
+      "emoji": "🛂",
+      "stage": 2
+    },
+    {
+      "id": 1427,
+      "word": "boss",
+      "ipa": "bɔs",
+      "viRead": "BAS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sếp",
+      "exampleEn": "My boss is very kind to everyone.",
+      "exampleVi": "Sếp tôi rất tốt với mọi người.",
+      "collocations": [
+        {
+          "en": "my boss",
+          "vi": "sếp tôi"
+        },
+        {
+          "en": "be your own boss",
+          "vi": "tự làm chủ"
+        }
+      ],
+      "tip": "be your own boss = tự kinh doanh, tự làm chủ. Trang trọng hơn: manager.",
+      "emoji": "🧑‍💼",
+      "stage": 2
+    },
+    {
+      "id": 1428,
+      "word": "bowl",
+      "ipa": "boʊl",
+      "viRead": "BÂUL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái bát, tô",
+      "exampleEn": "I eat a bowl of pho every morning.",
+      "exampleVi": "Sáng nào tôi cũng ăn một tô phở.",
+      "collocations": [
+        {
+          "en": "a bowl of rice",
+          "vi": "một bát cơm"
+        },
+        {
+          "en": "salad bowl",
+          "vi": "bát trộn salad"
+        }
+      ],
+      "tip": "a bowl of + món nước/cơm. ow đọc 'âu': 'bâul'.",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 1429,
+      "word": "brand",
+      "ipa": "brænd",
+      "viRead": "BRENĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thương hiệu",
+      "exampleEn": "What brand is your phone?",
+      "exampleVi": "Điện thoại của bạn hãng gì?",
+      "collocations": [
+        {
+          "en": "a famous brand",
+          "vi": "thương hiệu nổi tiếng"
+        },
+        {
+          "en": "brand new",
+          "vi": "mới toanh"
+        }
+      ],
+      "tip": "brand new = mới tinh (chưa dùng). What brand…? = Hãng gì?",
+      "emoji": "🏷️",
+      "stage": 2
+    },
+    {
+      "id": 1430,
+      "word": "bridge",
+      "ipa": "brɪʤ",
+      "viRead": "BRIGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây cầu",
+      "exampleEn": "The Dragon Bridge in Da Nang breathes fire.",
+      "exampleVi": "Cầu Rồng ở Đà Nẵng phun lửa.",
+      "collocations": [
+        {
+          "en": "cross the bridge",
+          "vi": "qua cầu"
+        },
+        {
+          "en": "build bridges",
+          "vi": "xây cầu nối"
+        }
+      ],
+      "tip": "d câm: 'brij'. Tên cầu viết hoa: Long Bien Bridge.",
+      "emoji": "🌉",
+      "stage": 2
+    },
+    {
+      "id": 1431,
+      "word": "bubble",
+      "ipa": "ˈbəbəl",
+      "viRead": "BƠ-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bong bóng",
+      "exampleEn": "The children love blowing bubbles.",
+      "exampleVi": "Bọn trẻ thích thổi bong bóng xà phòng.",
+      "collocations": [
+        {
+          "en": "blow bubbles",
+          "vi": "thổi bong bóng"
+        },
+        {
+          "en": "bubble tea",
+          "vi": "trà sữa trân châu"
+        }
+      ],
+      "tip": "bubble tea = trà sữa trân châu. speech bubble = bong bóng thoại (truyện tranh).",
+      "emoji": "🫧",
+      "stage": 2
+    },
+    {
+      "id": 1432,
+      "word": "bucket",
+      "ipa": "ˈbəkɪt",
+      "viRead": "BƠ-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái xô",
+      "exampleEn": "Fill the bucket with water.",
+      "exampleVi": "Đổ đầy nước vào xô.",
+      "collocations": [
+        {
+          "en": "a bucket of water",
+          "vi": "một xô nước"
+        },
+        {
+          "en": "bucket list",
+          "vi": "danh sách việc muốn làm trong đời"
+        }
+      ],
+      "tip": "bucket list = danh sách những điều muốn làm trước khi 'già'.",
+      "emoji": "🪣",
+      "stage": 2
+    },
+    {
+      "id": 1433,
+      "word": "butter",
+      "ipa": "ˈbətər",
+      "viRead": "BƠ-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bơ (sữa)",
+      "exampleEn": "I like bread with butter and jam.",
+      "exampleVi": "Tôi thích bánh mì phết bơ và mứt.",
+      "collocations": [
+        {
+          "en": "bread and butter",
+          "vi": "bánh mì bơ"
+        },
+        {
+          "en": "peanut butter",
+          "vi": "bơ đậu phộng"
+        }
+      ],
+      "tip": "butter = bơ làm từ sữa; quả bơ = avocado. Đừng nhầm!",
+      "emoji": "🧈",
+      "stage": 2
+    },
+    {
+      "id": 1434,
+      "word": "cabbage",
+      "ipa": "ˈkæbɪʤ",
+      "viRead": "KE-bơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bắp cải",
+      "exampleEn": "My mom makes soup with cabbage.",
+      "exampleVi": "Mẹ tôi nấu canh bắp cải.",
+      "collocations": [
+        {
+          "en": "a head of cabbage",
+          "vi": "một cây bắp cải"
+        },
+        {
+          "en": "red cabbage",
+          "vi": "bắp cải tím"
+        }
+      ],
+      "tip": "age cuối đọc 'ịch': 'KA-bịch'.",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 1435,
+      "word": "calendar",
+      "ipa": "ˈkæləndər",
+      "viRead": "KE-lơn-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lịch",
+      "exampleEn": "I wrote the date in my calendar.",
+      "exampleVi": "Tôi ghi ngày đó vào lịch.",
+      "collocations": [
+        {
+          "en": "lunar calendar",
+          "vi": "âm lịch"
+        },
+        {
+          "en": "on the calendar",
+          "vi": "trên lịch"
+        }
+      ],
+      "tip": "lunar calendar = âm lịch; solar calendar = dương lịch. Chính tả: calendAr (không phải -er).",
+      "emoji": "📅",
+      "stage": 2
+    },
+    {
+      "id": 1436,
+      "word": "camp",
+      "ipa": "kæmp",
+      "viRead": "KEMP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "trại; cắm trại",
+      "exampleEn": "The kids went to summer camp.",
+      "exampleVi": "Bọn trẻ đi trại hè.",
+      "collocations": [
+        {
+          "en": "summer camp",
+          "vi": "trại hè"
+        },
+        {
+          "en": "go camping",
+          "vi": "đi cắm trại"
+        }
+      ],
+      "family": [
+        {
+          "word": "camping",
+          "vi": "việc cắm trại"
+        }
+      ],
+      "tip": "go camping = đi cắm trại. camp fire = lửa trại.",
+      "emoji": "🏕️",
+      "stage": 2
+    },
+    {
+      "id": 1437,
+      "word": "candidate",
+      "ipa": "ˈkænədɪt",
+      "viRead": "KEN-đơ-đâyt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ứng viên",
+      "exampleEn": "There are ten candidates for the job.",
+      "exampleVi": "Có mười ứng viên cho vị trí này.",
+      "collocations": [
+        {
+          "en": "a strong candidate",
+          "vi": "ứng viên sáng giá"
+        },
+        {
+          "en": "job candidate",
+          "vi": "ứng viên xin việc"
+        }
+      ],
+      "tip": "candidate = ứng viên (xin việc, bầu cử, dự thi). Nhấn âm đầu: KAN-đi-đợt.",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 1438,
+      "word": "cap",
+      "ipa": "kæp",
+      "viRead": "KEP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mũ lưỡi trai; nắp",
+      "exampleEn": "He wears a baseball cap every day.",
+      "exampleVi": "Ngày nào anh ấy cũng đội mũ lưỡi trai.",
+      "collocations": [
+        {
+          "en": "baseball cap",
+          "vi": "mũ lưỡi trai"
+        },
+        {
+          "en": "bottle cap",
+          "vi": "nắp chai"
+        }
+      ],
+      "tip": "cap = mũ lưỡi trai; hat = mũ nói chung. cap còn là nắp chai/bút.",
+      "emoji": "🧢",
+      "stage": 2
+    },
+    {
+      "id": 1439,
+      "word": "capable",
+      "ipa": "ˈkeɪpəbəl",
+      "viRead": "KÂY-pơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có khả năng",
+      "exampleEn": "She is capable of doing this job.",
+      "exampleVi": "Cô ấy có khả năng làm công việc này.",
+      "collocations": [
+        {
+          "en": "capable of",
+          "vi": "có khả năng"
+        },
+        {
+          "en": "highly capable",
+          "vi": "rất giỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "capability",
+          "vi": "năng lực"
+        }
+      ],
+      "tip": "capable OF + V-ing (không dùng to V): capable of solving ✓.",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 1440,
+      "word": "carpet",
+      "ipa": "ˈkɑrpət",
+      "viRead": "KAR-pơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tấm thảm",
+      "exampleEn": "The cat is sleeping on the carpet.",
+      "exampleVi": "Con mèo đang ngủ trên thảm.",
+      "collocations": [
+        {
+          "en": "red carpet",
+          "vi": "thảm đỏ"
+        },
+        {
+          "en": "on the carpet",
+          "vi": "trên thảm"
+        }
+      ],
+      "tip": "red carpet = thảm đỏ (sự kiện). carpet = thảm trải sàn; rug = thảm nhỏ.",
+      "emoji": "🟥",
+      "stage": 2
+    },
+    {
+      "id": 1441,
+      "word": "cartoon",
+      "ipa": "kɑrˈtun",
+      "viRead": "kar-TUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phim hoạt hình",
+      "exampleEn": "My son watches cartoons after school.",
+      "exampleVi": "Con trai tôi xem hoạt hình sau giờ học.",
+      "collocations": [
+        {
+          "en": "watch cartoons",
+          "vi": "xem hoạt hình"
+        },
+        {
+          "en": "cartoon character",
+          "vi": "nhân vật hoạt hình"
+        }
+      ],
+      "tip": "cartoon = hoạt hình / tranh biếm họa. Nhấn âm sau: ka-TUN.",
+      "emoji": "📺",
+      "stage": 2
+    },
+    {
+      "id": 1442,
+      "word": "castle",
+      "ipa": "ˈkæsəl",
+      "viRead": "KE-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lâu đài",
+      "exampleEn": "We visited an old castle in Europe.",
+      "exampleVi": "Chúng tôi thăm một lâu đài cổ ở châu Âu.",
+      "collocations": [
+        {
+          "en": "an old castle",
+          "vi": "lâu đài cổ"
+        },
+        {
+          "en": "sand castle",
+          "vi": "lâu đài cát"
+        }
+      ],
+      "tip": "t câm: 'KA-sồ'. Tương tự: listen, whistle.",
+      "emoji": "🏰",
+      "stage": 2
+    },
+    {
+      "id": 1443,
+      "word": "celebrity",
+      "ipa": "səˈlɛbrɪti",
+      "viRead": "sơ-LEB-ri-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người nổi tiếng",
+      "exampleEn": "Many celebrities came to the film festival.",
+      "exampleVi": "Nhiều người nổi tiếng đến liên hoan phim.",
+      "collocations": [
+        {
+          "en": "a famous celebrity",
+          "vi": "người nổi tiếng"
+        },
+        {
+          "en": "celebrity news",
+          "vi": "tin sao"
+        }
+      ],
+      "tip": "celebrity = người nổi tiếng (sao); celeb là nói tắt.",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 1444,
+      "word": "century",
+      "ipa": "ˈsɛnʧəri",
+      "viRead": "SEN-chơ-i",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thế kỷ",
+      "exampleEn": "This pagoda was built in the 11th century.",
+      "exampleVi": "Ngôi chùa này được xây vào thế kỷ 11.",
+      "collocations": [
+        {
+          "en": "the 21st century",
+          "vi": "thế kỷ 21"
+        },
+        {
+          "en": "for centuries",
+          "vi": "hàng thế kỷ"
+        }
+      ],
+      "tip": "in the 21st century (có the và số thứ tự). c đọc 's': 'SEN-chơ-ri'.",
+      "emoji": "🕰️",
+      "stage": 2
+    },
+    {
+      "id": 1445,
+      "word": "certain",
+      "ipa": "ˈsərtən",
+      "viRead": "SƠ-tơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chắc chắn; nhất định",
+      "exampleEn": "I'm certain that I locked the door.",
+      "exampleVi": "Tôi chắc chắn là đã khóa cửa.",
+      "collocations": [
+        {
+          "en": "for certain",
+          "vi": "chắc chắn"
+        },
+        {
+          "en": "a certain amount",
+          "vi": "một lượng nhất định"
+        }
+      ],
+      "family": [
+        {
+          "word": "certainly",
+          "vi": "chắc chắn rồi"
+        }
+      ],
+      "tip": "Certainly! = Chắc chắn rồi / Được ạ (lịch sự hơn Sure).",
+      "emoji": "✔️",
+      "stage": 2
+    },
+    {
+      "id": 1446,
+      "word": "certificate",
+      "ipa": "sərˈtɪfɪkət",
+      "viRead": "sơ-TI-phi-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chứng chỉ, giấy chứng nhận",
+      "exampleEn": "She got an IELTS certificate last year.",
+      "exampleVi": "Năm ngoái cô ấy lấy chứng chỉ IELTS.",
+      "collocations": [
+        {
+          "en": "birth certificate",
+          "vi": "giấy khai sinh"
+        },
+        {
+          "en": "get a certificate",
+          "vi": "nhận chứng chỉ"
+        }
+      ],
+      "tip": "birth certificate = giấy khai sinh. Nhấn âm hai: sơ-TI-fi-kợt.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 1447,
+      "word": "chain",
+      "ipa": "ʧeɪn",
+      "viRead": "CHÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây xích; chuỗi",
+      "exampleEn": "My bike chain is broken.",
+      "exampleVi": "Xích xe đạp của tôi bị đứt.",
+      "collocations": [
+        {
+          "en": "a gold chain",
+          "vi": "dây chuyền vàng"
+        },
+        {
+          "en": "chain store",
+          "vi": "chuỗi cửa hàng"
+        }
+      ],
+      "tip": "chain store = chuỗi cửa hàng (như Circle K). ai đọc 'ây': 'chây-n'.",
+      "emoji": "⛓️",
+      "stage": 2
+    },
+    {
+      "id": 1448,
+      "word": "champion",
+      "ipa": "ˈʧæmpiən",
+      "viRead": "CHEM-pi-ơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà vô địch",
+      "exampleEn": "Vietnam became the champion of the tournament.",
+      "exampleVi": "Việt Nam trở thành nhà vô địch giải đấu.",
+      "collocations": [
+        {
+          "en": "world champion",
+          "vi": "vô địch thế giới"
+        },
+        {
+          "en": "become champion",
+          "vi": "giành chức vô địch"
+        }
+      ],
+      "family": [
+        {
+          "word": "championship",
+          "vi": "giải vô địch"
+        }
+      ],
+      "tip": "championship = giải vô địch. We are the champions! 🏆",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 1449,
+      "word": "channel",
+      "ipa": "ˈʧænəl",
+      "viRead": "CHE-nơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kênh",
+      "exampleEn": "What channel is the football match on?",
+      "exampleVi": "Trận bóng chiếu trên kênh nào?",
+      "collocations": [
+        {
+          "en": "TV channel",
+          "vi": "kênh truyền hình"
+        },
+        {
+          "en": "change the channel",
+          "vi": "chuyển kênh"
+        },
+        {
+          "en": "YouTube channel",
+          "vi": "kênh YouTube"
+        }
+      ],
+      "tip": "Nhấn âm đầu: CHA-nồ. subscribe to a channel = đăng ký kênh.",
+      "emoji": "📺",
+      "stage": 2
+    },
+    {
+      "id": 1450,
+      "word": "character",
+      "ipa": "ˈkɛrɪktər",
+      "viRead": "KE-rik-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân vật; tính cách",
+      "exampleEn": "Who is your favorite character in the film?",
+      "exampleVi": "Nhân vật yêu thích của bạn trong phim là ai?",
+      "collocations": [
+        {
+          "en": "main character",
+          "vi": "nhân vật chính"
+        },
+        {
+          "en": "strong character",
+          "vi": "tính cách mạnh mẽ"
+        }
+      ],
+      "tip": "ch đọc 'k': 'KA-rợc-tơ'. character còn là 'ký tự' (tối đa 100 characters).",
+      "emoji": "🦸",
+      "stage": 2
+    },
+    {
+      "id": 1451,
+      "word": "charity",
+      "ipa": "ˈʧɛrɪti",
+      "viRead": "CHE-ri-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tổ chức từ thiện; từ thiện",
+      "exampleEn": "We give money to charity every year.",
+      "exampleVi": "Hằng năm chúng tôi quyên tiền làm từ thiện.",
+      "collocations": [
+        {
+          "en": "give to charity",
+          "vi": "làm từ thiện"
+        },
+        {
+          "en": "charity event",
+          "vi": "sự kiện từ thiện"
+        }
+      ],
+      "tip": "give to charity = làm từ thiện. Số nhiều: charities.",
+      "emoji": "💝",
+      "stage": 2
+    },
+    {
+      "id": 1452,
+      "word": "cheese",
+      "ipa": "ʧiz",
+      "viRead": "CHID",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phô mai",
+      "exampleEn": "I'd like a sandwich with cheese.",
+      "exampleVi": "Cho tôi một bánh sandwich có phô mai.",
+      "collocations": [
+        {
+          "en": "a piece of cheese",
+          "vi": "một miếng phô mai"
+        },
+        {
+          "en": "say cheese",
+          "vi": "cười lên nào (chụp ảnh)"
+        }
+      ],
+      "tip": "Say cheese! = Cười lên (khi chụp ảnh). cheese không đếm được.",
+      "emoji": "🧀",
+      "stage": 2
+    },
+    {
+      "id": 1453,
+      "word": "chef",
+      "ipa": "ʃɛf",
+      "viRead": "SHEPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầu bếp (chuyên nghiệp)",
+      "exampleEn": "The chef cooked a delicious meal.",
+      "exampleVi": "Đầu bếp nấu một bữa ăn ngon tuyệt.",
+      "collocations": [
+        {
+          "en": "head chef",
+          "vi": "bếp trưởng"
+        },
+        {
+          "en": "a famous chef",
+          "vi": "đầu bếp nổi tiếng"
+        }
+      ],
+      "tip": "ch đọc 'sh': 'shef'. chef = đầu bếp nhà hàng; cook = người nấu ăn nói chung.",
+      "emoji": "👨‍🍳",
+      "stage": 2
+    },
+    {
+      "id": 1454,
+      "word": "chess",
+      "ipa": "ʧɛs",
+      "viRead": "CHES",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cờ vua",
+      "exampleEn": "My grandfather taught me to play chess.",
+      "exampleVi": "Ông tôi dạy tôi chơi cờ vua.",
+      "collocations": [
+        {
+          "en": "play chess",
+          "vi": "chơi cờ vua"
+        },
+        {
+          "en": "chess board",
+          "vi": "bàn cờ"
+        }
+      ],
+      "tip": "play chess (không có the). Cờ tướng = Chinese chess.",
+      "emoji": "♟️",
+      "stage": 2
+    },
+    {
+      "id": 1455,
+      "word": "citizen",
+      "ipa": "ˈsɪtɪzən",
+      "viRead": "SI-tơ-dơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công dân",
+      "exampleEn": "Every citizen has the right to vote.",
+      "exampleVi": "Mọi công dân đều có quyền bầu cử.",
+      "collocations": [
+        {
+          "en": "Vietnamese citizen",
+          "vi": "công dân Việt Nam"
+        },
+        {
+          "en": "senior citizen",
+          "vi": "người cao tuổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "city",
+          "vi": "thành phố"
+        },
+        {
+          "word": "citizenship",
+          "vi": "quốc tịch"
+        }
+      ],
+      "tip": "senior citizen = người cao tuổi (cách nói lịch sự).",
+      "emoji": "🪪",
+      "stage": 2
+    },
+    {
+      "id": 1456,
+      "word": "clever",
+      "ipa": "ˈklɛvər",
+      "viRead": "KLE-vơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thông minh, khéo léo",
+      "exampleEn": "What a clever idea!",
+      "exampleVi": "Ý tưởng thật thông minh!",
+      "collocations": [
+        {
+          "en": "a clever student",
+          "vi": "học sinh thông minh"
+        },
+        {
+          "en": "clever with your hands",
+          "vi": "khéo tay"
+        }
+      ],
+      "tip": "clever (Anh) ≈ smart (Mỹ). clever with your hands = khéo tay.",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 1457,
+      "word": "cliff",
+      "ipa": "klɪf",
+      "viRead": "KLIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vách đá",
+      "exampleEn": "The house stands on the edge of a cliff.",
+      "exampleVi": "Ngôi nhà nằm sát mép vách đá.",
+      "collocations": [
+        {
+          "en": "a steep cliff",
+          "vi": "vách đá dựng đứng"
+        },
+        {
+          "en": "on the cliff",
+          "vi": "trên vách đá"
+        }
+      ],
+      "tip": "cliff = vách đá dựng đứng (thường ven biển).",
+      "emoji": "🏔️",
+      "stage": 2
+    },
+    {
+      "id": 1458,
+      "word": "clinic",
+      "ipa": "ˈklɪnɪk",
+      "viRead": "KLI-nik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phòng khám",
+      "exampleEn": "I went to the clinic for a check-up.",
+      "exampleVi": "Tôi đến phòng khám để kiểm tra sức khỏe.",
+      "collocations": [
+        {
+          "en": "dental clinic",
+          "vi": "phòng khám nha khoa"
+        },
+        {
+          "en": "private clinic",
+          "vi": "phòng khám tư"
+        }
+      ],
+      "tip": "clinic = phòng khám (nhỏ); hospital = bệnh viện. check-up = khám tổng quát.",
+      "emoji": "🏥",
+      "stage": 2
+    },
+    {
+      "id": 1459,
+      "word": "cloud",
+      "ipa": "klaʊd",
+      "viRead": "KLAOĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đám mây",
+      "exampleEn": "There isn't a cloud in the sky today.",
+      "exampleVi": "Hôm nay trời không một gợn mây.",
+      "collocations": [
+        {
+          "en": "dark clouds",
+          "vi": "mây đen"
+        },
+        {
+          "en": "cloud storage",
+          "vi": "lưu trữ đám mây"
+        }
+      ],
+      "family": [
+        {
+          "word": "cloudy",
+          "vi": "nhiều mây"
+        }
+      ],
+      "tip": "cloudy = trời nhiều mây. Lưu dữ liệu 'trên đám mây' = in the cloud.",
+      "emoji": "☁️",
       "stage": 2
     }
   ]
