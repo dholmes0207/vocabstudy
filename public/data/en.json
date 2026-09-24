@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1365,
+    "count": 1409,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -2106,7 +2106,7 @@
       "id": 453,
       "word": "live",
       "ipa": "lɪv",
-      "viRead": "LAIV",
+      "viRead": "LIV",
       "pos": "v./adj.",
       "posCategory": "verb",
       "meaning": "sống, ở, sinh sống",
@@ -8427,8 +8427,8 @@
     {
       "id": 662,
       "word": "lead",
-      "ipa": "lɛd",
-      "viRead": "LEĐ",
+      "ipa": "lid",
+      "viRead": "LIĐ",
       "pos": "v.",
       "posCategory": "verb",
       "meaning": "dẫn dắt, dẫn đường",
@@ -16490,7 +16490,7 @@
       "id": 929,
       "word": "wind",
       "ipa": "wɪnd",
-      "viRead": "WAINĐ",
+      "viRead": "WINĐ",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "gió",
@@ -24501,7 +24501,7 @@
       "meaning": "đóng; gần",
       "exampleEn": "Please close the door when you leave.",
       "exampleVi": "Làm ơn đóng cửa khi bạn ra ngoài.",
-      "viRead": "KLÂUS",
+      "viRead": "KLÂUD",
       "collocations": [
         {
           "en": "close the door",
@@ -28483,13 +28483,13 @@
     {
       "id": 318,
       "word": "read",
-      "ipa": "rɛd",
+      "ipa": "rid",
       "pos": "v.",
       "posCategory": "verb",
       "meaning": "đọc",
       "exampleEn": "My son likes to read comics.",
       "exampleVi": "Con trai tôi thích đọc truyện tranh.",
-      "viRead": "REĐ",
+      "viRead": "RIĐ",
       "collocations": [
         {
           "en": "read a book",
@@ -28562,7 +28562,7 @@
       "meaning": "kỷ lục; hồ sơ; ghi lại (âm thanh, hình ảnh)",
       "exampleEn": "She broke the world record.",
       "exampleVi": "Cô ấy đã phá kỷ lục thế giới.",
-      "viRead": "rơ-KORĐ",
+      "viRead": "RE-kơđ",
       "collocations": [
         {
           "en": "world record",
@@ -29685,7 +29685,7 @@
       "meaning": "sử dụng, dùng",
       "exampleEn": "Can I use your phone?",
       "exampleVi": "Tôi dùng điện thoại của bạn được không?",
-      "viRead": "YUS",
+      "viRead": "YUD",
       "collocations": [
         {
           "en": "use a computer",
@@ -40527,6 +40527,1192 @@
       ],
       "tip": "swing – swung – swung. mood swings = tâm trạng lúc lên lúc xuống.",
       "emoji": "🎠",
+      "stage": 2
+    },
+    {
+      "id": 1366,
+      "word": "tail",
+      "ipa": "teɪl",
+      "viRead": "TÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái đuôi",
+      "exampleEn": "The dog wagged its tail happily.",
+      "exampleVi": "Con chó vẫy đuôi mừng rỡ.",
+      "collocations": [
+        {
+          "en": "wag its tail",
+          "vi": "vẫy đuôi"
+        },
+        {
+          "en": "heads or tails",
+          "vi": "sấp hay ngửa"
+        }
+      ],
+      "tip": "Heads or tails? = Sấp hay ngửa? (tung đồng xu). tail đọc giống tale (câu chuyện).",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 1367,
+      "word": "tap",
+      "ipa": "tæp",
+      "viRead": "TEP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vòi nước; chạm nhẹ",
+      "exampleEn": "Turn off the tap when you brush your teeth.",
+      "exampleVi": "Khóa vòi nước khi đánh răng.",
+      "collocations": [
+        {
+          "en": "turn on the tap",
+          "vi": "mở vòi"
+        },
+        {
+          "en": "tap water",
+          "vi": "nước máy"
+        },
+        {
+          "en": "tap the screen",
+          "vi": "chạm màn hình"
+        }
+      ],
+      "tip": "tap (Anh) = faucet (Mỹ). Trên điện thoại: tap = chạm; double-tap = chạm hai lần.",
+      "emoji": "🚰",
+      "stage": 2
+    },
+    {
+      "id": 1368,
+      "word": "tax",
+      "ipa": "tæks",
+      "viRead": "TEKS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thuế",
+      "exampleEn": "The price includes tax.",
+      "exampleVi": "Giá đã bao gồm thuế.",
+      "collocations": [
+        {
+          "en": "pay tax",
+          "vi": "đóng thuế"
+        },
+        {
+          "en": "income tax",
+          "vi": "thuế thu nhập"
+        },
+        {
+          "en": "tax-free",
+          "vi": "miễn thuế"
+        }
+      ],
+      "tip": "tax-free shop = cửa hàng miễn thuế ở sân bay. Số nhiều: taxes.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 1369,
+      "word": "tear",
+      "ipa": "tɪr",
+      "viRead": "TIA",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nước mắt",
+      "exampleEn": "Tears ran down her face.",
+      "exampleVi": "Nước mắt chảy dài trên mặt cô ấy.",
+      "collocations": [
+        {
+          "en": "in tears",
+          "vi": "đang khóc"
+        },
+        {
+          "en": "tears of joy",
+          "vi": "nước mắt hạnh phúc"
+        }
+      ],
+      "tip": "tear (nước mắt) đọc 'tia'; tear (xé) đọc 'te' — cùng chữ, khác âm, khác nghĩa!",
+      "emoji": "😢",
+      "stage": 2
+    },
+    {
+      "id": 1370,
+      "word": "temple",
+      "ipa": "ˈtɛmpəl",
+      "viRead": "TEM-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngôi đền, chùa",
+      "exampleEn": "We visited an old temple in Hanoi.",
+      "exampleVi": "Chúng tôi thăm một ngôi đền cổ ở Hà Nội.",
+      "collocations": [
+        {
+          "en": "visit a temple",
+          "vi": "đi lễ đền/chùa"
+        },
+        {
+          "en": "the Temple of Literature",
+          "vi": "Văn Miếu"
+        }
+      ],
+      "tip": "Văn Miếu = the Temple of Literature. Chùa cũng có thể gọi là pagoda.",
+      "emoji": "🛕",
+      "stage": 2
+    },
+    {
+      "id": 1371,
+      "word": "tent",
+      "ipa": "tɛnt",
+      "viRead": "TENT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái lều",
+      "exampleEn": "We slept in a tent by the lake.",
+      "exampleVi": "Chúng tôi ngủ trong lều bên hồ.",
+      "collocations": [
+        {
+          "en": "put up a tent",
+          "vi": "dựng lều"
+        },
+        {
+          "en": "sleep in a tent",
+          "vi": "ngủ lều"
+        }
+      ],
+      "tip": "go camping = đi cắm trại; put up a tent = dựng lều.",
+      "emoji": "⛺",
+      "stage": 2
+    },
+    {
+      "id": 1372,
+      "word": "terrible",
+      "ipa": "ˈtɛrəbəl",
+      "viRead": "TE-rơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tồi tệ, khủng khiếp",
+      "exampleEn": "The traffic was terrible this morning.",
+      "exampleVi": "Sáng nay giao thông kinh khủng quá.",
+      "collocations": [
+        {
+          "en": "terrible weather",
+          "vi": "thời tiết tệ"
+        },
+        {
+          "en": "feel terrible",
+          "vi": "thấy rất tệ"
+        }
+      ],
+      "family": [
+        {
+          "word": "terribly",
+          "vi": "vô cùng"
+        }
+      ],
+      "tip": "terrible đã rất mạnh, không nói very terrible. I'm terribly sorry = Tôi vô cùng xin lỗi.",
+      "emoji": "😖",
+      "stage": 2
+    },
+    {
+      "id": 1373,
+      "word": "theater",
+      "ipa": "ˈθieɪtər",
+      "viRead": "THI-ơ-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà hát; rạp",
+      "exampleEn": "We watched a play at the city theater.",
+      "exampleVi": "Chúng tôi xem một vở kịch ở nhà hát thành phố.",
+      "collocations": [
+        {
+          "en": "go to the theater",
+          "vi": "đi xem kịch"
+        },
+        {
+          "en": "movie theater",
+          "vi": "rạp chiếu phim"
+        }
+      ],
+      "tip": "Mỹ: theater; Anh: theatre. Nhà hát Lớn Hà Nội = Hanoi Opera House.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 1374,
+      "word": "thief",
+      "ipa": "θif",
+      "viRead": "THIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kẻ trộm",
+      "exampleEn": "The police caught the thief.",
+      "exampleVi": "Cảnh sát đã bắt được tên trộm.",
+      "collocations": [
+        {
+          "en": "catch a thief",
+          "vi": "bắt trộm"
+        },
+        {
+          "en": "car thief",
+          "vi": "kẻ trộm xe"
+        }
+      ],
+      "family": [
+        {
+          "word": "steal",
+          "vi": "ăn trộm"
+        },
+        {
+          "word": "theft",
+          "vi": "vụ trộm"
+        }
+      ],
+      "tip": "Số nhiều: thieves (f → ves). steal (động từ) → thief (người) → theft (vụ trộm).",
+      "emoji": "🦹",
+      "stage": 2
+    },
+    {
+      "id": 1375,
+      "word": "thirsty",
+      "ipa": "ˈθərsti",
+      "viRead": "THƠS-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khát",
+      "exampleEn": "I'm so thirsty, can I have some water?",
+      "exampleVi": "Tôi khát quá, cho tôi ít nước được không?",
+      "collocations": [
+        {
+          "en": "feel thirsty",
+          "vi": "thấy khát"
+        },
+        {
+          "en": "thirsty for",
+          "vi": "khao khát"
+        }
+      ],
+      "family": [
+        {
+          "word": "thirst",
+          "vi": "cơn khát"
+        }
+      ],
+      "tip": "I'm thirsty (không nói I'm thirst). Đói = hungry, khát = thirsty.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 1376,
+      "word": "throat",
+      "ipa": "θroʊt",
+      "viRead": "THRÂUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cổ họng",
+      "exampleEn": "I have a sore throat and a cough.",
+      "exampleVi": "Tôi bị đau họng và ho.",
+      "collocations": [
+        {
+          "en": "sore throat",
+          "vi": "đau họng"
+        },
+        {
+          "en": "clear your throat",
+          "vi": "hắng giọng"
+        }
+      ],
+      "tip": "neck = cổ (bên ngoài); throat = cổ họng (bên trong).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 1377,
+      "word": "thumb",
+      "ipa": "θəm",
+      "viRead": "THƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngón tay cái",
+      "exampleEn": "Give me a thumbs up if you understand.",
+      "exampleVi": "Nếu hiểu thì giơ ngón cái lên nhé.",
+      "collocations": [
+        {
+          "en": "thumbs up",
+          "vi": "giơ ngón cái (đồng ý)"
+        },
+        {
+          "en": "rule of thumb",
+          "vi": "quy tắc ước lượng"
+        }
+      ],
+      "tip": "b câm: 'thắm'. thumbs up 👍 = tốt, đồng ý.",
+      "emoji": "👍",
+      "stage": 2
+    },
+    {
+      "id": 1378,
+      "word": "tight",
+      "ipa": "taɪt",
+      "viRead": "TAIT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chật, chặt",
+      "exampleEn": "These shoes are too tight.",
+      "exampleVi": "Đôi giày này chật quá.",
+      "collocations": [
+        {
+          "en": "too tight",
+          "vi": "chật quá"
+        },
+        {
+          "en": "a tight schedule",
+          "vi": "lịch kín mít"
+        }
+      ],
+      "family": [
+        {
+          "word": "tightly",
+          "vi": "chặt chẽ"
+        }
+      ],
+      "tip": "tight ↔ loose. gh câm: 'tai-t'. Sleep tight! = Ngủ ngon nhé!",
+      "emoji": "🪢",
+      "stage": 2
+    },
+    {
+      "id": 1379,
+      "word": "tiny",
+      "ipa": "ˈtaɪni",
+      "viRead": "TAI-ni",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhỏ xíu",
+      "exampleEn": "She lives in a tiny apartment.",
+      "exampleVi": "Cô ấy sống trong một căn hộ nhỏ xíu.",
+      "collocations": [
+        {
+          "en": "a tiny bit",
+          "vi": "một chút xíu"
+        },
+        {
+          "en": "tiny baby",
+          "vi": "em bé bé xíu"
+        }
+      ],
+      "tip": "tiny mạnh hơn small/little. Đọc 'TAI-ni'.",
+      "emoji": "🐜",
+      "stage": 2
+    },
+    {
+      "id": 1380,
+      "word": "toe",
+      "ipa": "toʊ",
+      "viRead": "TÂU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngón chân",
+      "exampleEn": "I hurt my big toe.",
+      "exampleVi": "Tôi bị đau ngón chân cái.",
+      "collocations": [
+        {
+          "en": "big toe",
+          "vi": "ngón chân cái"
+        },
+        {
+          "en": "from head to toe",
+          "vi": "từ đầu đến chân"
+        }
+      ],
+      "tip": "toe = ngón chân (không dùng finger cho chân). toe đọc giống tow 'tâu'.",
+      "emoji": "🦶",
+      "stage": 2
+    },
+    {
+      "id": 1381,
+      "word": "tongue",
+      "ipa": "təŋ",
+      "viRead": "TƠNG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái lưỡi",
+      "exampleEn": "The soup was so hot it burned my tongue.",
+      "exampleVi": "Súp nóng quá làm bỏng lưỡi tôi.",
+      "collocations": [
+        {
+          "en": "mother tongue",
+          "vi": "tiếng mẹ đẻ"
+        },
+        {
+          "en": "on the tip of my tongue",
+          "vi": "nhớ mà chưa nói ra được"
+        }
+      ],
+      "tip": "ue câm: 'tắng'. It's on the tip of my tongue = Nó ở ngay đầu lưỡi (sắp nhớ ra).",
+      "emoji": "👅",
+      "stage": 2
+    },
+    {
+      "id": 1382,
+      "word": "towel",
+      "ipa": "taʊəl",
+      "viRead": "TAO-ơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khăn tắm",
+      "exampleEn": "Can I have a clean towel, please?",
+      "exampleVi": "Cho tôi xin một cái khăn sạch nhé?",
+      "collocations": [
+        {
+          "en": "bath towel",
+          "vi": "khăn tắm"
+        },
+        {
+          "en": "beach towel",
+          "vi": "khăn đi biển"
+        }
+      ],
+      "tip": "ow đọc 'ao': 'TAO-ồ'. Khăn giấy = paper towel/tissue.",
+      "emoji": "🧻",
+      "stage": 2
+    },
+    {
+      "id": 1383,
+      "word": "toy",
+      "ipa": "tɔɪ",
+      "viRead": "TOI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ chơi",
+      "exampleEn": "The children are playing with their toys.",
+      "exampleVi": "Bọn trẻ đang chơi đồ chơi.",
+      "collocations": [
+        {
+          "en": "toy car",
+          "vi": "xe đồ chơi"
+        },
+        {
+          "en": "toy shop",
+          "vi": "cửa hàng đồ chơi"
+        }
+      ],
+      "tip": "Số nhiều: toys (y sau nguyên âm giữ nguyên, chỉ thêm s).",
+      "emoji": "🧸",
+      "stage": 2
+    },
+    {
+      "id": 1384,
+      "word": "track",
+      "ipa": "træk",
+      "viRead": "TREK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường mòn; đường đua",
+      "exampleEn": "The train track goes through the village.",
+      "exampleVi": "Đường ray xe lửa chạy qua làng.",
+      "collocations": [
+        {
+          "en": "keep track of",
+          "vi": "theo dõi"
+        },
+        {
+          "en": "running track",
+          "vi": "đường chạy"
+        }
+      ],
+      "tip": "keep track of = theo dõi (như app này keep track of your progress). on track = đúng tiến độ.",
+      "emoji": "🛤️",
+      "stage": 2
+    },
+    {
+      "id": 1385,
+      "word": "trade",
+      "ipa": "treɪd",
+      "viRead": "TRÂYĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "thương mại; buôn bán",
+      "exampleEn": "Vietnam has strong trade with many countries.",
+      "exampleVi": "Việt Nam có quan hệ thương mại mạnh với nhiều nước.",
+      "collocations": [
+        {
+          "en": "trade with",
+          "vi": "buôn bán với"
+        },
+        {
+          "en": "trade fair",
+          "vi": "hội chợ thương mại"
+        }
+      ],
+      "family": [
+        {
+          "word": "trader",
+          "vi": "thương nhân"
+        }
+      ],
+      "tip": "trade (danh từ) còn là 'nghề thủ công': learn a trade = học nghề.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 1386,
+      "word": "transport",
+      "ipa": "ˈtrænspɔrt",
+      "viRead": "tren-SPORT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giao thông, phương tiện",
+      "exampleEn": "Public transport in this city is cheap.",
+      "exampleVi": "Giao thông công cộng ở thành phố này rẻ.",
+      "collocations": [
+        {
+          "en": "public transport",
+          "vi": "phương tiện công cộng"
+        },
+        {
+          "en": "means of transport",
+          "vi": "phương tiện đi lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "transportation",
+          "vi": "sự vận chuyển (Mỹ)"
+        }
+      ],
+      "tip": "Anh: public transport; Mỹ: public transportation. Danh từ nhấn đầu: TRANS-port.",
+      "emoji": "🚌",
+      "stage": 2
+    },
+    {
+      "id": 1387,
+      "word": "trap",
+      "ipa": "træp",
+      "viRead": "TREP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cái bẫy",
+      "exampleEn": "The mouse was caught in a trap.",
+      "exampleVi": "Con chuột bị mắc bẫy.",
+      "collocations": [
+        {
+          "en": "fall into a trap",
+          "vi": "mắc bẫy"
+        },
+        {
+          "en": "tourist trap",
+          "vi": "nơi 'chặt chém' khách du lịch"
+        }
+      ],
+      "tip": "tourist trap = nơi đắt đỏ chỉ để 'bẫy' khách du lịch.",
+      "emoji": "🪤",
+      "stage": 2
+    },
+    {
+      "id": 1388,
+      "word": "tray",
+      "ipa": "treɪ",
+      "viRead": "TRÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái khay",
+      "exampleEn": "The waiter brought the drinks on a tray.",
+      "exampleVi": "Người phục vụ mang đồ uống ra trên khay.",
+      "collocations": [
+        {
+          "en": "a tray of food",
+          "vi": "một khay đồ ăn"
+        },
+        {
+          "en": "ice cube tray",
+          "vi": "khay đá"
+        }
+      ],
+      "tip": "tray đọc 'trây'. Ăn cơm khay ở trường = eat from a tray.",
+      "emoji": "🍱",
+      "stage": 2
+    },
+    {
+      "id": 1389,
+      "word": "treat",
+      "ipa": "trit",
+      "viRead": "TRIT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đối xử; chiêu đãi",
+      "exampleEn": "Treat others the way you want to be treated.",
+      "exampleVi": "Đối xử với người khác như cách bạn muốn được đối xử.",
+      "collocations": [
+        {
+          "en": "treat someone well",
+          "vi": "đối xử tốt với ai"
+        },
+        {
+          "en": "my treat",
+          "vi": "để tôi mời"
+        }
+      ],
+      "family": [
+        {
+          "word": "treatment",
+          "vi": "sự điều trị; đối xử"
+        }
+      ],
+      "tip": "It's my treat! = Để tôi mời/bao nhé! treat còn là 'chữa trị': treat a disease.",
+      "emoji": "🍰",
+      "stage": 2
+    },
+    {
+      "id": 1390,
+      "word": "trend",
+      "ipa": "trɛnd",
+      "viRead": "TRENĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xu hướng",
+      "exampleEn": "Online shopping is a big trend now.",
+      "exampleVi": "Mua sắm online giờ là xu hướng lớn.",
+      "collocations": [
+        {
+          "en": "a new trend",
+          "vi": "xu hướng mới"
+        },
+        {
+          "en": "follow trends",
+          "vi": "chạy theo xu hướng"
+        }
+      ],
+      "family": [
+        {
+          "word": "trendy",
+          "vi": "hợp mốt"
+        }
+      ],
+      "tip": "trending = đang hot trên mạng. trendy = sành điệu.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1391,
+      "word": "trick",
+      "ipa": "trɪk",
+      "viRead": "TRIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mẹo; trò lừa",
+      "exampleEn": "Here's a trick to remember new words.",
+      "exampleVi": "Đây là một mẹo để nhớ từ mới.",
+      "collocations": [
+        {
+          "en": "play a trick on",
+          "vi": "chơi khăm ai"
+        },
+        {
+          "en": "that does the trick",
+          "vi": "thế là được việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "tricky",
+          "vi": "hóc búa"
+        }
+      ],
+      "tip": "tricky = khó nhằn: a tricky question. Trick or treat! = câu trẻ em nói dịp Halloween.",
+      "emoji": "🎩",
+      "stage": 2
+    },
+    {
+      "id": 1392,
+      "word": "tunnel",
+      "ipa": "ˈtənəl",
+      "viRead": "TƠ-nơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường hầm",
+      "exampleEn": "The train goes through a long tunnel.",
+      "exampleVi": "Tàu chạy qua một đường hầm dài.",
+      "collocations": [
+        {
+          "en": "through the tunnel",
+          "vi": "qua đường hầm"
+        },
+        {
+          "en": "light at the end of the tunnel",
+          "vi": "tia hy vọng"
+        }
+      ],
+      "tip": "light at the end of the tunnel = tia sáng cuối đường hầm (hy vọng sắp tới).",
+      "emoji": "🚇",
+      "stage": 2
+    },
+    {
+      "id": 1393,
+      "word": "twin",
+      "ipa": "twɪn",
+      "viRead": "TWIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sinh đôi",
+      "exampleEn": "My sister and I are twins.",
+      "exampleVi": "Tôi và em gái là chị em sinh đôi.",
+      "collocations": [
+        {
+          "en": "twin brother",
+          "vi": "anh/em trai sinh đôi"
+        },
+        {
+          "en": "twin beds",
+          "vi": "hai giường đơn"
+        }
+      ],
+      "tip": "twin room (khách sạn) = phòng hai giường đơn; double room = một giường đôi.",
+      "emoji": "👯",
+      "stage": 2
+    },
+    {
+      "id": 1394,
+      "word": "uniform",
+      "ipa": "ˈjunəˌfɔrm",
+      "viRead": "YU-nơ-phorm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng phục",
+      "exampleEn": "Students wear a uniform to school.",
+      "exampleVi": "Học sinh mặc đồng phục đến trường.",
+      "collocations": [
+        {
+          "en": "school uniform",
+          "vi": "đồng phục học sinh"
+        },
+        {
+          "en": "in uniform",
+          "vi": "mặc đồng phục"
+        }
+      ],
+      "family": [
+        {
+          "word": "form",
+          "vi": "hình thức"
+        }
+      ],
+      "tip": "uni (một) + form (dạng) = một kiểu cho tất cả. Dùng a uniform (u đọc 'diu').",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 1395,
+      "word": "unit",
+      "ipa": "ˈjunɪt",
+      "viRead": "YU-nơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đơn vị; bài (sách)",
+      "exampleEn": "Please open your book to Unit 5.",
+      "exampleVi": "Hãy mở sách ra Bài 5.",
+      "collocations": [
+        {
+          "en": "Unit 5",
+          "vi": "Bài 5"
+        },
+        {
+          "en": "unit of measurement",
+          "vi": "đơn vị đo"
+        }
+      ],
+      "tip": "Sách giáo khoa tiếng Anh chia theo Unit (bài). a unit (u đọc 'diu' nên dùng a).",
+      "emoji": "📘",
+      "stage": 2
+    },
+    {
+      "id": 1396,
+      "word": "universe",
+      "ipa": "ˈjunəˌvərs",
+      "viRead": "YU-nơ-vơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vũ trụ",
+      "exampleEn": "There are billions of stars in the universe.",
+      "exampleVi": "Có hàng tỷ ngôi sao trong vũ trụ.",
+      "collocations": [
+        {
+          "en": "the universe",
+          "vi": "vũ trụ"
+        },
+        {
+          "en": "the center of the universe",
+          "vi": "trung tâm vũ trụ"
+        }
+      ],
+      "family": [
+        {
+          "word": "universal",
+          "vi": "phổ quát"
+        }
+      ],
+      "tip": "uni (một) + verse = tất cả là một → vũ trụ. Luôn có the.",
+      "emoji": "🌌",
+      "stage": 2
+    },
+    {
+      "id": 1397,
+      "word": "university",
+      "ipa": "ˌjunəˈvərsəti",
+      "viRead": "yu-nơ-VƠ-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trường đại học",
+      "exampleEn": "She studies English at university.",
+      "exampleVi": "Cô ấy học tiếng Anh ở trường đại học.",
+      "collocations": [
+        {
+          "en": "go to university",
+          "vi": "học đại học"
+        },
+        {
+          "en": "university student",
+          "vi": "sinh viên đại học"
+        }
+      ],
+      "tip": "a university (không phải an) vì u đọc 'diu'. go to university (Anh, không có the).",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 1398,
+      "word": "upstairs",
+      "ipa": "əpˈstɛrz",
+      "viRead": "ơp-STERD",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ở trên lầu",
+      "exampleEn": "My bedroom is upstairs.",
+      "exampleVi": "Phòng ngủ của tôi ở trên lầu.",
+      "collocations": [
+        {
+          "en": "go upstairs",
+          "vi": "lên lầu"
+        },
+        {
+          "en": "the people upstairs",
+          "vi": "nhà tầng trên"
+        }
+      ],
+      "family": [
+        {
+          "word": "downstairs",
+          "vi": "dưới nhà"
+        }
+      ],
+      "tip": "upstairs là trạng từ: go upstairs ✓ (go to upstairs ✗).",
+      "emoji": "⬆️",
+      "stage": 2
+    },
+    {
+      "id": 1399,
+      "word": "victim",
+      "ipa": "ˈvɪktɪm",
+      "viRead": "VIK-tơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nạn nhân",
+      "exampleEn": "The victims of the flood need help.",
+      "exampleVi": "Các nạn nhân lũ lụt cần được giúp đỡ.",
+      "collocations": [
+        {
+          "en": "flood victims",
+          "vi": "nạn nhân lũ lụt"
+        },
+        {
+          "en": "a victim of",
+          "vi": "nạn nhân của"
+        }
+      ],
+      "tip": "victim = nạn nhân (tai nạn, thiên tai, tội phạm). Đọc 'VIK-tim'.",
+      "emoji": "🆘",
+      "stage": 2
+    },
+    {
+      "id": 1400,
+      "word": "visa",
+      "ipa": "ˈvizə",
+      "viRead": "VI-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thị thực",
+      "exampleEn": "Do I need a visa to visit Japan?",
+      "exampleVi": "Tôi có cần visa để đi Nhật không?",
+      "collocations": [
+        {
+          "en": "apply for a visa",
+          "vi": "xin visa"
+        },
+        {
+          "en": "tourist visa",
+          "vi": "visa du lịch"
+        }
+      ],
+      "tip": "apply for a visa = xin visa. visa đọc 'VI-zơ'.",
+      "emoji": "🛂",
+      "stage": 2
+    },
+    {
+      "id": 1401,
+      "word": "volunteer",
+      "ipa": "ˌvɑlənˈtɪr",
+      "viRead": "va-lơn-TIR",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "tình nguyện viên",
+      "exampleEn": "She works as a volunteer at the hospital.",
+      "exampleVi": "Cô ấy làm tình nguyện viên ở bệnh viện.",
+      "collocations": [
+        {
+          "en": "volunteer work",
+          "vi": "công việc tình nguyện"
+        },
+        {
+          "en": "volunteer to help",
+          "vi": "tình nguyện giúp"
+        }
+      ],
+      "family": [
+        {
+          "word": "voluntary",
+          "vi": "tự nguyện"
+        }
+      ],
+      "tip": "Nhấn âm cuối: vo-lần-TIA. Làm tình nguyện = do volunteer work.",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 1402,
+      "word": "vote",
+      "ipa": "voʊt",
+      "viRead": "VÂUT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "bỏ phiếu",
+      "exampleEn": "You can vote when you are 18.",
+      "exampleVi": "Bạn được đi bầu cử khi đủ 18 tuổi.",
+      "collocations": [
+        {
+          "en": "vote for",
+          "vi": "bỏ phiếu cho"
+        },
+        {
+          "en": "take a vote",
+          "vi": "biểu quyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "voter",
+          "vi": "cử tri"
+        }
+      ],
+      "tip": "vote for + người/lựa chọn: Vote for your favorite song!",
+      "emoji": "🗳️",
+      "stage": 2
+    },
+    {
+      "id": 1403,
+      "word": "wage",
+      "ipa": "weɪʤ",
+      "viRead": "WÂYGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền công",
+      "exampleEn": "The minimum wage increased this year.",
+      "exampleVi": "Năm nay lương tối thiểu tăng.",
+      "collocations": [
+        {
+          "en": "minimum wage",
+          "vi": "lương tối thiểu"
+        },
+        {
+          "en": "hourly wage",
+          "vi": "lương theo giờ"
+        }
+      ],
+      "tip": "wage = tiền công theo giờ/ngày/tuần; salary = lương tháng cố định.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 1404,
+      "word": "warn",
+      "ipa": "wɔrn",
+      "viRead": "WORN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cảnh báo",
+      "exampleEn": "I warned you not to touch it!",
+      "exampleVi": "Tôi đã cảnh báo bạn đừng chạm vào nó rồi mà!",
+      "collocations": [
+        {
+          "en": "warn someone about",
+          "vi": "cảnh báo ai về"
+        },
+        {
+          "en": "warn someone not to",
+          "vi": "dặn ai đừng"
+        }
+      ],
+      "family": [
+        {
+          "word": "warning",
+          "vi": "lời cảnh báo"
+        }
+      ],
+      "tip": "warn + người + (not) to V. ar đọc 'o': 'wom'.",
+      "emoji": "⚠️",
+      "stage": 2
+    },
+    {
+      "id": 1405,
+      "word": "wealth",
+      "ipa": "wɛlθ",
+      "viRead": "WELTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự giàu có",
+      "exampleEn": "Health is more important than wealth.",
+      "exampleVi": "Sức khỏe quan trọng hơn của cải.",
+      "collocations": [
+        {
+          "en": "health and wealth",
+          "vi": "sức khỏe và của cải"
+        },
+        {
+          "en": "great wealth",
+          "vi": "tài sản lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "wealthy",
+          "vi": "giàu có"
+        }
+      ],
+      "tip": "ea đọc 'e': 'welth'. wealthy = rich (trang trọng hơn).",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 1406,
+      "word": "weapon",
+      "ipa": "ˈwɛpən",
+      "viRead": "WE-pơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vũ khí",
+      "exampleEn": "Soldiers carry weapons.",
+      "exampleVi": "Binh lính mang vũ khí.",
+      "collocations": [
+        {
+          "en": "a dangerous weapon",
+          "vi": "vũ khí nguy hiểm"
+        },
+        {
+          "en": "secret weapon",
+          "vi": "vũ khí bí mật"
+        }
+      ],
+      "tip": "ea đọc 'e': 'WE-pần'. Your smile is your secret weapon!",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 1407,
+      "word": "wedding",
+      "ipa": "ˈwɛdɪŋ",
+      "viRead": "WE-đing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đám cưới",
+      "exampleEn": "We're going to my cousin's wedding on Saturday.",
+      "exampleVi": "Thứ Bảy chúng tôi đi đám cưới em họ.",
+      "collocations": [
+        {
+          "en": "wedding party",
+          "vi": "tiệc cưới"
+        },
+        {
+          "en": "wedding ring",
+          "vi": "nhẫn cưới"
+        },
+        {
+          "en": "wedding day",
+          "vi": "ngày cưới"
+        }
+      ],
+      "family": [
+        {
+          "word": "wed",
+          "vi": "kết hôn"
+        }
+      ],
+      "tip": "wedding = đám cưới (sự kiện); marriage = cuộc hôn nhân.",
+      "emoji": "💒",
+      "stage": 2
+    },
+    {
+      "id": 1408,
+      "word": "wrap",
+      "ipa": "ræp",
+      "viRead": "REP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gói, bọc",
+      "exampleEn": "Can you wrap this as a gift?",
+      "exampleVi": "Bạn gói cái này thành quà được không?",
+      "collocations": [
+        {
+          "en": "wrap a gift",
+          "vi": "gói quà"
+        },
+        {
+          "en": "gift wrap",
+          "vi": "giấy gói quà"
+        }
+      ],
+      "family": [
+        {
+          "word": "wrapper",
+          "vi": "giấy gói"
+        }
+      ],
+      "tip": "w câm: 'rap'. That's a wrap! = Xong việc rồi! (kết thúc buổi quay).",
+      "emoji": "🎁",
+      "stage": 2
+    },
+    {
+      "id": 1409,
+      "word": "youth",
+      "ipa": "juθ",
+      "viRead": "YUTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tuổi trẻ; thanh niên",
+      "exampleEn": "In my youth, I played football every day.",
+      "exampleVi": "Hồi trẻ ngày nào tôi cũng đá bóng.",
+      "collocations": [
+        {
+          "en": "in my youth",
+          "vi": "thời trẻ"
+        },
+        {
+          "en": "youth club",
+          "vi": "câu lạc bộ thanh niên"
+        }
+      ],
+      "family": [
+        {
+          "word": "young",
+          "vi": "trẻ"
+        }
+      ],
+      "tip": "young (tính từ) → youth (danh từ). Đoàn Thanh niên = the Youth Union.",
+      "emoji": "🧑",
       "stage": 2
     }
   ]
