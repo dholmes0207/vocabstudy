@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1275,
+    "count": 1295,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -38071,6 +38071,550 @@
       ],
       "tip": "pillow = gối nằm; cushion = gối tựa ghế sofa.",
       "emoji": "🛏️",
+      "stage": 2
+    },
+    {
+      "id": 1276,
+      "word": "landscape",
+      "ipa": "ˈlænˌskeɪp",
+      "viRead": "LEN-đskâyp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phong cảnh",
+      "exampleEn": "The landscape in Ha Giang is beautiful.",
+      "exampleVi": "Phong cảnh ở Hà Giang rất đẹp.",
+      "collocations": [
+        {
+          "en": "a beautiful landscape",
+          "vi": "phong cảnh đẹp"
+        },
+        {
+          "en": "landscape photo",
+          "vi": "ảnh phong cảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "land",
+          "vi": "đất"
+        }
+      ],
+      "tip": "landscape (ảnh ngang) ↔ portrait (ảnh dọc) — cũng là tên chế độ xoay màn hình.",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 1277,
+      "word": "liquid",
+      "ipa": "ˈlɪkwɪd",
+      "viRead": "LIK-wơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất lỏng",
+      "exampleEn": "You can't take liquids over 100 ml on the plane.",
+      "exampleVi": "Bạn không được mang chất lỏng quá 100 ml lên máy bay.",
+      "collocations": [
+        {
+          "en": "a clear liquid",
+          "vi": "chất lỏng trong suốt"
+        },
+        {
+          "en": "liquid soap",
+          "vi": "xà phòng nước"
+        }
+      ],
+      "tip": "u đọc 'w': 'LI-kwịđ'. Chất lỏng / rắn / khí = liquid / solid / gas.",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 1278,
+      "word": "medium",
+      "ipa": "ˈmidiəm",
+      "viRead": "MI-đi-ơm",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vừa, trung bình",
+      "exampleEn": "I'd like a medium coffee, please.",
+      "exampleVi": "Cho tôi một ly cà phê cỡ vừa.",
+      "collocations": [
+        {
+          "en": "medium size",
+          "vi": "cỡ vừa (M)"
+        },
+        {
+          "en": "medium rare",
+          "vi": "tái vừa (bít tết)"
+        }
+      ],
+      "tip": "Cỡ S/M/L = small/medium/large. Bít tết chín vừa: medium.",
+      "emoji": "Ⓜ️",
+      "stage": 2
+    },
+    {
+      "id": 1279,
+      "word": "melt",
+      "ipa": "mɛlt",
+      "viRead": "MELT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tan chảy",
+      "exampleEn": "The ice cream melted in the sun.",
+      "exampleVi": "Cây kem tan chảy dưới nắng.",
+      "collocations": [
+        {
+          "en": "melt in your mouth",
+          "vi": "tan trong miệng"
+        },
+        {
+          "en": "melted cheese",
+          "vi": "phô mai tan chảy"
+        }
+      ],
+      "tip": "melt = tan (vì nóng); dissolve = hòa tan (trong nước).",
+      "emoji": "🫠",
+      "stage": 2
+    },
+    {
+      "id": 1280,
+      "word": "membership",
+      "ipa": "ˈmɛmbərˌʃɪp",
+      "viRead": "MEM-bơ-ship",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tư cách thành viên",
+      "exampleEn": "I bought a gym membership for a year.",
+      "exampleVi": "Tôi mua thẻ tập gym một năm.",
+      "collocations": [
+        {
+          "en": "gym membership",
+          "vi": "thẻ tập gym"
+        },
+        {
+          "en": "membership card",
+          "vi": "thẻ thành viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "member",
+          "vi": "thành viên"
+        }
+      ],
+      "tip": "member (thành viên) + ship (tư cách) = membership. Tương tự: friendship, relationship.",
+      "emoji": "🎫",
+      "stage": 2
+    },
+    {
+      "id": 1281,
+      "word": "negative",
+      "ipa": "ˈnɛgətɪv",
+      "viRead": "NE-gơ-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tiêu cực; âm tính",
+      "exampleEn": "Don't be so negative about everything.",
+      "exampleVi": "Đừng tiêu cực về mọi thứ như vậy.",
+      "collocations": [
+        {
+          "en": "negative thinking",
+          "vi": "suy nghĩ tiêu cực"
+        },
+        {
+          "en": "test negative",
+          "vi": "xét nghiệm âm tính"
+        }
+      ],
+      "family": [
+        {
+          "word": "positive",
+          "vi": "tích cực"
+        }
+      ],
+      "tip": "negative ↔ positive. test negative = âm tính (tin tốt khi đi khám!).",
+      "emoji": "➖",
+      "stage": 2
+    },
+    {
+      "id": 1282,
+      "word": "novel",
+      "ipa": "ˈnɑvəl",
+      "viRead": "NA-vơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiểu thuyết",
+      "exampleEn": "I'm reading a novel by a Vietnamese writer.",
+      "exampleVi": "Tôi đang đọc một cuốn tiểu thuyết của nhà văn Việt Nam.",
+      "collocations": [
+        {
+          "en": "read a novel",
+          "vi": "đọc tiểu thuyết"
+        },
+        {
+          "en": "a best-selling novel",
+          "vi": "tiểu thuyết bán chạy"
+        }
+      ],
+      "family": [
+        {
+          "word": "novelist",
+          "vi": "tiểu thuyết gia"
+        }
+      ],
+      "tip": "novel = tiểu thuyết (hư cấu), không phải 'sách mới'. Nhấn âm đầu: NO-vồ.",
+      "emoji": "📕",
+      "stage": 2
+    },
+    {
+      "id": 1283,
+      "word": "obey",
+      "ipa": "oʊˈbeɪ",
+      "viRead": "âu-BÂY",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tuân theo, vâng lời",
+      "exampleEn": "Drivers must obey traffic rules.",
+      "exampleVi": "Tài xế phải tuân thủ luật giao thông.",
+      "collocations": [
+        {
+          "en": "obey the rules",
+          "vi": "tuân thủ quy định"
+        },
+        {
+          "en": "obey the law",
+          "vi": "tuân thủ pháp luật"
+        }
+      ],
+      "family": [
+        {
+          "word": "obedient",
+          "vi": "vâng lời"
+        }
+      ],
+      "tip": "obey đi thẳng với tân ngữ: obey the rules ✓ (obey to ✗). Trái nghĩa: disobey.",
+      "emoji": "🚸",
+      "stage": 2
+    },
+    {
+      "id": 1284,
+      "word": "original",
+      "ipa": "ərˈɪʤənəl",
+      "viRead": "ơ-I-giơ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nguyên bản; độc đáo",
+      "exampleEn": "Is this the original painting or a copy?",
+      "exampleVi": "Đây là bức tranh gốc hay bản sao?",
+      "collocations": [
+        {
+          "en": "an original idea",
+          "vi": "ý tưởng độc đáo"
+        },
+        {
+          "en": "original version",
+          "vi": "bản gốc"
+        }
+      ],
+      "family": [
+        {
+          "word": "origin",
+          "vi": "nguồn gốc"
+        },
+        {
+          "word": "originally",
+          "vi": "ban đầu"
+        }
+      ],
+      "tip": "originally = lúc đầu: I'm originally from Hue (Gốc tôi ở Huế).",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 1285,
+      "word": "palace",
+      "ipa": "ˈpæləs",
+      "viRead": "PE-lơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cung điện",
+      "exampleEn": "We visited the royal palace in Hue.",
+      "exampleVi": "Chúng tôi tham quan hoàng cung ở Huế.",
+      "collocations": [
+        {
+          "en": "royal palace",
+          "vi": "cung điện hoàng gia"
+        },
+        {
+          "en": "a beautiful palace",
+          "vi": "cung điện đẹp"
+        }
+      ],
+      "tip": "Nhấn âm đầu: PA-lịs. Đại Nội Huế = the Imperial City / Hue Imperial Palace.",
+      "emoji": "🏯",
+      "stage": 2
+    },
+    {
+      "id": 1286,
+      "word": "path",
+      "ipa": "pæθ",
+      "viRead": "PETH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lối đi, con đường nhỏ",
+      "exampleEn": "Follow the path through the forest.",
+      "exampleVi": "Đi theo lối mòn xuyên qua khu rừng.",
+      "collocations": [
+        {
+          "en": "a narrow path",
+          "vi": "lối đi hẹp"
+        },
+        {
+          "en": "career path",
+          "vi": "con đường sự nghiệp"
+        }
+      ],
+      "tip": "path = lối đi nhỏ (đi bộ); road = đường xe chạy. th cuối thổi hơi.",
+      "emoji": "🥾",
+      "stage": 2
+    },
+    {
+      "id": 1287,
+      "word": "pattern",
+      "ipa": "ˈpætərn",
+      "viRead": "PE-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mẫu, hoa văn; quy luật",
+      "exampleEn": "I love the flower pattern on this dress.",
+      "exampleVi": "Tôi thích họa tiết hoa trên chiếc váy này.",
+      "collocations": [
+        {
+          "en": "a flower pattern",
+          "vi": "họa tiết hoa"
+        },
+        {
+          "en": "sleep pattern",
+          "vi": "thói quen giấc ngủ"
+        }
+      ],
+      "tip": "pattern còn là 'quy luật lặp lại': Learn English sentence patterns = học các mẫu câu.",
+      "emoji": "🔷",
+      "stage": 2
+    },
+    {
+      "id": 1288,
+      "word": "pepper",
+      "ipa": "ˈpɛpər",
+      "viRead": "PE-pơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạt tiêu; ớt chuông",
+      "exampleEn": "Add salt and pepper to the soup.",
+      "exampleVi": "Thêm muối và tiêu vào súp.",
+      "collocations": [
+        {
+          "en": "salt and pepper",
+          "vi": "muối tiêu"
+        },
+        {
+          "en": "black pepper",
+          "vi": "tiêu đen"
+        },
+        {
+          "en": "green pepper",
+          "vi": "ớt chuông xanh"
+        }
+      ],
+      "tip": "pepper = hạt tiêu; bell pepper = ớt chuông; chili = ớt cay.",
+      "emoji": "🌶️",
+      "stage": 2
+    },
+    {
+      "id": 1289,
+      "word": "plastic",
+      "ipa": "ˈplæstɪk",
+      "viRead": "PLES-tik",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "nhựa",
+      "exampleEn": "Try to use less plastic every day.",
+      "exampleVi": "Hãy cố dùng ít đồ nhựa mỗi ngày.",
+      "collocations": [
+        {
+          "en": "plastic bag",
+          "vi": "túi ni-lông"
+        },
+        {
+          "en": "plastic bottle",
+          "vi": "chai nhựa"
+        }
+      ],
+      "tip": "plastic bag = túi ni-lông (không phải nylon bag). plastic surgery = phẫu thuật thẩm mỹ.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 1290,
+      "word": "plate",
+      "ipa": "pleɪt",
+      "viRead": "PLÂYT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái đĩa",
+      "exampleEn": "Put the cake on a plate.",
+      "exampleVi": "Đặt bánh lên đĩa.",
+      "collocations": [
+        {
+          "en": "a plate of rice",
+          "vi": "một đĩa cơm"
+        },
+        {
+          "en": "clean your plate",
+          "vi": "ăn sạch đĩa"
+        }
+      ],
+      "tip": "plate = đĩa (ăn); bowl = bát/tô; dish vừa là đĩa vừa là món ăn.",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 1291,
+      "word": "platform",
+      "ipa": "ˈplætˌfɔrm",
+      "viRead": "PLET-phorm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sân ga; nền tảng",
+      "exampleEn": "The train leaves from platform 3.",
+      "exampleVi": "Tàu khởi hành từ sân ga số 3.",
+      "collocations": [
+        {
+          "en": "platform 3",
+          "vi": "sân ga số 3"
+        },
+        {
+          "en": "online platform",
+          "vi": "nền tảng trực tuyến"
+        }
+      ],
+      "tip": "platform vừa là sân ga, vừa là 'nền tảng' công nghệ (social media platform).",
+      "emoji": "🚉",
+      "stage": 2
+    },
+    {
+      "id": 1292,
+      "word": "pleasant",
+      "ipa": "ˈplɛzənt",
+      "viRead": "PLE-dơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dễ chịu",
+      "exampleEn": "We had a pleasant evening by the lake.",
+      "exampleVi": "Chúng tôi có một buổi tối dễ chịu bên hồ.",
+      "collocations": [
+        {
+          "en": "a pleasant surprise",
+          "vi": "bất ngờ thú vị"
+        },
+        {
+          "en": "pleasant weather",
+          "vi": "thời tiết dễ chịu"
+        }
+      ],
+      "family": [
+        {
+          "word": "please",
+          "vi": "làm vui lòng"
+        },
+        {
+          "word": "pleasure",
+          "vi": "niềm vui"
+        }
+      ],
+      "tip": "ea đọc 'e': 'PLE-zần(t)' (khác please 'pli-z').",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 1293,
+      "word": "pocket",
+      "ipa": "ˈpɑkət",
+      "viRead": "PA-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "túi (quần, áo)",
+      "exampleEn": "He put his phone in his pocket.",
+      "exampleVi": "Anh ấy bỏ điện thoại vào túi quần.",
+      "collocations": [
+        {
+          "en": "in my pocket",
+          "vi": "trong túi tôi"
+        },
+        {
+          "en": "pocket money",
+          "vi": "tiền tiêu vặt"
+        }
+      ],
+      "tip": "pocket money = tiền tiêu vặt (bố mẹ cho). pocket = túi may trên quần áo; bag = túi xách.",
+      "emoji": "👖",
+      "stage": 2
+    },
+    {
+      "id": 1294,
+      "word": "poem",
+      "ipa": "poʊəm",
+      "viRead": "PÂU-ơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài thơ",
+      "exampleEn": "She wrote a poem for her mother.",
+      "exampleVi": "Cô ấy viết một bài thơ tặng mẹ.",
+      "collocations": [
+        {
+          "en": "write a poem",
+          "vi": "làm thơ"
+        },
+        {
+          "en": "a love poem",
+          "vi": "bài thơ tình"
+        }
+      ],
+      "family": [
+        {
+          "word": "poet",
+          "vi": "nhà thơ"
+        },
+        {
+          "word": "poetry",
+          "vi": "thơ ca"
+        }
+      ],
+      "tip": "poem (một bài thơ, đếm được) ↔ poetry (thơ ca nói chung, không đếm được).",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 1295,
+      "word": "pool",
+      "ipa": "pul",
+      "viRead": "PUL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hồ bơi",
+      "exampleEn": "The hotel has a big swimming pool.",
+      "exampleVi": "Khách sạn có một hồ bơi lớn.",
+      "collocations": [
+        {
+          "en": "swimming pool",
+          "vi": "hồ bơi"
+        },
+        {
+          "en": "by the pool",
+          "vi": "bên hồ bơi"
+        }
+      ],
+      "tip": "oo đọc 'u' dài: 'pu-l'. car pool = đi chung xe.",
+      "emoji": "🏊",
       "stage": 2
     }
   ]
