@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2793,
+    "count": 2843,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -79475,6 +79475,1360 @@
       ],
       "tip": "ie đọc 'i': 'prist'.",
       "emoji": "⛪",
+      "stage": 2
+    },
+    {
+      "id": 2794,
+      "word": "proceed",
+      "ipa": "prəˈsid",
+      "viRead": "prơ-SIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tiếp tục; tiến hành",
+      "exampleEn": "Please proceed to gate 5.",
+      "exampleVi": "Vui lòng di chuyển đến cửa số 5.",
+      "collocations": [
+        {
+          "en": "proceed to",
+          "vi": "đi tiếp đến"
+        },
+        {
+          "en": "proceed with",
+          "vi": "tiến hành"
+        }
+      ],
+      "family": [
+        {
+          "word": "process",
+          "vi": "quá trình"
+        }
+      ],
+      "tip": "Thông báo sân bay: Please proceed to gate... = Mời đến cửa...",
+      "emoji": "➡️",
+      "stage": 2
+    },
+    {
+      "id": 2795,
+      "word": "producer",
+      "ipa": "prəˈdusər",
+      "viRead": "prơ-ĐU-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà sản xuất",
+      "exampleEn": "Vietnam is a big coffee producer.",
+      "exampleVi": "Việt Nam là nước sản xuất cà phê lớn.",
+      "collocations": [
+        {
+          "en": "film producer",
+          "vi": "nhà sản xuất phim"
+        },
+        {
+          "en": "music producer",
+          "vi": "nhà sản xuất âm nhạc"
+        }
+      ],
+      "family": [
+        {
+          "word": "produce",
+          "vi": "sản xuất"
+        },
+        {
+          "word": "product",
+          "vi": "sản phẩm"
+        }
+      ],
+      "tip": "produce (v) → producer (người) → product (sản phẩm).",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 2796,
+      "word": "profession",
+      "ipa": "prəˈfɛʃən",
+      "viRead": "prơ-PHE-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghề nghiệp (chuyên môn)",
+      "exampleEn": "Teaching is a respected profession.",
+      "exampleVi": "Dạy học là một nghề được kính trọng.",
+      "collocations": [
+        {
+          "en": "the medical profession",
+          "vi": "ngành y"
+        },
+        {
+          "en": "by profession",
+          "vi": "về nghề nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "professional",
+          "vi": "chuyên nghiệp"
+        }
+      ],
+      "tip": "profession = nghề cần đào tạo chuyên môn (bác sĩ, luật sư...).",
+      "emoji": "👩‍⚕️",
+      "stage": 2
+    },
+    {
+      "id": 2797,
+      "word": "professional",
+      "ipa": "prəˈfɛʃənəl",
+      "viRead": "prơ-PHE-shơ-nơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "chuyên nghiệp",
+      "exampleEn": "He is a professional football player.",
+      "exampleVi": "Anh ấy là cầu thủ bóng đá chuyên nghiệp.",
+      "collocations": [
+        {
+          "en": "professional player",
+          "vi": "cầu thủ chuyên nghiệp"
+        },
+        {
+          "en": "professional advice",
+          "vi": "lời khuyên chuyên môn"
+        }
+      ],
+      "family": [
+        {
+          "word": "amateur",
+          "vi": "nghiệp dư"
+        }
+      ],
+      "tip": "professional ↔ amateur. Viết tắt thân mật: pro.",
+      "emoji": "💼",
+      "stage": 2
+    },
+    {
+      "id": 2798,
+      "word": "prohibit",
+      "ipa": "proʊˈhɪbət",
+      "viRead": "prâu-HI-bơt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cấm",
+      "exampleEn": "Smoking is prohibited in the building.",
+      "exampleVi": "Cấm hút thuốc trong tòa nhà.",
+      "collocations": [
+        {
+          "en": "strictly prohibited",
+          "vi": "nghiêm cấm"
+        },
+        {
+          "en": "prohibit from",
+          "vi": "cấm làm"
+        }
+      ],
+      "tip": "prohibit = ban (trang trọng, hay gặp trên biển báo).",
+      "emoji": "🚭",
+      "stage": 2
+    },
+    {
+      "id": 2799,
+      "word": "prompt",
+      "ipa": "prɑmpt",
+      "viRead": "PRAMPT",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "nhanh chóng, kịp thời",
+      "exampleEn": "Thank you for your prompt reply.",
+      "exampleVi": "Cảm ơn bạn đã trả lời nhanh.",
+      "collocations": [
+        {
+          "en": "a prompt reply",
+          "vi": "phản hồi nhanh"
+        },
+        {
+          "en": "prompt action",
+          "vi": "hành động kịp thời"
+        }
+      ],
+      "family": [
+        {
+          "word": "promptly",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "tip": "prompt (n) = câu lệnh gửi cho AI!",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 2800,
+      "word": "pronunciation",
+      "ipa": "prəˌnənsiˈeɪʃən",
+      "viRead": "prơ-nơn-si-ÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cách phát âm",
+      "exampleEn": "Listen and check your pronunciation.",
+      "exampleVi": "Nghe và kiểm tra phát âm của bạn.",
+      "collocations": [
+        {
+          "en": "good pronunciation",
+          "vi": "phát âm tốt"
+        },
+        {
+          "en": "pronunciation practice",
+          "vi": "luyện phát âm"
+        }
+      ],
+      "family": [
+        {
+          "word": "pronounce",
+          "vi": "phát âm"
+        }
+      ],
+      "tip": "BẪY chính tả: pronounce nhưng pronUnciation (mất chữ o).",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2801,
+      "word": "proper",
+      "ipa": "ˈprɑpər",
+      "viRead": "PRA-pơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đúng đắn, thích hợp",
+      "exampleEn": "You need proper shoes for hiking.",
+      "exampleVi": "Bạn cần giày phù hợp để leo núi.",
+      "collocations": [
+        {
+          "en": "proper clothes",
+          "vi": "quần áo phù hợp"
+        },
+        {
+          "en": "a proper meal",
+          "vi": "bữa ăn đàng hoàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "properly",
+          "vi": "đúng cách"
+        }
+      ],
+      "tip": "proper noun = danh từ riêng (Hanoi, Mai...).",
+      "emoji": "👞",
+      "stage": 2
+    },
+    {
+      "id": 2802,
+      "word": "properly",
+      "ipa": "ˈprɑpərli",
+      "viRead": "PRA-pơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đúng cách",
+      "exampleEn": "Chew your food properly.",
+      "exampleVi": "Nhai kỹ thức ăn cho đúng cách.",
+      "collocations": [
+        {
+          "en": "work properly",
+          "vi": "hoạt động đúng"
+        },
+        {
+          "en": "do it properly",
+          "vi": "làm cho đàng hoàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "proper",
+          "vi": "đúng đắn"
+        }
+      ],
+      "tip": "properly = correctly, đúng cách.",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 2803,
+      "word": "prospect",
+      "ipa": "ˈprɑspɛkt",
+      "viRead": "PRAS-pekt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "triển vọng",
+      "exampleEn": "The job has good prospects.",
+      "exampleVi": "Công việc có triển vọng tốt.",
+      "collocations": [
+        {
+          "en": "job prospects",
+          "vi": "triển vọng nghề nghiệp"
+        },
+        {
+          "en": "the prospect of",
+          "vi": "viễn cảnh"
+        }
+      ],
+      "tip": "Nhấn âm đầu: PRA-spekt.",
+      "emoji": "🔭",
+      "stage": 2
+    },
+    {
+      "id": 2804,
+      "word": "protection",
+      "ipa": "prəˈtɛkʃən",
+      "viRead": "prơ-TEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bảo vệ",
+      "exampleEn": "Wear sunscreen for protection from the sun.",
+      "exampleVi": "Thoa kem chống nắng để bảo vệ khỏi ánh nắng.",
+      "collocations": [
+        {
+          "en": "protection from",
+          "vi": "bảo vệ khỏi"
+        },
+        {
+          "en": "environmental protection",
+          "vi": "bảo vệ môi trường"
+        }
+      ],
+      "family": [
+        {
+          "word": "protect",
+          "vi": "bảo vệ"
+        }
+      ],
+      "tip": "protect (v) → protection (n).",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 2805,
+      "word": "prove",
+      "ipa": "pruv",
+      "viRead": "PRUV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chứng minh",
+      "exampleEn": "Can you prove it?",
+      "exampleVi": "Bạn chứng minh được không?",
+      "collocations": [
+        {
+          "en": "prove that",
+          "vi": "chứng minh rằng"
+        },
+        {
+          "en": "prove yourself",
+          "vi": "chứng tỏ bản thân"
+        }
+      ],
+      "family": [
+        {
+          "word": "proof",
+          "vi": "bằng chứng"
+        }
+      ],
+      "tip": "prove (v) → proof (n). o đọc 'u': 'pruv'.",
+      "emoji": "📐",
+      "stage": 2
+    },
+    {
+      "id": 2806,
+      "word": "province",
+      "ipa": "ˈprɑvɪns",
+      "viRead": "PRA-vơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tỉnh",
+      "exampleEn": "Vietnam has many provinces.",
+      "exampleVi": "Việt Nam có nhiều tỉnh.",
+      "collocations": [
+        {
+          "en": "Quang Nam province",
+          "vi": "tỉnh Quảng Nam"
+        },
+        {
+          "en": "a northern province",
+          "vi": "một tỉnh phía Bắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "provincial",
+          "vi": "thuộc tỉnh"
+        }
+      ],
+      "tip": "province = tỉnh; city = thành phố trực thuộc trung ương.",
+      "emoji": "🗺️",
+      "stage": 2
+    },
+    {
+      "id": 2807,
+      "word": "psychology",
+      "ipa": "saɪˈkɑləʤi",
+      "viRead": "sai-KA-lơ-gi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tâm lý học",
+      "exampleEn": "She studies psychology at university.",
+      "exampleVi": "Cô ấy học tâm lý học ở đại học.",
+      "collocations": [
+        {
+          "en": "child psychology",
+          "vi": "tâm lý trẻ em"
+        },
+        {
+          "en": "study psychology",
+          "vi": "học tâm lý học"
+        }
+      ],
+      "family": [
+        {
+          "word": "psychologist",
+          "vi": "nhà tâm lý học"
+        }
+      ],
+      "tip": "p câm: 'sai-KA-lơ-gi'.",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 2808,
+      "word": "publication",
+      "ipa": "ˌpəblɪˈkeɪʃən",
+      "viRead": "pơ-bli-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ấn phẩm; sự xuất bản",
+      "exampleEn": "The magazine is a monthly publication.",
+      "exampleVi": "Tạp chí là ấn phẩm hằng tháng.",
+      "collocations": [
+        {
+          "en": "date of publication",
+          "vi": "ngày xuất bản"
+        },
+        {
+          "en": "a new publication",
+          "vi": "ấn phẩm mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "publish",
+          "vi": "xuất bản"
+        }
+      ],
+      "tip": "publish (v) → publication (n).",
+      "emoji": "📰",
+      "stage": 2
+    },
+    {
+      "id": 2809,
+      "word": "pump",
+      "ipa": "pəmp",
+      "viRead": "PƠMP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "máy bơm",
+      "exampleEn": "The water pump is broken.",
+      "exampleVi": "Máy bơm nước bị hỏng.",
+      "collocations": [
+        {
+          "en": "water pump",
+          "vi": "máy bơm nước"
+        },
+        {
+          "en": "pump up",
+          "vi": "bơm căng"
+        }
+      ],
+      "tip": "pump up the tyres = bơm lốp xe.",
+      "emoji": "⛽",
+      "stage": 2
+    },
+    {
+      "id": 2810,
+      "word": "punch",
+      "ipa": "pənʧ",
+      "viRead": "PƠNCH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đấm",
+      "exampleEn": "He punched the wall in anger.",
+      "exampleVi": "Anh ta đấm vào tường vì giận.",
+      "collocations": [
+        {
+          "en": "punch someone",
+          "vi": "đấm ai"
+        },
+        {
+          "en": "a punch in the face",
+          "vi": "cú đấm vào mặt"
+        }
+      ],
+      "tip": "punch line = câu chốt gây cười của truyện cười.",
+      "emoji": "👊",
+      "stage": 2
+    },
+    {
+      "id": 2811,
+      "word": "purchase",
+      "ipa": "ˈpərʧəs",
+      "viRead": "PƠ-chơs",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "mua",
+      "exampleEn": "You can purchase tickets online.",
+      "exampleVi": "Bạn có thể mua vé trực tuyến.",
+      "collocations": [
+        {
+          "en": "purchase tickets",
+          "vi": "mua vé"
+        },
+        {
+          "en": "make a purchase",
+          "vi": "mua hàng"
+        }
+      ],
+      "tip": "purchase = buy (trang trọng). Đọc 'PƠ-chợs'.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 2812,
+      "word": "pursue",
+      "ipa": "pərˈsu",
+      "viRead": "pơ-SU",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "theo đuổi",
+      "exampleEn": "She wants to pursue a career in music.",
+      "exampleVi": "Cô ấy muốn theo đuổi sự nghiệp âm nhạc.",
+      "collocations": [
+        {
+          "en": "pursue a dream",
+          "vi": "theo đuổi ước mơ"
+        },
+        {
+          "en": "pursue a career",
+          "vi": "theo đuổi sự nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "pursuit",
+          "vi": "sự theo đuổi"
+        }
+      ],
+      "tip": "The Pursuit of Happyness = Mưu cầu hạnh phúc (phim).",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 2813,
+      "word": "servant",
+      "ipa": "ˈsərvənt",
+      "viRead": "SƠ-vơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người hầu",
+      "exampleEn": "The king had many servants.",
+      "exampleVi": "Nhà vua có nhiều người hầu.",
+      "collocations": [
+        {
+          "en": "civil servant",
+          "vi": "công chức"
+        },
+        {
+          "en": "a loyal servant",
+          "vi": "người hầu trung thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "serve",
+          "vi": "phục vụ"
+        }
+      ],
+      "tip": "civil servant = công chức nhà nước.",
+      "emoji": "🤵",
+      "stage": 2
+    },
+    {
+      "id": 2814,
+      "word": "shave",
+      "ipa": "ʃeɪv",
+      "viRead": "SHÂYV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cạo (râu)",
+      "exampleEn": "He shaves every morning.",
+      "exampleVi": "Anh ấy cạo râu mỗi sáng.",
+      "collocations": [
+        {
+          "en": "shave your beard",
+          "vi": "cạo râu"
+        },
+        {
+          "en": "a close shave",
+          "vi": "thoát hiểm trong gang tấc"
+        }
+      ],
+      "family": [
+        {
+          "word": "shaver",
+          "vi": "máy cạo râu"
+        }
+      ],
+      "tip": "a close shave = suýt nữa thì gặp nạn.",
+      "emoji": "🪒",
+      "stage": 2
+    },
+    {
+      "id": 2815,
+      "word": "shed",
+      "ipa": "ʃɛd",
+      "viRead": "SHEĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "nhà kho nhỏ; rụng (lá)",
+      "exampleEn": "The tools are in the garden shed.",
+      "exampleVi": "Dụng cụ ở trong nhà kho ngoài vườn.",
+      "collocations": [
+        {
+          "en": "garden shed",
+          "vi": "nhà kho trong vườn"
+        },
+        {
+          "en": "shed tears",
+          "vi": "rơi nước mắt"
+        }
+      ],
+      "tip": "shed – shed – shed. Trees shed their leaves = Cây rụng lá.",
+      "emoji": "🏚️",
+      "stage": 2
+    },
+    {
+      "id": 2816,
+      "word": "shiver",
+      "ipa": "ˈʃɪvər",
+      "viRead": "SHI-vơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "run rẩy",
+      "exampleEn": "She was shivering with cold.",
+      "exampleVi": "Cô ấy run lên vì lạnh.",
+      "collocations": [
+        {
+          "en": "shiver with cold",
+          "vi": "run vì lạnh"
+        },
+        {
+          "en": "send shivers down your spine",
+          "vi": "làm lạnh sống lưng"
+        }
+      ],
+      "tip": "shiver = run vì lạnh/sợ; shake = rung, lắc.",
+      "emoji": "🥶",
+      "stage": 2
+    },
+    {
+      "id": 2817,
+      "word": "shortage",
+      "ipa": "ˈʃɔrtɪʤ",
+      "viRead": "SHOR-tơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thiếu hụt",
+      "exampleEn": "There's a shortage of water in summer.",
+      "exampleVi": "Mùa hè thiếu nước.",
+      "collocations": [
+        {
+          "en": "water shortage",
+          "vi": "thiếu nước"
+        },
+        {
+          "en": "a shortage of",
+          "vi": "sự thiếu"
+        }
+      ],
+      "family": [
+        {
+          "word": "short",
+          "vi": "thiếu; ngắn"
+        }
+      ],
+      "tip": "short of = thiếu. shortage = sự thiếu hụt.",
+      "emoji": "🚱",
+      "stage": 2
+    },
+    {
+      "id": 2818,
+      "word": "shrug",
+      "ipa": "ʃrəg",
+      "viRead": "SHRƠG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhún vai",
+      "exampleEn": "He just shrugged and walked away.",
+      "exampleVi": "Anh ấy chỉ nhún vai rồi bỏ đi.",
+      "collocations": [
+        {
+          "en": "shrug your shoulders",
+          "vi": "nhún vai"
+        },
+        {
+          "en": "shrug off",
+          "vi": "gạt đi"
+        }
+      ],
+      "tip": "🤷 = shrug (nhún vai: tôi không biết).",
+      "emoji": "🤷",
+      "stage": 2
+    },
+    {
+      "id": 2819,
+      "word": "sibling",
+      "ipa": "ˈsɪblɪŋ",
+      "viRead": "SI-bling",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "anh chị em ruột",
+      "exampleEn": "Do you have any siblings?",
+      "exampleVi": "Bạn có anh chị em ruột không?",
+      "collocations": [
+        {
+          "en": "older sibling",
+          "vi": "anh/chị"
+        },
+        {
+          "en": "sibling rivalry",
+          "vi": "anh em ganh đua"
+        }
+      ],
+      "tip": "sibling = brother or sister. only child = con một.",
+      "emoji": "👫",
+      "stage": 2
+    },
+    {
+      "id": 2820,
+      "word": "sideways",
+      "ipa": "ˈsaɪdˌweɪz",
+      "viRead": "SAIĐ-wâyd",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sang một bên, nghiêng",
+      "exampleEn": "Turn the table sideways to get it through the door.",
+      "exampleVi": "Xoay nghiêng cái bàn để đưa qua cửa.",
+      "collocations": [
+        {
+          "en": "look sideways",
+          "vi": "liếc ngang"
+        },
+        {
+          "en": "move sideways",
+          "vi": "đi ngang"
+        }
+      ],
+      "family": [
+        {
+          "word": "side",
+          "vi": "bên"
+        }
+      ],
+      "tip": "Cua bò sideways = cua bò ngang.",
+      "emoji": "🦀",
+      "stage": 2
+    },
+    {
+      "id": 2821,
+      "word": "skilled",
+      "ipa": "skɪld",
+      "viRead": "SKILĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lành nghề",
+      "exampleEn": "We need skilled workers.",
+      "exampleVi": "Chúng tôi cần công nhân lành nghề.",
+      "collocations": [
+        {
+          "en": "skilled worker",
+          "vi": "thợ lành nghề"
+        },
+        {
+          "en": "highly skilled",
+          "vi": "rất giỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "skill",
+          "vi": "kỹ năng"
+        }
+      ],
+      "tip": "skilled = có kỹ năng ↔ unskilled.",
+      "emoji": "🛠️",
+      "stage": 2
+    },
+    {
+      "id": 2822,
+      "word": "skull",
+      "ipa": "skəl",
+      "viRead": "SKƠL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hộp sọ",
+      "exampleEn": "The skull protects the brain.",
+      "exampleVi": "Hộp sọ bảo vệ não.",
+      "collocations": [
+        {
+          "en": "human skull",
+          "vi": "hộp sọ người"
+        },
+        {
+          "en": "skull and crossbones",
+          "vi": "đầu lâu xương chéo"
+        }
+      ],
+      "tip": "☠️ skull and crossbones = biểu tượng chất độc/cướp biển.",
+      "emoji": "💀",
+      "stage": 2
+    },
+    {
+      "id": 2823,
+      "word": "slap",
+      "ipa": "slæp",
+      "viRead": "SLEP",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "tát",
+      "exampleEn": "She slapped his face.",
+      "exampleVi": "Cô ấy tát vào mặt anh ta.",
+      "collocations": [
+        {
+          "en": "slap someone",
+          "vi": "tát ai"
+        },
+        {
+          "en": "a slap in the face",
+          "vi": "cái tát vào mặt (sự sỉ nhục)"
+        }
+      ],
+      "tip": "slap → slapped.",
+      "emoji": "🖐️",
+      "stage": 2
+    },
+    {
+      "id": 2824,
+      "word": "slogan",
+      "ipa": "ˈsloʊgən",
+      "viRead": "SLÂU-gơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khẩu hiệu",
+      "exampleEn": "'Just do it' is a famous slogan.",
+      "exampleVi": "'Just do it' là một khẩu hiệu nổi tiếng.",
+      "collocations": [
+        {
+          "en": "advertising slogan",
+          "vi": "khẩu hiệu quảng cáo"
+        },
+        {
+          "en": "a catchy slogan",
+          "vi": "khẩu hiệu dễ nhớ"
+        }
+      ],
+      "tip": "Đọc 'SLÂU-gơn'.",
+      "emoji": "📣",
+      "stage": 2
+    },
+    {
+      "id": 2825,
+      "word": "sniff",
+      "ipa": "snɪf",
+      "viRead": "SNIPH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hít, ngửi",
+      "exampleEn": "The dog sniffed the bag.",
+      "exampleVi": "Con chó hít hít cái túi.",
+      "collocations": [
+        {
+          "en": "sniff the air",
+          "vi": "hít không khí"
+        },
+        {
+          "en": "sniff around",
+          "vi": "đánh hơi"
+        }
+      ],
+      "tip": "sniff = hít mạnh bằng mũi (tiếng khịt).",
+      "emoji": "🐶",
+      "stage": 2
+    },
+    {
+      "id": 2826,
+      "word": "soak",
+      "ipa": "soʊk",
+      "viRead": "SÂUK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngâm; làm ướt sũng",
+      "exampleEn": "Soak the rice for an hour.",
+      "exampleVi": "Ngâm gạo trong một giờ.",
+      "collocations": [
+        {
+          "en": "soak in water",
+          "vi": "ngâm nước"
+        },
+        {
+          "en": "soaked to the skin",
+          "vi": "ướt như chuột lột"
+        }
+      ],
+      "tip": "soaked to the skin = ướt như chuột lột.",
+      "emoji": "🛁",
+      "stage": 2
+    },
+    {
+      "id": 2827,
+      "word": "spill",
+      "ipa": "spɪl",
+      "viRead": "SPIL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm đổ (chất lỏng)",
+      "exampleEn": "Don't spill your coffee!",
+      "exampleVi": "Đừng làm đổ cà phê!",
+      "collocations": [
+        {
+          "en": "spill milk",
+          "vi": "làm đổ sữa"
+        },
+        {
+          "en": "spill the beans",
+          "vi": "lỡ miệng tiết lộ"
+        }
+      ],
+      "tip": "spill the beans = lỡ tiết lộ bí mật.",
+      "emoji": "☕",
+      "stage": 2
+    },
+    {
+      "id": 2828,
+      "word": "spin",
+      "ipa": "spɪn",
+      "viRead": "SPIN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "quay tròn",
+      "exampleEn": "The wheel spins very fast.",
+      "exampleVi": "Bánh xe quay rất nhanh.",
+      "collocations": [
+        {
+          "en": "spin around",
+          "vi": "quay vòng"
+        },
+        {
+          "en": "spin class",
+          "vi": "lớp đạp xe trong nhà"
+        }
+      ],
+      "tip": "spin – spun – spun.",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 2829,
+      "word": "splash",
+      "ipa": "splæʃ",
+      "viRead": "SPLESH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "té nước, bắn tung tóe",
+      "exampleEn": "The kids love to splash in the pool.",
+      "exampleVi": "Bọn trẻ thích té nước trong hồ bơi.",
+      "collocations": [
+        {
+          "en": "splash water",
+          "vi": "té nước"
+        },
+        {
+          "en": "make a splash",
+          "vi": "gây tiếng vang"
+        }
+      ],
+      "tip": "make a splash = gây ấn tượng mạnh.",
+      "emoji": "💦",
+      "stage": 2
+    },
+    {
+      "id": 2830,
+      "word": "sponsor",
+      "ipa": "ˈspɑnsər",
+      "viRead": "SPAN-sơ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "nhà tài trợ",
+      "exampleEn": "The company is the main sponsor of the event.",
+      "exampleVi": "Công ty là nhà tài trợ chính của sự kiện.",
+      "collocations": [
+        {
+          "en": "main sponsor",
+          "vi": "nhà tài trợ chính"
+        },
+        {
+          "en": "sponsor a child",
+          "vi": "bảo trợ một em nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "sponsorship",
+          "vi": "sự tài trợ"
+        }
+      ],
+      "tip": "sponsor (v) = tài trợ.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 2831,
+      "word": "squeeze",
+      "ipa": "skwiz",
+      "viRead": "SKWID",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vắt, bóp",
+      "exampleEn": "Squeeze some lime juice on the fish.",
+      "exampleVi": "Vắt ít nước chanh lên cá.",
+      "collocations": [
+        {
+          "en": "squeeze a lemon",
+          "vi": "vắt chanh"
+        },
+        {
+          "en": "squeeze in",
+          "vi": "chen vào"
+        }
+      ],
+      "tip": "squeeze = bóp mạnh, vắt.",
+      "emoji": "🍋",
+      "stage": 2
+    },
+    {
+      "id": 2832,
+      "word": "stain",
+      "ipa": "steɪn",
+      "viRead": "STÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vết bẩn",
+      "exampleEn": "There's a coffee stain on my shirt.",
+      "exampleVi": "Áo tôi có vết cà phê.",
+      "collocations": [
+        {
+          "en": "a coffee stain",
+          "vi": "vết cà phê"
+        },
+        {
+          "en": "remove a stain",
+          "vi": "tẩy vết bẩn"
+        }
+      ],
+      "tip": "stainless steel = thép không gỉ (inox).",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 2833,
+      "word": "sting",
+      "ipa": "stɪŋ",
+      "viRead": "STING",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "chích, đốt",
+      "exampleEn": "Be careful, bees can sting.",
+      "exampleVi": "Cẩn thận, ong có thể đốt đấy.",
+      "collocations": [
+        {
+          "en": "bee sting",
+          "vi": "vết ong đốt"
+        },
+        {
+          "en": "sting like a bee",
+          "vi": "chích như ong"
+        }
+      ],
+      "tip": "sting – stung – stung.",
+      "emoji": "🐝",
+      "stage": 2
+    },
+    {
+      "id": 2834,
+      "word": "stitch",
+      "ipa": "stɪʧ",
+      "viRead": "STICH",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "mũi khâu",
+      "exampleEn": "He needed five stitches in his head.",
+      "exampleVi": "Anh ấy phải khâu năm mũi ở đầu.",
+      "collocations": [
+        {
+          "en": "a few stitches",
+          "vi": "vài mũi khâu"
+        },
+        {
+          "en": "a stitch in time",
+          "vi": "phòng bệnh hơn chữa bệnh"
+        }
+      ],
+      "tip": "A stitch in time saves nine = Sửa sớm đỡ tốn công.",
+      "emoji": "🧵",
+      "stage": 2
+    },
+    {
+      "id": 2835,
+      "word": "strain",
+      "ipa": "streɪn",
+      "viRead": "STRÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự căng thẳng; căng cơ",
+      "exampleEn": "Too much screen time puts a strain on your eyes.",
+      "exampleVi": "Nhìn màn hình quá lâu gây mỏi mắt.",
+      "collocations": [
+        {
+          "en": "eye strain",
+          "vi": "mỏi mắt"
+        },
+        {
+          "en": "under strain",
+          "vi": "bị căng thẳng"
+        }
+      ],
+      "tip": "eye strain = mỏi mắt. muscle strain = căng cơ.",
+      "emoji": "😫",
+      "stage": 2
+    },
+    {
+      "id": 2836,
+      "word": "straw",
+      "ipa": "strɔ",
+      "viRead": "STRO",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ống hút; rơm",
+      "exampleEn": "Can I have a paper straw?",
+      "exampleVi": "Cho tôi xin ống hút giấy được không?",
+      "collocations": [
+        {
+          "en": "paper straw",
+          "vi": "ống hút giấy"
+        },
+        {
+          "en": "the last straw",
+          "vi": "giọt nước tràn ly"
+        }
+      ],
+      "tip": "the last straw = giọt nước tràn ly.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 2837,
+      "word": "stream",
+      "ipa": "strim",
+      "viRead": "STRIM",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "dòng suối",
+      "exampleEn": "We crossed a small stream.",
+      "exampleVi": "Chúng tôi băng qua một dòng suối nhỏ.",
+      "collocations": [
+        {
+          "en": "a mountain stream",
+          "vi": "suối trên núi"
+        },
+        {
+          "en": "live stream",
+          "vi": "phát trực tiếp"
+        }
+      ],
+      "family": [
+        {
+          "word": "streaming",
+          "vi": "phát trực tuyến"
+        }
+      ],
+      "tip": "live stream = phát trực tiếp (livestream).",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 2838,
+      "word": "stroll",
+      "ipa": "stroʊl",
+      "viRead": "STRÂUL",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đi dạo",
+      "exampleEn": "We strolled around the lake after dinner.",
+      "exampleVi": "Chúng tôi đi dạo quanh hồ sau bữa tối.",
+      "collocations": [
+        {
+          "en": "stroll along",
+          "vi": "đi dạo dọc"
+        },
+        {
+          "en": "take a stroll",
+          "vi": "đi dạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "stroller",
+          "vi": "xe đẩy em bé"
+        }
+      ],
+      "tip": "stroll = đi bộ thong thả.",
+      "emoji": "🚶",
+      "stage": 2
+    },
+    {
+      "id": 2839,
+      "word": "stuck",
+      "ipa": "stək",
+      "viRead": "STƠK",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mắc kẹt",
+      "exampleEn": "I'm stuck in traffic.",
+      "exampleVi": "Tôi đang kẹt xe.",
+      "collocations": [
+        {
+          "en": "stuck in traffic",
+          "vi": "kẹt xe"
+        },
+        {
+          "en": "get stuck",
+          "vi": "bị kẹt"
+        }
+      ],
+      "family": [
+        {
+          "word": "stick",
+          "vi": "dính"
+        }
+      ],
+      "tip": "stuck = quá khứ của stick. I'm stuck = Tôi bí rồi.",
+      "emoji": "🚗",
+      "stage": 2
+    },
+    {
+      "id": 2840,
+      "word": "studio",
+      "ipa": "ˈstudiˌoʊ",
+      "viRead": "STU-đi-âu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xưởng; phòng thu",
+      "exampleEn": "The band recorded the song in a studio.",
+      "exampleVi": "Ban nhạc thu bài hát trong phòng thu.",
+      "collocations": [
+        {
+          "en": "recording studio",
+          "vi": "phòng thu âm"
+        },
+        {
+          "en": "studio apartment",
+          "vi": "căn hộ studio"
+        }
+      ],
+      "tip": "studio apartment = căn hộ một phòng. Đọc 'STU-đi-âu'.",
+      "emoji": "🎙️",
+      "stage": 2
+    },
+    {
+      "id": 2841,
+      "word": "submit",
+      "ipa": "səbˈmɪt",
+      "viRead": "sơb-MIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nộp",
+      "exampleEn": "Please submit your homework by Friday.",
+      "exampleVi": "Vui lòng nộp bài tập trước thứ Sáu.",
+      "collocations": [
+        {
+          "en": "submit an application",
+          "vi": "nộp đơn"
+        },
+        {
+          "en": "submit homework",
+          "vi": "nộp bài"
+        }
+      ],
+      "family": [
+        {
+          "word": "submission",
+          "vi": "sự nộp"
+        }
+      ],
+      "tip": "Nút Submit = Gửi/Nộp.",
+      "emoji": "📤",
+      "stage": 2
+    },
+    {
+      "id": 2842,
+      "word": "suburb",
+      "ipa": "ˈsəbərb",
+      "viRead": "SƠ-bơb",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngoại ô",
+      "exampleEn": "They live in the suburbs of Hanoi.",
+      "exampleVi": "Họ sống ở ngoại ô Hà Nội.",
+      "collocations": [
+        {
+          "en": "in the suburbs",
+          "vi": "ở ngoại ô"
+        },
+        {
+          "en": "a quiet suburb",
+          "vi": "vùng ngoại ô yên tĩnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "suburban",
+          "vi": "thuộc ngoại ô"
+        }
+      ],
+      "tip": "sub (dưới) + urb (thành phố).",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 2843,
+      "word": "suitcase",
+      "ipa": "ˈsutˌkeɪs",
+      "viRead": "SUT-kâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "va li",
+      "exampleEn": "I packed my suitcase last night.",
+      "exampleVi": "Tôi đã xếp va li tối qua.",
+      "collocations": [
+        {
+          "en": "pack a suitcase",
+          "vi": "xếp va li"
+        },
+        {
+          "en": "carry a suitcase",
+          "vi": "xách va li"
+        }
+      ],
+      "tip": "suitcase = va li; backpack = ba lô.",
+      "emoji": "🧳",
       "stage": 2
     }
   ]
