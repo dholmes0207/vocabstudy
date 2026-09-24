@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2553,
+    "count": 2603,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -2518,7 +2518,7 @@
     {
       "id": 467,
       "word": "before",
-      "ipa": "ˌbiˈfɔr",
+      "ipa": "biˈfɔr",
       "viRead": "bi-PHOR",
       "pos": "prep./conj.",
       "posCategory": "preposition",
@@ -5749,7 +5749,7 @@
     {
       "id": 574,
       "word": "enter",
-      "ipa": "ˈɛnər",
+      "ipa": "ˈɛntər",
       "viRead": "EN-tơ",
       "pos": "v.",
       "posCategory": "verb",
@@ -7789,7 +7789,7 @@
     {
       "id": 641,
       "word": "include",
-      "ipa": "ˌɪnˈklud",
+      "ipa": "ɪnˈklud",
       "viRead": "in-KLUĐ",
       "pos": "v.",
       "posCategory": "verb",
@@ -7821,7 +7821,7 @@
     {
       "id": 642,
       "word": "inside",
-      "ipa": "ˌɪnˈsaɪd",
+      "ipa": "ɪnˈsaɪd",
       "viRead": "in-SAIĐ",
       "pos": "prep./adv.",
       "posCategory": "preposition",
@@ -7847,7 +7847,7 @@
     {
       "id": 643,
       "word": "instead",
-      "ipa": "ˌɪnˈstɛd",
+      "ipa": "ɪnˈstɛd",
       "viRead": "in-STEĐ",
       "pos": "adv.",
       "posCategory": "adverb",
@@ -7936,7 +7936,7 @@
     {
       "id": 646,
       "word": "itself",
-      "ipa": "ˌɪtˈsɛlf",
+      "ipa": "ɪtˈsɛlf",
       "viRead": "it-SELPH",
       "pos": "pron.",
       "posCategory": "pronoun",
@@ -24118,7 +24118,7 @@
     {
       "id": 178,
       "word": "center",
-      "ipa": "ˈsɛnər",
+      "ipa": "ˈsɛntər",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "trung tâm",
@@ -25229,7 +25229,7 @@
     {
       "id": 214,
       "word": "decide",
-      "ipa": "ˌdɪˈsaɪd",
+      "ipa": "dɪˈsaɪd",
       "pos": "v.",
       "posCategory": "verb",
       "meaning": "quyết định",
@@ -27237,7 +27237,7 @@
     {
       "id": 277,
       "word": "important",
-      "ipa": "ˌɪmˈpɔrtənt",
+      "ipa": "ɪmˈpɔrtənt",
       "pos": "adj.",
       "posCategory": "adjective",
       "meaning": "quan trọng",
@@ -27269,7 +27269,7 @@
     {
       "id": 278,
       "word": "improve",
-      "ipa": "ˌɪmˈpruv",
+      "ipa": "ɪmˈpruv",
       "pos": "v.",
       "posCategory": "verb",
       "meaning": "cải thiện",
@@ -28640,13 +28640,13 @@
     {
       "id": 323,
       "word": "review",
-      "ipa": "ˌrivˈju",
+      "ipa": "rɪˈvju",
       "pos": "n./v.",
       "posCategory": "noun",
       "meaning": "ôn tập, xem lại; bài đánh giá",
       "exampleEn": "I review my notes before every test.",
       "exampleVi": "Tôi ôn lại bài ghi trước mỗi bài kiểm tra.",
-      "viRead": "riv-YU",
+      "viRead": "ri-VYU",
       "collocations": [
         {
           "en": "review the lesson",
@@ -31076,7 +31076,7 @@
     {
       "id": 1028,
       "word": "disappointed",
-      "ipa": "ˌdɪsəˈpɔɪnɪd",
+      "ipa": "ˌdɪsəˈpɔɪntɪd",
       "viRead": "đi-sơ-POIN-tiđ",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -31648,7 +31648,7 @@
     {
       "id": 1047,
       "word": "ignore",
-      "ipa": "ˌɪgˈnɔr",
+      "ipa": "ɪgˈnɔr",
       "viRead": "ig-NOR",
       "pos": "v.",
       "posCategory": "verb",
@@ -31678,7 +31678,7 @@
     {
       "id": 1048,
       "word": "imagine",
-      "ipa": "ˌɪˈmæʤən",
+      "ipa": "ɪˈmæʤən",
       "viRead": "i-ME-giơn",
       "pos": "v.",
       "posCategory": "verb",
@@ -31708,7 +31708,7 @@
     {
       "id": 1049,
       "word": "impress",
-      "ipa": "ˌɪmˈprɛs",
+      "ipa": "ɪmˈprɛs",
       "viRead": "im-PRES",
       "pos": "v.",
       "posCategory": "verb",
@@ -31742,7 +31742,7 @@
     {
       "id": 1050,
       "word": "increase",
-      "ipa": "ˌɪnˈkris",
+      "ipa": "ɪnˈkris",
       "viRead": "in-KRIS",
       "pos": "v./n.",
       "posCategory": "verb",
@@ -31772,7 +31772,7 @@
     {
       "id": 1051,
       "word": "independent",
-      "ipa": "ˌɪndɪˈpɛndənt",
+      "ipa": "ɪndɪˈpɛndənt",
       "viRead": "in-đi-PEN-đơnt",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -31836,7 +31836,7 @@
     {
       "id": 1053,
       "word": "invite",
-      "ipa": "ˌɪnˈvaɪt",
+      "ipa": "ɪnˈvaɪt",
       "viRead": "in-VAIT",
       "pos": "v.",
       "posCategory": "verb",
@@ -32834,7 +32834,7 @@
     {
       "id": 1086,
       "word": "replace",
-      "ipa": "ˌriˈpleɪs",
+      "ipa": "riˈpleɪs",
       "viRead": "rip-LÂYS",
       "pos": "v.",
       "posCategory": "verb",
@@ -34398,7 +34398,7 @@
     {
       "id": 1141,
       "word": "ingredient",
-      "ipa": "ˌɪnˈgridiənt",
+      "ipa": "ɪnˈgridiənt",
       "viRead": "in-GRI-đi-ơnt",
       "pos": "n.",
       "posCategory": "noun",
@@ -37352,7 +37352,7 @@
     {
       "id": 1249,
       "word": "insurance",
-      "ipa": "ˌɪnˈʃʊrəns",
+      "ipa": "ɪnˈʃʊrəns",
       "viRead": "in-SHU-rơns",
       "pos": "n.",
       "posCategory": "noun",
@@ -45238,7 +45238,7 @@
     {
       "id": 1542,
       "word": "entertain",
-      "ipa": "ˌɛnərˈteɪn",
+      "ipa": "ˌɛntərˈteɪn",
       "viRead": "en-tơ-TÂYN",
       "pos": "v.",
       "posCategory": "verb",
@@ -46716,7 +46716,7 @@
     {
       "id": 1598,
       "word": "gentle",
-      "ipa": "ˈʤɛnəl",
+      "ipa": "ˈʤɛntəl",
       "viRead": "GIEN-tơl",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -47666,7 +47666,7 @@
     {
       "id": 1633,
       "word": "illegal",
-      "ipa": "ˌɪˈligəl",
+      "ipa": "ɪˈligəl",
       "viRead": "i-LI-gơl",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -47756,7 +47756,7 @@
     {
       "id": 1636,
       "word": "immediately",
-      "ipa": "ˌɪˈmiˌdiətli",
+      "ipa": "ɪˈmiˌdiətli",
       "viRead": "i-MI-đi-ơt-li",
       "pos": "adv.",
       "posCategory": "adverb",
@@ -47786,8 +47786,8 @@
     {
       "id": 1637,
       "word": "impact",
-      "ipa": "ˌɪmˈpækt",
-      "viRead": "im-PEKT",
+      "ipa": "ˈɪmpækt",
+      "viRead": "IM-pekt",
       "pos": "n.",
       "posCategory": "noun",
       "meaning": "tác động, ảnh hưởng",
@@ -47803,14 +47803,14 @@
           "vi": "tác động tích cực"
         }
       ],
-      "tip": "have an impact ON + đối tượng. Nhấn âm đầu: IM-pact.",
+      "tip": "have an impact ON + đối tượng. Danh từ nhấn âm đầu: IM-pekt.",
       "emoji": "💥",
       "stage": 2
     },
     {
       "id": 1638,
       "word": "import",
-      "ipa": "ˌɪmˈpɔrt",
+      "ipa": "ɪmˈpɔrt",
       "viRead": "im-PORT",
       "pos": "v./n.",
       "posCategory": "verb",
@@ -47864,7 +47864,7 @@
     {
       "id": 1640,
       "word": "indeed",
-      "ipa": "ˌɪnˈdid",
+      "ipa": "ɪnˈdid",
       "viRead": "in-ĐIĐ",
       "pos": "adv.",
       "posCategory": "adverb",
@@ -47952,7 +47952,7 @@
     {
       "id": 1643,
       "word": "infection",
-      "ipa": "ˌɪnˈfɛkʃən",
+      "ipa": "ɪnˈfɛkʃən",
       "viRead": "in-PHEK-shơn",
       "pos": "n.",
       "posCategory": "noun",
@@ -48012,7 +48012,7 @@
     {
       "id": 1645,
       "word": "inform",
-      "ipa": "ˌɪnˈfɔrm",
+      "ipa": "ɪnˈfɔrm",
       "viRead": "in-PHORM",
       "pos": "v.",
       "posCategory": "verb",
@@ -48150,7 +48150,7 @@
     {
       "id": 1650,
       "word": "insist",
-      "ipa": "ˌɪnˈsɪst",
+      "ipa": "ɪnˈsɪst",
       "viRead": "in-SIST",
       "pos": "v.",
       "posCategory": "verb",
@@ -48174,7 +48174,7 @@
     {
       "id": 1651,
       "word": "inspire",
-      "ipa": "ˌɪnˈspaɪr",
+      "ipa": "ɪnˈspaɪr",
       "viRead": "in-SPAIR",
       "pos": "v.",
       "posCategory": "verb",
@@ -48234,7 +48234,7 @@
     {
       "id": 1653,
       "word": "instruction",
-      "ipa": "ˌɪnˈstrəkʃən",
+      "ipa": "ɪnˈstrəkʃən",
       "viRead": "in-STRƠK-shơn",
       "pos": "n.",
       "posCategory": "noun",
@@ -48288,7 +48288,7 @@
     {
       "id": 1655,
       "word": "intelligent",
-      "ipa": "ˌɪnˈtɛləʤənt",
+      "ipa": "ɪnˈtɛləʤənt",
       "viRead": "in-TE-lơ-giơnt",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -48318,7 +48318,7 @@
     {
       "id": 1656,
       "word": "intend",
-      "ipa": "ˌɪnˈtɛnd",
+      "ipa": "ɪnˈtɛnd",
       "viRead": "in-TENĐ",
       "pos": "v.",
       "posCategory": "verb",
@@ -48348,7 +48348,7 @@
     {
       "id": 1657,
       "word": "international",
-      "ipa": "ˌɪnərˈnæʃənɑl",
+      "ipa": "ˌɪntərˈnæʃənəl",
       "viRead": "in-tơ-NE-shơ-nơl",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -48378,7 +48378,7 @@
     {
       "id": 1658,
       "word": "invest",
-      "ipa": "ˌɪnˈvɛst",
+      "ipa": "ɪnˈvɛst",
       "viRead": "in-VEST",
       "pos": "v.",
       "posCategory": "verb",
@@ -48412,7 +48412,7 @@
     {
       "id": 1659,
       "word": "invitation",
-      "ipa": "ˌɪnvɪˈteɪʃən",
+      "ipa": "ɪnvɪˈteɪʃən",
       "viRead": "in-vi-TÂY-shơn",
       "pos": "n.",
       "posCategory": "noun",
@@ -52092,7 +52092,7 @@
     {
       "id": 1795,
       "word": "particular",
-      "ipa": "ˌpɑˈtɪkjələr",
+      "ipa": "pərˈtɪkjələr",
       "viRead": "pơ-TIK-yơ-lơ",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -55170,7 +55170,7 @@
     {
       "id": 1905,
       "word": "retire",
-      "ipa": "ˌriˈtaɪər",
+      "ipa": "riˈtaɪər",
       "viRead": "ri-TAIR",
       "pos": "v.",
       "posCategory": "verb",
@@ -60384,7 +60384,7 @@
     {
       "id": 2098,
       "word": "unexpected",
-      "ipa": "ˌənɪkˈspɛktɪd",
+      "ipa": "ənɪkˈspɛktɪd",
       "viRead": "ơ-nik-SPEK-tiđ",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -60414,7 +60414,7 @@
     {
       "id": 2099,
       "word": "unfair",
-      "ipa": "ˌənˈfɛr",
+      "ipa": "ənˈfɛr",
       "viRead": "ơn-PHER",
       "pos": "adj.",
       "posCategory": "adjective",
@@ -67560,7 +67560,7 @@
     {
       "id": 2365,
       "word": "disagree",
-      "ipa": "ˌdɪsəˈgri",
+      "ipa": "dɪsəˈgri",
       "viRead": "đi-sơ-GRI",
       "pos": "v.",
       "posCategory": "verb",
@@ -67590,7 +67590,7 @@
     {
       "id": 2366,
       "word": "disappear",
-      "ipa": "ˌdɪsəˈpɪr",
+      "ipa": "dɪsəˈpɪr",
       "viRead": "đi-sơ-PIR",
       "pos": "v.",
       "posCategory": "verb",
@@ -67620,7 +67620,7 @@
     {
       "id": 2367,
       "word": "disappoint",
-      "ipa": "ˌdɪsəˈpɔɪnt",
+      "ipa": "dɪsəˈpɔɪnt",
       "viRead": "đi-sơ-POINT",
       "pos": "v.",
       "posCategory": "verb",
@@ -72815,6 +72815,1448 @@
       ],
       "tip": "hunger (n) → hungry (adj). The Hunger Games = Đấu trường sinh tử.",
       "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 2554,
+      "word": "hurricane",
+      "ipa": "ˈhərəˌkeɪn",
+      "viRead": "HƠ-rơ-kâyn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơn bão lớn",
+      "exampleEn": "The hurricane destroyed many houses.",
+      "exampleVi": "Cơn bão lớn đã phá hủy nhiều ngôi nhà.",
+      "collocations": [
+        {
+          "en": "a powerful hurricane",
+          "vi": "cơn bão mạnh"
+        },
+        {
+          "en": "hurricane season",
+          "vi": "mùa bão"
+        }
+      ],
+      "tip": "hurricane (Đại Tây Dương) = typhoon (Thái Bình Dương, như ở Việt Nam).",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 2555,
+      "word": "hut",
+      "ipa": "hət",
+      "viRead": "HƠT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "túp lều",
+      "exampleEn": "They lived in a small hut by the river.",
+      "exampleVi": "Họ sống trong một túp lều nhỏ bên sông.",
+      "collocations": [
+        {
+          "en": "a wooden hut",
+          "vi": "túp lều gỗ"
+        },
+        {
+          "en": "a beach hut",
+          "vi": "chòi trên bãi biển"
+        }
+      ],
+      "tip": "hut = nhà nhỏ, đơn sơ.",
+      "emoji": "🛖",
+      "stage": 2
+    },
+    {
+      "id": 2556,
+      "word": "identical",
+      "ipa": "aɪˈdɛntɪkəl",
+      "viRead": "ai-ĐEN-ti-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giống hệt",
+      "exampleEn": "The twins look identical.",
+      "exampleVi": "Cặp song sinh trông giống hệt nhau.",
+      "collocations": [
+        {
+          "en": "identical twins",
+          "vi": "sinh đôi cùng trứng"
+        },
+        {
+          "en": "identical to",
+          "vi": "giống hệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "identity",
+          "vi": "danh tính"
+        }
+      ],
+      "tip": "identical twins = sinh đôi giống hệt nhau.",
+      "emoji": "👯",
+      "stage": 2
+    },
+    {
+      "id": 2557,
+      "word": "identity",
+      "ipa": "aɪˈdɛntəti",
+      "viRead": "ai-ĐEN-tơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh tính; bản sắc",
+      "exampleEn": "Bring your identity card.",
+      "exampleVi": "Mang theo căn cước công dân.",
+      "collocations": [
+        {
+          "en": "identity card",
+          "vi": "thẻ căn cước"
+        },
+        {
+          "en": "cultural identity",
+          "vi": "bản sắc văn hóa"
+        }
+      ],
+      "family": [
+        {
+          "word": "identify",
+          "vi": "nhận dạng"
+        }
+      ],
+      "tip": "ID = identity (card). Nhấn âm 2: ai-ĐEN-tơ-ti.",
+      "emoji": "🪪",
+      "stage": 2
+    },
+    {
+      "id": 2558,
+      "word": "ignorant",
+      "ipa": "ˈɪgnərənt",
+      "viRead": "IG-nơ-rơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thiếu hiểu biết",
+      "exampleEn": "I felt ignorant about modern art.",
+      "exampleVi": "Tôi thấy mình mù tịt về nghệ thuật hiện đại.",
+      "collocations": [
+        {
+          "en": "ignorant of",
+          "vi": "không biết về"
+        },
+        {
+          "en": "an ignorant question",
+          "vi": "câu hỏi thiếu hiểu biết"
+        }
+      ],
+      "family": [
+        {
+          "word": "ignore",
+          "vi": "lờ đi"
+        },
+        {
+          "word": "ignorance",
+          "vi": "sự thiếu hiểu biết"
+        }
+      ],
+      "tip": "ignorant = không biết (vì thiếu kiến thức); ignore = cố tình lờ đi.",
+      "emoji": "🙈",
+      "stage": 2
+    },
+    {
+      "id": 2559,
+      "word": "illustrate",
+      "ipa": "ˈɪləˌstreɪt",
+      "viRead": "I-lơ-strâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "minh họa",
+      "exampleEn": "The book is illustrated with photos.",
+      "exampleVi": "Cuốn sách được minh họa bằng ảnh.",
+      "collocations": [
+        {
+          "en": "illustrate a book",
+          "vi": "vẽ minh họa sách"
+        },
+        {
+          "en": "illustrate a point",
+          "vi": "minh họa một ý"
+        }
+      ],
+      "family": [
+        {
+          "word": "illustration",
+          "vi": "hình minh họa"
+        }
+      ],
+      "tip": "Nhấn âm đầu: I-lơ-strâyt.",
+      "emoji": "🖍️",
+      "stage": 2
+    },
+    {
+      "id": 2560,
+      "word": "image",
+      "ipa": "ˈɪmɪʤ",
+      "viRead": "I-mơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình ảnh",
+      "exampleEn": "Click on the image to see it bigger.",
+      "exampleVi": "Bấm vào hình ảnh để xem to hơn.",
+      "collocations": [
+        {
+          "en": "an image of",
+          "vi": "hình ảnh của"
+        },
+        {
+          "en": "public image",
+          "vi": "hình ảnh trước công chúng"
+        }
+      ],
+      "family": [
+        {
+          "word": "imagine",
+          "vi": "tưởng tượng"
+        }
+      ],
+      "tip": "BẪY đọc: image = 'I-mịj' (không đọc 'i-mây-giơ').",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 2561,
+      "word": "imaginary",
+      "ipa": "ɪˈmæʤəˌnɛri",
+      "viRead": "i-ME-giơ-ne-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tưởng tượng, không có thật",
+      "exampleEn": "My little sister has an imaginary friend.",
+      "exampleVi": "Em gái tôi có một người bạn tưởng tượng.",
+      "collocations": [
+        {
+          "en": "imaginary friend",
+          "vi": "bạn tưởng tượng"
+        },
+        {
+          "en": "an imaginary line",
+          "vi": "đường tưởng tượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "imagine",
+          "vi": "tưởng tượng"
+        },
+        {
+          "word": "imagination",
+          "vi": "trí tưởng tượng"
+        }
+      ],
+      "tip": "imaginary = không có thật; imaginative = giàu trí tưởng tượng.",
+      "emoji": "🦄",
+      "stage": 2
+    },
+    {
+      "id": 2562,
+      "word": "immediate",
+      "ipa": "ɪˈmidiət",
+      "viRead": "i-MI-đi-ơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngay lập tức",
+      "exampleEn": "We need an immediate answer.",
+      "exampleVi": "Chúng tôi cần câu trả lời ngay lập tức.",
+      "collocations": [
+        {
+          "en": "immediate action",
+          "vi": "hành động ngay"
+        },
+        {
+          "en": "immediate family",
+          "vi": "gia đình ruột thịt"
+        }
+      ],
+      "family": [
+        {
+          "word": "immediately",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "tip": "immediately = right now. immediate family = bố mẹ, anh chị em, con cái.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 2563,
+      "word": "immense",
+      "ipa": "ɪˈmɛns",
+      "viRead": "i-MENS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bao la, to lớn",
+      "exampleEn": "The universe is immense.",
+      "exampleVi": "Vũ trụ bao la vô cùng.",
+      "collocations": [
+        {
+          "en": "immense pleasure",
+          "vi": "niềm vui lớn"
+        },
+        {
+          "en": "an immense amount",
+          "vi": "lượng khổng lồ"
+        }
+      ],
+      "family": [
+        {
+          "word": "immensely",
+          "vi": "vô cùng"
+        }
+      ],
+      "tip": "immense = huge = enormous.",
+      "emoji": "🌌",
+      "stage": 2
+    },
+    {
+      "id": 2564,
+      "word": "immigrant",
+      "ipa": "ˈɪməgrənt",
+      "viRead": "I-mơ-grơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người nhập cư",
+      "exampleEn": "Many immigrants came to the city for work.",
+      "exampleVi": "Nhiều người nhập cư đến thành phố làm việc.",
+      "collocations": [
+        {
+          "en": "illegal immigrant",
+          "vi": "người nhập cư trái phép"
+        },
+        {
+          "en": "immigrant family",
+          "vi": "gia đình nhập cư"
+        }
+      ],
+      "family": [
+        {
+          "word": "immigration",
+          "vi": "sự nhập cư"
+        }
+      ],
+      "tip": "immigrant (nhập cư vào) ↔ emigrant (di cư ra).",
+      "emoji": "🧳",
+      "stage": 2
+    },
+    {
+      "id": 2565,
+      "word": "impatient",
+      "ipa": "ɪmˈpeɪʃənt",
+      "viRead": "im-PÂY-shơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thiếu kiên nhẫn",
+      "exampleEn": "Don't be so impatient, the bus is coming.",
+      "exampleVi": "Đừng sốt ruột thế, xe buýt sắp đến rồi.",
+      "collocations": [
+        {
+          "en": "impatient with",
+          "vi": "mất kiên nhẫn với"
+        },
+        {
+          "en": "get impatient",
+          "vi": "sốt ruột"
+        }
+      ],
+      "family": [
+        {
+          "word": "patient",
+          "vi": "kiên nhẫn"
+        }
+      ],
+      "tip": "im + patient = không kiên nhẫn.",
+      "emoji": "⏳",
+      "stage": 2
+    },
+    {
+      "id": 2566,
+      "word": "imply",
+      "ipa": "ɪmˈplaɪ",
+      "viRead": "im-PLAI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngụ ý",
+      "exampleEn": "What are you trying to imply?",
+      "exampleVi": "Bạn đang muốn ngụ ý gì vậy?",
+      "collocations": [
+        {
+          "en": "imply that",
+          "vi": "ngụ ý rằng"
+        },
+        {
+          "en": "strongly imply",
+          "vi": "ám chỉ rõ"
+        }
+      ],
+      "family": [
+        {
+          "word": "implication",
+          "vi": "hàm ý"
+        }
+      ],
+      "tip": "imply (người nói ngụ ý) – infer (người nghe suy ra).",
+      "emoji": "🤨",
+      "stage": 2
+    },
+    {
+      "id": 2567,
+      "word": "impose",
+      "ipa": "ɪmˈpoʊz",
+      "viRead": "im-PÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "áp đặt",
+      "exampleEn": "Don't impose your ideas on others.",
+      "exampleVi": "Đừng áp đặt ý kiến lên người khác.",
+      "collocations": [
+        {
+          "en": "impose on",
+          "vi": "áp đặt lên"
+        },
+        {
+          "en": "impose a fine",
+          "vi": "phạt tiền"
+        }
+      ],
+      "tip": "impose a tax = đánh thuế.",
+      "emoji": "⛓️",
+      "stage": 2
+    },
+    {
+      "id": 2568,
+      "word": "impression",
+      "ipa": "ɪmˈprɛʃən",
+      "viRead": "im-PRE-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ấn tượng",
+      "exampleEn": "First impressions are important.",
+      "exampleVi": "Ấn tượng đầu tiên rất quan trọng.",
+      "collocations": [
+        {
+          "en": "first impression",
+          "vi": "ấn tượng đầu"
+        },
+        {
+          "en": "make an impression",
+          "vi": "gây ấn tượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "impress",
+          "vi": "gây ấn tượng"
+        }
+      ],
+      "tip": "impress (v) → impression (n) → impressive (adj).",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 2569,
+      "word": "impressive",
+      "ipa": "ɪmˈprɛsɪv",
+      "viRead": "im-PRE-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ấn tượng",
+      "exampleEn": "Your English is impressive!",
+      "exampleVi": "Tiếng Anh của bạn thật ấn tượng!",
+      "collocations": [
+        {
+          "en": "an impressive result",
+          "vi": "kết quả ấn tượng"
+        },
+        {
+          "en": "very impressive",
+          "vi": "rất ấn tượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "impression",
+          "vi": "ấn tượng"
+        }
+      ],
+      "tip": "Khen ai: That's impressive! = Giỏi thật!",
+      "emoji": "👏",
+      "stage": 2
+    },
+    {
+      "id": 2570,
+      "word": "improvement",
+      "ipa": "ɪmˈpruvmənt",
+      "viRead": "im-PRUV-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cải thiện",
+      "exampleEn": "There's a big improvement in your pronunciation.",
+      "exampleVi": "Phát âm của bạn tiến bộ rõ rệt.",
+      "collocations": [
+        {
+          "en": "a big improvement",
+          "vi": "tiến bộ lớn"
+        },
+        {
+          "en": "room for improvement",
+          "vi": "còn chỗ cải thiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "improve",
+          "vi": "cải thiện"
+        }
+      ],
+      "tip": "There's room for improvement = Vẫn có thể tốt hơn.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2571,
+      "word": "including",
+      "ipa": "ɪnˈkludɪŋ",
+      "viRead": "in-KLU-đing",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "bao gồm",
+      "exampleEn": "The price is 200,000 dong, including tax.",
+      "exampleVi": "Giá là 200.000 đồng, đã bao gồm thuế.",
+      "collocations": [
+        {
+          "en": "including tax",
+          "vi": "đã gồm thuế"
+        },
+        {
+          "en": "including breakfast",
+          "vi": "bao gồm bữa sáng"
+        }
+      ],
+      "family": [
+        {
+          "word": "include",
+          "vi": "bao gồm"
+        }
+      ],
+      "tip": "including = kể cả. excluding = không bao gồm.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 2572,
+      "word": "increasingly",
+      "ipa": "ɪnˈkrisɪŋgli",
+      "viRead": "in-KRI-sing-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngày càng",
+      "exampleEn": "English is increasingly important for jobs.",
+      "exampleVi": "Tiếng Anh ngày càng quan trọng cho công việc.",
+      "collocations": [
+        {
+          "en": "increasingly popular",
+          "vi": "ngày càng phổ biến"
+        },
+        {
+          "en": "increasingly difficult",
+          "vi": "ngày càng khó"
+        }
+      ],
+      "family": [
+        {
+          "word": "increase",
+          "vi": "tăng"
+        }
+      ],
+      "tip": "increasingly + tính từ = ngày càng...",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2573,
+      "word": "incredible",
+      "ipa": "ɪnˈkrɛdəbəl",
+      "viRead": "in-KRE-đơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khó tin; tuyệt vời",
+      "exampleEn": "The view from the top is incredible.",
+      "exampleVi": "Cảnh nhìn từ đỉnh thật tuyệt vời.",
+      "collocations": [
+        {
+          "en": "an incredible story",
+          "vi": "câu chuyện khó tin"
+        },
+        {
+          "en": "incredible view",
+          "vi": "cảnh tuyệt đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "incredibly",
+          "vi": "vô cùng"
+        }
+      ],
+      "tip": "in (không) + credible (tin được) = không thể tin nổi.",
+      "emoji": "🤯",
+      "stage": 2
+    },
+    {
+      "id": 2574,
+      "word": "independence",
+      "ipa": "ɪndɪˈpɛndəns",
+      "viRead": "in-đi-PEN-đơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự độc lập",
+      "exampleEn": "Vietnam's Independence Day is on September 2nd.",
+      "exampleVi": "Ngày Quốc khánh Việt Nam là 2 tháng 9.",
+      "collocations": [
+        {
+          "en": "Independence Day",
+          "vi": "ngày Độc lập"
+        },
+        {
+          "en": "financial independence",
+          "vi": "độc lập tài chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "independent",
+          "vi": "độc lập"
+        }
+      ],
+      "tip": "independent (adj) → independence (n).",
+      "emoji": "🇻🇳",
+      "stage": 2
+    },
+    {
+      "id": 2575,
+      "word": "index",
+      "ipa": "ˈɪndɛks",
+      "viRead": "IN-đeks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mục lục; chỉ số",
+      "exampleEn": "Look up the word in the index.",
+      "exampleVi": "Tra từ trong phần mục lục.",
+      "collocations": [
+        {
+          "en": "index finger",
+          "vi": "ngón trỏ"
+        },
+        {
+          "en": "price index",
+          "vi": "chỉ số giá"
+        }
+      ],
+      "tip": "index finger = ngón trỏ.",
+      "emoji": "☝️",
+      "stage": 2
+    },
+    {
+      "id": 2576,
+      "word": "indicate",
+      "ipa": "ˈɪndəˌkeɪt",
+      "viRead": "IN-đơ-kâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chỉ ra; cho thấy",
+      "exampleEn": "The results indicate that the plan works.",
+      "exampleVi": "Kết quả cho thấy kế hoạch có hiệu quả.",
+      "collocations": [
+        {
+          "en": "indicate that",
+          "vi": "cho thấy rằng"
+        },
+        {
+          "en": "clearly indicate",
+          "vi": "chỉ rõ"
+        }
+      ],
+      "family": [
+        {
+          "word": "indicator",
+          "vi": "chỉ số"
+        }
+      ],
+      "tip": "indicate = show (trang trọng).",
+      "emoji": "👉",
+      "stage": 2
+    },
+    {
+      "id": 2577,
+      "word": "indirect",
+      "ipa": "ɪndəˈrɛkt",
+      "viRead": "in-đơ-REKT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gián tiếp",
+      "exampleEn": "He gave an indirect answer.",
+      "exampleVi": "Anh ấy trả lời vòng vo.",
+      "collocations": [
+        {
+          "en": "indirect speech",
+          "vi": "câu gián tiếp"
+        },
+        {
+          "en": "an indirect route",
+          "vi": "đường vòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "direct",
+          "vi": "trực tiếp"
+        }
+      ],
+      "tip": "indirect speech = câu tường thuật (ngữ pháp).",
+      "emoji": "↪️",
+      "stage": 2
+    },
+    {
+      "id": 2578,
+      "word": "individual",
+      "ipa": "ɪndəˈvɪʤuəl",
+      "viRead": "in-đơ-VI-giu-ơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "riêng lẻ, cá nhân",
+      "exampleEn": "Each student gets individual attention.",
+      "exampleVi": "Mỗi học sinh được quan tâm riêng.",
+      "collocations": [
+        {
+          "en": "individual needs",
+          "vi": "nhu cầu cá nhân"
+        },
+        {
+          "en": "each individual",
+          "vi": "mỗi cá nhân"
+        }
+      ],
+      "family": [
+        {
+          "word": "individually",
+          "vi": "riêng lẻ"
+        }
+      ],
+      "tip": "Nhấn âm 3: in-đơ-VI-giu-ơl.",
+      "emoji": "🧍",
+      "stage": 2
+    },
+    {
+      "id": 2579,
+      "word": "industrial",
+      "ipa": "ɪnˈdəstriəl",
+      "viRead": "in-ĐƠS-tri-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc công nghiệp",
+      "exampleEn": "Binh Duong has many industrial parks.",
+      "exampleVi": "Bình Dương có nhiều khu công nghiệp.",
+      "collocations": [
+        {
+          "en": "industrial park",
+          "vi": "khu công nghiệp"
+        },
+        {
+          "en": "industrial area",
+          "vi": "vùng công nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "industry",
+          "vi": "ngành công nghiệp"
+        }
+      ],
+      "tip": "Nhấn âm 2: in-ĐƠS-tri-ơl.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 2580,
+      "word": "inevitable",
+      "ipa": "ɪˈnɛvətəbəl",
+      "viRead": "i-NE-vơ-tơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "không thể tránh khỏi",
+      "exampleEn": "Change is inevitable.",
+      "exampleVi": "Thay đổi là điều không thể tránh khỏi.",
+      "collocations": [
+        {
+          "en": "inevitable result",
+          "vi": "kết quả tất yếu"
+        },
+        {
+          "en": "seem inevitable",
+          "vi": "dường như khó tránh"
+        }
+      ],
+      "tip": "Nhấn âm 2: i-NE-vi-tơ-bồ.",
+      "emoji": "🌊",
+      "stage": 2
+    },
+    {
+      "id": 2581,
+      "word": "infant",
+      "ipa": "ˈɪnfənt",
+      "viRead": "IN-phơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trẻ sơ sinh",
+      "exampleEn": "Infants need a lot of sleep.",
+      "exampleVi": "Trẻ sơ sinh cần ngủ nhiều.",
+      "collocations": [
+        {
+          "en": "newborn infant",
+          "vi": "trẻ mới sinh"
+        },
+        {
+          "en": "infant formula",
+          "vi": "sữa công thức"
+        }
+      ],
+      "tip": "infant = em bé dưới 1 tuổi (trang trọng hơn baby).",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 2582,
+      "word": "informal",
+      "ipa": "ɪnˈfɔrməl",
+      "viRead": "in-PHOR-mơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thân mật, không trang trọng",
+      "exampleEn": "You can use informal English with friends.",
+      "exampleVi": "Bạn có thể dùng tiếng Anh thân mật với bạn bè.",
+      "collocations": [
+        {
+          "en": "informal language",
+          "vi": "ngôn ngữ thân mật"
+        },
+        {
+          "en": "an informal meeting",
+          "vi": "buổi gặp không chính thức"
+        }
+      ],
+      "family": [
+        {
+          "word": "formal",
+          "vi": "trang trọng"
+        }
+      ],
+      "tip": "formal ↔ informal. Nhắn tin bạn bè = informal.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 2583,
+      "word": "inhabitant",
+      "ipa": "ɪnˈhæbɪtənt",
+      "viRead": "in-HE-bơ-tơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cư dân",
+      "exampleEn": "The island has about 500 inhabitants.",
+      "exampleVi": "Hòn đảo có khoảng 500 cư dân.",
+      "collocations": [
+        {
+          "en": "local inhabitants",
+          "vi": "cư dân địa phương"
+        },
+        {
+          "en": "the inhabitants of",
+          "vi": "cư dân của"
+        }
+      ],
+      "family": [
+        {
+          "word": "inhabit",
+          "vi": "cư trú"
+        }
+      ],
+      "tip": "inhabitant = resident (người sống ở đó).",
+      "emoji": "🏝️",
+      "stage": 2
+    },
+    {
+      "id": 2584,
+      "word": "initial",
+      "ipa": "ɪˈnɪʃəl",
+      "viRead": "i-NI-shơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ban đầu",
+      "exampleEn": "My initial plan was to study in the morning.",
+      "exampleVi": "Kế hoạch ban đầu của tôi là học buổi sáng.",
+      "collocations": [
+        {
+          "en": "initial plan",
+          "vi": "kế hoạch ban đầu"
+        },
+        {
+          "en": "initial reaction",
+          "vi": "phản ứng ban đầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "initially",
+          "vi": "lúc đầu"
+        }
+      ],
+      "tip": "initials = chữ cái đầu tên (VD: N.V.A).",
+      "emoji": "🔤",
+      "stage": 2
+    },
+    {
+      "id": 2585,
+      "word": "inner",
+      "ipa": "ˈɪnər",
+      "viRead": "I-nơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bên trong",
+      "exampleEn": "The inner city is very crowded.",
+      "exampleVi": "Khu nội thành rất đông đúc.",
+      "collocations": [
+        {
+          "en": "inner city",
+          "vi": "nội thành"
+        },
+        {
+          "en": "inner peace",
+          "vi": "bình yên nội tâm"
+        }
+      ],
+      "family": [
+        {
+          "word": "outer",
+          "vi": "bên ngoài"
+        }
+      ],
+      "tip": "inner ↔ outer. inner peace = sự bình yên trong lòng.",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 2586,
+      "word": "input",
+      "ipa": "ˈɪnˌpʊt",
+      "viRead": "IN-put",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầu vào; ý kiến đóng góp",
+      "exampleEn": "Thanks for your input.",
+      "exampleVi": "Cảm ơn ý kiến đóng góp của bạn.",
+      "collocations": [
+        {
+          "en": "input and output",
+          "vi": "đầu vào và đầu ra"
+        },
+        {
+          "en": "valuable input",
+          "vi": "ý kiến quý"
+        }
+      ],
+      "family": [
+        {
+          "word": "output",
+          "vi": "đầu ra"
+        }
+      ],
+      "tip": "Học ngoại ngữ cần nhiều input (nghe, đọc) trước khi output (nói, viết).",
+      "emoji": "⌨️",
+      "stage": 2
+    },
+    {
+      "id": 2587,
+      "word": "insert",
+      "ipa": "ɪnˈsərt",
+      "viRead": "in-SƠT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chèn, đưa vào",
+      "exampleEn": "Insert your card into the machine.",
+      "exampleVi": "Đưa thẻ vào máy.",
+      "collocations": [
+        {
+          "en": "insert a card",
+          "vi": "đưa thẻ vào"
+        },
+        {
+          "en": "insert a picture",
+          "vi": "chèn ảnh"
+        }
+      ],
+      "tip": "Phím Insert trên bàn phím. Động từ nhấn sau: in-SƠT.",
+      "emoji": "💳",
+      "stage": 2
+    },
+    {
+      "id": 2588,
+      "word": "insight",
+      "ipa": "ˈɪnˌsaɪt",
+      "viRead": "IN-sait",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thấu hiểu",
+      "exampleEn": "The book gives an insight into Vietnamese culture.",
+      "exampleVi": "Cuốn sách giúp hiểu sâu về văn hóa Việt.",
+      "collocations": [
+        {
+          "en": "an insight into",
+          "vi": "hiểu biết sâu về"
+        },
+        {
+          "en": "valuable insight",
+          "vi": "hiểu biết giá trị"
+        }
+      ],
+      "tip": "in + sight (nhìn) = nhìn thấu bên trong.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 2589,
+      "word": "inspect",
+      "ipa": "ɪnˈspɛkt",
+      "viRead": "in-SPEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kiểm tra, thanh tra",
+      "exampleEn": "The officer inspected our bags.",
+      "exampleVi": "Viên chức kiểm tra túi của chúng tôi.",
+      "collocations": [
+        {
+          "en": "inspect a building",
+          "vi": "kiểm tra tòa nhà"
+        },
+        {
+          "en": "inspect closely",
+          "vi": "xem xét kỹ"
+        }
+      ],
+      "family": [
+        {
+          "word": "inspector",
+          "vi": "thanh tra"
+        }
+      ],
+      "tip": "inspect = kiểm tra kỹ lưỡng (chính thức).",
+      "emoji": "🕵️",
+      "stage": 2
+    },
+    {
+      "id": 2590,
+      "word": "install",
+      "ipa": "ɪnˈstɔl",
+      "viRead": "in-STOL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cài đặt, lắp đặt",
+      "exampleEn": "You need to install the app first.",
+      "exampleVi": "Bạn cần cài ứng dụng trước.",
+      "collocations": [
+        {
+          "en": "install an app",
+          "vi": "cài ứng dụng"
+        },
+        {
+          "en": "install air conditioning",
+          "vi": "lắp điều hòa"
+        }
+      ],
+      "family": [
+        {
+          "word": "installation",
+          "vi": "sự cài đặt"
+        }
+      ],
+      "tip": "install ↔ uninstall (gỡ cài đặt). VocabStudy cũng install được như app!",
+      "emoji": "📲",
+      "stage": 2
+    },
+    {
+      "id": 2591,
+      "word": "instance",
+      "ipa": "ˈɪnstəns",
+      "viRead": "IN-stơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ví dụ, trường hợp",
+      "exampleEn": "For instance, you can learn five words a day.",
+      "exampleVi": "Ví dụ, bạn có thể học năm từ mỗi ngày.",
+      "collocations": [
+        {
+          "en": "for instance",
+          "vi": "ví dụ"
+        },
+        {
+          "en": "in this instance",
+          "vi": "trong trường hợp này"
+        }
+      ],
+      "tip": "for instance = for example.",
+      "emoji": "📌",
+      "stage": 2
+    },
+    {
+      "id": 2592,
+      "word": "institute",
+      "ipa": "ˈɪnstɪˌtut",
+      "viRead": "IN-stơ-tut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "viện, học viện",
+      "exampleEn": "She works at a research institute.",
+      "exampleVi": "Cô ấy làm ở một viện nghiên cứu.",
+      "collocations": [
+        {
+          "en": "research institute",
+          "vi": "viện nghiên cứu"
+        },
+        {
+          "en": "language institute",
+          "vi": "trung tâm ngoại ngữ"
+        }
+      ],
+      "family": [
+        {
+          "word": "institution",
+          "vi": "tổ chức"
+        }
+      ],
+      "tip": "Nhấn âm đầu: IN-stơ-tut.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2593,
+      "word": "insult",
+      "ipa": "ɪnˈsəlt",
+      "viRead": "in-SƠLT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "xúc phạm",
+      "exampleEn": "Don't insult people online.",
+      "exampleVi": "Đừng xúc phạm người khác trên mạng.",
+      "collocations": [
+        {
+          "en": "insult someone",
+          "vi": "xúc phạm ai"
+        },
+        {
+          "en": "add insult to injury",
+          "vi": "đã tệ lại càng tệ"
+        }
+      ],
+      "tip": "Động từ nhấn sau: in-SƠLT; danh từ nhấn đầu: IN-sơlt.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 2594,
+      "word": "intense",
+      "ipa": "ɪnˈtɛns",
+      "viRead": "in-TENS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mãnh liệt, dữ dội",
+      "exampleEn": "The heat was intense.",
+      "exampleVi": "Cái nóng thật gay gắt.",
+      "collocations": [
+        {
+          "en": "intense heat",
+          "vi": "nóng gay gắt"
+        },
+        {
+          "en": "intense training",
+          "vi": "tập luyện cường độ cao"
+        }
+      ],
+      "family": [
+        {
+          "word": "intensive",
+          "vi": "chuyên sâu"
+        }
+      ],
+      "tip": "intensive course = khóa học cấp tốc.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 2595,
+      "word": "intention",
+      "ipa": "ɪnˈtɛnʧən",
+      "viRead": "in-TEN-chơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ý định",
+      "exampleEn": "I have no intention of giving up.",
+      "exampleVi": "Tôi không hề có ý định bỏ cuộc.",
+      "collocations": [
+        {
+          "en": "good intentions",
+          "vi": "ý tốt"
+        },
+        {
+          "en": "have no intention of",
+          "vi": "không có ý định"
+        }
+      ],
+      "family": [
+        {
+          "word": "intend",
+          "vi": "dự định"
+        }
+      ],
+      "tip": "intend (v) → intention (n).",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2596,
+      "word": "interior",
+      "ipa": "ɪnˈtɪriər",
+      "viRead": "in-TI-ri-ơ",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "nội thất; bên trong",
+      "exampleEn": "The interior of the house is modern.",
+      "exampleVi": "Nội thất ngôi nhà rất hiện đại.",
+      "collocations": [
+        {
+          "en": "interior design",
+          "vi": "thiết kế nội thất"
+        },
+        {
+          "en": "the interior of",
+          "vi": "bên trong"
+        }
+      ],
+      "family": [
+        {
+          "word": "exterior",
+          "vi": "bên ngoài"
+        }
+      ],
+      "tip": "interior designer = nhà thiết kế nội thất.",
+      "emoji": "🛋️",
+      "stage": 2
+    },
+    {
+      "id": 2597,
+      "word": "internal",
+      "ipa": "ɪnˈtərnəl",
+      "viRead": "in-TƠ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bên trong, nội bộ",
+      "exampleEn": "This is an internal company email.",
+      "exampleVi": "Đây là email nội bộ của công ty.",
+      "collocations": [
+        {
+          "en": "internal organs",
+          "vi": "nội tạng"
+        },
+        {
+          "en": "internal affairs",
+          "vi": "việc nội bộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "external",
+          "vi": "bên ngoài"
+        }
+      ],
+      "tip": "internal ↔ external.",
+      "emoji": "🫀",
+      "stage": 2
+    },
+    {
+      "id": 2598,
+      "word": "interpret",
+      "ipa": "ɪnˈtərprət",
+      "viRead": "in-TƠ-prơt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phiên dịch; giải thích",
+      "exampleEn": "Can you interpret for me?",
+      "exampleVi": "Bạn phiên dịch giúp tôi được không?",
+      "collocations": [
+        {
+          "en": "interpret for someone",
+          "vi": "phiên dịch cho ai"
+        },
+        {
+          "en": "interpret a dream",
+          "vi": "giải mộng"
+        }
+      ],
+      "family": [
+        {
+          "word": "interpreter",
+          "vi": "phiên dịch viên"
+        }
+      ],
+      "tip": "interpret = dịch nói; translate = dịch viết.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 2599,
+      "word": "interrupt",
+      "ipa": "ɪntəˈrəpt",
+      "viRead": "in-tơ-RƠPT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngắt lời, làm gián đoạn",
+      "exampleEn": "Sorry to interrupt, but it's time to go.",
+      "exampleVi": "Xin lỗi cắt ngang, nhưng đến giờ đi rồi.",
+      "collocations": [
+        {
+          "en": "sorry to interrupt",
+          "vi": "xin lỗi đã cắt ngang"
+        },
+        {
+          "en": "interrupt someone",
+          "vi": "ngắt lời ai"
+        }
+      ],
+      "family": [
+        {
+          "word": "interruption",
+          "vi": "sự gián đoạn"
+        }
+      ],
+      "tip": "Chính tả: 2 r (inte-RR-upt).",
+      "emoji": "✋",
+      "stage": 2
+    },
+    {
+      "id": 2600,
+      "word": "interval",
+      "ipa": "ˈɪntərvəl",
+      "viRead": "IN-tơ-vơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoảng thời gian; giờ nghỉ",
+      "exampleEn": "Review new words at regular intervals.",
+      "exampleVi": "Hãy ôn từ mới theo khoảng thời gian đều đặn.",
+      "collocations": [
+        {
+          "en": "at intervals",
+          "vi": "cách quãng"
+        },
+        {
+          "en": "regular intervals",
+          "vi": "khoảng đều đặn"
+        }
+      ],
+      "tip": "SRS = ôn tập theo khoảng cách tăng dần (spaced intervals)!",
+      "emoji": "⏱️",
+      "stage": 2
+    },
+    {
+      "id": 2601,
+      "word": "invade",
+      "ipa": "ɪnˈveɪd",
+      "viRead": "in-VÂYĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xâm lược",
+      "exampleEn": "The army invaded the country.",
+      "exampleVi": "Quân đội xâm lược đất nước.",
+      "collocations": [
+        {
+          "en": "invade a country",
+          "vi": "xâm lược một nước"
+        },
+        {
+          "en": "invade privacy",
+          "vi": "xâm phạm riêng tư"
+        }
+      ],
+      "family": [
+        {
+          "word": "invasion",
+          "vi": "cuộc xâm lược"
+        }
+      ],
+      "tip": "invade (v) → invasion (n).",
+      "emoji": "⚔️",
+      "stage": 2
+    },
+    {
+      "id": 2602,
+      "word": "invent",
+      "ipa": "ɪnˈvɛnt",
+      "viRead": "in-VENT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phát minh",
+      "exampleEn": "Who invented the telephone?",
+      "exampleVi": "Ai đã phát minh ra điện thoại?",
+      "collocations": [
+        {
+          "en": "invent a machine",
+          "vi": "phát minh máy"
+        },
+        {
+          "en": "invent a story",
+          "vi": "bịa chuyện"
+        }
+      ],
+      "family": [
+        {
+          "word": "inventor",
+          "vi": "nhà phát minh"
+        }
+      ],
+      "tip": "invent = tạo ra thứ mới; discover = tìm ra thứ đã có sẵn.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 2603,
+      "word": "invention",
+      "ipa": "ɪnˈvɛnʃən",
+      "viRead": "in-VEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phát minh",
+      "exampleEn": "The internet is a great invention.",
+      "exampleVi": "Internet là một phát minh vĩ đại.",
+      "collocations": [
+        {
+          "en": "a great invention",
+          "vi": "phát minh vĩ đại"
+        },
+        {
+          "en": "a new invention",
+          "vi": "phát minh mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "invent",
+          "vi": "phát minh"
+        }
+      ],
+      "tip": "Necessity is the mother of invention = Cái khó ló cái khôn.",
+      "emoji": "⚙️",
       "stage": 2
     }
   ]
