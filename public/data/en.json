@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1250,
+    "count": 1275,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -37401,6 +37401,676 @@
       ],
       "tip": "tell a joke (không nói say a joke). No joke! = Thật đấy, không đùa đâu!",
       "emoji": "😂",
+      "stage": 2
+    },
+    {
+      "id": 1251,
+      "word": "knock",
+      "ipa": "nɑk",
+      "viRead": "NAK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gõ (cửa)",
+      "exampleEn": "Please knock before you come in.",
+      "exampleVi": "Làm ơn gõ cửa trước khi vào.",
+      "collocations": [
+        {
+          "en": "knock on the door",
+          "vi": "gõ cửa"
+        },
+        {
+          "en": "knock over",
+          "vi": "làm đổ"
+        }
+      ],
+      "tip": "k câm: knock đọc 'nok'. Knock knock! Who's there? = mở đầu kiểu đùa gõ cửa.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 1252,
+      "word": "knife",
+      "ipa": "naɪf",
+      "viRead": "NAIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con dao",
+      "exampleEn": "Be careful with that sharp knife.",
+      "exampleVi": "Cẩn thận với con dao sắc đó.",
+      "collocations": [
+        {
+          "en": "a sharp knife",
+          "vi": "dao sắc"
+        },
+        {
+          "en": "knife and fork",
+          "vi": "dao và nĩa"
+        }
+      ],
+      "tip": "k câm: 'naif'. Số nhiều: knives (f → ves).",
+      "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 1253,
+      "word": "ladder",
+      "ipa": "ˈlædər",
+      "viRead": "LE-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái thang",
+      "exampleEn": "He climbed the ladder to fix the roof.",
+      "exampleVi": "Anh ấy leo thang để sửa mái nhà.",
+      "collocations": [
+        {
+          "en": "climb a ladder",
+          "vi": "leo thang"
+        },
+        {
+          "en": "career ladder",
+          "vi": "nấc thang sự nghiệp"
+        }
+      ],
+      "tip": "ladder = thang di động; stairs = cầu thang cố định trong nhà.",
+      "emoji": "🪜",
+      "stage": 2
+    },
+    {
+      "id": 1254,
+      "word": "lawyer",
+      "ipa": "ˈlɔjər",
+      "viRead": "LO-yơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "luật sư",
+      "exampleEn": "You should talk to a lawyer first.",
+      "exampleVi": "Bạn nên nói chuyện với luật sư trước.",
+      "collocations": [
+        {
+          "en": "hire a lawyer",
+          "vi": "thuê luật sư"
+        },
+        {
+          "en": "a good lawyer",
+          "vi": "luật sư giỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "law",
+          "vi": "luật"
+        }
+      ],
+      "tip": "law (luật) + yer = luật sư. Đọc 'LO-yơ'.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 1255,
+      "word": "leader",
+      "ipa": "ˈlidər",
+      "viRead": "LI-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người lãnh đạo, trưởng nhóm",
+      "exampleEn": "She is a natural leader.",
+      "exampleVi": "Cô ấy là người lãnh đạo bẩm sinh.",
+      "collocations": [
+        {
+          "en": "team leader",
+          "vi": "trưởng nhóm"
+        },
+        {
+          "en": "world leaders",
+          "vi": "các nhà lãnh đạo thế giới"
+        }
+      ],
+      "family": [
+        {
+          "word": "lead",
+          "vi": "dẫn dắt"
+        },
+        {
+          "word": "leadership",
+          "vi": "khả năng lãnh đạo"
+        }
+      ],
+      "tip": "lead (dẫn dắt) + er = leader. leadership skills = kỹ năng lãnh đạo.",
+      "emoji": "🧑‍✈️",
+      "stage": 2
+    },
+    {
+      "id": 1256,
+      "word": "leaf",
+      "ipa": "lif",
+      "viRead": "LIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiếc lá",
+      "exampleEn": "The leaves turn yellow in autumn.",
+      "exampleVi": "Lá cây chuyển vàng vào mùa thu.",
+      "collocations": [
+        {
+          "en": "green leaves",
+          "vi": "lá xanh"
+        },
+        {
+          "en": "turn over a new leaf",
+          "vi": "làm lại cuộc đời"
+        }
+      ],
+      "tip": "Số nhiều: leaf → leaves (f → ves). turn over a new leaf = bắt đầu lại, sửa đổi.",
+      "emoji": "🍃",
+      "stage": 2
+    },
+    {
+      "id": 1257,
+      "word": "limit",
+      "ipa": "ˈlɪmət",
+      "viRead": "LI-mơt",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "giới hạn",
+      "exampleEn": "There is a speed limit of 50 km/h here.",
+      "exampleVi": "Ở đây giới hạn tốc độ là 50 km/h.",
+      "collocations": [
+        {
+          "en": "speed limit",
+          "vi": "giới hạn tốc độ"
+        },
+        {
+          "en": "time limit",
+          "vi": "giới hạn thời gian"
+        }
+      ],
+      "family": [
+        {
+          "word": "limited",
+          "vi": "có hạn"
+        }
+      ],
+      "tip": "limited time offer = ưu đãi có hạn. The sky's the limit = Không gì là giới hạn.",
+      "emoji": "⛔",
+      "stage": 2
+    },
+    {
+      "id": 1258,
+      "word": "loan",
+      "ipa": "loʊn",
+      "viRead": "LÂUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoản vay",
+      "exampleEn": "They got a bank loan to buy a house.",
+      "exampleVi": "Họ vay ngân hàng để mua nhà.",
+      "collocations": [
+        {
+          "en": "take out a loan",
+          "vi": "vay tiền"
+        },
+        {
+          "en": "pay back a loan",
+          "vi": "trả nợ vay"
+        }
+      ],
+      "tip": "loan = khoản vay (danh từ); động từ vay là borrow, cho vay là lend.",
+      "emoji": "🏦",
+      "stage": 2
+    },
+    {
+      "id": 1259,
+      "word": "lock",
+      "ipa": "lɑk",
+      "viRead": "LAK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "khóa",
+      "exampleEn": "Don't forget to lock the door.",
+      "exampleVi": "Đừng quên khóa cửa.",
+      "collocations": [
+        {
+          "en": "lock the door",
+          "vi": "khóa cửa"
+        },
+        {
+          "en": "locked out",
+          "vi": "bị khóa ngoài"
+        }
+      ],
+      "family": [
+        {
+          "word": "unlock",
+          "vi": "mở khóa"
+        }
+      ],
+      "tip": "I'm locked out = Tôi bị khóa ngoài (quên chìa). unlock = mở khóa (điện thoại cũng dùng).",
+      "emoji": "🔒",
+      "stage": 2
+    },
+    {
+      "id": 1260,
+      "word": "marry",
+      "ipa": "ˈmɛri",
+      "viRead": "ME-ri",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kết hôn",
+      "exampleEn": "He wants to marry her next year.",
+      "exampleVi": "Anh ấy muốn cưới cô ấy vào năm sau.",
+      "collocations": [
+        {
+          "en": "get married",
+          "vi": "kết hôn"
+        },
+        {
+          "en": "married to",
+          "vi": "kết hôn với"
+        }
+      ],
+      "family": [
+        {
+          "word": "marriage",
+          "vi": "hôn nhân"
+        }
+      ],
+      "tip": "marry + người (không có to): marry her ✓. Nhưng: be/get married TO someone.",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 1261,
+      "word": "mirror",
+      "ipa": "ˈmɪrər",
+      "viRead": "MI-rơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái gương",
+      "exampleEn": "She looked at herself in the mirror.",
+      "exampleVi": "Cô ấy nhìn mình trong gương.",
+      "collocations": [
+        {
+          "en": "look in the mirror",
+          "vi": "soi gương"
+        },
+        {
+          "en": "a large mirror",
+          "vi": "tấm gương lớn"
+        }
+      ],
+      "tip": "look IN the mirror (không nói look at the mirror khi soi mình).",
+      "emoji": "🪞",
+      "stage": 2
+    },
+    {
+      "id": 1262,
+      "word": "mix",
+      "ipa": "mɪks",
+      "viRead": "MIKS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trộn, pha",
+      "exampleEn": "Mix the eggs with a little milk.",
+      "exampleVi": "Trộn trứng với một chút sữa.",
+      "collocations": [
+        {
+          "en": "mix with",
+          "vi": "trộn với"
+        },
+        {
+          "en": "mix up",
+          "vi": "nhầm lẫn"
+        }
+      ],
+      "family": [
+        {
+          "word": "mixture",
+          "vi": "hỗn hợp"
+        }
+      ],
+      "tip": "mix up = nhầm lẫn: I always mix up these two words.",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 1263,
+      "word": "nap",
+      "ipa": "næp",
+      "viRead": "NEP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giấc ngủ ngắn",
+      "exampleEn": "I take a short nap after lunch.",
+      "exampleVi": "Tôi ngủ một giấc ngắn sau bữa trưa.",
+      "collocations": [
+        {
+          "en": "take a nap",
+          "vi": "ngủ trưa, chợp mắt"
+        },
+        {
+          "en": "a quick nap",
+          "vi": "chợp mắt nhanh"
+        }
+      ],
+      "tip": "Tiếng Anh không có từ riêng cho 'ngủ trưa' — nói take a nap.",
+      "emoji": "😴",
+      "stage": 2
+    },
+    {
+      "id": 1264,
+      "word": "narrow",
+      "ipa": "ˈnɛroʊ",
+      "viRead": "NE-râu",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hẹp",
+      "exampleEn": "The streets in the old quarter are very narrow.",
+      "exampleVi": "Phố cổ có những con đường rất hẹp.",
+      "collocations": [
+        {
+          "en": "a narrow street",
+          "vi": "phố hẹp"
+        },
+        {
+          "en": "a narrow escape",
+          "vi": "thoát trong gang tấc"
+        }
+      ],
+      "family": [
+        {
+          "word": "narrowly",
+          "vi": "suýt soát"
+        }
+      ],
+      "tip": "narrow ↔ wide. ow cuối đọc 'âu': 'NE-râu'.",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 1265,
+      "word": "noodle",
+      "ipa": "ˈnudəl",
+      "viRead": "NU-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mì, bún, phở (sợi)",
+      "exampleEn": "I had noodle soup for breakfast.",
+      "exampleVi": "Bữa sáng tôi ăn một bát phở.",
+      "collocations": [
+        {
+          "en": "noodle soup",
+          "vi": "món nước có sợi (phở, bún)"
+        },
+        {
+          "en": "instant noodles",
+          "vi": "mì ăn liền"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: noodles. Mì tôm = instant noodles. Phở giữ nguyên tên: pho.",
+      "emoji": "🍜",
+      "stage": 2
+    },
+    {
+      "id": 1266,
+      "word": "normal",
+      "ipa": "ˈnɔrməl",
+      "viRead": "NOR-mơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bình thường",
+      "exampleEn": "It's normal to feel nervous before a test.",
+      "exampleVi": "Hồi hộp trước bài kiểm tra là chuyện bình thường.",
+      "collocations": [
+        {
+          "en": "back to normal",
+          "vi": "trở lại bình thường"
+        },
+        {
+          "en": "the new normal",
+          "vi": "trạng thái bình thường mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "normally",
+          "vi": "thường thì"
+        }
+      ],
+      "tip": "normally = usually (thường thì): Normally, I get up at six.",
+      "emoji": "😐",
+      "stage": 2
+    },
+    {
+      "id": 1267,
+      "word": "opposite",
+      "ipa": "ˈɑpəzɪt",
+      "viRead": "A-pơ-dơt",
+      "pos": "adj./prep.",
+      "posCategory": "adjective",
+      "meaning": "đối diện; trái ngược",
+      "exampleEn": "The bank is opposite the post office.",
+      "exampleVi": "Ngân hàng nằm đối diện bưu điện.",
+      "collocations": [
+        {
+          "en": "the opposite of",
+          "vi": "điều ngược lại của"
+        },
+        {
+          "en": "opposite side",
+          "vi": "phía đối diện"
+        }
+      ],
+      "tip": "opposite + nơi (không cần to): opposite the school. The opposite of hot is cold.",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 1268,
+      "word": "ordinary",
+      "ipa": "ˈɔrdəˌnɛri",
+      "viRead": "OR-đơ-ne-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bình thường, thông thường",
+      "exampleEn": "It was just an ordinary day.",
+      "exampleVi": "Đó chỉ là một ngày bình thường.",
+      "collocations": [
+        {
+          "en": "ordinary people",
+          "vi": "người bình thường"
+        },
+        {
+          "en": "out of the ordinary",
+          "vi": "khác thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "extraordinary",
+          "vi": "phi thường"
+        }
+      ],
+      "tip": "extra + ordinary = phi thường (vượt bình thường). Đọc 'O-đi-nơ-ri'.",
+      "emoji": "🚶",
+      "stage": 2
+    },
+    {
+      "id": 1269,
+      "word": "oven",
+      "ipa": "ˈəvən",
+      "viRead": "Ơ-vơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lò nướng",
+      "exampleEn": "Bake the chicken in the oven for an hour.",
+      "exampleVi": "Nướng gà trong lò một tiếng.",
+      "collocations": [
+        {
+          "en": "in the oven",
+          "vi": "trong lò"
+        },
+        {
+          "en": "microwave oven",
+          "vi": "lò vi sóng"
+        }
+      ],
+      "tip": "o đọc 'ă': 'Ắ-vần'. Lò vi sóng nói ngắn là microwave.",
+      "emoji": "♨️",
+      "stage": 2
+    },
+    {
+      "id": 1270,
+      "word": "owner",
+      "ipa": "ˈoʊnər",
+      "viRead": "ÂU-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chủ sở hữu",
+      "exampleEn": "The owner of this shop is very kind.",
+      "exampleVi": "Chủ cửa hàng này rất tốt bụng.",
+      "collocations": [
+        {
+          "en": "the owner of",
+          "vi": "chủ của"
+        },
+        {
+          "en": "home owner",
+          "vi": "chủ nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "own",
+          "vi": "sở hữu; riêng"
+        }
+      ],
+      "tip": "own (sở hữu) + er = owner. The owner = ông/bà chủ.",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 1271,
+      "word": "pan",
+      "ipa": "pæn",
+      "viRead": "PEN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái chảo",
+      "exampleEn": "Heat some oil in a pan.",
+      "exampleVi": "Đun nóng ít dầu trong chảo.",
+      "collocations": [
+        {
+          "en": "frying pan",
+          "vi": "chảo rán"
+        },
+        {
+          "en": "pots and pans",
+          "vi": "xoong nồi"
+        }
+      ],
+      "tip": "pan = chảo; pot = nồi. out of the frying pan into the fire = tránh vỏ dưa gặp vỏ dừa.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 1272,
+      "word": "parcel",
+      "ipa": "ˈpɑrsəl",
+      "viRead": "PAR-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bưu kiện",
+      "exampleEn": "A parcel arrived for you this morning.",
+      "exampleVi": "Sáng nay có một bưu kiện gửi cho bạn.",
+      "collocations": [
+        {
+          "en": "send a parcel",
+          "vi": "gửi bưu kiện"
+        },
+        {
+          "en": "parcel delivery",
+          "vi": "giao bưu kiện"
+        }
+      ],
+      "tip": "parcel (Anh) = package (Mỹ). Nhấn âm đầu: PA-sồ.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 1273,
+      "word": "partner",
+      "ipa": "ˈpɑrtnər",
+      "viRead": "PAR-tnơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đối tác; bạn đời",
+      "exampleEn": "Work with a partner and practice speaking.",
+      "exampleVi": "Làm việc với bạn cùng cặp và luyện nói.",
+      "collocations": [
+        {
+          "en": "business partner",
+          "vi": "đối tác kinh doanh"
+        },
+        {
+          "en": "speaking partner",
+          "vi": "bạn luyện nói"
+        }
+      ],
+      "family": [
+        {
+          "word": "partnership",
+          "vi": "quan hệ đối tác"
+        }
+      ],
+      "tip": "partner còn là người yêu/vợ/chồng (trung tính). Tìm một speaking partner giúp tiến bộ nhanh!",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 1274,
+      "word": "pet",
+      "ipa": "pɛt",
+      "viRead": "PET",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thú cưng",
+      "exampleEn": "Do you have any pets?",
+      "exampleVi": "Bạn có nuôi thú cưng không?",
+      "collocations": [
+        {
+          "en": "keep a pet",
+          "vi": "nuôi thú cưng"
+        },
+        {
+          "en": "pet shop",
+          "vi": "cửa hàng thú cưng"
+        }
+      ],
+      "tip": "Do you have any pets? — câu hỏi làm quen phổ biến. pet name = tên gọi thân mật.",
+      "emoji": "🐶",
+      "stage": 2
+    },
+    {
+      "id": 1275,
+      "word": "pillow",
+      "ipa": "ˈpɪloʊ",
+      "viRead": "PI-lâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái gối",
+      "exampleEn": "This pillow is too soft for me.",
+      "exampleVi": "Cái gối này quá mềm với tôi.",
+      "collocations": [
+        {
+          "en": "a soft pillow",
+          "vi": "gối mềm"
+        },
+        {
+          "en": "pillow fight",
+          "vi": "trò đánh gối"
+        }
+      ],
+      "tip": "pillow = gối nằm; cushion = gối tựa ghế sofa.",
+      "emoji": "🛏️",
       "stage": 2
     }
   ]
