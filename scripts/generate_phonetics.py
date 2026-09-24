@@ -14,6 +14,7 @@ because their text changed.
 Requires: pip install eng-to-ipa cmudict
 """
 import json
+import sys
 import os
 import re
 
@@ -100,12 +101,22 @@ def ipa_of(word: str) -> str:
 
 
 def main() -> None:
+    # --missing-only: fill ipa/viRead just for words that have none (new words
+    # appended by add_words.py). Never re-applies CORRECTIONS, so it cannot undo
+    # later edits made with patch_words.py.
+    missing_only = "--missing-only" in sys.argv
     src = os.path.join(ROOT, "public", "data", "en.json")
     with open(src, encoding="utf-8") as f:
         pack = json.load(f)
 
     changed_audio = []  # (kind, id): kind in {'w','e'}
     for w in pack["words"]:
+        if missing_only:
+            if not w.get("ipa"):
+                w["ipa"] = ipa_of(w["word"])
+            if not w.get("viRead"):
+                w["viRead"] = viet_read(w["word"])
+            continue
         fix = CORRECTIONS.get(w["id"])
         if fix:
             if "word" in fix and fix["word"] != w["word"]:
@@ -130,6 +141,7 @@ def main() -> None:
 
     with open(src, "w", encoding="utf-8") as f:
         json.dump(pack, f, ensure_ascii=False, indent=2)
+        f.write("\n")
     print(f"\nWrote {src}")
 
     # Report audio to regenerate

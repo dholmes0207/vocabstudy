@@ -41,11 +41,24 @@ describe('en.json dataset integrity', () => {
     expect(pack.meta.count).toBe(pack.words.length)
   })
 
-  it('delivers the promised 1000 words with contiguous ids', () => {
-    expect(pack.words).toHaveLength(1000)
+  it('delivers at least the promised 1000 core words, with contiguous ids', () => {
+    expect(pack.words.length).toBeGreaterThanOrEqual(1000)
     const ids = pack.words.map((w) => w.id).sort((a, b) => a - b)
     expect(ids[0]).toBe(1)
-    expect(ids[ids.length - 1]).toBe(1000)
+    expect(ids[ids.length - 1]).toBe(pack.words.length)
+    // The first 1000 in learning order are the core stage.
+    expect(pack.words.slice(0, 1000).every((w) => (w.stage ?? 1) === 1)).toBe(true)
+  })
+
+  // Words past the core 1000 are the extension (stage 2, B1). They only ship
+  // with the full depth a learner gets for the core words — never bare.
+  it('every extension word is stage 2, placed after the core, and fully deep', () => {
+    const ext = pack.words.slice(1000)
+    const bad = ext
+      .filter((w) => w.stage !== 2 || !w.collocations?.length || !w.tip?.trim())
+      .map((w) => `${w.id}:${w.word}`)
+    expect(bad).toEqual([])
+    expect(pack.words.slice(0, 1000).some((w) => w.stage === 2)).toBe(false)
   })
 
   // Learn/decks walk the array in order, so array order IS the curriculum: the

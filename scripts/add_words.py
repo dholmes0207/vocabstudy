@@ -45,6 +45,8 @@ def main(new_path):
             "meaning": e.get("meaning", "").strip(),
             "exampleEn": e.get("exampleEn", "").strip(),
             "exampleVi": e.get("exampleVi", "").strip(),
+            # Depth fields and stage pass straight through when present.
+            **{k: e[k] for k in ("collocations", "family", "tip", "emoji", "stage") if e.get(k)},
         })
 
     words.extend(added)

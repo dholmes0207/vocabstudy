@@ -177,7 +177,14 @@ export default function Learn() {
                       {complete ? '✓' : `${Math.round(pct * 100)}%`}
                     </span>
                   </ProgressRing>
-                  <span className="text-sm font-semibold">{deck.title}</span>
+                  <span className="text-sm font-semibold">
+                    {deck.title}
+                    {deck.stage > 1 && (
+                      <span className="chip ml-1.5 bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300">
+                        B1
+                      </span>
+                    )}
+                  </span>
                   <span className="text-xs text-slate-400">
                     {deck.mastered}/{deck.words.length} thành thạo
                   </span>

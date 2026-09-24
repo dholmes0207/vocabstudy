@@ -11,6 +11,8 @@ export interface Deck {
   started: number
   /** Number of words in this deck that are mastered. */
   mastered: number
+  /** Curriculum stage of the deck (1 = core A1–A2, 2 = extension B1). */
+  stage: number
 }
 
 /** Split an ordered word list into fixed-size decks, annotated with progress. */
@@ -24,7 +26,9 @@ export function buildDecks(
     const slice = words.slice(i, i + size)
     let started = 0
     let mastered = 0
+    let stage = 1
     for (const w of slice) {
+      stage = Math.max(stage, w.stage ?? 1)
       const card = cards[w.id]
       if (card) started++
       if (phaseOf(card) === 'mastered') mastered++
@@ -35,6 +39,7 @@ export function buildDecks(
       words: slice,
       started,
       mastered,
+      stage,
     })
   }
   return decks
