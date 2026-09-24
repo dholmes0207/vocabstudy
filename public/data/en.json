@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1459,
+    "count": 1509,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -43017,6 +43017,1376 @@
       ],
       "tip": "cloudy = trời nhiều mây. Lưu dữ liệu 'trên đám mây' = in the cloud.",
       "emoji": "☁️",
+      "stage": 2
+    },
+    {
+      "id": 1460,
+      "word": "coin",
+      "ipa": "kɔɪn",
+      "viRead": "KOIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng xu",
+      "exampleEn": "He found an old coin in the garden.",
+      "exampleVi": "Anh ấy tìm thấy một đồng xu cũ trong vườn.",
+      "collocations": [
+        {
+          "en": "toss a coin",
+          "vi": "tung đồng xu"
+        },
+        {
+          "en": "gold coin",
+          "vi": "đồng xu vàng"
+        }
+      ],
+      "tip": "toss a coin = tung đồng xu (để quyết định). coins = tiền xu; notes/bills = tiền giấy.",
+      "emoji": "🪙",
+      "stage": 2
+    },
+    {
+      "id": 1461,
+      "word": "collect",
+      "ipa": "kəˈlɛkt",
+      "viRead": "kơ-LEKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thu thập, sưu tầm",
+      "exampleEn": "My brother collects old stamps.",
+      "exampleVi": "Anh tôi sưu tầm tem cũ.",
+      "collocations": [
+        {
+          "en": "collect stamps",
+          "vi": "sưu tầm tem"
+        },
+        {
+          "en": "collect data",
+          "vi": "thu thập dữ liệu"
+        },
+        {
+          "en": "collect the kids",
+          "vi": "đón bọn trẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "collection",
+          "vi": "bộ sưu tập"
+        },
+        {
+          "word": "collector",
+          "vi": "nhà sưu tầm"
+        }
+      ],
+      "tip": "collect còn là 'đón' (Anh): I'll collect you at 5 = 5 giờ tôi đón bạn.",
+      "emoji": "📮",
+      "stage": 2
+    },
+    {
+      "id": 1462,
+      "word": "column",
+      "ipa": "ˈkɑləm",
+      "viRead": "KA-lơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cột (bảng); mục (báo)",
+      "exampleEn": "Write your name in the first column.",
+      "exampleVi": "Viết tên bạn vào cột đầu tiên.",
+      "collocations": [
+        {
+          "en": "the first column",
+          "vi": "cột đầu tiên"
+        },
+        {
+          "en": "newspaper column",
+          "vi": "chuyên mục báo"
+        }
+      ],
+      "tip": "n cuối câm: 'KO-lầm'. row = hàng ngang, column = cột dọc.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 1463,
+      "word": "combine",
+      "ipa": "ˈkɑmbaɪn",
+      "viRead": "KAM-bain",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kết hợp",
+      "exampleEn": "Combine the flour and the eggs.",
+      "exampleVi": "Trộn bột với trứng.",
+      "collocations": [
+        {
+          "en": "combine with",
+          "vi": "kết hợp với"
+        },
+        {
+          "en": "combine work and study",
+          "vi": "vừa làm vừa học"
+        }
+      ],
+      "family": [
+        {
+          "word": "combination",
+          "vi": "sự kết hợp"
+        }
+      ],
+      "tip": "combine A with B. combo (nói tắt của combination) = suất kết hợp (combo gà rán).",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 1464,
+      "word": "comedy",
+      "ipa": "ˈkɑmədi",
+      "viRead": "KA-mơ-đi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phim/kịch hài",
+      "exampleEn": "We watched a funny comedy last night.",
+      "exampleVi": "Tối qua chúng tôi xem một bộ phim hài rất vui.",
+      "collocations": [
+        {
+          "en": "romantic comedy",
+          "vi": "phim hài lãng mạn"
+        },
+        {
+          "en": "comedy show",
+          "vi": "chương trình hài"
+        }
+      ],
+      "family": [
+        {
+          "word": "comedian",
+          "vi": "diễn viên hài"
+        }
+      ],
+      "tip": "romantic comedy (rom-com) = phim hài lãng mạn. Nhấn âm đầu: KO-mơ-đi.",
+      "emoji": "🤣",
+      "stage": 2
+    },
+    {
+      "id": 1465,
+      "word": "commercial",
+      "ipa": "kəˈmərʃəl",
+      "viRead": "kơ-MƠ-shơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "thương mại; quảng cáo (TV)",
+      "exampleEn": "The TV show stopped for a commercial break.",
+      "exampleVi": "Chương trình TV tạm dừng để chiếu quảng cáo.",
+      "collocations": [
+        {
+          "en": "commercial break",
+          "vi": "giờ quảng cáo"
+        },
+        {
+          "en": "commercial center",
+          "vi": "trung tâm thương mại"
+        }
+      ],
+      "family": [
+        {
+          "word": "commerce",
+          "vi": "thương mại"
+        }
+      ],
+      "tip": "a commercial (danh từ) = đoạn quảng cáo trên TV/radio.",
+      "emoji": "📺",
+      "stage": 2
+    },
+    {
+      "id": 1466,
+      "word": "community",
+      "ipa": "kəmˈjunɪti",
+      "viRead": "kơm-YU-nơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cộng đồng",
+      "exampleEn": "We clean the beach with our local community.",
+      "exampleVi": "Chúng tôi dọn bãi biển cùng cộng đồng địa phương.",
+      "collocations": [
+        {
+          "en": "local community",
+          "vi": "cộng đồng địa phương"
+        },
+        {
+          "en": "online community",
+          "vi": "cộng đồng mạng"
+        }
+      ],
+      "tip": "Nhấn âm hai: cơ-MIU-nơ-ti. Số nhiều: communities.",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 1467,
+      "word": "concert",
+      "ipa": "ˈkɑnsərt",
+      "viRead": "KAN-sơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi hòa nhạc",
+      "exampleEn": "We bought tickets for a rock concert.",
+      "exampleVi": "Chúng tôi mua vé đi xem hòa nhạc rock.",
+      "collocations": [
+        {
+          "en": "go to a concert",
+          "vi": "đi xem hòa nhạc"
+        },
+        {
+          "en": "live concert",
+          "vi": "buổi diễn trực tiếp"
+        }
+      ],
+      "tip": "concert đọc 'KON-sợt'. at a concert (dùng at).",
+      "emoji": "🎸",
+      "stage": 2
+    },
+    {
+      "id": 1468,
+      "word": "conclusion",
+      "ipa": "kənˈkluʒən",
+      "viRead": "kơn-KLU-zhơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kết luận",
+      "exampleEn": "In conclusion, practice is the key.",
+      "exampleVi": "Tóm lại, luyện tập là chìa khóa.",
+      "collocations": [
+        {
+          "en": "in conclusion",
+          "vi": "tóm lại"
+        },
+        {
+          "en": "come to a conclusion",
+          "vi": "đi đến kết luận"
+        }
+      ],
+      "family": [
+        {
+          "word": "conclude",
+          "vi": "kết luận"
+        }
+      ],
+      "tip": "In conclusion, … = Tóm lại, … (câu mở đầu đoạn kết khi viết bài luận).",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 1469,
+      "word": "confirm",
+      "ipa": "kənˈfərm",
+      "viRead": "kơn-PHƠM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xác nhận",
+      "exampleEn": "Please confirm your booking by email.",
+      "exampleVi": "Vui lòng xác nhận đặt chỗ qua email.",
+      "collocations": [
+        {
+          "en": "confirm a booking",
+          "vi": "xác nhận đặt chỗ"
+        },
+        {
+          "en": "confirm by email",
+          "vi": "xác nhận qua email"
+        }
+      ],
+      "family": [
+        {
+          "word": "confirmation",
+          "vi": "sự xác nhận"
+        }
+      ],
+      "tip": "confirmation email = email xác nhận. Can you confirm…? = Bạn xác nhận giúp…?",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 1470,
+      "word": "connection",
+      "ipa": "kəˈnɛkʃən",
+      "viRead": "kơ-NEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kết nối; mối liên hệ",
+      "exampleEn": "The Wi-Fi connection here is very slow.",
+      "exampleVi": "Kết nối Wi-Fi ở đây rất chậm.",
+      "collocations": [
+        {
+          "en": "internet connection",
+          "vi": "kết nối mạng"
+        },
+        {
+          "en": "in connection with",
+          "vi": "liên quan đến"
+        }
+      ],
+      "family": [
+        {
+          "word": "connect",
+          "vi": "kết nối"
+        }
+      ],
+      "tip": "connection còn là 'chuyến bay nối tiếp': I missed my connection = Tôi lỡ chuyến nối.",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 1471,
+      "word": "contain",
+      "ipa": "kənˈteɪn",
+      "viRead": "kơn-TÂYN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chứa, bao gồm",
+      "exampleEn": "This drink contains a lot of sugar.",
+      "exampleVi": "Đồ uống này chứa rất nhiều đường.",
+      "collocations": [
+        {
+          "en": "contain sugar",
+          "vi": "chứa đường"
+        },
+        {
+          "en": "may contain nuts",
+          "vi": "có thể chứa hạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "container",
+          "vi": "thùng chứa"
+        }
+      ],
+      "tip": "contain không dùng thì tiếp diễn: It contains ✓ (It is containing ✗).",
+      "emoji": "🫙",
+      "stage": 2
+    },
+    {
+      "id": 1472,
+      "word": "continent",
+      "ipa": "ˈkɑntənənt",
+      "viRead": "KAN-tơ-nơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "châu lục",
+      "exampleEn": "Asia is the largest continent.",
+      "exampleVi": "Châu Á là châu lục lớn nhất.",
+      "collocations": [
+        {
+          "en": "the Asian continent",
+          "vi": "châu Á"
+        },
+        {
+          "en": "seven continents",
+          "vi": "bảy châu lục"
+        }
+      ],
+      "tip": "Nhấn âm đầu: KON-ti-nần(t).",
+      "emoji": "🌍",
+      "stage": 2
+    },
+    {
+      "id": 1473,
+      "word": "contract",
+      "ipa": "ˈkɑnˌtrækt",
+      "viRead": "KAN-trekt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hợp đồng",
+      "exampleEn": "Read the contract carefully before you sign.",
+      "exampleVi": "Đọc kỹ hợp đồng trước khi ký.",
+      "collocations": [
+        {
+          "en": "sign a contract",
+          "vi": "ký hợp đồng"
+        },
+        {
+          "en": "a one-year contract",
+          "vi": "hợp đồng một năm"
+        }
+      ],
+      "tip": "sign a contract = ký hợp đồng. Danh từ nhấn đầu: KON-tract.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 1474,
+      "word": "cool",
+      "ipa": "kul",
+      "viRead": "KUL",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mát; tuyệt",
+      "exampleEn": "It's cool in the evening in Da Lat.",
+      "exampleVi": "Buổi tối ở Đà Lạt mát mẻ.",
+      "collocations": [
+        {
+          "en": "cool weather",
+          "vi": "trời mát"
+        },
+        {
+          "en": "that's cool!",
+          "vi": "hay đấy!"
+        },
+        {
+          "en": "cool down",
+          "vi": "nguội đi, bình tĩnh lại"
+        }
+      ],
+      "tip": "cool = mát (nhẹ hơn cold) và 'ngầu, hay': That's so cool! Stay cool = Bình tĩnh nhé.",
+      "emoji": "😎",
+      "stage": 2
+    },
+    {
+      "id": 1475,
+      "word": "copy",
+      "ipa": "ˈkɑpi",
+      "viRead": "KA-pi",
+      "pos": "n./v.",
+      "posCategory": "verb",
+      "meaning": "sao chép; bản sao",
+      "exampleEn": "Can you copy this file for me?",
+      "exampleVi": "Bạn sao chép tệp này giúp tôi được không?",
+      "collocations": [
+        {
+          "en": "copy and paste",
+          "vi": "sao chép và dán"
+        },
+        {
+          "en": "a copy of",
+          "vi": "một bản sao của"
+        }
+      ],
+      "family": [
+        {
+          "word": "photocopy",
+          "vi": "bản photo"
+        }
+      ],
+      "tip": "copy – copied (y → ied). copy and paste = Ctrl+C, Ctrl+V.",
+      "emoji": "📄",
+      "stage": 2
+    },
+    {
+      "id": 1476,
+      "word": "corn",
+      "ipa": "kɔrn",
+      "viRead": "KORN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngô, bắp",
+      "exampleEn": "We ate grilled corn at the night market.",
+      "exampleVi": "Chúng tôi ăn ngô nướng ở chợ đêm.",
+      "collocations": [
+        {
+          "en": "grilled corn",
+          "vi": "ngô nướng"
+        },
+        {
+          "en": "corn soup",
+          "vi": "súp ngô"
+        }
+      ],
+      "family": [
+        {
+          "word": "popcorn",
+          "vi": "bỏng ngô"
+        }
+      ],
+      "tip": "pop + corn = bỏng ngô. Anh còn gọi ngô là maize.",
+      "emoji": "🌽",
+      "stage": 2
+    },
+    {
+      "id": 1477,
+      "word": "correct",
+      "ipa": "kərˈɛkt",
+      "viRead": "kơ-EKT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đúng, chính xác",
+      "exampleEn": "Your answer is correct!",
+      "exampleVi": "Câu trả lời của bạn đúng rồi!",
+      "collocations": [
+        {
+          "en": "the correct answer",
+          "vi": "đáp án đúng"
+        },
+        {
+          "en": "correct me if I'm wrong",
+          "vi": "sai thì sửa giúp tôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "correction",
+          "vi": "sự sửa lỗi"
+        },
+        {
+          "word": "correctly",
+          "vi": "một cách đúng"
+        }
+      ],
+      "tip": "correct vừa là tính từ (đúng) vừa là động từ (sửa lỗi): Please correct my mistakes.",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 1478,
+      "word": "costume",
+      "ipa": "ˈkɑstum",
+      "viRead": "kas-TUM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trang phục (hóa trang, biểu diễn)",
+      "exampleEn": "The kids wore costumes for the festival.",
+      "exampleVi": "Bọn trẻ mặc trang phục hóa trang cho lễ hội.",
+      "collocations": [
+        {
+          "en": "traditional costume",
+          "vi": "trang phục truyền thống"
+        },
+        {
+          "en": "costume party",
+          "vi": "tiệc hóa trang"
+        }
+      ],
+      "tip": "costume ≠ custom (phong tục). traditional costume = trang phục truyền thống.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 1479,
+      "word": "cotton",
+      "ipa": "ˈkɔtən",
+      "viRead": "KA-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bông, vải cotton",
+      "exampleEn": "This shirt is made of cotton.",
+      "exampleVi": "Chiếc áo này làm bằng vải cotton.",
+      "collocations": [
+        {
+          "en": "100% cotton",
+          "vi": "100% cotton"
+        },
+        {
+          "en": "cotton candy",
+          "vi": "kẹo bông"
+        }
+      ],
+      "tip": "made of cotton = làm bằng cotton. cotton candy (Mỹ) = kẹo bông gòn.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 1480,
+      "word": "couch",
+      "ipa": "kaʊʧ",
+      "viRead": "KAOCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ghế sofa",
+      "exampleEn": "He fell asleep on the couch.",
+      "exampleVi": "Anh ấy ngủ quên trên ghế sofa.",
+      "collocations": [
+        {
+          "en": "on the couch",
+          "vi": "trên ghế sofa"
+        },
+        {
+          "en": "couch potato",
+          "vi": "người lười biếng chỉ nằm xem TV"
+        }
+      ],
+      "tip": "couch potato = người suốt ngày nằm dài xem TV. couch = sofa.",
+      "emoji": "🛋️",
+      "stage": 2
+    },
+    {
+      "id": 1481,
+      "word": "couple",
+      "ipa": "ˈkəpəl",
+      "viRead": "KƠ-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cặp đôi; vài",
+      "exampleEn": "A young couple lives next door.",
+      "exampleVi": "Một cặp vợ chồng trẻ sống ở nhà bên.",
+      "collocations": [
+        {
+          "en": "a couple of",
+          "vi": "một vài"
+        },
+        {
+          "en": "married couple",
+          "vi": "cặp vợ chồng"
+        }
+      ],
+      "tip": "a couple of = một vài (2–3): a couple of days. ou đọc 'ă': 'KẮ-pồ'.",
+      "emoji": "💑",
+      "stage": 2
+    },
+    {
+      "id": 1482,
+      "word": "courage",
+      "ipa": "kərɪʤ",
+      "viRead": "KƠ-ơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng can đảm",
+      "exampleEn": "It takes courage to speak in front of people.",
+      "exampleVi": "Nói trước đám đông cần có can đảm.",
+      "collocations": [
+        {
+          "en": "have the courage to",
+          "vi": "có can đảm để"
+        },
+        {
+          "en": "show courage",
+          "vi": "thể hiện lòng dũng cảm"
+        }
+      ],
+      "family": [
+        {
+          "word": "courageous",
+          "vi": "can đảm"
+        },
+        {
+          "word": "encourage",
+          "vi": "động viên"
+        }
+      ],
+      "tip": "ou đọc 'ơ': 'KƠ-rịch'. courage → encourage (tiếp thêm can đảm).",
+      "emoji": "🦁",
+      "stage": 2
+    },
+    {
+      "id": 1483,
+      "word": "cousin",
+      "ipa": "ˈkəzən",
+      "viRead": "KƠ-dơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "anh/chị/em họ",
+      "exampleEn": "My cousin lives in Ho Chi Minh City.",
+      "exampleVi": "Anh họ tôi sống ở TP. Hồ Chí Minh.",
+      "collocations": [
+        {
+          "en": "first cousin",
+          "vi": "anh chị em họ gần"
+        },
+        {
+          "en": "my cousin's wedding",
+          "vi": "đám cưới người em họ"
+        }
+      ],
+      "tip": "Tiếng Anh không phân biệt họ nội/ngoại, trên/dưới: tất cả là cousin. ou đọc 'ă': 'KẮ-zần'.",
+      "emoji": "👫",
+      "stage": 2
+    },
+    {
+      "id": 1484,
+      "word": "cow",
+      "ipa": "kaʊ",
+      "viRead": "KAO",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bò (cái)",
+      "exampleEn": "The cows are eating grass in the field.",
+      "exampleVi": "Những con bò đang gặm cỏ ngoài đồng.",
+      "collocations": [
+        {
+          "en": "dairy cow",
+          "vi": "bò sữa"
+        },
+        {
+          "en": "cow's milk",
+          "vi": "sữa bò"
+        }
+      ],
+      "tip": "cow = bò cái; bull = bò đực; beef = thịt bò. ow đọc 'ao'.",
+      "emoji": "🐄",
+      "stage": 2
+    },
+    {
+      "id": 1485,
+      "word": "crab",
+      "ipa": "kræb",
+      "viRead": "KREB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con cua",
+      "exampleEn": "Crab soup is a famous dish in Hai Phong.",
+      "exampleVi": "Bánh đa cua là món nổi tiếng ở Hải Phòng.",
+      "collocations": [
+        {
+          "en": "crab meat",
+          "vi": "thịt cua"
+        },
+        {
+          "en": "soft-shell crab",
+          "vi": "cua lột"
+        }
+      ],
+      "tip": "crab = cua; lobster = tôm hùm; shrimp = tôm.",
+      "emoji": "🦀",
+      "stage": 2
+    },
+    {
+      "id": 1486,
+      "word": "cream",
+      "ipa": "krim",
+      "viRead": "KRIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kem (sữa); kem bôi",
+      "exampleEn": "Do you want cream in your coffee?",
+      "exampleVi": "Bạn có muốn cho kem vào cà phê không?",
+      "collocations": [
+        {
+          "en": "ice cream",
+          "vi": "kem (lạnh)"
+        },
+        {
+          "en": "sun cream",
+          "vi": "kem chống nắng"
+        }
+      ],
+      "tip": "ice cream = kem ăn; cream = kem sữa/kem bôi da. ea đọc 'i' dài: 'krim'.",
+      "emoji": "🍦",
+      "stage": 2
+    },
+    {
+      "id": 1487,
+      "word": "creative",
+      "ipa": "kriˈeɪtɪv",
+      "viRead": "kri-ÂY-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sáng tạo",
+      "exampleEn": "She has very creative ideas.",
+      "exampleVi": "Cô ấy có những ý tưởng rất sáng tạo.",
+      "collocations": [
+        {
+          "en": "creative thinking",
+          "vi": "tư duy sáng tạo"
+        },
+        {
+          "en": "get creative",
+          "vi": "sáng tạo lên"
+        }
+      ],
+      "family": [
+        {
+          "word": "create",
+          "vi": "tạo ra"
+        },
+        {
+          "word": "creativity",
+          "vi": "óc sáng tạo"
+        }
+      ],
+      "tip": "create (tạo ra) → creative (sáng tạo) → creativity (óc sáng tạo).",
+      "emoji": "🎨",
+      "stage": 2
+    },
+    {
+      "id": 1488,
+      "word": "crime",
+      "ipa": "kraɪm",
+      "viRead": "KRAIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tội phạm, tội ác",
+      "exampleEn": "Crime in this area has decreased.",
+      "exampleVi": "Tội phạm ở khu vực này đã giảm.",
+      "collocations": [
+        {
+          "en": "commit a crime",
+          "vi": "phạm tội"
+        },
+        {
+          "en": "crime rate",
+          "vi": "tỷ lệ tội phạm"
+        }
+      ],
+      "family": [
+        {
+          "word": "criminal",
+          "vi": "tội phạm (người)"
+        }
+      ],
+      "tip": "commit a crime = phạm tội. crime (hành vi) → criminal (kẻ phạm tội).",
+      "emoji": "🚔",
+      "stage": 2
+    },
+    {
+      "id": 1489,
+      "word": "crop",
+      "ipa": "krɑp",
+      "viRead": "KRAP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vụ mùa; cây trồng",
+      "exampleEn": "Rice is the main crop in the Mekong Delta.",
+      "exampleVi": "Lúa là cây trồng chính ở đồng bằng sông Cửu Long.",
+      "collocations": [
+        {
+          "en": "grow crops",
+          "vi": "trồng trọt"
+        },
+        {
+          "en": "crop a photo",
+          "vi": "cắt ảnh"
+        }
+      ],
+      "tip": "crop còn là 'cắt ảnh' (chỉnh ảnh trên điện thoại).",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 1490,
+      "word": "cruel",
+      "ipa": "kruəl",
+      "viRead": "KRU-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "độc ác, tàn nhẫn",
+      "exampleEn": "It's cruel to hurt animals.",
+      "exampleVi": "Làm hại động vật là độc ác.",
+      "collocations": [
+        {
+          "en": "cruel to",
+          "vi": "tàn nhẫn với"
+        },
+        {
+          "en": "a cruel joke",
+          "vi": "trò đùa ác"
+        }
+      ],
+      "family": [
+        {
+          "word": "cruelty",
+          "vi": "sự tàn nhẫn"
+        }
+      ],
+      "tip": "cruel đọc 2 âm tiết: 'KRU-ồ'.",
+      "emoji": "😈",
+      "stage": 2
+    },
+    {
+      "id": 1491,
+      "word": "cultural",
+      "ipa": "ˈkəlʧərəl",
+      "viRead": "KƠL-chơ-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc văn hóa",
+      "exampleEn": "Hoi An is a cultural heritage site.",
+      "exampleVi": "Hội An là di sản văn hóa.",
+      "collocations": [
+        {
+          "en": "cultural heritage",
+          "vi": "di sản văn hóa"
+        },
+        {
+          "en": "cultural differences",
+          "vi": "khác biệt văn hóa"
+        }
+      ],
+      "family": [
+        {
+          "word": "culture",
+          "vi": "văn hóa"
+        }
+      ],
+      "tip": "culture (danh từ) → cultural (tính từ). cultural heritage = di sản văn hóa.",
+      "emoji": "🏮",
+      "stage": 2
+    },
+    {
+      "id": 1492,
+      "word": "cupboard",
+      "ipa": "ˈkəbərd",
+      "viRead": "KƠ-bơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tủ (bếp, chén)",
+      "exampleEn": "The cups are in the kitchen cupboard.",
+      "exampleVi": "Cốc chén ở trong tủ bếp.",
+      "collocations": [
+        {
+          "en": "kitchen cupboard",
+          "vi": "tủ bếp"
+        },
+        {
+          "en": "in the cupboard",
+          "vi": "trong tủ"
+        }
+      ],
+      "tip": "p câm: 'KẮ-bợđ' (không đọc 'cúp-boọc').",
+      "emoji": "🗄️",
+      "stage": 2
+    },
+    {
+      "id": 1493,
+      "word": "curtain",
+      "ipa": "ˈkərtən",
+      "viRead": "KƠ-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rèm cửa",
+      "exampleEn": "Please close the curtains, the sun is too bright.",
+      "exampleVi": "Kéo rèm lại đi, nắng chói quá.",
+      "collocations": [
+        {
+          "en": "open the curtains",
+          "vi": "kéo rèm ra"
+        },
+        {
+          "en": "close the curtains",
+          "vi": "kéo rèm lại"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: curtains. Đọc 'KƠ-tần'.",
+      "emoji": "🪟",
+      "stage": 2
+    },
+    {
+      "id": 1494,
+      "word": "cushion",
+      "ipa": "ˈkʊʃən",
+      "viRead": "KU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái gối tựa",
+      "exampleEn": "Put a cushion behind your back.",
+      "exampleVi": "Đặt một cái gối tựa sau lưng.",
+      "collocations": [
+        {
+          "en": "a soft cushion",
+          "vi": "gối tựa mềm"
+        },
+        {
+          "en": "sofa cushion",
+          "vi": "gối sofa"
+        }
+      ],
+      "tip": "cushion = gối tựa (ghế); pillow = gối nằm.",
+      "emoji": "🛋️",
+      "stage": 2
+    },
+    {
+      "id": 1495,
+      "word": "cycle",
+      "ipa": "ˈsaɪkəl",
+      "viRead": "SAI-kơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đạp xe; chu kỳ",
+      "exampleEn": "I cycle to work when the weather is nice.",
+      "exampleVi": "Tôi đạp xe đi làm khi trời đẹp.",
+      "collocations": [
+        {
+          "en": "cycle to work",
+          "vi": "đạp xe đi làm"
+        },
+        {
+          "en": "life cycle",
+          "vi": "vòng đời"
+        }
+      ],
+      "family": [
+        {
+          "word": "cyclist",
+          "vi": "người đi xe đạp"
+        },
+        {
+          "word": "bicycle",
+          "vi": "xe đạp"
+        }
+      ],
+      "tip": "cy đọc 'sai': 'SAI-kồ'. recycle = tái chế (quay vòng lại).",
+      "emoji": "🚴",
+      "stage": 2
+    },
+    {
+      "id": 1496,
+      "word": "dairy",
+      "ipa": "ˈdɛri",
+      "viRead": "ĐE-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sản phẩm từ sữa",
+      "exampleEn": "I can't eat dairy products.",
+      "exampleVi": "Tôi không ăn được đồ làm từ sữa.",
+      "collocations": [
+        {
+          "en": "dairy products",
+          "vi": "sản phẩm từ sữa"
+        },
+        {
+          "en": "dairy farm",
+          "vi": "trang trại bò sữa"
+        }
+      ],
+      "tip": "dairy (sữa) ≠ diary (nhật ký) — chỉ đảo 2 chữ ai/ia!",
+      "emoji": "🥛",
+      "stage": 2
+    },
+    {
+      "id": 1497,
+      "word": "dare",
+      "ipa": "dɛr",
+      "viRead": "ĐER",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dám",
+      "exampleEn": "I didn't dare to tell my parents.",
+      "exampleVi": "Tôi đã không dám nói với bố mẹ.",
+      "collocations": [
+        {
+          "en": "dare to do",
+          "vi": "dám làm"
+        },
+        {
+          "en": "how dare you!",
+          "vi": "sao anh dám!"
+        }
+      ],
+      "family": [
+        {
+          "word": "daring",
+          "vi": "táo bạo"
+        }
+      ],
+      "tip": "How dare you! = Sao bạn dám! (tức giận). I dare you! = Dám không?",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 1498,
+      "word": "deal",
+      "ipa": "dil",
+      "viRead": "ĐIL",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "thỏa thuận; món hời",
+      "exampleEn": "It's a deal!",
+      "exampleVi": "Chốt vậy nhé!",
+      "collocations": [
+        {
+          "en": "a good deal",
+          "vi": "giá hời, món hời"
+        },
+        {
+          "en": "deal with",
+          "vi": "giải quyết, xử lý"
+        },
+        {
+          "en": "it's a deal",
+          "vi": "chốt nhé"
+        }
+      ],
+      "tip": "deal with = xử lý (vấn đề): I'll deal with it. deal – dealt – dealt.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 1499,
+      "word": "debt",
+      "ipa": "dɛt",
+      "viRead": "ĐET",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "món nợ",
+      "exampleEn": "He finally paid off his debt.",
+      "exampleVi": "Cuối cùng anh ấy đã trả hết nợ.",
+      "collocations": [
+        {
+          "en": "in debt",
+          "vi": "đang mắc nợ"
+        },
+        {
+          "en": "pay off a debt",
+          "vi": "trả hết nợ"
+        }
+      ],
+      "tip": "b CÂM: debt đọc 'đet'. in debt = đang nợ.",
+      "emoji": "💳",
+      "stage": 2
+    },
+    {
+      "id": 1500,
+      "word": "decrease",
+      "ipa": "ˈdiˌkris",
+      "viRead": "đik-RIS",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "giảm",
+      "exampleEn": "The number of smokers has decreased.",
+      "exampleVi": "Số người hút thuốc đã giảm.",
+      "collocations": [
+        {
+          "en": "decrease by",
+          "vi": "giảm đi (bao nhiêu)"
+        },
+        {
+          "en": "a sharp decrease",
+          "vi": "giảm mạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "increase",
+          "vi": "tăng"
+        }
+      ],
+      "tip": "decrease ↔ increase. Động từ nhấn sau: đi-KRIS.",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 1501,
+      "word": "defeat",
+      "ipa": "dɪˈfit",
+      "viRead": "đi-PHIT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đánh bại",
+      "exampleEn": "Vietnam defeated Thailand 2–1.",
+      "exampleVi": "Việt Nam đánh bại Thái Lan 2–1.",
+      "collocations": [
+        {
+          "en": "defeat an enemy",
+          "vi": "đánh bại kẻ thù"
+        },
+        {
+          "en": "a heavy defeat",
+          "vi": "thất bại nặng nề"
+        }
+      ],
+      "tip": "defeat = beat (đánh bại đối thủ). admit defeat = chịu thua.",
+      "emoji": "⚔️",
+      "stage": 2
+    },
+    {
+      "id": 1502,
+      "word": "define",
+      "ipa": "dɪˈfaɪn",
+      "viRead": "đi-PHAIN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "định nghĩa",
+      "exampleEn": "How do you define success?",
+      "exampleVi": "Bạn định nghĩa thành công như thế nào?",
+      "collocations": [
+        {
+          "en": "define a word",
+          "vi": "định nghĩa một từ"
+        },
+        {
+          "en": "clearly defined",
+          "vi": "được xác định rõ"
+        }
+      ],
+      "family": [
+        {
+          "word": "definition",
+          "vi": "định nghĩa"
+        }
+      ],
+      "tip": "define → definition (định nghĩa). i đọc 'ai': đi-FAIN.",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 1503,
+      "word": "delete",
+      "ipa": "dɪˈlit",
+      "viRead": "đi-LIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xóa",
+      "exampleEn": "I accidentally deleted all my photos.",
+      "exampleVi": "Tôi lỡ xóa hết ảnh.",
+      "collocations": [
+        {
+          "en": "delete a file",
+          "vi": "xóa tệp"
+        },
+        {
+          "en": "delete an account",
+          "vi": "xóa tài khoản"
+        }
+      ],
+      "tip": "delete = xóa (máy tính). Phím Delete trên bàn phím.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 1504,
+      "word": "demand",
+      "ipa": "dɪˈmænd",
+      "viRead": "đi-MENĐ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "nhu cầu; yêu cầu",
+      "exampleEn": "There is high demand for English teachers.",
+      "exampleVi": "Nhu cầu giáo viên tiếng Anh rất cao.",
+      "collocations": [
+        {
+          "en": "high demand",
+          "vi": "nhu cầu cao"
+        },
+        {
+          "en": "on demand",
+          "vi": "theo yêu cầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "demanding",
+          "vi": "đòi hỏi cao"
+        }
+      ],
+      "tip": "supply and demand = cung và cầu. a demanding job = công việc đòi hỏi cao.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 1505,
+      "word": "deny",
+      "ipa": "dɪˈnaɪ",
+      "viRead": "đi-NAI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phủ nhận",
+      "exampleEn": "He denied taking the money.",
+      "exampleVi": "Anh ta phủ nhận việc lấy tiền.",
+      "collocations": [
+        {
+          "en": "deny doing",
+          "vi": "phủ nhận đã làm"
+        },
+        {
+          "en": "deny it",
+          "vi": "chối"
+        }
+      ],
+      "family": [
+        {
+          "word": "denial",
+          "vi": "sự phủ nhận"
+        }
+      ],
+      "tip": "deny + V-ing. deny → denied (y → ied).",
+      "emoji": "🙅",
+      "stage": 2
+    },
+    {
+      "id": 1506,
+      "word": "department",
+      "ipa": "dɪˈpɑrtmənt",
+      "viRead": "đi-PAR-tmơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phòng, ban, khoa",
+      "exampleEn": "She works in the sales department.",
+      "exampleVi": "Cô ấy làm ở phòng kinh doanh.",
+      "collocations": [
+        {
+          "en": "sales department",
+          "vi": "phòng kinh doanh"
+        },
+        {
+          "en": "department store",
+          "vi": "cửa hàng bách hóa"
+        }
+      ],
+      "tip": "HR department = phòng nhân sự. department store = trung tâm thương mại lớn.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 1507,
+      "word": "depart",
+      "ipa": "dɪˈpɑrt",
+      "viRead": "đi-PART",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khởi hành",
+      "exampleEn": "The train departs at 6:30.",
+      "exampleVi": "Tàu khởi hành lúc 6 giờ 30.",
+      "collocations": [
+        {
+          "en": "depart from",
+          "vi": "khởi hành từ"
+        },
+        {
+          "en": "depart on time",
+          "vi": "khởi hành đúng giờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "departure",
+          "vi": "sự khởi hành"
+        }
+      ],
+      "tip": "Sân bay: Departures (khu đi) ↔ Arrivals (khu đến). depart trang trọng hơn leave.",
+      "emoji": "🛫",
+      "stage": 2
+    },
+    {
+      "id": 1508,
+      "word": "deposit",
+      "ipa": "dɪˈpɑzət",
+      "viRead": "đơ-PA-dit",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền đặt cọc; tiền gửi",
+      "exampleEn": "You need to pay a deposit to book the room.",
+      "exampleVi": "Bạn cần đặt cọc để giữ phòng.",
+      "collocations": [
+        {
+          "en": "pay a deposit",
+          "vi": "đặt cọc"
+        },
+        {
+          "en": "bank deposit",
+          "vi": "tiền gửi ngân hàng"
+        }
+      ],
+      "tip": "deposit = tiền cọc khi thuê nhà/đặt phòng; nhấn âm hai: đi-PO-zit.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 1509,
+      "word": "desk",
+      "ipa": "dɛsk",
+      "viRead": "ĐESK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bàn làm việc, bàn học",
+      "exampleEn": "My laptop is on my desk.",
+      "exampleVi": "Máy tính xách tay của tôi ở trên bàn.",
+      "collocations": [
+        {
+          "en": "at my desk",
+          "vi": "ở bàn làm việc"
+        },
+        {
+          "en": "front desk",
+          "vi": "quầy lễ tân"
+        }
+      ],
+      "tip": "desk = bàn làm việc/học; table = bàn ăn/bàn nói chung. front desk = lễ tân.",
+      "emoji": "🖥️",
       "stage": 2
     }
   ]
