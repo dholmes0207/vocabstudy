@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1150,
+    "count": 1200,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -34651,6 +34651,1382 @@
       ],
       "tip": "queue (Anh) đọc giống chữ Q ('kiu') — 4 chữ cuối câm! Mỹ nói line: wait in line.",
       "emoji": "🧍",
+      "stage": 2
+    },
+    {
+      "id": 1151,
+      "word": "fit",
+      "ipa": "fɪt",
+      "viRead": "PHIT",
+      "pos": "v./adj.",
+      "posCategory": "verb",
+      "meaning": "vừa (cỡ); khỏe mạnh",
+      "exampleEn": "These jeans don't fit me anymore.",
+      "exampleVi": "Cái quần jean này tôi mặc không còn vừa nữa.",
+      "collocations": [
+        {
+          "en": "keep fit",
+          "vi": "giữ dáng, khỏe mạnh"
+        },
+        {
+          "en": "fit well",
+          "vi": "vừa vặn"
+        }
+      ],
+      "family": [
+        {
+          "word": "fitness",
+          "vi": "thể lực"
+        }
+      ],
+      "tip": "fit = vừa về kích cỡ; suit = hợp về kiểu dáng/màu. keep fit = giữ sức khỏe.",
+      "emoji": "👖",
+      "stage": 2
+    },
+    {
+      "id": 1152,
+      "word": "pack",
+      "ipa": "pæk",
+      "viRead": "PEK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đóng gói, xếp hành lý",
+      "exampleEn": "I need to pack my bag tonight.",
+      "exampleVi": "Tối nay tôi cần xếp đồ vào túi.",
+      "collocations": [
+        {
+          "en": "pack your bags",
+          "vi": "thu dọn hành lý"
+        },
+        {
+          "en": "a pack of",
+          "vi": "một gói"
+        }
+      ],
+      "family": [
+        {
+          "word": "package",
+          "vi": "bưu kiện"
+        }
+      ],
+      "tip": "pack up = thu dọn. a pack of cigarettes/cards = một bao thuốc/một bộ bài.",
+      "emoji": "🎒",
+      "stage": 2
+    },
+    {
+      "id": 1153,
+      "word": "pray",
+      "ipa": "preɪ",
+      "viRead": "PRÂY",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cầu nguyện",
+      "exampleEn": "My grandmother prays at the pagoda every week.",
+      "exampleVi": "Bà tôi đi chùa cầu nguyện mỗi tuần.",
+      "collocations": [
+        {
+          "en": "pray for",
+          "vi": "cầu cho"
+        },
+        {
+          "en": "pray together",
+          "vi": "cùng cầu nguyện"
+        }
+      ],
+      "family": [
+        {
+          "word": "prayer",
+          "vi": "lời cầu nguyện"
+        }
+      ],
+      "tip": "pray (cầu nguyện) đọc giống prey (con mồi). pray for good luck = cầu may.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 1154,
+      "word": "recommend",
+      "ipa": "ˌrɛkəˈmɛnd",
+      "viRead": "re-kơ-MENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giới thiệu, khuyên dùng",
+      "exampleEn": "Can you recommend a good restaurant?",
+      "exampleVi": "Bạn giới thiệu giúp một nhà hàng ngon được không?",
+      "collocations": [
+        {
+          "en": "highly recommend",
+          "vi": "rất nên thử"
+        },
+        {
+          "en": "recommend doing",
+          "vi": "khuyên nên làm"
+        }
+      ],
+      "family": [
+        {
+          "word": "recommendation",
+          "vi": "lời gợi ý"
+        }
+      ],
+      "tip": "Chính tả: 1 c, 2 m (re-co-mm-end). recommend + V-ing: I recommend trying the pho.",
+      "emoji": "👍",
+      "stage": 2
+    },
+    {
+      "id": 1155,
+      "word": "relationship",
+      "ipa": "riˈleɪʃənˌʃɪp",
+      "viRead": "ri-LÂY-shơn-ship",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mối quan hệ",
+      "exampleEn": "They have a good relationship with their neighbors.",
+      "exampleVi": "Họ có quan hệ tốt với hàng xóm.",
+      "collocations": [
+        {
+          "en": "in a relationship",
+          "vi": "đang hẹn hò"
+        },
+        {
+          "en": "a good relationship",
+          "vi": "mối quan hệ tốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "relation",
+          "vi": "quan hệ"
+        },
+        {
+          "word": "relative",
+          "vi": "họ hàng"
+        }
+      ],
+      "tip": "in a relationship = đang có người yêu (trạng thái trên mạng xã hội).",
+      "emoji": "💞",
+      "stage": 2
+    },
+    {
+      "id": 1156,
+      "word": "report",
+      "ipa": "rɪˈpɔrt",
+      "viRead": "ri-PORT",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "báo cáo",
+      "exampleEn": "I have to finish this report by Friday.",
+      "exampleVi": "Tôi phải xong bản báo cáo này trước thứ Sáu.",
+      "collocations": [
+        {
+          "en": "write a report",
+          "vi": "viết báo cáo"
+        },
+        {
+          "en": "weather report",
+          "vi": "bản tin thời tiết"
+        }
+      ],
+      "family": [
+        {
+          "word": "reporter",
+          "vi": "phóng viên"
+        }
+      ],
+      "tip": "report vừa là danh từ (bản báo cáo) vừa là động từ (báo cáo, đưa tin).",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 1157,
+      "word": "rescue",
+      "ipa": "ˈrɛskju",
+      "viRead": "RES-kyu",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "giải cứu",
+      "exampleEn": "The firefighters rescued the cat from the tree.",
+      "exampleVi": "Lính cứu hỏa đã giải cứu con mèo trên cây.",
+      "collocations": [
+        {
+          "en": "rescue team",
+          "vi": "đội cứu hộ"
+        },
+        {
+          "en": "come to the rescue",
+          "vi": "đến giải cứu"
+        }
+      ],
+      "tip": "rescue = cứu khỏi nguy hiểm (đội cứu hộ); save cũng được: save someone's life.",
+      "emoji": "🚒",
+      "stage": 2
+    },
+    {
+      "id": 1158,
+      "word": "reservation",
+      "ipa": "ˌrɛzərˈveɪʃən",
+      "viRead": "re-dơ-VÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đặt chỗ",
+      "exampleEn": "I have a reservation for two at 7 p.m.",
+      "exampleVi": "Tôi đã đặt bàn cho hai người lúc 7 giờ tối.",
+      "collocations": [
+        {
+          "en": "make a reservation",
+          "vi": "đặt chỗ"
+        },
+        {
+          "en": "hotel reservation",
+          "vi": "đặt phòng khách sạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "reserve",
+          "vi": "đặt trước"
+        }
+      ],
+      "tip": "make a reservation = book (đặt trước). Ở nhà hàng: Do you have a reservation?",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 1159,
+      "word": "salary",
+      "ipa": "ˈsæləri",
+      "viRead": "SE-lơ-i",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lương (tháng)",
+      "exampleEn": "She got a higher salary at her new job.",
+      "exampleVi": "Ở công việc mới cô ấy được lương cao hơn.",
+      "collocations": [
+        {
+          "en": "a good salary",
+          "vi": "lương tốt"
+        },
+        {
+          "en": "salary increase",
+          "vi": "tăng lương"
+        }
+      ],
+      "tip": "salary = lương tháng cố định; wage = tiền công theo giờ/ngày.",
+      "emoji": "💸",
+      "stage": 2
+    },
+    {
+      "id": 1160,
+      "word": "sale",
+      "ipa": "seɪl",
+      "viRead": "SÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bán; đợt giảm giá",
+      "exampleEn": "These shoes are on sale this week.",
+      "exampleVi": "Tuần này đôi giày này đang giảm giá.",
+      "collocations": [
+        {
+          "en": "on sale",
+          "vi": "đang giảm giá"
+        },
+        {
+          "en": "for sale",
+          "vi": "đang rao bán"
+        }
+      ],
+      "family": [
+        {
+          "word": "sell",
+          "vi": "bán"
+        },
+        {
+          "word": "salesperson",
+          "vi": "nhân viên bán hàng"
+        }
+      ],
+      "tip": "on sale = đang giảm giá; for sale = đang được rao bán. Đừng nhầm!",
+      "emoji": "🏷️",
+      "stage": 2
+    },
+    {
+      "id": 1161,
+      "word": "sightseeing",
+      "ipa": "ˈsaɪtˈsiɪŋ",
+      "viRead": "SAIT-SI-ing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tham quan, ngắm cảnh",
+      "exampleEn": "We went sightseeing in Hue for two days.",
+      "exampleVi": "Chúng tôi đi tham quan Huế hai ngày.",
+      "collocations": [
+        {
+          "en": "go sightseeing",
+          "vi": "đi tham quan"
+        },
+        {
+          "en": "a sightseeing tour",
+          "vi": "tour ngắm cảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "sight",
+          "vi": "cảnh đẹp; thị lực"
+        }
+      ],
+      "tip": "sight (cảnh) + seeing (xem). go sightseeing (không có the).",
+      "emoji": "📸",
+      "stage": 2
+    },
+    {
+      "id": 1162,
+      "word": "snack",
+      "ipa": "snæk",
+      "viRead": "SNEK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ ăn vặt",
+      "exampleEn": "I usually have a snack in the afternoon.",
+      "exampleVi": "Tôi thường ăn vặt vào buổi chiều.",
+      "collocations": [
+        {
+          "en": "a healthy snack",
+          "vi": "món ăn vặt lành mạnh"
+        },
+        {
+          "en": "snack bar",
+          "vi": "quầy đồ ăn nhẹ"
+        }
+      ],
+      "tip": "have a snack = ăn nhẹ, ăn vặt. Người Việt gọi 'đồ ăn vặt' = snacks.",
+      "emoji": "🍿",
+      "stage": 2
+    },
+    {
+      "id": 1163,
+      "word": "souvenir",
+      "ipa": "ˌsuvəˈnɪr",
+      "viRead": "su-vơ-NIR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quà lưu niệm",
+      "exampleEn": "I bought some souvenirs for my friends.",
+      "exampleVi": "Tôi mua vài món quà lưu niệm cho bạn bè.",
+      "collocations": [
+        {
+          "en": "souvenir shop",
+          "vi": "cửa hàng lưu niệm"
+        },
+        {
+          "en": "buy souvenirs",
+          "vi": "mua quà lưu niệm"
+        }
+      ],
+      "tip": "Nhấn âm cuối: xu-vơ-NIA. Từ gốc tiếng Pháp nghĩa là 'kỷ niệm'.",
+      "emoji": "🗿",
+      "stage": 2
+    },
+    {
+      "id": 1164,
+      "word": "spicy",
+      "ipa": "ˈspaɪsi",
+      "viRead": "SPAI-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cay",
+      "exampleEn": "Thai food is often very spicy.",
+      "exampleVi": "Đồ ăn Thái thường rất cay.",
+      "collocations": [
+        {
+          "en": "spicy food",
+          "vi": "đồ ăn cay"
+        },
+        {
+          "en": "too spicy",
+          "vi": "cay quá"
+        }
+      ],
+      "family": [
+        {
+          "word": "spice",
+          "vi": "gia vị"
+        }
+      ],
+      "tip": "spicy = cay (ớt); hot cũng nghĩa cay nhưng dễ nhầm với nóng. Không cay: not spicy / mild.",
+      "emoji": "🌶️",
+      "stage": 2
+    },
+    {
+      "id": 1165,
+      "word": "staff",
+      "ipa": "stæf",
+      "viRead": "STEPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân viên (tập thể)",
+      "exampleEn": "The hotel staff were very friendly.",
+      "exampleVi": "Nhân viên khách sạn rất thân thiện.",
+      "collocations": [
+        {
+          "en": "staff meeting",
+          "vi": "họp nhân viên"
+        },
+        {
+          "en": "friendly staff",
+          "vi": "nhân viên thân thiện"
+        }
+      ],
+      "tip": "staff là danh từ tập thể: không nói a staff hay staffs — một người là a staff member.",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 1166,
+      "word": "stranger",
+      "ipa": "ˈstreɪnʤər",
+      "viRead": "STRÂYN-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người lạ",
+      "exampleEn": "Don't open the door to strangers.",
+      "exampleVi": "Đừng mở cửa cho người lạ.",
+      "collocations": [
+        {
+          "en": "a complete stranger",
+          "vi": "người hoàn toàn xa lạ"
+        },
+        {
+          "en": "talk to strangers",
+          "vi": "nói chuyện với người lạ"
+        }
+      ],
+      "family": [
+        {
+          "word": "strange",
+          "vi": "lạ"
+        }
+      ],
+      "tip": "stranger = người lạ (không phải 'lạ hơn'). Người nước ngoài là foreigner.",
+      "emoji": "🕵️",
+      "stage": 2
+    },
+    {
+      "id": 1167,
+      "word": "subject",
+      "ipa": "ˈsəbʤɪkt",
+      "viRead": "sơb-GIEKT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn học; chủ đề",
+      "exampleEn": "My favorite subject at school was history.",
+      "exampleVi": "Môn học yêu thích của tôi hồi đi học là lịch sử.",
+      "collocations": [
+        {
+          "en": "favorite subject",
+          "vi": "môn học yêu thích"
+        },
+        {
+          "en": "change the subject",
+          "vi": "đổi chủ đề"
+        }
+      ],
+      "tip": "subject = môn học và chủ đề; tiêu đề email cũng là Subject.",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 1168,
+      "word": "tasty",
+      "ipa": "ˈteɪsti",
+      "viRead": "TÂYS-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngon",
+      "exampleEn": "The street food here is cheap and tasty.",
+      "exampleVi": "Đồ ăn đường phố ở đây rẻ mà ngon.",
+      "collocations": [
+        {
+          "en": "tasty food",
+          "vi": "đồ ăn ngon"
+        },
+        {
+          "en": "really tasty",
+          "vi": "ngon thật sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "taste",
+          "vi": "nếm, vị"
+        }
+      ],
+      "tip": "tasty (thân mật) = delicious (mạnh hơn). taste + y = tasty (bỏ e).",
+      "emoji": "😋",
+      "stage": 2
+    },
+    {
+      "id": 1169,
+      "word": "technology",
+      "ipa": "tɛkˈnɑləʤi",
+      "viRead": "tek-NA-lơ-gii",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công nghệ",
+      "exampleEn": "Technology makes learning easier.",
+      "exampleVi": "Công nghệ giúp việc học dễ hơn.",
+      "collocations": [
+        {
+          "en": "new technology",
+          "vi": "công nghệ mới"
+        },
+        {
+          "en": "information technology",
+          "vi": "công nghệ thông tin (IT)"
+        }
+      ],
+      "family": [
+        {
+          "word": "technical",
+          "vi": "kỹ thuật"
+        }
+      ],
+      "tip": "IT = information technology. ch đọc 'k': tek-NO-lợ-gi.",
+      "emoji": "💻",
+      "stage": 2
+    },
+    {
+      "id": 1170,
+      "word": "tip",
+      "ipa": "tɪp",
+      "viRead": "TIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền boa; mẹo",
+      "exampleEn": "We left a small tip for the waiter.",
+      "exampleVi": "Chúng tôi để lại ít tiền boa cho người phục vụ.",
+      "collocations": [
+        {
+          "en": "leave a tip",
+          "vi": "để lại tiền boa"
+        },
+        {
+          "en": "useful tips",
+          "vi": "mẹo hữu ích"
+        }
+      ],
+      "tip": "tip vừa là tiền boa vừa là mẹo — như những mẹo 💡 trong app này là 'tips'!",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1171,
+      "word": "tour",
+      "ipa": "tʊr",
+      "viRead": "TUR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuyến tham quan",
+      "exampleEn": "We booked a boat tour in Ha Long Bay.",
+      "exampleVi": "Chúng tôi đặt một tour đi thuyền ở vịnh Hạ Long.",
+      "collocations": [
+        {
+          "en": "a city tour",
+          "vi": "tour thành phố"
+        },
+        {
+          "en": "tour guide",
+          "vi": "hướng dẫn viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "tourist",
+          "vi": "khách du lịch"
+        },
+        {
+          "word": "tourism",
+          "vi": "ngành du lịch"
+        }
+      ],
+      "tip": "tour đọc 'tua' (Mỹ 'tur'). tourist = khách du lịch.",
+      "emoji": "🚤",
+      "stage": 2
+    },
+    {
+      "id": 1172,
+      "word": "vacation",
+      "ipa": "veɪˈkeɪʃən",
+      "viRead": "vây-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỳ nghỉ",
+      "exampleEn": "We're going on vacation next month.",
+      "exampleVi": "Tháng sau chúng tôi đi nghỉ.",
+      "collocations": [
+        {
+          "en": "on vacation",
+          "vi": "đang đi nghỉ"
+        },
+        {
+          "en": "summer vacation",
+          "vi": "kỳ nghỉ hè"
+        }
+      ],
+      "tip": "Mỹ: vacation; Anh: holiday. on vacation = đang đi nghỉ.",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 1173,
+      "word": "cancel",
+      "ipa": "ˈkænsəl",
+      "viRead": "KEN-sơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hủy bỏ",
+      "exampleEn": "The match was cancelled because of the rain.",
+      "exampleVi": "Trận đấu bị hủy vì trời mưa.",
+      "collocations": [
+        {
+          "en": "cancel a meeting",
+          "vi": "hủy cuộc họp"
+        },
+        {
+          "en": "cancel an order",
+          "vi": "hủy đơn hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "cancellation",
+          "vi": "sự hủy bỏ"
+        }
+      ],
+      "tip": "Anh viết cancelled (2 l), Mỹ viết canceled (1 l) — đều đúng.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 1174,
+      "word": "discount",
+      "ipa": "ˈdɪskaʊnt",
+      "viRead": "đis-KAONT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự giảm giá",
+      "exampleEn": "Students get a ten percent discount.",
+      "exampleVi": "Sinh viên được giảm giá mười phần trăm.",
+      "collocations": [
+        {
+          "en": "get a discount",
+          "vi": "được giảm giá"
+        },
+        {
+          "en": "a big discount",
+          "vi": "giảm giá mạnh"
+        }
+      ],
+      "tip": "Mặc cả: Can I get a discount? = Bớt cho tôi được không?",
+      "emoji": "💲",
+      "stage": 2
+    },
+    {
+      "id": 1175,
+      "word": "exchange",
+      "ipa": "ɪksˈʧeɪnʤ",
+      "viRead": "ik-SCHÂYNGI",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "trao đổi; đổi (tiền)",
+      "exampleEn": "Where can I exchange dollars for dong?",
+      "exampleVi": "Tôi đổi đô la sang tiền đồng ở đâu?",
+      "collocations": [
+        {
+          "en": "exchange money",
+          "vi": "đổi tiền"
+        },
+        {
+          "en": "exchange rate",
+          "vi": "tỷ giá"
+        },
+        {
+          "en": "exchange student",
+          "vi": "sinh viên trao đổi"
+        }
+      ],
+      "tip": "exchange A FOR B: exchange this shirt for a bigger size (đổi áo lấy cỡ lớn hơn).",
+      "emoji": "💱",
+      "stage": 2
+    },
+    {
+      "id": 1176,
+      "word": "fever",
+      "ipa": "ˈfivər",
+      "viRead": "PHI-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sốt",
+      "exampleEn": "The child has a high fever.",
+      "exampleVi": "Đứa trẻ bị sốt cao.",
+      "collocations": [
+        {
+          "en": "have a fever",
+          "vi": "bị sốt"
+        },
+        {
+          "en": "a high fever",
+          "vi": "sốt cao"
+        }
+      ],
+      "tip": "have a fever (có a). Cảm sốt: I have a cold and a fever.",
+      "emoji": "🤒",
+      "stage": 2
+    },
+    {
+      "id": 1177,
+      "word": "headache",
+      "ipa": "ˈhɛˌdeɪk",
+      "viRead": "HE-đâyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đau đầu",
+      "exampleEn": "I have a terrible headache today.",
+      "exampleVi": "Hôm nay tôi đau đầu kinh khủng.",
+      "collocations": [
+        {
+          "en": "have a headache",
+          "vi": "bị đau đầu"
+        },
+        {
+          "en": "a bad headache",
+          "vi": "cơn đau đầu dữ dội"
+        }
+      ],
+      "family": [
+        {
+          "word": "head",
+          "vi": "đầu"
+        },
+        {
+          "word": "ache",
+          "vi": "cơn đau"
+        }
+      ],
+      "tip": "head + ache = đau đầu; tương tự: toothache (đau răng), stomachache (đau bụng). ch đọc 'k'.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 1178,
+      "word": "laundry",
+      "ipa": "ˈlɔndri",
+      "viRead": "LON-đri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quần áo cần giặt; tiệm giặt",
+      "exampleEn": "I do the laundry every Sunday.",
+      "exampleVi": "Chủ nhật nào tôi cũng giặt đồ.",
+      "collocations": [
+        {
+          "en": "do the laundry",
+          "vi": "giặt đồ"
+        },
+        {
+          "en": "laundry service",
+          "vi": "dịch vụ giặt ủi"
+        }
+      ],
+      "tip": "do the laundry = giặt đồ. Khách sạn: Is there a laundry service?",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 1179,
+      "word": "mood",
+      "ipa": "mud",
+      "viRead": "MUĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tâm trạng",
+      "exampleEn": "She's in a good mood today.",
+      "exampleVi": "Hôm nay cô ấy đang vui.",
+      "collocations": [
+        {
+          "en": "in a good mood",
+          "vi": "tâm trạng tốt"
+        },
+        {
+          "en": "in a bad mood",
+          "vi": "tâm trạng xấu"
+        },
+        {
+          "en": "not in the mood",
+          "vi": "không có hứng"
+        }
+      ],
+      "tip": "I'm not in the mood = Tôi không có hứng (làm gì). oo đọc 'u' dài: 'mu-đ'.",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 1180,
+      "word": "pharmacy",
+      "ipa": "ˈfɑrməsi",
+      "viRead": "PHAR-mơ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hiệu thuốc",
+      "exampleEn": "Is there a pharmacy near here?",
+      "exampleVi": "Gần đây có hiệu thuốc không?",
+      "collocations": [
+        {
+          "en": "go to the pharmacy",
+          "vi": "đi mua thuốc"
+        },
+        {
+          "en": "24-hour pharmacy",
+          "vi": "nhà thuốc 24 giờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "pharmacist",
+          "vi": "dược sĩ"
+        }
+      ],
+      "tip": "ph đọc 'f': 'FA-mơ-si'. Anh còn gọi là chemist's, Mỹ gọi drugstore.",
+      "emoji": "💊",
+      "stage": 2
+    },
+    {
+      "id": 1181,
+      "word": "refund",
+      "ipa": "ˈriˌfənd",
+      "viRead": "ri-PHƠNĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền hoàn lại",
+      "exampleEn": "Can I get a refund for this ticket?",
+      "exampleVi": "Tôi có được hoàn tiền vé này không?",
+      "collocations": [
+        {
+          "en": "get a refund",
+          "vi": "được hoàn tiền"
+        },
+        {
+          "en": "full refund",
+          "vi": "hoàn toàn bộ tiền"
+        }
+      ],
+      "tip": "re- (lại) + fund (quỹ tiền) = trả tiền lại. No refunds = Không hoàn tiền.",
+      "emoji": "💳",
+      "stage": 2
+    },
+    {
+      "id": 1182,
+      "word": "scared",
+      "ipa": "skɛrd",
+      "viRead": "SKERĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sợ",
+      "exampleEn": "My son is scared of the dark.",
+      "exampleVi": "Con trai tôi sợ bóng tối.",
+      "collocations": [
+        {
+          "en": "scared of",
+          "vi": "sợ (cái gì)"
+        },
+        {
+          "en": "scared to death",
+          "vi": "sợ chết khiếp"
+        }
+      ],
+      "family": [
+        {
+          "word": "scary",
+          "vi": "đáng sợ"
+        }
+      ],
+      "tip": "I'm scared (tôi sợ) ≠ It's scary (nó đáng sợ). scared = afraid nhưng thân mật hơn.",
+      "emoji": "😱",
+      "stage": 2
+    },
+    {
+      "id": 1183,
+      "word": "sore",
+      "ipa": "sɔr",
+      "viRead": "SOR",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đau, nhức",
+      "exampleEn": "I have a sore throat from singing too much.",
+      "exampleVi": "Tôi bị đau họng vì hát quá nhiều.",
+      "collocations": [
+        {
+          "en": "sore throat",
+          "vi": "đau họng"
+        },
+        {
+          "en": "sore eyes",
+          "vi": "mỏi mắt, đau mắt"
+        }
+      ],
+      "tip": "sore throat = đau họng (bệnh hay gặp). My legs are sore = Chân tôi nhức (sau khi tập).",
+      "emoji": "😷",
+      "stage": 2
+    },
+    {
+      "id": 1184,
+      "word": "stressed",
+      "ipa": "strɛst",
+      "viRead": "STREST",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "căng thẳng",
+      "exampleEn": "I feel stressed before deadlines.",
+      "exampleVi": "Trước hạn chót tôi thấy căng thẳng.",
+      "collocations": [
+        {
+          "en": "stressed out",
+          "vi": "căng thẳng tột độ"
+        },
+        {
+          "en": "feel stressed",
+          "vi": "cảm thấy căng thẳng"
+        }
+      ],
+      "family": [
+        {
+          "word": "stress",
+          "vi": "áp lực"
+        },
+        {
+          "word": "stressful",
+          "vi": "gây căng thẳng"
+        }
+      ],
+      "tip": "I'm stressed (tôi thấy) ≠ It's stressful (việc đó gây căng thẳng).",
+      "emoji": "😫",
+      "stage": 2
+    },
+    {
+      "id": 1185,
+      "word": "temperature",
+      "ipa": "ˈtɛmpərəʧər",
+      "viRead": "TEM-prơ-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiệt độ",
+      "exampleEn": "The temperature today is 35 degrees.",
+      "exampleVi": "Nhiệt độ hôm nay là 35 độ.",
+      "collocations": [
+        {
+          "en": "high temperature",
+          "vi": "nhiệt độ cao; sốt"
+        },
+        {
+          "en": "take your temperature",
+          "vi": "đo nhiệt độ"
+        }
+      ],
+      "tip": "Đọc 4 âm tiết: TEM-prơ-chơ (âm e giữa gần như nuốt). have a temperature = bị sốt.",
+      "emoji": "🌡️",
+      "stage": 2
+    },
+    {
+      "id": 1186,
+      "word": "toilet",
+      "ipa": "ˈtɔɪlət",
+      "viRead": "TOI-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà vệ sinh",
+      "exampleEn": "Excuse me, where is the toilet?",
+      "exampleVi": "Xin lỗi, nhà vệ sinh ở đâu ạ?",
+      "collocations": [
+        {
+          "en": "public toilet",
+          "vi": "nhà vệ sinh công cộng"
+        },
+        {
+          "en": "toilet paper",
+          "vi": "giấy vệ sinh"
+        }
+      ],
+      "tip": "Lịch sự hơn: Where is the restroom (Mỹ) / the ladies'/gents' (Anh)?",
+      "emoji": "🚻",
+      "stage": 2
+    },
+    {
+      "id": 1187,
+      "word": "wallet",
+      "ipa": "ˈwɔlət",
+      "viRead": "WO-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ví tiền",
+      "exampleEn": "I think I left my wallet at home.",
+      "exampleVi": "Hình như tôi để quên ví ở nhà.",
+      "collocations": [
+        {
+          "en": "lose your wallet",
+          "vi": "mất ví"
+        },
+        {
+          "en": "e-wallet",
+          "vi": "ví điện tử"
+        }
+      ],
+      "tip": "wallet thường là ví nam/ví gập; purse (Anh) = ví nữ, (Mỹ) = túi xách nữ.",
+      "emoji": "👛",
+      "stage": 2
+    },
+    {
+      "id": 1188,
+      "word": "bargain",
+      "ipa": "ˈbɑrgɪn",
+      "viRead": "BAR-gơn",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "món hời; mặc cả",
+      "exampleEn": "This bag was a real bargain.",
+      "exampleVi": "Cái túi này đúng là món hời.",
+      "collocations": [
+        {
+          "en": "a real bargain",
+          "vi": "món hời thật sự"
+        },
+        {
+          "en": "bargain with",
+          "vi": "mặc cả với"
+        }
+      ],
+      "tip": "Ở chợ: You can bargain here = Ở đây mặc cả được. ai đọc 'ơ': 'BA-gần'.",
+      "emoji": "🛍️",
+      "stage": 2
+    },
+    {
+      "id": 1189,
+      "word": "bill",
+      "ipa": "bɪl",
+      "viRead": "BIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hóa đơn",
+      "exampleEn": "Can we have the bill, please?",
+      "exampleVi": "Cho chúng tôi xin hóa đơn nhé?",
+      "collocations": [
+        {
+          "en": "pay the bill",
+          "vi": "thanh toán"
+        },
+        {
+          "en": "electricity bill",
+          "vi": "hóa đơn tiền điện"
+        }
+      ],
+      "tip": "Ở nhà hàng gọi tính tiền: The bill, please! (Mỹ hay nói check). Mỹ: bill còn là tờ tiền giấy.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 1190,
+      "word": "blanket",
+      "ipa": "ˈblæŋkɪt",
+      "viRead": "BLENG-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái chăn",
+      "exampleEn": "It's cold, so take an extra blanket.",
+      "exampleVi": "Trời lạnh, lấy thêm một cái chăn đi.",
+      "collocations": [
+        {
+          "en": "a warm blanket",
+          "vi": "chăn ấm"
+        },
+        {
+          "en": "under the blanket",
+          "vi": "dưới chăn"
+        }
+      ],
+      "tip": "blanket = chăn mỏng/dày nói chung; chăn bông lớn = duvet/comforter.",
+      "emoji": "🛌",
+      "stage": 2
+    },
+    {
+      "id": 1191,
+      "word": "appetite",
+      "ipa": "ˈæpəˌtaɪt",
+      "viRead": "E-pơ-tait",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thèm ăn, khẩu vị",
+      "exampleEn": "Swimming always gives me a big appetite.",
+      "exampleVi": "Bơi lội luôn làm tôi ăn ngon miệng.",
+      "collocations": [
+        {
+          "en": "a good appetite",
+          "vi": "ăn ngon miệng"
+        },
+        {
+          "en": "lose your appetite",
+          "vi": "mất cảm giác thèm ăn"
+        }
+      ],
+      "tip": "Bon appetit! (tiếng Pháp) = Chúc ngon miệng. Nhấn âm đầu: A-pơ-tai(t).",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 1192,
+      "word": "hire",
+      "ipa": "haɪər",
+      "viRead": "HAI-ơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thuê (người, xe)",
+      "exampleEn": "We hired a car for the weekend.",
+      "exampleVi": "Chúng tôi thuê một chiếc xe cho cuối tuần.",
+      "collocations": [
+        {
+          "en": "hire a car",
+          "vi": "thuê xe"
+        },
+        {
+          "en": "hire staff",
+          "vi": "tuyển nhân viên"
+        }
+      ],
+      "tip": "hire = thuê người/đồ trong thời gian ngắn; rent = thuê nhà/đồ dài hơn (Mỹ dùng rent cả cho xe).",
+      "emoji": "🚗",
+      "stage": 2
+    },
+    {
+      "id": 1193,
+      "word": "rush",
+      "ipa": "rəʃ",
+      "viRead": "RƠSH",
+      "pos": "v./n.",
+      "posCategory": "noun",
+      "meaning": "sự vội vàng",
+      "exampleEn": "Don't rush, we have plenty of time.",
+      "exampleVi": "Đừng vội, chúng ta còn nhiều thời gian.",
+      "collocations": [
+        {
+          "en": "rush hour",
+          "vi": "giờ cao điểm"
+        },
+        {
+          "en": "in a rush",
+          "vi": "đang vội"
+        }
+      ],
+      "tip": "rush hour = giờ cao điểm (7–9h, 17–19h). in a rush = in a hurry.",
+      "emoji": "🏃‍♀️",
+      "stage": 2
+    },
+    {
+      "id": 1194,
+      "word": "charge",
+      "ipa": "ʧɑrʤ",
+      "viRead": "CHARGI",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "phí; sạc (pin)",
+      "exampleEn": "Delivery is free of charge.",
+      "exampleVi": "Giao hàng miễn phí.",
+      "collocations": [
+        {
+          "en": "free of charge",
+          "vi": "miễn phí"
+        },
+        {
+          "en": "charge my phone",
+          "vi": "sạc điện thoại"
+        }
+      ],
+      "family": [
+        {
+          "word": "charger",
+          "vi": "cục sạc"
+        }
+      ],
+      "tip": "charge vừa là tính phí vừa là sạc pin. My phone is charging = Điện thoại đang sạc.",
+      "emoji": "🔌",
+      "stage": 2
+    },
+    {
+      "id": 1195,
+      "word": "overtime",
+      "ipa": "ˈoʊvərˌtaɪm",
+      "viRead": "ÂU-vơ-taim",
+      "pos": "n./adv.",
+      "posCategory": "noun",
+      "meaning": "làm thêm giờ",
+      "exampleEn": "I worked overtime every day last week.",
+      "exampleVi": "Tuần trước ngày nào tôi cũng làm thêm giờ.",
+      "collocations": [
+        {
+          "en": "work overtime",
+          "vi": "làm thêm giờ"
+        },
+        {
+          "en": "overtime pay",
+          "vi": "tiền làm thêm"
+        }
+      ],
+      "tip": "over (vượt) + time (giờ) = ngoài giờ. OT là cách nói tắt dân văn phòng hay dùng.",
+      "emoji": "🌙",
+      "stage": 2
+    },
+    {
+      "id": 1196,
+      "word": "colleague",
+      "ipa": "ˈkɑlig",
+      "viRead": "KA-lig",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng nghiệp",
+      "exampleEn": "I have lunch with my colleagues every day.",
+      "exampleVi": "Ngày nào tôi cũng ăn trưa với đồng nghiệp.",
+      "collocations": [
+        {
+          "en": "a work colleague",
+          "vi": "đồng nghiệp"
+        },
+        {
+          "en": "former colleague",
+          "vi": "đồng nghiệp cũ"
+        }
+      ],
+      "tip": "gue câm: 'KO-li-g'. Thân mật hơn: coworker.",
+      "emoji": "🧑‍💼",
+      "stage": 2
+    },
+    {
+      "id": 1197,
+      "word": "promote",
+      "ipa": "prəˈmoʊt",
+      "viRead": "prơ-MÂUT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thăng chức; quảng bá",
+      "exampleEn": "She was promoted to manager last month.",
+      "exampleVi": "Tháng trước cô ấy được thăng chức làm quản lý.",
+      "collocations": [
+        {
+          "en": "get promoted",
+          "vi": "được thăng chức"
+        },
+        {
+          "en": "promote a product",
+          "vi": "quảng bá sản phẩm"
+        }
+      ],
+      "family": [
+        {
+          "word": "promotion",
+          "vi": "sự thăng chức; khuyến mãi"
+        }
+      ],
+      "tip": "promotion vừa là thăng chức vừa là khuyến mãi (sales promotion).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1198,
+      "word": "hometown",
+      "ipa": "ˈhoʊmˌtaʊn",
+      "viRead": "HÂUM-taon",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quê nhà",
+      "exampleEn": "My hometown is a small town in the north.",
+      "exampleVi": "Quê tôi là một thị trấn nhỏ ở miền Bắc.",
+      "collocations": [
+        {
+          "en": "my hometown",
+          "vi": "quê tôi"
+        },
+        {
+          "en": "go back to your hometown",
+          "vi": "về quê"
+        }
+      ],
+      "family": [
+        {
+          "word": "home",
+          "vi": "nhà"
+        },
+        {
+          "word": "town",
+          "vi": "thị trấn"
+        }
+      ],
+      "tip": "Where is your hometown? = Quê bạn ở đâu? Về quê ăn Tết: go back to my hometown for Tet.",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 1199,
+      "word": "weekday",
+      "ipa": "ˈwikˌdeɪ",
+      "viRead": "WIK-đây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngày thường (T2–T6)",
+      "exampleEn": "The museum is quiet on weekdays.",
+      "exampleVi": "Ngày thường bảo tàng khá vắng.",
+      "collocations": [
+        {
+          "en": "on weekdays",
+          "vi": "vào ngày thường"
+        },
+        {
+          "en": "weekday mornings",
+          "vi": "các buổi sáng ngày thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "weekend",
+          "vi": "cuối tuần"
+        }
+      ],
+      "tip": "weekday (thứ 2–6) ↔ weekend (thứ 7, CN).",
+      "emoji": "📆",
+      "stage": 2
+    },
+    {
+      "id": 1200,
+      "word": "cashier",
+      "ipa": "kæˈʃɪr",
+      "viRead": "ke-SHIR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thu ngân",
+      "exampleEn": "Please pay the cashier at the front.",
+      "exampleVi": "Vui lòng thanh toán ở quầy thu ngân phía trước.",
+      "collocations": [
+        {
+          "en": "pay the cashier",
+          "vi": "trả tiền cho thu ngân"
+        },
+        {
+          "en": "cashier desk",
+          "vi": "quầy thu ngân"
+        }
+      ],
+      "family": [
+        {
+          "word": "cash",
+          "vi": "tiền mặt"
+        }
+      ],
+      "tip": "cash (tiền mặt) + ier = người giữ tiền. Nhấn âm sau: ka-SHIA.",
+      "emoji": "🧑‍💻",
       "stage": 2
     }
   ]
