@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1609,
+    "count": 1659,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -47011,6 +47011,1432 @@
       ],
       "tip": "graduate FROM + trường. Động từ đọc 'GRA-giu-ây(t)', danh từ 'GRA-giu-ợt'.",
       "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 1610,
+      "word": "gym",
+      "ipa": "ʤɪm",
+      "viRead": "GIIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phòng tập thể hình",
+      "exampleEn": "I go to the gym three times a week.",
+      "exampleVi": "Tôi đến phòng gym ba lần một tuần.",
+      "collocations": [
+        {
+          "en": "go to the gym",
+          "vi": "đi tập gym"
+        },
+        {
+          "en": "gym membership",
+          "vi": "thẻ tập gym"
+        }
+      ],
+      "tip": "gym là nói tắt của gymnasium. y đọc 'i': 'gim'.",
+      "emoji": "🏋️",
+      "stage": 2
+    },
+    {
+      "id": 1611,
+      "word": "hall",
+      "ipa": "hɔl",
+      "viRead": "HOL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội trường; hành lang",
+      "exampleEn": "The meeting is in the main hall.",
+      "exampleVi": "Cuộc họp ở hội trường chính.",
+      "collocations": [
+        {
+          "en": "concert hall",
+          "vi": "phòng hòa nhạc"
+        },
+        {
+          "en": "city hall",
+          "vi": "tòa thị chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "hallway",
+          "vi": "hành lang"
+        }
+      ],
+      "tip": "hall = hội trường (lớn) hoặc hành lang/sảnh vào nhà.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 1612,
+      "word": "handle",
+      "ipa": "ˈhændəl",
+      "viRead": "HEN-đơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "xử lý; tay cầm",
+      "exampleEn": "Can you handle this problem by yourself?",
+      "exampleVi": "Bạn tự xử lý vấn đề này được không?",
+      "collocations": [
+        {
+          "en": "handle stress",
+          "vi": "đối phó với căng thẳng"
+        },
+        {
+          "en": "door handle",
+          "vi": "tay nắm cửa"
+        }
+      ],
+      "tip": "I can handle it = Tôi lo được. handle with care = cẩn thận dễ vỡ.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 1613,
+      "word": "handsome",
+      "ipa": "ˈhænsəm",
+      "viRead": "HEN-sơm",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đẹp trai",
+      "exampleEn": "Her boyfriend is tall and handsome.",
+      "exampleVi": "Bạn trai cô ấy cao ráo và đẹp trai.",
+      "collocations": [
+        {
+          "en": "a handsome man",
+          "vi": "người đàn ông đẹp trai"
+        },
+        {
+          "en": "tall and handsome",
+          "vi": "cao ráo đẹp trai"
+        }
+      ],
+      "tip": "d gần như câm: 'HAN-sầm'. handsome cho nam; beautiful/pretty cho nữ.",
+      "emoji": "🤵",
+      "stage": 2
+    },
+    {
+      "id": 1614,
+      "word": "harbor",
+      "ipa": "ˈhɑrbər",
+      "viRead": "HAR-bơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bến cảng",
+      "exampleEn": "Many boats are in the harbor.",
+      "exampleVi": "Nhiều thuyền đang neo trong bến cảng.",
+      "collocations": [
+        {
+          "en": "in the harbor",
+          "vi": "trong cảng"
+        },
+        {
+          "en": "fishing harbor",
+          "vi": "cảng cá"
+        }
+      ],
+      "tip": "Mỹ: harbor; Anh: harbour. Hạ Long có nhiều bến tàu = harbors.",
+      "emoji": "⚓",
+      "stage": 2
+    },
+    {
+      "id": 1615,
+      "word": "harm",
+      "ipa": "hɑrm",
+      "viRead": "HARM",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự tổn hại",
+      "exampleEn": "Too much sugar can do harm to your health.",
+      "exampleVi": "Quá nhiều đường có thể gây hại cho sức khỏe.",
+      "collocations": [
+        {
+          "en": "do harm",
+          "vi": "gây hại"
+        },
+        {
+          "en": "no harm done",
+          "vi": "không sao đâu"
+        }
+      ],
+      "family": [
+        {
+          "word": "harmful",
+          "vi": "có hại"
+        },
+        {
+          "word": "harmless",
+          "vi": "vô hại"
+        }
+      ],
+      "tip": "harmful = có hại; harmless = vô hại. There's no harm in trying = Thử cũng chẳng mất gì.",
+      "emoji": "☣️",
+      "stage": 2
+    },
+    {
+      "id": 1616,
+      "word": "harvest",
+      "ipa": "ˈhɑrvəst",
+      "viRead": "HAR-vơst",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "mùa gặt, thu hoạch",
+      "exampleEn": "Farmers are busy during the rice harvest.",
+      "exampleVi": "Nông dân bận rộn vào mùa gặt lúa.",
+      "collocations": [
+        {
+          "en": "rice harvest",
+          "vi": "mùa gặt lúa"
+        },
+        {
+          "en": "harvest time",
+          "vi": "mùa thu hoạch"
+        }
+      ],
+      "tip": "harvest vừa là mùa gặt vừa là 'thu hoạch' (động từ).",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 1617,
+      "word": "headline",
+      "ipa": "ˈhɛˌdlaɪn",
+      "viRead": "HEĐ-lain",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiêu đề (báo)",
+      "exampleEn": "I only read the headlines this morning.",
+      "exampleVi": "Sáng nay tôi chỉ đọc lướt các tiêu đề.",
+      "collocations": [
+        {
+          "en": "news headlines",
+          "vi": "tiêu đề tin tức"
+        },
+        {
+          "en": "make headlines",
+          "vi": "lên báo"
+        }
+      ],
+      "family": [
+        {
+          "word": "head",
+          "vi": "đầu"
+        }
+      ],
+      "tip": "make headlines = gây chú ý, lên trang nhất.",
+      "emoji": "📰",
+      "stage": 2
+    },
+    {
+      "id": 1618,
+      "word": "heal",
+      "ipa": "hil",
+      "viRead": "HIL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chữa lành, lành lại",
+      "exampleEn": "The cut on my finger healed quickly.",
+      "exampleVi": "Vết cắt trên ngón tay tôi lành nhanh.",
+      "collocations": [
+        {
+          "en": "heal quickly",
+          "vi": "lành nhanh"
+        },
+        {
+          "en": "time heals",
+          "vi": "thời gian chữa lành"
+        }
+      ],
+      "family": [
+        {
+          "word": "health",
+          "vi": "sức khỏe"
+        }
+      ],
+      "tip": "heal (chữa lành) đọc giống heel (gót chân).",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 1619,
+      "word": "heater",
+      "ipa": "ˈhitər",
+      "viRead": "HI-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy sưởi",
+      "exampleEn": "Turn on the heater, it's cold.",
+      "exampleVi": "Bật máy sưởi đi, lạnh quá.",
+      "collocations": [
+        {
+          "en": "water heater",
+          "vi": "bình nóng lạnh"
+        },
+        {
+          "en": "turn on the heater",
+          "vi": "bật máy sưởi"
+        }
+      ],
+      "family": [
+        {
+          "word": "heat",
+          "vi": "nhiệt"
+        }
+      ],
+      "tip": "water heater = bình nóng lạnh. heat + er = máy làm nóng.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 1620,
+      "word": "helmet",
+      "ipa": "ˈhɛlmət",
+      "viRead": "HEL-mơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mũ bảo hiểm",
+      "exampleEn": "Always wear a helmet on a motorbike.",
+      "exampleVi": "Luôn đội mũ bảo hiểm khi đi xe máy.",
+      "collocations": [
+        {
+          "en": "wear a helmet",
+          "vi": "đội mũ bảo hiểm"
+        },
+        {
+          "en": "bike helmet",
+          "vi": "mũ xe đạp"
+        }
+      ],
+      "tip": "wear a helmet (không nói put on hat khi nói mũ bảo hiểm). Đọc 'HEL-mợt'.",
+      "emoji": "⛑️",
+      "stage": 2
+    },
+    {
+      "id": 1621,
+      "word": "hero",
+      "ipa": "ˈhɪroʊ",
+      "viRead": "HI-râu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "anh hùng",
+      "exampleEn": "Firefighters are real heroes.",
+      "exampleVi": "Lính cứu hỏa là những anh hùng thật sự.",
+      "collocations": [
+        {
+          "en": "a national hero",
+          "vi": "anh hùng dân tộc"
+        },
+        {
+          "en": "my hero",
+          "vi": "thần tượng của tôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "heroic",
+          "vi": "anh hùng"
+        }
+      ],
+      "tip": "Số nhiều: heroes (thêm -es). superhero = siêu anh hùng.",
+      "emoji": "🦸",
+      "stage": 2
+    },
+    {
+      "id": 1622,
+      "word": "highlight",
+      "ipa": "ˈhaɪˌlaɪt",
+      "viRead": "HAI-lait",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "điểm nổi bật",
+      "exampleEn": "The highlight of our trip was Ha Long Bay.",
+      "exampleVi": "Điểm nhấn của chuyến đi là vịnh Hạ Long.",
+      "collocations": [
+        {
+          "en": "the highlight of",
+          "vi": "điểm nhấn của"
+        },
+        {
+          "en": "match highlights",
+          "vi": "những pha nổi bật trận đấu"
+        }
+      ],
+      "family": [
+        {
+          "word": "highlighter",
+          "vi": "bút dạ quang"
+        }
+      ],
+      "tip": "highlight (động từ) = tô sáng. highlights = video tóm tắt trận đấu.",
+      "emoji": "🖍️",
+      "stage": 2
+    },
+    {
+      "id": 1623,
+      "word": "hike",
+      "ipa": "haɪk",
+      "viRead": "HAIK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "chuyến đi bộ đường dài",
+      "exampleEn": "We went on a hike in the mountains.",
+      "exampleVi": "Chúng tôi đi bộ đường dài trên núi.",
+      "collocations": [
+        {
+          "en": "go on a hike",
+          "vi": "đi leo núi, đi bộ đường dài"
+        },
+        {
+          "en": "a long hike",
+          "vi": "chuyến đi bộ dài"
+        }
+      ],
+      "family": [
+        {
+          "word": "hiking",
+          "vi": "môn đi bộ đường dài"
+        }
+      ],
+      "tip": "go hiking = đi trekking. hike còn là 'tăng mạnh' (price hike = tăng giá).",
+      "emoji": "🥾",
+      "stage": 2
+    },
+    {
+      "id": 1624,
+      "word": "honey",
+      "ipa": "ˈhəni",
+      "viRead": "HƠ-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mật ong; cưng (gọi yêu)",
+      "exampleEn": "I put some honey in my tea.",
+      "exampleVi": "Tôi cho ít mật ong vào trà.",
+      "collocations": [
+        {
+          "en": "a spoon of honey",
+          "vi": "một thìa mật ong"
+        },
+        {
+          "en": "honey, I'm home!",
+          "vi": "em/anh ơi, anh/em về rồi!"
+        }
+      ],
+      "family": [
+        {
+          "word": "honeymoon",
+          "vi": "tuần trăng mật"
+        }
+      ],
+      "tip": "honey còn là cách gọi thân mật (anh/em yêu). o đọc 'ă': 'HẮ-ni'.",
+      "emoji": "🍯",
+      "stage": 2
+    },
+    {
+      "id": 1625,
+      "word": "hook",
+      "ipa": "hʊk",
+      "viRead": "HUK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái móc",
+      "exampleEn": "Hang your bag on the hook.",
+      "exampleVi": "Treo túi lên móc.",
+      "collocations": [
+        {
+          "en": "on the hook",
+          "vi": "trên móc"
+        },
+        {
+          "en": "off the hook",
+          "vi": "thoát nạn; (điện thoại) nhấc máy"
+        }
+      ],
+      "tip": "get off the hook = thoát khỏi rắc rối.",
+      "emoji": "🪝",
+      "stage": 2
+    },
+    {
+      "id": 1626,
+      "word": "horror",
+      "ipa": "ˈhɔrər",
+      "viRead": "HO-rơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kinh hoàng; kinh dị",
+      "exampleEn": "I don't like horror films.",
+      "exampleVi": "Tôi không thích phim kinh dị.",
+      "collocations": [
+        {
+          "en": "horror film",
+          "vi": "phim kinh dị"
+        },
+        {
+          "en": "in horror",
+          "vi": "kinh hoàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "horrible",
+          "vi": "kinh khủng"
+        }
+      ],
+      "tip": "horror movie = phim kinh dị. horrible = rất tệ, kinh khủng.",
+      "emoji": "😱",
+      "stage": 2
+    },
+    {
+      "id": 1627,
+      "word": "host",
+      "ipa": "hoʊst",
+      "viRead": "HÂUST",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "chủ nhà; người dẫn chương trình",
+      "exampleEn": "Our host cooked a wonderful dinner.",
+      "exampleVi": "Chủ nhà nấu một bữa tối tuyệt vời.",
+      "collocations": [
+        {
+          "en": "host a party",
+          "vi": "tổ chức tiệc"
+        },
+        {
+          "en": "TV host",
+          "vi": "người dẫn chương trình"
+        }
+      ],
+      "family": [
+        {
+          "word": "hostess",
+          "vi": "nữ chủ nhà"
+        }
+      ],
+      "tip": "host = chủ nhà/MC; guest = khách. host a meeting = chủ trì cuộc họp.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 1628,
+      "word": "humble",
+      "ipa": "ˈhəmbəl",
+      "viRead": "HƠM-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khiêm tốn",
+      "exampleEn": "He is famous but still very humble.",
+      "exampleVi": "Anh ấy nổi tiếng nhưng vẫn rất khiêm tốn.",
+      "collocations": [
+        {
+          "en": "stay humble",
+          "vi": "giữ sự khiêm tốn"
+        },
+        {
+          "en": "a humble home",
+          "vi": "ngôi nhà giản dị"
+        }
+      ],
+      "tip": "h đọc rõ: 'HẮM-bồ'. Người Việt đề cao sự humble.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 1629,
+      "word": "humor",
+      "ipa": "ˈhjumər",
+      "viRead": "HYU-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hài hước",
+      "exampleEn": "She has a great sense of humor.",
+      "exampleVi": "Cô ấy rất có khiếu hài hước.",
+      "collocations": [
+        {
+          "en": "sense of humor",
+          "vi": "khiếu hài hước"
+        },
+        {
+          "en": "dark humor",
+          "vi": "hài đen"
+        }
+      ],
+      "family": [
+        {
+          "word": "humorous",
+          "vi": "hài hước"
+        }
+      ],
+      "tip": "Mỹ: humor; Anh: humour. sense of humor = khiếu hài hước.",
+      "emoji": "😄",
+      "stage": 2
+    },
+    {
+      "id": 1630,
+      "word": "hunt",
+      "ipa": "hənt",
+      "viRead": "HƠNT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "săn; tìm kiếm",
+      "exampleEn": "My mom is hunting for a cheap flight.",
+      "exampleVi": "Mẹ tôi đang săn vé máy bay rẻ.",
+      "collocations": [
+        {
+          "en": "job hunting",
+          "vi": "tìm việc"
+        },
+        {
+          "en": "hunt for",
+          "vi": "săn tìm"
+        }
+      ],
+      "family": [
+        {
+          "word": "hunter",
+          "vi": "thợ săn"
+        }
+      ],
+      "tip": "hunt for = lùng tìm: hunt for bargains = săn hàng giảm giá.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 1631,
+      "word": "ideal",
+      "ipa": "aɪˈdil",
+      "viRead": "ai-ĐIL",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lý tưởng",
+      "exampleEn": "This is an ideal place for a picnic.",
+      "exampleVi": "Đây là nơi lý tưởng để đi dã ngoại.",
+      "collocations": [
+        {
+          "en": "an ideal place",
+          "vi": "nơi lý tưởng"
+        },
+        {
+          "en": "ideal for",
+          "vi": "lý tưởng cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "ideally",
+          "vi": "lý tưởng nhất là"
+        }
+      ],
+      "tip": "Nhấn âm hai: ai-ĐIA-ồ. ideal ≠ idea (ý tưởng).",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 1632,
+      "word": "identify",
+      "ipa": "aɪˈdɛntəˌfaɪ",
+      "viRead": "ai-ĐEN-tơ-phai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhận ra, xác định",
+      "exampleEn": "Can you identify the man in this photo?",
+      "exampleVi": "Bạn có nhận ra người đàn ông trong ảnh không?",
+      "collocations": [
+        {
+          "en": "identify the problem",
+          "vi": "xác định vấn đề"
+        },
+        {
+          "en": "identify yourself",
+          "vi": "xưng danh"
+        }
+      ],
+      "family": [
+        {
+          "word": "identity",
+          "vi": "danh tính"
+        },
+        {
+          "word": "ID",
+          "vi": "giấy tờ tùy thân"
+        }
+      ],
+      "tip": "ID card = căn cước. identify → identified (y → ied).",
+      "emoji": "🪪",
+      "stage": 2
+    },
+    {
+      "id": 1633,
+      "word": "illegal",
+      "ipa": "ˌɪˈligəl",
+      "viRead": "i-LI-gơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bất hợp pháp",
+      "exampleEn": "It's illegal to drive without a license.",
+      "exampleVi": "Lái xe không bằng là phạm luật.",
+      "collocations": [
+        {
+          "en": "illegal parking",
+          "vi": "đỗ xe trái phép"
+        },
+        {
+          "en": "it's illegal to",
+          "vi": "… là phạm pháp"
+        }
+      ],
+      "family": [
+        {
+          "word": "legal",
+          "vi": "hợp pháp"
+        }
+      ],
+      "tip": "il + legal = bất hợp pháp (như in-, im-, ir-, un- tạo nghĩa ngược).",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 1634,
+      "word": "illness",
+      "ipa": "ˈɪlnəs",
+      "viRead": "IL-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bệnh tật, sự ốm",
+      "exampleEn": "She missed school because of illness.",
+      "exampleVi": "Cô ấy nghỉ học vì ốm.",
+      "collocations": [
+        {
+          "en": "serious illness",
+          "vi": "bệnh nặng"
+        },
+        {
+          "en": "mental illness",
+          "vi": "bệnh tâm thần"
+        }
+      ],
+      "family": [
+        {
+          "word": "ill",
+          "vi": "ốm"
+        }
+      ],
+      "tip": "ill + ness = sự ốm. illness (tình trạng ốm) rộng hơn disease (bệnh cụ thể).",
+      "emoji": "🤒",
+      "stage": 2
+    },
+    {
+      "id": 1635,
+      "word": "imagination",
+      "ipa": "ˌɪˌmæʤəˈneɪʃən",
+      "viRead": "i-me-giơ-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trí tưởng tượng",
+      "exampleEn": "Children have a wonderful imagination.",
+      "exampleVi": "Trẻ con có trí tưởng tượng tuyệt vời.",
+      "collocations": [
+        {
+          "en": "use your imagination",
+          "vi": "dùng trí tưởng tượng"
+        },
+        {
+          "en": "a lack of imagination",
+          "vi": "thiếu óc tưởng tượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "imagine",
+          "vi": "tưởng tượng"
+        }
+      ],
+      "tip": "imagine (động từ) → imagination (danh từ) → imaginative (giàu tưởng tượng).",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 1636,
+      "word": "immediately",
+      "ipa": "ˌɪˈmiˌdiətli",
+      "viRead": "i-MI-đi-ơt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngay lập tức",
+      "exampleEn": "Call me immediately if anything happens.",
+      "exampleVi": "Có chuyện gì thì gọi tôi ngay lập tức.",
+      "collocations": [
+        {
+          "en": "leave immediately",
+          "vi": "rời đi ngay"
+        },
+        {
+          "en": "immediately after",
+          "vi": "ngay sau khi"
+        }
+      ],
+      "family": [
+        {
+          "word": "immediate",
+          "vi": "ngay tức thì"
+        }
+      ],
+      "tip": "immediately = right away / at once. Chính tả: 2 m (i-mm-ediately).",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 1637,
+      "word": "impact",
+      "ipa": "ˌɪmˈpækt",
+      "viRead": "im-PEKT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tác động, ảnh hưởng",
+      "exampleEn": "Social media has a big impact on young people.",
+      "exampleVi": "Mạng xã hội có tác động lớn tới giới trẻ.",
+      "collocations": [
+        {
+          "en": "have an impact on",
+          "vi": "tác động đến"
+        },
+        {
+          "en": "a positive impact",
+          "vi": "tác động tích cực"
+        }
+      ],
+      "tip": "have an impact ON + đối tượng. Nhấn âm đầu: IM-pact.",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 1638,
+      "word": "import",
+      "ipa": "ˌɪmˈpɔrt",
+      "viRead": "im-PORT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhập khẩu",
+      "exampleEn": "Vietnam imports a lot of machines.",
+      "exampleVi": "Việt Nam nhập khẩu nhiều máy móc.",
+      "collocations": [
+        {
+          "en": "import goods",
+          "vi": "nhập khẩu hàng hóa"
+        },
+        {
+          "en": "import from",
+          "vi": "nhập từ"
+        }
+      ],
+      "family": [
+        {
+          "word": "export",
+          "vi": "xuất khẩu"
+        }
+      ],
+      "tip": "import ↔ export. Động từ nhấn sau: im-PORT; danh từ nhấn trước: IM-port.",
+      "emoji": "🚢",
+      "stage": 2
+    },
+    {
+      "id": 1639,
+      "word": "incident",
+      "ipa": "ˈɪnsədənt",
+      "viRead": "IN-sơ-đơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự việc, vụ việc",
+      "exampleEn": "The police are investigating the incident.",
+      "exampleVi": "Cảnh sát đang điều tra vụ việc.",
+      "collocations": [
+        {
+          "en": "a serious incident",
+          "vi": "vụ việc nghiêm trọng"
+        },
+        {
+          "en": "without incident",
+          "vi": "suôn sẻ"
+        }
+      ],
+      "tip": "incident = sự việc (thường không hay); accident = tai nạn.",
+      "emoji": "🚨",
+      "stage": 2
+    },
+    {
+      "id": 1640,
+      "word": "indeed",
+      "ipa": "ˌɪnˈdid",
+      "viRead": "in-ĐIĐ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thật vậy, quả thực",
+      "exampleEn": "It was indeed a great day.",
+      "exampleVi": "Quả thực đó là một ngày tuyệt vời.",
+      "collocations": [
+        {
+          "en": "yes, indeed",
+          "vi": "đúng thế"
+        },
+        {
+          "en": "very good indeed",
+          "vi": "thật sự rất tốt"
+        }
+      ],
+      "tip": "A friend in need is a friend indeed = Hoạn nạn mới biết bạn hiền.",
+      "emoji": "✔️",
+      "stage": 2
+    },
+    {
+      "id": 1641,
+      "word": "indoor",
+      "ipa": "ˈɪnˌdɔr",
+      "viRead": "IN-đor",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trong nhà",
+      "exampleEn": "Badminton is a popular indoor sport.",
+      "exampleVi": "Cầu lông là môn thể thao trong nhà phổ biến.",
+      "collocations": [
+        {
+          "en": "indoor games",
+          "vi": "trò chơi trong nhà"
+        },
+        {
+          "en": "indoor pool",
+          "vi": "bể bơi trong nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "outdoor",
+          "vi": "ngoài trời"
+        },
+        {
+          "word": "indoors",
+          "vi": "ở trong nhà"
+        }
+      ],
+      "tip": "indoor (tính từ, đứng trước danh từ) ↔ indoors (trạng từ): stay indoors.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 1642,
+      "word": "industry",
+      "ipa": "ˈɪndəstri",
+      "viRead": "IN-đơs-tri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngành công nghiệp",
+      "exampleEn": "Tourism is an important industry in Vietnam.",
+      "exampleVi": "Du lịch là ngành quan trọng ở Việt Nam.",
+      "collocations": [
+        {
+          "en": "the tourism industry",
+          "vi": "ngành du lịch"
+        },
+        {
+          "en": "heavy industry",
+          "vi": "công nghiệp nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "industrial",
+          "vi": "thuộc công nghiệp"
+        }
+      ],
+      "tip": "Nhấn âm đầu: IN-đợs-tri.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 1643,
+      "word": "infection",
+      "ipa": "ˌɪnˈfɛkʃən",
+      "viRead": "in-PHEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nhiễm trùng",
+      "exampleEn": "He has an ear infection.",
+      "exampleVi": "Anh ấy bị viêm tai.",
+      "collocations": [
+        {
+          "en": "ear infection",
+          "vi": "viêm tai"
+        },
+        {
+          "en": "prevent infection",
+          "vi": "ngừa nhiễm trùng"
+        }
+      ],
+      "family": [
+        {
+          "word": "infect",
+          "vi": "lây nhiễm"
+        }
+      ],
+      "tip": "ear/eye/throat infection = viêm tai/mắt/họng.",
+      "emoji": "🦠",
+      "stage": 2
+    },
+    {
+      "id": 1644,
+      "word": "influence",
+      "ipa": "ˈɪnfluəns",
+      "viRead": "IN-phlu-ơns",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "ảnh hưởng",
+      "exampleEn": "My teacher had a big influence on me.",
+      "exampleVi": "Thầy giáo có ảnh hưởng lớn đến tôi.",
+      "collocations": [
+        {
+          "en": "a good influence",
+          "vi": "ảnh hưởng tốt"
+        },
+        {
+          "en": "under the influence",
+          "vi": "khi say xỉn"
+        }
+      ],
+      "family": [
+        {
+          "word": "influencer",
+          "vi": "người có ảnh hưởng (mạng xã hội)"
+        }
+      ],
+      "tip": "influence ON + người. influencer = người có sức ảnh hưởng trên mạng.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 1645,
+      "word": "inform",
+      "ipa": "ˌɪnˈfɔrm",
+      "viRead": "in-PHORM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thông báo, báo cho biết",
+      "exampleEn": "Please inform us if you change your address.",
+      "exampleVi": "Vui lòng báo cho chúng tôi nếu bạn đổi địa chỉ.",
+      "collocations": [
+        {
+          "en": "inform someone of",
+          "vi": "báo cho ai về"
+        },
+        {
+          "en": "keep me informed",
+          "vi": "cập nhật cho tôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "information",
+          "vi": "thông tin"
+        }
+      ],
+      "tip": "inform + người (không cần to): inform me ✓ (inform to me ✗).",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 1646,
+      "word": "injury",
+      "ipa": "ˈɪnʤəri",
+      "viRead": "IN-giơ-i",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chấn thương, vết thương",
+      "exampleEn": "He missed the game because of a knee injury.",
+      "exampleVi": "Anh ấy vắng trận đấu vì chấn thương đầu gối.",
+      "collocations": [
+        {
+          "en": "a serious injury",
+          "vi": "chấn thương nặng"
+        },
+        {
+          "en": "knee injury",
+          "vi": "chấn thương đầu gối"
+        }
+      ],
+      "family": [
+        {
+          "word": "injure",
+          "vi": "làm bị thương"
+        }
+      ],
+      "tip": "injure (động từ) → injury (danh từ) → injured (bị thương).",
+      "emoji": "🩼",
+      "stage": 2
+    },
+    {
+      "id": 1647,
+      "word": "ink",
+      "ipa": "ɪŋk",
+      "viRead": "INGK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mực",
+      "exampleEn": "My pen has run out of ink.",
+      "exampleVi": "Bút tôi hết mực rồi.",
+      "collocations": [
+        {
+          "en": "black ink",
+          "vi": "mực đen"
+        },
+        {
+          "en": "run out of ink",
+          "vi": "hết mực"
+        }
+      ],
+      "tip": "ink không đếm được. printer ink = mực máy in.",
+      "emoji": "🖋️",
+      "stage": 2
+    },
+    {
+      "id": 1648,
+      "word": "innocent",
+      "ipa": "ˈɪnəsənt",
+      "viRead": "I-nơ-sơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vô tội; ngây thơ",
+      "exampleEn": "The court said he was innocent.",
+      "exampleVi": "Tòa tuyên bố anh ta vô tội.",
+      "collocations": [
+        {
+          "en": "innocent children",
+          "vi": "trẻ em ngây thơ"
+        },
+        {
+          "en": "prove innocent",
+          "vi": "chứng minh vô tội"
+        }
+      ],
+      "family": [
+        {
+          "word": "innocence",
+          "vi": "sự vô tội"
+        }
+      ],
+      "tip": "innocent ↔ guilty (có tội). Nhấn âm đầu: I-nơ-xần(t).",
+      "emoji": "😇",
+      "stage": 2
+    },
+    {
+      "id": 1649,
+      "word": "insect",
+      "ipa": "ˈɪnˌsɛkt",
+      "viRead": "IN-sekt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "côn trùng",
+      "exampleEn": "Ants and bees are insects.",
+      "exampleVi": "Kiến và ong là côn trùng.",
+      "collocations": [
+        {
+          "en": "insect bite",
+          "vi": "vết côn trùng cắn"
+        },
+        {
+          "en": "insect spray",
+          "vi": "thuốc xịt côn trùng"
+        }
+      ],
+      "tip": "insect = côn trùng (6 chân); bug là cách nói thân mật (cũng là 'lỗi phần mềm').",
+      "emoji": "🐜",
+      "stage": 2
+    },
+    {
+      "id": 1650,
+      "word": "insist",
+      "ipa": "ˌɪnˈsɪst",
+      "viRead": "in-SIST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhất quyết, khăng khăng",
+      "exampleEn": "She insisted on paying for dinner.",
+      "exampleVi": "Cô ấy nhất quyết đòi trả tiền bữa tối.",
+      "collocations": [
+        {
+          "en": "insist on",
+          "vi": "nhất quyết (làm gì)"
+        },
+        {
+          "en": "if you insist",
+          "vi": "nếu bạn đã muốn vậy"
+        }
+      ],
+      "tip": "insist ON + V-ing. If you insist! = Thôi được, nếu bạn nhất quyết vậy.",
+      "emoji": "☝️",
+      "stage": 2
+    },
+    {
+      "id": 1651,
+      "word": "inspire",
+      "ipa": "ˌɪnˈspaɪr",
+      "viRead": "in-SPAIR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "truyền cảm hứng",
+      "exampleEn": "Her story inspired me to study harder.",
+      "exampleVi": "Câu chuyện của cô ấy truyền cảm hứng cho tôi học chăm hơn.",
+      "collocations": [
+        {
+          "en": "inspire someone to",
+          "vi": "truyền cảm hứng cho ai làm gì"
+        },
+        {
+          "en": "be inspired by",
+          "vi": "được truyền cảm hứng bởi"
+        }
+      ],
+      "family": [
+        {
+          "word": "inspiration",
+          "vi": "nguồn cảm hứng"
+        }
+      ],
+      "tip": "inspiring = đầy cảm hứng. inspiration = nguồn cảm hứng.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1652,
+      "word": "instant",
+      "ipa": "ˈɪnstənt",
+      "viRead": "IN-stơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngay lập tức; ăn liền",
+      "exampleEn": "I don't like instant coffee.",
+      "exampleVi": "Tôi không thích cà phê hòa tan.",
+      "collocations": [
+        {
+          "en": "instant noodles",
+          "vi": "mì ăn liền"
+        },
+        {
+          "en": "instant message",
+          "vi": "tin nhắn tức thì"
+        }
+      ],
+      "family": [
+        {
+          "word": "instantly",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "tip": "instant noodles = mì tôm. instant coffee = cà phê hòa tan.",
+      "emoji": "🍜",
+      "stage": 2
+    },
+    {
+      "id": 1653,
+      "word": "instruction",
+      "ipa": "ˌɪnˈstrəkʃən",
+      "viRead": "in-STRƠK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hướng dẫn",
+      "exampleEn": "Read the instructions before you start.",
+      "exampleVi": "Đọc hướng dẫn trước khi bắt đầu.",
+      "collocations": [
+        {
+          "en": "follow the instructions",
+          "vi": "làm theo hướng dẫn"
+        },
+        {
+          "en": "give instructions",
+          "vi": "ra hướng dẫn"
+        }
+      ],
+      "family": [
+        {
+          "word": "instruct",
+          "vi": "chỉ dẫn"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: instructions. user instructions = hướng dẫn sử dụng.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 1654,
+      "word": "instrument",
+      "ipa": "ˈɪnstrəmənt",
+      "viRead": "IN-strơ-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhạc cụ; dụng cụ",
+      "exampleEn": "Can you play a musical instrument?",
+      "exampleVi": "Bạn có chơi nhạc cụ nào không?",
+      "collocations": [
+        {
+          "en": "musical instrument",
+          "vi": "nhạc cụ"
+        },
+        {
+          "en": "play an instrument",
+          "vi": "chơi nhạc cụ"
+        }
+      ],
+      "tip": "musical instrument = nhạc cụ. Nhấn âm đầu: IN-strơ-mần(t).",
+      "emoji": "🎻",
+      "stage": 2
+    },
+    {
+      "id": 1655,
+      "word": "intelligent",
+      "ipa": "ˌɪnˈtɛləʤənt",
+      "viRead": "in-TE-lơ-giơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thông minh",
+      "exampleEn": "Dolphins are very intelligent animals.",
+      "exampleVi": "Cá heo là loài vật rất thông minh.",
+      "collocations": [
+        {
+          "en": "an intelligent student",
+          "vi": "học sinh thông minh"
+        },
+        {
+          "en": "highly intelligent",
+          "vi": "cực kỳ thông minh"
+        }
+      ],
+      "family": [
+        {
+          "word": "intelligence",
+          "vi": "trí thông minh"
+        }
+      ],
+      "tip": "AI = artificial intelligence (trí tuệ nhân tạo). intelligent trang trọng hơn smart.",
+      "emoji": "🐬",
+      "stage": 2
+    },
+    {
+      "id": 1656,
+      "word": "intend",
+      "ipa": "ˌɪnˈtɛnd",
+      "viRead": "in-TENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dự định",
+      "exampleEn": "I intend to learn 20 new words a week.",
+      "exampleVi": "Tôi dự định học 20 từ mới mỗi tuần.",
+      "collocations": [
+        {
+          "en": "intend to do",
+          "vi": "dự định làm"
+        },
+        {
+          "en": "as intended",
+          "vi": "như dự tính"
+        }
+      ],
+      "family": [
+        {
+          "word": "intention",
+          "vi": "ý định"
+        }
+      ],
+      "tip": "intend + to V. Trang trọng hơn plan/mean.",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 1657,
+      "word": "international",
+      "ipa": "ˌɪnərˈnæʃənɑl",
+      "viRead": "in-tơ-NE-shơ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "quốc tế",
+      "exampleEn": "Tan Son Nhat is an international airport.",
+      "exampleVi": "Tân Sơn Nhất là sân bay quốc tế.",
+      "collocations": [
+        {
+          "en": "international airport",
+          "vi": "sân bay quốc tế"
+        },
+        {
+          "en": "international student",
+          "vi": "du học sinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "nation",
+          "vi": "quốc gia"
+        }
+      ],
+      "tip": "inter (giữa) + national (quốc gia) = giữa các nước.",
+      "emoji": "🌍",
+      "stage": 2
+    },
+    {
+      "id": 1658,
+      "word": "invest",
+      "ipa": "ˌɪnˈvɛst",
+      "viRead": "in-VEST",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đầu tư",
+      "exampleEn": "He invested his money in a small shop.",
+      "exampleVi": "Anh ấy đầu tư tiền vào một cửa hàng nhỏ.",
+      "collocations": [
+        {
+          "en": "invest in",
+          "vi": "đầu tư vào"
+        },
+        {
+          "en": "invest time",
+          "vi": "đầu tư thời gian"
+        }
+      ],
+      "family": [
+        {
+          "word": "investment",
+          "vi": "sự đầu tư"
+        },
+        {
+          "word": "investor",
+          "vi": "nhà đầu tư"
+        }
+      ],
+      "tip": "invest IN + thứ gì. Đầu tư vào việc học tiếng Anh = invest in learning English.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 1659,
+      "word": "invitation",
+      "ipa": "ˌɪnvɪˈteɪʃən",
+      "viRead": "in-vi-TÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời mời, thiệp mời",
+      "exampleEn": "Thank you for the invitation to your party.",
+      "exampleVi": "Cảm ơn bạn đã mời mình dự tiệc.",
+      "collocations": [
+        {
+          "en": "wedding invitation",
+          "vi": "thiệp cưới"
+        },
+        {
+          "en": "accept an invitation",
+          "vi": "nhận lời mời"
+        }
+      ],
+      "family": [
+        {
+          "word": "invite",
+          "vi": "mời"
+        }
+      ],
+      "tip": "invite (động từ) → invitation (danh từ). decline an invitation = từ chối lời mời.",
+      "emoji": "💌",
       "stage": 2
     }
   ]
