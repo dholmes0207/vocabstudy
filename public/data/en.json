@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 1659,
+    "count": 1709,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -48437,6 +48437,1336 @@
       ],
       "tip": "invite (động từ) → invitation (danh từ). decline an invitation = từ chối lời mời.",
       "emoji": "💌",
+      "stage": 2
+    },
+    {
+      "id": 1660,
+      "word": "item",
+      "ipa": "ˈaɪtəm",
+      "viRead": "AI-tơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "món, mục, mặt hàng",
+      "exampleEn": "There are ten items on my shopping list.",
+      "exampleVi": "Danh sách mua sắm của tôi có mười món.",
+      "collocations": [
+        {
+          "en": "an item on the list",
+          "vi": "một mục trong danh sách"
+        },
+        {
+          "en": "lost items",
+          "vi": "đồ thất lạc"
+        }
+      ],
+      "tip": "item = một món/một mục trong danh sách. Đọc 'AI-tầm'.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 1661,
+      "word": "jacket",
+      "ipa": "ˈʤækɪt",
+      "viRead": "GIE-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo khoác",
+      "exampleEn": "Take a jacket, it might get cold.",
+      "exampleVi": "Mang theo áo khoác đi, có thể trời sẽ lạnh.",
+      "collocations": [
+        {
+          "en": "a leather jacket",
+          "vi": "áo khoác da"
+        },
+        {
+          "en": "put on your jacket",
+          "vi": "mặc áo khoác vào"
+        }
+      ],
+      "tip": "jacket = áo khoác ngắn/nhẹ; coat = áo khoác dài, dày.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 1662,
+      "word": "jail",
+      "ipa": "ʤeɪl",
+      "viRead": "GIÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà tù",
+      "exampleEn": "He spent two years in jail.",
+      "exampleVi": "Anh ta ngồi tù hai năm.",
+      "collocations": [
+        {
+          "en": "in jail",
+          "vi": "ở tù"
+        },
+        {
+          "en": "go to jail",
+          "vi": "vào tù"
+        }
+      ],
+      "tip": "jail = prison (Mỹ hay dùng jail). in jail (không có the).",
+      "emoji": "⛓️",
+      "stage": 2
+    },
+    {
+      "id": 1663,
+      "word": "jar",
+      "ipa": "ʤɑr",
+      "viRead": "GIAR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái lọ, hũ",
+      "exampleEn": "Put the cookies in a glass jar.",
+      "exampleVi": "Cho bánh quy vào lọ thủy tinh.",
+      "collocations": [
+        {
+          "en": "a jar of honey",
+          "vi": "một hũ mật ong"
+        },
+        {
+          "en": "glass jar",
+          "vi": "lọ thủy tinh"
+        }
+      ],
+      "tip": "a jar of + thứ đựng trong hũ: a jar of jam.",
+      "emoji": "🫙",
+      "stage": 2
+    },
+    {
+      "id": 1664,
+      "word": "jaw",
+      "ipa": "ʤɔ",
+      "viRead": "GIO",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hàm",
+      "exampleEn": "He broke his jaw in the accident.",
+      "exampleVi": "Anh ấy bị gãy hàm trong vụ tai nạn.",
+      "collocations": [
+        {
+          "en": "jaw-dropping",
+          "vi": "gây sửng sốt"
+        },
+        {
+          "en": "lower jaw",
+          "vi": "hàm dưới"
+        }
+      ],
+      "tip": "jaw-dropping = đẹp/bất ngờ đến há hốc mồm. aw đọc 'o': 'jo'.",
+      "emoji": "😮",
+      "stage": 2
+    },
+    {
+      "id": 1665,
+      "word": "jealous",
+      "ipa": "ˈʤɛləs",
+      "viRead": "GIE-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ghen tị",
+      "exampleEn": "My little brother is jealous of the new baby.",
+      "exampleVi": "Em trai tôi ghen tị với em bé mới sinh.",
+      "collocations": [
+        {
+          "en": "jealous of",
+          "vi": "ghen tị với"
+        },
+        {
+          "en": "feel jealous",
+          "vi": "thấy ghen tị"
+        }
+      ],
+      "family": [
+        {
+          "word": "jealousy",
+          "vi": "sự ghen tị"
+        }
+      ],
+      "tip": "jealous OF + người. ea đọc 'e': 'GIE-lợs'.",
+      "emoji": "😒",
+      "stage": 2
+    },
+    {
+      "id": 1666,
+      "word": "jeans",
+      "ipa": "ʤinz",
+      "viRead": "GIIND",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quần bò, quần jean",
+      "exampleEn": "He always wears jeans and a T-shirt.",
+      "exampleVi": "Anh ấy lúc nào cũng mặc quần jean và áo phông.",
+      "collocations": [
+        {
+          "en": "a pair of jeans",
+          "vi": "một chiếc quần jean"
+        },
+        {
+          "en": "blue jeans",
+          "vi": "quần bò xanh"
+        }
+      ],
+      "tip": "jeans luôn số nhiều: My jeans ARE new. Một cái = a pair of jeans.",
+      "emoji": "👖",
+      "stage": 2
+    },
+    {
+      "id": 1667,
+      "word": "jewelry",
+      "ipa": "ˈʤuəlri",
+      "viRead": "GIU-ơl-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ trang sức",
+      "exampleEn": "She doesn't wear much jewelry.",
+      "exampleVi": "Cô ấy không đeo nhiều trang sức.",
+      "collocations": [
+        {
+          "en": "gold jewelry",
+          "vi": "trang sức vàng"
+        },
+        {
+          "en": "a piece of jewelry",
+          "vi": "một món trang sức"
+        }
+      ],
+      "family": [
+        {
+          "word": "jewel",
+          "vi": "viên ngọc"
+        }
+      ],
+      "tip": "Mỹ: jewelry; Anh: jewellery. Không đếm được: a piece of jewelry.",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 1668,
+      "word": "journalist",
+      "ipa": "ˈʤərnəlɪst",
+      "viRead": "GIƠ-nơ-lơst",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà báo",
+      "exampleEn": "She works as a journalist for a newspaper.",
+      "exampleVi": "Cô ấy làm nhà báo cho một tờ báo.",
+      "collocations": [
+        {
+          "en": "a famous journalist",
+          "vi": "nhà báo nổi tiếng"
+        },
+        {
+          "en": "sports journalist",
+          "vi": "phóng viên thể thao"
+        }
+      ],
+      "family": [
+        {
+          "word": "journal",
+          "vi": "tạp chí; nhật ký"
+        }
+      ],
+      "tip": "journal (nhật ký/tạp chí) + ist = nhà báo. Đọc 'GIƠ-nơ-list'.",
+      "emoji": "📰",
+      "stage": 2
+    },
+    {
+      "id": 1669,
+      "word": "judge",
+      "ipa": "ʤʌʤ",
+      "viRead": "GIẮJ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "thẩm phán; giám khảo; đánh giá",
+      "exampleEn": "The judge said he was guilty.",
+      "exampleVi": "Thẩm phán tuyên anh ta có tội.",
+      "collocations": [
+        {
+          "en": "don't judge",
+          "vi": "đừng phán xét"
+        },
+        {
+          "en": "judge by appearance",
+          "vi": "đánh giá qua vẻ ngoài"
+        }
+      ],
+      "family": [
+        {
+          "word": "judgment",
+          "vi": "sự phán đoán"
+        }
+      ],
+      "tip": "d câm trong 'dg': 'giắj'. Don't judge a book by its cover.",
+      "emoji": "👨‍⚖️",
+      "stage": 2
+    },
+    {
+      "id": 1670,
+      "word": "jungle",
+      "ipa": "ˈʤəŋgəl",
+      "viRead": "GIƠNG-gơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rừng rậm",
+      "exampleEn": "Tigers live in the jungle.",
+      "exampleVi": "Hổ sống trong rừng rậm.",
+      "collocations": [
+        {
+          "en": "in the jungle",
+          "vi": "trong rừng rậm"
+        },
+        {
+          "en": "concrete jungle",
+          "vi": "rừng bê tông (thành phố)"
+        }
+      ],
+      "tip": "jungle = rừng nhiệt đới rậm rạp; forest = rừng nói chung.",
+      "emoji": "🌴",
+      "stage": 2
+    },
+    {
+      "id": 1671,
+      "word": "junior",
+      "ipa": "ˈʤunjər",
+      "viRead": "GIUN-yơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cấp dưới, trẻ hơn",
+      "exampleEn": "He is a junior member of the team.",
+      "exampleVi": "Anh ấy là thành viên cấp dưới trong nhóm.",
+      "collocations": [
+        {
+          "en": "junior staff",
+          "vi": "nhân viên cấp dưới"
+        },
+        {
+          "en": "junior high school",
+          "vi": "trường trung học cơ sở"
+        }
+      ],
+      "family": [
+        {
+          "word": "senior",
+          "vi": "cấp trên, lớn tuổi hơn"
+        }
+      ],
+      "tip": "junior ↔ senior. junior developer = lập trình viên mới vào nghề.",
+      "emoji": "🧑‍🎓",
+      "stage": 2
+    },
+    {
+      "id": 1672,
+      "word": "justice",
+      "ipa": "ˈʤəstɪs",
+      "viRead": "GIƠS-tơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công lý",
+      "exampleEn": "Everyone deserves justice.",
+      "exampleVi": "Ai cũng xứng đáng được hưởng công lý.",
+      "collocations": [
+        {
+          "en": "fight for justice",
+          "vi": "đấu tranh cho công lý"
+        },
+        {
+          "en": "social justice",
+          "vi": "công bằng xã hội"
+        }
+      ],
+      "family": [
+        {
+          "word": "just",
+          "vi": "công bằng"
+        }
+      ],
+      "tip": "Nhấn âm đầu: GIẮS-tis.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 1673,
+      "word": "keen",
+      "ipa": "kin",
+      "viRead": "KIN",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hăng hái, say mê",
+      "exampleEn": "She is keen on learning languages.",
+      "exampleVi": "Cô ấy say mê học ngoại ngữ.",
+      "collocations": [
+        {
+          "en": "keen on",
+          "vi": "thích, say mê"
+        },
+        {
+          "en": "a keen student",
+          "vi": "học sinh hăng hái"
+        }
+      ],
+      "tip": "keen on + V-ing (Anh) = rất thích: I'm keen on cooking.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 1674,
+      "word": "kettle",
+      "ipa": "ˈkɛtəl",
+      "viRead": "KE-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ấm đun nước",
+      "exampleEn": "Put the kettle on, let's have tea.",
+      "exampleVi": "Đun nước đi, mình pha trà.",
+      "collocations": [
+        {
+          "en": "boil the kettle",
+          "vi": "đun nước"
+        },
+        {
+          "en": "electric kettle",
+          "vi": "ấm siêu tốc"
+        }
+      ],
+      "tip": "Put the kettle on = Đun nước đi (người Anh nói trước khi pha trà).",
+      "emoji": "🫖",
+      "stage": 2
+    },
+    {
+      "id": 1675,
+      "word": "kit",
+      "ipa": "kɪt",
+      "viRead": "KIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ dụng cụ",
+      "exampleEn": "Keep a first aid kit in your car.",
+      "exampleVi": "Để một bộ sơ cứu trong xe.",
+      "collocations": [
+        {
+          "en": "first aid kit",
+          "vi": "hộp sơ cứu"
+        },
+        {
+          "en": "repair kit",
+          "vi": "bộ sửa chữa"
+        }
+      ],
+      "tip": "first aid kit = hộp thuốc sơ cứu.",
+      "emoji": "🧰",
+      "stage": 2
+    },
+    {
+      "id": 1676,
+      "word": "kneel",
+      "ipa": "nil",
+      "viRead": "NIL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "quỳ",
+      "exampleEn": "Please kneel down on the mat.",
+      "exampleVi": "Hãy quỳ xuống tấm thảm.",
+      "collocations": [
+        {
+          "en": "kneel down",
+          "vi": "quỳ xuống"
+        },
+        {
+          "en": "kneel on the floor",
+          "vi": "quỳ trên sàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "knee",
+          "vi": "đầu gối"
+        }
+      ],
+      "tip": "k câm: 'niil'. Quá khứ: knelt.",
+      "emoji": "🧎",
+      "stage": 2
+    },
+    {
+      "id": 1677,
+      "word": "knot",
+      "ipa": "nɑt",
+      "viRead": "NAT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nút thắt",
+      "exampleEn": "Tie a knot in the rope.",
+      "exampleVi": "Thắt một nút ở sợi dây.",
+      "collocations": [
+        {
+          "en": "tie a knot",
+          "vi": "thắt nút"
+        },
+        {
+          "en": "tie the knot",
+          "vi": "kết hôn"
+        }
+      ],
+      "tip": "k câm: 'not' — đọc giống not! tie the knot = kết hôn.",
+      "emoji": "🪢",
+      "stage": 2
+    },
+    {
+      "id": 1678,
+      "word": "label",
+      "ipa": "ˈleɪbəl",
+      "viRead": "LÂY-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhãn",
+      "exampleEn": "Read the label before you buy it.",
+      "exampleVi": "Đọc nhãn trước khi mua.",
+      "collocations": [
+        {
+          "en": "price label",
+          "vi": "nhãn giá"
+        },
+        {
+          "en": "food label",
+          "vi": "nhãn thực phẩm"
+        }
+      ],
+      "tip": "Đọc 'LÂY-bồ'. record label = hãng thu âm.",
+      "emoji": "🏷️",
+      "stage": 2
+    },
+    {
+      "id": 1679,
+      "word": "labor",
+      "ipa": "ˈleɪbər",
+      "viRead": "LÂY-bơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lao động",
+      "exampleEn": "The factory needs more labor.",
+      "exampleVi": "Nhà máy cần thêm lao động.",
+      "collocations": [
+        {
+          "en": "cheap labor",
+          "vi": "lao động giá rẻ"
+        },
+        {
+          "en": "Labor Day",
+          "vi": "Ngày Quốc tế Lao động"
+        }
+      ],
+      "tip": "Mỹ: labor; Anh: labour. Ngày 1/5 = International Labor Day.",
+      "emoji": "👷",
+      "stage": 2
+    },
+    {
+      "id": 1680,
+      "word": "lack",
+      "ipa": "læk",
+      "viRead": "LEK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự thiếu",
+      "exampleEn": "I'm tired because of a lack of sleep.",
+      "exampleVi": "Tôi mệt vì thiếu ngủ.",
+      "collocations": [
+        {
+          "en": "a lack of",
+          "vi": "sự thiếu"
+        },
+        {
+          "en": "lack of money",
+          "vi": "thiếu tiền"
+        }
+      ],
+      "tip": "lack (động từ) đi thẳng tân ngữ: He lacks experience ✓ (lacks of ✗). Danh từ: a lack OF.",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 1681,
+      "word": "lamb",
+      "ipa": "læm",
+      "viRead": "LEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cừu non; thịt cừu",
+      "exampleEn": "We had roast lamb for dinner.",
+      "exampleVi": "Bữa tối chúng tôi ăn thịt cừu nướng.",
+      "collocations": [
+        {
+          "en": "roast lamb",
+          "vi": "cừu nướng"
+        },
+        {
+          "en": "gentle as a lamb",
+          "vi": "hiền như cừu"
+        }
+      ],
+      "tip": "b CÂM: 'lem'. lamb = cừu con/thịt cừu non; sheep = con cừu.",
+      "emoji": "🐑",
+      "stage": 2
+    },
+    {
+      "id": 1682,
+      "word": "lamp",
+      "ipa": "læmp",
+      "viRead": "LEMP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái đèn (bàn, ngủ)",
+      "exampleEn": "Turn on the lamp, it's dark in here.",
+      "exampleVi": "Bật đèn lên, trong này tối quá.",
+      "collocations": [
+        {
+          "en": "desk lamp",
+          "vi": "đèn bàn"
+        },
+        {
+          "en": "turn on the lamp",
+          "vi": "bật đèn"
+        }
+      ],
+      "tip": "lamp = đèn (vật dụng); light = ánh sáng/đèn nói chung.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 1683,
+      "word": "landlord",
+      "ipa": "ˈlænˌdlɔrd",
+      "viRead": "LEN-đlorđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chủ nhà (cho thuê)",
+      "exampleEn": "I pay the rent to my landlord every month.",
+      "exampleVi": "Hằng tháng tôi trả tiền nhà cho chủ nhà.",
+      "collocations": [
+        {
+          "en": "my landlord",
+          "vi": "chủ nhà của tôi"
+        },
+        {
+          "en": "landlord and tenant",
+          "vi": "chủ nhà và người thuê"
+        }
+      ],
+      "family": [
+        {
+          "word": "tenant",
+          "vi": "người thuê"
+        }
+      ],
+      "tip": "landlord = chủ nhà cho thuê; tenant = người thuê nhà.",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 1684,
+      "word": "lane",
+      "ipa": "leɪn",
+      "viRead": "LÂYN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "làn đường; ngõ",
+      "exampleEn": "Stay in the right lane.",
+      "exampleVi": "Đi đúng làn bên phải.",
+      "collocations": [
+        {
+          "en": "bus lane",
+          "vi": "làn xe buýt"
+        },
+        {
+          "en": "a narrow lane",
+          "vi": "con ngõ hẹp"
+        }
+      ],
+      "tip": "lane = làn xe / ngõ nhỏ (ngõ trong địa chỉ Hà Nội có thể dịch là lane).",
+      "emoji": "🛣️",
+      "stage": 2
+    },
+    {
+      "id": 1685,
+      "word": "laptop",
+      "ipa": "ˈlæpˌtɑp",
+      "viRead": "LEP-tap",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy tính xách tay",
+      "exampleEn": "I do my homework on my laptop.",
+      "exampleVi": "Tôi làm bài tập trên máy tính xách tay.",
+      "collocations": [
+        {
+          "en": "a new laptop",
+          "vi": "laptop mới"
+        },
+        {
+          "en": "laptop bag",
+          "vi": "túi laptop"
+        }
+      ],
+      "tip": "lap (đùi) + top = máy tính để trên đùi.",
+      "emoji": "💻",
+      "stage": 2
+    },
+    {
+      "id": 1686,
+      "word": "latest",
+      "ipa": "ˈleɪtəst",
+      "viRead": "LÂY-tơst",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mới nhất",
+      "exampleEn": "Have you seen the latest news?",
+      "exampleVi": "Bạn xem tin mới nhất chưa?",
+      "collocations": [
+        {
+          "en": "the latest news",
+          "vi": "tin mới nhất"
+        },
+        {
+          "en": "at the latest",
+          "vi": "chậm nhất là"
+        }
+      ],
+      "family": [
+        {
+          "word": "late",
+          "vi": "muộn"
+        }
+      ],
+      "tip": "at the latest = chậm nhất: Send it by Friday at the latest.",
+      "emoji": "🆕",
+      "stage": 2
+    },
+    {
+      "id": 1687,
+      "word": "launch",
+      "ipa": "lɔnʧ",
+      "viRead": "LONCH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "ra mắt, phóng",
+      "exampleEn": "The company will launch a new phone next month.",
+      "exampleVi": "Công ty sẽ ra mắt điện thoại mới vào tháng sau.",
+      "collocations": [
+        {
+          "en": "launch a product",
+          "vi": "ra mắt sản phẩm"
+        },
+        {
+          "en": "launch a rocket",
+          "vi": "phóng tên lửa"
+        }
+      ],
+      "tip": "au đọc 'o': 'lonch'. product launch = buổi ra mắt sản phẩm.",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 1688,
+      "word": "lawn",
+      "ipa": "lɔn",
+      "viRead": "LON",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bãi cỏ",
+      "exampleEn": "The children are playing on the lawn.",
+      "exampleVi": "Bọn trẻ đang chơi trên bãi cỏ.",
+      "collocations": [
+        {
+          "en": "mow the lawn",
+          "vi": "cắt cỏ"
+        },
+        {
+          "en": "on the lawn",
+          "vi": "trên bãi cỏ"
+        }
+      ],
+      "tip": "aw đọc 'o': 'lon'. lawn = bãi cỏ được cắt tỉa.",
+      "emoji": "🌿",
+      "stage": 2
+    },
+    {
+      "id": 1689,
+      "word": "layer",
+      "ipa": "leɪər",
+      "viRead": "LÂY-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lớp",
+      "exampleEn": "Wear a few layers when it's cold.",
+      "exampleVi": "Mặc vài lớp áo khi trời lạnh.",
+      "collocations": [
+        {
+          "en": "a thin layer",
+          "vi": "một lớp mỏng"
+        },
+        {
+          "en": "layers of clothes",
+          "vi": "nhiều lớp áo"
+        }
+      ],
+      "tip": "layer cake = bánh nhiều tầng. Đọc 'LÂY-ơ'.",
+      "emoji": "🍰",
+      "stage": 2
+    },
+    {
+      "id": 1690,
+      "word": "lecture",
+      "ipa": "ˈlɛkʧər",
+      "viRead": "LEK-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài giảng",
+      "exampleEn": "I have a two-hour lecture this afternoon.",
+      "exampleVi": "Chiều nay tôi có bài giảng hai tiếng.",
+      "collocations": [
+        {
+          "en": "give a lecture",
+          "vi": "giảng bài"
+        },
+        {
+          "en": "attend a lecture",
+          "vi": "dự bài giảng"
+        }
+      ],
+      "family": [
+        {
+          "word": "lecturer",
+          "vi": "giảng viên"
+        }
+      ],
+      "tip": "lecturer = giảng viên đại học. Đọc 'LEK-chơ'.",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 1691,
+      "word": "leisure",
+      "ipa": "ˈlɛʒər",
+      "viRead": "LE-zhơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thời gian rảnh, giải trí",
+      "exampleEn": "What do you do in your leisure time?",
+      "exampleVi": "Lúc rảnh bạn làm gì?",
+      "collocations": [
+        {
+          "en": "leisure time",
+          "vi": "thời gian rảnh"
+        },
+        {
+          "en": "at your leisure",
+          "vi": "lúc nào tiện"
+        }
+      ],
+      "tip": "Mỹ đọc 'LI-zhơ', Anh đọc 'LE-zhơ'. leisure = free time (trang trọng hơn).",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 1692,
+      "word": "lemon",
+      "ipa": "ˈlɛmən",
+      "viRead": "LE-mơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả chanh vàng",
+      "exampleEn": "I'd like hot water with lemon, please.",
+      "exampleVi": "Cho tôi nước ấm với chanh nhé.",
+      "collocations": [
+        {
+          "en": "lemon juice",
+          "vi": "nước chanh"
+        },
+        {
+          "en": "lemon tea",
+          "vi": "trà chanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "lemonade",
+          "vi": "nước chanh"
+        }
+      ],
+      "tip": "lemon = chanh vàng; lime = chanh xanh (loại người Việt hay dùng).",
+      "emoji": "🍋",
+      "stage": 2
+    },
+    {
+      "id": 1693,
+      "word": "length",
+      "ipa": "lɛŋθ",
+      "viRead": "LENGKTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiều dài",
+      "exampleEn": "What is the length of this room?",
+      "exampleVi": "Căn phòng này dài bao nhiêu?",
+      "collocations": [
+        {
+          "en": "the length of",
+          "vi": "chiều dài của"
+        },
+        {
+          "en": "at length",
+          "vi": "một cách chi tiết"
+        }
+      ],
+      "family": [
+        {
+          "word": "long",
+          "vi": "dài"
+        }
+      ],
+      "tip": "long → length (như strong → strength, wide → width). ng + th: 'lengkth'.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 1694,
+      "word": "lens",
+      "ipa": "lɛnz",
+      "viRead": "LEND",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ống kính; tròng kính",
+      "exampleEn": "I need to clean my camera lens.",
+      "exampleVi": "Tôi cần lau ống kính máy ảnh.",
+      "collocations": [
+        {
+          "en": "contact lens",
+          "vi": "kính áp tròng"
+        },
+        {
+          "en": "camera lens",
+          "vi": "ống kính máy ảnh"
+        }
+      ],
+      "tip": "contact lenses = kính áp tròng. Số nhiều: lenses.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 1695,
+      "word": "lesson",
+      "ipa": "ˈlɛsən",
+      "viRead": "LE-sơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài học",
+      "exampleEn": "Today's English lesson was about food.",
+      "exampleVi": "Bài học tiếng Anh hôm nay về đồ ăn.",
+      "collocations": [
+        {
+          "en": "take lessons",
+          "vi": "học (có thầy)"
+        },
+        {
+          "en": "learn a lesson",
+          "vi": "rút ra bài học"
+        }
+      ],
+      "tip": "lesson (bài học) đọc giống lessen (giảm bớt). learn your lesson = rút kinh nghiệm.",
+      "emoji": "📘",
+      "stage": 2
+    },
+    {
+      "id": 1696,
+      "word": "license",
+      "ipa": "ˈlaɪsəns",
+      "viRead": "LAI-sơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giấy phép",
+      "exampleEn": "You need a driving license to drive a car.",
+      "exampleVi": "Bạn cần bằng lái để lái ô tô.",
+      "collocations": [
+        {
+          "en": "driving license",
+          "vi": "bằng lái xe"
+        },
+        {
+          "en": "business license",
+          "vi": "giấy phép kinh doanh"
+        }
+      ],
+      "tip": "Mỹ: license (danh từ và động từ); Anh: licence (danh từ). Đọc 'LAI-sần(s)'.",
+      "emoji": "🪪",
+      "stage": 2
+    },
+    {
+      "id": 1697,
+      "word": "lid",
+      "ipa": "lɪd",
+      "viRead": "LIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái nắp",
+      "exampleEn": "Put the lid on the pot.",
+      "exampleVi": "Đậy nắp nồi lại.",
+      "collocations": [
+        {
+          "en": "put the lid on",
+          "vi": "đậy nắp"
+        },
+        {
+          "en": "take the lid off",
+          "vi": "mở nắp"
+        }
+      ],
+      "family": [
+        {
+          "word": "eyelid",
+          "vi": "mí mắt"
+        }
+      ],
+      "tip": "eyelid = mí mắt (nắp của mắt!).",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 1698,
+      "word": "lifestyle",
+      "ipa": "ˈlaɪfˌstaɪl",
+      "viRead": "LAIPH-stail",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lối sống",
+      "exampleEn": "A healthy lifestyle helps you live longer.",
+      "exampleVi": "Lối sống lành mạnh giúp bạn sống lâu hơn.",
+      "collocations": [
+        {
+          "en": "a healthy lifestyle",
+          "vi": "lối sống lành mạnh"
+        },
+        {
+          "en": "change your lifestyle",
+          "vi": "thay đổi lối sống"
+        }
+      ],
+      "family": [
+        {
+          "word": "life",
+          "vi": "cuộc sống"
+        }
+      ],
+      "tip": "life (cuộc sống) + style (phong cách) = lối sống.",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 1699,
+      "word": "lightning",
+      "ipa": "ˈlaɪtnɪŋ",
+      "viRead": "LAIT-ning",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tia chớp",
+      "exampleEn": "The tree was hit by lightning.",
+      "exampleVi": "Cái cây bị sét đánh.",
+      "collocations": [
+        {
+          "en": "thunder and lightning",
+          "vi": "sấm và chớp"
+        },
+        {
+          "en": "lightning fast",
+          "vi": "nhanh như chớp"
+        }
+      ],
+      "family": [
+        {
+          "word": "light",
+          "vi": "ánh sáng"
+        }
+      ],
+      "tip": "lightning (chớp, không có e) ≠ lightening (làm sáng). thunder = sấm.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 1700,
+      "word": "likely",
+      "ipa": "ˈlaɪkli",
+      "viRead": "LAIK-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có khả năng xảy ra",
+      "exampleEn": "It's likely to rain this afternoon.",
+      "exampleVi": "Chiều nay có khả năng mưa.",
+      "collocations": [
+        {
+          "en": "be likely to",
+          "vi": "có khả năng"
+        },
+        {
+          "en": "most likely",
+          "vi": "rất có thể"
+        }
+      ],
+      "family": [
+        {
+          "word": "like",
+          "vi": "thích; giống"
+        },
+        {
+          "word": "unlikely",
+          "vi": "khó xảy ra"
+        }
+      ],
+      "tip": "likely là TÍNH TỪ (dù có đuôi -ly): It's likely to rain. unlikely = khó xảy ra.",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 1701,
+      "word": "lip",
+      "ipa": "lɪp",
+      "viRead": "LIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môi",
+      "exampleEn": "She has red lips.",
+      "exampleVi": "Cô ấy có đôi môi đỏ.",
+      "collocations": [
+        {
+          "en": "bite your lip",
+          "vi": "cắn môi"
+        },
+        {
+          "en": "lip balm",
+          "vi": "son dưỡng"
+        }
+      ],
+      "family": [
+        {
+          "word": "lipstick",
+          "vi": "son môi"
+        }
+      ],
+      "tip": "lip + stick = son môi. My lips are sealed = Tôi sẽ giữ bí mật.",
+      "emoji": "👄",
+      "stage": 2
+    },
+    {
+      "id": 1702,
+      "word": "literature",
+      "ipa": "ˈlɪtərəʧər",
+      "viRead": "LI-tơ-ơ-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "văn học",
+      "exampleEn": "She studies English literature at university.",
+      "exampleVi": "Cô ấy học văn học Anh ở đại học.",
+      "collocations": [
+        {
+          "en": "English literature",
+          "vi": "văn học Anh"
+        },
+        {
+          "en": "classic literature",
+          "vi": "văn học kinh điển"
+        }
+      ],
+      "tip": "Đọc 'LI-tơ-rơ-chơ'. Môn Ngữ văn = Literature.",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 1703,
+      "word": "litter",
+      "ipa": "ˈlɪtər",
+      "viRead": "LI-tơ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "rác vứt bừa",
+      "exampleEn": "Please don't drop litter in the park.",
+      "exampleVi": "Làm ơn đừng xả rác trong công viên.",
+      "collocations": [
+        {
+          "en": "drop litter",
+          "vi": "xả rác"
+        },
+        {
+          "en": "no littering",
+          "vi": "cấm xả rác"
+        }
+      ],
+      "tip": "litter = rác vứt bừa ngoài đường. No littering = Cấm xả rác.",
+      "emoji": "🚯",
+      "stage": 2
+    },
+    {
+      "id": 1704,
+      "word": "loaf",
+      "ipa": "loʊf",
+      "viRead": "LÂUPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ổ (bánh mì)",
+      "exampleEn": "I bought a loaf of bread for breakfast.",
+      "exampleVi": "Tôi mua một ổ bánh mì cho bữa sáng.",
+      "collocations": [
+        {
+          "en": "a loaf of bread",
+          "vi": "một ổ bánh mì"
+        },
+        {
+          "en": "two loaves",
+          "vi": "hai ổ"
+        }
+      ],
+      "tip": "Số nhiều: loaves (f → ves). a loaf of bread = một ổ bánh mì.",
+      "emoji": "🍞",
+      "stage": 2
+    },
+    {
+      "id": 1705,
+      "word": "lobby",
+      "ipa": "ˈlɑbi",
+      "viRead": "LA-bi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sảnh",
+      "exampleEn": "Let's meet in the hotel lobby at 8.",
+      "exampleVi": "8 giờ gặp nhau ở sảnh khách sạn nhé.",
+      "collocations": [
+        {
+          "en": "hotel lobby",
+          "vi": "sảnh khách sạn"
+        },
+        {
+          "en": "in the lobby",
+          "vi": "ở sảnh"
+        }
+      ],
+      "tip": "lobby = sảnh chờ (khách sạn, tòa nhà).",
+      "emoji": "🏨",
+      "stage": 2
+    },
+    {
+      "id": 1706,
+      "word": "location",
+      "ipa": "loʊˈkeɪʃən",
+      "viRead": "lâu-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vị trí, địa điểm",
+      "exampleEn": "The hotel is in a great location.",
+      "exampleVi": "Khách sạn ở vị trí rất đẹp.",
+      "collocations": [
+        {
+          "en": "a great location",
+          "vi": "vị trí đẹp"
+        },
+        {
+          "en": "share your location",
+          "vi": "chia sẻ vị trí"
+        }
+      ],
+      "family": [
+        {
+          "word": "locate",
+          "vi": "định vị"
+        }
+      ],
+      "tip": "share your location = gửi định vị. Nhấn âm hai: lâu-KÂY-shần.",
+      "emoji": "📍",
+      "stage": 2
+    },
+    {
+      "id": 1707,
+      "word": "loose",
+      "ipa": "lus",
+      "viRead": "LUS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lỏng, rộng",
+      "exampleEn": "These trousers are a bit loose.",
+      "exampleVi": "Chiếc quần này hơi rộng.",
+      "collocations": [
+        {
+          "en": "loose clothes",
+          "vi": "quần áo rộng"
+        },
+        {
+          "en": "a loose tooth",
+          "vi": "răng lung lay"
+        }
+      ],
+      "family": [
+        {
+          "word": "loosen",
+          "vi": "nới lỏng"
+        }
+      ],
+      "tip": "loose (lỏng, đọc 'lus') ≠ lose (mất, đọc 'luz'). Rất hay viết nhầm!",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 1708,
+      "word": "loss",
+      "ipa": "lɔs",
+      "viRead": "LOS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự mất mát; thua lỗ",
+      "exampleEn": "I'm so sorry for your loss.",
+      "exampleVi": "Tôi rất tiếc về sự mất mát của bạn.",
+      "collocations": [
+        {
+          "en": "weight loss",
+          "vi": "giảm cân"
+        },
+        {
+          "en": "make a loss",
+          "vi": "thua lỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "lose",
+          "vi": "mất"
+        }
+      ],
+      "tip": "I'm sorry for your loss = câu chia buồn. lose (động từ) → loss (danh từ).",
+      "emoji": "💔",
+      "stage": 2
+    },
+    {
+      "id": 1709,
+      "word": "luxury",
+      "ipa": "ˈləgʒəri",
+      "viRead": "LƠG-zhơ-i",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự xa xỉ",
+      "exampleEn": "They stayed in a luxury hotel.",
+      "exampleVi": "Họ ở một khách sạn sang trọng.",
+      "collocations": [
+        {
+          "en": "luxury hotel",
+          "vi": "khách sạn hạng sang"
+        },
+        {
+          "en": "a luxury car",
+          "vi": "xe hạng sang"
+        }
+      ],
+      "family": [
+        {
+          "word": "luxurious",
+          "vi": "xa hoa"
+        }
+      ],
+      "tip": "x đọc 'kzh' hoặc 'ksh': 'LẮK-shơ-ri'. luxury brand = thương hiệu xa xỉ.",
+      "emoji": "💎",
       "stage": 2
     }
   ]
