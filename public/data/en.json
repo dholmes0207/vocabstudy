@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2993,
+    "count": 3041,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -84857,6 +84857,1212 @@
       ],
       "tip": "whereas = while (đối lập hai vế).",
       "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2994,
+      "word": "apron",
+      "ipa": "ˈeɪprən",
+      "viRead": "ÂY-prơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tạp dề",
+      "exampleEn": "Put on an apron before you cook.",
+      "exampleVi": "Đeo tạp dề trước khi nấu ăn.",
+      "collocations": [
+        {
+          "en": "wear an apron",
+          "vi": "đeo tạp dề"
+        },
+        {
+          "en": "kitchen apron",
+          "vi": "tạp dề nhà bếp"
+        }
+      ],
+      "tip": "Đọc 'ÂY-prần'.",
+      "emoji": "🧑‍🍳",
+      "stage": 2
+    },
+    {
+      "id": 2995,
+      "word": "ginger",
+      "ipa": "ˈʤɪnʤər",
+      "viRead": "GIN-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gừng",
+      "exampleEn": "Ginger tea is good for a cold.",
+      "exampleVi": "Trà gừng tốt khi bị cảm.",
+      "collocations": [
+        {
+          "en": "ginger tea",
+          "vi": "trà gừng"
+        },
+        {
+          "en": "fresh ginger",
+          "vi": "gừng tươi"
+        }
+      ],
+      "tip": "ginger (adj) = tóc màu đỏ cam (ginger hair).",
+      "emoji": "🫚",
+      "stage": 2
+    },
+    {
+      "id": 2996,
+      "word": "lettuce",
+      "ipa": "ˈlɛtəs",
+      "viRead": "LE-tơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rau xà lách",
+      "exampleEn": "Wrap the meat in a lettuce leaf.",
+      "exampleVi": "Cuốn thịt trong lá xà lách.",
+      "collocations": [
+        {
+          "en": "a lettuce leaf",
+          "vi": "lá xà lách"
+        },
+        {
+          "en": "fresh lettuce",
+          "vi": "xà lách tươi"
+        }
+      ],
+      "tip": "Đọc 'LE-tợs' (không phải 'lét-tu-xờ').",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 2997,
+      "word": "spinach",
+      "ipa": "ˈspɪnəʧ",
+      "viRead": "SPI-nơch",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rau chân vịt, cải bó xôi",
+      "exampleEn": "Popeye eats spinach to get strong.",
+      "exampleVi": "Thủy thủ Popeye ăn rau chân vịt để khỏe.",
+      "collocations": [
+        {
+          "en": "spinach soup",
+          "vi": "canh cải bó xôi"
+        },
+        {
+          "en": "fresh spinach",
+          "vi": "rau chân vịt tươi"
+        }
+      ],
+      "tip": "Đọc 'SPI-nịch'.",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 2998,
+      "word": "cucumber",
+      "ipa": "ˈkjukəmbər",
+      "viRead": "KYU-kơm-bơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dưa chuột",
+      "exampleEn": "I like cucumber with my rice.",
+      "exampleVi": "Tôi thích ăn dưa chuột với cơm.",
+      "collocations": [
+        {
+          "en": "sliced cucumber",
+          "vi": "dưa chuột thái lát"
+        },
+        {
+          "en": "cool as a cucumber",
+          "vi": "bình tĩnh như không"
+        }
+      ],
+      "tip": "cool as a cucumber = cực kỳ bình tĩnh.",
+      "emoji": "🥒",
+      "stage": 2
+    },
+    {
+      "id": 2999,
+      "word": "broccoli",
+      "ipa": "ˈbrɑkəli",
+      "viRead": "BRA-kơ-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bông cải xanh",
+      "exampleEn": "Kids often don't like broccoli.",
+      "exampleVi": "Trẻ con thường không thích bông cải xanh.",
+      "collocations": [
+        {
+          "en": "steamed broccoli",
+          "vi": "bông cải hấp"
+        },
+        {
+          "en": "broccoli soup",
+          "vi": "súp bông cải"
+        }
+      ],
+      "tip": "Chính tả: 2 c, 1 l.",
+      "emoji": "🥦",
+      "stage": 2
+    },
+    {
+      "id": 3000,
+      "word": "avocado",
+      "ipa": "ˌævəˈkɑdoʊ",
+      "viRead": "e-vơ-KA-đâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả bơ",
+      "exampleEn": "I love avocado smoothies.",
+      "exampleVi": "Tôi mê sinh tố bơ.",
+      "collocations": [
+        {
+          "en": "avocado smoothie",
+          "vi": "sinh tố bơ"
+        },
+        {
+          "en": "ripe avocado",
+          "vi": "bơ chín"
+        }
+      ],
+      "tip": "butter = bơ (từ sữa); avocado = quả bơ.",
+      "emoji": "🥑",
+      "stage": 2
+    },
+    {
+      "id": 3001,
+      "word": "coconut",
+      "ipa": "ˈkoʊkəˌnət",
+      "viRead": "KÂU-kơ-nơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả dừa",
+      "exampleEn": "Ben Tre is famous for coconuts.",
+      "exampleVi": "Bến Tre nổi tiếng về dừa.",
+      "collocations": [
+        {
+          "en": "coconut water",
+          "vi": "nước dừa"
+        },
+        {
+          "en": "coconut milk",
+          "vi": "nước cốt dừa"
+        }
+      ],
+      "tip": "coconut water = nước dừa tươi.",
+      "emoji": "🥥",
+      "stage": 2
+    },
+    {
+      "id": 3002,
+      "word": "lime",
+      "ipa": "laɪm",
+      "viRead": "LAIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chanh (xanh)",
+      "exampleEn": "Squeeze some lime on your pho.",
+      "exampleVi": "Vắt chút chanh vào phở.",
+      "collocations": [
+        {
+          "en": "lime juice",
+          "vi": "nước cốt chanh"
+        },
+        {
+          "en": "a slice of lime",
+          "vi": "lát chanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "lemon",
+          "vi": "chanh vàng"
+        }
+      ],
+      "tip": "Chanh xanh Việt Nam = lime; lemon = chanh vàng.",
+      "emoji": "🍋‍🟩",
+      "stage": 2
+    },
+    {
+      "id": 3003,
+      "word": "mango",
+      "ipa": "ˈmæŋgoʊ",
+      "viRead": "MENG-gâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả xoài",
+      "exampleEn": "Cat Chu mangoes are very sweet.",
+      "exampleVi": "Xoài cát Chu rất ngọt.",
+      "collocations": [
+        {
+          "en": "ripe mango",
+          "vi": "xoài chín"
+        },
+        {
+          "en": "mango sticky rice",
+          "vi": "xôi xoài"
+        }
+      ],
+      "tip": "Số nhiều: mangoes.",
+      "emoji": "🥭",
+      "stage": 2
+    },
+    {
+      "id": 3004,
+      "word": "papaya",
+      "ipa": "pəˈpaɪə",
+      "viRead": "pơ-PAI-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đu đủ",
+      "exampleEn": "Green papaya salad is delicious.",
+      "exampleVi": "Gỏi đu đủ xanh rất ngon.",
+      "collocations": [
+        {
+          "en": "green papaya",
+          "vi": "đu đủ xanh"
+        },
+        {
+          "en": "papaya salad",
+          "vi": "gỏi đu đủ"
+        }
+      ],
+      "tip": "Đọc 'pơ-PAI-ơ'.",
+      "emoji": "🥗",
+      "stage": 2
+    },
+    {
+      "id": 3005,
+      "word": "pineapple",
+      "ipa": "ˈpaɪˌnæpəl",
+      "viRead": "PAI-ne-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả dứa",
+      "exampleEn": "Pineapple is sweet and a little sour.",
+      "exampleVi": "Dứa ngọt và hơi chua.",
+      "collocations": [
+        {
+          "en": "pineapple juice",
+          "vi": "nước ép dứa"
+        },
+        {
+          "en": "fresh pineapple",
+          "vi": "dứa tươi"
+        }
+      ],
+      "tip": "pine (thông) + apple — vì trông giống quả thông!",
+      "emoji": "🍍",
+      "stage": 2
+    },
+    {
+      "id": 3006,
+      "word": "grape",
+      "ipa": "greɪp",
+      "viRead": "GRÂYP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả nho",
+      "exampleEn": "Ninh Thuan grows a lot of grapes.",
+      "exampleVi": "Ninh Thuận trồng rất nhiều nho.",
+      "collocations": [
+        {
+          "en": "a bunch of grapes",
+          "vi": "chùm nho"
+        },
+        {
+          "en": "grape juice",
+          "vi": "nước nho"
+        }
+      ],
+      "tip": "raisin = nho khô; wine = rượu vang.",
+      "emoji": "🍇",
+      "stage": 2
+    },
+    {
+      "id": 3007,
+      "word": "cherry",
+      "ipa": "ˈʧɛri",
+      "viRead": "CHE-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả anh đào",
+      "exampleEn": "This cake has a cherry on top.",
+      "exampleVi": "Chiếc bánh này có quả anh đào ở trên.",
+      "collocations": [
+        {
+          "en": "cherry blossom",
+          "vi": "hoa anh đào"
+        },
+        {
+          "en": "cherry tomato",
+          "vi": "cà chua bi"
+        }
+      ],
+      "tip": "the cherry on top = điều tuyệt vời thêm vào.",
+      "emoji": "🍒",
+      "stage": 2
+    },
+    {
+      "id": 3008,
+      "word": "peach",
+      "ipa": "piʧ",
+      "viRead": "PICH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả đào",
+      "exampleEn": "Peach blossoms are a symbol of Tet in the North.",
+      "exampleVi": "Hoa đào là biểu tượng Tết ở miền Bắc.",
+      "collocations": [
+        {
+          "en": "peach blossom",
+          "vi": "hoa đào"
+        },
+        {
+          "en": "peach juice",
+          "vi": "nước đào"
+        }
+      ],
+      "tip": "peach blossom = hoa đào (Tết miền Bắc); apricot blossom = hoa mai.",
+      "emoji": "🍑",
+      "stage": 2
+    },
+    {
+      "id": 3009,
+      "word": "plum",
+      "ipa": "pləm",
+      "viRead": "PLƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả mận",
+      "exampleEn": "These plums are very sour.",
+      "exampleVi": "Những quả mận này rất chua.",
+      "collocations": [
+        {
+          "en": "plum tree",
+          "vi": "cây mận"
+        },
+        {
+          "en": "dried plum",
+          "vi": "ô mai mận"
+        }
+      ],
+      "tip": "Mận Sơn La, mận Bắc = plums.",
+      "emoji": "🫐",
+      "stage": 2
+    },
+    {
+      "id": 3010,
+      "word": "strawberry",
+      "ipa": "ˈstrɔˌbɛri",
+      "viRead": "STRO-be-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dâu tây",
+      "exampleEn": "Da Lat is famous for strawberries.",
+      "exampleVi": "Đà Lạt nổi tiếng về dâu tây.",
+      "collocations": [
+        {
+          "en": "strawberry jam",
+          "vi": "mứt dâu"
+        },
+        {
+          "en": "fresh strawberry",
+          "vi": "dâu tây tươi"
+        }
+      ],
+      "tip": "straw + berry. Số nhiều: strawberries.",
+      "emoji": "🍓",
+      "stage": 2
+    },
+    {
+      "id": 3011,
+      "word": "tofu",
+      "ipa": "ˈtoʊfu",
+      "viRead": "TÂU-phu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đậu phụ",
+      "exampleEn": "Fried tofu with tomato sauce is a classic dish.",
+      "exampleVi": "Đậu phụ sốt cà chua là món kinh điển.",
+      "collocations": [
+        {
+          "en": "fried tofu",
+          "vi": "đậu phụ rán"
+        },
+        {
+          "en": "soft tofu",
+          "vi": "đậu phụ non"
+        }
+      ],
+      "tip": "tofu = đậu phụ (Mỹ gọi bean curd).",
+      "emoji": "🧈",
+      "stage": 2
+    },
+    {
+      "id": 3012,
+      "word": "shrimp",
+      "ipa": "ʃrɪmp",
+      "viRead": "SHRIMP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con tôm",
+      "exampleEn": "Grilled shrimp is my favorite.",
+      "exampleVi": "Tôm nướng là món tôi thích nhất.",
+      "collocations": [
+        {
+          "en": "grilled shrimp",
+          "vi": "tôm nướng"
+        },
+        {
+          "en": "shrimp paste",
+          "vi": "mắm tôm"
+        }
+      ],
+      "tip": "shrimp paste = mắm tôm. Số nhiều: shrimp hoặc shrimps.",
+      "emoji": "🦐",
+      "stage": 2
+    },
+    {
+      "id": 3013,
+      "word": "squid",
+      "ipa": "skwɪd",
+      "viRead": "SKWIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con mực",
+      "exampleEn": "We ate grilled squid by the sea.",
+      "exampleVi": "Chúng tôi ăn mực nướng bên bờ biển.",
+      "collocations": [
+        {
+          "en": "grilled squid",
+          "vi": "mực nướng"
+        },
+        {
+          "en": "dried squid",
+          "vi": "mực khô"
+        }
+      ],
+      "tip": "squid = mực ống; octopus = bạch tuộc.",
+      "emoji": "🦑",
+      "stage": 2
+    },
+    {
+      "id": 3014,
+      "word": "oyster",
+      "ipa": "ˈɔɪstər",
+      "viRead": "OIS-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con hàu",
+      "exampleEn": "Grilled oysters with onion oil are popular.",
+      "exampleVi": "Hàu nướng mỡ hành rất được ưa chuộng.",
+      "collocations": [
+        {
+          "en": "grilled oysters",
+          "vi": "hàu nướng"
+        },
+        {
+          "en": "oyster sauce",
+          "vi": "dầu hào"
+        }
+      ],
+      "tip": "oyster sauce = dầu hào.",
+      "emoji": "🦪",
+      "stage": 2
+    },
+    {
+      "id": 3015,
+      "word": "seafood",
+      "ipa": "ˈsiˌfud",
+      "viRead": "SI-phuđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hải sản",
+      "exampleEn": "Vung Tau has fresh seafood.",
+      "exampleVi": "Vũng Tàu có hải sản tươi.",
+      "collocations": [
+        {
+          "en": "fresh seafood",
+          "vi": "hải sản tươi"
+        },
+        {
+          "en": "seafood restaurant",
+          "vi": "nhà hàng hải sản"
+        }
+      ],
+      "tip": "sea + food. Không đếm được.",
+      "emoji": "🦀",
+      "stage": 2
+    },
+    {
+      "id": 3016,
+      "word": "beef",
+      "ipa": "bif",
+      "viRead": "BIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thịt bò",
+      "exampleEn": "Pho is usually made with beef.",
+      "exampleVi": "Phở thường nấu với thịt bò.",
+      "collocations": [
+        {
+          "en": "beef noodle soup",
+          "vi": "phở bò"
+        },
+        {
+          "en": "ground beef",
+          "vi": "thịt bò xay"
+        }
+      ],
+      "family": [
+        {
+          "word": "cow",
+          "vi": "con bò"
+        }
+      ],
+      "tip": "cow (con bò) – beef (thịt bò).",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 3017,
+      "word": "pork",
+      "ipa": "pɔrk",
+      "viRead": "PORK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thịt lợn",
+      "exampleEn": "Bun cha is made with grilled pork.",
+      "exampleVi": "Bún chả làm từ thịt lợn nướng.",
+      "collocations": [
+        {
+          "en": "grilled pork",
+          "vi": "thịt lợn nướng"
+        },
+        {
+          "en": "pork belly",
+          "vi": "ba chỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "pig",
+          "vi": "con lợn"
+        }
+      ],
+      "tip": "pig (con lợn) – pork (thịt lợn).",
+      "emoji": "🥓",
+      "stage": 2
+    },
+    {
+      "id": 3018,
+      "word": "bacon",
+      "ipa": "ˈbeɪkən",
+      "viRead": "BÂY-kơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thịt xông khói",
+      "exampleEn": "I had bacon and eggs for breakfast.",
+      "exampleVi": "Tôi ăn thịt xông khói và trứng cho bữa sáng.",
+      "collocations": [
+        {
+          "en": "bacon and eggs",
+          "vi": "thịt xông khói và trứng"
+        },
+        {
+          "en": "crispy bacon",
+          "vi": "thịt xông khói giòn"
+        }
+      ],
+      "tip": "bring home the bacon = kiếm tiền nuôi gia đình.",
+      "emoji": "🥓",
+      "stage": 2
+    },
+    {
+      "id": 3019,
+      "word": "ham",
+      "ipa": "hæm",
+      "viRead": "HEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giăm bông",
+      "exampleEn": "I made a ham sandwich.",
+      "exampleVi": "Tôi làm bánh mì kẹp giăm bông.",
+      "collocations": [
+        {
+          "en": "ham sandwich",
+          "vi": "bánh mì kẹp giăm bông"
+        },
+        {
+          "en": "a slice of ham",
+          "vi": "lát giăm bông"
+        }
+      ],
+      "tip": "ham = thịt đùi lợn muối (giăm bông).",
+      "emoji": "🍖",
+      "stage": 2
+    },
+    {
+      "id": 3020,
+      "word": "steak",
+      "ipa": "steɪk",
+      "viRead": "STÂYK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bít tết",
+      "exampleEn": "How would you like your steak?",
+      "exampleVi": "Bạn muốn bít tết chín mức nào?",
+      "collocations": [
+        {
+          "en": "beef steak",
+          "vi": "bò bít tết"
+        },
+        {
+          "en": "rare steak",
+          "vi": "bít tết tái"
+        }
+      ],
+      "tip": "ea đọc 'ây': 'stâyk' (giống stake).",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 3021,
+      "word": "omelette",
+      "ipa": "ˈɑmlət",
+      "viRead": "AM-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trứng tráng",
+      "exampleEn": "She made an omelette with onions.",
+      "exampleVi": "Cô ấy làm món trứng tráng hành.",
+      "collocations": [
+        {
+          "en": "cheese omelette",
+          "vi": "trứng tráng phô mai"
+        },
+        {
+          "en": "make an omelette",
+          "vi": "làm trứng tráng"
+        }
+      ],
+      "family": [
+        {
+          "word": "egg",
+          "vi": "trứng"
+        }
+      ],
+      "tip": "Mỹ viết omelet. Đọc 'AM-lơt'.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 3022,
+      "word": "pancake",
+      "ipa": "ˈpænˌkeɪk",
+      "viRead": "PEN-kâyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh kếp",
+      "exampleEn": "We had pancakes with honey.",
+      "exampleVi": "Chúng tôi ăn bánh kếp với mật ong.",
+      "collocations": [
+        {
+          "en": "banana pancake",
+          "vi": "bánh kếp chuối"
+        },
+        {
+          "en": "pancake day",
+          "vi": "ngày bánh kếp"
+        }
+      ],
+      "tip": "pan (chảo) + cake. Bánh xèo đôi khi được gọi là Vietnamese pancake.",
+      "emoji": "🥞",
+      "stage": 2
+    },
+    {
+      "id": 3023,
+      "word": "cereal",
+      "ipa": "ˈsɪriəl",
+      "viRead": "SI-ri-ơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngũ cốc (ăn sáng)",
+      "exampleEn": "My kids eat cereal with milk.",
+      "exampleVi": "Con tôi ăn ngũ cốc với sữa.",
+      "collocations": [
+        {
+          "en": "breakfast cereal",
+          "vi": "ngũ cốc ăn sáng"
+        },
+        {
+          "en": "a bowl of cereal",
+          "vi": "một bát ngũ cốc"
+        }
+      ],
+      "tip": "cereal đọc giống serial (nối tiếp).",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 3024,
+      "word": "yogurt",
+      "ipa": "ˈjoʊgərt",
+      "viRead": "YÂU-gơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sữa chua",
+      "exampleEn": "I eat yogurt every day.",
+      "exampleVi": "Tôi ăn sữa chua mỗi ngày.",
+      "collocations": [
+        {
+          "en": "plain yogurt",
+          "vi": "sữa chua không đường"
+        },
+        {
+          "en": "yogurt drink",
+          "vi": "sữa chua uống"
+        }
+      ],
+      "tip": "Anh viết yoghurt. Đọc 'YÂU-gơt'.",
+      "emoji": "🥛",
+      "stage": 2
+    },
+    {
+      "id": 3025,
+      "word": "jam",
+      "ipa": "ʤæm",
+      "viRead": "GIEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mứt; sự tắc nghẽn",
+      "exampleEn": "Spread some jam on your bread.",
+      "exampleVi": "Phết chút mứt lên bánh mì.",
+      "collocations": [
+        {
+          "en": "strawberry jam",
+          "vi": "mứt dâu"
+        },
+        {
+          "en": "traffic jam",
+          "vi": "tắc đường"
+        }
+      ],
+      "tip": "traffic jam = kẹt xe!",
+      "emoji": "🍓",
+      "stage": 2
+    },
+    {
+      "id": 3026,
+      "word": "ketchup",
+      "ipa": "ˈkɛʧəp",
+      "viRead": "KE-chơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tương cà",
+      "exampleEn": "Do you want ketchup with your fries?",
+      "exampleVi": "Bạn có muốn tương cà với khoai chiên không?",
+      "collocations": [
+        {
+          "en": "tomato ketchup",
+          "vi": "tương cà chua"
+        },
+        {
+          "en": "a bottle of ketchup",
+          "vi": "chai tương cà"
+        }
+      ],
+      "tip": "ketchup = tương cà; chili sauce = tương ớt.",
+      "emoji": "🍅",
+      "stage": 2
+    },
+    {
+      "id": 3027,
+      "word": "mayonnaise",
+      "ipa": "ˈmeɪəˌneɪz",
+      "viRead": "MÂY-ơ-nâyd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sốt mayonnaise",
+      "exampleEn": "Put some mayonnaise in the sandwich.",
+      "exampleVi": "Cho chút sốt mayonnaise vào bánh mì.",
+      "collocations": [
+        {
+          "en": "egg mayonnaise",
+          "vi": "trứng trộn mayonnaise"
+        },
+        {
+          "en": "a spoon of mayonnaise",
+          "vi": "một thìa mayonnaise"
+        }
+      ],
+      "tip": "Viết tắt: mayo. Đọc 'MÂY-ơ-nâyd'.",
+      "emoji": "🥪",
+      "stage": 2
+    },
+    {
+      "id": 3028,
+      "word": "fork",
+      "ipa": "fɔrk",
+      "viRead": "PHORK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái dĩa, nĩa",
+      "exampleEn": "Eat your salad with a fork.",
+      "exampleVi": "Ăn xa lát bằng dĩa.",
+      "collocations": [
+        {
+          "en": "knife and fork",
+          "vi": "dao và dĩa"
+        },
+        {
+          "en": "a plastic fork",
+          "vi": "dĩa nhựa"
+        }
+      ],
+      "tip": "fork in the road = ngã ba đường.",
+      "emoji": "🍴",
+      "stage": 2
+    },
+    {
+      "id": 3029,
+      "word": "chopsticks",
+      "ipa": "ˈʧɑpˌstɪks",
+      "viRead": "CHAP-stiks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đôi đũa",
+      "exampleEn": "Can you use chopsticks?",
+      "exampleVi": "Bạn có dùng được đũa không?",
+      "collocations": [
+        {
+          "en": "a pair of chopsticks",
+          "vi": "một đôi đũa"
+        },
+        {
+          "en": "wooden chopsticks",
+          "vi": "đũa gỗ"
+        }
+      ],
+      "tip": "Luôn số nhiều: a pair of chopsticks.",
+      "emoji": "🥢",
+      "stage": 2
+    },
+    {
+      "id": 3030,
+      "word": "grill",
+      "ipa": "grɪl",
+      "viRead": "GRIL",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nướng (trên vỉ)",
+      "exampleEn": "Let's grill some fish tonight.",
+      "exampleVi": "Tối nay mình nướng cá nhé.",
+      "collocations": [
+        {
+          "en": "grill meat",
+          "vi": "nướng thịt"
+        },
+        {
+          "en": "grilled fish",
+          "vi": "cá nướng"
+        }
+      ],
+      "tip": "grill = nướng trên vỉ/than; bake = nướng lò.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 3031,
+      "word": "freezer",
+      "ipa": "ˈfrizər",
+      "viRead": "PHRI-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngăn đá, tủ đông",
+      "exampleEn": "Put the ice cream in the freezer.",
+      "exampleVi": "Cho kem vào ngăn đá.",
+      "collocations": [
+        {
+          "en": "in the freezer",
+          "vi": "trong ngăn đá"
+        },
+        {
+          "en": "freezer bag",
+          "vi": "túi trữ đông"
+        }
+      ],
+      "family": [
+        {
+          "word": "freeze",
+          "vi": "đóng băng"
+        }
+      ],
+      "tip": "fridge = tủ lạnh; freezer = ngăn đá.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 3032,
+      "word": "verse",
+      "ipa": "vərs",
+      "viRead": "VƠS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "câu thơ; đoạn (bài hát)",
+      "exampleEn": "Let's sing the first verse again.",
+      "exampleVi": "Mình hát lại đoạn đầu nhé.",
+      "collocations": [
+        {
+          "en": "the first verse",
+          "vi": "đoạn đầu"
+        },
+        {
+          "en": "in verse",
+          "vi": "bằng thơ"
+        }
+      ],
+      "tip": "verse = đoạn lời; chorus = điệp khúc.",
+      "emoji": "🎶",
+      "stage": 2
+    },
+    {
+      "id": 3033,
+      "word": "veteran",
+      "ipa": "ˈvɛtərən",
+      "viRead": "VE-tơ-rơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cựu chiến binh; người kỳ cựu",
+      "exampleEn": "My grandfather is a war veteran.",
+      "exampleVi": "Ông tôi là cựu chiến binh.",
+      "collocations": [
+        {
+          "en": "war veteran",
+          "vi": "cựu chiến binh"
+        },
+        {
+          "en": "a veteran teacher",
+          "vi": "giáo viên lâu năm"
+        }
+      ],
+      "tip": "Viết tắt thân mật: vet (cũng là bác sĩ thú y!).",
+      "emoji": "🎖️",
+      "stage": 2
+    },
+    {
+      "id": 3034,
+      "word": "villa",
+      "ipa": "ˈvɪlə",
+      "viRead": "VI-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biệt thự",
+      "exampleEn": "We rented a villa by the beach.",
+      "exampleVi": "Chúng tôi thuê một căn biệt thự bên biển.",
+      "collocations": [
+        {
+          "en": "a beach villa",
+          "vi": "biệt thự biển"
+        },
+        {
+          "en": "rent a villa",
+          "vi": "thuê biệt thự"
+        }
+      ],
+      "tip": "Villa ở Đà Lạt, Vũng Tàu rất phổ biến.",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 3035,
+      "word": "wax",
+      "ipa": "wæks",
+      "viRead": "WEKS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sáp",
+      "exampleEn": "The candle is made of wax.",
+      "exampleVi": "Cây nến làm bằng sáp.",
+      "collocations": [
+        {
+          "en": "candle wax",
+          "vi": "sáp nến"
+        },
+        {
+          "en": "wax museum",
+          "vi": "bảo tàng tượng sáp"
+        }
+      ],
+      "tip": "wax museum = bảo tàng tượng sáp.",
+      "emoji": "🕯️",
+      "stage": 2
+    },
+    {
+      "id": 3036,
+      "word": "weave",
+      "ipa": "wiv",
+      "viRead": "WIV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dệt, đan",
+      "exampleEn": "The women weave cloth by hand.",
+      "exampleVi": "Những người phụ nữ dệt vải bằng tay.",
+      "collocations": [
+        {
+          "en": "weave cloth",
+          "vi": "dệt vải"
+        },
+        {
+          "en": "weave a basket",
+          "vi": "đan giỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "weaver",
+          "vi": "thợ dệt"
+        }
+      ],
+      "tip": "weave – wove – woven.",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 3037,
+      "word": "widow",
+      "ipa": "ˈwɪdoʊ",
+      "viRead": "WI-đâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "góa phụ",
+      "exampleEn": "She became a widow at forty.",
+      "exampleVi": "Bà ấy góa chồng năm bốn mươi tuổi.",
+      "collocations": [
+        {
+          "en": "a young widow",
+          "vi": "góa phụ trẻ"
+        },
+        {
+          "en": "widow and orphan",
+          "vi": "quả phụ và trẻ mồ côi"
+        }
+      ],
+      "family": [
+        {
+          "word": "widower",
+          "vi": "người góa vợ"
+        }
+      ],
+      "tip": "widow (góa chồng) – widower (góa vợ).",
+      "emoji": "🖤",
+      "stage": 2
+    },
+    {
+      "id": 3038,
+      "word": "worship",
+      "ipa": "ˈwərʃɪp",
+      "viRead": "WƠ-shơp",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "thờ cúng",
+      "exampleEn": "Many families worship their ancestors.",
+      "exampleVi": "Nhiều gia đình thờ cúng tổ tiên.",
+      "collocations": [
+        {
+          "en": "ancestor worship",
+          "vi": "thờ cúng tổ tiên"
+        },
+        {
+          "en": "place of worship",
+          "vi": "nơi thờ tự"
+        }
+      ],
+      "tip": "worship = thờ phụng; cũng dùng cho thần tượng (hero worship).",
+      "emoji": "🛐",
+      "stage": 2
+    },
+    {
+      "id": 3039,
+      "word": "trader",
+      "ipa": "ˈtreɪdər",
+      "viRead": "TRÂY-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thương nhân",
+      "exampleEn": "The market is full of traders.",
+      "exampleVi": "Chợ đầy người buôn bán.",
+      "collocations": [
+        {
+          "en": "a market trader",
+          "vi": "người bán hàng ở chợ"
+        },
+        {
+          "en": "street trader",
+          "vi": "người bán rong"
+        }
+      ],
+      "family": [
+        {
+          "word": "trade",
+          "vi": "buôn bán"
+        }
+      ],
+      "tip": "trade (v) → trader (người).",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 3040,
+      "word": "tram",
+      "ipa": "træm",
+      "viRead": "TREM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe điện (chạy ray)",
+      "exampleEn": "Hanoi used to have trams.",
+      "exampleVi": "Hà Nội từng có tàu điện.",
+      "collocations": [
+        {
+          "en": "take the tram",
+          "vi": "đi xe điện"
+        },
+        {
+          "en": "tram stop",
+          "vi": "trạm xe điện"
+        }
+      ],
+      "tip": "tram = tàu điện chạy trên phố.",
+      "emoji": "🚋",
+      "stage": 2
+    },
+    {
+      "id": 3041,
+      "word": "triumph",
+      "ipa": "ˈtraɪəmf",
+      "viRead": "TRAI-ơmph",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiến thắng vẻ vang",
+      "exampleEn": "The festival was a great triumph.",
+      "exampleVi": "Lễ hội là một thành công vang dội.",
+      "collocations": [
+        {
+          "en": "a great triumph",
+          "vi": "thắng lợi lớn"
+        },
+        {
+          "en": "in triumph",
+          "vi": "đắc thắng"
+        }
+      ],
+      "family": [
+        {
+          "word": "triumphant",
+          "vi": "đắc thắng"
+        }
+      ],
+      "tip": "Arc de Triomphe = Khải Hoàn Môn (Paris).",
+      "emoji": "🏆",
       "stage": 2
     }
   ]
