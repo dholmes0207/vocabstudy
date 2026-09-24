@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2943,
+    "count": 2993,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -83515,6 +83515,1348 @@
       ],
       "tip": "web + site. VocabStudy cũng là một website!",
       "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 2944,
+      "word": "backpack",
+      "ipa": "ˈbækˌpæk",
+      "viRead": "BEK-pek",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ba lô",
+      "exampleEn": "I carry my laptop in a backpack.",
+      "exampleVi": "Tôi mang laptop trong ba lô.",
+      "collocations": [
+        {
+          "en": "a heavy backpack",
+          "vi": "ba lô nặng"
+        },
+        {
+          "en": "school backpack",
+          "vi": "cặp đi học"
+        }
+      ],
+      "tip": "backpacker = khách du lịch ba lô, đi tiết kiệm.",
+      "emoji": "🎒",
+      "stage": 2
+    },
+    {
+      "id": 2945,
+      "word": "bakery",
+      "ipa": "ˈbeɪkəri",
+      "viRead": "BÂY-kơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiệm bánh",
+      "exampleEn": "There's a nice bakery on our street.",
+      "exampleVi": "Có một tiệm bánh ngon trên phố nhà tôi.",
+      "collocations": [
+        {
+          "en": "a local bakery",
+          "vi": "tiệm bánh gần nhà"
+        },
+        {
+          "en": "bakery shop",
+          "vi": "tiệm bánh"
+        }
+      ],
+      "family": [
+        {
+          "word": "bake",
+          "vi": "nướng bánh"
+        },
+        {
+          "word": "baker",
+          "vi": "thợ làm bánh"
+        }
+      ],
+      "tip": "bake (v) → baker (người) → bakery (tiệm).",
+      "emoji": "🥐",
+      "stage": 2
+    },
+    {
+      "id": 2946,
+      "word": "bathtub",
+      "ipa": "ˈbæθtəb",
+      "viRead": "BETH-tơb",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bồn tắm",
+      "exampleEn": "The hotel room has a big bathtub.",
+      "exampleVi": "Phòng khách sạn có bồn tắm lớn.",
+      "collocations": [
+        {
+          "en": "fill the bathtub",
+          "vi": "xả nước vào bồn"
+        },
+        {
+          "en": "a hot bathtub",
+          "vi": "bồn nước nóng"
+        }
+      ],
+      "family": [
+        {
+          "word": "bath",
+          "vi": "sự tắm"
+        }
+      ],
+      "tip": "bathtub (Mỹ) = bath (Anh).",
+      "emoji": "🛁",
+      "stage": 2
+    },
+    {
+      "id": 2947,
+      "word": "blender",
+      "ipa": "ˈblɛndər",
+      "viRead": "BLEN-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy xay sinh tố",
+      "exampleEn": "Put the fruit in the blender.",
+      "exampleVi": "Cho trái cây vào máy xay sinh tố.",
+      "collocations": [
+        {
+          "en": "an electric blender",
+          "vi": "máy xay điện"
+        },
+        {
+          "en": "use a blender",
+          "vi": "dùng máy xay"
+        }
+      ],
+      "family": [
+        {
+          "word": "blend",
+          "vi": "trộn, xay"
+        }
+      ],
+      "tip": "blend (xay trộn) + er = máy xay.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 2948,
+      "word": "bookshelf",
+      "ipa": "ˈbʊkˌʃɛlf",
+      "viRead": "BUK-shelph",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giá sách",
+      "exampleEn": "My bookshelf is full of novels.",
+      "exampleVi": "Giá sách của tôi đầy tiểu thuyết.",
+      "collocations": [
+        {
+          "en": "a wooden bookshelf",
+          "vi": "giá sách gỗ"
+        },
+        {
+          "en": "on the bookshelf",
+          "vi": "trên giá sách"
+        }
+      ],
+      "tip": "Số nhiều: bookshelves (f → ves).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 2949,
+      "word": "bracelet",
+      "ipa": "ˈbreɪslət",
+      "viRead": "BRÂYS-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vòng tay",
+      "exampleEn": "She wears a silver bracelet.",
+      "exampleVi": "Cô ấy đeo vòng tay bạc.",
+      "collocations": [
+        {
+          "en": "silver bracelet",
+          "vi": "vòng tay bạc"
+        },
+        {
+          "en": "friendship bracelet",
+          "vi": "vòng tay tình bạn"
+        }
+      ],
+      "tip": "Đọc 'BRÂYS-lợt'.",
+      "emoji": "📿",
+      "stage": 2
+    },
+    {
+      "id": 2950,
+      "word": "broom",
+      "ipa": "brum",
+      "viRead": "BRUM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái chổi",
+      "exampleEn": "Sweep the floor with a broom.",
+      "exampleVi": "Quét nhà bằng chổi.",
+      "collocations": [
+        {
+          "en": "a new broom",
+          "vi": "cây chổi mới"
+        },
+        {
+          "en": "witch's broom",
+          "vi": "chổi phù thủy"
+        }
+      ],
+      "tip": "A new broom sweeps clean = Mới đến thì hăng hái.",
+      "emoji": "🧹",
+      "stage": 2
+    },
+    {
+      "id": 2951,
+      "word": "candle",
+      "ipa": "ˈkændəl",
+      "viRead": "KEN-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây nến",
+      "exampleEn": "Blow out the candles on your cake!",
+      "exampleVi": "Thổi nến trên bánh đi!",
+      "collocations": [
+        {
+          "en": "light a candle",
+          "vi": "thắp nến"
+        },
+        {
+          "en": "birthday candles",
+          "vi": "nến sinh nhật"
+        }
+      ],
+      "tip": "candlelight dinner = bữa tối dưới ánh nến.",
+      "emoji": "🕯️",
+      "stage": 2
+    },
+    {
+      "id": 2952,
+      "word": "dishwasher",
+      "ipa": "ˈdɪʃˌwɑʃər",
+      "viRead": "ĐISH-wa-shơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy rửa bát",
+      "exampleEn": "Put the plates in the dishwasher.",
+      "exampleVi": "Cho đĩa vào máy rửa bát.",
+      "collocations": [
+        {
+          "en": "load the dishwasher",
+          "vi": "xếp bát vào máy"
+        },
+        {
+          "en": "dishwasher safe",
+          "vi": "dùng được máy rửa bát"
+        }
+      ],
+      "family": [
+        {
+          "word": "dish",
+          "vi": "đĩa"
+        }
+      ],
+      "tip": "dish + wash + er. Cũng chỉ người rửa bát ở nhà hàng.",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 2953,
+      "word": "doorbell",
+      "ipa": "ˈdɔrˌbɛl",
+      "viRead": "ĐOR-bel",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuông cửa",
+      "exampleEn": "Someone is ringing the doorbell.",
+      "exampleVi": "Có ai đang bấm chuông cửa.",
+      "collocations": [
+        {
+          "en": "ring the doorbell",
+          "vi": "bấm chuông cửa"
+        },
+        {
+          "en": "smart doorbell",
+          "vi": "chuông cửa thông minh"
+        }
+      ],
+      "tip": "door + bell.",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 2954,
+      "word": "earring",
+      "ipa": "ˈɪrɪŋ",
+      "viRead": "I-ring",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bông tai",
+      "exampleEn": "She lost one of her earrings.",
+      "exampleVi": "Cô ấy làm mất một chiếc bông tai.",
+      "collocations": [
+        {
+          "en": "a pair of earrings",
+          "vi": "đôi bông tai"
+        },
+        {
+          "en": "gold earring",
+          "vi": "bông tai vàng"
+        }
+      ],
+      "tip": "ear (tai) + ring (vòng) = bông tai.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 2955,
+      "word": "flashlight",
+      "ipa": "ˈflæʃˌlaɪt",
+      "viRead": "PHLESH-lait",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đèn pin",
+      "exampleEn": "Take a flashlight; the path is dark.",
+      "exampleVi": "Mang đèn pin theo, đường tối lắm.",
+      "collocations": [
+        {
+          "en": "turn on a flashlight",
+          "vi": "bật đèn pin"
+        },
+        {
+          "en": "phone flashlight",
+          "vi": "đèn pin điện thoại"
+        }
+      ],
+      "family": [
+        {
+          "word": "torch",
+          "vi": "đèn pin (Anh)"
+        }
+      ],
+      "tip": "flashlight (Mỹ) = torch (Anh).",
+      "emoji": "🔦",
+      "stage": 2
+    },
+    {
+      "id": 2956,
+      "word": "hairdryer",
+      "ipa": "ˈhɛrˌdraɪər",
+      "viRead": "HER-đrai-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy sấy tóc",
+      "exampleEn": "Is there a hairdryer in the room?",
+      "exampleVi": "Trong phòng có máy sấy tóc không?",
+      "collocations": [
+        {
+          "en": "use a hairdryer",
+          "vi": "dùng máy sấy tóc"
+        },
+        {
+          "en": "hotel hairdryer",
+          "vi": "máy sấy tóc khách sạn"
+        }
+      ],
+      "tip": "hair + dry + er.",
+      "emoji": "💨",
+      "stage": 2
+    },
+    {
+      "id": 2957,
+      "word": "hammer",
+      "ipa": "ˈhæmər",
+      "viRead": "HE-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái búa",
+      "exampleEn": "Hit the nail with a hammer.",
+      "exampleVi": "Đóng đinh bằng búa.",
+      "collocations": [
+        {
+          "en": "a hammer and nails",
+          "vi": "búa và đinh"
+        },
+        {
+          "en": "hit with a hammer",
+          "vi": "đập bằng búa"
+        }
+      ],
+      "tip": "hit the nail on the head = nói trúng phóc.",
+      "emoji": "🔨",
+      "stage": 2
+    },
+    {
+      "id": 2958,
+      "word": "hanger",
+      "ipa": "ˈhæŋər",
+      "viRead": "HE-ngơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "móc treo quần áo",
+      "exampleEn": "Put your shirt on a hanger.",
+      "exampleVi": "Treo áo sơ mi lên móc.",
+      "collocations": [
+        {
+          "en": "coat hanger",
+          "vi": "móc treo áo"
+        },
+        {
+          "en": "plastic hanger",
+          "vi": "móc nhựa"
+        }
+      ],
+      "family": [
+        {
+          "word": "hang",
+          "vi": "treo"
+        }
+      ],
+      "tip": "hang (treo) → hanger (móc treo).",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 2959,
+      "word": "lighter",
+      "ipa": "ˈlaɪtər",
+      "viRead": "LAI-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bật lửa",
+      "exampleEn": "Do you have a lighter?",
+      "exampleVi": "Bạn có bật lửa không?",
+      "collocations": [
+        {
+          "en": "a cigarette lighter",
+          "vi": "bật lửa"
+        },
+        {
+          "en": "gas lighter",
+          "vi": "bật lửa ga"
+        }
+      ],
+      "family": [
+        {
+          "word": "light",
+          "vi": "thắp sáng"
+        }
+      ],
+      "tip": "lighter còn là so sánh hơn của light (nhẹ hơn).",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 2960,
+      "word": "lipstick",
+      "ipa": "ˈlɪpˌstɪk",
+      "viRead": "LIP-stik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "son môi",
+      "exampleEn": "She put on red lipstick.",
+      "exampleVi": "Cô ấy tô son đỏ.",
+      "collocations": [
+        {
+          "en": "red lipstick",
+          "vi": "son đỏ"
+        },
+        {
+          "en": "wear lipstick",
+          "vi": "tô son"
+        }
+      ],
+      "family": [
+        {
+          "word": "lip",
+          "vi": "môi"
+        }
+      ],
+      "tip": "lip + stick = son thỏi.",
+      "emoji": "💄",
+      "stage": 2
+    },
+    {
+      "id": 2961,
+      "word": "mattress",
+      "ipa": "ˈmætrəs",
+      "viRead": "ME-trơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nệm",
+      "exampleEn": "This mattress is too soft.",
+      "exampleVi": "Cái nệm này mềm quá.",
+      "collocations": [
+        {
+          "en": "a soft mattress",
+          "vi": "nệm mềm"
+        },
+        {
+          "en": "air mattress",
+          "vi": "nệm hơi"
+        }
+      ],
+      "tip": "Chính tả: 2 t, 2 s.",
+      "emoji": "🛏️",
+      "stage": 2
+    },
+    {
+      "id": 2962,
+      "word": "microwave",
+      "ipa": "ˈmaɪkrəˌweɪv",
+      "viRead": "MAI-krơ-wâyv",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lò vi sóng",
+      "exampleEn": "Heat the rice in the microwave.",
+      "exampleVi": "Hâm cơm bằng lò vi sóng.",
+      "collocations": [
+        {
+          "en": "microwave oven",
+          "vi": "lò vi sóng"
+        },
+        {
+          "en": "in the microwave",
+          "vi": "trong lò vi sóng"
+        }
+      ],
+      "tip": "microwave (v) = hâm bằng lò vi sóng.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 2963,
+      "word": "mop",
+      "ipa": "mɑp",
+      "viRead": "MAP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cây lau nhà",
+      "exampleEn": "Clean the kitchen floor with a mop.",
+      "exampleVi": "Lau sàn bếp bằng cây lau nhà.",
+      "collocations": [
+        {
+          "en": "mop the floor",
+          "vi": "lau sàn"
+        },
+        {
+          "en": "a wet mop",
+          "vi": "cây lau ướt"
+        }
+      ],
+      "tip": "mop → mopped.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 2964,
+      "word": "napkin",
+      "ipa": "ˈnæpkɪn",
+      "viRead": "NEP-kin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khăn ăn",
+      "exampleEn": "Can I have a napkin, please?",
+      "exampleVi": "Cho tôi xin một tờ khăn ăn.",
+      "collocations": [
+        {
+          "en": "paper napkin",
+          "vi": "khăn giấy ăn"
+        },
+        {
+          "en": "table napkin",
+          "vi": "khăn ăn"
+        }
+      ],
+      "tip": "napkin = khăn ăn (giấy hoặc vải).",
+      "emoji": "🧻",
+      "stage": 2
+    },
+    {
+      "id": 2965,
+      "word": "necklace",
+      "ipa": "ˈnɛkləs",
+      "viRead": "NEK-lơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây chuyền",
+      "exampleEn": "He gave her a pearl necklace.",
+      "exampleVi": "Anh ấy tặng cô ấy một chuỗi ngọc trai.",
+      "collocations": [
+        {
+          "en": "pearl necklace",
+          "vi": "chuỗi ngọc trai"
+        },
+        {
+          "en": "gold necklace",
+          "vi": "dây chuyền vàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "neck",
+          "vi": "cổ"
+        }
+      ],
+      "tip": "neck + lace. Đọc 'NEK-lợs'.",
+      "emoji": "📿",
+      "stage": 2
+    },
+    {
+      "id": 2966,
+      "word": "notebook",
+      "ipa": "ˈnoʊtˌbʊk",
+      "viRead": "NÂUT-buk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sổ ghi chép",
+      "exampleEn": "Write new words in your notebook.",
+      "exampleVi": "Ghi từ mới vào sổ tay của bạn.",
+      "collocations": [
+        {
+          "en": "a spiral notebook",
+          "vi": "sổ lò xo"
+        },
+        {
+          "en": "notebook computer",
+          "vi": "máy tính xách tay"
+        }
+      ],
+      "family": [
+        {
+          "word": "note",
+          "vi": "ghi chú"
+        }
+      ],
+      "tip": "Sổ tay từ vựng = vocabulary notebook.",
+      "emoji": "📓",
+      "stage": 2
+    },
+    {
+      "id": 2967,
+      "word": "razor",
+      "ipa": "ˈreɪzər",
+      "viRead": "RÂY-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dao cạo",
+      "exampleEn": "He shaves with an electric razor.",
+      "exampleVi": "Anh ấy cạo râu bằng dao cạo điện.",
+      "collocations": [
+        {
+          "en": "electric razor",
+          "vi": "dao cạo điện"
+        },
+        {
+          "en": "razor blade",
+          "vi": "lưỡi dao cạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "shave",
+          "vi": "cạo"
+        }
+      ],
+      "tip": "razor sharp = sắc như dao cạo.",
+      "emoji": "🪒",
+      "stage": 2
+    },
+    {
+      "id": 2968,
+      "word": "ruler",
+      "ipa": "ˈrulər",
+      "viRead": "RU-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thước kẻ; người cai trị",
+      "exampleEn": "Draw a straight line with a ruler.",
+      "exampleVi": "Vẽ đường thẳng bằng thước kẻ.",
+      "collocations": [
+        {
+          "en": "a 30cm ruler",
+          "vi": "thước 30 phân"
+        },
+        {
+          "en": "a powerful ruler",
+          "vi": "nhà cai trị quyền lực"
+        }
+      ],
+      "family": [
+        {
+          "word": "rule",
+          "vi": "quy tắc; cai trị"
+        }
+      ],
+      "tip": "ruler = thước kẻ hoặc người cai trị.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2969,
+      "word": "sandal",
+      "ipa": "ˈsændəl",
+      "viRead": "SEN-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dép xăng-đan",
+      "exampleEn": "I wear sandals in summer.",
+      "exampleVi": "Mùa hè tôi đi xăng-đan.",
+      "collocations": [
+        {
+          "en": "a pair of sandals",
+          "vi": "đôi xăng-đan"
+        },
+        {
+          "en": "leather sandals",
+          "vi": "dép da"
+        }
+      ],
+      "tip": "flip-flops = dép tông; sandals = xăng-đan.",
+      "emoji": "🩴",
+      "stage": 2
+    },
+    {
+      "id": 2970,
+      "word": "screwdriver",
+      "ipa": "ˈskruˌdraɪvər",
+      "viRead": "SKRU-đrai-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tua vít",
+      "exampleEn": "I need a screwdriver to fix the chair.",
+      "exampleVi": "Tôi cần tua vít để sửa ghế.",
+      "collocations": [
+        {
+          "en": "a small screwdriver",
+          "vi": "tua vít nhỏ"
+        },
+        {
+          "en": "electric screwdriver",
+          "vi": "máy vặn vít"
+        }
+      ],
+      "tip": "screw (con vít) + driver.",
+      "emoji": "🪛",
+      "stage": 2
+    },
+    {
+      "id": 2971,
+      "word": "shovel",
+      "ipa": "ˈʃəvəl",
+      "viRead": "SHƠ-vơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái xẻng",
+      "exampleEn": "Dig a hole with a shovel.",
+      "exampleVi": "Đào hố bằng xẻng.",
+      "collocations": [
+        {
+          "en": "a snow shovel",
+          "vi": "xẻng xúc tuyết"
+        },
+        {
+          "en": "dig with a shovel",
+          "vi": "đào bằng xẻng"
+        }
+      ],
+      "tip": "o đọc 'ơ': 'SHƠ-vồ'.",
+      "emoji": "⛏️",
+      "stage": 2
+    },
+    {
+      "id": 2972,
+      "word": "slipper",
+      "ipa": "ˈslɪpər",
+      "viRead": "SLI-pơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dép đi trong nhà",
+      "exampleEn": "Put on your slippers; the floor is cold.",
+      "exampleVi": "Đi dép vào, sàn lạnh đấy.",
+      "collocations": [
+        {
+          "en": "a pair of slippers",
+          "vi": "đôi dép"
+        },
+        {
+          "en": "house slippers",
+          "vi": "dép trong nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "slip",
+          "vi": "trượt"
+        }
+      ],
+      "tip": "Cinderella's glass slipper = chiếc giày thủy tinh của Lọ Lem.",
+      "emoji": "🥿",
+      "stage": 2
+    },
+    {
+      "id": 2973,
+      "word": "sofa",
+      "ipa": "ˈsoʊfə",
+      "viRead": "SÂU-phơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ghế sô-pha",
+      "exampleEn": "Let's sit on the sofa and watch TV.",
+      "exampleVi": "Mình ngồi sô-pha xem TV đi.",
+      "collocations": [
+        {
+          "en": "a comfortable sofa",
+          "vi": "sô-pha êm"
+        },
+        {
+          "en": "sofa bed",
+          "vi": "sô-pha giường"
+        }
+      ],
+      "family": [
+        {
+          "word": "couch",
+          "vi": "ghế dài"
+        }
+      ],
+      "tip": "sofa = couch.",
+      "emoji": "🛋️",
+      "stage": 2
+    },
+    {
+      "id": 2974,
+      "word": "sponge",
+      "ipa": "spənʤ",
+      "viRead": "SPƠNGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "miếng bọt biển",
+      "exampleEn": "Wash the dishes with a sponge.",
+      "exampleVi": "Rửa bát bằng miếng bọt biển.",
+      "collocations": [
+        {
+          "en": "kitchen sponge",
+          "vi": "miếng rửa bát"
+        },
+        {
+          "en": "sponge cake",
+          "vi": "bánh bông lan"
+        }
+      ],
+      "tip": "sponge cake = bánh bông lan. SpongeBob = Bọt Biển.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 2975,
+      "word": "stapler",
+      "ipa": "ˈsteɪpələr",
+      "viRead": "STÂY-pơ-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái dập ghim",
+      "exampleEn": "Can I borrow your stapler?",
+      "exampleVi": "Cho tôi mượn cái dập ghim được không?",
+      "collocations": [
+        {
+          "en": "a small stapler",
+          "vi": "dập ghim nhỏ"
+        },
+        {
+          "en": "office stapler",
+          "vi": "dập ghim văn phòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "staple",
+          "vi": "cái ghim"
+        }
+      ],
+      "tip": "staple (ghim) + r.",
+      "emoji": "📎",
+      "stage": 2
+    },
+    {
+      "id": 2976,
+      "word": "sunscreen",
+      "ipa": "ˈsənskrin",
+      "viRead": "SƠN-skrin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kem chống nắng",
+      "exampleEn": "Put on sunscreen before you go to the beach.",
+      "exampleVi": "Thoa kem chống nắng trước khi ra biển.",
+      "collocations": [
+        {
+          "en": "put on sunscreen",
+          "vi": "thoa kem chống nắng"
+        },
+        {
+          "en": "sunscreen lotion",
+          "vi": "kem chống nắng"
+        }
+      ],
+      "tip": "sun + screen (tấm chắn).",
+      "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 2977,
+      "word": "teapot",
+      "ipa": "ˈtiˌpɑt",
+      "viRead": "TI-pat",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ấm trà",
+      "exampleEn": "Grandpa made tea in a clay teapot.",
+      "exampleVi": "Ông pha trà trong ấm đất.",
+      "collocations": [
+        {
+          "en": "a clay teapot",
+          "vi": "ấm đất"
+        },
+        {
+          "en": "pour from the teapot",
+          "vi": "rót từ ấm trà"
+        }
+      ],
+      "tip": "tea + pot.",
+      "emoji": "🫖",
+      "stage": 2
+    },
+    {
+      "id": 2978,
+      "word": "toaster",
+      "ipa": "ˈtoʊstər",
+      "viRead": "TÂUS-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy nướng bánh mì",
+      "exampleEn": "Put the bread in the toaster.",
+      "exampleVi": "Cho bánh mì vào máy nướng.",
+      "collocations": [
+        {
+          "en": "pop-up toaster",
+          "vi": "máy nướng bánh"
+        },
+        {
+          "en": "toaster oven",
+          "vi": "lò nướng mini"
+        }
+      ],
+      "family": [
+        {
+          "word": "toast",
+          "vi": "bánh mì nướng"
+        }
+      ],
+      "tip": "toast (bánh nướng) + er = máy nướng.",
+      "emoji": "🍞",
+      "stage": 2
+    },
+    {
+      "id": 2979,
+      "word": "toothbrush",
+      "ipa": "ˈtuθbrəʃ",
+      "viRead": "TUTH-brơsh",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bàn chải đánh răng",
+      "exampleEn": "Change your toothbrush every three months.",
+      "exampleVi": "Thay bàn chải đánh răng ba tháng một lần.",
+      "collocations": [
+        {
+          "en": "electric toothbrush",
+          "vi": "bàn chải điện"
+        },
+        {
+          "en": "a soft toothbrush",
+          "vi": "bàn chải lông mềm"
+        }
+      ],
+      "family": [
+        {
+          "word": "tooth",
+          "vi": "răng"
+        }
+      ],
+      "tip": "tooth + brush.",
+      "emoji": "🪥",
+      "stage": 2
+    },
+    {
+      "id": 2980,
+      "word": "toothpaste",
+      "ipa": "ˈtuθˌpeɪst",
+      "viRead": "TUTH-pâyst",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kem đánh răng",
+      "exampleEn": "We need a new tube of toothpaste.",
+      "exampleVi": "Mình cần tuýp kem đánh răng mới.",
+      "collocations": [
+        {
+          "en": "a tube of toothpaste",
+          "vi": "tuýp kem đánh răng"
+        },
+        {
+          "en": "mint toothpaste",
+          "vi": "kem đánh răng bạc hà"
+        }
+      ],
+      "family": [
+        {
+          "word": "tooth",
+          "vi": "răng"
+        }
+      ],
+      "tip": "tooth + paste (bột nhão).",
+      "emoji": "🦷",
+      "stage": 2
+    },
+    {
+      "id": 2981,
+      "word": "vase",
+      "ipa": "veɪs",
+      "viRead": "VÂYS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bình hoa",
+      "exampleEn": "Put the flowers in a vase.",
+      "exampleVi": "Cắm hoa vào bình.",
+      "collocations": [
+        {
+          "en": "a flower vase",
+          "vi": "bình hoa"
+        },
+        {
+          "en": "a glass vase",
+          "vi": "bình thủy tinh"
+        }
+      ],
+      "tip": "Mỹ đọc 'vâys', Anh đọc 'vaz'.",
+      "emoji": "🏺",
+      "stage": 2
+    },
+    {
+      "id": 2982,
+      "word": "web",
+      "ipa": "wɛb",
+      "viRead": "WEB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mạng (Internet); mạng nhện",
+      "exampleEn": "I found the answer on the web.",
+      "exampleVi": "Tôi tìm thấy câu trả lời trên mạng.",
+      "collocations": [
+        {
+          "en": "the web",
+          "vi": "mạng Internet"
+        },
+        {
+          "en": "spider web",
+          "vi": "mạng nhện"
+        }
+      ],
+      "family": [
+        {
+          "word": "website",
+          "vi": "trang web"
+        }
+      ],
+      "tip": "World Wide Web = www.",
+      "emoji": "🕸️",
+      "stage": 2
+    },
+    {
+      "id": 2983,
+      "word": "wheat",
+      "ipa": "wit",
+      "viRead": "WIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lúa mì",
+      "exampleEn": "Bread is made from wheat.",
+      "exampleVi": "Bánh mì làm từ lúa mì.",
+      "collocations": [
+        {
+          "en": "wheat flour",
+          "vi": "bột mì"
+        },
+        {
+          "en": "wheat field",
+          "vi": "cánh đồng lúa mì"
+        }
+      ],
+      "tip": "rice = lúa gạo; wheat = lúa mì.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2984,
+      "word": "width",
+      "ipa": "wɪdθ",
+      "viRead": "WIĐTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chiều rộng",
+      "exampleEn": "What is the width of the table?",
+      "exampleVi": "Cái bàn rộng bao nhiêu?",
+      "collocations": [
+        {
+          "en": "the width of",
+          "vi": "chiều rộng của"
+        },
+        {
+          "en": "length and width",
+          "vi": "chiều dài và rộng"
+        }
+      ],
+      "family": [
+        {
+          "word": "wide",
+          "vi": "rộng"
+        }
+      ],
+      "tip": "wide → width; long → length; deep → depth.",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 2985,
+      "word": "withdraw",
+      "ipa": "wɪθˈdrɔ",
+      "viRead": "with-ĐRO",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rút (tiền); rút lui",
+      "exampleEn": "I need to withdraw some money from the ATM.",
+      "exampleVi": "Tôi cần rút ít tiền ở cây ATM.",
+      "collocations": [
+        {
+          "en": "withdraw money",
+          "vi": "rút tiền"
+        },
+        {
+          "en": "withdraw from",
+          "vi": "rút khỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "withdrawal",
+          "vi": "sự rút tiền"
+        }
+      ],
+      "tip": "withdraw – withdrew – withdrawn.",
+      "emoji": "🏧",
+      "stage": 2
+    },
+    {
+      "id": 2986,
+      "word": "workout",
+      "ipa": "ˈwərˌkaʊt",
+      "viRead": "WƠRK-aot",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi tập thể dục",
+      "exampleEn": "I do a short workout every morning.",
+      "exampleVi": "Sáng nào tôi cũng tập một bài ngắn.",
+      "collocations": [
+        {
+          "en": "a morning workout",
+          "vi": "bài tập buổi sáng"
+        },
+        {
+          "en": "home workout",
+          "vi": "tập tại nhà"
+        }
+      ],
+      "tip": "work out (v) = tập thể dục; workout (n) = buổi tập.",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 2987,
+      "word": "workshop",
+      "ipa": "ˈwərkˌʃɑp",
+      "viRead": "WƠK-shap",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội thảo thực hành; xưởng",
+      "exampleEn": "I joined a photography workshop.",
+      "exampleVi": "Tôi tham gia một buổi workshop nhiếp ảnh.",
+      "collocations": [
+        {
+          "en": "attend a workshop",
+          "vi": "dự workshop"
+        },
+        {
+          "en": "car workshop",
+          "vi": "xưởng sửa xe"
+        }
+      ],
+      "tip": "workshop = buổi học thực hành nhóm nhỏ.",
+      "emoji": "🛠️",
+      "stage": 2
+    },
+    {
+      "id": 2988,
+      "word": "yawn",
+      "ipa": "jɔn",
+      "viRead": "YON",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngáp",
+      "exampleEn": "He yawned during the long meeting.",
+      "exampleVi": "Anh ấy ngáp trong cuộc họp dài.",
+      "collocations": [
+        {
+          "en": "yawn loudly",
+          "vi": "ngáp to"
+        },
+        {
+          "en": "make you yawn",
+          "vi": "làm bạn ngáp"
+        }
+      ],
+      "tip": "Ngáp dễ lây: yawning is contagious!",
+      "emoji": "🥱",
+      "stage": 2
+    },
+    {
+      "id": 2989,
+      "word": "youngster",
+      "ipa": "ˈjəŋstər",
+      "viRead": "YƠNG-stơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người trẻ, thiếu niên",
+      "exampleEn": "The club is popular with youngsters.",
+      "exampleVi": "Câu lạc bộ được giới trẻ ưa chuộng.",
+      "collocations": [
+        {
+          "en": "local youngsters",
+          "vi": "thanh thiếu niên địa phương"
+        },
+        {
+          "en": "a talented youngster",
+          "vi": "cầu thủ trẻ tài năng"
+        }
+      ],
+      "family": [
+        {
+          "word": "young",
+          "vi": "trẻ"
+        }
+      ],
+      "tip": "youngster = young person.",
+      "emoji": "🧑",
+      "stage": 2
+    },
+    {
+      "id": 2990,
+      "word": "wizard",
+      "ipa": "ˈwɪzərd",
+      "viRead": "WI-dơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phù thủy (nam); thiên tài",
+      "exampleEn": "Harry Potter is a young wizard.",
+      "exampleVi": "Harry Potter là một phù thủy nhỏ.",
+      "collocations": [
+        {
+          "en": "a wizard with",
+          "vi": "rất giỏi về"
+        },
+        {
+          "en": "setup wizard",
+          "vi": "trình hướng dẫn cài đặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "witch",
+          "vi": "phù thủy nữ"
+        }
+      ],
+      "tip": "wizard (nam) – witch (nữ). a computer wizard = thiên tài máy tính.",
+      "emoji": "🧙",
+      "stage": 2
+    },
+    {
+      "id": 2991,
+      "word": "wreck",
+      "ipa": "rɛk",
+      "viRead": "REK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "xác tàu; đống đổ nát",
+      "exampleEn": "Divers found an old ship wreck.",
+      "exampleVi": "Thợ lặn tìm thấy xác một con tàu cổ.",
+      "collocations": [
+        {
+          "en": "ship wreck",
+          "vi": "xác tàu đắm"
+        },
+        {
+          "en": "a nervous wreck",
+          "vi": "người suy sụp"
+        }
+      ],
+      "tip": "w câm: 'rek'.",
+      "emoji": "🚢",
+      "stage": 2
+    },
+    {
+      "id": 2992,
+      "word": "weed",
+      "ipa": "wid",
+      "viRead": "WIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cỏ dại",
+      "exampleEn": "Pull the weeds out of the garden.",
+      "exampleVi": "Nhổ cỏ dại trong vườn.",
+      "collocations": [
+        {
+          "en": "pull weeds",
+          "vi": "nhổ cỏ"
+        },
+        {
+          "en": "weed killer",
+          "vi": "thuốc diệt cỏ"
+        }
+      ],
+      "tip": "weed (v) = làm cỏ.",
+      "emoji": "🌱",
+      "stage": 2
+    },
+    {
+      "id": 2993,
+      "word": "whereas",
+      "ipa": "wɛrˈæz",
+      "viRead": "wer-ED",
+      "pos": "conj.",
+      "posCategory": "conjunction",
+      "meaning": "trong khi (đối lập)",
+      "exampleEn": "I like tea, whereas my wife likes coffee.",
+      "exampleVi": "Tôi thích trà, trong khi vợ tôi thích cà phê.",
+      "collocations": [
+        {
+          "en": "whereas others",
+          "vi": "trong khi những người khác"
+        },
+        {
+          "en": "whereas in fact",
+          "vi": "trong khi thực tế"
+        }
+      ],
+      "tip": "whereas = while (đối lập hai vế).",
+      "emoji": "⚖️",
       "stage": 2
     }
   ]
