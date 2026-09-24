@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2009,
+    "count": 2059,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -58019,6 +58019,1340 @@
       ],
       "tip": "stare at = nhìn chằm chằm; glance at = liếc nhìn.",
       "emoji": "👀",
+      "stage": 2
+    },
+    {
+      "id": 2010,
+      "word": "statue",
+      "ipa": "ˈstæˌʧu",
+      "viRead": "STE-chu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bức tượng",
+      "exampleEn": "There's a statue of Uncle Ho in the square.",
+      "exampleVi": "Có một bức tượng Bác Hồ ở quảng trường.",
+      "collocations": [
+        {
+          "en": "a bronze statue",
+          "vi": "tượng đồng"
+        },
+        {
+          "en": "the Statue of Liberty",
+          "vi": "tượng Nữ thần Tự do"
+        }
+      ],
+      "tip": "statue (tượng) khác status (địa vị). Đọc 'STE-chu'.",
+      "emoji": "🗽",
+      "stage": 2
+    },
+    {
+      "id": 2011,
+      "word": "status",
+      "ipa": "ˈstætəs",
+      "viRead": "STE-tơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "địa vị; trạng thái",
+      "exampleEn": "What's your relationship status?",
+      "exampleVi": "Tình trạng mối quan hệ của bạn là gì?",
+      "collocations": [
+        {
+          "en": "social status",
+          "vi": "địa vị xã hội"
+        },
+        {
+          "en": "status update",
+          "vi": "cập nhật trạng thái"
+        }
+      ],
+      "tip": "status trên Facebook = dòng trạng thái. Đọc 'STÂY-tợs' hoặc 'STE-tợs'.",
+      "emoji": "📶",
+      "stage": 2
+    },
+    {
+      "id": 2012,
+      "word": "steady",
+      "ipa": "ˈstɛdi",
+      "viRead": "STE-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đều đặn, vững",
+      "exampleEn": "She made steady progress in English.",
+      "exampleVi": "Cô ấy tiến bộ đều đặn trong tiếng Anh.",
+      "collocations": [
+        {
+          "en": "steady progress",
+          "vi": "tiến bộ đều"
+        },
+        {
+          "en": "a steady job",
+          "vi": "việc làm ổn định"
+        }
+      ],
+      "family": [
+        {
+          "word": "steadily",
+          "vi": "đều đặn"
+        }
+      ],
+      "tip": "Ready, steady, go! = Chuẩn bị, sẵn sàng, chạy! (Anh).",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 2013,
+      "word": "steel",
+      "ipa": "stil",
+      "viRead": "STIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thép",
+      "exampleEn": "The bridge is made of steel.",
+      "exampleVi": "Cây cầu làm bằng thép.",
+      "collocations": [
+        {
+          "en": "stainless steel",
+          "vi": "thép không gỉ (inox)"
+        },
+        {
+          "en": "steel door",
+          "vi": "cửa thép"
+        }
+      ],
+      "tip": "steel (thép) đọc giống steal (ăn trộm). inox = stainless steel.",
+      "emoji": "🔩",
+      "stage": 2
+    },
+    {
+      "id": 2014,
+      "word": "steep",
+      "ipa": "stip",
+      "viRead": "STIP",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dốc; (giá) cắt cổ",
+      "exampleEn": "The road up the mountain is very steep.",
+      "exampleVi": "Đường lên núi rất dốc.",
+      "collocations": [
+        {
+          "en": "a steep hill",
+          "vi": "đồi dốc"
+        },
+        {
+          "en": "steep prices",
+          "vi": "giá cắt cổ"
+        }
+      ],
+      "tip": "steep = dốc đứng; a steep learning curve = khó học lúc đầu.",
+      "emoji": "⛰️",
+      "stage": 2
+    },
+    {
+      "id": 2015,
+      "word": "stem",
+      "ipa": "stɛm",
+      "viRead": "STEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thân (cây), cuống",
+      "exampleEn": "Cut the flower stems before putting them in water.",
+      "exampleVi": "Cắt cuống hoa trước khi cắm vào nước.",
+      "collocations": [
+        {
+          "en": "flower stem",
+          "vi": "cuống hoa"
+        },
+        {
+          "en": "stem cells",
+          "vi": "tế bào gốc"
+        }
+      ],
+      "tip": "STEM = Khoa học, Công nghệ, Kỹ thuật, Toán (giáo dục STEM).",
+      "emoji": "🌷",
+      "stage": 2
+    },
+    {
+      "id": 2016,
+      "word": "stiff",
+      "ipa": "stɪf",
+      "viRead": "STIPH",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cứng; mỏi cứng",
+      "exampleEn": "My neck is stiff after sleeping on the sofa.",
+      "exampleVi": "Cổ tôi bị cứng sau khi ngủ trên ghế sô-pha.",
+      "collocations": [
+        {
+          "en": "a stiff neck",
+          "vi": "cứng cổ"
+        },
+        {
+          "en": "stiff muscles",
+          "vi": "cơ bắp mỏi cứng"
+        }
+      ],
+      "tip": "bored stiff = chán chết; scared stiff = sợ cứng người.",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 2017,
+      "word": "stir",
+      "ipa": "stər",
+      "viRead": "STƠ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khuấy",
+      "exampleEn": "Stir the soup slowly.",
+      "exampleVi": "Khuấy nồi canh từ từ.",
+      "collocations": [
+        {
+          "en": "stir well",
+          "vi": "khuấy đều"
+        },
+        {
+          "en": "stir-fry",
+          "vi": "xào"
+        }
+      ],
+      "tip": "stir-fry = món xào. stir → stirred.",
+      "emoji": "🥄",
+      "stage": 2
+    },
+    {
+      "id": 2018,
+      "word": "stock",
+      "ipa": "stɑk",
+      "viRead": "STAK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hàng tồn; cổ phiếu",
+      "exampleEn": "This size is out of stock.",
+      "exampleVi": "Cỡ này đã hết hàng.",
+      "collocations": [
+        {
+          "en": "out of stock",
+          "vi": "hết hàng"
+        },
+        {
+          "en": "stock market",
+          "vi": "thị trường chứng khoán"
+        }
+      ],
+      "tip": "in stock = còn hàng; out of stock = hết hàng.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 2019,
+      "word": "strength",
+      "ipa": "strɛŋθ",
+      "viRead": "STRENGTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sức mạnh; điểm mạnh",
+      "exampleEn": "What are your strengths and weaknesses?",
+      "exampleVi": "Điểm mạnh và điểm yếu của bạn là gì?",
+      "collocations": [
+        {
+          "en": "physical strength",
+          "vi": "sức mạnh thể chất"
+        },
+        {
+          "en": "strengths and weaknesses",
+          "vi": "điểm mạnh, điểm yếu"
+        }
+      ],
+      "family": [
+        {
+          "word": "strong",
+          "vi": "mạnh"
+        }
+      ],
+      "tip": "strong (tính từ) → strength (danh từ). Câu hỏi phỏng vấn kinh điển!",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 2020,
+      "word": "stress",
+      "ipa": "strɛs",
+      "viRead": "STRES",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "căng thẳng; trọng âm",
+      "exampleEn": "Exercise helps reduce stress.",
+      "exampleVi": "Tập thể dục giúp giảm căng thẳng.",
+      "collocations": [
+        {
+          "en": "under stress",
+          "vi": "bị căng thẳng"
+        },
+        {
+          "en": "word stress",
+          "vi": "trọng âm từ"
+        }
+      ],
+      "family": [
+        {
+          "word": "stressful",
+          "vi": "gây căng thẳng"
+        },
+        {
+          "word": "stressed",
+          "vi": "bị căng thẳng"
+        }
+      ],
+      "tip": "I'm stressed out = Tôi căng thẳng quá. Trong phát âm, stress = trọng âm.",
+      "emoji": "😣",
+      "stage": 2
+    },
+    {
+      "id": 2021,
+      "word": "stretch",
+      "ipa": "strɛʧ",
+      "viRead": "STRECH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "duỗi, giãn; kéo dài",
+      "exampleEn": "Stretch your arms above your head.",
+      "exampleVi": "Vươn hai tay lên quá đầu.",
+      "collocations": [
+        {
+          "en": "stretch your legs",
+          "vi": "duỗi chân; đi dạo"
+        },
+        {
+          "en": "stretch out",
+          "vi": "nằm duỗi ra"
+        }
+      ],
+      "tip": "Tập giãn cơ = do stretches / stretching.",
+      "emoji": "🙆",
+      "stage": 2
+    },
+    {
+      "id": 2022,
+      "word": "strike",
+      "ipa": "straɪk",
+      "viRead": "STRAIK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cuộc đình công; cú đánh",
+      "exampleEn": "The workers are on strike.",
+      "exampleVi": "Công nhân đang đình công.",
+      "collocations": [
+        {
+          "en": "on strike",
+          "vi": "đình công"
+        },
+        {
+          "en": "lightning strike",
+          "vi": "sét đánh"
+        }
+      ],
+      "tip": "strike – struck – struck. go on strike = đình công.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 2023,
+      "word": "string",
+      "ipa": "strɪŋ",
+      "viRead": "STRING",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sợi dây; dây đàn",
+      "exampleEn": "Tie the box with a piece of string.",
+      "exampleVi": "Buộc cái hộp bằng một đoạn dây.",
+      "collocations": [
+        {
+          "en": "a piece of string",
+          "vi": "một đoạn dây"
+        },
+        {
+          "en": "guitar string",
+          "vi": "dây đàn guitar"
+        }
+      ],
+      "tip": "string (dây nhỏ) < rope (dây thừng). no strings attached = không ràng buộc.",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 2024,
+      "word": "strip",
+      "ipa": "strɪp",
+      "viRead": "STRIP",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "dải, mảnh dài",
+      "exampleEn": "Cut the paper into thin strips.",
+      "exampleVi": "Cắt giấy thành những dải mỏng.",
+      "collocations": [
+        {
+          "en": "a strip of paper",
+          "vi": "một dải giấy"
+        },
+        {
+          "en": "comic strip",
+          "vi": "truyện tranh ngắn"
+        }
+      ],
+      "tip": "comic strip = mẩu truyện tranh vài khung trên báo.",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2025,
+      "word": "stripe",
+      "ipa": "straɪp",
+      "viRead": "STRAIP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sọc, vằn",
+      "exampleEn": "A zebra has black and white stripes.",
+      "exampleVi": "Ngựa vằn có sọc đen trắng.",
+      "collocations": [
+        {
+          "en": "black stripes",
+          "vi": "sọc đen"
+        },
+        {
+          "en": "stripe pattern",
+          "vi": "họa tiết kẻ sọc"
+        }
+      ],
+      "family": [
+        {
+          "word": "striped",
+          "vi": "có sọc"
+        }
+      ],
+      "tip": "a striped shirt = áo sơ mi kẻ sọc.",
+      "emoji": "🦓",
+      "stage": 2
+    },
+    {
+      "id": 2026,
+      "word": "struggle",
+      "ipa": "ˈstrəgəl",
+      "viRead": "STRƠ-gơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "vật lộn, chật vật",
+      "exampleEn": "Many students struggle with grammar.",
+      "exampleVi": "Nhiều học sinh chật vật với ngữ pháp.",
+      "collocations": [
+        {
+          "en": "struggle with",
+          "vi": "vật lộn với"
+        },
+        {
+          "en": "struggle to",
+          "vi": "chật vật để"
+        }
+      ],
+      "tip": "struggle to + V: She struggled to pay the rent.",
+      "emoji": "🧗",
+      "stage": 2
+    },
+    {
+      "id": 2027,
+      "word": "stuff",
+      "ipa": "stəf",
+      "viRead": "STƠPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ đạc; thứ, cái",
+      "exampleEn": "Put your stuff in the bag.",
+      "exampleVi": "Để đồ của bạn vào túi.",
+      "collocations": [
+        {
+          "en": "my stuff",
+          "vi": "đồ của tôi"
+        },
+        {
+          "en": "and stuff",
+          "vi": "và mấy thứ đại loại"
+        }
+      ],
+      "tip": "stuff = things (thân mật, không đếm được). 'I have a lot of stuff to do.'",
+      "emoji": "🎒",
+      "stage": 2
+    },
+    {
+      "id": 2028,
+      "word": "stupid",
+      "ipa": "ˈstupɪd",
+      "viRead": "STU-pơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngốc nghếch",
+      "exampleEn": "It was a stupid mistake.",
+      "exampleVi": "Đó là một lỗi ngớ ngẩn.",
+      "collocations": [
+        {
+          "en": "a stupid question",
+          "vi": "câu hỏi ngốc"
+        },
+        {
+          "en": "don't be stupid",
+          "vi": "đừng ngốc thế"
+        }
+      ],
+      "tip": "stupid khá nặng; nói nhẹ hơn: silly. 'There are no stupid questions.'",
+      "emoji": "🙃",
+      "stage": 2
+    },
+    {
+      "id": 2029,
+      "word": "style",
+      "ipa": "staɪl",
+      "viRead": "STAIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phong cách",
+      "exampleEn": "I love your style!",
+      "exampleVi": "Tôi thích phong cách của bạn!",
+      "collocations": [
+        {
+          "en": "hair style",
+          "vi": "kiểu tóc"
+        },
+        {
+          "en": "in style",
+          "vi": "hợp thời trang"
+        }
+      ],
+      "family": [
+        {
+          "word": "stylish",
+          "vi": "sành điệu"
+        }
+      ],
+      "tip": "hairstyle = kiểu tóc. stylish = sành điệu.",
+      "emoji": "😎",
+      "stage": 2
+    },
+    {
+      "id": 2030,
+      "word": "substance",
+      "ipa": "ˈsəbstəns",
+      "viRead": "SƠB-stơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất",
+      "exampleEn": "Water is a natural substance.",
+      "exampleVi": "Nước là một chất tự nhiên.",
+      "collocations": [
+        {
+          "en": "a toxic substance",
+          "vi": "chất độc hại"
+        },
+        {
+          "en": "chemical substance",
+          "vi": "hóa chất"
+        }
+      ],
+      "tip": "Nhấn âm đầu: SƠB-stần-s.",
+      "emoji": "🧪",
+      "stage": 2
+    },
+    {
+      "id": 2031,
+      "word": "succeed",
+      "ipa": "səkˈsid",
+      "viRead": "sơk-SIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thành công",
+      "exampleEn": "If you work hard, you will succeed.",
+      "exampleVi": "Nếu chăm chỉ, bạn sẽ thành công.",
+      "collocations": [
+        {
+          "en": "succeed in",
+          "vi": "thành công trong"
+        },
+        {
+          "en": "succeed in life",
+          "vi": "thành công trong cuộc sống"
+        }
+      ],
+      "family": [
+        {
+          "word": "success",
+          "vi": "sự thành công"
+        },
+        {
+          "word": "successful",
+          "vi": "thành công"
+        }
+      ],
+      "tip": "succeed in + V-ing. succeed (v) → success (n) → successful (adj).",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 2032,
+      "word": "sudden",
+      "ipa": "ˈsədən",
+      "viRead": "SƠ-đơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đột ngột",
+      "exampleEn": "There was a sudden change in the weather.",
+      "exampleVi": "Thời tiết thay đổi đột ngột.",
+      "collocations": [
+        {
+          "en": "all of a sudden",
+          "vi": "bỗng nhiên"
+        },
+        {
+          "en": "a sudden noise",
+          "vi": "tiếng động bất ngờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "suddenly",
+          "vi": "đột nhiên"
+        }
+      ],
+      "tip": "all of a sudden = suddenly = bỗng dưng.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 2033,
+      "word": "suffer",
+      "ipa": "ˈsəfər",
+      "viRead": "SƠ-phơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chịu đựng; mắc (bệnh)",
+      "exampleEn": "He suffers from back pain.",
+      "exampleVi": "Ông ấy bị đau lưng.",
+      "collocations": [
+        {
+          "en": "suffer from",
+          "vi": "mắc, bị"
+        },
+        {
+          "en": "suffer a loss",
+          "vi": "chịu thiệt hại"
+        }
+      ],
+      "family": [
+        {
+          "word": "suffering",
+          "vi": "nỗi đau khổ"
+        }
+      ],
+      "tip": "suffer from + bệnh: suffer from headaches.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 2034,
+      "word": "sum",
+      "ipa": "səm",
+      "viRead": "SƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoản (tiền); tổng",
+      "exampleEn": "She paid a large sum of money for the house.",
+      "exampleVi": "Cô ấy trả một khoản tiền lớn cho căn nhà.",
+      "collocations": [
+        {
+          "en": "a large sum",
+          "vi": "một khoản lớn"
+        },
+        {
+          "en": "sum up",
+          "vi": "tóm tắt"
+        }
+      ],
+      "family": [
+        {
+          "word": "summary",
+          "vi": "bản tóm tắt"
+        }
+      ],
+      "tip": "sum up = tóm lại. To sum up, ... = Tóm lại, ...",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 2035,
+      "word": "suppose",
+      "ipa": "səˈpoʊz",
+      "viRead": "sơ-PÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cho rằng, giả sử",
+      "exampleEn": "I suppose you're right.",
+      "exampleVi": "Tôi cho là bạn đúng.",
+      "collocations": [
+        {
+          "en": "be supposed to",
+          "vi": "đáng lẽ phải"
+        },
+        {
+          "en": "I suppose so",
+          "vi": "chắc vậy"
+        }
+      ],
+      "tip": "be supposed to = đáng lẽ phải: You're supposed to be at school!",
+      "emoji": "🤷",
+      "stage": 2
+    },
+    {
+      "id": 2036,
+      "word": "surgery",
+      "ipa": "ˈsərʤəri",
+      "viRead": "SƠ-giơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ca phẫu thuật",
+      "exampleEn": "He needs surgery on his knee.",
+      "exampleVi": "Anh ấy cần phẫu thuật đầu gối.",
+      "collocations": [
+        {
+          "en": "have surgery",
+          "vi": "được phẫu thuật"
+        },
+        {
+          "en": "plastic surgery",
+          "vi": "phẫu thuật thẩm mỹ"
+        }
+      ],
+      "family": [
+        {
+          "word": "surgeon",
+          "vi": "bác sĩ phẫu thuật"
+        }
+      ],
+      "tip": "surgeon = bác sĩ phẫu thuật. g đọc 'j': 'SƠ-jơ-ri'.",
+      "emoji": "🏥",
+      "stage": 2
+    },
+    {
+      "id": 2037,
+      "word": "surround",
+      "ipa": "səˈraʊnd",
+      "viRead": "sơ-RAONĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bao quanh",
+      "exampleEn": "The village is surrounded by rice fields.",
+      "exampleVi": "Ngôi làng được bao quanh bởi ruộng lúa.",
+      "collocations": [
+        {
+          "en": "be surrounded by",
+          "vi": "được bao quanh bởi"
+        },
+        {
+          "en": "surround sound",
+          "vi": "âm thanh vòm"
+        }
+      ],
+      "family": [
+        {
+          "word": "surroundings",
+          "vi": "môi trường xung quanh"
+        }
+      ],
+      "tip": "surroundings = môi trường xung quanh.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 2038,
+      "word": "survey",
+      "ipa": "ˈsərˌveɪ",
+      "viRead": "SƠ-vây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc khảo sát",
+      "exampleEn": "Please fill in this short survey.",
+      "exampleVi": "Vui lòng điền vào bản khảo sát ngắn này.",
+      "collocations": [
+        {
+          "en": "do a survey",
+          "vi": "làm khảo sát"
+        },
+        {
+          "en": "online survey",
+          "vi": "khảo sát trực tuyến"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: SƠ-vây; động từ nhấn sau: sơ-VÂY.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 2039,
+      "word": "suspect",
+      "ipa": "səˈspɛkt",
+      "viRead": "sơ-SPEKT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nghi ngờ; nghi phạm",
+      "exampleEn": "I suspect he's lying.",
+      "exampleVi": "Tôi nghi là anh ta đang nói dối.",
+      "collocations": [
+        {
+          "en": "suspect that",
+          "vi": "nghi rằng"
+        },
+        {
+          "en": "the main suspect",
+          "vi": "nghi phạm chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "suspicious",
+          "vi": "đáng ngờ"
+        }
+      ],
+      "tip": "Động từ nhấn sau: sơ-SPEKT; danh từ (nghi phạm) nhấn đầu: SƠS-pekt.",
+      "emoji": "🕵️",
+      "stage": 2
+    },
+    {
+      "id": 2040,
+      "word": "swallow",
+      "ipa": "ˈswɑloʊ",
+      "viRead": "SWA-lâu",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nuốt",
+      "exampleEn": "Chew your food well before you swallow.",
+      "exampleVi": "Nhai kỹ thức ăn trước khi nuốt.",
+      "collocations": [
+        {
+          "en": "swallow a pill",
+          "vi": "nuốt viên thuốc"
+        },
+        {
+          "en": "hard to swallow",
+          "vi": "khó chấp nhận"
+        }
+      ],
+      "tip": "swallow còn là chim én. hard to swallow = khó tin, khó chấp nhận.",
+      "emoji": "🐦",
+      "stage": 2
+    },
+    {
+      "id": 2041,
+      "word": "swear",
+      "ipa": "swɛr",
+      "viRead": "SWER",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thề; chửi thề",
+      "exampleEn": "I swear I didn't take it!",
+      "exampleVi": "Tôi thề là tôi không lấy nó!",
+      "collocations": [
+        {
+          "en": "I swear",
+          "vi": "tôi thề"
+        },
+        {
+          "en": "swear word",
+          "vi": "từ chửi thề"
+        }
+      ],
+      "tip": "swear – swore – sworn. swear word = từ tục.",
+      "emoji": "🤞",
+      "stage": 2
+    },
+    {
+      "id": 2042,
+      "word": "switch",
+      "ipa": "swɪʧ",
+      "viRead": "SWICH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "chuyển; công tắc",
+      "exampleEn": "Can we switch seats?",
+      "exampleVi": "Mình đổi chỗ được không?",
+      "collocations": [
+        {
+          "en": "switch on",
+          "vi": "bật"
+        },
+        {
+          "en": "switch off",
+          "vi": "tắt"
+        }
+      ],
+      "tip": "switch on/off = turn on/off (bật/tắt).",
+      "emoji": "🔀",
+      "stage": 2
+    },
+    {
+      "id": 2043,
+      "word": "sword",
+      "ipa": "sɔrd",
+      "viRead": "SORĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thanh kiếm",
+      "exampleEn": "The king held a golden sword.",
+      "exampleVi": "Nhà vua cầm một thanh kiếm vàng.",
+      "collocations": [
+        {
+          "en": "a sharp sword",
+          "vi": "thanh kiếm sắc"
+        },
+        {
+          "en": "sword fight",
+          "vi": "đấu kiếm"
+        }
+      ],
+      "tip": "w câm: 'SOĐ'.",
+      "emoji": "🗡️",
+      "stage": 2
+    },
+    {
+      "id": 2044,
+      "word": "symbol",
+      "ipa": "ˈsɪmbəl",
+      "viRead": "SIM-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biểu tượng, ký hiệu",
+      "exampleEn": "The dove is a symbol of peace.",
+      "exampleVi": "Chim bồ câu là biểu tượng của hòa bình.",
+      "collocations": [
+        {
+          "en": "a symbol of",
+          "vi": "biểu tượng của"
+        },
+        {
+          "en": "chemical symbol",
+          "vi": "ký hiệu hóa học"
+        }
+      ],
+      "family": [
+        {
+          "word": "symbolic",
+          "vi": "mang tính biểu tượng"
+        }
+      ],
+      "tip": "y đọc 'i': 'SIM-bồ'.",
+      "emoji": "☮️",
+      "stage": 2
+    },
+    {
+      "id": 2045,
+      "word": "sympathy",
+      "ipa": "ˈsɪmpəθi",
+      "viRead": "SIM-pơ-thi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cảm thông",
+      "exampleEn": "You have my deepest sympathy.",
+      "exampleVi": "Xin chia buồn sâu sắc cùng bạn.",
+      "collocations": [
+        {
+          "en": "feel sympathy for",
+          "vi": "cảm thông với"
+        },
+        {
+          "en": "deepest sympathy",
+          "vi": "lời chia buồn sâu sắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "sympathetic",
+          "vi": "thông cảm"
+        }
+      ],
+      "tip": "Khi có tang, nói 'My deepest sympathy' = Xin chia buồn sâu sắc. sympathetic = biết cảm thông (KHÔNG có nghĩa 'dễ mến').",
+      "emoji": "🫂",
+      "stage": 2
+    },
+    {
+      "id": 2046,
+      "word": "tackle",
+      "ipa": "ˈtækəl",
+      "viRead": "TE-kơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giải quyết; cản bóng",
+      "exampleEn": "We must tackle the problem now.",
+      "exampleVi": "Chúng ta phải giải quyết vấn đề ngay.",
+      "collocations": [
+        {
+          "en": "tackle a problem",
+          "vi": "giải quyết vấn đề"
+        },
+        {
+          "en": "tackle pollution",
+          "vi": "xử lý ô nhiễm"
+        }
+      ],
+      "tip": "tackle = bắt tay xử lý việc khó.",
+      "emoji": "🏈",
+      "stage": 2
+    },
+    {
+      "id": 2047,
+      "word": "tale",
+      "ipa": "teɪl",
+      "viRead": "TÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "câu chuyện (kể)",
+      "exampleEn": "Grandma told us an old fairy tale.",
+      "exampleVi": "Bà kể cho chúng tôi một câu chuyện cổ tích.",
+      "collocations": [
+        {
+          "en": "fairy tale",
+          "vi": "truyện cổ tích"
+        },
+        {
+          "en": "folk tale",
+          "vi": "truyện dân gian"
+        }
+      ],
+      "tip": "tale (chuyện) đọc giống tail (đuôi).",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 2048,
+      "word": "talent",
+      "ipa": "ˈtælənt",
+      "viRead": "TE-lơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tài năng",
+      "exampleEn": "She has a talent for music.",
+      "exampleVi": "Cô ấy có năng khiếu âm nhạc.",
+      "collocations": [
+        {
+          "en": "a talent for",
+          "vi": "năng khiếu về"
+        },
+        {
+          "en": "talent show",
+          "vi": "cuộc thi tài năng"
+        }
+      ],
+      "family": [
+        {
+          "word": "talented",
+          "vi": "tài năng"
+        }
+      ],
+      "tip": "a talent for + danh từ/V-ing.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 2049,
+      "word": "tank",
+      "ipa": "tæŋk",
+      "viRead": "TENGK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bể chứa; xe tăng",
+      "exampleEn": "Fill up the tank, please.",
+      "exampleVi": "Làm ơn đổ đầy bình xăng.",
+      "collocations": [
+        {
+          "en": "fish tank",
+          "vi": "bể cá"
+        },
+        {
+          "en": "gas tank",
+          "vi": "bình xăng"
+        }
+      ],
+      "tip": "tank top = áo ba lỗ.",
+      "emoji": "🛢️",
+      "stage": 2
+    },
+    {
+      "id": 2050,
+      "word": "target",
+      "ipa": "ˈtɑrgət",
+      "viRead": "TAR-gơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mục tiêu",
+      "exampleEn": "Our target is to learn ten words a day.",
+      "exampleVi": "Mục tiêu của chúng ta là học mười từ mỗi ngày.",
+      "collocations": [
+        {
+          "en": "meet a target",
+          "vi": "đạt mục tiêu"
+        },
+        {
+          "en": "target audience",
+          "vi": "khán giả mục tiêu"
+        }
+      ],
+      "tip": "set a target = đặt mục tiêu. g đọc 'g' cứng: 'TAR-gợt'.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2051,
+      "word": "technical",
+      "ipa": "ˈtɛknɪkəl",
+      "viRead": "TEK-ni-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc kỹ thuật",
+      "exampleEn": "We had some technical problems.",
+      "exampleVi": "Chúng tôi gặp một vài sự cố kỹ thuật.",
+      "collocations": [
+        {
+          "en": "technical problem",
+          "vi": "sự cố kỹ thuật"
+        },
+        {
+          "en": "technical support",
+          "vi": "hỗ trợ kỹ thuật"
+        }
+      ],
+      "family": [
+        {
+          "word": "technology",
+          "vi": "công nghệ"
+        }
+      ],
+      "tip": "ch đọc 'k': 'TEK-ni-kồ'.",
+      "emoji": "🛠️",
+      "stage": 2
+    },
+    {
+      "id": 2052,
+      "word": "technique",
+      "ipa": "tɛkˈnik",
+      "viRead": "tek-NIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỹ thuật, cách làm",
+      "exampleEn": "This memory technique really works.",
+      "exampleVi": "Kỹ thuật ghi nhớ này thực sự hiệu quả.",
+      "collocations": [
+        {
+          "en": "a new technique",
+          "vi": "kỹ thuật mới"
+        },
+        {
+          "en": "learning technique",
+          "vi": "phương pháp học"
+        }
+      ],
+      "tip": "Nhấn âm 2: tek-NÍK.",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 2053,
+      "word": "teenager",
+      "ipa": "ˈtiˌneɪʤər",
+      "viRead": "TI-nây-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thanh thiếu niên",
+      "exampleEn": "Most teenagers love their phones.",
+      "exampleVi": "Hầu hết thanh thiếu niên mê điện thoại.",
+      "collocations": [
+        {
+          "en": "a typical teenager",
+          "vi": "cậu thiếu niên điển hình"
+        },
+        {
+          "en": "as a teenager",
+          "vi": "hồi tuổi teen"
+        }
+      ],
+      "family": [
+        {
+          "word": "teen",
+          "vi": "tuổi teen"
+        }
+      ],
+      "tip": "teenager = người 13–19 tuổi (thirTEEN → nineTEEN).",
+      "emoji": "🧑‍🎤",
+      "stage": 2
+    },
+    {
+      "id": 2054,
+      "word": "temporary",
+      "ipa": "ˈtɛmpərˌɛri",
+      "viRead": "TEM-pơ-re-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tạm thời",
+      "exampleEn": "This is only a temporary job.",
+      "exampleVi": "Đây chỉ là việc làm tạm thời.",
+      "collocations": [
+        {
+          "en": "a temporary job",
+          "vi": "việc tạm thời"
+        },
+        {
+          "en": "temporary password",
+          "vi": "mật khẩu tạm"
+        }
+      ],
+      "family": [
+        {
+          "word": "permanent",
+          "vi": "lâu dài"
+        }
+      ],
+      "tip": "temporary ↔ permanent (lâu dài).",
+      "emoji": "⏲️",
+      "stage": 2
+    },
+    {
+      "id": 2055,
+      "word": "tend",
+      "ipa": "tɛnd",
+      "viRead": "TENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "có xu hướng",
+      "exampleEn": "I tend to wake up early.",
+      "exampleVi": "Tôi thường có xu hướng dậy sớm.",
+      "collocations": [
+        {
+          "en": "tend to",
+          "vi": "có xu hướng"
+        },
+        {
+          "en": "tend to forget",
+          "vi": "hay quên"
+        }
+      ],
+      "family": [
+        {
+          "word": "tendency",
+          "vi": "xu hướng"
+        }
+      ],
+      "tip": "tend to + V = thường hay: Prices tend to rise.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 2056,
+      "word": "tendency",
+      "ipa": "ˈtɛndənsi",
+      "viRead": "TEN-đơn-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xu hướng, khuynh hướng",
+      "exampleEn": "He has a tendency to talk too much.",
+      "exampleVi": "Anh ấy có xu hướng nói quá nhiều.",
+      "collocations": [
+        {
+          "en": "a tendency to",
+          "vi": "xu hướng"
+        },
+        {
+          "en": "a growing tendency",
+          "vi": "xu hướng ngày càng tăng"
+        }
+      ],
+      "family": [
+        {
+          "word": "tend",
+          "vi": "có xu hướng"
+        }
+      ],
+      "tip": "tend (v) → tendency (n).",
+      "emoji": "↗️",
+      "stage": 2
+    },
+    {
+      "id": 2057,
+      "word": "tension",
+      "ipa": "ˈtɛnʃən",
+      "viRead": "TEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự căng thẳng",
+      "exampleEn": "There was tension between the two brothers.",
+      "exampleVi": "Có căng thẳng giữa hai anh em.",
+      "collocations": [
+        {
+          "en": "tension between",
+          "vi": "căng thẳng giữa"
+        },
+        {
+          "en": "ease tension",
+          "vi": "làm dịu căng thẳng"
+        }
+      ],
+      "family": [
+        {
+          "word": "tense",
+          "vi": "căng thẳng"
+        }
+      ],
+      "tip": "tension = căng thẳng giữa người với người; stress = áp lực cá nhân.",
+      "emoji": "😬",
+      "stage": 2
+    },
+    {
+      "id": 2058,
+      "word": "term",
+      "ipa": "tərm",
+      "viRead": "TƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "học kỳ; thuật ngữ",
+      "exampleEn": "The new term starts in September.",
+      "exampleVi": "Học kỳ mới bắt đầu vào tháng Chín.",
+      "collocations": [
+        {
+          "en": "in terms of",
+          "vi": "xét về mặt"
+        },
+        {
+          "en": "long term",
+          "vi": "dài hạn"
+        }
+      ],
+      "tip": "in terms of = xét về. terms and conditions = điều khoản.",
+      "emoji": "📆",
+      "stage": 2
+    },
+    {
+      "id": 2059,
+      "word": "text",
+      "ipa": "tɛkst",
+      "viRead": "TEKST",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "văn bản; tin nhắn",
+      "exampleEn": "Read the text and answer the questions.",
+      "exampleVi": "Đọc văn bản và trả lời câu hỏi.",
+      "collocations": [
+        {
+          "en": "text message",
+          "vi": "tin nhắn"
+        },
+        {
+          "en": "text me",
+          "vi": "nhắn tin cho tôi"
+        }
+      ],
+      "tip": "text (động từ) = nhắn tin: Text me when you arrive.",
+      "emoji": "💬",
       "stage": 2
     }
   ]
