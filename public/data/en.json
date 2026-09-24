@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2408,
+    "count": 2458,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -68783,6 +68783,1428 @@
       ],
       "tip": "e-book = electronic book; e-mail = electronic mail.",
       "emoji": "📱",
+      "stage": 2
+    },
+    {
+      "id": 2409,
+      "word": "elsewhere",
+      "ipa": "ˈɛlsˌwɛr",
+      "viRead": "ELS-wer",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ở nơi khác",
+      "exampleEn": "This shop is too expensive; let's look elsewhere.",
+      "exampleVi": "Cửa hàng này đắt quá, mình tìm chỗ khác đi.",
+      "collocations": [
+        {
+          "en": "look elsewhere",
+          "vi": "tìm chỗ khác"
+        },
+        {
+          "en": "go elsewhere",
+          "vi": "đi chỗ khác"
+        }
+      ],
+      "tip": "elsewhere = somewhere else (ở nơi khác).",
+      "emoji": "🧭",
+      "stage": 2
+    },
+    {
+      "id": 2410,
+      "word": "embarrass",
+      "ipa": "ɪmˈbɛrəs",
+      "viRead": "im-BE-rơs",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm ngượng",
+      "exampleEn": "Please don't embarrass me in front of my friends.",
+      "exampleVi": "Đừng làm tôi xấu hổ trước mặt bạn bè nhé.",
+      "collocations": [
+        {
+          "en": "embarrass someone",
+          "vi": "làm ai ngượng"
+        },
+        {
+          "en": "feel embarrassed",
+          "vi": "thấy ngượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "embarrassed",
+          "vi": "ngượng"
+        },
+        {
+          "word": "embarrassing",
+          "vi": "đáng xấu hổ"
+        }
+      ],
+      "tip": "Chính tả: 2 r, 2 s (emba-RR-a-SS).",
+      "emoji": "😳",
+      "stage": 2
+    },
+    {
+      "id": 2411,
+      "word": "emerge",
+      "ipa": "ɪˈmərʤ",
+      "viRead": "i-MƠGI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xuất hiện, nổi lên",
+      "exampleEn": "The sun emerged from behind the clouds.",
+      "exampleVi": "Mặt trời ló ra từ sau đám mây.",
+      "collocations": [
+        {
+          "en": "emerge from",
+          "vi": "hiện ra từ"
+        },
+        {
+          "en": "emerging market",
+          "vi": "thị trường mới nổi"
+        }
+      ],
+      "tip": "emerging = mới nổi. emergency = trường hợp khẩn cấp (bất ngờ nổi lên).",
+      "emoji": "🌅",
+      "stage": 2
+    },
+    {
+      "id": 2412,
+      "word": "emotion",
+      "ipa": "ɪˈmoʊʃən",
+      "viRead": "i-MÂU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cảm xúc",
+      "exampleEn": "It's okay to show your emotions.",
+      "exampleVi": "Thể hiện cảm xúc là điều bình thường.",
+      "collocations": [
+        {
+          "en": "show emotion",
+          "vi": "bộc lộ cảm xúc"
+        },
+        {
+          "en": "mixed emotions",
+          "vi": "cảm xúc lẫn lộn"
+        }
+      ],
+      "family": [
+        {
+          "word": "emotional",
+          "vi": "xúc động"
+        }
+      ],
+      "tip": "emoji ≈ biểu tượng cảm xúc (emotion).",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 2413,
+      "word": "emotional",
+      "ipa": "ɪˈmoʊʃənəl",
+      "viRead": "i-MÂU-shơ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xúc động; thuộc cảm xúc",
+      "exampleEn": "She got emotional at her daughter's wedding.",
+      "exampleVi": "Bà ấy xúc động trong đám cưới của con gái.",
+      "collocations": [
+        {
+          "en": "get emotional",
+          "vi": "xúc động"
+        },
+        {
+          "en": "emotional support",
+          "vi": "hỗ trợ tinh thần"
+        }
+      ],
+      "family": [
+        {
+          "word": "emotion",
+          "vi": "cảm xúc"
+        }
+      ],
+      "tip": "get emotional = rưng rưng, xúc động.",
+      "emoji": "🥹",
+      "stage": 2
+    },
+    {
+      "id": 2414,
+      "word": "emphasis",
+      "ipa": "ˈɛmfəsɪs",
+      "viRead": "EM-phơ-sơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nhấn mạnh",
+      "exampleEn": "The school puts emphasis on speaking skills.",
+      "exampleVi": "Trường chú trọng kỹ năng nói.",
+      "collocations": [
+        {
+          "en": "put emphasis on",
+          "vi": "nhấn mạnh vào"
+        },
+        {
+          "en": "special emphasis",
+          "vi": "sự chú trọng đặc biệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "emphasize",
+          "vi": "nhấn mạnh"
+        }
+      ],
+      "tip": "emphasis (n) → emphasize (v). Nhấn âm đầu: EM-phơ-sis.",
+      "emoji": "❗",
+      "stage": 2
+    },
+    {
+      "id": 2415,
+      "word": "empire",
+      "ipa": "ˈɛmpaɪər",
+      "viRead": "EM-pai-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đế chế",
+      "exampleEn": "The Roman Empire lasted for centuries.",
+      "exampleVi": "Đế chế La Mã tồn tại hàng thế kỷ.",
+      "collocations": [
+        {
+          "en": "the Roman Empire",
+          "vi": "Đế chế La Mã"
+        },
+        {
+          "en": "a business empire",
+          "vi": "đế chế kinh doanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "emperor",
+          "vi": "hoàng đế"
+        }
+      ],
+      "tip": "emperor = hoàng đế; empire = đế chế.",
+      "emoji": "🏰",
+      "stage": 2
+    },
+    {
+      "id": 2416,
+      "word": "employer",
+      "ipa": "ɪmˈplɔɪər",
+      "viRead": "em-PLOI-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người sử dụng lao động",
+      "exampleEn": "My employer pays me every month.",
+      "exampleVi": "Chủ của tôi trả lương hằng tháng.",
+      "collocations": [
+        {
+          "en": "a good employer",
+          "vi": "chủ tốt"
+        },
+        {
+          "en": "employer and employee",
+          "vi": "chủ và nhân viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "employee",
+          "vi": "nhân viên"
+        },
+        {
+          "word": "employ",
+          "vi": "thuê"
+        }
+      ],
+      "tip": "employER = chủ (người thuê); employEE = người được thuê.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 2417,
+      "word": "encounter",
+      "ipa": "ɪnˈkaʊntər",
+      "viRead": "in-KAON-tơ",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "gặp phải",
+      "exampleEn": "We encountered some problems on the way.",
+      "exampleVi": "Chúng tôi gặp phải vài vấn đề trên đường.",
+      "collocations": [
+        {
+          "en": "encounter problems",
+          "vi": "gặp khó khăn"
+        },
+        {
+          "en": "a chance encounter",
+          "vi": "cuộc gặp tình cờ"
+        }
+      ],
+      "tip": "encounter = meet (thường là bất ngờ, khó khăn).",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 2418,
+      "word": "endless",
+      "ipa": "ˈɛndləs",
+      "viRead": "ENĐ-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vô tận",
+      "exampleEn": "The list of chores seems endless.",
+      "exampleVi": "Danh sách việc nhà dường như vô tận.",
+      "collocations": [
+        {
+          "en": "endless possibilities",
+          "vi": "khả năng vô tận"
+        },
+        {
+          "en": "an endless road",
+          "vi": "con đường bất tận"
+        }
+      ],
+      "family": [
+        {
+          "word": "end",
+          "vi": "kết thúc"
+        }
+      ],
+      "tip": "end + less (không) = không có kết thúc.",
+      "emoji": "♾️",
+      "stage": 2
+    },
+    {
+      "id": 2419,
+      "word": "enemy",
+      "ipa": "ˈɛnəmi",
+      "viRead": "E-nơ-mi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kẻ thù",
+      "exampleEn": "Laziness is the enemy of success.",
+      "exampleVi": "Lười biếng là kẻ thù của thành công.",
+      "collocations": [
+        {
+          "en": "an old enemy",
+          "vi": "kẻ thù cũ"
+        },
+        {
+          "en": "make enemies",
+          "vi": "gây thù chuốc oán"
+        }
+      ],
+      "family": [
+        {
+          "word": "friend",
+          "vi": "bạn"
+        }
+      ],
+      "tip": "enemy ↔ friend. Số nhiều: enemies.",
+      "emoji": "👿",
+      "stage": 2
+    },
+    {
+      "id": 2420,
+      "word": "engage",
+      "ipa": "ɪnˈgeɪʤ",
+      "viRead": "en-GÂYGI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tham gia; thu hút",
+      "exampleEn": "The game engages students in learning.",
+      "exampleVi": "Trò chơi thu hút học sinh vào việc học.",
+      "collocations": [
+        {
+          "en": "engage in",
+          "vi": "tham gia vào"
+        },
+        {
+          "en": "get engaged",
+          "vi": "đính hôn"
+        }
+      ],
+      "family": [
+        {
+          "word": "engagement",
+          "vi": "lễ đính hôn"
+        }
+      ],
+      "tip": "get engaged = đính hôn. engagement ring = nhẫn đính hôn.",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 2421,
+      "word": "ensure",
+      "ipa": "ɪnˈʃʊr",
+      "viRead": "en-SHUR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đảm bảo",
+      "exampleEn": "Please ensure that the door is locked.",
+      "exampleVi": "Vui lòng đảm bảo cửa đã khóa.",
+      "collocations": [
+        {
+          "en": "ensure that",
+          "vi": "đảm bảo rằng"
+        },
+        {
+          "en": "ensure safety",
+          "vi": "đảm bảo an toàn"
+        }
+      ],
+      "tip": "ensure = make sure (trang trọng).",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 2422,
+      "word": "entertainment",
+      "ipa": "ˌɛntərˈteɪnmənt",
+      "viRead": "en-tơ-TÂYN-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự giải trí",
+      "exampleEn": "The hotel offers live entertainment.",
+      "exampleVi": "Khách sạn có chương trình giải trí trực tiếp.",
+      "collocations": [
+        {
+          "en": "entertainment industry",
+          "vi": "ngành giải trí"
+        },
+        {
+          "en": "for entertainment",
+          "vi": "để giải trí"
+        }
+      ],
+      "family": [
+        {
+          "word": "entertain",
+          "vi": "giải trí"
+        }
+      ],
+      "tip": "entertain (v) → entertainment (n).",
+      "emoji": "🎪",
+      "stage": 2
+    },
+    {
+      "id": 2423,
+      "word": "enthusiasm",
+      "ipa": "ɪnˈθuziˌæzəm",
+      "viRead": "in-THU-di-e-dơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nhiệt tình",
+      "exampleEn": "She teaches with great enthusiasm.",
+      "exampleVi": "Cô ấy dạy học với sự nhiệt huyết.",
+      "collocations": [
+        {
+          "en": "with enthusiasm",
+          "vi": "một cách nhiệt tình"
+        },
+        {
+          "en": "lack of enthusiasm",
+          "vi": "thiếu nhiệt tình"
+        }
+      ],
+      "family": [
+        {
+          "word": "enthusiastic",
+          "vi": "nhiệt tình"
+        }
+      ],
+      "tip": "Nhấn âm 2: in-THU-di-e-dơm.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 2424,
+      "word": "enthusiastic",
+      "ipa": "ɪnˌθuziˈæstɪk",
+      "viRead": "in-thu-di-ES-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiệt tình, hăng hái",
+      "exampleEn": "The fans were very enthusiastic.",
+      "exampleVi": "Người hâm mộ rất cuồng nhiệt.",
+      "collocations": [
+        {
+          "en": "enthusiastic about",
+          "vi": "hào hứng về"
+        },
+        {
+          "en": "an enthusiastic welcome",
+          "vi": "sự chào đón nồng nhiệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "enthusiasm",
+          "vi": "sự nhiệt tình"
+        }
+      ],
+      "tip": "be enthusiastic about + danh từ/V-ing.",
+      "emoji": "🙌",
+      "stage": 2
+    },
+    {
+      "id": 2425,
+      "word": "entirely",
+      "ipa": "ɪnˈtaɪərli",
+      "viRead": "in-TAI-ơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hoàn toàn",
+      "exampleEn": "I entirely agree with you.",
+      "exampleVi": "Tôi hoàn toàn đồng ý với bạn.",
+      "collocations": [
+        {
+          "en": "entirely different",
+          "vi": "hoàn toàn khác"
+        },
+        {
+          "en": "not entirely",
+          "vi": "không hoàn toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "entire",
+          "vi": "toàn bộ"
+        }
+      ],
+      "tip": "entirely = completely.",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 2426,
+      "word": "entry",
+      "ipa": "ˈɛntri",
+      "viRead": "EN-tri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đi vào; mục",
+      "exampleEn": "Entry to the museum is free.",
+      "exampleVi": "Vào bảo tàng miễn phí.",
+      "collocations": [
+        {
+          "en": "no entry",
+          "vi": "cấm vào"
+        },
+        {
+          "en": "entry fee",
+          "vi": "phí vào cửa"
+        }
+      ],
+      "family": [
+        {
+          "word": "enter",
+          "vi": "đi vào"
+        }
+      ],
+      "tip": "No Entry = Cấm vào. enter (v) → entry/entrance (n).",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 2427,
+      "word": "envy",
+      "ipa": "ˈɛnvi",
+      "viRead": "EN-vi",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "sự ghen tị",
+      "exampleEn": "Her new car is the envy of her friends.",
+      "exampleVi": "Chiếc xe mới của cô ấy khiến bạn bè ghen tị.",
+      "collocations": [
+        {
+          "en": "green with envy",
+          "vi": "ghen tị ra mặt"
+        },
+        {
+          "en": "the envy of",
+          "vi": "khiến ... ghen tị"
+        }
+      ],
+      "family": [
+        {
+          "word": "envious",
+          "vi": "ghen tị"
+        }
+      ],
+      "tip": "green with envy = ghen tị (tiếng Anh dùng màu xanh!).",
+      "emoji": "💚",
+      "stage": 2
+    },
+    {
+      "id": 2428,
+      "word": "era",
+      "ipa": "ˈɪrə",
+      "viRead": "I-rơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỷ nguyên, thời đại",
+      "exampleEn": "We live in the digital era.",
+      "exampleVi": "Chúng ta sống trong kỷ nguyên số.",
+      "collocations": [
+        {
+          "en": "the digital era",
+          "vi": "kỷ nguyên số"
+        },
+        {
+          "en": "a new era",
+          "vi": "kỷ nguyên mới"
+        }
+      ],
+      "tip": "Đọc 'I-rơ' (Mỹ) hoặc 'IA-rơ' (Anh).",
+      "emoji": "⏳",
+      "stage": 2
+    },
+    {
+      "id": 2429,
+      "word": "establish",
+      "ipa": "ɪˈstæblɪʃ",
+      "viRead": "is-TE-blish",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thành lập, thiết lập",
+      "exampleEn": "The school was established in 1990.",
+      "exampleVi": "Trường được thành lập năm 1990.",
+      "collocations": [
+        {
+          "en": "establish a company",
+          "vi": "thành lập công ty"
+        },
+        {
+          "en": "well established",
+          "vi": "có uy tín lâu năm"
+        }
+      ],
+      "family": [
+        {
+          "word": "establishment",
+          "vi": "sự thành lập"
+        }
+      ],
+      "tip": "Hay gặp: Established in ... = Thành lập năm ...",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2430,
+      "word": "estate",
+      "ipa": "ɛˈsteɪt",
+      "viRead": "is-TÂYT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bất động sản; điền trang",
+      "exampleEn": "He works in real estate.",
+      "exampleVi": "Anh ấy làm trong ngành bất động sản.",
+      "collocations": [
+        {
+          "en": "real estate",
+          "vi": "bất động sản"
+        },
+        {
+          "en": "estate agent",
+          "vi": "môi giới nhà đất"
+        }
+      ],
+      "tip": "real estate = bất động sản.",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 2431,
+      "word": "eventually",
+      "ipa": "ɪˈvɛnʧuəli",
+      "viRead": "i-VEN-chu-ơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cuối cùng",
+      "exampleEn": "After many tries, he eventually passed.",
+      "exampleVi": "Sau nhiều lần thử, cuối cùng anh ấy cũng đỗ.",
+      "collocations": [
+        {
+          "en": "eventually find",
+          "vi": "cuối cùng tìm ra"
+        },
+        {
+          "en": "will eventually",
+          "vi": "rồi sẽ"
+        }
+      ],
+      "tip": "BẪY: eventually = cuối cùng (sau thời gian dài), KHÔNG phải 'có thể'.",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 2432,
+      "word": "evil",
+      "ipa": "ˈivəl",
+      "viRead": "I-vơl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "xấu xa, độc ác",
+      "exampleEn": "The witch in the story is evil.",
+      "exampleVi": "Mụ phù thủy trong truyện rất độc ác.",
+      "collocations": [
+        {
+          "en": "good and evil",
+          "vi": "thiện và ác"
+        },
+        {
+          "en": "an evil plan",
+          "vi": "âm mưu độc ác"
+        }
+      ],
+      "tip": "the lesser of two evils = chọn cái ít tệ hơn.",
+      "emoji": "😈",
+      "stage": 2
+    },
+    {
+      "id": 2433,
+      "word": "exaggerate",
+      "ipa": "ɪgˈzæʤəˌreɪt",
+      "viRead": "ig-DE-giơ-râyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phóng đại",
+      "exampleEn": "Don't exaggerate, it wasn't that bad.",
+      "exampleVi": "Đừng phóng đại, đâu có tệ đến thế.",
+      "collocations": [
+        {
+          "en": "exaggerate the problem",
+          "vi": "thổi phồng vấn đề"
+        },
+        {
+          "en": "greatly exaggerated",
+          "vi": "bị phóng đại nhiều"
+        }
+      ],
+      "family": [
+        {
+          "word": "exaggeration",
+          "vi": "sự phóng đại"
+        }
+      ],
+      "tip": "Chính tả: 2 g. x đọc 'gd': 'ig-DE-giơ-râyt'.",
+      "emoji": "🎈",
+      "stage": 2
+    },
+    {
+      "id": 2434,
+      "word": "exceed",
+      "ipa": "ɪkˈsid",
+      "viRead": "ik-SIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vượt quá",
+      "exampleEn": "Do not exceed the speed limit.",
+      "exampleVi": "Đừng vượt quá tốc độ cho phép.",
+      "collocations": [
+        {
+          "en": "exceed the limit",
+          "vi": "vượt giới hạn"
+        },
+        {
+          "en": "exceed expectations",
+          "vi": "vượt kỳ vọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "excess",
+          "vi": "sự dư thừa"
+        }
+      ],
+      "tip": "exceed expectations = vượt mong đợi.",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 2435,
+      "word": "exception",
+      "ipa": "ɪkˈsɛpʃən",
+      "viRead": "ik-SEP-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngoại lệ",
+      "exampleEn": "Every rule has an exception.",
+      "exampleVi": "Quy tắc nào cũng có ngoại lệ.",
+      "collocations": [
+        {
+          "en": "with the exception of",
+          "vi": "ngoại trừ"
+        },
+        {
+          "en": "make an exception",
+          "vi": "làm ngoại lệ"
+        }
+      ],
+      "family": [
+        {
+          "word": "except",
+          "vi": "ngoại trừ"
+        }
+      ],
+      "tip": "except (giới từ) → exception (danh từ).",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 2436,
+      "word": "excitement",
+      "ipa": "ɪkˈsaɪtmənt",
+      "viRead": "ik-SAIT-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phấn khích",
+      "exampleEn": "The children couldn't sleep from excitement.",
+      "exampleVi": "Bọn trẻ không ngủ được vì háo hức.",
+      "collocations": [
+        {
+          "en": "with excitement",
+          "vi": "đầy phấn khích"
+        },
+        {
+          "en": "full of excitement",
+          "vi": "đầy háo hức"
+        }
+      ],
+      "family": [
+        {
+          "word": "excited",
+          "vi": "hào hứng"
+        },
+        {
+          "word": "exciting",
+          "vi": "thú vị"
+        }
+      ],
+      "tip": "excite (v) → excitement (n).",
+      "emoji": "🎉",
+      "stage": 2
+    },
+    {
+      "id": 2437,
+      "word": "exclude",
+      "ipa": "ɪkˈsklud",
+      "viRead": "ik-SKLUĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "loại trừ",
+      "exampleEn": "The price excludes tax.",
+      "exampleVi": "Giá chưa bao gồm thuế.",
+      "collocations": [
+        {
+          "en": "exclude from",
+          "vi": "loại khỏi"
+        },
+        {
+          "en": "tax excluded",
+          "vi": "chưa gồm thuế"
+        }
+      ],
+      "family": [
+        {
+          "word": "include",
+          "vi": "bao gồm"
+        }
+      ],
+      "tip": "exclude ↔ include (bao gồm).",
+      "emoji": "✂️",
+      "stage": 2
+    },
+    {
+      "id": 2438,
+      "word": "executive",
+      "ipa": "ɪgˈzɛkjətɪv",
+      "viRead": "ig-DEK-yơ-tiv",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giám đốc, người điều hành",
+      "exampleEn": "She is a top executive at the bank.",
+      "exampleVi": "Bà ấy là giám đốc cấp cao ở ngân hàng.",
+      "collocations": [
+        {
+          "en": "chief executive",
+          "vi": "tổng giám đốc"
+        },
+        {
+          "en": "sales executive",
+          "vi": "nhân viên kinh doanh"
+        }
+      ],
+      "tip": "CEO = Chief Executive Officer. x đọc 'gd': 'ig-DEK-yơ-tiv'.",
+      "emoji": "💼",
+      "stage": 2
+    },
+    {
+      "id": 2439,
+      "word": "exhibit",
+      "ipa": "ɪgˈzɪbɪt",
+      "viRead": "ig-DI-bit",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "trưng bày",
+      "exampleEn": "The museum exhibits old coins.",
+      "exampleVi": "Bảo tàng trưng bày những đồng tiền cổ.",
+      "collocations": [
+        {
+          "en": "exhibit paintings",
+          "vi": "trưng bày tranh"
+        },
+        {
+          "en": "on exhibit",
+          "vi": "đang trưng bày"
+        }
+      ],
+      "family": [
+        {
+          "word": "exhibition",
+          "vi": "triển lãm"
+        }
+      ],
+      "tip": "h câm: 'ig-DI-bit'. exhibition = triển lãm.",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 2440,
+      "word": "existence",
+      "ipa": "ɪgˈzɪstəns",
+      "viRead": "ig-DIS-tơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tồn tại",
+      "exampleEn": "Do you believe in the existence of ghosts?",
+      "exampleVi": "Bạn có tin có ma không?",
+      "collocations": [
+        {
+          "en": "in existence",
+          "vi": "đang tồn tại"
+        },
+        {
+          "en": "come into existence",
+          "vi": "ra đời"
+        }
+      ],
+      "family": [
+        {
+          "word": "exist",
+          "vi": "tồn tại"
+        }
+      ],
+      "tip": "exist (v) → existence (n). Đuôi -ence, không phải -ance.",
+      "emoji": "🌌",
+      "stage": 2
+    },
+    {
+      "id": 2441,
+      "word": "expectation",
+      "ipa": "ˌɛkspɛkˈteɪʃən",
+      "viRead": "ek-spek-TÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kỳ vọng",
+      "exampleEn": "The film was beyond my expectations.",
+      "exampleVi": "Bộ phim vượt ngoài mong đợi của tôi.",
+      "collocations": [
+        {
+          "en": "high expectations",
+          "vi": "kỳ vọng cao"
+        },
+        {
+          "en": "meet expectations",
+          "vi": "đáp ứng kỳ vọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "expect",
+          "vi": "mong đợi"
+        }
+      ],
+      "tip": "expect (v) → expectation (n).",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2442,
+      "word": "experiment",
+      "ipa": "ɪkˈspɛrəmənt",
+      "viRead": "ik-SPE-rơ-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thí nghiệm",
+      "exampleEn": "We did an experiment in science class.",
+      "exampleVi": "Chúng tôi làm thí nghiệm trong giờ khoa học.",
+      "collocations": [
+        {
+          "en": "do an experiment",
+          "vi": "làm thí nghiệm"
+        },
+        {
+          "en": "a science experiment",
+          "vi": "thí nghiệm khoa học"
+        }
+      ],
+      "tip": "Nhấn âm 2: ik-SPE-rơ-mơnt.",
+      "emoji": "🧪",
+      "stage": 2
+    },
+    {
+      "id": 2443,
+      "word": "explosion",
+      "ipa": "ɪkˈsploʊʒən",
+      "viRead": "ik-SPLÂU-zhơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vụ nổ",
+      "exampleEn": "We heard a loud explosion.",
+      "exampleVi": "Chúng tôi nghe một tiếng nổ lớn.",
+      "collocations": [
+        {
+          "en": "a loud explosion",
+          "vi": "tiếng nổ lớn"
+        },
+        {
+          "en": "gas explosion",
+          "vi": "nổ khí ga"
+        }
+      ],
+      "family": [
+        {
+          "word": "explode",
+          "vi": "nổ"
+        }
+      ],
+      "tip": "explode (v) → explosion (n).",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 2444,
+      "word": "export",
+      "ipa": "ˈɛkspɔrt",
+      "viRead": "EK-sport",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự xuất khẩu; hàng xuất khẩu",
+      "exampleEn": "Rice is a major export of Vietnam.",
+      "exampleVi": "Gạo là mặt hàng xuất khẩu chính của Việt Nam.",
+      "collocations": [
+        {
+          "en": "export goods",
+          "vi": "hàng xuất khẩu"
+        },
+        {
+          "en": "export market",
+          "vi": "thị trường xuất khẩu"
+        }
+      ],
+      "family": [
+        {
+          "word": "import",
+          "vi": "nhập khẩu"
+        }
+      ],
+      "tip": "Danh từ nhấn đầu: EK-sport; động từ nhấn sau: ik-SPORT.",
+      "emoji": "🚢",
+      "stage": 2
+    },
+    {
+      "id": 2445,
+      "word": "expose",
+      "ipa": "ɪkˈspoʊz",
+      "viRead": "ik-SPÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phơi bày; để lộ",
+      "exampleEn": "Don't expose your skin to the sun too long.",
+      "exampleVi": "Đừng để da tiếp xúc với nắng quá lâu.",
+      "collocations": [
+        {
+          "en": "expose to",
+          "vi": "tiếp xúc với"
+        },
+        {
+          "en": "expose the truth",
+          "vi": "phơi bày sự thật"
+        }
+      ],
+      "family": [
+        {
+          "word": "exposure",
+          "vi": "sự tiếp xúc"
+        }
+      ],
+      "tip": "be exposed to English every day = tiếp xúc tiếng Anh mỗi ngày.",
+      "emoji": "☀️",
+      "stage": 2
+    },
+    {
+      "id": 2446,
+      "word": "extend",
+      "ipa": "ɪkˈstɛnd",
+      "viRead": "ik-STENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "kéo dài; mở rộng",
+      "exampleEn": "Can I extend my stay for two nights?",
+      "exampleVi": "Tôi có thể ở thêm hai đêm được không?",
+      "collocations": [
+        {
+          "en": "extend a visa",
+          "vi": "gia hạn visa"
+        },
+        {
+          "en": "extend the deadline",
+          "vi": "lùi hạn chót"
+        }
+      ],
+      "family": [
+        {
+          "word": "extension",
+          "vi": "sự gia hạn"
+        }
+      ],
+      "tip": "extend (v) → extension (n) → extensive (adj).",
+      "emoji": "📏",
+      "stage": 2
+    },
+    {
+      "id": 2447,
+      "word": "extent",
+      "ipa": "ɪkˈstɛnt",
+      "viRead": "ik-STENT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mức độ, phạm vi",
+      "exampleEn": "To some extent, I agree.",
+      "exampleVi": "Ở mức độ nào đó, tôi đồng ý.",
+      "collocations": [
+        {
+          "en": "to some extent",
+          "vi": "ở mức độ nào đó"
+        },
+        {
+          "en": "to what extent",
+          "vi": "đến mức nào"
+        }
+      ],
+      "tip": "to some extent = phần nào đó. extent ≠ extend.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 2448,
+      "word": "external",
+      "ipa": "ɪkˈstərnəl",
+      "viRead": "ik-STƠ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bên ngoài",
+      "exampleEn": "This cream is for external use only.",
+      "exampleVi": "Kem này chỉ dùng ngoài da.",
+      "collocations": [
+        {
+          "en": "external use",
+          "vi": "dùng ngoài"
+        },
+        {
+          "en": "external factors",
+          "vi": "yếu tố bên ngoài"
+        }
+      ],
+      "family": [
+        {
+          "word": "internal",
+          "vi": "bên trong"
+        }
+      ],
+      "tip": "external ↔ internal.",
+      "emoji": "🔲",
+      "stage": 2
+    },
+    {
+      "id": 2449,
+      "word": "extraordinary",
+      "ipa": "ɪkˈstrɔrdəˌnɛri",
+      "viRead": "ik-STROR-đơ-ne-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "phi thường",
+      "exampleEn": "She has an extraordinary voice.",
+      "exampleVi": "Cô ấy có giọng hát phi thường.",
+      "collocations": [
+        {
+          "en": "an extraordinary talent",
+          "vi": "tài năng phi thường"
+        },
+        {
+          "en": "something extraordinary",
+          "vi": "điều phi thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "ordinary",
+          "vi": "bình thường"
+        }
+      ],
+      "tip": "extra + ordinary = hơn cả bình thường. Đọc 'ik-STROR-đơ-ne-ri'.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 2450,
+      "word": "fabric",
+      "ipa": "ˈfæbrɪk",
+      "viRead": "PHE-brik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vải",
+      "exampleEn": "This fabric is soft and cool.",
+      "exampleVi": "Loại vải này mềm và mát.",
+      "collocations": [
+        {
+          "en": "cotton fabric",
+          "vi": "vải cotton"
+        },
+        {
+          "en": "silk fabric",
+          "vi": "vải lụa"
+        }
+      ],
+      "tip": "fabric = vải; KHÔNG phải nhà máy (factory).",
+      "emoji": "🧵",
+      "stage": 2
+    },
+    {
+      "id": 2451,
+      "word": "facility",
+      "ipa": "fəˈsɪlɪti",
+      "viRead": "phơ-SI-li-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơ sở vật chất, tiện nghi",
+      "exampleEn": "The school has good sports facilities.",
+      "exampleVi": "Trường có cơ sở vật chất thể thao tốt.",
+      "collocations": [
+        {
+          "en": "sports facilities",
+          "vi": "cơ sở thể thao"
+        },
+        {
+          "en": "medical facility",
+          "vi": "cơ sở y tế"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: facilities = tiện nghi.",
+      "emoji": "🏟️",
+      "stage": 2
+    },
+    {
+      "id": 2452,
+      "word": "factor",
+      "ipa": "ˈfæktər",
+      "viRead": "PHEK-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "yếu tố",
+      "exampleEn": "Price is an important factor.",
+      "exampleVi": "Giá cả là một yếu tố quan trọng.",
+      "collocations": [
+        {
+          "en": "a key factor",
+          "vi": "yếu tố then chốt"
+        },
+        {
+          "en": "risk factor",
+          "vi": "yếu tố rủi ro"
+        }
+      ],
+      "tip": "factor = yếu tố ảnh hưởng đến kết quả.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 2453,
+      "word": "faint",
+      "ipa": "feɪnt",
+      "viRead": "PHÂYNT",
+      "pos": "adj./v.",
+      "posCategory": "verb",
+      "meaning": "ngất xỉu; mờ nhạt",
+      "exampleEn": "She fainted because of the heat.",
+      "exampleVi": "Cô ấy ngất vì nóng.",
+      "collocations": [
+        {
+          "en": "feel faint",
+          "vi": "thấy choáng"
+        },
+        {
+          "en": "a faint smell",
+          "vi": "mùi thoang thoảng"
+        }
+      ],
+      "tip": "faint (v) = ngất; (adj) = mờ nhạt: a faint sound.",
+      "emoji": "😵",
+      "stage": 2
+    },
+    {
+      "id": 2454,
+      "word": "fairly",
+      "ipa": "ˈfɛrli",
+      "viRead": "PHER-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khá; công bằng",
+      "exampleEn": "The test was fairly easy.",
+      "exampleVi": "Bài kiểm tra khá dễ.",
+      "collocations": [
+        {
+          "en": "fairly easy",
+          "vi": "khá dễ"
+        },
+        {
+          "en": "treat fairly",
+          "vi": "đối xử công bằng"
+        }
+      ],
+      "family": [
+        {
+          "word": "fair",
+          "vi": "công bằng"
+        }
+      ],
+      "tip": "fairly (khá) < rather < very.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2455,
+      "word": "faith",
+      "ipa": "feɪθ",
+      "viRead": "PHÂYTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "niềm tin; đức tin",
+      "exampleEn": "Don't lose faith in yourself.",
+      "exampleVi": "Đừng mất niềm tin vào bản thân.",
+      "collocations": [
+        {
+          "en": "have faith in",
+          "vi": "tin vào"
+        },
+        {
+          "en": "lose faith",
+          "vi": "mất niềm tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "faithful",
+          "vi": "chung thủy"
+        }
+      ],
+      "tip": "faithful = chung thủy, trung thành.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 2456,
+      "word": "fame",
+      "ipa": "feɪm",
+      "viRead": "PHÂYM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh tiếng",
+      "exampleEn": "He found fame on YouTube.",
+      "exampleVi": "Anh ấy nổi tiếng nhờ YouTube.",
+      "collocations": [
+        {
+          "en": "rise to fame",
+          "vi": "trở nên nổi tiếng"
+        },
+        {
+          "en": "fame and fortune",
+          "vi": "danh vọng và tiền tài"
+        }
+      ],
+      "family": [
+        {
+          "word": "famous",
+          "vi": "nổi tiếng"
+        }
+      ],
+      "tip": "fame (n) → famous (adj). Hall of Fame = đại sảnh danh vọng.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 2457,
+      "word": "fantasy",
+      "ipa": "ˈfæntəsi",
+      "viRead": "PHEN-tơ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tưởng tượng; kỳ ảo",
+      "exampleEn": "Harry Potter is a fantasy story.",
+      "exampleVi": "Harry Potter là truyện kỳ ảo.",
+      "collocations": [
+        {
+          "en": "fantasy film",
+          "vi": "phim giả tưởng"
+        },
+        {
+          "en": "a childhood fantasy",
+          "vi": "ước mơ thời thơ ấu"
+        }
+      ],
+      "family": [
+        {
+          "word": "fantastic",
+          "vi": "tuyệt vời"
+        }
+      ],
+      "tip": "fantasy = thế giới tưởng tượng; fantastic = tuyệt vời.",
+      "emoji": "🧙",
+      "stage": 2
+    },
+    {
+      "id": 2458,
+      "word": "fascinating",
+      "ipa": "ˈfæsəˌneɪtɪŋ",
+      "viRead": "PHE-sơ-nây-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hấp dẫn, lôi cuốn",
+      "exampleEn": "The history of Hue is fascinating.",
+      "exampleVi": "Lịch sử Huế thật cuốn hút.",
+      "collocations": [
+        {
+          "en": "a fascinating story",
+          "vi": "câu chuyện hấp dẫn"
+        },
+        {
+          "en": "find it fascinating",
+          "vi": "thấy rất thú vị"
+        }
+      ],
+      "family": [
+        {
+          "word": "fascinated",
+          "vi": "bị cuốn hút"
+        }
+      ],
+      "tip": "fascinating (thứ gây) – fascinated (người thấy). sc đọc 's'.",
+      "emoji": "🤩",
       "stage": 2
     }
   ]
