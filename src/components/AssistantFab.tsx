@@ -25,13 +25,15 @@ export default function AssistantFab() {
 
   return (
     <>
-      {/* Floating bubble */}
+      {/* Floating bubble — desktop only. On a phone it sat on top of the very
+          buttons a learner taps most (Tiếp, loa, đáp án); there the assistant
+          opens from the header instead (AssistantHeaderButton). */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
           aria-label={user ? 'Mở trợ lý AI' : 'Trợ lý AI (cần đăng nhập)'}
           title={user ? 'Trợ lý AI học từ vựng' : 'Trợ lý AI — cần đăng nhập'}
-          className="fixed bottom-20 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-600/30 transition hover:scale-105 active:scale-95 lg:bottom-6 lg:right-6"
+          className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-600/30 transition hover:scale-105 active:scale-95 lg:flex"
         >
           <Bot className="h-7 w-7" />
           {/* "Online" dot only when the assistant is actually usable (logged in),
@@ -86,5 +88,23 @@ export default function AssistantFab() {
         </>
       )}
     </>
+  )
+}
+
+/** The assistant's entry point in the phone header (the bubble is desktop-only). */
+export function AssistantHeaderButton() {
+  const user = useAuth((s) => s.user)
+  const setOpen = useContextStore((s) => s.setAssistantOpen)
+  return (
+    <button
+      onClick={() => setOpen(true)}
+      aria-label={user ? 'Mở trợ lý AI' : 'Trợ lý AI (cần đăng nhập)'}
+      className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-sm active:scale-95 lg:hidden"
+    >
+      <Bot className="h-5 w-5" />
+      {user && (
+        <span className="absolute -right-0.5 -top-0.5 h-3 w-3 rounded-full border-2 border-white bg-emerald-400 dark:border-slate-900" />
+      )}
+    </button>
   )
 }

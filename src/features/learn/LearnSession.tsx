@@ -6,6 +6,7 @@ import { makeQuestion } from '@/lib/quiz'
 import { exampleAudio, prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
+import { useImmersive } from '@/store/uiStore'
 import QuizRunner from '@/components/QuizRunner'
 import WordInsight from '@/components/WordInsight'
 import MySentence from '@/components/MySentence'
@@ -168,6 +169,7 @@ function MeetCards({
   onDone: () => void
   onExit: () => void
 }) {
+  useImmersive()
   const autoSpeak = useSettings((s) => s.autoSpeak)
   const lang = useSettings((s) => s.currentLang)
   const word = group[index]
@@ -247,7 +249,7 @@ function MeetCards({
         <MySentence key={`mine-${word.id}`} word={word} lang={lang} />
       </div>
 
-      <div className="mt-5 flex gap-3">
+      <div className="session-actions flex gap-3">
         {index > 0 && (
           <button
             onClick={() => onIndex(index - 1)}

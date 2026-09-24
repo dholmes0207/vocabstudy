@@ -19,6 +19,9 @@
 
   body {
     @apply bg-slate-50 text-slate-800 antialiased;
+    /* Android Chrome paints a blue box over anything tapped; our buttons have
+       their own pressed states. */
+    -webkit-tap-highlight-color: transparent;
     @apply dark:bg-slate-950 dark:text-slate-200;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
@@ -49,6 +52,30 @@
 
   .chip {
     @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  /* A study session's main action bar. On a phone it sticks to the bottom of
+     the screen (above the home indicator, and above the keyboard thanks to
+     interactive-widget=resizes-content), so "Tiếp" never needs a scroll to
+     reach — the bottom nav is hidden in sessions (see useImmersive). On large
+     screens it is an ordinary block. */
+  .session-actions {
+    @apply sticky bottom-0 z-10 -mx-3 mt-5 bg-gradient-to-t from-slate-50 from-60% to-transparent px-3 pt-5;
+    @apply dark:from-slate-950;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+  }
+  /* Same bar inside a white card. */
+  .card .session-actions {
+    @apply from-white dark:from-slate-900;
+  }
+  @media (min-width: 1024px) {
+    .session-actions {
+      position: static;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      background: none;
+    }
   }
 }
 

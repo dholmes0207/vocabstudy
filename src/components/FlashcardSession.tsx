@@ -4,6 +4,7 @@ import type { Word } from '@/types'
 import Flashcard from './Flashcard'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
+import { useImmersive } from '@/store/uiStore'
 import { exampleAudio, prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 
 interface Props {
@@ -24,6 +25,7 @@ export default function FlashcardSession({
   renderComplete,
   onExit,
 }: Props) {
+  useImmersive()
   const autoSpeak = useSettings((s) => s.autoSpeak)
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
@@ -134,7 +136,7 @@ export default function FlashcardSession({
       />
 
       {/* Rating */}
-      <div className="mt-6 min-h-[3.5rem]">
+      <div className="session-actions min-h-[3.5rem]">
         {flipped ? (
           <div className="grid grid-cols-2 gap-3 animate-fade-in">
             <button

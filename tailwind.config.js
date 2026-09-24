@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
+  // Touch screens keep a :hover state after a tap, leaving cards "lifted" as if
+  // selected. Only apply hover styles where a real pointer can hover.
+  future: { hoverOnlyWhenSupported: true },
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {

@@ -36,13 +36,13 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
       {variant === 'details' ? null : full ? (
         <div className="flex flex-col items-center gap-2 text-center">
           <PosBadge category={word.posCategory} raw={word.pos} />
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             {word.emoji && (
               <span className="text-4xl" aria-hidden>
                 {word.emoji}
               </span>
             )}
-            <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+            <h2 className="break-words text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
               {word.word}
             </h2>
             <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="md" />

@@ -7,6 +7,7 @@ import { exampleAudio, pronounce, wordAudio } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
+import { useImmersive } from '@/store/uiStore'
 import HighlightExample from './HighlightExample'
 import PosBadge from './PosBadge'
 import SpeakButton from './SpeakButton'
@@ -71,6 +72,7 @@ export default function QuizRunner({
   onExit,
   caption,
 }: Props) {
+  useImmersive()
   const ttsRate = useSettings((s) => s.ttsRate)
   const soundEnabled = useSettings((s) => s.soundEnabled)
   const [queue, setQueue] = useState<Item[]>(() => questions.map((q) => ({ q, attempt: 1 })))
@@ -436,8 +438,8 @@ export default function QuizRunner({
           </div>
         )}
 
-        {/* Footer action */}
-        <div className="mt-6 min-h-[3rem]">
+        {/* Footer action — sticks to the bottom of a phone screen */}
+        <div className={isTyping || revealed ? 'session-actions' : 'mt-6'}>
           {isTyping && !revealed ? (
             <button
               onClick={submitTyping}

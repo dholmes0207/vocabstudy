@@ -57,6 +57,7 @@ export default function Quiz() {
         wordsById={wordsById}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(id, correct) => recordAnswer(code, id, correct)}
+        onExit={() => setQuestions(null)}
         renderComplete={(correct, total, wrongIds) => (
           <SessionComplete emoji="🏁" title="Xong bài quiz!" correct={correct} total={total}>
             {wrongIds.length > 0 && (
