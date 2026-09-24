@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 2648,
+    "count": 2695,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -75509,6 +75509,1290 @@
       ],
       "tip": "lottery ticket = vé số.",
       "emoji": "🎟️",
+      "stage": 2
+    },
+    {
+      "id": 2649,
+      "word": "machinery",
+      "ipa": "məˈʃinəri",
+      "viRead": "mơ-SHI-nơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy móc (nói chung)",
+      "exampleEn": "The factory bought new machinery.",
+      "exampleVi": "Nhà máy mua máy móc mới.",
+      "collocations": [
+        {
+          "en": "heavy machinery",
+          "vi": "máy móc hạng nặng"
+        },
+        {
+          "en": "farm machinery",
+          "vi": "máy nông nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "machine",
+          "vi": "cái máy"
+        }
+      ],
+      "tip": "machinery không đếm được (KHÔNG nói a machinery).",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 2650,
+      "word": "mad",
+      "ipa": "mæd",
+      "viRead": "MEĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "điên; tức giận",
+      "exampleEn": "My mom will be mad if I'm late.",
+      "exampleVi": "Mẹ sẽ giận nếu tôi về muộn.",
+      "collocations": [
+        {
+          "en": "go mad",
+          "vi": "phát điên"
+        },
+        {
+          "en": "mad at",
+          "vi": "giận ai"
+        }
+      ],
+      "tip": "Mỹ: mad = angry (giận). be mad about = mê mẩn.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 2651,
+      "word": "magnet",
+      "ipa": "ˈmægnət",
+      "viRead": "MEG-nơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nam châm",
+      "exampleEn": "Stick the note on the fridge with a magnet.",
+      "exampleVi": "Dán mẩu giấy lên tủ lạnh bằng nam châm.",
+      "collocations": [
+        {
+          "en": "fridge magnet",
+          "vi": "nam châm tủ lạnh"
+        },
+        {
+          "en": "a magnet for tourists",
+          "vi": "thỏi nam châm hút khách"
+        }
+      ],
+      "family": [
+        {
+          "word": "magnetic",
+          "vi": "có từ tính"
+        }
+      ],
+      "tip": "g đọc rõ: 'MEG-nợt'.",
+      "emoji": "🧲",
+      "stage": 2
+    },
+    {
+      "id": 2652,
+      "word": "maid",
+      "ipa": "meɪd",
+      "viRead": "MÂYĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người giúp việc",
+      "exampleEn": "The hotel maid cleaned our room.",
+      "exampleVi": "Nhân viên dọn phòng khách sạn đã dọn phòng cho chúng tôi.",
+      "collocations": [
+        {
+          "en": "hotel maid",
+          "vi": "nhân viên dọn phòng"
+        },
+        {
+          "en": "maid of honor",
+          "vi": "phù dâu chính"
+        }
+      ],
+      "tip": "maid (người giúp việc) đọc giống made (đã làm).",
+      "emoji": "🧹",
+      "stage": 2
+    },
+    {
+      "id": 2653,
+      "word": "mainly",
+      "ipa": "ˈmeɪnli",
+      "viRead": "MÂYN-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chủ yếu",
+      "exampleEn": "The students are mainly from Hanoi.",
+      "exampleVi": "Học sinh chủ yếu đến từ Hà Nội.",
+      "collocations": [
+        {
+          "en": "mainly because",
+          "vi": "chủ yếu vì"
+        },
+        {
+          "en": "consist mainly of",
+          "vi": "chủ yếu gồm"
+        }
+      ],
+      "family": [
+        {
+          "word": "main",
+          "vi": "chính"
+        }
+      ],
+      "tip": "mainly = mostly = chủ yếu.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 2654,
+      "word": "maintain",
+      "ipa": "meɪnˈteɪn",
+      "viRead": "mâyn-TÂYN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "duy trì; bảo dưỡng",
+      "exampleEn": "It's hard to maintain a daily habit.",
+      "exampleVi": "Duy trì thói quen hằng ngày thật khó.",
+      "collocations": [
+        {
+          "en": "maintain a habit",
+          "vi": "duy trì thói quen"
+        },
+        {
+          "en": "maintain a car",
+          "vi": "bảo dưỡng xe"
+        }
+      ],
+      "family": [
+        {
+          "word": "maintenance",
+          "vi": "sự bảo trì"
+        }
+      ],
+      "tip": "Chuỗi ngày học (streak) giúp bạn maintain thói quen!",
+      "emoji": "🔧",
+      "stage": 2
+    },
+    {
+      "id": 2655,
+      "word": "majority",
+      "ipa": "məˈʤɔrəti",
+      "viRead": "mơ-GIO-rơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đa số",
+      "exampleEn": "The majority of students passed the test.",
+      "exampleVi": "Đa số học sinh vượt qua bài kiểm tra.",
+      "collocations": [
+        {
+          "en": "the majority of",
+          "vi": "đa số"
+        },
+        {
+          "en": "a large majority",
+          "vi": "phần lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "minority",
+          "vi": "thiểu số"
+        }
+      ],
+      "tip": "majority ↔ minority. Nhấn âm 2: mơ-GIO-rơ-ti.",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 2656,
+      "word": "makeup",
+      "ipa": "ˈmeɪˌkəp",
+      "viRead": "MÂY-kơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ trang điểm",
+      "exampleEn": "She doesn't wear makeup to school.",
+      "exampleVi": "Cô ấy không trang điểm khi đi học.",
+      "collocations": [
+        {
+          "en": "wear makeup",
+          "vi": "trang điểm"
+        },
+        {
+          "en": "makeup artist",
+          "vi": "chuyên viên trang điểm"
+        }
+      ],
+      "tip": "put on makeup = trang điểm; take off makeup = tẩy trang.",
+      "emoji": "💄",
+      "stage": 2
+    },
+    {
+      "id": 2657,
+      "word": "manner",
+      "ipa": "ˈmænər",
+      "viRead": "ME-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cách thức; phép lịch sự",
+      "exampleEn": "It's bad manners to talk with your mouth full.",
+      "exampleVi": "Vừa nhai vừa nói là bất lịch sự.",
+      "collocations": [
+        {
+          "en": "good manners",
+          "vi": "lịch sự"
+        },
+        {
+          "en": "table manners",
+          "vi": "phép lịch sự khi ăn"
+        }
+      ],
+      "tip": "manners (số nhiều) = phép lịch sự.",
+      "emoji": "🎩",
+      "stage": 2
+    },
+    {
+      "id": 2658,
+      "word": "manufacture",
+      "ipa": "ˌmænjəˈfækʧər",
+      "viRead": "men-yơ-PHEK-chơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sản xuất",
+      "exampleEn": "The company manufactures phones.",
+      "exampleVi": "Công ty sản xuất điện thoại.",
+      "collocations": [
+        {
+          "en": "manufacture cars",
+          "vi": "sản xuất ô tô"
+        },
+        {
+          "en": "be manufactured in",
+          "vi": "được sản xuất tại"
+        }
+      ],
+      "family": [
+        {
+          "word": "manufacturer",
+          "vi": "nhà sản xuất"
+        }
+      ],
+      "tip": "manu (tay) + facture (làm) — gốc là 'làm bằng tay'.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 2659,
+      "word": "marathon",
+      "ipa": "ˈmɛrəˌθɑn",
+      "viRead": "ME-rơ-than",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc chạy marathon",
+      "exampleEn": "He ran a marathon in Da Nang.",
+      "exampleVi": "Anh ấy chạy marathon ở Đà Nẵng.",
+      "collocations": [
+        {
+          "en": "run a marathon",
+          "vi": "chạy marathon"
+        },
+        {
+          "en": "a movie marathon",
+          "vi": "cày phim liền mạch"
+        }
+      ],
+      "tip": "marathon = 42,195 km. Cày phim liên tục = movie marathon.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 2660,
+      "word": "margin",
+      "ipa": "ˈmɑrʤən",
+      "viRead": "MAR-giơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lề (giấy); biên độ",
+      "exampleEn": "Write your notes in the margin.",
+      "exampleVi": "Ghi chú vào lề giấy.",
+      "collocations": [
+        {
+          "en": "in the margin",
+          "vi": "ở lề"
+        },
+        {
+          "en": "profit margin",
+          "vi": "biên lợi nhuận"
+        }
+      ],
+      "tip": "win by a narrow margin = thắng sát nút.",
+      "emoji": "📄",
+      "stage": 2
+    },
+    {
+      "id": 2661,
+      "word": "marine",
+      "ipa": "məˈrin",
+      "viRead": "mơ-RIN",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc biển",
+      "exampleEn": "Marine life is in danger from plastic.",
+      "exampleVi": "Sinh vật biển đang gặp nguy vì rác nhựa.",
+      "collocations": [
+        {
+          "en": "marine life",
+          "vi": "sinh vật biển"
+        },
+        {
+          "en": "marine park",
+          "vi": "khu bảo tồn biển"
+        }
+      ],
+      "tip": "Nhấn âm 2: mơ-RIN.",
+      "emoji": "🐠",
+      "stage": 2
+    },
+    {
+      "id": 2662,
+      "word": "mark",
+      "ipa": "mɑrk",
+      "viRead": "MARK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "điểm; dấu",
+      "exampleEn": "She got full marks in the test.",
+      "exampleVi": "Cô ấy được điểm tuyệt đối bài kiểm tra.",
+      "collocations": [
+        {
+          "en": "full marks",
+          "vi": "điểm tối đa"
+        },
+        {
+          "en": "question mark",
+          "vi": "dấu hỏi"
+        }
+      ],
+      "tip": "question mark (?) = dấu hỏi; exclamation mark (!) = dấu chấm than.",
+      "emoji": "✔️",
+      "stage": 2
+    },
+    {
+      "id": 2663,
+      "word": "marriage",
+      "ipa": "ˈmɛrɪʤ",
+      "viRead": "ME-rigi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hôn nhân",
+      "exampleEn": "They have a happy marriage.",
+      "exampleVi": "Họ có cuộc hôn nhân hạnh phúc.",
+      "collocations": [
+        {
+          "en": "a happy marriage",
+          "vi": "hôn nhân hạnh phúc"
+        },
+        {
+          "en": "marriage proposal",
+          "vi": "lời cầu hôn"
+        }
+      ],
+      "family": [
+        {
+          "word": "marry",
+          "vi": "kết hôn"
+        }
+      ],
+      "tip": "marry (v) → marriage (n) → married (adj).",
+      "emoji": "💒",
+      "stage": 2
+    },
+    {
+      "id": 2664,
+      "word": "married",
+      "ipa": "ˈmɛrid",
+      "viRead": "ME-riđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đã kết hôn",
+      "exampleEn": "Are you married or single?",
+      "exampleVi": "Bạn đã kết hôn hay còn độc thân?",
+      "collocations": [
+        {
+          "en": "get married",
+          "vi": "kết hôn"
+        },
+        {
+          "en": "married to",
+          "vi": "kết hôn với"
+        }
+      ],
+      "family": [
+        {
+          "word": "marry",
+          "vi": "kết hôn"
+        }
+      ],
+      "tip": "get married to someone (KHÔNG dùng with).",
+      "emoji": "💑",
+      "stage": 2
+    },
+    {
+      "id": 2665,
+      "word": "mass",
+      "ipa": "mæs",
+      "viRead": "MES",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "khối; số đông",
+      "exampleEn": "A mass of people gathered in the square.",
+      "exampleVi": "Rất đông người tụ tập ở quảng trường.",
+      "collocations": [
+        {
+          "en": "mass media",
+          "vi": "truyền thông đại chúng"
+        },
+        {
+          "en": "mass production",
+          "vi": "sản xuất hàng loạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "massive",
+          "vi": "to lớn"
+        }
+      ],
+      "tip": "mass media = truyền thông đại chúng.",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 2666,
+      "word": "massive",
+      "ipa": "ˈmæsɪv",
+      "viRead": "ME-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "to lớn, đồ sộ",
+      "exampleEn": "There was a massive traffic jam.",
+      "exampleVi": "Có một vụ kẹt xe khổng lồ.",
+      "collocations": [
+        {
+          "en": "a massive storm",
+          "vi": "cơn bão lớn"
+        },
+        {
+          "en": "massive success",
+          "vi": "thành công vang dội"
+        }
+      ],
+      "family": [
+        {
+          "word": "mass",
+          "vi": "khối"
+        }
+      ],
+      "tip": "massive = huge.",
+      "emoji": "🐘",
+      "stage": 2
+    },
+    {
+      "id": 2667,
+      "word": "mathematics",
+      "ipa": "ˌmæθəˈmætɪks",
+      "viRead": "me-thơ-ME-tiks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "toán học",
+      "exampleEn": "Mathematics was my favorite subject.",
+      "exampleVi": "Toán là môn tôi thích nhất.",
+      "collocations": [
+        {
+          "en": "study mathematics",
+          "vi": "học toán"
+        },
+        {
+          "en": "applied mathematics",
+          "vi": "toán ứng dụng"
+        }
+      ],
+      "tip": "Viết tắt: maths (Anh), math (Mỹ). Là danh từ số ít.",
+      "emoji": "➗",
+      "stage": 2
+    },
+    {
+      "id": 2668,
+      "word": "mature",
+      "ipa": "məˈʧʊr",
+      "viRead": "mơ-CHUR",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trưởng thành, chín chắn",
+      "exampleEn": "She is very mature for her age.",
+      "exampleVi": "Cô ấy rất chín chắn so với tuổi.",
+      "collocations": [
+        {
+          "en": "mature for your age",
+          "vi": "chín chắn so với tuổi"
+        },
+        {
+          "en": "emotionally mature",
+          "vi": "trưởng thành về cảm xúc"
+        }
+      ],
+      "family": [
+        {
+          "word": "maturity",
+          "vi": "sự trưởng thành"
+        }
+      ],
+      "tip": "mature ↔ immature (non nớt).",
+      "emoji": "🧑",
+      "stage": 2
+    },
+    {
+      "id": 2669,
+      "word": "maximum",
+      "ipa": "ˈmæksəməm",
+      "viRead": "MEK-sơ-mơm",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "mức tối đa",
+      "exampleEn": "The maximum speed here is 50 km/h.",
+      "exampleVi": "Tốc độ tối đa ở đây là 50 km/h.",
+      "collocations": [
+        {
+          "en": "maximum speed",
+          "vi": "tốc độ tối đa"
+        },
+        {
+          "en": "a maximum of",
+          "vi": "tối đa"
+        }
+      ],
+      "family": [
+        {
+          "word": "minimum",
+          "vi": "mức tối thiểu"
+        }
+      ],
+      "tip": "maximum ↔ minimum. Viết tắt: max.",
+      "emoji": "🔝",
+      "stage": 2
+    },
+    {
+      "id": 2670,
+      "word": "means",
+      "ipa": "minz",
+      "viRead": "MIND",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phương tiện; cách",
+      "exampleEn": "The bike is my main means of transport.",
+      "exampleVi": "Xe đạp là phương tiện đi lại chính của tôi.",
+      "collocations": [
+        {
+          "en": "means of transport",
+          "vi": "phương tiện đi lại"
+        },
+        {
+          "en": "by all means",
+          "vi": "cứ tự nhiên"
+        }
+      ],
+      "tip": "means giống nhau ở số ít và số nhiều. By all means! = Cứ tự nhiên!",
+      "emoji": "🚲",
+      "stage": 2
+    },
+    {
+      "id": 2671,
+      "word": "meanwhile",
+      "ipa": "ˈminˌwaɪl",
+      "viRead": "MIN-wail",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "trong khi đó",
+      "exampleEn": "I'll cook. Meanwhile, you can set the table.",
+      "exampleVi": "Tôi nấu ăn. Trong lúc đó, bạn dọn bàn nhé.",
+      "collocations": [
+        {
+          "en": "in the meanwhile",
+          "vi": "trong lúc đó"
+        },
+        {
+          "en": "meanwhile, back home",
+          "vi": "trong khi đó ở nhà"
+        }
+      ],
+      "tip": "meanwhile = in the meantime.",
+      "emoji": "⏱️",
+      "stage": 2
+    },
+    {
+      "id": 2672,
+      "word": "medal",
+      "ipa": "ˈmɛdəl",
+      "viRead": "ME-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "huy chương",
+      "exampleEn": "She won a gold medal.",
+      "exampleVi": "Cô ấy giành huy chương vàng.",
+      "collocations": [
+        {
+          "en": "gold medal",
+          "vi": "huy chương vàng"
+        },
+        {
+          "en": "win a medal",
+          "vi": "giành huy chương"
+        }
+      ],
+      "tip": "medal (huy chương) đọc giống meddle (xen vào).",
+      "emoji": "🥇",
+      "stage": 2
+    },
+    {
+      "id": 2673,
+      "word": "mercy",
+      "ipa": "ˈmərsi",
+      "viRead": "MƠ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng thương xót",
+      "exampleEn": "The king showed mercy to the prisoner.",
+      "exampleVi": "Nhà vua khoan dung với tù nhân.",
+      "collocations": [
+        {
+          "en": "have mercy",
+          "vi": "xin rủ lòng thương"
+        },
+        {
+          "en": "at the mercy of",
+          "vi": "phụ thuộc hoàn toàn vào"
+        }
+      ],
+      "tip": "at the mercy of the weather = phụ thuộc hoàn toàn vào thời tiết.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 2674,
+      "word": "mere",
+      "ipa": "mɪr",
+      "viRead": "MIR",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chỉ là",
+      "exampleEn": "He was a mere child at that time.",
+      "exampleVi": "Hồi đó cậu ấy chỉ là một đứa trẻ.",
+      "collocations": [
+        {
+          "en": "a mere",
+          "vi": "chỉ là"
+        },
+        {
+          "en": "the mere thought",
+          "vi": "chỉ mới nghĩ đến"
+        }
+      ],
+      "family": [
+        {
+          "word": "merely",
+          "vi": "chỉ"
+        }
+      ],
+      "tip": "The mere thought of it scares me = Chỉ nghĩ thôi đã sợ.",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 2675,
+      "word": "merely",
+      "ipa": "ˈmɪrli",
+      "viRead": "MIR-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chỉ, đơn thuần",
+      "exampleEn": "I was merely asking a question.",
+      "exampleVi": "Tôi chỉ hỏi một câu thôi mà.",
+      "collocations": [
+        {
+          "en": "merely a",
+          "vi": "chỉ là"
+        },
+        {
+          "en": "not merely",
+          "vi": "không chỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "mere",
+          "vi": "chỉ là"
+        }
+      ],
+      "tip": "merely = only = just (trang trọng).",
+      "emoji": "☝️",
+      "stage": 2
+    },
+    {
+      "id": 2676,
+      "word": "military",
+      "ipa": "ˈmɪlɪˌtɛri",
+      "viRead": "MI-lơ-te-ri",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "thuộc quân đội",
+      "exampleEn": "He did his military service.",
+      "exampleVi": "Anh ấy đã đi nghĩa vụ quân sự.",
+      "collocations": [
+        {
+          "en": "military service",
+          "vi": "nghĩa vụ quân sự"
+        },
+        {
+          "en": "military base",
+          "vi": "căn cứ quân sự"
+        }
+      ],
+      "tip": "Nhấn âm đầu: MI-lơ-te-ri.",
+      "emoji": "🎖️",
+      "stage": 2
+    },
+    {
+      "id": 2677,
+      "word": "mill",
+      "ipa": "mɪl",
+      "viRead": "MIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cối xay; nhà máy xay",
+      "exampleEn": "They take the rice to the mill.",
+      "exampleVi": "Họ mang lúa đến nhà máy xay.",
+      "collocations": [
+        {
+          "en": "rice mill",
+          "vi": "nhà máy xay lúa"
+        },
+        {
+          "en": "wind mill",
+          "vi": "cối xay gió"
+        }
+      ],
+      "tip": "windmill = cối xay gió.",
+      "emoji": "🌬️",
+      "stage": 2
+    },
+    {
+      "id": 2678,
+      "word": "mineral",
+      "ipa": "ˈmɪnərəl",
+      "viRead": "MI-nơ-rơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoáng chất",
+      "exampleEn": "I drink mineral water every day.",
+      "exampleVi": "Tôi uống nước khoáng mỗi ngày.",
+      "collocations": [
+        {
+          "en": "mineral water",
+          "vi": "nước khoáng"
+        },
+        {
+          "en": "vitamins and minerals",
+          "vi": "vitamin và khoáng chất"
+        }
+      ],
+      "tip": "mineral water = nước khoáng.",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 2679,
+      "word": "minister",
+      "ipa": "ˈmɪnɪstər",
+      "viRead": "MI-nơs-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ trưởng",
+      "exampleEn": "The Prime Minister visited the school.",
+      "exampleVi": "Thủ tướng đã đến thăm trường.",
+      "collocations": [
+        {
+          "en": "Prime Minister",
+          "vi": "Thủ tướng"
+        },
+        {
+          "en": "Minister of Education",
+          "vi": "Bộ trưởng Giáo dục"
+        }
+      ],
+      "family": [
+        {
+          "word": "ministry",
+          "vi": "bộ"
+        }
+      ],
+      "tip": "Prime Minister = Thủ tướng. ministry = bộ.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 2680,
+      "word": "minority",
+      "ipa": "məˈnɔrəti",
+      "viRead": "mơ-NO-rơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thiểu số",
+      "exampleEn": "Vietnam has 53 ethnic minority groups.",
+      "exampleVi": "Việt Nam có 53 dân tộc thiểu số.",
+      "collocations": [
+        {
+          "en": "ethnic minority",
+          "vi": "dân tộc thiểu số"
+        },
+        {
+          "en": "in the minority",
+          "vi": "chiếm thiểu số"
+        }
+      ],
+      "family": [
+        {
+          "word": "majority",
+          "vi": "đa số"
+        }
+      ],
+      "tip": "minority ↔ majority.",
+      "emoji": "🧑‍🤝‍🧑",
+      "stage": 2
+    },
+    {
+      "id": 2681,
+      "word": "mist",
+      "ipa": "mɪst",
+      "viRead": "MIST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sương mù (nhẹ)",
+      "exampleEn": "The mountains were covered in mist.",
+      "exampleVi": "Những ngọn núi phủ sương.",
+      "collocations": [
+        {
+          "en": "morning mist",
+          "vi": "sương sớm"
+        },
+        {
+          "en": "thick mist",
+          "vi": "sương dày"
+        }
+      ],
+      "family": [
+        {
+          "word": "misty",
+          "vi": "mù sương"
+        }
+      ],
+      "tip": "mist (sương nhẹ) < fog (sương mù dày).",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 2682,
+      "word": "mixture",
+      "ipa": "ˈmɪksʧər",
+      "viRead": "MIKS-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hỗn hợp",
+      "exampleEn": "Pour the mixture into a bowl.",
+      "exampleVi": "Đổ hỗn hợp vào tô.",
+      "collocations": [
+        {
+          "en": "a mixture of",
+          "vi": "hỗn hợp của"
+        },
+        {
+          "en": "cake mixture",
+          "vi": "bột bánh đã trộn"
+        }
+      ],
+      "family": [
+        {
+          "word": "mix",
+          "vi": "trộn"
+        }
+      ],
+      "tip": "mix (v) → mixture (n).",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 2683,
+      "word": "mode",
+      "ipa": "moʊd",
+      "viRead": "MÂUĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chế độ; phương thức",
+      "exampleEn": "Put your phone in silent mode.",
+      "exampleVi": "Để điện thoại ở chế độ im lặng.",
+      "collocations": [
+        {
+          "en": "silent mode",
+          "vi": "chế độ im lặng"
+        },
+        {
+          "en": "dark mode",
+          "vi": "chế độ tối"
+        }
+      ],
+      "tip": "dark mode = chế độ tối (app này cũng có!).",
+      "emoji": "🌙",
+      "stage": 2
+    },
+    {
+      "id": 2684,
+      "word": "moderate",
+      "ipa": "ˈmɑdərət",
+      "viRead": "MA-đơ-rơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vừa phải, điều độ",
+      "exampleEn": "Moderate exercise is good for you.",
+      "exampleVi": "Tập thể dục vừa phải tốt cho bạn.",
+      "collocations": [
+        {
+          "en": "moderate exercise",
+          "vi": "tập vừa phải"
+        },
+        {
+          "en": "moderate price",
+          "vi": "giá phải chăng"
+        }
+      ],
+      "family": [
+        {
+          "word": "moderately",
+          "vi": "vừa phải"
+        }
+      ],
+      "tip": "Tính từ đọc 'MA-đơ-rợt'.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 2685,
+      "word": "modest",
+      "ipa": "ˈmɑdəst",
+      "viRead": "MA-đơst",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khiêm tốn",
+      "exampleEn": "He is very modest about his success.",
+      "exampleVi": "Anh ấy rất khiêm tốn về thành công của mình.",
+      "collocations": [
+        {
+          "en": "modest about",
+          "vi": "khiêm tốn về"
+        },
+        {
+          "en": "a modest house",
+          "vi": "ngôi nhà giản dị"
+        }
+      ],
+      "family": [
+        {
+          "word": "modesty",
+          "vi": "sự khiêm tốn"
+        }
+      ],
+      "tip": "modest ≈ humble (khiêm tốn).",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 2686,
+      "word": "monk",
+      "ipa": "məŋk",
+      "viRead": "MƠNGK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà sư",
+      "exampleEn": "A monk lives in the temple.",
+      "exampleVi": "Một nhà sư sống trong ngôi chùa.",
+      "collocations": [
+        {
+          "en": "Buddhist monk",
+          "vi": "nhà sư Phật giáo"
+        },
+        {
+          "en": "become a monk",
+          "vi": "đi tu"
+        }
+      ],
+      "tip": "o đọc 'ơ': 'mơngk'.",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 2687,
+      "word": "moral",
+      "ipa": "ˈmɔrəl",
+      "viRead": "MO-rơl",
+      "pos": "adj./n.",
+      "posCategory": "noun",
+      "meaning": "bài học đạo đức",
+      "exampleEn": "The moral of the story is: be honest.",
+      "exampleVi": "Bài học của câu chuyện là: hãy trung thực.",
+      "collocations": [
+        {
+          "en": "the moral of the story",
+          "vi": "bài học rút ra"
+        },
+        {
+          "en": "moral values",
+          "vi": "giá trị đạo đức"
+        }
+      ],
+      "family": [
+        {
+          "word": "morality",
+          "vi": "đạo đức"
+        }
+      ],
+      "tip": "moral (bài học) ≠ morale (tinh thần).",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 2688,
+      "word": "moreover",
+      "ipa": "mɔrˈoʊvər",
+      "viRead": "mor-ÂU-vơ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hơn nữa",
+      "exampleEn": "The hotel is cheap; moreover, it's near the beach.",
+      "exampleVi": "Khách sạn rẻ; hơn nữa, nó gần bãi biển.",
+      "collocations": [
+        {
+          "en": "and moreover",
+          "vi": "và hơn nữa"
+        },
+        {
+          "en": "moreover, it is",
+          "vi": "hơn nữa, nó"
+        }
+      ],
+      "tip": "moreover = furthermore = in addition (văn viết).",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 2689,
+      "word": "motion",
+      "ipa": "ˈmoʊʃən",
+      "viRead": "MÂU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuyển động",
+      "exampleEn": "The film is in slow motion.",
+      "exampleVi": "Phim đang chiếu chậm.",
+      "collocations": [
+        {
+          "en": "slow motion",
+          "vi": "quay chậm"
+        },
+        {
+          "en": "in motion",
+          "vi": "đang chuyển động"
+        }
+      ],
+      "tip": "motion sickness = say xe.",
+      "emoji": "🎞️",
+      "stage": 2
+    },
+    {
+      "id": 2690,
+      "word": "motivate",
+      "ipa": "ˈmoʊtəˌveɪt",
+      "viRead": "MÂU-tơ-vâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tạo động lực",
+      "exampleEn": "Good teachers motivate their students.",
+      "exampleVi": "Giáo viên giỏi truyền động lực cho học sinh.",
+      "collocations": [
+        {
+          "en": "motivate someone to",
+          "vi": "thúc đẩy ai"
+        },
+        {
+          "en": "be motivated",
+          "vi": "có động lực"
+        }
+      ],
+      "family": [
+        {
+          "word": "motivation",
+          "vi": "động lực"
+        }
+      ],
+      "tip": "motivation = động lực. Streak giúp bạn có motivation!",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 2691,
+      "word": "motor",
+      "ipa": "ˈmoʊtər",
+      "viRead": "MÂU-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "động cơ",
+      "exampleEn": "The boat has a small motor.",
+      "exampleVi": "Chiếc thuyền có động cơ nhỏ.",
+      "collocations": [
+        {
+          "en": "electric motor",
+          "vi": "động cơ điện"
+        },
+        {
+          "en": "motor bike",
+          "vi": "xe máy"
+        }
+      ],
+      "family": [
+        {
+          "word": "motorbike",
+          "vi": "xe máy"
+        }
+      ],
+      "tip": "motorbike = xe máy.",
+      "emoji": "🛵",
+      "stage": 2
+    },
+    {
+      "id": 2692,
+      "word": "mount",
+      "ipa": "maʊnt",
+      "viRead": "MAONT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trèo lên; tăng",
+      "exampleEn": "Mount the horse slowly.",
+      "exampleVi": "Lên ngựa từ từ thôi.",
+      "collocations": [
+        {
+          "en": "mount a horse",
+          "vi": "lên ngựa"
+        },
+        {
+          "en": "Mount Everest",
+          "vi": "núi Everest"
+        }
+      ],
+      "tip": "Mount + tên núi: Mount Fuji = núi Phú Sĩ.",
+      "emoji": "🏔️",
+      "stage": 2
+    },
+    {
+      "id": 2693,
+      "word": "multiple",
+      "ipa": "ˈməltəpəl",
+      "viRead": "MƠL-tơ-pơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều",
+      "exampleEn": "Choose the right answer from multiple choices.",
+      "exampleVi": "Chọn đáp án đúng trong nhiều lựa chọn.",
+      "collocations": [
+        {
+          "en": "multiple choice",
+          "vi": "trắc nghiệm"
+        },
+        {
+          "en": "multiple times",
+          "vi": "nhiều lần"
+        }
+      ],
+      "family": [
+        {
+          "word": "multiply",
+          "vi": "nhân"
+        }
+      ],
+      "tip": "multiple-choice test = bài trắc nghiệm.",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 2694,
+      "word": "murder",
+      "ipa": "ˈmərdər",
+      "viRead": "MƠ-đơ",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "vụ giết người",
+      "exampleEn": "The police are investigating the murder.",
+      "exampleVi": "Cảnh sát đang điều tra vụ giết người.",
+      "collocations": [
+        {
+          "en": "commit murder",
+          "vi": "phạm tội giết người"
+        },
+        {
+          "en": "murder mystery",
+          "vi": "truyện trinh thám án mạng"
+        }
+      ],
+      "family": [
+        {
+          "word": "murderer",
+          "vi": "kẻ giết người"
+        }
+      ],
+      "tip": "murder = giết người có chủ ý; kill = giết (nói chung).",
+      "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 2695,
+      "word": "myth",
+      "ipa": "mɪθ",
+      "viRead": "MITH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "truyện thần thoại; điều hoang đường",
+      "exampleEn": "It's a myth that goldfish have short memories.",
+      "exampleVi": "Cá vàng có trí nhớ ngắn chỉ là lời đồn sai.",
+      "collocations": [
+        {
+          "en": "Greek myth",
+          "vi": "thần thoại Hy Lạp"
+        },
+        {
+          "en": "a common myth",
+          "vi": "quan niệm sai phổ biến"
+        }
+      ],
+      "family": [
+        {
+          "word": "mythology",
+          "vi": "thần thoại học"
+        }
+      ],
+      "tip": "myth = chuyện hoang đường / niềm tin sai phổ biến.",
+      "emoji": "🐉",
       "stage": 2
     }
   ]
