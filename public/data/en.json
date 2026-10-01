@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3388,
+    "count": 3428,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -95291,6 +95291,1098 @@
       ],
       "tip": "tooth + ache.",
       "emoji": "🦷",
+      "stage": 2
+    },
+    {
+      "id": 3389,
+      "word": "baggage",
+      "ipa": "ˈbægɪʤ",
+      "viRead": "BE-gơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hành lý",
+      "exampleEn": "Collect your baggage at belt 3.",
+      "exampleVi": "Nhận hành lý ở băng chuyền số 3.",
+      "collocations": [
+        {
+          "en": "baggage claim",
+          "vi": "khu nhận hành lý"
+        },
+        {
+          "en": "carry-on baggage",
+          "vi": "hành lý xách tay"
+        }
+      ],
+      "family": [
+        {
+          "word": "luggage",
+          "vi": "hành lý"
+        }
+      ],
+      "tip": "baggage = luggage, không đếm được: a piece of baggage.",
+      "emoji": "🧳",
+      "stage": 2
+    },
+    {
+      "id": 3390,
+      "word": "boarding",
+      "ipa": "ˈbɔrdɪŋ",
+      "viRead": "BOR-đing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lên máy bay/tàu",
+      "exampleEn": "Boarding starts at 7:30.",
+      "exampleVi": "Lên máy bay bắt đầu lúc 7:30.",
+      "collocations": [
+        {
+          "en": "boarding pass",
+          "vi": "thẻ lên máy bay"
+        },
+        {
+          "en": "boarding gate",
+          "vi": "cửa lên máy bay"
+        }
+      ],
+      "family": [
+        {
+          "word": "board",
+          "vi": "lên (tàu, xe)"
+        }
+      ],
+      "tip": "boarding pass = thẻ lên tàu bay. boarding school = trường nội trú.",
+      "emoji": "🎫",
+      "stage": 2
+    },
+    {
+      "id": 3391,
+      "word": "brochure",
+      "ipa": "broʊˈʃʊr",
+      "viRead": "brâu-SHUR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tờ gấp quảng cáo",
+      "exampleEn": "Take a brochure about the tour.",
+      "exampleVi": "Lấy một tờ giới thiệu về tour.",
+      "collocations": [
+        {
+          "en": "travel brochure",
+          "vi": "tờ quảng cáo du lịch"
+        },
+        {
+          "en": "hotel brochure",
+          "vi": "tờ giới thiệu khách sạn"
+        }
+      ],
+      "tip": "ch đọc 'sh': 'brâu-SHUA'.",
+      "emoji": "📰",
+      "stage": 2
+    },
+    {
+      "id": 3392,
+      "word": "cruise",
+      "ipa": "kruz",
+      "viRead": "KRUD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuyến du thuyền",
+      "exampleEn": "We took a cruise around Ha Long Bay.",
+      "exampleVi": "Chúng tôi đi du thuyền quanh vịnh Hạ Long.",
+      "collocations": [
+        {
+          "en": "a cruise ship",
+          "vi": "tàu du lịch"
+        },
+        {
+          "en": "go on a cruise",
+          "vi": "đi du thuyền"
+        }
+      ],
+      "tip": "ui đọc 'u': 'kruz'. cruise control = ga tự động (ô tô).",
+      "emoji": "🛳️",
+      "stage": 2
+    },
+    {
+      "id": 3393,
+      "word": "customs",
+      "ipa": "ˈkəstəmz",
+      "viRead": "KƠS-tơmd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hải quan",
+      "exampleEn": "We went through customs at the airport.",
+      "exampleVi": "Chúng tôi làm thủ tục hải quan ở sân bay.",
+      "collocations": [
+        {
+          "en": "go through customs",
+          "vi": "qua hải quan"
+        },
+        {
+          "en": "customs officer",
+          "vi": "nhân viên hải quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "custom",
+          "vi": "phong tục"
+        }
+      ],
+      "tip": "custom (phong tục) – customs (hải quan, luôn có s).",
+      "emoji": "🛂",
+      "stage": 2
+    },
+    {
+      "id": 3394,
+      "word": "itinerary",
+      "ipa": "aɪˈtɪnərˌɛri",
+      "viRead": "ai-TI-nơ-re-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lịch trình chuyến đi",
+      "exampleEn": "Here is our itinerary for the trip.",
+      "exampleVi": "Đây là lịch trình chuyến đi của chúng ta.",
+      "collocations": [
+        {
+          "en": "travel itinerary",
+          "vi": "lịch trình du lịch"
+        },
+        {
+          "en": "a busy itinerary",
+          "vi": "lịch trình dày đặc"
+        }
+      ],
+      "tip": "Khó đọc: 'ai-TI-nơ-re-ri'.",
+      "emoji": "🗺️",
+      "stage": 2
+    },
+    {
+      "id": 3395,
+      "word": "jetlag",
+      "ipa": "ˈʤɛtˌlæg",
+      "viRead": "GIET-leg",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mệt mỏi do lệch múi giờ",
+      "exampleEn": "I had terrible jetlag after the flight to America.",
+      "exampleVi": "Tôi bị lệch múi giờ nặng sau chuyến bay sang Mỹ.",
+      "collocations": [
+        {
+          "en": "suffer from jetlag",
+          "vi": "bị lệch múi giờ"
+        },
+        {
+          "en": "get over jetlag",
+          "vi": "hết lệch múi giờ"
+        }
+      ],
+      "tip": "Cũng viết jet lag (hai chữ).",
+      "emoji": "😪",
+      "stage": 2
+    },
+    {
+      "id": 3396,
+      "word": "landmark",
+      "ipa": "ˈlændˌmɑrk",
+      "viRead": "LENĐ-mark",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "địa danh nổi tiếng",
+      "exampleEn": "The One Pillar Pagoda is a famous landmark.",
+      "exampleVi": "Chùa Một Cột là địa danh nổi tiếng.",
+      "collocations": [
+        {
+          "en": "a famous landmark",
+          "vi": "địa danh nổi tiếng"
+        },
+        {
+          "en": "a historic landmark",
+          "vi": "di tích lịch sử"
+        }
+      ],
+      "family": [
+        {
+          "word": "land",
+          "vi": "đất"
+        }
+      ],
+      "tip": "landmark = công trình/địa điểm dễ nhận ra, biểu tượng.",
+      "emoji": "🏯",
+      "stage": 2
+    },
+    {
+      "id": 3397,
+      "word": "resort",
+      "ipa": "rɪˈzɔrt",
+      "viRead": "ri-DORT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khu nghỉ dưỡng",
+      "exampleEn": "We stayed at a beach resort in Mui Ne.",
+      "exampleVi": "Chúng tôi ở khu nghỉ dưỡng biển ở Mũi Né.",
+      "collocations": [
+        {
+          "en": "beach resort",
+          "vi": "khu nghỉ dưỡng biển"
+        },
+        {
+          "en": "as a last resort",
+          "vi": "phương án cuối cùng"
+        }
+      ],
+      "tip": "as a last resort = khi không còn cách nào khác.",
+      "emoji": "🏝️",
+      "stage": 2
+    },
+    {
+      "id": 3398,
+      "word": "archery",
+      "ipa": "ˈɑrʧəri",
+      "viRead": "AR-chơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn bắn cung",
+      "exampleEn": "She practises archery every weekend.",
+      "exampleVi": "Cô ấy tập bắn cung mỗi cuối tuần.",
+      "collocations": [
+        {
+          "en": "archery club",
+          "vi": "câu lạc bộ bắn cung"
+        },
+        {
+          "en": "Olympic archery",
+          "vi": "bắn cung Olympic"
+        }
+      ],
+      "family": [
+        {
+          "word": "archer",
+          "vi": "cung thủ"
+        }
+      ],
+      "tip": "ch đọc 'ch': 'AR-chơ-ri'.",
+      "emoji": "🏹",
+      "stage": 2
+    },
+    {
+      "id": 3399,
+      "word": "badminton",
+      "ipa": "ˈbædˌmɪntən",
+      "viRead": "BEĐ-min-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cầu lông",
+      "exampleEn": "My parents play badminton in the park.",
+      "exampleVi": "Bố mẹ tôi chơi cầu lông trong công viên.",
+      "collocations": [
+        {
+          "en": "play badminton",
+          "vi": "chơi cầu lông"
+        },
+        {
+          "en": "badminton racket",
+          "vi": "vợt cầu lông"
+        }
+      ],
+      "tip": "shuttlecock = quả cầu lông.",
+      "emoji": "🏸",
+      "stage": 2
+    },
+    {
+      "id": 3400,
+      "word": "baseball",
+      "ipa": "ˈbeɪsˌbɔl",
+      "viRead": "BÂYS-bol",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bóng chày",
+      "exampleEn": "Baseball is popular in America and Japan.",
+      "exampleVi": "Bóng chày phổ biến ở Mỹ và Nhật.",
+      "collocations": [
+        {
+          "en": "baseball cap",
+          "vi": "mũ lưỡi trai"
+        },
+        {
+          "en": "baseball bat",
+          "vi": "gậy bóng chày"
+        }
+      ],
+      "tip": "baseball cap = mũ lưỡi trai.",
+      "emoji": "⚾",
+      "stage": 2
+    },
+    {
+      "id": 3401,
+      "word": "basketball",
+      "ipa": "ˈbæskətˌbɔl",
+      "viRead": "BES-kơt-bol",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bóng rổ",
+      "exampleEn": "He is tall, so he plays basketball.",
+      "exampleVi": "Anh ấy cao nên chơi bóng rổ.",
+      "collocations": [
+        {
+          "en": "play basketball",
+          "vi": "chơi bóng rổ"
+        },
+        {
+          "en": "basketball court",
+          "vi": "sân bóng rổ"
+        }
+      ],
+      "tip": "basket (rổ) + ball.",
+      "emoji": "🏀",
+      "stage": 2
+    },
+    {
+      "id": 3402,
+      "word": "boxing",
+      "ipa": "ˈbɑksɪŋ",
+      "viRead": "BAK-sing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quyền anh",
+      "exampleEn": "Boxing is a tough sport.",
+      "exampleVi": "Quyền anh là môn thể thao khắc nghiệt.",
+      "collocations": [
+        {
+          "en": "boxing gloves",
+          "vi": "găng đấm bốc"
+        },
+        {
+          "en": "a boxing match",
+          "vi": "trận quyền anh"
+        }
+      ],
+      "family": [
+        {
+          "word": "box",
+          "vi": "đấm bốc"
+        }
+      ],
+      "tip": "boxer = võ sĩ quyền anh (cũng là giống chó).",
+      "emoji": "🥊",
+      "stage": 2
+    },
+    {
+      "id": 3403,
+      "word": "cycling",
+      "ipa": "ˈsaɪkəlɪŋ",
+      "viRead": "SAI-kơ-ling",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đạp xe",
+      "exampleEn": "Cycling around the lake is relaxing.",
+      "exampleVi": "Đạp xe quanh hồ thật thư giãn.",
+      "collocations": [
+        {
+          "en": "go cycling",
+          "vi": "đi đạp xe"
+        },
+        {
+          "en": "cycling lane",
+          "vi": "làn xe đạp"
+        }
+      ],
+      "family": [
+        {
+          "word": "cycle",
+          "vi": "đạp xe"
+        }
+      ],
+      "tip": "go cycling = đi đạp xe (thể thao, thư giãn).",
+      "emoji": "🚴",
+      "stage": 2
+    },
+    {
+      "id": 3404,
+      "word": "diving",
+      "ipa": "ˈdaɪvɪŋ",
+      "viRead": "ĐAI-ving",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn lặn; nhảy cầu",
+      "exampleEn": "Nha Trang is great for diving.",
+      "exampleVi": "Nha Trang rất tuyệt để lặn biển.",
+      "collocations": [
+        {
+          "en": "scuba diving",
+          "vi": "lặn bình khí"
+        },
+        {
+          "en": "diving board",
+          "vi": "cầu nhảy"
+        }
+      ],
+      "family": [
+        {
+          "word": "dive",
+          "vi": "lặn"
+        }
+      ],
+      "tip": "dive → diving.",
+      "emoji": "🤿",
+      "stage": 2
+    },
+    {
+      "id": 3405,
+      "word": "fitness",
+      "ipa": "ˈfɪtnəs",
+      "viRead": "PHIT-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự khỏe mạnh, thể lực",
+      "exampleEn": "Swimming improves your fitness.",
+      "exampleVi": "Bơi lội cải thiện thể lực.",
+      "collocations": [
+        {
+          "en": "fitness center",
+          "vi": "trung tâm thể hình"
+        },
+        {
+          "en": "physical fitness",
+          "vi": "thể lực"
+        }
+      ],
+      "family": [
+        {
+          "word": "fit",
+          "vi": "khỏe mạnh"
+        }
+      ],
+      "tip": "fit (adj) → fitness (n).",
+      "emoji": "🏋️",
+      "stage": 2
+    },
+    {
+      "id": 3406,
+      "word": "goalkeeper",
+      "ipa": "ˈgoʊlˌkipər",
+      "viRead": "GÂUL-ki-pơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thủ môn",
+      "exampleEn": "The goalkeeper saved the penalty.",
+      "exampleVi": "Thủ môn đã cản được quả phạt đền.",
+      "collocations": [
+        {
+          "en": "a great goalkeeper",
+          "vi": "thủ môn xuất sắc"
+        },
+        {
+          "en": "goalkeeper gloves",
+          "vi": "găng thủ môn"
+        }
+      ],
+      "family": [
+        {
+          "word": "goal",
+          "vi": "khung thành"
+        }
+      ],
+      "tip": "goal + keeper (người giữ). Viết tắt: keeper / goalie.",
+      "emoji": "🧤",
+      "stage": 2
+    },
+    {
+      "id": 3407,
+      "word": "golf",
+      "ipa": "gɔlf",
+      "viRead": "GALPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn gôn",
+      "exampleEn": "My boss plays golf on Sundays.",
+      "exampleVi": "Sếp tôi chơi gôn vào Chủ nhật.",
+      "collocations": [
+        {
+          "en": "play golf",
+          "vi": "chơi gôn"
+        },
+        {
+          "en": "golf course",
+          "vi": "sân gôn"
+        }
+      ],
+      "tip": "golf course = sân gôn.",
+      "emoji": "⛳",
+      "stage": 2
+    },
+    {
+      "id": 3408,
+      "word": "hiking",
+      "ipa": "ˈhaɪkɪŋ",
+      "viRead": "HAI-king",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đi bộ đường dài",
+      "exampleEn": "We went hiking in Sa Pa.",
+      "exampleVi": "Chúng tôi đi bộ đường dài ở Sa Pa.",
+      "collocations": [
+        {
+          "en": "go hiking",
+          "vi": "đi leo núi"
+        },
+        {
+          "en": "hiking boots",
+          "vi": "giày leo núi"
+        }
+      ],
+      "family": [
+        {
+          "word": "hike",
+          "vi": "leo núi"
+        }
+      ],
+      "tip": "hike → hiking.",
+      "emoji": "🥾",
+      "stage": 2
+    },
+    {
+      "id": 3409,
+      "word": "jogging",
+      "ipa": "ˈʤɔgɪŋ",
+      "viRead": "GIA-ging",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chạy bộ",
+      "exampleEn": "Jogging is good for your heart.",
+      "exampleVi": "Chạy bộ tốt cho tim.",
+      "collocations": [
+        {
+          "en": "go jogging",
+          "vi": "đi chạy bộ"
+        },
+        {
+          "en": "morning jogging",
+          "vi": "chạy bộ buổi sáng"
+        }
+      ],
+      "family": [
+        {
+          "word": "jog",
+          "vi": "chạy bộ"
+        }
+      ],
+      "tip": "jog → jogging (gấp đôi g).",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 3410,
+      "word": "karate",
+      "ipa": "kəˈrɑti",
+      "viRead": "kơ-RA-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "võ karate",
+      "exampleEn": "He has a black belt in karate.",
+      "exampleVi": "Anh ấy có đai đen karate.",
+      "collocations": [
+        {
+          "en": "karate class",
+          "vi": "lớp karate"
+        },
+        {
+          "en": "karate kick",
+          "vi": "cú đá karate"
+        }
+      ],
+      "tip": "Đọc 'kơ-RA-ti'.",
+      "emoji": "🥋",
+      "stage": 2
+    },
+    {
+      "id": 3411,
+      "word": "referee",
+      "ipa": "ˌrɛfəˈri",
+      "viRead": "re-phơ-RI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trọng tài",
+      "exampleEn": "The referee gave him a red card.",
+      "exampleVi": "Trọng tài rút thẻ đỏ cho anh ấy.",
+      "collocations": [
+        {
+          "en": "the referee's whistle",
+          "vi": "tiếng còi trọng tài"
+        },
+        {
+          "en": "video referee",
+          "vi": "trọng tài video (VAR)"
+        }
+      ],
+      "tip": "Nhấn âm cuối: re-phơ-RI.",
+      "emoji": "🟥",
+      "stage": 2
+    },
+    {
+      "id": 3412,
+      "word": "rugby",
+      "ipa": "ˈrəgbi",
+      "viRead": "RƠG-bi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bóng bầu dục",
+      "exampleEn": "Rugby is very popular in New Zealand.",
+      "exampleVi": "Bóng bầu dục rất phổ biến ở New Zealand.",
+      "collocations": [
+        {
+          "en": "play rugby",
+          "vi": "chơi bóng bầu dục"
+        },
+        {
+          "en": "rugby team",
+          "vi": "đội bóng bầu dục"
+        }
+      ],
+      "tip": "rugby (Anh) khác American football.",
+      "emoji": "🏉",
+      "stage": 2
+    },
+    {
+      "id": 3413,
+      "word": "skating",
+      "ipa": "ˈskeɪtɪŋ",
+      "viRead": "SKÂY-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trượt patin, trượt băng",
+      "exampleEn": "We went ice skating in Vincom.",
+      "exampleVi": "Chúng tôi đi trượt băng ở Vincom.",
+      "collocations": [
+        {
+          "en": "ice skating",
+          "vi": "trượt băng"
+        },
+        {
+          "en": "roller skating",
+          "vi": "trượt patin"
+        }
+      ],
+      "family": [
+        {
+          "word": "skate",
+          "vi": "trượt"
+        }
+      ],
+      "tip": "skate → skating.",
+      "emoji": "⛸️",
+      "stage": 2
+    },
+    {
+      "id": 3414,
+      "word": "skiing",
+      "ipa": "ˈskiɪŋ",
+      "viRead": "SKI-ing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trượt tuyết",
+      "exampleEn": "They went skiing in Japan.",
+      "exampleVi": "Họ đi trượt tuyết ở Nhật.",
+      "collocations": [
+        {
+          "en": "go skiing",
+          "vi": "đi trượt tuyết"
+        },
+        {
+          "en": "skiing holiday",
+          "vi": "kỳ nghỉ trượt tuyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "ski",
+          "vi": "trượt tuyết"
+        }
+      ],
+      "tip": "Chính tả: hai chữ i liền nhau.",
+      "emoji": "⛷️",
+      "stage": 2
+    },
+    {
+      "id": 3415,
+      "word": "surfing",
+      "ipa": "ˈsərfɪŋ",
+      "viRead": "SƠ-phing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lướt sóng; lướt web",
+      "exampleEn": "Surfing is popular in Da Nang.",
+      "exampleVi": "Lướt sóng rất phổ biến ở Đà Nẵng.",
+      "collocations": [
+        {
+          "en": "go surfing",
+          "vi": "đi lướt sóng"
+        },
+        {
+          "en": "web surfing",
+          "vi": "lướt web"
+        }
+      ],
+      "family": [
+        {
+          "word": "surf",
+          "vi": "lướt"
+        }
+      ],
+      "tip": "surf → surfing.",
+      "emoji": "🏄",
+      "stage": 2
+    },
+    {
+      "id": 3416,
+      "word": "swimming",
+      "ipa": "ˈswɪmɪŋ",
+      "viRead": "SWI-ming",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bơi lội",
+      "exampleEn": "Swimming is my favorite sport.",
+      "exampleVi": "Bơi lội là môn thể thao tôi thích nhất.",
+      "collocations": [
+        {
+          "en": "go swimming",
+          "vi": "đi bơi"
+        },
+        {
+          "en": "swimming pool",
+          "vi": "bể bơi"
+        }
+      ],
+      "family": [
+        {
+          "word": "swim",
+          "vi": "bơi"
+        }
+      ],
+      "tip": "swim → swimming (gấp đôi m).",
+      "emoji": "🏊",
+      "stage": 2
+    },
+    {
+      "id": 3417,
+      "word": "tennis",
+      "ipa": "ˈtɛnɪs",
+      "viRead": "TE-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quần vợt",
+      "exampleEn": "Do you play tennis?",
+      "exampleVi": "Bạn có chơi quần vợt không?",
+      "collocations": [
+        {
+          "en": "play tennis",
+          "vi": "chơi quần vợt"
+        },
+        {
+          "en": "table tennis",
+          "vi": "bóng bàn"
+        }
+      ],
+      "tip": "table tennis = bóng bàn (ping-pong).",
+      "emoji": "🎾",
+      "stage": 2
+    },
+    {
+      "id": 3418,
+      "word": "volleyball",
+      "ipa": "ˈvɑliˌbɔl",
+      "viRead": "VA-li-bol",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bóng chuyền",
+      "exampleEn": "We played beach volleyball all afternoon.",
+      "exampleVi": "Chúng tôi chơi bóng chuyền bãi biển cả buổi chiều.",
+      "collocations": [
+        {
+          "en": "beach volleyball",
+          "vi": "bóng chuyền bãi biển"
+        },
+        {
+          "en": "volleyball team",
+          "vi": "đội bóng chuyền"
+        }
+      ],
+      "tip": "volley = cú đánh bóng khi bóng chưa chạm đất.",
+      "emoji": "🏐",
+      "stage": 2
+    },
+    {
+      "id": 3419,
+      "word": "wrestling",
+      "ipa": "ˈrɛsəlɪŋ",
+      "viRead": "RES-ling",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn đấu vật",
+      "exampleEn": "Wrestling is an old Olympic sport.",
+      "exampleVi": "Đấu vật là môn Olympic lâu đời.",
+      "collocations": [
+        {
+          "en": "a wrestling match",
+          "vi": "trận đấu vật"
+        },
+        {
+          "en": "traditional wrestling",
+          "vi": "vật dân tộc"
+        }
+      ],
+      "family": [
+        {
+          "word": "wrestle",
+          "vi": "vật"
+        }
+      ],
+      "tip": "w và t câm: 'RES-ling'.",
+      "emoji": "🤼",
+      "stage": 2
+    },
+    {
+      "id": 3420,
+      "word": "yoga",
+      "ipa": "ˈjoʊgə",
+      "viRead": "YÂU-gơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "yoga",
+      "exampleEn": "She does yoga every morning.",
+      "exampleVi": "Sáng nào cô ấy cũng tập yoga.",
+      "collocations": [
+        {
+          "en": "do yoga",
+          "vi": "tập yoga"
+        },
+        {
+          "en": "yoga mat",
+          "vi": "thảm yoga"
+        }
+      ],
+      "tip": "do yoga (KHÔNG dùng play).",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 3421,
+      "word": "allowance",
+      "ipa": "əˈlaʊəns",
+      "viRead": "ơ-LAO-ơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền tiêu vặt; trợ cấp",
+      "exampleEn": "My parents give me a weekly allowance.",
+      "exampleVi": "Bố mẹ cho tôi tiền tiêu vặt hằng tuần.",
+      "collocations": [
+        {
+          "en": "weekly allowance",
+          "vi": "tiền tiêu vặt hằng tuần"
+        },
+        {
+          "en": "travel allowance",
+          "vi": "phụ cấp đi lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "allow",
+          "vi": "cho phép"
+        }
+      ],
+      "tip": "pocket money (Anh) = allowance (Mỹ).",
+      "emoji": "💵",
+      "stage": 2
+    },
+    {
+      "id": 3422,
+      "word": "donation",
+      "ipa": "doʊˈneɪʃən",
+      "viRead": "đâu-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự quyên góp",
+      "exampleEn": "They made a donation to the flood victims.",
+      "exampleVi": "Họ quyên góp cho người dân vùng lũ.",
+      "collocations": [
+        {
+          "en": "make a donation",
+          "vi": "quyên góp"
+        },
+        {
+          "en": "blood donation",
+          "vi": "hiến máu"
+        }
+      ],
+      "family": [
+        {
+          "word": "donate",
+          "vi": "quyên góp"
+        }
+      ],
+      "tip": "donate (v) → donation (n).",
+      "emoji": "🤲",
+      "stage": 2
+    },
+    {
+      "id": 3423,
+      "word": "installment",
+      "ipa": "ɪnˈstɔlmənt",
+      "viRead": "in-STOL-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoản trả góp",
+      "exampleEn": "I'm paying for my phone in monthly installments.",
+      "exampleVi": "Tôi trả góp điện thoại theo tháng.",
+      "collocations": [
+        {
+          "en": "pay in installments",
+          "vi": "trả góp"
+        },
+        {
+          "en": "monthly installment",
+          "vi": "khoản góp hằng tháng"
+        }
+      ],
+      "tip": "Mỹ: installment; Anh: instalment. Mua trả góp = buy in installments.",
+      "emoji": "💳",
+      "stage": 2
+    },
+    {
+      "id": 3424,
+      "word": "invoice",
+      "ipa": "ˈɪnvɔɪs",
+      "viRead": "IN-vois",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hóa đơn (bán hàng)",
+      "exampleEn": "Please send me the invoice by email.",
+      "exampleVi": "Vui lòng gửi hóa đơn qua email cho tôi.",
+      "collocations": [
+        {
+          "en": "send an invoice",
+          "vi": "gửi hóa đơn"
+        },
+        {
+          "en": "VAT invoice",
+          "vi": "hóa đơn VAT"
+        }
+      ],
+      "family": [
+        {
+          "word": "receipt",
+          "vi": "biên lai"
+        }
+      ],
+      "tip": "invoice = hóa đơn đề nghị thanh toán; receipt = biên lai đã trả.",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 3425,
+      "word": "mortgage",
+      "ipa": "ˈmɔrgɪʤ",
+      "viRead": "MOR-gơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khoản vay mua nhà",
+      "exampleEn": "They took out a mortgage to buy the house.",
+      "exampleVi": "Họ vay thế chấp để mua nhà.",
+      "collocations": [
+        {
+          "en": "pay off a mortgage",
+          "vi": "trả hết nợ nhà"
+        },
+        {
+          "en": "mortgage rate",
+          "vi": "lãi suất vay mua nhà"
+        }
+      ],
+      "tip": "t câm: 'MOR-gịj'.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 3426,
+      "word": "savings",
+      "ipa": "ˈseɪvɪŋz",
+      "viRead": "SÂY-vingd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền tiết kiệm",
+      "exampleEn": "She spent all her savings on the trip.",
+      "exampleVi": "Cô ấy tiêu hết tiền tiết kiệm cho chuyến đi.",
+      "collocations": [
+        {
+          "en": "savings account",
+          "vi": "tài khoản tiết kiệm"
+        },
+        {
+          "en": "life savings",
+          "vi": "toàn bộ tiền dành dụm"
+        }
+      ],
+      "family": [
+        {
+          "word": "save",
+          "vi": "tiết kiệm"
+        }
+      ],
+      "tip": "Luôn số nhiều: savings.",
+      "emoji": "🐷",
+      "stage": 2
+    },
+    {
+      "id": 3427,
+      "word": "ointment",
+      "ipa": "ˈɔɪntmənt",
+      "viRead": "OINT-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thuốc mỡ",
+      "exampleEn": "Put some ointment on the burn.",
+      "exampleVi": "Bôi chút thuốc mỡ lên vết bỏng.",
+      "collocations": [
+        {
+          "en": "apply ointment",
+          "vi": "bôi thuốc mỡ"
+        },
+        {
+          "en": "skin ointment",
+          "vi": "thuốc bôi da"
+        }
+      ],
+      "tip": "oi đọc 'oi': 'OINT-mơnt'.",
+      "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 3428,
+      "word": "vaccine",
+      "ipa": "vækˈsin",
+      "viRead": "vek-SIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vắc-xin",
+      "exampleEn": "The flu vaccine is free for children.",
+      "exampleVi": "Vắc-xin cúm miễn phí cho trẻ em.",
+      "collocations": [
+        {
+          "en": "get a vaccine",
+          "vi": "tiêm vắc-xin"
+        },
+        {
+          "en": "flu vaccine",
+          "vi": "vắc-xin cúm"
+        }
+      ],
+      "family": [
+        {
+          "word": "vaccinate",
+          "vi": "tiêm chủng"
+        }
+      ],
+      "tip": "Đọc 'vek-SIN'.",
+      "emoji": "💉",
       "stage": 2
     }
   ]
