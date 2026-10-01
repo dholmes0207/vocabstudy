@@ -6,8 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
     />
-    <meta name="theme-color" content="#1b5ef5" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <!-- Browser bar tinted like the top of the sky (pale morning / night). -->
+    <meta name="theme-color" content="#dfe7f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
     <!-- Installable on the home screen (Android "Add to Home screen" / iOS). -->
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
@@ -18,13 +19,27 @@
       content="VocabStudy — Học & ôn từ vựng tiếng Anh cho người Việt: tự nhớ lại, lặp lại ngắt quãng (SRS), trò chơi và trợ lý AI."
     />
     <title>VocabStudy · Học từ vựng tiếng Anh</title>
+    <link rel="canonical" href="https://vocastudy.app/" />
+    <!-- Link previews (Zalo, Messenger, Facebook, X). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VocabStudy" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:url" content="https://vocastudy.app/" />
+    <meta property="og:title" content="VocabStudy · Học từ vựng tiếng Anh" />
+    <meta
+      property="og:description"
+      content="Hơn 3000 từ tiếng Anh thông dụng cho người Việt: tự nhớ lại, lặp lại ngắt quãng, trò chơi, luyện nói và trợ lý AI."
+    />
+    <meta property="og:image" content="https://vocastudy.app/icons/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E"
     />
-    <!-- Start the 280 KB language pack in parallel with the JS bundle instead of
-         after it: on mobile this is the biggest single win at startup. Relative
-         href so it still resolves when the app is hosted under a sub-path. -->
+    <!-- Start the language pack (the largest download, ~430 KB compressed) in
+         parallel with the JS bundle instead of after it: on mobile this is the
+         biggest single win at startup. Relative href so it still resolves when
+         the app is hosted under a sub-path. -->
     <link rel="preload" href="data/en.json" as="fetch" type="application/json" crossorigin />
     <!-- Prevent flash of wrong theme: apply saved theme before paint -->
     <script>
@@ -42,6 +57,12 @@
     </script>
   </head>
   <body>
+    <noscript>
+      <p style="padding: 2rem; font-family: system-ui, sans-serif; text-align: center">
+        VocabStudy cần bật JavaScript để chạy. Hãy bật JavaScript trong trình duyệt rồi tải lại
+        trang.
+      </p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

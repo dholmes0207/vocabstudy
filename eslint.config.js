@@ -56,8 +56,17 @@ export default tseslint.config(
 
   // Build/tooling config files run in Node.
   {
-    files: ['*.config.{js,ts}', 'vite.config.ts'],
+    files: ['*.config.js'],
     extends: [js.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: globals.node,
+    },
+  },
+  // …and the TypeScript ones need the TypeScript parser (vite.config.ts has a plugin).
+  {
+    files: ['*.config.ts'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 2022,
       globals: globals.node,
