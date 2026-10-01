@@ -9,6 +9,7 @@ import { useProvideContext } from '@/store/contextStore'
 import { pronounce, wordAudio } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { celebrate } from '@/lib/confetti'
+import { skyBurstAt, skyCelebrate } from '@/lib/skyEvents'
 import GameShell, { GameResult } from './GameShell'
 
 // "Ghép cặp": tap an English word, then its meaning. Six pairs against the
@@ -71,7 +72,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
   const seconds = startedAt === null ? 0 : Math.max(0, Math.floor((now - startedAt) / 1000))
 
   // `at` is the tap's event.timeStamp — the same clock as performance.now().
-  const tap = (side: Side, id: number, at: number) => {
+  const tap = (side: Side, id: number, at: number, el?: Element) => {
     if (result || matched.includes(id)) return
     const start = startedAt ?? at
     if (startedAt === null) {
@@ -89,6 +90,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
     if (en === vi) {
       const done = [...matched, id]
       setMatched(done)
+      skyBurstAt(el, 0.9)
       if (soundEnabled) playCorrect()
       if (side === 'vi') speak(id)
       if (done.length === pairs.length) finish(Math.max(1, Math.round((at - start) / 1000)))
@@ -114,6 +116,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
     const record = finishMatch(secs)
     setResult({ seconds: secs, xp, record })
     celebrate(record ? 1.4 : 0.9)
+    skyCelebrate(record ? 1.4 : 0.9)
   }
 
   if (pairs.length < 2) {
@@ -151,7 +154,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
     return (
       <button
         key={`${side}-${id}`}
-        onClick={(e) => tap(side, id, e.timeStamp)}
+        onClick={(e) => tap(side, id, e.timeStamp, e.currentTarget)}
         disabled={isMatched}
         aria-pressed={isSelected}
         className={`flex min-h-[3.5rem] w-full items-center justify-center rounded-xl border-2 px-2 py-2 text-center transition active:scale-[0.97] ${

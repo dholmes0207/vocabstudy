@@ -32,6 +32,7 @@ import {
   type Sparkle,
   type Star,
 } from './sky'
+import { SKY_EVENT, type SkyEventDetail } from './skyEvents'
 
 export interface SkyOptions {
   effects: SkyEffects
@@ -52,6 +53,8 @@ const WARMUP_FRAMES = 60
 const SAMPLE_FRAMES = 120
 /** Median frame time above this (≈ 38 fps) drops "full" to "lite". */
 const SLOW_FRAME_MS = 26
+/** Flakes nearer than this are drawn as crystals rather than soft dots. */
+const CRYSTAL_DEPTH = 0.86
 
 type Rgb = [number, number, number]
 
@@ -60,6 +63,8 @@ interface Palette {
   glint: HTMLCanvasElement
   moon: HTMLCanvasElement | null
   flake: HTMLCanvasElement
+  /** Six-armed crystal for the nearest, biggest flakes. */
+  crystal: HTMLCanvasElement
   sparkles: HTMLCanvasElement[]
   sparkleBlend: GlobalCompositeOperation
   glow: Rgb
@@ -337,9 +342,19 @@ export function startSky(
   function drawSnow(c: CanvasRenderingContext2D) {
     if (!flakes.length) return
     for (const f of flakes) {
-      const size = f.r * 4
       c.globalAlpha = 0.35 + f.depth * 0.6
-      c.drawImage(palette.flake, f.x - size / 2, f.y - size / 2, size, size)
+      if (f.depth > CRYSTAL_DEPTH) {
+        // The closest flakes are big enough to show their shape, slowly turning.
+        const size = f.r * 6.5
+        c.save()
+        c.translate(f.x, f.y)
+        c.rotate(f.phase + t * 0.4 * (f.swayFreq - 0.85))
+        c.drawImage(palette.crystal, -size / 2, -size / 2, size, size)
+        c.restore()
+      } else {
+        const size = f.r * 4
+        c.drawImage(palette.flake, f.x - size / 2, f.y - size / 2, size, size)
+      }
     }
   }
 
@@ -456,6 +471,28 @@ export function startSky(
     pointer.hasLast = false
   }
 
+  function onSkyEvent(e: Event) {
+    const d = (e as CustomEvent<SkyEventDetail>).detail
+    if (!d || !opts.trail || !running || budget.sparkles === 0) return
+    const colors = palette.sparkles.length
+    // Feedback for the learner, so it may briefly exceed the ambient cap.
+    const cap = budget.sparkles * 2
+    if (d.kind === 'burst') {
+      emitSparkles(sparkles, d.x, d.y, Math.round(14 * d.power), rand, { speed: 190, cap, colors })
+      return
+    }
+    const spots = Math.round(3 + 3 * d.power)
+    for (let i = 0; i < spots; i++) {
+      const x = w * (0.15 + rand() * 0.7)
+      const y = h * (0.12 + rand() * 0.45)
+      emitSparkles(sparkles, x, y, Math.round(10 * d.power), rand, { speed: 220, cap, colors })
+    }
+    if (dark) {
+      const n = Math.round(2 + 3 * d.power)
+      for (let i = 0; i < n; i++) meteors.push(spawnMeteor(w, h, rand))
+    }
+  }
+
   let resizeQueued = false
   function onResize() {
     if (resizeQueued) return
@@ -495,6 +532,7 @@ export function startSky(
   window.addEventListener('mouseout', onLeave, { passive: true })
   window.addEventListener('blur', onBlur)
   window.addEventListener('resize', onResize, { passive: true })
+  window.addEventListener(SKY_EVENT, onSkyEvent)
   document.addEventListener('visibilitychange', onVisibility)
   mqReduce.addEventListener?.('change', onEnvChange)
   mqCoarse.addEventListener?.('change', onEnvChange)
@@ -517,6 +555,7 @@ export function startSky(
       window.removeEventListener('mouseout', onLeave)
       window.removeEventListener('blur', onBlur)
       window.removeEventListener('resize', onResize)
+      window.removeEventListener(SKY_EVENT, onSkyEvent)
       document.removeEventListener('visibilitychange', onVisibility)
       mqReduce.removeEventListener?.('change', onEnvChange)
       mqCoarse.removeEventListener?.('change', onEnvChange)
@@ -609,13 +648,57 @@ function moon() {
   })
 }
 
+/** A white flake: solid body with a soft rim in `rim` so it reads on a pale sky too. */
+function flake([r, g, b]: Rgb, rimAlpha: number) {
+  return sprite(24, (ctx, s) => {
+    const grad = ctx.createRadialGradient(s / 2, s / 2, 0, s / 2, s / 2, s / 2)
+    grad.addColorStop(0, 'rgba(255,255,255,1)')
+    grad.addColorStop(0.4, 'rgba(255,255,255,0.92)')
+    grad.addColorStop(0.62, `rgba(${r},${g},${b},${(rimAlpha * 0.6).toFixed(2)})`)
+    grad.addColorStop(1, `rgba(${r},${g},${b},0)`)
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, s, s)
+  })
+}
+
+/** A six-armed snow crystal with little side branches. */
+function crystal(stroke: string, shadow: string) {
+  return sprite(64, (ctx, s) => {
+    const c = s / 2
+    const arm = s * 0.42
+    ctx.translate(c, c)
+    ctx.lineCap = 'round'
+    ctx.strokeStyle = stroke
+    ctx.shadowColor = shadow
+    ctx.shadowBlur = 4
+    ctx.lineWidth = 2.4
+    for (let i = 0; i < 6; i++) {
+      ctx.save()
+      ctx.rotate((i * Math.PI) / 3)
+      ctx.beginPath()
+      ctx.moveTo(0, 0)
+      ctx.lineTo(0, -arm)
+      for (const at of [0.45, 0.7]) {
+        const len = arm * (at === 0.45 ? 0.3 : 0.22)
+        ctx.moveTo(0, -arm * at)
+        ctx.lineTo(-len * 0.8, -arm * at - len * 0.6)
+        ctx.moveTo(0, -arm * at)
+        ctx.lineTo(len * 0.8, -arm * at - len * 0.6)
+      }
+      ctx.stroke()
+      ctx.restore()
+    }
+  })
+}
+
 function makePalette(dark: boolean): Palette {
   if (dark) {
     return {
       stars: [dot([226, 232, 240]), dot([147, 197, 253]), dot([253, 230, 138])],
       glint: glint(),
       moon: moon(),
-      flake: dot([226, 232, 240], '255,255,255', 24),
+      flake: flake([191, 219, 254], 0.35),
+      crystal: crystal('rgba(241,245,249,0.95)', 'rgba(147,197,253,0.8)'),
       sparkles: [
         dot([253, 224, 71]),
         dot([165, 180, 252]),
@@ -632,8 +715,9 @@ function makePalette(dark: boolean): Palette {
     stars: [dot([148, 163, 184]), dot([96, 165, 250]), dot([251, 191, 36])],
     glint: glint(),
     moon: null,
-    // White flakes vanish on a pale sky, so give them a cool grey rim.
-    flake: dot([100, 116, 139], '255,255,255', 24),
+    // White flakes vanish on a pale sky, so give them a cool blue-grey rim.
+    flake: flake([100, 130, 180], 0.4),
+    crystal: crystal('rgba(255,255,255,0.98)', 'rgba(71,105,160,0.75)'),
     sparkles: [
       dot([27, 94, 245], '191,219,254'),
       dot([168, 85, 247], '233,213,255'),

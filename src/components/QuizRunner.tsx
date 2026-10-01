@@ -5,6 +5,7 @@ import { GAP, buildSkeleton, checkFillAnswer } from '@/lib/quiz'
 import { MAX_ATTEMPTS, requeue } from '@/lib/practice'
 import { exampleAudio, pronounce, wordAudio } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
+import { skyBurstAt } from '@/lib/skyEvents'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
@@ -164,15 +165,21 @@ export default function QuizRunner({
     onAnswer(q.wordId, correct)
   }
 
+  // The sky lights up where the learner got it right; a streak makes it bigger.
+  const sparkleAt = (el: Element | null) => skyBurstAt(el, 0.8 + Math.min(combo, 5) * 0.15)
+
   const chooseOption = (i: number) => {
     if (revealed || !q || !q.options[i]) return
     setSelected(i)
     commit(q.options[i].correct)
+    if (q.options[i].correct) sparkleAt(document.querySelector(`[data-quiz-option="${i}"]`))
   }
 
   const submitTyping = () => {
     if (revealed || !input.trim() || !word || !q) return
-    commit(checkFillAnswer(word, input, q.surface))
+    const ok = checkFillAnswer(word, input, q.surface)
+    commit(ok)
+    if (ok) sparkleAt(inputRef.current)
   }
 
   const next = () => {
@@ -395,6 +402,7 @@ export default function QuizRunner({
                 <button
                   key={`${opt.wordId}-${i}`}
                   onClick={() => chooseOption(i)}
+                  data-quiz-option={i}
                   disabled={revealed}
                   className={`flex items-center justify-between gap-3 rounded-xl border-2 px-4 py-3.5 text-left text-base font-medium transition ${
                     state === 'correct'

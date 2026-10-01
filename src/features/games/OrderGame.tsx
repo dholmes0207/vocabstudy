@@ -18,6 +18,7 @@ import { useProvideContext } from '@/store/contextStore'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { celebrate } from '@/lib/confetti'
+import { skyCelebrate } from '@/lib/skyEvents'
 import HighlightExample from '@/components/HighlightExample'
 import GameShell, { GameResult } from './GameShell'
 
@@ -99,6 +100,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
     const record = finishOrder(mistakes)
     setResult({ xp, record })
     celebrate(record ? 1.4 : 0.9)
+    skyCelebrate(record ? 1.4 : 0.9)
   }
 
   if (!word || !state) {

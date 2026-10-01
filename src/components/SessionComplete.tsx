@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { celebrate } from '@/lib/confetti'
+import { skyCelebrate } from '@/lib/skyEvents'
 
 interface Props {
   title?: string
@@ -43,9 +44,13 @@ export default function SessionComplete({
   // no "score" to scale by, so give a generous, fixed celebration.
   useEffect(() => {
     if (showScore) {
-      if (total > 0) celebrate(0.6 + (pct / 100) * 0.8)
+      if (total > 0) {
+        celebrate(0.6 + (pct / 100) * 0.8)
+        skyCelebrate(0.4 + pct / 100)
+      }
     } else {
       celebrate(1.2)
+      skyCelebrate(1.2)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

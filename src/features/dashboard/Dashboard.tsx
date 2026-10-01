@@ -26,11 +26,16 @@ export default function Dashboard() {
   const greeting = hour < 11 ? 'Chào buổi sáng' : hour < 18 ? 'Chào buổi chiều' : 'Chào buổi tối'
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="stagger space-y-6">
       {/* Greeting */}
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">{greeting}! 👋</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+            <span className="text-aurora">{greeting}!</span>{' '}
+            <span className="wave" aria-hidden="true">
+              👋
+            </span>
+          </h1>
           <p className="mt-1 text-slate-500">
             Học <b>{pack.meta.nativeName}</b> · mỗi ngày một chút là đủ.
           </p>

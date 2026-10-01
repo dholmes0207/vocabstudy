@@ -125,7 +125,7 @@ export default function Layout() {
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className="flex items-center gap-2.5">
-      <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 text-lg shadow-sm">
+      <span className="brand-mark grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-lg shadow-md shadow-brand-600/30">
         📚
       </span>
       {!compact && (
