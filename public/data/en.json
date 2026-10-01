@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3338,
+    "count": 3388,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -93947,6 +93947,1350 @@
       ],
       "tip": "u đọc 'u' ngắn: 'BU-chơ'.",
       "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 3339,
+      "word": "alphabet",
+      "ipa": "ˈælfəˌbɛt",
+      "viRead": "EL-phơ-bet",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảng chữ cái",
+      "exampleEn": "The English alphabet has 26 letters.",
+      "exampleVi": "Bảng chữ cái tiếng Anh có 26 chữ cái.",
+      "collocations": [
+        {
+          "en": "the English alphabet",
+          "vi": "bảng chữ cái tiếng Anh"
+        },
+        {
+          "en": "alphabet song",
+          "vi": "bài hát ABC"
+        }
+      ],
+      "family": [
+        {
+          "word": "alphabetical",
+          "vi": "theo thứ tự ABC"
+        }
+      ],
+      "tip": "alpha + beta: hai chữ cái đầu tiếng Hy Lạp.",
+      "emoji": "🔤",
+      "stage": 2
+    },
+    {
+      "id": 3340,
+      "word": "blackboard",
+      "ipa": "ˈblækˌbɔrd",
+      "viRead": "BLEK-borđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảng đen",
+      "exampleEn": "The teacher wrote on the blackboard.",
+      "exampleVi": "Cô giáo viết lên bảng đen.",
+      "collocations": [
+        {
+          "en": "write on the blackboard",
+          "vi": "viết lên bảng"
+        },
+        {
+          "en": "clean the blackboard",
+          "vi": "lau bảng"
+        }
+      ],
+      "tip": "whiteboard = bảng trắng (viết bút dạ).",
+      "emoji": "🧑‍🏫",
+      "stage": 2
+    },
+    {
+      "id": 3341,
+      "word": "calculator",
+      "ipa": "ˈkælkjəˌleɪtər",
+      "viRead": "KEL-kyơ-lây-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy tính bỏ túi",
+      "exampleEn": "You can use a calculator in the exam.",
+      "exampleVi": "Bạn được dùng máy tính trong kỳ thi.",
+      "collocations": [
+        {
+          "en": "use a calculator",
+          "vi": "dùng máy tính"
+        },
+        {
+          "en": "pocket calculator",
+          "vi": "máy tính bỏ túi"
+        }
+      ],
+      "family": [
+        {
+          "word": "calculate",
+          "vi": "tính toán"
+        }
+      ],
+      "tip": "calculate (v) → calculator (máy tính cầm tay).",
+      "emoji": "🧮",
+      "stage": 2
+    },
+    {
+      "id": 3342,
+      "word": "campus",
+      "ipa": "ˈkæmpəs",
+      "viRead": "KEM-pơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khuôn viên trường",
+      "exampleEn": "The university campus is very green.",
+      "exampleVi": "Khuôn viên trường đại học rất xanh.",
+      "collocations": [
+        {
+          "en": "on campus",
+          "vi": "trong khuôn viên trường"
+        },
+        {
+          "en": "campus life",
+          "vi": "đời sống sinh viên"
+        }
+      ],
+      "tip": "live on campus = ở ký túc xá trong trường.",
+      "emoji": "🏫",
+      "stage": 2
+    },
+    {
+      "id": 3343,
+      "word": "canteen",
+      "ipa": "kænˈtin",
+      "viRead": "ken-TIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "căng tin",
+      "exampleEn": "We have lunch in the school canteen.",
+      "exampleVi": "Chúng tôi ăn trưa ở căng tin trường.",
+      "collocations": [
+        {
+          "en": "school canteen",
+          "vi": "căng tin trường"
+        },
+        {
+          "en": "canteen food",
+          "vi": "đồ ăn căng tin"
+        }
+      ],
+      "tip": "canteen (Anh) ≈ cafeteria (Mỹ).",
+      "emoji": "🍱",
+      "stage": 2
+    },
+    {
+      "id": 3344,
+      "word": "classroom",
+      "ipa": "ˈklæsˌrum",
+      "viRead": "KLES-rum",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lớp học (phòng)",
+      "exampleEn": "Our classroom is on the second floor.",
+      "exampleVi": "Lớp học của chúng tôi ở tầng hai.",
+      "collocations": [
+        {
+          "en": "in the classroom",
+          "vi": "trong lớp"
+        },
+        {
+          "en": "a quiet classroom",
+          "vi": "lớp học yên tĩnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "class",
+          "vi": "lớp"
+        }
+      ],
+      "tip": "class + room.",
+      "emoji": "🏫",
+      "stage": 2
+    },
+    {
+      "id": 3345,
+      "word": "curriculum",
+      "ipa": "kəˈrɪkjələm",
+      "viRead": "kơ-RIK-yơ-lơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chương trình học",
+      "exampleEn": "English is part of the school curriculum.",
+      "exampleVi": "Tiếng Anh là một phần của chương trình học.",
+      "collocations": [
+        {
+          "en": "school curriculum",
+          "vi": "chương trình học"
+        },
+        {
+          "en": "the new curriculum",
+          "vi": "chương trình mới"
+        }
+      ],
+      "tip": "CV = curriculum vitae (sơ yếu lý lịch).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 3346,
+      "word": "dormitory",
+      "ipa": "ˈdɔrməˌtɔri",
+      "viRead": "ĐOR-mơ-to-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ký túc xá",
+      "exampleEn": "Students live in the dormitory.",
+      "exampleVi": "Sinh viên sống ở ký túc xá.",
+      "collocations": [
+        {
+          "en": "college dormitory",
+          "vi": "ký túc xá đại học"
+        },
+        {
+          "en": "dormitory room",
+          "vi": "phòng ký túc"
+        }
+      ],
+      "tip": "Viết tắt: dorm.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 3347,
+      "word": "eraser",
+      "ipa": "ɪˈreɪsər",
+      "viRead": "i-RÂY-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cục tẩy",
+      "exampleEn": "Can I borrow your eraser?",
+      "exampleVi": "Cho tôi mượn cục tẩy được không?",
+      "collocations": [
+        {
+          "en": "pencil eraser",
+          "vi": "tẩy bút chì"
+        },
+        {
+          "en": "a rubber eraser",
+          "vi": "cục tẩy cao su"
+        }
+      ],
+      "family": [
+        {
+          "word": "erase",
+          "vi": "xóa"
+        }
+      ],
+      "tip": "eraser (Mỹ) = rubber (Anh).",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 3348,
+      "word": "exam",
+      "ipa": "ɪgˈzæm",
+      "viRead": "ig-DEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỳ thi",
+      "exampleEn": "I have a math exam tomorrow.",
+      "exampleVi": "Ngày mai tôi thi toán.",
+      "collocations": [
+        {
+          "en": "pass an exam",
+          "vi": "thi đỗ"
+        },
+        {
+          "en": "fail an exam",
+          "vi": "thi trượt"
+        }
+      ],
+      "family": [
+        {
+          "word": "examination",
+          "vi": "kỳ thi"
+        }
+      ],
+      "tip": "take/sit an exam = đi thi; pass ↔ fail.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 3349,
+      "word": "marker",
+      "ipa": "ˈmɑrkər",
+      "viRead": "MAR-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bút dạ",
+      "exampleEn": "Write your name with a black marker.",
+      "exampleVi": "Viết tên bằng bút dạ đen.",
+      "collocations": [
+        {
+          "en": "a permanent marker",
+          "vi": "bút dạ không xóa"
+        },
+        {
+          "en": "whiteboard marker",
+          "vi": "bút viết bảng"
+        }
+      ],
+      "family": [
+        {
+          "word": "mark",
+          "vi": "đánh dấu"
+        }
+      ],
+      "tip": "highlighter = bút dạ quang.",
+      "emoji": "🖊️",
+      "stage": 2
+    },
+    {
+      "id": 3350,
+      "word": "principal",
+      "ipa": "ˈprɪnsəpəl",
+      "viRead": "PRIN-sơ-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hiệu trưởng",
+      "exampleEn": "The principal gave a speech on the first day.",
+      "exampleVi": "Thầy hiệu trưởng phát biểu ngày khai giảng.",
+      "collocations": [
+        {
+          "en": "school principal",
+          "vi": "hiệu trưởng"
+        },
+        {
+          "en": "the principal's office",
+          "vi": "phòng hiệu trưởng"
+        }
+      ],
+      "tip": "principal (hiệu trưởng) đọc giống principle (nguyên tắc).",
+      "emoji": "👩‍🏫",
+      "stage": 2
+    },
+    {
+      "id": 3351,
+      "word": "quiz",
+      "ipa": "kwɪz",
+      "viRead": "KWID",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài kiểm tra ngắn; câu đố",
+      "exampleEn": "We have a short vocabulary quiz every Friday.",
+      "exampleVi": "Thứ Sáu nào cũng có bài kiểm tra từ vựng ngắn.",
+      "collocations": [
+        {
+          "en": "a quick quiz",
+          "vi": "bài kiểm tra nhanh"
+        },
+        {
+          "en": "quiz show",
+          "vi": "chương trình đố vui"
+        }
+      ],
+      "tip": "Số nhiều: quizzes (gấp đôi z). Mục Kiểm tra trong app chính là quiz!",
+      "emoji": "❓",
+      "stage": 2
+    },
+    {
+      "id": 3352,
+      "word": "recess",
+      "ipa": "ˈrisɛs",
+      "viRead": "RI-ses",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giờ ra chơi",
+      "exampleEn": "The children play football at recess.",
+      "exampleVi": "Bọn trẻ đá bóng giờ ra chơi.",
+      "collocations": [
+        {
+          "en": "at recess",
+          "vi": "giờ ra chơi"
+        },
+        {
+          "en": "a short recess",
+          "vi": "nghỉ giải lao ngắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "break",
+          "vi": "giờ nghỉ"
+        }
+      ],
+      "tip": "recess (Mỹ) = break/playtime (Anh).",
+      "emoji": "⚽",
+      "stage": 2
+    },
+    {
+      "id": 3353,
+      "word": "semester",
+      "ipa": "səˈmɛstər",
+      "viRead": "sơ-MES-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "học kỳ",
+      "exampleEn": "The second semester starts in February.",
+      "exampleVi": "Học kỳ hai bắt đầu vào tháng Hai.",
+      "collocations": [
+        {
+          "en": "first semester",
+          "vi": "học kỳ một"
+        },
+        {
+          "en": "end of semester",
+          "vi": "cuối kỳ"
+        }
+      ],
+      "family": [
+        {
+          "word": "term",
+          "vi": "học kỳ"
+        }
+      ],
+      "tip": "semester (2 kỳ/năm) – term (thường 3 kỳ/năm ở Anh).",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 3354,
+      "word": "syllabus",
+      "ipa": "ˈsɪləbəs",
+      "viRead": "SI-lơ-bơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đề cương môn học",
+      "exampleEn": "Read the syllabus before the first class.",
+      "exampleVi": "Hãy đọc đề cương trước buổi học đầu.",
+      "collocations": [
+        {
+          "en": "course syllabus",
+          "vi": "đề cương khóa học"
+        },
+        {
+          "en": "on the syllabus",
+          "vi": "có trong đề cương"
+        }
+      ],
+      "tip": "Đọc 'SI-lơ-bơs'.",
+      "emoji": "📄",
+      "stage": 2
+    },
+    {
+      "id": 3355,
+      "word": "timetable",
+      "ipa": "ˈtaɪmˌteɪbəl",
+      "viRead": "TAIM-tây-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thời khóa biểu; lịch trình",
+      "exampleEn": "Check the bus timetable.",
+      "exampleVi": "Xem lịch chạy xe buýt.",
+      "collocations": [
+        {
+          "en": "school timetable",
+          "vi": "thời khóa biểu"
+        },
+        {
+          "en": "train timetable",
+          "vi": "lịch tàu"
+        }
+      ],
+      "family": [
+        {
+          "word": "schedule",
+          "vi": "lịch"
+        }
+      ],
+      "tip": "timetable (Anh) ≈ schedule (Mỹ).",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 3356,
+      "word": "app",
+      "ipa": "æp",
+      "viRead": "EP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ứng dụng",
+      "exampleEn": "Download the app on your phone.",
+      "exampleVi": "Tải ứng dụng về điện thoại.",
+      "collocations": [
+        {
+          "en": "download an app",
+          "vi": "tải ứng dụng"
+        },
+        {
+          "en": "a learning app",
+          "vi": "ứng dụng học tập"
+        }
+      ],
+      "family": [
+        {
+          "word": "application",
+          "vi": "ứng dụng"
+        }
+      ],
+      "tip": "app = application. VocabStudy cũng cài được như một app!",
+      "emoji": "📱",
+      "stage": 2
+    },
+    {
+      "id": 3357,
+      "word": "browser",
+      "ipa": "ˈbraʊzər",
+      "viRead": "BRAO-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trình duyệt",
+      "exampleEn": "Open the link in your browser.",
+      "exampleVi": "Mở đường link trong trình duyệt.",
+      "collocations": [
+        {
+          "en": "web browser",
+          "vi": "trình duyệt web"
+        },
+        {
+          "en": "browser tab",
+          "vi": "tab trình duyệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "browse",
+          "vi": "duyệt"
+        }
+      ],
+      "tip": "Chrome, Safari, Firefox đều là browser.",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 3358,
+      "word": "charger",
+      "ipa": "ˈʧɑrʤər",
+      "viRead": "CHAR-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ sạc",
+      "exampleEn": "I forgot my phone charger.",
+      "exampleVi": "Tôi quên bộ sạc điện thoại.",
+      "collocations": [
+        {
+          "en": "phone charger",
+          "vi": "sạc điện thoại"
+        },
+        {
+          "en": "wireless charger",
+          "vi": "sạc không dây"
+        }
+      ],
+      "family": [
+        {
+          "word": "charge",
+          "vi": "sạc"
+        }
+      ],
+      "tip": "charge (sạc) + er.",
+      "emoji": "🔌",
+      "stage": 2
+    },
+    {
+      "id": 3359,
+      "word": "click",
+      "ipa": "klɪk",
+      "viRead": "KLIK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "bấm, nhấp chuột",
+      "exampleEn": "Click the button to start.",
+      "exampleVi": "Bấm vào nút để bắt đầu.",
+      "collocations": [
+        {
+          "en": "click on",
+          "vi": "bấm vào"
+        },
+        {
+          "en": "double click",
+          "vi": "nhấp đúp"
+        }
+      ],
+      "tip": "right-click = nhấp chuột phải.",
+      "emoji": "🖱️",
+      "stage": 2
+    },
+    {
+      "id": 3360,
+      "word": "cursor",
+      "ipa": "ˈkərsər",
+      "viRead": "KƠ-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con trỏ chuột",
+      "exampleEn": "Move the cursor over the stars.",
+      "exampleVi": "Di con trỏ qua các ngôi sao.",
+      "collocations": [
+        {
+          "en": "move the cursor",
+          "vi": "di con trỏ"
+        },
+        {
+          "en": "mouse cursor",
+          "vi": "con trỏ chuột"
+        }
+      ],
+      "tip": "Trên VocabStudy, sao gần con trỏ sẽ nối thành chòm sao!",
+      "emoji": "🖱️",
+      "stage": 2
+    },
+    {
+      "id": 3361,
+      "word": "emoji",
+      "ipa": "ɪˈmoʊʤi",
+      "viRead": "i-MÂU-gi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biểu tượng cảm xúc",
+      "exampleEn": "She replied with a heart emoji.",
+      "exampleVi": "Cô ấy trả lời bằng một emoji trái tim.",
+      "collocations": [
+        {
+          "en": "send an emoji",
+          "vi": "gửi emoji"
+        },
+        {
+          "en": "a smiley emoji",
+          "vi": "emoji mặt cười"
+        }
+      ],
+      "tip": "Từ gốc tiếng Nhật: e (hình) + moji (chữ).",
+      "emoji": "😀",
+      "stage": 2
+    },
+    {
+      "id": 3362,
+      "word": "folder",
+      "ipa": "ˈfoʊldər",
+      "viRead": "PHÂUL-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thư mục",
+      "exampleEn": "Save the file in this folder.",
+      "exampleVi": "Lưu tệp vào thư mục này.",
+      "collocations": [
+        {
+          "en": "create a folder",
+          "vi": "tạo thư mục"
+        },
+        {
+          "en": "a new folder",
+          "vi": "thư mục mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "fold",
+          "vi": "gấp"
+        }
+      ],
+      "tip": "folder cũng là bìa kẹp hồ sơ.",
+      "emoji": "📁",
+      "stage": 2
+    },
+    {
+      "id": 3363,
+      "word": "hacker",
+      "ipa": "ˈhækər",
+      "viRead": "HE-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tin tặc",
+      "exampleEn": "A hacker stole their passwords.",
+      "exampleVi": "Một tin tặc đã đánh cắp mật khẩu của họ.",
+      "collocations": [
+        {
+          "en": "a computer hacker",
+          "vi": "tin tặc máy tính"
+        },
+        {
+          "en": "protect from hackers",
+          "vi": "chống tin tặc"
+        }
+      ],
+      "family": [
+        {
+          "word": "hack",
+          "vi": "xâm nhập"
+        }
+      ],
+      "tip": "life hack = mẹo vặt cuộc sống.",
+      "emoji": "🧑‍💻",
+      "stage": 2
+    },
+    {
+      "id": 3364,
+      "word": "hashtag",
+      "ipa": "ˈhæʃˌtæg",
+      "viRead": "HESH-teg",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thẻ bắt đầu bằng #",
+      "exampleEn": "Add a hashtag to your post.",
+      "exampleVi": "Thêm hashtag vào bài đăng của bạn.",
+      "collocations": [
+        {
+          "en": "use a hashtag",
+          "vi": "dùng hashtag"
+        },
+        {
+          "en": "trending hashtag",
+          "vi": "hashtag đang hot"
+        }
+      ],
+      "tip": "hash (#) + tag (thẻ).",
+      "emoji": "#️⃣",
+      "stage": 2
+    },
+    {
+      "id": 3365,
+      "word": "headphones",
+      "ipa": "ˈhɛdˌfoʊnz",
+      "viRead": "HEĐ-phâund",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tai nghe",
+      "exampleEn": "Put on your headphones and listen.",
+      "exampleVi": "Đeo tai nghe vào và nghe.",
+      "collocations": [
+        {
+          "en": "wireless headphones",
+          "vi": "tai nghe không dây"
+        },
+        {
+          "en": "a pair of headphones",
+          "vi": "một cái tai nghe"
+        }
+      ],
+      "tip": "Luôn số nhiều: headphones. earbuds = tai nghe nhét tai.",
+      "emoji": "🎧",
+      "stage": 2
+    },
+    {
+      "id": 3366,
+      "word": "inbox",
+      "ipa": "ˈɪnˌbɑks",
+      "viRead": "IN-baks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hộp thư đến",
+      "exampleEn": "Check your inbox for the email.",
+      "exampleVi": "Kiểm tra hộp thư đến xem có email không.",
+      "collocations": [
+        {
+          "en": "email inbox",
+          "vi": "hộp thư email"
+        },
+        {
+          "en": "a full inbox",
+          "vi": "hộp thư đầy"
+        }
+      ],
+      "tip": "inbox (thư đến) ↔ outbox. 'Inbox mình nhé' = nhắn riêng.",
+      "emoji": "📥",
+      "stage": 2
+    },
+    {
+      "id": 3367,
+      "word": "keyboard",
+      "ipa": "ˈkiˌbɔrd",
+      "viRead": "KI-borđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bàn phím",
+      "exampleEn": "Type the word on the keyboard.",
+      "exampleVi": "Gõ từ trên bàn phím.",
+      "collocations": [
+        {
+          "en": "computer keyboard",
+          "vi": "bàn phím máy tính"
+        },
+        {
+          "en": "keyboard shortcut",
+          "vi": "phím tắt"
+        }
+      ],
+      "family": [
+        {
+          "word": "key",
+          "vi": "phím"
+        }
+      ],
+      "tip": "keyboard shortcut = phím tắt (Ctrl+C).",
+      "emoji": "⌨️",
+      "stage": 2
+    },
+    {
+      "id": 3368,
+      "word": "link",
+      "ipa": "lɪŋk",
+      "viRead": "LINGK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường link, liên kết",
+      "exampleEn": "Send me the link, please.",
+      "exampleVi": "Gửi tôi đường link nhé.",
+      "collocations": [
+        {
+          "en": "click the link",
+          "vi": "bấm vào link"
+        },
+        {
+          "en": "share a link",
+          "vi": "chia sẻ link"
+        }
+      ],
+      "tip": "link (v) = liên kết: link your account.",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 3369,
+      "word": "login",
+      "ipa": "ˈlɔgˌɪn",
+      "viRead": "LOG-in",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đăng nhập",
+      "exampleEn": "Enter your login details.",
+      "exampleVi": "Nhập thông tin đăng nhập.",
+      "collocations": [
+        {
+          "en": "login page",
+          "vi": "trang đăng nhập"
+        },
+        {
+          "en": "login details",
+          "vi": "thông tin đăng nhập"
+        }
+      ],
+      "tip": "login (danh từ) – log in (động từ): Please log in.",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 3370,
+      "word": "printer",
+      "ipa": "ˈprɪntər",
+      "viRead": "PRIN-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy in",
+      "exampleEn": "The printer is out of paper.",
+      "exampleVi": "Máy in hết giấy rồi.",
+      "collocations": [
+        {
+          "en": "color printer",
+          "vi": "máy in màu"
+        },
+        {
+          "en": "printer ink",
+          "vi": "mực in"
+        }
+      ],
+      "family": [
+        {
+          "word": "print",
+          "vi": "in"
+        }
+      ],
+      "tip": "print + er.",
+      "emoji": "🖨️",
+      "stage": 2
+    },
+    {
+      "id": 3371,
+      "word": "router",
+      "ipa": "ˈraʊtər",
+      "viRead": "RAO-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ phát wifi",
+      "exampleEn": "Restart the router if the wifi is slow.",
+      "exampleVi": "Khởi động lại bộ phát nếu wifi chậm.",
+      "collocations": [
+        {
+          "en": "wifi router",
+          "vi": "bộ phát wifi"
+        },
+        {
+          "en": "restart the router",
+          "vi": "khởi động lại router"
+        }
+      ],
+      "tip": "Mỹ đọc 'RAO-tơ', Anh đọc 'RU-tơ'.",
+      "emoji": "📶",
+      "stage": 2
+    },
+    {
+      "id": 3372,
+      "word": "screenshot",
+      "ipa": "ˈskrinˌʃɑt",
+      "viRead": "SKRIN-shat",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ảnh chụp màn hình",
+      "exampleEn": "Take a screenshot and send it to me.",
+      "exampleVi": "Chụp màn hình rồi gửi cho tôi.",
+      "collocations": [
+        {
+          "en": "take a screenshot",
+          "vi": "chụp màn hình"
+        },
+        {
+          "en": "send a screenshot",
+          "vi": "gửi ảnh chụp màn hình"
+        }
+      ],
+      "family": [
+        {
+          "word": "screen",
+          "vi": "màn hình"
+        }
+      ],
+      "tip": "screen + shot.",
+      "emoji": "📸",
+      "stage": 2
+    },
+    {
+      "id": 3373,
+      "word": "selfie",
+      "ipa": "ˈsɛlˌfi",
+      "viRead": "SEL-phi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ảnh tự chụp",
+      "exampleEn": "Let's take a selfie together!",
+      "exampleVi": "Mình chụp ảnh tự sướng cùng nhau đi!",
+      "collocations": [
+        {
+          "en": "take a selfie",
+          "vi": "chụp ảnh tự sướng"
+        },
+        {
+          "en": "selfie stick",
+          "vi": "gậy tự sướng"
+        }
+      ],
+      "family": [
+        {
+          "word": "self",
+          "vi": "bản thân"
+        }
+      ],
+      "tip": "selfie stick = gậy chụp ảnh.",
+      "emoji": "🤳",
+      "stage": 2
+    },
+    {
+      "id": 3374,
+      "word": "smartphone",
+      "ipa": "ˈsmɑrtˌfoʊn",
+      "viRead": "SMART-phâun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điện thoại thông minh",
+      "exampleEn": "Most students have a smartphone.",
+      "exampleVi": "Hầu hết học sinh đều có điện thoại thông minh.",
+      "collocations": [
+        {
+          "en": "a new smartphone",
+          "vi": "điện thoại mới"
+        },
+        {
+          "en": "smartphone app",
+          "vi": "ứng dụng điện thoại"
+        }
+      ],
+      "family": [
+        {
+          "word": "phone",
+          "vi": "điện thoại"
+        }
+      ],
+      "tip": "smart + phone.",
+      "emoji": "📱",
+      "stage": 2
+    },
+    {
+      "id": 3375,
+      "word": "spam",
+      "ipa": "spæm",
+      "viRead": "SPEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thư rác",
+      "exampleEn": "Check your spam folder.",
+      "exampleVi": "Kiểm tra thư mục thư rác.",
+      "collocations": [
+        {
+          "en": "spam email",
+          "vi": "email rác"
+        },
+        {
+          "en": "spam folder",
+          "vi": "thư mục spam"
+        }
+      ],
+      "tip": "spam (v) = gửi tin nhắn rác hàng loạt.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 3376,
+      "word": "username",
+      "ipa": "ˈjuzərˌneɪm",
+      "viRead": "YU-dơ-nâym",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tên người dùng",
+      "exampleEn": "Choose a username and a password.",
+      "exampleVi": "Chọn tên người dùng và mật khẩu.",
+      "collocations": [
+        {
+          "en": "your username",
+          "vi": "tên người dùng của bạn"
+        },
+        {
+          "en": "forgot username",
+          "vi": "quên tên đăng nhập"
+        }
+      ],
+      "family": [
+        {
+          "word": "user",
+          "vi": "người dùng"
+        }
+      ],
+      "tip": "user + name.",
+      "emoji": "👤",
+      "stage": 2
+    },
+    {
+      "id": 3377,
+      "word": "webcam",
+      "ipa": "ˈwɛbˌkæm",
+      "viRead": "WEB-kem",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "webcam",
+      "exampleEn": "Turn on your webcam for the class.",
+      "exampleVi": "Bật webcam cho buổi học.",
+      "collocations": [
+        {
+          "en": "turn on the webcam",
+          "vi": "bật webcam"
+        },
+        {
+          "en": "laptop webcam",
+          "vi": "webcam laptop"
+        }
+      ],
+      "family": [
+        {
+          "word": "camera",
+          "vi": "máy ảnh"
+        }
+      ],
+      "tip": "web + camera.",
+      "emoji": "📷",
+      "stage": 2
+    },
+    {
+      "id": 3378,
+      "word": "wifi",
+      "ipa": "ˈwaɪˌfaɪ",
+      "viRead": "WAI-phai",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mạng wifi",
+      "exampleEn": "What's the wifi password?",
+      "exampleVi": "Mật khẩu wifi là gì?",
+      "collocations": [
+        {
+          "en": "free wifi",
+          "vi": "wifi miễn phí"
+        },
+        {
+          "en": "wifi password",
+          "vi": "mật khẩu wifi"
+        }
+      ],
+      "tip": "Câu hỏi quen thuộc ở quán cà phê: What's the wifi password?",
+      "emoji": "📶",
+      "stage": 2
+    },
+    {
+      "id": 3379,
+      "word": "blister",
+      "ipa": "ˈblɪstər",
+      "viRead": "BLIS-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vết phồng rộp",
+      "exampleEn": "My new shoes gave me a blister.",
+      "exampleVi": "Đôi giày mới làm chân tôi phồng rộp.",
+      "collocations": [
+        {
+          "en": "a painful blister",
+          "vi": "vết phồng đau"
+        },
+        {
+          "en": "get a blister",
+          "vi": "bị phồng"
+        }
+      ],
+      "tip": "blister = vết phồng nước trên da.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 3380,
+      "word": "bruise",
+      "ipa": "bruz",
+      "viRead": "BRUD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vết bầm tím",
+      "exampleEn": "He has a bruise on his knee.",
+      "exampleVi": "Anh ấy bị bầm ở đầu gối.",
+      "collocations": [
+        {
+          "en": "a big bruise",
+          "vi": "vết bầm to"
+        },
+        {
+          "en": "bruise easily",
+          "vi": "dễ bị bầm"
+        }
+      ],
+      "tip": "ui đọc 'u': 'bruz'.",
+      "emoji": "🟣",
+      "stage": 2
+    },
+    {
+      "id": 3381,
+      "word": "cramp",
+      "ipa": "kræmp",
+      "viRead": "KREMP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuột rút",
+      "exampleEn": "I got a cramp in my leg while swimming.",
+      "exampleVi": "Tôi bị chuột rút ở chân khi bơi.",
+      "collocations": [
+        {
+          "en": "leg cramp",
+          "vi": "chuột rút chân"
+        },
+        {
+          "en": "stomach cramps",
+          "vi": "đau quặn bụng"
+        }
+      ],
+      "tip": "get a cramp = bị chuột rút.",
+      "emoji": "🦵",
+      "stage": 2
+    },
+    {
+      "id": 3382,
+      "word": "injection",
+      "ipa": "ɪnˈʤɛkʃən",
+      "viRead": "in-GIEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mũi tiêm",
+      "exampleEn": "The nurse gave me an injection.",
+      "exampleVi": "Y tá tiêm cho tôi một mũi.",
+      "collocations": [
+        {
+          "en": "get an injection",
+          "vi": "được tiêm"
+        },
+        {
+          "en": "flu injection",
+          "vi": "tiêm phòng cúm"
+        }
+      ],
+      "family": [
+        {
+          "word": "inject",
+          "vi": "tiêm"
+        }
+      ],
+      "tip": "injection = shot (Mỹ, thân mật).",
+      "emoji": "💉",
+      "stage": 2
+    },
+    {
+      "id": 3383,
+      "word": "nausea",
+      "ipa": "ˈnɔziə",
+      "viRead": "NO-di-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cảm giác buồn nôn",
+      "exampleEn": "Car trips give me nausea.",
+      "exampleVi": "Đi ô tô làm tôi buồn nôn.",
+      "collocations": [
+        {
+          "en": "feel nausea",
+          "vi": "thấy buồn nôn"
+        },
+        {
+          "en": "nausea and vomiting",
+          "vi": "buồn nôn và nôn"
+        }
+      ],
+      "tip": "Đọc 'NO-zi-ơ'. I feel sick = tôi thấy buồn nôn.",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 3384,
+      "word": "rash",
+      "ipa": "ræʃ",
+      "viRead": "RESH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phát ban",
+      "exampleEn": "The baby has a rash on her face.",
+      "exampleVi": "Em bé bị phát ban trên mặt.",
+      "collocations": [
+        {
+          "en": "skin rash",
+          "vi": "phát ban da"
+        },
+        {
+          "en": "heat rash",
+          "vi": "rôm sảy"
+        }
+      ],
+      "tip": "heat rash = rôm sảy (mùa hè).",
+      "emoji": "🔴",
+      "stage": 2
+    },
+    {
+      "id": 3385,
+      "word": "sprain",
+      "ipa": "spreɪn",
+      "viRead": "SPRÂYN",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "bong gân",
+      "exampleEn": "I sprained my ankle playing football.",
+      "exampleVi": "Tôi bị bong gân mắt cá khi đá bóng.",
+      "collocations": [
+        {
+          "en": "sprain your ankle",
+          "vi": "bong gân mắt cá"
+        },
+        {
+          "en": "a bad sprain",
+          "vi": "bong gân nặng"
+        }
+      ],
+      "tip": "sprain (bong gân) nhẹ hơn break (gãy).",
+      "emoji": "🦶",
+      "stage": 2
+    },
+    {
+      "id": 3386,
+      "word": "stomachache",
+      "ipa": "ˈstəməkˌeɪk",
+      "viRead": "STƠ-mơk-âyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đau bụng",
+      "exampleEn": "I have a stomachache after eating too much.",
+      "exampleVi": "Tôi bị đau bụng sau khi ăn quá nhiều.",
+      "collocations": [
+        {
+          "en": "a bad stomachache",
+          "vi": "đau bụng dữ dội"
+        },
+        {
+          "en": "have a stomachache",
+          "vi": "bị đau bụng"
+        }
+      ],
+      "family": [
+        {
+          "word": "stomach",
+          "vi": "dạ dày"
+        }
+      ],
+      "tip": "ch đọc 'k': 'STƠ-mơk-âyk'.",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 3387,
+      "word": "thermometer",
+      "ipa": "θərˈmɑmətər",
+      "viRead": "thơ-MA-mơ-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiệt kế",
+      "exampleEn": "Use a thermometer to check her fever.",
+      "exampleVi": "Dùng nhiệt kế để đo sốt cho bé.",
+      "collocations": [
+        {
+          "en": "digital thermometer",
+          "vi": "nhiệt kế điện tử"
+        },
+        {
+          "en": "read a thermometer",
+          "vi": "đọc nhiệt kế"
+        }
+      ],
+      "tip": "thermo (nhiệt) + meter (đo). Nhấn âm 2: thơ-MA-mơ-tơ.",
+      "emoji": "🌡️",
+      "stage": 2
+    },
+    {
+      "id": 3388,
+      "word": "toothache",
+      "ipa": "ˈtuθˌeɪk",
+      "viRead": "TUTH-âyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đau răng",
+      "exampleEn": "I have a toothache; I need a dentist.",
+      "exampleVi": "Tôi bị đau răng, tôi cần gặp nha sĩ.",
+      "collocations": [
+        {
+          "en": "a bad toothache",
+          "vi": "đau răng dữ dội"
+        },
+        {
+          "en": "have a toothache",
+          "vi": "bị đau răng"
+        }
+      ],
+      "family": [
+        {
+          "word": "tooth",
+          "vi": "răng"
+        }
+      ],
+      "tip": "tooth + ache.",
+      "emoji": "🦷",
       "stage": 2
     }
   ]
