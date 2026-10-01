@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { celebrate } from '@/lib/confetti'
 import { skyCelebrate } from '@/lib/skyEvents'
@@ -57,16 +57,18 @@ export default function SessionComplete({
 
   return (
     <div className="mx-auto max-w-md animate-fade-in text-center">
-      <div className="card p-8">
-        <p className="text-6xl">{emoji}</p>
-        <h1 className="mt-4 text-2xl font-extrabold">{title}</h1>
+      <div className="card glow-ring p-8">
+        <p className="pop-in text-6xl">{emoji}</p>
+        <h1 className="mt-4 text-2xl font-extrabold">
+          <span className="text-aurora">{title}</span>
+        </h1>
         <p className="mt-1 text-slate-500">{praise}</p>
 
         {showScore && total > 0 && (
           <div className="mt-6 grid grid-cols-3 gap-3">
-            <Stat label="Đúng" value={`${correct}`} tone="text-emerald-600" />
-            <Stat label="Tổng" value={`${total}`} tone="text-slate-700 dark:text-slate-200" />
-            <Stat label="Chính xác" value={`${pct}%`} tone="text-brand-600" />
+            <Stat label="Đúng" value={correct} tone="text-emerald-600" />
+            <Stat label="Tổng" value={total} tone="text-slate-700 dark:text-slate-200" />
+            <Stat label="Chính xác" value={pct} suffix="%" tone="text-brand-600" />
           </div>
         )}
 
@@ -80,11 +82,51 @@ export default function SessionComplete({
   )
 }
 
-function Stat({ label, value, tone }: { label: string; value: string; tone: string }) {
+function Stat({
+  label,
+  value,
+  suffix = '',
+  tone,
+}: {
+  label: string
+  value: number
+  suffix?: string
+  tone: string
+}) {
   return (
     <div className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
-      <p className={`text-2xl font-extrabold ${tone}`}>{value}</p>
+      <p className={`text-2xl font-extrabold tabular-nums ${tone}`}>
+        <CountUp to={value} />
+        {suffix}
+      </p>
       <p className="text-xs text-slate-400">{label}</p>
     </div>
   )
+}
+
+/**
+ * Counts from 0 up to `to` once, easing out. Writes straight into the DOM
+ * (no re-render per frame); the final number is what React renders, so
+ * screen readers, reduced motion and tests always see the real value.
+ */
+function CountUp({ to, ms = 900 }: { to: number; ms?: number }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el || to <= 0) return
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+    let raf = 0
+    const start = performance.now()
+    const tick = (now: number) => {
+      const p = Math.min(1, (now - start) / ms)
+      el.textContent = String(Math.round(to * (1 - Math.pow(1 - p, 3))))
+      if (p < 1) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => {
+      cancelAnimationFrame(raf)
+      el.textContent = String(to)
+    }
+  }, [to, ms])
+  return <span ref={ref}>{to}</span>
 }
