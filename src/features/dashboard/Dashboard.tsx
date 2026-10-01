@@ -7,6 +7,7 @@ import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 import WordOfDay from './WordOfDay'
+import { useTilt } from '@/hooks/useTilt'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -169,34 +170,37 @@ function ActionCard({
   disabled: boolean
   hint: string
 }) {
+  const tilt = useTilt()
   const toneCls =
     tone === 'brand' ? 'from-brand-500 to-brand-700' : 'from-emerald-500 to-emerald-700'
   const inner = (
     <div
-      className={`card relative overflow-hidden p-5 transition ${
-        disabled ? 'opacity-70' : 'hover:-translate-y-0.5 hover:shadow-md'
-      }`}
+      className={`card relative overflow-hidden p-5 ${disabled ? '' : 'tilt'}`}
+      {...(disabled ? {} : tilt)}
     >
       <div
         className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${toneCls} opacity-10`}
       />
-      <div className="flex items-center gap-3">
-        <span
-          className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow`}
+      {/* Dim the content, not the card: a see-through card would show the sky. */}
+      <div className={disabled ? 'opacity-60' : ''}>
+        <div className="flex items-center gap-3">
+          <span
+            className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow`}
+          >
+            <Icon className="h-6 w-6" />
+          </span>
+          <h3 className="text-lg font-bold">{title}</h3>
+        </div>
+        <p className="mt-4">
+          <span className="text-4xl font-extrabold">{count}</span>{' '}
+          <span className="text-slate-500">{unit}</span>
+        </p>
+        <p className="mt-1 text-xs text-slate-400">{hint}</p>
+        <div
+          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-400' : 'text-brand-600 dark:text-brand-300'}`}
         >
-          <Icon className="h-6 w-6" />
-        </span>
-        <h3 className="text-lg font-bold">{title}</h3>
-      </div>
-      <p className="mt-4">
-        <span className="text-4xl font-extrabold">{count}</span>{' '}
-        <span className="text-slate-500">{unit}</span>
-      </p>
-      <p className="mt-1 text-xs text-slate-400">{hint}</p>
-      <div
-        className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-400' : 'text-brand-600 dark:text-brand-300'}`}
-      >
-        {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
+          {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
+        </div>
       </div>
     </div>
   )

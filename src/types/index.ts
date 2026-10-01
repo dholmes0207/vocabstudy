@@ -217,6 +217,9 @@ export interface QuizOption {
 
 export type ThemeSetting = 'light' | 'dark' | 'system'
 
+/** The animated sky behind the app (see lib/sky). "auto" = full on desktop, light on phones. */
+export type SkyEffects = 'auto' | 'full' | 'lite' | 'off'
+
 /**
  * How due words are reviewed: `recall` asks a question (harder as the card
  * matures); `flip` is the classic flashcard with self-grading.
@@ -252,4 +255,10 @@ export interface Settings {
   soundEnabled: boolean
   /** Review by answering questions (default) or by flipping cards. */
   reviewStyle: ReviewStyle
+  /** How much of the animated sky (stars, aurora, shooting stars) to draw. */
+  skyEffects: SkyEffects
+  /** Snow falling over the sky. */
+  snow: boolean
+  /** Sparkles that follow the mouse / burst on tap. */
+  cursorTrail: boolean
 }

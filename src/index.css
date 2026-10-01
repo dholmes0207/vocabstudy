@@ -79,6 +79,145 @@
   }
 }
 
+/* The living sky behind every screen (components/SkyBackdrop, lib/skyRenderer).
+   Fixed under the page at z-index -1: the body's own background propagates to
+   the viewport canvas, so it paints first and the sky lies on top of it. */
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  /* A pale winter morning: soft sun glow top-right over a cool blue fade. */
+  background:
+    radial-gradient(55% 40% at 88% -4%, rgb(254 215 170 / 0.55), transparent 70%),
+    radial-gradient(45% 35% at 8% 10%, rgb(221 214 254 / 0.45), transparent 70%),
+    linear-gradient(180deg, #cfdcf6 0%, #e2eafa 36%, #f0f4fc 70%, #f8fafc 100%);
+  transition: opacity 0.6s ease;
+}
+:root.dark .sky {
+  background:
+    radial-gradient(70% 50% at 82% -6%, rgb(55 48 163 / 0.45), transparent 70%),
+    radial-gradient(60% 40% at 8% 106%, rgb(30 64 175 / 0.3), transparent 70%),
+    linear-gradient(180deg, #020617 0%, #081130 42%, #0d1739 76%, #0f172a 100%);
+}
+/* Quieter while studying: the sky stays, the eye goes to the card. */
+.sky--calm {
+  opacity: 0.55;
+}
+.sky-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Sparkles float above the page (a tap on a card still shows them) but below
+   dialogs, and never take a click. */
+.sky-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* Drifting light: soft clouds by day, aurora by night. Pre-blurred gradients
+   moved with transform only, so it stays on the compositor. */
+.sky-glow {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: -8%;
+  height: 60%;
+  background:
+    radial-gradient(30% 40% at 20% 40%, rgb(255 255 255 / 0.55), transparent 70%),
+    radial-gradient(26% 32% at 62% 22%, rgb(255 255 255 / 0.45), transparent 70%),
+    radial-gradient(22% 30% at 88% 55%, rgb(255 255 255 / 0.35), transparent 70%);
+  animation: sky-drift 40s ease-in-out infinite alternate;
+  will-change: transform;
+}
+:root.dark .sky-glow {
+  background:
+    radial-gradient(34% 55% at 24% 46%, rgb(45 212 191 / 0.12), transparent 70%),
+    radial-gradient(30% 45% at 58% 32%, rgb(129 140 248 / 0.16), transparent 70%),
+    radial-gradient(26% 40% at 86% 52%, rgb(236 72 153 / 0.07), transparent 70%);
+  animation: sky-aurora 22s ease-in-out infinite alternate;
+}
+@keyframes sky-drift {
+  from {
+    transform: translate3d(-4%, 0, 0);
+  }
+  to {
+    transform: translate3d(4%, 2%, 0);
+  }
+}
+@keyframes sky-aurora {
+  from {
+    transform: translate3d(-5%, 0, 0) scale(1);
+    opacity: 0.65;
+  }
+  to {
+    transform: translate3d(5%, 3%, 0) scale(1.1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sky-glow,
+  :root.dark .sky-glow {
+    animation: none;
+  }
+}
+
+/* Cards that lean toward the mouse with a moving glare (hooks/useTilt). */
+.tilt {
+  position: relative;
+  transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+.tilt[data-tilting] {
+  transition:
+    transform 0.08s linear,
+    box-shadow 0.3s ease;
+  box-shadow: 0 18px 40px -18px rgb(27 94 245 / 0.35);
+}
+.tilt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgb(255 255 255 / 0.35),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+:root.dark .tilt::after {
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgb(165 180 252 / 0.14),
+    transparent 55%
+  );
+}
+:root.dark .tilt[data-tilting] {
+  box-shadow: 0 18px 44px -16px rgb(99 102 241 / 0.45);
+}
+.tilt[data-tilting]::after {
+  opacity: 1;
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .tilt {
+    transform: none;
+  }
+  .tilt::after {
+    display: none;
+  }
+}
+
 /* 3D flip card */
 .flip-scene {
   perspective: 1400px;

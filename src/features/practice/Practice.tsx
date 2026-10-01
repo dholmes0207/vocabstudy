@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useProvideContext } from '@/store/contextStore'
 import { PRACTICE } from './entries'
+import { useTilt } from '@/hooks/useTilt'
 
 // The "Luyện tập" hub: everything that practises words you have already met.
 // One tab on the phone's bottom bar instead of three.
 
 export default function Practice() {
   useProvideContext('Luyện tập')
+  const tilt = useTilt(6)
   return (
     <div className="space-y-5 animate-fade-in">
       <header>
@@ -21,7 +23,8 @@ export default function Practice() {
           <Link
             key={e.to}
             to={e.to}
-            className="card flex items-center gap-4 p-4 transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+            className="card tilt flex items-center gap-4 p-4 active:scale-[0.99]"
+            {...tilt}
           >
             <span
               className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-2xl text-white shadow ${e.tone}`}

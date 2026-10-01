@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { ReviewStyle, Settings, Strictness, ThemeSetting } from '@/types'
+import type { ReviewStyle, Settings, SkyEffects, Strictness, ThemeSetting } from '@/types'
 import { setPreferredVoiceURI } from '@/lib/tts'
 import { setAudioVoiceKey } from '@/lib/audio'
 
@@ -18,6 +18,9 @@ interface SettingsState extends Settings {
   setSpeechStrictness: (s: Strictness) => void
   setSoundEnabled: (b: boolean) => void
   setReviewStyle: (s: ReviewStyle) => void
+  setSkyEffects: (s: SkyEffects) => void
+  setSnow: (b: boolean) => void
+  setCursorTrail: (b: boolean) => void
 }
 
 const DEFAULTS: Settings = {
@@ -34,6 +37,11 @@ const DEFAULTS: Settings = {
   speechStrictness: 'normal',
   soundEnabled: true,
   reviewStyle: 'recall',
+  // New fields need no migration: persist merges the saved state over these
+  // defaults, so existing learners simply get the sky switched on.
+  skyEffects: 'auto',
+  snow: true,
+  cursorTrail: true,
 }
 
 export const useSettings = create<SettingsState>()(
@@ -54,6 +62,9 @@ export const useSettings = create<SettingsState>()(
       setSpeechStrictness: (speechStrictness) => set({ speechStrictness }),
       setSoundEnabled: (soundEnabled) => set({ soundEnabled }),
       setReviewStyle: (reviewStyle) => set({ reviewStyle }),
+      setSkyEffects: (skyEffects) => set({ skyEffects }),
+      setSnow: (snow) => set({ snow }),
+      setCursorTrail: (cursorTrail) => set({ cursorTrail }),
     }),
     {
       name: 'vocab.settings.v1',

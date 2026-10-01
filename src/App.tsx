@@ -3,6 +3,7 @@ import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
 import Layout from './components/Layout'
 import ErrorBoundary from './components/ErrorBoundary'
+import SkyBackdrop from './components/SkyBackdrop'
 import { useData } from './store/dataStore'
 import { useSettings } from './store/settingsStore'
 import { useAuth } from './store/authStore'
@@ -29,6 +30,7 @@ export default function App() {
 
   return (
     <HashRouter>
+      <SkyBackdrop />
       {/* Last line of defence: a throw in Layout, DataGate or a lazy chunk used
           to unmount everything and leave a blank white page. */}
       <ErrorBoundary>

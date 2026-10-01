@@ -67,3 +67,40 @@ export function Toggle({
     </button>
   )
 }
+
+/** A row of mutually exclusive choices (a radio group drawn as pills). */
+export function Segmented<T extends string>({
+  value,
+  options,
+  onChange,
+  label,
+  disabled,
+}: {
+  value: T
+  options: readonly (readonly [T, string])[]
+  onChange: (v: T) => void
+  label: string
+  disabled?: boolean
+}) {
+  return (
+    <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-1.5">
+      {options.map(([v, text]) => (
+        <button
+          key={v}
+          type="button"
+          role="radio"
+          aria-checked={value === v}
+          disabled={disabled}
+          onClick={() => onChange(v)}
+          className={`rounded-lg border-2 px-3 py-1.5 text-sm font-semibold transition disabled:opacity-40 ${
+            value === v
+              ? 'border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-200'
+              : 'border-slate-200 dark:border-slate-700'
+          }`}
+        >
+          {text}
+        </button>
+      ))}
+    </div>
+  )
+}

@@ -12,7 +12,20 @@ import { isRecognitionSupported } from '@/lib/speech'
 import { supabaseConfigured } from '@/lib/supabase'
 import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
-import { Row, Section, Toggle } from './ui'
+import { Row, Section, Segmented, Toggle } from './ui'
+
+const THEME_OPTIONS = [
+  ['light', 'Sáng'],
+  ['dark', 'Tối'],
+  ['system', 'Theo máy'],
+] as const
+
+const SKY_OPTIONS = [
+  ['auto', 'Tự động'],
+  ['full', 'Đầy đủ'],
+  ['lite', 'Nhẹ'],
+  ['off', 'Tắt'],
+] as const
 
 const STRICTNESS_OPTIONS = [
   ['easy', 'Dễ'],
@@ -28,6 +41,11 @@ export default function SettingsPage() {
   const syncing = Boolean(user && supabaseConfigured)
   const effLevel = useEffectiveLevel()
   const resetLanguage = useStudy((s) => s.resetLanguage)
+  const [reducedMotion] = useState(
+    () =>
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  )
 
   const fileRef = useRef<HTMLInputElement>(null)
   const [confirmReset, setConfirmReset] = useState(false)
@@ -85,6 +103,49 @@ export default function SettingsPage() {
           {notice}
         </div>
       )}
+
+      {/* Look & feel */}
+      <Section title="Giao diện">
+        <Row label="Chủ đề" hint="Bầu trời sao rõ nhất ở chủ đề Tối.">
+          <Segmented
+            label="Chủ đề"
+            value={settings.theme}
+            options={THEME_OPTIONS}
+            onChange={settings.setTheme}
+          />
+        </Row>
+        <Row
+          label="Bầu trời động"
+          hint={
+            reducedMotion
+              ? 'Máy đang bật “Giảm chuyển động” nên bầu trời đứng yên.'
+              : 'Sao lấp lánh, sao băng, cực quang. “Tự động” nhẹ hơn trên điện thoại để đỡ tốn pin.'
+          }
+        >
+          <Segmented
+            label="Bầu trời động"
+            value={settings.skyEffects}
+            options={SKY_OPTIONS}
+            onChange={settings.setSkyEffects}
+          />
+        </Row>
+        <Row label="Tuyết rơi" hint="Rê chuột hoặc chạm để gạt tuyết sang bên.">
+          <Toggle
+            checked={settings.snow}
+            onChange={settings.setSnow}
+            label="Tuyết rơi"
+            disabled={settings.skyEffects === 'off'}
+          />
+        </Row>
+        <Row label="Lấp lánh theo chuột" hint="Vệt sáng theo con trỏ, bung sao khi bấm hoặc chạm.">
+          <Toggle
+            checked={settings.cursorTrail}
+            onChange={settings.setCursorTrail}
+            label="Lấp lánh theo chuột"
+            disabled={settings.skyEffects === 'off'}
+          />
+        </Row>
+      </Section>
 
       {/* Learning */}
       <Section title="Học tập">

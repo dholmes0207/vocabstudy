@@ -61,7 +61,7 @@ export default function Layout() {
   return (
     <div className="min-h-[100dvh] lg:flex">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-[100dvh] w-64 shrink-0 flex-col border-r border-slate-200 bg-white/70 px-4 py-6 backdrop-blur dark:border-slate-800 dark:bg-slate-900/70 lg:flex">
+      <aside className="sticky top-0 hidden h-[100dvh] w-64 shrink-0 flex-col border-r border-white/60 bg-white/60 px-4 py-6 backdrop-blur-md dark:border-white/5 dark:bg-slate-950/50 lg:flex">
         <Brand />
         <nav className="mt-8 flex flex-1 flex-col gap-1">
           {NAV.map((item) => (
@@ -79,7 +79,7 @@ export default function Layout() {
       {/* Main column */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Header */}
-        <header className="sticky top-0 z-20 flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-2.5 pt-[max(0.625rem,env(safe-area-inset-top))] dark:border-slate-800 dark:bg-slate-900 lg:bg-white/80 lg:py-3 lg:backdrop-blur lg:dark:bg-slate-900/80">
+        <header className="sticky top-0 z-20 flex items-center gap-2 border-b border-white/60 bg-white/75 px-4 py-2.5 pt-[max(0.625rem,env(safe-area-inset-top))] backdrop-blur-md dark:border-white/5 dark:bg-slate-950/60 lg:py-3">
           <div className="lg:hidden">
             <Brand compact />
           </div>
@@ -104,7 +104,7 @@ export default function Layout() {
 
       {/* Mobile bottom navigation */}
       {!immersive && (
-        <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] dark:border-slate-800 dark:bg-slate-900 lg:hidden">
+        <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-white/60 bg-white/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md dark:border-white/5 dark:bg-slate-950/75 lg:hidden">
           {NAV.filter((n) => n.primary).map((item) => (
             <BottomLink
               key={item.to}
