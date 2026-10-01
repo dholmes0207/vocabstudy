@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3238,
+    "count": 3288,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -91127,6 +91127,1400 @@
       ],
       "tip": "zebra crossing = vạch kẻ đường cho người đi bộ (Anh).",
       "emoji": "🦓",
+      "stage": 2
+    },
+    {
+      "id": 3239,
+      "word": "ache",
+      "ipa": "eɪk",
+      "viRead": "ÂYK",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "cơn đau âm ỉ",
+      "exampleEn": "I have an ache in my back.",
+      "exampleVi": "Lưng tôi đau âm ỉ.",
+      "collocations": [
+        {
+          "en": "a dull ache",
+          "vi": "đau âm ỉ"
+        },
+        {
+          "en": "aches and pains",
+          "vi": "đau nhức"
+        }
+      ],
+      "family": [
+        {
+          "word": "headache",
+          "vi": "đau đầu"
+        }
+      ],
+      "tip": "ch đọc 'k': 'âyk'. head + ache = headache.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 3240,
+      "word": "alike",
+      "ipa": "əˈlaɪk",
+      "viRead": "ơ-LAIK",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "giống nhau",
+      "exampleEn": "The two sisters look alike.",
+      "exampleVi": "Hai chị em trông giống nhau.",
+      "collocations": [
+        {
+          "en": "look alike",
+          "vi": "trông giống nhau"
+        },
+        {
+          "en": "think alike",
+          "vi": "nghĩ giống nhau"
+        }
+      ],
+      "family": [
+        {
+          "word": "like",
+          "vi": "giống"
+        }
+      ],
+      "tip": "alike đứng sau động từ: They look alike (KHÔNG nói alike sisters).",
+      "emoji": "👯",
+      "stage": 2
+    },
+    {
+      "id": 3241,
+      "word": "annoyed",
+      "ipa": "əˈnɔɪd",
+      "viRead": "ơ-NOIĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bực mình",
+      "exampleEn": "I was annoyed because the bus was late.",
+      "exampleVi": "Tôi bực mình vì xe buýt đến muộn.",
+      "collocations": [
+        {
+          "en": "annoyed with",
+          "vi": "bực với ai"
+        },
+        {
+          "en": "get annoyed",
+          "vi": "bực mình"
+        }
+      ],
+      "family": [
+        {
+          "word": "annoying",
+          "vi": "gây khó chịu"
+        }
+      ],
+      "tip": "annoyed (người thấy bực) – annoying (thứ gây bực).",
+      "emoji": "😒",
+      "stage": 2
+    },
+    {
+      "id": 3242,
+      "word": "bark",
+      "ipa": "bɑrk",
+      "viRead": "BARK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "sủa; vỏ cây",
+      "exampleEn": "The dog barks at strangers.",
+      "exampleVi": "Con chó sủa người lạ.",
+      "collocations": [
+        {
+          "en": "bark at",
+          "vi": "sủa vào"
+        },
+        {
+          "en": "tree bark",
+          "vi": "vỏ cây"
+        }
+      ],
+      "tip": "His bark is worse than his bite = Nói vậy thôi chứ không làm gì đâu.",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 3243,
+      "word": "bathe",
+      "ipa": "beɪð",
+      "viRead": "BÂYĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tắm (cho)",
+      "exampleEn": "She bathes the baby every evening.",
+      "exampleVi": "Tối nào cô ấy cũng tắm cho em bé.",
+      "collocations": [
+        {
+          "en": "bathe the baby",
+          "vi": "tắm cho em bé"
+        },
+        {
+          "en": "bathe in the sea",
+          "vi": "tắm biển"
+        }
+      ],
+      "family": [
+        {
+          "word": "bath",
+          "vi": "sự tắm"
+        }
+      ],
+      "tip": "bath (n, 'bath') ≠ bathe (v, 'bâyđ').",
+      "emoji": "🛁",
+      "stage": 2
+    },
+    {
+      "id": 3244,
+      "word": "bleed",
+      "ipa": "blid",
+      "viRead": "BLIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chảy máu",
+      "exampleEn": "Your finger is bleeding!",
+      "exampleVi": "Ngón tay bạn đang chảy máu!",
+      "collocations": [
+        {
+          "en": "bleed heavily",
+          "vi": "chảy nhiều máu"
+        },
+        {
+          "en": "nose bleeding",
+          "vi": "chảy máu cam"
+        }
+      ],
+      "family": [
+        {
+          "word": "blood",
+          "vi": "máu"
+        }
+      ],
+      "tip": "bleed – bled – bled. blood (n) – bleed (v).",
+      "emoji": "🩸",
+      "stage": 2
+    },
+    {
+      "id": 3245,
+      "word": "blink",
+      "ipa": "blɪŋk",
+      "viRead": "BLINGK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chớp mắt",
+      "exampleEn": "He didn't blink when he heard the news.",
+      "exampleVi": "Anh ấy không chớp mắt khi nghe tin.",
+      "collocations": [
+        {
+          "en": "in the blink of an eye",
+          "vi": "trong chớp mắt"
+        },
+        {
+          "en": "blink twice",
+          "vi": "chớp mắt hai lần"
+        }
+      ],
+      "tip": "in the blink of an eye = trong nháy mắt.",
+      "emoji": "😉",
+      "stage": 2
+    },
+    {
+      "id": 3246,
+      "word": "chilly",
+      "ipa": "ˈʧɪli",
+      "viRead": "CHI-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "se lạnh",
+      "exampleEn": "It's a bit chilly this morning.",
+      "exampleVi": "Sáng nay trời hơi se lạnh.",
+      "collocations": [
+        {
+          "en": "a chilly morning",
+          "vi": "buổi sáng se lạnh"
+        },
+        {
+          "en": "feel chilly",
+          "vi": "thấy lạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "chill",
+          "vi": "cái lạnh"
+        }
+      ],
+      "tip": "chilly = hơi lạnh (nhẹ hơn cold). Hà Nội tháng 11 = chilly.",
+      "emoji": "🍂",
+      "stage": 2
+    },
+    {
+      "id": 3247,
+      "word": "clumsy",
+      "ipa": "ˈkləmzi",
+      "viRead": "KLƠM-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vụng về",
+      "exampleEn": "I'm so clumsy; I dropped my phone again.",
+      "exampleVi": "Tôi vụng quá, lại đánh rơi điện thoại rồi.",
+      "collocations": [
+        {
+          "en": "a clumsy mistake",
+          "vi": "lỗi vụng về"
+        },
+        {
+          "en": "feel clumsy",
+          "vi": "thấy mình vụng"
+        }
+      ],
+      "tip": "clumsy = hậu đậu.",
+      "emoji": "🙈",
+      "stage": 2
+    },
+    {
+      "id": 3248,
+      "word": "confused",
+      "ipa": "kənˈfjuzd",
+      "viRead": "kơn-PHYUDĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bối rối",
+      "exampleEn": "I'm confused by these two words.",
+      "exampleVi": "Tôi bị lẫn hai từ này.",
+      "collocations": [
+        {
+          "en": "confused about",
+          "vi": "bối rối về"
+        },
+        {
+          "en": "get confused",
+          "vi": "bị nhầm lẫn"
+        }
+      ],
+      "family": [
+        {
+          "word": "confusing",
+          "vi": "gây khó hiểu"
+        }
+      ],
+      "tip": "confused (người thấy rối) – confusing (thứ gây rối).",
+      "emoji": "😵‍💫",
+      "stage": 2
+    },
+    {
+      "id": 3249,
+      "word": "cozy",
+      "ipa": "ˈkoʊzi",
+      "viRead": "KÂU-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ấm cúng",
+      "exampleEn": "This little cafe is warm and cozy.",
+      "exampleVi": "Quán cà phê nhỏ này ấm áp và ấm cúng.",
+      "collocations": [
+        {
+          "en": "a cozy room",
+          "vi": "căn phòng ấm cúng"
+        },
+        {
+          "en": "cozy blanket",
+          "vi": "chăn ấm"
+        }
+      ],
+      "tip": "Anh viết cosy. Ngày đông, chăn ấm, trà nóng = cozy.",
+      "emoji": "☕",
+      "stage": 2
+    },
+    {
+      "id": 3250,
+      "word": "crawl",
+      "ipa": "krɔl",
+      "viRead": "KROL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bò",
+      "exampleEn": "The baby is learning to crawl.",
+      "exampleVi": "Em bé đang tập bò.",
+      "collocations": [
+        {
+          "en": "crawl on the floor",
+          "vi": "bò trên sàn"
+        },
+        {
+          "en": "traffic crawls",
+          "vi": "xe nhích từng chút"
+        }
+      ],
+      "tip": "Kẹt xe giờ cao điểm: traffic is crawling.",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 3251,
+      "word": "crispy",
+      "ipa": "ˈkrɪspi",
+      "viRead": "KRIS-pi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giòn",
+      "exampleEn": "I love crispy spring rolls.",
+      "exampleVi": "Tôi thích chả giò giòn rụm.",
+      "collocations": [
+        {
+          "en": "crispy skin",
+          "vi": "da giòn"
+        },
+        {
+          "en": "crispy fried chicken",
+          "vi": "gà rán giòn"
+        }
+      ],
+      "tip": "crispy = giòn (đồ chiên); crunchy = giòn (đồ cứng như hạt).",
+      "emoji": "🍗",
+      "stage": 2
+    },
+    {
+      "id": 3252,
+      "word": "cuddle",
+      "ipa": "ˈkədəl",
+      "viRead": "KƠ-đơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "ôm ấp",
+      "exampleEn": "The little girl cuddled her teddy bear.",
+      "exampleVi": "Cô bé ôm chặt con gấu bông.",
+      "collocations": [
+        {
+          "en": "cuddle up",
+          "vi": "rúc vào"
+        },
+        {
+          "en": "give a cuddle",
+          "vi": "ôm một cái"
+        }
+      ],
+      "tip": "cuddle = ôm ấp âu yếm (lâu, thân mật hơn hug).",
+      "emoji": "🧸",
+      "stage": 2
+    },
+    {
+      "id": 3253,
+      "word": "dawn",
+      "ipa": "dɔn",
+      "viRead": "ĐON",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bình minh",
+      "exampleEn": "We left the house at dawn.",
+      "exampleVi": "Chúng tôi ra khỏi nhà lúc rạng sáng.",
+      "collocations": [
+        {
+          "en": "at dawn",
+          "vi": "lúc bình minh"
+        },
+        {
+          "en": "from dawn till dusk",
+          "vi": "từ sáng tới tối"
+        }
+      ],
+      "family": [
+        {
+          "word": "dusk",
+          "vi": "hoàng hôn"
+        }
+      ],
+      "tip": "dawn ↔ dusk. aw đọc 'o': 'đon'.",
+      "emoji": "🌄",
+      "stage": 2
+    },
+    {
+      "id": 3254,
+      "word": "dig",
+      "ipa": "dɪg",
+      "viRead": "ĐIG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đào",
+      "exampleEn": "The dog likes to dig in the garden.",
+      "exampleVi": "Con chó thích đào bới trong vườn.",
+      "collocations": [
+        {
+          "en": "dig a hole",
+          "vi": "đào hố"
+        },
+        {
+          "en": "dig deeper",
+          "vi": "tìm hiểu sâu hơn"
+        }
+      ],
+      "tip": "dig – dug – dug.",
+      "emoji": "⛏️",
+      "stage": 2
+    },
+    {
+      "id": 3255,
+      "word": "dusk",
+      "ipa": "dəsk",
+      "viRead": "ĐƠSK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chạng vạng",
+      "exampleEn": "The street lights come on at dusk.",
+      "exampleVi": "Đèn đường bật lúc chạng vạng.",
+      "collocations": [
+        {
+          "en": "at dusk",
+          "vi": "lúc chạng vạng"
+        },
+        {
+          "en": "dusk falls",
+          "vi": "hoàng hôn buông"
+        }
+      ],
+      "family": [
+        {
+          "word": "dawn",
+          "vi": "bình minh"
+        }
+      ],
+      "tip": "dusk = lúc trời nhá nhem tối.",
+      "emoji": "🌆",
+      "stage": 2
+    },
+    {
+      "id": 3256,
+      "word": "envious",
+      "ipa": "ˈɛnviəs",
+      "viRead": "EN-vi-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ghen tị",
+      "exampleEn": "I'm envious of your long holiday.",
+      "exampleVi": "Tôi ghen tị với kỳ nghỉ dài của bạn.",
+      "collocations": [
+        {
+          "en": "envious of",
+          "vi": "ghen tị với"
+        },
+        {
+          "en": "envious looks",
+          "vi": "ánh mắt ghen tị"
+        }
+      ],
+      "family": [
+        {
+          "word": "envy",
+          "vi": "sự ghen tị"
+        }
+      ],
+      "tip": "envious of + điều người khác có.",
+      "emoji": "😒",
+      "stage": 2
+    },
+    {
+      "id": 3257,
+      "word": "fetch",
+      "ipa": "fɛʧ",
+      "viRead": "PHECH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đi lấy về",
+      "exampleEn": "Can you fetch me a glass of water?",
+      "exampleVi": "Lấy giúp tôi cốc nước được không?",
+      "collocations": [
+        {
+          "en": "fetch water",
+          "vi": "đi lấy nước"
+        },
+        {
+          "en": "play fetch",
+          "vi": "chơi ném bắt (với chó)"
+        }
+      ],
+      "tip": "fetch = đi lấy rồi mang về. Chơi ném que cho chó nhặt = play fetch.",
+      "emoji": "🎾",
+      "stage": 2
+    },
+    {
+      "id": 3258,
+      "word": "fluffy",
+      "ipa": "ˈfləfi",
+      "viRead": "PHLƠ-phi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mềm mịn, xù",
+      "exampleEn": "The kitten has fluffy white fur.",
+      "exampleVi": "Mèo con có bộ lông trắng mềm mịn.",
+      "collocations": [
+        {
+          "en": "fluffy pancakes",
+          "vi": "bánh kếp xốp mềm"
+        },
+        {
+          "en": "a fluffy cloud",
+          "vi": "đám mây bông"
+        }
+      ],
+      "family": [
+        {
+          "word": "fluff",
+          "vi": "lông tơ"
+        }
+      ],
+      "tip": "fluffy = xốp, bông (mây, lông, bánh).",
+      "emoji": "☁️",
+      "stage": 2
+    },
+    {
+      "id": 3259,
+      "word": "freezing",
+      "ipa": "ˈfrizɪŋ",
+      "viRead": "PHRI-ding",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lạnh cóng",
+      "exampleEn": "It's freezing outside tonight.",
+      "exampleVi": "Tối nay ngoài trời lạnh cóng.",
+      "collocations": [
+        {
+          "en": "freezing cold",
+          "vi": "lạnh buốt"
+        },
+        {
+          "en": "I'm freezing",
+          "vi": "tôi lạnh cóng"
+        }
+      ],
+      "family": [
+        {
+          "word": "freeze",
+          "vi": "đóng băng"
+        }
+      ],
+      "tip": "freezing = rất lạnh (dưới 0°C). I'm freezing! = Lạnh chết mất!",
+      "emoji": "🥶",
+      "stage": 2
+    },
+    {
+      "id": 3260,
+      "word": "frown",
+      "ipa": "fraʊn",
+      "viRead": "PHRAON",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cau mày",
+      "exampleEn": "The teacher frowned at the noisy students.",
+      "exampleVi": "Cô giáo cau mày với đám học sinh ồn ào.",
+      "collocations": [
+        {
+          "en": "frown at",
+          "vi": "cau mày với"
+        },
+        {
+          "en": "a deep frown",
+          "vi": "cái cau mày"
+        }
+      ],
+      "family": [
+        {
+          "word": "smile",
+          "vi": "mỉm cười"
+        }
+      ],
+      "tip": "frown ↔ smile. ow đọc 'ao': 'phraon'.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 3261,
+      "word": "furry",
+      "ipa": "ˈfəri",
+      "viRead": "PHƠ-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có lông xù",
+      "exampleEn": "Cats and dogs are furry pets.",
+      "exampleVi": "Mèo và chó là thú cưng có lông.",
+      "collocations": [
+        {
+          "en": "furry animals",
+          "vi": "thú có lông"
+        },
+        {
+          "en": "furry friend",
+          "vi": "bạn bốn chân lông xù"
+        }
+      ],
+      "family": [
+        {
+          "word": "fur",
+          "vi": "bộ lông"
+        }
+      ],
+      "tip": "fur (n) + ry = furry. our furry friends = thú cưng.",
+      "emoji": "🐻",
+      "stage": 2
+    },
+    {
+      "id": 3262,
+      "word": "giggle",
+      "ipa": "ˈgɪgəl",
+      "viRead": "GI-gơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cười khúc khích",
+      "exampleEn": "The girls giggled at the funny photo.",
+      "exampleVi": "Các cô bé cười khúc khích vì tấm ảnh vui.",
+      "collocations": [
+        {
+          "en": "giggle at",
+          "vi": "cười khúc khích vì"
+        },
+        {
+          "en": "a nervous giggle",
+          "vi": "tiếng cười ngượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "laugh",
+          "vi": "cười"
+        }
+      ],
+      "tip": "giggle = cười khúc khích (nhỏ, tinh nghịch).",
+      "emoji": "🤭",
+      "stage": 2
+    },
+    {
+      "id": 3263,
+      "word": "gorgeous",
+      "ipa": "ˈgɔrʤəs",
+      "viRead": "GOR-giơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lộng lẫy, tuyệt đẹp",
+      "exampleEn": "The view of Ha Long Bay is gorgeous.",
+      "exampleVi": "Cảnh vịnh Hạ Long thật tuyệt đẹp.",
+      "collocations": [
+        {
+          "en": "a gorgeous view",
+          "vi": "cảnh tuyệt đẹp"
+        },
+        {
+          "en": "look gorgeous",
+          "vi": "trông lộng lẫy"
+        }
+      ],
+      "tip": "gorgeous = very beautiful. g đọc 'g' rồi 'j': 'GOR-jợs'.",
+      "emoji": "😍",
+      "stage": 2
+    },
+    {
+      "id": 3264,
+      "word": "greedy",
+      "ipa": "ˈgridi",
+      "viRead": "GRI-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tham lam",
+      "exampleEn": "Don't be greedy; share with others.",
+      "exampleVi": "Đừng tham lam, hãy chia sẻ với người khác.",
+      "collocations": [
+        {
+          "en": "a greedy person",
+          "vi": "người tham lam"
+        },
+        {
+          "en": "greedy for money",
+          "vi": "ham tiền"
+        }
+      ],
+      "family": [
+        {
+          "word": "greed",
+          "vi": "lòng tham"
+        }
+      ],
+      "tip": "greedy = tham (ăn, tiền).",
+      "emoji": "🤑",
+      "stage": 2
+    },
+    {
+      "id": 3265,
+      "word": "grumpy",
+      "ipa": "ˈgrəmpi",
+      "viRead": "GRƠM-pi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cáu kỉnh",
+      "exampleEn": "Dad is grumpy before his morning coffee.",
+      "exampleVi": "Bố hay cáu trước khi uống cà phê sáng.",
+      "collocations": [
+        {
+          "en": "a grumpy old man",
+          "vi": "ông già khó tính"
+        },
+        {
+          "en": "feel grumpy",
+          "vi": "thấy cáu kỉnh"
+        }
+      ],
+      "tip": "Grumpy là chú lùn Cau Có trong Bạch Tuyết.",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 3266,
+      "word": "hatch",
+      "ipa": "hæʧ",
+      "viRead": "HECH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nở (trứng)",
+      "exampleEn": "The chicks hatched this morning.",
+      "exampleVi": "Gà con nở sáng nay.",
+      "collocations": [
+        {
+          "en": "eggs hatch",
+          "vi": "trứng nở"
+        },
+        {
+          "en": "hatch a plan",
+          "vi": "ấp ủ kế hoạch"
+        }
+      ],
+      "tip": "Don't count your chickens before they hatch = Chưa đỗ ông nghè đã đe hàng tổng.",
+      "emoji": "🐣",
+      "stage": 2
+    },
+    {
+      "id": 3267,
+      "word": "homesick",
+      "ipa": "ˈhoʊmˌsɪk",
+      "viRead": "HÂUM-sik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhớ nhà",
+      "exampleEn": "She felt homesick during her first year abroad.",
+      "exampleVi": "Cô ấy nhớ nhà trong năm đầu du học.",
+      "collocations": [
+        {
+          "en": "feel homesick",
+          "vi": "thấy nhớ nhà"
+        },
+        {
+          "en": "get homesick",
+          "vi": "bị nhớ nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "home",
+          "vi": "nhà"
+        }
+      ],
+      "tip": "home + sick = nhớ nhà (đến mức buồn).",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 3268,
+      "word": "icy",
+      "ipa": "ˈaɪsi",
+      "viRead": "AI-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đóng băng; lạnh giá",
+      "exampleEn": "Be careful, the road is icy.",
+      "exampleVi": "Cẩn thận, đường đóng băng.",
+      "collocations": [
+        {
+          "en": "icy roads",
+          "vi": "đường đóng băng"
+        },
+        {
+          "en": "an icy wind",
+          "vi": "gió lạnh buốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "ice",
+          "vi": "băng"
+        }
+      ],
+      "tip": "ice (n) → icy (adj). an icy look = ánh nhìn lạnh lùng.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 3269,
+      "word": "itchy",
+      "ipa": "ˈɪʧi",
+      "viRead": "I-chi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngứa",
+      "exampleEn": "Mosquito bites are very itchy.",
+      "exampleVi": "Vết muỗi đốt rất ngứa.",
+      "collocations": [
+        {
+          "en": "itchy skin",
+          "vi": "da ngứa"
+        },
+        {
+          "en": "itchy eyes",
+          "vi": "ngứa mắt"
+        }
+      ],
+      "family": [
+        {
+          "word": "itch",
+          "vi": "ngứa"
+        }
+      ],
+      "tip": "itch (v/n) → itchy (adj).",
+      "emoji": "🦟",
+      "stage": 2
+    },
+    {
+      "id": 3270,
+      "word": "jog",
+      "ipa": "ʤɑg",
+      "viRead": "GIAG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chạy bộ chậm",
+      "exampleEn": "I jog around the lake every morning.",
+      "exampleVi": "Sáng nào tôi cũng chạy bộ quanh hồ.",
+      "collocations": [
+        {
+          "en": "go jogging",
+          "vi": "đi chạy bộ"
+        },
+        {
+          "en": "jog your memory",
+          "vi": "gợi lại trí nhớ"
+        }
+      ],
+      "tip": "jog → jogging. jog your memory = gợi nhớ.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 3271,
+      "word": "juicy",
+      "ipa": "ˈʤusi",
+      "viRead": "GIU-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mọng nước",
+      "exampleEn": "This mango is sweet and juicy.",
+      "exampleVi": "Quả xoài này ngọt và mọng nước.",
+      "collocations": [
+        {
+          "en": "juicy fruit",
+          "vi": "trái cây mọng nước"
+        },
+        {
+          "en": "juicy gossip",
+          "vi": "chuyện tầm phào hấp dẫn"
+        }
+      ],
+      "family": [
+        {
+          "word": "juice",
+          "vi": "nước ép"
+        }
+      ],
+      "tip": "juice (n) → juicy (adj).",
+      "emoji": "🥭",
+      "stage": 2
+    },
+    {
+      "id": 3272,
+      "word": "lick",
+      "ipa": "lɪk",
+      "viRead": "LIK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "liếm",
+      "exampleEn": "The cat licked its paws.",
+      "exampleVi": "Con mèo liếm chân.",
+      "collocations": [
+        {
+          "en": "lick an ice cream",
+          "vi": "liếm kem"
+        },
+        {
+          "en": "lick your lips",
+          "vi": "liếm môi"
+        }
+      ],
+      "tip": "finger-licking good = ngon mút tay.",
+      "emoji": "👅",
+      "stage": 2
+    },
+    {
+      "id": 3273,
+      "word": "lovely",
+      "ipa": "ˈləvli",
+      "viRead": "LƠV-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng yêu, dễ thương",
+      "exampleEn": "What a lovely day!",
+      "exampleVi": "Một ngày thật đẹp!",
+      "collocations": [
+        {
+          "en": "a lovely day",
+          "vi": "ngày đẹp trời"
+        },
+        {
+          "en": "lovely to see you",
+          "vi": "rất vui được gặp bạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "love",
+          "vi": "tình yêu"
+        }
+      ],
+      "tip": "lovely là tính từ (không phải trạng từ) dù có đuôi -ly.",
+      "emoji": "💕",
+      "stage": 2
+    },
+    {
+      "id": 3274,
+      "word": "messy",
+      "ipa": "ˈmɛsi",
+      "viRead": "ME-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bừa bộn",
+      "exampleEn": "His desk is always messy.",
+      "exampleVi": "Bàn của anh ấy lúc nào cũng bừa bộn.",
+      "collocations": [
+        {
+          "en": "a messy room",
+          "vi": "phòng bừa bộn"
+        },
+        {
+          "en": "messy hair",
+          "vi": "tóc rối"
+        }
+      ],
+      "family": [
+        {
+          "word": "mess",
+          "vi": "mớ hỗn độn"
+        }
+      ],
+      "tip": "mess (n) → messy (adj) ↔ tidy.",
+      "emoji": "🧦",
+      "stage": 2
+    },
+    {
+      "id": 3275,
+      "word": "moist",
+      "ipa": "mɔɪst",
+      "viRead": "MOIST",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ẩm",
+      "exampleEn": "Keep the soil moist.",
+      "exampleVi": "Giữ đất luôn ẩm.",
+      "collocations": [
+        {
+          "en": "moist soil",
+          "vi": "đất ẩm"
+        },
+        {
+          "en": "moist cake",
+          "vi": "bánh ẩm mềm"
+        }
+      ],
+      "family": [
+        {
+          "word": "moisture",
+          "vi": "độ ẩm"
+        }
+      ],
+      "tip": "moist = hơi ẩm (dễ chịu); damp = ẩm (khó chịu).",
+      "emoji": "💧",
+      "stage": 2
+    },
+    {
+      "id": 3276,
+      "word": "muddy",
+      "ipa": "ˈmədi",
+      "viRead": "MƠ-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lầy lội",
+      "exampleEn": "Take off your muddy shoes.",
+      "exampleVi": "Cởi đôi giày dính bùn ra.",
+      "collocations": [
+        {
+          "en": "muddy roads",
+          "vi": "đường lầy lội"
+        },
+        {
+          "en": "muddy water",
+          "vi": "nước đục"
+        }
+      ],
+      "family": [
+        {
+          "word": "mud",
+          "vi": "bùn"
+        }
+      ],
+      "tip": "mud (n) → muddy (adj) — gấp đôi d.",
+      "emoji": "🥾",
+      "stage": 2
+    },
+    {
+      "id": 3277,
+      "word": "naughty",
+      "ipa": "ˈnɔti",
+      "viRead": "NO-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nghịch ngợm",
+      "exampleEn": "The naughty boy hid his sister's toys.",
+      "exampleVi": "Cậu bé nghịch ngợm giấu đồ chơi của em gái.",
+      "collocations": [
+        {
+          "en": "a naughty child",
+          "vi": "đứa trẻ nghịch"
+        },
+        {
+          "en": "naughty but nice",
+          "vi": "nghịch mà dễ thương"
+        }
+      ],
+      "tip": "gh câm: 'NO-ti'.",
+      "emoji": "😜",
+      "stage": 2
+    },
+    {
+      "id": 3278,
+      "word": "nosy",
+      "ipa": "ˈnoʊzi",
+      "viRead": "NÂU-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tọc mạch",
+      "exampleEn": "Our nosy neighbor always asks questions.",
+      "exampleVi": "Bà hàng xóm tọc mạch luôn hỏi han.",
+      "collocations": [
+        {
+          "en": "a nosy neighbor",
+          "vi": "hàng xóm tọc mạch"
+        },
+        {
+          "en": "don't be nosy",
+          "vi": "đừng tò mò chuyện người khác"
+        }
+      ],
+      "family": [
+        {
+          "word": "nose",
+          "vi": "mũi"
+        }
+      ],
+      "tip": "nose (mũi) → nosy = chõ mũi vào chuyện người khác.",
+      "emoji": "👃",
+      "stage": 2
+    },
+    {
+      "id": 3279,
+      "word": "obedient",
+      "ipa": "oʊˈbidiənt",
+      "viRead": "âu-BI-đi-ơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngoan ngoãn, vâng lời",
+      "exampleEn": "The dog is very obedient.",
+      "exampleVi": "Con chó rất nghe lời.",
+      "collocations": [
+        {
+          "en": "an obedient child",
+          "vi": "đứa trẻ ngoan"
+        },
+        {
+          "en": "obedient to",
+          "vi": "vâng lời"
+        }
+      ],
+      "family": [
+        {
+          "word": "obey",
+          "vi": "vâng lời"
+        }
+      ],
+      "tip": "obey (v) → obedient (adj).",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 3280,
+      "word": "pinch",
+      "ipa": "pɪnʧ",
+      "viRead": "PINCH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "véo",
+      "exampleEn": "She pinched my arm to wake me up.",
+      "exampleVi": "Cô ấy véo tay để đánh thức tôi.",
+      "collocations": [
+        {
+          "en": "pinch me",
+          "vi": "véo tôi đi"
+        },
+        {
+          "en": "a pinch of salt",
+          "vi": "một nhúm muối"
+        }
+      ],
+      "tip": "a pinch of salt = một nhúm muối. Pinch me, I'm dreaming!",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 3281,
+      "word": "plump",
+      "ipa": "pləmp",
+      "viRead": "PLƠMP",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tròn trịa, mũm mĩm",
+      "exampleEn": "The baby has plump cheeks.",
+      "exampleVi": "Em bé có đôi má mũm mĩm.",
+      "collocations": [
+        {
+          "en": "plump cheeks",
+          "vi": "má phúng phính"
+        },
+        {
+          "en": "a plump chicken",
+          "vi": "con gà béo"
+        }
+      ],
+      "tip": "plump = tròn trịa (lịch sự hơn fat).",
+      "emoji": "🍑",
+      "stage": 2
+    },
+    {
+      "id": 3282,
+      "word": "puzzled",
+      "ipa": "ˈpəzəld",
+      "viRead": "PƠ-dơlđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bối rối, khó hiểu",
+      "exampleEn": "He looked puzzled by the question.",
+      "exampleVi": "Anh ấy có vẻ bối rối trước câu hỏi.",
+      "collocations": [
+        {
+          "en": "a puzzled look",
+          "vi": "vẻ mặt khó hiểu"
+        },
+        {
+          "en": "puzzled by",
+          "vi": "bối rối vì"
+        }
+      ],
+      "family": [
+        {
+          "word": "puzzle",
+          "vi": "câu đố"
+        }
+      ],
+      "tip": "puzzle (câu đố) → puzzled (bối rối).",
+      "emoji": "🤔",
+      "stage": 2
+    },
+    {
+      "id": 3283,
+      "word": "relaxed",
+      "ipa": "rɪˈlækst",
+      "viRead": "ri-LEKST",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thư thái",
+      "exampleEn": "I feel relaxed after a hot bath.",
+      "exampleVi": "Tôi thấy thư thái sau khi tắm nước nóng.",
+      "collocations": [
+        {
+          "en": "feel relaxed",
+          "vi": "thấy thư thái"
+        },
+        {
+          "en": "a relaxed atmosphere",
+          "vi": "không khí thoải mái"
+        }
+      ],
+      "family": [
+        {
+          "word": "relax",
+          "vi": "thư giãn"
+        },
+        {
+          "word": "relaxing",
+          "vi": "thư giãn"
+        }
+      ],
+      "tip": "relaxed (người thấy) – relaxing (thứ giúp thư giãn).",
+      "emoji": "😌",
+      "stage": 2
+    },
+    {
+      "id": 3284,
+      "word": "rinse",
+      "ipa": "rɪns",
+      "viRead": "RINS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "súc, tráng (nước)",
+      "exampleEn": "Rinse the rice before cooking.",
+      "exampleVi": "Vo gạo trước khi nấu.",
+      "collocations": [
+        {
+          "en": "rinse your mouth",
+          "vi": "súc miệng"
+        },
+        {
+          "en": "rinse with water",
+          "vi": "tráng nước"
+        }
+      ],
+      "tip": "rinse = tráng/súc bằng nước sạch.",
+      "emoji": "🚰",
+      "stage": 2
+    },
+    {
+      "id": 3285,
+      "word": "rotten",
+      "ipa": "ˈrɑtən",
+      "viRead": "RA-tơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thối, hỏng",
+      "exampleEn": "Throw away the rotten bananas.",
+      "exampleVi": "Vứt mấy quả chuối hỏng đi.",
+      "collocations": [
+        {
+          "en": "rotten eggs",
+          "vi": "trứng thối"
+        },
+        {
+          "en": "feel rotten",
+          "vi": "thấy rất mệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "rot",
+          "vi": "mục rữa"
+        }
+      ],
+      "tip": "I feel rotten = Tôi thấy người khó chịu, mệt mỏi.",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 3286,
+      "word": "salty",
+      "ipa": "ˈsɔlti",
+      "viRead": "SOL-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mặn",
+      "exampleEn": "The soup is too salty.",
+      "exampleVi": "Canh mặn quá.",
+      "collocations": [
+        {
+          "en": "salty food",
+          "vi": "đồ ăn mặn"
+        },
+        {
+          "en": "salty sea air",
+          "vi": "gió biển mằn mặn"
+        }
+      ],
+      "family": [
+        {
+          "word": "salt",
+          "vi": "muối"
+        }
+      ],
+      "tip": "salt (n) → salty (adj). sweet / sour / salty / bitter / spicy.",
+      "emoji": "🧂",
+      "stage": 2
+    },
+    {
+      "id": 3287,
+      "word": "scary",
+      "ipa": "ˈskɛri",
+      "viRead": "SKE-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng sợ",
+      "exampleEn": "That was a really scary movie.",
+      "exampleVi": "Đó là một bộ phim thật đáng sợ.",
+      "collocations": [
+        {
+          "en": "a scary movie",
+          "vi": "phim đáng sợ"
+        },
+        {
+          "en": "scary moment",
+          "vi": "khoảnh khắc đáng sợ"
+        }
+      ],
+      "family": [
+        {
+          "word": "scare",
+          "vi": "dọa"
+        },
+        {
+          "word": "scared",
+          "vi": "sợ"
+        }
+      ],
+      "tip": "scary (gây sợ) – scared (thấy sợ).",
+      "emoji": "👻",
+      "stage": 2
+    },
+    {
+      "id": 3288,
+      "word": "scratch",
+      "ipa": "skræʧ",
+      "viRead": "SKRECH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "gãi; cào",
+      "exampleEn": "The cat scratched my hand.",
+      "exampleVi": "Con mèo cào tay tôi.",
+      "collocations": [
+        {
+          "en": "scratch your head",
+          "vi": "gãi đầu"
+        },
+        {
+          "en": "from scratch",
+          "vi": "từ đầu"
+        }
+      ],
+      "tip": "start from scratch = bắt đầu từ con số 0.",
+      "emoji": "🐾",
       "stage": 2
     }
   ]
