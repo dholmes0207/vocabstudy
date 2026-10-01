@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3141,
+    "count": 3191,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -88655,6 +88655,1260 @@
       ],
       "tip": "fire (lửa) + fly (côn trùng bay). Số nhiều: fireflies.",
       "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 3142,
+      "word": "fireplace",
+      "ipa": "ˈfaɪərˌpleɪs",
+      "viRead": "PHAI-ơ-plâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lò sưởi",
+      "exampleEn": "We sat by the fireplace on a cold night.",
+      "exampleVi": "Chúng tôi ngồi bên lò sưởi trong đêm lạnh.",
+      "collocations": [
+        {
+          "en": "sit by the fireplace",
+          "vi": "ngồi bên lò sưởi"
+        },
+        {
+          "en": "a stone fireplace",
+          "vi": "lò sưởi bằng đá"
+        }
+      ],
+      "family": [
+        {
+          "word": "fire",
+          "vi": "lửa"
+        }
+      ],
+      "tip": "fire + place: chỗ đốt lửa trong nhà.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 3143,
+      "word": "flamingo",
+      "ipa": "fləˈmɪŋgoʊ",
+      "viRead": "phlơ-MING-gâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim hồng hạc",
+      "exampleEn": "A flamingo can stand on one leg.",
+      "exampleVi": "Chim hồng hạc có thể đứng một chân.",
+      "collocations": [
+        {
+          "en": "pink flamingo",
+          "vi": "hồng hạc màu hồng"
+        },
+        {
+          "en": "a flock of flamingos",
+          "vi": "đàn hồng hạc"
+        }
+      ],
+      "tip": "Đọc 'phlơ-MING-gâu'.",
+      "emoji": "🦩",
+      "stage": 2
+    },
+    {
+      "id": 3144,
+      "word": "flea",
+      "ipa": "fli",
+      "viRead": "PHLI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bọ chét",
+      "exampleEn": "The dog has fleas.",
+      "exampleVi": "Con chó bị bọ chét.",
+      "collocations": [
+        {
+          "en": "flea market",
+          "vi": "chợ đồ cũ"
+        },
+        {
+          "en": "flea bite",
+          "vi": "vết bọ chét cắn"
+        }
+      ],
+      "tip": "flea market = chợ trời, chợ đồ cũ.",
+      "emoji": "🐜",
+      "stage": 2
+    },
+    {
+      "id": 3145,
+      "word": "fox",
+      "ipa": "fɑks",
+      "viRead": "PHAKS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con cáo",
+      "exampleEn": "The fox is clever in many stories.",
+      "exampleVi": "Con cáo rất ranh mãnh trong nhiều câu chuyện.",
+      "collocations": [
+        {
+          "en": "a clever fox",
+          "vi": "con cáo ranh mãnh"
+        },
+        {
+          "en": "the fox and the grapes",
+          "vi": "con cáo và chùm nho"
+        }
+      ],
+      "tip": "Số nhiều: foxes. sly as a fox = ranh như cáo.",
+      "emoji": "🦊",
+      "stage": 2
+    },
+    {
+      "id": 3146,
+      "word": "galaxy",
+      "ipa": "ˈgæləksi",
+      "viRead": "GE-lơk-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thiên hà",
+      "exampleEn": "Our sun is one star in the Milky Way galaxy.",
+      "exampleVi": "Mặt trời của chúng ta là một ngôi sao trong dải Ngân Hà.",
+      "collocations": [
+        {
+          "en": "the Milky Way galaxy",
+          "vi": "dải Ngân Hà"
+        },
+        {
+          "en": "a distant galaxy",
+          "vi": "thiên hà xa xôi"
+        }
+      ],
+      "tip": "Milky Way = dải Ngân Hà. Đọc 'GE-lơk-si'.",
+      "emoji": "🌌",
+      "stage": 2
+    },
+    {
+      "id": 3147,
+      "word": "gazebo",
+      "ipa": "gəˈziboʊ",
+      "viRead": "gơ-DI-bâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chòi nghỉ (trong vườn)",
+      "exampleEn": "They had tea in the garden gazebo.",
+      "exampleVi": "Họ uống trà trong chòi nghỉ ngoài vườn.",
+      "collocations": [
+        {
+          "en": "garden gazebo",
+          "vi": "chòi trong vườn"
+        },
+        {
+          "en": "a wooden gazebo",
+          "vi": "chòi gỗ"
+        }
+      ],
+      "tip": "Đọc 'gơ-ZI-bâu'.",
+      "emoji": "⛩️",
+      "stage": 2
+    },
+    {
+      "id": 3148,
+      "word": "giraffe",
+      "ipa": "ʤəˈræf",
+      "viRead": "giơ-REPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hươu cao cổ",
+      "exampleEn": "A giraffe has a very long neck.",
+      "exampleVi": "Hươu cao cổ có cái cổ rất dài.",
+      "collocations": [
+        {
+          "en": "a tall giraffe",
+          "vi": "hươu cao cổ cao lớn"
+        },
+        {
+          "en": "baby giraffe",
+          "vi": "hươu cao cổ con"
+        }
+      ],
+      "tip": "g đọc 'j': 'giơ-REPH'.",
+      "emoji": "🦒",
+      "stage": 2
+    },
+    {
+      "id": 3149,
+      "word": "glacier",
+      "ipa": "ˈgleɪʃər",
+      "viRead": "GLÂY-shơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sông băng",
+      "exampleEn": "The glacier is melting because of global warming.",
+      "exampleVi": "Sông băng đang tan vì nóng lên toàn cầu.",
+      "collocations": [
+        {
+          "en": "a melting glacier",
+          "vi": "sông băng đang tan"
+        },
+        {
+          "en": "glacier ice",
+          "vi": "băng sông băng"
+        }
+      ],
+      "family": [
+        {
+          "word": "ice",
+          "vi": "băng"
+        }
+      ],
+      "tip": "Đọc 'GLÂY-shơ'.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 3150,
+      "word": "goose",
+      "ipa": "gus",
+      "viRead": "GUS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ngỗng",
+      "exampleEn": "A goose is bigger than a duck.",
+      "exampleVi": "Ngỗng to hơn vịt.",
+      "collocations": [
+        {
+          "en": "wild goose",
+          "vi": "ngỗng trời"
+        },
+        {
+          "en": "goose bumps",
+          "vi": "nổi da gà"
+        }
+      ],
+      "tip": "Số nhiều bất quy tắc: geese. goose bumps = nổi da gà.",
+      "emoji": "🪿",
+      "stage": 2
+    },
+    {
+      "id": 3151,
+      "word": "gorilla",
+      "ipa": "gəˈrɪlə",
+      "viRead": "gơ-RI-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khỉ đột",
+      "exampleEn": "The gorilla is the largest ape.",
+      "exampleVi": "Khỉ đột là loài vượn lớn nhất.",
+      "collocations": [
+        {
+          "en": "a mountain gorilla",
+          "vi": "khỉ đột núi"
+        },
+        {
+          "en": "gorilla family",
+          "vi": "gia đình khỉ đột"
+        }
+      ],
+      "tip": "Nhấn âm 2: gơ-RI-lơ.",
+      "emoji": "🦍",
+      "stage": 2
+    },
+    {
+      "id": 3152,
+      "word": "greenhouse",
+      "ipa": "ˈgrinˌhaʊs",
+      "viRead": "GRIN-haos",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà kính",
+      "exampleEn": "Da Lat grows flowers in greenhouses.",
+      "exampleVi": "Đà Lạt trồng hoa trong nhà kính.",
+      "collocations": [
+        {
+          "en": "greenhouse effect",
+          "vi": "hiệu ứng nhà kính"
+        },
+        {
+          "en": "greenhouse gas",
+          "vi": "khí nhà kính"
+        }
+      ],
+      "tip": "greenhouse effect = hiệu ứng nhà kính.",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 3153,
+      "word": "groceries",
+      "ipa": "ˈgroʊsəriz",
+      "viRead": "GRÂU-sơ-rid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thực phẩm, hàng tạp hóa",
+      "exampleEn": "I need to buy groceries after work.",
+      "exampleVi": "Tan làm tôi phải đi mua đồ ăn.",
+      "collocations": [
+        {
+          "en": "buy groceries",
+          "vi": "mua đồ ăn"
+        },
+        {
+          "en": "a bag of groceries",
+          "vi": "túi đồ chợ"
+        }
+      ],
+      "family": [
+        {
+          "word": "grocery",
+          "vi": "cửa hàng tạp hóa"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: groceries = đồ ăn, đồ dùng mua về nhà.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 3154,
+      "word": "hairdresser",
+      "ipa": "ˈhɛrˌdrɛsər",
+      "viRead": "HER-đre-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ làm tóc",
+      "exampleEn": "I go to the hairdresser every month.",
+      "exampleVi": "Tháng nào tôi cũng đi làm tóc.",
+      "collocations": [
+        {
+          "en": "at the hairdresser's",
+          "vi": "ở tiệm làm tóc"
+        },
+        {
+          "en": "a good hairdresser",
+          "vi": "thợ làm tóc giỏi"
+        }
+      ],
+      "family": [
+        {
+          "word": "hair",
+          "vi": "tóc"
+        }
+      ],
+      "tip": "hairdresser = thợ làm tóc (nữ); barber = thợ cắt tóc nam.",
+      "emoji": "💇",
+      "stage": 2
+    },
+    {
+      "id": 3155,
+      "word": "hamster",
+      "ipa": "ˈhæmstər",
+      "viRead": "HEM-stơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuột hamster",
+      "exampleEn": "My son has a pet hamster.",
+      "exampleVi": "Con trai tôi nuôi một con chuột hamster.",
+      "collocations": [
+        {
+          "en": "pet hamster",
+          "vi": "hamster cưng"
+        },
+        {
+          "en": "hamster wheel",
+          "vi": "bánh xe hamster"
+        }
+      ],
+      "tip": "on a hamster wheel = làm mãi mà chẳng tiến triển.",
+      "emoji": "🐹",
+      "stage": 2
+    },
+    {
+      "id": 3156,
+      "word": "hedgehog",
+      "ipa": "ˈhɛʤˌhɑg",
+      "viRead": "HEGI-hag",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con nhím",
+      "exampleEn": "A hedgehog rolls into a ball when it's scared.",
+      "exampleVi": "Nhím cuộn tròn khi sợ hãi.",
+      "collocations": [
+        {
+          "en": "a baby hedgehog",
+          "vi": "nhím con"
+        },
+        {
+          "en": "Sonic the Hedgehog",
+          "vi": "nhím Sonic"
+        }
+      ],
+      "tip": "hedgehog = nhím nhỏ; porcupine = nhím lông dài.",
+      "emoji": "🦔",
+      "stage": 2
+    },
+    {
+      "id": 3157,
+      "word": "hiccup",
+      "ipa": "ˈhɪkəp",
+      "viRead": "HI-kơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nấc cụt",
+      "exampleEn": "I've had hiccups for ten minutes.",
+      "exampleVi": "Tôi bị nấc cụt mười phút rồi.",
+      "collocations": [
+        {
+          "en": "have the hiccups",
+          "vi": "bị nấc"
+        },
+        {
+          "en": "a small hiccup",
+          "vi": "trục trặc nhỏ"
+        }
+      ],
+      "tip": "hiccup còn có nghĩa: trục trặc nhỏ. Đọc 'HIK-ơp'.",
+      "emoji": "😮",
+      "stage": 2
+    },
+    {
+      "id": 3158,
+      "word": "highway",
+      "ipa": "ˈhaɪˌweɪ",
+      "viRead": "HAI-wây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường cao tốc",
+      "exampleEn": "The new highway goes from Hanoi to Hai Phong.",
+      "exampleVi": "Đường cao tốc mới đi từ Hà Nội tới Hải Phòng.",
+      "collocations": [
+        {
+          "en": "on the highway",
+          "vi": "trên đường cao tốc"
+        },
+        {
+          "en": "highway exit",
+          "vi": "lối ra cao tốc"
+        }
+      ],
+      "tip": "highway (Mỹ) ≈ motorway (Anh).",
+      "emoji": "🛣️",
+      "stage": 2
+    },
+    {
+      "id": 3159,
+      "word": "hippo",
+      "ipa": "ˈhɪpoʊ",
+      "viRead": "HI-pâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hà mã",
+      "exampleEn": "A hippo spends most of the day in water.",
+      "exampleVi": "Hà mã ở dưới nước gần như cả ngày.",
+      "collocations": [
+        {
+          "en": "a baby hippo",
+          "vi": "hà mã con"
+        },
+        {
+          "en": "hungry hippo",
+          "vi": "hà mã đói"
+        }
+      ],
+      "tip": "Viết tắt của hippopotamus.",
+      "emoji": "🦛",
+      "stage": 2
+    },
+    {
+      "id": 3160,
+      "word": "honeymoon",
+      "ipa": "ˈhəniˌmun",
+      "viRead": "HƠ-ni-mun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tuần trăng mật",
+      "exampleEn": "They went to Phu Quoc for their honeymoon.",
+      "exampleVi": "Họ đi Phú Quốc hưởng tuần trăng mật.",
+      "collocations": [
+        {
+          "en": "on honeymoon",
+          "vi": "đang hưởng trăng mật"
+        },
+        {
+          "en": "honeymoon period",
+          "vi": "giai đoạn trăng mật"
+        }
+      ],
+      "tip": "honey (mật) + moon (trăng).",
+      "emoji": "💑",
+      "stage": 2
+    },
+    {
+      "id": 3161,
+      "word": "hostel",
+      "ipa": "ˈhɑstəl",
+      "viRead": "HAS-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà trọ giá rẻ",
+      "exampleEn": "Backpackers often stay in hostels.",
+      "exampleVi": "Dân du lịch ba lô thường ở nhà trọ giá rẻ.",
+      "collocations": [
+        {
+          "en": "youth hostel",
+          "vi": "nhà trọ thanh niên"
+        },
+        {
+          "en": "stay in a hostel",
+          "vi": "ở hostel"
+        }
+      ],
+      "family": [
+        {
+          "word": "hotel",
+          "vi": "khách sạn"
+        }
+      ],
+      "tip": "hostel (rẻ, phòng chung) ≠ hotel (khách sạn).",
+      "emoji": "🛏️",
+      "stage": 2
+    },
+    {
+      "id": 3162,
+      "word": "iceberg",
+      "ipa": "ˈaɪsbərg",
+      "viRead": "AIS-bơg",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tảng băng trôi",
+      "exampleEn": "The Titanic hit an iceberg.",
+      "exampleVi": "Tàu Titanic đâm vào tảng băng trôi.",
+      "collocations": [
+        {
+          "en": "the tip of the iceberg",
+          "vi": "phần nổi của tảng băng"
+        },
+        {
+          "en": "a huge iceberg",
+          "vi": "tảng băng khổng lồ"
+        }
+      ],
+      "tip": "the tip of the iceberg = mới chỉ là phần nổi.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 3163,
+      "word": "igloo",
+      "ipa": "ˈɪglu",
+      "viRead": "IG-lu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà tuyết",
+      "exampleEn": "The children built an igloo out of snow.",
+      "exampleVi": "Bọn trẻ dựng một ngôi nhà tuyết.",
+      "collocations": [
+        {
+          "en": "build an igloo",
+          "vi": "dựng nhà tuyết"
+        },
+        {
+          "en": "inside an igloo",
+          "vi": "trong nhà tuyết"
+        }
+      ],
+      "tip": "igloo = nhà làm bằng khối tuyết của người Inuit.",
+      "emoji": "🛖",
+      "stage": 2
+    },
+    {
+      "id": 3164,
+      "word": "jellyfish",
+      "ipa": "ˈʤɛliˌfɪʃ",
+      "viRead": "GIE-li-phish",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con sứa",
+      "exampleEn": "Be careful, jellyfish can sting.",
+      "exampleVi": "Cẩn thận, sứa có thể chích.",
+      "collocations": [
+        {
+          "en": "jellyfish sting",
+          "vi": "vết sứa đốt"
+        },
+        {
+          "en": "a pink jellyfish",
+          "vi": "con sứa hồng"
+        }
+      ],
+      "tip": "jellyfish giống nhau số ít và số nhiều.",
+      "emoji": "🪼",
+      "stage": 2
+    },
+    {
+      "id": 3165,
+      "word": "jigsaw",
+      "ipa": "ˈʤɪgˌsɔ",
+      "viRead": "GIG-so",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tranh ghép hình",
+      "exampleEn": "We did a 1000-piece jigsaw together.",
+      "exampleVi": "Chúng tôi cùng ghép bức tranh 1000 mảnh.",
+      "collocations": [
+        {
+          "en": "jigsaw puzzle",
+          "vi": "trò ghép hình"
+        },
+        {
+          "en": "a piece of the jigsaw",
+          "vi": "một mảnh ghép"
+        }
+      ],
+      "tip": "jigsaw puzzle = trò xếp hình.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 3166,
+      "word": "kangaroo",
+      "ipa": "ˌkæŋgəˈru",
+      "viRead": "keng-gơ-RU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con chuột túi",
+      "exampleEn": "Kangaroos live in Australia.",
+      "exampleVi": "Chuột túi sống ở Úc.",
+      "collocations": [
+        {
+          "en": "baby kangaroo",
+          "vi": "chuột túi con"
+        },
+        {
+          "en": "a jumping kangaroo",
+          "vi": "chuột túi nhảy"
+        }
+      ],
+      "tip": "Nhấn âm cuối: keng-gơ-RU.",
+      "emoji": "🦘",
+      "stage": 2
+    },
+    {
+      "id": 3167,
+      "word": "kite",
+      "ipa": "kaɪt",
+      "viRead": "KAIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con diều",
+      "exampleEn": "The kids are flying kites in the field.",
+      "exampleVi": "Lũ trẻ đang thả diều trên cánh đồng.",
+      "collocations": [
+        {
+          "en": "fly a kite",
+          "vi": "thả diều"
+        },
+        {
+          "en": "kite festival",
+          "vi": "lễ hội diều"
+        }
+      ],
+      "tip": "fly a kite = thả diều.",
+      "emoji": "🪁",
+      "stage": 2
+    },
+    {
+      "id": 3168,
+      "word": "koala",
+      "ipa": "koʊˈɑlə",
+      "viRead": "kâu-A-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gấu túi",
+      "exampleEn": "A koala sleeps up to 20 hours a day.",
+      "exampleVi": "Gấu túi ngủ tới 20 tiếng mỗi ngày.",
+      "collocations": [
+        {
+          "en": "a sleepy koala",
+          "vi": "gấu túi buồn ngủ"
+        },
+        {
+          "en": "koala bear",
+          "vi": "gấu koala"
+        }
+      ],
+      "tip": "Đọc 'kâu-A-lơ'.",
+      "emoji": "🐨",
+      "stage": 2
+    },
+    {
+      "id": 3169,
+      "word": "ladybug",
+      "ipa": "ˈleɪdiˌbəg",
+      "viRead": "LÂY-đi-bơg",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bọ rùa",
+      "exampleEn": "A ladybug landed on my hand.",
+      "exampleVi": "Một con bọ rùa đậu lên tay tôi.",
+      "collocations": [
+        {
+          "en": "a red ladybug",
+          "vi": "bọ rùa đỏ"
+        },
+        {
+          "en": "ladybug spots",
+          "vi": "chấm bọ rùa"
+        }
+      ],
+      "tip": "Mỹ: ladybug; Anh: ladybird.",
+      "emoji": "🐞",
+      "stage": 2
+    },
+    {
+      "id": 3170,
+      "word": "lantern",
+      "ipa": "ˈlæntərn",
+      "viRead": "LEN-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đèn lồng",
+      "exampleEn": "Hoi An is full of colorful lanterns.",
+      "exampleVi": "Hội An rực rỡ đèn lồng nhiều màu.",
+      "collocations": [
+        {
+          "en": "paper lantern",
+          "vi": "đèn lồng giấy"
+        },
+        {
+          "en": "lantern festival",
+          "vi": "lễ hội đèn lồng"
+        }
+      ],
+      "tip": "Mid-Autumn lanterns = đèn Trung thu.",
+      "emoji": "🏮",
+      "stage": 2
+    },
+    {
+      "id": 3171,
+      "word": "leopard",
+      "ipa": "ˈlɛpərd",
+      "viRead": "LE-pơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con báo",
+      "exampleEn": "A leopard can climb trees.",
+      "exampleVi": "Báo có thể trèo cây.",
+      "collocations": [
+        {
+          "en": "a snow leopard",
+          "vi": "báo tuyết"
+        },
+        {
+          "en": "leopard print",
+          "vi": "họa tiết da báo"
+        }
+      ],
+      "tip": "eo đọc 'e': 'LE-pơđ'.",
+      "emoji": "🐆",
+      "stage": 2
+    },
+    {
+      "id": 3172,
+      "word": "lighthouse",
+      "ipa": "ˈlaɪtˌhaʊs",
+      "viRead": "LAIT-haos",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngọn hải đăng",
+      "exampleEn": "The lighthouse guides ships at night.",
+      "exampleVi": "Ngọn hải đăng dẫn đường cho tàu ban đêm.",
+      "collocations": [
+        {
+          "en": "an old lighthouse",
+          "vi": "hải đăng cũ"
+        },
+        {
+          "en": "lighthouse keeper",
+          "vi": "người gác hải đăng"
+        }
+      ],
+      "tip": "light + house.",
+      "emoji": "🗼",
+      "stage": 2
+    },
+    {
+      "id": 3173,
+      "word": "lizard",
+      "ipa": "ˈlɪzərd",
+      "viRead": "LI-dơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con thằn lằn",
+      "exampleEn": "A small lizard is on the wall.",
+      "exampleVi": "Có một con thằn lằn nhỏ trên tường.",
+      "collocations": [
+        {
+          "en": "a green lizard",
+          "vi": "thằn lằn xanh"
+        },
+        {
+          "en": "house lizard",
+          "vi": "thạch sùng"
+        }
+      ],
+      "tip": "house lizard (gecko) = thạch sùng.",
+      "emoji": "🦎",
+      "stage": 2
+    },
+    {
+      "id": 3174,
+      "word": "lobster",
+      "ipa": "ˈlɑbstər",
+      "viRead": "LAB-stơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tôm hùm",
+      "exampleEn": "Grilled lobster is expensive.",
+      "exampleVi": "Tôm hùm nướng rất đắt.",
+      "collocations": [
+        {
+          "en": "lobster soup",
+          "vi": "súp tôm hùm"
+        },
+        {
+          "en": "rock lobster",
+          "vi": "tôm hùm đá"
+        }
+      ],
+      "tip": "lobster = tôm hùm; shrimp = tôm.",
+      "emoji": "🦞",
+      "stage": 2
+    },
+    {
+      "id": 3175,
+      "word": "locker",
+      "ipa": "ˈlɑkər",
+      "viRead": "LA-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tủ có khóa",
+      "exampleEn": "Leave your bag in the locker.",
+      "exampleVi": "Để túi của bạn vào tủ khóa.",
+      "collocations": [
+        {
+          "en": "school locker",
+          "vi": "tủ đồ ở trường"
+        },
+        {
+          "en": "locker room",
+          "vi": "phòng thay đồ"
+        }
+      ],
+      "family": [
+        {
+          "word": "lock",
+          "vi": "khóa"
+        }
+      ],
+      "tip": "locker room = phòng thay đồ.",
+      "emoji": "🔐",
+      "stage": 2
+    },
+    {
+      "id": 3176,
+      "word": "lollipop",
+      "ipa": "ˈlɑliˌpɑp",
+      "viRead": "LA-li-pap",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kẹo mút",
+      "exampleEn": "The child is licking a lollipop.",
+      "exampleVi": "Đứa bé đang mút kẹo.",
+      "collocations": [
+        {
+          "en": "a strawberry lollipop",
+          "vi": "kẹo mút dâu"
+        },
+        {
+          "en": "lollipop stick",
+          "vi": "que kẹo mút"
+        }
+      ],
+      "tip": "Đọc 'LA-li-pap'.",
+      "emoji": "🍭",
+      "stage": 2
+    },
+    {
+      "id": 3177,
+      "word": "mailbox",
+      "ipa": "ˈmeɪlˌbɑks",
+      "viRead": "MÂYL-baks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hộp thư",
+      "exampleEn": "Check the mailbox for letters.",
+      "exampleVi": "Kiểm tra hộp thư xem có thư không.",
+      "collocations": [
+        {
+          "en": "check the mailbox",
+          "vi": "xem hộp thư"
+        },
+        {
+          "en": "email mailbox",
+          "vi": "hộp thư điện tử"
+        }
+      ],
+      "family": [
+        {
+          "word": "mail",
+          "vi": "thư"
+        }
+      ],
+      "tip": "mailbox (Mỹ) = postbox/letterbox (Anh).",
+      "emoji": "📫",
+      "stage": 2
+    },
+    {
+      "id": 3178,
+      "word": "mammal",
+      "ipa": "ˈmæməl",
+      "viRead": "ME-mơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "động vật có vú",
+      "exampleEn": "A whale is a mammal, not a fish.",
+      "exampleVi": "Cá voi là động vật có vú, không phải cá.",
+      "collocations": [
+        {
+          "en": "marine mammal",
+          "vi": "thú biển"
+        },
+        {
+          "en": "small mammal",
+          "vi": "thú nhỏ"
+        }
+      ],
+      "tip": "Chính tả: 2 m ở giữa.",
+      "emoji": "🐋",
+      "stage": 2
+    },
+    {
+      "id": 3179,
+      "word": "maple",
+      "ipa": "ˈmeɪpəl",
+      "viRead": "MÂY-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây phong",
+      "exampleEn": "Maple leaves turn red in autumn.",
+      "exampleVi": "Lá phong chuyển đỏ vào mùa thu.",
+      "collocations": [
+        {
+          "en": "maple leaf",
+          "vi": "lá phong"
+        },
+        {
+          "en": "maple syrup",
+          "vi": "si-rô cây phong"
+        }
+      ],
+      "tip": "Lá phong là biểu tượng của Canada.",
+      "emoji": "🍁",
+      "stage": 2
+    },
+    {
+      "id": 3180,
+      "word": "meadow",
+      "ipa": "ˈmɛˌdoʊ",
+      "viRead": "ME-đâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng cỏ",
+      "exampleEn": "Cows are eating grass in the meadow.",
+      "exampleVi": "Bò đang gặm cỏ trên đồng cỏ.",
+      "collocations": [
+        {
+          "en": "a green meadow",
+          "vi": "đồng cỏ xanh"
+        },
+        {
+          "en": "meadow flowers",
+          "vi": "hoa đồng nội"
+        }
+      ],
+      "tip": "ea đọc 'e': 'ME-đâu'.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 3181,
+      "word": "meteor",
+      "ipa": "ˈmitiər",
+      "viRead": "MI-ti-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sao băng",
+      "exampleEn": "We saw a meteor last night.",
+      "exampleVi": "Tối qua chúng tôi thấy một ngôi sao băng.",
+      "collocations": [
+        {
+          "en": "meteor shower",
+          "vi": "mưa sao băng"
+        },
+        {
+          "en": "a bright meteor",
+          "vi": "sao băng sáng"
+        }
+      ],
+      "tip": "meteor shower = mưa sao băng (như khi bạn hoàn thành bài học!).",
+      "emoji": "☄️",
+      "stage": 2
+    },
+    {
+      "id": 3182,
+      "word": "microscope",
+      "ipa": "ˈmaɪkrəˌskoʊp",
+      "viRead": "MAI-krơ-skâup",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kính hiển vi",
+      "exampleEn": "Look at the cells under the microscope.",
+      "exampleVi": "Quan sát tế bào dưới kính hiển vi.",
+      "collocations": [
+        {
+          "en": "under a microscope",
+          "vi": "dưới kính hiển vi"
+        },
+        {
+          "en": "electron microscope",
+          "vi": "kính hiển vi điện tử"
+        }
+      ],
+      "tip": "micro (nhỏ) + scope (nhìn). telescope = kính thiên văn.",
+      "emoji": "🔬",
+      "stage": 2
+    },
+    {
+      "id": 3183,
+      "word": "milkshake",
+      "ipa": "ˈmɪlkˌʃeɪk",
+      "viRead": "MILK-shâyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sữa lắc",
+      "exampleEn": "I'd like a chocolate milkshake.",
+      "exampleVi": "Cho tôi một ly sữa lắc sô-cô-la.",
+      "collocations": [
+        {
+          "en": "chocolate milkshake",
+          "vi": "sữa lắc sô-cô-la"
+        },
+        {
+          "en": "strawberry milkshake",
+          "vi": "sữa lắc dâu"
+        }
+      ],
+      "family": [
+        {
+          "word": "milk",
+          "vi": "sữa"
+        }
+      ],
+      "tip": "milk + shake (lắc).",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 3184,
+      "word": "mint",
+      "ipa": "mɪnt",
+      "viRead": "MINT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bạc hà",
+      "exampleEn": "Add some fresh mint to the drink.",
+      "exampleVi": "Thêm chút bạc hà tươi vào đồ uống.",
+      "collocations": [
+        {
+          "en": "fresh mint",
+          "vi": "bạc hà tươi"
+        },
+        {
+          "en": "mint tea",
+          "vi": "trà bạc hà"
+        }
+      ],
+      "tip": "in mint condition = còn mới tinh.",
+      "emoji": "🌿",
+      "stage": 2
+    },
+    {
+      "id": 3185,
+      "word": "mitten",
+      "ipa": "ˈmɪtən",
+      "viRead": "MI-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "găng tay hở ngón (bao tay)",
+      "exampleEn": "Put on your mittens; it's snowing.",
+      "exampleVi": "Đeo bao tay vào, trời đang tuyết.",
+      "collocations": [
+        {
+          "en": "a pair of mittens",
+          "vi": "một đôi bao tay"
+        },
+        {
+          "en": "wool mittens",
+          "vi": "bao tay len"
+        }
+      ],
+      "family": [
+        {
+          "word": "glove",
+          "vi": "găng tay"
+        }
+      ],
+      "tip": "mitten = bao tay (gộp 4 ngón); glove = găng tay (tách ngón).",
+      "emoji": "🧤",
+      "stage": 2
+    },
+    {
+      "id": 3186,
+      "word": "moose",
+      "ipa": "mus",
+      "viRead": "MUS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nai sừng tấm",
+      "exampleEn": "A moose has huge antlers.",
+      "exampleVi": "Nai sừng tấm có bộ gạc khổng lồ.",
+      "collocations": [
+        {
+          "en": "a big moose",
+          "vi": "nai sừng tấm lớn"
+        },
+        {
+          "en": "moose antlers",
+          "vi": "gạc nai sừng tấm"
+        }
+      ],
+      "tip": "moose giống nhau số ít và số nhiều.",
+      "emoji": "🫎",
+      "stage": 2
+    },
+    {
+      "id": 3187,
+      "word": "moth",
+      "ipa": "mɔθ",
+      "viRead": "MOTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bướm đêm",
+      "exampleEn": "Moths fly toward the light.",
+      "exampleVi": "Bướm đêm bay về phía ánh đèn.",
+      "collocations": [
+        {
+          "en": "like a moth to a flame",
+          "vi": "như thiêu thân lao vào lửa"
+        },
+        {
+          "en": "a white moth",
+          "vi": "bướm đêm trắng"
+        }
+      ],
+      "tip": "like a moth to a flame = bị cuốn hút không cưỡng nổi.",
+      "emoji": "🦋",
+      "stage": 2
+    },
+    {
+      "id": 3188,
+      "word": "octopus",
+      "ipa": "ˈɑktəˌpʊs",
+      "viRead": "AK-tơ-pus",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bạch tuộc",
+      "exampleEn": "An octopus has eight arms.",
+      "exampleVi": "Bạch tuộc có tám xúc tu.",
+      "collocations": [
+        {
+          "en": "grilled octopus",
+          "vi": "bạch tuộc nướng"
+        },
+        {
+          "en": "a giant octopus",
+          "vi": "bạch tuộc khổng lồ"
+        }
+      ],
+      "tip": "octo = tám (October từng là tháng thứ 8).",
+      "emoji": "🐙",
+      "stage": 2
+    },
+    {
+      "id": 3189,
+      "word": "orchard",
+      "ipa": "ˈɔrʧərd",
+      "viRead": "OR-chơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vườn cây ăn quả",
+      "exampleEn": "My uncle has a mango orchard.",
+      "exampleVi": "Chú tôi có một vườn xoài.",
+      "collocations": [
+        {
+          "en": "an apple orchard",
+          "vi": "vườn táo"
+        },
+        {
+          "en": "fruit orchard",
+          "vi": "vườn cây ăn trái"
+        }
+      ],
+      "tip": "orchard = vườn cây ăn quả (miệt vườn miền Tây).",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 3190,
+      "word": "ostrich",
+      "ipa": "ˈɔstrɪʧ",
+      "viRead": "OS-trich",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đà điểu",
+      "exampleEn": "An ostrich can run very fast.",
+      "exampleVi": "Đà điểu chạy rất nhanh.",
+      "collocations": [
+        {
+          "en": "ostrich egg",
+          "vi": "trứng đà điểu"
+        },
+        {
+          "en": "ostrich farm",
+          "vi": "trại đà điểu"
+        }
+      ],
+      "tip": "bury your head in the sand like an ostrich = né tránh vấn đề.",
+      "emoji": "🐦",
+      "stage": 2
+    },
+    {
+      "id": 3191,
+      "word": "panda",
+      "ipa": "ˈpændə",
+      "viRead": "PEN-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gấu trúc",
+      "exampleEn": "Pandas eat a lot of bamboo.",
+      "exampleVi": "Gấu trúc ăn rất nhiều tre.",
+      "collocations": [
+        {
+          "en": "giant panda",
+          "vi": "gấu trúc lớn"
+        },
+        {
+          "en": "red panda",
+          "vi": "gấu trúc đỏ"
+        }
+      ],
+      "tip": "giant panda = gấu trúc khổng lồ (Trung Quốc).",
+      "emoji": "🐼",
       "stage": 2
     }
   ]
