@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3428,
+    "count": 3478,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -96383,6 +96383,1452 @@
       ],
       "tip": "Đọc 'vek-SIN'.",
       "emoji": "💉",
+      "stage": 2
+    },
+    {
+      "id": 3429,
+      "word": "ambitious",
+      "ipa": "æmˈbɪʃəs",
+      "viRead": "em-BI-shơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều tham vọng",
+      "exampleEn": "She is ambitious and wants to start her own company.",
+      "exampleVi": "Cô ấy nhiều tham vọng và muốn mở công ty riêng.",
+      "collocations": [
+        {
+          "en": "an ambitious plan",
+          "vi": "kế hoạch đầy tham vọng"
+        },
+        {
+          "en": "ambitious young people",
+          "vi": "người trẻ nhiều hoài bão"
+        }
+      ],
+      "family": [
+        {
+          "word": "ambition",
+          "vi": "tham vọng"
+        }
+      ],
+      "tip": "ambitious = có hoài bão (thường là khen).",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 3430,
+      "word": "arrogant",
+      "ipa": "ˈɛrəgənt",
+      "viRead": "E-rơ-gơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kiêu ngạo",
+      "exampleEn": "He is arrogant and never listens to others.",
+      "exampleVi": "Anh ta kiêu ngạo và chẳng bao giờ nghe ai.",
+      "collocations": [
+        {
+          "en": "an arrogant person",
+          "vi": "người kiêu ngạo"
+        },
+        {
+          "en": "arrogant behavior",
+          "vi": "thái độ kiêu căng"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrogance",
+          "vi": "sự kiêu ngạo"
+        }
+      ],
+      "tip": "arrogant ↔ humble (khiêm tốn).",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 3431,
+      "word": "bossy",
+      "ipa": "ˈbɔsi",
+      "viRead": "BO-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hách dịch, thích sai khiến",
+      "exampleEn": "My older sister is so bossy.",
+      "exampleVi": "Chị tôi hay sai khiến lắm.",
+      "collocations": [
+        {
+          "en": "a bossy sister",
+          "vi": "bà chị hay sai bảo"
+        },
+        {
+          "en": "don't be bossy",
+          "vi": "đừng ra lệnh thế"
+        }
+      ],
+      "family": [
+        {
+          "word": "boss",
+          "vi": "sếp"
+        }
+      ],
+      "tip": "boss (sếp) + y = thích ra lệnh như sếp.",
+      "emoji": "👉",
+      "stage": 2
+    },
+    {
+      "id": 3432,
+      "word": "charming",
+      "ipa": "ˈʧɑrmɪŋ",
+      "viRead": "CHAR-ming",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "duyên dáng, quyến rũ",
+      "exampleEn": "Hoi An is a charming old town.",
+      "exampleVi": "Hội An là một phố cổ đầy duyên dáng.",
+      "collocations": [
+        {
+          "en": "a charming smile",
+          "vi": "nụ cười duyên"
+        },
+        {
+          "en": "Prince Charming",
+          "vi": "bạch mã hoàng tử"
+        }
+      ],
+      "family": [
+        {
+          "word": "charm",
+          "vi": "sức hút"
+        }
+      ],
+      "tip": "Prince Charming = chàng hoàng tử trong mơ.",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 3433,
+      "word": "cheeky",
+      "ipa": "ˈʧiki",
+      "viRead": "CHI-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "láu lỉnh, hỗn",
+      "exampleEn": "The cheeky boy stuck out his tongue.",
+      "exampleVi": "Cậu bé láu lỉnh lè lưỡi.",
+      "collocations": [
+        {
+          "en": "a cheeky smile",
+          "vi": "nụ cười láu lỉnh"
+        },
+        {
+          "en": "cheeky question",
+          "vi": "câu hỏi tinh nghịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheek",
+          "vi": "má"
+        }
+      ],
+      "tip": "cheeky = hơi hỗn nhưng đáng yêu.",
+      "emoji": "😜",
+      "stage": 2
+    },
+    {
+      "id": 3434,
+      "word": "childish",
+      "ipa": "ˈʧaɪldɪʃ",
+      "viRead": "CHAILĐ-ish",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trẻ con, ấu trĩ",
+      "exampleEn": "Stop being so childish!",
+      "exampleVi": "Đừng trẻ con như vậy nữa!",
+      "collocations": [
+        {
+          "en": "childish behavior",
+          "vi": "hành vi trẻ con"
+        },
+        {
+          "en": "a childish joke",
+          "vi": "trò đùa trẻ con"
+        }
+      ],
+      "family": [
+        {
+          "word": "child",
+          "vi": "đứa trẻ"
+        }
+      ],
+      "tip": "childish (chê: trẻ con) ≠ childlike (khen: hồn nhiên).",
+      "emoji": "🍼",
+      "stage": 2
+    },
+    {
+      "id": 3435,
+      "word": "considerate",
+      "ipa": "kənˈsɪdərət",
+      "viRead": "kơn-SI-đơ-rơt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chu đáo, biết nghĩ cho người khác",
+      "exampleEn": "It was considerate of you to call.",
+      "exampleVi": "Bạn thật chu đáo khi gọi điện.",
+      "collocations": [
+        {
+          "en": "considerate of others",
+          "vi": "biết nghĩ cho người khác"
+        },
+        {
+          "en": "a considerate neighbor",
+          "vi": "hàng xóm chu đáo"
+        }
+      ],
+      "family": [
+        {
+          "word": "consider",
+          "vi": "cân nhắc"
+        }
+      ],
+      "tip": "considerate = quan tâm đến cảm giác người khác.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 3436,
+      "word": "cowardly",
+      "ipa": "ˈkaʊərdli",
+      "viRead": "KAO-ơđ-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hèn nhát",
+      "exampleEn": "Running away was a cowardly thing to do.",
+      "exampleVi": "Bỏ chạy là việc làm hèn nhát.",
+      "collocations": [
+        {
+          "en": "a cowardly act",
+          "vi": "hành động hèn nhát"
+        },
+        {
+          "en": "cowardly lion",
+          "vi": "sư tử nhát gan"
+        }
+      ],
+      "family": [
+        {
+          "word": "coward",
+          "vi": "kẻ hèn nhát"
+        },
+        {
+          "word": "brave",
+          "vi": "dũng cảm"
+        }
+      ],
+      "tip": "cowardly là tính từ dù có đuôi -ly.",
+      "emoji": "🙀",
+      "stage": 2
+    },
+    {
+      "id": 3437,
+      "word": "decisive",
+      "ipa": "dɪˈsaɪsɪv",
+      "viRead": "đi-SAI-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "quyết đoán",
+      "exampleEn": "A good leader must be decisive.",
+      "exampleVi": "Người lãnh đạo giỏi phải quyết đoán.",
+      "collocations": [
+        {
+          "en": "a decisive leader",
+          "vi": "lãnh đạo quyết đoán"
+        },
+        {
+          "en": "decisive moment",
+          "vi": "thời khắc quyết định"
+        }
+      ],
+      "family": [
+        {
+          "word": "decide",
+          "vi": "quyết định"
+        }
+      ],
+      "tip": "decide (v) → decision (n) → decisive (adj).",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 3438,
+      "word": "dishonest",
+      "ipa": "dɪˈsɑnəst",
+      "viRead": "đi-SA-nơst",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "không trung thực",
+      "exampleEn": "It's dishonest to copy someone's homework.",
+      "exampleVi": "Chép bài tập của người khác là không trung thực.",
+      "collocations": [
+        {
+          "en": "a dishonest person",
+          "vi": "người không trung thực"
+        },
+        {
+          "en": "dishonest behavior",
+          "vi": "hành vi gian dối"
+        }
+      ],
+      "family": [
+        {
+          "word": "honest",
+          "vi": "trung thực"
+        }
+      ],
+      "tip": "dis + honest. h câm: 'đis-A-nơst'.",
+      "emoji": "🤥",
+      "stage": 2
+    },
+    {
+      "id": 3439,
+      "word": "easygoing",
+      "ipa": "ˌiziˈgoʊɪŋ",
+      "viRead": "I-di-GÂU-ing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dễ tính, thoải mái",
+      "exampleEn": "My teacher is very easygoing.",
+      "exampleVi": "Thầy giáo tôi rất dễ tính.",
+      "collocations": [
+        {
+          "en": "an easygoing person",
+          "vi": "người dễ tính"
+        },
+        {
+          "en": "easygoing attitude",
+          "vi": "thái độ thoải mái"
+        }
+      ],
+      "family": [
+        {
+          "word": "easy",
+          "vi": "dễ"
+        }
+      ],
+      "tip": "easygoing = dễ chịu, không câu nệ.",
+      "emoji": "😎",
+      "stage": 2
+    },
+    {
+      "id": 3440,
+      "word": "energetic",
+      "ipa": "ˌɛnərˈʤɛtɪk",
+      "viRead": "e-nơ-GIE-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tràn đầy năng lượng",
+      "exampleEn": "The kids are energetic in the morning.",
+      "exampleVi": "Buổi sáng bọn trẻ tràn đầy năng lượng.",
+      "collocations": [
+        {
+          "en": "an energetic dance",
+          "vi": "điệu nhảy sôi động"
+        },
+        {
+          "en": "feel energetic",
+          "vi": "thấy tràn trề sức sống"
+        }
+      ],
+      "family": [
+        {
+          "word": "energy",
+          "vi": "năng lượng"
+        }
+      ],
+      "tip": "energy (n) → energetic (adj). Nhấn âm 3: e-nơ-GIE-tik.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 3441,
+      "word": "faithful",
+      "ipa": "ˈfeɪθfəl",
+      "viRead": "PHÂYTH-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chung thủy, trung thành",
+      "exampleEn": "He is a faithful husband.",
+      "exampleVi": "Anh ấy là người chồng chung thủy.",
+      "collocations": [
+        {
+          "en": "a faithful friend",
+          "vi": "người bạn trung thành"
+        },
+        {
+          "en": "faithful to",
+          "vi": "chung thủy với"
+        }
+      ],
+      "family": [
+        {
+          "word": "faith",
+          "vi": "niềm tin"
+        }
+      ],
+      "tip": "Yours faithfully = Kính thư (cuối thư trang trọng).",
+      "emoji": "💍",
+      "stage": 2
+    },
+    {
+      "id": 3442,
+      "word": "fussy",
+      "ipa": "ˈfəsi",
+      "viRead": "PHƠ-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kén chọn, cầu kỳ",
+      "exampleEn": "My son is a fussy eater.",
+      "exampleVi": "Con trai tôi rất kén ăn.",
+      "collocations": [
+        {
+          "en": "a fussy eater",
+          "vi": "người kén ăn"
+        },
+        {
+          "en": "fussy about",
+          "vi": "cầu kỳ về"
+        }
+      ],
+      "family": [
+        {
+          "word": "fuss",
+          "vi": "sự rối rít"
+        }
+      ],
+      "tip": "a fussy eater = người kén ăn.",
+      "emoji": "🥦",
+      "stage": 2
+    },
+    {
+      "id": 3443,
+      "word": "hardworking",
+      "ipa": "ˌhɑrdˈwərkɪŋ",
+      "viRead": "harđ-WƠ-king",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chăm chỉ",
+      "exampleEn": "Vietnamese farmers are very hardworking.",
+      "exampleVi": "Nông dân Việt Nam rất chăm chỉ.",
+      "collocations": [
+        {
+          "en": "a hardworking student",
+          "vi": "học sinh chăm chỉ"
+        },
+        {
+          "en": "hardworking people",
+          "vi": "người cần cù"
+        }
+      ],
+      "family": [
+        {
+          "word": "work",
+          "vi": "làm việc"
+        }
+      ],
+      "tip": "hard + working = chăm chỉ (≈ diligent).",
+      "emoji": "🐝",
+      "stage": 2
+    },
+    {
+      "id": 3444,
+      "word": "helpful",
+      "ipa": "ˈhɛlpfəl",
+      "viRead": "HELP-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hay giúp đỡ; hữu ích",
+      "exampleEn": "The staff were very helpful.",
+      "exampleVi": "Nhân viên rất nhiệt tình giúp đỡ.",
+      "collocations": [
+        {
+          "en": "helpful advice",
+          "vi": "lời khuyên hữu ích"
+        },
+        {
+          "en": "very helpful",
+          "vi": "rất có ích"
+        }
+      ],
+      "family": [
+        {
+          "word": "help",
+          "vi": "giúp"
+        },
+        {
+          "word": "helpless",
+          "vi": "bất lực"
+        }
+      ],
+      "tip": "helpful ↔ unhelpful; helpless = bất lực.",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 3445,
+      "word": "imaginative",
+      "ipa": "ɪˈmæʤənətɪv",
+      "viRead": "i-ME-giơ-nơ-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giàu trí tưởng tượng",
+      "exampleEn": "She writes very imaginative stories.",
+      "exampleVi": "Cô ấy viết những câu chuyện giàu trí tưởng tượng.",
+      "collocations": [
+        {
+          "en": "an imaginative child",
+          "vi": "đứa trẻ giàu tưởng tượng"
+        },
+        {
+          "en": "imaginative ideas",
+          "vi": "ý tưởng sáng tạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "imagine",
+          "vi": "tưởng tượng"
+        }
+      ],
+      "tip": "imaginative (giàu tưởng tượng) ≠ imaginary (không có thật).",
+      "emoji": "🦄",
+      "stage": 2
+    },
+    {
+      "id": 3446,
+      "word": "impolite",
+      "ipa": "ˌɪmpəˈlaɪt",
+      "viRead": "im-pơ-LAIT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bất lịch sự",
+      "exampleEn": "It's impolite to interrupt people.",
+      "exampleVi": "Ngắt lời người khác là bất lịch sự.",
+      "collocations": [
+        {
+          "en": "impolite to",
+          "vi": "bất lịch sự với"
+        },
+        {
+          "en": "an impolite question",
+          "vi": "câu hỏi bất lịch sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "polite",
+          "vi": "lịch sự"
+        }
+      ],
+      "tip": "im + polite.",
+      "emoji": "🙊",
+      "stage": 2
+    },
+    {
+      "id": 3447,
+      "word": "moody",
+      "ipa": "ˈmudi",
+      "viRead": "MU-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tâm trạng thất thường",
+      "exampleEn": "Teenagers can be moody.",
+      "exampleVi": "Tuổi teen có thể thất thường.",
+      "collocations": [
+        {
+          "en": "a moody teenager",
+          "vi": "cô cậu tuổi teen thất thường"
+        },
+        {
+          "en": "moody weather",
+          "vi": "thời tiết thất thường"
+        }
+      ],
+      "family": [
+        {
+          "word": "mood",
+          "vi": "tâm trạng"
+        }
+      ],
+      "tip": "moody ≠ 'mood' (tâm trạng). in a good mood = vui vẻ.",
+      "emoji": "🌦️",
+      "stage": 2
+    },
+    {
+      "id": 3448,
+      "word": "naive",
+      "ipa": "naɪˈiv",
+      "viRead": "nai-IV",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngây thơ, cả tin",
+      "exampleEn": "It was naive to believe him.",
+      "exampleVi": "Tin anh ta thì thật ngây thơ.",
+      "collocations": [
+        {
+          "en": "a naive question",
+          "vi": "câu hỏi ngây thơ"
+        },
+        {
+          "en": "politically naive",
+          "vi": "ngây thơ chính trị"
+        }
+      ],
+      "tip": "Đọc 2 âm: 'nai-IV'.",
+      "emoji": "😇",
+      "stage": 2
+    },
+    {
+      "id": 3449,
+      "word": "optimistic",
+      "ipa": "ˌɑptɪˈmɪstɪk",
+      "viRead": "ap-tơ-MIS-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lạc quan",
+      "exampleEn": "I'm optimistic about the future.",
+      "exampleVi": "Tôi lạc quan về tương lai.",
+      "collocations": [
+        {
+          "en": "optimistic about",
+          "vi": "lạc quan về"
+        },
+        {
+          "en": "stay optimistic",
+          "vi": "giữ tinh thần lạc quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "optimist",
+          "vi": "người lạc quan"
+        }
+      ],
+      "tip": "optimistic ↔ pessimistic.",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 3450,
+      "word": "outgoing",
+      "ipa": "ˈaʊtˌgoʊɪŋ",
+      "viRead": "AOT-gâu-ing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hòa đồng, cởi mở",
+      "exampleEn": "She's outgoing and makes friends easily.",
+      "exampleVi": "Cô ấy hòa đồng và dễ kết bạn.",
+      "collocations": [
+        {
+          "en": "an outgoing person",
+          "vi": "người hòa đồng"
+        },
+        {
+          "en": "outgoing personality",
+          "vi": "tính cách cởi mở"
+        }
+      ],
+      "family": [
+        {
+          "word": "shy",
+          "vi": "nhút nhát"
+        }
+      ],
+      "tip": "outgoing ↔ shy.",
+      "emoji": "🥳",
+      "stage": 2
+    },
+    {
+      "id": 3451,
+      "word": "pessimistic",
+      "ipa": "ˌpɛsəˈmɪstɪk",
+      "viRead": "pe-sơ-MIS-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bi quan",
+      "exampleEn": "Don't be so pessimistic; you'll pass!",
+      "exampleVi": "Đừng bi quan thế, bạn sẽ đỗ thôi!",
+      "collocations": [
+        {
+          "en": "pessimistic about",
+          "vi": "bi quan về"
+        },
+        {
+          "en": "a pessimistic view",
+          "vi": "cái nhìn bi quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "pessimist",
+          "vi": "người bi quan"
+        }
+      ],
+      "tip": "pessimistic ↔ optimistic.",
+      "emoji": "🌧️",
+      "stage": 2
+    },
+    {
+      "id": 3452,
+      "word": "punctual",
+      "ipa": "ˈpəŋkʧuəl",
+      "viRead": "PƠNGK-chu-ơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đúng giờ",
+      "exampleEn": "Please be punctual for the meeting.",
+      "exampleVi": "Vui lòng đến họp đúng giờ.",
+      "collocations": [
+        {
+          "en": "be punctual",
+          "vi": "đúng giờ"
+        },
+        {
+          "en": "a punctual person",
+          "vi": "người đúng giờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "punctuality",
+          "vi": "sự đúng giờ"
+        }
+      ],
+      "tip": "punctual = on time.",
+      "emoji": "⏰",
+      "stage": 2
+    },
+    {
+      "id": 3453,
+      "word": "reliable",
+      "ipa": "rɪˈlaɪəbəl",
+      "viRead": "ri-LAI-ơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng tin cậy",
+      "exampleEn": "He is a reliable friend.",
+      "exampleVi": "Anh ấy là người bạn đáng tin cậy.",
+      "collocations": [
+        {
+          "en": "a reliable source",
+          "vi": "nguồn đáng tin"
+        },
+        {
+          "en": "reliable car",
+          "vi": "xe bền bỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "rely",
+          "vi": "dựa vào"
+        },
+        {
+          "word": "unreliable",
+          "vi": "không đáng tin"
+        }
+      ],
+      "tip": "rely (v) → reliable (adj).",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 3454,
+      "word": "reserved",
+      "ipa": "rɪˈzərvd",
+      "viRead": "ri-DƠVĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kín đáo, dè dặt; đã đặt trước",
+      "exampleEn": "He is quiet and reserved.",
+      "exampleVi": "Anh ấy trầm lặng và kín đáo.",
+      "collocations": [
+        {
+          "en": "a reserved person",
+          "vi": "người kín đáo"
+        },
+        {
+          "en": "reserved seat",
+          "vi": "ghế đã đặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "reserve",
+          "vi": "đặt trước"
+        }
+      ],
+      "tip": "reserved = dè dặt (tính cách) / đã được đặt (chỗ).",
+      "emoji": "🤐",
+      "stage": 2
+    },
+    {
+      "id": 3455,
+      "word": "sociable",
+      "ipa": "ˈsoʊʃəbəl",
+      "viRead": "SÂU-shơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hòa đồng, thích giao tiếp",
+      "exampleEn": "She is very sociable at parties.",
+      "exampleVi": "Cô ấy rất hòa đồng ở các bữa tiệc.",
+      "collocations": [
+        {
+          "en": "a sociable person",
+          "vi": "người hòa đồng"
+        },
+        {
+          "en": "feel sociable",
+          "vi": "muốn giao lưu"
+        }
+      ],
+      "family": [
+        {
+          "word": "social",
+          "vi": "xã hội"
+        }
+      ],
+      "tip": "sociable ≈ outgoing. Đọc 'SÂU-shơ-bồ'.",
+      "emoji": "🎉",
+      "stage": 2
+    },
+    {
+      "id": 3456,
+      "word": "stubborn",
+      "ipa": "ˈstəbərn",
+      "viRead": "STƠ-bơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bướng bỉnh",
+      "exampleEn": "My grandpa is as stubborn as a mule.",
+      "exampleVi": "Ông tôi bướng như con la.",
+      "collocations": [
+        {
+          "en": "stubborn as a mule",
+          "vi": "bướng như la"
+        },
+        {
+          "en": "a stubborn child",
+          "vi": "đứa trẻ bướng"
+        }
+      ],
+      "tip": "as stubborn as a mule = cứng đầu như con la.",
+      "emoji": "🐐",
+      "stage": 2
+    },
+    {
+      "id": 3457,
+      "word": "sympathetic",
+      "ipa": "ˌsɪmpəˈθɛtɪk",
+      "viRead": "sim-pơ-THE-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cảm thông",
+      "exampleEn": "My teacher was very sympathetic when I was ill.",
+      "exampleVi": "Cô giáo rất cảm thông khi tôi bị ốm.",
+      "collocations": [
+        {
+          "en": "sympathetic to",
+          "vi": "cảm thông với"
+        },
+        {
+          "en": "a sympathetic ear",
+          "vi": "người chịu lắng nghe"
+        }
+      ],
+      "family": [
+        {
+          "word": "sympathy",
+          "vi": "sự cảm thông"
+        }
+      ],
+      "tip": "BẪY: sympathetic = biết cảm thông, KHÔNG phải 'dễ mến'.",
+      "emoji": "🫂",
+      "stage": 2
+    },
+    {
+      "id": 3458,
+      "word": "talkative",
+      "ipa": "ˈtɔkətɪv",
+      "viRead": "TO-kơ-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nói nhiều",
+      "exampleEn": "My little brother is very talkative.",
+      "exampleVi": "Em trai tôi rất nói nhiều.",
+      "collocations": [
+        {
+          "en": "a talkative child",
+          "vi": "đứa trẻ hay nói"
+        },
+        {
+          "en": "not very talkative",
+          "vi": "không nói nhiều lắm"
+        }
+      ],
+      "family": [
+        {
+          "word": "talk",
+          "vi": "nói chuyện"
+        }
+      ],
+      "tip": "talk + ative = hay nói.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 3459,
+      "word": "trustworthy",
+      "ipa": "ˈtrəstˌwərði",
+      "viRead": "TRƠST-wơ-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng tin",
+      "exampleEn": "She is honest and trustworthy.",
+      "exampleVi": "Cô ấy trung thực và đáng tin.",
+      "collocations": [
+        {
+          "en": "a trustworthy friend",
+          "vi": "người bạn đáng tin"
+        },
+        {
+          "en": "trustworthy information",
+          "vi": "thông tin đáng tin"
+        }
+      ],
+      "family": [
+        {
+          "word": "trust",
+          "vi": "tin tưởng"
+        }
+      ],
+      "tip": "trust + worthy (xứng đáng).",
+      "emoji": "🤞",
+      "stage": 2
+    },
+    {
+      "id": 3460,
+      "word": "vain",
+      "ipa": "veɪn",
+      "viRead": "VÂYN",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tự cao, chảnh; vô ích",
+      "exampleEn": "He is vain about his looks.",
+      "exampleVi": "Anh ta tự cao về ngoại hình.",
+      "collocations": [
+        {
+          "en": "in vain",
+          "vi": "vô ích"
+        },
+        {
+          "en": "vain about",
+          "vi": "tự phụ về"
+        }
+      ],
+      "family": [
+        {
+          "word": "vanity",
+          "vi": "sự phù phiếm"
+        }
+      ],
+      "tip": "in vain = công cốc, vô ích.",
+      "emoji": "🪞",
+      "stage": 2
+    },
+    {
+      "id": 3461,
+      "word": "witty",
+      "ipa": "ˈwɪti",
+      "viRead": "WI-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dí dỏm",
+      "exampleEn": "He gave a witty answer.",
+      "exampleVi": "Anh ấy trả lời rất dí dỏm.",
+      "collocations": [
+        {
+          "en": "a witty remark",
+          "vi": "nhận xét dí dỏm"
+        },
+        {
+          "en": "witty and charming",
+          "vi": "dí dỏm và duyên dáng"
+        }
+      ],
+      "family": [
+        {
+          "word": "wit",
+          "vi": "sự dí dỏm"
+        }
+      ],
+      "tip": "witty = hài hước thông minh.",
+      "emoji": "😄",
+      "stage": 2
+    },
+    {
+      "id": 3462,
+      "word": "attic",
+      "ipa": "ˈætɪk",
+      "viRead": "E-tik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gác mái",
+      "exampleEn": "We keep old toys in the attic.",
+      "exampleVi": "Chúng tôi cất đồ chơi cũ trên gác mái.",
+      "collocations": [
+        {
+          "en": "in the attic",
+          "vi": "trên gác mái"
+        },
+        {
+          "en": "attic room",
+          "vi": "phòng áp mái"
+        }
+      ],
+      "tip": "attic (trên cùng) ↔ basement (dưới cùng).",
+      "emoji": "🏚️",
+      "stage": 2
+    },
+    {
+      "id": 3463,
+      "word": "basement",
+      "ipa": "ˈbeɪsmənt",
+      "viRead": "BÂYS-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tầng hầm",
+      "exampleEn": "The car park is in the basement.",
+      "exampleVi": "Bãi đỗ xe ở tầng hầm.",
+      "collocations": [
+        {
+          "en": "in the basement",
+          "vi": "dưới tầng hầm"
+        },
+        {
+          "en": "basement parking",
+          "vi": "hầm để xe"
+        }
+      ],
+      "tip": "basement = tầng hầm (B1, B2 trong thang máy).",
+      "emoji": "🅿️",
+      "stage": 2
+    },
+    {
+      "id": 3464,
+      "word": "bookcase",
+      "ipa": "ˈbʊkˌkeɪs",
+      "viRead": "BUK-kâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tủ sách",
+      "exampleEn": "The bookcase is full of novels.",
+      "exampleVi": "Tủ sách đầy tiểu thuyết.",
+      "collocations": [
+        {
+          "en": "a tall bookcase",
+          "vi": "tủ sách cao"
+        },
+        {
+          "en": "wooden bookcase",
+          "vi": "tủ sách gỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "bookshelf",
+          "vi": "giá sách"
+        }
+      ],
+      "tip": "book + case (hộp, tủ).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 3465,
+      "word": "doormat",
+      "ipa": "ˈdɔrˌmæt",
+      "viRead": "ĐOR-met",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thảm chùi chân",
+      "exampleEn": "Wipe your feet on the doormat.",
+      "exampleVi": "Chùi chân lên thảm trước cửa.",
+      "collocations": [
+        {
+          "en": "a welcome doormat",
+          "vi": "thảm Welcome"
+        },
+        {
+          "en": "treat like a doormat",
+          "vi": "coi như cỏ rác"
+        }
+      ],
+      "tip": "be a doormat = để người khác chà đạp.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 3466,
+      "word": "driveway",
+      "ipa": "ˈdraɪvˌweɪ",
+      "viRead": "ĐRAIV-wây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lối xe vào nhà",
+      "exampleEn": "Park the car in the driveway.",
+      "exampleVi": "Đỗ xe ở lối vào nhà.",
+      "collocations": [
+        {
+          "en": "in the driveway",
+          "vi": "ở lối xe vào"
+        },
+        {
+          "en": "a long driveway",
+          "vi": "lối xe vào dài"
+        }
+      ],
+      "family": [
+        {
+          "word": "drive",
+          "vi": "lái xe"
+        }
+      ],
+      "tip": "drive + way.",
+      "emoji": "🚗",
+      "stage": 2
+    },
+    {
+      "id": 3467,
+      "word": "faucet",
+      "ipa": "ˈfɔsət",
+      "viRead": "PHO-sơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vòi nước",
+      "exampleEn": "Turn off the faucet when you brush your teeth.",
+      "exampleVi": "Khóa vòi nước khi đánh răng.",
+      "collocations": [
+        {
+          "en": "kitchen faucet",
+          "vi": "vòi bếp"
+        },
+        {
+          "en": "a dripping faucet",
+          "vi": "vòi nhỏ giọt"
+        }
+      ],
+      "family": [
+        {
+          "word": "tap",
+          "vi": "vòi (Anh)"
+        }
+      ],
+      "tip": "faucet (Mỹ) = tap (Anh).",
+      "emoji": "🚰",
+      "stage": 2
+    },
+    {
+      "id": 3468,
+      "word": "gate",
+      "ipa": "geɪt",
+      "viRead": "GÂYT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cổng",
+      "exampleEn": "Close the gate behind you.",
+      "exampleVi": "Đóng cổng sau khi vào.",
+      "collocations": [
+        {
+          "en": "front gate",
+          "vi": "cổng trước"
+        },
+        {
+          "en": "boarding gate",
+          "vi": "cửa lên máy bay"
+        }
+      ],
+      "tip": "gate 5 = cửa ra máy bay số 5.",
+      "emoji": "⛩️",
+      "stage": 2
+    },
+    {
+      "id": 3469,
+      "word": "hallway",
+      "ipa": "ˈhɔlˌweɪ",
+      "viRead": "HOL-wây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hành lang, lối đi trong nhà",
+      "exampleEn": "Leave your shoes in the hallway.",
+      "exampleVi": "Để giày ở hành lang.",
+      "collocations": [
+        {
+          "en": "in the hallway",
+          "vi": "ở hành lang"
+        },
+        {
+          "en": "a narrow hallway",
+          "vi": "hành lang hẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "hall",
+          "vi": "sảnh"
+        }
+      ],
+      "tip": "hallway ≈ corridor.",
+      "emoji": "🚪",
+      "stage": 2
+    },
+    {
+      "id": 3470,
+      "word": "outlet",
+      "ipa": "ˈaʊtˌlɛt",
+      "viRead": "AOT-let",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ổ cắm; cửa hàng giảm giá",
+      "exampleEn": "Is there an outlet near the table?",
+      "exampleVi": "Gần bàn có ổ cắm không?",
+      "collocations": [
+        {
+          "en": "power outlet",
+          "vi": "ổ cắm điện"
+        },
+        {
+          "en": "outlet store",
+          "vi": "cửa hàng outlet"
+        }
+      ],
+      "tip": "outlet (Mỹ) = socket (Anh).",
+      "emoji": "🔌",
+      "stage": 2
+    },
+    {
+      "id": 3471,
+      "word": "pantry",
+      "ipa": "ˈpæntri",
+      "viRead": "PEN-tri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tủ/kho đựng thức ăn",
+      "exampleEn": "There's rice in the pantry.",
+      "exampleVi": "Có gạo trong tủ đồ ăn.",
+      "collocations": [
+        {
+          "en": "kitchen pantry",
+          "vi": "tủ đồ bếp"
+        },
+        {
+          "en": "pantry shelf",
+          "vi": "kệ thực phẩm"
+        }
+      ],
+      "tip": "pantry = kho nhỏ cất đồ khô trong bếp.",
+      "emoji": "🥫",
+      "stage": 2
+    },
+    {
+      "id": 3472,
+      "word": "patio",
+      "ipa": "ˈpætiˌoʊ",
+      "viRead": "PE-ti-âu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sân hiên",
+      "exampleEn": "We had breakfast on the patio.",
+      "exampleVi": "Chúng tôi ăn sáng ngoài sân hiên.",
+      "collocations": [
+        {
+          "en": "on the patio",
+          "vi": "ngoài hiên"
+        },
+        {
+          "en": "patio furniture",
+          "vi": "bàn ghế sân vườn"
+        }
+      ],
+      "tip": "Đọc 'PE-ti-âu'.",
+      "emoji": "🪴",
+      "stage": 2
+    },
+    {
+      "id": 3473,
+      "word": "pillowcase",
+      "ipa": "ˈpɪloʊˌkeɪs",
+      "viRead": "PI-lâu-kâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vỏ gối",
+      "exampleEn": "Change the pillowcase every week.",
+      "exampleVi": "Thay vỏ gối mỗi tuần.",
+      "collocations": [
+        {
+          "en": "a clean pillowcase",
+          "vi": "vỏ gối sạch"
+        },
+        {
+          "en": "silk pillowcase",
+          "vi": "vỏ gối lụa"
+        }
+      ],
+      "family": [
+        {
+          "word": "pillow",
+          "vi": "gối"
+        }
+      ],
+      "tip": "pillow + case.",
+      "emoji": "🛏️",
+      "stage": 2
+    },
+    {
+      "id": 3474,
+      "word": "quilt",
+      "ipa": "kwɪlt",
+      "viRead": "KWILT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chăn bông",
+      "exampleEn": "Grandma made this quilt by hand.",
+      "exampleVi": "Bà khâu tay tấm chăn bông này.",
+      "collocations": [
+        {
+          "en": "a warm quilt",
+          "vi": "chăn bông ấm"
+        },
+        {
+          "en": "patchwork quilt",
+          "vi": "chăn chắp vải"
+        }
+      ],
+      "family": [
+        {
+          "word": "blanket",
+          "vi": "chăn"
+        }
+      ],
+      "tip": "u câm: 'kwilt'.",
+      "emoji": "🛌",
+      "stage": 2
+    },
+    {
+      "id": 3475,
+      "word": "rug",
+      "ipa": "rəg",
+      "viRead": "RƠG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tấm thảm nhỏ",
+      "exampleEn": "There's a soft rug in the living room.",
+      "exampleVi": "Có một tấm thảm mềm trong phòng khách.",
+      "collocations": [
+        {
+          "en": "a soft rug",
+          "vi": "thảm mềm"
+        },
+        {
+          "en": "sweep under the rug",
+          "vi": "giấu nhẹm"
+        }
+      ],
+      "family": [
+        {
+          "word": "carpet",
+          "vi": "thảm trải sàn"
+        }
+      ],
+      "tip": "sweep it under the rug = giấu nhẹm vấn đề.",
+      "emoji": "🟫",
+      "stage": 2
+    },
+    {
+      "id": 3476,
+      "word": "staircase",
+      "ipa": "ˈstɛrˌkeɪs",
+      "viRead": "STER-kâys",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cầu thang",
+      "exampleEn": "The staircase goes up to the bedrooms.",
+      "exampleVi": "Cầu thang dẫn lên các phòng ngủ.",
+      "collocations": [
+        {
+          "en": "a spiral staircase",
+          "vi": "cầu thang xoắn"
+        },
+        {
+          "en": "wooden staircase",
+          "vi": "cầu thang gỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "stairs",
+          "vi": "bậc thang"
+        }
+      ],
+      "tip": "stair + case.",
+      "emoji": "🪜",
+      "stage": 2
+    },
+    {
+      "id": 3477,
+      "word": "tile",
+      "ipa": "taɪl",
+      "viRead": "TAIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "viên gạch lát",
+      "exampleEn": "The bathroom floor has white tiles.",
+      "exampleVi": "Sàn phòng tắm lát gạch trắng.",
+      "collocations": [
+        {
+          "en": "floor tiles",
+          "vi": "gạch lát nền"
+        },
+        {
+          "en": "roof tiles",
+          "vi": "ngói lợp"
+        }
+      ],
+      "tip": "roof tiles = ngói.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 3478,
+      "word": "vacuum",
+      "ipa": "ˈvækjum",
+      "viRead": "VEK-yum",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "hút bụi",
+      "exampleEn": "I vacuum the house every Saturday.",
+      "exampleVi": "Thứ Bảy nào tôi cũng hút bụi nhà.",
+      "collocations": [
+        {
+          "en": "vacuum the floor",
+          "vi": "hút bụi sàn"
+        },
+        {
+          "en": "vacuum cleaner",
+          "vi": "máy hút bụi"
+        }
+      ],
+      "tip": "Chính tả: 2 chữ u. vacuum cleaner = máy hút bụi.",
+      "emoji": "🧹",
       "stage": 2
     }
   ]
