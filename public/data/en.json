@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3191,
+    "count": 3238,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -89909,6 +89909,1224 @@
       ],
       "tip": "giant panda = gấu trúc khổng lồ (Trung Quốc).",
       "emoji": "🐼",
+      "stage": 2
+    },
+    {
+      "id": 3192,
+      "word": "parachute",
+      "ipa": "ˈpɛrəˌʃut",
+      "viRead": "PE-rơ-shut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái dù (nhảy dù)",
+      "exampleEn": "He jumped from the plane with a parachute.",
+      "exampleVi": "Anh ấy nhảy khỏi máy bay bằng dù.",
+      "collocations": [
+        {
+          "en": "open a parachute",
+          "vi": "bung dù"
+        },
+        {
+          "en": "parachute jump",
+          "vi": "cú nhảy dù"
+        }
+      ],
+      "tip": "ch đọc 'sh': 'PE-rơ-shut'.",
+      "emoji": "🪂",
+      "stage": 2
+    },
+    {
+      "id": 3193,
+      "word": "parrot",
+      "ipa": "ˈpɛrət",
+      "viRead": "PE-rơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con vẹt",
+      "exampleEn": "The parrot can say 'hello'.",
+      "exampleVi": "Con vẹt biết nói 'hello'.",
+      "collocations": [
+        {
+          "en": "a talking parrot",
+          "vi": "vẹt biết nói"
+        },
+        {
+          "en": "parrot fashion",
+          "vi": "học vẹt"
+        }
+      ],
+      "tip": "learn parrot-fashion = học vẹt — app này giúp bạn tránh điều đó!",
+      "emoji": "🦜",
+      "stage": 2
+    },
+    {
+      "id": 3194,
+      "word": "peacock",
+      "ipa": "ˈpiˌkɑk",
+      "viRead": "PI-kak",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con công",
+      "exampleEn": "The peacock opened its beautiful tail.",
+      "exampleVi": "Con công xòe cái đuôi tuyệt đẹp.",
+      "collocations": [
+        {
+          "en": "proud as a peacock",
+          "vi": "kiêu như công"
+        },
+        {
+          "en": "peacock feather",
+          "vi": "lông công"
+        }
+      ],
+      "tip": "proud as a peacock = kiêu hãnh như con công.",
+      "emoji": "🦚",
+      "stage": 2
+    },
+    {
+      "id": 3195,
+      "word": "penguin",
+      "ipa": "ˈpɛŋgwən",
+      "viRead": "PENG-gwơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim cánh cụt",
+      "exampleEn": "Penguins can't fly, but they swim well.",
+      "exampleVi": "Chim cánh cụt không bay được nhưng bơi giỏi.",
+      "collocations": [
+        {
+          "en": "emperor penguin",
+          "vi": "chim cánh cụt hoàng đế"
+        },
+        {
+          "en": "a baby penguin",
+          "vi": "cánh cụt con"
+        }
+      ],
+      "tip": "Đọc 'PENG-gwin'.",
+      "emoji": "🐧",
+      "stage": 2
+    },
+    {
+      "id": 3196,
+      "word": "pigeon",
+      "ipa": "ˈpɪʤɪn",
+      "viRead": "PI-giơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim bồ câu",
+      "exampleEn": "Pigeons are eating bread in the square.",
+      "exampleVi": "Bồ câu đang ăn bánh mì ở quảng trường.",
+      "collocations": [
+        {
+          "en": "feed the pigeons",
+          "vi": "cho bồ câu ăn"
+        },
+        {
+          "en": "carrier pigeon",
+          "vi": "bồ câu đưa thư"
+        }
+      ],
+      "family": [
+        {
+          "word": "dove",
+          "vi": "bồ câu trắng"
+        }
+      ],
+      "tip": "pigeon = bồ câu (thường); dove = bồ câu trắng (biểu tượng hòa bình).",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 3197,
+      "word": "pine",
+      "ipa": "paɪn",
+      "viRead": "PAIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây thông",
+      "exampleEn": "Da Lat is famous for its pine forests.",
+      "exampleVi": "Đà Lạt nổi tiếng với những rừng thông.",
+      "collocations": [
+        {
+          "en": "pine tree",
+          "vi": "cây thông"
+        },
+        {
+          "en": "pine forest",
+          "vi": "rừng thông"
+        }
+      ],
+      "tip": "pineapple = quả dứa (trông giống quả thông).",
+      "emoji": "🌲",
+      "stage": 2
+    },
+    {
+      "id": 3198,
+      "word": "porch",
+      "ipa": "pɔrʧ",
+      "viRead": "PORCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hiên nhà",
+      "exampleEn": "Grandpa sits on the porch every evening.",
+      "exampleVi": "Chiều nào ông cũng ngồi ngoài hiên.",
+      "collocations": [
+        {
+          "en": "front porch",
+          "vi": "hiên trước"
+        },
+        {
+          "en": "on the porch",
+          "vi": "ngoài hiên"
+        }
+      ],
+      "tip": "porch = mái hiên trước cửa.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 3199,
+      "word": "puppy",
+      "ipa": "ˈpəpi",
+      "viRead": "PƠ-pi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chó con",
+      "exampleEn": "We adopted a cute puppy.",
+      "exampleVi": "Chúng tôi nhận nuôi một chú chó con dễ thương.",
+      "collocations": [
+        {
+          "en": "a cute puppy",
+          "vi": "chó con dễ thương"
+        },
+        {
+          "en": "puppy love",
+          "vi": "tình yêu tuổi học trò"
+        }
+      ],
+      "family": [
+        {
+          "word": "dog",
+          "vi": "con chó"
+        }
+      ],
+      "tip": "puppy love = tình cảm trẻ con, tình yêu tuổi học trò.",
+      "emoji": "🐶",
+      "stage": 2
+    },
+    {
+      "id": 3200,
+      "word": "rabbit",
+      "ipa": "ˈræbɪt",
+      "viRead": "RE-bơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con thỏ",
+      "exampleEn": "The rabbit is eating a carrot.",
+      "exampleVi": "Con thỏ đang ăn cà rốt.",
+      "collocations": [
+        {
+          "en": "a white rabbit",
+          "vi": "thỏ trắng"
+        },
+        {
+          "en": "rabbit hole",
+          "vi": "hang thỏ; mải mê lạc đề"
+        }
+      ],
+      "family": [
+        {
+          "word": "bunny",
+          "vi": "thỏ con"
+        }
+      ],
+      "tip": "go down a rabbit hole = mải mê tìm hiểu mãi một thứ.",
+      "emoji": "🐇",
+      "stage": 2
+    },
+    {
+      "id": 3201,
+      "word": "raccoon",
+      "ipa": "ræˈkun",
+      "viRead": "re-KUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gấu mèo",
+      "exampleEn": "A raccoon was looking for food in the bin.",
+      "exampleVi": "Một con gấu mèo đang lục thùng rác tìm đồ ăn.",
+      "collocations": [
+        {
+          "en": "a hungry raccoon",
+          "vi": "gấu mèo đói"
+        },
+        {
+          "en": "raccoon mask",
+          "vi": "mặt nạ gấu mèo"
+        }
+      ],
+      "tip": "Chính tả: 2 c, 2 o.",
+      "emoji": "🦝",
+      "stage": 2
+    },
+    {
+      "id": 3202,
+      "word": "raft",
+      "ipa": "ræft",
+      "viRead": "REPHT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái bè",
+      "exampleEn": "They crossed the river on a bamboo raft.",
+      "exampleVi": "Họ qua sông bằng bè tre.",
+      "collocations": [
+        {
+          "en": "bamboo raft",
+          "vi": "bè tre"
+        },
+        {
+          "en": "go rafting",
+          "vi": "chèo thuyền vượt thác"
+        }
+      ],
+      "tip": "rafting = trò chèo bè vượt thác.",
+      "emoji": "🛶",
+      "stage": 2
+    },
+    {
+      "id": 3203,
+      "word": "raincoat",
+      "ipa": "ˈreɪnˌkoʊt",
+      "viRead": "RÂYN-kâut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo mưa",
+      "exampleEn": "Take your raincoat; it's going to rain.",
+      "exampleVi": "Mang áo mưa đi, trời sắp mưa.",
+      "collocations": [
+        {
+          "en": "wear a raincoat",
+          "vi": "mặc áo mưa"
+        },
+        {
+          "en": "a plastic raincoat",
+          "vi": "áo mưa ni-lông"
+        }
+      ],
+      "family": [
+        {
+          "word": "rain",
+          "vi": "mưa"
+        }
+      ],
+      "tip": "rain + coat. Áo mưa xe máy cũng là raincoat.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 3204,
+      "word": "reindeer",
+      "ipa": "ˈreɪnˌdɪr",
+      "viRead": "RÂYN-đir",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tuần lộc",
+      "exampleEn": "Santa's sleigh is pulled by reindeer.",
+      "exampleVi": "Xe trượt tuyết của ông già Noel do tuần lộc kéo.",
+      "collocations": [
+        {
+          "en": "Santa's reindeer",
+          "vi": "tuần lộc của ông già Noel"
+        },
+        {
+          "en": "a herd of reindeer",
+          "vi": "đàn tuần lộc"
+        }
+      ],
+      "family": [
+        {
+          "word": "deer",
+          "vi": "hươu"
+        }
+      ],
+      "tip": "reindeer giống nhau số ít và số nhiều. Rudolph là chú tuần lộc mũi đỏ.",
+      "emoji": "🦌",
+      "stage": 2
+    },
+    {
+      "id": 3205,
+      "word": "rhino",
+      "ipa": "ˈraɪˌnoʊ",
+      "viRead": "RAI-nâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tê giác",
+      "exampleEn": "Rhinos are in danger because of hunting.",
+      "exampleVi": "Tê giác đang gặp nguy vì nạn săn bắt.",
+      "collocations": [
+        {
+          "en": "black rhino",
+          "vi": "tê giác đen"
+        },
+        {
+          "en": "rhino horn",
+          "vi": "sừng tê giác"
+        }
+      ],
+      "tip": "Viết tắt của rhinoceros.",
+      "emoji": "🦏",
+      "stage": 2
+    },
+    {
+      "id": 3206,
+      "word": "rooftop",
+      "ipa": "ˈrufˌtɑp",
+      "viRead": "RUPH-tap",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sân thượng, mái nhà",
+      "exampleEn": "We had dinner at a rooftop bar.",
+      "exampleVi": "Chúng tôi ăn tối ở một quán bar sân thượng.",
+      "collocations": [
+        {
+          "en": "rooftop bar",
+          "vi": "bar sân thượng"
+        },
+        {
+          "en": "rooftop garden",
+          "vi": "vườn sân thượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "roof",
+          "vi": "mái nhà"
+        }
+      ],
+      "tip": "roof + top.",
+      "emoji": "🌇",
+      "stage": 2
+    },
+    {
+      "id": 3207,
+      "word": "sandcastle",
+      "ipa": "ˈsændˌkæsəl",
+      "viRead": "SEND-ke-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lâu đài cát",
+      "exampleEn": "The kids built a sandcastle on the beach.",
+      "exampleVi": "Bọn trẻ đắp lâu đài cát trên bãi biển.",
+      "collocations": [
+        {
+          "en": "build a sandcastle",
+          "vi": "đắp lâu đài cát"
+        },
+        {
+          "en": "a big sandcastle",
+          "vi": "lâu đài cát lớn"
+        }
+      ],
+      "tip": "sand (cát) + castle (lâu đài). t câm: 'SEND-ke-sồ'.",
+      "emoji": "🏰",
+      "stage": 2
+    },
+    {
+      "id": 3208,
+      "word": "scarecrow",
+      "ipa": "ˈskærˌkroʊ",
+      "viRead": "SKER-krâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bù nhìn",
+      "exampleEn": "A scarecrow stands in the rice field.",
+      "exampleVi": "Một con bù nhìn đứng giữa ruộng lúa.",
+      "collocations": [
+        {
+          "en": "an old scarecrow",
+          "vi": "bù nhìn cũ"
+        },
+        {
+          "en": "scarecrow in the field",
+          "vi": "bù nhìn trên đồng"
+        }
+      ],
+      "family": [
+        {
+          "word": "scare",
+          "vi": "dọa"
+        }
+      ],
+      "tip": "scare (dọa) + crow (con quạ).",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 3209,
+      "word": "seagull",
+      "ipa": "ˈsiˌgəl",
+      "viRead": "SI-gơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim hải âu",
+      "exampleEn": "Seagulls are flying over the beach.",
+      "exampleVi": "Hải âu đang bay trên bãi biển.",
+      "collocations": [
+        {
+          "en": "a white seagull",
+          "vi": "hải âu trắng"
+        },
+        {
+          "en": "seagulls fly",
+          "vi": "hải âu bay"
+        }
+      ],
+      "tip": "Viết tắt: gull.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 3210,
+      "word": "seal",
+      "ipa": "sil",
+      "viRead": "SIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hải cẩu",
+      "exampleEn": "A seal is lying on the rocks.",
+      "exampleVi": "Một con hải cẩu đang nằm trên ghềnh đá.",
+      "collocations": [
+        {
+          "en": "a baby seal",
+          "vi": "hải cẩu con"
+        },
+        {
+          "en": "seal of approval",
+          "vi": "sự chấp thuận"
+        }
+      ],
+      "tip": "seal còn là con dấu / niêm phong.",
+      "emoji": "🦭",
+      "stage": 2
+    },
+    {
+      "id": 3211,
+      "word": "shark",
+      "ipa": "ʃɑrk",
+      "viRead": "SHARK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cá mập",
+      "exampleEn": "Sharks have very sharp teeth.",
+      "exampleVi": "Cá mập có hàm răng rất sắc.",
+      "collocations": [
+        {
+          "en": "shark attack",
+          "vi": "cá mập tấn công"
+        },
+        {
+          "en": "great white shark",
+          "vi": "cá mập trắng"
+        }
+      ],
+      "tip": "loan shark = kẻ cho vay nặng lãi.",
+      "emoji": "🦈",
+      "stage": 2
+    },
+    {
+      "id": 3212,
+      "word": "skateboard",
+      "ipa": "ˈskeɪtˌbɔrd",
+      "viRead": "SKÂYT-borđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ván trượt",
+      "exampleEn": "He rides his skateboard to school.",
+      "exampleVi": "Cậu ấy đi ván trượt tới trường.",
+      "collocations": [
+        {
+          "en": "ride a skateboard",
+          "vi": "trượt ván"
+        },
+        {
+          "en": "skateboard park",
+          "vi": "sân trượt ván"
+        }
+      ],
+      "tip": "skate + board.",
+      "emoji": "🛹",
+      "stage": 2
+    },
+    {
+      "id": 3213,
+      "word": "skyscraper",
+      "ipa": "ˈskaɪˌskreɪpər",
+      "viRead": "SKAI-skrây-pơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tòa nhà chọc trời",
+      "exampleEn": "Landmark 81 is the tallest skyscraper in Vietnam.",
+      "exampleVi": "Landmark 81 là tòa nhà chọc trời cao nhất Việt Nam.",
+      "collocations": [
+        {
+          "en": "a tall skyscraper",
+          "vi": "nhà chọc trời"
+        },
+        {
+          "en": "skyscraper view",
+          "vi": "cảnh từ tòa cao tầng"
+        }
+      ],
+      "tip": "sky (trời) + scraper (cái cạo) = cạo trời.",
+      "emoji": "🏙️",
+      "stage": 2
+    },
+    {
+      "id": 3214,
+      "word": "sled",
+      "ipa": "slɛd",
+      "viRead": "SLEĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe trượt tuyết",
+      "exampleEn": "The children rode a sled down the hill.",
+      "exampleVi": "Bọn trẻ đi xe trượt tuyết xuống đồi.",
+      "collocations": [
+        {
+          "en": "ride a sled",
+          "vi": "đi xe trượt tuyết"
+        },
+        {
+          "en": "sled dogs",
+          "vi": "chó kéo xe tuyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "sleigh",
+          "vi": "xe trượt tuyết (do vật kéo)"
+        }
+      ],
+      "tip": "sled (nhỏ, tự trượt) – sleigh (lớn, ngựa/tuần lộc kéo).",
+      "emoji": "🛷",
+      "stage": 2
+    },
+    {
+      "id": 3215,
+      "word": "sleigh",
+      "ipa": "sleɪ",
+      "viRead": "SLÂY",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe trượt tuyết (do vật kéo)",
+      "exampleEn": "Santa rides a sleigh across the sky.",
+      "exampleVi": "Ông già Noel cưỡi xe trượt tuyết bay qua bầu trời.",
+      "collocations": [
+        {
+          "en": "Santa's sleigh",
+          "vi": "xe trượt của ông già Noel"
+        },
+        {
+          "en": "sleigh bells",
+          "vi": "chuông xe trượt tuyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "sled",
+          "vi": "xe trượt nhỏ"
+        }
+      ],
+      "tip": "eigh đọc 'ây': 'slây' (giống slay). Jingle bells – sleigh bells!",
+      "emoji": "🛷",
+      "stage": 2
+    },
+    {
+      "id": 3216,
+      "word": "snail",
+      "ipa": "sneɪl",
+      "viRead": "SNÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ốc sên",
+      "exampleEn": "The snail moves very slowly.",
+      "exampleVi": "Con ốc sên bò rất chậm.",
+      "collocations": [
+        {
+          "en": "at a snail's pace",
+          "vi": "chậm như sên"
+        },
+        {
+          "en": "snail mail",
+          "vi": "thư tay (chậm)"
+        }
+      ],
+      "tip": "at a snail's pace = chậm như rùa bò.",
+      "emoji": "🐌",
+      "stage": 2
+    },
+    {
+      "id": 3217,
+      "word": "snowflake",
+      "ipa": "ˈsnoʊˌfleɪk",
+      "viRead": "SNÂU-phlâyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bông tuyết",
+      "exampleEn": "No two snowflakes are the same.",
+      "exampleVi": "Không có hai bông tuyết nào giống nhau.",
+      "collocations": [
+        {
+          "en": "falling snowflakes",
+          "vi": "bông tuyết rơi"
+        },
+        {
+          "en": "a tiny snowflake",
+          "vi": "bông tuyết nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "snow",
+          "vi": "tuyết"
+        }
+      ],
+      "tip": "Như bông tuyết đang rơi trên màn hình của bạn!",
+      "emoji": "❄️",
+      "stage": 2
+    },
+    {
+      "id": 3218,
+      "word": "snowman",
+      "ipa": "ˈsnoʊˌmæn",
+      "viRead": "SNÂU-men",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người tuyết",
+      "exampleEn": "Let's build a snowman!",
+      "exampleVi": "Mình đắp người tuyết đi!",
+      "collocations": [
+        {
+          "en": "build a snowman",
+          "vi": "đắp người tuyết"
+        },
+        {
+          "en": "a happy snowman",
+          "vi": "người tuyết vui vẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "snow",
+          "vi": "tuyết"
+        }
+      ],
+      "tip": "Số nhiều: snowmen.",
+      "emoji": "⛄",
+      "stage": 2
+    },
+    {
+      "id": 3219,
+      "word": "sparrow",
+      "ipa": "ˈspɛroʊ",
+      "viRead": "SPE-râu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim sẻ",
+      "exampleEn": "A sparrow is singing on the roof.",
+      "exampleVi": "Một con chim sẻ đang hót trên mái nhà.",
+      "collocations": [
+        {
+          "en": "a little sparrow",
+          "vi": "chim sẻ nhỏ"
+        },
+        {
+          "en": "sparrows chirp",
+          "vi": "chim sẻ líu lo"
+        }
+      ],
+      "tip": "Đọc 'SPE-râu'.",
+      "emoji": "🐦",
+      "stage": 2
+    },
+    {
+      "id": 3220,
+      "word": "squirrel",
+      "ipa": "ˈskwərəl",
+      "viRead": "SKWƠ-rơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con sóc",
+      "exampleEn": "The squirrel is hiding nuts.",
+      "exampleVi": "Con sóc đang giấu hạt.",
+      "collocations": [
+        {
+          "en": "a red squirrel",
+          "vi": "sóc đỏ"
+        },
+        {
+          "en": "squirrel away",
+          "vi": "dành dụm"
+        }
+      ],
+      "tip": "Khó đọc: 'SKWƠ-rơl'.",
+      "emoji": "🐿️",
+      "stage": 2
+    },
+    {
+      "id": 3221,
+      "word": "starfish",
+      "ipa": "ˈstɑrˌfɪʃ",
+      "viRead": "STAR-phish",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sao biển",
+      "exampleEn": "We found a starfish on the sand.",
+      "exampleVi": "Chúng tôi tìm thấy một con sao biển trên cát.",
+      "collocations": [
+        {
+          "en": "a red starfish",
+          "vi": "sao biển đỏ"
+        },
+        {
+          "en": "starfish beach",
+          "vi": "bãi sao biển"
+        }
+      ],
+      "tip": "Bãi Sao (Phú Quốc) nổi tiếng với sao biển.",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 3222,
+      "word": "stork",
+      "ipa": "stɔrk",
+      "viRead": "STORK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con cò (lớn)",
+      "exampleEn": "A stork is standing in the rice field.",
+      "exampleVi": "Một con cò đứng giữa ruộng lúa.",
+      "collocations": [
+        {
+          "en": "white stork",
+          "vi": "cò trắng"
+        },
+        {
+          "en": "the stork brings babies",
+          "vi": "cò mang em bé đến (truyện)"
+        }
+      ],
+      "tip": "Ở Việt Nam con cò thường gọi là egret/heron; stork là cò lớn.",
+      "emoji": "🦢",
+      "stage": 2
+    },
+    {
+      "id": 3223,
+      "word": "submarine",
+      "ipa": "ˈsəbməˌrin",
+      "viRead": "SƠB-mơ-rin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tàu ngầm",
+      "exampleEn": "The submarine went deep under the sea.",
+      "exampleVi": "Tàu ngầm lặn sâu xuống biển.",
+      "collocations": [
+        {
+          "en": "a nuclear submarine",
+          "vi": "tàu ngầm hạt nhân"
+        },
+        {
+          "en": "yellow submarine",
+          "vi": "tàu ngầm vàng"
+        }
+      ],
+      "tip": "sub (dưới) + marine (biển).",
+      "emoji": "🛳️",
+      "stage": 2
+    },
+    {
+      "id": 3224,
+      "word": "sunflower",
+      "ipa": "ˈsənˌflaʊər",
+      "viRead": "SƠN-phlao-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa hướng dương",
+      "exampleEn": "Sunflowers turn toward the sun.",
+      "exampleVi": "Hoa hướng dương quay về phía mặt trời.",
+      "collocations": [
+        {
+          "en": "sunflower seeds",
+          "vi": "hạt hướng dương"
+        },
+        {
+          "en": "a field of sunflowers",
+          "vi": "cánh đồng hướng dương"
+        }
+      ],
+      "family": [
+        {
+          "word": "sun",
+          "vi": "mặt trời"
+        }
+      ],
+      "tip": "sunflower seeds = hạt hướng dương (ăn Tết!).",
+      "emoji": "🌻",
+      "stage": 2
+    },
+    {
+      "id": 3225,
+      "word": "swan",
+      "ipa": "swɔn",
+      "viRead": "SWAN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thiên nga",
+      "exampleEn": "A white swan is swimming on the lake.",
+      "exampleVi": "Một con thiên nga trắng đang bơi trên hồ.",
+      "collocations": [
+        {
+          "en": "a black swan",
+          "vi": "thiên nga đen"
+        },
+        {
+          "en": "swan lake",
+          "vi": "hồ thiên nga"
+        }
+      ],
+      "tip": "black swan event = sự kiện bất ngờ hiếm có.",
+      "emoji": "🦢",
+      "stage": 2
+    },
+    {
+      "id": 3226,
+      "word": "telescope",
+      "ipa": "ˈtɛləˌskoʊp",
+      "viRead": "TE-lơ-skâup",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kính thiên văn",
+      "exampleEn": "We looked at the moon through a telescope.",
+      "exampleVi": "Chúng tôi ngắm mặt trăng qua kính thiên văn.",
+      "collocations": [
+        {
+          "en": "look through a telescope",
+          "vi": "nhìn qua kính thiên văn"
+        },
+        {
+          "en": "space telescope",
+          "vi": "kính viễn vọng không gian"
+        }
+      ],
+      "tip": "tele (xa) + scope (nhìn).",
+      "emoji": "🔭",
+      "stage": 2
+    },
+    {
+      "id": 3227,
+      "word": "tiger",
+      "ipa": "ˈtaɪgər",
+      "viRead": "TAI-gơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con hổ",
+      "exampleEn": "The tiger is the king of the jungle in Asia.",
+      "exampleVi": "Hổ là chúa sơn lâm ở châu Á.",
+      "collocations": [
+        {
+          "en": "Year of the Tiger",
+          "vi": "năm Dần"
+        },
+        {
+          "en": "a paper tiger",
+          "vi": "hổ giấy"
+        }
+      ],
+      "tip": "paper tiger = hổ giấy (trông đáng sợ nhưng yếu).",
+      "emoji": "🐯",
+      "stage": 2
+    },
+    {
+      "id": 3228,
+      "word": "toad",
+      "ipa": "toʊd",
+      "viRead": "TÂUĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con cóc",
+      "exampleEn": "A toad jumped out of the garden.",
+      "exampleVi": "Một con cóc nhảy ra khỏi vườn.",
+      "collocations": [
+        {
+          "en": "a fat toad",
+          "vi": "con cóc mập"
+        },
+        {
+          "en": "toad and frog",
+          "vi": "cóc và ếch"
+        }
+      ],
+      "family": [
+        {
+          "word": "frog",
+          "vi": "con ếch"
+        }
+      ],
+      "tip": "toad = cóc (da sần); frog = ếch.",
+      "emoji": "🐸",
+      "stage": 2
+    },
+    {
+      "id": 3229,
+      "word": "tortoise",
+      "ipa": "ˈtɔrtəs",
+      "viRead": "TOR-tơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con rùa (cạn)",
+      "exampleEn": "The tortoise won the race against the hare.",
+      "exampleVi": "Con rùa thắng cuộc đua với thỏ.",
+      "collocations": [
+        {
+          "en": "the tortoise and the hare",
+          "vi": "rùa và thỏ"
+        },
+        {
+          "en": "a giant tortoise",
+          "vi": "rùa khổng lồ"
+        }
+      ],
+      "family": [
+        {
+          "word": "turtle",
+          "vi": "rùa nước"
+        }
+      ],
+      "tip": "BẪY đọc: 'TOR-tơs' (không phải 'tor-toi-sơ').",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 3230,
+      "word": "tulip",
+      "ipa": "ˈtulɪp",
+      "viRead": "TU-lip",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa tulip",
+      "exampleEn": "Tulips come in many colors.",
+      "exampleVi": "Hoa tulip có nhiều màu sắc.",
+      "collocations": [
+        {
+          "en": "red tulips",
+          "vi": "tulip đỏ"
+        },
+        {
+          "en": "tulip garden",
+          "vi": "vườn tulip"
+        }
+      ],
+      "tip": "Hà Lan nổi tiếng với hoa tulip.",
+      "emoji": "🌷",
+      "stage": 2
+    },
+    {
+      "id": 3231,
+      "word": "turkey",
+      "ipa": "ˈtərki",
+      "viRead": "TƠ-ki",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gà tây",
+      "exampleEn": "Americans eat turkey at Thanksgiving.",
+      "exampleVi": "Người Mỹ ăn gà tây vào Lễ Tạ ơn.",
+      "collocations": [
+        {
+          "en": "roast turkey",
+          "vi": "gà tây quay"
+        },
+        {
+          "en": "turkey sandwich",
+          "vi": "bánh mì gà tây"
+        }
+      ],
+      "tip": "Turkey (viết hoa) = nước Thổ Nhĩ Kỳ.",
+      "emoji": "🦃",
+      "stage": 2
+    },
+    {
+      "id": 3232,
+      "word": "unicorn",
+      "ipa": "ˈjunɪˌkɔrn",
+      "viRead": "YU-ni-korn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỳ lân",
+      "exampleEn": "A unicorn has one horn on its head.",
+      "exampleVi": "Kỳ lân có một chiếc sừng trên đầu.",
+      "collocations": [
+        {
+          "en": "a magical unicorn",
+          "vi": "kỳ lân thần kỳ"
+        },
+        {
+          "en": "unicorn company",
+          "vi": "công ty kỳ lân (tỷ đô)"
+        }
+      ],
+      "tip": "uni (một) + corn (sừng). Startup tỷ đô = unicorn.",
+      "emoji": "🦄",
+      "stage": 2
+    },
+    {
+      "id": 3233,
+      "word": "vulture",
+      "ipa": "ˈvəlʧər",
+      "viRead": "VƠL-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim kền kền",
+      "exampleEn": "Vultures fly in circles in the sky.",
+      "exampleVi": "Kền kền bay vòng tròn trên trời.",
+      "collocations": [
+        {
+          "en": "circling vultures",
+          "vi": "kền kền lượn vòng"
+        },
+        {
+          "en": "a hungry vulture",
+          "vi": "kền kền đói"
+        }
+      ],
+      "tip": "Đọc 'VƠL-chơ'.",
+      "emoji": "🦅",
+      "stage": 2
+    },
+    {
+      "id": 3234,
+      "word": "walrus",
+      "ipa": "ˈwɔlrəs",
+      "viRead": "WOL-rơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con hải mã",
+      "exampleEn": "A walrus has two long tusks.",
+      "exampleVi": "Hải mã có hai chiếc ngà dài.",
+      "collocations": [
+        {
+          "en": "a big walrus",
+          "vi": "hải mã lớn"
+        },
+        {
+          "en": "walrus tusks",
+          "vi": "ngà hải mã"
+        }
+      ],
+      "tip": "Đọc 'WOL-rơs'.",
+      "emoji": "🦭",
+      "stage": 2
+    },
+    {
+      "id": 3235,
+      "word": "wasp",
+      "ipa": "wɑsp",
+      "viRead": "WASP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con ong bắp cày",
+      "exampleEn": "A wasp stung me on the arm.",
+      "exampleVi": "Một con ong bắp cày đốt vào tay tôi.",
+      "collocations": [
+        {
+          "en": "wasp sting",
+          "vi": "vết ong đốt"
+        },
+        {
+          "en": "wasp nest",
+          "vi": "tổ ong vò vẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "bee",
+          "vi": "con ong"
+        }
+      ],
+      "tip": "wasp (ong vò vẽ) dữ hơn bee (ong mật).",
+      "emoji": "🐝",
+      "stage": 2
+    },
+    {
+      "id": 3236,
+      "word": "whale",
+      "ipa": "weɪl",
+      "viRead": "WÂYL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cá voi",
+      "exampleEn": "The blue whale is the largest animal on Earth.",
+      "exampleVi": "Cá voi xanh là động vật lớn nhất Trái Đất.",
+      "collocations": [
+        {
+          "en": "blue whale",
+          "vi": "cá voi xanh"
+        },
+        {
+          "en": "whale watching",
+          "vi": "ngắm cá voi"
+        }
+      ],
+      "tip": "h câm: 'wâyl'. have a whale of a time = vui hết cỡ.",
+      "emoji": "🐋",
+      "stage": 2
+    },
+    {
+      "id": 3237,
+      "word": "woodpecker",
+      "ipa": "ˈwʊdˌpɛkər",
+      "viRead": "WUĐ-pe-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim gõ kiến",
+      "exampleEn": "A woodpecker is knocking on the tree.",
+      "exampleVi": "Một con chim gõ kiến đang gõ vào thân cây.",
+      "collocations": [
+        {
+          "en": "a red woodpecker",
+          "vi": "gõ kiến đỏ"
+        },
+        {
+          "en": "woodpecker sound",
+          "vi": "tiếng gõ kiến"
+        }
+      ],
+      "tip": "wood (gỗ) + peck (mổ) + er.",
+      "emoji": "🪶",
+      "stage": 2
+    },
+    {
+      "id": 3238,
+      "word": "zebra",
+      "ipa": "ˈzibrə",
+      "viRead": "DI-brơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngựa vằn",
+      "exampleEn": "A zebra has black and white stripes.",
+      "exampleVi": "Ngựa vằn có sọc đen trắng.",
+      "collocations": [
+        {
+          "en": "zebra crossing",
+          "vi": "vạch qua đường"
+        },
+        {
+          "en": "a herd of zebras",
+          "vi": "đàn ngựa vằn"
+        }
+      ],
+      "tip": "zebra crossing = vạch kẻ đường cho người đi bộ (Anh).",
+      "emoji": "🦓",
       "stage": 2
     }
   ]
