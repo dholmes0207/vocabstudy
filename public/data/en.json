@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3572,
+    "count": 3622,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -100437,6 +100437,1464 @@
       ],
       "tip": "present continuous = thì hiện tại tiếp diễn (am/is/are + V-ing).",
       "emoji": "♾️",
+      "stage": 2
+    },
+    {
+      "id": 3573,
+      "word": "criticism",
+      "ipa": "ˈkrɪtɪˌsɪzəm",
+      "viRead": "KRI-ti-si-dơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời phê bình, chỉ trích",
+      "exampleEn": "She can't take criticism.",
+      "exampleVi": "Cô ấy không chịu được lời phê bình.",
+      "collocations": [
+        {
+          "en": "accept criticism",
+          "vi": "đón nhận góp ý"
+        },
+        {
+          "en": "constructive criticism",
+          "vi": "góp ý xây dựng"
+        }
+      ],
+      "family": [
+        {
+          "word": "criticize",
+          "vi": "chỉ trích"
+        }
+      ],
+      "tip": "constructive criticism = góp ý mang tính xây dựng.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 3574,
+      "word": "critical",
+      "ipa": "ˈkrɪtɪkəl",
+      "viRead": "KRI-ti-kơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "quan trọng then chốt; phê phán",
+      "exampleEn": "Sleep is critical for memory.",
+      "exampleVi": "Giấc ngủ cực kỳ quan trọng với trí nhớ.",
+      "collocations": [
+        {
+          "en": "critical thinking",
+          "vi": "tư duy phản biện"
+        },
+        {
+          "en": "in critical condition",
+          "vi": "trong tình trạng nguy kịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "critic",
+          "vi": "nhà phê bình"
+        }
+      ],
+      "tip": "critical thinking = tư duy phản biện.",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 3575,
+      "word": "clause",
+      "ipa": "klɔz",
+      "viRead": "KLOD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mệnh đề; điều khoản",
+      "exampleEn": "Read every clause in the contract.",
+      "exampleVi": "Đọc kỹ từng điều khoản trong hợp đồng.",
+      "collocations": [
+        {
+          "en": "relative clause",
+          "vi": "mệnh đề quan hệ"
+        },
+        {
+          "en": "a clause in the contract",
+          "vi": "điều khoản hợp đồng"
+        }
+      ],
+      "tip": "relative clause = mệnh đề quan hệ (who, which, that).",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 3576,
+      "word": "convention",
+      "ipa": "kənˈvɛnʃən",
+      "viRead": "kơn-VEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội nghị; quy ước",
+      "exampleEn": "The city hosts a big comic convention.",
+      "exampleVi": "Thành phố tổ chức hội chợ truyện tranh lớn.",
+      "collocations": [
+        {
+          "en": "convention center",
+          "vi": "trung tâm hội nghị"
+        },
+        {
+          "en": "social convention",
+          "vi": "quy ước xã hội"
+        }
+      ],
+      "family": [
+        {
+          "word": "conventional",
+          "vi": "thông thường"
+        }
+      ],
+      "tip": "conventional = truyền thống, thông thường.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 3577,
+      "word": "convert",
+      "ipa": "kənˈvərt",
+      "viRead": "kơn-VƠT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chuyển đổi",
+      "exampleEn": "Convert dollars into dong.",
+      "exampleVi": "Đổi đô la sang đồng.",
+      "collocations": [
+        {
+          "en": "convert into",
+          "vi": "chuyển thành"
+        },
+        {
+          "en": "convert a file",
+          "vi": "chuyển đổi tệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "conversion",
+          "vi": "sự chuyển đổi"
+        }
+      ],
+      "tip": "Động từ nhấn sau: kơn-VƠT.",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 3578,
+      "word": "commonly",
+      "ipa": "ˈkɑmənli",
+      "viRead": "KA-mơn-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thường, phổ biến",
+      "exampleEn": "This word is commonly used in daily life.",
+      "exampleVi": "Từ này được dùng phổ biến hằng ngày.",
+      "collocations": [
+        {
+          "en": "commonly used",
+          "vi": "thường dùng"
+        },
+        {
+          "en": "commonly known as",
+          "vi": "thường được gọi là"
+        }
+      ],
+      "family": [
+        {
+          "word": "common",
+          "vi": "phổ biến"
+        }
+      ],
+      "tip": "commonly = usually, widely.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 3579,
+      "word": "confront",
+      "ipa": "kənˈfrənt",
+      "viRead": "kơn-PHRƠNT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đối mặt",
+      "exampleEn": "You have to confront your fears.",
+      "exampleVi": "Bạn phải đối mặt với nỗi sợ.",
+      "collocations": [
+        {
+          "en": "confront a problem",
+          "vi": "đối mặt vấn đề"
+        },
+        {
+          "en": "confront someone",
+          "vi": "chất vấn ai"
+        }
+      ],
+      "family": [
+        {
+          "word": "confrontation",
+          "vi": "sự đối đầu"
+        }
+      ],
+      "tip": "confront = face (trực diện, mạnh mẽ).",
+      "emoji": "🥊",
+      "stage": 2
+    },
+    {
+      "id": 3580,
+      "word": "chairman",
+      "ipa": "ˈʧɛrmən",
+      "viRead": "CHER-mơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chủ tịch",
+      "exampleEn": "The chairman opened the meeting.",
+      "exampleVi": "Chủ tịch khai mạc cuộc họp.",
+      "collocations": [
+        {
+          "en": "chairman of the board",
+          "vi": "chủ tịch hội đồng quản trị"
+        },
+        {
+          "en": "vice chairman",
+          "vi": "phó chủ tịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "chair",
+          "vi": "chủ trì"
+        }
+      ],
+      "tip": "Trung tính: chairperson / chair.",
+      "emoji": "👔",
+      "stage": 2
+    },
+    {
+      "id": 3581,
+      "word": "cloth",
+      "ipa": "klɔθ",
+      "viRead": "KLOTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vải; khăn",
+      "exampleEn": "Wipe the table with a damp cloth.",
+      "exampleVi": "Lau bàn bằng khăn ẩm.",
+      "collocations": [
+        {
+          "en": "a piece of cloth",
+          "vi": "mảnh vải"
+        },
+        {
+          "en": "a damp cloth",
+          "vi": "khăn ẩm"
+        }
+      ],
+      "family": [
+        {
+          "word": "clothes",
+          "vi": "quần áo"
+        }
+      ],
+      "tip": "cloth (vải, 'kloth') – clothes (quần áo, 'klâuđz').",
+      "emoji": "🧵",
+      "stage": 2
+    },
+    {
+      "id": 3582,
+      "word": "cast",
+      "ipa": "kæst",
+      "viRead": "KEST",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "dàn diễn viên; bó bột",
+      "exampleEn": "The cast of the film is amazing.",
+      "exampleVi": "Dàn diễn viên của bộ phim thật tuyệt.",
+      "collocations": [
+        {
+          "en": "the cast of a film",
+          "vi": "dàn diễn viên"
+        },
+        {
+          "en": "arm in a cast",
+          "vi": "tay bó bột"
+        }
+      ],
+      "tip": "cast – cast – cast. broadcast = phát sóng.",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 3583,
+      "word": "decent",
+      "ipa": "ˈdisənt",
+      "viRead": "ĐI-sơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tử tế; kha khá",
+      "exampleEn": "He has a decent job and a nice family.",
+      "exampleVi": "Anh ấy có công việc ổn và gia đình hạnh phúc.",
+      "collocations": [
+        {
+          "en": "a decent salary",
+          "vi": "lương kha khá"
+        },
+        {
+          "en": "decent people",
+          "vi": "người tử tế"
+        }
+      ],
+      "tip": "Đọc 'ĐI-sơnt' (khác descent 'đi-SENT').",
+      "emoji": "👍",
+      "stage": 2
+    },
+    {
+      "id": 3584,
+      "word": "defense",
+      "ipa": "dɪˈfɛns",
+      "viRead": "đi-PHENS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phòng thủ",
+      "exampleEn": "Our team has a strong defense.",
+      "exampleVi": "Đội chúng tôi có hàng phòng ngự chắc.",
+      "collocations": [
+        {
+          "en": "self defense",
+          "vi": "tự vệ"
+        },
+        {
+          "en": "Ministry of Defense",
+          "vi": "Bộ Quốc phòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "defend",
+          "vi": "bảo vệ"
+        }
+      ],
+      "tip": "Mỹ viết defense, Anh viết defence.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 3585,
+      "word": "democratic",
+      "ipa": "ˌdɛməˈkrætɪk",
+      "viRead": "đe-mơ-KRE-tik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dân chủ",
+      "exampleEn": "Every member gets a democratic vote.",
+      "exampleVi": "Mỗi thành viên có một lá phiếu dân chủ.",
+      "collocations": [
+        {
+          "en": "a democratic country",
+          "vi": "quốc gia dân chủ"
+        },
+        {
+          "en": "democratic decision",
+          "vi": "quyết định dân chủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "democracy",
+          "vi": "nền dân chủ"
+        }
+      ],
+      "tip": "Nhấn âm 3: đe-mơ-KRE-tik.",
+      "emoji": "🗳️",
+      "stage": 2
+    },
+    {
+      "id": 3586,
+      "word": "despite",
+      "ipa": "dɪˈspaɪt",
+      "viRead": "đi-SPAIT",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "mặc dù, bất chấp",
+      "exampleEn": "Despite the rain, we went out.",
+      "exampleVi": "Mặc dù mưa, chúng tôi vẫn ra ngoài.",
+      "collocations": [
+        {
+          "en": "despite the rain",
+          "vi": "bất chấp trời mưa"
+        },
+        {
+          "en": "despite the fact that",
+          "vi": "mặc dù thực tế là"
+        }
+      ],
+      "family": [
+        {
+          "word": "although",
+          "vi": "mặc dù"
+        }
+      ],
+      "tip": "despite + danh từ/V-ing; although + mệnh đề. KHÔNG nói 'despite of'.",
+      "emoji": "☔",
+      "stage": 2
+    },
+    {
+      "id": 3587,
+      "word": "destruction",
+      "ipa": "dɪˈstrəkʃən",
+      "viRead": "đi-STRƠK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phá hủy",
+      "exampleEn": "The storm caused great destruction.",
+      "exampleVi": "Cơn bão gây tàn phá nặng nề.",
+      "collocations": [
+        {
+          "en": "mass destruction",
+          "vi": "hủy diệt hàng loạt"
+        },
+        {
+          "en": "environmental destruction",
+          "vi": "hủy hoại môi trường"
+        }
+      ],
+      "family": [
+        {
+          "word": "destroy",
+          "vi": "phá hủy"
+        }
+      ],
+      "tip": "destroy (v) → destruction (n).",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 3588,
+      "word": "detailed",
+      "ipa": "dɪˈteɪld",
+      "viRead": "đi-TÂYLĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chi tiết",
+      "exampleEn": "He gave me detailed instructions.",
+      "exampleVi": "Anh ấy hướng dẫn tôi rất chi tiết.",
+      "collocations": [
+        {
+          "en": "detailed information",
+          "vi": "thông tin chi tiết"
+        },
+        {
+          "en": "a detailed plan",
+          "vi": "kế hoạch chi tiết"
+        }
+      ],
+      "family": [
+        {
+          "word": "detail",
+          "vi": "chi tiết"
+        }
+      ],
+      "tip": "detail (n) → detailed (adj).",
+      "emoji": "🔎",
+      "stage": 2
+    },
+    {
+      "id": 3589,
+      "word": "development",
+      "ipa": "dɪˈvɛləpmənt",
+      "viRead": "đi-VE-lơp-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phát triển",
+      "exampleEn": "The development of the city is very fast.",
+      "exampleVi": "Thành phố phát triển rất nhanh.",
+      "collocations": [
+        {
+          "en": "economic development",
+          "vi": "phát triển kinh tế"
+        },
+        {
+          "en": "personal development",
+          "vi": "phát triển bản thân"
+        }
+      ],
+      "family": [
+        {
+          "word": "develop",
+          "vi": "phát triển"
+        }
+      ],
+      "tip": "develop (v) → development (n) → developer (nhà phát triển).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 3590,
+      "word": "directly",
+      "ipa": "dɪˈrɛktli",
+      "viRead": "đi-REKT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "trực tiếp",
+      "exampleEn": "Please contact me directly.",
+      "exampleVi": "Vui lòng liên hệ trực tiếp với tôi.",
+      "collocations": [
+        {
+          "en": "directly opposite",
+          "vi": "ngay đối diện"
+        },
+        {
+          "en": "speak directly",
+          "vi": "nói thẳng"
+        }
+      ],
+      "family": [
+        {
+          "word": "direct",
+          "vi": "trực tiếp"
+        }
+      ],
+      "tip": "directly = straight, without anyone in between.",
+      "emoji": "➡️",
+      "stage": 2
+    },
+    {
+      "id": 3591,
+      "word": "disability",
+      "ipa": "ˌdɪsəˈbɪlɪti",
+      "viRead": "đi-sơ-BI-li-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khuyết tật",
+      "exampleEn": "The building is accessible for people with disabilities.",
+      "exampleVi": "Tòa nhà thuận tiện cho người khuyết tật.",
+      "collocations": [
+        {
+          "en": "people with disabilities",
+          "vi": "người khuyết tật"
+        },
+        {
+          "en": "learning disability",
+          "vi": "khó khăn trong học tập"
+        }
+      ],
+      "family": [
+        {
+          "word": "disabled",
+          "vi": "khuyết tật"
+        }
+      ],
+      "tip": "Nói 'people with disabilities' lịch sự hơn 'the disabled'.",
+      "emoji": "♿",
+      "stage": 2
+    },
+    {
+      "id": 3592,
+      "word": "double",
+      "ipa": "ˈdəbəl",
+      "viRead": "ĐƠ-bơl",
+      "pos": "adj./v.",
+      "posCategory": "adjective",
+      "meaning": "gấp đôi",
+      "exampleEn": "I'd like a double room, please.",
+      "exampleVi": "Cho tôi một phòng đôi.",
+      "collocations": [
+        {
+          "en": "double room",
+          "vi": "phòng đôi"
+        },
+        {
+          "en": "double check",
+          "vi": "kiểm tra lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "single",
+          "vi": "đơn"
+        }
+      ],
+      "tip": "double-check = kiểm tra lại cho chắc.",
+      "emoji": "2️⃣",
+      "stage": 2
+    },
+    {
+      "id": 3593,
+      "word": "drawing",
+      "ipa": "ˈdrɔɪŋ",
+      "viRead": "ĐRO-ing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bức vẽ",
+      "exampleEn": "My daughter made a drawing of our family.",
+      "exampleVi": "Con gái tôi vẽ một bức tranh về gia đình.",
+      "collocations": [
+        {
+          "en": "a pencil drawing",
+          "vi": "tranh chì"
+        },
+        {
+          "en": "drawing class",
+          "vi": "lớp vẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "draw",
+          "vi": "vẽ"
+        }
+      ],
+      "tip": "drawing (vẽ bằng bút) – painting (vẽ bằng màu).",
+      "emoji": "🖍️",
+      "stage": 2
+    },
+    {
+      "id": 3594,
+      "word": "dynamic",
+      "ipa": "daɪˈnæmɪk",
+      "viRead": "đai-NE-mik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "năng động",
+      "exampleEn": "She is a dynamic young leader.",
+      "exampleVi": "Cô ấy là nhà lãnh đạo trẻ năng động.",
+      "collocations": [
+        {
+          "en": "a dynamic person",
+          "vi": "người năng động"
+        },
+        {
+          "en": "dynamic city",
+          "vi": "thành phố năng động"
+        }
+      ],
+      "tip": "Nhấn âm 2: đai-NE-mik.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 3595,
+      "word": "earnings",
+      "ipa": "ˈərnɪŋz",
+      "viRead": "Ơ-ningd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thu nhập",
+      "exampleEn": "His earnings went up this year.",
+      "exampleVi": "Thu nhập của anh ấy tăng năm nay.",
+      "collocations": [
+        {
+          "en": "monthly earnings",
+          "vi": "thu nhập hằng tháng"
+        },
+        {
+          "en": "total earnings",
+          "vi": "tổng thu nhập"
+        }
+      ],
+      "family": [
+        {
+          "word": "earn",
+          "vi": "kiếm (tiền)"
+        }
+      ],
+      "tip": "Luôn số nhiều: earnings.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 3596,
+      "word": "edition",
+      "ipa": "ɪˈdɪʃən",
+      "viRead": "i-ĐI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ấn bản, phiên bản",
+      "exampleEn": "This is the latest edition of the dictionary.",
+      "exampleVi": "Đây là ấn bản mới nhất của từ điển.",
+      "collocations": [
+        {
+          "en": "latest edition",
+          "vi": "ấn bản mới nhất"
+        },
+        {
+          "en": "limited edition",
+          "vi": "phiên bản giới hạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "edit",
+          "vi": "chỉnh sửa"
+        }
+      ],
+      "tip": "limited edition = phiên bản giới hạn.",
+      "emoji": "📘",
+      "stage": 2
+    },
+    {
+      "id": 3597,
+      "word": "efficiency",
+      "ipa": "ɪˈfɪʃənsi",
+      "viRead": "i-PHI-shơn-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hiệu suất",
+      "exampleEn": "The new machine improves efficiency.",
+      "exampleVi": "Chiếc máy mới tăng hiệu suất.",
+      "collocations": [
+        {
+          "en": "energy efficiency",
+          "vi": "hiệu suất năng lượng"
+        },
+        {
+          "en": "improve efficiency",
+          "vi": "nâng cao hiệu quả"
+        }
+      ],
+      "family": [
+        {
+          "word": "efficient",
+          "vi": "hiệu quả"
+        }
+      ],
+      "tip": "efficient (adj) → efficiency (n).",
+      "emoji": "⚙️",
+      "stage": 2
+    },
+    {
+      "id": 3598,
+      "word": "enhance",
+      "ipa": "ɛnˈhæns",
+      "viRead": "en-HENS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nâng cao, cải thiện",
+      "exampleEn": "Music can enhance your mood.",
+      "exampleVi": "Âm nhạc có thể cải thiện tâm trạng.",
+      "collocations": [
+        {
+          "en": "enhance quality",
+          "vi": "nâng cao chất lượng"
+        },
+        {
+          "en": "enhance skills",
+          "vi": "nâng cao kỹ năng"
+        }
+      ],
+      "family": [
+        {
+          "word": "enhancement",
+          "vi": "sự nâng cao"
+        }
+      ],
+      "tip": "enhance = improve (trang trọng).",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 3599,
+      "word": "enterprise",
+      "ipa": "ˈɛntərˌpraɪz",
+      "viRead": "EN-tơ-praid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "doanh nghiệp",
+      "exampleEn": "She runs a small enterprise.",
+      "exampleVi": "Cô ấy điều hành một doanh nghiệp nhỏ.",
+      "collocations": [
+        {
+          "en": "small enterprise",
+          "vi": "doanh nghiệp nhỏ"
+        },
+        {
+          "en": "state enterprise",
+          "vi": "doanh nghiệp nhà nước"
+        }
+      ],
+      "family": [
+        {
+          "word": "entrepreneur",
+          "vi": "doanh nhân"
+        }
+      ],
+      "tip": "SME = small and medium-sized enterprises.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 3600,
+      "word": "equality",
+      "ipa": "ɪkˈwɑləti",
+      "viRead": "i-KWA-lơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bình đẳng",
+      "exampleEn": "We believe in gender equality.",
+      "exampleVi": "Chúng tôi tin vào bình đẳng giới.",
+      "collocations": [
+        {
+          "en": "gender equality",
+          "vi": "bình đẳng giới"
+        },
+        {
+          "en": "equality for all",
+          "vi": "bình đẳng cho tất cả"
+        }
+      ],
+      "family": [
+        {
+          "word": "equal",
+          "vi": "bằng nhau"
+        }
+      ],
+      "tip": "equal (adj) → equality (n) ↔ inequality.",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 3601,
+      "word": "equally",
+      "ipa": "ˈikwəli",
+      "viRead": "I-kwơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngang nhau, như nhau",
+      "exampleEn": "Share the cake equally.",
+      "exampleVi": "Chia bánh đều nhau.",
+      "collocations": [
+        {
+          "en": "equally important",
+          "vi": "quan trọng như nhau"
+        },
+        {
+          "en": "share equally",
+          "vi": "chia đều"
+        }
+      ],
+      "family": [
+        {
+          "word": "equal",
+          "vi": "bằng nhau"
+        }
+      ],
+      "tip": "equally + adj = ... như nhau.",
+      "emoji": "🟰",
+      "stage": 2
+    },
+    {
+      "id": 3602,
+      "word": "equivalent",
+      "ipa": "ɪkˈwɪvələnt",
+      "viRead": "i-KWI-vơ-lơnt",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "tương đương",
+      "exampleEn": "One dollar is equivalent to about 25,000 dong.",
+      "exampleVi": "Một đô la tương đương khoảng 25.000 đồng.",
+      "collocations": [
+        {
+          "en": "equivalent to",
+          "vi": "tương đương với"
+        },
+        {
+          "en": "the English equivalent",
+          "vi": "từ tương đương trong tiếng Anh"
+        }
+      ],
+      "family": [
+        {
+          "word": "equal",
+          "vi": "bằng"
+        }
+      ],
+      "tip": "Nhấn âm 2: i-KWI-vơ-lơnt.",
+      "emoji": "🔁",
+      "stage": 2
+    },
+    {
+      "id": 3603,
+      "word": "essentially",
+      "ipa": "ɛˈsɛnʃəli",
+      "viRead": "e-SEN-shơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "về cơ bản",
+      "exampleEn": "The two words mean essentially the same thing.",
+      "exampleVi": "Hai từ về cơ bản có nghĩa như nhau.",
+      "collocations": [
+        {
+          "en": "essentially the same",
+          "vi": "về cơ bản giống nhau"
+        },
+        {
+          "en": "essentially true",
+          "vi": "về cơ bản là đúng"
+        }
+      ],
+      "family": [
+        {
+          "word": "essential",
+          "vi": "thiết yếu"
+        }
+      ],
+      "tip": "essentially = basically.",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 3604,
+      "word": "ethnic",
+      "ipa": "ˈɛθnɪk",
+      "viRead": "ETH-nik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thuộc dân tộc",
+      "exampleEn": "Vietnam has 54 ethnic groups.",
+      "exampleVi": "Việt Nam có 54 dân tộc.",
+      "collocations": [
+        {
+          "en": "ethnic group",
+          "vi": "dân tộc"
+        },
+        {
+          "en": "ethnic minority",
+          "vi": "dân tộc thiểu số"
+        }
+      ],
+      "tip": "th đọc 'th': 'ETH-nik'.",
+      "emoji": "🎎",
+      "stage": 2
+    },
+    {
+      "id": 3605,
+      "word": "evaluate",
+      "ipa": "ɪˈvæljuˌeɪt",
+      "viRead": "i-VE-lyu-âyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đánh giá",
+      "exampleEn": "Teachers evaluate students' progress.",
+      "exampleVi": "Giáo viên đánh giá sự tiến bộ của học sinh.",
+      "collocations": [
+        {
+          "en": "evaluate results",
+          "vi": "đánh giá kết quả"
+        },
+        {
+          "en": "evaluate a plan",
+          "vi": "đánh giá kế hoạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "evaluation",
+          "vi": "sự đánh giá"
+        }
+      ],
+      "tip": "evaluate = assess.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 3606,
+      "word": "evident",
+      "ipa": "ˈɛvədənt",
+      "viRead": "E-vơ-đơnt",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rõ ràng, hiển nhiên",
+      "exampleEn": "It was evident that she was tired.",
+      "exampleVi": "Rõ ràng là cô ấy đã mệt.",
+      "collocations": [
+        {
+          "en": "clearly evident",
+          "vi": "rõ ràng"
+        },
+        {
+          "en": "it is evident that",
+          "vi": "rõ ràng là"
+        }
+      ],
+      "family": [
+        {
+          "word": "evidence",
+          "vi": "bằng chứng"
+        }
+      ],
+      "tip": "evident (adj) – evidence (n).",
+      "emoji": "👁️",
+      "stage": 2
+    },
+    {
+      "id": 3607,
+      "word": "evolution",
+      "ipa": "ˌɛvəˈluʃən",
+      "viRead": "e-vơ-LU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tiến hóa",
+      "exampleEn": "Darwin wrote about evolution.",
+      "exampleVi": "Darwin viết về thuyết tiến hóa.",
+      "collocations": [
+        {
+          "en": "the theory of evolution",
+          "vi": "thuyết tiến hóa"
+        },
+        {
+          "en": "human evolution",
+          "vi": "sự tiến hóa của loài người"
+        }
+      ],
+      "family": [
+        {
+          "word": "evolve",
+          "vi": "tiến hóa"
+        }
+      ],
+      "tip": "evolve (v) → evolution (n).",
+      "emoji": "🐒",
+      "stage": 2
+    },
+    {
+      "id": 3608,
+      "word": "evolve",
+      "ipa": "ɪˈvɑlv",
+      "viRead": "i-VALV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phát triển, tiến hóa",
+      "exampleEn": "Languages evolve over time.",
+      "exampleVi": "Ngôn ngữ thay đổi theo thời gian.",
+      "collocations": [
+        {
+          "en": "evolve over time",
+          "vi": "phát triển theo thời gian"
+        },
+        {
+          "en": "evolve into",
+          "vi": "phát triển thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "evolution",
+          "vi": "sự tiến hóa"
+        }
+      ],
+      "tip": "evolve = develop gradually.",
+      "emoji": "🌱",
+      "stage": 2
+    },
+    {
+      "id": 3609,
+      "word": "existing",
+      "ipa": "ɪgˈzɪstɪŋ",
+      "viRead": "ig-DIS-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hiện có",
+      "exampleEn": "We will improve the existing system.",
+      "exampleVi": "Chúng tôi sẽ cải thiện hệ thống hiện có.",
+      "collocations": [
+        {
+          "en": "existing customers",
+          "vi": "khách hàng hiện tại"
+        },
+        {
+          "en": "the existing system",
+          "vi": "hệ thống hiện có"
+        }
+      ],
+      "family": [
+        {
+          "word": "exist",
+          "vi": "tồn tại"
+        }
+      ],
+      "tip": "existing = currently in use.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 3610,
+      "word": "expansion",
+      "ipa": "ɪkˈspænʧən",
+      "viRead": "ik-SPEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự mở rộng",
+      "exampleEn": "The company is planning an expansion.",
+      "exampleVi": "Công ty đang lên kế hoạch mở rộng.",
+      "collocations": [
+        {
+          "en": "rapid expansion",
+          "vi": "mở rộng nhanh"
+        },
+        {
+          "en": "business expansion",
+          "vi": "mở rộng kinh doanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "expand",
+          "vi": "mở rộng"
+        }
+      ],
+      "tip": "expand (v) → expansion (n).",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 3611,
+      "word": "experienced",
+      "ipa": "ɪkˈspɪriənst",
+      "viRead": "ik-SPI-ri-ơnst",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có kinh nghiệm",
+      "exampleEn": "We need an experienced teacher.",
+      "exampleVi": "Chúng tôi cần một giáo viên có kinh nghiệm.",
+      "collocations": [
+        {
+          "en": "an experienced driver",
+          "vi": "tài xế lâu năm"
+        },
+        {
+          "en": "highly experienced",
+          "vi": "rất giàu kinh nghiệm"
+        }
+      ],
+      "family": [
+        {
+          "word": "experience",
+          "vi": "kinh nghiệm"
+        }
+      ],
+      "tip": "experienced ↔ inexperienced.",
+      "emoji": "🧓",
+      "stage": 2
+    },
+    {
+      "id": 3612,
+      "word": "explanation",
+      "ipa": "ˌɛkspləˈneɪʃən",
+      "viRead": "ek-splơ-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời giải thích",
+      "exampleEn": "Thank you for the clear explanation.",
+      "exampleVi": "Cảm ơn lời giải thích rõ ràng.",
+      "collocations": [
+        {
+          "en": "a clear explanation",
+          "vi": "giải thích rõ ràng"
+        },
+        {
+          "en": "give an explanation",
+          "vi": "đưa ra lời giải thích"
+        }
+      ],
+      "family": [
+        {
+          "word": "explain",
+          "vi": "giải thích"
+        }
+      ],
+      "tip": "BẪY chính tả: explain nhưng explAnation (mất chữ i).",
+      "emoji": "💬",
+      "stage": 2
+    },
+    {
+      "id": 3613,
+      "word": "expression",
+      "ipa": "ɪkˈsprɛʃən",
+      "viRead": "ik-SPRE-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cách diễn đạt; vẻ mặt",
+      "exampleEn": "Learn useful English expressions.",
+      "exampleVi": "Học các cách diễn đạt tiếng Anh hữu ích.",
+      "collocations": [
+        {
+          "en": "facial expression",
+          "vi": "nét mặt"
+        },
+        {
+          "en": "a common expression",
+          "vi": "thành ngữ phổ biến"
+        }
+      ],
+      "family": [
+        {
+          "word": "express",
+          "vi": "diễn tả"
+        }
+      ],
+      "tip": "express (v) → expression (n).",
+      "emoji": "😮",
+      "stage": 2
+    },
+    {
+      "id": 3614,
+      "word": "extensive",
+      "ipa": "ɪkˈstɛnsɪv",
+      "viRead": "ik-STEN-siv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rộng lớn; sâu rộng",
+      "exampleEn": "The museum has an extensive collection.",
+      "exampleVi": "Bảo tàng có bộ sưu tập rất phong phú.",
+      "collocations": [
+        {
+          "en": "extensive knowledge",
+          "vi": "kiến thức sâu rộng"
+        },
+        {
+          "en": "extensive damage",
+          "vi": "thiệt hại trên diện rộng"
+        }
+      ],
+      "family": [
+        {
+          "word": "extend",
+          "vi": "mở rộng"
+        }
+      ],
+      "tip": "extensive reading = đọc nhiều (phương pháp học).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 3615,
+      "word": "extract",
+      "ipa": "ɪkˈstrækt",
+      "viRead": "ik-STREKT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chiết xuất; trích",
+      "exampleEn": "Extract the juice from the lemons.",
+      "exampleVi": "Vắt lấy nước từ chanh.",
+      "collocations": [
+        {
+          "en": "extract juice",
+          "vi": "ép lấy nước"
+        },
+        {
+          "en": "extract information",
+          "vi": "trích xuất thông tin"
+        }
+      ],
+      "tip": "Động từ nhấn sau: ik-STREKT; danh từ nhấn đầu: EK-strekt.",
+      "emoji": "🍋",
+      "stage": 2
+    },
+    {
+      "id": 3616,
+      "word": "failure",
+      "ipa": "ˈfeɪljər",
+      "viRead": "PHÂYL-yơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thất bại",
+      "exampleEn": "Failure is the first step to success.",
+      "exampleVi": "Thất bại là bước đầu của thành công.",
+      "collocations": [
+        {
+          "en": "a complete failure",
+          "vi": "thất bại hoàn toàn"
+        },
+        {
+          "en": "heart failure",
+          "vi": "suy tim"
+        }
+      ],
+      "family": [
+        {
+          "word": "fail",
+          "vi": "thất bại"
+        }
+      ],
+      "tip": "Thất bại là mẹ thành công = Failure is the mother of success.",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 3617,
+      "word": "formal",
+      "ipa": "ˈfɔrməl",
+      "viRead": "PHOR-mơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trang trọng",
+      "exampleEn": "Use formal English in a job interview.",
+      "exampleVi": "Dùng tiếng Anh trang trọng khi phỏng vấn.",
+      "collocations": [
+        {
+          "en": "formal language",
+          "vi": "ngôn ngữ trang trọng"
+        },
+        {
+          "en": "formal dress",
+          "vi": "trang phục lịch sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "informal",
+          "vi": "thân mật"
+        }
+      ],
+      "tip": "formal ↔ informal.",
+      "emoji": "🎩",
+      "stage": 2
+    },
+    {
+      "id": 3618,
+      "word": "formula",
+      "ipa": "ˈfɔrmjələ",
+      "viRead": "PHOR-myơ-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công thức",
+      "exampleEn": "Learn this math formula by heart.",
+      "exampleVi": "Học thuộc công thức toán này.",
+      "collocations": [
+        {
+          "en": "math formula",
+          "vi": "công thức toán"
+        },
+        {
+          "en": "baby formula",
+          "vi": "sữa công thức"
+        }
+      ],
+      "tip": "Số nhiều: formulas / formulae. Formula 1 = giải đua F1.",
+      "emoji": "🧮",
+      "stage": 2
+    },
+    {
+      "id": 3619,
+      "word": "founder",
+      "ipa": "ˈfaʊndər",
+      "viRead": "PHAON-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người sáng lập",
+      "exampleEn": "He is the founder of a tech company.",
+      "exampleVi": "Anh ấy là người sáng lập một công ty công nghệ.",
+      "collocations": [
+        {
+          "en": "co-founder",
+          "vi": "đồng sáng lập"
+        },
+        {
+          "en": "the founder of",
+          "vi": "người sáng lập"
+        }
+      ],
+      "family": [
+        {
+          "word": "found",
+          "vi": "thành lập"
+        }
+      ],
+      "tip": "found (thành lập) → founder.",
+      "emoji": "🏗️",
+      "stage": 2
+    },
+    {
+      "id": 3620,
+      "word": "framework",
+      "ipa": "ˈfreɪmˌwərk",
+      "viRead": "PHRÂYM-wơk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khung, khuôn khổ",
+      "exampleEn": "This app is built with a modern framework.",
+      "exampleVi": "Ứng dụng này được xây bằng một framework hiện đại.",
+      "collocations": [
+        {
+          "en": "legal framework",
+          "vi": "khung pháp lý"
+        },
+        {
+          "en": "a framework for",
+          "vi": "khung cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "frame",
+          "vi": "khung"
+        }
+      ],
+      "tip": "VocabStudy dùng framework React!",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 3621,
+      "word": "freely",
+      "ipa": "ˈfrili",
+      "viRead": "PHRI-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "tự do",
+      "exampleEn": "You can speak freely here.",
+      "exampleVi": "Bạn có thể nói thoải mái ở đây.",
+      "collocations": [
+        {
+          "en": "speak freely",
+          "vi": "nói thoải mái"
+        },
+        {
+          "en": "freely available",
+          "vi": "có sẵn miễn phí"
+        }
+      ],
+      "family": [
+        {
+          "word": "free",
+          "vi": "tự do"
+        }
+      ],
+      "tip": "freely = without limits.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 3622,
+      "word": "frequency",
+      "ipa": "ˈfrikwənsi",
+      "viRead": "PHRI-kwơn-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tần suất; tần số",
+      "exampleEn": "Words are sorted by frequency.",
+      "exampleVi": "Các từ được sắp xếp theo tần suất.",
+      "collocations": [
+        {
+          "en": "high frequency",
+          "vi": "tần suất cao"
+        },
+        {
+          "en": "radio frequency",
+          "vi": "tần số radio"
+        }
+      ],
+      "family": [
+        {
+          "word": "frequent",
+          "vi": "thường xuyên"
+        }
+      ],
+      "tip": "Học từ tần suất cao trước = học từ hay gặp nhất trước.",
+      "emoji": "📶",
       "stage": 2
     }
   ]
