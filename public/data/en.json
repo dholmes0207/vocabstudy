@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3522,
+    "count": 3572,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -99023,6 +99023,1420 @@
       ],
       "tip": "woods (rừng nhỏ) < forest (rừng lớn). out of the woods = thoát nạn.",
       "emoji": "🌲",
+      "stage": 2
+    },
+    {
+      "id": 3523,
+      "word": "absence",
+      "ipa": "ˈæbsəns",
+      "viRead": "EB-sơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự vắng mặt",
+      "exampleEn": "Nobody noticed his absence.",
+      "exampleVi": "Không ai để ý anh ấy vắng mặt.",
+      "collocations": [
+        {
+          "en": "in the absence of",
+          "vi": "khi không có"
+        },
+        {
+          "en": "absence from school",
+          "vi": "nghỉ học"
+        }
+      ],
+      "family": [
+        {
+          "word": "absent",
+          "vi": "vắng mặt"
+        }
+      ],
+      "tip": "absent (adj) → absence (n).",
+      "emoji": "🪑",
+      "stage": 2
+    },
+    {
+      "id": 3524,
+      "word": "absolutely",
+      "ipa": "ˌæbsəˈlutli",
+      "viRead": "eb-sơ-LUT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hoàn toàn; chắc chắn rồi",
+      "exampleEn": "You're absolutely right.",
+      "exampleVi": "Bạn hoàn toàn đúng.",
+      "collocations": [
+        {
+          "en": "absolutely right",
+          "vi": "hoàn toàn đúng"
+        },
+        {
+          "en": "absolutely not",
+          "vi": "tuyệt đối không"
+        }
+      ],
+      "family": [
+        {
+          "word": "absolute",
+          "vi": "tuyệt đối"
+        }
+      ],
+      "tip": "Absolutely! = Chắc chắn rồi! (đồng ý nhiệt tình).",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 3525,
+      "word": "accidentally",
+      "ipa": "ˌæksəˈdɛntəli",
+      "viRead": "ek-sơ-ĐEN-tơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "vô tình",
+      "exampleEn": "I accidentally deleted the file.",
+      "exampleVi": "Tôi vô tình xóa mất tệp.",
+      "collocations": [
+        {
+          "en": "accidentally break",
+          "vi": "vô tình làm vỡ"
+        },
+        {
+          "en": "accidentally on purpose",
+          "vi": "giả vờ vô tình"
+        }
+      ],
+      "family": [
+        {
+          "word": "accident",
+          "vi": "tai nạn"
+        }
+      ],
+      "tip": "accidentally = by accident ↔ on purpose.",
+      "emoji": "😬",
+      "stage": 2
+    },
+    {
+      "id": 3526,
+      "word": "accompany",
+      "ipa": "əˈkəmpəni",
+      "viRead": "ơ-KƠM-pơ-ni",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đi cùng",
+      "exampleEn": "Children must be accompanied by an adult.",
+      "exampleVi": "Trẻ em phải đi cùng người lớn.",
+      "collocations": [
+        {
+          "en": "accompany someone",
+          "vi": "đi cùng ai"
+        },
+        {
+          "en": "accompanied by",
+          "vi": "có ... đi kèm"
+        }
+      ],
+      "family": [
+        {
+          "word": "company",
+          "vi": "sự bầu bạn"
+        }
+      ],
+      "tip": "accompany = go with (trang trọng).",
+      "emoji": "👨‍👧",
+      "stage": 2
+    },
+    {
+      "id": 3527,
+      "word": "additional",
+      "ipa": "əˈdɪʃənəl",
+      "viRead": "ơ-ĐI-shơ-nơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thêm, bổ sung",
+      "exampleEn": "There is no additional charge.",
+      "exampleVi": "Không tính thêm phí.",
+      "collocations": [
+        {
+          "en": "additional cost",
+          "vi": "chi phí phát sinh"
+        },
+        {
+          "en": "additional information",
+          "vi": "thông tin bổ sung"
+        }
+      ],
+      "family": [
+        {
+          "word": "add",
+          "vi": "thêm"
+        }
+      ],
+      "tip": "add (v) → addition (n) → additional (adj).",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 3528,
+      "word": "admission",
+      "ipa": "ədˈmɪʃən",
+      "viRead": "ơđ-MI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nhận vào; vé vào",
+      "exampleEn": "Admission to the museum is free on Sundays.",
+      "exampleVi": "Vào bảo tàng miễn phí ngày Chủ nhật.",
+      "collocations": [
+        {
+          "en": "free admission",
+          "vi": "vào cửa miễn phí"
+        },
+        {
+          "en": "university admission",
+          "vi": "tuyển sinh đại học"
+        }
+      ],
+      "family": [
+        {
+          "word": "admit",
+          "vi": "cho vào"
+        }
+      ],
+      "tip": "admit (v) → admission (n).",
+      "emoji": "🎟️",
+      "stage": 2
+    },
+    {
+      "id": 3529,
+      "word": "advanced",
+      "ipa": "ədˈvænst",
+      "viRead": "ơđ-VENST",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nâng cao; tiên tiến",
+      "exampleEn": "She is in the advanced English class.",
+      "exampleVi": "Cô ấy học lớp tiếng Anh nâng cao.",
+      "collocations": [
+        {
+          "en": "advanced level",
+          "vi": "trình độ nâng cao"
+        },
+        {
+          "en": "advanced technology",
+          "vi": "công nghệ tiên tiến"
+        }
+      ],
+      "family": [
+        {
+          "word": "advance",
+          "vi": "tiến bộ"
+        }
+      ],
+      "tip": "beginner → intermediate → advanced.",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 3530,
+      "word": "advertisement",
+      "ipa": "ˌædvərˈtaɪzmənt",
+      "viRead": "eđ-vơ-TAID-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quảng cáo",
+      "exampleEn": "I saw an advertisement for a new phone.",
+      "exampleVi": "Tôi thấy quảng cáo một chiếc điện thoại mới.",
+      "collocations": [
+        {
+          "en": "TV advertisement",
+          "vi": "quảng cáo truyền hình"
+        },
+        {
+          "en": "job advertisement",
+          "vi": "tin tuyển dụng"
+        }
+      ],
+      "family": [
+        {
+          "word": "advertise",
+          "vi": "quảng cáo"
+        }
+      ],
+      "tip": "Viết tắt: ad / advert.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 3531,
+      "word": "afterwards",
+      "ipa": "ˈæftərwərdz",
+      "viRead": "EPH-tơ-wơđd",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sau đó",
+      "exampleEn": "We had dinner and went for a walk afterwards.",
+      "exampleVi": "Chúng tôi ăn tối rồi sau đó đi dạo.",
+      "collocations": [
+        {
+          "en": "soon afterwards",
+          "vi": "ngay sau đó"
+        },
+        {
+          "en": "shortly afterwards",
+          "vi": "chẳng bao lâu sau"
+        }
+      ],
+      "family": [
+        {
+          "word": "after",
+          "vi": "sau"
+        }
+      ],
+      "tip": "afterwards = later, after that.",
+      "emoji": "⏭️",
+      "stage": 2
+    },
+    {
+      "id": 3532,
+      "word": "aid",
+      "ipa": "eɪd",
+      "viRead": "ÂYĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự viện trợ, cứu trợ",
+      "exampleEn": "They sent food aid to the flood area.",
+      "exampleVi": "Họ gửi lương thực cứu trợ tới vùng lũ.",
+      "collocations": [
+        {
+          "en": "first aid",
+          "vi": "sơ cứu"
+        },
+        {
+          "en": "hearing aid",
+          "vi": "máy trợ thính"
+        }
+      ],
+      "tip": "first aid kit = hộp sơ cứu.",
+      "emoji": "⛑️",
+      "stage": 2
+    },
+    {
+      "id": 3533,
+      "word": "alongside",
+      "ipa": "əˌlɔŋˈsaɪd",
+      "viRead": "ơ-long-SAIĐ",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "bên cạnh; cùng với",
+      "exampleEn": "I worked alongside many great people.",
+      "exampleVi": "Tôi đã làm việc cùng nhiều người tuyệt vời.",
+      "collocations": [
+        {
+          "en": "alongside each other",
+          "vi": "cạnh nhau"
+        },
+        {
+          "en": "work alongside",
+          "vi": "làm việc cùng"
+        }
+      ],
+      "tip": "alongside = beside / together with.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 3534,
+      "word": "alter",
+      "ipa": "ˈɔltər",
+      "viRead": "OL-tơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thay đổi, sửa",
+      "exampleEn": "Can you alter this dress for me?",
+      "exampleVi": "Bạn sửa giúp tôi chiếc váy này được không?",
+      "collocations": [
+        {
+          "en": "alter a dress",
+          "vi": "sửa váy"
+        },
+        {
+          "en": "alter plans",
+          "vi": "thay đổi kế hoạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "alteration",
+          "vi": "sự sửa đổi"
+        }
+      ],
+      "tip": "alter (thay đổi) đọc giống altar (bàn thờ).",
+      "emoji": "✂️",
+      "stage": 2
+    },
+    {
+      "id": 3535,
+      "word": "apparently",
+      "ipa": "əˈpɛrəntli",
+      "viRead": "ơ-PE-rơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nghe nói, hình như",
+      "exampleEn": "Apparently, she's moving to Hanoi.",
+      "exampleVi": "Nghe nói cô ấy sắp chuyển ra Hà Nội.",
+      "collocations": [
+        {
+          "en": "apparently not",
+          "vi": "hình như không"
+        },
+        {
+          "en": "apparently true",
+          "vi": "có vẻ đúng"
+        }
+      ],
+      "family": [
+        {
+          "word": "apparent",
+          "vi": "rõ ràng"
+        }
+      ],
+      "tip": "Apparently, ... = Nghe nói là... (tin chưa chắc).",
+      "emoji": "🤷",
+      "stage": 2
+    },
+    {
+      "id": 3536,
+      "word": "architect",
+      "ipa": "ˈɑrkəˌtɛkt",
+      "viRead": "AR-kơ-tekt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kiến trúc sư",
+      "exampleEn": "The architect designed a green building.",
+      "exampleVi": "Kiến trúc sư thiết kế một tòa nhà xanh.",
+      "collocations": [
+        {
+          "en": "a famous architect",
+          "vi": "kiến trúc sư nổi tiếng"
+        },
+        {
+          "en": "landscape architect",
+          "vi": "kiến trúc sư cảnh quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "architecture",
+          "vi": "kiến trúc"
+        }
+      ],
+      "tip": "ch đọc 'k': 'AR-ki-tekt'.",
+      "emoji": "📐",
+      "stage": 2
+    },
+    {
+      "id": 3537,
+      "word": "architecture",
+      "ipa": "ˈɑrkəˌtɛkʧər",
+      "viRead": "AR-kơ-tek-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kiến trúc",
+      "exampleEn": "Hue is famous for its royal architecture.",
+      "exampleVi": "Huế nổi tiếng với kiến trúc cung đình.",
+      "collocations": [
+        {
+          "en": "modern architecture",
+          "vi": "kiến trúc hiện đại"
+        },
+        {
+          "en": "French architecture",
+          "vi": "kiến trúc Pháp"
+        }
+      ],
+      "family": [
+        {
+          "word": "architect",
+          "vi": "kiến trúc sư"
+        }
+      ],
+      "tip": "ch đọc 'k': 'AR-ki-tek-chơ'.",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 3538,
+      "word": "aside",
+      "ipa": "əˈsaɪd",
+      "viRead": "ơ-SAIĐ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sang một bên",
+      "exampleEn": "Put your phone aside and listen.",
+      "exampleVi": "Để điện thoại sang một bên và lắng nghe.",
+      "collocations": [
+        {
+          "en": "put aside",
+          "vi": "để sang bên; dành dụm"
+        },
+        {
+          "en": "aside from",
+          "vi": "ngoài ra"
+        }
+      ],
+      "tip": "put money aside = để dành tiền.",
+      "emoji": "↔️",
+      "stage": 2
+    },
+    {
+      "id": 3539,
+      "word": "assistance",
+      "ipa": "əˈsɪstəns",
+      "viRead": "ơ-SIS-tơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự trợ giúp",
+      "exampleEn": "Do you need any assistance?",
+      "exampleVi": "Bạn có cần hỗ trợ gì không?",
+      "collocations": [
+        {
+          "en": "ask for assistance",
+          "vi": "nhờ trợ giúp"
+        },
+        {
+          "en": "financial assistance",
+          "vi": "hỗ trợ tài chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "assist",
+          "vi": "giúp đỡ"
+        },
+        {
+          "word": "assistant",
+          "vi": "trợ lý"
+        }
+      ],
+      "tip": "assistance = help (trang trọng).",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 3540,
+      "word": "attendance",
+      "ipa": "əˈtɛndəns",
+      "viRead": "ơ-TEN-đơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự có mặt, chuyên cần",
+      "exampleEn": "Attendance is checked every morning.",
+      "exampleVi": "Sáng nào cũng điểm danh.",
+      "collocations": [
+        {
+          "en": "take attendance",
+          "vi": "điểm danh"
+        },
+        {
+          "en": "perfect attendance",
+          "vi": "đi học đầy đủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "attend",
+          "vi": "tham dự"
+        }
+      ],
+      "tip": "attend (v) → attendance (n).",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 3541,
+      "word": "attraction",
+      "ipa": "əˈtrækʃən",
+      "viRead": "ơ-TREK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "điểm thu hút",
+      "exampleEn": "Ha Long Bay is a major tourist attraction.",
+      "exampleVi": "Vịnh Hạ Long là điểm thu hút du khách lớn.",
+      "collocations": [
+        {
+          "en": "tourist attraction",
+          "vi": "điểm du lịch"
+        },
+        {
+          "en": "the main attraction",
+          "vi": "điểm thu hút chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "attract",
+          "vi": "thu hút"
+        }
+      ],
+      "tip": "attract (v) → attraction (n) → attractive (adj).",
+      "emoji": "🎡",
+      "stage": 2
+    },
+    {
+      "id": 3542,
+      "word": "automatically",
+      "ipa": "ˌɔtəˈmætɪkli",
+      "viRead": "o-tơ-ME-tik-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "một cách tự động",
+      "exampleEn": "The app saves your progress automatically.",
+      "exampleVi": "Ứng dụng tự động lưu tiến độ của bạn.",
+      "collocations": [
+        {
+          "en": "work automatically",
+          "vi": "hoạt động tự động"
+        },
+        {
+          "en": "update automatically",
+          "vi": "tự cập nhật"
+        }
+      ],
+      "family": [
+        {
+          "word": "automatic",
+          "vi": "tự động"
+        }
+      ],
+      "tip": "automatic + ally.",
+      "emoji": "⚙️",
+      "stage": 2
+    },
+    {
+      "id": 3543,
+      "word": "awareness",
+      "ipa": "əˈwɛrnəs",
+      "viRead": "ơ-WER-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhận thức",
+      "exampleEn": "We need more awareness about plastic waste.",
+      "exampleVi": "Chúng ta cần nâng cao nhận thức về rác thải nhựa.",
+      "collocations": [
+        {
+          "en": "raise awareness",
+          "vi": "nâng cao nhận thức"
+        },
+        {
+          "en": "public awareness",
+          "vi": "nhận thức cộng đồng"
+        }
+      ],
+      "family": [
+        {
+          "word": "aware",
+          "vi": "nhận thức được"
+        }
+      ],
+      "tip": "aware (adj) → awareness (n).",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 3544,
+      "word": "backwards",
+      "ipa": "ˈbækwərdz",
+      "viRead": "BEK-wơđd",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "về phía sau, ngược",
+      "exampleEn": "Count backwards from ten.",
+      "exampleVi": "Đếm ngược từ mười.",
+      "collocations": [
+        {
+          "en": "count backwards",
+          "vi": "đếm ngược"
+        },
+        {
+          "en": "step backwards",
+          "vi": "lùi lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "forwards",
+          "vi": "về phía trước"
+        }
+      ],
+      "tip": "backwards ↔ forwards.",
+      "emoji": "⏪",
+      "stage": 2
+    },
+    {
+      "id": 3545,
+      "word": "band",
+      "ipa": "bænd",
+      "viRead": "BENĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ban nhạc; dải",
+      "exampleEn": "My favorite band is playing tonight.",
+      "exampleVi": "Ban nhạc tôi thích biểu diễn tối nay.",
+      "collocations": [
+        {
+          "en": "rock band",
+          "vi": "ban nhạc rock"
+        },
+        {
+          "en": "rubber band",
+          "vi": "dây chun"
+        }
+      ],
+      "tip": "band = ban nhạc; rubber band = dây chun.",
+      "emoji": "🎸",
+      "stage": 2
+    },
+    {
+      "id": 3546,
+      "word": "bar",
+      "ipa": "bɑr",
+      "viRead": "BAR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quán bar; thanh",
+      "exampleEn": "Let's meet at the bar after work.",
+      "exampleVi": "Tan làm gặp nhau ở quán bar nhé.",
+      "collocations": [
+        {
+          "en": "a chocolate bar",
+          "vi": "thanh sô-cô-la"
+        },
+        {
+          "en": "coffee bar",
+          "vi": "quầy cà phê"
+        }
+      ],
+      "tip": "bar = quầy/quán; a bar of soap = bánh xà phòng.",
+      "emoji": "🍫",
+      "stage": 2
+    },
+    {
+      "id": 3547,
+      "word": "barely",
+      "ipa": "ˈbɛrli",
+      "viRead": "BER-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "vừa đủ, hầu như không",
+      "exampleEn": "I could barely hear him.",
+      "exampleVi": "Tôi gần như không nghe được anh ấy.",
+      "collocations": [
+        {
+          "en": "barely enough",
+          "vi": "vừa đủ"
+        },
+        {
+          "en": "barely awake",
+          "vi": "vừa mới tỉnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "bare",
+          "vi": "trần, trụi"
+        }
+      ],
+      "tip": "barely ≈ hardly (hầu như không).",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 3548,
+      "word": "base",
+      "ipa": "beɪs",
+      "viRead": "BÂYS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nền tảng; căn cứ",
+      "exampleEn": "Rice is the base of every Vietnamese meal.",
+      "exampleVi": "Cơm là nền tảng của mọi bữa ăn Việt.",
+      "collocations": [
+        {
+          "en": "military base",
+          "vi": "căn cứ quân sự"
+        },
+        {
+          "en": "base on",
+          "vi": "dựa trên"
+        }
+      ],
+      "family": [
+        {
+          "word": "basic",
+          "vi": "cơ bản"
+        }
+      ],
+      "tip": "be based on = dựa trên: The film is based on a true story.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 3549,
+      "word": "behalf",
+      "ipa": "bɪˈhæf",
+      "viRead": "bi-HEPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thay mặt",
+      "exampleEn": "I'm writing on behalf of my company.",
+      "exampleVi": "Tôi viết thư thay mặt công ty.",
+      "collocations": [
+        {
+          "en": "on behalf of",
+          "vi": "thay mặt cho"
+        },
+        {
+          "en": "on my behalf",
+          "vi": "thay mặt tôi"
+        }
+      ],
+      "tip": "Chỉ dùng trong cụm on behalf of.",
+      "emoji": "✍️",
+      "stage": 2
+    },
+    {
+      "id": 3550,
+      "word": "beneath",
+      "ipa": "bɪˈniθ",
+      "viRead": "bi-NITH",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "bên dưới",
+      "exampleEn": "The cat is sleeping beneath the table.",
+      "exampleVi": "Con mèo đang ngủ dưới gầm bàn.",
+      "collocations": [
+        {
+          "en": "beneath the surface",
+          "vi": "dưới bề mặt"
+        },
+        {
+          "en": "beneath the stars",
+          "vi": "dưới bầu trời sao"
+        }
+      ],
+      "tip": "beneath = under (văn chương hơn).",
+      "emoji": "⬇️",
+      "stage": 2
+    },
+    {
+      "id": 3551,
+      "word": "besides",
+      "ipa": "bɪˈsaɪdz",
+      "viRead": "bi-SAIĐD",
+      "pos": "adv./prep.",
+      "posCategory": "adverb",
+      "meaning": "ngoài ra, hơn nữa",
+      "exampleEn": "I'm too tired to go out. Besides, it's raining.",
+      "exampleVi": "Tôi mệt quá không đi chơi được. Hơn nữa, trời đang mưa.",
+      "collocations": [
+        {
+          "en": "besides that",
+          "vi": "ngoài điều đó"
+        },
+        {
+          "en": "besides English",
+          "vi": "ngoài tiếng Anh"
+        }
+      ],
+      "family": [
+        {
+          "word": "beside",
+          "vi": "bên cạnh"
+        }
+      ],
+      "tip": "BẪY: besides = ngoài ra; beside = bên cạnh.",
+      "emoji": "➕",
+      "stage": 2
+    },
+    {
+      "id": 3552,
+      "word": "billion",
+      "ipa": "ˈbɪljən",
+      "viRead": "BIL-yơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "một tỷ",
+      "exampleEn": "The world has about eight billion people.",
+      "exampleVi": "Thế giới có khoảng tám tỷ người.",
+      "collocations": [
+        {
+          "en": "a billion",
+          "vi": "một tỷ"
+        },
+        {
+          "en": "billions of",
+          "vi": "hàng tỷ"
+        }
+      ],
+      "family": [
+        {
+          "word": "million",
+          "vi": "triệu"
+        }
+      ],
+      "tip": "million (triệu) – billion (tỷ) – trillion (nghìn tỷ).",
+      "emoji": "🌍",
+      "stage": 2
+    },
+    {
+      "id": 3553,
+      "word": "biography",
+      "ipa": "baɪˈɑgrəfi",
+      "viRead": "bai-A-grơ-phi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiểu sử",
+      "exampleEn": "I'm reading a biography of Ho Chi Minh.",
+      "exampleVi": "Tôi đang đọc tiểu sử Hồ Chí Minh.",
+      "collocations": [
+        {
+          "en": "write a biography",
+          "vi": "viết tiểu sử"
+        },
+        {
+          "en": "a short biography",
+          "vi": "tiểu sử ngắn"
+        }
+      ],
+      "tip": "bio (sự sống) + graphy (viết). Nhấn âm 2: bai-A-grơ-phi.",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 3554,
+      "word": "birth",
+      "ipa": "bərθ",
+      "viRead": "BƠTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự sinh ra",
+      "exampleEn": "What is your date of birth?",
+      "exampleVi": "Ngày sinh của bạn là gì?",
+      "collocations": [
+        {
+          "en": "date of birth",
+          "vi": "ngày sinh"
+        },
+        {
+          "en": "give birth",
+          "vi": "sinh con"
+        }
+      ],
+      "family": [
+        {
+          "word": "born",
+          "vi": "được sinh ra"
+        }
+      ],
+      "tip": "date of birth (DOB) = ngày sinh. give birth to = sinh con.",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 3555,
+      "word": "bit",
+      "ipa": "bɪt",
+      "viRead": "BIT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "một chút, mẩu",
+      "exampleEn": "I'm a bit tired today.",
+      "exampleVi": "Hôm nay tôi hơi mệt.",
+      "collocations": [
+        {
+          "en": "a bit",
+          "vi": "một chút"
+        },
+        {
+          "en": "bit by bit",
+          "vi": "từng chút một"
+        }
+      ],
+      "tip": "a bit = a little. bit by bit = dần dần.",
+      "emoji": "🤏",
+      "stage": 2
+    },
+    {
+      "id": 3556,
+      "word": "capacity",
+      "ipa": "kəˈpæsɪti",
+      "viRead": "kơ-PE-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sức chứa; năng lực",
+      "exampleEn": "The stadium has a capacity of 40,000.",
+      "exampleVi": "Sân vận động có sức chứa 40.000 người.",
+      "collocations": [
+        {
+          "en": "full capacity",
+          "vi": "hết công suất"
+        },
+        {
+          "en": "seating capacity",
+          "vi": "số chỗ ngồi"
+        }
+      ],
+      "tip": "Nhấn âm 2: kơ-PE-sơ-ti.",
+      "emoji": "🏟️",
+      "stage": 2
+    },
+    {
+      "id": 3557,
+      "word": "category",
+      "ipa": "ˈkætəˌgɔri",
+      "viRead": "KE-tơ-go-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "loại, hạng mục",
+      "exampleEn": "Choose a category of words to practice.",
+      "exampleVi": "Chọn một nhóm từ để luyện tập.",
+      "collocations": [
+        {
+          "en": "in the category of",
+          "vi": "thuộc nhóm"
+        },
+        {
+          "en": "a new category",
+          "vi": "hạng mục mới"
+        }
+      ],
+      "tip": "Nhấn âm đầu: KE-tơ-go-ri.",
+      "emoji": "🗂️",
+      "stage": 2
+    },
+    {
+      "id": 3558,
+      "word": "certainly",
+      "ipa": "ˈsərtənli",
+      "viRead": "SƠ-tơn-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chắc chắn",
+      "exampleEn": "I'll certainly come to your wedding.",
+      "exampleVi": "Tôi chắc chắn sẽ đến dự đám cưới của bạn.",
+      "collocations": [
+        {
+          "en": "certainly not",
+          "vi": "chắc chắn không"
+        },
+        {
+          "en": "almost certainly",
+          "vi": "gần như chắc chắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "certain",
+          "vi": "chắc chắn"
+        }
+      ],
+      "tip": "Certainly! = Được chứ! (lịch sự).",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 3559,
+      "word": "circumstance",
+      "ipa": "ˈsərkəmˌstæns",
+      "viRead": "SƠ-kơm-stens",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoàn cảnh",
+      "exampleEn": "Under these circumstances, we must wait.",
+      "exampleVi": "Trong hoàn cảnh này, chúng ta phải chờ.",
+      "collocations": [
+        {
+          "en": "under no circumstances",
+          "vi": "trong bất kỳ trường hợp nào cũng không"
+        },
+        {
+          "en": "difficult circumstances",
+          "vi": "hoàn cảnh khó khăn"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: circumstances.",
+      "emoji": "🌪️",
+      "stage": 2
+    },
+    {
+      "id": 3560,
+      "word": "clerk",
+      "ipa": "klərk",
+      "viRead": "KLƠK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân viên văn phòng; thư ký",
+      "exampleEn": "The clerk checked my documents.",
+      "exampleVi": "Nhân viên kiểm tra giấy tờ của tôi.",
+      "collocations": [
+        {
+          "en": "bank clerk",
+          "vi": "nhân viên ngân hàng"
+        },
+        {
+          "en": "hotel clerk",
+          "vi": "lễ tân khách sạn"
+        }
+      ],
+      "tip": "Mỹ đọc 'klơk', Anh đọc 'klak'.",
+      "emoji": "🗃️",
+      "stage": 2
+    },
+    {
+      "id": 3561,
+      "word": "closely",
+      "ipa": "ˈkloʊsli",
+      "viRead": "KLÂUS-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chặt chẽ; kỹ lưỡng",
+      "exampleEn": "Listen closely to the pronunciation.",
+      "exampleVi": "Hãy nghe kỹ cách phát âm.",
+      "collocations": [
+        {
+          "en": "look closely",
+          "vi": "nhìn kỹ"
+        },
+        {
+          "en": "work closely with",
+          "vi": "phối hợp chặt chẽ với"
+        }
+      ],
+      "family": [
+        {
+          "word": "close",
+          "vi": "gần"
+        }
+      ],
+      "tip": "closely = carefully (kỹ) / tightly (chặt).",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 3562,
+      "word": "clothing",
+      "ipa": "ˈkloʊðɪŋ",
+      "viRead": "KLÂU-đing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quần áo (nói chung)",
+      "exampleEn": "Bring warm clothing for Sa Pa.",
+      "exampleVi": "Mang quần áo ấm khi lên Sa Pa.",
+      "collocations": [
+        {
+          "en": "warm clothing",
+          "vi": "quần áo ấm"
+        },
+        {
+          "en": "clothing store",
+          "vi": "cửa hàng quần áo"
+        }
+      ],
+      "family": [
+        {
+          "word": "clothes",
+          "vi": "quần áo"
+        }
+      ],
+      "tip": "clothing không đếm được (trang trọng hơn clothes).",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 3563,
+      "word": "combination",
+      "ipa": "ˌkɑmbəˈneɪʃən",
+      "viRead": "kam-bơ-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kết hợp",
+      "exampleEn": "Coffee and coconut is a great combination.",
+      "exampleVi": "Cà phê với dừa là sự kết hợp tuyệt vời.",
+      "collocations": [
+        {
+          "en": "a combination of",
+          "vi": "sự kết hợp của"
+        },
+        {
+          "en": "a perfect combination",
+          "vi": "kết hợp hoàn hảo"
+        }
+      ],
+      "family": [
+        {
+          "word": "combine",
+          "vi": "kết hợp"
+        }
+      ],
+      "tip": "combine (v) → combination (n). combo = viết tắt.",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 3564,
+      "word": "comparison",
+      "ipa": "kəmˈpɛrəsən",
+      "viRead": "kơm-PE-rơ-sơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự so sánh",
+      "exampleEn": "In comparison with Hanoi, Saigon is hotter.",
+      "exampleVi": "So với Hà Nội, Sài Gòn nóng hơn.",
+      "collocations": [
+        {
+          "en": "in comparison with",
+          "vi": "so với"
+        },
+        {
+          "en": "make a comparison",
+          "vi": "so sánh"
+        }
+      ],
+      "family": [
+        {
+          "word": "compare",
+          "vi": "so sánh"
+        }
+      ],
+      "tip": "compare (v) → comparison (n).",
+      "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 3565,
+      "word": "competitive",
+      "ipa": "kəmˈpɛtɪtɪv",
+      "viRead": "kơm-PE-tơ-tiv",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cạnh tranh; ham thắng",
+      "exampleEn": "The job market is very competitive.",
+      "exampleVi": "Thị trường việc làm rất cạnh tranh.",
+      "collocations": [
+        {
+          "en": "competitive price",
+          "vi": "giá cạnh tranh"
+        },
+        {
+          "en": "a competitive person",
+          "vi": "người hiếu thắng"
+        }
+      ],
+      "family": [
+        {
+          "word": "compete",
+          "vi": "cạnh tranh"
+        }
+      ],
+      "tip": "compete → competition → competitive.",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 3566,
+      "word": "complaint",
+      "ipa": "kəmˈpleɪnt",
+      "viRead": "kơm-PLÂYNT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời phàn nàn",
+      "exampleEn": "We received a complaint about the noise.",
+      "exampleVi": "Chúng tôi nhận được lời phàn nàn về tiếng ồn.",
+      "collocations": [
+        {
+          "en": "make a complaint",
+          "vi": "khiếu nại"
+        },
+        {
+          "en": "customer complaint",
+          "vi": "khiếu nại của khách"
+        }
+      ],
+      "family": [
+        {
+          "word": "complain",
+          "vi": "phàn nàn"
+        }
+      ],
+      "tip": "complain (v) → complaint (n).",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 3567,
+      "word": "component",
+      "ipa": "kəmˈpoʊnənt",
+      "viRead": "kơm-PÂU-nơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thành phần, bộ phận",
+      "exampleEn": "Vocabulary is a key component of a language.",
+      "exampleVi": "Từ vựng là thành phần then chốt của ngôn ngữ.",
+      "collocations": [
+        {
+          "en": "a key component",
+          "vi": "thành phần chủ chốt"
+        },
+        {
+          "en": "electronic components",
+          "vi": "linh kiện điện tử"
+        }
+      ],
+      "tip": "Nhấn âm 2: kơm-PÂU-nơnt.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 3568,
+      "word": "considerable",
+      "ipa": "kənˈsɪdərəbəl",
+      "viRead": "kơn-SI-đơ-rơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng kể",
+      "exampleEn": "It takes a considerable amount of time.",
+      "exampleVi": "Việc đó tốn một lượng thời gian đáng kể.",
+      "collocations": [
+        {
+          "en": "a considerable amount",
+          "vi": "một lượng đáng kể"
+        },
+        {
+          "en": "considerable effort",
+          "vi": "nỗ lực lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "considerably",
+          "vi": "đáng kể"
+        }
+      ],
+      "tip": "considerable ≠ considerate (chu đáo).",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 3569,
+      "word": "consideration",
+      "ipa": "kənˌsɪdəˈreɪʃən",
+      "viRead": "kơn-si-đơ-RÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cân nhắc",
+      "exampleEn": "After careful consideration, I said yes.",
+      "exampleVi": "Sau khi cân nhắc kỹ, tôi đồng ý.",
+      "collocations": [
+        {
+          "en": "take into consideration",
+          "vi": "cân nhắc đến"
+        },
+        {
+          "en": "careful consideration",
+          "vi": "cân nhắc kỹ"
+        }
+      ],
+      "family": [
+        {
+          "word": "consider",
+          "vi": "cân nhắc"
+        }
+      ],
+      "tip": "take sth into consideration = tính đến điều gì.",
+      "emoji": "🤔",
+      "stage": 2
+    },
+    {
+      "id": 3570,
+      "word": "constantly",
+      "ipa": "ˈkɑnstəntli",
+      "viRead": "KAN-stơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "liên tục",
+      "exampleEn": "He is constantly checking his phone.",
+      "exampleVi": "Anh ấy liên tục kiểm tra điện thoại.",
+      "collocations": [
+        {
+          "en": "constantly changing",
+          "vi": "không ngừng thay đổi"
+        },
+        {
+          "en": "constantly worried",
+          "vi": "lúc nào cũng lo"
+        }
+      ],
+      "family": [
+        {
+          "word": "constant",
+          "vi": "liên tục"
+        }
+      ],
+      "tip": "constantly + V-ing = cứ ... mãi (hơi phàn nàn).",
+      "emoji": "🔁",
+      "stage": 2
+    },
+    {
+      "id": 3571,
+      "word": "contemporary",
+      "ipa": "kənˈtɛmpərˌɛri",
+      "viRead": "kơn-TEM-pơ-re-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đương đại",
+      "exampleEn": "I like contemporary art.",
+      "exampleVi": "Tôi thích nghệ thuật đương đại.",
+      "collocations": [
+        {
+          "en": "contemporary art",
+          "vi": "nghệ thuật đương đại"
+        },
+        {
+          "en": "contemporary music",
+          "vi": "âm nhạc đương đại"
+        }
+      ],
+      "tip": "contemporary = hiện đại, cùng thời.",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 3572,
+      "word": "continuous",
+      "ipa": "kənˈtɪnjuəs",
+      "viRead": "kơn-TIN-yu-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "liên tục, không ngừng",
+      "exampleEn": "There was continuous rain for three days.",
+      "exampleVi": "Mưa liên tục ba ngày.",
+      "collocations": [
+        {
+          "en": "continuous rain",
+          "vi": "mưa liên tục"
+        },
+        {
+          "en": "present continuous",
+          "vi": "thì hiện tại tiếp diễn"
+        }
+      ],
+      "family": [
+        {
+          "word": "continue",
+          "vi": "tiếp tục"
+        }
+      ],
+      "tip": "present continuous = thì hiện tại tiếp diễn (am/is/are + V-ing).",
+      "emoji": "♾️",
       "stage": 2
     }
   ]
