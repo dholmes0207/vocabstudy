@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3288,
+    "count": 3338,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -92521,6 +92521,1432 @@
       ],
       "tip": "start from scratch = bắt đầu từ con số 0.",
       "emoji": "🐾",
+      "stage": 2
+    },
+    {
+      "id": 3289,
+      "word": "slippery",
+      "ipa": "ˈslɪpəri",
+      "viRead": "SLI-pơ-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trơn trượt",
+      "exampleEn": "The floor is slippery after the rain.",
+      "exampleVi": "Sàn nhà trơn trượt sau mưa.",
+      "collocations": [
+        {
+          "en": "slippery floor",
+          "vi": "sàn trơn"
+        },
+        {
+          "en": "slippery road",
+          "vi": "đường trơn"
+        }
+      ],
+      "family": [
+        {
+          "word": "slip",
+          "vi": "trượt"
+        }
+      ],
+      "tip": "Biển cảnh báo: Caution! Slippery floor.",
+      "emoji": "⚠️",
+      "stage": 2
+    },
+    {
+      "id": 3290,
+      "word": "sneaky",
+      "ipa": "ˈsniki",
+      "viRead": "SNI-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lén lút, ranh mãnh",
+      "exampleEn": "The sneaky cat stole the fish.",
+      "exampleVi": "Con mèo ranh mãnh lấy trộm cá.",
+      "collocations": [
+        {
+          "en": "a sneaky plan",
+          "vi": "kế hoạch lén lút"
+        },
+        {
+          "en": "sneaky look",
+          "vi": "cái nhìn lén"
+        }
+      ],
+      "family": [
+        {
+          "word": "sneak",
+          "vi": "lẻn"
+        }
+      ],
+      "tip": "sneak (lẻn) → sneaky (ranh mãnh). sneakers = giày thể thao.",
+      "emoji": "🐈",
+      "stage": 2
+    },
+    {
+      "id": 3291,
+      "word": "snore",
+      "ipa": "snɔr",
+      "viRead": "SNOR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngáy",
+      "exampleEn": "My dad snores very loudly.",
+      "exampleVi": "Bố tôi ngáy rất to.",
+      "collocations": [
+        {
+          "en": "snore loudly",
+          "vi": "ngáy to"
+        },
+        {
+          "en": "stop snoring",
+          "vi": "đừng ngáy nữa"
+        }
+      ],
+      "tip": "snore = ngáy khi ngủ. Zzz = tiếng ngáy trong truyện tranh.",
+      "emoji": "😴",
+      "stage": 2
+    },
+    {
+      "id": 3292,
+      "word": "soggy",
+      "ipa": "ˈsɑgi",
+      "viRead": "SA-gi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sũng nước, nhão",
+      "exampleEn": "The cereal got soggy in the milk.",
+      "exampleVi": "Ngũ cốc bị nhão trong sữa.",
+      "collocations": [
+        {
+          "en": "soggy bread",
+          "vi": "bánh mì nhão"
+        },
+        {
+          "en": "soggy ground",
+          "vi": "đất sũng nước"
+        }
+      ],
+      "tip": "soggy = ướt sũng, mềm nhũn (khó chịu).",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 3293,
+      "word": "sour",
+      "ipa": "saʊər",
+      "viRead": "SAO-ơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chua",
+      "exampleEn": "Green mangoes are very sour.",
+      "exampleVi": "Xoài xanh rất chua.",
+      "collocations": [
+        {
+          "en": "sweet and sour",
+          "vi": "chua ngọt"
+        },
+        {
+          "en": "sour soup",
+          "vi": "canh chua"
+        }
+      ],
+      "tip": "sweet and sour fish soup = canh chua cá.",
+      "emoji": "🍋",
+      "stage": 2
+    },
+    {
+      "id": 3294,
+      "word": "stale",
+      "ipa": "steɪl",
+      "viRead": "STÂYL",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cũ, ôi (đồ ăn)",
+      "exampleEn": "This bread is stale; don't eat it.",
+      "exampleVi": "Bánh mì này cũ rồi, đừng ăn.",
+      "collocations": [
+        {
+          "en": "stale bread",
+          "vi": "bánh mì cũ"
+        },
+        {
+          "en": "stale air",
+          "vi": "không khí ngột ngạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "fresh",
+          "vi": "tươi"
+        }
+      ],
+      "tip": "stale ↔ fresh. stale bread = bánh mì để lâu cứng lại.",
+      "emoji": "🍞",
+      "stage": 2
+    },
+    {
+      "id": 3295,
+      "word": "sticky",
+      "ipa": "ˈstɪki",
+      "viRead": "STI-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dính",
+      "exampleEn": "My hands are sticky from the candy.",
+      "exampleVi": "Tay tôi dính vì kẹo.",
+      "collocations": [
+        {
+          "en": "sticky rice",
+          "vi": "xôi, gạo nếp"
+        },
+        {
+          "en": "sticky note",
+          "vi": "giấy nhớ"
+        }
+      ],
+      "family": [
+        {
+          "word": "stick",
+          "vi": "dính"
+        }
+      ],
+      "tip": "sticky rice = xôi/gạo nếp. sticky note = giấy ghi chú dán.",
+      "emoji": "🍙",
+      "stage": 2
+    },
+    {
+      "id": 3296,
+      "word": "striped",
+      "ipa": "straɪpt",
+      "viRead": "STRAIPT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có sọc",
+      "exampleEn": "He wore a blue striped shirt.",
+      "exampleVi": "Anh ấy mặc áo sơ mi sọc xanh.",
+      "collocations": [
+        {
+          "en": "a striped shirt",
+          "vi": "áo kẻ sọc"
+        },
+        {
+          "en": "striped pattern",
+          "vi": "họa tiết sọc"
+        }
+      ],
+      "family": [
+        {
+          "word": "stripe",
+          "vi": "sọc"
+        }
+      ],
+      "tip": "stripe (n) → striped (adj). spotted = chấm bi.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 3297,
+      "word": "sweaty",
+      "ipa": "ˈswɛti",
+      "viRead": "SWE-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đẫm mồ hôi",
+      "exampleEn": "I'm all sweaty after the run.",
+      "exampleVi": "Tôi đẫm mồ hôi sau khi chạy.",
+      "collocations": [
+        {
+          "en": "sweaty hands",
+          "vi": "tay đẫm mồ hôi"
+        },
+        {
+          "en": "get sweaty",
+          "vi": "ra mồ hôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "sweat",
+          "vi": "mồ hôi"
+        }
+      ],
+      "tip": "sweat (n) → sweaty (adj).",
+      "emoji": "💦",
+      "stage": 2
+    },
+    {
+      "id": 3298,
+      "word": "swollen",
+      "ipa": "ˈswoʊlən",
+      "viRead": "SWÂU-lơn",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sưng",
+      "exampleEn": "My ankle is swollen.",
+      "exampleVi": "Mắt cá chân tôi bị sưng.",
+      "collocations": [
+        {
+          "en": "swollen eyes",
+          "vi": "mắt sưng"
+        },
+        {
+          "en": "a swollen river",
+          "vi": "sông dâng nước"
+        }
+      ],
+      "family": [
+        {
+          "word": "swell",
+          "vi": "sưng lên"
+        }
+      ],
+      "tip": "swell – swelled – swollen.",
+      "emoji": "🦶",
+      "stage": 2
+    },
+    {
+      "id": 3299,
+      "word": "tangle",
+      "ipa": "ˈtæŋgəl",
+      "viRead": "TENG-gơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "làm rối",
+      "exampleEn": "The wind tangled her long hair.",
+      "exampleVi": "Gió làm rối mái tóc dài của cô ấy.",
+      "collocations": [
+        {
+          "en": "tangled hair",
+          "vi": "tóc rối"
+        },
+        {
+          "en": "get tangled",
+          "vi": "bị rối"
+        }
+      ],
+      "tip": "Tangled = phim 'Công chúa tóc mây'.",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 3300,
+      "word": "tender",
+      "ipa": "ˈtɛndər",
+      "viRead": "TEN-đơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mềm; dịu dàng",
+      "exampleEn": "The beef is very tender.",
+      "exampleVi": "Thịt bò rất mềm.",
+      "collocations": [
+        {
+          "en": "tender meat",
+          "vi": "thịt mềm"
+        },
+        {
+          "en": "a tender smile",
+          "vi": "nụ cười dịu dàng"
+        }
+      ],
+      "tip": "tender = mềm (thịt) / dịu dàng (cử chỉ).",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 3301,
+      "word": "tickle",
+      "ipa": "ˈtɪkəl",
+      "viRead": "TI-kơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cù, thọc lét",
+      "exampleEn": "Stop tickling me!",
+      "exampleVi": "Đừng cù tôi nữa!",
+      "collocations": [
+        {
+          "en": "tickle someone",
+          "vi": "cù ai"
+        },
+        {
+          "en": "tickle your nose",
+          "vi": "làm nhột mũi"
+        }
+      ],
+      "family": [
+        {
+          "word": "ticklish",
+          "vi": "có máu buồn"
+        }
+      ],
+      "tip": "ticklish = có máu buồn (dễ nhột).",
+      "emoji": "🤣",
+      "stage": 2
+    },
+    {
+      "id": 3302,
+      "word": "twinkle",
+      "ipa": "ˈtwɪŋkəl",
+      "viRead": "TWING-kơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lấp lánh",
+      "exampleEn": "The stars twinkle in the night sky.",
+      "exampleVi": "Những vì sao lấp lánh trên bầu trời đêm.",
+      "collocations": [
+        {
+          "en": "twinkle twinkle little star",
+          "vi": "ngôi sao nhỏ lấp lánh"
+        },
+        {
+          "en": "eyes twinkle",
+          "vi": "mắt lấp lánh"
+        }
+      ],
+      "tip": "Twinkle, twinkle, little star — bài hát thiếu nhi kinh điển. Như bầu trời sau lưng bạn!",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 3303,
+      "word": "wink",
+      "ipa": "wɪŋk",
+      "viRead": "WINGK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nháy mắt",
+      "exampleEn": "He winked at me and smiled.",
+      "exampleVi": "Anh ấy nháy mắt với tôi rồi cười.",
+      "collocations": [
+        {
+          "en": "wink at",
+          "vi": "nháy mắt với"
+        },
+        {
+          "en": "in a wink",
+          "vi": "trong nháy mắt"
+        }
+      ],
+      "family": [
+        {
+          "word": "blink",
+          "vi": "chớp mắt"
+        }
+      ],
+      "tip": "wink = nháy một mắt (cố ý); blink = chớp mắt.",
+      "emoji": "😉",
+      "stage": 2
+    },
+    {
+      "id": 3304,
+      "word": "wobble",
+      "ipa": "ˈwɑbəl",
+      "viRead": "WA-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lung lay, lảo đảo",
+      "exampleEn": "The table wobbles; one leg is short.",
+      "exampleVi": "Cái bàn bị cập kênh, một chân bị ngắn.",
+      "collocations": [
+        {
+          "en": "wobble on a bike",
+          "vi": "loạng choạng trên xe đạp"
+        },
+        {
+          "en": "start to wobble",
+          "vi": "bắt đầu lung lay"
+        }
+      ],
+      "family": [
+        {
+          "word": "wobbly",
+          "vi": "lung lay"
+        }
+      ],
+      "tip": "a wobbly tooth = răng sắp rụng.",
+      "emoji": "🫨",
+      "stage": 2
+    },
+    {
+      "id": 3305,
+      "word": "wrinkle",
+      "ipa": "ˈrɪŋkəl",
+      "viRead": "RING-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nếp nhăn",
+      "exampleEn": "Grandma has wrinkles around her eyes.",
+      "exampleVi": "Bà có những nếp nhăn quanh mắt.",
+      "collocations": [
+        {
+          "en": "deep wrinkles",
+          "vi": "nếp nhăn sâu"
+        },
+        {
+          "en": "iron out the wrinkles",
+          "vi": "là phẳng nếp nhăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "wrinkled",
+          "vi": "nhăn nheo"
+        }
+      ],
+      "tip": "w câm: 'RING-kồ'.",
+      "emoji": "👵",
+      "stage": 2
+    },
+    {
+      "id": 3306,
+      "word": "yummy",
+      "ipa": "ˈjəmi",
+      "viRead": "YƠ-mi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ngon (thân mật)",
+      "exampleEn": "This cake is yummy!",
+      "exampleVi": "Bánh này ngon quá!",
+      "collocations": [
+        {
+          "en": "yummy food",
+          "vi": "đồ ăn ngon"
+        },
+        {
+          "en": "looks yummy",
+          "vi": "trông ngon"
+        }
+      ],
+      "tip": "yummy = delicious (trẻ con và thân mật hay dùng). Yum!",
+      "emoji": "😋",
+      "stage": 2
+    },
+    {
+      "id": 3307,
+      "word": "sip",
+      "ipa": "sɪp",
+      "viRead": "SIP",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhấp, uống từng ngụm",
+      "exampleEn": "She sipped her hot tea slowly.",
+      "exampleVi": "Cô ấy nhấp từng ngụm trà nóng.",
+      "collocations": [
+        {
+          "en": "take a sip",
+          "vi": "nhấp một ngụm"
+        },
+        {
+          "en": "sip coffee",
+          "vi": "nhâm nhi cà phê"
+        }
+      ],
+      "tip": "sip → sipped. Nhâm nhi cà phê = sip coffee.",
+      "emoji": "🍵",
+      "stage": 2
+    },
+    {
+      "id": 3308,
+      "word": "nephew",
+      "ipa": "ˈnɛfju",
+      "viRead": "NE-phyu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cháu trai (con anh chị em)",
+      "exampleEn": "My nephew is five years old.",
+      "exampleVi": "Cháu trai tôi năm tuổi.",
+      "collocations": [
+        {
+          "en": "my little nephew",
+          "vi": "cháu trai nhỏ"
+        },
+        {
+          "en": "nephews and nieces",
+          "vi": "các cháu"
+        }
+      ],
+      "family": [
+        {
+          "word": "niece",
+          "vi": "cháu gái"
+        }
+      ],
+      "tip": "nephew (cháu trai) – niece (cháu gái); grandson = cháu nội/ngoại.",
+      "emoji": "👦",
+      "stage": 2
+    },
+    {
+      "id": 3309,
+      "word": "niece",
+      "ipa": "nis",
+      "viRead": "NIS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cháu gái (con anh chị em)",
+      "exampleEn": "My niece loves drawing.",
+      "exampleVi": "Cháu gái tôi thích vẽ.",
+      "collocations": [
+        {
+          "en": "my niece",
+          "vi": "cháu gái tôi"
+        },
+        {
+          "en": "a baby niece",
+          "vi": "cháu gái nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "nephew",
+          "vi": "cháu trai"
+        }
+      ],
+      "tip": "ie đọc 'i': 'nis'.",
+      "emoji": "👧",
+      "stage": 2
+    },
+    {
+      "id": 3310,
+      "word": "grandson",
+      "ipa": "ˈgrændˌsən",
+      "viRead": "GREN-sơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cháu trai (nội/ngoại)",
+      "exampleEn": "Grandpa is teaching his grandson to fish.",
+      "exampleVi": "Ông đang dạy cháu trai câu cá.",
+      "collocations": [
+        {
+          "en": "his grandson",
+          "vi": "cháu trai của ông"
+        },
+        {
+          "en": "eldest grandson",
+          "vi": "cháu đích tôn"
+        }
+      ],
+      "family": [
+        {
+          "word": "grandfather",
+          "vi": "ông"
+        }
+      ],
+      "tip": "d gần như câm: 'GREN-sơn'.",
+      "emoji": "👴",
+      "stage": 2
+    },
+    {
+      "id": 3311,
+      "word": "granddaughter",
+      "ipa": "ˈgrænˌdɔtər",
+      "viRead": "GREN-đo-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cháu gái (nội/ngoại)",
+      "exampleEn": "Grandma knits a scarf for her granddaughter.",
+      "exampleVi": "Bà đan khăn cho cháu gái.",
+      "collocations": [
+        {
+          "en": "her granddaughter",
+          "vi": "cháu gái của bà"
+        },
+        {
+          "en": "a little granddaughter",
+          "vi": "cháu gái nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "grandmother",
+          "vi": "bà"
+        }
+      ],
+      "tip": "Chính tả: grand + daughter (2 chữ d liền nhau).",
+      "emoji": "👵",
+      "stage": 2
+    },
+    {
+      "id": 3312,
+      "word": "twins",
+      "ipa": "twɪnz",
+      "viRead": "TWIND",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cặp song sinh",
+      "exampleEn": "They are twins, but they look different.",
+      "exampleVi": "Họ là sinh đôi nhưng trông khác nhau.",
+      "collocations": [
+        {
+          "en": "identical twins",
+          "vi": "sinh đôi cùng trứng"
+        },
+        {
+          "en": "a pair of twins",
+          "vi": "một cặp song sinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "twin",
+          "vi": "một trong cặp song sinh"
+        }
+      ],
+      "tip": "twin (một người) – twins (cặp). Gemini = cung Song Tử.",
+      "emoji": "👯",
+      "stage": 2
+    },
+    {
+      "id": 3313,
+      "word": "stepmother",
+      "ipa": "ˈstɛpˌməðər",
+      "viRead": "STEP-mơ-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mẹ kế",
+      "exampleEn": "Cinderella lived with her stepmother.",
+      "exampleVi": "Lọ Lem sống với mẹ kế.",
+      "collocations": [
+        {
+          "en": "a kind stepmother",
+          "vi": "mẹ kế tốt bụng"
+        },
+        {
+          "en": "wicked stepmother",
+          "vi": "mẹ kế độc ác"
+        }
+      ],
+      "family": [
+        {
+          "word": "mother",
+          "vi": "mẹ"
+        }
+      ],
+      "tip": "step- = kế: stepfather (bố dượng), stepsister (chị em kế).",
+      "emoji": "👩",
+      "stage": 2
+    },
+    {
+      "id": 3314,
+      "word": "bride",
+      "ipa": "braɪd",
+      "viRead": "BRAIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cô dâu",
+      "exampleEn": "The bride wore a red ao dai.",
+      "exampleVi": "Cô dâu mặc áo dài đỏ.",
+      "collocations": [
+        {
+          "en": "the bride and groom",
+          "vi": "cô dâu và chú rể"
+        },
+        {
+          "en": "a beautiful bride",
+          "vi": "cô dâu xinh đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "groom",
+          "vi": "chú rể"
+        }
+      ],
+      "tip": "bride + groom = cô dâu chú rể.",
+      "emoji": "👰",
+      "stage": 2
+    },
+    {
+      "id": 3315,
+      "word": "groom",
+      "ipa": "grum",
+      "viRead": "GRUM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chú rể",
+      "exampleEn": "The groom looked nervous.",
+      "exampleVi": "Chú rể trông có vẻ hồi hộp.",
+      "collocations": [
+        {
+          "en": "the bride and groom",
+          "vi": "cô dâu chú rể"
+        },
+        {
+          "en": "a nervous groom",
+          "vi": "chú rể hồi hộp"
+        }
+      ],
+      "family": [
+        {
+          "word": "bride",
+          "vi": "cô dâu"
+        }
+      ],
+      "tip": "groom = bridegroom (chú rể). groom (v) = chải chuốt.",
+      "emoji": "🤵",
+      "stage": 2
+    },
+    {
+      "id": 3316,
+      "word": "roommate",
+      "ipa": "ˈruˌmeɪt",
+      "viRead": "RU-mâyt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bạn cùng phòng",
+      "exampleEn": "My roommate is from Hue.",
+      "exampleVi": "Bạn cùng phòng của tôi người Huế.",
+      "collocations": [
+        {
+          "en": "a new roommate",
+          "vi": "bạn cùng phòng mới"
+        },
+        {
+          "en": "college roommate",
+          "vi": "bạn cùng phòng ký túc"
+        }
+      ],
+      "family": [
+        {
+          "word": "room",
+          "vi": "phòng"
+        }
+      ],
+      "tip": "room + mate (bạn). classmate, teammate cũng vậy.",
+      "emoji": "🛏️",
+      "stage": 2
+    },
+    {
+      "id": 3317,
+      "word": "classmate",
+      "ipa": "ˈklæsˌmeɪt",
+      "viRead": "KLES-mâyt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bạn cùng lớp",
+      "exampleEn": "We were classmates in high school.",
+      "exampleVi": "Chúng tôi là bạn cùng lớp hồi cấp ba.",
+      "collocations": [
+        {
+          "en": "an old classmate",
+          "vi": "bạn học cũ"
+        },
+        {
+          "en": "my classmates",
+          "vi": "các bạn cùng lớp"
+        }
+      ],
+      "family": [
+        {
+          "word": "class",
+          "vi": "lớp"
+        }
+      ],
+      "tip": "class + mate.",
+      "emoji": "🧑‍🎓",
+      "stage": 2
+    },
+    {
+      "id": 3318,
+      "word": "teammate",
+      "ipa": "ˈtiˌmeɪt",
+      "viRead": "TI-mâyt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng đội",
+      "exampleEn": "He passed the ball to his teammate.",
+      "exampleVi": "Anh ấy chuyền bóng cho đồng đội.",
+      "collocations": [
+        {
+          "en": "a good teammate",
+          "vi": "đồng đội tốt"
+        },
+        {
+          "en": "my teammates",
+          "vi": "đồng đội của tôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "team",
+          "vi": "đội"
+        }
+      ],
+      "tip": "team + mate.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 3319,
+      "word": "villain",
+      "ipa": "ˈvɪlən",
+      "viRead": "VI-lơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kẻ phản diện",
+      "exampleEn": "Every hero needs a villain.",
+      "exampleVi": "Anh hùng nào cũng cần một kẻ phản diện.",
+      "collocations": [
+        {
+          "en": "the villain of the film",
+          "vi": "kẻ phản diện của phim"
+        },
+        {
+          "en": "a famous villain",
+          "vi": "phản diện nổi tiếng"
+        }
+      ],
+      "family": [
+        {
+          "word": "hero",
+          "vi": "anh hùng"
+        }
+      ],
+      "tip": "hero ↔ villain. Đọc 'VI-lần'.",
+      "emoji": "🦹",
+      "stage": 2
+    },
+    {
+      "id": 3320,
+      "word": "plumber",
+      "ipa": "ˈpləmər",
+      "viRead": "PLƠ-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ sửa ống nước",
+      "exampleEn": "Call a plumber to fix the leak.",
+      "exampleVi": "Gọi thợ sửa ống nước đến sửa chỗ rò.",
+      "collocations": [
+        {
+          "en": "call a plumber",
+          "vi": "gọi thợ ống nước"
+        },
+        {
+          "en": "a good plumber",
+          "vi": "thợ ống nước giỏi"
+        }
+      ],
+      "tip": "b câm: 'PLƠ-mơ'. Mario là một plumber!",
+      "emoji": "🔧",
+      "stage": 2
+    },
+    {
+      "id": 3321,
+      "word": "electrician",
+      "ipa": "ɪlɛkˈtrɪʃən",
+      "viRead": "i-lek-TRI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ điện",
+      "exampleEn": "The electrician fixed the lights.",
+      "exampleVi": "Thợ điện đã sửa đèn.",
+      "collocations": [
+        {
+          "en": "call an electrician",
+          "vi": "gọi thợ điện"
+        },
+        {
+          "en": "a qualified electrician",
+          "vi": "thợ điện có chứng chỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "electric",
+          "vi": "điện"
+        }
+      ],
+      "tip": "Nhấn âm 3: i-lek-TRI-shơn.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 3322,
+      "word": "firefighter",
+      "ipa": "ˈfaɪrˌfaɪtər",
+      "viRead": "PHAIR-phai-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lính cứu hỏa",
+      "exampleEn": "The firefighters put out the fire.",
+      "exampleVi": "Lính cứu hỏa đã dập tắt đám cháy.",
+      "collocations": [
+        {
+          "en": "a brave firefighter",
+          "vi": "lính cứu hỏa dũng cảm"
+        },
+        {
+          "en": "firefighters arrive",
+          "vi": "lính cứu hỏa tới"
+        }
+      ],
+      "family": [
+        {
+          "word": "fire",
+          "vi": "lửa"
+        }
+      ],
+      "tip": "firefighter (trung tính) thay cho fireman.",
+      "emoji": "🧑‍🚒",
+      "stage": 2
+    },
+    {
+      "id": 3323,
+      "word": "waitress",
+      "ipa": "ˈweɪtrəs",
+      "viRead": "WÂY-trơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nữ phục vụ",
+      "exampleEn": "The waitress brought our drinks.",
+      "exampleVi": "Cô phục vụ mang đồ uống ra cho chúng tôi.",
+      "collocations": [
+        {
+          "en": "ask the waitress",
+          "vi": "gọi cô phục vụ"
+        },
+        {
+          "en": "a friendly waitress",
+          "vi": "nữ phục vụ thân thiện"
+        }
+      ],
+      "family": [
+        {
+          "word": "waiter",
+          "vi": "nam phục vụ"
+        }
+      ],
+      "tip": "waiter (nam) – waitress (nữ) – server (chung).",
+      "emoji": "💁",
+      "stage": 2
+    },
+    {
+      "id": 3324,
+      "word": "farmer",
+      "ipa": "ˈfɑrmər",
+      "viRead": "PHAR-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nông dân",
+      "exampleEn": "Farmers work hard in the rice fields.",
+      "exampleVi": "Nông dân làm việc vất vả trên đồng lúa.",
+      "collocations": [
+        {
+          "en": "rice farmer",
+          "vi": "nông dân trồng lúa"
+        },
+        {
+          "en": "farmers' market",
+          "vi": "chợ nông sản"
+        }
+      ],
+      "family": [
+        {
+          "word": "farm",
+          "vi": "nông trại"
+        }
+      ],
+      "tip": "farm + er.",
+      "emoji": "👨‍🌾",
+      "stage": 2
+    },
+    {
+      "id": 3325,
+      "word": "fisherman",
+      "ipa": "ˈfɪʃərˌmæn",
+      "viRead": "PHI-shơ-men",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngư dân",
+      "exampleEn": "The fisherman goes to sea before dawn.",
+      "exampleVi": "Người ngư dân ra khơi trước bình minh.",
+      "collocations": [
+        {
+          "en": "a local fisherman",
+          "vi": "ngư dân địa phương"
+        },
+        {
+          "en": "fisherman's boat",
+          "vi": "thuyền ngư dân"
+        }
+      ],
+      "family": [
+        {
+          "word": "fish",
+          "vi": "cá"
+        }
+      ],
+      "tip": "Số nhiều: fishermen.",
+      "emoji": "🎣",
+      "stage": 2
+    },
+    {
+      "id": 3326,
+      "word": "babysitter",
+      "ipa": "ˈbeɪbiˌsɪtər",
+      "viRead": "BÂY-bi-si-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người trông trẻ",
+      "exampleEn": "We need a babysitter for Saturday night.",
+      "exampleVi": "Tối thứ Bảy chúng tôi cần người trông trẻ.",
+      "collocations": [
+        {
+          "en": "hire a babysitter",
+          "vi": "thuê người trông trẻ"
+        },
+        {
+          "en": "work as a babysitter",
+          "vi": "làm trông trẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "babysit",
+          "vi": "trông trẻ"
+        }
+      ],
+      "tip": "baby + sit + ter.",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 3327,
+      "word": "vet",
+      "ipa": "vɛt",
+      "viRead": "VET",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bác sĩ thú y",
+      "exampleEn": "Take the dog to the vet.",
+      "exampleVi": "Đưa con chó đi bác sĩ thú y.",
+      "collocations": [
+        {
+          "en": "take a pet to the vet",
+          "vi": "đưa thú cưng đi khám"
+        },
+        {
+          "en": "the vet clinic",
+          "vi": "phòng khám thú y"
+        }
+      ],
+      "tip": "vet = veterinarian (bác sĩ thú y). vet cũng là veteran (cựu binh).",
+      "emoji": "🩺",
+      "stage": 2
+    },
+    {
+      "id": 3328,
+      "word": "pharmacist",
+      "ipa": "ˈfɑrməsɪst",
+      "viRead": "PHAR-mơ-sist",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dược sĩ",
+      "exampleEn": "Ask the pharmacist about the medicine.",
+      "exampleVi": "Hỏi dược sĩ về loại thuốc này.",
+      "collocations": [
+        {
+          "en": "a local pharmacist",
+          "vi": "dược sĩ gần nhà"
+        },
+        {
+          "en": "ask a pharmacist",
+          "vi": "hỏi dược sĩ"
+        }
+      ],
+      "family": [
+        {
+          "word": "pharmacy",
+          "vi": "hiệu thuốc"
+        }
+      ],
+      "tip": "ph đọc 'f': 'PHAR-mơ-sist'.",
+      "emoji": "💊",
+      "stage": 2
+    },
+    {
+      "id": 3329,
+      "word": "accountant",
+      "ipa": "əˈkaʊntənt",
+      "viRead": "ơ-KAON-tơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kế toán",
+      "exampleEn": "My sister works as an accountant.",
+      "exampleVi": "Chị tôi làm kế toán.",
+      "collocations": [
+        {
+          "en": "chief accountant",
+          "vi": "kế toán trưởng"
+        },
+        {
+          "en": "work as an accountant",
+          "vi": "làm kế toán"
+        }
+      ],
+      "family": [
+        {
+          "word": "account",
+          "vi": "tài khoản"
+        }
+      ],
+      "tip": "account (tài khoản) + ant.",
+      "emoji": "🧮",
+      "stage": 2
+    },
+    {
+      "id": 3330,
+      "word": "astronaut",
+      "ipa": "ˈæstrəˌnɑt",
+      "viRead": "ES-trơ-nat",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phi hành gia",
+      "exampleEn": "The astronaut walked on the moon.",
+      "exampleVi": "Phi hành gia đi bộ trên mặt trăng.",
+      "collocations": [
+        {
+          "en": "become an astronaut",
+          "vi": "trở thành phi hành gia"
+        },
+        {
+          "en": "astronaut suit",
+          "vi": "bộ đồ phi hành gia"
+        }
+      ],
+      "tip": "astro (sao) + naut (người đi biển).",
+      "emoji": "👩‍🚀",
+      "stage": 2
+    },
+    {
+      "id": 3331,
+      "word": "photographer",
+      "ipa": "fəˈtɑgrəfər",
+      "viRead": "phơ-TA-grơ-phơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiếp ảnh gia",
+      "exampleEn": "The wedding photographer took great photos.",
+      "exampleVi": "Thợ chụp ảnh cưới chụp ảnh rất đẹp.",
+      "collocations": [
+        {
+          "en": "wedding photographer",
+          "vi": "thợ ảnh cưới"
+        },
+        {
+          "en": "a professional photographer",
+          "vi": "nhiếp ảnh gia chuyên nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "photograph",
+          "vi": "bức ảnh"
+        }
+      ],
+      "tip": "Trọng âm: PHOtograph – phoTOgrapher.",
+      "emoji": "📷",
+      "stage": 2
+    },
+    {
+      "id": 3332,
+      "word": "designer",
+      "ipa": "dɪˈzaɪnər",
+      "viRead": "đi-DAI-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà thiết kế",
+      "exampleEn": "She is a fashion designer.",
+      "exampleVi": "Cô ấy là nhà thiết kế thời trang.",
+      "collocations": [
+        {
+          "en": "fashion designer",
+          "vi": "nhà thiết kế thời trang"
+        },
+        {
+          "en": "graphic designer",
+          "vi": "nhà thiết kế đồ họa"
+        }
+      ],
+      "family": [
+        {
+          "word": "design",
+          "vi": "thiết kế"
+        }
+      ],
+      "tip": "g câm: 'đi-DAI-nơ'.",
+      "emoji": "🎨",
+      "stage": 2
+    },
+    {
+      "id": 3333,
+      "word": "programmer",
+      "ipa": "ˈproʊˌgræmər",
+      "viRead": "PRÂU-gre-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lập trình viên",
+      "exampleEn": "My brother is a computer programmer.",
+      "exampleVi": "Anh tôi là lập trình viên máy tính.",
+      "collocations": [
+        {
+          "en": "computer programmer",
+          "vi": "lập trình viên"
+        },
+        {
+          "en": "a junior programmer",
+          "vi": "lập trình viên mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "program",
+          "vi": "chương trình"
+        }
+      ],
+      "tip": "programmer = coder = developer.",
+      "emoji": "👨‍💻",
+      "stage": 2
+    },
+    {
+      "id": 3334,
+      "word": "receptionist",
+      "ipa": "rɪˈsɛpʃənɪst",
+      "viRead": "ri-SEP-shơ-nist",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lễ tân",
+      "exampleEn": "The receptionist gave us our room key.",
+      "exampleVi": "Lễ tân đưa chìa khóa phòng cho chúng tôi.",
+      "collocations": [
+        {
+          "en": "hotel receptionist",
+          "vi": "lễ tân khách sạn"
+        },
+        {
+          "en": "ask the receptionist",
+          "vi": "hỏi lễ tân"
+        }
+      ],
+      "family": [
+        {
+          "word": "reception",
+          "vi": "quầy lễ tân"
+        }
+      ],
+      "tip": "reception (quầy lễ tân) + ist.",
+      "emoji": "🛎️",
+      "stage": 2
+    },
+    {
+      "id": 3335,
+      "word": "translator",
+      "ipa": "trænzˈleɪtər",
+      "viRead": "trens-LÂY-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biên dịch viên",
+      "exampleEn": "She works as a Korean translator.",
+      "exampleVi": "Cô ấy làm biên dịch tiếng Hàn.",
+      "collocations": [
+        {
+          "en": "a professional translator",
+          "vi": "biên dịch viên chuyên nghiệp"
+        },
+        {
+          "en": "online translator",
+          "vi": "công cụ dịch trực tuyến"
+        }
+      ],
+      "family": [
+        {
+          "word": "translate",
+          "vi": "dịch"
+        }
+      ],
+      "tip": "translator (dịch viết) – interpreter (phiên dịch nói).",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 3336,
+      "word": "carpenter",
+      "ipa": "ˈkɑrpəntər",
+      "viRead": "KAR-pơn-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ mộc",
+      "exampleEn": "The carpenter made a wooden table.",
+      "exampleVi": "Người thợ mộc đóng một cái bàn gỗ.",
+      "collocations": [
+        {
+          "en": "a skilled carpenter",
+          "vi": "thợ mộc lành nghề"
+        },
+        {
+          "en": "carpenter's tools",
+          "vi": "đồ nghề thợ mộc"
+        }
+      ],
+      "tip": "carpenter = thợ mộc.",
+      "emoji": "🪚",
+      "stage": 2
+    },
+    {
+      "id": 3337,
+      "word": "baker",
+      "ipa": "ˈbeɪkər",
+      "viRead": "BÂY-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ làm bánh",
+      "exampleEn": "The baker gets up at 4 a.m.",
+      "exampleVi": "Thợ làm bánh dậy lúc 4 giờ sáng.",
+      "collocations": [
+        {
+          "en": "the baker's",
+          "vi": "tiệm bánh"
+        },
+        {
+          "en": "a local baker",
+          "vi": "thợ bánh trong xóm"
+        }
+      ],
+      "family": [
+        {
+          "word": "bake",
+          "vi": "nướng bánh"
+        },
+        {
+          "word": "bakery",
+          "vi": "tiệm bánh"
+        }
+      ],
+      "tip": "bake → baker → bakery.",
+      "emoji": "👨‍🍳",
+      "stage": 2
+    },
+    {
+      "id": 3338,
+      "word": "butcher",
+      "ipa": "ˈbʊʧər",
+      "viRead": "BU-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người bán thịt",
+      "exampleEn": "The butcher cut the meat for us.",
+      "exampleVi": "Người bán thịt thái thịt cho chúng tôi.",
+      "collocations": [
+        {
+          "en": "the butcher's",
+          "vi": "hàng thịt"
+        },
+        {
+          "en": "a butcher's knife",
+          "vi": "dao thái thịt"
+        }
+      ],
+      "tip": "u đọc 'u' ngắn: 'BU-chơ'.",
+      "emoji": "🔪",
       "stage": 2
     }
   ]
