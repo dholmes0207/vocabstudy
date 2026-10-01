@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3722,
+    "count": 3772,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -104799,6 +104799,1462 @@
       ],
       "tip": "significantly = considerably.",
       "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 3723,
+      "word": "minimal",
+      "ipa": "ˈmɪnəməl",
+      "viRead": "MI-nơ-mơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tối thiểu",
+      "exampleEn": "The damage was minimal.",
+      "exampleVi": "Thiệt hại không đáng kể.",
+      "collocations": [
+        {
+          "en": "minimal cost",
+          "vi": "chi phí tối thiểu"
+        },
+        {
+          "en": "minimal design",
+          "vi": "thiết kế tối giản"
+        }
+      ],
+      "family": [
+        {
+          "word": "minimum",
+          "vi": "mức tối thiểu"
+        }
+      ],
+      "tip": "minimalist = người theo lối sống tối giản.",
+      "emoji": "🔹",
+      "stage": 2
+    },
+    {
+      "id": 3724,
+      "word": "notably",
+      "ipa": "ˈnoʊtəbli",
+      "viRead": "NÂU-tơ-bli",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đáng chú ý là, đặc biệt",
+      "exampleEn": "Many fruits, notably mangoes, grow here.",
+      "exampleVi": "Nhiều loại quả, đặc biệt là xoài, mọc ở đây.",
+      "collocations": [
+        {
+          "en": "most notably",
+          "vi": "đáng chú ý nhất"
+        },
+        {
+          "en": "notably different",
+          "vi": "khác biệt rõ"
+        }
+      ],
+      "family": [
+        {
+          "word": "notable",
+          "vi": "đáng chú ý"
+        }
+      ],
+      "tip": "notably = especially.",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 3725,
+      "word": "per",
+      "ipa": "pər",
+      "viRead": "PƠ",
+      "pos": "prep.",
+      "posCategory": "preposition",
+      "meaning": "mỗi",
+      "exampleEn": "The ticket costs 50,000 dong per person.",
+      "exampleVi": "Vé giá 50.000 đồng mỗi người.",
+      "collocations": [
+        {
+          "en": "per person",
+          "vi": "mỗi người"
+        },
+        {
+          "en": "per hour",
+          "vi": "mỗi giờ"
+        }
+      ],
+      "tip": "km per hour (km/h); per cent = phần trăm.",
+      "emoji": "➗",
+      "stage": 2
+    },
+    {
+      "id": 3726,
+      "word": "prior",
+      "ipa": "praɪər",
+      "viRead": "PRAI-ơ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "trước",
+      "exampleEn": "No prior experience is needed.",
+      "exampleVi": "Không cần kinh nghiệm trước đó.",
+      "collocations": [
+        {
+          "en": "prior to",
+          "vi": "trước khi"
+        },
+        {
+          "en": "prior experience",
+          "vi": "kinh nghiệm trước"
+        }
+      ],
+      "family": [
+        {
+          "word": "priority",
+          "vi": "ưu tiên"
+        }
+      ],
+      "tip": "prior to = before (trang trọng).",
+      "emoji": "⏮️",
+      "stage": 2
+    },
+    {
+      "id": 3727,
+      "word": "provided",
+      "ipa": "prəˈvaɪdɪd",
+      "viRead": "prơ-VAI-điđ",
+      "pos": "conj.",
+      "posCategory": "conjunction",
+      "meaning": "miễn là",
+      "exampleEn": "You can go out, provided you finish your homework.",
+      "exampleVi": "Con được đi chơi, miễn là làm xong bài tập.",
+      "collocations": [
+        {
+          "en": "provided that",
+          "vi": "với điều kiện là"
+        },
+        {
+          "en": "provided you",
+          "vi": "miễn là bạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "provide",
+          "vi": "cung cấp"
+        }
+      ],
+      "tip": "provided (that) = as long as = miễn là.",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 3728,
+      "word": "rating",
+      "ipa": "ˈreɪtɪŋ",
+      "viRead": "RÂY-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự xếp hạng, đánh giá",
+      "exampleEn": "The app has a five-star rating.",
+      "exampleVi": "Ứng dụng được đánh giá năm sao.",
+      "collocations": [
+        {
+          "en": "a high rating",
+          "vi": "đánh giá cao"
+        },
+        {
+          "en": "star rating",
+          "vi": "xếp hạng sao"
+        }
+      ],
+      "family": [
+        {
+          "word": "rate",
+          "vi": "đánh giá"
+        }
+      ],
+      "tip": "rate (v) → rating (n).",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 3729,
+      "word": "readily",
+      "ipa": "ˈrɛdəli",
+      "viRead": "RE-đơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sẵn sàng; dễ dàng",
+      "exampleEn": "Fresh herbs are readily available in Vietnam.",
+      "exampleVi": "Rau thơm tươi có sẵn khắp nơi ở Việt Nam.",
+      "collocations": [
+        {
+          "en": "readily available",
+          "vi": "có sẵn"
+        },
+        {
+          "en": "readily agree",
+          "vi": "sẵn lòng đồng ý"
+        }
+      ],
+      "family": [
+        {
+          "word": "ready",
+          "vi": "sẵn sàng"
+        }
+      ],
+      "tip": "readily available = dễ kiếm, có sẵn.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 3730,
+      "word": "recruit",
+      "ipa": "rɪˈkrut",
+      "viRead": "ri-KRUT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tuyển dụng",
+      "exampleEn": "The company is recruiting new staff.",
+      "exampleVi": "Công ty đang tuyển nhân viên mới.",
+      "collocations": [
+        {
+          "en": "recruit staff",
+          "vi": "tuyển nhân viên"
+        },
+        {
+          "en": "recruit volunteers",
+          "vi": "tuyển tình nguyện viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "recruitment",
+          "vi": "sự tuyển dụng"
+        }
+      ],
+      "tip": "ui đọc 'u': 'ri-KRUT'.",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 3731,
+      "word": "regulation",
+      "ipa": "ˌrɛgjəˈleɪʃən",
+      "viRead": "re-gyơ-LÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quy định",
+      "exampleEn": "Follow the safety regulations.",
+      "exampleVi": "Tuân theo các quy định an toàn.",
+      "collocations": [
+        {
+          "en": "safety regulations",
+          "vi": "quy định an toàn"
+        },
+        {
+          "en": "rules and regulations",
+          "vi": "nội quy"
+        }
+      ],
+      "family": [
+        {
+          "word": "regulate",
+          "vi": "điều tiết"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: regulations.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 3732,
+      "word": "reinforce",
+      "ipa": "ˌriɪnˈfɔrs",
+      "viRead": "ri-in-PHORS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "củng cố",
+      "exampleEn": "Reviewing words reinforces your memory.",
+      "exampleVi": "Ôn từ giúp củng cố trí nhớ.",
+      "collocations": [
+        {
+          "en": "reinforce memory",
+          "vi": "củng cố trí nhớ"
+        },
+        {
+          "en": "reinforce a wall",
+          "vi": "gia cố tường"
+        }
+      ],
+      "family": [
+        {
+          "word": "reinforcement",
+          "vi": "sự củng cố"
+        }
+      ],
+      "tip": "re + in + force: thêm lực vào.",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 3733,
+      "word": "resistance",
+      "ipa": "rɪˈzɪstəns",
+      "viRead": "ri-DIS-tơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự chống cự, kháng cự",
+      "exampleEn": "There was strong resistance to the new rules.",
+      "exampleVi": "Luật mới gặp sự phản đối mạnh mẽ.",
+      "collocations": [
+        {
+          "en": "resistance to",
+          "vi": "sự chống lại"
+        },
+        {
+          "en": "water resistance",
+          "vi": "khả năng chống nước"
+        }
+      ],
+      "family": [
+        {
+          "word": "resist",
+          "vi": "chống lại"
+        }
+      ],
+      "tip": "resist (v) → resistance (n) → resistant (adj).",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 3734,
+      "word": "resolution",
+      "ipa": "ˌrɛzəˈluʃən",
+      "viRead": "re-dơ-LU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quyết tâm; độ phân giải",
+      "exampleEn": "My New Year's resolution is to read more.",
+      "exampleVi": "Quyết tâm năm mới của tôi là đọc nhiều hơn.",
+      "collocations": [
+        {
+          "en": "New Year's resolution",
+          "vi": "quyết tâm năm mới"
+        },
+        {
+          "en": "high resolution",
+          "vi": "độ phân giải cao"
+        }
+      ],
+      "family": [
+        {
+          "word": "resolve",
+          "vi": "giải quyết"
+        }
+      ],
+      "tip": "New Year's resolution = điều quyết tâm làm trong năm mới.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 3735,
+      "word": "resolve",
+      "ipa": "riˈzɑlv",
+      "viRead": "ri-DALV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giải quyết",
+      "exampleEn": "We need to resolve this problem quickly.",
+      "exampleVi": "Chúng ta cần giải quyết vấn đề này nhanh.",
+      "collocations": [
+        {
+          "en": "resolve a problem",
+          "vi": "giải quyết vấn đề"
+        },
+        {
+          "en": "resolve a conflict",
+          "vi": "hòa giải xung đột"
+        }
+      ],
+      "family": [
+        {
+          "word": "resolution",
+          "vi": "giải pháp"
+        }
+      ],
+      "tip": "resolve = solve (trang trọng).",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 3736,
+      "word": "respectively",
+      "ipa": "rɪˈspɛktɪvli",
+      "viRead": "ri-SPEK-tiv-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "lần lượt (tương ứng)",
+      "exampleEn": "Nam and Lan are 10 and 12, respectively.",
+      "exampleVi": "Nam và Lan lần lượt 10 và 12 tuổi.",
+      "collocations": [
+        {
+          "en": "respectively",
+          "vi": "tương ứng"
+        },
+        {
+          "en": "first and second respectively",
+          "vi": "lần lượt nhất và nhì"
+        }
+      ],
+      "family": [
+        {
+          "word": "respective",
+          "vi": "tương ứng"
+        }
+      ],
+      "tip": "respectively = theo thứ tự tương ứng (khác respectfully = lễ phép).",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 3737,
+      "word": "restore",
+      "ipa": "rɪˈstɔr",
+      "viRead": "ri-STOR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khôi phục",
+      "exampleEn": "They restored the old temple.",
+      "exampleVi": "Họ đã trùng tu ngôi chùa cổ.",
+      "collocations": [
+        {
+          "en": "restore a building",
+          "vi": "trùng tu công trình"
+        },
+        {
+          "en": "restore data",
+          "vi": "khôi phục dữ liệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "restoration",
+          "vi": "sự phục hồi"
+        }
+      ],
+      "tip": "restore = bring back (khôi phục, trùng tu).",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 3738,
+      "word": "restriction",
+      "ipa": "riˈstrɪkʃən",
+      "viRead": "ri-STRIK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hạn chế",
+      "exampleEn": "There are no restrictions on age.",
+      "exampleVi": "Không giới hạn độ tuổi.",
+      "collocations": [
+        {
+          "en": "travel restrictions",
+          "vi": "hạn chế đi lại"
+        },
+        {
+          "en": "age restriction",
+          "vi": "giới hạn độ tuổi"
+        }
+      ],
+      "family": [
+        {
+          "word": "restrict",
+          "vi": "hạn chế"
+        }
+      ],
+      "tip": "restrict (v) → restriction (n).",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 3739,
+      "word": "retail",
+      "ipa": "ˈriˌteɪl",
+      "viRead": "RI-tâyl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bán lẻ",
+      "exampleEn": "She works in retail.",
+      "exampleVi": "Cô ấy làm ngành bán lẻ.",
+      "collocations": [
+        {
+          "en": "retail store",
+          "vi": "cửa hàng bán lẻ"
+        },
+        {
+          "en": "retail price",
+          "vi": "giá bán lẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "wholesale",
+          "vi": "bán buôn"
+        }
+      ],
+      "tip": "retail (bán lẻ) ↔ wholesale (bán sỉ).",
+      "emoji": "🏪",
+      "stage": 2
+    },
+    {
+      "id": 3740,
+      "word": "retain",
+      "ipa": "rɪˈteɪn",
+      "viRead": "ri-TÂYN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "giữ lại",
+      "exampleEn": "Regular review helps you retain new words.",
+      "exampleVi": "Ôn đều đặn giúp bạn nhớ được từ mới.",
+      "collocations": [
+        {
+          "en": "retain information",
+          "vi": "ghi nhớ thông tin"
+        },
+        {
+          "en": "retain customers",
+          "vi": "giữ chân khách hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "retention",
+          "vi": "sự ghi nhớ"
+        }
+      ],
+      "tip": "retain = keep (trang trọng).",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 3741,
+      "word": "retirement",
+      "ipa": "rɪˈtaɪərmənt",
+      "viRead": "ri-TAIR-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự nghỉ hưu",
+      "exampleEn": "My grandparents enjoy their retirement.",
+      "exampleVi": "Ông bà tôi tận hưởng tuổi nghỉ hưu.",
+      "collocations": [
+        {
+          "en": "early retirement",
+          "vi": "nghỉ hưu sớm"
+        },
+        {
+          "en": "retirement age",
+          "vi": "tuổi nghỉ hưu"
+        }
+      ],
+      "family": [
+        {
+          "word": "retire",
+          "vi": "nghỉ hưu"
+        }
+      ],
+      "tip": "retire (v) → retirement (n) → retired (adj).",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 3742,
+      "word": "revenue",
+      "ipa": "ˈrɛvəˌnu",
+      "viRead": "RE-vơ-nu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "doanh thu",
+      "exampleEn": "Tourism brings revenue to the city.",
+      "exampleVi": "Du lịch mang lại doanh thu cho thành phố.",
+      "collocations": [
+        {
+          "en": "annual revenue",
+          "vi": "doanh thu hằng năm"
+        },
+        {
+          "en": "tax revenue",
+          "vi": "nguồn thu thuế"
+        }
+      ],
+      "family": [
+        {
+          "word": "income",
+          "vi": "thu nhập"
+        }
+      ],
+      "tip": "Đọc 'RE-vơ-nu'.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 3743,
+      "word": "reverse",
+      "ipa": "rɪˈvərs",
+      "viRead": "ri-VƠS",
+      "pos": "v./adj.",
+      "posCategory": "verb",
+      "meaning": "đảo ngược; lùi",
+      "exampleEn": "Reverse the car into the garage.",
+      "exampleVi": "Lùi xe vào gara.",
+      "collocations": [
+        {
+          "en": "in reverse",
+          "vi": "ngược lại"
+        },
+        {
+          "en": "reverse the order",
+          "vi": "đảo thứ tự"
+        }
+      ],
+      "tip": "reverse gear = số lùi.",
+      "emoji": "⏪",
+      "stage": 2
+    },
+    {
+      "id": 3744,
+      "word": "revolution",
+      "ipa": "ˌrɛvəˈluʃən",
+      "viRead": "re-vơ-LU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc cách mạng",
+      "exampleEn": "The internet started a revolution in learning.",
+      "exampleVi": "Internet đã tạo ra cuộc cách mạng trong học tập.",
+      "collocations": [
+        {
+          "en": "the August Revolution",
+          "vi": "Cách mạng Tháng Tám"
+        },
+        {
+          "en": "industrial revolution",
+          "vi": "cách mạng công nghiệp"
+        }
+      ],
+      "family": [
+        {
+          "word": "revolutionary",
+          "vi": "mang tính cách mạng"
+        }
+      ],
+      "tip": "revolve (xoay) → revolution (vòng quay; cách mạng).",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 3745,
+      "word": "roughly",
+      "ipa": "ˈrəfli",
+      "viRead": "RƠPH-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khoảng, xấp xỉ",
+      "exampleEn": "The trip takes roughly two hours.",
+      "exampleVi": "Chuyến đi mất khoảng hai tiếng.",
+      "collocations": [
+        {
+          "en": "roughly speaking",
+          "vi": "nói đại khái"
+        },
+        {
+          "en": "roughly the same",
+          "vi": "gần như giống nhau"
+        }
+      ],
+      "family": [
+        {
+          "word": "rough",
+          "vi": "thô"
+        }
+      ],
+      "tip": "roughly = about, approximately.",
+      "emoji": "≈",
+      "stage": 2
+    },
+    {
+      "id": 3746,
+      "word": "scenario",
+      "ipa": "sɪˈnɛrioʊ",
+      "viRead": "si-NE-ri-âu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kịch bản, tình huống",
+      "exampleEn": "In the worst scenario, we'll take a taxi.",
+      "exampleVi": "Trường hợp xấu nhất, mình đi taxi.",
+      "collocations": [
+        {
+          "en": "worst-case scenario",
+          "vi": "tình huống xấu nhất"
+        },
+        {
+          "en": "a possible scenario",
+          "vi": "kịch bản có thể xảy ra"
+        }
+      ],
+      "tip": "Đọc 'sơ-NE-ri-âu'.",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 3747,
+      "word": "scheme",
+      "ipa": "skim",
+      "viRead": "SKIM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kế hoạch, chương trình",
+      "exampleEn": "The government has a new scheme to help farmers.",
+      "exampleVi": "Chính phủ có chương trình mới hỗ trợ nông dân.",
+      "collocations": [
+        {
+          "en": "a pension scheme",
+          "vi": "chương trình lương hưu"
+        },
+        {
+          "en": "color scheme",
+          "vi": "bảng phối màu"
+        }
+      ],
+      "tip": "sch đọc 'sk': 'skim'. color scheme = bộ màu.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 3748,
+      "word": "secondary",
+      "ipa": "ˈsɛkənˌdɛri",
+      "viRead": "SE-kơn-đe-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thứ hai; trung học",
+      "exampleEn": "She teaches at a secondary school.",
+      "exampleVi": "Cô ấy dạy ở trường trung học.",
+      "collocations": [
+        {
+          "en": "secondary school",
+          "vi": "trường trung học"
+        },
+        {
+          "en": "of secondary importance",
+          "vi": "thứ yếu"
+        }
+      ],
+      "family": [
+        {
+          "word": "second",
+          "vi": "thứ hai"
+        }
+      ],
+      "tip": "primary (tiểu học) → secondary (trung học).",
+      "emoji": "🏫",
+      "stage": 2
+    },
+    {
+      "id": 3749,
+      "word": "sector",
+      "ipa": "ˈsɛktər",
+      "viRead": "SEK-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lĩnh vực, khu vực",
+      "exampleEn": "He works in the public sector.",
+      "exampleVi": "Anh ấy làm trong khu vực nhà nước.",
+      "collocations": [
+        {
+          "en": "public sector",
+          "vi": "khu vực công"
+        },
+        {
+          "en": "private sector",
+          "vi": "khu vực tư nhân"
+        }
+      ],
+      "tip": "sector = một phần của nền kinh tế.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 3750,
+      "word": "selection",
+      "ipa": "səˈlɛkʃən",
+      "viRead": "sơ-LEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lựa chọn; tuyển chọn",
+      "exampleEn": "The shop has a wide selection of books.",
+      "exampleVi": "Cửa hàng có nhiều loại sách để chọn.",
+      "collocations": [
+        {
+          "en": "a wide selection",
+          "vi": "nhiều lựa chọn"
+        },
+        {
+          "en": "natural selection",
+          "vi": "chọn lọc tự nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "select",
+          "vi": "chọn"
+        }
+      ],
+      "tip": "select (v) → selection (n).",
+      "emoji": "🛍️",
+      "stage": 2
+    },
+    {
+      "id": 3751,
+      "word": "sequence",
+      "ipa": "ˈsikwəns",
+      "viRead": "SIK-wơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trình tự, chuỗi",
+      "exampleEn": "Put the pictures in the right sequence.",
+      "exampleVi": "Sắp xếp các bức tranh theo đúng trình tự.",
+      "collocations": [
+        {
+          "en": "in sequence",
+          "vi": "theo thứ tự"
+        },
+        {
+          "en": "a sequence of events",
+          "vi": "chuỗi sự kiện"
+        }
+      ],
+      "tip": "Đọc 'SI-kwơns'.",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 3752,
+      "word": "severely",
+      "ipa": "səˈvɪrli",
+      "viRead": "sơ-VIR-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nghiêm trọng, nặng nề",
+      "exampleEn": "The house was severely damaged.",
+      "exampleVi": "Ngôi nhà bị hư hại nặng.",
+      "collocations": [
+        {
+          "en": "severely damaged",
+          "vi": "hư hại nặng"
+        },
+        {
+          "en": "severely injured",
+          "vi": "bị thương nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "severe",
+          "vi": "nghiêm trọng"
+        }
+      ],
+      "tip": "severely = badly, seriously.",
+      "emoji": "⚠️",
+      "stage": 2
+    },
+    {
+      "id": 3753,
+      "word": "similarly",
+      "ipa": "ˈsɪmələrli",
+      "viRead": "SI-mơ-lơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "tương tự",
+      "exampleEn": "Similarly, you can learn verbs with pictures.",
+      "exampleVi": "Tương tự, bạn có thể học động từ qua tranh.",
+      "collocations": [
+        {
+          "en": "similarly, the",
+          "vi": "tương tự,"
+        },
+        {
+          "en": "behave similarly",
+          "vi": "cư xử giống nhau"
+        }
+      ],
+      "family": [
+        {
+          "word": "similar",
+          "vi": "tương tự"
+        }
+      ],
+      "tip": "Similarly, ... = Tương tự như vậy, ...",
+      "emoji": "🟰",
+      "stage": 2
+    },
+    {
+      "id": 3754,
+      "word": "simultaneously",
+      "ipa": "ˌsaɪməlˈteɪniəsli",
+      "viRead": "sai-mơl-TÂY-ni-ơs-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đồng thời",
+      "exampleEn": "They both answered simultaneously.",
+      "exampleVi": "Cả hai trả lời cùng một lúc.",
+      "collocations": [
+        {
+          "en": "happen simultaneously",
+          "vi": "xảy ra đồng thời"
+        },
+        {
+          "en": "simultaneously translate",
+          "vi": "dịch song song"
+        }
+      ],
+      "family": [
+        {
+          "word": "simultaneous",
+          "vi": "đồng thời"
+        }
+      ],
+      "tip": "simultaneously = at the same time.",
+      "emoji": "⏱️",
+      "stage": 2
+    },
+    {
+      "id": 3755,
+      "word": "solely",
+      "ipa": "ˈsoʊlli",
+      "viRead": "SÂUL-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chỉ, duy nhất",
+      "exampleEn": "The decision is solely yours.",
+      "exampleVi": "Quyết định hoàn toàn là của bạn.",
+      "collocations": [
+        {
+          "en": "solely responsible",
+          "vi": "chịu trách nhiệm hoàn toàn"
+        },
+        {
+          "en": "solely for",
+          "vi": "chỉ dành cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "sole",
+          "vi": "duy nhất"
+        }
+      ],
+      "tip": "solely = only.",
+      "emoji": "☝️",
+      "stage": 2
+    },
+    {
+      "id": 3756,
+      "word": "specialist",
+      "ipa": "ˈspɛʃəlɪst",
+      "viRead": "SPE-shơ-lơst",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuyên gia",
+      "exampleEn": "See a skin specialist about the rash.",
+      "exampleVi": "Đi khám bác sĩ da liễu về chỗ phát ban.",
+      "collocations": [
+        {
+          "en": "a heart specialist",
+          "vi": "bác sĩ chuyên khoa tim"
+        },
+        {
+          "en": "IT specialist",
+          "vi": "chuyên viên IT"
+        }
+      ],
+      "family": [
+        {
+          "word": "special",
+          "vi": "đặc biệt"
+        }
+      ],
+      "tip": "specialist = chuyên gia một lĩnh vực.",
+      "emoji": "👨‍⚕️",
+      "stage": 2
+    },
+    {
+      "id": 3757,
+      "word": "specifically",
+      "ipa": "spəˈsɪfɪkli",
+      "viRead": "spơ-SI-phik-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cụ thể là, đặc biệt",
+      "exampleEn": "This book is written specifically for beginners.",
+      "exampleVi": "Cuốn sách này viết riêng cho người mới bắt đầu.",
+      "collocations": [
+        {
+          "en": "specifically for",
+          "vi": "dành riêng cho"
+        },
+        {
+          "en": "more specifically",
+          "vi": "cụ thể hơn"
+        }
+      ],
+      "family": [
+        {
+          "word": "specific",
+          "vi": "cụ thể"
+        }
+      ],
+      "tip": "specifically = particularly, for a particular purpose.",
+      "emoji": "🎯",
+      "stage": 2
+    },
+    {
+      "id": 3758,
+      "word": "stability",
+      "ipa": "stəˈbɪlɪti",
+      "viRead": "stơ-BI-li-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự ổn định",
+      "exampleEn": "Children need stability and love.",
+      "exampleVi": "Trẻ em cần sự ổn định và tình yêu thương.",
+      "collocations": [
+        {
+          "en": "economic stability",
+          "vi": "ổn định kinh tế"
+        },
+        {
+          "en": "job stability",
+          "vi": "sự ổn định công việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "stable",
+          "vi": "ổn định"
+        }
+      ],
+      "tip": "stable (adj) → stability (n).",
+      "emoji": "⚓",
+      "stage": 2
+    },
+    {
+      "id": 3759,
+      "word": "statistic",
+      "ipa": "stəˈtɪstɪk",
+      "viRead": "stơ-TIS-tik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "số liệu thống kê",
+      "exampleEn": "The statistics show more people are learning English.",
+      "exampleVi": "Số liệu cho thấy ngày càng nhiều người học tiếng Anh.",
+      "collocations": [
+        {
+          "en": "official statistics",
+          "vi": "số liệu chính thức"
+        },
+        {
+          "en": "a shocking statistic",
+          "vi": "con số gây sốc"
+        }
+      ],
+      "family": [
+        {
+          "word": "statistical",
+          "vi": "thuộc thống kê"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: statistics (stats).",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 3760,
+      "word": "steadily",
+      "ipa": "ˈstɛdəli",
+      "viRead": "STE-đơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đều đặn, vững chắc",
+      "exampleEn": "Prices have risen steadily.",
+      "exampleVi": "Giá cả tăng đều đặn.",
+      "collocations": [
+        {
+          "en": "rise steadily",
+          "vi": "tăng đều"
+        },
+        {
+          "en": "work steadily",
+          "vi": "làm việc đều đặn"
+        }
+      ],
+      "family": [
+        {
+          "word": "steady",
+          "vi": "đều đặn"
+        }
+      ],
+      "tip": "steadily = gradually and regularly.",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 3761,
+      "word": "strategic",
+      "ipa": "strəˈtiʤɪk",
+      "viRead": "strơ-TI-gik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mang tính chiến lược",
+      "exampleEn": "Da Nang has a strategic location.",
+      "exampleVi": "Đà Nẵng có vị trí chiến lược.",
+      "collocations": [
+        {
+          "en": "strategic location",
+          "vi": "vị trí chiến lược"
+        },
+        {
+          "en": "strategic plan",
+          "vi": "kế hoạch chiến lược"
+        }
+      ],
+      "family": [
+        {
+          "word": "strategy",
+          "vi": "chiến lược"
+        }
+      ],
+      "tip": "strategy (n) → strategic (adj). Nhấn âm 2: strơ-TI-jik.",
+      "emoji": "♟️",
+      "stage": 2
+    },
+    {
+      "id": 3762,
+      "word": "strictly",
+      "ipa": "ˈstrɪktli",
+      "viRead": "STRIKT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nghiêm ngặt",
+      "exampleEn": "Smoking is strictly forbidden.",
+      "exampleVi": "Hút thuốc bị nghiêm cấm.",
+      "collocations": [
+        {
+          "en": "strictly forbidden",
+          "vi": "nghiêm cấm"
+        },
+        {
+          "en": "strictly speaking",
+          "vi": "nói một cách chính xác"
+        }
+      ],
+      "family": [
+        {
+          "word": "strict",
+          "vi": "nghiêm"
+        }
+      ],
+      "tip": "strictly speaking = nói cho chính xác thì.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 3763,
+      "word": "substantial",
+      "ipa": "səbˈstænʃəl",
+      "viRead": "sơb-STEN-shơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng kể, lớn",
+      "exampleEn": "He got a substantial pay rise.",
+      "exampleVi": "Anh ấy được tăng lương đáng kể.",
+      "collocations": [
+        {
+          "en": "a substantial amount",
+          "vi": "một lượng lớn"
+        },
+        {
+          "en": "substantial change",
+          "vi": "thay đổi đáng kể"
+        }
+      ],
+      "tip": "substantial = large, considerable.",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 3764,
+      "word": "successfully",
+      "ipa": "səkˈsɛsfəli",
+      "viRead": "sơk-SES-phơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thành công",
+      "exampleEn": "You have successfully finished the lesson!",
+      "exampleVi": "Bạn đã hoàn thành bài học thành công!",
+      "collocations": [
+        {
+          "en": "successfully complete",
+          "vi": "hoàn thành thành công"
+        },
+        {
+          "en": "successfully pass",
+          "vi": "vượt qua thành công"
+        }
+      ],
+      "family": [
+        {
+          "word": "success",
+          "vi": "thành công"
+        }
+      ],
+      "tip": "Chính tả: su-cc-e-ss-fu-ll-y (2 c, 2 s, 2 l).",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 3765,
+      "word": "summary",
+      "ipa": "ˈsəməri",
+      "viRead": "SƠ-mơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bản tóm tắt",
+      "exampleEn": "Write a short summary of the story.",
+      "exampleVi": "Viết một bản tóm tắt ngắn về câu chuyện.",
+      "collocations": [
+        {
+          "en": "in summary",
+          "vi": "tóm lại"
+        },
+        {
+          "en": "a brief summary",
+          "vi": "tóm tắt ngắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "summarize",
+          "vi": "tóm tắt"
+        }
+      ],
+      "tip": "In summary, ... = Tóm lại, ...",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 3766,
+      "word": "surrounding",
+      "ipa": "səˈraʊndɪŋ",
+      "viRead": "sơ-RAON-đing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xung quanh",
+      "exampleEn": "Hanoi and the surrounding areas are cold in winter.",
+      "exampleVi": "Hà Nội và các vùng lân cận lạnh vào mùa đông.",
+      "collocations": [
+        {
+          "en": "surrounding areas",
+          "vi": "vùng lân cận"
+        },
+        {
+          "en": "surrounding villages",
+          "vi": "làng xung quanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "surround",
+          "vi": "bao quanh"
+        },
+        {
+          "word": "surroundings",
+          "vi": "môi trường xung quanh"
+        }
+      ],
+      "tip": "surroundings (n, số nhiều) = môi trường xung quanh.",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 3767,
+      "word": "survival",
+      "ipa": "sərˈvaɪvəl",
+      "viRead": "sơ-VAI-vơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự sống sót",
+      "exampleEn": "Water is necessary for survival.",
+      "exampleVi": "Nước cần thiết cho sự sống còn.",
+      "collocations": [
+        {
+          "en": "survival skills",
+          "vi": "kỹ năng sinh tồn"
+        },
+        {
+          "en": "a fight for survival",
+          "vi": "cuộc chiến sinh tồn"
+        }
+      ],
+      "family": [
+        {
+          "word": "survive",
+          "vi": "sống sót"
+        }
+      ],
+      "tip": "survive (v) → survival (n) → survivor (người sống sót).",
+      "emoji": "🏕️",
+      "stage": 2
+    },
+    {
+      "id": 3768,
+      "word": "suspend",
+      "ipa": "səˈspɛnd",
+      "viRead": "sơ-SPENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đình chỉ, tạm dừng",
+      "exampleEn": "The match was suspended because of rain.",
+      "exampleVi": "Trận đấu bị tạm dừng vì mưa.",
+      "collocations": [
+        {
+          "en": "be suspended from school",
+          "vi": "bị đình chỉ học"
+        },
+        {
+          "en": "suspend a service",
+          "vi": "tạm ngừng dịch vụ"
+        }
+      ],
+      "family": [
+        {
+          "word": "suspension",
+          "vi": "sự đình chỉ"
+        }
+      ],
+      "tip": "suspension bridge = cầu treo.",
+      "emoji": "⏸️",
+      "stage": 2
+    },
+    {
+      "id": 3769,
+      "word": "sustainable",
+      "ipa": "səˈsteɪnəbəl",
+      "viRead": "sơ-STÂY-nơ-bơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bền vững",
+      "exampleEn": "We need sustainable tourism.",
+      "exampleVi": "Chúng ta cần du lịch bền vững.",
+      "collocations": [
+        {
+          "en": "sustainable development",
+          "vi": "phát triển bền vững"
+        },
+        {
+          "en": "sustainable energy",
+          "vi": "năng lượng bền vững"
+        }
+      ],
+      "family": [
+        {
+          "word": "sustain",
+          "vi": "duy trì"
+        }
+      ],
+      "tip": "sustainable = có thể duy trì lâu dài mà không hại môi trường.",
+      "emoji": "♻️",
+      "stage": 2
+    },
+    {
+      "id": 3770,
+      "word": "temporarily",
+      "ipa": "ˌtɛmpəˈrɛrəli",
+      "viRead": "tem-pơ-RE-rơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "tạm thời",
+      "exampleEn": "The shop is temporarily closed.",
+      "exampleVi": "Cửa hàng tạm thời đóng cửa.",
+      "collocations": [
+        {
+          "en": "temporarily closed",
+          "vi": "tạm đóng cửa"
+        },
+        {
+          "en": "temporarily unavailable",
+          "vi": "tạm thời không có"
+        }
+      ],
+      "family": [
+        {
+          "word": "temporary",
+          "vi": "tạm thời"
+        }
+      ],
+      "tip": "Biển hiệu: Temporarily Closed = Tạm nghỉ.",
+      "emoji": "🚧",
+      "stage": 2
+    },
+    {
+      "id": 3771,
+      "word": "tremendous",
+      "ipa": "trɪˈmɛndəs",
+      "viRead": "trơ-MEN-đơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "to lớn, khủng khiếp",
+      "exampleEn": "She made a tremendous effort.",
+      "exampleVi": "Cô ấy đã nỗ lực rất lớn.",
+      "collocations": [
+        {
+          "en": "a tremendous effort",
+          "vi": "nỗ lực to lớn"
+        },
+        {
+          "en": "tremendous success",
+          "vi": "thành công vang dội"
+        }
+      ],
+      "tip": "tremendous = huge, very great.",
+      "emoji": "🌋",
+      "stage": 2
+    },
+    {
+      "id": 3772,
+      "word": "truly",
+      "ipa": "ˈtruli",
+      "viRead": "TRU-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thật sự",
+      "exampleEn": "I'm truly sorry.",
+      "exampleVi": "Tôi thật lòng xin lỗi.",
+      "collocations": [
+        {
+          "en": "truly sorry",
+          "vi": "thật lòng xin lỗi"
+        },
+        {
+          "en": "Yours truly",
+          "vi": "Thân ái (cuối thư)"
+        }
+      ],
+      "family": [
+        {
+          "word": "true",
+          "vi": "thật"
+        }
+      ],
+      "tip": "Chính tả: truly (bỏ e của true).",
+      "emoji": "💙",
       "stage": 2
     }
   ]
