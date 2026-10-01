@@ -1,6 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { Loader2 } from 'lucide-react'
 import Layout from './components/Layout'
 import ErrorBoundary from './components/ErrorBoundary'
 import SkyBackdrop from './components/SkyBackdrop'
@@ -103,10 +102,25 @@ function DataGate({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
 
+/** While a screen or the word pack loads: a tiny constellation drawing itself. */
 function CenterSpinner() {
   return (
-    <div className="grid min-h-[60vh] place-items-center">
-      <Loader2 className="h-8 w-8 animate-spin text-brand-500" />
+    <div className="grid min-h-[60vh] place-items-center" role="status">
+      <div className="flex flex-col items-center gap-3">
+        <svg viewBox="0 0 64 40" className="loader-constellation h-12 w-20" aria-hidden="true">
+          <polyline points="6,30 20,12 34,22 48,8 58,26" />
+          {[
+            [6, 30],
+            [20, 12],
+            [34, 22],
+            [48, 8],
+            [58, 26],
+          ].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r="2.4" style={{ animationDelay: `${i * 0.18}s` }} />
+          ))}
+        </svg>
+        <span className="text-sm text-slate-500 dark:text-slate-400">Đang tải…</span>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { Monitor, Moon, Sun } from 'lucide-react'
 import type { ThemeSetting } from '@/types'
-import { useSettings } from '@/store/settingsStore'
+import { setThemeOrigin, useSettings } from '@/store/settingsStore'
 
 const ORDER: ThemeSetting[] = ['light', 'dark', 'system']
 const ICON = { light: Sun, dark: Moon, system: Monitor }
@@ -11,7 +11,11 @@ export default function ThemeToggle() {
   const setTheme = useSettings((s) => s.setTheme)
   const Icon = ICON[theme]
 
-  const next = () => setTheme(ORDER[(ORDER.indexOf(theme) + 1) % ORDER.length])
+  const next = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const r = e.currentTarget.getBoundingClientRect()
+    setThemeOrigin(r.left + r.width / 2, r.top + r.height / 2)
+    setTheme(ORDER[(ORDER.indexOf(theme) + 1) % ORDER.length])
+  }
 
   return (
     <button

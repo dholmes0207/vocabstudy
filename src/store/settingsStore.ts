@@ -89,9 +89,30 @@ function resolveDark(theme: ThemeSetting): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches
 }
 
+/** Where the next theme change should ripple out from (the button that was pressed). */
+let themeOrigin: { x: number; y: number } | null = null
+export function setThemeOrigin(x: number, y: number): void {
+  themeOrigin = { x, y }
+}
+
 export function applyTheme(theme: ThemeSetting): void {
+  const root = document.documentElement
   const dark = resolveDark(theme)
-  document.documentElement.classList.toggle('dark', dark)
+  if (root.classList.contains('dark') === dark) return
+  const flip = () => root.classList.toggle('dark', dark)
+  // Night falls (or day breaks) as a circle spreading from the theme button.
+  // Browsers without View Transitions, or with reduced motion, just switch.
+  const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown }
+  const calm = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  if (!doc.startViewTransition || calm) {
+    flip()
+    return
+  }
+  const o = themeOrigin ?? { x: window.innerWidth / 2, y: 0 }
+  themeOrigin = null
+  root.style.setProperty('--vt-x', `${o.x}px`)
+  root.style.setProperty('--vt-y', `${o.y}px`)
+  doc.startViewTransition(flip)
 }
 
 /** Wire up theme + TTS-voice reactivity. Call once at app startup. */

@@ -348,6 +348,77 @@
   }
 }
 
+/* Loading indicator: the line of a constellation draws itself, stars blink in. */
+.loader-constellation polyline {
+  fill: none;
+  stroke: rgb(51 125 255 / 0.55);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 80;
+  animation: draw-line 1.8s ease-in-out infinite;
+}
+.loader-constellation circle {
+  fill: #337dff;
+  animation: star-blink 1.8s ease-in-out infinite;
+}
+:root.dark .loader-constellation polyline {
+  stroke: rgb(199 210 254 / 0.6);
+}
+:root.dark .loader-constellation circle {
+  fill: #e0e7ff;
+}
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 80;
+  }
+  60%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes star-blink {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+.loader-constellation circle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader-constellation polyline,
+  .loader-constellation circle {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Theme switch: the new theme spreads as a circle from the button pressed
+   (settingsStore.applyTheme). Only runs where View Transitions exist. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: theme-reveal 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 0));
+  }
+  to {
+    clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 0));
+  }
+}
+
 /* 3D flip card */
 .flip-scene {
   perspective: 1400px;
