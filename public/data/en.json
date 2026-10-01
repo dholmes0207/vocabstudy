@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3867,
+    "count": 3887,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -108865,6 +108865,528 @@
       ],
       "tip": "yam (Mỹ thường chỉ khoai lang) = sweet potato.",
       "emoji": "🍠",
+      "stage": 2
+    },
+    {
+      "id": 3868,
+      "word": "bagel",
+      "ipa": "ˈbeɪgəl",
+      "viRead": "BÂY-gơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh mì vòng",
+      "exampleEn": "I had a bagel with cream cheese.",
+      "exampleVi": "Tôi ăn bánh mì vòng với phô mai kem.",
+      "collocations": [
+        {
+          "en": "a toasted bagel",
+          "vi": "bánh mì vòng nướng"
+        },
+        {
+          "en": "bagel with cream cheese",
+          "vi": "bánh vòng phô mai"
+        }
+      ],
+      "tip": "Đọc 'BÂY-gồ'.",
+      "emoji": "🥯",
+      "stage": 2
+    },
+    {
+      "id": 3869,
+      "word": "broth",
+      "ipa": "brɔθ",
+      "viRead": "BROTH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nước dùng",
+      "exampleEn": "The secret of pho is the beef broth.",
+      "exampleVi": "Bí quyết của phở là nước dùng bò.",
+      "collocations": [
+        {
+          "en": "beef broth",
+          "vi": "nước dùng bò"
+        },
+        {
+          "en": "chicken broth",
+          "vi": "nước dùng gà"
+        }
+      ],
+      "family": [
+        {
+          "word": "soup",
+          "vi": "súp"
+        }
+      ],
+      "tip": "broth = nước dùng (nước hầm xương).",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 3870,
+      "word": "chives",
+      "ipa": "ʧaɪvz",
+      "viRead": "CHAIVD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hẹ",
+      "exampleEn": "Add chopped chives to the eggs.",
+      "exampleVi": "Thêm hẹ thái nhỏ vào trứng.",
+      "collocations": [
+        {
+          "en": "chopped chives",
+          "vi": "hẹ thái nhỏ"
+        },
+        {
+          "en": "garlic chives",
+          "vi": "hẹ tỏi"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: chives.",
+      "emoji": "🌱",
+      "stage": 2
+    },
+    {
+      "id": 3871,
+      "word": "custard",
+      "ipa": "ˈkəstərd",
+      "viRead": "KƠS-tơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kem trứng, bánh flan",
+      "exampleEn": "Caramel custard is a popular dessert.",
+      "exampleVi": "Bánh flan caramel là món tráng miệng phổ biến.",
+      "collocations": [
+        {
+          "en": "caramel custard",
+          "vi": "bánh flan"
+        },
+        {
+          "en": "custard cream",
+          "vi": "kem trứng"
+        }
+      ],
+      "tip": "Bánh flan = crème caramel / caramel custard.",
+      "emoji": "🍮",
+      "stage": 2
+    },
+    {
+      "id": 3872,
+      "word": "fig",
+      "ipa": "fɪg",
+      "viRead": "PHIG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả sung, vả",
+      "exampleEn": "Figs are sweet and soft.",
+      "exampleVi": "Quả sung ngọt và mềm.",
+      "collocations": [
+        {
+          "en": "dried figs",
+          "vi": "sung khô"
+        },
+        {
+          "en": "a fig tree",
+          "vi": "cây sung"
+        }
+      ],
+      "tip": "fig leaf = lá sung (che đậy).",
+      "emoji": "🟣",
+      "stage": 2
+    },
+    {
+      "id": 3873,
+      "word": "gravy",
+      "ipa": "ˈgreɪvi",
+      "viRead": "GRÂY-vi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nước sốt thịt",
+      "exampleEn": "Pour some gravy on the potatoes.",
+      "exampleVi": "Rưới chút nước sốt lên khoai tây.",
+      "collocations": [
+        {
+          "en": "meat gravy",
+          "vi": "nước sốt thịt"
+        },
+        {
+          "en": "gravy boat",
+          "vi": "bát đựng sốt"
+        }
+      ],
+      "tip": "gravy = nước sốt làm từ nước thịt.",
+      "emoji": "🍖",
+      "stage": 2
+    },
+    {
+      "id": 3874,
+      "word": "hazelnut",
+      "ipa": "ˈheɪzəlˌnət",
+      "viRead": "HÂY-dơl-nơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạt phỉ",
+      "exampleEn": "I love hazelnut chocolate.",
+      "exampleVi": "Tôi thích sô-cô-la hạt phỉ.",
+      "collocations": [
+        {
+          "en": "hazelnut spread",
+          "vi": "bơ hạt phỉ"
+        },
+        {
+          "en": "roasted hazelnuts",
+          "vi": "hạt phỉ rang"
+        }
+      ],
+      "family": [
+        {
+          "word": "nut",
+          "vi": "hạt"
+        }
+      ],
+      "tip": "hazel (màu nâu hạt dẻ) + nut.",
+      "emoji": "🌰",
+      "stage": 2
+    },
+    {
+      "id": 3875,
+      "word": "macaroni",
+      "ipa": "ˌmækəˈroʊni",
+      "viRead": "me-kơ-RÂU-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mì ống nui",
+      "exampleEn": "Mom made macaroni soup.",
+      "exampleVi": "Mẹ nấu canh nui.",
+      "collocations": [
+        {
+          "en": "macaroni and cheese",
+          "vi": "nui phô mai"
+        },
+        {
+          "en": "macaroni soup",
+          "vi": "canh nui"
+        }
+      ],
+      "family": [
+        {
+          "word": "pasta",
+          "vi": "mì Ý"
+        }
+      ],
+      "tip": "macaroni = nui.",
+      "emoji": "🍝",
+      "stage": 2
+    },
+    {
+      "id": 3876,
+      "word": "mustard",
+      "ipa": "ˈməstərd",
+      "viRead": "MƠS-tơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mù tạt",
+      "exampleEn": "Do you want mustard on your hot dog?",
+      "exampleVi": "Bạn muốn mù tạt trên xúc xích không?",
+      "collocations": [
+        {
+          "en": "mustard greens",
+          "vi": "cải bẹ xanh"
+        },
+        {
+          "en": "yellow mustard",
+          "vi": "mù tạt vàng"
+        }
+      ],
+      "tip": "mustard greens = cải bẹ xanh (cải đắng).",
+      "emoji": "🌭",
+      "stage": 2
+    },
+    {
+      "id": 3877,
+      "word": "oatmeal",
+      "ipa": "ˈoʊtˌmil",
+      "viRead": "ÂUT-mil",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cháo yến mạch",
+      "exampleEn": "I eat oatmeal for breakfast.",
+      "exampleVi": "Tôi ăn yến mạch vào bữa sáng.",
+      "collocations": [
+        {
+          "en": "a bowl of oatmeal",
+          "vi": "bát yến mạch"
+        },
+        {
+          "en": "oatmeal cookies",
+          "vi": "bánh quy yến mạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "oat",
+          "vi": "yến mạch"
+        }
+      ],
+      "tip": "oat + meal.",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 3878,
+      "word": "radish",
+      "ipa": "ˈrædɪʃ",
+      "viRead": "RE-đish",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "củ cải",
+      "exampleEn": "Pickled radish goes well with banh mi.",
+      "exampleVi": "Củ cải muối ăn kèm bánh mì rất hợp.",
+      "collocations": [
+        {
+          "en": "white radish",
+          "vi": "củ cải trắng"
+        },
+        {
+          "en": "pickled radish",
+          "vi": "củ cải muối"
+        }
+      ],
+      "tip": "daikon = củ cải trắng to.",
+      "emoji": "🥕",
+      "stage": 2
+    },
+    {
+      "id": 3879,
+      "word": "sprout",
+      "ipa": "spraʊt",
+      "viRead": "SPRAOT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giá; mầm",
+      "exampleEn": "Add bean sprouts to the pho.",
+      "exampleVi": "Thêm giá vào phở.",
+      "collocations": [
+        {
+          "en": "bean sprouts",
+          "vi": "giá đỗ"
+        },
+        {
+          "en": "Brussels sprouts",
+          "vi": "cải Brussels"
+        }
+      ],
+      "tip": "bean sprouts = giá đỗ.",
+      "emoji": "🌱",
+      "stage": 2
+    },
+    {
+      "id": 3880,
+      "word": "squash",
+      "ipa": "skwɑʃ",
+      "viRead": "SKWASH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bí (rau quả)",
+      "exampleEn": "We grew squash in the garden.",
+      "exampleVi": "Chúng tôi trồng bí trong vườn.",
+      "collocations": [
+        {
+          "en": "butternut squash",
+          "vi": "bí hồ lô"
+        },
+        {
+          "en": "squash soup",
+          "vi": "súp bí"
+        }
+      ],
+      "family": [
+        {
+          "word": "pumpkin",
+          "vi": "bí ngô"
+        }
+      ],
+      "tip": "squash (v) = đè bẹp. Squash cũng là môn bóng quần.",
+      "emoji": "🎃",
+      "stage": 2
+    },
+    {
+      "id": 3881,
+      "word": "toffee",
+      "ipa": "ˈtɑfi",
+      "viRead": "TA-phi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kẹo bơ cứng",
+      "exampleEn": "The kids love toffee.",
+      "exampleVi": "Bọn trẻ thích kẹo bơ cứng.",
+      "collocations": [
+        {
+          "en": "a piece of toffee",
+          "vi": "một viên kẹo bơ"
+        },
+        {
+          "en": "toffee apple",
+          "vi": "táo bọc kẹo"
+        }
+      ],
+      "tip": "Chính tả: 2 f, 2 e.",
+      "emoji": "🍬",
+      "stage": 2
+    },
+    {
+      "id": 3882,
+      "word": "turnip",
+      "ipa": "ˈtərnəp",
+      "viRead": "TƠ-nơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "củ cải tròn",
+      "exampleEn": "Turnip soup is good in winter.",
+      "exampleVi": "Canh củ cải ngon vào mùa đông.",
+      "collocations": [
+        {
+          "en": "turnip soup",
+          "vi": "canh củ cải"
+        },
+        {
+          "en": "boiled turnip",
+          "vi": "củ cải luộc"
+        }
+      ],
+      "tip": "Đọc 'TƠ-nip'.",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 3883,
+      "word": "zucchini",
+      "ipa": "zuˈkini",
+      "viRead": "du-KI-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bí ngòi",
+      "exampleEn": "Stir-fry the zucchini with garlic.",
+      "exampleVi": "Xào bí ngòi với tỏi.",
+      "collocations": [
+        {
+          "en": "grilled zucchini",
+          "vi": "bí ngòi nướng"
+        },
+        {
+          "en": "zucchini soup",
+          "vi": "súp bí ngòi"
+        }
+      ],
+      "tip": "zucchini (Mỹ) = courgette (Anh). Đọc 'du-KI-ni'.",
+      "emoji": "🥒",
+      "stage": 2
+    },
+    {
+      "id": 3884,
+      "word": "jumpsuit",
+      "ipa": "ˈʤəmpˌsut",
+      "viRead": "GIƠMP-sut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo liền quần",
+      "exampleEn": "She wore a white jumpsuit to the party.",
+      "exampleVi": "Cô ấy mặc bộ áo liền quần trắng đi tiệc.",
+      "collocations": [
+        {
+          "en": "a denim jumpsuit",
+          "vi": "áo liền quần bò"
+        },
+        {
+          "en": "wear a jumpsuit",
+          "vi": "mặc đồ liền thân"
+        }
+      ],
+      "tip": "jump + suit.",
+      "emoji": "👗",
+      "stage": 2
+    },
+    {
+      "id": 3885,
+      "word": "brooch",
+      "ipa": "broʊʧ",
+      "viRead": "BRÂUCH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trâm cài áo",
+      "exampleEn": "Grandma wears a gold brooch.",
+      "exampleVi": "Bà cài một chiếc trâm vàng.",
+      "collocations": [
+        {
+          "en": "a silver brooch",
+          "vi": "trâm bạc"
+        },
+        {
+          "en": "pin a brooch",
+          "vi": "cài trâm"
+        }
+      ],
+      "tip": "BẪY đọc: oo đọc 'âu': 'brâuch'.",
+      "emoji": "📌",
+      "stage": 2
+    },
+    {
+      "id": 3886,
+      "word": "suspenders",
+      "ipa": "səˈspɛndərz",
+      "viRead": "sơ-SPEN-đơd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây đeo quần",
+      "exampleEn": "He wears red suspenders.",
+      "exampleVi": "Ông ấy đeo dây quần màu đỏ.",
+      "collocations": [
+        {
+          "en": "a pair of suspenders",
+          "vi": "một bộ dây đeo quần"
+        },
+        {
+          "en": "red suspenders",
+          "vi": "dây đeo đỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "suspend",
+          "vi": "treo"
+        }
+      ],
+      "tip": "suspenders (Mỹ) = braces (Anh).",
+      "emoji": "👔",
+      "stage": 2
+    },
+    {
+      "id": 3887,
+      "word": "margarine",
+      "ipa": "ˈmɑrʤərɪn",
+      "viRead": "MAR-giơ-rin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bơ thực vật",
+      "exampleEn": "Spread margarine on the bread.",
+      "exampleVi": "Phết bơ thực vật lên bánh mì.",
+      "collocations": [
+        {
+          "en": "low-fat margarine",
+          "vi": "bơ thực vật ít béo"
+        },
+        {
+          "en": "butter or margarine",
+          "vi": "bơ hay bơ thực vật"
+        }
+      ],
+      "family": [
+        {
+          "word": "butter",
+          "vi": "bơ"
+        }
+      ],
+      "tip": "g đọc 'j': 'MAR-jơ-rin'.",
+      "emoji": "🧈",
       "stage": 2
     }
   ]
