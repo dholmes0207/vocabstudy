@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3478,
+    "count": 3522,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -97829,6 +97829,1200 @@
       ],
       "tip": "Chính tả: 2 chữ u. vacuum cleaner = máy hút bụi.",
       "emoji": "🧹",
+      "stage": 2
+    },
+    {
+      "id": 3479,
+      "word": "blend",
+      "ipa": "blɛnd",
+      "viRead": "BLENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "xay; trộn đều",
+      "exampleEn": "Blend the mango with milk and ice.",
+      "exampleVi": "Xay xoài với sữa và đá.",
+      "collocations": [
+        {
+          "en": "blend together",
+          "vi": "trộn đều"
+        },
+        {
+          "en": "blend in",
+          "vi": "hòa nhập"
+        }
+      ],
+      "family": [
+        {
+          "word": "blender",
+          "vi": "máy xay"
+        }
+      ],
+      "tip": "blend in = hòa vào, không nổi bật.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 3480,
+      "word": "dice",
+      "ipa": "daɪs",
+      "viRead": "ĐAIS",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "thái hạt lựu; xúc xắc",
+      "exampleEn": "Dice the carrots into small cubes.",
+      "exampleVi": "Thái cà rốt thành hạt lựu nhỏ.",
+      "collocations": [
+        {
+          "en": "dice onions",
+          "vi": "thái hành hạt lựu"
+        },
+        {
+          "en": "roll the dice",
+          "vi": "đổ xúc xắc"
+        }
+      ],
+      "tip": "dice (n) = quân xúc xắc (số ít: die).",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 3481,
+      "word": "fry",
+      "ipa": "fraɪ",
+      "viRead": "PHRAI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chiên, rán",
+      "exampleEn": "Fry the fish until it is golden.",
+      "exampleVi": "Rán cá đến khi vàng.",
+      "collocations": [
+        {
+          "en": "deep fry",
+          "vi": "chiên ngập dầu"
+        },
+        {
+          "en": "stir fry",
+          "vi": "xào"
+        }
+      ],
+      "family": [
+        {
+          "word": "fried",
+          "vi": "chiên"
+        }
+      ],
+      "tip": "fry – fried – fried. French fries = khoai tây chiên.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 3482,
+      "word": "grate",
+      "ipa": "greɪt",
+      "viRead": "GRÂYT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bào, nạo",
+      "exampleEn": "Grate some cheese on top.",
+      "exampleVi": "Bào chút phô mai rắc lên trên.",
+      "collocations": [
+        {
+          "en": "grate cheese",
+          "vi": "bào phô mai"
+        },
+        {
+          "en": "grated coconut",
+          "vi": "dừa nạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "grater",
+          "vi": "cái bào"
+        }
+      ],
+      "tip": "grated coconut = dừa nạo.",
+      "emoji": "🧀",
+      "stage": 2
+    },
+    {
+      "id": 3483,
+      "word": "knead",
+      "ipa": "nid",
+      "viRead": "NIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhào (bột)",
+      "exampleEn": "Knead the dough until it is smooth.",
+      "exampleVi": "Nhào bột cho đến khi mịn.",
+      "collocations": [
+        {
+          "en": "knead the dough",
+          "vi": "nhào bột"
+        },
+        {
+          "en": "knead well",
+          "vi": "nhào kỹ"
+        }
+      ],
+      "tip": "k câm: 'nid' (giống need).",
+      "emoji": "🫓",
+      "stage": 2
+    },
+    {
+      "id": 3484,
+      "word": "marinate",
+      "ipa": "ˈmɛrəˌneɪt",
+      "viRead": "ME-rơ-nâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ướp",
+      "exampleEn": "Marinate the pork with fish sauce and garlic.",
+      "exampleVi": "Ướp thịt heo với nước mắm và tỏi.",
+      "collocations": [
+        {
+          "en": "marinate the meat",
+          "vi": "ướp thịt"
+        },
+        {
+          "en": "marinate overnight",
+          "vi": "ướp qua đêm"
+        }
+      ],
+      "family": [
+        {
+          "word": "marinade",
+          "vi": "nước ướp"
+        }
+      ],
+      "tip": "Nhấn âm đầu: ME-rơ-nâyt.",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 3485,
+      "word": "mash",
+      "ipa": "mæʃ",
+      "viRead": "MESH",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nghiền",
+      "exampleEn": "Mash the potatoes with butter.",
+      "exampleVi": "Nghiền khoai tây với bơ.",
+      "collocations": [
+        {
+          "en": "mashed potatoes",
+          "vi": "khoai tây nghiền"
+        },
+        {
+          "en": "mash bananas",
+          "vi": "nghiền chuối"
+        }
+      ],
+      "tip": "mashed potatoes = khoai tây nghiền.",
+      "emoji": "🥔",
+      "stage": 2
+    },
+    {
+      "id": 3486,
+      "word": "mince",
+      "ipa": "mɪns",
+      "viRead": "MINS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "băm",
+      "exampleEn": "Mince the garlic and onion.",
+      "exampleVi": "Băm tỏi và hành.",
+      "collocations": [
+        {
+          "en": "minced meat",
+          "vi": "thịt băm"
+        },
+        {
+          "en": "mince garlic",
+          "vi": "băm tỏi"
+        }
+      ],
+      "tip": "minced pork = thịt heo băm.",
+      "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 3487,
+      "word": "simmer",
+      "ipa": "ˈsɪmər",
+      "viRead": "SI-mơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đun liu riu",
+      "exampleEn": "Let the soup simmer for an hour.",
+      "exampleVi": "Để canh sôi liu riu trong một giờ.",
+      "collocations": [
+        {
+          "en": "simmer gently",
+          "vi": "đun nhỏ lửa"
+        },
+        {
+          "en": "bring to a simmer",
+          "vi": "đun đến sôi lăn tăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "boil",
+          "vi": "đun sôi"
+        }
+      ],
+      "tip": "simmer = sôi lăn tăn (nhỏ lửa); boil = sôi sùng sục.",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 3488,
+      "word": "sprinkle",
+      "ipa": "ˈsprɪŋkəl",
+      "viRead": "SPRING-kơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rắc",
+      "exampleEn": "Sprinkle some salt on the fish.",
+      "exampleVi": "Rắc chút muối lên cá.",
+      "collocations": [
+        {
+          "en": "sprinkle with sugar",
+          "vi": "rắc đường"
+        },
+        {
+          "en": "sprinkle water",
+          "vi": "vẩy nước"
+        }
+      ],
+      "family": [
+        {
+          "word": "sprinkles",
+          "vi": "cốm rắc bánh"
+        }
+      ],
+      "tip": "sprinkles = cốm màu rắc lên kem, bánh.",
+      "emoji": "🧂",
+      "stage": 2
+    },
+    {
+      "id": 3489,
+      "word": "whisk",
+      "ipa": "wɪsk",
+      "viRead": "WISK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đánh (trứng)",
+      "exampleEn": "Whisk the eggs with a fork.",
+      "exampleVi": "Đánh trứng bằng dĩa.",
+      "collocations": [
+        {
+          "en": "whisk the eggs",
+          "vi": "đánh trứng"
+        },
+        {
+          "en": "a hand whisk",
+          "vi": "cây đánh trứng"
+        }
+      ],
+      "tip": "h câm: 'wisk'.",
+      "emoji": "🥚",
+      "stage": 2
+    },
+    {
+      "id": 3490,
+      "word": "bland",
+      "ipa": "blænd",
+      "viRead": "BLENĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhạt nhẽo",
+      "exampleEn": "This soup is a bit bland; add some salt.",
+      "exampleVi": "Canh hơi nhạt, cho thêm chút muối.",
+      "collocations": [
+        {
+          "en": "bland food",
+          "vi": "đồ ăn nhạt"
+        },
+        {
+          "en": "a bland taste",
+          "vi": "vị nhạt"
+        }
+      ],
+      "tip": "bland = nhạt (không đậm vị).",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 3491,
+      "word": "crunchy",
+      "ipa": "ˈkrənʧi",
+      "viRead": "KRƠN-chi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giòn rụm",
+      "exampleEn": "I like crunchy peanuts in my salad.",
+      "exampleVi": "Tôi thích lạc giòn trong món gỏi.",
+      "collocations": [
+        {
+          "en": "crunchy peanuts",
+          "vi": "lạc giòn"
+        },
+        {
+          "en": "crunchy texture",
+          "vi": "kết cấu giòn"
+        }
+      ],
+      "family": [
+        {
+          "word": "crunch",
+          "vi": "tiếng giòn rụm"
+        }
+      ],
+      "tip": "crunchy = giòn (táo, lạc); crispy = giòn (đồ chiên).",
+      "emoji": "🥜",
+      "stage": 2
+    },
+    {
+      "id": 3492,
+      "word": "creamy",
+      "ipa": "ˈkrimi",
+      "viRead": "KRI-mi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "béo ngậy, mịn như kem",
+      "exampleEn": "This coconut coffee is so creamy.",
+      "exampleVi": "Cà phê cốt dừa này béo ngậy quá.",
+      "collocations": [
+        {
+          "en": "creamy soup",
+          "vi": "súp kem"
+        },
+        {
+          "en": "creamy texture",
+          "vi": "kết cấu mịn"
+        }
+      ],
+      "family": [
+        {
+          "word": "cream",
+          "vi": "kem"
+        }
+      ],
+      "tip": "cream (n) + y = creamy.",
+      "emoji": "🥥",
+      "stage": 2
+    },
+    {
+      "id": 3493,
+      "word": "greasy",
+      "ipa": "ˈgrisi",
+      "viRead": "GRI-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều dầu mỡ",
+      "exampleEn": "Fast food is often greasy.",
+      "exampleVi": "Đồ ăn nhanh thường nhiều dầu mỡ.",
+      "collocations": [
+        {
+          "en": "greasy food",
+          "vi": "đồ ăn nhiều mỡ"
+        },
+        {
+          "en": "greasy hair",
+          "vi": "tóc bết"
+        }
+      ],
+      "family": [
+        {
+          "word": "grease",
+          "vi": "dầu mỡ"
+        }
+      ],
+      "tip": "greasy hair = tóc bết dầu.",
+      "emoji": "🍟",
+      "stage": 2
+    },
+    {
+      "id": 3494,
+      "word": "savory",
+      "ipa": "ˈseɪvəri",
+      "viRead": "SÂY-vơ-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mặn, đậm đà (không ngọt)",
+      "exampleEn": "Do you prefer sweet or savory snacks?",
+      "exampleVi": "Bạn thích đồ ăn vặt ngọt hay mặn?",
+      "collocations": [
+        {
+          "en": "sweet or savory",
+          "vi": "ngọt hay mặn"
+        },
+        {
+          "en": "savory pancake",
+          "vi": "bánh mặn"
+        }
+      ],
+      "tip": "Anh viết savoury. savory ↔ sweet.",
+      "emoji": "🥟",
+      "stage": 2
+    },
+    {
+      "id": 3495,
+      "word": "tangy",
+      "ipa": "ˈtæŋi",
+      "viRead": "TENG-i",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chua nhẹ, chua thanh",
+      "exampleEn": "The sauce is sweet and tangy.",
+      "exampleVi": "Nước sốt chua ngọt thanh.",
+      "collocations": [
+        {
+          "en": "tangy sauce",
+          "vi": "sốt chua thanh"
+        },
+        {
+          "en": "a tangy taste",
+          "vi": "vị chua nhẹ"
+        }
+      ],
+      "tip": "tangy = chua thơm dễ chịu (chanh, me).",
+      "emoji": "🍋",
+      "stage": 2
+    },
+    {
+      "id": 3496,
+      "word": "colander",
+      "ipa": "ˈkɑləndər",
+      "viRead": "KA-lơn-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái rổ (lọc)",
+      "exampleEn": "Drain the noodles in a colander.",
+      "exampleVi": "Để ráo bún trong rổ.",
+      "collocations": [
+        {
+          "en": "drain in a colander",
+          "vi": "để ráo trong rổ"
+        },
+        {
+          "en": "metal colander",
+          "vi": "rổ kim loại"
+        }
+      ],
+      "family": [
+        {
+          "word": "strainer",
+          "vi": "cái rây"
+        }
+      ],
+      "tip": "Đọc 'KA-lơn-đơ'.",
+      "emoji": "🥣",
+      "stage": 2
+    },
+    {
+      "id": 3497,
+      "word": "ladle",
+      "ipa": "ˈleɪdəl",
+      "viRead": "LÂY-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái muôi",
+      "exampleEn": "Use a ladle to serve the soup.",
+      "exampleVi": "Dùng muôi để múc canh.",
+      "collocations": [
+        {
+          "en": "soup ladle",
+          "vi": "muôi múc canh"
+        },
+        {
+          "en": "a ladle of soup",
+          "vi": "một muôi canh"
+        }
+      ],
+      "tip": "ladle = muôi; spoon = thìa.",
+      "emoji": "🥄",
+      "stage": 2
+    },
+    {
+      "id": 3498,
+      "word": "saucer",
+      "ipa": "ˈsɔsər",
+      "viRead": "SO-sơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đĩa lót tách",
+      "exampleEn": "Put the cup on the saucer.",
+      "exampleVi": "Đặt tách lên đĩa lót.",
+      "collocations": [
+        {
+          "en": "cup and saucer",
+          "vi": "tách và đĩa lót"
+        },
+        {
+          "en": "flying saucer",
+          "vi": "đĩa bay"
+        }
+      ],
+      "family": [
+        {
+          "word": "sauce",
+          "vi": "nước sốt"
+        }
+      ],
+      "tip": "flying saucer = đĩa bay (UFO).",
+      "emoji": "🛸",
+      "stage": 2
+    },
+    {
+      "id": 3499,
+      "word": "skillet",
+      "ipa": "ˈskɪlət",
+      "viRead": "SKI-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chảo (gang)",
+      "exampleEn": "Heat oil in a skillet.",
+      "exampleVi": "Đun dầu trong chảo.",
+      "collocations": [
+        {
+          "en": "cast iron skillet",
+          "vi": "chảo gang"
+        },
+        {
+          "en": "a hot skillet",
+          "vi": "chảo nóng"
+        }
+      ],
+      "family": [
+        {
+          "word": "pan",
+          "vi": "chảo"
+        }
+      ],
+      "tip": "skillet (Mỹ) = frying pan.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 3500,
+      "word": "spatula",
+      "ipa": "ˈspæˌʧʊlə",
+      "viRead": "SPE-chu-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái xẻng lật",
+      "exampleEn": "Flip the pancake with a spatula.",
+      "exampleVi": "Lật bánh bằng xẻng lật.",
+      "collocations": [
+        {
+          "en": "a rubber spatula",
+          "vi": "xẻng cao su"
+        },
+        {
+          "en": "flip with a spatula",
+          "vi": "lật bằng xẻng"
+        }
+      ],
+      "tip": "Đọc 'SPE-chơ-lơ'.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 3501,
+      "word": "strainer",
+      "ipa": "ˈstreɪnər",
+      "viRead": "STRÂY-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái rây, cái lọc",
+      "exampleEn": "Pour the tea through a strainer.",
+      "exampleVi": "Rót trà qua cái lọc.",
+      "collocations": [
+        {
+          "en": "tea strainer",
+          "vi": "lọc trà"
+        },
+        {
+          "en": "a fine strainer",
+          "vi": "rây mịn"
+        }
+      ],
+      "family": [
+        {
+          "word": "strain",
+          "vi": "lọc"
+        }
+      ],
+      "tip": "strain (lọc) + er.",
+      "emoji": "🫖",
+      "stage": 2
+    },
+    {
+      "id": 3502,
+      "word": "teaspoon",
+      "ipa": "ˈtiˌspun",
+      "viRead": "TI-spun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thìa cà phê",
+      "exampleEn": "Add a teaspoon of sugar.",
+      "exampleVi": "Thêm một thìa cà phê đường.",
+      "collocations": [
+        {
+          "en": "a teaspoon of",
+          "vi": "một thìa cà phê"
+        },
+        {
+          "en": "half a teaspoon",
+          "vi": "nửa thìa cà phê"
+        }
+      ],
+      "family": [
+        {
+          "word": "tablespoon",
+          "vi": "thìa canh"
+        }
+      ],
+      "tip": "teaspoon (tsp) nhỏ hơn tablespoon (tbsp).",
+      "emoji": "🥄",
+      "stage": 2
+    },
+    {
+      "id": 3503,
+      "word": "tablespoon",
+      "ipa": "ˈteɪbəlˌspun",
+      "viRead": "TÂY-bơl-spun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thìa canh",
+      "exampleEn": "Add two tablespoons of fish sauce.",
+      "exampleVi": "Thêm hai thìa canh nước mắm.",
+      "collocations": [
+        {
+          "en": "a tablespoon of",
+          "vi": "một thìa canh"
+        },
+        {
+          "en": "level tablespoon",
+          "vi": "thìa gạt ngang"
+        }
+      ],
+      "family": [
+        {
+          "word": "teaspoon",
+          "vi": "thìa cà phê"
+        }
+      ],
+      "tip": "1 tablespoon = 3 teaspoons.",
+      "emoji": "🥄",
+      "stage": 2
+    },
+    {
+      "id": 3504,
+      "word": "wok",
+      "ipa": "wɑk",
+      "viRead": "WAK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chảo sâu lòng",
+      "exampleEn": "Stir-fry the vegetables in a wok.",
+      "exampleVi": "Xào rau trong chảo sâu lòng.",
+      "collocations": [
+        {
+          "en": "stir-fry in a wok",
+          "vi": "xào trong chảo"
+        },
+        {
+          "en": "a hot wok",
+          "vi": "chảo nóng"
+        }
+      ],
+      "tip": "wok = chảo xào kiểu châu Á.",
+      "emoji": "🥘",
+      "stage": 2
+    },
+    {
+      "id": 3505,
+      "word": "beach",
+      "ipa": "biʧ",
+      "viRead": "BIICH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bãi biển",
+      "exampleEn": "We spent the day at the beach.",
+      "exampleVi": "Chúng tôi dành cả ngày ở bãi biển.",
+      "collocations": [
+        {
+          "en": "on the beach",
+          "vi": "trên bãi biển"
+        },
+        {
+          "en": "beach holiday",
+          "vi": "kỳ nghỉ biển"
+        }
+      ],
+      "family": [
+        {
+          "word": "sea",
+          "vi": "biển"
+        }
+      ],
+      "tip": "BẪY: beach (i dài) ≠ b*tch (i ngắn) — kéo dài âm 'biiich'!",
+      "emoji": "🏖️",
+      "stage": 2
+    },
+    {
+      "id": 3506,
+      "word": "brook",
+      "ipa": "brʊk",
+      "viRead": "BRUK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con suối nhỏ",
+      "exampleEn": "A small brook runs behind the house.",
+      "exampleVi": "Một con suối nhỏ chảy sau nhà.",
+      "collocations": [
+        {
+          "en": "a babbling brook",
+          "vi": "suối róc rách"
+        },
+        {
+          "en": "cross the brook",
+          "vi": "băng qua suối"
+        }
+      ],
+      "family": [
+        {
+          "word": "stream",
+          "vi": "dòng suối"
+        }
+      ],
+      "tip": "brook = suối nhỏ (văn chương).",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 3507,
+      "word": "coral",
+      "ipa": "ˈkɔrəl",
+      "viRead": "KO-rơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "san hô",
+      "exampleEn": "Nha Trang has beautiful coral reefs.",
+      "exampleVi": "Nha Trang có những rạn san hô tuyệt đẹp.",
+      "collocations": [
+        {
+          "en": "coral reef",
+          "vi": "rạn san hô"
+        },
+        {
+          "en": "coral colors",
+          "vi": "màu san hô"
+        }
+      ],
+      "tip": "Đọc 'KO-rơl'.",
+      "emoji": "🪸",
+      "stage": 2
+    },
+    {
+      "id": 3508,
+      "word": "creek",
+      "ipa": "krik",
+      "viRead": "KRIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con lạch",
+      "exampleEn": "The kids played in the creek.",
+      "exampleVi": "Lũ trẻ chơi đùa ở con lạch.",
+      "collocations": [
+        {
+          "en": "a shallow creek",
+          "vi": "lạch nông"
+        },
+        {
+          "en": "up the creek",
+          "vi": "gặp rắc rối"
+        }
+      ],
+      "tip": "up the creek = gặp rắc rối to.",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 3509,
+      "word": "delta",
+      "ipa": "ˈdɛltə",
+      "viRead": "ĐEL-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng bằng châu thổ",
+      "exampleEn": "The Mekong Delta is the rice bowl of Vietnam.",
+      "exampleVi": "Đồng bằng sông Cửu Long là vựa lúa của Việt Nam.",
+      "collocations": [
+        {
+          "en": "the Mekong Delta",
+          "vi": "đồng bằng sông Cửu Long"
+        },
+        {
+          "en": "Red River Delta",
+          "vi": "đồng bằng sông Hồng"
+        }
+      ],
+      "tip": "Δ (delta) là chữ cái Hy Lạp hình tam giác — giống hình châu thổ.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 3510,
+      "word": "dune",
+      "ipa": "dun",
+      "viRead": "ĐUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồi cát",
+      "exampleEn": "We rode a jeep over the sand dunes in Mui Ne.",
+      "exampleVi": "Chúng tôi đi xe jeep qua đồi cát ở Mũi Né.",
+      "collocations": [
+        {
+          "en": "sand dunes",
+          "vi": "đồi cát"
+        },
+        {
+          "en": "white dunes",
+          "vi": "đồi cát trắng"
+        }
+      ],
+      "tip": "Đồi cát Mũi Né = Mui Ne sand dunes.",
+      "emoji": "🏜️",
+      "stage": 2
+    },
+    {
+      "id": 3511,
+      "word": "gulf",
+      "ipa": "gəlf",
+      "viRead": "GƠLPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vịnh lớn",
+      "exampleEn": "The Gulf of Tonkin is in northern Vietnam.",
+      "exampleVi": "Vịnh Bắc Bộ nằm ở phía bắc Việt Nam.",
+      "collocations": [
+        {
+          "en": "the Gulf of Tonkin",
+          "vi": "vịnh Bắc Bộ"
+        },
+        {
+          "en": "the Gulf of Thailand",
+          "vi": "vịnh Thái Lan"
+        }
+      ],
+      "family": [
+        {
+          "word": "bay",
+          "vi": "vịnh nhỏ"
+        }
+      ],
+      "tip": "gulf > bay (vịnh lớn hơn).",
+      "emoji": "🌊",
+      "stage": 2
+    },
+    {
+      "id": 3512,
+      "word": "lagoon",
+      "ipa": "ləˈgun",
+      "viRead": "lơ-GUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầm phá",
+      "exampleEn": "Tam Giang is the largest lagoon in Southeast Asia.",
+      "exampleVi": "Tam Giang là đầm phá lớn nhất Đông Nam Á.",
+      "collocations": [
+        {
+          "en": "a blue lagoon",
+          "vi": "đầm nước xanh"
+        },
+        {
+          "en": "Tam Giang lagoon",
+          "vi": "phá Tam Giang"
+        }
+      ],
+      "tip": "Nhấn âm sau: lơ-GUN.",
+      "emoji": "🏝️",
+      "stage": 2
+    },
+    {
+      "id": 3513,
+      "word": "marsh",
+      "ipa": "mɑrʃ",
+      "viRead": "MARSH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầm lầy",
+      "exampleEn": "Many birds live in the marsh.",
+      "exampleVi": "Nhiều loài chim sống ở đầm lầy.",
+      "collocations": [
+        {
+          "en": "salt marsh",
+          "vi": "đầm nước mặn"
+        },
+        {
+          "en": "a muddy marsh",
+          "vi": "đầm lầy bùn"
+        }
+      ],
+      "family": [
+        {
+          "word": "swamp",
+          "vi": "đầm lầy"
+        }
+      ],
+      "tip": "marsh (cỏ, nước nông) – swamp (có cây gỗ).",
+      "emoji": "🦆",
+      "stage": 2
+    },
+    {
+      "id": 3514,
+      "word": "oasis",
+      "ipa": "oʊˈeɪsɪs",
+      "viRead": "âu-ÂY-sis",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ốc đảo",
+      "exampleEn": "The park is an oasis in the busy city.",
+      "exampleVi": "Công viên là ốc đảo giữa thành phố ồn ào.",
+      "collocations": [
+        {
+          "en": "a desert oasis",
+          "vi": "ốc đảo sa mạc"
+        },
+        {
+          "en": "an oasis of calm",
+          "vi": "chốn bình yên"
+        }
+      ],
+      "tip": "Số nhiều: oases. Đọc 'âu-ÂY-sis'.",
+      "emoji": "🌴",
+      "stage": 2
+    },
+    {
+      "id": 3515,
+      "word": "plateau",
+      "ipa": "plæˈtoʊ",
+      "viRead": "ple-TÂU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cao nguyên",
+      "exampleEn": "Da Lat is on the Lang Biang plateau.",
+      "exampleVi": "Đà Lạt nằm trên cao nguyên Lâm Viên.",
+      "collocations": [
+        {
+          "en": "the Central Highlands plateau",
+          "vi": "cao nguyên Tây Nguyên"
+        },
+        {
+          "en": "reach a plateau",
+          "vi": "chững lại"
+        }
+      ],
+      "tip": "reach a plateau = tiến bộ chững lại. Đọc 'ple-TÂU'.",
+      "emoji": "⛰️",
+      "stage": 2
+    },
+    {
+      "id": 3516,
+      "word": "rainforest",
+      "ipa": "ˈreɪnˌfɔrəst",
+      "viRead": "RÂYN-pho-rơst",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rừng mưa nhiệt đới",
+      "exampleEn": "The Amazon is the largest rainforest.",
+      "exampleVi": "Amazon là rừng mưa nhiệt đới lớn nhất.",
+      "collocations": [
+        {
+          "en": "tropical rainforest",
+          "vi": "rừng mưa nhiệt đới"
+        },
+        {
+          "en": "protect the rainforest",
+          "vi": "bảo vệ rừng mưa"
+        }
+      ],
+      "family": [
+        {
+          "word": "forest",
+          "vi": "rừng"
+        }
+      ],
+      "tip": "rain + forest.",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 3517,
+      "word": "reef",
+      "ipa": "rif",
+      "viRead": "RIPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rạn san hô, đá ngầm",
+      "exampleEn": "We went snorkeling on the reef.",
+      "exampleVi": "Chúng tôi lặn ngắm rạn san hô.",
+      "collocations": [
+        {
+          "en": "coral reef",
+          "vi": "rạn san hô"
+        },
+        {
+          "en": "the Great Barrier Reef",
+          "vi": "rạn san hô Great Barrier"
+        }
+      ],
+      "tip": "ee đọc 'i' dài: 'rif'.",
+      "emoji": "🐠",
+      "stage": 2
+    },
+    {
+      "id": 3518,
+      "word": "ridge",
+      "ipa": "rɪʤ",
+      "viRead": "RIGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sống núi, dải đồi",
+      "exampleEn": "We walked along the mountain ridge.",
+      "exampleVi": "Chúng tôi đi dọc sống núi.",
+      "collocations": [
+        {
+          "en": "mountain ridge",
+          "vi": "sống núi"
+        },
+        {
+          "en": "along the ridge",
+          "vi": "dọc dải đồi"
+        }
+      ],
+      "tip": "d câm: 'rij'.",
+      "emoji": "🏔️",
+      "stage": 2
+    },
+    {
+      "id": 3519,
+      "word": "savanna",
+      "ipa": "səˈvænə",
+      "viRead": "sơ-VE-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thảo nguyên",
+      "exampleEn": "Lions live on the African savanna.",
+      "exampleVi": "Sư tử sống trên thảo nguyên châu Phi.",
+      "collocations": [
+        {
+          "en": "the African savanna",
+          "vi": "thảo nguyên châu Phi"
+        },
+        {
+          "en": "savanna grass",
+          "vi": "cỏ thảo nguyên"
+        }
+      ],
+      "tip": "Cũng viết savannah. Nhấn âm 2: sơ-VE-nơ.",
+      "emoji": "🦁",
+      "stage": 2
+    },
+    {
+      "id": 3520,
+      "word": "swamp",
+      "ipa": "swɔmp",
+      "viRead": "SWAMP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đầm lầy",
+      "exampleEn": "Crocodiles live in the swamp.",
+      "exampleVi": "Cá sấu sống trong đầm lầy.",
+      "collocations": [
+        {
+          "en": "mangrove swamp",
+          "vi": "rừng ngập mặn"
+        },
+        {
+          "en": "swamped with work",
+          "vi": "ngập đầu công việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "marsh",
+          "vi": "đầm lầy"
+        }
+      ],
+      "tip": "be swamped = ngập trong việc.",
+      "emoji": "🐊",
+      "stage": 2
+    },
+    {
+      "id": 3521,
+      "word": "wetland",
+      "ipa": "ˈwɛtˌlænd",
+      "viRead": "WET-lenđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vùng đất ngập nước",
+      "exampleEn": "Tram Chim is a famous wetland park.",
+      "exampleVi": "Tràm Chim là vườn quốc gia đất ngập nước nổi tiếng.",
+      "collocations": [
+        {
+          "en": "protect wetlands",
+          "vi": "bảo vệ đất ngập nước"
+        },
+        {
+          "en": "wetland birds",
+          "vi": "chim vùng ngập nước"
+        }
+      ],
+      "family": [
+        {
+          "word": "wet",
+          "vi": "ướt"
+        }
+      ],
+      "tip": "wet + land.",
+      "emoji": "🦩",
+      "stage": 2
+    },
+    {
+      "id": 3522,
+      "word": "woods",
+      "ipa": "wʊdz",
+      "viRead": "WUĐD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khu rừng nhỏ",
+      "exampleEn": "We went for a walk in the woods.",
+      "exampleVi": "Chúng tôi đi dạo trong rừng.",
+      "collocations": [
+        {
+          "en": "in the woods",
+          "vi": "trong rừng"
+        },
+        {
+          "en": "out of the woods",
+          "vi": "đã qua cơn nguy"
+        }
+      ],
+      "family": [
+        {
+          "word": "wood",
+          "vi": "gỗ"
+        }
+      ],
+      "tip": "woods (rừng nhỏ) < forest (rừng lớn). out of the woods = thoát nạn.",
+      "emoji": "🌲",
       "stage": 2
     }
   ]
