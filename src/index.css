@@ -121,6 +121,14 @@
     radial-gradient(60% 40% at 8% 106%, rgb(30 64 175 / 0.3), transparent 70%),
     linear-gradient(180deg, #020617 0%, #081130 42%, #0d1739 76%, #0f172a 100%);
 }
+/* A device that could not keep up with the sky (skyRenderer sets the flag)
+   also drops the frosted-glass blur, a common source of scroll jank on
+   low-end Android; the bars stay readable on their own tint. */
+:root[data-sky-slow] .backdrop-blur-md {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
 /* Quieter while studying: the sky stays, the eye goes to the card. */
 .sky--calm {
   opacity: 0.55;

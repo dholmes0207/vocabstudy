@@ -384,8 +384,10 @@ export function startSky(
     const median = sorted[sorted.length >> 1]
     samples.length = 0
     if (median > SLOW_FRAME_MS) {
-      // This device can't keep up — the lighter sky looks almost as good.
+      // This device can't keep up — the lighter sky looks almost as good, and
+      // the frosted-glass blur on the bars goes too (CSS keys off this flag).
       quality = 'lite'
+      root.dataset.skySlow = ''
       resize()
     }
   }
