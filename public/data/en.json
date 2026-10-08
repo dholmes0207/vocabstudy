@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4221,
+    "count": 4253,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -118897,6 +118897,930 @@
       ],
       "tip": "integrity = ngay thẳng, nói được làm được.",
       "emoji": "⚖️",
+      "stage": 2
+    },
+    {
+      "id": 4222,
+      "word": "sidewalk",
+      "ipa": "ˈsaɪdˌwɔk",
+      "viRead": "SAIĐ-wok",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vỉa hè",
+      "exampleEn": "Please ride on the road, not on the sidewalk.",
+      "exampleVi": "Hãy đi dưới lòng đường, đừng đi trên vỉa hè.",
+      "collocations": [
+        {
+          "en": "walk on the sidewalk",
+          "vi": "đi trên vỉa hè"
+        },
+        {
+          "en": "sidewalk café",
+          "vi": "quán cà phê vỉa hè"
+        }
+      ],
+      "family": [
+        {
+          "word": "pavement",
+          "vi": "vỉa hè (Anh)"
+        }
+      ],
+      "tip": "Mỹ: sidewalk; Anh: pavement.",
+      "emoji": "🚶",
+      "stage": 2
+    },
+    {
+      "id": 4223,
+      "word": "crosswalk",
+      "ipa": "ˈkrɔsˌwɔk",
+      "viRead": "KROS-wok",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vạch kẻ sang đường",
+      "exampleEn": "Cross the street at the crosswalk.",
+      "exampleVi": "Hãy sang đường ở vạch kẻ.",
+      "collocations": [
+        {
+          "en": "use the crosswalk",
+          "vi": "đi qua vạch sang đường"
+        },
+        {
+          "en": "stop at the crosswalk",
+          "vi": "dừng ở vạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "zebra crossing",
+          "vi": "vạch ngựa vằn (Anh)"
+        }
+      ],
+      "tip": "Mỹ: crosswalk; Anh: zebra crossing.",
+      "emoji": "🦓",
+      "stage": 2
+    },
+    {
+      "id": 4224,
+      "word": "intersection",
+      "ipa": "ˌɪntərˈsɛkʃən",
+      "viRead": "in-tơ-SEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngã tư, giao lộ",
+      "exampleEn": "Turn left at the next intersection.",
+      "exampleVi": "Rẽ trái ở ngã tư tiếp theo.",
+      "collocations": [
+        {
+          "en": "busy intersection",
+          "vi": "ngã tư đông đúc"
+        },
+        {
+          "en": "at the intersection",
+          "vi": "tại giao lộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "crossroads",
+          "vi": "ngã tư"
+        }
+      ],
+      "tip": "Hỏi đường hay gặp: at the intersection.",
+      "emoji": "🚦",
+      "stage": 2
+    },
+    {
+      "id": 4225,
+      "word": "roundabout",
+      "ipa": "ˈraʊndəˌbaʊt",
+      "viRead": "RAON-đơ-baot",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vòng xoay, bùng binh",
+      "exampleEn": "Go around the roundabout and take the second exit.",
+      "exampleVi": "Đi quanh vòng xoay rồi ra ở lối thứ hai.",
+      "collocations": [
+        {
+          "en": "at the roundabout",
+          "vi": "ở vòng xoay"
+        },
+        {
+          "en": "go around the roundabout",
+          "vi": "đi vòng qua bùng binh"
+        }
+      ],
+      "family": [
+        {
+          "word": "traffic circle",
+          "vi": "vòng xoay (Mỹ)"
+        }
+      ],
+      "tip": "Mỹ hay gọi là traffic circle.",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 4226,
+      "word": "layover",
+      "ipa": "ˈleɪˌoʊvər",
+      "viRead": "LÂY-âu-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chặng dừng quá cảnh",
+      "exampleEn": "We have a three-hour layover in Singapore.",
+      "exampleVi": "Chúng tôi quá cảnh ba tiếng ở Singapore.",
+      "collocations": [
+        {
+          "en": "long layover",
+          "vi": "quá cảnh lâu"
+        },
+        {
+          "en": "layover in",
+          "vi": "quá cảnh ở"
+        }
+      ],
+      "family": [
+        {
+          "word": "stopover",
+          "vi": "điểm dừng"
+        }
+      ],
+      "tip": "layover = chờ đổi chuyến bay.",
+      "emoji": "🛫",
+      "stage": 2
+    },
+    {
+      "id": 4227,
+      "word": "runway",
+      "ipa": "ˈrənˌweɪ",
+      "viRead": "RƠN-wây",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đường băng",
+      "exampleEn": "The plane is moving onto the runway.",
+      "exampleVi": "Máy bay đang lăn ra đường băng.",
+      "collocations": [
+        {
+          "en": "airport runway",
+          "vi": "đường băng sân bay"
+        },
+        {
+          "en": "fashion runway",
+          "vi": "sàn diễn thời trang"
+        }
+      ],
+      "tip": "runway cũng là sàn catwalk thời trang.",
+      "emoji": "🛬",
+      "stage": 2
+    },
+    {
+      "id": 4228,
+      "word": "seatbelt",
+      "ipa": "ˈsitˌbɛlt",
+      "viRead": "SIT-belt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây an toàn",
+      "exampleEn": "Fasten your seatbelt, please.",
+      "exampleVi": "Vui lòng thắt dây an toàn.",
+      "collocations": [
+        {
+          "en": "fasten your seatbelt",
+          "vi": "thắt dây an toàn"
+        },
+        {
+          "en": "wear a seatbelt",
+          "vi": "đeo dây an toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "seat",
+          "vi": "ghế"
+        }
+      ],
+      "tip": "Câu quen thuộc trên máy bay: Fasten your seatbelt.",
+      "emoji": "🪢",
+      "stage": 2
+    },
+    {
+      "id": 4229,
+      "word": "turbulence",
+      "ipa": "ˈtərbjələns",
+      "viRead": "TƠB-yơ-lơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiễu động (máy bay rung lắc)",
+      "exampleEn": "The plane shook because of turbulence.",
+      "exampleVi": "Máy bay rung lắc vì nhiễu động.",
+      "collocations": [
+        {
+          "en": "experience turbulence",
+          "vi": "gặp nhiễu động"
+        },
+        {
+          "en": "severe turbulence",
+          "vi": "nhiễu động mạnh"
+        }
+      ],
+      "tip": "Gặp turbulence nhớ thắt dây an toàn.",
+      "emoji": "✈️",
+      "stage": 2
+    },
+    {
+      "id": 4230,
+      "word": "reception",
+      "ipa": "rɪˈsɛpʃən",
+      "viRead": "ri-SEP-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quầy lễ tân; tiệc chiêu đãi",
+      "exampleEn": "Leave your key at reception.",
+      "exampleVi": "Để chìa khóa ở quầy lễ tân.",
+      "collocations": [
+        {
+          "en": "hotel reception",
+          "vi": "lễ tân khách sạn"
+        },
+        {
+          "en": "wedding reception",
+          "vi": "tiệc cưới"
+        }
+      ],
+      "family": [
+        {
+          "word": "receptionist",
+          "vi": "lễ tân"
+        }
+      ],
+      "tip": "wedding reception = tiệc cưới.",
+      "emoji": "🛎️",
+      "stage": 2
+    },
+    {
+      "id": 4231,
+      "word": "checkout",
+      "ipa": "ˈʧɛkˌaʊt",
+      "viRead": "CHEK-aot",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quầy thanh toán; trả phòng",
+      "exampleEn": "Checkout is at noon.",
+      "exampleVi": "Giờ trả phòng là buổi trưa.",
+      "collocations": [
+        {
+          "en": "checkout time",
+          "vi": "giờ trả phòng"
+        },
+        {
+          "en": "self-checkout",
+          "vi": "quầy tự thanh toán"
+        }
+      ],
+      "family": [
+        {
+          "word": "check out",
+          "vi": "trả phòng (động từ)"
+        }
+      ],
+      "tip": "checkout (n) — check out (v, hai chữ).",
+      "emoji": "🧾",
+      "stage": 2
+    },
+    {
+      "id": 4232,
+      "word": "coupon",
+      "ipa": "ˈkuˌpɑn",
+      "viRead": "KU-pan",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phiếu giảm giá",
+      "exampleEn": "Use this coupon to get 20% off.",
+      "exampleVi": "Dùng phiếu này để được giảm 20%.",
+      "collocations": [
+        {
+          "en": "discount coupon",
+          "vi": "phiếu giảm giá"
+        },
+        {
+          "en": "coupon code",
+          "vi": "mã giảm giá"
+        }
+      ],
+      "family": [
+        {
+          "word": "voucher",
+          "vi": "phiếu quà tặng"
+        }
+      ],
+      "tip": "coupon code = mã giảm giá khi mua online.",
+      "emoji": "🎟️",
+      "stage": 2
+    },
+    {
+      "id": 4233,
+      "word": "aisle",
+      "ipa": "aɪəl",
+      "viRead": "AIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lối đi (giữa các kệ, hàng ghế)",
+      "exampleEn": "The rice is in aisle five.",
+      "exampleVi": "Gạo ở lối đi số năm.",
+      "collocations": [
+        {
+          "en": "aisle seat",
+          "vi": "ghế cạnh lối đi"
+        },
+        {
+          "en": "down the aisle",
+          "vi": "dọc lối đi"
+        }
+      ],
+      "tip": "'s' câm: đọc 'AIL'. aisle seat = ghế sát lối đi.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 4234,
+      "word": "trolley",
+      "ipa": "ˈtrɑli",
+      "viRead": "TRA-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe đẩy (hàng)",
+      "exampleEn": "Push the trolley to the checkout.",
+      "exampleVi": "Đẩy xe hàng tới quầy thanh toán.",
+      "collocations": [
+        {
+          "en": "shopping trolley",
+          "vi": "xe đẩy siêu thị"
+        },
+        {
+          "en": "luggage trolley",
+          "vi": "xe đẩy hành lý"
+        }
+      ],
+      "family": [
+        {
+          "word": "cart",
+          "vi": "xe đẩy (Mỹ)"
+        }
+      ],
+      "tip": "Anh: trolley; Mỹ: cart.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 4235,
+      "word": "basket",
+      "ipa": "ˈbæskət",
+      "viRead": "BES-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giỏ",
+      "exampleEn": "Put the apples in the basket.",
+      "exampleVi": "Bỏ táo vào giỏ.",
+      "collocations": [
+        {
+          "en": "shopping basket",
+          "vi": "giỏ mua sắm"
+        },
+        {
+          "en": "fruit basket",
+          "vi": "giỏ trái cây"
+        }
+      ],
+      "tip": "Don't put all your eggs in one basket = Đừng bỏ hết trứng vào một giỏ.",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 4236,
+      "word": "banknote",
+      "ipa": "ˈbæŋkˌnoʊt",
+      "viRead": "BENGK-nâut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tờ tiền giấy",
+      "exampleEn": "The machine doesn't take old banknotes.",
+      "exampleVi": "Máy không nhận tờ tiền cũ.",
+      "collocations": [
+        {
+          "en": "fake banknote",
+          "vi": "tiền giả"
+        },
+        {
+          "en": "new banknote",
+          "vi": "tiền mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "bill",
+          "vi": "tờ tiền (Mỹ)"
+        }
+      ],
+      "tip": "Mỹ: bill; Anh: banknote / note.",
+      "emoji": "💵",
+      "stage": 2
+    },
+    {
+      "id": 4237,
+      "word": "tenant",
+      "ipa": "ˈtɛnənt",
+      "viRead": "TE-nơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người thuê nhà",
+      "exampleEn": "The tenant pays rent every month.",
+      "exampleVi": "Người thuê nhà trả tiền hằng tháng.",
+      "collocations": [
+        {
+          "en": "new tenant",
+          "vi": "người thuê mới"
+        },
+        {
+          "en": "tenant and landlord",
+          "vi": "người thuê và chủ nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "landlord",
+          "vi": "chủ nhà"
+        }
+      ],
+      "tip": "tenant ↔ landlord.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 4238,
+      "word": "alley",
+      "ipa": "ˈæli",
+      "viRead": "E-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ngõ, hẻm",
+      "exampleEn": "My house is at the end of the alley.",
+      "exampleVi": "Nhà tôi ở cuối hẻm.",
+      "collocations": [
+        {
+          "en": "narrow alley",
+          "vi": "hẻm nhỏ"
+        },
+        {
+          "en": "blind alley",
+          "vi": "ngõ cụt"
+        }
+      ],
+      "family": [
+        {
+          "word": "lane",
+          "vi": "ngõ"
+        }
+      ],
+      "tip": "Nhà trong hẻm = a house in an alley.",
+      "emoji": "🏘️",
+      "stage": 2
+    },
+    {
+      "id": 4239,
+      "word": "avenue",
+      "ipa": "ˈævəˌnu",
+      "viRead": "E-vơ-nu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đại lộ",
+      "exampleEn": "The museum is on Fifth Avenue.",
+      "exampleVi": "Bảo tàng nằm trên Đại lộ số 5.",
+      "collocations": [
+        {
+          "en": "main avenue",
+          "vi": "đại lộ chính"
+        },
+        {
+          "en": "tree-lined avenue",
+          "vi": "đại lộ rợp bóng cây"
+        }
+      ],
+      "family": [
+        {
+          "word": "street",
+          "vi": "đường phố"
+        }
+      ],
+      "tip": "Viết tắt: Ave.",
+      "emoji": "🛣️",
+      "stage": 2
+    },
+    {
+      "id": 4240,
+      "word": "boulevard",
+      "ipa": "ˈbʊləˌvɑrd",
+      "viRead": "BU-lơ-varđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đại lộ lớn",
+      "exampleEn": "We walked along the boulevard at night.",
+      "exampleVi": "Chúng tôi dạo dọc đại lộ vào ban đêm.",
+      "collocations": [
+        {
+          "en": "wide boulevard",
+          "vi": "đại lộ rộng"
+        },
+        {
+          "en": "Nguyen Hue Boulevard",
+          "vi": "đại lộ Nguyễn Huệ"
+        }
+      ],
+      "family": [
+        {
+          "word": "avenue",
+          "vi": "đại lộ"
+        }
+      ],
+      "tip": "Viết tắt: Blvd.",
+      "emoji": "🌃",
+      "stage": 2
+    },
+    {
+      "id": 4241,
+      "word": "monument",
+      "ipa": "ˈmɑnjəmənt",
+      "viRead": "MAN-yu-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đài tưởng niệm, di tích",
+      "exampleEn": "The monument was built 100 years ago.",
+      "exampleVi": "Đài tưởng niệm được xây cách đây 100 năm.",
+      "collocations": [
+        {
+          "en": "historic monument",
+          "vi": "di tích lịch sử"
+        },
+        {
+          "en": "national monument",
+          "vi": "di tích quốc gia"
+        }
+      ],
+      "family": [
+        {
+          "word": "memorial",
+          "vi": "đài tưởng niệm"
+        }
+      ],
+      "tip": "monument = công trình kỷ niệm.",
+      "emoji": "🗿",
+      "stage": 2
+    },
+    {
+      "id": 4242,
+      "word": "sailboat",
+      "ipa": "ˈseɪlˌboʊt",
+      "viRead": "SÂYL-bâut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thuyền buồm",
+      "exampleEn": "A white sailboat crossed the bay.",
+      "exampleVi": "Một chiếc thuyền buồm trắng băng qua vịnh.",
+      "collocations": [
+        {
+          "en": "sail a sailboat",
+          "vi": "lái thuyền buồm"
+        },
+        {
+          "en": "small sailboat",
+          "vi": "thuyền buồm nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "sail",
+          "vi": "cánh buồm"
+        }
+      ],
+      "tip": "sail + boat.",
+      "emoji": "⛵",
+      "stage": 2
+    },
+    {
+      "id": 4243,
+      "word": "cardigan",
+      "ipa": "ˈkɑrdɪgən",
+      "viRead": "KAR-đi-gơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo khoác len cài cúc",
+      "exampleEn": "Wear a cardigan, it's chilly tonight.",
+      "exampleVi": "Mặc áo len khoác vào, tối nay se lạnh.",
+      "collocations": [
+        {
+          "en": "wool cardigan",
+          "vi": "áo len cardigan"
+        },
+        {
+          "en": "button up a cardigan",
+          "vi": "cài cúc áo len"
+        }
+      ],
+      "family": [
+        {
+          "word": "sweater",
+          "vi": "áo len"
+        }
+      ],
+      "tip": "cardigan có cúc phía trước; sweater thì chui đầu.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 4244,
+      "word": "overcoat",
+      "ipa": "ˈoʊvərˌkoʊt",
+      "viRead": "ÂU-vơ-kâut",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo khoác dài",
+      "exampleEn": "He put on his overcoat and left.",
+      "exampleVi": "Ông mặc áo khoác dài rồi đi.",
+      "collocations": [
+        {
+          "en": "wool overcoat",
+          "vi": "áo măng tô len"
+        },
+        {
+          "en": "heavy overcoat",
+          "vi": "áo khoác dày"
+        }
+      ],
+      "family": [
+        {
+          "word": "coat",
+          "vi": "áo khoác"
+        }
+      ],
+      "tip": "over + coat = áo khoác ngoài dài.",
+      "emoji": "🧥",
+      "stage": 2
+    },
+    {
+      "id": 4245,
+      "word": "tuxedo",
+      "ipa": "təkˈsidoʊ",
+      "viRead": "tơk-SI-đâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bộ lễ phục nam",
+      "exampleEn": "The groom wore a black tuxedo.",
+      "exampleVi": "Chú rể mặc bộ lễ phục đen.",
+      "collocations": [
+        {
+          "en": "black tuxedo",
+          "vi": "lễ phục đen"
+        },
+        {
+          "en": "rent a tuxedo",
+          "vi": "thuê lễ phục"
+        }
+      ],
+      "family": [
+        {
+          "word": "suit",
+          "vi": "bộ com-lê"
+        }
+      ],
+      "tip": "Viết tắt thân mật: tux.",
+      "emoji": "🤵",
+      "stage": 2
+    },
+    {
+      "id": 4246,
+      "word": "stocking",
+      "ipa": "ˈstɑkɪŋ",
+      "viRead": "STA-king",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tất dài, vớ da",
+      "exampleEn": "Children hang a stocking for Santa.",
+      "exampleVi": "Trẻ con treo chiếc tất dài chờ ông già Noel.",
+      "collocations": [
+        {
+          "en": "Christmas stocking",
+          "vi": "tất Giáng sinh"
+        },
+        {
+          "en": "silk stockings",
+          "vi": "tất lụa"
+        }
+      ],
+      "family": [
+        {
+          "word": "sock",
+          "vi": "tất ngắn"
+        }
+      ],
+      "tip": "Christmas stocking = tất treo đựng quà Noel.",
+      "emoji": "🧦",
+      "stage": 2
+    },
+    {
+      "id": 4247,
+      "word": "sneaker",
+      "ipa": "ˈsnikər",
+      "viRead": "SNI-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giày thể thao",
+      "exampleEn": "I bought new white sneakers.",
+      "exampleVi": "Tôi mới mua đôi giày thể thao trắng.",
+      "collocations": [
+        {
+          "en": "running sneakers",
+          "vi": "giày chạy"
+        },
+        {
+          "en": "a pair of sneakers",
+          "vi": "một đôi giày thể thao"
+        }
+      ],
+      "family": [
+        {
+          "word": "trainer",
+          "vi": "giày thể thao (Anh)"
+        }
+      ],
+      "tip": "Mỹ: sneakers; Anh: trainers.",
+      "emoji": "👟",
+      "stage": 2
+    },
+    {
+      "id": 4248,
+      "word": "beanie",
+      "ipa": "ˈbini",
+      "viRead": "BI-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mũ len trùm đầu",
+      "exampleEn": "Wear a beanie to keep your head warm.",
+      "exampleVi": "Đội mũ len cho ấm đầu.",
+      "collocations": [
+        {
+          "en": "wool beanie",
+          "vi": "mũ len"
+        },
+        {
+          "en": "knit beanie",
+          "vi": "mũ đan"
+        }
+      ],
+      "family": [
+        {
+          "word": "hat",
+          "vi": "mũ"
+        }
+      ],
+      "tip": "beanie = mũ len ôm đầu.",
+      "emoji": "🧢",
+      "stage": 2
+    },
+    {
+      "id": 4249,
+      "word": "wristwatch",
+      "ipa": "ˈrɪstˌwɑʧ",
+      "viRead": "RIST-wach",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng hồ đeo tay",
+      "exampleEn": "My grandfather gave me his wristwatch.",
+      "exampleVi": "Ông tặng tôi chiếc đồng hồ đeo tay của ông.",
+      "collocations": [
+        {
+          "en": "gold wristwatch",
+          "vi": "đồng hồ vàng"
+        },
+        {
+          "en": "wear a wristwatch",
+          "vi": "đeo đồng hồ"
+        }
+      ],
+      "family": [
+        {
+          "word": "watch",
+          "vi": "đồng hồ"
+        }
+      ],
+      "tip": "wrist (cổ tay) + watch.",
+      "emoji": "⌚",
+      "stage": 2
+    },
+    {
+      "id": 4250,
+      "word": "handbag",
+      "ipa": "ˈhændˌbæg",
+      "viRead": "HENĐ-beg",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "túi xách tay",
+      "exampleEn": "She keeps her phone in her handbag.",
+      "exampleVi": "Cô ấy để điện thoại trong túi xách.",
+      "collocations": [
+        {
+          "en": "leather handbag",
+          "vi": "túi da"
+        },
+        {
+          "en": "designer handbag",
+          "vi": "túi hàng hiệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "purse",
+          "vi": "ví, túi (Mỹ)"
+        }
+      ],
+      "tip": "hand + bag.",
+      "emoji": "👜",
+      "stage": 2
+    },
+    {
+      "id": 4251,
+      "word": "lace",
+      "ipa": "leɪs",
+      "viRead": "LÂYS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ren; dây giày",
+      "exampleEn": "Her dress is made of white lace.",
+      "exampleVi": "Váy cô ấy làm bằng ren trắng.",
+      "collocations": [
+        {
+          "en": "shoe lace",
+          "vi": "dây giày"
+        },
+        {
+          "en": "lace dress",
+          "vi": "váy ren"
+        }
+      ],
+      "tip": "lace up = buộc dây giày.",
+      "emoji": "🪡",
+      "stage": 2
+    },
+    {
+      "id": 4252,
+      "word": "denim",
+      "ipa": "ˈdɛnəm",
+      "viRead": "ĐE-nơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vải bò, vải jean",
+      "exampleEn": "Denim jackets never go out of style.",
+      "exampleVi": "Áo khoác bò không bao giờ lỗi mốt.",
+      "collocations": [
+        {
+          "en": "denim jacket",
+          "vi": "áo khoác bò"
+        },
+        {
+          "en": "blue denim",
+          "vi": "vải bò xanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "jeans",
+          "vi": "quần bò"
+        }
+      ],
+      "tip": "jeans được may từ denim.",
+      "emoji": "👖",
+      "stage": 2
+    },
+    {
+      "id": 4253,
+      "word": "velvet",
+      "ipa": "ˈvɛlvət",
+      "viRead": "VEL-vơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhung",
+      "exampleEn": "The sofa is covered in red velvet.",
+      "exampleVi": "Ghế sô-pha bọc nhung đỏ.",
+      "collocations": [
+        {
+          "en": "velvet dress",
+          "vi": "váy nhung"
+        },
+        {
+          "en": "red velvet cake",
+          "vi": "bánh red velvet"
+        }
+      ],
+      "tip": "red velvet = bánh nhung đỏ.",
+      "emoji": "🟥",
       "stage": 2
     }
   ]
