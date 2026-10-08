@@ -81,7 +81,10 @@ export default function Speaking() {
           <span className="text-aurora">Luyện nói</span> <span aria-hidden="true">🎙️</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.
+          Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.{' '}
+          <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
+            Xem trước những âm khó cho người Việt 👄
+          </Link>
         </p>
       </header>
 

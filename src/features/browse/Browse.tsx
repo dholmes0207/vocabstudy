@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import type { PosCategory, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -87,7 +87,12 @@ export default function Browse() {
         <h1 className="text-2xl font-extrabold tracking-tight">
           <span className="text-aurora">Tra cứu từ vựng</span> <span aria-hidden="true">📚</span>
         </h1>
-        <p className="mt-1 text-slate-500">{pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.</p>
+        <p className="mt-1 text-slate-500">
+          {pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.{' '}
+          <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
+            Đọc phiên âm thế nào? 👄
+          </Link>
+        </p>
       </header>
 
       {/* Search */}
