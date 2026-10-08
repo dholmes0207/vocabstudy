@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4426,
+    "count": 4440,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -124711,6 +124711,426 @@
       ],
       "tip": "worrying (gây lo) / worried (cảm thấy lo).",
       "emoji": "😟",
+      "stage": 2
+    },
+    {
+      "id": 4427,
+      "word": "afterward",
+      "ipa": "ˈæftərwərd",
+      "viRead": "EPH-tơ-wơđ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "sau đó",
+      "exampleEn": "We had dinner and went for a walk afterward.",
+      "exampleVi": "Chúng tôi ăn tối rồi sau đó đi dạo.",
+      "collocations": [
+        {
+          "en": "shortly afterward",
+          "vi": "ngay sau đó"
+        },
+        {
+          "en": "soon afterward",
+          "vi": "không lâu sau"
+        }
+      ],
+      "family": [
+        {
+          "word": "after",
+          "vi": "sau"
+        }
+      ],
+      "tip": "Anh hay viết afterwards.",
+      "emoji": "⏭️",
+      "stage": 2
+    },
+    {
+      "id": 4428,
+      "word": "aloud",
+      "ipa": "əˈlaʊd",
+      "viRead": "ơ-LAOĐ",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thành tiếng, to",
+      "exampleEn": "Read the sentence aloud.",
+      "exampleVi": "Đọc to câu này lên.",
+      "collocations": [
+        {
+          "en": "read aloud",
+          "vi": "đọc to"
+        },
+        {
+          "en": "think aloud",
+          "vi": "nghĩ thành lời"
+        }
+      ],
+      "family": [
+        {
+          "word": "loudly",
+          "vi": "to"
+        }
+      ],
+      "tip": "Đọc aloud giúp nhớ từ lâu hơn!",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 4429,
+      "word": "backward",
+      "ipa": "ˈbækwərd",
+      "viRead": "BEK-wơđ",
+      "pos": "adv./adj.",
+      "posCategory": "adverb",
+      "meaning": "lùi về sau, ngược",
+      "exampleEn": "Count backward from ten.",
+      "exampleVi": "Đếm ngược từ mười.",
+      "collocations": [
+        {
+          "en": "step backward",
+          "vi": "lùi một bước"
+        },
+        {
+          "en": "count backward",
+          "vi": "đếm ngược"
+        }
+      ],
+      "family": [
+        {
+          "word": "forward",
+          "vi": "về phía trước"
+        }
+      ],
+      "tip": "backward ↔ forward. Anh: backwards.",
+      "emoji": "⏪",
+      "stage": 2
+    },
+    {
+      "id": 4430,
+      "word": "downstairs",
+      "ipa": "ˌdaʊnˈstɛrz",
+      "viRead": "đaon-STERD",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ở tầng dưới, xuống lầu",
+      "exampleEn": "Breakfast is ready, come downstairs!",
+      "exampleVi": "Bữa sáng xong rồi, xuống nhà đi!",
+      "collocations": [
+        {
+          "en": "go downstairs",
+          "vi": "xuống lầu"
+        },
+        {
+          "en": "the downstairs room",
+          "vi": "phòng tầng dưới"
+        }
+      ],
+      "family": [
+        {
+          "word": "upstairs",
+          "vi": "trên lầu"
+        }
+      ],
+      "tip": "downstairs ↔ upstairs.",
+      "emoji": "⬇️",
+      "stage": 2
+    },
+    {
+      "id": 4431,
+      "word": "indoors",
+      "ipa": "ˌɪnˈdɔrz",
+      "viRead": "in-ĐORD",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "trong nhà",
+      "exampleEn": "Stay indoors when it's raining.",
+      "exampleVi": "Ở trong nhà khi trời mưa.",
+      "collocations": [
+        {
+          "en": "stay indoors",
+          "vi": "ở trong nhà"
+        },
+        {
+          "en": "play indoors",
+          "vi": "chơi trong nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "indoor",
+          "vi": "trong nhà (adj)"
+        }
+      ],
+      "tip": "indoors (adv) — indoor (adj): indoor games.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 4432,
+      "word": "outdoors",
+      "ipa": "ˌaʊtˈdɔrz",
+      "viRead": "aot-ĐORD",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngoài trời",
+      "exampleEn": "Kids should play outdoors more.",
+      "exampleVi": "Trẻ con nên chơi ngoài trời nhiều hơn.",
+      "collocations": [
+        {
+          "en": "go outdoors",
+          "vi": "ra ngoài trời"
+        },
+        {
+          "en": "the great outdoors",
+          "vi": "thiên nhiên hoang dã"
+        }
+      ],
+      "family": [
+        {
+          "word": "outdoor",
+          "vi": "ngoài trời (adj)"
+        }
+      ],
+      "tip": "outdoors (adv) — outdoor (adj): outdoor café.",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 4433,
+      "word": "someday",
+      "ipa": "ˈsəmˌdeɪ",
+      "viRead": "SƠM-đây",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "một ngày nào đó",
+      "exampleEn": "Someday I will speak English fluently.",
+      "exampleVi": "Một ngày nào đó tôi sẽ nói tiếng Anh trôi chảy.",
+      "collocations": [
+        {
+          "en": "someday soon",
+          "vi": "một ngày không xa"
+        },
+        {
+          "en": "maybe someday",
+          "vi": "có lẽ một ngày nào đó"
+        }
+      ],
+      "family": [
+        {
+          "word": "one day",
+          "vi": "một ngày"
+        }
+      ],
+      "tip": "Học mỗi ngày một chút — someday sẽ thành công!",
+      "emoji": "🌈",
+      "stage": 2
+    },
+    {
+      "id": 4434,
+      "word": "weekly",
+      "ipa": "ˈwikli",
+      "viRead": "WIK-li",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "hằng tuần",
+      "exampleEn": "We have a weekly English club.",
+      "exampleVi": "Chúng tôi có câu lạc bộ tiếng Anh hằng tuần.",
+      "collocations": [
+        {
+          "en": "weekly meeting",
+          "vi": "họp hằng tuần"
+        },
+        {
+          "en": "twice weekly",
+          "vi": "hai lần mỗi tuần"
+        }
+      ],
+      "family": [
+        {
+          "word": "week",
+          "vi": "tuần"
+        }
+      ],
+      "tip": "week + -ly.",
+      "emoji": "📆",
+      "stage": 2
+    },
+    {
+      "id": 4435,
+      "word": "monthly",
+      "ipa": "ˈmənθli",
+      "viRead": "MƠNTH-li",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "hằng tháng",
+      "exampleEn": "I pay my phone bill monthly.",
+      "exampleVi": "Tôi trả tiền điện thoại hằng tháng.",
+      "collocations": [
+        {
+          "en": "monthly salary",
+          "vi": "lương tháng"
+        },
+        {
+          "en": "monthly payment",
+          "vi": "khoản trả hằng tháng"
+        }
+      ],
+      "family": [
+        {
+          "word": "month",
+          "vi": "tháng"
+        }
+      ],
+      "tip": "month + -ly.",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 4436,
+      "word": "yearly",
+      "ipa": "ˈjɪrli",
+      "viRead": "YIR-li",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "hằng năm",
+      "exampleEn": "The festival is a yearly event.",
+      "exampleVi": "Lễ hội là sự kiện hằng năm.",
+      "collocations": [
+        {
+          "en": "yearly event",
+          "vi": "sự kiện thường niên"
+        },
+        {
+          "en": "yearly checkup",
+          "vi": "khám hằng năm"
+        }
+      ],
+      "family": [
+        {
+          "word": "annual",
+          "vi": "hằng năm"
+        }
+      ],
+      "tip": "yearly = annual.",
+      "emoji": "🎆",
+      "stage": 2
+    },
+    {
+      "id": 4437,
+      "word": "noon",
+      "ipa": "nun",
+      "viRead": "NUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi trưa (12 giờ)",
+      "exampleEn": "Let's meet at noon.",
+      "exampleVi": "Mình gặp nhau lúc mười hai giờ trưa nhé.",
+      "collocations": [
+        {
+          "en": "at noon",
+          "vi": "lúc trưa"
+        },
+        {
+          "en": "high noon",
+          "vi": "giữa trưa"
+        }
+      ],
+      "family": [
+        {
+          "word": "midday",
+          "vi": "giữa trưa"
+        }
+      ],
+      "tip": "noon = 12 giờ trưa; midnight = 12 giờ đêm.",
+      "emoji": "🕛",
+      "stage": 2
+    },
+    {
+      "id": 4438,
+      "word": "twilight",
+      "ipa": "ˈtwaɪˌlaɪt",
+      "viRead": "TWAI-lait",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoàng hôn, chạng vạng",
+      "exampleEn": "The city lights come on at twilight.",
+      "exampleVi": "Đèn thành phố bật sáng lúc chạng vạng.",
+      "collocations": [
+        {
+          "en": "at twilight",
+          "vi": "lúc chạng vạng"
+        },
+        {
+          "en": "twilight sky",
+          "vi": "bầu trời chạng vạng"
+        }
+      ],
+      "family": [
+        {
+          "word": "dusk",
+          "vi": "hoàng hôn"
+        }
+      ],
+      "tip": "twilight = lúc trời nhá nhem.",
+      "emoji": "🌆",
+      "stage": 2
+    },
+    {
+      "id": 4439,
+      "word": "fortnight",
+      "ipa": "ˈfɔrtˌnaɪt",
+      "viRead": "PHORT-nait",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hai tuần",
+      "exampleEn": "I'll be on holiday for a fortnight.",
+      "exampleVi": "Tôi sẽ đi nghỉ hai tuần.",
+      "collocations": [
+        {
+          "en": "a fortnight ago",
+          "vi": "hai tuần trước"
+        },
+        {
+          "en": "every fortnight",
+          "vi": "hai tuần một lần"
+        }
+      ],
+      "family": [
+        {
+          "word": "week",
+          "vi": "tuần"
+        }
+      ],
+      "tip": "Từ kiểu Anh: fourteen nights → fortnight.",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 4440,
+      "word": "millennium",
+      "ipa": "məˈlɛniəm",
+      "viRead": "mơ-LE-ni-ơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thiên niên kỷ",
+      "exampleEn": "Hanoi celebrated its first millennium in 2010.",
+      "exampleVi": "Hà Nội kỷ niệm nghìn năm vào năm 2010.",
+      "collocations": [
+        {
+          "en": "new millennium",
+          "vi": "thiên niên kỷ mới"
+        },
+        {
+          "en": "the third millennium",
+          "vi": "thiên niên kỷ thứ ba"
+        }
+      ],
+      "family": [
+        {
+          "word": "century",
+          "vi": "thế kỷ"
+        }
+      ],
+      "tip": "Số nhiều: millennia. Hai l, hai n.",
+      "emoji": "🏯",
       "stage": 2
     }
   ]
