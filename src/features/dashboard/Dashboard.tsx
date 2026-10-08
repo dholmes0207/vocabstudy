@@ -7,6 +7,7 @@ import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 import WordOfDay from './WordOfDay'
+import { levelForXp } from '@/lib/xpLevel'
 import InstallPrompt from '@/components/InstallPrompt'
 import SpeakButton from '@/components/SpeakButton'
 import { proverbOfDay } from '@/lib/proverbs'
@@ -64,6 +65,12 @@ export default function Dashboard() {
           </span>
           <span className="text-sm text-brand-600 dark:text-brand-300" title="Điểm kinh nghiệm">
             ⭐ <b className="text-lg">{stats?.xp ?? 0}</b>
+          </span>
+          <span
+            className="text-sm font-semibold text-violet-600 dark:text-violet-300"
+            title="Cấp độ"
+          >
+            Cấp {levelForXp(stats?.xp ?? 0).level}
           </span>
         </div>
       </div>

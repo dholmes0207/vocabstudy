@@ -10,6 +10,8 @@ import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import UserMenu from './UserMenu'
 import ErrorBoundary from './ErrorBoundary'
+import LevelUp from './LevelUp'
+import { levelForXp } from '@/lib/xpLevel'
 import { useProgressSync } from '@/hooks/useProgressSync'
 
 interface NavItem {
@@ -116,6 +118,8 @@ export default function Layout() {
         </nav>
       )}
 
+      <LevelUp />
+
       {/* Floating AI assistant (desktop bubble; on phones it opens from the header) */}
       <AssistantFab />
     </div>
@@ -184,17 +188,35 @@ function BottomLink({ item, badge, active }: { item: NavItem; badge: number; act
 }
 
 function StreakPill({ streak, xp }: { streak: number; xp: number }) {
+  const lv = levelForXp(xp)
   return (
-    <div className="mt-4 flex items-center justify-between rounded-xl bg-slate-100 px-3 py-2.5 text-sm dark:bg-slate-800">
-      <span className="flex items-center gap-1.5" title="Chuỗi ngày học liên tục">
-        🔥 <b>{streak}</b> ngày
-      </span>
-      <span
-        className="flex items-center gap-1.5 text-brand-600 dark:text-brand-300"
-        title="Điểm kinh nghiệm"
+    <div className="mt-4 rounded-xl bg-slate-100/80 px-3 py-2.5 text-sm dark:bg-slate-800/70">
+      <div
+        className="mb-2"
+        title={`${xp - lv.floor}/${lv.next - lv.floor} XP tới cấp ${lv.level + 1}`}
       >
-        ⭐ {xp}
-      </span>
+        <div className="flex items-center justify-between text-xs font-semibold">
+          <span>Cấp {lv.level}</span>
+          <span className="text-slate-400">cấp {lv.level + 1}</span>
+        </div>
+        <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-brand-500 to-violet-500"
+            style={{ width: `${Math.round(lv.ratio * 100)}%` }}
+          />
+        </div>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="flex items-center gap-1.5" title="Chuỗi ngày học liên tục">
+          🔥 <b>{streak}</b> ngày
+        </span>
+        <span
+          className="flex items-center gap-1.5 text-brand-600 dark:text-brand-300"
+          title="Điểm kinh nghiệm"
+        >
+          ⭐ {xp}
+        </span>
+      </div>
     </div>
   )
 }
