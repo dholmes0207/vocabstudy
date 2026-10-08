@@ -50,7 +50,7 @@ export default function Learn() {
             correct={total}
             total={total}
             showScore={false}
-            note={`Bạn vừa làm quen và tự nhớ lại ${total} từ. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`}
+            note={`Bạn vừa làm quen và tự nhớ lại ${total} từ — thêm ${total} ngôi sao trên bầu trời của bạn ✨. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`}
           >
             <Link to="/review" className="btn-primary">
               Ôn tập ngay

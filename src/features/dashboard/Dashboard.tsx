@@ -10,7 +10,7 @@ import WordOfDay from './WordOfDay'
 import InstallPrompt from '@/components/InstallPrompt'
 import SpeakButton from '@/components/SpeakButton'
 import { proverbOfDay } from '@/lib/proverbs'
-import { DailyGoal, MySky, WelcomeBack } from './Motivation'
+import { DailyGoal, FirstSteps, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
 
@@ -68,6 +68,7 @@ export default function Dashboard() {
         </div>
       </div>
 
+      {s.learned === 0 && !stats?.lastStudyDay && <FirstSteps />}
       <WelcomeBack stats={stats} day={today()} due={s.due} />
 
       {/* A small goal, a streak one missed day can't break, and a sky to fill. */}

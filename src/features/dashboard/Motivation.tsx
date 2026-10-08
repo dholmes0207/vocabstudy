@@ -186,3 +186,38 @@ export function MySky({ learned, mastered }: { learned: number; mastered: number
     </section>
   )
 }
+
+const STEPS = [
+  ['1', 'Học 5 từ đầu tiên', 'Nghe, xem câu ví dụ, rồi tự nhớ lại ngay — khoảng 2 phút.'],
+  ['2', 'Mai quay lại ôn', 'App tự nhắc đúng từ sắp quên. Nhớ lại sau một đêm mới là nhớ thật.'],
+  [
+    '3',
+    'Mỗi ngày một chút',
+    'Mục tiêu nhỏ 10 câu. Lỡ một ngày cũng không sao — đã có khiên giữ chuỗi.',
+  ],
+] as const
+
+/** First visit: three plain steps, so a beginner knows exactly what to do. */
+export function FirstSteps() {
+  return (
+    <section className="card p-5">
+      <p className="text-lg font-bold">Bắt đầu thật đơn giản 🌱</p>
+      <ol className="mt-3 space-y-3">
+        {STEPS.map(([n, title, desc]) => (
+          <li key={n} className="flex gap-3">
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-violet-600 text-sm font-bold text-white">
+              {n}
+            </span>
+            <span>
+              <b>{title}</b>
+              <span className="block text-sm text-slate-500 dark:text-slate-400">{desc}</span>
+            </span>
+          </li>
+        ))}
+      </ol>
+      <Link to="/learn?quick=1" className="btn-primary mt-4 w-full">
+        <Zap className="h-4 w-4" /> Học 5 từ đầu tiên
+      </Link>
+    </section>
+  )
+}
