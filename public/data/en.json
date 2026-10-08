@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4186,
+    "count": 4221,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -117847,6 +117847,1056 @@
       ],
       "tip": "Scorpio = cung Thiên Yết (Bọ Cạp).",
       "emoji": "🦂",
+      "stage": 2
+    },
+    {
+      "id": 4187,
+      "word": "boredom",
+      "ipa": "ˈbɔrdəm",
+      "viRead": "BOR-đơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự buồn chán",
+      "exampleEn": "He plays games out of boredom.",
+      "exampleVi": "Cậu ấy chơi game vì buồn chán.",
+      "collocations": [
+        {
+          "en": "out of boredom",
+          "vi": "vì chán"
+        },
+        {
+          "en": "die of boredom",
+          "vi": "chán muốn chết"
+        }
+      ],
+      "family": [
+        {
+          "word": "bored",
+          "vi": "chán"
+        }
+      ],
+      "tip": "bored (adj) → boredom (n).",
+      "emoji": "🥱",
+      "stage": 2
+    },
+    {
+      "id": 4188,
+      "word": "curiosity",
+      "ipa": "ˌkjʊriˈɑsəti",
+      "viRead": "kyu-ri-A-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tò mò",
+      "exampleEn": "Curiosity helps you learn faster.",
+      "exampleVi": "Sự tò mò giúp bạn học nhanh hơn.",
+      "collocations": [
+        {
+          "en": "out of curiosity",
+          "vi": "vì tò mò"
+        },
+        {
+          "en": "Curiosity killed the cat",
+          "vi": "Tò mò hại thân"
+        }
+      ],
+      "family": [
+        {
+          "word": "curious",
+          "vi": "tò mò"
+        }
+      ],
+      "tip": "Curiosity killed the cat = Tò mò quá hại thân.",
+      "emoji": "🧐",
+      "stage": 2
+    },
+    {
+      "id": 4189,
+      "word": "despair",
+      "ipa": "dɪˈspɛr",
+      "viRead": "đi-SPER",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tuyệt vọng",
+      "exampleEn": "Don't give up in despair; try again tomorrow.",
+      "exampleVi": "Đừng tuyệt vọng bỏ cuộc, mai thử lại.",
+      "collocations": [
+        {
+          "en": "in despair",
+          "vi": "trong tuyệt vọng"
+        },
+        {
+          "en": "deep despair",
+          "vi": "tuyệt vọng sâu sắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "hope",
+          "vi": "hy vọng"
+        }
+      ],
+      "tip": "despair ↔ hope.",
+      "emoji": "😞",
+      "stage": 2
+    },
+    {
+      "id": 4190,
+      "word": "disappointment",
+      "ipa": "ˌdɪsəˈpɔɪntmənt",
+      "viRead": "đi-sơ-POINT-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thất vọng",
+      "exampleEn": "The cancelled trip was a big disappointment.",
+      "exampleVi": "Chuyến đi bị hủy là một nỗi thất vọng lớn.",
+      "collocations": [
+        {
+          "en": "great disappointment",
+          "vi": "thất vọng lớn"
+        },
+        {
+          "en": "to my disappointment",
+          "vi": "tôi thất vọng là"
+        }
+      ],
+      "family": [
+        {
+          "word": "disappointed",
+          "vi": "thất vọng"
+        }
+      ],
+      "tip": "disappoint: một s, hai p.",
+      "emoji": "😔",
+      "stage": 2
+    },
+    {
+      "id": 4191,
+      "word": "disgust",
+      "ipa": "dɪsˈgəst",
+      "viRead": "đis-GƠST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự ghê tởm",
+      "exampleEn": "She looked at the dirty kitchen in disgust.",
+      "exampleVi": "Cô ấy nhìn căn bếp bẩn với vẻ ghê tởm.",
+      "collocations": [
+        {
+          "en": "in disgust",
+          "vi": "ghê tởm"
+        },
+        {
+          "en": "feel disgust",
+          "vi": "thấy kinh tởm"
+        }
+      ],
+      "family": [
+        {
+          "word": "disgusting",
+          "vi": "kinh tởm"
+        }
+      ],
+      "tip": "disgusting = ghê quá, kinh quá.",
+      "emoji": "🤢",
+      "stage": 2
+    },
+    {
+      "id": 4192,
+      "word": "embarrassment",
+      "ipa": "ɪmˈbɛrəsmənt",
+      "viRead": "im-BE-rơs-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự ngượng ngùng",
+      "exampleEn": "His face turned red with embarrassment.",
+      "exampleVi": "Mặt anh ấy đỏ lên vì ngượng.",
+      "collocations": [
+        {
+          "en": "red with embarrassment",
+          "vi": "đỏ mặt vì ngượng"
+        },
+        {
+          "en": "cause embarrassment",
+          "vi": "gây ngượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "embarrassed",
+          "vi": "ngượng"
+        }
+      ],
+      "tip": "Chính tả: hai r, hai s.",
+      "emoji": "😳",
+      "stage": 2
+    },
+    {
+      "id": 4193,
+      "word": "frustration",
+      "ipa": "frəˈstreɪʃən",
+      "viRead": "phrơ-STRÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bực bội, nản lòng",
+      "exampleEn": "Learning a language can bring frustration, but keep going.",
+      "exampleVi": "Học ngoại ngữ có lúc nản, nhưng cứ tiếp tục.",
+      "collocations": [
+        {
+          "en": "feel frustration",
+          "vi": "thấy bực bội"
+        },
+        {
+          "en": "in frustration",
+          "vi": "trong bực tức"
+        }
+      ],
+      "family": [
+        {
+          "word": "frustrated",
+          "vi": "bực bội"
+        }
+      ],
+      "tip": "Nản là bình thường — ai học cũng trải qua!",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 4194,
+      "word": "gratitude",
+      "ipa": "ˈgrætəˌtud",
+      "viRead": "GRE-tơ-tuđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng biết ơn",
+      "exampleEn": "I want to show my gratitude to my teachers.",
+      "exampleVi": "Tôi muốn bày tỏ lòng biết ơn với thầy cô.",
+      "collocations": [
+        {
+          "en": "express gratitude",
+          "vi": "bày tỏ lòng biết ơn"
+        },
+        {
+          "en": "deep gratitude",
+          "vi": "lòng biết ơn sâu sắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "grateful",
+          "vi": "biết ơn"
+        }
+      ],
+      "tip": "grateful (adj) → gratitude (n).",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 4195,
+      "word": "guilt",
+      "ipa": "gɪlt",
+      "viRead": "GILT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cảm giác tội lỗi",
+      "exampleEn": "She felt guilt for missing her friend's party.",
+      "exampleVi": "Cô ấy thấy áy náy vì lỡ tiệc của bạn.",
+      "collocations": [
+        {
+          "en": "feel guilt",
+          "vi": "thấy có lỗi"
+        },
+        {
+          "en": "guilt trip",
+          "vi": "làm ai thấy tội lỗi"
+        }
+      ],
+      "family": [
+        {
+          "word": "guilty",
+          "vi": "có lỗi"
+        }
+      ],
+      "tip": "'u' câm: đọc 'GILT'.",
+      "emoji": "😣",
+      "stage": 2
+    },
+    {
+      "id": 4196,
+      "word": "happiness",
+      "ipa": "ˈhæpinəs",
+      "viRead": "HE-pi-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạnh phúc",
+      "exampleEn": "Money can't buy happiness.",
+      "exampleVi": "Tiền không mua được hạnh phúc.",
+      "collocations": [
+        {
+          "en": "true happiness",
+          "vi": "hạnh phúc thật sự"
+        },
+        {
+          "en": "bring happiness",
+          "vi": "mang lại hạnh phúc"
+        }
+      ],
+      "family": [
+        {
+          "word": "happy",
+          "vi": "vui"
+        }
+      ],
+      "tip": "happy → happiness (y → i).",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 4197,
+      "word": "jealousy",
+      "ipa": "ˈʤɛləsi",
+      "viRead": "GIE-lơ-si",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự ghen tị",
+      "exampleEn": "Jealousy can ruin a friendship.",
+      "exampleVi": "Sự ghen tị có thể phá hỏng tình bạn.",
+      "collocations": [
+        {
+          "en": "feel jealousy",
+          "vi": "thấy ghen tị"
+        },
+        {
+          "en": "out of jealousy",
+          "vi": "vì ghen"
+        }
+      ],
+      "family": [
+        {
+          "word": "jealous",
+          "vi": "ghen tị"
+        }
+      ],
+      "tip": "jealous (adj) → jealousy (n).",
+      "emoji": "💚",
+      "stage": 2
+    },
+    {
+      "id": 4198,
+      "word": "loneliness",
+      "ipa": "ˈloʊnlinəs",
+      "viRead": "LÂUN-li-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cô đơn",
+      "exampleEn": "Talking to friends helps with loneliness.",
+      "exampleVi": "Trò chuyện với bạn bè giúp vơi cô đơn.",
+      "collocations": [
+        {
+          "en": "feel loneliness",
+          "vi": "thấy cô đơn"
+        },
+        {
+          "en": "deal with loneliness",
+          "vi": "đối mặt cô đơn"
+        }
+      ],
+      "family": [
+        {
+          "word": "lonely",
+          "vi": "cô đơn"
+        }
+      ],
+      "tip": "lonely → loneliness.",
+      "emoji": "🌧️",
+      "stage": 2
+    },
+    {
+      "id": 4199,
+      "word": "misery",
+      "ipa": "ˈmɪzəri",
+      "viRead": "MI-dơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nỗi khổ sở",
+      "exampleEn": "The long flight was pure misery.",
+      "exampleVi": "Chuyến bay dài đúng là cực hình.",
+      "collocations": [
+        {
+          "en": "pure misery",
+          "vi": "khổ sở vô cùng"
+        },
+        {
+          "en": "put someone out of misery",
+          "vi": "giải thoát ai"
+        }
+      ],
+      "family": [
+        {
+          "word": "miserable",
+          "vi": "khổ sở"
+        }
+      ],
+      "tip": "miserable (adj) → misery (n).",
+      "emoji": "😩",
+      "stage": 2
+    },
+    {
+      "id": 4200,
+      "word": "nostalgia",
+      "ipa": "nɑˈstælʤə",
+      "viRead": "na-STEL-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nỗi hoài niệm",
+      "exampleEn": "Old songs fill me with nostalgia.",
+      "exampleVi": "Những bài hát cũ làm tôi hoài niệm.",
+      "collocations": [
+        {
+          "en": "feel nostalgia",
+          "vi": "thấy hoài niệm"
+        },
+        {
+          "en": "a wave of nostalgia",
+          "vi": "cơn hoài niệm"
+        }
+      ],
+      "family": [
+        {
+          "word": "nostalgic",
+          "vi": "hoài niệm"
+        }
+      ],
+      "tip": "nostalgia = nhớ về ngày xưa.",
+      "emoji": "📼",
+      "stage": 2
+    },
+    {
+      "id": 4201,
+      "word": "rage",
+      "ipa": "reɪʤ",
+      "viRead": "RÂYGI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơn thịnh nộ",
+      "exampleEn": "He shouted in rage.",
+      "exampleVi": "Anh ta hét lên trong cơn giận dữ.",
+      "collocations": [
+        {
+          "en": "in a rage",
+          "vi": "trong cơn giận"
+        },
+        {
+          "en": "road rage",
+          "vi": "nổi nóng khi lái xe"
+        }
+      ],
+      "family": [
+        {
+          "word": "anger",
+          "vi": "sự tức giận"
+        }
+      ],
+      "tip": "road rage = cáu giận khi tham gia giao thông.",
+      "emoji": "😡",
+      "stage": 2
+    },
+    {
+      "id": 4202,
+      "word": "sadness",
+      "ipa": "ˈsædnəs",
+      "viRead": "SEĐ-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nỗi buồn",
+      "exampleEn": "There was sadness in her eyes.",
+      "exampleVi": "Có nỗi buồn trong mắt cô ấy.",
+      "collocations": [
+        {
+          "en": "deep sadness",
+          "vi": "nỗi buồn sâu sắc"
+        },
+        {
+          "en": "feel sadness",
+          "vi": "thấy buồn"
+        }
+      ],
+      "family": [
+        {
+          "word": "sad",
+          "vi": "buồn"
+        }
+      ],
+      "tip": "sad → sadness (gấp đôi d).",
+      "emoji": "😢",
+      "stage": 2
+    },
+    {
+      "id": 4203,
+      "word": "determination",
+      "ipa": "dɪˌtərməˈneɪʃən",
+      "viRead": "đi-tơ-mơ-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự quyết tâm",
+      "exampleEn": "With determination, you can learn anything.",
+      "exampleVi": "Có quyết tâm thì học gì cũng được.",
+      "collocations": [
+        {
+          "en": "strong determination",
+          "vi": "quyết tâm mạnh mẽ"
+        },
+        {
+          "en": "show determination",
+          "vi": "thể hiện quyết tâm"
+        }
+      ],
+      "family": [
+        {
+          "word": "determined",
+          "vi": "quyết tâm"
+        }
+      ],
+      "tip": "determined (adj) → determination (n).",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 4204,
+      "word": "humility",
+      "ipa": "hjuˈmɪlɪti",
+      "viRead": "hyu-MI-li-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự khiêm tốn",
+      "exampleEn": "A great teacher shows humility.",
+      "exampleVi": "Một người thầy giỏi luôn khiêm tốn.",
+      "collocations": [
+        {
+          "en": "with humility",
+          "vi": "một cách khiêm nhường"
+        },
+        {
+          "en": "show humility",
+          "vi": "thể hiện sự khiêm tốn"
+        }
+      ],
+      "family": [
+        {
+          "word": "humble",
+          "vi": "khiêm tốn"
+        }
+      ],
+      "tip": "humble (adj) → humility (n).",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 4205,
+      "word": "generosity",
+      "ipa": "ˌʤɛnəˈrɑsəti",
+      "viRead": "gie-nơ-RA-sơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hào phóng",
+      "exampleEn": "Thank you for your generosity.",
+      "exampleVi": "Cảm ơn sự hào phóng của bạn.",
+      "collocations": [
+        {
+          "en": "show generosity",
+          "vi": "tỏ ra hào phóng"
+        },
+        {
+          "en": "great generosity",
+          "vi": "lòng hào phóng lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "generous",
+          "vi": "hào phóng"
+        }
+      ],
+      "tip": "generous → generosity.",
+      "emoji": "🎁",
+      "stage": 2
+    },
+    {
+      "id": 4206,
+      "word": "laziness",
+      "ipa": "ˈleɪzinəs",
+      "viRead": "LÂY-di-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lười biếng",
+      "exampleEn": "Laziness is not the reason; you are just tired.",
+      "exampleVi": "Không phải lười đâu, bạn chỉ mệt thôi.",
+      "collocations": [
+        {
+          "en": "pure laziness",
+          "vi": "lười chảy thây"
+        },
+        {
+          "en": "overcome laziness",
+          "vi": "vượt qua sự lười"
+        }
+      ],
+      "family": [
+        {
+          "word": "lazy",
+          "vi": "lười"
+        }
+      ],
+      "tip": "lazy → laziness (y → i).",
+      "emoji": "🦥",
+      "stage": 2
+    },
+    {
+      "id": 4207,
+      "word": "loyalty",
+      "ipa": "ˈlɔɪəlti",
+      "viRead": "LOI-ơl-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng trung thành",
+      "exampleEn": "Dogs are famous for their loyalty.",
+      "exampleVi": "Chó nổi tiếng vì lòng trung thành.",
+      "collocations": [
+        {
+          "en": "brand loyalty",
+          "vi": "trung thành với thương hiệu"
+        },
+        {
+          "en": "show loyalty",
+          "vi": "thể hiện sự trung thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "loyal",
+          "vi": "trung thành"
+        }
+      ],
+      "tip": "loyal → loyalty.",
+      "emoji": "🐕",
+      "stage": 2
+    },
+    {
+      "id": 4208,
+      "word": "modesty",
+      "ipa": "ˈmɑdəsti",
+      "viRead": "MA-đơs-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự khiêm tốn, giản dị",
+      "exampleEn": "She spoke about her success with modesty.",
+      "exampleVi": "Cô ấy nói về thành công của mình một cách khiêm tốn.",
+      "collocations": [
+        {
+          "en": "false modesty",
+          "vi": "khiêm tốn giả tạo"
+        },
+        {
+          "en": "with modesty",
+          "vi": "khiêm nhường"
+        }
+      ],
+      "family": [
+        {
+          "word": "modest",
+          "vi": "khiêm tốn"
+        }
+      ],
+      "tip": "modest → modesty.",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 4209,
+      "word": "optimism",
+      "ipa": "ˈɑptɪˌmɪzəm",
+      "viRead": "AP-tơ-mi-dơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lạc quan",
+      "exampleEn": "Her optimism makes everyone happy.",
+      "exampleVi": "Sự lạc quan của cô ấy làm mọi người vui lây.",
+      "collocations": [
+        {
+          "en": "full of optimism",
+          "vi": "đầy lạc quan"
+        },
+        {
+          "en": "cautious optimism",
+          "vi": "lạc quan thận trọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "optimistic",
+          "vi": "lạc quan"
+        }
+      ],
+      "tip": "optimism ↔ pessimism (bi quan).",
+      "emoji": "🌞",
+      "stage": 2
+    },
+    {
+      "id": 4210,
+      "word": "politeness",
+      "ipa": "pəˈlaɪtnəs",
+      "viRead": "pơ-LAIT-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lịch sự",
+      "exampleEn": "Politeness costs nothing.",
+      "exampleVi": "Lịch sự chẳng tốn gì cả.",
+      "collocations": [
+        {
+          "en": "out of politeness",
+          "vi": "vì phép lịch sự"
+        },
+        {
+          "en": "basic politeness",
+          "vi": "phép lịch sự cơ bản"
+        }
+      ],
+      "family": [
+        {
+          "word": "polite",
+          "vi": "lịch sự"
+        }
+      ],
+      "tip": "polite → politeness.",
+      "emoji": "🎩",
+      "stage": 2
+    },
+    {
+      "id": 4211,
+      "word": "selfishness",
+      "ipa": "ˈsɛlfɪʃnəs",
+      "viRead": "SEL-phish-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự ích kỷ",
+      "exampleEn": "Selfishness makes people lonely.",
+      "exampleVi": "Sự ích kỷ khiến con người cô đơn.",
+      "collocations": [
+        {
+          "en": "pure selfishness",
+          "vi": "ích kỷ thuần túy"
+        },
+        {
+          "en": "act of selfishness",
+          "vi": "hành động ích kỷ"
+        }
+      ],
+      "family": [
+        {
+          "word": "selfish",
+          "vi": "ích kỷ"
+        }
+      ],
+      "tip": "self + ish + ness.",
+      "emoji": "🙅",
+      "stage": 2
+    },
+    {
+      "id": 4212,
+      "word": "stubbornness",
+      "ipa": "ˈstəbərnəs",
+      "viRead": "STƠ-bơn-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự bướng bỉnh",
+      "exampleEn": "His stubbornness made the problem worse.",
+      "exampleVi": "Sự bướng bỉnh của anh ấy làm vấn đề tệ hơn.",
+      "collocations": [
+        {
+          "en": "sheer stubbornness",
+          "vi": "bướng bỉnh hết mức"
+        },
+        {
+          "en": "out of stubbornness",
+          "vi": "vì bướng"
+        }
+      ],
+      "family": [
+        {
+          "word": "stubborn",
+          "vi": "bướng"
+        }
+      ],
+      "tip": "stubborn as a mule = cứng đầu như la.",
+      "emoji": "🐐",
+      "stage": 2
+    },
+    {
+      "id": 4213,
+      "word": "creativity",
+      "ipa": "ˌkrieɪˈtɪvəti",
+      "viRead": "kri-ây-TI-vơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự sáng tạo",
+      "exampleEn": "Art classes help children's creativity.",
+      "exampleVi": "Lớp mỹ thuật giúp trẻ sáng tạo.",
+      "collocations": [
+        {
+          "en": "encourage creativity",
+          "vi": "khuyến khích sáng tạo"
+        },
+        {
+          "en": "full of creativity",
+          "vi": "đầy sáng tạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "creative",
+          "vi": "sáng tạo"
+        }
+      ],
+      "tip": "create → creative → creativity.",
+      "emoji": "🎨",
+      "stage": 2
+    },
+    {
+      "id": 4214,
+      "word": "bravery",
+      "ipa": "ˈbreɪvəri",
+      "viRead": "BRÂY-vơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự dũng cảm",
+      "exampleEn": "The firefighter was praised for his bravery.",
+      "exampleVi": "Người lính cứu hỏa được khen vì lòng dũng cảm.",
+      "collocations": [
+        {
+          "en": "act of bravery",
+          "vi": "hành động dũng cảm"
+        },
+        {
+          "en": "award for bravery",
+          "vi": "giải thưởng dũng cảm"
+        }
+      ],
+      "family": [
+        {
+          "word": "brave",
+          "vi": "dũng cảm"
+        }
+      ],
+      "tip": "brave → bravery.",
+      "emoji": "🦁",
+      "stage": 2
+    },
+    {
+      "id": 4215,
+      "word": "cowardice",
+      "ipa": "ˈkaʊərdəs",
+      "viRead": "KAO-ơ-đơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hèn nhát",
+      "exampleEn": "Running away was an act of cowardice.",
+      "exampleVi": "Bỏ chạy là một hành động hèn nhát.",
+      "collocations": [
+        {
+          "en": "act of cowardice",
+          "vi": "hành động hèn nhát"
+        },
+        {
+          "en": "moral cowardice",
+          "vi": "hèn nhát về đạo đức"
+        }
+      ],
+      "family": [
+        {
+          "word": "coward",
+          "vi": "kẻ hèn nhát"
+        }
+      ],
+      "tip": "coward (n, người) → cowardice (n, tính).",
+      "emoji": "🐔",
+      "stage": 2
+    },
+    {
+      "id": 4216,
+      "word": "greed",
+      "ipa": "grid",
+      "viRead": "GRIĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng tham",
+      "exampleEn": "Greed makes people do bad things.",
+      "exampleVi": "Lòng tham khiến người ta làm điều xấu.",
+      "collocations": [
+        {
+          "en": "pure greed",
+          "vi": "tham lam thuần túy"
+        },
+        {
+          "en": "driven by greed",
+          "vi": "bị lòng tham chi phối"
+        }
+      ],
+      "family": [
+        {
+          "word": "greedy",
+          "vi": "tham lam"
+        }
+      ],
+      "tip": "greed (n) → greedy (adj).",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 4217,
+      "word": "arrogance",
+      "ipa": "ˈɛrəgəns",
+      "viRead": "E-rơ-gơns",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kiêu ngạo",
+      "exampleEn": "His arrogance lost him many friends.",
+      "exampleVi": "Sự kiêu ngạo khiến anh ấy mất nhiều bạn.",
+      "collocations": [
+        {
+          "en": "sheer arrogance",
+          "vi": "kiêu ngạo hết mức"
+        },
+        {
+          "en": "full of arrogance",
+          "vi": "đầy kiêu ngạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "arrogant",
+          "vi": "kiêu ngạo"
+        }
+      ],
+      "tip": "arrogant ↔ humble.",
+      "emoji": "😏",
+      "stage": 2
+    },
+    {
+      "id": 4218,
+      "word": "compassion",
+      "ipa": "kəmˈpæʃən",
+      "viRead": "kơm-PE-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng trắc ẩn",
+      "exampleEn": "Nurses treat patients with compassion.",
+      "exampleVi": "Y tá chăm sóc bệnh nhân bằng lòng trắc ẩn.",
+      "collocations": [
+        {
+          "en": "show compassion",
+          "vi": "thể hiện lòng trắc ẩn"
+        },
+        {
+          "en": "deep compassion",
+          "vi": "lòng thương cảm sâu sắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "sympathy",
+          "vi": "sự cảm thông"
+        }
+      ],
+      "tip": "compassion = thương người, muốn giúp.",
+      "emoji": "💞",
+      "stage": 2
+    },
+    {
+      "id": 4219,
+      "word": "forgiveness",
+      "ipa": "fərˈgɪvnəs",
+      "viRead": "phơ-GIV-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự tha thứ",
+      "exampleEn": "He asked for forgiveness.",
+      "exampleVi": "Anh ấy xin được tha thứ.",
+      "collocations": [
+        {
+          "en": "ask for forgiveness",
+          "vi": "xin tha thứ"
+        },
+        {
+          "en": "beg forgiveness",
+          "vi": "cầu xin tha thứ"
+        }
+      ],
+      "family": [
+        {
+          "word": "forgive",
+          "vi": "tha thứ"
+        }
+      ],
+      "tip": "forgive → forgiveness.",
+      "emoji": "🕊️",
+      "stage": 2
+    },
+    {
+      "id": 4220,
+      "word": "hospitality",
+      "ipa": "ˌhɑspəˈtæləti",
+      "viRead": "has-pơ-TE-lơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lòng hiếu khách",
+      "exampleEn": "Thank you for your warm hospitality.",
+      "exampleVi": "Cảm ơn lòng hiếu khách nồng hậu của bạn.",
+      "collocations": [
+        {
+          "en": "warm hospitality",
+          "vi": "sự hiếu khách nồng hậu"
+        },
+        {
+          "en": "hospitality industry",
+          "vi": "ngành dịch vụ lưu trú"
+        }
+      ],
+      "family": [
+        {
+          "word": "hospitable",
+          "vi": "hiếu khách"
+        }
+      ],
+      "tip": "hospitality industry = ngành nhà hàng – khách sạn.",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 4221,
+      "word": "integrity",
+      "ipa": "ɪnˈtɛgrəti",
+      "viRead": "in-TE-grơ-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự chính trực",
+      "exampleEn": "A good leader has integrity.",
+      "exampleVi": "Một người lãnh đạo tốt luôn chính trực.",
+      "collocations": [
+        {
+          "en": "personal integrity",
+          "vi": "sự chính trực cá nhân"
+        },
+        {
+          "en": "a man of integrity",
+          "vi": "người chính trực"
+        }
+      ],
+      "family": [
+        {
+          "word": "honesty",
+          "vi": "sự trung thực"
+        }
+      ],
+      "tip": "integrity = ngay thẳng, nói được làm được.",
+      "emoji": "⚖️",
       "stage": 2
     }
   ]
