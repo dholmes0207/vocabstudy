@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4293,
+    "count": 4323,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -120949,6 +120949,858 @@
       ],
       "tip": "striker = tiền đạo cắm.",
       "emoji": "⚽",
+      "stage": 2
+    },
+    {
+      "id": 4294,
+      "word": "backache",
+      "ipa": "ˈbækˌeɪk",
+      "viRead": "BEK-âyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đau lưng",
+      "exampleEn": "Sitting all day gives me a backache.",
+      "exampleVi": "Ngồi cả ngày làm tôi đau lưng.",
+      "collocations": [
+        {
+          "en": "have a backache",
+          "vi": "bị đau lưng"
+        },
+        {
+          "en": "bad backache",
+          "vi": "đau lưng nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "ache",
+          "vi": "cơn đau"
+        }
+      ],
+      "tip": "back + ache. 'ache' đọc 'ÂYK'.",
+      "emoji": "💆",
+      "stage": 2
+    },
+    {
+      "id": 4295,
+      "word": "earache",
+      "ipa": "ˈɪrˌeɪk",
+      "viRead": "IR-âyk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đau tai",
+      "exampleEn": "The child has an earache after swimming.",
+      "exampleVi": "Đứa bé bị đau tai sau khi bơi.",
+      "collocations": [
+        {
+          "en": "have an earache",
+          "vi": "bị đau tai"
+        },
+        {
+          "en": "bad earache",
+          "vi": "đau tai nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "ache",
+          "vi": "cơn đau"
+        }
+      ],
+      "tip": "ear + ache.",
+      "emoji": "👂",
+      "stage": 2
+    },
+    {
+      "id": 4296,
+      "word": "migraine",
+      "ipa": "ˈmaɪˌgreɪn",
+      "viRead": "MAI-grâyn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chứng đau nửa đầu",
+      "exampleEn": "Bright light gives her a migraine.",
+      "exampleVi": "Ánh sáng chói làm cô ấy đau nửa đầu.",
+      "collocations": [
+        {
+          "en": "suffer from migraines",
+          "vi": "bị chứng đau nửa đầu"
+        },
+        {
+          "en": "a bad migraine",
+          "vi": "cơn đau nửa đầu nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "headache",
+          "vi": "đau đầu"
+        }
+      ],
+      "tip": "migraine nặng hơn headache.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 4297,
+      "word": "chills",
+      "ipa": "ʧɪlz",
+      "viRead": "CHILD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cơn ớn lạnh",
+      "exampleEn": "I have a fever and chills.",
+      "exampleVi": "Tôi bị sốt và ớn lạnh.",
+      "collocations": [
+        {
+          "en": "fever and chills",
+          "vi": "sốt và ớn lạnh"
+        },
+        {
+          "en": "send chills down my spine",
+          "vi": "làm tôi rợn người"
+        }
+      ],
+      "family": [
+        {
+          "word": "chilly",
+          "vi": "se lạnh"
+        }
+      ],
+      "tip": "give me chills = làm tôi nổi da gà.",
+      "emoji": "🥶",
+      "stage": 2
+    },
+    {
+      "id": 4298,
+      "word": "diarrhea",
+      "ipa": "ˌdaɪəˈriə",
+      "viRead": "đai-ơ-RI-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiêu chảy",
+      "exampleEn": "Drink lots of water if you have diarrhea.",
+      "exampleVi": "Uống nhiều nước nếu bị tiêu chảy.",
+      "collocations": [
+        {
+          "en": "have diarrhea",
+          "vi": "bị tiêu chảy"
+        },
+        {
+          "en": "medicine for diarrhea",
+          "vi": "thuốc tiêu chảy"
+        }
+      ],
+      "tip": "Anh viết diarrhoea.",
+      "emoji": "🚽",
+      "stage": 2
+    },
+    {
+      "id": 4299,
+      "word": "dizziness",
+      "ipa": "ˈdɪzinəs",
+      "viRead": "ĐI-di-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự chóng mặt",
+      "exampleEn": "Dizziness can come from not eating.",
+      "exampleVi": "Chóng mặt có thể do nhịn ăn.",
+      "collocations": [
+        {
+          "en": "feel dizziness",
+          "vi": "thấy chóng mặt"
+        },
+        {
+          "en": "cause dizziness",
+          "vi": "gây chóng mặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "dizzy",
+          "vi": "chóng mặt"
+        }
+      ],
+      "tip": "dizzy (adj) → dizziness (n).",
+      "emoji": "💫",
+      "stage": 2
+    },
+    {
+      "id": 4300,
+      "word": "insomnia",
+      "ipa": "ɪnˈsɑmniə",
+      "viRead": "in-SAM-ni-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chứng mất ngủ",
+      "exampleEn": "Too much coffee can cause insomnia.",
+      "exampleVi": "Uống nhiều cà phê có thể gây mất ngủ.",
+      "collocations": [
+        {
+          "en": "suffer from insomnia",
+          "vi": "bị mất ngủ"
+        },
+        {
+          "en": "chronic insomnia",
+          "vi": "mất ngủ kinh niên"
+        }
+      ],
+      "family": [
+        {
+          "word": "sleep",
+          "vi": "ngủ"
+        }
+      ],
+      "tip": "in (không) + somnia (giấc ngủ).",
+      "emoji": "🌙",
+      "stage": 2
+    },
+    {
+      "id": 4301,
+      "word": "fatigue",
+      "ipa": "fəˈtig",
+      "viRead": "phơ-TIG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự mệt mỏi",
+      "exampleEn": "He felt great fatigue after the long trip.",
+      "exampleVi": "Anh ấy thấy rất mệt sau chuyến đi dài.",
+      "collocations": [
+        {
+          "en": "extreme fatigue",
+          "vi": "mệt mỏi cực độ"
+        },
+        {
+          "en": "mental fatigue",
+          "vi": "mệt mỏi tinh thần"
+        }
+      ],
+      "family": [
+        {
+          "word": "tiredness",
+          "vi": "sự mệt"
+        }
+      ],
+      "tip": "Đọc 'phơ-TIG' (gue câm).",
+      "emoji": "😩",
+      "stage": 2
+    },
+    {
+      "id": 4302,
+      "word": "checkup",
+      "ipa": "ˈʧɛkˌəp",
+      "viRead": "CHEK-ơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi khám tổng quát",
+      "exampleEn": "Go for a checkup once a year.",
+      "exampleVi": "Mỗi năm nên đi khám tổng quát một lần.",
+      "collocations": [
+        {
+          "en": "medical checkup",
+          "vi": "khám sức khỏe"
+        },
+        {
+          "en": "dental checkup",
+          "vi": "khám răng"
+        }
+      ],
+      "family": [
+        {
+          "word": "check up",
+          "vi": "kiểm tra (động từ)"
+        }
+      ],
+      "tip": "Anh hay viết check-up.",
+      "emoji": "🩺",
+      "stage": 2
+    },
+    {
+      "id": 4303,
+      "word": "stethoscope",
+      "ipa": "ˈstɛθəˌskoʊp",
+      "viRead": "STE-thơ-skâup",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ống nghe (bác sĩ)",
+      "exampleEn": "The doctor listened to my heart with a stethoscope.",
+      "exampleVi": "Bác sĩ nghe tim tôi bằng ống nghe.",
+      "collocations": [
+        {
+          "en": "doctor's stethoscope",
+          "vi": "ống nghe của bác sĩ"
+        },
+        {
+          "en": "use a stethoscope",
+          "vi": "dùng ống nghe"
+        }
+      ],
+      "tip": "Đọc 'STE-thơ-skâup'.",
+      "emoji": "🩺",
+      "stage": 2
+    },
+    {
+      "id": 4304,
+      "word": "wheelchair",
+      "ipa": "ˈwilˌʧɛr",
+      "viRead": "WIL-cher",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xe lăn",
+      "exampleEn": "The building has a ramp for wheelchairs.",
+      "exampleVi": "Tòa nhà có đường dốc cho xe lăn.",
+      "collocations": [
+        {
+          "en": "in a wheelchair",
+          "vi": "ngồi xe lăn"
+        },
+        {
+          "en": "wheelchair access",
+          "vi": "lối cho xe lăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "wheel",
+          "vi": "bánh xe"
+        }
+      ],
+      "tip": "wheel + chair.",
+      "emoji": "♿",
+      "stage": 2
+    },
+    {
+      "id": 4305,
+      "word": "crutches",
+      "ipa": "ˈkrəʧɪz",
+      "viRead": "KRƠ-chid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nạng",
+      "exampleEn": "He walked on crutches for a month.",
+      "exampleVi": "Anh ấy chống nạng suốt một tháng.",
+      "collocations": [
+        {
+          "en": "on crutches",
+          "vi": "chống nạng"
+        },
+        {
+          "en": "a pair of crutches",
+          "vi": "một đôi nạng"
+        }
+      ],
+      "tip": "Thường dùng số nhiều: crutches.",
+      "emoji": "🦯",
+      "stage": 2
+    },
+    {
+      "id": 4306,
+      "word": "stitches",
+      "ipa": "ˈstɪʧɪz",
+      "viRead": "STI-chid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mũi khâu (vết thương)",
+      "exampleEn": "The cut needed five stitches.",
+      "exampleVi": "Vết đứt phải khâu năm mũi.",
+      "collocations": [
+        {
+          "en": "get stitches",
+          "vi": "được khâu"
+        },
+        {
+          "en": "in stitches",
+          "vi": "cười lăn lộn"
+        }
+      ],
+      "family": [
+        {
+          "word": "stitch",
+          "vi": "mũi khâu"
+        }
+      ],
+      "tip": "in stitches = cười đau cả bụng.",
+      "emoji": "🪡",
+      "stage": 2
+    },
+    {
+      "id": 4307,
+      "word": "swelling",
+      "ipa": "ˈswɛlɪŋ",
+      "viRead": "SWE-ling",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chỗ sưng",
+      "exampleEn": "Put ice on the swelling.",
+      "exampleVi": "Chườm đá lên chỗ sưng.",
+      "collocations": [
+        {
+          "en": "reduce swelling",
+          "vi": "giảm sưng"
+        },
+        {
+          "en": "swelling on the ankle",
+          "vi": "sưng ở mắt cá"
+        }
+      ],
+      "family": [
+        {
+          "word": "swell",
+          "vi": "sưng lên"
+        }
+      ],
+      "tip": "swell (v) → swelling (n).",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 4308,
+      "word": "fracture",
+      "ipa": "ˈfrækʧər",
+      "viRead": "PHREK-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chỗ gãy xương",
+      "exampleEn": "The X-ray showed a small fracture.",
+      "exampleVi": "Phim chụp cho thấy một chỗ rạn xương nhỏ.",
+      "collocations": [
+        {
+          "en": "bone fracture",
+          "vi": "gãy xương"
+        },
+        {
+          "en": "hairline fracture",
+          "vi": "rạn xương"
+        }
+      ],
+      "family": [
+        {
+          "word": "break",
+          "vi": "gãy"
+        }
+      ],
+      "tip": "fracture = gãy/rạn xương (từ y khoa).",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 4309,
+      "word": "diabetes",
+      "ipa": "ˌdaɪəˈbitiz",
+      "viRead": "đai-ơ-BI-tid",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bệnh tiểu đường",
+      "exampleEn": "Too much sugar can lead to diabetes.",
+      "exampleVi": "Ăn quá nhiều đường có thể dẫn đến tiểu đường.",
+      "collocations": [
+        {
+          "en": "type 2 diabetes",
+          "vi": "tiểu đường tuýp 2"
+        },
+        {
+          "en": "have diabetes",
+          "vi": "bị tiểu đường"
+        }
+      ],
+      "family": [
+        {
+          "word": "diabetic",
+          "vi": "người bị tiểu đường"
+        }
+      ],
+      "tip": "Đọc 'đai-ơ-BI-tid'.",
+      "emoji": "🩸",
+      "stage": 2
+    },
+    {
+      "id": 4310,
+      "word": "asthma",
+      "ipa": "ˈæzmə",
+      "viRead": "ED-mơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bệnh hen suyễn",
+      "exampleEn": "She uses an inhaler for her asthma.",
+      "exampleVi": "Cô ấy dùng bình xịt cho bệnh hen.",
+      "collocations": [
+        {
+          "en": "asthma attack",
+          "vi": "cơn hen"
+        },
+        {
+          "en": "have asthma",
+          "vi": "bị hen"
+        }
+      ],
+      "tip": "'th' câm: đọc 'ED-mơ'.",
+      "emoji": "😮‍💨",
+      "stage": 2
+    },
+    {
+      "id": 4311,
+      "word": "heartbeat",
+      "ipa": "ˈhɑrtˌbit",
+      "viRead": "HART-bit",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhịp tim",
+      "exampleEn": "I could hear my heartbeat in the quiet room.",
+      "exampleVi": "Trong phòng yên tĩnh tôi nghe được nhịp tim mình.",
+      "collocations": [
+        {
+          "en": "fast heartbeat",
+          "vi": "tim đập nhanh"
+        },
+        {
+          "en": "in a heartbeat",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "family": [
+        {
+          "word": "heart",
+          "vi": "tim"
+        }
+      ],
+      "tip": "in a heartbeat = ngay tắp lự.",
+      "emoji": "💓",
+      "stage": 2
+    },
+    {
+      "id": 4312,
+      "word": "pulse",
+      "ipa": "pəls",
+      "viRead": "PƠLS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mạch đập",
+      "exampleEn": "The nurse checked my pulse.",
+      "exampleVi": "Y tá bắt mạch cho tôi.",
+      "collocations": [
+        {
+          "en": "take someone's pulse",
+          "vi": "bắt mạch"
+        },
+        {
+          "en": "pulse rate",
+          "vi": "nhịp mạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "heartbeat",
+          "vi": "nhịp tim"
+        }
+      ],
+      "tip": "take your pulse = bắt mạch.",
+      "emoji": "❤️",
+      "stage": 2
+    },
+    {
+      "id": 4313,
+      "word": "protein",
+      "ipa": "ˈproʊˌtin",
+      "viRead": "PRÂU-tin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất đạm",
+      "exampleEn": "Eggs are full of protein.",
+      "exampleVi": "Trứng giàu chất đạm.",
+      "collocations": [
+        {
+          "en": "high in protein",
+          "vi": "giàu đạm"
+        },
+        {
+          "en": "protein shake",
+          "vi": "sữa protein"
+        }
+      ],
+      "tip": "Đọc 'PRÂU-tin'.",
+      "emoji": "🥚",
+      "stage": 2
+    },
+    {
+      "id": 4314,
+      "word": "calorie",
+      "ipa": "ˈkæləri",
+      "viRead": "KE-lơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ca-lo",
+      "exampleEn": "This drink has a lot of calories.",
+      "exampleVi": "Đồ uống này nhiều ca-lo.",
+      "collocations": [
+        {
+          "en": "low calorie",
+          "vi": "ít ca-lo"
+        },
+        {
+          "en": "burn calories",
+          "vi": "đốt ca-lo"
+        }
+      ],
+      "tip": "burn calories = tiêu hao năng lượng.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 4315,
+      "word": "nutrient",
+      "ipa": "ˈnutriənt",
+      "viRead": "NU-tri-ơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất dinh dưỡng",
+      "exampleEn": "Vegetables are rich in nutrients.",
+      "exampleVi": "Rau giàu chất dinh dưỡng.",
+      "collocations": [
+        {
+          "en": "essential nutrient",
+          "vi": "chất dinh dưỡng thiết yếu"
+        },
+        {
+          "en": "rich in nutrients",
+          "vi": "giàu dinh dưỡng"
+        }
+      ],
+      "family": [
+        {
+          "word": "nutrition",
+          "vi": "dinh dưỡng"
+        }
+      ],
+      "tip": "nutrient (chất) — nutrition (dinh dưỡng nói chung).",
+      "emoji": "🥕",
+      "stage": 2
+    },
+    {
+      "id": 4316,
+      "word": "stretching",
+      "ipa": "ˈstrɛʧɪŋ",
+      "viRead": "STRE-ching",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giãn cơ",
+      "exampleEn": "Do some stretching before you run.",
+      "exampleVi": "Giãn cơ một chút trước khi chạy.",
+      "collocations": [
+        {
+          "en": "stretching exercises",
+          "vi": "bài tập giãn cơ"
+        },
+        {
+          "en": "morning stretching",
+          "vi": "giãn cơ buổi sáng"
+        }
+      ],
+      "family": [
+        {
+          "word": "stretch",
+          "vi": "duỗi, kéo giãn"
+        }
+      ],
+      "tip": "stretch (v) → stretching (n).",
+      "emoji": "🤸",
+      "stage": 2
+    },
+    {
+      "id": 4317,
+      "word": "posture",
+      "ipa": "ˈpɑsʧər",
+      "viRead": "PAS-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tư thế (dáng ngồi, đứng)",
+      "exampleEn": "Good posture protects your back.",
+      "exampleVi": "Tư thế đúng giúp bảo vệ lưng.",
+      "collocations": [
+        {
+          "en": "good posture",
+          "vi": "tư thế đúng"
+        },
+        {
+          "en": "bad posture",
+          "vi": "tư thế xấu"
+        }
+      ],
+      "tip": "Ngồi học lâu nhớ giữ posture thẳng lưng.",
+      "emoji": "🧍",
+      "stage": 2
+    },
+    {
+      "id": 4318,
+      "word": "hygiene",
+      "ipa": "ˈhaɪˌʤin",
+      "viRead": "HAI-gin",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vệ sinh",
+      "exampleEn": "Wash your hands for good hygiene.",
+      "exampleVi": "Rửa tay để giữ vệ sinh.",
+      "collocations": [
+        {
+          "en": "personal hygiene",
+          "vi": "vệ sinh cá nhân"
+        },
+        {
+          "en": "food hygiene",
+          "vi": "vệ sinh thực phẩm"
+        }
+      ],
+      "family": [
+        {
+          "word": "clean",
+          "vi": "sạch"
+        }
+      ],
+      "tip": "Đọc 'HAI-gin'.",
+      "emoji": "🧼",
+      "stage": 2
+    },
+    {
+      "id": 4319,
+      "word": "floss",
+      "ipa": "flɑs",
+      "viRead": "PHLAS",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "chỉ nha khoa",
+      "exampleEn": "Use floss after brushing your teeth.",
+      "exampleVi": "Dùng chỉ nha khoa sau khi đánh răng.",
+      "collocations": [
+        {
+          "en": "dental floss",
+          "vi": "chỉ nha khoa"
+        },
+        {
+          "en": "floss your teeth",
+          "vi": "xỉa răng bằng chỉ"
+        }
+      ],
+      "tip": "floss (v) = làm sạch kẽ răng bằng chỉ.",
+      "emoji": "🦷",
+      "stage": 2
+    },
+    {
+      "id": 4320,
+      "word": "mouthwash",
+      "ipa": "ˈmaʊθˌwɑʃ",
+      "viRead": "MAOTH-wash",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nước súc miệng",
+      "exampleEn": "Rinse with mouthwash every night.",
+      "exampleVi": "Súc miệng bằng nước súc miệng mỗi tối.",
+      "collocations": [
+        {
+          "en": "use mouthwash",
+          "vi": "dùng nước súc miệng"
+        },
+        {
+          "en": "mint mouthwash",
+          "vi": "nước súc miệng bạc hà"
+        }
+      ],
+      "family": [
+        {
+          "word": "mouth",
+          "vi": "miệng"
+        }
+      ],
+      "tip": "mouth + wash.",
+      "emoji": "🫧",
+      "stage": 2
+    },
+    {
+      "id": 4321,
+      "word": "conditioner",
+      "ipa": "kənˈdɪʃənər",
+      "viRead": "kơn-ĐI-shơ-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dầu xả",
+      "exampleEn": "Use conditioner after shampoo.",
+      "exampleVi": "Dùng dầu xả sau khi gội.",
+      "collocations": [
+        {
+          "en": "hair conditioner",
+          "vi": "dầu xả tóc"
+        },
+        {
+          "en": "shampoo and conditioner",
+          "vi": "dầu gội và dầu xả"
+        }
+      ],
+      "family": [
+        {
+          "word": "shampoo",
+          "vi": "dầu gội"
+        }
+      ],
+      "tip": "air conditioner = máy lạnh!",
+      "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 4322,
+      "word": "deodorant",
+      "ipa": "diˈoʊdərənt",
+      "viRead": "đi-ÂU-đơ-rơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chất khử mùi",
+      "exampleEn": "Put on deodorant before the gym.",
+      "exampleVi": "Xịt khử mùi trước khi đi tập.",
+      "collocations": [
+        {
+          "en": "spray deodorant",
+          "vi": "xịt khử mùi"
+        },
+        {
+          "en": "roll-on deodorant",
+          "vi": "lăn khử mùi"
+        }
+      ],
+      "family": [
+        {
+          "word": "odor",
+          "vi": "mùi"
+        }
+      ],
+      "tip": "de (khử) + odor (mùi).",
+      "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 4323,
+      "word": "lotion",
+      "ipa": "ˈloʊʃən",
+      "viRead": "LÂU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kem dưỡng da",
+      "exampleEn": "Put lotion on your dry hands.",
+      "exampleVi": "Thoa kem dưỡng lên đôi tay khô.",
+      "collocations": [
+        {
+          "en": "body lotion",
+          "vi": "sữa dưỡng thể"
+        },
+        {
+          "en": "hand lotion",
+          "vi": "kem dưỡng tay"
+        }
+      ],
+      "family": [
+        {
+          "word": "cream",
+          "vi": "kem"
+        }
+      ],
+      "tip": "sunscreen lotion = kem chống nắng.",
+      "emoji": "🧴",
       "stage": 2
     }
   ]
