@@ -31,10 +31,23 @@ function progress(cards: SRSCard[], stats: Partial<LanguageProgress['stats']> = 
       xp: 0,
       newByDay: {},
       reviewsByDay: {},
+      shields: 0,
+      bestStreak: 0,
+      shieldUsedDay: null,
       ...stats,
     },
   } satisfies LanguageProgress
 }
+
+describe('mergeProgress — streak shields', () => {
+  it('keeps the best streak of both devices and the shields of the latest one', () => {
+    const phone = progress([], { streak: 3, lastStudyDay: 20, shields: 0, bestStreak: 12 })
+    const laptop = progress([], { streak: 9, lastStudyDay: 18, shields: 2, bestStreak: 9 })
+    const merged = mergeProgress(phone, laptop)
+    expect(merged.stats.bestStreak).toBe(12)
+    expect(merged.stats.shields).toBe(0)
+  })
+})
 
 describe('mergeProgress — cards', () => {
   it('keeps a card only the local side knows about (studied offline)', () => {

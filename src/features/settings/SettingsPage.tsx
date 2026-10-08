@@ -27,6 +27,13 @@ const SKY_OPTIONS = [
   ['off', 'Tắt'],
 ] as const
 
+const GOAL_CHOICES = [
+  ['5', '5 câu'],
+  ['10', '10 câu'],
+  ['20', '20 câu'],
+  ['40', '40 câu'],
+] as const
+
 const STRICTNESS_OPTIONS = [
   ['easy', 'Dễ'],
   ['normal', 'Vừa'],
@@ -151,6 +158,17 @@ export default function SettingsPage() {
 
       {/* Learning */}
       <Section title="Học tập">
+        <Row
+          label="Mục tiêu nhỏ mỗi ngày"
+          hint="Số câu trả lời mỗi ngày. Mục tiêu nhỏ dễ giữ hơn — đều đặn quan trọng hơn nhiều."
+        >
+          <Segmented
+            label="Mục tiêu nhỏ mỗi ngày"
+            value={String(settings.dailyGoal)}
+            options={GOAL_CHOICES}
+            onChange={(v) => settings.setDailyGoal(Number(v))}
+          />
+        </Row>
         <Row label="Số từ mới mỗi ngày" hint="Khuyến nghị 10–15 từ để nhớ chất lượng.">
           <div className="flex items-center gap-3">
             <input

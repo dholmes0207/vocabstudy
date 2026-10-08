@@ -7,12 +7,15 @@ import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 import WordOfDay from './WordOfDay'
+import { DailyGoal, MySky, WelcomeBack } from './Motivation'
+import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const dailyNewLimit = useSettings((s) => s.dailyNewLimit)
+  const dailyGoal = useSettings((s) => s.dailyGoal)
   const progress = useStudy((s) => s.progress[code])
   const stats = progress?.stats
 
@@ -49,6 +52,20 @@ export default function Dashboard() {
           </span>
         </div>
       </div>
+
+      <WelcomeBack stats={stats} day={today()} due={s.due} />
+
+      {/* A small goal, a streak one missed day can't break, and a sky to fill. */}
+      <section className="grid gap-4 sm:grid-cols-2">
+        <DailyGoal
+          stats={stats}
+          day={today()}
+          doneToday={s.reviewsDoneToday}
+          goal={dailyGoal}
+          due={s.due}
+        />
+        <MySky learned={s.learned} mastered={s.mastered} />
+      </section>
 
       {/* Today's plan */}
       <section>

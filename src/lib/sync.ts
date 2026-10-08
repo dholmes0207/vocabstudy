@@ -60,6 +60,9 @@ function safeProgress(p: LanguageProgress | undefined | null): LanguageProgress 
       xp: num(s.xp, base.xp),
       newByDay: dayMap(s.newByDay),
       reviewsByDay: dayMap(s.reviewsByDay),
+      shields: num(s.shields, 0),
+      bestStreak: num(s.bestStreak, num(s.streak, 0)),
+      shieldUsedDay: typeof s.shieldUsedDay === 'number' ? s.shieldUsedDay : null,
     },
   }
 }
@@ -125,6 +128,19 @@ export function mergeProgress(
       xp: Math.max(a.stats.xp, b.stats.xp),
       newByDay: maxDayMaps(a.stats.newByDay, b.stats.newByDay),
       reviewsByDay: maxDayMaps(a.stats.reviewsByDay, b.stats.reviewsByDay),
+      // Shields follow whichever device studied last; the record is the best of both.
+      shields:
+        (a.stats.lastStudyDay ?? -1) >= (b.stats.lastStudyDay ?? -1)
+          ? (a.stats.shields ?? 0)
+          : (b.stats.shields ?? 0),
+      bestStreak: Math.max(
+        a.stats.bestStreak ?? a.stats.streak,
+        b.stats.bestStreak ?? b.stats.streak
+      ),
+      shieldUsedDay:
+        Math.max(a.stats.shieldUsedDay ?? -1, b.stats.shieldUsedDay ?? -1) >= 0
+          ? Math.max(a.stats.shieldUsedDay ?? -1, b.stats.shieldUsedDay ?? -1)
+          : null,
     },
   }
 }

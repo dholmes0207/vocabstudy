@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 import type { LanguageProgress, SRSCard, StudyStats } from '@/types'
 import { newCard, review } from '@/lib/srs'
 import { today } from '@/lib/date'
+import { nextStreak } from '@/lib/motivation'
 
 /**
  * Stable stand-in for "this language has no progress yet". Screens read
@@ -130,11 +131,9 @@ function bump(rec: Record<number, number>, day: number): Record<number, number> 
   return { ...rec, [day]: (rec[day] ?? 0) + 1 }
 }
 
-/** Advance/reset the streak based on the last active day. */
-function updateStreak(stats: StudyStats, day: number): Pick<StudyStats, 'streak' | 'lastStudyDay'> {
-  if (stats.lastStudyDay === day) return { streak: stats.streak, lastStudyDay: day }
-  if (stats.lastStudyDay === day - 1) return { streak: stats.streak + 1, lastStudyDay: day }
-  return { streak: 1, lastStudyDay: day }
+/** Advance/reset the streak based on the last active day (one missed day can be shielded). */
+function updateStreak(stats: StudyStats, day: number) {
+  return nextStreak(stats, day)
 }
 
 // ---------------------------------------------------------------------------
@@ -158,6 +157,9 @@ export function normalizeProgress(data: unknown): LanguageProgress {
     xp: s.xp ?? base.xp,
     newByDay: s.newByDay ?? base.newByDay,
     reviewsByDay: s.reviewsByDay ?? base.reviewsByDay,
+    shields: typeof s.shields === 'number' ? s.shields : 0,
+    bestStreak: typeof s.bestStreak === 'number' ? s.bestStreak : (s.streak ?? 0),
+    shieldUsedDay: typeof s.shieldUsedDay === 'number' ? s.shieldUsedDay : null,
   }
   return { cards, stats }
 }

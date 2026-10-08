@@ -21,6 +21,7 @@ interface SettingsState extends Settings {
   setSkyEffects: (s: SkyEffects) => void
   setSnow: (b: boolean) => void
   setCursorTrail: (b: boolean) => void
+  setDailyGoal: (n: number) => void
 }
 
 const DEFAULTS: Settings = {
@@ -42,6 +43,7 @@ const DEFAULTS: Settings = {
   skyEffects: 'auto',
   snow: true,
   cursorTrail: true,
+  dailyGoal: 10,
 }
 
 export const useSettings = create<SettingsState>()(
@@ -65,6 +67,7 @@ export const useSettings = create<SettingsState>()(
       setSkyEffects: (skyEffects) => set({ skyEffects }),
       setSnow: (snow) => set({ snow }),
       setCursorTrail: (cursorTrail) => set({ cursorTrail }),
+      setDailyGoal: (dailyGoal) => set({ dailyGoal: clamp(Math.round(dailyGoal), 1, 200) }),
     }),
     {
       name: 'vocab.settings.v1',

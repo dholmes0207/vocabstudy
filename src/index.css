@@ -562,6 +562,42 @@
   }
 }
 
+/* "Bầu trời của bạn": a little night sky that fills with the learner's words. */
+.my-sky {
+  background:
+    radial-gradient(60% 70% at 85% 0%, rgb(99 102 241 / 0.45), transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, rgb(14 165 233 / 0.25), transparent 70%),
+    linear-gradient(160deg, #0b1236 0%, #141b4d 55%, #1e1b4b 100%);
+}
+.my-sky .star-off {
+  fill: rgb(255 255 255 / 0.18);
+}
+.my-sky .star-lit {
+  fill: #e0e7ff;
+  filter: drop-shadow(0 0 2px rgb(165 180 252 / 0.9));
+  animation: star-glow 3.5s ease-in-out infinite;
+}
+.my-sky .star-bright {
+  fill: #fde68a;
+  filter: drop-shadow(0 0 3px rgb(253 230 138 / 0.95));
+  animation: star-glow 3.5s ease-in-out infinite;
+}
+@keyframes star-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .my-sky .star-lit,
+  .my-sky .star-bright {
+    animation: none;
+  }
+}
+
 /* 3D flip card */
 .flip-scene {
   perspective: 1400px;

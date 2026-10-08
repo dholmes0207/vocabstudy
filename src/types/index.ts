@@ -167,6 +167,12 @@ export interface StudyStats {
   newByDay: Record<number, number>
   /** Reviews done, keyed by epoch day -> count. */
   reviewsByDay: Record<number, number>
+  /** Streak shields held: one forgives a single missed day (lib/motivation). */
+  shields?: number
+  /** Longest streak ever reached. */
+  bestStreak?: number
+  /** The day a shield last saved the streak (shown once on the dashboard). */
+  shieldUsedDay?: number | null
 }
 
 /** Everything we persist for a single language's progress. */
@@ -261,4 +267,6 @@ export interface Settings {
   snow: boolean
   /** Sparkles that follow the mouse / burst on tap. */
   cursorTrail: boolean
+  /** Answers per day the learner aims for (a small, reachable goal). */
+  dailyGoal: number
 }

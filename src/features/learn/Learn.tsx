@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { BookOpen, Sparkles } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -24,7 +24,9 @@ export default function Learn() {
   const [session, setSession] = useState<Word[] | null>(null)
   // Quick session length so busy learners can grab a short set without opening
   // Settings. 'all' = however many new words remain today. See F6.
-  const [pick, setPick] = useState<number | 'all'>('all')
+  // "Học nhanh 2 phút" from the dashboard arrives with ?quick=1: five words.
+  const [params] = useSearchParams()
+  const [pick, setPick] = useState<number | 'all'>(() => (params.get('quick') ? 5 : 'all'))
   // With 1000 words the pack is 50 decks — dumping all of them on the page
   // overwhelms a beginner, so show the stretch they are actually on.
   const [showAllDecks, setShowAllDecks] = useState(false)
