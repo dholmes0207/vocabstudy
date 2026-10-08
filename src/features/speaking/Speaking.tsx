@@ -77,7 +77,9 @@ export default function Speaking() {
   return (
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Luyện nói 🎙️</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Luyện nói</span> <span aria-hidden="true">🎙️</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.
         </p>

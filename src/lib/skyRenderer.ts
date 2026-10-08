@@ -53,6 +53,8 @@ const WARMUP_FRAMES = 60
 const SAMPLE_FRAMES = 120
 /** Median frame time above this (≈ 38 fps) drops "full" to "lite". */
 const SLOW_FRAME_MS = 26
+/** How strong the pointer effects stay during a study session (1 = unchanged). */
+const CALM = 0.6
 /** Flakes nearer than this are drawn as crystals rather than soft dots. */
 const CRYSTAL_DEPTH = 0.86
 
@@ -197,8 +199,9 @@ export function startSky(
 
     stepSparkles(sparkles, dt)
 
-    if (dark && budget.meteorEvery && !calm) {
-      meteorTimer -= dt
+    if (dark && budget.meteorEvery) {
+      // Calm (a study session): still a living sky, just quieter.
+      meteorTimer -= calm ? dt * 0.5 : dt
       if (meteorTimer <= 0) {
         meteors.push(spawnMeteor(w, h, rand))
         meteorTimer = nextMeteorIn(budget.meteorEvery, rand)
@@ -217,18 +220,12 @@ export function startSky(
     if (dark) {
       drawMoon(c)
       drawStars(c, still)
-      if (
-        budget.constellation &&
-        !calm &&
-        pointer.fine &&
-        pointer.active &&
-        t - pointer.lastMove < 2.5
-      ) {
+      if (budget.constellation && pointer.fine && pointer.active && t - pointer.lastMove < 2.5) {
         drawConstellation(c)
       }
       drawMeteors(c)
     }
-    if (opts.trail && !calm && pointer.fine && pointer.active) drawGlow(c)
+    if (opts.trail && pointer.fine && pointer.active) drawGlow(c)
     drawSnow(c)
     drawSparkles(fxCtx ?? c)
     c.globalAlpha = 1
@@ -276,7 +273,7 @@ export function startSky(
   function drawConstellation(c: CanvasRenderingContext2D) {
     const near = pointsNear(starPts, pointer.tx, pointer.ty, 170, 9)
     if (near.length < 2) return
-    const fade = Math.max(0, 1 - (t - pointer.lastMove) / 2.5)
+    const fade = Math.max(0, 1 - (t - pointer.lastMove) / 2.5) * (calm ? CALM : 1)
     const [r, g, b] = palette.line
     c.lineWidth = 0.8
     for (const [a, bIdx] of constellationLinks(starPts, near, 140)) {
@@ -327,7 +324,7 @@ export function startSky(
   }
 
   function drawGlow(c: CanvasRenderingContext2D) {
-    const fade = Math.max(0, 1 - (t - pointer.lastMove) / 4)
+    const fade = Math.max(0, 1 - (t - pointer.lastMove) / 4) * (calm ? CALM : 1)
     if (fade <= 0) return
     const radius = 200
     const [r, g, b] = palette.glow
@@ -425,9 +422,10 @@ export function startSky(
     pointer.ty = y
     pointer.active = true
     pointer.lastMove = t
-    if (opts.trail && !calm && running && budget.sparkles > 0) {
+    if (opts.trail && running && budget.sparkles > 0) {
       const dist = pointer.hasLast ? Math.hypot(x - pointer.lx, y - pointer.ly) : 0
-      const { count, carry } = trailEmission(dist, pointer.carry, pointer.fine ? 16 : 28)
+      const spacing = (pointer.fine ? 16 : 28) * (calm ? 1.6 : 1)
+      const { count, carry } = trailEmission(dist, pointer.carry, spacing)
       pointer.carry = carry
       if (count > 0) {
         emitSparkles(sparkles, x, y, Math.min(count, 3), rand, {
@@ -546,7 +544,6 @@ export function startSky(
   return {
     setCalm(next) {
       calm = next
-      if (calm) meteors.length = 0
     },
     stop() {
       halt()

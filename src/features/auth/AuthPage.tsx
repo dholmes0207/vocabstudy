@@ -41,13 +41,15 @@ export default function AuthPage() {
   }
 
   return (
-    <div className="grid min-h-[100dvh] place-items-center bg-slate-50 p-4 dark:bg-slate-950">
+    <div className="grid min-h-[100dvh] place-items-center p-4">
       <div className="card w-full max-w-sm p-7 animate-fade-in">
         <div className="mb-5 text-center">
           <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brand-600 text-2xl shadow">
             📚
           </span>
-          <h1 className="mt-3 text-xl font-extrabold">VocabStudy</h1>
+          <h1 className="mt-3 text-xl font-extrabold">
+            <span className="text-aurora">VocabStudy</span>
+          </h1>
           <p className="text-sm text-slate-400">
             {mode === 'login' ? 'Đăng nhập để đồng bộ tiến độ' : 'Tạo tài khoản mới'}
           </p>

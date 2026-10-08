@@ -87,7 +87,9 @@ export default function Learn() {
   return (
     <div className="space-y-8 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Học từ mới 📖</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Học từ mới</span> <span aria-hidden="true">📖</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           Mỗi lần 5 từ: làm quen (nghe, đọc câu ví dụ, xem cụm hay đi chung) rồi tự nhớ lại ngay —
           sai thì được giải thích và làm lại.

@@ -110,7 +110,9 @@ export default function Quiz() {
   return (
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Kiểm tra 🎯</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Kiểm tra</span> <span aria-hidden="true">🎯</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           Tự nhớ lại là cách nhớ lâu nhất. Câu sai sẽ được đưa vào lịch ôn lại; câu đúng khi từ chưa
           tới hạn ôn thì không làm từ &quot;thành thạo&quot; nhanh hơn — nhớ sâu cần thời gian giãn

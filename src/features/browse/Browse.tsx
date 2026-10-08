@@ -84,7 +84,9 @@ export default function Browse() {
   return (
     <div className="space-y-5 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Tra cứu từ vựng 📚</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Tra cứu từ vựng</span> <span aria-hidden="true">📚</span>
+        </h1>
         <p className="mt-1 text-slate-500">{pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.</p>
       </header>
 

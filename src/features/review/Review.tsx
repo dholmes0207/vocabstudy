@@ -89,7 +89,9 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   return (
     <div className="animate-fade-in">
       <header className="mx-auto mb-4 max-w-xl">
-        <h1 className="text-2xl font-extrabold tracking-tight">Ôn tập 🔁</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Ôn tập</span> <span aria-hidden="true">🔁</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           {due.length} từ đến hạn ·{' '}
           {style === 'recall'

@@ -72,7 +72,9 @@ export default function Stats() {
   return (
     <div className="space-y-6 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Thống kê 📈</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Thống kê</span> <span aria-hidden="true">📈</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           Theo dõi hành trình chinh phục {pack.meta.count} từ của bạn.
         </p>

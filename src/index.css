@@ -33,8 +33,11 @@
 }
 
 @layer components {
+  /* Frosted-glass cards: the sky glows softly through, the text stays crisp.
+     Devices that proved too slow for the sky get solid cards (see below). */
   .card {
-    @apply rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+    @apply rounded-2xl border border-white/70 bg-white/85 shadow-sm shadow-slate-900/5 backdrop-blur-md;
+    @apply dark:border-white/10 dark:bg-slate-900/75 dark:shadow-black/20;
   }
 
   .btn {
@@ -124,14 +127,21 @@
 /* A device that could not keep up with the sky (skyRenderer sets the flag)
    also drops the frosted-glass blur, a common source of scroll jank on
    low-end Android; the bars stay readable on their own tint. */
-:root[data-sky-slow] .backdrop-blur-md {
+:root[data-sky-slow] .backdrop-blur-md,
+:root[data-sky-slow] .card {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+:root[data-sky-slow] .card {
+  background-color: rgb(255 255 255 / 0.97);
+}
+:root.dark[data-sky-slow] .card {
+  background-color: rgb(15 23 42 / 0.96);
+}
 
-/* Quieter while studying: the sky stays, the eye goes to the card. */
+/* Slightly quieter while studying: the sky stays alive, the eye goes to the card. */
 .sky--calm {
-  opacity: 0.55;
+  opacity: 0.8;
 }
 .sky-canvas {
   position: absolute;

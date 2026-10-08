@@ -24,7 +24,9 @@ export default function AdminPage() {
   return (
     <div className="space-y-5 animate-fade-in">
       <header>
-        <h1 className="text-2xl font-extrabold tracking-tight">Quản trị 🛡️</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          <span className="text-aurora">Quản trị</span> <span aria-hidden="true">🛡️</span>
+        </h1>
         <p className="mt-1 text-slate-500">
           Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).
         </p>
