@@ -36,3 +36,14 @@ describe('achievements', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 })
+
+describe('sticker badges', () => {
+  it('unlock as the gift album fills up', () => {
+    const base = { learned: 1, mastered: 0, streak: 0, xp: 0, totalReviews: 0, accuracy: 0 }
+    const byId = (stickers: number) =>
+      Object.fromEntries(evaluateAchievements({ ...base, stickers }).map((a) => [a.id, a]))
+    expect(byId(6).stickers12).toMatchObject({ unlocked: false, progress: 0.5 })
+    expect(byId(12).stickers12.unlocked).toBe(true)
+    expect(byId(48).stickers48.unlocked).toBe(true)
+  })
+})

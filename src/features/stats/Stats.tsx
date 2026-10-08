@@ -59,6 +59,7 @@ export default function Stats() {
     accuracy,
     daysStudied: Object.values(stats.reviewsByDay).filter((n) => n > 0).length,
     bestStreak: stats.bestStreak ?? stats.streak,
+    stickers: collected(stats.stickers ?? {}).size,
   })
   const unlockedCount = achievements.filter((a) => a.unlocked).length
 

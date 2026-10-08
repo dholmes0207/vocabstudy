@@ -13,6 +13,8 @@ export interface AchievementInput {
   daysStudied?: number
   /** Longest streak ever reached. */
   bestStreak?: number
+  /** Distinct stickers in the "Quà mỗi ngày" album. */
+  stickers?: number
 }
 
 export interface Achievement {
@@ -186,6 +188,22 @@ const DEFS: Def[] = [
     desc: 'Học vào 100 ngày khác nhau',
     value: (m) => m.daysStudied ?? 0,
     target: 100,
+  },
+  {
+    id: 'stickers12',
+    icon: '🎁',
+    title: 'Nhà sưu tầm',
+    desc: 'Mở 12 nhãn dán quà mỗi ngày',
+    value: (m) => m.stickers ?? 0,
+    target: 12,
+  },
+  {
+    id: 'stickers48',
+    icon: '🏆',
+    title: 'Đủ bộ sưu tập',
+    desc: 'Mở đủ 48 nhãn dán',
+    value: (m) => m.stickers ?? 0,
+    target: 48,
   },
   {
     id: 'best14',

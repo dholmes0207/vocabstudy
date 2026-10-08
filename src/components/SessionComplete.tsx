@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { celebrate } from '@/lib/confetti'
 import { skyCelebrate } from '@/lib/skyEvents'
+import GoalNudge from './GoalNudge'
 
 interface Props {
   title?: string
@@ -63,6 +64,7 @@ export default function SessionComplete({
           <span className="text-aurora">{title}</span>
         </h1>
         <p className="mt-1 text-slate-500">{praise}</p>
+        <GoalNudge />
 
         {showScore && total > 0 && (
           <div className="mt-6 grid grid-cols-3 gap-3">
