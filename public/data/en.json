@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4062,
+    "count": 4107,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -114325,6 +114325,1350 @@
       ],
       "tip": "Luyện nói: mở miệng to, đừng mumble!",
       "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 4063,
+      "word": "basically",
+      "ipa": "ˈbeɪsɪkli",
+      "viRead": "BÂY-sik-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "về cơ bản",
+      "exampleEn": "Basically, you just need to practice every day.",
+      "exampleVi": "Về cơ bản, bạn chỉ cần luyện tập mỗi ngày.",
+      "collocations": [
+        {
+          "en": "basically the same",
+          "vi": "về cơ bản là giống"
+        },
+        {
+          "en": "basically right",
+          "vi": "về cơ bản là đúng"
+        }
+      ],
+      "family": [
+        {
+          "word": "basic",
+          "vi": "cơ bản"
+        }
+      ],
+      "tip": "Người bản xứ hay mở đầu câu bằng 'Basically, …'.",
+      "emoji": "🧱",
+      "stage": 2
+    },
+    {
+      "id": 4064,
+      "word": "briefly",
+      "ipa": "ˈbrifli",
+      "viRead": "BRIPH-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngắn gọn; trong chốc lát",
+      "exampleEn": "Let me briefly explain the rules.",
+      "exampleVi": "Để tôi giải thích ngắn gọn luật chơi.",
+      "collocations": [
+        {
+          "en": "briefly explain",
+          "vi": "giải thích ngắn gọn"
+        },
+        {
+          "en": "speak briefly",
+          "vi": "nói ngắn gọn"
+        }
+      ],
+      "family": [
+        {
+          "word": "brief",
+          "vi": "ngắn gọn"
+        }
+      ],
+      "tip": "brief (adj) → briefly (adv).",
+      "emoji": "⏱️",
+      "stage": 2
+    },
+    {
+      "id": 4065,
+      "word": "carefully",
+      "ipa": "ˈkɛrfəli",
+      "viRead": "KER-phơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cẩn thận",
+      "exampleEn": "Listen carefully to the teacher.",
+      "exampleVi": "Nghe cô giáo thật cẩn thận.",
+      "collocations": [
+        {
+          "en": "listen carefully",
+          "vi": "nghe kỹ"
+        },
+        {
+          "en": "drive carefully",
+          "vi": "lái xe cẩn thận"
+        }
+      ],
+      "family": [
+        {
+          "word": "careful",
+          "vi": "cẩn thận (adj)"
+        }
+      ],
+      "tip": "careful + ly (hai chữ l).",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 4066,
+      "word": "clearly",
+      "ipa": "ˈklɪrli",
+      "viRead": "KLIR-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "rõ ràng",
+      "exampleEn": "Please speak clearly and slowly.",
+      "exampleVi": "Vui lòng nói rõ ràng và chậm.",
+      "collocations": [
+        {
+          "en": "speak clearly",
+          "vi": "nói rõ ràng"
+        },
+        {
+          "en": "clearly see",
+          "vi": "thấy rõ"
+        }
+      ],
+      "family": [
+        {
+          "word": "clear",
+          "vi": "rõ"
+        }
+      ],
+      "tip": "clear (adj) → clearly (adv).",
+      "emoji": "🔊",
+      "stage": 2
+    },
+    {
+      "id": 4067,
+      "word": "completely",
+      "ipa": "kəmˈplitli",
+      "viRead": "kơm-PLIT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hoàn toàn",
+      "exampleEn": "I completely forgot your birthday!",
+      "exampleVi": "Tôi quên béng mất sinh nhật bạn!",
+      "collocations": [
+        {
+          "en": "completely forget",
+          "vi": "quên hoàn toàn"
+        },
+        {
+          "en": "completely different",
+          "vi": "khác hoàn toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "complete",
+          "vi": "hoàn thành, đầy đủ"
+        }
+      ],
+      "tip": "completely = totally.",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 4068,
+      "word": "currently",
+      "ipa": "ˈkərəntli",
+      "viRead": "KƠ-rơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hiện tại, hiện nay",
+      "exampleEn": "She is currently living in Da Nang.",
+      "exampleVi": "Hiện cô ấy đang sống ở Đà Nẵng.",
+      "collocations": [
+        {
+          "en": "currently working",
+          "vi": "hiện đang làm"
+        },
+        {
+          "en": "currently available",
+          "vi": "hiện có sẵn"
+        }
+      ],
+      "family": [
+        {
+          "word": "current",
+          "vi": "hiện tại"
+        }
+      ],
+      "tip": "currently ≠ actually (thật ra) — người Việt hay nhầm!",
+      "emoji": "📍",
+      "stage": 2
+    },
+    {
+      "id": 4069,
+      "word": "easily",
+      "ipa": "ˈizəli",
+      "viRead": "I-dơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "dễ dàng",
+      "exampleEn": "You can easily learn five words a day.",
+      "exampleVi": "Bạn có thể dễ dàng học năm từ mỗi ngày.",
+      "collocations": [
+        {
+          "en": "easily find",
+          "vi": "dễ tìm"
+        },
+        {
+          "en": "win easily",
+          "vi": "thắng dễ"
+        }
+      ],
+      "family": [
+        {
+          "word": "easy",
+          "vi": "dễ"
+        }
+      ],
+      "tip": "easy → easily (y → i).",
+      "emoji": "🍰",
+      "stage": 2
+    },
+    {
+      "id": 4070,
+      "word": "especially",
+      "ipa": "ɪˈspɛʃəli",
+      "viRead": "i-SPE-shơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đặc biệt là",
+      "exampleEn": "I love fruit, especially mangoes.",
+      "exampleVi": "Tôi thích trái cây, đặc biệt là xoài.",
+      "collocations": [
+        {
+          "en": "especially for",
+          "vi": "đặc biệt dành cho"
+        },
+        {
+          "en": "especially when",
+          "vi": "nhất là khi"
+        }
+      ],
+      "family": [
+        {
+          "word": "special",
+          "vi": "đặc biệt"
+        }
+      ],
+      "tip": "especially (nhất là) ≠ specially (dành riêng).",
+      "emoji": "⭐",
+      "stage": 2
+    },
+    {
+      "id": 4071,
+      "word": "extremely",
+      "ipa": "ɪkˈstrimli",
+      "viRead": "ek-STRIM-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cực kỳ",
+      "exampleEn": "It's extremely hot today.",
+      "exampleVi": "Hôm nay nóng cực kỳ.",
+      "collocations": [
+        {
+          "en": "extremely important",
+          "vi": "cực kỳ quan trọng"
+        },
+        {
+          "en": "extremely difficult",
+          "vi": "cực kỳ khó"
+        }
+      ],
+      "family": [
+        {
+          "word": "extreme",
+          "vi": "cực độ"
+        }
+      ],
+      "tip": "extremely > very.",
+      "emoji": "🔥",
+      "stage": 2
+    },
+    {
+      "id": 4072,
+      "word": "finally",
+      "ipa": "ˈfaɪnəli",
+      "viRead": "PHAI-nơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cuối cùng",
+      "exampleEn": "After an hour, the bus finally came.",
+      "exampleVi": "Sau một tiếng, xe buýt cuối cùng cũng đến.",
+      "collocations": [
+        {
+          "en": "finally arrive",
+          "vi": "cuối cùng cũng đến"
+        },
+        {
+          "en": "and finally",
+          "vi": "và cuối cùng"
+        }
+      ],
+      "family": [
+        {
+          "word": "final",
+          "vi": "cuối cùng (adj)"
+        }
+      ],
+      "tip": "Dùng khi kể: First… Then… Finally…",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 4073,
+      "word": "fortunately",
+      "ipa": "ˈfɔrʧənətli",
+      "viRead": "PHOR-chơ-nơt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "may mắn thay",
+      "exampleEn": "Fortunately, nobody was hurt.",
+      "exampleVi": "May mắn thay, không ai bị thương.",
+      "collocations": [
+        {
+          "en": "fortunately for me",
+          "vi": "may cho tôi"
+        },
+        {
+          "en": "but fortunately",
+          "vi": "nhưng may là"
+        }
+      ],
+      "family": [
+        {
+          "word": "unfortunately",
+          "vi": "không may"
+        }
+      ],
+      "tip": "fortunately ↔ unfortunately.",
+      "emoji": "🍀",
+      "stage": 2
+    },
+    {
+      "id": 4074,
+      "word": "gently",
+      "ipa": "ˈʤɛntli",
+      "viRead": "GIENT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nhẹ nhàng",
+      "exampleEn": "Hold the baby gently.",
+      "exampleVi": "Bế em bé nhẹ nhàng thôi.",
+      "collocations": [
+        {
+          "en": "gently touch",
+          "vi": "chạm nhẹ"
+        },
+        {
+          "en": "speak gently",
+          "vi": "nói nhẹ nhàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "gentle",
+          "vi": "nhẹ nhàng (adj)"
+        }
+      ],
+      "tip": "gentle → gently (bỏ e, thêm y).",
+      "emoji": "🪶",
+      "stage": 2
+    },
+    {
+      "id": 4075,
+      "word": "honestly",
+      "ipa": "ˈɑnɪstli",
+      "viRead": "A-nist-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thật lòng mà nói",
+      "exampleEn": "Honestly, I don't understand this lesson.",
+      "exampleVi": "Thật lòng mà nói, tôi không hiểu bài này.",
+      "collocations": [
+        {
+          "en": "honestly speaking",
+          "vi": "thành thật mà nói"
+        },
+        {
+          "en": "answer honestly",
+          "vi": "trả lời thật"
+        }
+      ],
+      "family": [
+        {
+          "word": "honest",
+          "vi": "thật thà"
+        }
+      ],
+      "tip": "'h' câm: đọc 'A-nist-li'.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 4076,
+      "word": "instantly",
+      "ipa": "ˈɪnstəntli",
+      "viRead": "IN-stơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ngay lập tức",
+      "exampleEn": "The pain stopped instantly.",
+      "exampleVi": "Cơn đau dừng ngay lập tức.",
+      "collocations": [
+        {
+          "en": "almost instantly",
+          "vi": "gần như ngay lập tức"
+        },
+        {
+          "en": "recognize instantly",
+          "vi": "nhận ra ngay"
+        }
+      ],
+      "family": [
+        {
+          "word": "instant",
+          "vi": "tức thì"
+        }
+      ],
+      "tip": "instant noodles = mì ăn liền.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 4077,
+      "word": "loudly",
+      "ipa": "ˈlaʊdli",
+      "viRead": "LAOĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "to, ầm ĩ",
+      "exampleEn": "The kids laughed loudly.",
+      "exampleVi": "Bọn trẻ cười ầm lên.",
+      "collocations": [
+        {
+          "en": "laugh loudly",
+          "vi": "cười to"
+        },
+        {
+          "en": "speak loudly",
+          "vi": "nói to"
+        }
+      ],
+      "family": [
+        {
+          "word": "loud",
+          "vi": "to, ồn"
+        }
+      ],
+      "tip": "Luyện nói: đọc to (loudly) giúp nhớ lâu hơn!",
+      "emoji": "📢",
+      "stage": 2
+    },
+    {
+      "id": 4078,
+      "word": "luckily",
+      "ipa": "ˈləkəli",
+      "viRead": "LƠ-kơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "may thay",
+      "exampleEn": "Luckily, I had an umbrella.",
+      "exampleVi": "May mà tôi có ô.",
+      "collocations": [
+        {
+          "en": "luckily for us",
+          "vi": "may cho chúng tôi"
+        },
+        {
+          "en": "but luckily",
+          "vi": "nhưng may thay"
+        }
+      ],
+      "family": [
+        {
+          "word": "lucky",
+          "vi": "may mắn"
+        }
+      ],
+      "tip": "lucky → luckily (y → i).",
+      "emoji": "🍀",
+      "stage": 2
+    },
+    {
+      "id": 4079,
+      "word": "naturally",
+      "ipa": "ˈnæʧərəli",
+      "viRead": "NE-chơ-rơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "một cách tự nhiên; dĩ nhiên",
+      "exampleEn": "Try to speak naturally.",
+      "exampleVi": "Hãy cố nói một cách tự nhiên.",
+      "collocations": [
+        {
+          "en": "speak naturally",
+          "vi": "nói tự nhiên"
+        },
+        {
+          "en": "come naturally",
+          "vi": "đến một cách tự nhiên"
+        }
+      ],
+      "family": [
+        {
+          "word": "natural",
+          "vi": "tự nhiên"
+        }
+      ],
+      "tip": "Naturally! = Dĩ nhiên rồi!",
+      "emoji": "🌿",
+      "stage": 2
+    },
+    {
+      "id": 4080,
+      "word": "neatly",
+      "ipa": "ˈnitli",
+      "viRead": "NIT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "gọn gàng",
+      "exampleEn": "Write your name neatly.",
+      "exampleVi": "Viết tên bạn cho ngay ngắn.",
+      "collocations": [
+        {
+          "en": "neatly folded",
+          "vi": "gấp gọn gàng"
+        },
+        {
+          "en": "dress neatly",
+          "vi": "ăn mặc gọn gàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "neat",
+          "vi": "gọn"
+        }
+      ],
+      "tip": "neat (adj) → neatly (adv).",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 4081,
+      "word": "officially",
+      "ipa": "əˈfɪʃəli",
+      "viRead": "ơ-PHI-shơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chính thức",
+      "exampleEn": "The new bridge officially opens tomorrow.",
+      "exampleVi": "Cây cầu mới chính thức thông xe ngày mai.",
+      "collocations": [
+        {
+          "en": "officially open",
+          "vi": "chính thức mở cửa"
+        },
+        {
+          "en": "officially announce",
+          "vi": "chính thức công bố"
+        }
+      ],
+      "family": [
+        {
+          "word": "official",
+          "vi": "chính thức (adj)"
+        }
+      ],
+      "tip": "official → officially.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 4082,
+      "word": "originally",
+      "ipa": "əˈrɪʤənəli",
+      "viRead": "ơ-RI-giơ-nơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "ban đầu, vốn dĩ",
+      "exampleEn": "I'm originally from Hue.",
+      "exampleVi": "Gốc tôi là người Huế.",
+      "collocations": [
+        {
+          "en": "originally from",
+          "vi": "gốc ở"
+        },
+        {
+          "en": "originally planned",
+          "vi": "dự định ban đầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "original",
+          "vi": "nguyên bản"
+        }
+      ],
+      "tip": "I'm originally from… = Quê gốc tôi ở…",
+      "emoji": "🏡",
+      "stage": 2
+    },
+    {
+      "id": 4083,
+      "word": "perfectly",
+      "ipa": "ˈpərfɪktli",
+      "viRead": "PƠ-phikt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hoàn hảo; hoàn toàn",
+      "exampleEn": "Your answer is perfectly correct.",
+      "exampleVi": "Câu trả lời của bạn hoàn toàn đúng.",
+      "collocations": [
+        {
+          "en": "perfectly fine",
+          "vi": "hoàn toàn ổn"
+        },
+        {
+          "en": "fit perfectly",
+          "vi": "vừa khít"
+        }
+      ],
+      "family": [
+        {
+          "word": "perfect",
+          "vi": "hoàn hảo"
+        }
+      ],
+      "tip": "perfectly fine = ổn cả mà.",
+      "emoji": "👌",
+      "stage": 2
+    },
+    {
+      "id": 4084,
+      "word": "personally",
+      "ipa": "ˈpərsənəli",
+      "viRead": "PƠ-sơ-nơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "riêng tôi, cá nhân",
+      "exampleEn": "Personally, I prefer tea.",
+      "exampleVi": "Riêng tôi thì thích trà hơn.",
+      "collocations": [
+        {
+          "en": "personally speaking",
+          "vi": "theo ý riêng"
+        },
+        {
+          "en": "take it personally",
+          "vi": "để bụng"
+        }
+      ],
+      "family": [
+        {
+          "word": "personal",
+          "vi": "cá nhân"
+        }
+      ],
+      "tip": "Don't take it personally = Đừng để bụng nhé.",
+      "emoji": "🙋",
+      "stage": 2
+    },
+    {
+      "id": 4085,
+      "word": "politely",
+      "ipa": "pəˈlaɪtli",
+      "viRead": "pơ-LAIT-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "lịch sự",
+      "exampleEn": "Ask politely and people will help.",
+      "exampleVi": "Hỏi lịch sự thì mọi người sẽ giúp.",
+      "collocations": [
+        {
+          "en": "ask politely",
+          "vi": "hỏi lịch sự"
+        },
+        {
+          "en": "smile politely",
+          "vi": "mỉm cười lịch sự"
+        }
+      ],
+      "family": [
+        {
+          "word": "polite",
+          "vi": "lịch sự (adj)"
+        }
+      ],
+      "tip": "polite → politely.",
+      "emoji": "🎩",
+      "stage": 2
+    },
+    {
+      "id": 4086,
+      "word": "possibly",
+      "ipa": "ˈpɑsəbli",
+      "viRead": "PA-sơ-bli",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "có thể",
+      "exampleEn": "Could you possibly help me?",
+      "exampleVi": "Bạn có thể giúp tôi được không?",
+      "collocations": [
+        {
+          "en": "could you possibly",
+          "vi": "bạn có thể nào…"
+        },
+        {
+          "en": "quite possibly",
+          "vi": "rất có thể"
+        }
+      ],
+      "family": [
+        {
+          "word": "possible",
+          "vi": "có thể"
+        }
+      ],
+      "tip": "Could you possibly…? = cách nhờ rất lịch sự.",
+      "emoji": "🤔",
+      "stage": 2
+    },
+    {
+      "id": 4087,
+      "word": "quickly",
+      "ipa": "ˈkwɪkli",
+      "viRead": "KWIK-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nhanh",
+      "exampleEn": "Come here quickly!",
+      "exampleVi": "Lại đây nhanh lên!",
+      "collocations": [
+        {
+          "en": "quickly learn",
+          "vi": "học nhanh"
+        },
+        {
+          "en": "as quickly as possible",
+          "vi": "nhanh nhất có thể"
+        }
+      ],
+      "family": [
+        {
+          "word": "quick",
+          "vi": "nhanh (adj)"
+        }
+      ],
+      "tip": "quick (adj) → quickly (adv): run quickly.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 4088,
+      "word": "quietly",
+      "ipa": "ˈkwaɪətli",
+      "viRead": "KWAI-ơt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khẽ, lặng lẽ",
+      "exampleEn": "Please close the door quietly.",
+      "exampleVi": "Làm ơn đóng cửa khẽ thôi.",
+      "collocations": [
+        {
+          "en": "speak quietly",
+          "vi": "nói khẽ"
+        },
+        {
+          "en": "sit quietly",
+          "vi": "ngồi yên lặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "quiet",
+          "vi": "yên tĩnh"
+        }
+      ],
+      "tip": "quiet (yên lặng) ≠ quite (khá).",
+      "emoji": "🤫",
+      "stage": 2
+    },
+    {
+      "id": 4089,
+      "word": "rapidly",
+      "ipa": "ˈræpədli",
+      "viRead": "RE-pơđ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nhanh chóng",
+      "exampleEn": "The city is growing rapidly.",
+      "exampleVi": "Thành phố đang phát triển nhanh chóng.",
+      "collocations": [
+        {
+          "en": "grow rapidly",
+          "vi": "tăng nhanh"
+        },
+        {
+          "en": "change rapidly",
+          "vi": "thay đổi nhanh"
+        }
+      ],
+      "family": [
+        {
+          "word": "rapid",
+          "vi": "nhanh"
+        }
+      ],
+      "tip": "rapidly = quickly (trang trọng hơn).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 4090,
+      "word": "regularly",
+      "ipa": "ˈrɛgjələrli",
+      "viRead": "REG-yơ-lơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đều đặn, thường xuyên",
+      "exampleEn": "Review your words regularly.",
+      "exampleVi": "Ôn từ vựng đều đặn.",
+      "collocations": [
+        {
+          "en": "exercise regularly",
+          "vi": "tập thể dục đều"
+        },
+        {
+          "en": "meet regularly",
+          "vi": "gặp thường xuyên"
+        }
+      ],
+      "family": [
+        {
+          "word": "regular",
+          "vi": "đều đặn"
+        }
+      ],
+      "tip": "Bí quyết học từ: ôn regularly!",
+      "emoji": "🔁",
+      "stage": 2
+    },
+    {
+      "id": 4091,
+      "word": "rudely",
+      "ipa": "ˈrudli",
+      "viRead": "RUĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thô lỗ",
+      "exampleEn": "He spoke rudely to the waiter.",
+      "exampleVi": "Anh ta nói năng thô lỗ với người phục vụ.",
+      "collocations": [
+        {
+          "en": "behave rudely",
+          "vi": "cư xử thô lỗ"
+        },
+        {
+          "en": "rudely interrupt",
+          "vi": "ngắt lời thô lỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "rude",
+          "vi": "thô lỗ"
+        }
+      ],
+      "tip": "rude → rudely.",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 4092,
+      "word": "safely",
+      "ipa": "ˈseɪfli",
+      "viRead": "SÂYPH-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "an toàn",
+      "exampleEn": "We arrived home safely.",
+      "exampleVi": "Chúng tôi về nhà an toàn.",
+      "collocations": [
+        {
+          "en": "arrive safely",
+          "vi": "đến nơi an toàn"
+        },
+        {
+          "en": "drive safely",
+          "vi": "lái xe an toàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "safe",
+          "vi": "an toàn"
+        }
+      ],
+      "tip": "Drive safely! = Đi đường cẩn thận nhé!",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 4093,
+      "word": "seriously",
+      "ipa": "ˈsɪriəsli",
+      "viRead": "SI-ri-ơs-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "nghiêm túc; nghiêm trọng",
+      "exampleEn": "Seriously? You won the lottery?",
+      "exampleVi": "Thật hả? Bạn trúng số à?",
+      "collocations": [
+        {
+          "en": "take it seriously",
+          "vi": "coi trọng"
+        },
+        {
+          "en": "seriously injured",
+          "vi": "bị thương nặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "serious",
+          "vi": "nghiêm túc"
+        }
+      ],
+      "tip": "Seriously? = Thật á? (ngạc nhiên).",
+      "emoji": "😳",
+      "stage": 2
+    },
+    {
+      "id": 4094,
+      "word": "silently",
+      "ipa": "ˈsaɪləntli",
+      "viRead": "SAI-lơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "im lặng, không tiếng động",
+      "exampleEn": "The cat moved silently.",
+      "exampleVi": "Con mèo di chuyển không một tiếng động.",
+      "collocations": [
+        {
+          "en": "read silently",
+          "vi": "đọc thầm"
+        },
+        {
+          "en": "sit silently",
+          "vi": "ngồi im lặng"
+        }
+      ],
+      "family": [
+        {
+          "word": "silent",
+          "vi": "im lặng"
+        }
+      ],
+      "tip": "silent → silently.",
+      "emoji": "🐈",
+      "stage": 2
+    },
+    {
+      "id": 4095,
+      "word": "slowly",
+      "ipa": "ˈsloʊli",
+      "viRead": "SLÂU-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chậm",
+      "exampleEn": "Speak slowly, please.",
+      "exampleVi": "Làm ơn nói chậm thôi.",
+      "collocations": [
+        {
+          "en": "walk slowly",
+          "vi": "đi chậm"
+        },
+        {
+          "en": "slowly but surely",
+          "vi": "chậm mà chắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "slow",
+          "vi": "chậm"
+        }
+      ],
+      "tip": "Câu cứu cánh: Could you speak more slowly, please?",
+      "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 4096,
+      "word": "smoothly",
+      "ipa": "ˈsmuðli",
+      "viRead": "SMUĐ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "trơn tru, suôn sẻ",
+      "exampleEn": "Everything went smoothly.",
+      "exampleVi": "Mọi việc diễn ra suôn sẻ.",
+      "collocations": [
+        {
+          "en": "go smoothly",
+          "vi": "suôn sẻ"
+        },
+        {
+          "en": "run smoothly",
+          "vi": "vận hành trơn tru"
+        }
+      ],
+      "family": [
+        {
+          "word": "smooth",
+          "vi": "trơn, mịn"
+        }
+      ],
+      "tip": "go smoothly = trôi chảy, êm xuôi.",
+      "emoji": "🛼",
+      "stage": 2
+    },
+    {
+      "id": 4097,
+      "word": "somehow",
+      "ipa": "ˈsəmˌhaʊ",
+      "viRead": "SƠM-hao",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "bằng cách nào đó",
+      "exampleEn": "Somehow, I passed the exam.",
+      "exampleVi": "Bằng cách nào đó mà tôi đã qua kỳ thi.",
+      "collocations": [
+        {
+          "en": "somehow manage",
+          "vi": "xoay xở được"
+        },
+        {
+          "en": "somehow or other",
+          "vi": "bằng cách này hay cách khác"
+        }
+      ],
+      "tip": "some + how.",
+      "emoji": "🤷",
+      "stage": 2
+    },
+    {
+      "id": 4098,
+      "word": "strongly",
+      "ipa": "ˈstrɔŋli",
+      "viRead": "STRONG-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "mạnh mẽ; kiên quyết",
+      "exampleEn": "I strongly agree with you.",
+      "exampleVi": "Tôi hoàn toàn đồng ý với bạn.",
+      "collocations": [
+        {
+          "en": "strongly agree",
+          "vi": "rất đồng ý"
+        },
+        {
+          "en": "strongly recommend",
+          "vi": "rất khuyên"
+        }
+      ],
+      "family": [
+        {
+          "word": "strong",
+          "vi": "mạnh"
+        }
+      ],
+      "tip": "strongly agree / disagree hay gặp trong khảo sát.",
+      "emoji": "💪",
+      "stage": 2
+    },
+    {
+      "id": 4099,
+      "word": "suddenly",
+      "ipa": "ˈsədənli",
+      "viRead": "SƠ-đơn-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "đột nhiên",
+      "exampleEn": "Suddenly, the lights went out.",
+      "exampleVi": "Đột nhiên đèn tắt phụt.",
+      "collocations": [
+        {
+          "en": "suddenly stop",
+          "vi": "đột ngột dừng"
+        },
+        {
+          "en": "suddenly realize",
+          "vi": "chợt nhận ra"
+        }
+      ],
+      "family": [
+        {
+          "word": "sudden",
+          "vi": "đột ngột"
+        }
+      ],
+      "tip": "Kể chuyện hay dùng: Suddenly, …",
+      "emoji": "💥",
+      "stage": 2
+    },
+    {
+      "id": 4100,
+      "word": "surely",
+      "ipa": "ˈʃʊrli",
+      "viRead": "SHUR-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chắc chắn (là)",
+      "exampleEn": "Surely you remember me?",
+      "exampleVi": "Chắc chắn bạn nhớ tôi chứ?",
+      "collocations": [
+        {
+          "en": "slowly but surely",
+          "vi": "chậm mà chắc"
+        },
+        {
+          "en": "surely not",
+          "vi": "chắc chắn là không"
+        }
+      ],
+      "family": [
+        {
+          "word": "sure",
+          "vi": "chắc chắn"
+        }
+      ],
+      "tip": "slowly but surely = chậm mà chắc — đúng tinh thần học từ!",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 4101,
+      "word": "thankfully",
+      "ipa": "ˈθæŋkfəli",
+      "viRead": "THENGK-phơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "may mà, ơn trời",
+      "exampleEn": "Thankfully, the rain stopped.",
+      "exampleVi": "Ơn trời, mưa đã tạnh.",
+      "collocations": [
+        {
+          "en": "thankfully, no one",
+          "vi": "may là không ai"
+        },
+        {
+          "en": "but thankfully",
+          "vi": "nhưng may thay"
+        }
+      ],
+      "family": [
+        {
+          "word": "thankful",
+          "vi": "biết ơn"
+        }
+      ],
+      "tip": "thankfully ≈ luckily.",
+      "emoji": "🙌",
+      "stage": 2
+    },
+    {
+      "id": 4102,
+      "word": "thoroughly",
+      "ipa": "ˈθərəli",
+      "viRead": "THƠ-rơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "kỹ lưỡng",
+      "exampleEn": "Wash your hands thoroughly.",
+      "exampleVi": "Rửa tay thật kỹ.",
+      "collocations": [
+        {
+          "en": "check thoroughly",
+          "vi": "kiểm tra kỹ"
+        },
+        {
+          "en": "thoroughly enjoy",
+          "vi": "rất thích thú"
+        }
+      ],
+      "family": [
+        {
+          "word": "thorough",
+          "vi": "kỹ lưỡng"
+        }
+      ],
+      "tip": "Đọc 'THƠ-rơ-li' (ough = ơ).",
+      "emoji": "🧼",
+      "stage": 2
+    },
+    {
+      "id": 4103,
+      "word": "totally",
+      "ipa": "ˈtoʊtəli",
+      "viRead": "TÂU-tơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "hoàn toàn",
+      "exampleEn": "I totally agree!",
+      "exampleVi": "Tôi hoàn toàn đồng ý!",
+      "collocations": [
+        {
+          "en": "totally agree",
+          "vi": "hoàn toàn đồng ý"
+        },
+        {
+          "en": "totally different",
+          "vi": "khác hẳn"
+        }
+      ],
+      "family": [
+        {
+          "word": "total",
+          "vi": "tổng"
+        }
+      ],
+      "tip": "Totally! = Chuẩn luôn! (thân mật).",
+      "emoji": "💯",
+      "stage": 2
+    },
+    {
+      "id": 4104,
+      "word": "typically",
+      "ipa": "ˈtɪpɪkəli",
+      "viRead": "TI-pik-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thường thì, điển hình",
+      "exampleEn": "Typically, I get up at six.",
+      "exampleVi": "Thường thì tôi dậy lúc sáu giờ.",
+      "collocations": [
+        {
+          "en": "typically take",
+          "vi": "thường mất"
+        },
+        {
+          "en": "typically used",
+          "vi": "thường được dùng"
+        }
+      ],
+      "family": [
+        {
+          "word": "typical",
+          "vi": "điển hình"
+        }
+      ],
+      "tip": "typical → typically (thêm -ly).",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 4105,
+      "word": "urgently",
+      "ipa": "ˈərʤəntli",
+      "viRead": "Ơ-giơnt-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khẩn cấp",
+      "exampleEn": "We urgently need more water.",
+      "exampleVi": "Chúng tôi cần thêm nước gấp.",
+      "collocations": [
+        {
+          "en": "urgently need",
+          "vi": "cần gấp"
+        },
+        {
+          "en": "urgently call",
+          "vi": "gọi gấp"
+        }
+      ],
+      "family": [
+        {
+          "word": "urgent",
+          "vi": "khẩn cấp"
+        }
+      ],
+      "tip": "urgent → urgently.",
+      "emoji": "🚨",
+      "stage": 2
+    },
+    {
+      "id": 4106,
+      "word": "usually",
+      "ipa": "ˈjuʒuəli",
+      "viRead": "YU-zhu-ơ-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thường thường",
+      "exampleEn": "I usually walk to school.",
+      "exampleVi": "Tôi thường đi bộ đến trường.",
+      "collocations": [
+        {
+          "en": "usually go",
+          "vi": "thường đi"
+        },
+        {
+          "en": "usually take",
+          "vi": "thường mất (thời gian)"
+        }
+      ],
+      "family": [
+        {
+          "word": "usual",
+          "vi": "thông thường"
+        }
+      ],
+      "tip": "Mức độ: always > usually > often > sometimes > never.",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 4107,
+      "word": "wisely",
+      "ipa": "ˈwaɪzli",
+      "viRead": "WAID-li",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "khôn ngoan",
+      "exampleEn": "Spend your money wisely.",
+      "exampleVi": "Hãy tiêu tiền khôn ngoan.",
+      "collocations": [
+        {
+          "en": "choose wisely",
+          "vi": "chọn khôn ngoan"
+        },
+        {
+          "en": "use time wisely",
+          "vi": "dùng thời gian khôn ngoan"
+        }
+      ],
+      "family": [
+        {
+          "word": "wise",
+          "vi": "khôn ngoan"
+        }
+      ],
+      "tip": "wise → wisely.",
+      "emoji": "🦉",
       "stage": 2
     }
   ]
