@@ -7,6 +7,9 @@ import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 import WordOfDay from './WordOfDay'
+import InstallPrompt from '@/components/InstallPrompt'
+import SpeakButton from '@/components/SpeakButton'
+import { proverbOfDay } from '@/lib/proverbs'
 import { DailyGoal, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
@@ -24,6 +27,7 @@ export default function Dashboard() {
   const learnedPct = s.total ? s.learned / s.total : 0
 
   useProvideContext('Trang chủ')
+  const proverb = proverbOfDay(today())
 
   const hour = new Date().getHours()
   const greeting = hour < 11 ? 'Chào buổi sáng' : hour < 18 ? 'Chào buổi chiều' : 'Chào buổi tối'
@@ -41,6 +45,17 @@ export default function Dashboard() {
           </h1>
           <p className="mt-1 text-slate-500">
             Học <b>{pack.meta.nativeName}</b> · mỗi ngày một chút là đủ.
+          </p>
+          <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm">
+            <span aria-hidden>💬</span>
+            <i className="font-semibold text-slate-700 dark:text-slate-200">{proverb.en}</i>
+            <SpeakButton
+              text={proverb.en}
+              lang={pack.meta.ttsLang}
+              size="sm"
+              label="Nghe câu này"
+            />
+            <span className="text-slate-500 dark:text-slate-400">— {proverb.vi}</span>
           </p>
         </div>
         <div className="flex items-center gap-4 rounded-2xl bg-white px-4 py-2 shadow-sm dark:bg-slate-900">
@@ -66,6 +81,8 @@ export default function Dashboard() {
         />
         <MySky learned={s.learned} mastered={s.mastered} />
       </section>
+
+      <InstallPrompt />
 
       {/* Today's plan */}
       <section>

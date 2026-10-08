@@ -9,6 +9,10 @@ export interface AchievementInput {
   totalReviews: number
   /** Accuracy as a percentage 0..100. */
   accuracy: number
+  /** Distinct days with at least one answer — rewards coming back, streak or not. */
+  daysStudied?: number
+  /** Longest streak ever reached. */
+  bestStreak?: number
 }
 
 export interface Achievement {
@@ -142,6 +146,54 @@ const DEFS: Def[] = [
     desc: 'Đạt 2000 XP',
     value: (m) => m.xp,
     target: 2000,
+  },
+  {
+    id: 'learn2000',
+    icon: '🌌',
+    title: 'Dải ngân hà',
+    desc: 'Học 2000 từ',
+    value: (m) => m.learned,
+    target: 2000,
+  },
+  {
+    id: 'learn3000',
+    icon: '🪐',
+    title: 'Vũ trụ từ vựng',
+    desc: 'Học 3000 từ',
+    value: (m) => m.learned,
+    target: 3000,
+  },
+  {
+    id: 'days10',
+    icon: '📅',
+    title: 'Quay lại',
+    desc: 'Học vào 10 ngày khác nhau (không cần liên tục)',
+    value: (m) => m.daysStudied ?? 0,
+    target: 10,
+  },
+  {
+    id: 'days30',
+    icon: '🗓️',
+    title: 'Thói quen',
+    desc: 'Học vào 30 ngày khác nhau',
+    value: (m) => m.daysStudied ?? 0,
+    target: 30,
+  },
+  {
+    id: 'days100',
+    icon: '🏔️',
+    title: 'Bền bỉ',
+    desc: 'Học vào 100 ngày khác nhau',
+    value: (m) => m.daysStudied ?? 0,
+    target: 100,
+  },
+  {
+    id: 'best14',
+    icon: '🛡️',
+    title: 'Hai tuần vững vàng',
+    desc: 'Chuỗi 14 ngày (khiên giúp cũng tính)',
+    value: (m) => Math.max(m.bestStreak ?? 0, m.streak),
+    target: 14,
   },
   {
     id: 'sharp',
