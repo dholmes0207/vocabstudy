@@ -60,11 +60,11 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
         title="Không có từ nào cần ôn hôm nay!"
         description="Bạn đã ôn hết các từ đến hạn. Học thêm từ mới để lấp đầy lịch ôn của ngày mai nhé."
       >
-        <Link to="/learn" className="btn-primary">
-          Học từ mới
+        <Link to="/learn?quick=1" className="btn-primary">
+          Học nhanh 5 từ
         </Link>
-        <Link to="/quiz" className="btn-secondary">
-          Làm quiz
+        <Link to="/games/match" className="btn-secondary">
+          Chơi Ghép cặp
         </Link>
       </EmptyState>
     )

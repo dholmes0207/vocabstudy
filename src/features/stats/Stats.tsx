@@ -7,6 +7,7 @@ import { useStudy, cardsOf, statsOf } from '@/store/studyStore'
 import { INTERVALS, MASTERED_BOX } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { today, formatDay } from '@/lib/date'
+import { recentCalendar } from '@/lib/calendar'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
 
@@ -44,6 +45,7 @@ export default function Stats() {
     ? Math.round((stats.totalCorrect / stats.totalReviews) * 100)
     : 0
   const maxActivity = Math.max(1, ...activity.map((a) => a.reviews + a.news))
+  const calendar = recentCalendar(stats.reviewsByDay, today())
 
   const achievements = evaluateAchievements({
     learned: s.learned,
@@ -134,6 +136,26 @@ export default function Stats() {
         </div>
         <p className="mt-2 text-center text-xs text-slate-400">
           Nhãn = khoảng cách ôn của mỗi bậc (ngày) · 🏆 = đã thành thạo
+        </p>
+      </section>
+
+      {/* Study calendar: the last 5 weeks */}
+      <section className="card p-5">
+        <h2 className="font-bold">5 tuần gần đây</h2>
+        <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">
+          Mỗi ô sáng là một ngày bạn đã học — cố đừng để chuỗi đứt nhé.
+        </p>
+        <div className="grid max-w-sm grid-cols-7 gap-1.5">
+          {calendar.map((c) => (
+            <div
+              key={c.day}
+              title={`${formatDay(c.day)}: ${c.count} câu`}
+              className={`cal-cell cal-${c.level} aspect-square rounded-md ${c.isToday ? 'ring-2 ring-brand-500' : ''}`}
+            />
+          ))}
+        </div>
+        <p className="mt-2 text-xs text-slate-400">
+          Đã học {calendar.filter((c) => c.count > 0).length}/{calendar.length} ngày
         </p>
       </section>
 

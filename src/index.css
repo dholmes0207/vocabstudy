@@ -598,6 +598,24 @@
   }
 }
 
+/* Study calendar cells (stats page): empty → glowing as more was done. */
+.cal-0 {
+  @apply bg-slate-200/70 dark:bg-slate-800/70;
+}
+.cal-1 {
+  @apply bg-brand-200 dark:bg-brand-900;
+}
+.cal-2 {
+  @apply bg-brand-400 dark:bg-brand-700;
+}
+.cal-3 {
+  @apply bg-brand-500 dark:bg-brand-500;
+}
+.cal-4 {
+  @apply bg-gradient-to-br from-brand-500 to-violet-500;
+  box-shadow: 0 0 10px -2px rgb(124 58 237 / 0.6);
+}
+
 /* 3D flip card */
 .flip-scene {
   perspective: 1400px;
