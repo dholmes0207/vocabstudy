@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4353,
+    "count": 4373,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -122623,6 +122623,576 @@
       ],
       "tip": "Mỹ cũng viết wooly.",
       "emoji": "🐑",
+      "stage": 2
+    },
+    {
+      "id": 4354,
+      "word": "manager",
+      "ipa": "ˈmænɪʤər",
+      "viRead": "ME-nơ-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quản lý, trưởng phòng",
+      "exampleEn": "I need to talk to the manager.",
+      "exampleVi": "Tôi cần nói chuyện với quản lý.",
+      "collocations": [
+        {
+          "en": "store manager",
+          "vi": "quản lý cửa hàng"
+        },
+        {
+          "en": "project manager",
+          "vi": "quản lý dự án"
+        }
+      ],
+      "family": [
+        {
+          "word": "manage",
+          "vi": "quản lý"
+        }
+      ],
+      "tip": "manage (v) → manager (n). Trọng âm đầu: ME-nơ-giơ.",
+      "emoji": "👔",
+      "stage": 2
+    },
+    {
+      "id": 4355,
+      "word": "meeting",
+      "ipa": "ˈmitɪŋ",
+      "viRead": "MI-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cuộc họp",
+      "exampleEn": "We have a meeting at nine.",
+      "exampleVi": "Chúng tôi có cuộc họp lúc chín giờ.",
+      "collocations": [
+        {
+          "en": "have a meeting",
+          "vi": "họp"
+        },
+        {
+          "en": "team meeting",
+          "vi": "họp nhóm"
+        }
+      ],
+      "family": [
+        {
+          "word": "meet",
+          "vi": "gặp"
+        }
+      ],
+      "tip": "I'm in a meeting = Tôi đang họp.",
+      "emoji": "📅",
+      "stage": 2
+    },
+    {
+      "id": 4356,
+      "word": "coworker",
+      "ipa": "ˈkoʊˌwərkər",
+      "viRead": "KÂU-wơ-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồng nghiệp",
+      "exampleEn": "My coworkers took me out for lunch.",
+      "exampleVi": "Đồng nghiệp đưa tôi đi ăn trưa.",
+      "collocations": [
+        {
+          "en": "friendly coworker",
+          "vi": "đồng nghiệp thân thiện"
+        },
+        {
+          "en": "new coworker",
+          "vi": "đồng nghiệp mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "colleague",
+          "vi": "đồng nghiệp"
+        }
+      ],
+      "tip": "co (cùng) + worker.",
+      "emoji": "🧑‍💼",
+      "stage": 2
+    },
+    {
+      "id": 4357,
+      "word": "intern",
+      "ipa": "ˈɪntərn",
+      "viRead": "IN-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thực tập sinh",
+      "exampleEn": "She works as an intern at a bank.",
+      "exampleVi": "Cô ấy làm thực tập sinh ở ngân hàng.",
+      "collocations": [
+        {
+          "en": "summer intern",
+          "vi": "thực tập sinh hè"
+        },
+        {
+          "en": "unpaid intern",
+          "vi": "thực tập không lương"
+        }
+      ],
+      "family": [
+        {
+          "word": "internship",
+          "vi": "kỳ thực tập"
+        }
+      ],
+      "tip": "intern (người) — internship (kỳ thực tập).",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 4358,
+      "word": "internship",
+      "ipa": "ˈɪntərnˌʃɪp",
+      "viRead": "IN-tơn-ship",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỳ thực tập",
+      "exampleEn": "I got an internship at a tech company.",
+      "exampleVi": "Tôi được nhận thực tập ở một công ty công nghệ.",
+      "collocations": [
+        {
+          "en": "do an internship",
+          "vi": "đi thực tập"
+        },
+        {
+          "en": "apply for an internship",
+          "vi": "nộp đơn thực tập"
+        }
+      ],
+      "family": [
+        {
+          "word": "intern",
+          "vi": "thực tập sinh"
+        }
+      ],
+      "tip": "intern + ship.",
+      "emoji": "💼",
+      "stage": 2
+    },
+    {
+      "id": 4359,
+      "word": "bonus",
+      "ipa": "ˈboʊnəs",
+      "viRead": "BÂU-nơs",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền thưởng",
+      "exampleEn": "Workers get a bonus before Tet.",
+      "exampleVi": "Công nhân được thưởng trước Tết.",
+      "collocations": [
+        {
+          "en": "Tet bonus",
+          "vi": "thưởng Tết"
+        },
+        {
+          "en": "year-end bonus",
+          "vi": "thưởng cuối năm"
+        }
+      ],
+      "family": [
+        {
+          "word": "salary",
+          "vi": "lương"
+        }
+      ],
+      "tip": "a bonus = điều thêm, phần thưởng.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 4360,
+      "word": "agenda",
+      "ipa": "əˈʤɛndə",
+      "viRead": "ơ-GIEN-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chương trình họp",
+      "exampleEn": "What's on the agenda today?",
+      "exampleVi": "Hôm nay họp những gì?",
+      "collocations": [
+        {
+          "en": "on the agenda",
+          "vi": "trong chương trình"
+        },
+        {
+          "en": "meeting agenda",
+          "vi": "chương trình cuộc họp"
+        }
+      ],
+      "tip": "hidden agenda = ý đồ ngầm.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 4361,
+      "word": "supplier",
+      "ipa": "səˈplaɪər",
+      "viRead": "sơ-PLAI-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà cung cấp",
+      "exampleEn": "We buy rice from a local supplier.",
+      "exampleVi": "Chúng tôi mua gạo từ một nhà cung cấp địa phương.",
+      "collocations": [
+        {
+          "en": "main supplier",
+          "vi": "nhà cung cấp chính"
+        },
+        {
+          "en": "supplier of",
+          "vi": "nhà cung cấp"
+        }
+      ],
+      "family": [
+        {
+          "word": "supply",
+          "vi": "cung cấp"
+        }
+      ],
+      "tip": "supply (v) → supplier (n).",
+      "emoji": "🚚",
+      "stage": 2
+    },
+    {
+      "id": 4362,
+      "word": "headquarters",
+      "ipa": "ˈhɛdˌkwɔrtərz",
+      "viRead": "HEĐ-kwor-tơd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trụ sở chính",
+      "exampleEn": "The company's headquarters is in Hanoi.",
+      "exampleVi": "Trụ sở chính của công ty ở Hà Nội.",
+      "collocations": [
+        {
+          "en": "company headquarters",
+          "vi": "trụ sở công ty"
+        },
+        {
+          "en": "police headquarters",
+          "vi": "sở chỉ huy cảnh sát"
+        }
+      ],
+      "family": [
+        {
+          "word": "office",
+          "vi": "văn phòng"
+        }
+      ],
+      "tip": "Luôn có s: headquarters (viết tắt HQ).",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 4363,
+      "word": "cubicle",
+      "ipa": "ˈkjubɪkəl",
+      "viRead": "KYU-bi-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ô làm việc (vách ngăn)",
+      "exampleEn": "My desk is in a small cubicle.",
+      "exampleVi": "Bàn tôi ở trong một ô làm việc nhỏ.",
+      "collocations": [
+        {
+          "en": "office cubicle",
+          "vi": "ô văn phòng"
+        },
+        {
+          "en": "work in a cubicle",
+          "vi": "làm trong ô ngăn"
+        }
+      ],
+      "tip": "cubicle = ô làm việc có vách ngăn.",
+      "emoji": "🗄️",
+      "stage": 2
+    },
+    {
+      "id": 4364,
+      "word": "photocopier",
+      "ipa": "ˈfoʊtoʊˌkɑpiər",
+      "viRead": "PHÂU-tâu-ka-pi-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy photo",
+      "exampleEn": "The photocopier is out of paper.",
+      "exampleVi": "Máy photo hết giấy rồi.",
+      "collocations": [
+        {
+          "en": "use the photocopier",
+          "vi": "dùng máy photo"
+        },
+        {
+          "en": "fix the photocopier",
+          "vi": "sửa máy photo"
+        }
+      ],
+      "family": [
+        {
+          "word": "copy",
+          "vi": "sao chép"
+        }
+      ],
+      "tip": "photocopy (v) = photo tài liệu.",
+      "emoji": "🖨️",
+      "stage": 2
+    },
+    {
+      "id": 4365,
+      "word": "spreadsheet",
+      "ipa": "ˈsprɛdˌʃit",
+      "viRead": "SPREĐ-shit",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảng tính",
+      "exampleEn": "I keep my budget in a spreadsheet.",
+      "exampleVi": "Tôi ghi ngân sách trong một bảng tính.",
+      "collocations": [
+        {
+          "en": "Excel spreadsheet",
+          "vi": "bảng tính Excel"
+        },
+        {
+          "en": "fill in a spreadsheet",
+          "vi": "điền bảng tính"
+        }
+      ],
+      "tip": "spread (trải) + sheet (tờ).",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 4366,
+      "word": "memo",
+      "ipa": "ˈmɛˌmoʊ",
+      "viRead": "ME-mâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bản ghi nhớ, thông báo nội bộ",
+      "exampleEn": "The boss sent a memo to all staff.",
+      "exampleVi": "Sếp gửi thông báo nội bộ cho toàn bộ nhân viên.",
+      "collocations": [
+        {
+          "en": "send a memo",
+          "vi": "gửi bản ghi nhớ"
+        },
+        {
+          "en": "internal memo",
+          "vi": "thông báo nội bộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "note",
+          "vi": "ghi chú"
+        }
+      ],
+      "tip": "memo = viết tắt của memorandum.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 4367,
+      "word": "resignation",
+      "ipa": "ˌrɛzɪgˈneɪʃən",
+      "viRead": "re-dig-NÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự từ chức, đơn nghỉ việc",
+      "exampleEn": "He handed in his resignation today.",
+      "exampleVi": "Hôm nay anh ấy nộp đơn nghỉ việc.",
+      "collocations": [
+        {
+          "en": "letter of resignation",
+          "vi": "đơn xin nghỉ việc"
+        },
+        {
+          "en": "hand in your resignation",
+          "vi": "nộp đơn nghỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "resign",
+          "vi": "từ chức"
+        }
+      ],
+      "tip": "resign (v) → resignation (n). 'g' câm trong resign.",
+      "emoji": "✉️",
+      "stage": 2
+    },
+    {
+      "id": 4368,
+      "word": "layoff",
+      "ipa": "ˈleɪˌɔf",
+      "viRead": "LÂY-oph",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đợt cắt giảm nhân sự",
+      "exampleEn": "The factory announced a layoff.",
+      "exampleVi": "Nhà máy thông báo cắt giảm nhân sự.",
+      "collocations": [
+        {
+          "en": "mass layoff",
+          "vi": "sa thải hàng loạt"
+        },
+        {
+          "en": "face a layoff",
+          "vi": "đối mặt cắt giảm"
+        }
+      ],
+      "family": [
+        {
+          "word": "lay off",
+          "vi": "cho nghỉ việc (động từ)"
+        }
+      ],
+      "tip": "layoff (n) — lay off (v).",
+      "emoji": "📉",
+      "stage": 2
+    },
+    {
+      "id": 4369,
+      "word": "startup",
+      "ipa": "ˈstɑrtˌəp",
+      "viRead": "START-ơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công ty khởi nghiệp",
+      "exampleEn": "She works for a small startup.",
+      "exampleVi": "Cô ấy làm cho một công ty khởi nghiệp nhỏ.",
+      "collocations": [
+        {
+          "en": "tech startup",
+          "vi": "startup công nghệ"
+        },
+        {
+          "en": "start a startup",
+          "vi": "lập công ty khởi nghiệp"
+        }
+      ],
+      "tip": "start up (v) = khởi động.",
+      "emoji": "🚀",
+      "stage": 2
+    },
+    {
+      "id": 4370,
+      "word": "entrepreneur",
+      "ipa": "ˌɑntrəprəˈnʊr",
+      "viRead": "an-trơ-prơ-NƠ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "doanh nhân, người khởi nghiệp",
+      "exampleEn": "My aunt is a successful entrepreneur.",
+      "exampleVi": "Dì tôi là một doanh nhân thành đạt.",
+      "collocations": [
+        {
+          "en": "young entrepreneur",
+          "vi": "doanh nhân trẻ"
+        },
+        {
+          "en": "successful entrepreneur",
+          "vi": "doanh nhân thành đạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "business",
+          "vi": "kinh doanh"
+        }
+      ],
+      "tip": "Gốc Pháp, đọc 'an-trơ-prơ-NƠ'.",
+      "emoji": "💡",
+      "stage": 2
+    },
+    {
+      "id": 4371,
+      "word": "warranty",
+      "ipa": "ˈwɔrənti",
+      "viRead": "WO-rơn-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảo hành",
+      "exampleEn": "The phone comes with a two-year warranty.",
+      "exampleVi": "Điện thoại được bảo hành hai năm.",
+      "collocations": [
+        {
+          "en": "under warranty",
+          "vi": "còn bảo hành"
+        },
+        {
+          "en": "warranty card",
+          "vi": "phiếu bảo hành"
+        }
+      ],
+      "family": [
+        {
+          "word": "guarantee",
+          "vi": "bảo đảm"
+        }
+      ],
+      "tip": "under warranty = còn trong hạn bảo hành.",
+      "emoji": "🛡️",
+      "stage": 2
+    },
+    {
+      "id": 4372,
+      "word": "feedback",
+      "ipa": "ˈfidˌbæk",
+      "viRead": "PHIĐ-bek",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ý kiến phản hồi",
+      "exampleEn": "Thank you for your feedback.",
+      "exampleVi": "Cảm ơn bạn đã góp ý.",
+      "collocations": [
+        {
+          "en": "give feedback",
+          "vi": "góp ý"
+        },
+        {
+          "en": "positive feedback",
+          "vi": "phản hồi tích cực"
+        }
+      ],
+      "tip": "Không đếm được: some feedback (không có a).",
+      "emoji": "💬",
+      "stage": 2
+    },
+    {
+      "id": 4373,
+      "word": "logo",
+      "ipa": "ˈloʊgoʊ",
+      "viRead": "LÂU-gâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biểu trưng, lô-gô",
+      "exampleEn": "The company has a new logo.",
+      "exampleVi": "Công ty có lô-gô mới.",
+      "collocations": [
+        {
+          "en": "company logo",
+          "vi": "lô-gô công ty"
+        },
+        {
+          "en": "design a logo",
+          "vi": "thiết kế lô-gô"
+        }
+      ],
+      "family": [
+        {
+          "word": "brand",
+          "vi": "thương hiệu"
+        }
+      ],
+      "tip": "Đọc 'LÂU-gâu'.",
+      "emoji": "🔷",
       "stage": 2
     }
   ]
