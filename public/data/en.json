@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4144,
+    "count": 4186,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -116719,6 +116719,1134 @@
       ],
       "tip": "assign (v) → assignment (n). 'g' câm.",
       "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 4145,
+      "word": "confess",
+      "ipa": "kənˈfɛs",
+      "viRead": "kơn-PHES",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thú nhận",
+      "exampleEn": "He confessed that he broke the vase.",
+      "exampleVi": "Cậu ấy thú nhận đã làm vỡ bình hoa.",
+      "collocations": [
+        {
+          "en": "confess to",
+          "vi": "thú nhận"
+        },
+        {
+          "en": "I must confess",
+          "vi": "phải thú thật là"
+        }
+      ],
+      "family": [
+        {
+          "word": "confession",
+          "vi": "lời thú tội"
+        }
+      ],
+      "tip": "I must confess… = Thú thật là…",
+      "emoji": "🙊",
+      "stage": 2
+    },
+    {
+      "id": 4146,
+      "word": "congratulate",
+      "ipa": "kənˈgræʧəˌleɪt",
+      "viRead": "kơn-GRE-chơ-lâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chúc mừng",
+      "exampleEn": "We congratulate you on your new job.",
+      "exampleVi": "Chúng tôi chúc mừng bạn có việc mới.",
+      "collocations": [
+        {
+          "en": "congratulate someone on",
+          "vi": "chúc mừng ai về"
+        },
+        {
+          "en": "warmly congratulate",
+          "vi": "nhiệt liệt chúc mừng"
+        }
+      ],
+      "family": [
+        {
+          "word": "congratulations",
+          "vi": "lời chúc mừng"
+        }
+      ],
+      "tip": "Congratulations! = Chúc mừng! (luôn có s).",
+      "emoji": "🎉",
+      "stage": 2
+    },
+    {
+      "id": 4147,
+      "word": "deceive",
+      "ipa": "dɪˈsiv",
+      "viRead": "đi-SIV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lừa dối",
+      "exampleEn": "Don't let the low price deceive you.",
+      "exampleVi": "Đừng để giá rẻ đánh lừa bạn.",
+      "collocations": [
+        {
+          "en": "deceive someone",
+          "vi": "lừa ai"
+        },
+        {
+          "en": "be deceived",
+          "vi": "bị lừa"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheat",
+          "vi": "gian lận"
+        }
+      ],
+      "tip": "Chính tả: e trước i sau c — deceive, receive.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 4148,
+      "word": "exhale",
+      "ipa": "ɛksˈheɪl",
+      "viRead": "eks-HÂYL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thở ra",
+      "exampleEn": "Exhale slowly and relax.",
+      "exampleVi": "Thở ra từ từ và thả lỏng.",
+      "collocations": [
+        {
+          "en": "inhale and exhale",
+          "vi": "hít vào thở ra"
+        },
+        {
+          "en": "exhale deeply",
+          "vi": "thở ra sâu"
+        }
+      ],
+      "family": [
+        {
+          "word": "inhale",
+          "vi": "hít vào"
+        }
+      ],
+      "tip": "exhale ↔ inhale.",
+      "emoji": "😮‍💨",
+      "stage": 2
+    },
+    {
+      "id": 4149,
+      "word": "memorize",
+      "ipa": "ˈmɛməˌraɪz",
+      "viRead": "ME-mơ-raid",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "học thuộc, ghi nhớ",
+      "exampleEn": "Don't just memorize words; use them.",
+      "exampleVi": "Đừng chỉ học thuộc từ, hãy dùng chúng.",
+      "collocations": [
+        {
+          "en": "memorize words",
+          "vi": "thuộc từ"
+        },
+        {
+          "en": "memorize a poem",
+          "vi": "học thuộc bài thơ"
+        }
+      ],
+      "family": [
+        {
+          "word": "memory",
+          "vi": "trí nhớ"
+        }
+      ],
+      "tip": "Anh viết memorise.",
+      "emoji": "🧠",
+      "stage": 2
+    },
+    {
+      "id": 4150,
+      "word": "plead",
+      "ipa": "plid",
+      "viRead": "PLIĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "van xin, nài nỉ",
+      "exampleEn": "The boy pleaded for one more chance.",
+      "exampleVi": "Cậu bé van xin thêm một cơ hội.",
+      "collocations": [
+        {
+          "en": "plead for",
+          "vi": "van nài"
+        },
+        {
+          "en": "plead guilty",
+          "vi": "nhận tội"
+        }
+      ],
+      "family": [
+        {
+          "word": "beg",
+          "vi": "cầu xin"
+        }
+      ],
+      "tip": "plead guilty = nhận tội trước tòa.",
+      "emoji": "🙏",
+      "stage": 2
+    },
+    {
+      "id": 4151,
+      "word": "scatter",
+      "ipa": "ˈskætər",
+      "viRead": "SKE-tơ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rải, vung vãi",
+      "exampleEn": "Scatter the seeds over the soil.",
+      "exampleVi": "Rải hạt giống lên đất.",
+      "collocations": [
+        {
+          "en": "scatter seeds",
+          "vi": "rải hạt"
+        },
+        {
+          "en": "scattered showers",
+          "vi": "mưa rải rác"
+        }
+      ],
+      "tip": "scattered showers = mưa rải rác (bản tin thời tiết).",
+      "emoji": "🌾",
+      "stage": 2
+    },
+    {
+      "id": 4152,
+      "word": "starve",
+      "ipa": "stɑrv",
+      "viRead": "STARV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chết đói; đói lả",
+      "exampleEn": "I'm starving! Let's eat.",
+      "exampleVi": "Tôi đói lả rồi! Đi ăn thôi.",
+      "collocations": [
+        {
+          "en": "I'm starving",
+          "vi": "đói quá"
+        },
+        {
+          "en": "starve to death",
+          "vi": "chết đói"
+        }
+      ],
+      "family": [
+        {
+          "word": "hungry",
+          "vi": "đói"
+        }
+      ],
+      "tip": "I'm starving = đói muốn xỉu (nói quá).",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 4153,
+      "word": "stumble",
+      "ipa": "ˈstəmbəl",
+      "viRead": "STƠM-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vấp ngã; nói vấp",
+      "exampleEn": "She stumbled on the stairs.",
+      "exampleVi": "Cô ấy vấp trên cầu thang.",
+      "collocations": [
+        {
+          "en": "stumble over",
+          "vi": "vấp phải"
+        },
+        {
+          "en": "stumble upon",
+          "vi": "tình cờ gặp"
+        }
+      ],
+      "family": [
+        {
+          "word": "trip",
+          "vi": "vấp"
+        }
+      ],
+      "tip": "stumble upon = tình cờ tìm thấy.",
+      "emoji": "🤕",
+      "stage": 2
+    },
+    {
+      "id": 4154,
+      "word": "hail",
+      "ipa": "heɪl",
+      "viRead": "HÂYL",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "mưa đá",
+      "exampleEn": "The hail damaged the cars.",
+      "exampleVi": "Mưa đá làm hỏng những chiếc ô tô.",
+      "collocations": [
+        {
+          "en": "hail storm",
+          "vi": "bão mưa đá"
+        },
+        {
+          "en": "hail a taxi",
+          "vi": "vẫy taxi"
+        }
+      ],
+      "tip": "hail a taxi = vẫy taxi.",
+      "emoji": "🌨️",
+      "stage": 2
+    },
+    {
+      "id": 4155,
+      "word": "drought",
+      "ipa": "draʊt",
+      "viRead": "ĐRAOT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hạn hán",
+      "exampleEn": "The drought killed the rice fields.",
+      "exampleVi": "Hạn hán làm chết những cánh đồng lúa.",
+      "collocations": [
+        {
+          "en": "severe drought",
+          "vi": "hạn hán nặng"
+        },
+        {
+          "en": "drought and flood",
+          "vi": "hạn hán và lũ lụt"
+        }
+      ],
+      "family": [
+        {
+          "word": "flood",
+          "vi": "lũ lụt"
+        }
+      ],
+      "tip": "Đọc 'ĐRAOT' (ough = ao).",
+      "emoji": "🏜️",
+      "stage": 2
+    },
+    {
+      "id": 4156,
+      "word": "typhoon",
+      "ipa": "taɪˈfun",
+      "viRead": "tai-PHUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bão nhiệt đới",
+      "exampleEn": "A typhoon is coming to central Vietnam.",
+      "exampleVi": "Một cơn bão đang tiến vào miền Trung.",
+      "collocations": [
+        {
+          "en": "typhoon season",
+          "vi": "mùa bão"
+        },
+        {
+          "en": "strong typhoon",
+          "vi": "bão mạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "storm",
+          "vi": "bão"
+        }
+      ],
+      "tip": "typhoon (châu Á) = hurricane (Đại Tây Dương).",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 4157,
+      "word": "landslide",
+      "ipa": "ˈlændˌslaɪd",
+      "viRead": "LENĐ-slaiđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sạt lở đất",
+      "exampleEn": "Heavy rain caused a landslide in the mountains.",
+      "exampleVi": "Mưa lớn gây sạt lở đất trên núi.",
+      "collocations": [
+        {
+          "en": "deadly landslide",
+          "vi": "sạt lở chết người"
+        },
+        {
+          "en": "win by a landslide",
+          "vi": "thắng áp đảo"
+        }
+      ],
+      "tip": "win by a landslide = thắng áp đảo.",
+      "emoji": "⛰️",
+      "stage": 2
+    },
+    {
+      "id": 4158,
+      "word": "riverbank",
+      "ipa": "ˈrɪvərˌbæŋk",
+      "viRead": "RI-vơ-bengk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bờ sông",
+      "exampleEn": "We had a picnic on the riverbank.",
+      "exampleVi": "Chúng tôi dã ngoại bên bờ sông.",
+      "collocations": [
+        {
+          "en": "along the riverbank",
+          "vi": "dọc bờ sông"
+        },
+        {
+          "en": "sit on the riverbank",
+          "vi": "ngồi bên bờ sông"
+        }
+      ],
+      "family": [
+        {
+          "word": "river",
+          "vi": "sông"
+        }
+      ],
+      "tip": "river + bank (bờ).",
+      "emoji": "🏞️",
+      "stage": 2
+    },
+    {
+      "id": 4159,
+      "word": "shrub",
+      "ipa": "ʃrəb",
+      "viRead": "SHRƠB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây bụi",
+      "exampleEn": "There are small shrubs around the house.",
+      "exampleVi": "Quanh nhà có những bụi cây nhỏ.",
+      "collocations": [
+        {
+          "en": "flowering shrub",
+          "vi": "cây bụi có hoa"
+        },
+        {
+          "en": "plant a shrub",
+          "vi": "trồng cây bụi"
+        }
+      ],
+      "family": [
+        {
+          "word": "bush",
+          "vi": "bụi cây"
+        }
+      ],
+      "tip": "shrub = bush (cây bụi).",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 4160,
+      "word": "vine",
+      "ipa": "vaɪn",
+      "viRead": "VAIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dây leo; cây nho",
+      "exampleEn": "The vine climbs up the wall.",
+      "exampleVi": "Dây leo bò lên tường.",
+      "collocations": [
+        {
+          "en": "grape vine",
+          "vi": "cây nho"
+        },
+        {
+          "en": "climbing vine",
+          "vi": "dây leo"
+        }
+      ],
+      "tip": "through the grapevine = nghe phong thanh.",
+      "emoji": "🍇",
+      "stage": 2
+    },
+    {
+      "id": 4161,
+      "word": "moss",
+      "ipa": "mɔs",
+      "viRead": "MOS",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rêu",
+      "exampleEn": "Moss grows on the old stones.",
+      "exampleVi": "Rêu mọc trên những hòn đá cũ.",
+      "collocations": [
+        {
+          "en": "green moss",
+          "vi": "rêu xanh"
+        },
+        {
+          "en": "covered in moss",
+          "vi": "phủ đầy rêu"
+        }
+      ],
+      "tip": "A rolling stone gathers no moss = Hòn đá lăn không bám rêu.",
+      "emoji": "🪨",
+      "stage": 2
+    },
+    {
+      "id": 4162,
+      "word": "fern",
+      "ipa": "fərn",
+      "viRead": "PHƠN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây dương xỉ",
+      "exampleEn": "Ferns love shady, wet places.",
+      "exampleVi": "Dương xỉ thích chỗ râm và ẩm.",
+      "collocations": [
+        {
+          "en": "tree fern",
+          "vi": "dương xỉ thân gỗ"
+        },
+        {
+          "en": "fern leaf",
+          "vi": "lá dương xỉ"
+        }
+      ],
+      "tip": "fern = dương xỉ.",
+      "emoji": "🌿",
+      "stage": 2
+    },
+    {
+      "id": 4163,
+      "word": "boulder",
+      "ipa": "ˈboʊldər",
+      "viRead": "BÂUL-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tảng đá lớn",
+      "exampleEn": "A huge boulder blocked the road.",
+      "exampleVi": "Một tảng đá khổng lồ chắn đường.",
+      "collocations": [
+        {
+          "en": "huge boulder",
+          "vi": "tảng đá lớn"
+        },
+        {
+          "en": "roll a boulder",
+          "vi": "lăn tảng đá"
+        }
+      ],
+      "family": [
+        {
+          "word": "rock",
+          "vi": "đá"
+        }
+      ],
+      "tip": "boulder > rock > stone > pebble.",
+      "emoji": "🪨",
+      "stage": 2
+    },
+    {
+      "id": 4164,
+      "word": "oak",
+      "ipa": "oʊk",
+      "viRead": "ÂUK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cây sồi",
+      "exampleEn": "An old oak stands in the park.",
+      "exampleVi": "Một cây sồi già đứng trong công viên.",
+      "collocations": [
+        {
+          "en": "oak tree",
+          "vi": "cây sồi"
+        },
+        {
+          "en": "oak table",
+          "vi": "bàn gỗ sồi"
+        }
+      ],
+      "family": [
+        {
+          "word": "acorn",
+          "vi": "quả sồi"
+        }
+      ],
+      "tip": "Cây sồi tượng trưng cho sức mạnh, bền bỉ.",
+      "emoji": "🌳",
+      "stage": 2
+    },
+    {
+      "id": 4165,
+      "word": "orchid",
+      "ipa": "ˈɔrkəd",
+      "viRead": "OR-kơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa lan",
+      "exampleEn": "She grows orchids on her balcony.",
+      "exampleVi": "Cô ấy trồng lan ngoài ban công.",
+      "collocations": [
+        {
+          "en": "white orchid",
+          "vi": "lan trắng"
+        },
+        {
+          "en": "orchid pot",
+          "vi": "chậu lan"
+        }
+      ],
+      "tip": "Đọc 'OR-kơđ' (ch = k).",
+      "emoji": "🪻",
+      "stage": 2
+    },
+    {
+      "id": 4166,
+      "word": "rose",
+      "ipa": "roʊz",
+      "viRead": "RÂUD",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa hồng",
+      "exampleEn": "He gave her a red rose.",
+      "exampleVi": "Anh ấy tặng cô một bông hồng đỏ.",
+      "collocations": [
+        {
+          "en": "red rose",
+          "vi": "hồng đỏ"
+        },
+        {
+          "en": "a bunch of roses",
+          "vi": "bó hoa hồng"
+        }
+      ],
+      "tip": "rose cũng là quá khứ của rise (mọc lên).",
+      "emoji": "🌹",
+      "stage": 2
+    },
+    {
+      "id": 4167,
+      "word": "lily",
+      "ipa": "ˈlɪli",
+      "viRead": "LI-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hoa loa kèn, hoa huệ tây",
+      "exampleEn": "White lilies smell sweet.",
+      "exampleVi": "Hoa loa kèn trắng thơm ngọt ngào.",
+      "collocations": [
+        {
+          "en": "water lily",
+          "vi": "hoa súng"
+        },
+        {
+          "en": "white lily",
+          "vi": "loa kèn trắng"
+        }
+      ],
+      "tip": "water lily = hoa súng.",
+      "emoji": "🌷",
+      "stage": 2
+    },
+    {
+      "id": 4168,
+      "word": "bud",
+      "ipa": "bəd",
+      "viRead": "BƠĐ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nụ, chồi",
+      "exampleEn": "The roses are in bud.",
+      "exampleVi": "Hoa hồng đang ra nụ.",
+      "collocations": [
+        {
+          "en": "flower bud",
+          "vi": "nụ hoa"
+        },
+        {
+          "en": "taste buds",
+          "vi": "vị giác"
+        }
+      ],
+      "tip": "taste buds = nụ vị giác.",
+      "emoji": "🌱",
+      "stage": 2
+    },
+    {
+      "id": 4169,
+      "word": "petal",
+      "ipa": "ˈpɛtəl",
+      "viRead": "PE-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cánh hoa",
+      "exampleEn": "A petal fell onto the table.",
+      "exampleVi": "Một cánh hoa rơi xuống bàn.",
+      "collocations": [
+        {
+          "en": "rose petal",
+          "vi": "cánh hoa hồng"
+        },
+        {
+          "en": "flower petal",
+          "vi": "cánh hoa"
+        }
+      ],
+      "tip": "petal = cánh hoa.",
+      "emoji": "🌸",
+      "stage": 2
+    },
+    {
+      "id": 4170,
+      "word": "twig",
+      "ipa": "twɪg",
+      "viRead": "TWIG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cành nhỏ",
+      "exampleEn": "The bird built a nest with twigs.",
+      "exampleVi": "Con chim làm tổ bằng cành cây nhỏ.",
+      "collocations": [
+        {
+          "en": "dry twig",
+          "vi": "cành khô"
+        },
+        {
+          "en": "snap a twig",
+          "vi": "bẻ cành nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "branch",
+          "vi": "cành cây"
+        }
+      ],
+      "tip": "twig < branch.",
+      "emoji": "🪵",
+      "stage": 2
+    },
+    {
+      "id": 4171,
+      "word": "acorn",
+      "ipa": "ˈeɪkɔrn",
+      "viRead": "ÂY-korn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quả sồi",
+      "exampleEn": "Squirrels collect acorns in autumn.",
+      "exampleVi": "Sóc nhặt quả sồi vào mùa thu.",
+      "collocations": [
+        {
+          "en": "collect acorns",
+          "vi": "nhặt quả sồi"
+        },
+        {
+          "en": "from a little acorn",
+          "vi": "từ hạt nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "oak",
+          "vi": "cây sồi"
+        }
+      ],
+      "tip": "Great oaks from little acorns grow = Việc lớn bắt đầu từ việc nhỏ.",
+      "emoji": "🌰",
+      "stage": 2
+    },
+    {
+      "id": 4172,
+      "word": "hive",
+      "ipa": "haɪv",
+      "viRead": "HAIV",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tổ ong",
+      "exampleEn": "Bees live in a hive.",
+      "exampleVi": "Ong sống trong tổ.",
+      "collocations": [
+        {
+          "en": "bee hive",
+          "vi": "tổ ong"
+        },
+        {
+          "en": "a hive of activity",
+          "vi": "nơi nhộn nhịp"
+        }
+      ],
+      "family": [
+        {
+          "word": "bee",
+          "vi": "con ong"
+        }
+      ],
+      "tip": "a hive of activity = chỗ rất nhộn nhịp.",
+      "emoji": "🐝",
+      "stage": 2
+    },
+    {
+      "id": 4173,
+      "word": "paw",
+      "ipa": "pɔ",
+      "viRead": "PO",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bàn chân (thú)",
+      "exampleEn": "The dog gave me its paw.",
+      "exampleVi": "Con chó đưa chân cho tôi.",
+      "collocations": [
+        {
+          "en": "dog's paw",
+          "vi": "chân chó"
+        },
+        {
+          "en": "paw print",
+          "vi": "dấu chân thú"
+        }
+      ],
+      "tip": "paw (chó, mèo) — hoof (ngựa, bò).",
+      "emoji": "🐾",
+      "stage": 2
+    },
+    {
+      "id": 4174,
+      "word": "claw",
+      "ipa": "klɔ",
+      "viRead": "KLO",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "móng vuốt",
+      "exampleEn": "The cat has sharp claws.",
+      "exampleVi": "Con mèo có móng vuốt sắc.",
+      "collocations": [
+        {
+          "en": "sharp claws",
+          "vi": "vuốt sắc"
+        },
+        {
+          "en": "crab claw",
+          "vi": "càng cua"
+        }
+      ],
+      "tip": "crab claw = càng cua.",
+      "emoji": "🦀",
+      "stage": 2
+    },
+    {
+      "id": 4175,
+      "word": "beak",
+      "ipa": "bik",
+      "viRead": "BIK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mỏ chim",
+      "exampleEn": "The bird held a worm in its beak.",
+      "exampleVi": "Con chim ngậm con sâu trong mỏ.",
+      "collocations": [
+        {
+          "en": "sharp beak",
+          "vi": "mỏ nhọn"
+        },
+        {
+          "en": "long beak",
+          "vi": "mỏ dài"
+        }
+      ],
+      "tip": "beak = mỏ chim.",
+      "emoji": "🐦",
+      "stage": 2
+    },
+    {
+      "id": 4176,
+      "word": "fin",
+      "ipa": "fɪn",
+      "viRead": "PHIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vây cá",
+      "exampleEn": "A shark's fin cut through the water.",
+      "exampleVi": "Vây cá mập rẽ nước.",
+      "collocations": [
+        {
+          "en": "shark fin",
+          "vi": "vây cá mập"
+        },
+        {
+          "en": "swim fins",
+          "vi": "chân vịt bơi"
+        }
+      ],
+      "tip": "swim fins = chân vịt (lặn).",
+      "emoji": "🦈",
+      "stage": 2
+    },
+    {
+      "id": 4177,
+      "word": "hoof",
+      "ipa": "huf",
+      "viRead": "HUPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "móng guốc",
+      "exampleEn": "The horse hurt its hoof.",
+      "exampleVi": "Con ngựa bị đau móng.",
+      "collocations": [
+        {
+          "en": "horse's hoof",
+          "vi": "móng ngựa"
+        },
+        {
+          "en": "the sound of hooves",
+          "vi": "tiếng vó ngựa"
+        }
+      ],
+      "tip": "Số nhiều: hooves.",
+      "emoji": "🐴",
+      "stage": 2
+    },
+    {
+      "id": 4178,
+      "word": "antenna",
+      "ipa": "ænˈtɛnə",
+      "viRead": "en-TE-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "râu (côn trùng); ăng-ten",
+      "exampleEn": "An ant uses each antenna to smell and touch.",
+      "exampleVi": "Con kiến dùng râu để ngửi và cảm nhận.",
+      "collocations": [
+        {
+          "en": "TV antenna",
+          "vi": "ăng-ten TV"
+        },
+        {
+          "en": "insect antenna",
+          "vi": "râu côn trùng"
+        }
+      ],
+      "tip": "Số nhiều (côn trùng): antennae.",
+      "emoji": "🐜",
+      "stage": 2
+    },
+    {
+      "id": 4179,
+      "word": "cocoon",
+      "ipa": "kəˈkun",
+      "viRead": "kơ-KUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái kén",
+      "exampleEn": "The caterpillar is sleeping in its cocoon.",
+      "exampleVi": "Con sâu đang ngủ trong kén.",
+      "collocations": [
+        {
+          "en": "silk cocoon",
+          "vi": "kén tằm"
+        },
+        {
+          "en": "break out of a cocoon",
+          "vi": "phá kén"
+        }
+      ],
+      "tip": "Sâu → kén (cocoon) → bướm.",
+      "emoji": "🦋",
+      "stage": 2
+    },
+    {
+      "id": 4180,
+      "word": "tadpole",
+      "ipa": "ˈtædˌpoʊl",
+      "viRead": "TEĐ-pâul",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nòng nọc",
+      "exampleEn": "The tadpoles will become frogs.",
+      "exampleVi": "Nòng nọc sẽ thành ếch.",
+      "collocations": [
+        {
+          "en": "catch tadpoles",
+          "vi": "bắt nòng nọc"
+        },
+        {
+          "en": "tadpole to frog",
+          "vi": "nòng nọc thành ếch"
+        }
+      ],
+      "family": [
+        {
+          "word": "frog",
+          "vi": "con ếch"
+        }
+      ],
+      "tip": "tadpole = nòng nọc.",
+      "emoji": "🐸",
+      "stage": 2
+    },
+    {
+      "id": 4181,
+      "word": "beaver",
+      "ipa": "ˈbivər",
+      "viRead": "BI-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con hải ly",
+      "exampleEn": "Beavers build dams on rivers.",
+      "exampleVi": "Hải ly đắp đập trên sông.",
+      "collocations": [
+        {
+          "en": "busy beaver",
+          "vi": "người chăm chỉ"
+        },
+        {
+          "en": "beaver dam",
+          "vi": "đập hải ly"
+        }
+      ],
+      "tip": "eager beaver = người hăng hái.",
+      "emoji": "🦫",
+      "stage": 2
+    },
+    {
+      "id": 4182,
+      "word": "otter",
+      "ipa": "ˈɑtər",
+      "viRead": "A-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con rái cá",
+      "exampleEn": "Otters hold hands when they sleep.",
+      "exampleVi": "Rái cá nắm tay nhau khi ngủ.",
+      "collocations": [
+        {
+          "en": "sea otter",
+          "vi": "rái cá biển"
+        },
+        {
+          "en": "river otter",
+          "vi": "rái cá sông"
+        }
+      ],
+      "tip": "Rái cá biển nắm tay nhau để khỏi trôi!",
+      "emoji": "🦦",
+      "stage": 2
+    },
+    {
+      "id": 4183,
+      "word": "crow",
+      "ipa": "kroʊ",
+      "viRead": "KRÂU",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con quạ",
+      "exampleEn": "A crow sat on the fence.",
+      "exampleVi": "Một con quạ đậu trên hàng rào.",
+      "collocations": [
+        {
+          "en": "black crow",
+          "vi": "quạ đen"
+        },
+        {
+          "en": "as the crow flies",
+          "vi": "theo đường chim bay"
+        }
+      ],
+      "tip": "as the crow flies = tính theo đường chim bay.",
+      "emoji": "🐦‍⬛",
+      "stage": 2
+    },
+    {
+      "id": 4184,
+      "word": "hawk",
+      "ipa": "hɔk",
+      "viRead": "HOK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chim diều hâu",
+      "exampleEn": "A hawk flew high above the field.",
+      "exampleVi": "Một con diều hâu bay cao trên cánh đồng.",
+      "collocations": [
+        {
+          "en": "eyes like a hawk",
+          "vi": "mắt tinh như diều hâu"
+        },
+        {
+          "en": "watch like a hawk",
+          "vi": "theo dõi sát sao"
+        }
+      ],
+      "family": [
+        {
+          "word": "eagle",
+          "vi": "đại bàng"
+        }
+      ],
+      "tip": "watch like a hawk = canh chừng sát sao.",
+      "emoji": "🦅",
+      "stage": 2
+    },
+    {
+      "id": 4185,
+      "word": "beetle",
+      "ipa": "ˈbitəl",
+      "viRead": "BI-tơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bọ cánh cứng",
+      "exampleEn": "A black beetle crawled on the leaf.",
+      "exampleVi": "Một con bọ cánh cứng màu đen bò trên lá.",
+      "collocations": [
+        {
+          "en": "dung beetle",
+          "vi": "bọ hung"
+        },
+        {
+          "en": "black beetle",
+          "vi": "bọ cánh cứng đen"
+        }
+      ],
+      "family": [
+        {
+          "word": "bug",
+          "vi": "con bọ"
+        }
+      ],
+      "tip": "Ban nhạc The Beatles chơi chữ từ beetle.",
+      "emoji": "🪲",
+      "stage": 2
+    },
+    {
+      "id": 4186,
+      "word": "scorpion",
+      "ipa": "ˈskɔrpiən",
+      "viRead": "SKOR-pi-ơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bọ cạp",
+      "exampleEn": "A scorpion has a poisonous tail.",
+      "exampleVi": "Bọ cạp có cái đuôi độc.",
+      "collocations": [
+        {
+          "en": "scorpion sting",
+          "vi": "vết bọ cạp đốt"
+        },
+        {
+          "en": "desert scorpion",
+          "vi": "bọ cạp sa mạc"
+        }
+      ],
+      "tip": "Scorpio = cung Thiên Yết (Bọ Cạp).",
+      "emoji": "🦂",
       "stage": 2
     }
   ]
