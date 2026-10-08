@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4022,
+    "count": 4062,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -113185,6 +113185,1146 @@
       ],
       "tip": "dress (mặc) + -er = tủ đồ.",
       "emoji": "🗄️",
+      "stage": 2
+    },
+    {
+      "id": 4023,
+      "word": "barber",
+      "ipa": "ˈbɑrbər",
+      "viRead": "BAR-bơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ cắt tóc (nam)",
+      "exampleEn": "I go to the barber once a month.",
+      "exampleVi": "Mỗi tháng tôi đi cắt tóc một lần.",
+      "collocations": [
+        {
+          "en": "go to the barber",
+          "vi": "đi cắt tóc"
+        },
+        {
+          "en": "barber's shop",
+          "vi": "tiệm cắt tóc nam"
+        }
+      ],
+      "family": [
+        {
+          "word": "hairdresser",
+          "vi": "thợ làm tóc"
+        }
+      ],
+      "tip": "barber cắt tóc nam; hairdresser làm tóc nói chung.",
+      "emoji": "💈",
+      "stage": 2
+    },
+    {
+      "id": 4024,
+      "word": "cleaner",
+      "ipa": "ˈklinər",
+      "viRead": "KLI-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người dọn dẹp; chất tẩy rửa",
+      "exampleEn": "The cleaner comes every Friday.",
+      "exampleVi": "Người dọn dẹp đến vào thứ Sáu hằng tuần.",
+      "collocations": [
+        {
+          "en": "office cleaner",
+          "vi": "nhân viên vệ sinh"
+        },
+        {
+          "en": "glass cleaner",
+          "vi": "nước lau kính"
+        }
+      ],
+      "family": [
+        {
+          "word": "clean",
+          "vi": "sạch, lau dọn"
+        }
+      ],
+      "tip": "clean + -er = người/đồ làm sạch.",
+      "emoji": "🧹",
+      "stage": 2
+    },
+    {
+      "id": 4025,
+      "word": "florist",
+      "ipa": "ˈflɔrɪst",
+      "viRead": "PHLO-rist",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người bán hoa",
+      "exampleEn": "I bought roses from the florist.",
+      "exampleVi": "Tôi mua hoa hồng ở tiệm hoa.",
+      "collocations": [
+        {
+          "en": "local florist",
+          "vi": "tiệm hoa gần nhà"
+        },
+        {
+          "en": "florist shop",
+          "vi": "cửa hàng hoa"
+        }
+      ],
+      "family": [
+        {
+          "word": "flower",
+          "vi": "hoa"
+        }
+      ],
+      "tip": "florist = người bán / cắm hoa.",
+      "emoji": "💐",
+      "stage": 2
+    },
+    {
+      "id": 4026,
+      "word": "gardener",
+      "ipa": "ˈgɑrdənər",
+      "viRead": "GAR-đơ-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người làm vườn",
+      "exampleEn": "The gardener cuts the grass every week.",
+      "exampleVi": "Người làm vườn cắt cỏ mỗi tuần.",
+      "collocations": [
+        {
+          "en": "keen gardener",
+          "vi": "người mê làm vườn"
+        },
+        {
+          "en": "hire a gardener",
+          "vi": "thuê người làm vườn"
+        }
+      ],
+      "family": [
+        {
+          "word": "garden",
+          "vi": "vườn"
+        }
+      ],
+      "tip": "garden + -er.",
+      "emoji": "👨‍🌾",
+      "stage": 2
+    },
+    {
+      "id": 4027,
+      "word": "janitor",
+      "ipa": "ˈʤænətər",
+      "viRead": "GIE-nơ-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lao công, bảo vệ tòa nhà",
+      "exampleEn": "The janitor cleans the school after class.",
+      "exampleVi": "Bác lao công dọn trường sau giờ học.",
+      "collocations": [
+        {
+          "en": "school janitor",
+          "vi": "lao công trường học"
+        },
+        {
+          "en": "night janitor",
+          "vi": "người trông coi ban đêm"
+        }
+      ],
+      "family": [
+        {
+          "word": "caretaker",
+          "vi": "người trông coi (Anh)"
+        }
+      ],
+      "tip": "Mỹ: janitor; Anh: caretaker.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 4028,
+      "word": "midwife",
+      "ipa": "ˈmɪdˌwaɪf",
+      "viRead": "MIĐ-waiph",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bà đỡ, nữ hộ sinh",
+      "exampleEn": "The midwife helped deliver the baby.",
+      "exampleVi": "Nữ hộ sinh giúp đỡ đẻ em bé.",
+      "collocations": [
+        {
+          "en": "experienced midwife",
+          "vi": "nữ hộ sinh lành nghề"
+        },
+        {
+          "en": "midwife visit",
+          "vi": "lần khám của nữ hộ sinh"
+        }
+      ],
+      "tip": "Số nhiều: midwives.",
+      "emoji": "🤱",
+      "stage": 2
+    },
+    {
+      "id": 4029,
+      "word": "miner",
+      "ipa": "ˈmaɪnər",
+      "viRead": "MAI-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ mỏ",
+      "exampleEn": "My grandfather was a coal miner.",
+      "exampleVi": "Ông tôi từng là thợ mỏ than.",
+      "collocations": [
+        {
+          "en": "coal miner",
+          "vi": "thợ mỏ than"
+        },
+        {
+          "en": "gold miner",
+          "vi": "người đào vàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "mine",
+          "vi": "mỏ"
+        }
+      ],
+      "tip": "mine (mỏ) + -er. Đọc giống minor (vị thành niên).",
+      "emoji": "⛏️",
+      "stage": 2
+    },
+    {
+      "id": 4030,
+      "word": "nanny",
+      "ipa": "ˈnæni",
+      "viRead": "NE-ni",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảo mẫu, vú em",
+      "exampleEn": "The nanny takes the kids to school.",
+      "exampleVi": "Bảo mẫu đưa bọn trẻ đến trường.",
+      "collocations": [
+        {
+          "en": "full-time nanny",
+          "vi": "bảo mẫu toàn thời gian"
+        },
+        {
+          "en": "hire a nanny",
+          "vi": "thuê bảo mẫu"
+        }
+      ],
+      "family": [
+        {
+          "word": "babysitter",
+          "vi": "người trông trẻ"
+        }
+      ],
+      "tip": "nanny trông trẻ thường xuyên; babysitter trông theo giờ.",
+      "emoji": "👩‍🍼",
+      "stage": 2
+    },
+    {
+      "id": 4031,
+      "word": "paramedic",
+      "ipa": "ˌpɛrəˈmɛdɪk",
+      "viRead": "pe-rơ-ME-đik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân viên cấp cứu",
+      "exampleEn": "The paramedics arrived in five minutes.",
+      "exampleVi": "Nhân viên cấp cứu đến sau năm phút.",
+      "collocations": [
+        {
+          "en": "call a paramedic",
+          "vi": "gọi cấp cứu"
+        },
+        {
+          "en": "paramedic team",
+          "vi": "đội cấp cứu"
+        }
+      ],
+      "family": [
+        {
+          "word": "ambulance",
+          "vi": "xe cứu thương"
+        }
+      ],
+      "tip": "paramedic làm việc trên xe cứu thương.",
+      "emoji": "🚑",
+      "stage": 2
+    },
+    {
+      "id": 4032,
+      "word": "postman",
+      "ipa": "ˈpoʊstmən",
+      "viRead": "PÂUST-mơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người đưa thư",
+      "exampleEn": "The postman brings letters every morning.",
+      "exampleVi": "Người đưa thư mang thư đến mỗi sáng.",
+      "collocations": [
+        {
+          "en": "local postman",
+          "vi": "bác đưa thư"
+        },
+        {
+          "en": "postman's bag",
+          "vi": "túi đưa thư"
+        }
+      ],
+      "family": [
+        {
+          "word": "mail carrier",
+          "vi": "người đưa thư (Mỹ)"
+        }
+      ],
+      "tip": "Anh: postman; Mỹ: mail carrier.",
+      "emoji": "📮",
+      "stage": 2
+    },
+    {
+      "id": 4033,
+      "word": "courier",
+      "ipa": "ˈkʊriər",
+      "viRead": "KU-ri-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người giao hàng (chuyển phát)",
+      "exampleEn": "A courier delivered the package today.",
+      "exampleVi": "Hôm nay người giao hàng đã đưa gói hàng tới.",
+      "collocations": [
+        {
+          "en": "send by courier",
+          "vi": "gửi chuyển phát"
+        },
+        {
+          "en": "motorbike courier",
+          "vi": "shipper xe máy"
+        }
+      ],
+      "family": [
+        {
+          "word": "delivery",
+          "vi": "giao hàng"
+        }
+      ],
+      "tip": "courier ≈ shipper (từ tiếng Việt hay dùng).",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 4034,
+      "word": "lifeguard",
+      "ipa": "ˈlaɪfˌgɑrd",
+      "viRead": "LAIPH-garđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân viên cứu hộ (bể bơi, biển)",
+      "exampleEn": "Always swim where you can see a lifeguard.",
+      "exampleVi": "Luôn bơi ở nơi có nhân viên cứu hộ.",
+      "collocations": [
+        {
+          "en": "lifeguard tower",
+          "vi": "chòi cứu hộ"
+        },
+        {
+          "en": "on duty lifeguard",
+          "vi": "cứu hộ đang trực"
+        }
+      ],
+      "tip": "life (mạng sống) + guard (bảo vệ).",
+      "emoji": "🛟",
+      "stage": 2
+    },
+    {
+      "id": 4035,
+      "word": "locksmith",
+      "ipa": "ˈlɑksˌmɪθ",
+      "viRead": "LAK-smith",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thợ khóa",
+      "exampleEn": "I lost my keys, so I called a locksmith.",
+      "exampleVi": "Tôi mất chìa nên gọi thợ khóa.",
+      "collocations": [
+        {
+          "en": "call a locksmith",
+          "vi": "gọi thợ khóa"
+        },
+        {
+          "en": "24-hour locksmith",
+          "vi": "thợ khóa 24 giờ"
+        }
+      ],
+      "family": [
+        {
+          "word": "lock",
+          "vi": "khóa"
+        }
+      ],
+      "tip": "lock + smith (thợ).",
+      "emoji": "🔑",
+      "stage": 2
+    },
+    {
+      "id": 4036,
+      "word": "optician",
+      "ipa": "ɑpˈtɪʃən",
+      "viRead": "ap-TI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người bán / đo kính mắt",
+      "exampleEn": "The optician checked my eyes.",
+      "exampleVi": "Người đo kính đã kiểm tra mắt tôi.",
+      "collocations": [
+        {
+          "en": "go to the optician",
+          "vi": "đi đo mắt"
+        },
+        {
+          "en": "optician's shop",
+          "vi": "tiệm kính"
+        }
+      ],
+      "family": [
+        {
+          "word": "glasses",
+          "vi": "kính mắt"
+        }
+      ],
+      "tip": "optician = tiệm/thợ kính mắt.",
+      "emoji": "👓",
+      "stage": 2
+    },
+    {
+      "id": 4037,
+      "word": "barbershop",
+      "ipa": "ˈbɑrbərˌʃɑp",
+      "viRead": "BAR-bơ-shap",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiệm cắt tóc nam",
+      "exampleEn": "There's a barbershop on the corner.",
+      "exampleVi": "Có một tiệm cắt tóc ở góc phố.",
+      "collocations": [
+        {
+          "en": "old barbershop",
+          "vi": "tiệm cắt tóc cũ"
+        },
+        {
+          "en": "barbershop chair",
+          "vi": "ghế cắt tóc"
+        }
+      ],
+      "family": [
+        {
+          "word": "barber",
+          "vi": "thợ cắt tóc"
+        }
+      ],
+      "tip": "barber + shop.",
+      "emoji": "💈",
+      "stage": 2
+    },
+    {
+      "id": 4038,
+      "word": "laundromat",
+      "ipa": "ˈlɔndrəˌmæt",
+      "viRead": "LON-đrơ-met",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiệm giặt tự động",
+      "exampleEn": "I wash my clothes at the laundromat.",
+      "exampleVi": "Tôi giặt đồ ở tiệm giặt tự động.",
+      "collocations": [
+        {
+          "en": "local laundromat",
+          "vi": "tiệm giặt gần nhà"
+        },
+        {
+          "en": "coin laundromat",
+          "vi": "tiệm giặt bỏ xu"
+        }
+      ],
+      "family": [
+        {
+          "word": "laundry",
+          "vi": "đồ giặt"
+        }
+      ],
+      "tip": "Anh: launderette.",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 4039,
+      "word": "stationery",
+      "ipa": "ˈsteɪʃəˌnɛri",
+      "viRead": "STÂY-shơ-ne-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "văn phòng phẩm",
+      "exampleEn": "Pens and paper are sold in the stationery shop.",
+      "exampleVi": "Bút và giấy được bán ở tiệm văn phòng phẩm.",
+      "collocations": [
+        {
+          "en": "stationery shop",
+          "vi": "tiệm văn phòng phẩm"
+        },
+        {
+          "en": "school stationery",
+          "vi": "đồ dùng học tập"
+        }
+      ],
+      "family": [
+        {
+          "word": "stationary",
+          "vi": "đứng yên"
+        }
+      ],
+      "tip": "stationery (văn phòng phẩm) ≠ stationary (đứng yên) — nhớ 'e' = envelope.",
+      "emoji": "✏️",
+      "stage": 2
+    },
+    {
+      "id": 4040,
+      "word": "hardware",
+      "ipa": "ˈhɑrdˌwɛr",
+      "viRead": "HARĐ-wer",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ ngũ kim; phần cứng máy tính",
+      "exampleEn": "Buy nails at the hardware store.",
+      "exampleVi": "Mua đinh ở cửa hàng ngũ kim.",
+      "collocations": [
+        {
+          "en": "hardware store",
+          "vi": "cửa hàng ngũ kim"
+        },
+        {
+          "en": "computer hardware",
+          "vi": "phần cứng máy tính"
+        }
+      ],
+      "family": [
+        {
+          "word": "software",
+          "vi": "phần mềm"
+        }
+      ],
+      "tip": "hardware ↔ software.",
+      "emoji": "🔨",
+      "stage": 2
+    },
+    {
+      "id": 4041,
+      "word": "salon",
+      "ipa": "səˈlɑn",
+      "viRead": "sơ-LAN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiệm làm đẹp",
+      "exampleEn": "She has her nails done at the salon.",
+      "exampleVi": "Cô ấy làm móng ở tiệm làm đẹp.",
+      "collocations": [
+        {
+          "en": "hair salon",
+          "vi": "tiệm làm tóc"
+        },
+        {
+          "en": "nail salon",
+          "vi": "tiệm làm móng"
+        }
+      ],
+      "tip": "nail salon = tiệm nail.",
+      "emoji": "💅",
+      "stage": 2
+    },
+    {
+      "id": 4042,
+      "word": "aquarium",
+      "ipa": "əˈkwɛriəm",
+      "viRead": "ơ-KWE-ri-ơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bể cá; thủy cung",
+      "exampleEn": "We saw sharks at the aquarium.",
+      "exampleVi": "Chúng tôi xem cá mập ở thủy cung.",
+      "collocations": [
+        {
+          "en": "visit the aquarium",
+          "vi": "đi thủy cung"
+        },
+        {
+          "en": "home aquarium",
+          "vi": "bể cá cảnh"
+        }
+      ],
+      "tip": "aqua = nước (tiếng Latin).",
+      "emoji": "🐠",
+      "stage": 2
+    },
+    {
+      "id": 4043,
+      "word": "cafeteria",
+      "ipa": "ˌkæfəˈtɪriə",
+      "viRead": "ke-phơ-TI-ri-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "căng tin (tự phục vụ)",
+      "exampleEn": "We have lunch in the school cafeteria.",
+      "exampleVi": "Chúng tôi ăn trưa ở căng tin trường.",
+      "collocations": [
+        {
+          "en": "school cafeteria",
+          "vi": "căng tin trường"
+        },
+        {
+          "en": "staff cafeteria",
+          "vi": "căng tin nhân viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "canteen",
+          "vi": "căng tin"
+        }
+      ],
+      "tip": "cafeteria = căng tin tự chọn món.",
+      "emoji": "🍱",
+      "stage": 2
+    },
+    {
+      "id": 4044,
+      "word": "kindergarten",
+      "ipa": "ˈkɪndərˌgɑrtən",
+      "viRead": "KIN-đơ-gar-tơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mẫu giáo",
+      "exampleEn": "My daughter goes to kindergarten.",
+      "exampleVi": "Con gái tôi đi học mẫu giáo.",
+      "collocations": [
+        {
+          "en": "kindergarten teacher",
+          "vi": "cô giáo mẫu giáo"
+        },
+        {
+          "en": "start kindergarten",
+          "vi": "bắt đầu đi mẫu giáo"
+        }
+      ],
+      "family": [
+        {
+          "word": "preschool",
+          "vi": "mầm non"
+        }
+      ],
+      "tip": "Từ gốc Đức: 'vườn trẻ'.",
+      "emoji": "🧒",
+      "stage": 2
+    },
+    {
+      "id": 4045,
+      "word": "orphanage",
+      "ipa": "ˈɔrfənəʤ",
+      "viRead": "OR-phơ-nơgi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trại trẻ mồ côi",
+      "exampleEn": "They give gifts to the orphanage every Tet.",
+      "exampleVi": "Tết nào họ cũng tặng quà trại trẻ mồ côi.",
+      "collocations": [
+        {
+          "en": "visit an orphanage",
+          "vi": "thăm trại trẻ"
+        },
+        {
+          "en": "grow up in an orphanage",
+          "vi": "lớn lên ở trại trẻ"
+        }
+      ],
+      "family": [
+        {
+          "word": "orphan",
+          "vi": "trẻ mồ côi"
+        }
+      ],
+      "tip": "orphan (trẻ mồ côi) + -age.",
+      "emoji": "🏠",
+      "stage": 2
+    },
+    {
+      "id": 4046,
+      "word": "pier",
+      "ipa": "pɪr",
+      "viRead": "PIR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cầu tàu, bến",
+      "exampleEn": "We walked along the pier at sunset.",
+      "exampleVi": "Chúng tôi đi dạo trên cầu tàu lúc hoàng hôn.",
+      "collocations": [
+        {
+          "en": "fishing pier",
+          "vi": "cầu câu cá"
+        },
+        {
+          "en": "at the pier",
+          "vi": "ở bến tàu"
+        }
+      ],
+      "family": [
+        {
+          "word": "dock",
+          "vi": "bến tàu"
+        }
+      ],
+      "tip": "Đọc giống peer (bạn đồng trang lứa).",
+      "emoji": "⚓",
+      "stage": 2
+    },
+    {
+      "id": 4047,
+      "word": "plaza",
+      "ipa": "ˈplɑzə",
+      "viRead": "PLA-dơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "quảng trường; khu mua sắm",
+      "exampleEn": "There's a fountain in the plaza.",
+      "exampleVi": "Có một đài phun nước ở quảng trường.",
+      "collocations": [
+        {
+          "en": "shopping plaza",
+          "vi": "trung tâm mua sắm"
+        },
+        {
+          "en": "central plaza",
+          "vi": "quảng trường trung tâm"
+        }
+      ],
+      "family": [
+        {
+          "word": "square",
+          "vi": "quảng trường"
+        }
+      ],
+      "tip": "plaza (gốc Tây Ban Nha) = square.",
+      "emoji": "⛲",
+      "stage": 2
+    },
+    {
+      "id": 4048,
+      "word": "warehouse",
+      "ipa": "ˈwɛrˌhaʊs",
+      "viRead": "WER-haos",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà kho",
+      "exampleEn": "The boxes are stored in a warehouse.",
+      "exampleVi": "Thùng hàng được cất trong nhà kho.",
+      "collocations": [
+        {
+          "en": "warehouse worker",
+          "vi": "công nhân kho"
+        },
+        {
+          "en": "large warehouse",
+          "vi": "kho lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "storage",
+          "vi": "kho chứa"
+        }
+      ],
+      "tip": "ware (hàng hóa) + house.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 4049,
+      "word": "nostril",
+      "ipa": "ˈnɑstrɪl",
+      "viRead": "NAS-tril",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lỗ mũi",
+      "exampleEn": "Breathe in through your left nostril.",
+      "exampleVi": "Hít vào bằng lỗ mũi trái.",
+      "collocations": [
+        {
+          "en": "left nostril",
+          "vi": "lỗ mũi trái"
+        },
+        {
+          "en": "flared nostrils",
+          "vi": "phồng mũi"
+        }
+      ],
+      "family": [
+        {
+          "word": "nose",
+          "vi": "mũi"
+        }
+      ],
+      "tip": "Hai lỗ mũi: nostrils.",
+      "emoji": "👃",
+      "stage": 2
+    },
+    {
+      "id": 4050,
+      "word": "scalp",
+      "ipa": "skælp",
+      "viRead": "SKELP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "da đầu",
+      "exampleEn": "Massage your scalp when you wash your hair.",
+      "exampleVi": "Mát-xa da đầu khi gội.",
+      "collocations": [
+        {
+          "en": "dry scalp",
+          "vi": "da đầu khô"
+        },
+        {
+          "en": "itchy scalp",
+          "vi": "ngứa da đầu"
+        }
+      ],
+      "tip": "scalp = da đầu.",
+      "emoji": "💆",
+      "stage": 2
+    },
+    {
+      "id": 4051,
+      "word": "rib",
+      "ipa": "rɪb",
+      "viRead": "RIB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "xương sườn",
+      "exampleEn": "He broke a rib in the fall.",
+      "exampleVi": "Anh ấy gãy một xương sườn khi ngã.",
+      "collocations": [
+        {
+          "en": "broken rib",
+          "vi": "gãy xương sườn"
+        },
+        {
+          "en": "pork ribs",
+          "vi": "sườn heo"
+        }
+      ],
+      "tip": "spare ribs = sườn non (món ăn).",
+      "emoji": "🍖",
+      "stage": 2
+    },
+    {
+      "id": 4052,
+      "word": "liver",
+      "ipa": "ˈlɪvər",
+      "viRead": "LI-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gan",
+      "exampleEn": "Too much alcohol is bad for your liver.",
+      "exampleVi": "Uống nhiều rượu hại gan.",
+      "collocations": [
+        {
+          "en": "liver disease",
+          "vi": "bệnh gan"
+        },
+        {
+          "en": "chicken liver",
+          "vi": "gan gà"
+        }
+      ],
+      "family": [
+        {
+          "word": "kidney",
+          "vi": "thận"
+        }
+      ],
+      "tip": "liver = gan (cả nội tạng và món ăn).",
+      "emoji": "🫀",
+      "stage": 2
+    },
+    {
+      "id": 4053,
+      "word": "calf",
+      "ipa": "kæf",
+      "viRead": "KEPH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bắp chân; con bê",
+      "exampleEn": "My calf hurts after running.",
+      "exampleVi": "Bắp chân tôi đau sau khi chạy.",
+      "collocations": [
+        {
+          "en": "calf muscle",
+          "vi": "cơ bắp chân"
+        },
+        {
+          "en": "a newborn calf",
+          "vi": "con bê mới sinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "cow",
+          "vi": "con bò"
+        }
+      ],
+      "tip": "Chữ 'l' câm: đọc 'KEPH'. Số nhiều: calves.",
+      "emoji": "🐄",
+      "stage": 2
+    },
+    {
+      "id": 4054,
+      "word": "freckle",
+      "ipa": "ˈfrɛkəl",
+      "viRead": "PHRE-kơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tàn nhang",
+      "exampleEn": "She has freckles on her nose.",
+      "exampleVi": "Cô ấy có tàn nhang trên mũi.",
+      "collocations": [
+        {
+          "en": "covered in freckles",
+          "vi": "đầy tàn nhang"
+        },
+        {
+          "en": "a few freckles",
+          "vi": "vài nốt tàn nhang"
+        }
+      ],
+      "tip": "freckle thường dùng số nhiều: freckles.",
+      "emoji": "🙂",
+      "stage": 2
+    },
+    {
+      "id": 4055,
+      "word": "dimple",
+      "ipa": "ˈdɪmpəl",
+      "viRead": "ĐIM-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lúm đồng tiền",
+      "exampleEn": "He has a dimple when he smiles.",
+      "exampleVi": "Anh ấy có lúm đồng tiền khi cười.",
+      "collocations": [
+        {
+          "en": "cute dimple",
+          "vi": "lúm đồng tiền xinh"
+        },
+        {
+          "en": "dimple on the cheek",
+          "vi": "lúm trên má"
+        }
+      ],
+      "tip": "dimple = má lúm đồng tiền.",
+      "emoji": "😊",
+      "stage": 2
+    },
+    {
+      "id": 4056,
+      "word": "pimple",
+      "ipa": "ˈpɪmpəl",
+      "viRead": "PIM-pơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mụn",
+      "exampleEn": "Don't squeeze that pimple!",
+      "exampleVi": "Đừng nặn cái mụn đó!",
+      "collocations": [
+        {
+          "en": "get a pimple",
+          "vi": "nổi mụn"
+        },
+        {
+          "en": "squeeze a pimple",
+          "vi": "nặn mụn"
+        }
+      ],
+      "family": [
+        {
+          "word": "acne",
+          "vi": "mụn trứng cá"
+        }
+      ],
+      "tip": "pimple (một nốt) — acne (bệnh mụn).",
+      "emoji": "😖",
+      "stage": 2
+    },
+    {
+      "id": 4057,
+      "word": "scar",
+      "ipa": "skɑr",
+      "viRead": "SKAR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vết sẹo",
+      "exampleEn": "He has a small scar on his chin.",
+      "exampleVi": "Anh ấy có một vết sẹo nhỏ trên cằm.",
+      "collocations": [
+        {
+          "en": "leave a scar",
+          "vi": "để lại sẹo"
+        },
+        {
+          "en": "old scar",
+          "vi": "vết sẹo cũ"
+        }
+      ],
+      "tip": "scar cũng dùng cho vết thương lòng.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 4058,
+      "word": "plaster",
+      "ipa": "ˈplæstər",
+      "viRead": "PLES-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "băng dán cá nhân (Anh); vữa",
+      "exampleEn": "Put a plaster on the cut.",
+      "exampleVi": "Dán băng cá nhân lên vết đứt.",
+      "collocations": [
+        {
+          "en": "sticking plaster",
+          "vi": "băng dán"
+        },
+        {
+          "en": "plaster wall",
+          "vi": "tường trát vữa"
+        }
+      ],
+      "family": [
+        {
+          "word": "bandage",
+          "vi": "băng gạc"
+        }
+      ],
+      "tip": "Anh: plaster; Mỹ: Band-Aid.",
+      "emoji": "🩹",
+      "stage": 2
+    },
+    {
+      "id": 4059,
+      "word": "allergy",
+      "ipa": "ˈælərʤi",
+      "viRead": "E-lơ-gi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dị ứng",
+      "exampleEn": "I have an allergy to peanuts.",
+      "exampleVi": "Tôi bị dị ứng đậu phộng.",
+      "collocations": [
+        {
+          "en": "food allergy",
+          "vi": "dị ứng thực phẩm"
+        },
+        {
+          "en": "allergy to",
+          "vi": "dị ứng với"
+        }
+      ],
+      "family": [
+        {
+          "word": "allergic",
+          "vi": "bị dị ứng"
+        }
+      ],
+      "tip": "Trọng âm: E-lơ-gi; còn allergic: ơ-LƠ-gik.",
+      "emoji": "🤧",
+      "stage": 2
+    },
+    {
+      "id": 4060,
+      "word": "drool",
+      "ipa": "drul",
+      "viRead": "ĐRUL",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "chảy nước dãi",
+      "exampleEn": "The baby drools when his teeth come in.",
+      "exampleVi": "Em bé chảy dãi khi mọc răng.",
+      "collocations": [
+        {
+          "en": "drool over",
+          "vi": "thèm nhỏ dãi"
+        },
+        {
+          "en": "start to drool",
+          "vi": "bắt đầu chảy dãi"
+        }
+      ],
+      "tip": "drool over sth = thèm thuồng thứ gì.",
+      "emoji": "🤤",
+      "stage": 2
+    },
+    {
+      "id": 4061,
+      "word": "chuckle",
+      "ipa": "ˈʧəkəl",
+      "viRead": "CHƠ-kơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cười khúc khích",
+      "exampleEn": "Grandpa chuckles at his own jokes.",
+      "exampleVi": "Ông cười khúc khích với chuyện cười của mình.",
+      "collocations": [
+        {
+          "en": "chuckle softly",
+          "vi": "cười khẽ"
+        },
+        {
+          "en": "a quiet chuckle",
+          "vi": "tiếng cười khẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "giggle",
+          "vi": "cười khúc khích"
+        }
+      ],
+      "tip": "chuckle = cười nhỏ trong cổ họng.",
+      "emoji": "😄",
+      "stage": 2
+    },
+    {
+      "id": 4062,
+      "word": "mumble",
+      "ipa": "ˈməmbəl",
+      "viRead": "MƠM-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lầm bầm, nói lí nhí",
+      "exampleEn": "Don't mumble, speak clearly!",
+      "exampleVi": "Đừng lầm bầm, nói rõ ra!",
+      "collocations": [
+        {
+          "en": "mumble something",
+          "vi": "lẩm bẩm gì đó"
+        },
+        {
+          "en": "mumble to yourself",
+          "vi": "lầm bầm một mình"
+        }
+      ],
+      "family": [
+        {
+          "word": "whisper",
+          "vi": "thì thầm"
+        }
+      ],
+      "tip": "Luyện nói: mở miệng to, đừng mumble!",
+      "emoji": "🗣️",
       "stage": 2
     }
   ]
