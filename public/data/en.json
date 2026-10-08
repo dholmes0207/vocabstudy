@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4253,
+    "count": 4293,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -119821,6 +119821,1134 @@
       ],
       "tip": "red velvet = bánh nhung đỏ.",
       "emoji": "🟥",
+      "stage": 2
+    },
+    {
+      "id": 4254,
+      "word": "guitar",
+      "ipa": "gɪˈtɑr",
+      "viRead": "gi-TAR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn ghi-ta",
+      "exampleEn": "He plays the guitar every evening.",
+      "exampleVi": "Tối nào anh ấy cũng chơi ghi-ta.",
+      "collocations": [
+        {
+          "en": "play the guitar",
+          "vi": "chơi ghi-ta"
+        },
+        {
+          "en": "electric guitar",
+          "vi": "ghi-ta điện"
+        }
+      ],
+      "family": [
+        {
+          "word": "guitarist",
+          "vi": "người chơi ghi-ta"
+        }
+      ],
+      "tip": "Trọng âm sau: gi-TAR.",
+      "emoji": "🎸",
+      "stage": 2
+    },
+    {
+      "id": 4255,
+      "word": "piano",
+      "ipa": "piˈænoʊ",
+      "viRead": "pi-E-nâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn pi-a-nô",
+      "exampleEn": "My daughter is learning the piano.",
+      "exampleVi": "Con gái tôi đang học pi-a-nô.",
+      "collocations": [
+        {
+          "en": "play the piano",
+          "vi": "chơi pi-a-nô"
+        },
+        {
+          "en": "piano lesson",
+          "vi": "buổi học đàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "pianist",
+          "vi": "nghệ sĩ pi-a-nô"
+        }
+      ],
+      "tip": "play + the + nhạc cụ: play the piano.",
+      "emoji": "🎹",
+      "stage": 2
+    },
+    {
+      "id": 4256,
+      "word": "violin",
+      "ipa": "vaɪəˈlɪn",
+      "viRead": "vai-ơ-LIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn vi-ô-lông",
+      "exampleEn": "She played the violin at the concert.",
+      "exampleVi": "Cô ấy chơi vĩ cầm trong buổi hòa nhạc.",
+      "collocations": [
+        {
+          "en": "play the violin",
+          "vi": "chơi vĩ cầm"
+        },
+        {
+          "en": "violin bow",
+          "vi": "vĩ đàn"
+        }
+      ],
+      "family": [
+        {
+          "word": "violinist",
+          "vi": "nghệ sĩ vĩ cầm"
+        }
+      ],
+      "tip": "Trọng âm cuối: vai-ơ-LIN.",
+      "emoji": "🎻",
+      "stage": 2
+    },
+    {
+      "id": 4257,
+      "word": "cello",
+      "ipa": "ˈʧɛloʊ",
+      "viRead": "CHE-lâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn xen-lô",
+      "exampleEn": "The cello has a deep, warm sound.",
+      "exampleVi": "Đàn cello có âm trầm và ấm.",
+      "collocations": [
+        {
+          "en": "play the cello",
+          "vi": "chơi cello"
+        },
+        {
+          "en": "cello player",
+          "vi": "người chơi cello"
+        }
+      ],
+      "tip": "'c' đọc như 'ch': CHE-lâu.",
+      "emoji": "🎻",
+      "stage": 2
+    },
+    {
+      "id": 4258,
+      "word": "flute",
+      "ipa": "flut",
+      "viRead": "PHLUT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sáo",
+      "exampleEn": "He plays the flute in the school band.",
+      "exampleVi": "Cậu ấy thổi sáo trong ban nhạc trường.",
+      "collocations": [
+        {
+          "en": "play the flute",
+          "vi": "thổi sáo"
+        },
+        {
+          "en": "bamboo flute",
+          "vi": "sáo trúc"
+        }
+      ],
+      "tip": "bamboo flute = sáo trúc.",
+      "emoji": "🪈",
+      "stage": 2
+    },
+    {
+      "id": 4259,
+      "word": "trumpet",
+      "ipa": "ˈtrəmpət",
+      "viRead": "TRƠM-pơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kèn trumpet",
+      "exampleEn": "The trumpet sounded loud and clear.",
+      "exampleVi": "Tiếng kèn vang to và rõ.",
+      "collocations": [
+        {
+          "en": "play the trumpet",
+          "vi": "thổi kèn"
+        },
+        {
+          "en": "blow your own trumpet",
+          "vi": "tự khoe khoang"
+        }
+      ],
+      "tip": "blow your own trumpet = tự khen mình.",
+      "emoji": "🎺",
+      "stage": 2
+    },
+    {
+      "id": 4260,
+      "word": "saxophone",
+      "ipa": "ˈsæksəˌfoʊn",
+      "viRead": "SEK-sơ-phâun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kèn xắc-xô-phôn",
+      "exampleEn": "Jazz often uses the saxophone.",
+      "exampleVi": "Nhạc jazz hay dùng kèn saxophone.",
+      "collocations": [
+        {
+          "en": "play the saxophone",
+          "vi": "chơi saxophone"
+        },
+        {
+          "en": "alto saxophone",
+          "vi": "saxophone alto"
+        }
+      ],
+      "tip": "Viết tắt: sax.",
+      "emoji": "🎷",
+      "stage": 2
+    },
+    {
+      "id": 4261,
+      "word": "harp",
+      "ipa": "hɑrp",
+      "viRead": "HARP",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn hạc",
+      "exampleEn": "The harp sounds like falling water.",
+      "exampleVi": "Đàn hạc nghe như tiếng nước chảy.",
+      "collocations": [
+        {
+          "en": "play the harp",
+          "vi": "chơi đàn hạc"
+        },
+        {
+          "en": "golden harp",
+          "vi": "đàn hạc vàng"
+        }
+      ],
+      "tip": "harp on = nói đi nói lại mãi.",
+      "emoji": "🪕",
+      "stage": 2
+    },
+    {
+      "id": 4262,
+      "word": "ukulele",
+      "ipa": "ˌjukəˈleɪli",
+      "viRead": "yu-kơ-LÂY-li",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đàn u-ku-lê-lê",
+      "exampleEn": "The ukulele is easy for beginners.",
+      "exampleVi": "Đàn ukulele dễ cho người mới.",
+      "collocations": [
+        {
+          "en": "play the ukulele",
+          "vi": "chơi ukulele"
+        },
+        {
+          "en": "ukulele chords",
+          "vi": "hợp âm ukulele"
+        }
+      ],
+      "tip": "Gốc Hawaii, đọc 'yu-kơ-LÂY-li'.",
+      "emoji": "🎶",
+      "stage": 2
+    },
+    {
+      "id": 4263,
+      "word": "melody",
+      "ipa": "ˈmɛlədi",
+      "viRead": "ME-lơ-đi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giai điệu",
+      "exampleEn": "I can't stop humming this melody.",
+      "exampleVi": "Tôi cứ ngân nga mãi giai điệu này.",
+      "collocations": [
+        {
+          "en": "sweet melody",
+          "vi": "giai điệu ngọt ngào"
+        },
+        {
+          "en": "catchy melody",
+          "vi": "giai điệu dễ nhớ"
+        }
+      ],
+      "family": [
+        {
+          "word": "tune",
+          "vi": "giai điệu"
+        }
+      ],
+      "tip": "catchy melody = giai điệu bắt tai.",
+      "emoji": "🎵",
+      "stage": 2
+    },
+    {
+      "id": 4264,
+      "word": "genre",
+      "ipa": "ˈʒɑnrə",
+      "viRead": "ZHAN-rơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thể loại",
+      "exampleEn": "What genre of music do you like?",
+      "exampleVi": "Bạn thích thể loại nhạc nào?",
+      "collocations": [
+        {
+          "en": "music genre",
+          "vi": "thể loại nhạc"
+        },
+        {
+          "en": "film genre",
+          "vi": "thể loại phim"
+        }
+      ],
+      "family": [
+        {
+          "word": "type",
+          "vi": "loại"
+        }
+      ],
+      "tip": "Gốc Pháp, đọc 'ZHAN-rơ'.",
+      "emoji": "🎼",
+      "stage": 2
+    },
+    {
+      "id": 4265,
+      "word": "rehearsal",
+      "ipa": "rɪˈhərsəl",
+      "viRead": "ri-HƠ-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi tập dượt",
+      "exampleEn": "The band has rehearsal on Friday.",
+      "exampleVi": "Ban nhạc tập dượt vào thứ Sáu.",
+      "collocations": [
+        {
+          "en": "dress rehearsal",
+          "vi": "tổng duyệt"
+        },
+        {
+          "en": "final rehearsal",
+          "vi": "buổi tập cuối"
+        }
+      ],
+      "family": [
+        {
+          "word": "rehearse",
+          "vi": "tập dượt"
+        }
+      ],
+      "tip": "dress rehearsal = buổi tổng duyệt.",
+      "emoji": "🎭",
+      "stage": 2
+    },
+    {
+      "id": 4266,
+      "word": "audition",
+      "ipa": "ɑˈdɪʃən",
+      "viRead": "a-ĐI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "buổi thử giọng, thử vai",
+      "exampleEn": "She has an audition for the school play.",
+      "exampleVi": "Cô ấy đi thử vai cho vở kịch của trường.",
+      "collocations": [
+        {
+          "en": "go to an audition",
+          "vi": "đi thử giọng"
+        },
+        {
+          "en": "pass the audition",
+          "vi": "qua vòng thử giọng"
+        }
+      ],
+      "tip": "audition = thử giọng / casting.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 4267,
+      "word": "karaoke",
+      "ipa": "ˌkɛriˈoʊki",
+      "viRead": "ke-ri-ÂU-ki",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hát karaoke",
+      "exampleEn": "Let's go to karaoke after dinner.",
+      "exampleVi": "Ăn tối xong đi hát karaoke nhé.",
+      "collocations": [
+        {
+          "en": "sing karaoke",
+          "vi": "hát karaoke"
+        },
+        {
+          "en": "karaoke night",
+          "vi": "đêm karaoke"
+        }
+      ],
+      "tip": "Tiếng Anh đọc 'ke-ri-ÂU-ki'.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 4268,
+      "word": "hockey",
+      "ipa": "ˈhɑki",
+      "viRead": "HA-ki",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khúc côn cầu",
+      "exampleEn": "Ice hockey is popular in Canada.",
+      "exampleVi": "Khúc côn cầu trên băng rất phổ biến ở Canada.",
+      "collocations": [
+        {
+          "en": "ice hockey",
+          "vi": "khúc côn cầu trên băng"
+        },
+        {
+          "en": "hockey stick",
+          "vi": "gậy khúc côn cầu"
+        }
+      ],
+      "tip": "Mỹ: hockey = khúc côn cầu trên băng.",
+      "emoji": "🏒",
+      "stage": 2
+    },
+    {
+      "id": 4269,
+      "word": "cricket",
+      "ipa": "ˈkrɪkɪt",
+      "viRead": "KRI-kơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn crích-kê; con dế",
+      "exampleEn": "Cricket is a big sport in India.",
+      "exampleVi": "Crích-kê là môn thể thao lớn ở Ấn Độ.",
+      "collocations": [
+        {
+          "en": "play cricket",
+          "vi": "chơi crích-kê"
+        },
+        {
+          "en": "cricket chirping",
+          "vi": "dế kêu"
+        }
+      ],
+      "tip": "cricket cũng là con dế!",
+      "emoji": "🏏",
+      "stage": 2
+    },
+    {
+      "id": 4270,
+      "word": "judo",
+      "ipa": "ˈʤuˌdoʊ",
+      "viRead": "GIU-đâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "môn võ judo (nhu đạo)",
+      "exampleEn": "He does judo twice a week.",
+      "exampleVi": "Cậu ấy tập judo mỗi tuần hai buổi.",
+      "collocations": [
+        {
+          "en": "do judo",
+          "vi": "tập judo"
+        },
+        {
+          "en": "judo class",
+          "vi": "lớp judo"
+        }
+      ],
+      "family": [
+        {
+          "word": "karate",
+          "vi": "karate"
+        }
+      ],
+      "tip": "do + môn võ: do judo, do karate.",
+      "emoji": "🥋",
+      "stage": 2
+    },
+    {
+      "id": 4271,
+      "word": "camping",
+      "ipa": "ˈkæmpɪŋ",
+      "viRead": "KEM-ping",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cắm trại",
+      "exampleEn": "We go camping in the mountains every summer.",
+      "exampleVi": "Hè nào chúng tôi cũng đi cắm trại trên núi.",
+      "collocations": [
+        {
+          "en": "go camping",
+          "vi": "đi cắm trại"
+        },
+        {
+          "en": "camping trip",
+          "vi": "chuyến cắm trại"
+        }
+      ],
+      "family": [
+        {
+          "word": "camp",
+          "vi": "trại"
+        }
+      ],
+      "tip": "go + V-ing cho hoạt động: go camping.",
+      "emoji": "🏕️",
+      "stage": 2
+    },
+    {
+      "id": 4272,
+      "word": "fishing",
+      "ipa": "ˈfɪʃɪŋ",
+      "viRead": "PHI-shing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "câu cá",
+      "exampleEn": "Grandpa loves fishing at the lake.",
+      "exampleVi": "Ông rất thích câu cá ở hồ.",
+      "collocations": [
+        {
+          "en": "go fishing",
+          "vi": "đi câu cá"
+        },
+        {
+          "en": "fishing rod",
+          "vi": "cần câu"
+        }
+      ],
+      "family": [
+        {
+          "word": "fish",
+          "vi": "cá, câu cá"
+        }
+      ],
+      "tip": "go fishing = đi câu.",
+      "emoji": "🎣",
+      "stage": 2
+    },
+    {
+      "id": 4273,
+      "word": "hunting",
+      "ipa": "ˈhəntɪŋ",
+      "viRead": "HƠN-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "săn bắn",
+      "exampleEn": "Hunting is not allowed in this forest.",
+      "exampleVi": "Khu rừng này cấm săn bắn.",
+      "collocations": [
+        {
+          "en": "go hunting",
+          "vi": "đi săn"
+        },
+        {
+          "en": "job hunting",
+          "vi": "đi tìm việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "hunt",
+          "vi": "săn"
+        }
+      ],
+      "tip": "job hunting = săn việc.",
+      "emoji": "🏹",
+      "stage": 2
+    },
+    {
+      "id": 4274,
+      "word": "rowing",
+      "ipa": "ˈroʊɪŋ",
+      "viRead": "RÂU-ing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chèo thuyền",
+      "exampleEn": "We went rowing on the river.",
+      "exampleVi": "Chúng tôi đi chèo thuyền trên sông.",
+      "collocations": [
+        {
+          "en": "go rowing",
+          "vi": "đi chèo thuyền"
+        },
+        {
+          "en": "rowing boat",
+          "vi": "thuyền chèo"
+        }
+      ],
+      "family": [
+        {
+          "word": "row",
+          "vi": "chèo"
+        }
+      ],
+      "tip": "row (chèo) đọc 'RÂU'.",
+      "emoji": "🚣",
+      "stage": 2
+    },
+    {
+      "id": 4275,
+      "word": "sailing",
+      "ipa": "ˈseɪlɪŋ",
+      "viRead": "SÂY-ling",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đi thuyền buồm",
+      "exampleEn": "Sailing is fun when the wind is good.",
+      "exampleVi": "Đi thuyền buồm vui khi gió thuận.",
+      "collocations": [
+        {
+          "en": "go sailing",
+          "vi": "đi thuyền buồm"
+        },
+        {
+          "en": "plain sailing",
+          "vi": "thuận buồm xuôi gió"
+        }
+      ],
+      "family": [
+        {
+          "word": "sail",
+          "vi": "buồm"
+        }
+      ],
+      "tip": "plain sailing = suôn sẻ.",
+      "emoji": "⛵",
+      "stage": 2
+    },
+    {
+      "id": 4276,
+      "word": "climbing",
+      "ipa": "ˈklaɪmɪŋ",
+      "viRead": "KLAI-ming",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "leo núi, leo vách",
+      "exampleEn": "Rock climbing needs strong arms.",
+      "exampleVi": "Leo vách đá cần cánh tay khỏe.",
+      "collocations": [
+        {
+          "en": "rock climbing",
+          "vi": "leo vách đá"
+        },
+        {
+          "en": "go climbing",
+          "vi": "đi leo núi"
+        }
+      ],
+      "family": [
+        {
+          "word": "climb",
+          "vi": "leo"
+        }
+      ],
+      "tip": "'b' câm: đọc 'KLAI-ming'.",
+      "emoji": "🧗",
+      "stage": 2
+    },
+    {
+      "id": 4277,
+      "word": "crossword",
+      "ipa": "ˈkrɔsˌwərd",
+      "viRead": "KROS-wơđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ô chữ",
+      "exampleEn": "Grandma does the crossword every morning.",
+      "exampleVi": "Sáng nào bà cũng giải ô chữ.",
+      "collocations": [
+        {
+          "en": "do a crossword",
+          "vi": "giải ô chữ"
+        },
+        {
+          "en": "crossword puzzle",
+          "vi": "trò ô chữ"
+        }
+      ],
+      "family": [
+        {
+          "word": "puzzle",
+          "vi": "câu đố"
+        }
+      ],
+      "tip": "Giải ô chữ tiếng Anh = cách ôn từ vui.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 4278,
+      "word": "origami",
+      "ipa": "ˌɔriˈgɑˌmi",
+      "viRead": "o-ri-GA-mi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nghệ thuật gấp giấy",
+      "exampleEn": "She made a crane with origami.",
+      "exampleVi": "Cô ấy gấp một con hạc giấy.",
+      "collocations": [
+        {
+          "en": "origami crane",
+          "vi": "hạc giấy"
+        },
+        {
+          "en": "origami paper",
+          "vi": "giấy gấp"
+        }
+      ],
+      "tip": "Gốc Nhật: ori (gấp) + kami (giấy).",
+      "emoji": "🦢",
+      "stage": 2
+    },
+    {
+      "id": 4279,
+      "word": "knitting",
+      "ipa": "ˈnɪtɪŋ",
+      "viRead": "NI-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đan len",
+      "exampleEn": "My mother's hobby is knitting.",
+      "exampleVi": "Sở thích của mẹ tôi là đan len.",
+      "collocations": [
+        {
+          "en": "knitting needles",
+          "vi": "que đan"
+        },
+        {
+          "en": "take up knitting",
+          "vi": "bắt đầu tập đan"
+        }
+      ],
+      "family": [
+        {
+          "word": "knit",
+          "vi": "đan"
+        }
+      ],
+      "tip": "'k' câm: đọc 'NI-ting'.",
+      "emoji": "🧶",
+      "stage": 2
+    },
+    {
+      "id": 4280,
+      "word": "sewing",
+      "ipa": "ˈsoʊɪŋ",
+      "viRead": "SÂU-ing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "may vá",
+      "exampleEn": "She learned sewing from her grandmother.",
+      "exampleVi": "Cô ấy học may vá từ bà.",
+      "collocations": [
+        {
+          "en": "sewing machine",
+          "vi": "máy may"
+        },
+        {
+          "en": "sewing kit",
+          "vi": "bộ kim chỉ"
+        }
+      ],
+      "family": [
+        {
+          "word": "sew",
+          "vi": "may"
+        }
+      ],
+      "tip": "sew đọc 'SÂU' (như so).",
+      "emoji": "🧵",
+      "stage": 2
+    },
+    {
+      "id": 4281,
+      "word": "embroidery",
+      "ipa": "ɛmˈbrɔɪdəri",
+      "viRead": "em-BROI-đơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thêu thùa",
+      "exampleEn": "Hue is famous for embroidery.",
+      "exampleVi": "Huế nổi tiếng về nghề thêu.",
+      "collocations": [
+        {
+          "en": "hand embroidery",
+          "vi": "thêu tay"
+        },
+        {
+          "en": "embroidery thread",
+          "vi": "chỉ thêu"
+        }
+      ],
+      "family": [
+        {
+          "word": "embroider",
+          "vi": "thêu"
+        }
+      ],
+      "tip": "embroidery = tranh thêu, nghề thêu.",
+      "emoji": "🪡",
+      "stage": 2
+    },
+    {
+      "id": 4282,
+      "word": "gardening",
+      "ipa": "ˈgɑrdənɪŋ",
+      "viRead": "GAR-đơ-ning",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "làm vườn",
+      "exampleEn": "Gardening helps me relax.",
+      "exampleVi": "Làm vườn giúp tôi thư giãn.",
+      "collocations": [
+        {
+          "en": "love gardening",
+          "vi": "thích làm vườn"
+        },
+        {
+          "en": "gardening tools",
+          "vi": "dụng cụ làm vườn"
+        }
+      ],
+      "family": [
+        {
+          "word": "garden",
+          "vi": "vườn"
+        }
+      ],
+      "tip": "garden + -ing.",
+      "emoji": "🌻",
+      "stage": 2
+    },
+    {
+      "id": 4283,
+      "word": "baking",
+      "ipa": "ˈbeɪkɪŋ",
+      "viRead": "BÂY-king",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "làm bánh, nướng bánh",
+      "exampleEn": "Baking is my favorite weekend activity.",
+      "exampleVi": "Làm bánh là việc tôi thích nhất cuối tuần.",
+      "collocations": [
+        {
+          "en": "baking powder",
+          "vi": "bột nở"
+        },
+        {
+          "en": "baking soda",
+          "vi": "muối nở"
+        }
+      ],
+      "family": [
+        {
+          "word": "bake",
+          "vi": "nướng"
+        }
+      ],
+      "tip": "baking soda = muối nở.",
+      "emoji": "🧁",
+      "stage": 2
+    },
+    {
+      "id": 4284,
+      "word": "painting",
+      "ipa": "ˈpeɪntɪŋ",
+      "viRead": "PÂYN-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bức tranh; hội họa",
+      "exampleEn": "This painting is over 100 years old.",
+      "exampleVi": "Bức tranh này hơn 100 năm tuổi.",
+      "collocations": [
+        {
+          "en": "oil painting",
+          "vi": "tranh sơn dầu"
+        },
+        {
+          "en": "take up painting",
+          "vi": "tập vẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "paint",
+          "vi": "sơn, vẽ"
+        }
+      ],
+      "tip": "painting (tranh màu) — drawing (tranh vẽ chì).",
+      "emoji": "🖼️",
+      "stage": 2
+    },
+    {
+      "id": 4285,
+      "word": "sketching",
+      "ipa": "ˈskɛʧɪŋ",
+      "viRead": "SKE-ching",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vẽ phác thảo",
+      "exampleEn": "I do sketching in the park.",
+      "exampleVi": "Tôi vẽ phác họa trong công viên.",
+      "collocations": [
+        {
+          "en": "pencil sketching",
+          "vi": "phác thảo bằng chì"
+        },
+        {
+          "en": "sketching pad",
+          "vi": "sổ phác thảo"
+        }
+      ],
+      "family": [
+        {
+          "word": "sketch",
+          "vi": "bản phác"
+        }
+      ],
+      "tip": "sketch (n/v) → sketching.",
+      "emoji": "✏️",
+      "stage": 2
+    },
+    {
+      "id": 4286,
+      "word": "photography",
+      "ipa": "fəˈtɑgrəfi",
+      "viRead": "phơ-TA-grơ-phi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhiếp ảnh",
+      "exampleEn": "He studies photography at college.",
+      "exampleVi": "Anh ấy học nhiếp ảnh ở trường cao đẳng.",
+      "collocations": [
+        {
+          "en": "street photography",
+          "vi": "nhiếp ảnh đường phố"
+        },
+        {
+          "en": "love photography",
+          "vi": "mê chụp ảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "photographer",
+          "vi": "nhiếp ảnh gia"
+        }
+      ],
+      "tip": "Trọng âm: phơ-TA-grơ-phi.",
+      "emoji": "📷",
+      "stage": 2
+    },
+    {
+      "id": 4287,
+      "word": "calligraphy",
+      "ipa": "kəˈlɪgrəfi",
+      "viRead": "kơ-LI-grơ-phi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thư pháp",
+      "exampleEn": "At Tet, people ask for calligraphy.",
+      "exampleVi": "Dịp Tết, người ta đi xin chữ thư pháp.",
+      "collocations": [
+        {
+          "en": "Chinese calligraphy",
+          "vi": "thư pháp chữ Hán"
+        },
+        {
+          "en": "calligraphy pen",
+          "vi": "bút thư pháp"
+        }
+      ],
+      "tip": "Xin chữ ngày Tết = ask for calligraphy at Tet.",
+      "emoji": "🖌️",
+      "stage": 2
+    },
+    {
+      "id": 4288,
+      "word": "scoreboard",
+      "ipa": "ˈskɔrˌbɔrd",
+      "viRead": "SKOR-borđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bảng điểm",
+      "exampleEn": "Look at the scoreboard: we're winning!",
+      "exampleVi": "Nhìn bảng điểm kìa: mình đang thắng!",
+      "collocations": [
+        {
+          "en": "electronic scoreboard",
+          "vi": "bảng điểm điện tử"
+        },
+        {
+          "en": "on the scoreboard",
+          "vi": "trên bảng điểm"
+        }
+      ],
+      "family": [
+        {
+          "word": "score",
+          "vi": "điểm số"
+        }
+      ],
+      "tip": "score + board.",
+      "emoji": "🔢",
+      "stage": 2
+    },
+    {
+      "id": 4289,
+      "word": "tournament",
+      "ipa": "ˈtʊrnəmənt",
+      "viRead": "TUR-nơ-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giải đấu",
+      "exampleEn": "Our school won the chess tournament.",
+      "exampleVi": "Trường tôi thắng giải cờ vua.",
+      "collocations": [
+        {
+          "en": "chess tournament",
+          "vi": "giải cờ vua"
+        },
+        {
+          "en": "win a tournament",
+          "vi": "vô địch giải"
+        }
+      ],
+      "family": [
+        {
+          "word": "competition",
+          "vi": "cuộc thi"
+        }
+      ],
+      "tip": "tournament = giải đấu nhiều vòng.",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 4290,
+      "word": "championship",
+      "ipa": "ˈʧæmpiənˌʃɪp",
+      "viRead": "CHEM-pi-ơn-ship",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giải vô địch",
+      "exampleEn": "Vietnam won the regional championship.",
+      "exampleVi": "Việt Nam vô địch giải khu vực.",
+      "collocations": [
+        {
+          "en": "world championship",
+          "vi": "giải vô địch thế giới"
+        },
+        {
+          "en": "win the championship",
+          "vi": "đoạt chức vô địch"
+        }
+      ],
+      "family": [
+        {
+          "word": "champion",
+          "vi": "nhà vô địch"
+        }
+      ],
+      "tip": "champion (người) → championship (giải).",
+      "emoji": "🥇",
+      "stage": 2
+    },
+    {
+      "id": 4291,
+      "word": "spectator",
+      "ipa": "ˈspɛkteɪtər",
+      "viRead": "SPEK-tây-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khán giả (thể thao)",
+      "exampleEn": "Thousands of spectators filled the stadium.",
+      "exampleVi": "Hàng nghìn khán giả lấp kín sân vận động.",
+      "collocations": [
+        {
+          "en": "spectator sport",
+          "vi": "môn thể thao nhiều người xem"
+        },
+        {
+          "en": "crowd of spectators",
+          "vi": "đám đông khán giả"
+        }
+      ],
+      "family": [
+        {
+          "word": "audience",
+          "vi": "khán giả"
+        }
+      ],
+      "tip": "spectator (xem thể thao) — audience (xem biểu diễn).",
+      "emoji": "👀",
+      "stage": 2
+    },
+    {
+      "id": 4292,
+      "word": "jersey",
+      "ipa": "ˈʤərzi",
+      "viRead": "GIƠ-di",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "áo đấu",
+      "exampleEn": "He wears the number 10 jersey.",
+      "exampleVi": "Anh ấy mặc áo số 10.",
+      "collocations": [
+        {
+          "en": "football jersey",
+          "vi": "áo bóng đá"
+        },
+        {
+          "en": "team jersey",
+          "vi": "áo đội"
+        }
+      ],
+      "family": [
+        {
+          "word": "shirt",
+          "vi": "áo"
+        }
+      ],
+      "tip": "jersey = áo thi đấu thể thao.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 4293,
+      "word": "striker",
+      "ipa": "ˈstraɪkər",
+      "viRead": "STRAI-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiền đạo",
+      "exampleEn": "The striker scored two goals.",
+      "exampleVi": "Tiền đạo ghi hai bàn.",
+      "collocations": [
+        {
+          "en": "star striker",
+          "vi": "tiền đạo ngôi sao"
+        },
+        {
+          "en": "main striker",
+          "vi": "tiền đạo chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "goalkeeper",
+          "vi": "thủ môn"
+        }
+      ],
+      "tip": "striker = tiền đạo cắm.",
+      "emoji": "⚽",
       "stage": 2
     }
   ]
