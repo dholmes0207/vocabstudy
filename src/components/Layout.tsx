@@ -169,7 +169,7 @@ function BottomLink({ item, badge, active }: { item: NavItem; badge: number; act
       }`}
     >
       <span
-        className={`grid h-7 w-12 place-items-center rounded-full transition ${active ? 'bg-brand-100 dark:bg-brand-950' : ''}`}
+        className={`grid h-7 w-12 place-items-center rounded-full transition ${active ? 'nav-pill bg-brand-100 dark:bg-brand-950' : ''}`}
       >
         <Icon className="h-5 w-5" />
       </span>

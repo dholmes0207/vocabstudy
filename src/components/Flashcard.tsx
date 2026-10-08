@@ -4,6 +4,7 @@ import SpeakButton from './SpeakButton'
 import PosBadge from './PosBadge'
 import WordInsight from './WordInsight'
 import { wordAudio } from '@/lib/audio'
+import { skyBurstAt } from '@/lib/skyEvents'
 
 interface Props {
   word: Word
@@ -14,17 +15,22 @@ interface Props {
 
 /** A 3D flip flashcard. Front = target word; back = meaning + example. */
 export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
+  // Turning to the meaning lets a little starlight out of the card.
+  const flip = (el: Element) => {
+    if (!flipped) skyBurstAt(el, 0.7)
+    onFlip()
+  }
   return (
     <div className="flip-scene w-full">
       <div
         role="button"
         tabIndex={0}
         aria-label={flipped ? 'Xem lại mặt trước' : 'Lật thẻ để xem nghĩa'}
-        onClick={onFlip}
+        onClick={(e) => flip(e.currentTarget)}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') {
             e.preventDefault()
-            onFlip()
+            flip(e.currentTarget)
           }
         }}
         className={`flip-card min-h-[20rem] w-full cursor-pointer sm:min-h-[24rem] ${flipped ? 'is-flipped' : ''}`}

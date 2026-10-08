@@ -24,6 +24,12 @@ export default function WordOfDay() {
   return (
     <section className="card relative overflow-hidden p-5">
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-amber-300 to-orange-500 opacity-20" />
+      {/* A few stars twinkling over the corner — today's word "shines". */}
+      <span aria-hidden className="wod-stars">
+        <i>✦</i>
+        <i>✦</i>
+        <i>✦</i>
+      </span>
       <p className="text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">
         ✨ Từ của ngày
       </p>
