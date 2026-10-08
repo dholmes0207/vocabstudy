@@ -30,3 +30,61 @@ export function recentCalendar(
     return { day, count, level: activityLevel(count), isToday: day === today }
   })
 }
+
+export interface WeekTotals {
+  /** Answers given (reviews + learning drills). */
+  answers: number
+  /** New words learned. */
+  words: number
+  /** Days with any study. */
+  days: number
+}
+
+function weekTotals(
+  reviews: Record<number, number>,
+  news: Record<number, number>,
+  lastDay: number
+): WeekTotals {
+  const t: WeekTotals = { answers: 0, words: 0, days: 0 }
+  for (let d = lastDay - 6; d <= lastDay; d++) {
+    const r = reviews[d] ?? 0
+    t.answers += r
+    t.words += news[d] ?? 0
+    if (r > 0) t.days++
+  }
+  return t
+}
+
+export interface WeekCompare {
+  now: WeekTotals
+  before: WeekTotals
+  message: string
+}
+
+/**
+ * The last 7 days against the 7 before — progress measured against yourself,
+ * never against others. A slower week gets a nudge, never a scolding; nothing
+ * to compare yet returns null so the card stays hidden.
+ */
+export function compareWeeks(
+  reviews: Record<number, number>,
+  news: Record<number, number>,
+  today: number
+): WeekCompare | null {
+  const now = weekTotals(reviews, news, today)
+  const before = weekTotals(reviews, news, today - 7)
+  if (now.answers === 0 && before.answers === 0) return null
+  let message: string
+  if (before.answers === 0) {
+    message = 'Tuần đầu tiên — khởi đầu tốt lắm! 🌱'
+  } else if (now.answers >= before.answers) {
+    const pct = Math.round(((now.answers - before.answers) / before.answers) * 100)
+    message =
+      pct === 0
+        ? 'Đều đặn như tuần trước — giữ nhịp vậy là tuyệt 👏'
+        : `Nhiều hơn tuần trước ${pct}% — bạn đang tiến bộ thật đấy 📈`
+  } else {
+    message = 'Tuần này nhẹ hơn một chút — không sao, vài câu hôm nay là lại vào nhịp 💪'
+  }
+  return { now, before, message }
+}

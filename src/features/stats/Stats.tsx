@@ -7,7 +7,7 @@ import { useStudy, cardsOf, statsOf } from '@/store/studyStore'
 import { INTERVALS, MASTERED_BOX } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { today, formatDay } from '@/lib/date'
-import { recentCalendar } from '@/lib/calendar'
+import { compareWeeks, recentCalendar, type WeekTotals } from '@/lib/calendar'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
 
@@ -46,6 +46,7 @@ export default function Stats() {
     : 0
   const maxActivity = Math.max(1, ...activity.map((a) => a.reviews + a.news))
   const calendar = recentCalendar(stats.reviewsByDay, today())
+  const week = compareWeeks(stats.reviewsByDay, stats.newByDay, today())
 
   const achievements = evaluateAchievements({
     learned: s.learned,
@@ -138,6 +139,19 @@ export default function Stats() {
           Nhãn = khoảng cách ôn của mỗi bậc (ngày) · 🏆 = đã thành thạo
         </p>
       </section>
+
+      {/* This week against the last: progress measured against yourself */}
+      {week && (
+        <section className="card p-5">
+          <h2 className="font-bold">7 ngày qua</h2>
+          <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">{week.message}</p>
+          <div className="grid grid-cols-3 gap-3">
+            {WEEK_TILES.map(([key, label]) => (
+              <WeekTile key={key} label={label} now={week.now[key]} before={week.before[key]} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Study calendar: the last 5 weeks */}
       <section className="card p-5">
@@ -278,6 +292,27 @@ function Legend({ color, label, value }: { color: string; label: string; value: 
       <span className={`mx-auto mb-1 block h-2.5 w-2.5 rounded-full ${color}`} />
       <p className="font-bold">{value}</p>
       <p className="text-xs text-slate-400">{label}</p>
+    </div>
+  )
+}
+
+const WEEK_TILES: [keyof WeekTotals, string][] = [
+  ['answers', 'câu trả lời'],
+  ['words', 'từ mới'],
+  ['days', 'ngày học'],
+]
+
+function WeekTile({ label, now, before }: { label: string; now: number; before: number }) {
+  const diff = now - before
+  return (
+    <div className="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-800/60">
+      <p className="text-2xl font-extrabold tabular-nums">{now}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
+      <p
+        className={`mt-1 text-xs font-semibold ${diff > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400'}`}
+      >
+        {diff > 0 ? `▲ ${diff}` : diff < 0 ? `tuần trước ${before}` : '= tuần trước'}
+      </p>
     </div>
   )
 }
