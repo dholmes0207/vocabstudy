@@ -12,6 +12,7 @@ import { isRecognitionSupported } from '@/lib/speech'
 import { supabaseConfigured } from '@/lib/supabase'
 import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
+import ReminderSetup from '@/components/ReminderSetup'
 import { Row, Section, Segmented, Toggle } from './ui'
 
 const THEME_OPTIONS = [
@@ -169,6 +170,14 @@ export default function SettingsPage() {
             onChange={(v) => settings.setDailyGoal(Number(v))}
           />
         </Row>
+        <div className="py-3.5">
+          <p className="font-medium">Nhắc học mỗi ngày 🔔</p>
+          <p className="mb-3 text-sm text-slate-400">
+            Thêm một lịch hẹn lặp lại hằng ngày vào điện thoại — đến giờ chuông reo, bấm vào là mở
+            app.
+          </p>
+          <ReminderSetup />
+        </div>
         <Row label="Số từ mới mỗi ngày" hint="Khuyến nghị 10–15 từ để nhớ chất lượng.">
           <div className="flex items-center gap-3">
             <input

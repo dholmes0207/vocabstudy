@@ -2,8 +2,10 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Share2, Zap } from 'lucide-react'
 import ProgressRing from '@/components/ProgressRing'
+import ReminderSetup from '@/components/ReminderSetup'
 import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
+import { savedReminder } from '@/lib/reminder'
 import {
   coverageEstimate,
   daysAway,
@@ -60,6 +62,8 @@ export function DailyGoal({
   const shields = stats?.shields ?? 0
   const best = Math.max(stats?.bestStreak ?? 0, streak)
   const savedYesterday = stats?.shieldUsedDay != null && day - stats.shieldUsedDay <= 1
+  // Offer a reminder until the learner has set one up (then it lives in Settings).
+  const [hasReminder] = useState(() => savedReminder() !== null)
 
   // Reaching the goal lights up the sky — once per day, however often the
   // dashboard is opened afterwards.
@@ -115,6 +119,16 @@ export function DailyGoal({
         <Link to={quickStartPath(due)} className="btn-primary mt-4 w-full">
           <Zap className="h-4 w-4" /> Học nhanh 2 phút
         </Link>
+      )}
+      {!hasReminder && (
+        <details className="mt-3 rounded-xl bg-slate-50 px-3 py-2 dark:bg-slate-800/60">
+          <summary className="cursor-pointer text-sm font-semibold text-brand-600 dark:text-brand-300">
+            🔔 Hay quên mở app? Nhờ điện thoại nhắc mỗi ngày
+          </summary>
+          <div className="pb-1 pt-3">
+            <ReminderSetup />
+          </div>
+        </details>
       )}
     </section>
   )
