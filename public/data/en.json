@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4323,
+    "count": 4353,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -121801,6 +121801,828 @@
       ],
       "tip": "sunscreen lotion = kem chống nắng.",
       "emoji": "🧴",
+      "stage": 2
+    },
+    {
+      "id": 4324,
+      "word": "beige",
+      "ipa": "beɪʒ",
+      "viRead": "BÂYZH",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu be",
+      "exampleEn": "She bought a beige coat.",
+      "exampleVi": "Cô ấy mua một chiếc áo khoác màu be.",
+      "collocations": [
+        {
+          "en": "beige walls",
+          "vi": "tường màu be"
+        },
+        {
+          "en": "light beige",
+          "vi": "be nhạt"
+        }
+      ],
+      "tip": "Gốc Pháp, đọc 'BÂYZH'.",
+      "emoji": "🟫",
+      "stage": 2
+    },
+    {
+      "id": 4325,
+      "word": "maroon",
+      "ipa": "məˈrun",
+      "viRead": "mơ-RUN",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu nâu sẫm, đỏ rượu",
+      "exampleEn": "Our school uniform is maroon.",
+      "exampleVi": "Đồng phục trường tôi màu đỏ rượu.",
+      "collocations": [
+        {
+          "en": "maroon jacket",
+          "vi": "áo khoác đỏ rượu"
+        },
+        {
+          "en": "dark maroon",
+          "vi": "nâu đỏ sẫm"
+        }
+      ],
+      "tip": "maroon = đỏ sẫm pha nâu.",
+      "emoji": "🍷",
+      "stage": 2
+    },
+    {
+      "id": 4326,
+      "word": "turquoise",
+      "ipa": "ˈtərkwɔɪz",
+      "viRead": "TƠK-woid",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu ngọc lam",
+      "exampleEn": "The sea in Phu Quoc is turquoise.",
+      "exampleVi": "Biển Phú Quốc màu ngọc lam.",
+      "collocations": [
+        {
+          "en": "turquoise water",
+          "vi": "nước xanh ngọc"
+        },
+        {
+          "en": "turquoise stone",
+          "vi": "đá ngọc lam"
+        }
+      ],
+      "tip": "Đọc 'TƠK-woid'.",
+      "emoji": "🩵",
+      "stage": 2
+    },
+    {
+      "id": 4327,
+      "word": "violet",
+      "ipa": "ˈvaɪəlɪt",
+      "viRead": "VAI-ơ-lit",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu tím; hoa violet",
+      "exampleEn": "The sky turned violet at sunset.",
+      "exampleVi": "Bầu trời chuyển màu tím lúc hoàng hôn.",
+      "collocations": [
+        {
+          "en": "deep violet",
+          "vi": "tím đậm"
+        },
+        {
+          "en": "violet flowers",
+          "vi": "hoa violet"
+        }
+      ],
+      "family": [
+        {
+          "word": "purple",
+          "vi": "tím"
+        }
+      ],
+      "tip": "ultraviolet (UV) = tia cực tím.",
+      "emoji": "🟣",
+      "stage": 2
+    },
+    {
+      "id": 4328,
+      "word": "lavender",
+      "ipa": "ˈlævəndər",
+      "viRead": "LE-vơn-đơ",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "hoa oải hương; màu tím nhạt",
+      "exampleEn": "The room smells of lavender.",
+      "exampleVi": "Căn phòng thơm mùi oải hương.",
+      "collocations": [
+        {
+          "en": "lavender oil",
+          "vi": "tinh dầu oải hương"
+        },
+        {
+          "en": "lavender field",
+          "vi": "cánh đồng oải hương"
+        }
+      ],
+      "tip": "Oải hương giúp ngủ ngon.",
+      "emoji": "💜",
+      "stage": 2
+    },
+    {
+      "id": 4329,
+      "word": "crimson",
+      "ipa": "ˈkrɪmzən",
+      "viRead": "KRIM-dơn",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "đỏ thẫm",
+      "exampleEn": "Her face turned crimson.",
+      "exampleVi": "Mặt cô ấy đỏ bừng.",
+      "collocations": [
+        {
+          "en": "crimson red",
+          "vi": "đỏ thẫm"
+        },
+        {
+          "en": "turn crimson",
+          "vi": "đỏ mặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "red",
+          "vi": "đỏ"
+        }
+      ],
+      "tip": "crimson = đỏ đậm như máu.",
+      "emoji": "🟥",
+      "stage": 2
+    },
+    {
+      "id": 4330,
+      "word": "scarlet",
+      "ipa": "ˈskɑrlət",
+      "viRead": "SKAR-lơt",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "đỏ tươi",
+      "exampleEn": "She wore a scarlet dress.",
+      "exampleVi": "Cô ấy mặc chiếc váy đỏ tươi.",
+      "collocations": [
+        {
+          "en": "scarlet fever",
+          "vi": "bệnh tinh hồng nhiệt"
+        },
+        {
+          "en": "bright scarlet",
+          "vi": "đỏ chói"
+        }
+      ],
+      "family": [
+        {
+          "word": "red",
+          "vi": "đỏ"
+        }
+      ],
+      "tip": "scarlet = đỏ tươi, rực.",
+      "emoji": "🌺",
+      "stage": 2
+    },
+    {
+      "id": 4331,
+      "word": "bronze",
+      "ipa": "brɑnz",
+      "viRead": "BRAND",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "đồng thiếc; màu đồng",
+      "exampleEn": "She won a bronze medal.",
+      "exampleVi": "Cô ấy giành huy chương đồng.",
+      "collocations": [
+        {
+          "en": "bronze medal",
+          "vi": "huy chương đồng"
+        },
+        {
+          "en": "bronze statue",
+          "vi": "tượng đồng"
+        }
+      ],
+      "family": [
+        {
+          "word": "copper",
+          "vi": "đồng đỏ"
+        }
+      ],
+      "tip": "gold > silver > bronze.",
+      "emoji": "🥉",
+      "stage": 2
+    },
+    {
+      "id": 4332,
+      "word": "ivory",
+      "ipa": "ˈaɪvəri",
+      "viRead": "AI-vơ-ri",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "ngà voi; màu trắng ngà",
+      "exampleEn": "Selling ivory is against the law.",
+      "exampleVi": "Buôn bán ngà voi là phạm pháp.",
+      "collocations": [
+        {
+          "en": "ivory white",
+          "vi": "trắng ngà"
+        },
+        {
+          "en": "ivory tower",
+          "vi": "tháp ngà"
+        }
+      ],
+      "tip": "ivory tower = tháp ngà (xa rời thực tế).",
+      "emoji": "🐘",
+      "stage": 2
+    },
+    {
+      "id": 4333,
+      "word": "teal",
+      "ipa": "til",
+      "viRead": "TIL",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu xanh mòng két",
+      "exampleEn": "He painted the door teal.",
+      "exampleVi": "Anh ấy sơn cửa màu xanh mòng két.",
+      "collocations": [
+        {
+          "en": "teal blue",
+          "vi": "xanh mòng két"
+        },
+        {
+          "en": "dark teal",
+          "vi": "xanh két đậm"
+        }
+      ],
+      "tip": "teal = xanh lam pha lục.",
+      "emoji": "🟦",
+      "stage": 2
+    },
+    {
+      "id": 4334,
+      "word": "khaki",
+      "ipa": "ˈkɑki",
+      "viRead": "KA-ki",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "màu kaki",
+      "exampleEn": "He wore khaki pants.",
+      "exampleVi": "Anh ấy mặc quần màu kaki.",
+      "collocations": [
+        {
+          "en": "khaki pants",
+          "vi": "quần kaki"
+        },
+        {
+          "en": "khaki uniform",
+          "vi": "đồng phục kaki"
+        }
+      ],
+      "tip": "Đọc 'KA-ki'.",
+      "emoji": "👖",
+      "stage": 2
+    },
+    {
+      "id": 4335,
+      "word": "charcoal",
+      "ipa": "ˈʧɑrˌkoʊl",
+      "viRead": "CHAR-kâul",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "than củi; màu xám than",
+      "exampleEn": "We grilled the meat over charcoal.",
+      "exampleVi": "Chúng tôi nướng thịt trên than hoa.",
+      "collocations": [
+        {
+          "en": "charcoal grill",
+          "vi": "bếp than"
+        },
+        {
+          "en": "charcoal gray",
+          "vi": "xám than"
+        }
+      ],
+      "family": [
+        {
+          "word": "coal",
+          "vi": "than đá"
+        }
+      ],
+      "tip": "charcoal = than củi (nướng BBQ).",
+      "emoji": "⚫",
+      "stage": 2
+    },
+    {
+      "id": 4336,
+      "word": "triangle",
+      "ipa": "ˈtraɪˌæŋgəl",
+      "viRead": "TRAI-eng-gơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình tam giác",
+      "exampleEn": "Draw a triangle with three equal sides.",
+      "exampleVi": "Vẽ một tam giác đều.",
+      "collocations": [
+        {
+          "en": "draw a triangle",
+          "vi": "vẽ tam giác"
+        },
+        {
+          "en": "right triangle",
+          "vi": "tam giác vuông"
+        }
+      ],
+      "family": [
+        {
+          "word": "angle",
+          "vi": "góc"
+        }
+      ],
+      "tip": "tri (ba) + angle (góc).",
+      "emoji": "🔺",
+      "stage": 2
+    },
+    {
+      "id": 4337,
+      "word": "rectangle",
+      "ipa": "ˈrɛktæŋgəl",
+      "viRead": "REK-teng-gơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình chữ nhật",
+      "exampleEn": "A door is a rectangle.",
+      "exampleVi": "Cánh cửa có hình chữ nhật.",
+      "collocations": [
+        {
+          "en": "draw a rectangle",
+          "vi": "vẽ hình chữ nhật"
+        },
+        {
+          "en": "long rectangle",
+          "vi": "hình chữ nhật dài"
+        }
+      ],
+      "family": [
+        {
+          "word": "square",
+          "vi": "hình vuông"
+        }
+      ],
+      "tip": "rectangular (adj) = có hình chữ nhật.",
+      "emoji": "▭",
+      "stage": 2
+    },
+    {
+      "id": 4338,
+      "word": "cube",
+      "ipa": "kjub",
+      "viRead": "KYUB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khối lập phương; viên",
+      "exampleEn": "Put two ice cubes in my drink.",
+      "exampleVi": "Cho hai viên đá vào ly của tôi.",
+      "collocations": [
+        {
+          "en": "ice cube",
+          "vi": "viên đá"
+        },
+        {
+          "en": "sugar cube",
+          "vi": "viên đường"
+        }
+      ],
+      "tip": "ice cube = viên đá lạnh.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 4339,
+      "word": "sphere",
+      "ipa": "sfɪr",
+      "viRead": "SPHIR",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình cầu",
+      "exampleEn": "The Earth is almost a sphere.",
+      "exampleVi": "Trái Đất gần như là một hình cầu.",
+      "collocations": [
+        {
+          "en": "perfect sphere",
+          "vi": "hình cầu hoàn hảo"
+        },
+        {
+          "en": "glass sphere",
+          "vi": "quả cầu thủy tinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "ball",
+          "vi": "quả bóng"
+        }
+      ],
+      "tip": "hemisphere = bán cầu.",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 4340,
+      "word": "cylinder",
+      "ipa": "ˈsɪlɪndər",
+      "viRead": "SI-lơn-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình trụ; bình khí",
+      "exampleEn": "A can has the shape of a cylinder.",
+      "exampleVi": "Cái lon có hình trụ.",
+      "collocations": [
+        {
+          "en": "gas cylinder",
+          "vi": "bình gas"
+        },
+        {
+          "en": "glass cylinder",
+          "vi": "ống thủy tinh"
+        }
+      ],
+      "tip": "gas cylinder = bình ga.",
+      "emoji": "🥫",
+      "stage": 2
+    },
+    {
+      "id": 4341,
+      "word": "cone",
+      "ipa": "koʊn",
+      "viRead": "KÂUN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hình nón; ốc quế",
+      "exampleEn": "I'd like an ice cream cone, please.",
+      "exampleVi": "Cho tôi một cây kem ốc quế.",
+      "collocations": [
+        {
+          "en": "ice cream cone",
+          "vi": "kem ốc quế"
+        },
+        {
+          "en": "traffic cone",
+          "vi": "cọc giao thông"
+        }
+      ],
+      "tip": "Nón lá Việt Nam = conical hat.",
+      "emoji": "🍦",
+      "stage": 2
+    },
+    {
+      "id": 4342,
+      "word": "pyramid",
+      "ipa": "ˈpɪrəmɪd",
+      "viRead": "PI-rơ-miđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kim tự tháp; hình chóp",
+      "exampleEn": "We saw the pyramids in Egypt.",
+      "exampleVi": "Chúng tôi đã xem kim tự tháp ở Ai Cập.",
+      "collocations": [
+        {
+          "en": "Egyptian pyramid",
+          "vi": "kim tự tháp Ai Cập"
+        },
+        {
+          "en": "food pyramid",
+          "vi": "tháp dinh dưỡng"
+        }
+      ],
+      "tip": "Trọng âm đầu: PI-rơ-miđ.",
+      "emoji": "🔺",
+      "stage": 2
+    },
+    {
+      "id": 4343,
+      "word": "spiral",
+      "ipa": "ˈspaɪrəl",
+      "viRead": "SPAI-rơl",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "hình xoắn ốc",
+      "exampleEn": "A snail's shell is a spiral.",
+      "exampleVi": "Vỏ ốc sên có hình xoắn ốc.",
+      "collocations": [
+        {
+          "en": "spiral staircase",
+          "vi": "cầu thang xoắn"
+        },
+        {
+          "en": "spiral notebook",
+          "vi": "vở gáy lò xo"
+        }
+      ],
+      "tip": "spiral notebook = vở gáy lò xo.",
+      "emoji": "🌀",
+      "stage": 2
+    },
+    {
+      "id": 4344,
+      "word": "zigzag",
+      "ipa": "ˈzɪgzæg",
+      "viRead": "DIG-deg",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "đường zíc zắc",
+      "exampleEn": "The path goes in a zigzag up the hill.",
+      "exampleVi": "Con đường chạy zíc zắc lên đồi.",
+      "collocations": [
+        {
+          "en": "zigzag line",
+          "vi": "đường zíc zắc"
+        },
+        {
+          "en": "in a zigzag",
+          "vi": "theo hình zíc zắc"
+        }
+      ],
+      "tip": "zigzag = đường gấp khúc.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 4345,
+      "word": "dot",
+      "ipa": "dɑt",
+      "viRead": "ĐAT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dấu chấm; chấm tròn",
+      "exampleEn": "Her dress has white dots.",
+      "exampleVi": "Váy cô ấy có chấm trắng.",
+      "collocations": [
+        {
+          "en": "polka dot",
+          "vi": "chấm bi"
+        },
+        {
+          "en": "dot com",
+          "vi": "chấm com"
+        }
+      ],
+      "family": [
+        {
+          "word": "spot",
+          "vi": "đốm"
+        }
+      ],
+      "tip": "Đọc địa chỉ web: vocastudy dot app.",
+      "emoji": "⚪",
+      "stage": 2
+    },
+    {
+      "id": 4346,
+      "word": "checkered",
+      "ipa": "ˈʧɛkərd",
+      "viRead": "CHE-kơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kẻ ô (caro)",
+      "exampleEn": "The table has a checkered cloth.",
+      "exampleVi": "Bàn trải khăn kẻ ô.",
+      "collocations": [
+        {
+          "en": "checkered shirt",
+          "vi": "áo sơ mi caro"
+        },
+        {
+          "en": "checkered flag",
+          "vi": "cờ ca-rô"
+        }
+      ],
+      "family": [
+        {
+          "word": "plaid",
+          "vi": "kẻ sọc ca-rô"
+        }
+      ],
+      "tip": "Anh viết chequered.",
+      "emoji": "🏁",
+      "stage": 2
+    },
+    {
+      "id": 4347,
+      "word": "spotted",
+      "ipa": "ˈspɑtɪd",
+      "viRead": "SPA-tiđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có đốm",
+      "exampleEn": "A leopard has a spotted coat.",
+      "exampleVi": "Báo hoa mai có bộ lông đốm.",
+      "collocations": [
+        {
+          "en": "spotted dog",
+          "vi": "chó đốm"
+        },
+        {
+          "en": "spotted dress",
+          "vi": "váy chấm"
+        }
+      ],
+      "family": [
+        {
+          "word": "spot",
+          "vi": "đốm"
+        }
+      ],
+      "tip": "spot (n) → spotted (adj).",
+      "emoji": "🐆",
+      "stage": 2
+    },
+    {
+      "id": 4348,
+      "word": "glossy",
+      "ipa": "ˈglɔsi",
+      "viRead": "GLO-si",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bóng loáng",
+      "exampleEn": "The magazine has glossy pages.",
+      "exampleVi": "Tạp chí có những trang giấy bóng.",
+      "collocations": [
+        {
+          "en": "glossy hair",
+          "vi": "tóc bóng mượt"
+        },
+        {
+          "en": "glossy paper",
+          "vi": "giấy bóng"
+        }
+      ],
+      "family": [
+        {
+          "word": "shiny",
+          "vi": "sáng bóng"
+        }
+      ],
+      "tip": "glossy ↔ matte (mờ).",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 4349,
+      "word": "silky",
+      "ipa": "ˈsɪlki",
+      "viRead": "SIL-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mượt như lụa",
+      "exampleEn": "She has long silky hair.",
+      "exampleVi": "Cô ấy có mái tóc dài mượt như lụa.",
+      "collocations": [
+        {
+          "en": "silky hair",
+          "vi": "tóc mượt"
+        },
+        {
+          "en": "silky smooth",
+          "vi": "mịn như lụa"
+        }
+      ],
+      "family": [
+        {
+          "word": "silk",
+          "vi": "lụa"
+        }
+      ],
+      "tip": "silk (n) → silky (adj).",
+      "emoji": "🎀",
+      "stage": 2
+    },
+    {
+      "id": 4350,
+      "word": "metallic",
+      "ipa": "məˈtælɪk",
+      "viRead": "mơ-TE-lik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ánh kim, bằng kim loại",
+      "exampleEn": "The car is painted metallic gray.",
+      "exampleVi": "Chiếc xe sơn màu xám ánh kim.",
+      "collocations": [
+        {
+          "en": "metallic sound",
+          "vi": "tiếng kim loại"
+        },
+        {
+          "en": "metallic paint",
+          "vi": "sơn ánh kim"
+        }
+      ],
+      "family": [
+        {
+          "word": "metal",
+          "vi": "kim loại"
+        }
+      ],
+      "tip": "metal (n) → metallic (adj).",
+      "emoji": "🔩",
+      "stage": 2
+    },
+    {
+      "id": 4351,
+      "word": "opaque",
+      "ipa": "oʊˈpeɪk",
+      "viRead": "âu-PÂYK",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mờ đục, không trong suốt",
+      "exampleEn": "The bathroom window is opaque.",
+      "exampleVi": "Cửa sổ phòng tắm là kính mờ.",
+      "collocations": [
+        {
+          "en": "opaque glass",
+          "vi": "kính mờ"
+        },
+        {
+          "en": "opaque bottle",
+          "vi": "chai không trong suốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "transparent",
+          "vi": "trong suốt"
+        }
+      ],
+      "tip": "opaque ↔ transparent. Đọc 'âu-PÂYK'.",
+      "emoji": "🪟",
+      "stage": 2
+    },
+    {
+      "id": 4352,
+      "word": "dense",
+      "ipa": "dɛns",
+      "viRead": "ĐENS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dày đặc",
+      "exampleEn": "We drove slowly through dense fog.",
+      "exampleVi": "Chúng tôi lái chậm qua màn sương dày đặc.",
+      "collocations": [
+        {
+          "en": "dense fog",
+          "vi": "sương dày đặc"
+        },
+        {
+          "en": "dense forest",
+          "vi": "rừng rậm"
+        }
+      ],
+      "family": [
+        {
+          "word": "thick",
+          "vi": "dày"
+        }
+      ],
+      "tip": "dense ↔ sparse (thưa thớt).",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 4353,
+      "word": "woolly",
+      "ipa": "ˈwʊli",
+      "viRead": "WU-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bằng len; xù như len",
+      "exampleEn": "Grandma knitted me a woolly hat.",
+      "exampleVi": "Bà đan cho tôi một cái mũ len.",
+      "collocations": [
+        {
+          "en": "woolly hat",
+          "vi": "mũ len"
+        },
+        {
+          "en": "woolly socks",
+          "vi": "tất len"
+        }
+      ],
+      "family": [
+        {
+          "word": "wool",
+          "vi": "len"
+        }
+      ],
+      "tip": "Mỹ cũng viết wooly.",
+      "emoji": "🐑",
       "stage": 2
     }
   ]
