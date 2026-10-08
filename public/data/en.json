@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4373,
+    "count": 4401,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -123193,6 +123193,786 @@
       ],
       "tip": "Đọc 'LÂU-gâu'.",
       "emoji": "🔷",
+      "stage": 2
+    },
+    {
+      "id": 4374,
+      "word": "barrel",
+      "ipa": "ˈbɛrəl",
+      "viRead": "BE-rơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thùng (gỗ, phuy)",
+      "exampleEn": "The water barrel is full after the rain.",
+      "exampleVi": "Thùng nước đầy sau cơn mưa.",
+      "collocations": [
+        {
+          "en": "oil barrel",
+          "vi": "thùng dầu"
+        },
+        {
+          "en": "wooden barrel",
+          "vi": "thùng gỗ"
+        }
+      ],
+      "tip": "a barrel of laughs = vui hết biết.",
+      "emoji": "🛢️",
+      "stage": 2
+    },
+    {
+      "id": 4375,
+      "word": "celebration",
+      "ipa": "ˌsɛləˈbreɪʃən",
+      "viRead": "se-lơ-BRÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lễ kỷ niệm, buổi ăn mừng",
+      "exampleEn": "We had a small celebration for her birthday.",
+      "exampleVi": "Chúng tôi ăn mừng sinh nhật cô ấy nho nhỏ.",
+      "collocations": [
+        {
+          "en": "birthday celebration",
+          "vi": "tiệc sinh nhật"
+        },
+        {
+          "en": "a cause for celebration",
+          "vi": "đáng ăn mừng"
+        }
+      ],
+      "family": [
+        {
+          "word": "celebrate",
+          "vi": "ăn mừng"
+        }
+      ],
+      "tip": "celebrate (v) → celebration (n).",
+      "emoji": "🎉",
+      "stage": 2
+    },
+    {
+      "id": 4376,
+      "word": "cradle",
+      "ipa": "ˈkreɪdəl",
+      "viRead": "KRÂY-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái nôi",
+      "exampleEn": "The baby is sleeping in the cradle.",
+      "exampleVi": "Em bé đang ngủ trong nôi.",
+      "collocations": [
+        {
+          "en": "rock the cradle",
+          "vi": "đưa nôi"
+        },
+        {
+          "en": "from the cradle",
+          "vi": "từ thuở nằm nôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "crib",
+          "vi": "cũi"
+        }
+      ],
+      "tip": "from cradle to grave = suốt đời.",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 4377,
+      "word": "doll",
+      "ipa": "dɑl",
+      "viRead": "ĐAL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "búp bê",
+      "exampleEn": "My sister has a collection of dolls.",
+      "exampleVi": "Em gái tôi có cả bộ sưu tập búp bê.",
+      "collocations": [
+        {
+          "en": "play with dolls",
+          "vi": "chơi búp bê"
+        },
+        {
+          "en": "paper doll",
+          "vi": "búp bê giấy"
+        }
+      ],
+      "family": [
+        {
+          "word": "toy",
+          "vi": "đồ chơi"
+        }
+      ],
+      "tip": "doll (búp bê) — dollar (đô la).",
+      "emoji": "🪆",
+      "stage": 2
+    },
+    {
+      "id": 4378,
+      "word": "errand",
+      "ipa": "ˈɛrənd",
+      "viRead": "E-rơnđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "việc vặt (đi mua, đi gửi)",
+      "exampleEn": "I have some errands to run this morning.",
+      "exampleVi": "Sáng nay tôi có vài việc vặt phải đi làm.",
+      "collocations": [
+        {
+          "en": "run errands",
+          "vi": "chạy việc vặt"
+        },
+        {
+          "en": "do an errand",
+          "vi": "làm việc vặt"
+        }
+      ],
+      "family": [
+        {
+          "word": "chore",
+          "vi": "việc nhà"
+        }
+      ],
+      "tip": "run errands = đi làm mấy việc lặt vặt bên ngoài.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 4379,
+      "word": "garbage",
+      "ipa": "ˈgɑrbɪʤ",
+      "viRead": "GAR-bigi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rác",
+      "exampleEn": "Take out the garbage, please.",
+      "exampleVi": "Đổ rác giùm nhé.",
+      "collocations": [
+        {
+          "en": "take out the garbage",
+          "vi": "đổ rác"
+        },
+        {
+          "en": "garbage truck",
+          "vi": "xe rác"
+        }
+      ],
+      "family": [
+        {
+          "word": "trash",
+          "vi": "rác"
+        }
+      ],
+      "tip": "Mỹ: garbage/trash; Anh: rubbish.",
+      "emoji": "🗑️",
+      "stage": 2
+    },
+    {
+      "id": 4380,
+      "word": "greeting",
+      "ipa": "ˈgritɪŋ",
+      "viRead": "GRI-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lời chào",
+      "exampleEn": "She waved a greeting from the window.",
+      "exampleVi": "Cô ấy vẫy tay chào từ cửa sổ.",
+      "collocations": [
+        {
+          "en": "warm greeting",
+          "vi": "lời chào nồng nhiệt"
+        },
+        {
+          "en": "greeting card",
+          "vi": "thiệp chúc mừng"
+        }
+      ],
+      "family": [
+        {
+          "word": "greet",
+          "vi": "chào"
+        }
+      ],
+      "tip": "Season's greetings! = Chúc mừng mùa lễ!",
+      "emoji": "👋",
+      "stage": 2
+    },
+    {
+      "id": 4381,
+      "word": "leftovers",
+      "ipa": "ˈlɛftˌoʊvərz",
+      "viRead": "LEPHT-âu-vơd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ ăn thừa",
+      "exampleEn": "We had the leftovers for lunch.",
+      "exampleVi": "Chúng tôi ăn đồ còn thừa cho bữa trưa.",
+      "collocations": [
+        {
+          "en": "eat leftovers",
+          "vi": "ăn đồ thừa"
+        },
+        {
+          "en": "dinner leftovers",
+          "vi": "đồ ăn tối còn lại"
+        }
+      ],
+      "family": [
+        {
+          "word": "left",
+          "vi": "còn lại"
+        }
+      ],
+      "tip": "Luôn số nhiều: leftovers.",
+      "emoji": "🍱",
+      "stage": 2
+    },
+    {
+      "id": 4382,
+      "word": "lullaby",
+      "ipa": "ˈlələˌbaɪ",
+      "viRead": "LƠ-lơ-bai",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài hát ru",
+      "exampleEn": "Grandma sang a lullaby to the baby.",
+      "exampleVi": "Bà hát ru cho em bé.",
+      "collocations": [
+        {
+          "en": "sing a lullaby",
+          "vi": "hát ru"
+        },
+        {
+          "en": "old lullaby",
+          "vi": "bài ru xưa"
+        }
+      ],
+      "tip": "lullaby = ru à ơi.",
+      "emoji": "🌙",
+      "stage": 2
+    },
+    {
+      "id": 4383,
+      "word": "marble",
+      "ipa": "ˈmɑrbəl",
+      "viRead": "MAR-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đá cẩm thạch; viên bi",
+      "exampleEn": "The floor is made of marble.",
+      "exampleVi": "Sàn nhà làm bằng đá cẩm thạch.",
+      "collocations": [
+        {
+          "en": "marble floor",
+          "vi": "sàn đá hoa"
+        },
+        {
+          "en": "play marbles",
+          "vi": "chơi bắn bi"
+        }
+      ],
+      "tip": "play marbles = chơi bắn bi.",
+      "emoji": "⚪",
+      "stage": 2
+    },
+    {
+      "id": 4384,
+      "word": "nickname",
+      "ipa": "ˈnɪkˌneɪm",
+      "viRead": "NIK-nâym",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biệt danh, tên ở nhà",
+      "exampleEn": "My nickname at home is 'Bin'.",
+      "exampleVi": "Tên ở nhà của tôi là 'Bin'.",
+      "collocations": [
+        {
+          "en": "give a nickname",
+          "vi": "đặt biệt danh"
+        },
+        {
+          "en": "childhood nickname",
+          "vi": "tên hồi nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "name",
+          "vi": "tên"
+        }
+      ],
+      "tip": "Người Việt hay có tên ở nhà = nickname.",
+      "emoji": "🏷️",
+      "stage": 2
+    },
+    {
+      "id": 4385,
+      "word": "ornament",
+      "ipa": "ˈɔrnəmənt",
+      "viRead": "OR-nơ-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ trang trí",
+      "exampleEn": "We hung ornaments on the Christmas tree.",
+      "exampleVi": "Chúng tôi treo đồ trang trí lên cây thông Noel.",
+      "collocations": [
+        {
+          "en": "Christmas ornament",
+          "vi": "đồ trang trí Noel"
+        },
+        {
+          "en": "glass ornament",
+          "vi": "đồ trang trí thủy tinh"
+        }
+      ],
+      "family": [
+        {
+          "word": "decoration",
+          "vi": "sự trang trí"
+        }
+      ],
+      "tip": "ornament = món đồ trang trí.",
+      "emoji": "🎄",
+      "stage": 2
+    },
+    {
+      "id": 4386,
+      "word": "picnic",
+      "ipa": "ˈpɪkˌnɪk",
+      "viRead": "PIK-nik",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chuyến dã ngoại",
+      "exampleEn": "Let's have a picnic in the park.",
+      "exampleVi": "Mình đi dã ngoại ở công viên nhé.",
+      "collocations": [
+        {
+          "en": "have a picnic",
+          "vi": "đi dã ngoại"
+        },
+        {
+          "en": "picnic basket",
+          "vi": "giỏ picnic"
+        }
+      ],
+      "tip": "picnic → picnicked (thêm k).",
+      "emoji": "🧺",
+      "stage": 2
+    },
+    {
+      "id": 4387,
+      "word": "postcard",
+      "ipa": "ˈpoʊstˌkɑrd",
+      "viRead": "PÂUST-karđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bưu thiếp",
+      "exampleEn": "Send me a postcard from Da Lat!",
+      "exampleVi": "Gửi cho tôi tấm bưu thiếp từ Đà Lạt nhé!",
+      "collocations": [
+        {
+          "en": "send a postcard",
+          "vi": "gửi bưu thiếp"
+        },
+        {
+          "en": "picture postcard",
+          "vi": "bưu thiếp có hình"
+        }
+      ],
+      "family": [
+        {
+          "word": "card",
+          "vi": "thiệp"
+        }
+      ],
+      "tip": "post + card.",
+      "emoji": "💌",
+      "stage": 2
+    },
+    {
+      "id": 4388,
+      "word": "prank",
+      "ipa": "præŋk",
+      "viRead": "PRENGK",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trò chơi khăm",
+      "exampleEn": "The kids played a prank on their teacher.",
+      "exampleVi": "Bọn trẻ chơi khăm thầy giáo.",
+      "collocations": [
+        {
+          "en": "play a prank",
+          "vi": "chơi khăm"
+        },
+        {
+          "en": "April Fools' prank",
+          "vi": "trò đùa Cá tháng Tư"
+        }
+      ],
+      "family": [
+        {
+          "word": "joke",
+          "vi": "trò đùa"
+        }
+      ],
+      "tip": "prank call = cuộc gọi chọc phá.",
+      "emoji": "🃏",
+      "stage": 2
+    },
+    {
+      "id": 4389,
+      "word": "puppet",
+      "ipa": "ˈpəpɪt",
+      "viRead": "PƠ-pơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con rối",
+      "exampleEn": "Water puppet shows are famous in Vietnam.",
+      "exampleVi": "Múa rối nước rất nổi tiếng ở Việt Nam.",
+      "collocations": [
+        {
+          "en": "water puppet",
+          "vi": "múa rối nước"
+        },
+        {
+          "en": "puppet show",
+          "vi": "buổi múa rối"
+        }
+      ],
+      "tip": "water puppetry = múa rối nước.",
+      "emoji": "🎎",
+      "stage": 2
+    },
+    {
+      "id": 4390,
+      "word": "riddle",
+      "ipa": "ˈrɪdəl",
+      "viRead": "RI-đơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "câu đố",
+      "exampleEn": "Can you solve this riddle?",
+      "exampleVi": "Bạn giải được câu đố này không?",
+      "collocations": [
+        {
+          "en": "solve a riddle",
+          "vi": "giải câu đố"
+        },
+        {
+          "en": "tell a riddle",
+          "vi": "đố"
+        }
+      ],
+      "family": [
+        {
+          "word": "puzzle",
+          "vi": "câu đố"
+        }
+      ],
+      "tip": "riddle = câu đố mẹo bằng lời.",
+      "emoji": "❓",
+      "stage": 2
+    },
+    {
+      "id": 4391,
+      "word": "ribbon",
+      "ipa": "ˈrɪbən",
+      "viRead": "RI-bơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ruy băng",
+      "exampleEn": "She tied her hair with a red ribbon.",
+      "exampleVi": "Cô ấy buộc tóc bằng ruy băng đỏ.",
+      "collocations": [
+        {
+          "en": "red ribbon",
+          "vi": "ruy băng đỏ"
+        },
+        {
+          "en": "cut the ribbon",
+          "vi": "cắt băng khánh thành"
+        }
+      ],
+      "tip": "cut the ribbon = cắt băng khánh thành.",
+      "emoji": "🎀",
+      "stage": 2
+    },
+    {
+      "id": 4392,
+      "word": "scrapbook",
+      "ipa": "ˈskræpˌbʊk",
+      "viRead": "SKREP-buk",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sổ lưu niệm (dán ảnh)",
+      "exampleEn": "She keeps her travel photos in a scrapbook.",
+      "exampleVi": "Cô ấy dán ảnh du lịch trong sổ lưu niệm.",
+      "collocations": [
+        {
+          "en": "make a scrapbook",
+          "vi": "làm sổ lưu niệm"
+        },
+        {
+          "en": "scrapbook page",
+          "vi": "trang sổ"
+        }
+      ],
+      "tip": "scrap (mẩu) + book.",
+      "emoji": "📔",
+      "stage": 2
+    },
+    {
+      "id": 4393,
+      "word": "sticker",
+      "ipa": "ˈstɪkər",
+      "viRead": "STI-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhãn dán, hình dán",
+      "exampleEn": "My laptop is covered with stickers.",
+      "exampleVi": "Laptop của tôi dán đầy hình dán.",
+      "collocations": [
+        {
+          "en": "put a sticker on",
+          "vi": "dán nhãn"
+        },
+        {
+          "en": "price sticker",
+          "vi": "nhãn giá"
+        }
+      ],
+      "family": [
+        {
+          "word": "stick",
+          "vi": "dán"
+        }
+      ],
+      "tip": "Mở quà mỗi ngày trong app để sưu tầm sticker!",
+      "emoji": "🏷️",
+      "stage": 2
+    },
+    {
+      "id": 4394,
+      "word": "teddy",
+      "ipa": "ˈtɛdi",
+      "viRead": "TE-đi",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gấu bông",
+      "exampleEn": "The child sleeps with his teddy.",
+      "exampleVi": "Đứa bé ngủ cùng con gấu bông.",
+      "collocations": [
+        {
+          "en": "teddy bear",
+          "vi": "gấu bông"
+        },
+        {
+          "en": "cuddle a teddy",
+          "vi": "ôm gấu bông"
+        }
+      ],
+      "tip": "Teddy bear đặt theo tên Tổng thống Teddy Roosevelt.",
+      "emoji": "🧸",
+      "stage": 2
+    },
+    {
+      "id": 4395,
+      "word": "trash",
+      "ipa": "træʃ",
+      "viRead": "TRESH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "rác",
+      "exampleEn": "Don't throw trash on the street.",
+      "exampleVi": "Đừng vứt rác ra đường.",
+      "collocations": [
+        {
+          "en": "trash can",
+          "vi": "thùng rác"
+        },
+        {
+          "en": "take out the trash",
+          "vi": "đổ rác"
+        }
+      ],
+      "family": [
+        {
+          "word": "garbage",
+          "vi": "rác"
+        }
+      ],
+      "tip": "trash can = thùng rác.",
+      "emoji": "🚮",
+      "stage": 2
+    },
+    {
+      "id": 4396,
+      "word": "zodiac",
+      "ipa": "ˈzoʊdiˌæk",
+      "viRead": "DÂU-đi-ek",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cung hoàng đạo; con giáp",
+      "exampleEn": "What's your Vietnamese zodiac animal?",
+      "exampleVi": "Bạn tuổi con gì?",
+      "collocations": [
+        {
+          "en": "zodiac sign",
+          "vi": "cung hoàng đạo"
+        },
+        {
+          "en": "zodiac animal",
+          "vi": "con giáp"
+        }
+      ],
+      "tip": "Vietnamese zodiac = 12 con giáp (có mèo thay thỏ!).",
+      "emoji": "🐉",
+      "stage": 2
+    },
+    {
+      "id": 4397,
+      "word": "superstition",
+      "ipa": "ˌsupərˈstɪʃən",
+      "viRead": "su-pơ-STI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự mê tín",
+      "exampleEn": "It's a superstition that cats bring bad luck.",
+      "exampleVi": "Mèo mang lại xui xẻo là điều mê tín.",
+      "collocations": [
+        {
+          "en": "old superstition",
+          "vi": "mê tín xưa"
+        },
+        {
+          "en": "believe in superstition",
+          "vi": "tin vào mê tín"
+        }
+      ],
+      "family": [
+        {
+          "word": "superstitious",
+          "vi": "mê tín"
+        }
+      ],
+      "tip": "superstitious (adj) = mê tín.",
+      "emoji": "🍀",
+      "stage": 2
+    },
+    {
+      "id": 4398,
+      "word": "witch",
+      "ipa": "wɪʧ",
+      "viRead": "WICH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phù thủy (nữ)",
+      "exampleEn": "The witch flew on a broom.",
+      "exampleVi": "Mụ phù thủy cưỡi chổi bay.",
+      "collocations": [
+        {
+          "en": "wicked witch",
+          "vi": "phù thủy độc ác"
+        },
+        {
+          "en": "witch hat",
+          "vi": "mũ phù thủy"
+        }
+      ],
+      "family": [
+        {
+          "word": "wizard",
+          "vi": "phù thủy (nam)"
+        }
+      ],
+      "tip": "witch (nữ) — wizard (nam).",
+      "emoji": "🧙‍♀️",
+      "stage": 2
+    },
+    {
+      "id": 4399,
+      "word": "mermaid",
+      "ipa": "ˈmərˌmeɪd",
+      "viRead": "MƠ-mâyđ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nàng tiên cá",
+      "exampleEn": "The Little Mermaid is a famous story.",
+      "exampleVi": "Nàng tiên cá là một câu chuyện nổi tiếng.",
+      "collocations": [
+        {
+          "en": "little mermaid",
+          "vi": "nàng tiên cá"
+        },
+        {
+          "en": "mermaid tail",
+          "vi": "đuôi tiên cá"
+        }
+      ],
+      "tip": "mer (biển, cổ) + maid (thiếu nữ).",
+      "emoji": "🧜‍♀️",
+      "stage": 2
+    },
+    {
+      "id": 4400,
+      "word": "fairytale",
+      "ipa": "ˈfɛriˌteɪl",
+      "viRead": "PHE-ri-tâyl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "truyện cổ tích",
+      "exampleEn": "Their wedding was like a fairytale.",
+      "exampleVi": "Đám cưới của họ như truyện cổ tích.",
+      "collocations": [
+        {
+          "en": "fairytale ending",
+          "vi": "kết có hậu"
+        },
+        {
+          "en": "read a fairytale",
+          "vi": "đọc truyện cổ tích"
+        }
+      ],
+      "family": [
+        {
+          "word": "fairy",
+          "vi": "nàng tiên"
+        }
+      ],
+      "tip": "Cũng viết fairy tale (hai chữ).",
+      "emoji": "🏰",
+      "stage": 2
+    },
+    {
+      "id": 4401,
+      "word": "fable",
+      "ipa": "ˈfeɪbəl",
+      "viRead": "PHÂY-bơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "truyện ngụ ngôn",
+      "exampleEn": "The fable teaches us not to be lazy.",
+      "exampleVi": "Truyện ngụ ngôn dạy ta đừng lười biếng.",
+      "collocations": [
+        {
+          "en": "Aesop's fables",
+          "vi": "truyện ngụ ngôn Aesop"
+        },
+        {
+          "en": "moral of the fable",
+          "vi": "bài học của truyện"
+        }
+      ],
+      "family": [
+        {
+          "word": "story",
+          "vi": "câu chuyện"
+        }
+      ],
+      "tip": "Truyện 'Rùa và Thỏ' là một fable.",
+      "emoji": "🐢",
       "stage": 2
     }
   ]
