@@ -84,6 +84,7 @@ export default function Listen() {
         ttsLang={pack.meta.ttsLang}
         viVoice={sayMeaning ? viVoice : null}
         due={getDueCards(Object.values(cards), today()).length}
+        preview={source === 'upcoming'}
         onRestart={() => setPlaylist(null)}
       />
     )
@@ -217,6 +218,7 @@ function Player({
   ttsLang,
   viVoice,
   due,
+  preview,
   onRestart,
 }: {
   words: Word[]
@@ -224,6 +226,8 @@ function Player({
   ttsLang: string
   viVoice: string | null
   due: number
+  /** The playlist previewed words not learned yet: offer to learn them next. */
+  preview: boolean
   onRestart: () => void
 }) {
   const rate = useSettings((s) => s.ttsRate)
@@ -344,8 +348,8 @@ function Player({
         <button onClick={onRestart} className="btn-secondary">
           Nghe tiếp
         </button>
-        <Link to={quickStartPath(due)} className="btn-primary">
-          Học nhanh 2 phút
+        <Link to={preview ? '/learn?quick=1' : quickStartPath(due)} className="btn-primary">
+          {preview ? 'Học ngay những từ vừa nghe' : 'Học nhanh 2 phút'}
         </Link>
       </SessionComplete>
     )
