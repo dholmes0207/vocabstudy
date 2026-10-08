@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4401,
+    "count": 4426,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -123973,6 +123973,744 @@
       ],
       "tip": "Truyện 'Rùa và Thỏ' là một fable.",
       "emoji": "🐢",
+      "stage": 2
+    },
+    {
+      "id": 4402,
+      "word": "wonderful",
+      "ipa": "ˈwəndərfəl",
+      "viRead": "WƠN-đơ-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt vời",
+      "exampleEn": "We had a wonderful time in Hoi An.",
+      "exampleVi": "Chúng tôi đã có khoảng thời gian tuyệt vời ở Hội An.",
+      "collocations": [
+        {
+          "en": "wonderful time",
+          "vi": "khoảng thời gian tuyệt vời"
+        },
+        {
+          "en": "wonderful idea",
+          "vi": "ý tưởng tuyệt vời"
+        }
+      ],
+      "family": [
+        {
+          "word": "wonder",
+          "vi": "điều kỳ diệu"
+        }
+      ],
+      "tip": "wonder + -ful = đầy điều kỳ diệu.",
+      "emoji": "🌟",
+      "stage": 2
+    },
+    {
+      "id": 4403,
+      "word": "interesting",
+      "ipa": "ˈɪntrəstɪŋ",
+      "viRead": "IN-trơ-sting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thú vị",
+      "exampleEn": "This book is really interesting.",
+      "exampleVi": "Cuốn sách này thật thú vị.",
+      "collocations": [
+        {
+          "en": "interesting story",
+          "vi": "câu chuyện thú vị"
+        },
+        {
+          "en": "find it interesting",
+          "vi": "thấy thú vị"
+        }
+      ],
+      "family": [
+        {
+          "word": "interested",
+          "vi": "quan tâm, thấy hứng thú"
+        }
+      ],
+      "tip": "-ing: cái gây ra (interesting book); -ed: người cảm thấy (I'm interested).",
+      "emoji": "📖",
+      "stage": 2
+    },
+    {
+      "id": 4404,
+      "word": "exciting",
+      "ipa": "ɪkˈsaɪtɪŋ",
+      "viRead": "ik-SAI-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hào hứng, sôi động",
+      "exampleEn": "The match was very exciting.",
+      "exampleVi": "Trận đấu rất sôi động.",
+      "collocations": [
+        {
+          "en": "exciting news",
+          "vi": "tin vui hào hứng"
+        },
+        {
+          "en": "exciting game",
+          "vi": "trận đấu hấp dẫn"
+        }
+      ],
+      "family": [
+        {
+          "word": "excited",
+          "vi": "hào hứng (cảm thấy)"
+        }
+      ],
+      "tip": "The game is exciting → I'm excited.",
+      "emoji": "🎢",
+      "stage": 2
+    },
+    {
+      "id": 4405,
+      "word": "awesome",
+      "ipa": "ˈɔsəm",
+      "viRead": "O-sơm",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt đỉnh, quá đã",
+      "exampleEn": "Your new bike is awesome!",
+      "exampleVi": "Xe đạp mới của bạn đỉnh quá!",
+      "collocations": [
+        {
+          "en": "totally awesome",
+          "vi": "đỉnh của chóp"
+        },
+        {
+          "en": "awesome view",
+          "vi": "cảnh tuyệt đẹp"
+        }
+      ],
+      "family": [
+        {
+          "word": "amazing",
+          "vi": "tuyệt vời"
+        }
+      ],
+      "tip": "Awesome! = Tuyệt! (rất thân mật, Mỹ).",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 4406,
+      "word": "fabulous",
+      "ipa": "ˈfæbjələs",
+      "viRead": "PHE-byơ-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt diệu",
+      "exampleEn": "You look fabulous in that dress!",
+      "exampleVi": "Bạn mặc chiếc váy đó trông tuyệt quá!",
+      "collocations": [
+        {
+          "en": "fabulous party",
+          "vi": "bữa tiệc tuyệt vời"
+        },
+        {
+          "en": "look fabulous",
+          "vi": "trông tuyệt"
+        }
+      ],
+      "tip": "fab = viết tắt thân mật của fabulous.",
+      "emoji": "💃",
+      "stage": 2
+    },
+    {
+      "id": 4407,
+      "word": "marvelous",
+      "ipa": "ˈmɑrvələs",
+      "viRead": "MAR-vơ-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kỳ diệu, tuyệt vời",
+      "exampleEn": "The view from the top is marvelous.",
+      "exampleVi": "Cảnh nhìn từ trên đỉnh thật kỳ diệu.",
+      "collocations": [
+        {
+          "en": "marvelous view",
+          "vi": "cảnh kỳ diệu"
+        },
+        {
+          "en": "marvelous idea",
+          "vi": "ý hay tuyệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "marvel",
+          "vi": "điều kỳ diệu"
+        }
+      ],
+      "tip": "Anh viết marvellous.",
+      "emoji": "🌄",
+      "stage": 2
+    },
+    {
+      "id": 4408,
+      "word": "splendid",
+      "ipa": "ˈsplɛndɪd",
+      "viRead": "SPLEN-điđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lộng lẫy, xuất sắc",
+      "exampleEn": "They live in a splendid old house.",
+      "exampleVi": "Họ sống trong một ngôi nhà cổ lộng lẫy.",
+      "collocations": [
+        {
+          "en": "splendid view",
+          "vi": "cảnh tráng lệ"
+        },
+        {
+          "en": "splendid job",
+          "vi": "làm rất xuất sắc"
+        }
+      ],
+      "tip": "Splendid! = Tuyệt lắm! (kiểu Anh).",
+      "emoji": "🏛️",
+      "stage": 2
+    },
+    {
+      "id": 4409,
+      "word": "terrific",
+      "ipa": "təˈrɪfɪk",
+      "viRead": "tơ-RI-phik",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tuyệt vời",
+      "exampleEn": "You did a terrific job!",
+      "exampleVi": "Bạn làm tốt tuyệt vời!",
+      "collocations": [
+        {
+          "en": "terrific job",
+          "vi": "làm rất tốt"
+        },
+        {
+          "en": "feel terrific",
+          "vi": "thấy rất khỏe"
+        }
+      ],
+      "family": [
+        {
+          "word": "terrible",
+          "vi": "tệ hại"
+        }
+      ],
+      "tip": "terrific (tuyệt) ≠ terrible (tệ) — dễ nhầm!",
+      "emoji": "👍",
+      "stage": 2
+    },
+    {
+      "id": 4410,
+      "word": "dreadful",
+      "ipa": "ˈdrɛdfəl",
+      "viRead": "ĐREĐ-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kinh khủng, tồi tệ",
+      "exampleEn": "The traffic this morning was dreadful.",
+      "exampleVi": "Giao thông sáng nay kinh khủng.",
+      "collocations": [
+        {
+          "en": "dreadful weather",
+          "vi": "thời tiết tệ hại"
+        },
+        {
+          "en": "feel dreadful",
+          "vi": "thấy rất mệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "dread",
+          "vi": "nỗi sợ"
+        }
+      ],
+      "tip": "dreadful = awful.",
+      "emoji": "😖",
+      "stage": 2
+    },
+    {
+      "id": 4411,
+      "word": "disgusting",
+      "ipa": "dɪsˈgəstɪŋ",
+      "viRead": "đis-GƠS-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kinh tởm, ghê",
+      "exampleEn": "The smell from the trash is disgusting.",
+      "exampleVi": "Mùi từ thùng rác thật kinh khủng.",
+      "collocations": [
+        {
+          "en": "disgusting smell",
+          "vi": "mùi ghê"
+        },
+        {
+          "en": "absolutely disgusting",
+          "vi": "ghê tởm hết sức"
+        }
+      ],
+      "family": [
+        {
+          "word": "disgust",
+          "vi": "sự ghê tởm"
+        }
+      ],
+      "tip": "Ew, disgusting! = Eo ơi, ghê quá!",
+      "emoji": "🤮",
+      "stage": 2
+    },
+    {
+      "id": 4412,
+      "word": "annoying",
+      "ipa": "əˈnɔɪɪŋ",
+      "viRead": "ơ-NOI-ing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gây khó chịu, phiền",
+      "exampleEn": "That noise is so annoying.",
+      "exampleVi": "Tiếng ồn đó thật khó chịu.",
+      "collocations": [
+        {
+          "en": "annoying habit",
+          "vi": "thói quen khó chịu"
+        },
+        {
+          "en": "really annoying",
+          "vi": "phiền thật"
+        }
+      ],
+      "family": [
+        {
+          "word": "annoyed",
+          "vi": "bực mình"
+        }
+      ],
+      "tip": "-ing (gây phiền) / -ed (thấy bực).",
+      "emoji": "😒",
+      "stage": 2
+    },
+    {
+      "id": 4413,
+      "word": "confusing",
+      "ipa": "kənˈfjuzɪŋ",
+      "viRead": "kơn-PHYU-ding",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khó hiểu, gây rối",
+      "exampleEn": "English spelling can be confusing.",
+      "exampleVi": "Chính tả tiếng Anh có thể gây rối.",
+      "collocations": [
+        {
+          "en": "confusing question",
+          "vi": "câu hỏi khó hiểu"
+        },
+        {
+          "en": "a bit confusing",
+          "vi": "hơi rối"
+        }
+      ],
+      "family": [
+        {
+          "word": "confused",
+          "vi": "bối rối"
+        }
+      ],
+      "tip": "The rule is confusing → I'm confused.",
+      "emoji": "😵‍💫",
+      "stage": 2
+    },
+    {
+      "id": 4414,
+      "word": "disappointing",
+      "ipa": "ˌdɪsəˈpɔɪntɪŋ",
+      "viRead": "đi-sơ-POIN-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng thất vọng",
+      "exampleEn": "The ending of the movie was disappointing.",
+      "exampleVi": "Kết phim thật đáng thất vọng.",
+      "collocations": [
+        {
+          "en": "disappointing result",
+          "vi": "kết quả đáng thất vọng"
+        },
+        {
+          "en": "a bit disappointing",
+          "vi": "hơi thất vọng"
+        }
+      ],
+      "family": [
+        {
+          "word": "disappointed",
+          "vi": "thất vọng"
+        }
+      ],
+      "tip": "disappointing (gây) / disappointed (cảm thấy).",
+      "emoji": "😞",
+      "stage": 2
+    },
+    {
+      "id": 4415,
+      "word": "embarrassing",
+      "ipa": "ɪmˈbɛrəsɪŋ",
+      "viRead": "im-BE-rơ-sing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng xấu hổ, ngượng",
+      "exampleEn": "Falling on stage was so embarrassing.",
+      "exampleVi": "Ngã trên sân khấu thật là ngượng.",
+      "collocations": [
+        {
+          "en": "embarrassing moment",
+          "vi": "khoảnh khắc ngượng"
+        },
+        {
+          "en": "how embarrassing",
+          "vi": "ngại quá"
+        }
+      ],
+      "family": [
+        {
+          "word": "embarrassed",
+          "vi": "ngượng"
+        }
+      ],
+      "tip": "How embarrassing! = Ngại quá!",
+      "emoji": "🙈",
+      "stage": 2
+    },
+    {
+      "id": 4416,
+      "word": "exhausting",
+      "ipa": "ɪgˈzɔstɪŋ",
+      "viRead": "ig-DOS-ting",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rất mệt, kiệt sức",
+      "exampleEn": "Moving house is exhausting.",
+      "exampleVi": "Chuyển nhà mệt kinh khủng.",
+      "collocations": [
+        {
+          "en": "exhausting day",
+          "vi": "ngày mệt rã rời"
+        },
+        {
+          "en": "physically exhausting",
+          "vi": "mệt về thể chất"
+        }
+      ],
+      "family": [
+        {
+          "word": "exhausted",
+          "vi": "kiệt sức"
+        }
+      ],
+      "tip": "exhausting (làm mệt) / exhausted (bị mệt).",
+      "emoji": "🥵",
+      "stage": 2
+    },
+    {
+      "id": 4417,
+      "word": "frightening",
+      "ipa": "ˈfraɪtənɪŋ",
+      "viRead": "PHRAI-tơ-ning",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng sợ",
+      "exampleEn": "The storm last night was frightening.",
+      "exampleVi": "Cơn bão đêm qua thật đáng sợ.",
+      "collocations": [
+        {
+          "en": "frightening experience",
+          "vi": "trải nghiệm đáng sợ"
+        },
+        {
+          "en": "a bit frightening",
+          "vi": "hơi đáng sợ"
+        }
+      ],
+      "family": [
+        {
+          "word": "frightened",
+          "vi": "sợ hãi"
+        }
+      ],
+      "tip": "frighten (v) → frightening (adj).",
+      "emoji": "😱",
+      "stage": 2
+    },
+    {
+      "id": 4418,
+      "word": "shocking",
+      "ipa": "ˈʃɑkɪŋ",
+      "viRead": "SHA-king",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gây sốc",
+      "exampleEn": "The news was shocking.",
+      "exampleVi": "Tin tức thật gây sốc.",
+      "collocations": [
+        {
+          "en": "shocking news",
+          "vi": "tin gây sốc"
+        },
+        {
+          "en": "shocking price",
+          "vi": "giá sốc"
+        }
+      ],
+      "family": [
+        {
+          "word": "shocked",
+          "vi": "bị sốc"
+        }
+      ],
+      "tip": "shocking pink = hồng chói.",
+      "emoji": "⚡",
+      "stage": 2
+    },
+    {
+      "id": 4419,
+      "word": "surprising",
+      "ipa": "səˈpraɪzɪŋ",
+      "viRead": "sơ-PRAI-ding",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng ngạc nhiên",
+      "exampleEn": "It's surprising how fast children learn.",
+      "exampleVi": "Thật ngạc nhiên trẻ con học nhanh thế nào.",
+      "collocations": [
+        {
+          "en": "surprising news",
+          "vi": "tin bất ngờ"
+        },
+        {
+          "en": "not surprising",
+          "vi": "chẳng có gì lạ"
+        }
+      ],
+      "family": [
+        {
+          "word": "surprised",
+          "vi": "ngạc nhiên"
+        }
+      ],
+      "tip": "Not surprising! = Chẳng lạ gì!",
+      "emoji": "😮",
+      "stage": 2
+    },
+    {
+      "id": 4420,
+      "word": "tiring",
+      "ipa": "ˈtaɪrɪŋ",
+      "viRead": "TAI-ring",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gây mệt mỏi",
+      "exampleEn": "Long bus trips are tiring.",
+      "exampleVi": "Những chuyến xe buýt dài rất mệt.",
+      "collocations": [
+        {
+          "en": "tiring day",
+          "vi": "ngày mệt"
+        },
+        {
+          "en": "very tiring",
+          "vi": "rất mệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "tired",
+          "vi": "mệt"
+        }
+      ],
+      "tip": "tiring (gây mệt) / tired (thấy mệt).",
+      "emoji": "😪",
+      "stage": 2
+    },
+    {
+      "id": 4421,
+      "word": "amusing",
+      "ipa": "əˈmjuzɪŋ",
+      "viRead": "ơ-MYU-ding",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "buồn cười, vui",
+      "exampleEn": "He told us an amusing story.",
+      "exampleVi": "Anh ấy kể cho chúng tôi một chuyện vui.",
+      "collocations": [
+        {
+          "en": "amusing story",
+          "vi": "chuyện vui"
+        },
+        {
+          "en": "find it amusing",
+          "vi": "thấy buồn cười"
+        }
+      ],
+      "family": [
+        {
+          "word": "amused",
+          "vi": "thích thú"
+        }
+      ],
+      "tip": "amusement park = công viên giải trí.",
+      "emoji": "😄",
+      "stage": 2
+    },
+    {
+      "id": 4422,
+      "word": "relaxing",
+      "ipa": "rɪˈlæksɪŋ",
+      "viRead": "ri-LEK-sing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thư giãn",
+      "exampleEn": "A walk by the lake is very relaxing.",
+      "exampleVi": "Đi dạo bên hồ rất thư giãn.",
+      "collocations": [
+        {
+          "en": "relaxing music",
+          "vi": "nhạc thư giãn"
+        },
+        {
+          "en": "relaxing holiday",
+          "vi": "kỳ nghỉ thư thái"
+        }
+      ],
+      "family": [
+        {
+          "word": "relaxed",
+          "vi": "thoải mái"
+        }
+      ],
+      "tip": "relaxing (làm thư giãn) / relaxed (thấy thoải mái).",
+      "emoji": "🧘",
+      "stage": 2
+    },
+    {
+      "id": 4423,
+      "word": "satisfying",
+      "ipa": "ˈsætɪsˌfaɪɪŋ",
+      "viRead": "SE-tis-phai-ing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thỏa mãn, mãn nguyện",
+      "exampleEn": "Finishing a hard task is satisfying.",
+      "exampleVi": "Hoàn thành việc khó thật mãn nguyện.",
+      "collocations": [
+        {
+          "en": "satisfying meal",
+          "vi": "bữa ăn no nê"
+        },
+        {
+          "en": "deeply satisfying",
+          "vi": "rất mãn nguyện"
+        }
+      ],
+      "family": [
+        {
+          "word": "satisfied",
+          "vi": "hài lòng"
+        }
+      ],
+      "tip": "oddly satisfying = xem đã mắt lạ kỳ.",
+      "emoji": "😌",
+      "stage": 2
+    },
+    {
+      "id": 4424,
+      "word": "thrilling",
+      "ipa": "ˈθrɪlɪŋ",
+      "viRead": "THRI-ling",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ly kỳ, hồi hộp",
+      "exampleEn": "The movie has a thrilling ending.",
+      "exampleVi": "Bộ phim có cái kết ly kỳ.",
+      "collocations": [
+        {
+          "en": "thrilling ride",
+          "vi": "chuyến đi hồi hộp"
+        },
+        {
+          "en": "thrilling match",
+          "vi": "trận đấu kịch tính"
+        }
+      ],
+      "family": [
+        {
+          "word": "thrilled",
+          "vi": "phấn khích"
+        }
+      ],
+      "tip": "thriller = phim ly kỳ.",
+      "emoji": "🎬",
+      "stage": 2
+    },
+    {
+      "id": 4425,
+      "word": "touching",
+      "ipa": "ˈtəʧɪŋ",
+      "viRead": "TƠ-ching",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cảm động",
+      "exampleEn": "It was a touching speech.",
+      "exampleVi": "Đó là một bài phát biểu cảm động.",
+      "collocations": [
+        {
+          "en": "touching story",
+          "vi": "câu chuyện cảm động"
+        },
+        {
+          "en": "deeply touching",
+          "vi": "vô cùng cảm động"
+        }
+      ],
+      "family": [
+        {
+          "word": "touched",
+          "vi": "xúc động"
+        }
+      ],
+      "tip": "I'm touched = Tôi rất xúc động.",
+      "emoji": "🥹",
+      "stage": 2
+    },
+    {
+      "id": 4426,
+      "word": "worrying",
+      "ipa": "ˈwəriɪŋ",
+      "viRead": "WƠ-ri-ing",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đáng lo ngại",
+      "exampleEn": "The rise in prices is worrying.",
+      "exampleVi": "Giá cả tăng thật đáng lo.",
+      "collocations": [
+        {
+          "en": "worrying news",
+          "vi": "tin đáng lo"
+        },
+        {
+          "en": "a worrying sign",
+          "vi": "dấu hiệu đáng lo"
+        }
+      ],
+      "family": [
+        {
+          "word": "worried",
+          "vi": "lo lắng"
+        }
+      ],
+      "tip": "worrying (gây lo) / worried (cảm thấy lo).",
+      "emoji": "😟",
       "stage": 2
     }
   ]
