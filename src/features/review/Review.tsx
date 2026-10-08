@@ -66,6 +66,9 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
         <Link to="/games/match" className="btn-secondary">
           Chơi Ghép cặp
         </Link>
+        <Link to="/listen" className="btn-secondary">
+          🎧 Nghe lại từ đã học
+        </Link>
       </EmptyState>
     )
   }
