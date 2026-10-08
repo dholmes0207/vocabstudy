@@ -30,9 +30,14 @@ export function WelcomeBack({ stats, day, due }: { stats?: StudyStats; day: numb
       <div className="absolute -left-8 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-amber-300 to-pink-400 opacity-20" />
       <p className="text-lg font-bold">{msg.title}</p>
       <p className="mt-1 text-slate-600 dark:text-slate-300">{msg.body}</p>
-      <Link to={quickStartPath(due)} className="btn-primary mt-4">
-        <Zap className="h-4 w-4" /> Học nhanh 2 phút
-      </Link>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <Link to={quickStartPath(due)} className="btn-primary">
+          <Zap className="h-4 w-4" /> Học nhanh 2 phút
+        </Link>
+        <Link to="/listen" className="btn-secondary">
+          🎧 Chỉ nghe thôi
+        </Link>
+      </div>
     </section>
   )
 }

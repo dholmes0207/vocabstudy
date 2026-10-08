@@ -38,6 +38,13 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-violet-500 to-fuchsia-600',
   },
   {
+    to: '/listen',
+    icon: '🎧',
+    title: 'Nghe thụ động',
+    desc: 'Bận tay, đang trên xe? Bấm một lần rồi cứ nghe: từ, nghĩa, câu ví dụ.',
+    tone: 'from-sky-500 to-cyan-600',
+  },
+  {
     to: '/speaking',
     icon: Mic,
     title: 'Luyện nói',
