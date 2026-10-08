@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3937,
+    "count": 3981,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -110731,6 +110731,1308 @@
       ],
       "tip": "zip file = tệp nén .zip.",
       "emoji": "🤐",
+      "stage": 2
+    },
+    {
+      "id": 3938,
+      "word": "fresh",
+      "ipa": "frɛʃ",
+      "viRead": "PHRESH",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "tươi, mới",
+      "exampleEn": "I buy fresh vegetables every morning.",
+      "exampleVi": "Sáng nào tôi cũng mua rau tươi.",
+      "collocations": [
+        {
+          "en": "fresh air",
+          "vi": "không khí trong lành"
+        },
+        {
+          "en": "fresh start",
+          "vi": "khởi đầu mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "freshman",
+          "vi": "sinh viên năm nhất"
+        }
+      ],
+      "tip": "fresh start = làm lại từ đầu — không bao giờ là quá muộn!",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 3939,
+      "word": "creepy",
+      "ipa": "ˈkripi",
+      "viRead": "KRI-pi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "rùng rợn, đáng sợ",
+      "exampleEn": "The old house looks creepy at night.",
+      "exampleVi": "Ngôi nhà cũ trông rùng rợn vào ban đêm.",
+      "collocations": [
+        {
+          "en": "creepy feeling",
+          "vi": "cảm giác rờn rợn"
+        },
+        {
+          "en": "a bit creepy",
+          "vi": "hơi đáng sợ"
+        }
+      ],
+      "family": [
+        {
+          "word": "creep",
+          "vi": "bò, rón rén"
+        }
+      ],
+      "tip": "creepy = gây cảm giác nổi da gà.",
+      "emoji": "👻",
+      "stage": 2
+    },
+    {
+      "id": 3940,
+      "word": "filthy",
+      "ipa": "ˈfɪlθi",
+      "viRead": "PHIL-thi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bẩn thỉu",
+      "exampleEn": "His shoes were filthy after the rain.",
+      "exampleVi": "Giày cậu ấy bẩn thỉu sau cơn mưa.",
+      "collocations": [
+        {
+          "en": "filthy hands",
+          "vi": "tay bẩn"
+        },
+        {
+          "en": "filthy rich",
+          "vi": "giàu nứt đố đổ vách"
+        }
+      ],
+      "family": [
+        {
+          "word": "dirty",
+          "vi": "bẩn"
+        }
+      ],
+      "tip": "filthy = rất bẩn (mạnh hơn dirty).",
+      "emoji": "🦨",
+      "stage": 2
+    },
+    {
+      "id": 3941,
+      "word": "fragile",
+      "ipa": "ˈfræʤəl",
+      "viRead": "PHRE-giơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dễ vỡ",
+      "exampleEn": "Be careful, the glass is fragile.",
+      "exampleVi": "Cẩn thận, cái ly dễ vỡ đấy.",
+      "collocations": [
+        {
+          "en": "fragile glass",
+          "vi": "thủy tinh dễ vỡ"
+        },
+        {
+          "en": "handle with care, fragile",
+          "vi": "hàng dễ vỡ, nhẹ tay"
+        }
+      ],
+      "tip": "Thùng hàng ghi FRAGILE = hàng dễ vỡ.",
+      "emoji": "🥚",
+      "stage": 2
+    },
+    {
+      "id": 3942,
+      "word": "fuzzy",
+      "ipa": "ˈfəzi",
+      "viRead": "PHƠ-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mờ; có lông tơ",
+      "exampleEn": "The photo is too fuzzy to see.",
+      "exampleVi": "Bức ảnh mờ quá, không nhìn rõ.",
+      "collocations": [
+        {
+          "en": "fuzzy picture",
+          "vi": "ảnh mờ"
+        },
+        {
+          "en": "warm and fuzzy",
+          "vi": "ấm áp dễ chịu"
+        }
+      ],
+      "family": [
+        {
+          "word": "blurry",
+          "vi": "mờ"
+        }
+      ],
+      "tip": "fuzzy = mờ nhòe / lông xù.",
+      "emoji": "🧸",
+      "stage": 2
+    },
+    {
+      "id": 3943,
+      "word": "gloomy",
+      "ipa": "ˈglumi",
+      "viRead": "GLU-mi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "u ám, ảm đạm",
+      "exampleEn": "It was a gloomy, rainy day.",
+      "exampleVi": "Đó là một ngày mưa u ám.",
+      "collocations": [
+        {
+          "en": "gloomy weather",
+          "vi": "thời tiết u ám"
+        },
+        {
+          "en": "feel gloomy",
+          "vi": "thấy buồn chán"
+        }
+      ],
+      "family": [
+        {
+          "word": "gloom",
+          "vi": "sự u ám"
+        }
+      ],
+      "tip": "gloomy ↔ sunny / cheerful.",
+      "emoji": "🌧️",
+      "stage": 2
+    },
+    {
+      "id": 3944,
+      "word": "harsh",
+      "ipa": "hɑrʃ",
+      "viRead": "HARSH",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khắc nghiệt, gay gắt",
+      "exampleEn": "The winter here is very harsh.",
+      "exampleVi": "Mùa đông ở đây rất khắc nghiệt.",
+      "collocations": [
+        {
+          "en": "harsh words",
+          "vi": "lời nói gay gắt"
+        },
+        {
+          "en": "harsh weather",
+          "vi": "thời tiết khắc nghiệt"
+        }
+      ],
+      "tip": "harsh = quá nghiêm khắc, khó chịu.",
+      "emoji": "🥶",
+      "stage": 2
+    },
+    {
+      "id": 3945,
+      "word": "rusty",
+      "ipa": "ˈrəsti",
+      "viRead": "RƠS-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gỉ sét; (kỹ năng) bị cùn",
+      "exampleEn": "My English is a bit rusty.",
+      "exampleVi": "Tiếng Anh của tôi hơi bị mai một.",
+      "collocations": [
+        {
+          "en": "rusty nail",
+          "vi": "đinh gỉ"
+        },
+        {
+          "en": "a bit rusty",
+          "vi": "hơi mai một"
+        }
+      ],
+      "family": [
+        {
+          "word": "rust",
+          "vi": "gỉ sét"
+        }
+      ],
+      "tip": "My English is rusty = lâu không dùng nên quên — ôn lại là nhớ thôi!",
+      "emoji": "🔩",
+      "stage": 2
+    },
+    {
+      "id": 3946,
+      "word": "skinny",
+      "ipa": "ˈskɪni",
+      "viRead": "SKI-ni",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gầy nhom; bó sát",
+      "exampleEn": "He was a skinny boy.",
+      "exampleVi": "Cậu ấy từng là một cậu bé gầy nhom.",
+      "collocations": [
+        {
+          "en": "skinny jeans",
+          "vi": "quần bò bó"
+        },
+        {
+          "en": "too skinny",
+          "vi": "gầy quá"
+        }
+      ],
+      "family": [
+        {
+          "word": "thin",
+          "vi": "gầy"
+        }
+      ],
+      "tip": "skinny jeans = quần jean bó.",
+      "emoji": "🦴",
+      "stage": 2
+    },
+    {
+      "id": 3947,
+      "word": "sleepy",
+      "ipa": "ˈslipi",
+      "viRead": "SLI-pi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "buồn ngủ",
+      "exampleEn": "I feel sleepy after lunch.",
+      "exampleVi": "Tôi thấy buồn ngủ sau bữa trưa.",
+      "collocations": [
+        {
+          "en": "feel sleepy",
+          "vi": "thấy buồn ngủ"
+        },
+        {
+          "en": "sleepy town",
+          "vi": "thị trấn yên ả"
+        }
+      ],
+      "family": [
+        {
+          "word": "sleep",
+          "vi": "ngủ"
+        }
+      ],
+      "tip": "sleep (v) → sleepy (adj).",
+      "emoji": "🥱",
+      "stage": 2
+    },
+    {
+      "id": 3948,
+      "word": "stingy",
+      "ipa": "ˈstɪnʤi",
+      "viRead": "STIN-gi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "keo kiệt",
+      "exampleEn": "Don't be stingy, share your snacks!",
+      "exampleVi": "Đừng keo kiệt, chia đồ ăn vặt đi!",
+      "collocations": [
+        {
+          "en": "stingy with money",
+          "vi": "keo kiệt tiền bạc"
+        },
+        {
+          "en": "a stingy boss",
+          "vi": "ông chủ keo kiệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "mean",
+          "vi": "bủn xỉn (Anh)"
+        }
+      ],
+      "tip": "stingy ↔ generous (hào phóng).",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 3949,
+      "word": "tame",
+      "ipa": "teɪm",
+      "viRead": "TÂYM",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đã thuần hóa, hiền",
+      "exampleEn": "The birds here are very tame.",
+      "exampleVi": "Chim ở đây rất dạn người.",
+      "collocations": [
+        {
+          "en": "tame animal",
+          "vi": "thú đã thuần"
+        },
+        {
+          "en": "tame a horse",
+          "vi": "thuần hóa ngựa"
+        }
+      ],
+      "family": [
+        {
+          "word": "wild",
+          "vi": "hoang dã"
+        }
+      ],
+      "tip": "tame ↔ wild.",
+      "emoji": "🐴",
+      "stage": 2
+    },
+    {
+      "id": 3950,
+      "word": "tricky",
+      "ipa": "ˈtrɪki",
+      "viRead": "TRI-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "khó, lắt léo",
+      "exampleEn": "This question is a bit tricky.",
+      "exampleVi": "Câu hỏi này hơi khó nhằn.",
+      "collocations": [
+        {
+          "en": "tricky question",
+          "vi": "câu hỏi mẹo"
+        },
+        {
+          "en": "a tricky situation",
+          "vi": "tình huống khó xử"
+        }
+      ],
+      "family": [
+        {
+          "word": "trick",
+          "vi": "mẹo"
+        }
+      ],
+      "tip": "tricky = khó vì có bẫy.",
+      "emoji": "🧩",
+      "stage": 2
+    },
+    {
+      "id": 3951,
+      "word": "wealthy",
+      "ipa": "ˈwɛlθi",
+      "viRead": "WEL-thi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giàu có",
+      "exampleEn": "She comes from a wealthy family.",
+      "exampleVi": "Cô ấy xuất thân từ gia đình giàu có.",
+      "collocations": [
+        {
+          "en": "wealthy family",
+          "vi": "gia đình giàu"
+        },
+        {
+          "en": "the wealthy",
+          "vi": "người giàu"
+        }
+      ],
+      "family": [
+        {
+          "word": "wealth",
+          "vi": "sự giàu có"
+        }
+      ],
+      "tip": "wealthy = rich (trang trọng hơn).",
+      "emoji": "💎",
+      "stage": 2
+    },
+    {
+      "id": 3952,
+      "word": "weird",
+      "ipa": "wɪrd",
+      "viRead": "WIRĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kỳ lạ, quái",
+      "exampleEn": "That's weird, the door was open.",
+      "exampleVi": "Lạ thật, cửa mở sẵn.",
+      "collocations": [
+        {
+          "en": "weird feeling",
+          "vi": "cảm giác lạ"
+        },
+        {
+          "en": "weird and wonderful",
+          "vi": "kỳ lạ và thú vị"
+        }
+      ],
+      "family": [
+        {
+          "word": "strange",
+          "vi": "lạ"
+        }
+      ],
+      "tip": "Chính tả lạ: w-e-i-r-d (e trước i).",
+      "emoji": "🤪",
+      "stage": 2
+    },
+    {
+      "id": 3953,
+      "word": "wicked",
+      "ipa": "ˈwɪkəd",
+      "viRead": "WI-kơđ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "độc ác",
+      "exampleEn": "The wicked witch lived in the forest.",
+      "exampleVi": "Mụ phù thủy độc ác sống trong rừng.",
+      "collocations": [
+        {
+          "en": "wicked witch",
+          "vi": "phù thủy độc ác"
+        },
+        {
+          "en": "wicked smile",
+          "vi": "nụ cười ranh mãnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "evil",
+          "vi": "xấu xa"
+        }
+      ],
+      "tip": "Lóng (Anh): wicked = tuyệt vời!",
+      "emoji": "🧙",
+      "stage": 2
+    },
+    {
+      "id": 3954,
+      "word": "worthy",
+      "ipa": "ˈwərði",
+      "viRead": "WƠ-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "xứng đáng",
+      "exampleEn": "She is a worthy winner.",
+      "exampleVi": "Cô ấy là người chiến thắng xứng đáng.",
+      "collocations": [
+        {
+          "en": "worthy of",
+          "vi": "xứng đáng với"
+        },
+        {
+          "en": "a worthy cause",
+          "vi": "việc nghĩa đáng làm"
+        }
+      ],
+      "family": [
+        {
+          "word": "worth",
+          "vi": "đáng giá"
+        }
+      ],
+      "tip": "worthy of + N: xứng đáng với.",
+      "emoji": "🏆",
+      "stage": 2
+    },
+    {
+      "id": 3955,
+      "word": "blunt",
+      "ipa": "blənt",
+      "viRead": "BLƠNT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cùn; thẳng thừng",
+      "exampleEn": "This knife is blunt.",
+      "exampleVi": "Con dao này cùn rồi.",
+      "collocations": [
+        {
+          "en": "blunt knife",
+          "vi": "dao cùn"
+        },
+        {
+          "en": "to be blunt",
+          "vi": "nói thẳng thì"
+        }
+      ],
+      "family": [
+        {
+          "word": "sharp",
+          "vi": "sắc"
+        }
+      ],
+      "tip": "blunt ↔ sharp. To be blunt… = Nói thẳng nhé…",
+      "emoji": "🔪",
+      "stage": 2
+    },
+    {
+      "id": 3956,
+      "word": "breezy",
+      "ipa": "ˈbrizi",
+      "viRead": "BRI-di",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "có gió nhẹ, mát",
+      "exampleEn": "It's a breezy afternoon by the sea.",
+      "exampleVi": "Buổi chiều bên biển có gió mát.",
+      "collocations": [
+        {
+          "en": "breezy day",
+          "vi": "ngày gió mát"
+        },
+        {
+          "en": "light and breezy",
+          "vi": "nhẹ nhàng thoáng đãng"
+        }
+      ],
+      "family": [
+        {
+          "word": "breeze",
+          "vi": "gió nhẹ"
+        }
+      ],
+      "tip": "breeze (n) → breezy (adj).",
+      "emoji": "🍃",
+      "stage": 2
+    },
+    {
+      "id": 3957,
+      "word": "bumpy",
+      "ipa": "ˈbəmpi",
+      "viRead": "BƠM-pi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "gập ghềnh, xóc",
+      "exampleEn": "The road to the village is bumpy.",
+      "exampleVi": "Đường về làng gập ghềnh.",
+      "collocations": [
+        {
+          "en": "bumpy road",
+          "vi": "đường xóc"
+        },
+        {
+          "en": "bumpy ride",
+          "vi": "chuyến đi xóc nảy"
+        }
+      ],
+      "family": [
+        {
+          "word": "bump",
+          "vi": "va, cú xóc"
+        }
+      ],
+      "tip": "a bumpy ride = chặng đường nhiều trắc trở.",
+      "emoji": "🛻",
+      "stage": 2
+    },
+    {
+      "id": 3958,
+      "word": "chubby",
+      "ipa": "ˈʧəbi",
+      "viRead": "CHƠ-bi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mũm mĩm",
+      "exampleEn": "Grandma loves to pinch my chubby cheeks.",
+      "exampleVi": "Bà rất thích véo đôi má phúng phính của tôi.",
+      "collocations": [
+        {
+          "en": "chubby cheeks",
+          "vi": "má phúng phính"
+        },
+        {
+          "en": "a chubby baby",
+          "vi": "em bé mũm mĩm"
+        }
+      ],
+      "tip": "chubby = mập dễ thương (nói về trẻ em).",
+      "emoji": "👶",
+      "stage": 2
+    },
+    {
+      "id": 3959,
+      "word": "crisp",
+      "ipa": "krɪsp",
+      "viRead": "KRISP",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "giòn; (không khí) mát lạnh",
+      "exampleEn": "I love crisp autumn mornings.",
+      "exampleVi": "Tôi thích những buổi sáng thu se lạnh.",
+      "collocations": [
+        {
+          "en": "crisp apple",
+          "vi": "táo giòn"
+        },
+        {
+          "en": "crisp air",
+          "vi": "không khí mát lạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "crispy",
+          "vi": "giòn"
+        }
+      ],
+      "tip": "crisp/crispy = giòn tan.",
+      "emoji": "🍏",
+      "stage": 2
+    },
+    {
+      "id": 3960,
+      "word": "cute",
+      "ipa": "kjut",
+      "viRead": "KYUT",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "dễ thương",
+      "exampleEn": "What a cute puppy!",
+      "exampleVi": "Con cún dễ thương quá!",
+      "collocations": [
+        {
+          "en": "so cute",
+          "vi": "dễ thương quá"
+        },
+        {
+          "en": "cute baby",
+          "vi": "em bé dễ thương"
+        }
+      ],
+      "family": [
+        {
+          "word": "adorable",
+          "vi": "đáng yêu"
+        }
+      ],
+      "tip": "cute = đáng yêu (đồ vật, con vật, người).",
+      "emoji": "🐶",
+      "stage": 2
+    },
+    {
+      "id": 3961,
+      "word": "dusty",
+      "ipa": "ˈdəsti",
+      "viRead": "ĐƠS-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "đầy bụi",
+      "exampleEn": "The old books are dusty.",
+      "exampleVi": "Mấy cuốn sách cũ đầy bụi.",
+      "collocations": [
+        {
+          "en": "dusty road",
+          "vi": "đường bụi"
+        },
+        {
+          "en": "dusty shelf",
+          "vi": "kệ phủ bụi"
+        }
+      ],
+      "family": [
+        {
+          "word": "dust",
+          "vi": "bụi"
+        }
+      ],
+      "tip": "dust (n) → dusty (adj).",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 3962,
+      "word": "frank",
+      "ipa": "fræŋk",
+      "viRead": "PHRENGK",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "thẳng thắn",
+      "exampleEn": "To be frank, I don't like it.",
+      "exampleVi": "Nói thật lòng, tôi không thích nó.",
+      "collocations": [
+        {
+          "en": "to be frank",
+          "vi": "nói thật"
+        },
+        {
+          "en": "frank discussion",
+          "vi": "thảo luận thẳng thắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "honest",
+          "vi": "thật thà"
+        }
+      ],
+      "tip": "frankly = thành thật mà nói.",
+      "emoji": "🗣️",
+      "stage": 2
+    },
+    {
+      "id": 3963,
+      "word": "hairy",
+      "ipa": "ˈhɛri",
+      "viRead": "HE-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nhiều lông",
+      "exampleEn": "The spider has hairy legs.",
+      "exampleVi": "Con nhện có chân đầy lông.",
+      "collocations": [
+        {
+          "en": "hairy arms",
+          "vi": "tay nhiều lông"
+        },
+        {
+          "en": "hairy legs",
+          "vi": "chân nhiều lông"
+        }
+      ],
+      "family": [
+        {
+          "word": "hair",
+          "vi": "tóc, lông"
+        }
+      ],
+      "tip": "hair (n) → hairy (adj).",
+      "emoji": "🦍",
+      "stage": 2
+    },
+    {
+      "id": 3964,
+      "word": "hasty",
+      "ipa": "ˈheɪsti",
+      "viRead": "HÂYS-ti",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vội vàng",
+      "exampleEn": "Don't make a hasty decision.",
+      "exampleVi": "Đừng quyết định vội vàng.",
+      "collocations": [
+        {
+          "en": "hasty decision",
+          "vi": "quyết định vội"
+        },
+        {
+          "en": "hasty exit",
+          "vi": "rời đi vội vã"
+        }
+      ],
+      "family": [
+        {
+          "word": "haste",
+          "vi": "sự vội vàng"
+        }
+      ],
+      "tip": "Haste makes waste = Dục tốc bất đạt.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 3965,
+      "word": "hilarious",
+      "ipa": "hɪˈlɛriəs",
+      "viRead": "hi-LE-ri-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "cực kỳ buồn cười",
+      "exampleEn": "The movie was hilarious.",
+      "exampleVi": "Bộ phim buồn cười kinh khủng.",
+      "collocations": [
+        {
+          "en": "absolutely hilarious",
+          "vi": "buồn cười hết sức"
+        },
+        {
+          "en": "hilarious joke",
+          "vi": "chuyện cười cực vui"
+        }
+      ],
+      "family": [
+        {
+          "word": "funny",
+          "vi": "buồn cười"
+        }
+      ],
+      "tip": "hilarious = very funny.",
+      "emoji": "🤣",
+      "stage": 2
+    },
+    {
+      "id": 3966,
+      "word": "jolly",
+      "ipa": "ˈʤɑli",
+      "viRead": "GIA-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vui vẻ, hớn hở",
+      "exampleEn": "Santa is a jolly old man.",
+      "exampleVi": "Ông già Noel là một ông lão vui tính.",
+      "collocations": [
+        {
+          "en": "jolly good",
+          "vi": "rất tốt (Anh)"
+        },
+        {
+          "en": "a jolly time",
+          "vi": "khoảng thời gian vui"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheerful",
+          "vi": "vui vẻ"
+        }
+      ],
+      "tip": "jolly good! = tuyệt lắm (kiểu Anh).",
+      "emoji": "🎅",
+      "stage": 2
+    },
+    {
+      "id": 3967,
+      "word": "mysterious",
+      "ipa": "mɪˈstɪriəs",
+      "viRead": "mis-TI-ri-ơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bí ẩn",
+      "exampleEn": "A mysterious letter arrived today.",
+      "exampleVi": "Hôm nay có một lá thư bí ẩn gửi đến.",
+      "collocations": [
+        {
+          "en": "mysterious stranger",
+          "vi": "người lạ bí ẩn"
+        },
+        {
+          "en": "mysterious smile",
+          "vi": "nụ cười bí ẩn"
+        }
+      ],
+      "family": [
+        {
+          "word": "mystery",
+          "vi": "điều bí ẩn"
+        }
+      ],
+      "tip": "mystery (n) → mysterious (adj).",
+      "emoji": "🕵️",
+      "stage": 2
+    },
+    {
+      "id": 3968,
+      "word": "picky",
+      "ipa": "ˈpɪki",
+      "viRead": "PI-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "kén chọn",
+      "exampleEn": "My son is a picky eater.",
+      "exampleVi": "Con trai tôi kén ăn.",
+      "collocations": [
+        {
+          "en": "picky eater",
+          "vi": "người kén ăn"
+        },
+        {
+          "en": "picky about",
+          "vi": "kén chọn về"
+        }
+      ],
+      "family": [
+        {
+          "word": "fussy",
+          "vi": "khó tính"
+        }
+      ],
+      "tip": "picky eater = trẻ kén ăn.",
+      "emoji": "🥦",
+      "stage": 2
+    },
+    {
+      "id": 3969,
+      "word": "playful",
+      "ipa": "ˈpleɪfəl",
+      "viRead": "PLÂY-phơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "nghịch ngợm, tinh nghịch",
+      "exampleEn": "The kitten is very playful.",
+      "exampleVi": "Con mèo con rất tinh nghịch.",
+      "collocations": [
+        {
+          "en": "playful puppy",
+          "vi": "cún tinh nghịch"
+        },
+        {
+          "en": "playful smile",
+          "vi": "nụ cười tinh nghịch"
+        }
+      ],
+      "family": [
+        {
+          "word": "play",
+          "vi": "chơi"
+        }
+      ],
+      "tip": "play + -ful = thích chơi đùa.",
+      "emoji": "🐱",
+      "stage": 2
+    },
+    {
+      "id": 3970,
+      "word": "restless",
+      "ipa": "ˈrɛstləs",
+      "viRead": "REST-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "bồn chồn, không yên",
+      "exampleEn": "The kids were restless on the long trip.",
+      "exampleVi": "Lũ trẻ bồn chồn trong chuyến đi dài.",
+      "collocations": [
+        {
+          "en": "feel restless",
+          "vi": "thấy bồn chồn"
+        },
+        {
+          "en": "restless night",
+          "vi": "đêm trằn trọc"
+        }
+      ],
+      "family": [
+        {
+          "word": "rest",
+          "vi": "nghỉ ngơi"
+        }
+      ],
+      "tip": "rest + -less = không yên.",
+      "emoji": "😣",
+      "stage": 2
+    },
+    {
+      "id": 3971,
+      "word": "risky",
+      "ipa": "ˈrɪski",
+      "viRead": "RIS-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "mạo hiểm, rủi ro",
+      "exampleEn": "Driving in this storm is risky.",
+      "exampleVi": "Lái xe trong cơn bão này rất mạo hiểm.",
+      "collocations": [
+        {
+          "en": "risky business",
+          "vi": "việc rủi ro"
+        },
+        {
+          "en": "too risky",
+          "vi": "quá mạo hiểm"
+        }
+      ],
+      "family": [
+        {
+          "word": "risk",
+          "vi": "rủi ro"
+        }
+      ],
+      "tip": "risk (n) → risky (adj).",
+      "emoji": "🎲",
+      "stage": 2
+    },
+    {
+      "id": 3972,
+      "word": "scruffy",
+      "ipa": "ˈskrəfi",
+      "viRead": "SKRƠ-phi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lôi thôi, nhếch nhác",
+      "exampleEn": "He looked scruffy in his old jeans.",
+      "exampleVi": "Anh ấy trông lôi thôi trong cái quần bò cũ.",
+      "collocations": [
+        {
+          "en": "scruffy clothes",
+          "vi": "quần áo nhếch nhác"
+        },
+        {
+          "en": "look scruffy",
+          "vi": "trông lôi thôi"
+        }
+      ],
+      "family": [
+        {
+          "word": "messy",
+          "vi": "bừa bộn"
+        }
+      ],
+      "tip": "scruffy ↔ smart / neat.",
+      "emoji": "👕",
+      "stage": 2
+    },
+    {
+      "id": 3973,
+      "word": "spooky",
+      "ipa": "ˈspuki",
+      "viRead": "SPU-ki",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "ma quái",
+      "exampleEn": "We told spooky stories by the fire.",
+      "exampleVi": "Chúng tôi kể chuyện ma bên đống lửa.",
+      "collocations": [
+        {
+          "en": "spooky story",
+          "vi": "chuyện ma"
+        },
+        {
+          "en": "spooky house",
+          "vi": "nhà ma"
+        }
+      ],
+      "family": [
+        {
+          "word": "spook",
+          "vi": "con ma"
+        }
+      ],
+      "tip": "Halloween = mùa spooky!",
+      "emoji": "🎃",
+      "stage": 2
+    },
+    {
+      "id": 3974,
+      "word": "spotless",
+      "ipa": "ˈspɑtləs",
+      "viRead": "SPAT-lơs",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sạch bong",
+      "exampleEn": "Her kitchen is always spotless.",
+      "exampleVi": "Bếp của cô ấy lúc nào cũng sạch bong.",
+      "collocations": [
+        {
+          "en": "spotless kitchen",
+          "vi": "bếp sạch bong"
+        },
+        {
+          "en": "spotless record",
+          "vi": "lý lịch trong sạch"
+        }
+      ],
+      "family": [
+        {
+          "word": "spot",
+          "vi": "vết"
+        }
+      ],
+      "tip": "spot + -less = không một vết bẩn.",
+      "emoji": "✨",
+      "stage": 2
+    },
+    {
+      "id": 3975,
+      "word": "sturdy",
+      "ipa": "ˈstərdi",
+      "viRead": "STƠ-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "chắc chắn, cứng cáp",
+      "exampleEn": "Buy a sturdy pair of shoes for hiking.",
+      "exampleVi": "Mua một đôi giày chắc chắn để leo núi.",
+      "collocations": [
+        {
+          "en": "sturdy table",
+          "vi": "bàn chắc chắn"
+        },
+        {
+          "en": "sturdy shoes",
+          "vi": "giày bền chắc"
+        }
+      ],
+      "family": [
+        {
+          "word": "strong",
+          "vi": "khỏe, chắc"
+        }
+      ],
+      "tip": "sturdy ↔ fragile.",
+      "emoji": "🪑",
+      "stage": 2
+    },
+    {
+      "id": 3976,
+      "word": "tense",
+      "ipa": "tɛns",
+      "viRead": "TENS",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "căng thẳng",
+      "exampleEn": "Everyone was tense before the exam.",
+      "exampleVi": "Ai cũng căng thẳng trước kỳ thi.",
+      "collocations": [
+        {
+          "en": "tense moment",
+          "vi": "giây phút căng thẳng"
+        },
+        {
+          "en": "feel tense",
+          "vi": "thấy căng thẳng"
+        }
+      ],
+      "family": [
+        {
+          "word": "tension",
+          "vi": "sự căng thẳng"
+        }
+      ],
+      "tip": "tense (n) = thì (ngữ pháp): past tense.",
+      "emoji": "😬",
+      "stage": 2
+    },
+    {
+      "id": 3977,
+      "word": "thrilled",
+      "ipa": "θrɪld",
+      "viRead": "THRILĐ",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "vui sướng, phấn khích",
+      "exampleEn": "I was thrilled to get the job.",
+      "exampleVi": "Tôi vui sướng khi nhận được việc.",
+      "collocations": [
+        {
+          "en": "thrilled to bits",
+          "vi": "sướng rơn"
+        },
+        {
+          "en": "absolutely thrilled",
+          "vi": "vô cùng phấn khích"
+        }
+      ],
+      "family": [
+        {
+          "word": "thrilling",
+          "vi": "ly kỳ"
+        }
+      ],
+      "tip": "thrilled (cảm thấy) ↔ thrilling (gây ra).",
+      "emoji": "🤩",
+      "stage": 2
+    },
+    {
+      "id": 3978,
+      "word": "trendy",
+      "ipa": "ˈtrɛndi",
+      "viRead": "TREN-đi",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "hợp mốt, sành điệu",
+      "exampleEn": "They opened a trendy café downtown.",
+      "exampleVi": "Họ mở một quán cà phê sành điệu ở trung tâm.",
+      "collocations": [
+        {
+          "en": "trendy café",
+          "vi": "quán cà phê thời thượng"
+        },
+        {
+          "en": "trendy clothes",
+          "vi": "quần áo hợp mốt"
+        }
+      ],
+      "family": [
+        {
+          "word": "trend",
+          "vi": "xu hướng"
+        }
+      ],
+      "tip": "trend (n) → trendy (adj).",
+      "emoji": "🕶️",
+      "stage": 2
+    },
+    {
+      "id": 3979,
+      "word": "upbeat",
+      "ipa": "ˈəpˌbit",
+      "viRead": "ƠP-bit",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lạc quan, vui tươi",
+      "exampleEn": "She stays upbeat even on bad days.",
+      "exampleVi": "Cô ấy vẫn lạc quan cả những ngày tệ.",
+      "collocations": [
+        {
+          "en": "upbeat music",
+          "vi": "nhạc sôi động"
+        },
+        {
+          "en": "stay upbeat",
+          "vi": "giữ tinh thần lạc quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "positive",
+          "vi": "tích cực"
+        }
+      ],
+      "tip": "upbeat = vui vẻ, tích cực.",
+      "emoji": "🎵",
+      "stage": 2
+    },
+    {
+      "id": 3980,
+      "word": "wobbly",
+      "ipa": "ˈwɑbəli",
+      "viRead": "WA-bơ-li",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "lung lay, chông chênh",
+      "exampleEn": "This chair is wobbly.",
+      "exampleVi": "Cái ghế này lung lay.",
+      "collocations": [
+        {
+          "en": "wobbly tooth",
+          "vi": "răng lung lay"
+        },
+        {
+          "en": "wobbly legs",
+          "vi": "chân run run"
+        }
+      ],
+      "family": [
+        {
+          "word": "wobble",
+          "vi": "lắc lư"
+        }
+      ],
+      "tip": "wobbly tooth = răng sữa lung lay.",
+      "emoji": "🪑",
+      "stage": 2
+    },
+    {
+      "id": 3981,
+      "word": "worn",
+      "ipa": "wɔrn",
+      "viRead": "WORN",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "sờn, mòn; mệt lả",
+      "exampleEn": "My old jacket is worn at the elbows.",
+      "exampleVi": "Áo khoác cũ của tôi sờn ở khuỷu tay.",
+      "collocations": [
+        {
+          "en": "worn out",
+          "vi": "mệt lả / mòn hết"
+        },
+        {
+          "en": "well-worn",
+          "vi": "đã cũ sờn"
+        }
+      ],
+      "family": [
+        {
+          "word": "wear",
+          "vi": "mặc, mòn"
+        }
+      ],
+      "tip": "I'm worn out = Tôi mệt rã rời.",
+      "emoji": "👖",
       "stage": 2
     }
   ]
