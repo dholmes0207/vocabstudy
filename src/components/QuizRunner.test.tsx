@@ -3,6 +3,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import type { PosCategory, QuizQuestion, Word } from '@/types'
+import { PRAISE } from '@/lib/encourage'
 
 vi.mock('@/lib/audio', () => ({
   pronounce: vi.fn(),
@@ -86,7 +87,8 @@ describe('QuizRunner', () => {
   it('after a right answer, puts the word back in its sentence', () => {
     setup(false)
     pick('quả táo')
-    expect(screen.getByText('✓ Chính xác!')).toBeInTheDocument()
+    // The praise varies by question (lib/encourage); any of them means "right".
+    expect(screen.getByText(new RegExp(`^✓ (${PRAISE.join('|')})$`))).toBeInTheDocument()
     expect(screen.getByText('Tôi thích quả táo.')).toBeInTheDocument()
   })
 

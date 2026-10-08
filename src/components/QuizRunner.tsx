@@ -4,7 +4,8 @@ import type { QuizMode, QuizQuestion, Word } from '@/types'
 import { GAP, buildSkeleton, checkFillAnswer } from '@/lib/quiz'
 import { MAX_ATTEMPTS, requeue } from '@/lib/practice'
 import { exampleAudio, pronounce, wordAudio } from '@/lib/audio'
-import { playCorrect, playWrong } from '@/lib/sound'
+import { buzz, playCorrect, playWrong } from '@/lib/sound'
+import { nudge, praise } from '@/lib/encourage'
 import { skyBurstAt } from '@/lib/skyEvents'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
@@ -155,7 +156,10 @@ export default function QuizRunner({
       else setWrongIds((ids) => (ids.includes(q.wordId) ? ids : [...ids, q.wordId]))
     }
     setCombo((c) => (correct ? c + 1 : 0))
-    if (soundEnabled) (correct ? playCorrect : playWrong)()
+    if (soundEnabled) {
+      ;(correct ? playCorrect : playWrong)()
+      buzz(correct)
+    }
     const retry = !correct && requeueWrong && item.attempt < MAX_ATTEMPTS
     setWillReturn(retry)
     if (retry) {
@@ -432,7 +436,7 @@ export default function QuizRunner({
             {lastCorrect ? (
               <>
                 <p className="font-semibold text-emerald-600">
-                  ✓ Chính xác!
+                  ✓ {praise(q.wordId + item.attempt)}
                   {isTyping && q.surface && norm(input) !== norm(q.surface) && (
                     <span className="ml-1 font-normal text-slate-500">
                       Trong câu, từ này được viết là <b>{q.surface}</b>.
@@ -443,7 +447,9 @@ export default function QuizRunner({
               </>
             ) : (
               <>
-                <p className="font-semibold text-rose-600">Chưa đúng — không sao, xem lại nhé:</p>
+                <p className="font-semibold text-rose-600">
+                  Chưa đúng — {nudge(q.wordId + item.attempt)}
+                </p>
                 {chosenWord && <Contrast mode={q.mode} chosen={chosenWord} />}
                 <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
                   <WordInsight word={word} ttsLang={ttsLang} variant="compact" />

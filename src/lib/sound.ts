@@ -41,3 +41,17 @@ export function playCorrect(): void {
 export function playWrong(): void {
   tone(220, 0, 0.22, 0.06)
 }
+
+/**
+ * A tiny buzz on phones that support it (Android): a tap for right, a double
+ * tap for wrong. Silently does nothing elsewhere (iOS Safari has no vibrate).
+ */
+export function buzz(correct: boolean): void {
+  try {
+    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+      navigator.vibrate(correct ? 15 : [25, 40, 25])
+    }
+  } catch {
+    // some browsers throw when vibration is blocked; feedback is optional
+  }
+}
