@@ -173,6 +173,8 @@ export interface StudyStats {
   bestStreak?: number
   /** The day a shield last saved the streak (shown once on the dashboard). */
   shieldUsedDay?: number | null
+  /** "Quà mỗi ngày": the sticker each goal-reaching day gave (day → index into ALL_STICKERS). */
+  stickers?: Record<number, number>
 }
 
 /** Everything we persist for a single language's progress. */

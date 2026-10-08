@@ -8,6 +8,7 @@ import { INTERVALS, MASTERED_BOX } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { today, formatDay } from '@/lib/date'
 import { compareWeeks, recentCalendar, type WeekTotals } from '@/lib/calendar'
+import { ALL_STICKERS, STICKER_SETS, collected } from '@/lib/stickers'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
 
@@ -47,6 +48,7 @@ export default function Stats() {
   const maxActivity = Math.max(1, ...activity.map((a) => a.reviews + a.news))
   const calendar = recentCalendar(stats.reviewsByDay, today())
   const week = compareWeeks(stats.reviewsByDay, stats.newByDay, today())
+  const album = collected(stats.stickers ?? {})
 
   const achievements = evaluateAchievements({
     learned: s.learned,
@@ -255,6 +257,57 @@ export default function Stats() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* "Quà mỗi ngày": the sticker album */}
+      <section className="card p-6">
+        <div className="flex items-baseline justify-between gap-3">
+          <h2 className="font-bold">Bộ sưu tập nhãn dán 🎁</h2>
+          <span className="text-sm text-slate-500">
+            {album.size}/{ALL_STICKERS.length}
+          </span>
+        </div>
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          Mỗi ngày đạt mục tiêu nhỏ mở được một nhãn dán mới — mỗi nhãn là một từ tiếng Anh.
+        </p>
+        {STICKER_SETS.map((set) => {
+          const got = set.stickers.filter((st) => album.has(ALL_STICKERS.indexOf(st))).length
+          return (
+            <div key={set.name} className="mt-4">
+              <p className="mb-2 text-sm font-semibold">
+                {set.name}{' '}
+                <span className="font-normal text-slate-400">
+                  {got}/{set.stickers.length}
+                </span>
+                {got === set.stickers.length && ' ✅'}
+              </p>
+              <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-12">
+                {set.stickers.map((st) =>
+                  album.has(ALL_STICKERS.indexOf(st)) ? (
+                    <div
+                      key={st.en}
+                      title={`${st.en} — ${st.vi}`}
+                      className="pop-in flex flex-col items-center rounded-xl bg-amber-50 px-1 py-2 dark:bg-amber-950/30"
+                    >
+                      <span className="text-2xl" aria-hidden="true">
+                        {st.emoji}
+                      </span>
+                      <span className="mt-0.5 truncate text-[11px] font-semibold">{st.en}</span>
+                    </div>
+                  ) : (
+                    <div
+                      key={st.en}
+                      aria-label="Chưa mở"
+                      className="grid place-items-center rounded-xl bg-slate-100 py-2 text-2xl font-bold text-slate-300 dark:bg-slate-800 dark:text-slate-600"
+                    >
+                      ?
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          )
+        })}
       </section>
     </div>
   )

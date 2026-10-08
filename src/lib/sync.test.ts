@@ -34,6 +34,7 @@ function progress(cards: SRSCard[], stats: Partial<LanguageProgress['stats']> = 
       shields: 0,
       bestStreak: 0,
       shieldUsedDay: null,
+      stickers: {},
       ...stats,
     },
   } satisfies LanguageProgress
@@ -46,6 +47,14 @@ describe('mergeProgress — streak shields', () => {
     const merged = mergeProgress(phone, laptop)
     expect(merged.stats.bestStreak).toBe(12)
     expect(merged.stats.shields).toBe(0)
+  })
+})
+
+describe('mergeProgress — sticker album', () => {
+  it('keeps the gifts opened on either device', () => {
+    const phone = progress([], { stickers: { 20: 3 } })
+    const laptop = progress([], { stickers: { 21: 8 } })
+    expect(mergeProgress(phone, laptop).stats.stickers).toEqual({ 20: 3, 21: 8 })
   })
 })
 

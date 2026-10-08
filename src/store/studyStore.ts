@@ -4,6 +4,7 @@ import type { LanguageProgress, SRSCard, StudyStats } from '@/types'
 import { newCard, review } from '@/lib/srs'
 import { today } from '@/lib/date'
 import { nextStreak } from '@/lib/motivation'
+import { pickSticker } from '@/lib/stickers'
 
 /**
  * Stable stand-in for "this language has no progress yet". Screens read
@@ -23,6 +24,8 @@ interface StudyState {
    * touches an SRS card — see lib/games.ts.
    */
   addPlayXp: (code: string, xp: number) => void
+  /** Open the day's gift (once per day; a no-op if already opened). */
+  claimSticker: (code: string, day: number) => void
   /** How many brand-new words have been introduced today for a language. */
   newIntroducedToday: (code: string) => number
   /** Wipe all progress for one language. */
@@ -104,6 +107,22 @@ export const useStudy = create<StudyState>()(
         })
       },
 
+      claimSticker: (code, day) => {
+        set((state) => {
+          const lang = state.progress[code]
+          if (!lang) return state
+          const owned = lang.stats.stickers ?? {}
+          if (owned[day] !== undefined) return state
+          const stickers = { ...owned, [day]: pickSticker(owned, day) }
+          return {
+            progress: {
+              ...state.progress,
+              [code]: { ...lang, stats: { ...lang.stats, stickers } },
+            },
+          }
+        })
+      },
+
       newIntroducedToday: (code) => {
         const lang = get().progress[code]
         if (!lang) return 0
@@ -160,6 +179,7 @@ export function normalizeProgress(data: unknown): LanguageProgress {
     shields: typeof s.shields === 'number' ? s.shields : 0,
     bestStreak: typeof s.bestStreak === 'number' ? s.bestStreak : (s.streak ?? 0),
     shieldUsedDay: typeof s.shieldUsedDay === 'number' ? s.shieldUsedDay : null,
+    stickers: s.stickers && typeof s.stickers === 'object' ? s.stickers : {},
   }
   return { cards, stats }
 }

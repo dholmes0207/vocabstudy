@@ -1,4 +1,5 @@
 import type { LanguageProgress, SRSCard, StudyStats } from '@/types'
+import { mergeStickers } from './stickers'
 
 // ============================================================================
 // Merging local progress with the server copy.
@@ -63,6 +64,7 @@ function safeProgress(p: LanguageProgress | undefined | null): LanguageProgress 
       shields: num(s.shields, 0),
       bestStreak: num(s.bestStreak, num(s.streak, 0)),
       shieldUsedDay: typeof s.shieldUsedDay === 'number' ? s.shieldUsedDay : null,
+      stickers: dayMap(s.stickers),
     },
   }
 }
@@ -141,6 +143,7 @@ export function mergeProgress(
         Math.max(a.stats.shieldUsedDay ?? -1, b.stats.shieldUsedDay ?? -1) >= 0
           ? Math.max(a.stats.shieldUsedDay ?? -1, b.stats.shieldUsedDay ?? -1)
           : null,
+      stickers: mergeStickers(a.stats.stickers ?? {}, b.stats.stickers ?? {}),
     },
   }
 }

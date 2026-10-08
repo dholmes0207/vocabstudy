@@ -2,10 +2,14 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Share2, Zap } from 'lucide-react'
 import ProgressRing from '@/components/ProgressRing'
+import SpeakButton from '@/components/SpeakButton'
 import ReminderSetup from '@/components/ReminderSetup'
 import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
 import { savedReminder } from '@/lib/reminder'
+import { ALL_STICKERS, collected } from '@/lib/stickers'
+import { useSettings } from '@/store/settingsStore'
+import { useStudy } from '@/store/studyStore'
 import {
   coverageEstimate,
   daysAway,
@@ -65,10 +69,16 @@ export function DailyGoal({
   // Offer a reminder until the learner has set one up (then it lives in Settings).
   const [hasReminder] = useState(() => savedReminder() !== null)
 
-  // Reaching the goal lights up the sky — once per day, however often the
-  // dashboard is opened afterwards.
+  const code = useSettings((s) => s.currentLang)
+  const claimSticker = useStudy((s) => s.claimSticker)
+  const owned = stats?.stickers
+  const gift = g.reached && owned?.[day] !== undefined ? ALL_STICKERS[owned[day]] : undefined
+
+  // Reaching the goal opens the day's gift and lights up the sky — once per
+  // day, however often the dashboard is opened afterwards.
   useEffect(() => {
     if (!g.reached) return
+    claimSticker(code, day)
     try {
       if (localStorage.getItem(GOAL_KEY) === String(day)) return
       localStorage.setItem(GOAL_KEY, String(day))
@@ -76,7 +86,7 @@ export function DailyGoal({
       return
     }
     skyCelebrate(1)
-  }, [g.reached, day])
+  }, [g.reached, day, code, claimSticker])
 
   return (
     <section className="card p-5">
@@ -110,6 +120,28 @@ export function DailyGoal({
           </p>
         </div>
       </div>
+      {gift ? (
+        <div className="mt-3 flex items-center gap-3 rounded-xl bg-gradient-to-r from-amber-50 to-pink-50 px-3 py-2 dark:from-amber-950/40 dark:to-pink-950/30">
+          <span className="pop-in text-4xl" aria-hidden="true">
+            {gift.emoji}
+          </span>
+          <div className="min-w-0 flex-1 text-sm">
+            <p className="font-semibold">
+              🎁 Quà hôm nay: <b className="text-base">{gift.en}</b> — {gift.vi}
+            </p>
+            <Link to="/stats" className="font-semibold text-brand-600 dark:text-brand-300">
+              Bộ sưu tập {collected(owned ?? {}).size}/{ALL_STICKERS.length} →
+            </Link>
+          </div>
+          <SpeakButton text={gift.en} lang="en-US" size="sm" />
+        </div>
+      ) : (
+        !g.reached && (
+          <p className="mt-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+            🎁 Đạt mục tiêu để mở quà hôm nay — một nhãn dán mới cho bộ sưu tập.
+          </p>
+        )
+      )}
       {savedYesterday && (
         <p className="mt-3 rounded-xl bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/50 dark:text-sky-200">
           🛡️ Hôm qua bạn lỡ một ngày — khiên đã giữ chuỗi giúp bạn.

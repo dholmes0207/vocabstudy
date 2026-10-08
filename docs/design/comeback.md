@@ -17,3 +17,16 @@
 - `src/lib/motivation.ts` (+ test): `nextStreak` (khiên, kỷ lục), `welcomeBack`, `goalProgress`, `coverageEstimate` (bảng tần suất ước lượng, nội suy log — chỉ để khích lệ), `nextMilestone`, `quickStartPath`.
 - `StudyStats` thêm `shields`, `bestStreak`, `shieldUsedDay` (tuỳ chọn); `normalizeProgress` và `sync.ts` (chuẩn hoá + gộp: kỷ lục lấy max, khiên theo thiết bị học gần nhất) giữ các trường này.
 - `Settings.dailyGoal`; Trang chủ: `features/dashboard/Motivation.tsx` (`WelcomeBack`, `DailyGoal`, `MySky`).
+
+## Quà mỗi ngày (nhãn dán)
+
+**User**: "Đạt mục tiêu rồi thì sao? Mai lại y như hôm nay."
+
+**BA**: đạt mục tiêu nhỏ mở một "quà" — nhãn dán ngẫu nhiên cho bộ sưu tập 48 nhãn
+(4 bộ × 12: Bầu trời, Động vật, Món ngon, Du lịch). Mỗi nhãn là một từ tiếng Anh kèm
+nghĩa và nút nghe. Không bao giờ trùng cho tới khi đủ bộ. Album ở Thống kê, ô chưa mở
+hiện "?" để gợi tò mò.
+
+**Dev**: `src/lib/stickers.ts` (thuần, có test). `stats.stickers` = ngày → chỉ số
+nhãn; `claimSticker(code, day)` chỉ ghi một lần mỗi ngày. Đồng bộ: hợp hai album theo
+ngày, trùng ngày giữ chỉ số nhỏ hơn (cho kết quả như nhau theo cả hai chiều gộp).
