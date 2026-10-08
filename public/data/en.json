@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4107,
+    "count": 4144,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -115669,6 +115669,1056 @@
       ],
       "tip": "wise → wisely.",
       "emoji": "🦉",
+      "stage": 2
+    },
+    {
+      "id": 4108,
+      "word": "thaw",
+      "ipa": "θɔ",
+      "viRead": "THO",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rã đông, tan băng",
+      "exampleEn": "Thaw the chicken before you cook it.",
+      "exampleVi": "Rã đông thịt gà trước khi nấu.",
+      "collocations": [
+        {
+          "en": "thaw out",
+          "vi": "rã đông"
+        },
+        {
+          "en": "thaw frozen food",
+          "vi": "rã đông đồ đông lạnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "freeze",
+          "vi": "đông lạnh"
+        }
+      ],
+      "tip": "thaw ↔ freeze.",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 4109,
+      "word": "gulp",
+      "ipa": "gəlp",
+      "viRead": "GƠLP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nuốt ực, uống ừng ực",
+      "exampleEn": "He gulped his water and ran out.",
+      "exampleVi": "Anh ấy uống ực cốc nước rồi chạy ra ngoài.",
+      "collocations": [
+        {
+          "en": "gulp down",
+          "vi": "nuốt chửng"
+        },
+        {
+          "en": "gulp of air",
+          "vi": "hớp không khí"
+        }
+      ],
+      "family": [
+        {
+          "word": "swallow",
+          "vi": "nuốt"
+        }
+      ],
+      "tip": "gulp = nuốt vội một hơi to.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 4110,
+      "word": "nibble",
+      "ipa": "ˈnɪbəl",
+      "viRead": "NI-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gặm, nhấm nháp",
+      "exampleEn": "The rabbit nibbled a carrot.",
+      "exampleVi": "Con thỏ gặm củ cà rốt.",
+      "collocations": [
+        {
+          "en": "nibble on",
+          "vi": "nhấm nháp"
+        },
+        {
+          "en": "nibble a cookie",
+          "vi": "nhấm bánh quy"
+        }
+      ],
+      "family": [
+        {
+          "word": "bite",
+          "vi": "cắn"
+        }
+      ],
+      "tip": "nibble = cắn từng miếng nhỏ.",
+      "emoji": "🐰",
+      "stage": 2
+    },
+    {
+      "id": 4111,
+      "word": "crunch",
+      "ipa": "krənʧ",
+      "viRead": "KRƠNCH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "nhai rau ráu, kêu giòn",
+      "exampleEn": "The leaves crunch under our feet.",
+      "exampleVi": "Lá kêu lạo xạo dưới chân chúng tôi.",
+      "collocations": [
+        {
+          "en": "crunch on",
+          "vi": "nhai rau ráu"
+        },
+        {
+          "en": "crunch time",
+          "vi": "giờ G, lúc gấp rút"
+        }
+      ],
+      "family": [
+        {
+          "word": "crunchy",
+          "vi": "giòn"
+        }
+      ],
+      "tip": "crunch time = lúc nước rút (trước hạn chót).",
+      "emoji": "🥨",
+      "stage": 2
+    },
+    {
+      "id": 4112,
+      "word": "slurp",
+      "ipa": "slərp",
+      "viRead": "SLƠP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "húp xì xụp",
+      "exampleEn": "He slurped his noodles loudly.",
+      "exampleVi": "Anh ấy húp mì xì xụp.",
+      "collocations": [
+        {
+          "en": "slurp soup",
+          "vi": "húp canh"
+        },
+        {
+          "en": "slurp noodles",
+          "vi": "húp mì"
+        }
+      ],
+      "family": [
+        {
+          "word": "sip",
+          "vi": "nhấp"
+        }
+      ],
+      "tip": "Ở phương Tây, húp xì xụp thường bị coi là bất lịch sự.",
+      "emoji": "🍜",
+      "stage": 2
+    },
+    {
+      "id": 4113,
+      "word": "cauliflower",
+      "ipa": "ˈkɑləˌflaʊər",
+      "viRead": "KA-lơ-phlao-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "súp lơ trắng",
+      "exampleEn": "Cauliflower is good in soup.",
+      "exampleVi": "Súp lơ trắng nấu canh rất ngon.",
+      "collocations": [
+        {
+          "en": "cauliflower rice",
+          "vi": "cơm súp lơ"
+        },
+        {
+          "en": "roasted cauliflower",
+          "vi": "súp lơ nướng"
+        }
+      ],
+      "family": [
+        {
+          "word": "broccoli",
+          "vi": "súp lơ xanh"
+        }
+      ],
+      "tip": "cauliflower (trắng) — broccoli (xanh).",
+      "emoji": "🥦",
+      "stage": 2
+    },
+    {
+      "id": 4114,
+      "word": "celery",
+      "ipa": "ˈsɛləri",
+      "viRead": "SE-lơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cần tây",
+      "exampleEn": "Add some celery to the salad.",
+      "exampleVi": "Thêm chút cần tây vào món salad.",
+      "collocations": [
+        {
+          "en": "celery stick",
+          "vi": "nhánh cần tây"
+        },
+        {
+          "en": "celery juice",
+          "vi": "nước ép cần tây"
+        }
+      ],
+      "tip": "Trọng âm đầu: SE-lơ-ri.",
+      "emoji": "🥬",
+      "stage": 2
+    },
+    {
+      "id": 4115,
+      "word": "omelet",
+      "ipa": "ˈɑmlət",
+      "viRead": "AM-lơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trứng tráng, trứng ốp-lết",
+      "exampleEn": "I make an omelet for breakfast.",
+      "exampleVi": "Tôi làm trứng tráng cho bữa sáng.",
+      "collocations": [
+        {
+          "en": "cheese omelet",
+          "vi": "trứng tráng phô mai"
+        },
+        {
+          "en": "make an omelet",
+          "vi": "làm trứng tráng"
+        }
+      ],
+      "family": [
+        {
+          "word": "egg",
+          "vi": "trứng"
+        }
+      ],
+      "tip": "Anh viết omelette.",
+      "emoji": "🍳",
+      "stage": 2
+    },
+    {
+      "id": 4116,
+      "word": "clam",
+      "ipa": "klæm",
+      "viRead": "KLEM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con nghêu, ngao",
+      "exampleEn": "We had clams with lemongrass.",
+      "exampleVi": "Chúng tôi ăn nghêu hấp sả.",
+      "collocations": [
+        {
+          "en": "clam soup",
+          "vi": "canh ngao"
+        },
+        {
+          "en": "clam up",
+          "vi": "im thin thít"
+        }
+      ],
+      "family": [
+        {
+          "word": "oyster",
+          "vi": "hàu"
+        }
+      ],
+      "tip": "clam up = im bặt không nói.",
+      "emoji": "🦪",
+      "stage": 2
+    },
+    {
+      "id": 4117,
+      "word": "veal",
+      "ipa": "vil",
+      "viRead": "VIL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thịt bê",
+      "exampleEn": "Veal is softer than beef.",
+      "exampleVi": "Thịt bê mềm hơn thịt bò.",
+      "collocations": [
+        {
+          "en": "veal cutlet",
+          "vi": "bê cốt lết"
+        },
+        {
+          "en": "roast veal",
+          "vi": "bê nướng"
+        }
+      ],
+      "family": [
+        {
+          "word": "calf",
+          "vi": "con bê"
+        }
+      ],
+      "tip": "calf (con bê) → veal (thịt bê).",
+      "emoji": "🥩",
+      "stage": 2
+    },
+    {
+      "id": 4118,
+      "word": "yeast",
+      "ipa": "jist",
+      "viRead": "YIST",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "men (làm bánh, rượu)",
+      "exampleEn": "You need yeast to make bread.",
+      "exampleVi": "Cần có men để làm bánh mì.",
+      "collocations": [
+        {
+          "en": "dry yeast",
+          "vi": "men khô"
+        },
+        {
+          "en": "add yeast",
+          "vi": "cho men vào"
+        }
+      ],
+      "family": [
+        {
+          "word": "dough",
+          "vi": "bột nhào"
+        }
+      ],
+      "tip": "Đọc 'YIST'.",
+      "emoji": "🍞",
+      "stage": 2
+    },
+    {
+      "id": 4119,
+      "word": "crumb",
+      "ipa": "krəm",
+      "viRead": "KRƠM",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "vụn bánh",
+      "exampleEn": "There are crumbs all over the table.",
+      "exampleVi": "Vụn bánh vương khắp bàn.",
+      "collocations": [
+        {
+          "en": "bread crumbs",
+          "vi": "vụn bánh mì"
+        },
+        {
+          "en": "cookie crumbs",
+          "vi": "vụn bánh quy"
+        }
+      ],
+      "tip": "'b' câm: đọc 'KRƠM'.",
+      "emoji": "🍪",
+      "stage": 2
+    },
+    {
+      "id": 4120,
+      "word": "pretzel",
+      "ipa": "ˈprɛtsəl",
+      "viRead": "PRET-sơl",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh quy xoắn",
+      "exampleEn": "He bought a salty pretzel at the market.",
+      "exampleVi": "Anh ấy mua một chiếc bánh xoắn mặn ở chợ.",
+      "collocations": [
+        {
+          "en": "soft pretzel",
+          "vi": "bánh xoắn mềm"
+        },
+        {
+          "en": "salted pretzel",
+          "vi": "bánh xoắn mặn"
+        }
+      ],
+      "tip": "Bánh hình nút thắt, gốc Đức.",
+      "emoji": "🥨",
+      "stage": 2
+    },
+    {
+      "id": 4121,
+      "word": "muffin",
+      "ipa": "ˈməfən",
+      "viRead": "MƠ-phơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bánh nướng xốp",
+      "exampleEn": "I had a blueberry muffin with coffee.",
+      "exampleVi": "Tôi ăn bánh muffin việt quất với cà phê.",
+      "collocations": [
+        {
+          "en": "blueberry muffin",
+          "vi": "bánh muffin việt quất"
+        },
+        {
+          "en": "chocolate muffin",
+          "vi": "bánh muffin sô-cô-la"
+        }
+      ],
+      "family": [
+        {
+          "word": "cupcake",
+          "vi": "bánh cupcake"
+        }
+      ],
+      "tip": "muffin ít ngọt hơn cupcake.",
+      "emoji": "🧁",
+      "stage": 2
+    },
+    {
+      "id": 4122,
+      "word": "stew",
+      "ipa": "stu",
+      "viRead": "STU",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "món hầm",
+      "exampleEn": "Mom makes beef stew on cold days.",
+      "exampleVi": "Mẹ nấu bò hầm vào những ngày lạnh.",
+      "collocations": [
+        {
+          "en": "beef stew",
+          "vi": "bò hầm"
+        },
+        {
+          "en": "stew slowly",
+          "vi": "hầm nhỏ lửa"
+        }
+      ],
+      "family": [
+        {
+          "word": "soup",
+          "vi": "súp"
+        }
+      ],
+      "tip": "stew (v) = hầm, ninh.",
+      "emoji": "🍲",
+      "stage": 2
+    },
+    {
+      "id": 4123,
+      "word": "curry",
+      "ipa": "ˈkəri",
+      "viRead": "KƠ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cà ri",
+      "exampleEn": "Chicken curry is my favorite dish.",
+      "exampleVi": "Cà ri gà là món tôi thích nhất.",
+      "collocations": [
+        {
+          "en": "chicken curry",
+          "vi": "cà ri gà"
+        },
+        {
+          "en": "curry powder",
+          "vi": "bột cà ri"
+        }
+      ],
+      "tip": "Đọc 'KƠ-ri'.",
+      "emoji": "🍛",
+      "stage": 2
+    },
+    {
+      "id": 4124,
+      "word": "attachment",
+      "ipa": "əˈtæʧmənt",
+      "viRead": "ơ-TECH-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tệp đính kèm",
+      "exampleEn": "Please check the attachment in my email.",
+      "exampleVi": "Vui lòng xem tệp đính kèm trong email của tôi.",
+      "collocations": [
+        {
+          "en": "email attachment",
+          "vi": "tệp đính kèm email"
+        },
+        {
+          "en": "open the attachment",
+          "vi": "mở tệp đính kèm"
+        }
+      ],
+      "family": [
+        {
+          "word": "attach",
+          "vi": "đính kèm"
+        }
+      ],
+      "tip": "attach (v) → attachment (n).",
+      "emoji": "📎",
+      "stage": 2
+    },
+    {
+      "id": 4125,
+      "word": "notification",
+      "ipa": "ˌnoʊtəfəˈkeɪʃən",
+      "viRead": "nâu-tơ-phơ-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thông báo",
+      "exampleEn": "Turn off notifications when you study.",
+      "exampleVi": "Tắt thông báo khi học bài.",
+      "collocations": [
+        {
+          "en": "push notification",
+          "vi": "thông báo đẩy"
+        },
+        {
+          "en": "turn off notifications",
+          "vi": "tắt thông báo"
+        }
+      ],
+      "family": [
+        {
+          "word": "notify",
+          "vi": "thông báo"
+        }
+      ],
+      "tip": "Tắt notification = học tập trung hơn.",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 4126,
+      "word": "scanner",
+      "ipa": "ˈskænər",
+      "viRead": "SKE-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy quét",
+      "exampleEn": "Put the paper in the scanner.",
+      "exampleVi": "Đặt tờ giấy vào máy quét.",
+      "collocations": [
+        {
+          "en": "barcode scanner",
+          "vi": "máy quét mã vạch"
+        },
+        {
+          "en": "document scanner",
+          "vi": "máy scan tài liệu"
+        }
+      ],
+      "family": [
+        {
+          "word": "scan",
+          "vi": "quét"
+        }
+      ],
+      "tip": "scan (v) → scanner (n).",
+      "emoji": "🖨️",
+      "stage": 2
+    },
+    {
+      "id": 4127,
+      "word": "earbuds",
+      "ipa": "ˈɪrˌbədz",
+      "viRead": "IR-bơđd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tai nghe nhét tai",
+      "exampleEn": "I listen to podcasts with my earbuds.",
+      "exampleVi": "Tôi nghe podcast bằng tai nghe nhét tai.",
+      "collocations": [
+        {
+          "en": "wireless earbuds",
+          "vi": "tai nghe không dây"
+        },
+        {
+          "en": "put in your earbuds",
+          "vi": "đeo tai nghe"
+        }
+      ],
+      "family": [
+        {
+          "word": "headphones",
+          "vi": "tai nghe chụp"
+        }
+      ],
+      "tip": "Luôn số nhiều: earbuds.",
+      "emoji": "🎧",
+      "stage": 2
+    },
+    {
+      "id": 4128,
+      "word": "speaker",
+      "ipa": "ˈspikər",
+      "viRead": "SPI-kơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cái loa; người nói",
+      "exampleEn": "Turn up the speaker, I can't hear.",
+      "exampleVi": "Vặn loa to lên, tôi không nghe được.",
+      "collocations": [
+        {
+          "en": "loud speaker",
+          "vi": "loa to"
+        },
+        {
+          "en": "native speaker",
+          "vi": "người bản xứ"
+        }
+      ],
+      "family": [
+        {
+          "word": "speak",
+          "vi": "nói"
+        }
+      ],
+      "tip": "native speaker = người bản ngữ.",
+      "emoji": "🔈",
+      "stage": 2
+    },
+    {
+      "id": 4129,
+      "word": "microphone",
+      "ipa": "ˈmaɪkrəˌfoʊn",
+      "viRead": "MAI-krơ-phâun",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "micro",
+      "exampleEn": "Speak into the microphone.",
+      "exampleVi": "Hãy nói vào micro.",
+      "collocations": [
+        {
+          "en": "turn on the microphone",
+          "vi": "bật micro"
+        },
+        {
+          "en": "wireless microphone",
+          "vi": "micro không dây"
+        }
+      ],
+      "family": [
+        {
+          "word": "mic",
+          "vi": "micro (viết tắt)"
+        }
+      ],
+      "tip": "Viết tắt: mic (đọc 'MAIK').",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 4130,
+      "word": "backup",
+      "ipa": "ˈbækˌəp",
+      "viRead": "BEK-ơp",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bản sao lưu",
+      "exampleEn": "Always keep a backup of your photos.",
+      "exampleVi": "Luôn giữ bản sao lưu ảnh của bạn.",
+      "collocations": [
+        {
+          "en": "make a backup",
+          "vi": "sao lưu"
+        },
+        {
+          "en": "backup plan",
+          "vi": "kế hoạch dự phòng"
+        }
+      ],
+      "family": [
+        {
+          "word": "back up",
+          "vi": "sao lưu (động từ)"
+        }
+      ],
+      "tip": "backup (n) — back up (v, hai chữ).",
+      "emoji": "💾",
+      "stage": 2
+    },
+    {
+      "id": 4131,
+      "word": "icon",
+      "ipa": "ˈaɪkɑn",
+      "viRead": "AI-kan",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "biểu tượng",
+      "exampleEn": "Tap the icon to open the app.",
+      "exampleVi": "Chạm vào biểu tượng để mở ứng dụng.",
+      "collocations": [
+        {
+          "en": "app icon",
+          "vi": "biểu tượng ứng dụng"
+        },
+        {
+          "en": "fashion icon",
+          "vi": "biểu tượng thời trang"
+        }
+      ],
+      "family": [
+        {
+          "word": "symbol",
+          "vi": "ký hiệu"
+        }
+      ],
+      "tip": "Đọc 'AI-kan'.",
+      "emoji": "📱",
+      "stage": 2
+    },
+    {
+      "id": 4132,
+      "word": "tab",
+      "ipa": "tæb",
+      "viRead": "TEB",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thẻ (trình duyệt); hóa đơn",
+      "exampleEn": "I have too many tabs open.",
+      "exampleVi": "Tôi mở quá nhiều thẻ.",
+      "collocations": [
+        {
+          "en": "new tab",
+          "vi": "thẻ mới"
+        },
+        {
+          "en": "keep tabs on",
+          "vi": "theo dõi sát"
+        }
+      ],
+      "tip": "keep tabs on = để mắt theo dõi.",
+      "emoji": "🗂️",
+      "stage": 2
+    },
+    {
+      "id": 4133,
+      "word": "podcast",
+      "ipa": "ˈpɑdˌkæst",
+      "viRead": "PAĐ-kest",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "chương trình phát thanh số",
+      "exampleEn": "I listen to an English podcast every morning.",
+      "exampleVi": "Mỗi sáng tôi nghe một podcast tiếng Anh.",
+      "collocations": [
+        {
+          "en": "listen to a podcast",
+          "vi": "nghe podcast"
+        },
+        {
+          "en": "podcast episode",
+          "vi": "tập podcast"
+        }
+      ],
+      "tip": "Podcast tiếng Anh = cách luyện nghe 'thụ động' rất tốt.",
+      "emoji": "🎙️",
+      "stage": 2
+    },
+    {
+      "id": 4134,
+      "word": "playlist",
+      "ipa": "ˈpleɪˌlɪst",
+      "viRead": "PLÂY-list",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh sách phát",
+      "exampleEn": "This playlist is great for studying.",
+      "exampleVi": "Danh sách nhạc này rất hợp để học.",
+      "collocations": [
+        {
+          "en": "make a playlist",
+          "vi": "tạo danh sách phát"
+        },
+        {
+          "en": "study playlist",
+          "vi": "nhạc để học"
+        }
+      ],
+      "tip": "play + list.",
+      "emoji": "🎶",
+      "stage": 2
+    },
+    {
+      "id": 4135,
+      "word": "subscriber",
+      "ipa": "səbˈskraɪbər",
+      "viRead": "sơb-SKRAI-bơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người đăng ký (kênh)",
+      "exampleEn": "The channel has a million subscribers.",
+      "exampleVi": "Kênh có một triệu người đăng ký.",
+      "collocations": [
+        {
+          "en": "new subscriber",
+          "vi": "người đăng ký mới"
+        },
+        {
+          "en": "million subscribers",
+          "vi": "triệu người đăng ký"
+        }
+      ],
+      "family": [
+        {
+          "word": "subscribe",
+          "vi": "đăng ký"
+        }
+      ],
+      "tip": "subscribe (v) → subscriber (n).",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 4136,
+      "word": "follower",
+      "ipa": "ˈfɑloʊər",
+      "viRead": "PHA-lâu-ơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người theo dõi",
+      "exampleEn": "She has many followers on Instagram.",
+      "exampleVi": "Cô ấy có nhiều người theo dõi trên Instagram.",
+      "collocations": [
+        {
+          "en": "gain followers",
+          "vi": "tăng người theo dõi"
+        },
+        {
+          "en": "loyal follower",
+          "vi": "người theo dõi trung thành"
+        }
+      ],
+      "family": [
+        {
+          "word": "follow",
+          "vi": "theo dõi"
+        }
+      ],
+      "tip": "follow + -er.",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 4137,
+      "word": "avatar",
+      "ipa": "ˈævəˌtɑr",
+      "viRead": "E-vơ-tar",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ảnh đại diện",
+      "exampleEn": "Change your avatar in the settings.",
+      "exampleVi": "Đổi ảnh đại diện trong phần cài đặt.",
+      "collocations": [
+        {
+          "en": "profile avatar",
+          "vi": "ảnh đại diện"
+        },
+        {
+          "en": "change your avatar",
+          "vi": "đổi ảnh đại diện"
+        }
+      ],
+      "family": [
+        {
+          "word": "profile picture",
+          "vi": "ảnh hồ sơ"
+        }
+      ],
+      "tip": "Trọng âm đầu: E-vơ-tar.",
+      "emoji": "🧑‍🎤",
+      "stage": 2
+    },
+    {
+      "id": 4138,
+      "word": "scroll",
+      "ipa": "skroʊl",
+      "viRead": "SKRÂUL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cuộn (màn hình)",
+      "exampleEn": "Scroll down to see more words.",
+      "exampleVi": "Cuộn xuống để xem thêm từ.",
+      "collocations": [
+        {
+          "en": "scroll down",
+          "vi": "cuộn xuống"
+        },
+        {
+          "en": "scroll through",
+          "vi": "lướt qua"
+        }
+      ],
+      "tip": "doomscrolling = lướt mạng không dừng được.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 4139,
+      "word": "swipe",
+      "ipa": "swaɪp",
+      "viRead": "SWAIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vuốt (màn hình); quẹt thẻ",
+      "exampleEn": "Swipe left to see the next photo.",
+      "exampleVi": "Vuốt sang trái để xem ảnh tiếp theo.",
+      "collocations": [
+        {
+          "en": "swipe left",
+          "vi": "vuốt trái"
+        },
+        {
+          "en": "swipe a card",
+          "vi": "quẹt thẻ"
+        }
+      ],
+      "tip": "swipe a card = quẹt thẻ.",
+      "emoji": "👆",
+      "stage": 2
+    },
+    {
+      "id": 4140,
+      "word": "zoom",
+      "ipa": "zum",
+      "viRead": "DUM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phóng to, thu nhỏ",
+      "exampleEn": "Zoom in to see the details.",
+      "exampleVi": "Phóng to để xem chi tiết.",
+      "collocations": [
+        {
+          "en": "zoom in",
+          "vi": "phóng to"
+        },
+        {
+          "en": "zoom out",
+          "vi": "thu nhỏ"
+        }
+      ],
+      "tip": "zoom in ↔ zoom out.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 4141,
+      "word": "glitch",
+      "ipa": "glɪʧ",
+      "viRead": "GLICH",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "trục trặc nhỏ",
+      "exampleEn": "There was a glitch in the game.",
+      "exampleVi": "Trò chơi bị trục trặc một chút.",
+      "collocations": [
+        {
+          "en": "technical glitch",
+          "vi": "trục trặc kỹ thuật"
+        },
+        {
+          "en": "minor glitch",
+          "vi": "lỗi nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "bug",
+          "vi": "lỗi"
+        }
+      ],
+      "tip": "glitch = lỗi nhỏ, tạm thời.",
+      "emoji": "👾",
+      "stage": 2
+    },
+    {
+      "id": 4142,
+      "word": "bug",
+      "ipa": "bəg",
+      "viRead": "BƠG",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "con bọ; lỗi phần mềm",
+      "exampleEn": "There's a bug in my code.",
+      "exampleVi": "Có lỗi trong mã của tôi.",
+      "collocations": [
+        {
+          "en": "fix a bug",
+          "vi": "sửa lỗi"
+        },
+        {
+          "en": "stomach bug",
+          "vi": "bệnh đường ruột"
+        }
+      ],
+      "family": [
+        {
+          "word": "insect",
+          "vi": "côn trùng"
+        }
+      ],
+      "tip": "debug = gỡ lỗi.",
+      "emoji": "🐛",
+      "stage": 2
+    },
+    {
+      "id": 4143,
+      "word": "sharpener",
+      "ipa": "ˈʃɑrpənər",
+      "viRead": "SHAR-pơ-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "gọt bút chì",
+      "exampleEn": "Can I borrow your pencil sharpener?",
+      "exampleVi": "Cho mình mượn cái gọt bút chì nhé?",
+      "collocations": [
+        {
+          "en": "pencil sharpener",
+          "vi": "gọt bút chì"
+        },
+        {
+          "en": "knife sharpener",
+          "vi": "mài dao"
+        }
+      ],
+      "family": [
+        {
+          "word": "sharp",
+          "vi": "sắc"
+        }
+      ],
+      "tip": "sharpen (v) → sharpener (n).",
+      "emoji": "✏️",
+      "stage": 2
+    },
+    {
+      "id": 4144,
+      "word": "assignment",
+      "ipa": "əˈsaɪnmənt",
+      "viRead": "ơ-SAIN-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bài tập được giao",
+      "exampleEn": "I finished my English assignment.",
+      "exampleVi": "Tôi đã làm xong bài tập tiếng Anh.",
+      "collocations": [
+        {
+          "en": "hand in an assignment",
+          "vi": "nộp bài"
+        },
+        {
+          "en": "writing assignment",
+          "vi": "bài viết"
+        }
+      ],
+      "family": [
+        {
+          "word": "homework",
+          "vi": "bài tập về nhà"
+        }
+      ],
+      "tip": "assign (v) → assignment (n). 'g' câm.",
+      "emoji": "📝",
       "stage": 2
     }
   ]
