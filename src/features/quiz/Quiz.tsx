@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { GraduationCap } from 'lucide-react'
 import type { QuizMode, QuizQuestion, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -42,7 +42,11 @@ export default function Quiz() {
     [pack.words, cards]
   )
 
-  const [scope, setScope] = useState<Scope>('learned')
+  // "Từ hay quên" on the practice hub opens straight onto the tricky words.
+  const [params] = useSearchParams()
+  const [scope, setScope] = useState<Scope>(() =>
+    params.get('scope') === 'hard' ? 'hard' : 'learned'
+  )
   const [modes, setModes] = useState<QuizMode[]>(['en-to-vi', 'vi-to-en', 'listen', 'context'])
   const [count, setCount] = useState(10)
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)

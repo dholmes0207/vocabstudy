@@ -31,6 +31,13 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-brand-500 to-brand-700',
   },
   {
+    to: '/quiz?scope=hard',
+    icon: '🎯',
+    title: 'Từ hay quên',
+    desc: 'Luyện riêng những từ bạn hay sai — gỡ từng "nút thắt" một.',
+    tone: 'from-violet-500 to-fuchsia-600',
+  },
+  {
     to: '/speaking',
     icon: Mic,
     title: 'Luyện nói',
