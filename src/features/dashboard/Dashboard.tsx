@@ -87,7 +87,7 @@ export default function Dashboard() {
           goal={dailyGoal}
           due={s.due}
         />
-        <MySky learned={s.learned} mastered={s.mastered} />
+        <MySky learned={s.learned} mastered={s.mastered} streak={stats?.streak ?? 0} />
       </section>
 
       <InstallPrompt />

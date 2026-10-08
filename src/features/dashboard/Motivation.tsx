@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Zap } from 'lucide-react'
+import { Share2, Zap } from 'lucide-react'
 import ProgressRing from '@/components/ProgressRing'
 import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
@@ -10,6 +10,7 @@ import {
   goalProgress,
   nextMilestone,
   quickStartPath,
+  shareText,
   welcomeBack,
 } from '@/lib/motivation'
 import type { StudyStats } from '@/types'
@@ -120,7 +121,32 @@ const SKY_STARS = 90
  * "Bầu trời của bạn": every word learned lights a star. Stars sit in fixed
  * places (seeded), so the learner watches the same sky fill up day by day.
  */
-export function MySky({ learned, mastered }: { learned: number; mastered: number }) {
+export function MySky({
+  learned,
+  mastered,
+  streak = 0,
+}: {
+  learned: number
+  mastered: number
+  streak?: number
+}) {
+  const [copied, setCopied] = useState(false)
+  // Phones open the system share sheet (Zalo, Messenger…); elsewhere copy it.
+  const share = async () => {
+    const text = shareText(learned, streak)
+    const url = 'https://vocastudy.app/'
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: 'VocabStudy', text, url })
+        return
+      }
+      await navigator.clipboard.writeText(`${text} ${url}`)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    } catch {
+      // the learner closed the share sheet — nothing to do
+    }
+  }
   const stars = useMemo(() => {
     const rand = mulberry32(4242)
     return Array.from({ length: SKY_STARS }, () => ({
@@ -183,6 +209,14 @@ export function MySky({ learned, mastered }: { learned: number; mastered: number
           Còn <b className="text-white">{m.left}</b> từ nữa để chạm mốc {m.target} ⭐
         </p>
       </div>
+      {learned > 0 && (
+        <button
+          onClick={share}
+          className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/20"
+        >
+          <Share2 className="h-4 w-4" /> {copied ? 'Đã chép — dán để khoe nhé!' : 'Khoe bầu trời'}
+        </button>
+      )}
     </section>
   )
 }

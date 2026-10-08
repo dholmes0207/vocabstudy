@@ -148,3 +148,10 @@ export function nextMilestone(known: number): { target: number; left: number; fr
 export function quickStartPath(due: number): string {
   return due > 0 ? '/review' : '/learn?quick=1'
 }
+
+/** The text shared by "Khoe bầu trời" — progress in one friendly line. */
+export function shareText(learned: number, streak: number): string {
+  const parts = [`Mình đã thắp sáng ${learned} ngôi sao (từ tiếng Anh) trên VocabStudy 🌟`]
+  if (streak >= 2) parts.push(`chuỗi ${streak} ngày liên tục 🔥`)
+  return `${parts.join(', ')}. Học cùng mình nhé!`
+}

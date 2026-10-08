@@ -7,6 +7,7 @@ import {
   nextMilestone,
   nextStreak,
   quickStartPath,
+  shareText,
   welcomeBack,
 } from './motivation'
 
@@ -106,5 +107,13 @@ describe('quick start', () => {
   it('reviews what is due first, otherwise five new words', () => {
     expect(quickStartPath(3)).toBe('/review')
     expect(quickStartPath(0)).toBe('/learn?quick=1')
+  })
+})
+
+describe('shareText', () => {
+  it('mentions the stars, and the streak only when there is one', () => {
+    expect(shareText(120, 5)).toContain('120 ngôi sao')
+    expect(shareText(120, 5)).toContain('5 ngày')
+    expect(shareText(3, 1)).not.toContain('chuỗi')
   })
 })
