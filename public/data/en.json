@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 3887,
+    "count": 3937,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -109387,6 +109387,1350 @@
       ],
       "tip": "g đọc 'j': 'MAR-jơ-rin'.",
       "emoji": "🧈",
+      "stage": 2
+    },
+    {
+      "id": 3888,
+      "word": "adore",
+      "ipa": "əˈdɔr",
+      "viRead": "ơ-ĐOR",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "yêu quý, rất thích",
+      "exampleEn": "Kids adore their grandparents.",
+      "exampleVi": "Trẻ con rất yêu quý ông bà.",
+      "collocations": [
+        {
+          "en": "adore someone",
+          "vi": "yêu quý ai"
+        },
+        {
+          "en": "absolutely adore",
+          "vi": "cực kỳ thích"
+        }
+      ],
+      "family": [
+        {
+          "word": "adorable",
+          "vi": "đáng yêu"
+        }
+      ],
+      "tip": "adorable = đáng yêu (em bé, cún con).",
+      "emoji": "🥰",
+      "stage": 2
+    },
+    {
+      "id": 3889,
+      "word": "applaud",
+      "ipa": "əˈplɔd",
+      "viRead": "ơ-PLOĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "vỗ tay hoan nghênh",
+      "exampleEn": "The audience applauded loudly.",
+      "exampleVi": "Khán giả vỗ tay vang dội.",
+      "collocations": [
+        {
+          "en": "applaud loudly",
+          "vi": "vỗ tay vang dội"
+        },
+        {
+          "en": "applaud the effort",
+          "vi": "ghi nhận nỗ lực"
+        }
+      ],
+      "family": [
+        {
+          "word": "applause",
+          "vi": "tràng vỗ tay"
+        }
+      ],
+      "tip": "applaud (v) → applause (n).",
+      "emoji": "👏",
+      "stage": 2
+    },
+    {
+      "id": 3890,
+      "word": "bow",
+      "ipa": "baʊ",
+      "viRead": "BAO",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cúi chào",
+      "exampleEn": "The actors bowed at the end of the show.",
+      "exampleVi": "Các diễn viên cúi chào khi kết thúc buổi diễn.",
+      "collocations": [
+        {
+          "en": "bow to",
+          "vi": "cúi chào"
+        },
+        {
+          "en": "take a bow",
+          "vi": "cúi chào khán giả"
+        }
+      ],
+      "tip": "bow (cúi chào) đọc 'bao'; bow (cái nơ, cây cung) đọc 'bâu'.",
+      "emoji": "🙇",
+      "stage": 2
+    },
+    {
+      "id": 3891,
+      "word": "brag",
+      "ipa": "bræg",
+      "viRead": "BREG",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khoe khoang",
+      "exampleEn": "He always brags about his new car.",
+      "exampleVi": "Anh ta lúc nào cũng khoe xe mới.",
+      "collocations": [
+        {
+          "en": "brag about",
+          "vi": "khoe về"
+        },
+        {
+          "en": "stop bragging",
+          "vi": "đừng khoe nữa"
+        }
+      ],
+      "family": [
+        {
+          "word": "boast",
+          "vi": "khoe khoang"
+        }
+      ],
+      "tip": "brag = boast (thân mật hơn).",
+      "emoji": "🦚",
+      "stage": 2
+    },
+    {
+      "id": 3892,
+      "word": "brew",
+      "ipa": "bru",
+      "viRead": "BRU",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "pha (trà, cà phê); ủ",
+      "exampleEn": "Grandpa brews green tea every morning.",
+      "exampleVi": "Sáng nào ông cũng pha trà xanh.",
+      "collocations": [
+        {
+          "en": "brew coffee",
+          "vi": "pha cà phê"
+        },
+        {
+          "en": "brew tea",
+          "vi": "pha trà"
+        }
+      ],
+      "tip": "cold brew = cà phê ủ lạnh.",
+      "emoji": "🍵",
+      "stage": 2
+    },
+    {
+      "id": 3893,
+      "word": "bully",
+      "ipa": "ˈbʊli",
+      "viRead": "BU-li",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "bắt nạt",
+      "exampleEn": "Never bully younger children.",
+      "exampleVi": "Đừng bao giờ bắt nạt trẻ nhỏ hơn.",
+      "collocations": [
+        {
+          "en": "be bullied",
+          "vi": "bị bắt nạt"
+        },
+        {
+          "en": "stop bullying",
+          "vi": "ngừng bắt nạt"
+        }
+      ],
+      "family": [
+        {
+          "word": "bullying",
+          "vi": "nạn bắt nạt"
+        }
+      ],
+      "tip": "cyberbullying = bắt nạt trên mạng.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 3894,
+      "word": "burp",
+      "ipa": "bərp",
+      "viRead": "BƠP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ợ",
+      "exampleEn": "The baby burped after drinking milk.",
+      "exampleVi": "Em bé ợ sau khi bú sữa.",
+      "collocations": [
+        {
+          "en": "burp loudly",
+          "vi": "ợ to"
+        },
+        {
+          "en": "burp a baby",
+          "vi": "vỗ ợ hơi cho bé"
+        }
+      ],
+      "tip": "burp = ợ hơi. Lịch sự nói 'Excuse me' sau khi ợ.",
+      "emoji": "😮‍💨",
+      "stage": 2
+    },
+    {
+      "id": 3895,
+      "word": "carve",
+      "ipa": "kɑrv",
+      "viRead": "KARV",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khắc, chạm; thái",
+      "exampleEn": "He carved a duck out of wood.",
+      "exampleVi": "Ông ấy khắc một con vịt từ gỗ.",
+      "collocations": [
+        {
+          "en": "carve wood",
+          "vi": "khắc gỗ"
+        },
+        {
+          "en": "carve a pumpkin",
+          "vi": "khắc bí ngô"
+        }
+      ],
+      "tip": "Khắc bí ngô Halloween = carve a pumpkin.",
+      "emoji": "🪵",
+      "stage": 2
+    },
+    {
+      "id": 3896,
+      "word": "cease",
+      "ipa": "sis",
+      "viRead": "SIS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngừng, chấm dứt",
+      "exampleEn": "The rain finally ceased.",
+      "exampleVi": "Cuối cùng mưa cũng ngừng.",
+      "collocations": [
+        {
+          "en": "cease to exist",
+          "vi": "không còn tồn tại"
+        },
+        {
+          "en": "cease fire",
+          "vi": "ngừng bắn"
+        }
+      ],
+      "family": [
+        {
+          "word": "stop",
+          "vi": "dừng"
+        }
+      ],
+      "tip": "cease = stop (trang trọng). ceasefire = ngừng bắn.",
+      "emoji": "⏹️",
+      "stage": 2
+    },
+    {
+      "id": 3897,
+      "word": "cheer",
+      "ipa": "ʧɪr",
+      "viRead": "CHIR",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cổ vũ, reo hò",
+      "exampleEn": "Fans cheered for the national team.",
+      "exampleVi": "Người hâm mộ cổ vũ đội tuyển quốc gia.",
+      "collocations": [
+        {
+          "en": "cheer up",
+          "vi": "vui lên"
+        },
+        {
+          "en": "cheer for",
+          "vi": "cổ vũ cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "cheerful",
+          "vi": "vui vẻ"
+        }
+      ],
+      "tip": "Cheer up! = Vui lên nào! Cheers! = Cạn ly / Cảm ơn (Anh).",
+      "emoji": "📣",
+      "stage": 2
+    },
+    {
+      "id": 3898,
+      "word": "chill",
+      "ipa": "ʧɪl",
+      "viRead": "CHIL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "làm lạnh; thư giãn",
+      "exampleEn": "Chill the drinks before the party.",
+      "exampleVi": "Làm lạnh đồ uống trước bữa tiệc.",
+      "collocations": [
+        {
+          "en": "chill out",
+          "vi": "thư giãn"
+        },
+        {
+          "en": "chill in the fridge",
+          "vi": "để lạnh trong tủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "chilly",
+          "vi": "se lạnh"
+        }
+      ],
+      "tip": "chill out = thư giãn (thân mật). Chill đi! = Relax!",
+      "emoji": "🧊",
+      "stage": 2
+    },
+    {
+      "id": 3899,
+      "word": "choke",
+      "ipa": "ʧoʊk",
+      "viRead": "CHÂUK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nghẹn, mắc nghẹn",
+      "exampleEn": "Eat slowly so you don't choke.",
+      "exampleVi": "Ăn chậm thôi kẻo nghẹn.",
+      "collocations": [
+        {
+          "en": "choke on food",
+          "vi": "nghẹn thức ăn"
+        },
+        {
+          "en": "choke back tears",
+          "vi": "nén nước mắt"
+        }
+      ],
+      "tip": "choke on + đồ ăn = bị nghẹn.",
+      "emoji": "😣",
+      "stage": 2
+    },
+    {
+      "id": 3900,
+      "word": "cling",
+      "ipa": "klɪŋ",
+      "viRead": "KLING",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bám chặt",
+      "exampleEn": "Babies often cling to their mothers.",
+      "exampleVi": "Em bé thường bám chặt lấy mẹ.",
+      "collocations": [
+        {
+          "en": "cling to",
+          "vi": "bám vào"
+        },
+        {
+          "en": "cling film",
+          "vi": "màng bọc thực phẩm"
+        }
+      ],
+      "tip": "cling – clung – clung. cling film = màng bọc thực phẩm.",
+      "emoji": "🐨",
+      "stage": 2
+    },
+    {
+      "id": 3901,
+      "word": "dine",
+      "ipa": "daɪn",
+      "viRead": "ĐAIN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dùng bữa",
+      "exampleEn": "We dined at a nice restaurant.",
+      "exampleVi": "Chúng tôi dùng bữa ở một nhà hàng sang.",
+      "collocations": [
+        {
+          "en": "dine out",
+          "vi": "ăn ngoài"
+        },
+        {
+          "en": "dining room",
+          "vi": "phòng ăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "dinner",
+          "vi": "bữa tối"
+        }
+      ],
+      "tip": "dine (trang trọng) = eat. dining table = bàn ăn.",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 3902,
+      "word": "doze",
+      "ipa": "doʊz",
+      "viRead": "ĐÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngủ gật, chợp mắt",
+      "exampleEn": "Grandpa dozed off in front of the TV.",
+      "exampleVi": "Ông ngủ gật trước ti-vi.",
+      "collocations": [
+        {
+          "en": "doze off",
+          "vi": "ngủ gật"
+        },
+        {
+          "en": "a short doze",
+          "vi": "giấc chợp mắt"
+        }
+      ],
+      "family": [
+        {
+          "word": "nap",
+          "vi": "giấc ngủ ngắn"
+        }
+      ],
+      "tip": "doze off = ngủ gật.",
+      "emoji": "😴",
+      "stage": 2
+    },
+    {
+      "id": 3903,
+      "word": "embrace",
+      "ipa": "ɪmˈbreɪs",
+      "viRead": "em-BRÂYS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ôm; đón nhận",
+      "exampleEn": "She embraced her son at the airport.",
+      "exampleVi": "Bà ôm chầm lấy con trai ở sân bay.",
+      "collocations": [
+        {
+          "en": "embrace change",
+          "vi": "đón nhận thay đổi"
+        },
+        {
+          "en": "warm embrace",
+          "vi": "cái ôm ấm áp"
+        }
+      ],
+      "family": [
+        {
+          "word": "hug",
+          "vi": "ôm"
+        }
+      ],
+      "tip": "embrace = ôm (trang trọng) / đón nhận (ý tưởng mới).",
+      "emoji": "🤗",
+      "stage": 2
+    },
+    {
+      "id": 3904,
+      "word": "emphasize",
+      "ipa": "ˈɛmfəˌsaɪz",
+      "viRead": "EM-phơ-said",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhấn mạnh",
+      "exampleEn": "The teacher emphasized the importance of practice.",
+      "exampleVi": "Cô giáo nhấn mạnh tầm quan trọng của luyện tập.",
+      "collocations": [
+        {
+          "en": "emphasize the point",
+          "vi": "nhấn mạnh ý"
+        },
+        {
+          "en": "emphasize that",
+          "vi": "nhấn mạnh rằng"
+        }
+      ],
+      "family": [
+        {
+          "word": "emphasis",
+          "vi": "sự nhấn mạnh"
+        }
+      ],
+      "tip": "Anh viết emphasise.",
+      "emoji": "❗",
+      "stage": 2
+    },
+    {
+      "id": 3905,
+      "word": "fade",
+      "ipa": "feɪd",
+      "viRead": "PHÂYĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "phai, mờ dần",
+      "exampleEn": "The colors fade in the sun.",
+      "exampleVi": "Màu sắc phai dưới nắng.",
+      "collocations": [
+        {
+          "en": "fade away",
+          "vi": "mờ dần"
+        },
+        {
+          "en": "fade out",
+          "vi": "tắt dần"
+        }
+      ],
+      "tip": "Ký ức mờ dần nếu không ôn — vì vậy app nhắc bạn ôn đúng lúc!",
+      "emoji": "🌫️",
+      "stage": 2
+    },
+    {
+      "id": 3906,
+      "word": "flee",
+      "ipa": "fli",
+      "viRead": "PHLI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chạy trốn",
+      "exampleEn": "Many people had to flee from the flood.",
+      "exampleVi": "Nhiều người phải chạy khỏi vùng lũ.",
+      "collocations": [
+        {
+          "en": "flee from",
+          "vi": "chạy khỏi"
+        },
+        {
+          "en": "flee the country",
+          "vi": "trốn ra nước ngoài"
+        }
+      ],
+      "tip": "flee – fled – fled.",
+      "emoji": "🏃",
+      "stage": 2
+    },
+    {
+      "id": 3907,
+      "word": "flip",
+      "ipa": "flɪp",
+      "viRead": "PHLIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lật",
+      "exampleEn": "Flip the pancake when it is brown.",
+      "exampleVi": "Lật bánh khi mặt dưới vàng.",
+      "collocations": [
+        {
+          "en": "flip a coin",
+          "vi": "tung đồng xu"
+        },
+        {
+          "en": "flip the card",
+          "vi": "lật thẻ"
+        }
+      ],
+      "tip": "Lật thẻ học từ = flip the flashcard!",
+      "emoji": "🔄",
+      "stage": 2
+    },
+    {
+      "id": 3908,
+      "word": "groan",
+      "ipa": "groʊn",
+      "viRead": "GRÂUN",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "rên rỉ",
+      "exampleEn": "He groaned when he saw the homework.",
+      "exampleVi": "Cậu ấy rên lên khi thấy bài tập về nhà.",
+      "collocations": [
+        {
+          "en": "groan with pain",
+          "vi": "rên vì đau"
+        },
+        {
+          "en": "moan and groan",
+          "vi": "than thở"
+        }
+      ],
+      "tip": "groan = rên (đau, chán nản).",
+      "emoji": "😩",
+      "stage": 2
+    },
+    {
+      "id": 3909,
+      "word": "hop",
+      "ipa": "hɑp",
+      "viRead": "HAP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhảy lò cò; nhảy",
+      "exampleEn": "The rabbit hopped across the garden.",
+      "exampleVi": "Con thỏ nhảy qua khu vườn.",
+      "collocations": [
+        {
+          "en": "hop on",
+          "vi": "nhảy lên (xe)"
+        },
+        {
+          "en": "hip hop",
+          "vi": "nhạc hip hop"
+        }
+      ],
+      "tip": "hop on the bus = lên xe buýt (thân mật).",
+      "emoji": "🐇",
+      "stage": 2
+    },
+    {
+      "id": 3910,
+      "word": "hum",
+      "ipa": "həm",
+      "viRead": "HƠM",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngân nga",
+      "exampleEn": "She hums while she cooks.",
+      "exampleVi": "Cô ấy vừa nấu ăn vừa ngân nga.",
+      "collocations": [
+        {
+          "en": "hum a song",
+          "vi": "ngân nga bài hát"
+        },
+        {
+          "en": "hum along",
+          "vi": "ngân nga theo"
+        }
+      ],
+      "tip": "hum = hát khẽ không lời.",
+      "emoji": "🎶",
+      "stage": 2
+    },
+    {
+      "id": 3911,
+      "word": "imitate",
+      "ipa": "ˈɪməˌteɪt",
+      "viRead": "I-mơ-tâyt",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "bắt chước",
+      "exampleEn": "Children imitate their parents.",
+      "exampleVi": "Trẻ con bắt chước bố mẹ.",
+      "collocations": [
+        {
+          "en": "imitate a sound",
+          "vi": "bắt chước âm thanh"
+        },
+        {
+          "en": "imitate the teacher",
+          "vi": "bắt chước giáo viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "imitation",
+          "vi": "sự bắt chước"
+        }
+      ],
+      "tip": "Bắt chước giọng mẫu là cách luyện phát âm tốt nhất!",
+      "emoji": "🦜",
+      "stage": 2
+    },
+    {
+      "id": 3912,
+      "word": "inhale",
+      "ipa": "ɪnˈheɪl",
+      "viRead": "in-HÂYL",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hít vào",
+      "exampleEn": "Inhale slowly through your nose.",
+      "exampleVi": "Hít vào chậm bằng mũi.",
+      "collocations": [
+        {
+          "en": "inhale deeply",
+          "vi": "hít sâu"
+        },
+        {
+          "en": "inhale and exhale",
+          "vi": "hít vào thở ra"
+        }
+      ],
+      "family": [
+        {
+          "word": "exhale",
+          "vi": "thở ra"
+        }
+      ],
+      "tip": "inhale ↔ exhale.",
+      "emoji": "🌬️",
+      "stage": 2
+    },
+    {
+      "id": 3913,
+      "word": "juggle",
+      "ipa": "ˈʤəgəl",
+      "viRead": "GIƠ-gơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "tung hứng; xoay xở",
+      "exampleEn": "She juggles work and study.",
+      "exampleVi": "Cô ấy xoay xở cả đi làm lẫn đi học.",
+      "collocations": [
+        {
+          "en": "juggle balls",
+          "vi": "tung hứng bóng"
+        },
+        {
+          "en": "juggle work and family",
+          "vi": "cân bằng công việc và gia đình"
+        }
+      ],
+      "tip": "juggle = vừa làm nhiều việc một lúc.",
+      "emoji": "🤹",
+      "stage": 2
+    },
+    {
+      "id": 3914,
+      "word": "limp",
+      "ipa": "lɪmp",
+      "viRead": "LIMP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đi khập khiễng",
+      "exampleEn": "He limped after the football match.",
+      "exampleVi": "Anh ấy đi khập khiễng sau trận bóng.",
+      "collocations": [
+        {
+          "en": "walk with a limp",
+          "vi": "đi khập khiễng"
+        },
+        {
+          "en": "limp away",
+          "vi": "khập khiễng bỏ đi"
+        }
+      ],
+      "tip": "limp (adj) = mềm rũ: a limp handshake.",
+      "emoji": "🦶",
+      "stage": 2
+    },
+    {
+      "id": 3915,
+      "word": "mend",
+      "ipa": "mɛnd",
+      "viRead": "MENĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "sửa, vá",
+      "exampleEn": "Grandma mended my torn shirt.",
+      "exampleVi": "Bà vá chiếc áo rách của tôi.",
+      "collocations": [
+        {
+          "en": "mend a shirt",
+          "vi": "vá áo"
+        },
+        {
+          "en": "mend a relationship",
+          "vi": "hàn gắn mối quan hệ"
+        }
+      ],
+      "family": [
+        {
+          "word": "repair",
+          "vi": "sửa"
+        }
+      ],
+      "tip": "mend = sửa (đồ vải, quan hệ).",
+      "emoji": "🪡",
+      "stage": 2
+    },
+    {
+      "id": 3916,
+      "word": "paddle",
+      "ipa": "ˈpædəl",
+      "viRead": "PE-đơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "chèo (thuyền)",
+      "exampleEn": "We paddled the boat across the lake.",
+      "exampleVi": "Chúng tôi chèo thuyền qua hồ.",
+      "collocations": [
+        {
+          "en": "paddle a canoe",
+          "vi": "chèo xuồng"
+        },
+        {
+          "en": "stand-up paddle",
+          "vi": "chèo SUP"
+        }
+      ],
+      "tip": "paddle board = ván chèo đứng (SUP).",
+      "emoji": "🛶",
+      "stage": 2
+    },
+    {
+      "id": 3917,
+      "word": "peep",
+      "ipa": "pip",
+      "viRead": "PIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "nhìn trộm, ló ra",
+      "exampleEn": "The sun peeped through the clouds.",
+      "exampleVi": "Mặt trời ló ra sau mây.",
+      "collocations": [
+        {
+          "en": "peep through",
+          "vi": "nhìn qua"
+        },
+        {
+          "en": "peep out",
+          "vi": "ló ra"
+        }
+      ],
+      "tip": "peek = nhìn lén nhanh; peep = ló ra / nhìn trộm.",
+      "emoji": "👀",
+      "stage": 2
+    },
+    {
+      "id": 3918,
+      "word": "poke",
+      "ipa": "poʊk",
+      "viRead": "PÂUK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chọc, thọc",
+      "exampleEn": "Don't poke the cat!",
+      "exampleVi": "Đừng chọc con mèo!",
+      "collocations": [
+        {
+          "en": "poke fun at",
+          "vi": "chế giễu"
+        },
+        {
+          "en": "poke someone",
+          "vi": "chọc ai"
+        }
+      ],
+      "tip": "poke trên Facebook = chọc ai đó.",
+      "emoji": "👉",
+      "stage": 2
+    },
+    {
+      "id": 3919,
+      "word": "quarrel",
+      "ipa": "ˈkwɔrəl",
+      "viRead": "KWO-rơl",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cãi nhau",
+      "exampleEn": "The two brothers often quarrel.",
+      "exampleVi": "Hai anh em thường cãi nhau.",
+      "collocations": [
+        {
+          "en": "quarrel with",
+          "vi": "cãi nhau với"
+        },
+        {
+          "en": "a family quarrel",
+          "vi": "cãi vã gia đình"
+        }
+      ],
+      "family": [
+        {
+          "word": "argue",
+          "vi": "tranh cãi"
+        }
+      ],
+      "tip": "quarrel = cãi vã (thường chuyện nhỏ, giữa người thân).",
+      "emoji": "😤",
+      "stage": 2
+    },
+    {
+      "id": 3920,
+      "word": "rake",
+      "ipa": "reɪk",
+      "viRead": "RÂYK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "cào (lá)",
+      "exampleEn": "We raked the leaves in the garden.",
+      "exampleVi": "Chúng tôi cào lá trong vườn.",
+      "collocations": [
+        {
+          "en": "rake leaves",
+          "vi": "cào lá"
+        },
+        {
+          "en": "a garden rake",
+          "vi": "cái cào"
+        }
+      ],
+      "tip": "rake (n) = cái cào.",
+      "emoji": "🍂",
+      "stage": 2
+    },
+    {
+      "id": 3921,
+      "word": "recite",
+      "ipa": "rɪˈsaɪt",
+      "viRead": "ri-SAIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đọc thuộc lòng",
+      "exampleEn": "She recited a poem in class.",
+      "exampleVi": "Cô bé đọc thuộc một bài thơ trước lớp.",
+      "collocations": [
+        {
+          "en": "recite a poem",
+          "vi": "đọc thơ"
+        },
+        {
+          "en": "recite from memory",
+          "vi": "đọc thuộc lòng"
+        }
+      ],
+      "tip": "recite = đọc to từ trí nhớ.",
+      "emoji": "📜",
+      "stage": 2
+    },
+    {
+      "id": 3922,
+      "word": "rhyme",
+      "ipa": "raɪm",
+      "viRead": "RAIM",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "vần",
+      "exampleEn": "'Cat' rhymes with 'hat'.",
+      "exampleVi": "'Cat' vần với 'hat'.",
+      "collocations": [
+        {
+          "en": "rhyme with",
+          "vi": "vần với"
+        },
+        {
+          "en": "nursery rhyme",
+          "vi": "bài đồng dao"
+        }
+      ],
+      "tip": "Chính tả lạ: r-h-y-m-e. Đọc 'raim'.",
+      "emoji": "🎵",
+      "stage": 2
+    },
+    {
+      "id": 3923,
+      "word": "roar",
+      "ipa": "rɔr",
+      "viRead": "ROR",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "gầm",
+      "exampleEn": "The lion roared loudly.",
+      "exampleVi": "Con sư tử gầm vang.",
+      "collocations": [
+        {
+          "en": "roar of laughter",
+          "vi": "tràng cười lớn"
+        },
+        {
+          "en": "the roar of the crowd",
+          "vi": "tiếng hò reo"
+        }
+      ],
+      "tip": "roar = gầm (sư tử, hổ, đám đông).",
+      "emoji": "🦁",
+      "stage": 2
+    },
+    {
+      "id": 3924,
+      "word": "rub",
+      "ipa": "rəb",
+      "viRead": "RƠB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chà xát, xoa",
+      "exampleEn": "Rub your hands to warm them up.",
+      "exampleVi": "Xoa hai tay cho ấm.",
+      "collocations": [
+        {
+          "en": "rub your eyes",
+          "vi": "dụi mắt"
+        },
+        {
+          "en": "rub cream",
+          "vi": "xoa kem"
+        }
+      ],
+      "tip": "rub → rubbed (gấp đôi b).",
+      "emoji": "🤲",
+      "stage": 2
+    },
+    {
+      "id": 3925,
+      "word": "scold",
+      "ipa": "skoʊld",
+      "viRead": "SKÂULĐ",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "mắng",
+      "exampleEn": "Mom scolded me for coming home late.",
+      "exampleVi": "Mẹ mắng tôi vì về muộn.",
+      "collocations": [
+        {
+          "en": "scold someone for",
+          "vi": "mắng ai vì"
+        },
+        {
+          "en": "be scolded",
+          "vi": "bị mắng"
+        }
+      ],
+      "tip": "scold + người + for + V-ing.",
+      "emoji": "😠",
+      "stage": 2
+    },
+    {
+      "id": 3926,
+      "word": "scrub",
+      "ipa": "skrəb",
+      "viRead": "SKRƠB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cọ rửa",
+      "exampleEn": "Scrub the floor with a brush.",
+      "exampleVi": "Cọ sàn bằng bàn chải.",
+      "collocations": [
+        {
+          "en": "scrub the floor",
+          "vi": "cọ sàn"
+        },
+        {
+          "en": "face scrub",
+          "vi": "tẩy tế bào chết"
+        }
+      ],
+      "tip": "face scrub = kem tẩy tế bào chết.",
+      "emoji": "🧽",
+      "stage": 2
+    },
+    {
+      "id": 3927,
+      "word": "skate",
+      "ipa": "skeɪt",
+      "viRead": "SKÂYT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "trượt (patin, băng)",
+      "exampleEn": "Can you skate?",
+      "exampleVi": "Bạn biết trượt patin không?",
+      "collocations": [
+        {
+          "en": "ice skate",
+          "vi": "trượt băng"
+        },
+        {
+          "en": "roller skate",
+          "vi": "trượt patin"
+        }
+      ],
+      "family": [
+        {
+          "word": "skating",
+          "vi": "môn trượt"
+        }
+      ],
+      "tip": "skate → skating; skateboard = ván trượt.",
+      "emoji": "⛸️",
+      "stage": 2
+    },
+    {
+      "id": 3928,
+      "word": "ski",
+      "ipa": "ski",
+      "viRead": "SKI",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "trượt tuyết",
+      "exampleEn": "We learned to ski in Japan.",
+      "exampleVi": "Chúng tôi học trượt tuyết ở Nhật.",
+      "collocations": [
+        {
+          "en": "go skiing",
+          "vi": "đi trượt tuyết"
+        },
+        {
+          "en": "ski resort",
+          "vi": "khu trượt tuyết"
+        }
+      ],
+      "family": [
+        {
+          "word": "skiing",
+          "vi": "môn trượt tuyết"
+        }
+      ],
+      "tip": "ski → skiing (hai chữ i).",
+      "emoji": "⛷️",
+      "stage": 2
+    },
+    {
+      "id": 3929,
+      "word": "sob",
+      "ipa": "sɑb",
+      "viRead": "SAB",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khóc nức nở",
+      "exampleEn": "The little girl sobbed when her balloon flew away.",
+      "exampleVi": "Cô bé khóc nức nở khi bóng bay bay mất.",
+      "collocations": [
+        {
+          "en": "sob quietly",
+          "vi": "khóc thút thít"
+        },
+        {
+          "en": "sob story",
+          "vi": "chuyện kể than khóc"
+        }
+      ],
+      "family": [
+        {
+          "word": "cry",
+          "vi": "khóc"
+        }
+      ],
+      "tip": "sob → sobbed. cry < sob (khóc to, nấc).",
+      "emoji": "😭",
+      "stage": 2
+    },
+    {
+      "id": 3930,
+      "word": "spit",
+      "ipa": "spɪt",
+      "viRead": "SPIT",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khạc, nhổ",
+      "exampleEn": "Don't spit in the street.",
+      "exampleVi": "Đừng khạc nhổ ra đường.",
+      "collocations": [
+        {
+          "en": "spit out",
+          "vi": "nhổ ra"
+        },
+        {
+          "en": "no spitting",
+          "vi": "cấm khạc nhổ"
+        }
+      ],
+      "tip": "spit – spat – spat.",
+      "emoji": "🚫",
+      "stage": 2
+    },
+    {
+      "id": 3931,
+      "word": "stack",
+      "ipa": "stæk",
+      "viRead": "STEK",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "xếp chồng",
+      "exampleEn": "Stack the plates on the table.",
+      "exampleVi": "Xếp chồng đĩa lên bàn.",
+      "collocations": [
+        {
+          "en": "stack up",
+          "vi": "chất đống"
+        },
+        {
+          "en": "a stack of books",
+          "vi": "chồng sách"
+        }
+      ],
+      "family": [
+        {
+          "word": "pile",
+          "vi": "đống"
+        }
+      ],
+      "tip": "a stack of = một chồng (ngay ngắn).",
+      "emoji": "📚",
+      "stage": 2
+    },
+    {
+      "id": 3932,
+      "word": "tiptoe",
+      "ipa": "ˈtɪpˌtoʊ",
+      "viRead": "TIP-tâu",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đi nhón chân",
+      "exampleEn": "She tiptoed past the sleeping baby.",
+      "exampleVi": "Cô ấy nhón chân đi qua em bé đang ngủ.",
+      "collocations": [
+        {
+          "en": "tiptoe in",
+          "vi": "nhón chân bước vào"
+        },
+        {
+          "en": "on tiptoe",
+          "vi": "nhón chân"
+        }
+      ],
+      "family": [
+        {
+          "word": "toe",
+          "vi": "ngón chân"
+        }
+      ],
+      "tip": "tip (đầu) + toe (ngón chân).",
+      "emoji": "🩰",
+      "stage": 2
+    },
+    {
+      "id": 3933,
+      "word": "tumble",
+      "ipa": "ˈtəmbəl",
+      "viRead": "TƠM-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "ngã nhào; lộn nhào",
+      "exampleEn": "The boy tumbled down the hill.",
+      "exampleVi": "Cậu bé ngã lăn xuống đồi.",
+      "collocations": [
+        {
+          "en": "tumble down",
+          "vi": "lăn xuống"
+        },
+        {
+          "en": "tumble dryer",
+          "vi": "máy sấy quần áo"
+        }
+      ],
+      "tip": "tumble dryer = máy sấy quần áo lồng quay.",
+      "emoji": "🤸",
+      "stage": 2
+    },
+    {
+      "id": 3934,
+      "word": "unpack",
+      "ipa": "ənˈpæk",
+      "viRead": "ơn-PEK",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "dỡ đồ, mở hành lý",
+      "exampleEn": "Unpack your suitcase when you arrive.",
+      "exampleVi": "Dỡ va li khi bạn đến nơi.",
+      "collocations": [
+        {
+          "en": "unpack a suitcase",
+          "vi": "dỡ va li"
+        },
+        {
+          "en": "unpack the shopping",
+          "vi": "cất đồ mua về"
+        }
+      ],
+      "family": [
+        {
+          "word": "pack",
+          "vi": "đóng gói"
+        }
+      ],
+      "tip": "un + pack ↔ pack.",
+      "emoji": "🧳",
+      "stage": 2
+    },
+    {
+      "id": 3935,
+      "word": "untie",
+      "ipa": "ənˈtaɪ",
+      "viRead": "ơn-TAI",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cởi (nút buộc)",
+      "exampleEn": "Untie your shoelaces first.",
+      "exampleVi": "Cởi dây giày ra trước đã.",
+      "collocations": [
+        {
+          "en": "untie a knot",
+          "vi": "gỡ nút"
+        },
+        {
+          "en": "untie shoelaces",
+          "vi": "cởi dây giày"
+        }
+      ],
+      "family": [
+        {
+          "word": "tie",
+          "vi": "buộc"
+        }
+      ],
+      "tip": "un + tie ↔ tie.",
+      "emoji": "🪢",
+      "stage": 2
+    },
+    {
+      "id": 3936,
+      "word": "weep",
+      "ipa": "wip",
+      "viRead": "WIP",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "khóc (lặng lẽ)",
+      "exampleEn": "Don't weep; everything will be fine.",
+      "exampleVi": "Đừng khóc, mọi chuyện sẽ ổn thôi.",
+      "collocations": [
+        {
+          "en": "weep with joy",
+          "vi": "khóc vì vui"
+        },
+        {
+          "en": "weep quietly",
+          "vi": "khóc lặng lẽ"
+        }
+      ],
+      "family": [
+        {
+          "word": "cry",
+          "vi": "khóc"
+        }
+      ],
+      "tip": "weep – wept – wept (văn chương hơn cry).",
+      "emoji": "😢",
+      "stage": 2
+    },
+    {
+      "id": 3937,
+      "word": "zip",
+      "ipa": "zɪp",
+      "viRead": "DIP",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "kéo khóa",
+      "exampleEn": "Zip up your jacket; it's cold.",
+      "exampleVi": "Kéo khóa áo khoác lên, lạnh đấy.",
+      "collocations": [
+        {
+          "en": "zip up",
+          "vi": "kéo khóa lên"
+        },
+        {
+          "en": "zip file",
+          "vi": "tệp nén"
+        }
+      ],
+      "family": [
+        {
+          "word": "zipper",
+          "vi": "khóa kéo"
+        }
+      ],
+      "tip": "zip file = tệp nén .zip.",
+      "emoji": "🤐",
       "stage": 2
     }
   ]
