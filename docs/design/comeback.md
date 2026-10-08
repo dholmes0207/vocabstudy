@@ -30,3 +30,15 @@ hiện "?" để gợi tò mò.
 **Dev**: `src/lib/stickers.ts` (thuần, có test). `stats.stickers` = ngày → chỉ số
 nhãn; `claimSticker(code, day)` chỉ ghi một lần mỗi ngày. Đồng bộ: hợp hai album theo
 ngày, trùng ngày giữ chỉ số nhỏ hơn (cho kết quả như nhau theo cả hai chiều gộp).
+
+## Hành trình 7 ngày đầu
+
+**User**: "Mở app ra không biết hôm nay nên làm gì; làm mãi một kiểu thì chán."
+
+**BA**: thẻ trên trang chủ từ ngày học thứ nhất tới hết ngày thứ bảy: 7 ô, mỗi ngày học
+xong một ô sáng lên; mỗi ngày gợi ý một nhiệm vụ nhỏ và giới thiệu thêm một cách học
+(học nhanh → ôn → Ghép cặp → Nghe thụ động → Âm khó → Luyện nói → mục tiêu nhỏ). Ngày
+nào có học cũng tính là xong, nhiệm vụ chỉ là gợi ý. Về đích: chúc mừng và pháo sáng
+cả bầu trời một lần, rồi thẻ tự ẩn.
+
+**Dev**: `src/lib/journey.ts` (thuần, có test), `Journey` trong `Motivation.tsx`.

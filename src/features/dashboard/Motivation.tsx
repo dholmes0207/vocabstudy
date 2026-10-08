@@ -8,6 +8,7 @@ import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
 import { savedReminder } from '@/lib/reminder'
 import { ALL_STICKERS, collected } from '@/lib/stickers'
+import { JOURNEY, journeyState } from '@/lib/journey'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import {
@@ -303,6 +304,91 @@ export function FirstSteps() {
       <Link to="/learn?quick=1" className="btn-primary mt-4 w-full">
         <Zap className="h-4 w-4" /> Học 5 từ đầu tiên
       </Link>
+    </section>
+  )
+}
+
+const JOURNEY_KEY = 'vocab.journeyCelebrated'
+
+/** "Hành trình 7 ngày đầu": one small mission a day through the first week. */
+export function Journey({
+  reviewsByDay,
+  day,
+}: {
+  reviewsByDay: Record<number, number>
+  day: number
+}) {
+  const j = journeyState(reviewsByDay, day)
+  const finished = j?.finished ?? false
+
+  // Finishing the first week deserves the whole sky — once.
+  useEffect(() => {
+    if (!finished) return
+    try {
+      if (localStorage.getItem(JOURNEY_KEY)) return
+      localStorage.setItem(JOURNEY_KEY, String(day))
+    } catch {
+      return
+    }
+    skyCelebrate(1.5)
+  }, [finished, day])
+
+  if (!j) return null
+  const mission = JOURNEY[j.current]
+  const tomorrow = JOURNEY[j.done]
+
+  return (
+    <section className="card p-5">
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="font-bold">Hành trình 7 ngày đầu 🗺️</p>
+        <span className="text-sm text-slate-500">
+          {j.done}/{JOURNEY.length} ngày
+        </span>
+      </div>
+      <ol className="mt-3 grid max-w-md grid-cols-7 gap-1.5">
+        {JOURNEY.map((m, i) => (
+          <li
+            key={m.title}
+            title={`Ngày ${i + 1}: ${m.title}`}
+            className={`grid aspect-square place-items-center rounded-xl text-lg font-bold transition ${
+              i < j.done
+                ? 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white'
+                : i === j.current
+                  ? 'bg-brand-50 ring-2 ring-brand-400 dark:bg-brand-950'
+                  : 'bg-slate-100 opacity-60 dark:bg-slate-800'
+            }`}
+          >
+            {i < j.done ? '✓' : m.emoji}
+          </li>
+        ))}
+      </ol>
+      {j.finished ? (
+        <p className="mt-3 text-sm">
+          🎉 <b>Bạn đã đi hết tuần đầu tiên!</b> Phần khó nhất — bắt đầu và giữ nhịp — bạn đã làm
+          được. Từ giờ cứ mỗi ngày một chút như vậy nhé.
+        </p>
+      ) : (
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+              {j.studiedToday
+                ? `Xong ngày ${j.done} ✓ — nhiệm vụ hôm nay`
+                : `Nhiệm vụ ngày ${j.current + 1}`}
+            </p>
+            <p className="font-semibold">
+              {mission.emoji} {mission.title}
+            </p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {j.studiedToday && tomorrow
+                ? `Mai: ${tomorrow.emoji} ${tomorrow.title}`
+                : mission.desc}
+            </p>
+          </div>
+          <Link to={mission.to} className={j.studiedToday ? 'btn-secondary' : 'btn-primary'}>
+            {j.studiedToday ? 'Thử luôn' : 'Làm ngay'}
+          </Link>
+        </div>
+      )}
     </section>
   )
 }
