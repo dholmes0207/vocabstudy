@@ -37,7 +37,7 @@ const NAV: NavItem[] = [
     label: 'Luyện tập',
     icon: Dumbbell,
     primary: true,
-    also: ['/quiz', '/games', '/speaking', '/listen'],
+    also: ['/quiz', '/games', '/speaking', '/listen', '/sounds'],
   },
   { to: '/browse', label: 'Tra cứu', icon: Library, primary: true },
   { to: '/stats', label: 'Thống kê', icon: BarChart3 },

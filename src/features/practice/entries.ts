@@ -45,6 +45,13 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-500 to-cyan-600',
   },
   {
+    to: '/sounds',
+    icon: '👄',
+    title: 'Âm khó cho người Việt',
+    desc: 'th, âm cuối, ship/sheep… cách đặt lưỡi và trò thử tai phân biệt.',
+    tone: 'from-pink-500 to-rose-600',
+  },
+  {
     to: '/speaking',
     icon: Mic,
     title: 'Luyện nói',
