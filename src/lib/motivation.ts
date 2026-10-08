@@ -155,3 +155,21 @@ export function shareText(learned: number, streak: number): string {
   if (streak >= 2) parts.push(`chuỗi ${streak} ngày liên tục 🔥`)
   return `${parts.join(', ')}. Học cùng mình nhé!`
 }
+
+export interface EnergyOption {
+  emoji: string
+  label: string
+  to: string
+}
+
+/**
+ * "Hôm nay còn bao nhiêu sức?" — three doors sized to the learner's energy, so a
+ * tired evening still has something small enough to say yes to.
+ */
+export function energyOptions(due: number): EnergyOption[] {
+  return [
+    { emoji: '🪫', label: 'Mệt: chỉ nghe', to: '/listen' },
+    { emoji: '⚡', label: '2 phút', to: quickStartPath(due) },
+    { emoji: '💪', label: 'Học đầy đủ', to: due > 0 ? '/review' : '/learn' },
+  ]
+}

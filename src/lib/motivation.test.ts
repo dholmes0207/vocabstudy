@@ -3,6 +3,7 @@ import {
   MAX_SHIELDS,
   coverageEstimate,
   daysAway,
+  energyOptions,
   goalProgress,
   nextMilestone,
   nextStreak,
@@ -115,5 +116,12 @@ describe('shareText', () => {
     expect(shareText(120, 5)).toContain('120 ngôi sao')
     expect(shareText(120, 5)).toContain('5 ngày')
     expect(shareText(3, 1)).not.toContain('chuỗi')
+  })
+})
+
+describe('energyOptions', () => {
+  it('offers listening for tired days and puts due reviews first otherwise', () => {
+    expect(energyOptions(0).map((o) => o.to)).toEqual(['/listen', '/learn?quick=1', '/learn'])
+    expect(energyOptions(4).map((o) => o.to)).toEqual(['/listen', '/review', '/review'])
   })
 })

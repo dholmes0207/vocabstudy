@@ -14,6 +14,7 @@ import { useStudy } from '@/store/studyStore'
 import {
   coverageEstimate,
   daysAway,
+  energyOptions,
   goalProgress,
   nextMilestone,
   quickStartPath,
@@ -149,9 +150,29 @@ export function DailyGoal({
         </p>
       )}
       {!g.reached && (
-        <Link to={quickStartPath(due)} className="btn-primary mt-4 w-full">
-          <Zap className="h-4 w-4" /> Học nhanh 2 phút
-        </Link>
+        <>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-400">
+            Hôm nay bạn còn bao nhiêu sức?
+          </p>
+          <div className="mt-2 grid grid-cols-3 gap-2">
+            {energyOptions(due).map((o, i) => (
+              <Link
+                key={o.label}
+                to={o.to}
+                className={`flex flex-col items-center gap-0.5 rounded-xl px-2 py-2.5 text-center text-sm font-semibold transition hover:-translate-y-0.5 ${
+                  i === 1
+                    ? 'bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-md'
+                    : 'border border-slate-200 bg-white/60 hover:border-brand-300 dark:border-slate-700 dark:bg-slate-900/50'
+                }`}
+              >
+                <span className="text-xl" aria-hidden="true">
+                  {o.emoji}
+                </span>
+                {o.label}
+              </Link>
+            ))}
+          </div>
+        </>
       )}
       {!hasReminder && (
         <details className="mt-3 rounded-xl bg-slate-50 px-3 py-2 dark:bg-slate-800/60">
