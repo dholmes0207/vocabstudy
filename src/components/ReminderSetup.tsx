@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CalendarPlus, Download } from 'lucide-react'
 import {
+  APP_URL,
   DEFAULT_REMINDER,
   REMINDER_KEY,
   googleCalendarUrl,
@@ -8,6 +9,7 @@ import {
   reminderIcs,
   savedReminder,
 } from '@/lib/reminder'
+import { useT, useUiLang } from '@/lib/i18n'
 
 /**
  * Pick a time, then add a daily event to the phone's calendar — Google
@@ -17,6 +19,8 @@ export default function ReminderSetup({ onAdded }: { onAdded?: (time: string) =>
   const [time, setTime] = useState(() => savedReminder() ?? DEFAULT_REMINDER)
   const [added, setAdded] = useState<string | null>(null)
   const valid = parseTime(time) !== null
+  const t = useT()
+  const lang = useUiLang()
 
   const remember = () => {
     try {
@@ -29,7 +33,9 @@ export default function ReminderSetup({ onAdded }: { onAdded?: (time: string) =>
   }
 
   const download = () => {
-    const blob = new Blob([reminderIcs(time, new Date())], { type: 'text/calendar;charset=utf-8' })
+    const blob = new Blob([reminderIcs(time, new Date(), APP_URL, lang)], {
+      type: 'text/calendar;charset=utf-8',
+    })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
@@ -44,7 +50,7 @@ export default function ReminderSetup({ onAdded }: { onAdded?: (time: string) =>
   return (
     <div className="space-y-3">
       <label className="flex items-center gap-3 text-sm font-semibold">
-        Nhắc lúc
+        {t('Nhắc lúc', 'Remind me at')}
         <input
           type="time"
           value={time}
@@ -54,22 +60,27 @@ export default function ReminderSetup({ onAdded }: { onAdded?: (time: string) =>
       </label>
       <div className="flex flex-wrap gap-2">
         <a
-          href={valid ? googleCalendarUrl(time, new Date()) : undefined}
+          href={valid ? googleCalendarUrl(time, new Date(), APP_URL, lang) : undefined}
           target="_blank"
           rel="noopener noreferrer"
           onClick={valid ? remember : undefined}
           aria-disabled={!valid}
           className="btn-primary aria-disabled:pointer-events-none aria-disabled:opacity-50"
         >
-          <CalendarPlus className="h-4 w-4" /> Lịch Google
+          <CalendarPlus className="h-4 w-4" /> {t('Lịch Google', 'Google Calendar')}
         </a>
         <button onClick={download} disabled={!valid} className="btn-secondary">
-          <Download className="h-4 w-4" /> iPhone / lịch khác (.ics)
+          <Download className="h-4 w-4" />{' '}
+          {t('iPhone / lịch khác (.ics)', 'iPhone / other calendars (.ics)')}
         </button>
       </div>
       {added && (
         <p className="text-sm text-emerald-600 dark:text-emerald-400">
-          ✓ Đã tạo nhắc nhở lúc {added} mỗi ngày — nhớ bấm “Lưu” trong ứng dụng Lịch nhé.
+          ✓{' '}
+          {t(
+            `Đã tạo nhắc nhở lúc ${added} mỗi ngày — nhớ bấm “Lưu” trong ứng dụng Lịch nhé.`,
+            `Daily reminder at ${added} created — remember to tap “Save” in your Calendar app.`
+          )}
         </p>
       )}
     </div>

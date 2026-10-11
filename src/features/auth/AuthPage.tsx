@@ -4,6 +4,7 @@ import { LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from '@/components/UiLangToggle'
+import SiteFooter from '@/components/SiteFooter'
 
 export default function AuthPage() {
   const navigate = useNavigate()
@@ -62,7 +63,7 @@ export default function AuthPage() {
   }
 
   return (
-    <div className="grid min-h-[100dvh] place-items-center p-4">
+    <div className="grid min-h-[100dvh] place-items-center content-center gap-6 p-4">
       <div className="card relative w-full max-w-sm p-7 animate-fade-in">
         <UiLangToggle className="absolute right-3 top-3" />
         <div className="mb-5 text-center">
@@ -162,6 +163,7 @@ export default function AuthPage() {
           {t('Dùng thử không cần tài khoản →', 'Try it without an account →')}
         </button>
       </div>
+      <SiteFooter />
     </div>
   )
 }

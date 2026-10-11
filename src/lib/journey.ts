@@ -7,40 +7,66 @@ export interface Mission {
   emoji: string
   title: string
   desc: string
+  titleEn: string
+  descEn: string
   to: string
 }
 
 export const JOURNEY: Mission[] = [
-  { emoji: '🌱', title: 'Học 5 từ đầu tiên', desc: 'Khoảng 2 phút.', to: '/learn?quick=1' },
+  {
+    emoji: '🌱',
+    title: 'Học 5 từ đầu tiên',
+    desc: 'Khoảng 2 phút.',
+    titleEn: 'Learn your first 5 words',
+    descEn: 'About 2 minutes.',
+    to: '/learn?quick=1',
+  },
   {
     emoji: '🔁',
     title: 'Ôn lại từ hôm qua',
     desc: 'Nhớ lại sau một đêm mới là nhớ thật.',
+    titleEn: "Review yesterday's words",
+    descEn: 'Recalling after a night’s sleep is what makes it stick.',
     to: '/review',
   },
-  { emoji: '🧩', title: 'Chơi Ghép cặp', desc: 'Đua với đồng hồ, phá kỷ lục.', to: '/games/match' },
+  {
+    emoji: '🧩',
+    title: 'Chơi Ghép cặp',
+    desc: 'Đua với đồng hồ, phá kỷ lục.',
+    titleEn: 'Play Match',
+    descEn: 'Race the clock, beat your record.',
+    to: '/games/match',
+  },
   {
     emoji: '🎧',
     title: 'Nghe thụ động một lượt',
     desc: 'Bấm một lần rồi cứ nghe.',
+    titleEn: 'One round of hands-free listening',
+    descEn: 'Tap once, then just listen.',
     to: '/listen',
   },
   {
     emoji: '👄',
     title: 'Thử tai với "Âm khó"',
     desc: 'ship hay sheep? Nghe và chọn.',
+    titleEn: 'Train your ear on tricky sounds',
+    descEn: 'ship or sheep? Listen and choose.',
     to: '/sounds',
   },
   {
     emoji: '🎙️',
     title: 'Luyện nói 5 từ',
     desc: 'Đọc vào micro, nghe lại giọng mình.',
+    titleEn: 'Say 5 words out loud',
+    descEn: 'Speak into the mic, hear yourself back.',
     to: '/speaking',
   },
   {
     emoji: '🏁',
     title: 'Đạt mục tiêu nhỏ',
     desc: 'Về đích tuần đầu tiên!',
+    titleEn: 'Reach your small daily goal',
+    descEn: 'Finish your first week!',
     to: '/review',
   },
 ]

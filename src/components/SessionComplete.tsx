@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { celebrate } from '@/lib/confetti'
 import { skyCelebrate } from '@/lib/skyEvents'
 import GoalNudge from './GoalNudge'
+import { useT } from '@/lib/i18n'
 
 interface Props {
   title?: string
@@ -22,7 +23,7 @@ interface Props {
 
 /** Friendly end-of-session celebration with a light accuracy readout. */
 export default function SessionComplete({
-  title = 'Hoàn thành!',
+  title,
   emoji = '🎉',
   correct,
   total,
@@ -30,16 +31,17 @@ export default function SessionComplete({
   note,
   children,
 }: Props) {
+  const t = useT()
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0
   const praise = !showScore
-    ? (note ?? 'Cứ đều đặn mỗi ngày nhé!')
+    ? (note ?? t('Cứ đều đặn mỗi ngày nhé!', 'Keep it up a little every day!'))
     : pct >= 90
-      ? 'Tuyệt vời!'
+      ? t('Tuyệt vời!', 'Amazing!')
       : pct >= 70
-        ? 'Làm tốt lắm!'
+        ? t('Làm tốt lắm!', 'Well done!')
         : pct >= 50
-          ? 'Cố lên nhé!'
-          : 'Đừng nản, ôn lại nào!'
+          ? t('Cố lên nhé!', 'Keep going!')
+          : t('Đừng nản, ôn lại nào!', "Don't give up — let's review!")
 
   // Throw a little confetti to reward finishing. For learning sessions there's
   // no "score" to scale by, so give a generous, fixed celebration.
@@ -61,23 +63,27 @@ export default function SessionComplete({
       <div className="card glow-ring p-8">
         <p className="pop-in text-6xl">{emoji}</p>
         <h1 className="mt-4 text-2xl font-extrabold">
-          <span className="text-aurora">{title}</span>
+          <span className="text-aurora">{title ?? t('Hoàn thành!', 'All done!')}</span>
         </h1>
         <p className="mt-1 text-slate-500">{praise}</p>
         <GoalNudge />
 
         {showScore && total > 0 && (
           <div className="mt-6 grid grid-cols-3 gap-3">
-            <Stat label="Đúng" value={correct} tone="text-emerald-600" />
-            <Stat label="Tổng" value={total} tone="text-slate-700 dark:text-slate-200" />
-            <Stat label="Chính xác" value={pct} suffix="%" tone="text-brand-600" />
+            <Stat label={t('Đúng', 'Correct')} value={correct} tone="text-emerald-600" />
+            <Stat
+              label={t('Tổng', 'Total')}
+              value={total}
+              tone="text-slate-700 dark:text-slate-200"
+            />
+            <Stat label={t('Chính xác', 'Accuracy')} value={pct} suffix="%" tone="text-brand-600" />
           </div>
         )}
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">{children}</div>
 
         <Link to="/" className="btn-ghost mt-4 w-full">
-          Về trang chủ
+          {t('Về trang chủ', 'Back to home')}
         </Link>
       </div>
     </div>

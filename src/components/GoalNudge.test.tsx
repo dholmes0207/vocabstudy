@@ -31,7 +31,7 @@ function withAnswersToday(n: number) {
 }
 
 beforeEach(() => {
-  useSettings.setState({ currentLang: 'en', dailyGoal: 10 })
+  useSettings.setState({ currentLang: 'en', dailyGoal: 10, uiLang: 'vi' })
 })
 afterEach(cleanup)
 
@@ -40,6 +40,13 @@ describe('GoalNudge', () => {
     withAnswersToday(7)
     render(<GoalNudge />)
     expect(screen.getByText(/câu nữa là đạt mục tiêu/)).toHaveTextContent('Còn 3 câu')
+  })
+
+  it('speaks English too', () => {
+    useSettings.setState({ uiLang: 'en' })
+    withAnswersToday(7)
+    render(<GoalNudge />)
+    expect(screen.getByText(/more answers to reach/)).toHaveTextContent('Just 3 more answers')
   })
 
   it('opens and shows the gift once the goal is reached', () => {

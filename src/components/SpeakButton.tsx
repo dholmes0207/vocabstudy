@@ -3,6 +3,7 @@ import { Volume2, VolumeX } from 'lucide-react'
 import { isTTSSupported } from '@/lib/tts'
 import { pronounce } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
+import { useT } from '@/lib/i18n'
 
 interface Props {
   text: string
@@ -33,6 +34,7 @@ export default function SpeakButton({
 }: Props) {
   const rate = useSettings((s) => s.ttsRate)
   const [speaking, setSpeaking] = useState(false)
+  const t = useT()
 
   useEffect(() => () => setSpeaking(false), [text])
 
@@ -42,7 +44,7 @@ export default function SpeakButton({
   if (!canPlay) {
     return (
       <span
-        title="Trình duyệt không hỗ trợ phát âm"
+        title={t('Trình duyệt không hỗ trợ phát âm', "This browser can't play pronunciation")}
         className={`inline-flex items-center justify-center rounded-full text-slate-300 dark:text-slate-600 ${sizeMap[size]} ${className}`}
       >
         <VolumeX />
@@ -66,7 +68,7 @@ export default function SpeakButton({
     <button
       type="button"
       onClick={handle}
-      aria-label={label ?? `Phát âm "${text}"`}
+      aria-label={label ?? t(`Phát âm "${text}"`, `Pronounce "${text}"`)}
       className={`inline-flex items-center justify-center rounded-full bg-brand-50 text-brand-600 transition hover:bg-brand-100 active:scale-90 dark:bg-brand-950 dark:text-brand-300 dark:hover:bg-brand-900 ${
         speaking ? 'animate-pulse ring-2 ring-brand-400' : ''
       } ${sizeMap[size]} ${className}`}

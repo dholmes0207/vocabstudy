@@ -8,7 +8,7 @@ import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
 import { savedReminder } from '@/lib/reminder'
 import { ALL_STICKERS, collected } from '@/lib/stickers'
-import { JOURNEY, journeyState } from '@/lib/journey'
+import { JOURNEY, journeyState, type Mission } from '@/lib/journey'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import {
@@ -22,6 +22,7 @@ import {
   welcomeBack,
 } from '@/lib/motivation'
 import type { StudyStats } from '@/types'
+import { useT, useUiLang } from '@/lib/i18n'
 
 // Dashboard pieces that bring a discouraged learner back (docs/design/comeback.md):
 // a warm welcome after a break, a tiny daily goal with a one-tap 2-minute
@@ -31,7 +32,9 @@ import type { StudyStats } from '@/types'
 const GOAL_KEY = 'vocab.goalCelebrated'
 
 export function WelcomeBack({ stats, day, due }: { stats?: StudyStats; day: number; due: number }) {
-  const msg = welcomeBack(daysAway(stats?.lastStudyDay ?? null, day))
+  const t = useT()
+  const lang = useUiLang()
+  const msg = welcomeBack(daysAway(stats?.lastStudyDay ?? null, day), lang)
   if (!msg) return null
   return (
     <section className="card relative overflow-hidden border-amber-200/70 p-5 dark:border-amber-500/20">
@@ -40,10 +43,10 @@ export function WelcomeBack({ stats, day, due }: { stats?: StudyStats; day: numb
       <p className="mt-1 text-slate-600 dark:text-slate-300">{msg.body}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         <Link to={quickStartPath(due)} className="btn-primary">
-          <Zap className="h-4 w-4" /> Học nhanh 2 phút
+          <Zap className="h-4 w-4" /> {t('Học nhanh 2 phút', 'Quick 2-minute session')}
         </Link>
         <Link to="/listen" className="btn-secondary">
-          🎧 Chỉ nghe thôi
+          🎧 {t('Chỉ nghe thôi', 'Just listen')}
         </Link>
       </div>
     </section>
@@ -63,6 +66,8 @@ export function DailyGoal({
   goal: number
   due: number
 }) {
+  const t = useT()
+  const lang = useUiLang()
   const g = goalProgress(doneToday, goal)
   const streak = stats?.lastStudyDay != null && day - stats.lastStudyDay <= 1 ? stats.streak : 0
   const shields = stats?.shields ?? 0
@@ -96,29 +101,45 @@ export function DailyGoal({
         <ProgressRing value={g.ratio} size={88} stroke={9}>
           <div className="text-center leading-tight">
             <p className="text-lg font-extrabold">{g.reached ? '🎉' : `${g.done}/${g.goal}`}</p>
-            <p className="text-[10px] text-slate-400">hôm nay</p>
+            <p className="text-[10px] text-slate-400">{t('hôm nay', 'today')}</p>
           </div>
         </ProgressRing>
         <div className="min-w-0">
           <p className="font-bold">
-            {g.reached ? 'Đạt mục tiêu hôm nay!' : `Mục tiêu nhỏ: ${g.goal} câu mỗi ngày`}
+            {g.reached
+              ? t('Đạt mục tiêu hôm nay!', 'Goal reached today!')
+              : t(`Mục tiêu nhỏ: ${g.goal} câu mỗi ngày`, `Small goal: ${g.goal} answers a day`)}
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {g.reached
-              ? 'Giỏi lắm! Mai quay lại giữ chuỗi nhé.'
+              ? t(
+                  'Giỏi lắm! Mai quay lại giữ chuỗi nhé.',
+                  'Great job! Come back tomorrow to keep your streak.'
+                )
               : g.done === 0
-                ? 'Chỉ cần bắt đầu — vài câu là đủ.'
-                : `Còn ${g.left} câu nữa thôi.`}{' '}
+                ? t('Chỉ cần bắt đầu — vài câu là đủ.', 'Just start — a few answers is enough.')
+                : t(`Còn ${g.left} câu nữa thôi.`, `Only ${g.left} to go.`)}{' '}
             <Link to="/settings" className="font-semibold text-brand-600 dark:text-brand-300">
-              Đổi
+              {t('Đổi', 'Change')}
             </Link>
           </p>
           <p className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-sm">
-            <span title="Chuỗi ngày học">🔥 {streak} ngày</span>
-            <span title="Mỗi khiên tha cho một ngày lỡ học. Cứ 7 ngày liên tục được thêm một khiên.">
-              🛡️ {shields} khiên
+            <span title={t('Chuỗi ngày học', 'Study streak')}>
+              🔥 {streak} {t('ngày', streak === 1 ? 'day' : 'days')}
             </span>
-            {best > 1 && <span title="Chuỗi dài nhất">🏅 kỷ lục {best}</span>}
+            <span
+              title={t(
+                'Mỗi khiên tha cho một ngày lỡ học. Cứ 7 ngày liên tục được thêm một khiên.',
+                'Each shield forgives one missed day. Every 7-day streak earns another.'
+              )}
+            >
+              🛡️ {shields} {t('khiên', shields === 1 ? 'shield' : 'shields')}
+            </span>
+            {best > 1 && (
+              <span title={t('Chuỗi dài nhất', 'Longest streak')}>
+                🏅 {t('kỷ lục', 'best')} {best}
+              </span>
+            )}
           </p>
         </div>
       </div>
@@ -129,10 +150,11 @@ export function DailyGoal({
           </span>
           <div className="min-w-0 flex-1 text-sm">
             <p className="font-semibold">
-              🎁 Quà hôm nay: <b className="text-base">{gift.en}</b> — {gift.vi}
+              🎁 {t('Quà hôm nay:', "Today's gift:")} <b className="text-base">{gift.en}</b> —{' '}
+              {gift.vi}
             </p>
             <Link to="/stats" className="font-semibold text-brand-600 dark:text-brand-300">
-              Bộ sưu tập {collected(owned ?? {}).size}/{ALL_STICKERS.length} →
+              {t('Bộ sưu tập', 'Collection')} {collected(owned ?? {}).size}/{ALL_STICKERS.length} →
             </Link>
           </div>
           <SpeakButton text={gift.en} lang="en-US" size="sm" />
@@ -140,22 +162,30 @@ export function DailyGoal({
       ) : (
         !g.reached && (
           <p className="mt-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-            🎁 Đạt mục tiêu để mở quà hôm nay — một nhãn dán mới cho bộ sưu tập.
+            🎁{' '}
+            {t(
+              'Đạt mục tiêu để mở quà hôm nay — một nhãn dán mới cho bộ sưu tập.',
+              "Reach the goal to open today's gift — a new sticker for your collection."
+            )}
           </p>
         )
       )}
       {savedYesterday && (
         <p className="mt-3 rounded-xl bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/50 dark:text-sky-200">
-          🛡️ Hôm qua bạn lỡ một ngày — khiên đã giữ chuỗi giúp bạn.
+          🛡️{' '}
+          {t(
+            'Hôm qua bạn lỡ một ngày — khiên đã giữ chuỗi giúp bạn.',
+            'You missed a day yesterday — a shield kept your streak alive.'
+          )}
         </p>
       )}
       {!g.reached && (
         <>
           <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Hôm nay bạn còn bao nhiêu sức?
+            {t('Hôm nay bạn còn bao nhiêu sức?', 'How much energy do you have today?')}
           </p>
           <div className="mt-2 grid grid-cols-3 gap-2">
-            {energyOptions(due).map((o, i) => (
+            {energyOptions(due, lang).map((o, i) => (
               <Link
                 key={o.label}
                 to={o.to}
@@ -177,7 +207,11 @@ export function DailyGoal({
       {!hasReminder && (
         <details className="mt-3 rounded-xl bg-slate-50 px-3 py-2 dark:bg-slate-800/60">
           <summary className="cursor-pointer text-sm font-semibold text-brand-600 dark:text-brand-300">
-            🔔 Hay quên mở app? Nhờ điện thoại nhắc mỗi ngày
+            🔔{' '}
+            {t(
+              'Hay quên mở app? Nhờ điện thoại nhắc mỗi ngày',
+              'Often forget to study? Get a daily reminder on your phone'
+            )}
           </summary>
           <div className="pb-1 pt-3">
             <ReminderSetup />
@@ -204,9 +238,11 @@ export function MySky({
   streak?: number
 }) {
   const [copied, setCopied] = useState(false)
+  const t = useT()
+  const lang = useUiLang()
   // Phones open the system share sheet (Zalo, Messenger…); elsewhere copy it.
   const share = async () => {
-    const text = shareText(learned, streak)
+    const text = shareText(learned, streak, lang)
     const url = 'https://vocastudy.app/'
     try {
       if (navigator.share) {
@@ -240,7 +276,7 @@ export function MySky({
   return (
     <section className="my-sky relative overflow-hidden rounded-2xl p-5 text-white shadow-lg">
       <p className="text-sm font-semibold uppercase tracking-wide text-indigo-200">
-        🌌 Bầu trời của bạn
+        🌌 {t('Bầu trời của bạn', 'Your sky')}
       </p>
       <svg viewBox="0 0 300 110" className="mt-2 w-full" aria-hidden="true">
         {stars.map((s, i) => (
@@ -256,7 +292,22 @@ export function MySky({
       </svg>
       <p className="mt-2 text-sm text-indigo-100">
         {learned === 0 ? (
-          <>Mỗi từ bạn học sẽ thắp sáng một ngôi sao. Bắt đầu với từ đầu tiên nhé!</>
+          t(
+            'Mỗi từ bạn học sẽ thắp sáng một ngôi sao. Bắt đầu với từ đầu tiên nhé!',
+            'Every word you learn lights up a star. Start with your first one!'
+          )
+        ) : lang === 'en' ? (
+          <>
+            You've lit up <b className="text-white">{learned}</b> stars
+            {mastered > 0 && (
+              <>
+                {' '}
+                — <b className="text-amber-200">{mastered}</b> shine bright
+              </>
+            )}
+            . With that many common words you understand about{' '}
+            <b className="text-white">{coverage}%</b> of the words in everyday English text.
+          </>
         ) : (
           <>
             Bạn đã thắp sáng <b className="text-white">{learned}</b> ngôi sao
@@ -279,7 +330,15 @@ export function MySky({
           />
         </div>
         <p className="mt-1.5 text-xs text-indigo-200">
-          Còn <b className="text-white">{m.left}</b> từ nữa để chạm mốc {m.target} ⭐
+          {lang === 'en' ? (
+            <>
+              <b className="text-white">{m.left}</b> more words to reach {m.target} ⭐
+            </>
+          ) : (
+            <>
+              Còn <b className="text-white">{m.left}</b> từ nữa để chạm mốc {m.target} ⭐
+            </>
+          )}
         </p>
       </div>
       {learned > 0 && (
@@ -287,7 +346,10 @@ export function MySky({
           onClick={share}
           className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/20"
         >
-          <Share2 className="h-4 w-4" /> {copied ? 'Đã chép — dán để khoe nhé!' : 'Khoe bầu trời'}
+          <Share2 className="h-4 w-4" />{' '}
+          {copied
+            ? t('Đã chép — dán để khoe nhé!', 'Copied — paste it to share!')
+            : t('Khoe bầu trời', 'Share my sky')}
         </button>
       )}
     </section>
@@ -295,20 +357,40 @@ export function MySky({
 }
 
 const STEPS = [
-  ['1', 'Học 5 từ đầu tiên', 'Nghe, xem câu ví dụ, rồi tự nhớ lại ngay — khoảng 2 phút.'],
-  ['2', 'Mai quay lại ôn', 'App tự nhắc đúng từ sắp quên. Nhớ lại sau một đêm mới là nhớ thật.'],
+  [
+    '1',
+    ['Học 5 từ đầu tiên', 'Learn your first 5 words'],
+    [
+      'Nghe, xem câu ví dụ, rồi tự nhớ lại ngay — khoảng 2 phút.',
+      'Listen, see an example, then recall it right away — about 2 minutes.',
+    ],
+  ],
+  [
+    '2',
+    ['Mai quay lại ôn', 'Come back tomorrow to review'],
+    [
+      'App tự nhắc đúng từ sắp quên. Nhớ lại sau một đêm mới là nhớ thật.',
+      'The app brings back the words you are about to forget. Recalling after a night is real memory.',
+    ],
+  ],
   [
     '3',
-    'Mỗi ngày một chút',
-    'Mục tiêu nhỏ 10 câu. Lỡ một ngày cũng không sao — đã có khiên giữ chuỗi.',
+    ['Mỗi ngày một chút', 'A little every day'],
+    [
+      'Mục tiêu nhỏ 10 câu. Lỡ một ngày cũng không sao — đã có khiên giữ chuỗi.',
+      'A small goal of 10 answers. Missing a day is fine — shields protect your streak.',
+    ],
   ],
 ] as const
 
 /** First visit: three plain steps, so a beginner knows exactly what to do. */
 export function FirstSteps() {
+  const t = useT()
   return (
     <section className="card p-5">
-      <p className="text-lg font-bold">Bắt đầu thật đơn giản 🌱</p>
+      <p className="text-lg font-bold">
+        {t('Bắt đầu thật đơn giản 🌱', 'Getting started is easy 🌱')}
+      </p>
       <ol className="mt-3 space-y-3">
         {STEPS.map(([n, title, desc]) => (
           <li key={n} className="flex gap-3">
@@ -316,14 +398,16 @@ export function FirstSteps() {
               {n}
             </span>
             <span>
-              <b>{title}</b>
-              <span className="block text-sm text-slate-500 dark:text-slate-400">{desc}</span>
+              <b>{t(title[0], title[1])}</b>
+              <span className="block text-sm text-slate-500 dark:text-slate-400">
+                {t(desc[0], desc[1])}
+              </span>
             </span>
           </li>
         ))}
       </ol>
       <Link to="/learn?quick=1" className="btn-primary mt-4 w-full">
-        <Zap className="h-4 w-4" /> Học 5 từ đầu tiên
+        <Zap className="h-4 w-4" /> {t('Học 5 từ đầu tiên', 'Learn your first 5 words')}
       </Link>
     </section>
   )
@@ -339,6 +423,9 @@ export function Journey({
   reviewsByDay: Record<number, number>
   day: number
 }) {
+  const t = useT()
+  const lang = useUiLang()
+  const title = (m: Mission) => (lang === 'en' ? m.titleEn : m.title)
   const j = journeyState(reviewsByDay, day)
   const finished = j?.finished ?? false
 
@@ -361,16 +448,16 @@ export function Journey({
   return (
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-3">
-        <p className="font-bold">Hành trình 7 ngày đầu 🗺️</p>
+        <p className="font-bold">{t('Hành trình 7 ngày đầu 🗺️', 'Your first 7 days 🗺️')}</p>
         <span className="text-sm text-slate-500">
-          {j.done}/{JOURNEY.length} ngày
+          {j.done}/{JOURNEY.length} {t('ngày', 'days')}
         </span>
       </div>
       <ol className="mt-3 grid max-w-md grid-cols-7 gap-1.5">
         {JOURNEY.map((m, i) => (
           <li
             key={m.title}
-            title={`Ngày ${i + 1}: ${m.title}`}
+            title={t(`Ngày ${i + 1}: ${m.title}`, `Day ${i + 1}: ${m.titleEn}`)}
             className={`grid aspect-square place-items-center rounded-xl text-lg font-bold transition ${
               i < j.done
                 ? 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white'
@@ -385,28 +472,39 @@ export function Journey({
       </ol>
       {j.finished ? (
         <p className="mt-3 text-sm">
-          🎉 <b>Bạn đã đi hết tuần đầu tiên!</b> Phần khó nhất — bắt đầu và giữ nhịp — bạn đã làm
-          được. Từ giờ cứ mỗi ngày một chút như vậy nhé.
+          🎉 <b>{t('Bạn đã đi hết tuần đầu tiên!', 'You finished your first week!')}</b>{' '}
+          {t(
+            'Phần khó nhất — bắt đầu và giữ nhịp — bạn đã làm được. Từ giờ cứ mỗi ngày một chút như vậy nhé.',
+            'The hardest part — starting and keeping a rhythm — is done. Keep going a little every day.'
+          )}
         </p>
       ) : (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
               {j.studiedToday
-                ? `Xong ngày ${j.done} ✓ — nhiệm vụ hôm nay`
-                : `Nhiệm vụ ngày ${j.current + 1}`}
+                ? t(
+                    `Xong ngày ${j.done} ✓ — nhiệm vụ hôm nay`,
+                    `Day ${j.done} done ✓ — today's mission`
+                  )
+                : t(`Nhiệm vụ ngày ${j.current + 1}`, `Day ${j.current + 1} mission`)}
             </p>
             <p className="font-semibold">
-              {mission.emoji} {mission.title}
+              {mission.emoji} {title(mission)}
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-400">
               {j.studiedToday && tomorrow
-                ? `Mai: ${tomorrow.emoji} ${tomorrow.title}`
-                : mission.desc}
+                ? t(
+                    `Mai: ${tomorrow.emoji} ${tomorrow.title}`,
+                    `Tomorrow: ${tomorrow.emoji} ${tomorrow.titleEn}`
+                  )
+                : lang === 'en'
+                  ? mission.descEn
+                  : mission.desc}
             </p>
           </div>
           <Link to={mission.to} className={j.studiedToday ? 'btn-secondary' : 'btn-primary'}>
-            {j.studiedToday ? 'Thử luôn' : 'Làm ngay'}
+            {j.studiedToday ? t('Thử luôn', 'Try it') : t('Làm ngay', 'Do it now')}
           </Link>
         </div>
       )}

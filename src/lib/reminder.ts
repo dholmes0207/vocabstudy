@@ -3,12 +3,27 @@
 // every phone — Google Calendar via a link, everything else (iPhone, Outlook,
 // Samsung…) via an .ics file. Pure; ReminderSetup.tsx does the clicking.
 
+import type { UiLang } from '@/types'
+
 export const APP_URL = 'https://vocastudy.app/'
 /** localStorage: the "HH:MM" of the reminder the learner last added. */
 export const REMINDER_KEY = 'vocab.reminder'
 export const DEFAULT_REMINDER = '20:00'
 
-const TITLE = '📚 2 phút học từ vựng'
+/** Event wording in the interface language. */
+function words(lang: UiLang) {
+  return lang === 'en'
+    ? {
+        title: '📚 2 minutes of vocabulary',
+        details: (url: string) => `Open VocaStudy for a quick 2-minute session: ${url}`,
+        alarm: 'Time for your English words!',
+      }
+    : {
+        title: '📚 2 phút học từ vựng',
+        details: (url: string) => `Mở VocaStudy và học nhanh 2 phút: ${url}`,
+        alarm: 'Đến giờ học từ vựng rồi!',
+      }
+}
 const DURATION_MIN = 10
 
 /** The reminder time the learner last added (null = never set one up). */
@@ -77,7 +92,8 @@ export function fold(line: string): string {
 }
 
 /** A calendar file with one event that repeats every day at `time`. */
-export function reminderIcs(time: string, now: Date, url = APP_URL): string {
+export function reminderIcs(time: string, now: Date, url = APP_URL, lang: UiLang = 'vi'): string {
+  const w = words(lang)
   const start = firstReminder(now, time)
   const lines = [
     'BEGIN:VCALENDAR',
@@ -90,12 +106,12 @@ export function reminderIcs(time: string, now: Date, url = APP_URL): string {
     `DTSTART:${local(start)}`,
     `DURATION:PT${DURATION_MIN}M`,
     'RRULE:FREQ=DAILY',
-    `SUMMARY:${esc(TITLE)}`,
-    `DESCRIPTION:${esc(`Mở VocaStudy và học nhanh 2 phút: ${url}`)}`,
+    `SUMMARY:${esc(w.title)}`,
+    `DESCRIPTION:${esc(w.details(url))}`,
     `URL:${url}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
-    `DESCRIPTION:${esc('Đến giờ học từ vựng rồi!')}`,
+    `DESCRIPTION:${esc(w.alarm)}`,
     'TRIGGER:PT0M',
     'END:VALARM',
     'END:VEVENT',
@@ -105,13 +121,19 @@ export function reminderIcs(time: string, now: Date, url = APP_URL): string {
 }
 
 /** The same daily event as a pre-filled Google Calendar link. */
-export function googleCalendarUrl(time: string, now: Date, url = APP_URL): string {
+export function googleCalendarUrl(
+  time: string,
+  now: Date,
+  url = APP_URL,
+  lang: UiLang = 'vi'
+): string {
+  const w = words(lang)
   const start = firstReminder(now, time)
   const end = new Date(start.getTime() + DURATION_MIN * 60_000)
   const q = new URLSearchParams({
     action: 'TEMPLATE',
-    text: TITLE,
-    details: `Mở VocaStudy và học nhanh 2 phút: ${url}`,
+    text: w.title,
+    details: w.details(url),
     dates: `${local(start)}/${local(end)}`,
     recur: 'RRULE:FREQ=DAILY',
   })

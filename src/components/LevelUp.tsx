@@ -3,6 +3,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { levelForXp } from '@/lib/xpLevel'
 import { skyCelebrate } from '@/lib/skyEvents'
+import { useT } from '@/lib/i18n'
 
 const key = (code: string) => `vocab.levelSeen.${code}`
 
@@ -25,6 +26,7 @@ export default function LevelUp() {
   const xp = useStudy((s) => s.progress[code]?.stats.xp ?? 0)
   const level = levelForXp(xp).level
   const [shown, setShown] = useState<number | null>(null)
+  const t = useT()
 
   useEffect(() => {
     const seen = readSeen(code)
@@ -60,10 +62,10 @@ export default function LevelUp() {
     >
       <div className="glow-ring card px-6 py-3 text-center">
         <p className="text-lg font-extrabold">
-          🎉 <span className="text-aurora">Lên cấp {shown}!</span>
+          🎉 <span className="text-aurora">{t(`Lên cấp ${shown}!`, `Level ${shown}!`)}</span>
         </p>
         <p className="text-xs text-slate-500 dark:text-slate-400">
-          Mỗi câu trả lời đều đưa bạn đi xa hơn.
+          {t('Mỗi câu trả lời đều đưa bạn đi xa hơn.', 'Every answer takes you further.')}
         </p>
       </div>
     </div>

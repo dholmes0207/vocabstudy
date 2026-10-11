@@ -17,6 +17,7 @@ import { levelForXp } from '@/lib/xpLevel'
 import { useProgressSync } from '@/hooks/useProgressSync'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from './UiLangToggle'
+import SiteFooter from './SiteFooter'
 
 /** A Vietnamese/English pair, picked by the interface language. */
 type Pair = [vi: string, en: string]
@@ -121,6 +122,7 @@ export default function Layout() {
               </DataGate>
             </Suspense>
           </ErrorBoundary>
+          <SiteFooter className="mt-12 border-t border-slate-200/60 pt-5 dark:border-white/5" />
         </main>
       </div>
 

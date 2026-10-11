@@ -4,6 +4,7 @@ import { useStudy } from '@/store/studyStore'
 import { goalProgress } from '@/lib/motivation'
 import { ALL_STICKERS } from '@/lib/stickers'
 import { today } from '@/lib/date'
+import { useT } from '@/lib/i18n'
 
 /**
  * End-of-session line about the day's small goal: how close the gift is, or
@@ -15,6 +16,7 @@ export default function GoalNudge() {
   const goal = useSettings((s) => s.dailyGoal)
   const stats = useStudy((s) => s.progress[code]?.stats)
   const claimSticker = useStudy((s) => s.claimSticker)
+  const t = useT()
   const day = today()
   const g = goalProgress(stats?.reviewsByDay[day] ?? 0, goal)
 
@@ -33,7 +35,8 @@ export default function GoalNudge() {
           {gift.emoji}
         </span>
         <p className="text-left text-sm">
-          🎁 Đạt mục tiêu hôm nay! Quà của bạn: <b className="text-base">{gift.en}</b> — {gift.vi}
+          🎁 {t('Đạt mục tiêu hôm nay! Quà của bạn:', 'Goal reached! Your gift:')}{' '}
+          <b className="text-base">{gift.en}</b> — {gift.vi}
         </p>
       </div>
     )
@@ -41,7 +44,11 @@ export default function GoalNudge() {
   if (g.reached) return null
   return (
     <p className="mt-4 rounded-xl bg-amber-50 px-4 py-2.5 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
-      Còn <b>{g.left}</b> câu nữa là đạt mục tiêu hôm nay và mở quà 🎁
+      {t('Còn', 'Just')} <b>{g.left}</b>{' '}
+      {t(
+        'câu nữa là đạt mục tiêu hôm nay và mở quà 🎁',
+        "more answers to reach today's goal and open your gift 🎁"
+      )}
     </p>
   )
 }

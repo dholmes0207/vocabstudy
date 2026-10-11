@@ -8,6 +8,7 @@ import { wordOfDay } from '@/lib/games'
 import { today } from '@/lib/date'
 import { wordAudio } from '@/lib/audio'
 import SpeakButton from '@/components/SpeakButton'
+import { useT } from '@/lib/i18n'
 
 /**
  * "Từ của ngày": one word worth a second look — something already met but not
@@ -20,6 +21,7 @@ export default function WordOfDay() {
   const cards = useStudy((s) => s.progress[code]?.cards) ?? NO_CARDS
   const w = useMemo(() => wordOfDay(pack.words, cards, today()), [pack.words, cards])
   const chunk = w.collocations?.[0]
+  const t = useT()
 
   return (
     <section className="card relative overflow-hidden p-5">
@@ -31,7 +33,7 @@ export default function WordOfDay() {
         <i>✦</i>
       </span>
       <p className="text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">
-        ✨ Từ của ngày
+        ✨ {t('Từ của ngày', 'Word of the day')}
       </p>
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
         {w.emoji && (
@@ -41,7 +43,11 @@ export default function WordOfDay() {
         )}
         <span className="text-2xl font-extrabold">{w.word}</span>
         <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
-        {w.viRead && <span className="text-sm text-slate-400">đọc: {w.viRead}</span>}
+        {w.viRead && (
+          <span className="text-sm text-slate-400">
+            {t('đọc:', 'reads like:')} {w.viRead}
+          </span>
+        )}
       </div>
       <p className="mt-1 font-semibold text-brand-700 dark:text-brand-300">{w.meaning}</p>
       {chunk && (
@@ -59,7 +65,8 @@ export default function WordOfDay() {
         to={`/browse?q=${encodeURIComponent(w.word)}`}
         className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 dark:text-brand-300"
       >
-        Xem đầy đủ & tự đặt câu <ArrowRight className="h-4 w-4" />
+        {t('Xem đầy đủ & tự đặt câu', 'See more & write your own sentence')}{' '}
+        <ArrowRight className="h-4 w-4" />
       </Link>
     </section>
   )

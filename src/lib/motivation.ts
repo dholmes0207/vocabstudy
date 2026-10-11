@@ -3,6 +3,8 @@
 // and a sense of how far their words already reach. Pure functions — the
 // stores and screens call these — so every rule here is unit-tested.
 
+import type { UiLang } from '@/types'
+
 /** A streak shield is earned for every full week of streak… */
 export const SHIELD_EVERY = 7
 /** …and you can hold at most this many. */
@@ -71,18 +73,32 @@ export function daysAway(lastStudyDay: number | null, day: number): number | nul
  * Whether to greet a returning learner, and how. Coming back is the win —
  * never mention what was lost.
  */
-export function welcomeBack(away: number | null): { title: string; body: string } | null {
+export function welcomeBack(
+  away: number | null,
+  lang: UiLang = 'vi'
+): { title: string; body: string } | null {
   if (away === null || away < 2) return null
+  const en = lang === 'en'
   if (away < 7) {
-    return {
-      title: 'Chào mừng bạn quay lại! 👋',
-      body: `Đã ${away} ngày rồi — không sao cả. Hôm nay chỉ cần 2 phút cho vài từ là đủ.`,
-    }
+    return en
+      ? {
+          title: 'Welcome back! 👋',
+          body: `It's been ${away} days — that's fine. Today, just 2 minutes and a few words is enough.`,
+        }
+      : {
+          title: 'Chào mừng bạn quay lại! 👋',
+          body: `Đã ${away} ngày rồi — không sao cả. Hôm nay chỉ cần 2 phút cho vài từ là đủ.`,
+        }
   }
-  return {
-    title: 'Rất vui được gặp lại bạn! 🌱',
-    body: 'Lâu rồi mới gặp — mình bắt đầu lại thật nhẹ nhàng nhé: 5 từ, 2 phút, không áp lực.',
-  }
+  return en
+    ? {
+        title: 'So good to see you again! 🌱',
+        body: "It's been a while — let's restart gently: 5 words, 2 minutes, no pressure.",
+      }
+    : {
+        title: 'Rất vui được gặp lại bạn! 🌱',
+        body: 'Lâu rồi mới gặp — mình bắt đầu lại thật nhẹ nhàng nhé: 5 từ, 2 phút, không áp lực.',
+      }
 }
 
 /** Daily goal choices (answers per day), from "barely anything" up. */
@@ -150,7 +166,12 @@ export function quickStartPath(due: number): string {
 }
 
 /** The text shared by "Khoe bầu trời" — progress in one friendly line. */
-export function shareText(learned: number, streak: number): string {
+export function shareText(learned: number, streak: number, lang: UiLang = 'vi'): string {
+  if (lang === 'en') {
+    const en = [`I've lit up ${learned} stars (English words) on VocaStudy 🌟`]
+    if (streak >= 2) en.push(`a ${streak}-day streak 🔥`)
+    return `${en.join(', ')}. Learn with me!`
+  }
   const parts = [`Mình đã thắp sáng ${learned} ngôi sao (từ tiếng Anh) trên VocaStudy 🌟`]
   if (streak >= 2) parts.push(`chuỗi ${streak} ngày liên tục 🔥`)
   return `${parts.join(', ')}. Học cùng mình nhé!`
@@ -166,10 +187,11 @@ export interface EnergyOption {
  * "Hôm nay còn bao nhiêu sức?" — three doors sized to the learner's energy, so a
  * tired evening still has something small enough to say yes to.
  */
-export function energyOptions(due: number): EnergyOption[] {
+export function energyOptions(due: number, lang: UiLang = 'vi'): EnergyOption[] {
+  const en = lang === 'en'
   return [
-    { emoji: '🪫', label: 'Mệt: chỉ nghe', to: '/listen' },
-    { emoji: '⚡', label: '2 phút', to: quickStartPath(due) },
-    { emoji: '💪', label: 'Học đầy đủ', to: due > 0 ? '/review' : '/learn' },
+    { emoji: '🪫', label: en ? 'Tired: just listen' : 'Mệt: chỉ nghe', to: '/listen' },
+    { emoji: '⚡', label: en ? '2 minutes' : '2 phút', to: quickStartPath(due) },
+    { emoji: '💪', label: en ? 'Full session' : 'Học đầy đủ', to: due > 0 ? '/review' : '/learn' },
   ]
 }

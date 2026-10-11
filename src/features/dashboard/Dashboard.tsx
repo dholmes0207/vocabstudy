@@ -14,6 +14,7 @@ import { proverbOfDay } from '@/lib/proverbs'
 import { DailyGoal, FirstSteps, Journey, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
+import { useT } from '@/lib/i18n'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -22,6 +23,7 @@ export default function Dashboard() {
   const dailyGoal = useSettings((s) => s.dailyGoal)
   const progress = useStudy((s) => s.progress[code])
   const stats = progress?.stats
+  const t = useT()
 
   const s = summarize(pack.words, progress, dailyNewLimit)
   const masteredPct = s.total ? s.mastered / s.total : 0
@@ -31,7 +33,12 @@ export default function Dashboard() {
   const proverb = proverbOfDay(today())
 
   const hour = new Date().getHours()
-  const greeting = hour < 11 ? 'Chào buổi sáng' : hour < 18 ? 'Chào buổi chiều' : 'Chào buổi tối'
+  const greeting =
+    hour < 11
+      ? t('Chào buổi sáng', 'Good morning')
+      : hour < 18
+        ? t('Chào buổi chiều', 'Good afternoon')
+        : t('Chào buổi tối', 'Good evening')
 
   return (
     <div className="stagger space-y-6">
@@ -45,7 +52,8 @@ export default function Dashboard() {
             </span>
           </h1>
           <p className="mt-1 text-slate-500">
-            Học <b>{pack.meta.nativeName}</b> · mỗi ngày một chút là đủ.
+            {t('Học', 'Learning')} <b>{t(pack.meta.nativeName, pack.meta.name)}</b> ·{' '}
+            {t('mỗi ngày một chút là đủ.', 'a little every day is enough.')}
           </p>
           <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm">
             <span aria-hidden>💬</span>
@@ -54,23 +62,27 @@ export default function Dashboard() {
               text={proverb.en}
               lang={pack.meta.ttsLang}
               size="sm"
-              label="Nghe câu này"
+              label={t('Nghe câu này', 'Listen')}
             />
             <span className="text-slate-500 dark:text-slate-400">— {proverb.vi}</span>
           </p>
         </div>
         <div className="flex items-center gap-4 rounded-2xl bg-white px-4 py-2 shadow-sm dark:bg-slate-900">
-          <span className="text-sm" title="Chuỗi ngày học liên tục">
-            🔥 <b className="text-lg">{stats?.streak ?? 0}</b> ngày
+          <span className="text-sm" title={t('Chuỗi ngày học liên tục', 'Study streak')}>
+            🔥 <b className="text-lg">{stats?.streak ?? 0}</b>{' '}
+            {t('ngày', (stats?.streak ?? 0) === 1 ? 'day' : 'days')}
           </span>
-          <span className="text-sm text-brand-600 dark:text-brand-300" title="Điểm kinh nghiệm">
+          <span
+            className="text-sm text-brand-600 dark:text-brand-300"
+            title={t('Điểm kinh nghiệm', 'Experience points')}
+          >
             ⭐ <b className="text-lg">{stats?.xp ?? 0}</b>
           </span>
           <span
             className="text-sm font-semibold text-violet-600 dark:text-violet-300"
-            title="Cấp độ"
+            title={t('Cấp độ', 'Level')}
           >
-            Cấp {levelForXp(stats?.xp ?? 0).level}
+            {t('Cấp', 'Level')} {levelForXp(stats?.xp ?? 0).level}
           </span>
         </div>
       </div>
@@ -96,30 +108,39 @@ export default function Dashboard() {
       {/* Today's plan */}
       <section>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
-          Kế hoạch hôm nay
+          {t('Kế hoạch hôm nay', "Today's plan")}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <ActionCard
             to="/review"
             icon={Repeat2}
             tone="brand"
-            title="Ôn tập"
+            title={t('Ôn tập', 'Review')}
             count={s.due}
-            unit="từ cần ôn"
-            cta={s.due > 0 ? 'Ôn ngay' : 'Chưa có từ đến hạn'}
+            unit={t('từ cần ôn', 'words due')}
+            cta={
+              s.due > 0 ? t('Ôn ngay', 'Review now') : t('Chưa có từ đến hạn', 'Nothing due yet')
+            }
             disabled={s.due === 0}
-            hint="Lặp lại ngắt quãng giúp nhớ lâu."
+            hint={t('Lặp lại ngắt quãng giúp nhớ lâu.', 'Spaced repetition makes words stick.')}
           />
           <ActionCard
             to="/learn"
             icon={BookOpen}
             tone="emerald"
-            title="Học từ mới"
+            title={t('Học từ mới', 'Learn new words')}
             count={s.newRemainingToday}
-            unit="từ mới hôm nay"
-            cta={s.newRemainingToday > 0 ? 'Bắt đầu học' : 'Đã đủ từ mới hôm nay'}
+            unit={t('từ mới hôm nay', 'new words today')}
+            cta={
+              s.newRemainingToday > 0
+                ? t('Bắt đầu học', 'Start learning')
+                : t('Đã đủ từ mới hôm nay', 'Done for today')
+            }
             disabled={s.newRemainingToday === 0}
-            hint={`Giới hạn ${dailyNewLimit} từ/ngày · đã học ${s.newDoneToday}`}
+            hint={t(
+              `Giới hạn ${dailyNewLimit} từ/ngày · đã học ${s.newDoneToday}`,
+              `Limit ${dailyNewLimit} words/day · learned ${s.newDoneToday}`
+            )}
           />
         </div>
       </section>
@@ -130,15 +151,25 @@ export default function Dashboard() {
           <ProgressRing value={masteredPct} size={150} stroke={12}>
             <div>
               <p className="text-3xl font-extrabold">{Math.round(masteredPct * 100)}%</p>
-              <p className="text-xs text-slate-400">thành thạo</p>
+              <p className="text-xs text-slate-400">{t('thành thạo', 'mastered')}</p>
             </div>
           </ProgressRing>
         </div>
         <div className="card grid grid-cols-2 gap-3 p-6 sm:grid-cols-4">
-          <Metric label="Đã học" value={s.learned} total={s.total} tone="text-brand-600" />
-          <Metric label="Thành thạo" value={s.mastered} total={s.total} tone="text-emerald-600" />
-          <Metric label="Đang học" value={s.learning} tone="text-amber-600" />
-          <Metric label="Chưa học" value={s.fresh} tone="text-slate-400" />
+          <Metric
+            label={t('Đã học', 'Learned')}
+            value={s.learned}
+            total={s.total}
+            tone="text-brand-600"
+          />
+          <Metric
+            label={t('Thành thạo', 'Mastered')}
+            value={s.mastered}
+            total={s.total}
+            tone="text-emerald-600"
+          />
+          <Metric label={t('Đang học', 'Learning')} value={s.learning} tone="text-amber-600" />
+          <Metric label={t('Chưa học', 'Not started')} value={s.fresh} tone="text-slate-400" />
           <div className="col-span-2 sm:col-span-4">
             <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
               <div
@@ -147,7 +178,10 @@ export default function Dashboard() {
               />
             </div>
             <p className="mt-1.5 text-xs text-slate-400">
-              Bạn đã chạm tới {s.learned}/{s.total} từ.
+              {t(
+                `Bạn đã chạm tới ${s.learned}/${s.total} từ.`,
+                `You've met ${s.learned}/${s.total} words.`
+              )}
             </p>
           </div>
         </div>
@@ -158,39 +192,52 @@ export default function Dashboard() {
       {/* Play & practise */}
       <section>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
-          Chơi mà học
+          {t('Chơi mà học', 'Learn through play')}
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
           <QuickLink
             to="/games/match"
             emoji="🧩"
-            title="Ghép cặp"
-            desc="6 cặp từ – nghĩa, đua với đồng hồ."
+            title={t('Ghép cặp', 'Match')}
+            desc={t(
+              '6 cặp từ – nghĩa, đua với đồng hồ.',
+              'Pair 6 words with meanings, beat the clock.'
+            )}
           />
           <QuickLink
             to="/games/order"
             emoji="🔤"
-            title="Xếp câu"
-            desc="Xếp mảnh thành câu tiếng Anh đúng."
+            title={t('Xếp câu', 'Build a sentence')}
+            desc={t(
+              'Xếp mảnh thành câu tiếng Anh đúng.',
+              'Put the pieces into a correct sentence.'
+            )}
           />
           <QuickLink
             to="/quiz"
             icon={GraduationCap}
-            title="Kiểm tra nhanh"
-            desc="6 dạng câu hỏi: chọn nghĩa, nghe, điền câu…"
+            title={t('Kiểm tra nhanh', 'Quick quiz')}
+            desc={t(
+              '6 dạng câu hỏi: chọn nghĩa, nghe, điền câu…',
+              '6 question types: meanings, listening, gaps…'
+            )}
           />
           <QuickLink
             to="/speaking"
             icon={Mic}
-            title="Luyện nói"
-            desc="Đọc vào micro, so với giọng mẫu."
+            title={t('Luyện nói', 'Speaking')}
+            desc={t(
+              'Đọc vào micro, so với giọng mẫu.',
+              'Speak into the mic, compare with the model.'
+            )}
           />
         </div>
         <Link
           to="/browse"
           className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-300"
         >
-          <Library className="h-4 w-4" /> Tra cứu {pack.meta.count} từ
+          <Library className="h-4 w-4" /> {t('Tra cứu', 'Browse')} {pack.meta.count}{' '}
+          {t('từ', 'words')}
         </Link>
       </section>
     </div>
