@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { useProvideContext } from '@/store/contextStore'
 import { PRACTICE } from './entries'
 import { useTilt } from '@/hooks/useTilt'
+import { useT } from '@/lib/i18n'
 
 // The "Luyện tập" hub: everything that practises words you have already met.
 // One tab on the phone's bottom bar instead of three.
@@ -10,14 +11,19 @@ import { useTilt } from '@/hooks/useTilt'
 export default function Practice() {
   useProvideContext('Luyện tập')
   const tilt = useTilt(6)
+  const t = useT()
   return (
     <div className="space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Luyện tập</span> <span aria-hidden="true">💪</span>
+          <span className="text-aurora">{t('Luyện tập', 'Practice')}</span>{' '}
+          <span aria-hidden="true">💪</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Dùng lại những từ đã gặp theo nhiều cách — càng đa dạng càng nhớ lâu.
+          {t(
+            'Dùng lại những từ đã gặp theo nhiều cách — càng đa dạng càng nhớ lâu.',
+            'Use the words you have met in many ways — the more varied, the longer they stick.'
+          )}
         </p>
       </header>
       <div className="grid gap-3 sm:grid-cols-2">
@@ -34,8 +40,8 @@ export default function Practice() {
               {typeof e.icon === 'string' ? e.icon : <e.icon className="h-6 w-6" />}
             </span>
             <span className="min-w-0 flex-1">
-              <span className="block font-bold">{e.title}</span>
-              <span className="block text-sm text-slate-500">{e.desc}</span>
+              <span className="block font-bold">{t(e.title, e.titleEn)}</span>
+              <span className="block text-sm text-slate-500">{t(e.desc, e.descEn)}</span>
             </span>
             <ArrowRight className="h-5 w-5 shrink-0 text-slate-300" />
           </Link>

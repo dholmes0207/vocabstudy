@@ -5,6 +5,8 @@ export interface PracticeEntry {
   icon: typeof Mic | string
   title: string
   desc: string
+  titleEn: string
+  descEn: string
   tone: string
 }
 
@@ -14,6 +16,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: '🧩',
     title: 'Ghép cặp',
     desc: 'Nối 6 từ với nghĩa của chúng, đua với đồng hồ. Phá kỷ lục của chính mình!',
+    titleEn: 'Match',
+    descEn: 'Pair 6 words with their meanings against the clock. Beat your own record!',
     tone: 'from-amber-400 to-orange-500',
   },
   {
@@ -21,6 +25,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: '🔤',
     title: 'Xếp câu',
     desc: 'Xếp các mảnh thành câu tiếng Anh đúng — hiểu từ đứng ở đâu trong câu.',
+    titleEn: 'Build a sentence',
+    descEn: 'Put the pieces into a correct English sentence — see where each word goes.',
     tone: 'from-emerald-500 to-teal-600',
   },
   {
@@ -28,6 +34,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: GraduationCap,
     title: 'Kiểm tra',
     desc: '6 dạng câu hỏi: chọn nghĩa, nghe, điền vào câu, gõ từ…',
+    titleEn: 'Quiz',
+    descEn: '6 question types: meanings, listening, gaps, typing…',
     tone: 'from-brand-500 to-brand-700',
   },
   {
@@ -35,6 +43,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: '🎯',
     title: 'Từ hay quên',
     desc: 'Luyện riêng những từ bạn hay sai — gỡ từng "nút thắt" một.',
+    titleEn: 'Often-missed words',
+    descEn: 'Practise only the words you keep getting wrong — untie them one by one.',
     tone: 'from-violet-500 to-fuchsia-600',
   },
   {
@@ -42,6 +52,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: '🎧',
     title: 'Nghe thụ động',
     desc: 'Bận tay, đang trên xe? Bấm một lần rồi cứ nghe: từ, nghĩa, câu ví dụ.',
+    titleEn: 'Hands-free listening',
+    descEn: 'Hands busy, on the bus? Tap once and just listen: word, meaning, example.',
     tone: 'from-sky-500 to-cyan-600',
   },
   {
@@ -49,6 +61,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: '👄',
     title: 'Âm khó cho người Việt',
     desc: 'th, âm cuối, ship/sheep… cách đặt lưỡi và trò thử tai phân biệt.',
+    titleEn: 'Tricky sounds for Vietnamese speakers',
+    descEn: 'th, final sounds, ship/sheep… how to shape them, plus an ear test.',
     tone: 'from-pink-500 to-rose-600',
   },
   {
@@ -56,6 +70,8 @@ export const PRACTICE: PracticeEntry[] = [
     icon: Mic,
     title: 'Luyện nói',
     desc: 'Đọc vào micro, nghe lại và so với giọng mẫu.',
+    titleEn: 'Speaking',
+    descEn: 'Speak into the mic, play it back and compare with the model.',
     tone: 'from-rose-500 to-rose-700',
   },
 ]

@@ -5,25 +5,51 @@ import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { pronounce, wordAudio } from '@/lib/audio'
-import { SOUND_LESSONS, earRound, type EarRound, type SoundLesson } from '@/lib/sounds'
+import { SOUND_LESSONS, earRound, lessonText, type EarRound, type SoundLesson } from '@/lib/sounds'
 import { nudge, praise } from '@/lib/encourage'
 import { buzz } from '@/lib/sound'
 import { skyBurstAt } from '@/lib/skyEvents'
+import { useT, useUiLang } from '@/lib/i18n'
 
 // "Âm khó cho người Việt" (docs/design/sounds.md).
 
 type Play = (word: string) => void
 
 const READING_TIPS = [
-  ['VIẾT HOA', 'là âm nhấn: đọc to, dài và cao hơn — kơm-PYU-tơ.'],
-  ['đ / d', '"đ" là /d/ tiếng Anh (red → REĐ); "d" là /z/ như giọng Bắc (zoo → DU).'],
-  ['ph, th', '"ph" là /f/ (five → PHAIV); "th" là âm lưỡi giữa hai răng (think → THINGK).'],
-  ['Âm cuối', 'chữ cuối viết ra là phải bật ra: rice → RAIS, không phải "rai".'],
+  [
+    ['VIẾT HOA', 'CAPITALS'],
+    [
+      'là âm nhấn: đọc to, dài và cao hơn — kơm-PYU-tơ.',
+      'mark the stressed syllable: louder, longer, higher — kơm-PYU-tơ.',
+    ],
+  ],
+  [
+    ['đ / d', 'đ / d'],
+    [
+      '"đ" là /d/ tiếng Anh (red → REĐ); "d" là /z/ như giọng Bắc (zoo → DU).',
+      '"đ" is English /d/ (red → REĐ); "d" is /z/ as in Northern Vietnamese (zoo → DU).',
+    ],
+  ],
+  [
+    ['ph, th', 'ph, th'],
+    [
+      '"ph" là /f/ (five → PHAIV); "th" là âm lưỡi giữa hai răng (think → THINGK).',
+      '"ph" is /f/ (five → PHAIV); "th" is the tongue-between-teeth sound (think → THINGK).',
+    ],
+  ],
+  [
+    ['Âm cuối', 'Endings'],
+    [
+      'chữ cuối viết ra là phải bật ra: rice → RAIS, không phải "rai".',
+      'a final letter that is written must be sounded: rice → RAIS, not "rai".',
+    ],
+  ],
 ] as const
 
 export default function Sounds() {
   const pack = useData((s) => s.pack)!
   const rate = useSettings((s) => s.ttsRate)
+  const t = useT()
   const byWord = useMemo(
     () => new Map(pack.words.map((w) => [w.word.toLowerCase(), w] as const)),
     [pack.words]
@@ -43,30 +69,38 @@ export default function Sounds() {
     <div className="mx-auto max-w-2xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Âm khó cho người Việt</span>{' '}
+          <span className="text-aurora">
+            {t('Âm khó cho người Việt', 'Tricky sounds for Vietnamese speakers')}
+          </span>{' '}
           <span aria-hidden="true">👄</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Những âm người Việt hay đọc sai nhất — cách đặt lưỡi, lỗi thường gặp, và trò “thử tai” để
-          nghe ra khác biệt. Bấm vào từ nào cũng nghe được.
+          {t(
+            'Những âm người Việt hay đọc sai nhất — cách đặt lưỡi, lỗi thường gặp, và trò “thử tai” để nghe ra khác biệt. Bấm vào từ nào cũng nghe được.',
+            'The sounds Vietnamese speakers most often get wrong — how to shape them, the usual slips, and an “ear test” to hear the difference. Tap any word to hear it.'
+          )}
         </p>
       </header>
 
       <section className="card p-5">
-        <h2 className="font-bold">Đọc dòng “cách đọc” thế nào?</h2>
+        <h2 className="font-bold">
+          {t('Đọc dòng “cách đọc” thế nào?', 'How to read the Vietnamese respelling')}
+        </h2>
         <ul className="mt-3 space-y-2 text-sm">
           {READING_TIPS.map(([k, v]) => (
-            <li key={k} className="flex gap-3">
+            <li key={k[0]} className="flex gap-3">
               <span className="w-20 shrink-0 font-bold text-brand-600 dark:text-brand-300">
-                {k}
+                {t(k[0], k[1])}
               </span>
-              <span className="text-slate-600 dark:text-slate-300">{v}</span>
+              <span className="text-slate-600 dark:text-slate-300">{t(v[0], v[1])}</span>
             </li>
           ))}
         </ul>
         <p className="mt-3 text-sm text-slate-500">
-          Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như
-          “ship” và “sheep”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.
+          {t(
+            'Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như “ship” và “sheep”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.',
+            'The respelling is only an approximation in Vietnamese letters. Some differences cannot be written (like “ship” and “sheep”) — your ear is the teacher, so always listen to the model voice.'
+          )}
         </p>
       </section>
 
@@ -78,7 +112,7 @@ export default function Sounds() {
 
       <div className="text-center">
         <Link to="/speaking" className="btn-primary">
-          Luyện nói với micro 🎙️
+          {t('Luyện nói với micro 🎙️', 'Practise speaking with the mic 🎙️')}
         </Link>
       </div>
     </div>
@@ -107,19 +141,21 @@ function Lesson({
   play: Play
   byWord: Map<string, Word>
 }) {
+  const t = useT()
+  const text = lessonText(lesson, useUiLang())
   return (
     <section className="card p-5">
       <div className="flex items-center gap-3">
         <span className="rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 px-2.5 py-1 font-mono text-sm font-bold text-white">
           {lesson.symbol}
         </span>
-        <h2 className="text-lg font-bold">{lesson.title}</h2>
+        <h2 className="text-lg font-bold">{text.title}</h2>
       </div>
       <p className="mt-3 text-sm">
-        <b>Cách phát âm:</b> {lesson.how}
+        <b>{t('Cách phát âm:', 'How:')}</b> {text.how}
       </p>
       <p className="mt-1.5 text-sm text-amber-700 dark:text-amber-300">
-        <b>Hay sai:</b> {lesson.slip}
+        <b>{t('Hay sai:', 'Common slip:')}</b> {text.slip}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
         {lesson.words.map((w) => (
@@ -128,7 +164,9 @@ function Lesson({
       </div>
       {lesson.pairs.length > 0 && (
         <>
-          <p className="mt-4 text-sm font-semibold text-slate-500">Cặp dễ nhầm</p>
+          <p className="mt-4 text-sm font-semibold text-slate-500">
+            {t('Cặp dễ nhầm', 'Easily confused pairs')}
+          </p>
           <div className="mt-2 flex flex-wrap gap-2">
             {lesson.pairs.map(([a, b]) => (
               <span
@@ -154,6 +192,8 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
   const [round, setRound] = useState<EarRound | null>(null)
   const [picked, setPicked] = useState<0 | 1 | null>(null)
   const [score, setScore] = useState({ right: 0, total: 0 })
+  const t = useT()
+  const lang = useUiLang()
 
   const next = () => {
     const r = earRound(pairs)
@@ -174,7 +214,7 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
   if (!round) {
     return (
       <button onClick={next} className="btn-secondary mt-4">
-        <Ear className="h-4 w-4" /> Thử tai: nghe và chọn
+        <Ear className="h-4 w-4" /> {t('Thử tai: nghe và chọn', 'Ear test: listen and choose')}
       </button>
     )
   }
@@ -183,9 +223,11 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
   return (
     <div className="mt-4 rounded-2xl bg-slate-50 p-4 dark:bg-slate-800/60">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-sm font-semibold">Bạn nghe thấy từ nào?</p>
+        <p className="text-sm font-semibold">
+          {t('Bạn nghe thấy từ nào?', 'Which word did you hear?')}
+        </p>
         <span className="text-xs text-slate-500">
-          Đúng {score.right}/{score.total}
+          {t('Đúng', 'Right')} {score.right}/{score.total}
         </span>
       </div>
       <div className="mt-3 grid grid-cols-2 gap-2">
@@ -212,23 +254,24 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
       </div>
       <div className="mt-3 flex flex-wrap items-center gap-2">
         <button onClick={() => play(target)} className="btn-ghost">
-          <RotateCcw className="h-4 w-4" /> Nghe lại
+          <RotateCcw className="h-4 w-4" /> {t('Nghe lại', 'Play again')}
         </button>
         {picked !== null && (
           <>
             <p className="flex-1 text-sm" aria-live="polite">
               {picked === round.answer ? (
                 <span className="text-emerald-600 dark:text-emerald-400">
-                  ✓ {praise(score.total + target.length)}
+                  ✓ {praise(score.total + target.length, lang)}
                 </span>
               ) : (
                 <span className="text-rose-600 dark:text-rose-400">
-                  Đó là “{target}” — {nudge(score.total + target.length)}
+                  {t(`Đó là “${target}”`, `It was “${target}”`)} —{' '}
+                  {nudge(score.total + target.length, lang)}
                 </span>
               )}
             </p>
             <button onClick={next} className="btn-primary">
-              Câu tiếp
+              {t('Câu tiếp', 'Next')}
             </button>
           </>
         )}

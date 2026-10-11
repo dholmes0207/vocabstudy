@@ -21,6 +21,7 @@ import { celebrate } from '@/lib/confetti'
 import { skyCelebrate } from '@/lib/skyEvents'
 import HighlightExample from '@/components/HighlightExample'
 import GameShell, { GameResult } from './GameShell'
+import { useT } from '@/lib/i18n'
 
 // "Xếp câu": rebuild an example sentence from shuffled tiles, guided by its
 // Vietnamese translation. It trains what a word list never does — where words
@@ -55,6 +56,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
   const [shaking, setShaking] = useState<number | null>(null)
   const [mistakes, setMistakes] = useState(0)
   const [result, setResult] = useState<{ xp: number; record: boolean } | null>(null)
+  const t = useT()
 
   const word = words[idx]
   useProvideContext(
@@ -105,21 +107,25 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
 
   if (!word || !state) {
     return (
-      <GameShell title="Xếp câu" stats={null}>
-        <p className="card p-6 text-center text-slate-500">Chưa đủ câu để chơi.</p>
+      <GameShell title={t('Xếp câu', 'Build a sentence')} stats={null}>
+        <p className="card p-6 text-center text-slate-500">
+          {t('Chưa đủ câu để chơi.', 'Not enough sentences to play yet.')}
+        </p>
       </GameShell>
     )
   }
 
   if (result) {
     return (
-      <GameShell title="Xếp câu" stats={null}>
+      <GameShell title={t('Xếp câu', 'Build a sentence')} stats={null}>
         <GameResult
           emoji={mistakes === 0 ? '🌟' : '🎉'}
-          title="Xếp xong cả 5 câu!"
+          title={t('Xếp xong cả 5 câu!', 'All 5 sentences built!')}
           lines={[
-            `Xếp nhầm: ${mistakes} lần`,
-            best !== null ? `Kỷ lục của bạn: ${best} lần nhầm` : '',
+            t(`Xếp nhầm: ${mistakes} lần`, `Wrong moves: ${mistakes}`),
+            best !== null
+              ? t(`Kỷ lục của bạn: ${best} lần nhầm`, `Your record: ${best} wrong moves`)
+              : '',
           ].filter(Boolean)}
           xp={result.xp}
           record={result.record}
@@ -133,7 +139,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
 
   return (
     <GameShell
-      title="Xếp câu 🔤"
+      title={t('Xếp câu 🔤', 'Build a sentence 🔤')}
       stats={
         <>
           <span>
@@ -146,12 +152,12 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
       <div className="card space-y-5 p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Xếp thành câu tiếng Anh có nghĩa là
+            {t('Xếp thành câu tiếng Anh có nghĩa là', 'Build the English sentence that means')}
           </p>
           <p className="mt-1 text-lg font-semibold">{word.exampleVi}</p>
           <p className="mt-1 text-sm text-slate-400">
-            Từ đang luyện: <b className="text-slate-600 dark:text-slate-300">{word.word}</b> ·{' '}
-            {word.meaning}
+            {t('Từ đang luyện:', 'Practising:')}{' '}
+            <b className="text-slate-600 dark:text-slate-300">{word.word}</b> · {word.meaning}
           </p>
         </div>
 
@@ -169,7 +175,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
               <button
                 onClick={speak}
                 className="mt-0.5 rounded-full bg-brand-600 p-1.5 text-white"
-                aria-label="Nghe cả câu"
+                aria-label={t('Nghe cả câu', 'Hear the whole sentence')}
               >
                 <Volume2 className="h-4 w-4" />
               </button>
@@ -192,7 +198,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
             ))
           ) : (
             <span className="self-center text-sm text-slate-400">
-              Chạm các ô bên dưới theo thứ tự…
+              {t('Chạm các ô bên dưới theo thứ tự…', 'Tap the tiles below in order…')}
             </span>
           )}
         </div>
@@ -225,7 +231,9 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
         {state.done && (
           <div className="session-actions">
             <button className="btn-primary h-12 w-full" onClick={next} autoFocus>
-              {idx + 1 < words.length ? 'Câu tiếp theo' : 'Xem kết quả'}{' '}
+              {idx + 1 < words.length
+                ? t('Câu tiếp theo', 'Next sentence')
+                : t('Xem kết quả', 'See results')}{' '}
               <ArrowRight className="h-5 w-5" />
             </button>
           </div>

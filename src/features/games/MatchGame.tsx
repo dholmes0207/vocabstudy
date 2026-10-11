@@ -11,6 +11,7 @@ import { playCorrect, playWrong } from '@/lib/sound'
 import { celebrate } from '@/lib/confetti'
 import { skyBurstAt, skyCelebrate } from '@/lib/skyEvents'
 import GameShell, { GameResult } from './GameShell'
+import { useT } from '@/lib/i18n'
 
 // "Ghép cặp": tap an English word, then its meaning. Six pairs against the
 // clock; the clock starts on the first tap. A wrong pair flashes red and counts
@@ -60,6 +61,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
   )
 
   useProvideContext('Trò chơi Ghép cặp')
+  const t = useT()
 
   // Tick the clock while a round is running.
   useEffect(() => {
@@ -121,22 +123,24 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
 
   if (pairs.length < 2) {
     return (
-      <GameShell title="Ghép cặp" stats={null}>
-        <p className="card p-6 text-center text-slate-500">Chưa đủ từ để chơi.</p>
+      <GameShell title={t('Ghép cặp', 'Match')} stats={null}>
+        <p className="card p-6 text-center text-slate-500">
+          {t('Chưa đủ từ để chơi.', 'Not enough words to play yet.')}
+        </p>
       </GameShell>
     )
   }
 
   if (result) {
     return (
-      <GameShell title="Ghép cặp" stats={null}>
+      <GameShell title={t('Ghép cặp', 'Match')} stats={null}>
         <GameResult
           emoji={result.record ? '🏆' : '🎉'}
-          title="Ghép xong!"
+          title={t('Ghép xong!', 'All matched!')}
           lines={[
-            `Thời gian: ${result.seconds} giây`,
-            `Ghép nhầm: ${mistakes} lần`,
-            best !== null ? `Kỷ lục của bạn: ${best} giây` : '',
+            t(`Thời gian: ${result.seconds} giây`, `Time: ${result.seconds} seconds`),
+            t(`Ghép nhầm: ${mistakes} lần`, `Wrong matches: ${mistakes}`),
+            best !== null ? t(`Kỷ lục của bạn: ${best} giây`, `Your record: ${best} seconds`) : '',
           ].filter(Boolean)}
           xp={result.xp}
           record={result.record}
@@ -174,19 +178,26 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
 
   return (
     <GameShell
-      title="Ghép cặp 🧩"
+      title={t('Ghép cặp 🧩', 'Match 🧩')}
       stats={
         <>
-          <span title="Thời gian">⏱ {seconds}s</span>
-          <span title="Ghép nhầm" className={mistakes ? 'text-rose-500' : ''}>
+          <span title={t('Thời gian', 'Time')}>⏱ {seconds}s</span>
+          <span title={t('Ghép nhầm', 'Wrong matches')} className={mistakes ? 'text-rose-500' : ''}>
             ✗ {mistakes}
           </span>
         </>
       }
     >
       <p className="mb-3 text-sm text-slate-500">
-        Chạm một từ tiếng Anh rồi chạm nghĩa của nó. Đồng hồ chạy từ lần chạm đầu tiên.
-        {best !== null && <span className="ml-1 font-medium">Kỷ lục: {best}s.</span>}
+        {t(
+          'Chạm một từ tiếng Anh rồi chạm nghĩa của nó. Đồng hồ chạy từ lần chạm đầu tiên.',
+          'Tap an English word, then its meaning. The clock starts at your first tap.'
+        )}
+        {best !== null && (
+          <span className="ml-1 font-medium">
+            {t('Kỷ lục', 'Record')}: {best}s.
+          </span>
+        )}
       </p>
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-3">{left.map((id) => tile('en', id))}</div>

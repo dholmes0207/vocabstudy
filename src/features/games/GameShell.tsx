@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { LogOut } from 'lucide-react'
 import { useImmersive } from '@/store/uiStore'
+import { useT } from '@/lib/i18n'
 
 /** Common frame for a game: exit, title, and a live stat line. Focus mode on phones. */
 export default function GameShell({
@@ -13,15 +14,16 @@ export default function GameShell({
   children: React.ReactNode
 }) {
   useImmersive()
+  const t = useT()
   return (
     <div className="mx-auto max-w-xl animate-fade-in">
       <div className="mb-4 flex items-center gap-3">
         <Link
           to="/practice"
           className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
-          aria-label="Thoát trò chơi"
+          aria-label={t('Thoát trò chơi', 'Leave the game')}
         >
-          <LogOut className="h-4 w-4" /> Thoát
+          <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
         </Link>
         <h1 className="flex-1 truncate text-lg font-extrabold">{title}</h1>
         <div className="flex shrink-0 items-center gap-3 text-sm font-semibold tabular-nums text-slate-500">
@@ -49,13 +51,14 @@ export function GameResult({
   record: boolean
   onAgain: () => void
 }) {
+  const t = useT()
   return (
     <div className="card p-8 text-center animate-fade-in">
       <p className="text-6xl">{emoji}</p>
       <h2 className="mt-3 text-2xl font-extrabold">{title}</h2>
       {record && (
         <p className="mt-2 inline-block rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-          🏆 Kỷ lục mới của bạn!
+          🏆 {t('Kỷ lục mới của bạn!', 'New personal record!')}
         </p>
       )}
       <ul className="mt-4 space-y-1 text-slate-500">
@@ -66,10 +69,10 @@ export function GameResult({
       <p className="mt-3 text-lg font-bold text-brand-600 dark:text-brand-300">+{xp} XP ⭐</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <button className="btn-primary" onClick={onAgain} autoFocus>
-          Chơi ván mới
+          {t('Chơi ván mới', 'Play again')}
         </button>
         <Link to="/practice" className="btn-secondary">
-          Trò khác
+          {t('Trò khác', 'Other games')}
         </Link>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { SOUND_LESSONS, earRound, lessonWords } from './sounds'
+import { SOUND_LESSONS, earRound, lessonText, lessonWords } from './sounds'
 
 describe('sound lessons', () => {
   it('have unique ids, words to hear, and two different words per pair', () => {
@@ -35,5 +35,16 @@ describe('earRound', () => {
 
   it('always returns one of the given pairs', () => {
     for (let i = 0; i < 20; i++) expect(pairs).toContainEqual(earRound(pairs).pair)
+  })
+})
+
+describe('lessonText', () => {
+  it('has English wording for every lesson', () => {
+    for (const l of SOUND_LESSONS) {
+      const en = lessonText(l, 'en')
+      expect(en.title).not.toBe(l.title)
+      expect(en.how.length).toBeGreaterThan(10)
+    }
+    expect(lessonText(SOUND_LESSONS[0], 'vi').title).toBe(SOUND_LESSONS[0].title)
   })
 })

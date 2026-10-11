@@ -24,19 +24,20 @@ import { today } from '@/lib/date'
 import { Field, Segment } from '@/components/Choice'
 import EmptyState from '@/components/EmptyState'
 import SessionComplete from '@/components/SessionComplete'
+import { tx, useT } from '@/lib/i18n'
 
 // "Nghe thụ động" (docs/design/listen.md): tap once, then just listen.
 
-const SOURCES: { key: ListenSource; label: string }[] = [
-  { key: 'learned', label: 'Từ đã học' },
-  { key: 'hard', label: 'Từ hay quên' },
-  { key: 'upcoming', label: 'Từ sắp học' },
+const SOURCES: { key: ListenSource; label: string; labelEn: string }[] = [
+  { key: 'learned', label: 'Từ đã học', labelEn: 'Learned' },
+  { key: 'hard', label: 'Từ hay quên', labelEn: 'Often missed' },
+  { key: 'upcoming', label: 'Từ sắp học', labelEn: 'Coming up' },
 ]
 
-const PACES: { key: ListenPace; label: string }[] = [
-  { key: 'short', label: 'Nhanh' },
-  { key: 'normal', label: 'Vừa' },
-  { key: 'long', label: 'Thong thả' },
+const PACES: { key: ListenPace; label: string; labelEn: string }[] = [
+  { key: 'short', label: 'Nhanh', labelEn: 'Quick' },
+  { key: 'normal', label: 'Vừa', labelEn: 'Normal' },
+  { key: 'long', label: 'Thong thả', labelEn: 'Relaxed' },
 ]
 
 /** About 11 seconds a word at the normal pace. */
@@ -67,6 +68,7 @@ export default function Listen() {
   const [viVoice, setViVoice] = useState<string | null>(vietnameseVoice)
   const [sayMeaning, setSayMeaning] = useState(true)
   const [playlist, setPlaylist] = useState<Word[] | null>(null)
+  const t = useT()
 
   // Browsers load their voice list late; pick up a Vietnamese voice when it arrives.
   useEffect(() => {
@@ -101,16 +103,19 @@ export default function Listen() {
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Nghe thụ động</span> <span aria-hidden="true">🎧</span>
+          <span className="text-aurora">{t('Nghe thụ động', 'Hands-free listening')}</span>{' '}
+          <span aria-hidden="true">🎧</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Mệt, bận tay, đang trên xe? Bấm một lần rồi cứ thế nghe: từ → nghĩa → câu ví dụ. Không
-          chấm điểm, không áp lực.
+          {t(
+            'Mệt, bận tay, đang trên xe? Bấm một lần rồi cứ thế nghe: từ → nghĩa → câu ví dụ. Không chấm điểm, không áp lực.',
+            'Tired, hands busy, on the bus? Tap once and just listen: word → meaning → example. No scores, no pressure.'
+          )}
         </p>
       </header>
 
       <div className="card space-y-6 p-6">
-        <Field label="Nghe gì">
+        <Field label={t('Nghe gì', 'What to hear')}>
           <div className="grid grid-cols-3 gap-2">
             {SOURCES.map((s) => (
               <Segment
@@ -119,22 +124,25 @@ export default function Listen() {
                 onClick={() => setSource(s.key)}
                 disabled={counts[s.key] === 0}
               >
-                {s.label} <span className="opacity-60">({counts[s.key]})</span>
+                {t(s.label, s.labelEn)} <span className="opacity-60">({counts[s.key]})</span>
               </Segment>
             ))}
           </div>
           {source === 'upcoming' && (
             <p className="mt-2 text-sm text-slate-500">
-              Nghe trước những từ sắp học — đến lúc học thật sẽ thấy quen tai.
+              {t(
+                'Nghe trước những từ sắp học — đến lúc học thật sẽ thấy quen tai.',
+                "Hear the words you'll learn next — they'll sound familiar when you study them."
+              )}
             </p>
           )}
         </Field>
 
-        <Field label="Nhịp">
+        <Field label={t('Nhịp', 'Pace')}>
           <div className="grid grid-cols-3 gap-2">
             {PACES.map((p) => (
               <Segment key={p.key} active={pace === p.key} onClick={() => setPace(p.key)}>
-                {p.label}
+                {t(p.label, p.labelEn)}
               </Segment>
             ))}
           </div>
@@ -148,25 +156,35 @@ export default function Listen() {
               checked={sayMeaning}
               onChange={(e) => setSayMeaning(e.target.checked)}
             />
-            Đọc to nghĩa tiếng Việt (nghe mà không cần nhìn màn hình)
+            {t(
+              'Đọc to nghĩa tiếng Việt (nghe mà không cần nhìn màn hình)',
+              'Read the Vietnamese meaning aloud (no need to look at the screen)'
+            )}
           </label>
         )}
 
         {available === 0 ? (
           <EmptyState
             emoji="🎧"
-            title="Chưa có từ nào ở mục này"
-            description="Chọn mục khác nhé."
+            title={t('Chưa có từ nào ở mục này', 'No words here yet')}
+            description={t('Chọn mục khác nhé.', 'Pick another option.')}
           />
         ) : (
           <button onClick={start} className="btn-primary w-full py-3 text-base">
-            <Headphones className="h-5 w-5" /> Bắt đầu nghe {size} từ (≈ {minutes(size)} phút)
+            <Headphones className="h-5 w-5" />{' '}
+            {t(
+              `Bắt đầu nghe ${size} từ (≈ ${minutes(size)} phút)`,
+              `Listen to ${size} words (≈ ${minutes(size)} min)`
+            )}
           </button>
         )}
       </div>
 
       <p className="text-center text-sm text-slate-500">
-        Mẹo: trên điện thoại, bạn có thể tạm dừng hoặc chuyển từ ngay ở màn hình khoá.
+        {t(
+          'Mẹo: trên điện thoại, bạn có thể tạm dừng hoặc chuyển từ ngay ở màn hình khoá.',
+          'Tip: on a phone you can pause or skip straight from the lock screen.'
+        )}
       </p>
     </div>
   )
@@ -231,6 +249,7 @@ function Player({
   onRestart: () => void
 }) {
   const rate = useSettings((s) => s.ttsRate)
+  const t = useT()
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(true)
   const [step, setStep] = useState<ListenStep['kind'] | null>(null)
@@ -307,7 +326,7 @@ function Player({
       ms.metadata = new MediaMetadata({
         title: word.word,
         artist: word.meaning,
-        album: 'VocaStudy · Nghe thụ động',
+        album: tx('VocaStudy · Nghe thụ động', 'VocaStudy · Hands-free listening'),
       })
     }
     const handlers: [MediaSessionAction, () => void][] = [
@@ -339,17 +358,22 @@ function Player({
     return (
       <SessionComplete
         emoji="🎧"
-        title="Nghe xong rồi!"
+        title={t('Nghe xong rồi!', 'Listening done!')}
         correct={0}
         total={words.length}
         showScore={false}
-        note={`${words.length} từ đã vào tai. Muốn chắc hơn, thử nhớ lại chúng trong 2 phút nhé.`}
+        note={t(
+          `${words.length} từ đã vào tai. Muốn chắc hơn, thử nhớ lại chúng trong 2 phút nhé.`,
+          `${words.length} words heard. To make them stick, try recalling them in 2 minutes.`
+        )}
       >
         <button onClick={onRestart} className="btn-secondary">
-          Nghe tiếp
+          {t('Nghe tiếp', 'Listen more')}
         </button>
         <Link to={preview ? '/learn?quick=1' : quickStartPath(due)} className="btn-primary">
-          {preview ? 'Học ngay những từ vừa nghe' : 'Học nhanh 2 phút'}
+          {preview
+            ? t('Học ngay những từ vừa nghe', 'Learn these words now')
+            : t('Học nhanh 2 phút', 'Quick 2-minute session')}
         </Link>
       </SessionComplete>
     )
@@ -362,10 +386,10 @@ function Player({
     <div className="mx-auto max-w-xl space-y-5 animate-fade-in">
       <div className="flex items-center justify-between text-sm text-slate-500">
         <span>
-          🎧 Từ {index + 1}/{words.length}
+          🎧 {t('Từ', 'Word')} {index + 1}/{words.length}
         </span>
         <button onClick={onRestart} className="font-semibold text-brand-600 dark:text-brand-300">
-          Dừng nghe
+          {t('Dừng nghe', 'Stop')}
         </button>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
@@ -406,21 +430,21 @@ function Player({
           onClick={() => go(index - 1)}
           disabled={index === 0}
           className="btn-ghost h-12 w-12 rounded-full p-0 disabled:opacity-30"
-          aria-label="Từ trước"
+          aria-label={t('Từ trước', 'Previous word')}
         >
           <SkipBack className="h-5 w-5" />
         </button>
         <button
           onClick={() => setPlaying((p) => !p)}
           className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg transition hover:scale-105"
-          aria-label={playing ? 'Tạm dừng' : 'Nghe tiếp'}
+          aria-label={playing ? t('Tạm dừng', 'Pause') : t('Nghe tiếp', 'Resume')}
         >
           {playing ? <Pause className="h-7 w-7" /> : <Play className="ml-1 h-7 w-7" />}
         </button>
         <button
           onClick={() => (index + 1 < words.length ? go(index + 1) : setDone(true))}
           className="btn-ghost h-12 w-12 rounded-full p-0"
-          aria-label="Từ tiếp"
+          aria-label={t('Từ tiếp', 'Next word')}
         >
           <SkipForward className="h-5 w-5" />
         </button>

@@ -176,3 +176,76 @@ export function earRound(pairs: [string, string][], rand: () => number = Math.ra
   const pair = pairs[Math.floor(rand() * pairs.length)]
   return { pair, answer: rand() < 0.5 ? 0 : 1 }
 }
+
+/** English wording for each lesson, by id (the Vietnamese lives on the lesson). */
+const LESSON_EN: Record<string, { title: string; how: string; slip: string }> = {
+  'th-voiceless': {
+    title: 'th in "think"',
+    how: 'Rest the tip of your tongue lightly between your teeth and blow air out. No voice.',
+    slip: 'Saying "t" or a Vietnamese "th" — "three" (3) comes out as "tree".',
+  },
+  'th-voiced': {
+    title: 'th in "this"',
+    how: 'Tongue between the teeth as for /θ/, but with your voice on — put a hand on your throat to feel it buzz.',
+    slip: 'Turning it into a full "đ": "they" sounds like "day".',
+  },
+  endings: {
+    title: 'Final sounds',
+    how: 'English always releases the last sound lightly. Practise slowly so the ending is clear, then speed up.',
+    slip: 'Swallowing the ending: "like", "light" and "life" all become "lai" — the listener cannot tell which you mean.',
+  },
+  'sh-s': {
+    title: '"sh" and "s"',
+    how: '/ʃ/: round your lips forward as in "shhh". /s/: lips flat, as if smiling.',
+    slip: 'Mixing them up — "she" becomes "see", "ship" becomes "sip".',
+  },
+  'ee-i': {
+    title: 'Long "ee" and short "i"',
+    how: '/iː/ is long with a tight smile (sheep). /ɪ/ is short and crisp with relaxed lips, leaning towards "ê" (ship).',
+    slip: 'Saying every "i" the same — "sheep" and "ship" merge. The respelling cannot show this difference, so listen to the model voice.',
+  },
+  'ae-e': {
+    title: 'Flat "a" and "e"',
+    how: '/æ/: drop your jaw and open wide as if saying "a", but make an "e" (man). /e/: mouth half open (men).',
+    slip: '"man" (one person) and "men" (several) sound exactly alike.',
+  },
+  'uh-ae': {
+    title: 'Short "uh" and flat "a"',
+    how: '/ʌ/: short, mouth half open, close to the Vietnamese "ơ" (cup). /æ/: open wide, lips spread (cap).',
+    slip: 'Reading the letter "u" as "u": "cup" becomes "cúp", "cut" becomes "cút".',
+  },
+  'oo-u': {
+    title: 'Long "oo" and short "u"',
+    how: '/uː/: round your lips and hold it (pool). /ʊ/: short, lips more relaxed (pull).',
+    slip: '"pool" (swimming pool) and "pull" (to drag) sound the same.',
+  },
+  'walk-work': {
+    title: '"walk" and "work"',
+    how: 'walk: rounded lips, no "r" sound (the "l" is silent). work: tongue curls up like "ơ" + r.',
+    slip: 'Two everyday words that often sound identical — "I walk" becomes "I work".',
+  },
+  'l-n': {
+    title: '"l" and "n"',
+    how: '/l/: tongue tip behind the upper front teeth, air flows around the sides. /n/: air goes through the nose.',
+    slip: 'In some regions l and n get mixed — "light" becomes "night".',
+  },
+  r: {
+    title: 'Initial "r"',
+    how: 'Curl the tongue tip up without touching the roof of the mouth, lips slightly rounded. Do not roll it.',
+    slip: 'Saying "r" like a Northern "d/gi", or rolling it — "rice" becomes "zai".',
+  },
+  stress: {
+    title: 'Word stress',
+    how: 'The CAPITALISED syllable in the respelling is stressed: louder, longer, higher. The others are quick and light, often "uh".',
+    slip: 'Giving every syllable equal weight like Vietnamese — "computer" as three even beats "com-piu-tơ".',
+  },
+}
+
+/** A lesson's title, how-to and usual slip in the interface language. */
+export function lessonText(
+  lesson: SoundLesson,
+  lang: 'vi' | 'en'
+): { title: string; how: string; slip: string } {
+  const en = lang === 'en' ? LESSON_EN[lesson.id] : undefined
+  return en ?? { title: lesson.title, how: lesson.how, slip: lesson.slip }
+}
