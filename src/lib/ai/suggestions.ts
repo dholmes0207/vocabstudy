@@ -3,7 +3,12 @@ import type { PageContext } from '@/store/contextStore'
 // Context- and level-aware suggested questions for the AI assistant — worded in
 // plain, friendly Vietnamese (no jargon), scaling depth with the learner level.
 
-export function suggestQuestions(ctx: PageContext, level: number): string[] {
+export function suggestQuestions(
+  ctx: PageContext,
+  level: number,
+  lang: 'vi' | 'en' = 'vi'
+): string[] {
+  if (lang === 'en') return suggestEnglish(ctx.word?.word, level)
   const w = ctx.word?.word
   if (w) {
     const base = [`Giải thích từ "${w}" cho mình`, `Cho ví dụ với "${w}"`]
@@ -40,5 +45,38 @@ export function suggestQuestions(ctx: PageContext, level: number): string[] {
     'Phân biệt: important, crucial, vital, essential',
     'Những từ hay đi chung với "research"',
     'Kiểm tra mình 5 từ khó kèm giải thích',
+  ]
+}
+
+function suggestEnglish(w: string | undefined, level: number): string[] {
+  if (w) {
+    const base = [`Explain "${w}" to me`, `Give me examples with "${w}"`]
+    if (level <= 2) return [...base, `A memory trick for "${w}"`, `One simple sentence with "${w}"`]
+    if (level === 3)
+      return [...base, `Words that go with "${w}"`, `Words from the same root as "${w}"`]
+    if (level === 4)
+      return [
+        `Is "${w}" formal or casual?`,
+        `Idioms and phrases with "${w}"`,
+        `"${w}" vs. similar words`,
+      ]
+    return [
+      `Where does "${w}" come from?`,
+      `How is "${w}" different from its synonyms?`,
+      `Using "${w}" in formal writing`,
+    ]
+  }
+  if (level <= 2)
+    return [
+      'Explain "ability" with one example',
+      'A memory trick for "necessary"',
+      'Quiz me on 5 basic words',
+    ]
+  if (level === 3)
+    return ['"affect" vs. "effect"', 'Words that go with "make"', 'Quiz me on 5 words']
+  return [
+    'important vs. crucial vs. vital vs. essential',
+    'Words that go with "research"',
+    'Quiz me on 5 hard words with explanations',
   ]
 }

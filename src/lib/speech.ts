@@ -7,6 +7,8 @@
 // see PronounceTrainer. On Chrome the audio is sent to Google for recognition,
 // which is why the trainer asks before starting rather than listening silently.
 
+import { tx } from './i18n'
+
 /** Minimal structural types — TS DOM lib does not ship SpeechRecognition. */
 interface RecognitionAlternative {
   transcript: string
@@ -177,16 +179,28 @@ export function listenOnce(opts: ListenOptions): ListenHandle | null {
 export function recognitionErrorMessage(reason: RecognitionFailure): string {
   switch (reason) {
     case 'unsupported':
-      return 'Trình duyệt này không chấm điểm phát âm được (Firefox chưa hỗ trợ). Bạn vẫn ghi âm và tự so sánh với giọng mẫu được.'
+      return tx(
+        'Trình duyệt này không chấm điểm phát âm được (Firefox chưa hỗ trợ). Bạn vẫn ghi âm và tự so sánh với giọng mẫu được.',
+        "This browser can't score pronunciation (Firefox doesn't support it). You can still record and compare with the model voice."
+      )
     case 'not-allowed':
-      return 'Chưa được phép dùng micro. Bấm vào biểu tượng khoá 🔒 trên thanh địa chỉ để cấp quyền.'
+      return tx(
+        'Chưa được phép dùng micro. Bấm vào biểu tượng khoá 🔒 trên thanh địa chỉ để cấp quyền.',
+        'Microphone access is blocked. Click the lock 🔒 in the address bar to allow it.'
+      )
     case 'no-speech':
-      return 'Không nghe thấy gì. Thử lại và đọc to, rõ hơn nhé.'
+      return tx(
+        'Không nghe thấy gì. Thử lại và đọc to, rõ hơn nhé.',
+        "Didn't hear anything. Try again, louder and clearer."
+      )
     case 'audio-capture':
-      return 'Không tìm thấy micro nào trên thiết bị.'
+      return tx('Không tìm thấy micro nào trên thiết bị.', 'No microphone found on this device.')
     case 'network':
-      return 'Mất kết nối tới dịch vụ nhận dạng giọng nói. Kiểm tra mạng rồi thử lại.'
+      return tx(
+        'Mất kết nối tới dịch vụ nhận dạng giọng nói. Kiểm tra mạng rồi thử lại.',
+        'Lost connection to the speech service. Check your network and try again.'
+      )
     default:
-      return 'Có lỗi khi nghe. Thử lại nhé.'
+      return tx('Có lỗi khi nghe. Thử lại nhé.', 'Something went wrong while listening. Try again.')
   }
 }

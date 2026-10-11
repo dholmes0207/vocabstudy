@@ -60,12 +60,22 @@ export interface BuildOptions {
   levelInstruction?: string
   /** Short description of the page/word the learner is currently viewing. */
   contextText?: string
+  /** The learner's interface language; 'en' asks for replies in English. */
+  replyLang?: 'vi' | 'en'
   maxTurns?: number
 }
 
+/**
+ * Appended when the learner uses the English interface. It overrides only the
+ * reply language; scope, safety and teaching rules above all still apply.
+ */
+export const ENGLISH_REPLIES = `# NGÔN NGỮ TRẢ LỜI: TIẾNG ANH
+The learner has chosen the English interface. Write ALL explanations, refusals and questions in simple, clear English (CEFR A2–B1), not Vietnamese. Keep the Vietnamese meaning of the word being studied in brackets, e.g. "ability (khả năng)", because the learner is Vietnamese. Every other rule above still applies.`
+
 export function buildMessages(history: ChatTurn[], opts: BuildOptions = {}) {
-  const { levelInstruction, contextText, maxTurns = 10 } = opts
+  const { levelInstruction, contextText, replyLang, maxTurns = 10 } = opts
   let system = SYSTEM_PROMPT
+  if (replyLang === 'en') system += `\n\n${ENGLISH_REPLIES}`
   if (levelInstruction) {
     system += `\n\n# PHÂN HÓA THEO TRÌNH ĐỘ NGƯỜI HỌC\n${levelInstruction}`
   }

@@ -13,15 +13,16 @@ import PosBadge from '@/components/PosBadge'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import { Field, Segment } from '@/components/Choice'
+import { useT } from '@/lib/i18n'
 
 type Scope = 'learned' | 'hard' | 'all'
 
 const COUNTS = [5, 10, 20]
 
 const STRICTNESS_LABELS = {
-  easy: 'Dễ',
-  normal: 'Vừa',
-  hard: 'Khó',
+  easy: ['Dễ', 'Easy'],
+  normal: ['Vừa', 'Normal'],
+  hard: ['Khó', 'Strict'],
 } as const
 
 /** Shuffle a copy — sessions should not always start at word #1. */
@@ -53,6 +54,7 @@ export default function Speaking() {
   const [scope, setScope] = useState<Scope>('learned')
   const [count, setCount] = useState(10)
   const [session, setSession] = useState<Word[] | null>(null)
+  const t = useT()
 
   if (session) {
     return (
@@ -78,86 +80,101 @@ export default function Speaking() {
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Luyện nói</span> <span aria-hidden="true">🎙️</span>
+          <span className="text-aurora">{t('Luyện nói', 'Speaking')}</span>{' '}
+          <span aria-hidden="true">🎙️</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.{' '}
+          {t(
+            'Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.',
+            'Hear the model → speak into the mic → play yourself back. Results go into your reviews.'
+          )}{' '}
           <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
-            Xem trước những âm khó cho người Việt 👄
+            {t('Xem trước những âm khó cho người Việt 👄', 'See the tricky sounds first 👄')}
           </Link>
         </p>
       </header>
 
       {!canRecord && (
         <p className="rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
-          Trình duyệt này không ghi âm được. Hãy dùng Chrome, Edge hoặc Safari bản mới, và mở trang
-          qua HTTPS.
+          {t(
+            'Trình duyệt này không ghi âm được. Hãy dùng Chrome, Edge hoặc Safari bản mới, và mở trang qua HTTPS.',
+            "This browser can't record. Use a recent Chrome, Edge or Safari over HTTPS."
+          )}
         </p>
       )}
       {canRecord && !isRecognitionSupported() && (
         <p className="rounded-xl bg-slate-100 px-4 py-3 text-sm text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-          Trình duyệt này chưa chấm điểm phát âm tự động được (Firefox). Bạn vẫn ghi âm, nghe đối
-          chiếu với giọng mẫu và tự chấm bình thường.
+          {t(
+            'Trình duyệt này chưa chấm điểm phát âm tự động được (Firefox). Bạn vẫn ghi âm, nghe đối chiếu với giọng mẫu và tự chấm bình thường.',
+            "This browser can't score pronunciation (Firefox). You can still record, compare with the model voice and grade yourself."
+          )}
         </p>
       )}
 
       {noLearned && scope !== 'all' ? (
         <EmptyState
           emoji="🎤"
-          title="Bạn chưa học từ nào"
-          description="Hãy học vài từ trước, hoặc chọn “Toàn bộ” để luyện nói thử."
+          title={t('Bạn chưa học từ nào', "You haven't learned any words yet")}
+          description={t(
+            'Hãy học vài từ trước, hoặc chọn “Toàn bộ” để luyện nói thử.',
+            'Learn a few words first, or choose “All” to try speaking.'
+          )}
         >
           <Link to="/learn" className="btn-primary">
-            Học từ mới
+            {t('Học từ mới', 'Learn new words')}
           </Link>
           <button className="btn-secondary" onClick={() => setScope('all')}>
-            Luyện toàn bộ
+            {t('Luyện toàn bộ', 'Practise all words')}
           </button>
         </EmptyState>
       ) : (
         <div className="card space-y-6 p-6">
-          <Field label="Phạm vi">
+          <Field label={t('Phạm vi', 'Words')}>
             <div className="grid grid-cols-3 gap-2">
               <Segment
                 active={scope === 'learned'}
                 onClick={() => setScope('learned')}
                 disabled={noLearned}
               >
-                Đã học <span className="opacity-60">({learnedWords.length})</span>
+                {t('Đã học', 'Learned')} <span className="opacity-60">({learnedWords.length})</span>
               </Segment>
               <Segment
                 active={scope === 'hard'}
                 onClick={() => setScope('hard')}
                 disabled={hardWords.length === 0}
               >
-                Hay sai <span className="opacity-60">({hardWords.length})</span>
+                {t('Hay sai', 'Often missed')}{' '}
+                <span className="opacity-60">({hardWords.length})</span>
               </Segment>
               <Segment active={scope === 'all'} onClick={() => setScope('all')}>
-                Toàn bộ <span className="opacity-60">({pack.words.length})</span>
+                {t('Toàn bộ', 'All')} <span className="opacity-60">({pack.words.length})</span>
               </Segment>
             </div>
           </Field>
 
-          <Field label="Số từ">
+          <Field label={t('Số từ', 'Number of words')}>
             <div className="grid grid-cols-3 gap-2">
               {COUNTS.map((c) => (
                 <Segment key={c} active={count === c} onClick={() => setCount(c)}>
-                  {c} từ
+                  {c} {t('từ', 'words')}
                 </Segment>
               ))}
             </div>
           </Field>
 
-          <Field label="Độ khó chấm điểm">
+          <Field label={t('Độ khó chấm điểm', 'Scoring strictness')}>
             <div className="grid grid-cols-3 gap-2">
               {(Object.keys(STRICTNESS_LABELS) as (keyof typeof STRICTNESS_LABELS)[]).map((s) => (
                 <Segment key={s} active={strictness === s} onClick={() => setStrictness(s)}>
-                  {STRICTNESS_LABELS[s]}
+                  {t(STRICTNESS_LABELS[s][0], STRICTNESS_LABELS[s][1])}
                 </Segment>
               ))}
             </div>
             <p className="mt-2 text-xs text-slate-400">
-              “Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.
+              {t(
+                '“Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.',
+                '“Strict” accepts only the exact word; “Easy” also accepts close attempts.'
+              )}
             </p>
           </Field>
 
@@ -166,7 +183,8 @@ export default function Speaking() {
             disabled={!canRecord || scopeWords.length === 0}
             className="btn-primary h-12 w-full"
           >
-            <Mic className="h-5 w-5" /> Bắt đầu ({Math.min(count, scopeWords.length)} từ)
+            <Mic className="h-5 w-5" /> {t('Bắt đầu', 'Start')} (
+            {Math.min(count, scopeWords.length)} {t('từ', 'words')})
           </button>
         </div>
       )}
@@ -189,6 +207,7 @@ function SpeakingSession({
   const [passedCount, setPassedCount] = useState(0)
   /** Words the learner never cleared, so the summary can list them. */
   const [missed, setMissed] = useState<Word[]>([])
+  const t = useT()
   /** Whether the current word has already been graded (avoids double-counting). */
   const [graded, setGraded] = useState(false)
 
@@ -213,13 +232,15 @@ function SpeakingSession({
     return (
       <SessionComplete
         emoji="🎙️"
-        title="Xong buổi luyện nói!"
+        title={t('Xong buổi luyện nói!', 'Speaking session done!')}
         correct={passedCount}
         total={words.length}
       >
         {missed.length > 0 && (
           <div className="w-full text-left">
-            <p className="mb-2 text-sm font-semibold text-slate-500">Từ nên luyện thêm:</p>
+            <p className="mb-2 text-sm font-semibold text-slate-500">
+              {t('Từ nên luyện thêm:', 'Words to practise more:')}
+            </p>
             <ul className="space-y-1.5">
               {missed.map((w) => (
                 <li
@@ -283,7 +304,7 @@ function SpeakingSession({
           {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
           {word.viRead && (
             <p className="text-sm text-slate-400">
-              cách đọc:{' '}
+              {t('cách đọc:', 'reads like:')}{' '}
               <span className="font-semibold text-slate-500 dark:text-slate-300">
                 {word.viRead}
               </span>
@@ -300,7 +321,8 @@ function SpeakingSession({
           onAttempt={handleAttempt}
           footer={
             <button onClick={next} className="btn-primary h-12 w-full">
-              {graded ? 'Từ tiếp theo' : 'Bỏ qua'} <SkipForward className="h-4 w-4" />
+              {graded ? t('Từ tiếp theo', 'Next word') : t('Bỏ qua', 'Skip')}{' '}
+              <SkipForward className="h-4 w-4" />
             </button>
           }
         />

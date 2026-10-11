@@ -8,6 +8,7 @@ import { preCheckInput } from '@/lib/ai/guardrail'
 import { suggestQuestions } from '@/lib/ai/suggestions'
 import { quotaHint } from '@/lib/quota'
 import Markdown from '@/components/Markdown'
+import { useT, useUiLang } from '@/lib/i18n'
 
 interface Msg {
   id: number
@@ -16,8 +17,10 @@ interface Msg {
   isError?: boolean
 }
 
-const GREETING =
-  'Chào bạn 👋 Mình là trợ lý học từ vựng tiếng Anh. Hỏi mình về nghĩa, cách dùng, ví dụ, cách phân biệt hay mẹo nhớ từ nhé. (Mình chỉ hỗ trợ học từ vựng tiếng Anh.)'
+const GREETING: [vi: string, en: string] = [
+  'Chào bạn 👋 Mình là trợ lý học từ vựng tiếng Anh. Hỏi mình về nghĩa, cách dùng, ví dụ, cách phân biệt hay mẹo nhớ từ nhé. (Mình chỉ hỗ trợ học từ vựng tiếng Anh.)',
+  "Hi 👋 I'm your English vocabulary tutor. Ask me about meanings, usage, examples, differences between words or memory tricks. (I only help with English vocabulary.)",
+]
 
 function contextText(ctx: PageContext): string {
   if (ctx.word) {
@@ -34,6 +37,8 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   const user = useAuth((s) => s.user)
   const authStatus = useAuth((s) => s.status)
   const ctx = useContextStore()
+  const t = useT()
+  const lang = useUiLang()
 
   const [configured, setConfigured] = useState<null | boolean>(null)
   const [messages, setMessages] = useState<Msg[]>([])
@@ -55,7 +60,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   const send = async (raw: string) => {
     if (loading) return
     const text = raw.trim()
-    const pc = preCheckInput(text)
+    const pc = preCheckInput(text, lang)
     if (!pc.ok) {
       setWarn(pc.message ?? null)
       return
@@ -74,11 +79,18 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         history,
         level,
         context: contextText(ctx),
+        lang,
       })
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: reply }])
-      setQuotaNote(quotaHint(remaining))
+      setQuotaNote(quotaHint(remaining, lang))
     } catch (e) {
-      const msg = e instanceof ApiError ? e.message : 'Có lỗi khi gọi trợ lý. Thử lại nhé.'
+      const msg =
+        e instanceof ApiError
+          ? e.message
+          : t(
+              'Có lỗi khi gọi trợ lý. Thử lại nhé.',
+              'Something went wrong with the tutor. Try again.'
+            )
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: msg, isError: true }])
     } finally {
       setLoading(false)
@@ -119,19 +131,24 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, configured, loading, messages])
 
-  if (authStatus === 'loading') return <Centered>Đang tải…</Centered>
+  // A returning learner (cached) can chat while the session check finishes.
+  if (authStatus === 'loading' && !user) return <Centered>{t('Đang tải…', 'Loading…')}</Centered>
   if (!user) return <LoginPrompt onClose={onClose} />
   if (configured === false) return <NotConfigured admin={user.role === 'admin'} onClose={onClose} />
 
-  const suggestions = suggestQuestions(ctx, level)
+  const suggestions = suggestQuestions(ctx, level, lang)
 
   return (
     <div className="flex h-full flex-col">
       <div className="scroll-thin flex-1 space-y-4 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-950/40">
-        <Bubble role="assistant" content={GREETING} />
+        <Bubble role="assistant" content={t(GREETING[0], GREETING[1])} />
         {ctx.word && messages.length === 0 && (
           <p className="text-center text-xs text-slate-400">
-            💡 Mình biết bạn đang xem từ "{ctx.word.word}".
+            💡{' '}
+            {t(
+              `Mình biết bạn đang xem từ "${ctx.word.word}".`,
+              `I can see you're looking at "${ctx.word.word}".`
+            )}
           </p>
         )}
         {messages.map((m) => (
@@ -153,7 +170,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         {messages.length === 0 && !loading && configured && (
           <div className="pt-1">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-              Gợi ý câu hỏi
+              {t('Gợi ý câu hỏi', 'Suggested questions')}
             </p>
             <div className="flex flex-wrap gap-2">
               {suggestions.map((p) => (
@@ -184,14 +201,14 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
               }
             }}
             rows={1}
-            placeholder="Hỏi về một từ tiếng Anh…"
+            placeholder={t('Hỏi về một từ tiếng Anh…', 'Ask about an English word…')}
             className="max-h-28 min-h-[2.75rem] flex-1 resize-none rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-[15px] outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
           />
           <button
             onClick={() => send(input)}
             disabled={loading || !input.trim()}
             className="btn-primary h-11 w-11 shrink-0 !px-0"
-            aria-label="Gửi"
+            aria-label={t('Gửi', 'Send')}
           >
             <Send className="h-5 w-5" />
           </button>
@@ -255,18 +272,24 @@ function Centered({ children }: { children: React.ReactNode }) {
 }
 
 function LoginPrompt({ onClose }: { onClose?: () => void }) {
+  const t = useT()
   return (
     <div className="grid h-full place-items-center p-6 text-center">
       <div>
         <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow">
           <Bot className="h-7 w-7" />
         </span>
-        <h2 className="mt-4 text-lg font-bold">Trợ lý AI học từ vựng</h2>
+        <h2 className="mt-4 text-lg font-bold">
+          {t('Trợ lý AI học từ vựng', 'AI vocabulary tutor')}
+        </h2>
         <p className="mt-2 text-sm text-slate-500">
-          Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).
+          {t(
+            'Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).',
+            'Sign in to chat with the tutor (free; progress is saved to your account).'
+          )}
         </p>
         <Link to="/login" onClick={onClose} className="btn-primary mt-4">
-          <LogIn className="h-4 w-4" /> Đăng nhập / Đăng ký
+          <LogIn className="h-4 w-4" /> {t('Đăng nhập / Đăng ký', 'Sign in / Sign up')}
         </Link>
       </div>
     </div>
@@ -274,25 +297,34 @@ function LoginPrompt({ onClose }: { onClose?: () => void }) {
 }
 
 function NotConfigured({ admin, onClose }: { admin: boolean; onClose?: () => void }) {
+  const t = useT()
   return (
     <div className="grid h-full place-items-center p-6 text-center">
       <div>
         <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow">
           <Bot className="h-7 w-7" />
         </span>
-        <h2 className="mt-4 text-lg font-bold">Trợ lý chưa sẵn sàng</h2>
+        <h2 className="mt-4 text-lg font-bold">
+          {t('Trợ lý chưa sẵn sàng', 'Tutor not ready yet')}
+        </h2>
         {admin ? (
           <>
             <p className="mt-2 text-sm text-slate-500">
-              Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.
+              {t(
+                'Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.',
+                'Add an AI provider (API key) on the Admin page to turn the tutor on.'
+              )}
             </p>
             <Link to="/admin" onClick={onClose} className="btn-primary mt-4">
-              Cấu hình trong Quản trị
+              {t('Cấu hình trong Quản trị', 'Set it up in Admin')}
             </Link>
           </>
         ) : (
           <p className="mt-2 text-sm text-slate-500">
-            Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.
+            {t(
+              'Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.',
+              'The tutor is not switched on yet. Ask your admin (teacher) to set it up.'
+            )}
           </p>
         )}
       </div>

@@ -25,6 +25,7 @@ import {
   type PronunciationResult,
 } from '@/lib/pronunciation'
 import { playCorrect, playWrong } from '@/lib/sound'
+import { useT, useUiLang } from '@/lib/i18n'
 
 interface Props {
   word: Word
@@ -54,6 +55,7 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
   const [elapsed, setElapsed] = useState(0)
   /** Set when the attempt produced audio but no machine grade (Firefox). */
   const [selfRate, setSelfRate] = useState(false)
+  const t = useT()
 
   const activeRec = useRef<ActiveRecording | null>(null)
   const listener = useRef<ListenHandle | null>(null)
@@ -105,7 +107,9 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
     playback.current?.pause() // tapping twice must not stack two copies
     const el = new Audio(recording.url)
     playback.current = el
-    void el.play().catch(() => setError('Không phát lại được bản ghi.'))
+    void el
+      .play()
+      .catch(() => setError(t('Không phát lại được bản ghi.', "Couldn't play the recording back.")))
   }
 
   const finish = useCallback(
@@ -221,11 +225,14 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
       {/* Model pronunciation ------------------------------------------------ */}
       <div className="flex flex-col items-center gap-2">
         <button type="button" onClick={playModel} className="btn-secondary h-11 px-5">
-          <Play className="h-4 w-4" /> Nghe mẫu
+          <Play className="h-4 w-4" /> {t('Nghe mẫu', 'Hear the model')}
         </button>
         {!canRecognize && (
           <p className="text-center text-xs text-slate-400">
-            Trình duyệt này không chấm điểm được — bạn ghi âm rồi tự so với giọng mẫu nhé.
+            {t(
+              'Trình duyệt này không chấm điểm được — bạn ghi âm rồi tự so với giọng mẫu nhé.',
+              "This browser can't score — record yourself and compare with the model voice."
+            )}
           </p>
         )}
       </div>
@@ -236,7 +243,11 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
           type="button"
           onClick={listening ? stop : start}
           disabled={scoring}
-          aria-label={listening ? 'Dừng ghi âm' : `Đọc từ "${word.word}"`}
+          aria-label={
+            listening
+              ? t('Dừng ghi âm', 'Stop recording')
+              : t(`Đọc từ "${word.word}"`, `Say "${word.word}"`)
+          }
           className={`grid h-24 w-24 place-items-center rounded-full text-white shadow-lg transition active:scale-95 disabled:opacity-60 ${
             listening
               ? 'animate-pulse bg-rose-500 ring-8 ring-rose-200 dark:ring-rose-900/50'
@@ -254,12 +265,15 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
 
         <p className="text-sm font-medium text-slate-500" aria-live="polite">
           {listening
-            ? `Đang nghe… ${(elapsed / 1000).toFixed(1)}s — bấm để dừng`
+            ? t(
+                `Đang nghe… ${(elapsed / 1000).toFixed(1)}s — bấm để dừng`,
+                `Listening… ${(elapsed / 1000).toFixed(1)}s — tap to stop`
+              )
             : scoring
-              ? 'Đang chấm…'
+              ? t('Đang chấm…', 'Scoring…')
               : phase === 'done'
-                ? 'Bấm micro để thử lại'
-                : 'Bấm micro rồi đọc to từ trên'}
+                ? t('Bấm micro để thử lại', 'Tap the mic to try again')
+                : t('Bấm micro rồi đọc to từ trên', 'Tap the mic and say the word above')}
         </p>
       </div>
 
@@ -276,10 +290,10 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
       {recording && (
         <div className="grid grid-cols-2 gap-2">
           <button type="button" onClick={playModel} className="btn-secondary h-11">
-            <Play className="h-4 w-4" /> Giọng mẫu
+            <Play className="h-4 w-4" /> {t('Giọng mẫu', 'Model voice')}
           </button>
           <button type="button" onClick={playMine} className="btn-secondary h-11">
-            <Play className="h-4 w-4" /> Giọng của bạn
+            <Play className="h-4 w-4" /> {t('Giọng của bạn', 'Your voice')}
           </button>
         </div>
       )}
@@ -288,14 +302,14 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
       {selfRate && recording && (
         <div className="space-y-2 rounded-xl bg-slate-50 p-4 text-center dark:bg-slate-800/60">
           <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
-            Nghe lại hai giọng rồi tự chấm:
+            {t('Nghe lại hai giọng rồi tự chấm:', 'Listen to both, then grade yourself:')}
           </p>
           <div className="grid grid-cols-2 gap-2">
             <button type="button" onClick={() => rateSelf(true)} className="btn-secondary h-11">
-              <ThumbsUp className="h-4 w-4" /> Giống rồi
+              <ThumbsUp className="h-4 w-4" /> {t('Giống rồi', 'Sounds the same')}
             </button>
             <button type="button" onClick={() => rateSelf(false)} className="btn-secondary h-11">
-              <ThumbsDown className="h-4 w-4" /> Chưa giống
+              <ThumbsDown className="h-4 w-4" /> {t('Chưa giống', 'Not yet')}
             </button>
           </div>
         </div>
@@ -310,36 +324,41 @@ const VERDICT_STYLE = {
   great: {
     ring: 'text-emerald-500',
     chip: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
-    label: 'Chuẩn! 🎉',
+    label: ['Chuẩn! 🎉', 'Spot on! 🎉'],
   },
   good: {
     ring: 'text-amber-500',
     chip: 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300',
-    label: 'Gần đúng 👍',
+    label: ['Gần đúng 👍', 'Close 👍'],
   },
   retry: {
     ring: 'text-rose-500',
     chip: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300',
-    label: 'Thử lại nhé 💪',
+    label: ['Thử lại nhé 💪', 'Try again 💪'],
   },
 } as const
 
 function ScorePanel({ result, target }: { result: PronunciationResult; target: string }) {
   const style = VERDICT_STYLE[result.verdict]
+  const t = useT()
+  const lang = useUiLang()
   return (
     <div className="space-y-3 rounded-2xl bg-slate-50 p-5 text-center dark:bg-slate-800/60">
       <div className="flex items-center justify-center gap-4">
         <div className={`text-5xl font-extrabold tabular-nums ${style.ring}`}>{result.score}</div>
         <div className="text-left">
-          <span className={`chip ${style.chip}`}>{style.label}</span>
+          <span className={`chip ${style.chip}`}>{t(style.label[0], style.label[1])}</span>
           {result.heard && (
             <p className="mt-1.5 text-sm text-slate-500">
-              Máy nghe được: <b className="text-slate-700 dark:text-slate-200">{result.heard}</b>
+              {t('Máy nghe được:', 'It heard:')}{' '}
+              <b className="text-slate-700 dark:text-slate-200">{result.heard}</b>
             </p>
           )}
         </div>
       </div>
-      <p className="text-sm text-slate-500 dark:text-slate-400">{feedbackFor(result, target)}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400">
+        {feedbackFor(result, target, lang)}
+      </p>
     </div>
   )
 }

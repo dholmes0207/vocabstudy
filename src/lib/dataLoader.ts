@@ -1,4 +1,5 @@
 import type { DataManifest, LanguagePack } from '@/types'
+import { tx } from './i18n'
 
 // Loads the manifest and language packs from /public/data. Uses BASE_URL so it
 // works whether the site is hosted at a domain root or a sub-path.
@@ -7,13 +8,22 @@ const base = import.meta.env.BASE_URL
 
 export async function loadManifest(): Promise<DataManifest> {
   const res = await fetch(`${base}data/index.json`)
-  if (!res.ok) throw new Error(`Không tải được manifest (${res.status})`)
+  if (!res.ok)
+    throw new Error(
+      tx(`Không tải được manifest (${res.status})`, `Couldn't load the manifest (${res.status})`)
+    )
   return (await res.json()) as DataManifest
 }
 
 export async function loadPack(code: string): Promise<LanguagePack> {
   const res = await fetch(`${base}data/${code}.json`)
-  if (!res.ok) throw new Error(`Không tải được gói ngôn ngữ "${code}" (${res.status})`)
+  if (!res.ok)
+    throw new Error(
+      tx(
+        `Không tải được gói ngôn ngữ "${code}" (${res.status})`,
+        `Couldn't load the "${code}" word pack (${res.status})`
+      )
+    )
   const pack = (await res.json()) as LanguagePack
   validatePack(pack, code)
   return pack

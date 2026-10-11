@@ -6,6 +6,7 @@
 
 import type { Strictness } from '@/types'
 import { phoneticKey, similarity } from './phonetic'
+import type { UiLang } from '@/types'
 
 export type { Strictness }
 
@@ -116,15 +117,30 @@ export function isPass(result: PronunciationResult, strictness: Strictness): boo
   return result.score >= STRICTNESS[strictness]
 }
 
-/** Short Vietnamese coaching line for a result. */
-export function feedbackFor(result: PronunciationResult, target: string): string {
-  if (result.exact) return 'Chuẩn! Máy nhận đúng từ bạn đọc.'
-  if (!result.heard) return 'Chưa nghe thấy gì — thử lại và đọc to hơn nhé.'
+/** Short coaching line for a result, in the interface language. */
+export function feedbackFor(
+  result: PronunciationResult,
+  target: string,
+  lang: UiLang = 'vi'
+): string {
+  const en = lang === 'en'
+  if (result.exact)
+    return en ? 'Spot on! It heard exactly your word.' : 'Chuẩn! Máy nhận đúng từ bạn đọc.'
+  if (!result.heard)
+    return en
+      ? "Didn't hear anything — try again a little louder."
+      : 'Chưa nghe thấy gì — thử lại và đọc to hơn nhé.'
   if (result.homophone) {
-    return `Máy nghe thành “${result.heard}” — nghe rất giống “${target}”. Nếu không phải từ đồng âm thì để ý nguyên âm.`
+    return en
+      ? `It heard “${result.heard}” — which sounds just like “${target}”. If it isn't a homophone, watch the vowel.`
+      : `Máy nghe thành “${result.heard}” — nghe rất giống “${target}”. Nếu không phải từ đồng âm thì để ý nguyên âm.`
   }
   if (result.score >= GOOD_MIN) {
-    return `Gần đúng — máy nghe thành “${result.heard}”. Đọc chậm và rõ hơn một chút.`
+    return en
+      ? `Close — it heard “${result.heard}”. Say it a bit slower and clearer.`
+      : `Gần đúng — máy nghe thành “${result.heard}”. Đọc chậm và rõ hơn một chút.`
   }
-  return `Máy nghe thành “${result.heard}”. Nghe lại mẫu rồi thử lại nhé.`
+  return en
+    ? `It heard “${result.heard}”. Listen to the model again, then retry.`
+    : `Máy nghe thành “${result.heard}”. Nghe lại mẫu rồi thử lại nhé.`
 }

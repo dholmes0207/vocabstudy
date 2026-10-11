@@ -1,4 +1,5 @@
 import { getAccessToken } from './supabase'
+import { tx } from './i18n'
 
 // Client for the Cloudflare Pages Functions API (server-side pieces that must
 // hold secrets): the AI proxy and admin operations. Auth and progress talk to
@@ -47,7 +48,13 @@ async function req<T>(path: string, options: RequestInit = {}): Promise<T> {
       },
     })
   } catch {
-    throw new ApiError(0, 'Không kết nối được máy chủ. Kiểm tra mạng nhé.')
+    throw new ApiError(
+      0,
+      tx(
+        'Không kết nối được máy chủ. Kiểm tra mạng nhé.',
+        "Can't reach the server. Check your connection."
+      )
+    )
   }
   const isJson = res.headers.get('content-type')?.includes('application/json')
   const body = isJson ? await res.json().catch(() => ({})) : {}
@@ -62,6 +69,8 @@ export const api = {
     history: { role: 'user' | 'assistant'; content: string }[]
     level?: number
     context?: string
+    /** Interface language, so the tutor replies in it. */
+    lang?: 'vi' | 'en'
   }) =>
     req<{ reply: string; remaining?: number }>('/ai/chat', {
       method: 'POST',

@@ -14,13 +14,20 @@ export interface PreCheck {
   message?: string
 }
 
-export function preCheckInput(text: string): PreCheck {
+export function preCheckInput(text: string, lang: 'vi' | 'en' = 'vi'): PreCheck {
   const t = text.trim()
-  if (!t) return { ok: false, message: 'Bạn nhập câu hỏi về từ vựng nhé 🙂' }
+  const en = lang === 'en'
+  if (!t)
+    return {
+      ok: false,
+      message: en ? 'Type a question about vocabulary 🙂' : 'Bạn nhập câu hỏi về từ vựng nhé 🙂',
+    }
   if (t.length > MAX_INPUT_CHARS) {
     return {
       ok: false,
-      message: `Câu hỏi hơi dài (tối đa ${MAX_INPUT_CHARS} ký tự). Bạn rút gọn giúp mình nhé.`,
+      message: en
+        ? `That's a bit long (max ${MAX_INPUT_CHARS} characters). Please shorten it.`
+        : `Câu hỏi hơi dài (tối đa ${MAX_INPUT_CHARS} ký tự). Bạn rút gọn giúp mình nhé.`,
     }
   }
   return { ok: true }

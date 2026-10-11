@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { cleanup, render, screen, waitFor } from '@testing-library/react'
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 
 // The AI cap fails open on purpose, so "silently not counting" is a state an
@@ -13,6 +13,9 @@ vi.mock('@/lib/api', async () => {
 })
 
 const { AiQuotaPanel } = await import('./AdminPage')
+const { useSettings } = await import('@/store/settingsStore')
+
+beforeEach(() => useSettings.setState({ uiLang: 'vi' }))
 
 afterEach(() => {
   cleanup()

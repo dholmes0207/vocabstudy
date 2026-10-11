@@ -29,7 +29,7 @@ export function parseDailyLimit(raw: string | undefined, fallback: number): numb
  * A broken counter must never lock a learner out of the tutor, so a non-finite
  * or negative `used` is treated as "no evidence of overuse" and allowed.
  */
-export function quotaVerdict(used: number, limit: number): QuotaVerdict {
+export function quotaVerdict(used: number, limit: number, lang: 'vi' | 'en' = 'vi'): QuotaVerdict {
   const safeUsed = Number.isFinite(used) && used > 0 ? Math.floor(used) : 0
   if (limit <= 0) {
     return { allowed: true, used: safeUsed, limit, remaining: Number.POSITIVE_INFINITY }
@@ -41,7 +41,10 @@ export function quotaVerdict(used: number, limit: number): QuotaVerdict {
     used: safeUsed,
     limit,
     remaining: 0,
-    message: `Bạn đã dùng hết ${limit} lượt hỏi trợ lý AI cho hôm nay. Hẹn gặp lại vào ngày mai nhé!`,
+    message:
+      lang === 'en'
+        ? `You've used all ${limit} AI tutor questions for today. See you tomorrow!`
+        : `Bạn đã dùng hết ${limit} lượt hỏi trợ lý AI cho hôm nay. Hẹn gặp lại vào ngày mai nhé!`,
   }
 }
 
@@ -89,9 +92,18 @@ const HINT_THRESHOLD = 5
  * guessing at a number the learner will be judged against is worse than saying
  * nothing.
  */
-export function quotaHint(remaining: number | null | undefined): string | null {
+export function quotaHint(
+  remaining: number | null | undefined,
+  lang: 'vi' | 'en' = 'vi'
+): string | null {
   if (typeof remaining !== 'number' || !Number.isFinite(remaining)) return null
   if (remaining > HINT_THRESHOLD) return null
-  if (remaining <= 0) return 'Đó là lượt hỏi cuối cùng hôm nay. Hẹn gặp lại ngày mai nhé!'
-  return `Còn ${remaining} lượt hỏi trợ lý hôm nay.`
+  const en = lang === 'en'
+  if (remaining <= 0)
+    return en
+      ? 'That was your last question for today. See you tomorrow!'
+      : 'Đó là lượt hỏi cuối cùng hôm nay. Hẹn gặp lại ngày mai nhé!'
+  return en
+    ? `${remaining} tutor questions left today.`
+    : `Còn ${remaining} lượt hỏi trợ lý hôm nay.`
 }

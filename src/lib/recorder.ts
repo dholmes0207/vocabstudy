@@ -5,6 +5,8 @@
 // available to every learner, even where speech recognition is not. It needs a
 // secure context (https or localhost), which production already has.
 
+import { tx } from './i18n'
+
 export type RecorderFailure = 'unsupported' | 'not-allowed' | 'no-device' | 'error'
 
 export interface Recording {
@@ -115,12 +117,18 @@ export function releaseRecording(rec: Recording | null): void {
 export function recorderErrorMessage(reason: RecorderFailure): string {
   switch (reason) {
     case 'unsupported':
-      return 'Trình duyệt này không ghi âm được. Thử Chrome, Edge hoặc Safari bản mới.'
+      return tx(
+        'Trình duyệt này không ghi âm được. Thử Chrome, Edge hoặc Safari bản mới.',
+        "This browser can't record. Try a recent Chrome, Edge or Safari."
+      )
     case 'not-allowed':
-      return 'Chưa được phép dùng micro. Bấm biểu tượng khoá 🔒 trên thanh địa chỉ để cấp quyền rồi thử lại.'
+      return tx(
+        'Chưa được phép dùng micro. Bấm biểu tượng khoá 🔒 trên thanh địa chỉ để cấp quyền rồi thử lại.',
+        'Microphone access is blocked. Click the lock 🔒 in the address bar to allow it, then retry.'
+      )
     case 'no-device':
-      return 'Không tìm thấy micro nào trên thiết bị.'
+      return tx('Không tìm thấy micro nào trên thiết bị.', 'No microphone found on this device.')
     default:
-      return 'Không mở được micro. Thử lại nhé.'
+      return tx('Không mở được micro. Thử lại nhé.', "Couldn't open the microphone. Try again.")
   }
 }

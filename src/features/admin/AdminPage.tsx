@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom'
 import { Check, Trash2, UserX } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { api, ApiError, type AdminUser, type AiUsageReport } from '@/lib/api'
+import { tx, useT } from '@/lib/i18n'
 
 export default function AdminPage() {
   const me = useAuth((s) => s.user)
+  const t = useT()
 
   if (me?.role !== 'admin') {
     return (
       <div className="mx-auto max-w-md py-10 text-center">
         <div className="card p-8">
           <p className="text-4xl">🔒</p>
-          <h1 className="mt-3 text-lg font-bold">Chỉ dành cho quản trị viên</h1>
+          <h1 className="mt-3 text-lg font-bold">
+            {t('Chỉ dành cho quản trị viên', 'Admins only')}
+          </h1>
           <Link to="/" className="btn-primary mt-4">
-            Về trang chủ
+            {t('Về trang chủ', 'Back to home')}
           </Link>
         </div>
       </div>
@@ -25,17 +29,23 @@ export default function AdminPage() {
     <div className="space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Quản trị</span> <span aria-hidden="true">🛡️</span>
+          <span className="text-aurora">{t('Quản trị', 'Admin')}</span>{' '}
+          <span aria-hidden="true">🛡️</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).
+          {t(
+            'Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).',
+            'Manage user accounts. Permissions are enforced on the server (Cloudflare Function + Supabase).'
+          )}
         </p>
       </header>
 
       <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-        🔑 <b>API key AI</b> được đặt bằng biến môi trường <code>OPENAI_API_KEY</code> trên
-        Cloudflare Pages (secret) — không nằm trong app, học viên không bao giờ thấy. Đổi key/model
-        ở Cloudflare → Settings → Environment variables.
+        🔑{' '}
+        {t(
+          'API key AI được đặt bằng biến môi trường OPENAI_API_KEY trên Cloudflare Pages (secret) — không nằm trong app, học viên không bao giờ thấy. Đổi key/model ở Cloudflare → Settings → Environment variables.',
+          'The AI API key is the OPENAI_API_KEY environment variable on Cloudflare Pages (a secret) — it is not in the app and learners never see it. Change the key/model under Cloudflare → Settings → Environment variables.'
+        )}
       </div>
 
       <AiQuotaPanel />
@@ -53,6 +63,7 @@ export default function AdminPage() {
  * The only hard proof it works is today's request count going up.
  */
 export function AiQuotaPanel() {
+  const t = useT()
   const [report, setReport] = useState<AiUsageReport | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -61,7 +72,15 @@ export function AiQuotaPanel() {
     api
       .adminAiUsage()
       .then((r) => alive && setReport(r))
-      .catch((e) => alive && setError(e instanceof ApiError ? e.message : 'Lỗi tải bộ đếm AI'))
+      .catch(
+        (e) =>
+          alive &&
+          setError(
+            e instanceof ApiError
+              ? e.message
+              : tx('Lỗi tải bộ đếm AI', "Couldn't load the AI counter")
+          )
+      )
     return () => {
       alive = false
     }
@@ -70,12 +89,17 @@ export function AiQuotaPanel() {
   if (error) {
     return (
       <div className="card p-4 text-sm text-rose-600 dark:text-rose-400">
-        ⚠️ Không đọc được tình trạng hạn mức AI: {error}
+        ⚠️ {t('Không đọc được tình trạng hạn mức AI:', "Couldn't read the AI quota status:")}{' '}
+        {error}
       </div>
     )
   }
   if (!report)
-    return <div className="card p-4 text-sm text-slate-400">Đang kiểm tra hạn mức AI…</div>
+    return (
+      <div className="card p-4 text-sm text-slate-400">
+        {t('Đang kiểm tra hạn mức AI…', 'Checking the AI quota…')}
+      </div>
+    )
 
   const off = report.limit === 0
   const broken = !report.reachable
@@ -84,7 +108,7 @@ export function AiQuotaPanel() {
   return (
     <div className="card p-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="font-bold">Hạn mức trợ lý AI</h2>
+        <h2 className="font-bold">{t('Hạn mức trợ lý AI', 'AI tutor quota')}</h2>
         <span
           className={`chip px-3 py-1 text-xs font-semibold ${
             broken
@@ -94,29 +118,46 @@ export function AiQuotaPanel() {
                 : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
           }`}
         >
-          {broken ? '✕ Không đếm được' : off ? '○ Đã tắt hạn mức' : '✓ Đang đếm'}
+          {broken
+            ? t('✕ Không đếm được', '✕ Not counting')
+            : off
+              ? t('○ Đã tắt hạn mức', '○ Quota off')
+              : t('✓ Đang đếm', '✓ Counting')}
         </span>
       </div>
 
       <p className="mt-2 text-sm text-slate-500">
         {off
-          ? 'AI_DAILY_LIMIT đang là 0 — học sinh hỏi không giới hạn.'
-          : `Mỗi học sinh ${report.limit} lượt/ngày, mốc sang ngày theo giờ Việt Nam.`}
+          ? t(
+              'AI_DAILY_LIMIT đang là 0 — học sinh hỏi không giới hạn.',
+              'AI_DAILY_LIMIT is 0 — learners can ask without limit.'
+            )
+          : t(
+              `Mỗi học sinh ${report.limit} lượt/ngày, mốc sang ngày theo giờ Việt Nam.`,
+              `${report.limit} questions per learner per day; the day resets on Vietnam time.`
+            )}
       </p>
 
       {broken ? (
         <p className="mt-3 rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">
-          Hạn mức <b>đang không có tác dụng</b> — trợ lý vẫn trả lời nhưng không ai bị chặn.
+          {t(
+            'Hạn mức đang không có tác dụng — trợ lý vẫn trả lời nhưng không ai bị chặn.',
+            'The quota is not in effect — the tutor still answers, but nobody is limited.'
+          )}
           {report.error ? ` ${report.error}` : ''}
         </p>
       ) : (
         <p className="mt-3 text-sm">
-          Hôm nay ({report.day}): <b>{report.today.requests}</b> lượt hỏi từ{' '}
-          <b>{report.today.users}</b> học sinh.
+          {t('Hôm nay', 'Today')} ({report.day}): <b>{report.today.requests}</b>{' '}
+          {t('lượt hỏi từ', 'questions from')} <b>{report.today.users}</b>{' '}
+          {t('học sinh.', 'learners.')}
           {!off && !counted && (
             <span className="text-slate-400">
               {' '}
-              Chưa có lượt nào — hỏi thử một câu rồi tải lại trang để chắc chắn bộ đếm chạy.
+              {t(
+                'Chưa có lượt nào — hỏi thử một câu rồi tải lại trang để chắc chắn bộ đếm chạy.',
+                'No questions yet — ask one, then reload to confirm the counter works.'
+              )}
             </span>
           )}
         </p>
@@ -135,7 +176,11 @@ function UsersTab({ meId }: { meId: string }) {
     api
       .adminUsers()
       .then((r) => alive && setUsers(r.users))
-      .catch((e) => alive && setError(e instanceof ApiError ? e.message : 'Lỗi tải dữ liệu'))
+      .catch(
+        (e) =>
+          alive &&
+          setError(e instanceof ApiError ? e.message : tx('Lỗi tải dữ liệu', "Couldn't load data"))
+      )
     return () => {
       alive = false
     }
@@ -146,7 +191,7 @@ function UsersTab({ meId }: { meId: string }) {
       await fn()
       setReloadKey((k) => k + 1)
     } catch (e) {
-      alert(e instanceof ApiError ? e.message : 'Thao tác thất bại')
+      alert(e instanceof ApiError ? e.message : tx('Thao tác thất bại', 'Action failed'))
     }
   }
 
@@ -160,7 +205,14 @@ function UsersTab({ meId }: { meId: string }) {
         users={pending}
         onApprove={(u) => act(() => api.adminPatchUser(u.id, { status: 'active' }))}
         onReject={(u) => {
-          if (confirm(`Từ chối và xoá đăng ký của ${u.email}?`))
+          if (
+            confirm(
+              tx(
+                `Từ chối và xoá đăng ký của ${u.email}?`,
+                `Reject and delete the sign-up from ${u.email}?`
+              )
+            )
+          )
             act(() => api.adminDeleteUser(u.id))
         }}
       />
@@ -179,19 +231,24 @@ function PendingSignups({
   onApprove: (u: AdminUser) => void
   onReject: (u: AdminUser) => void
 }) {
+  const t = useT()
   return (
     <section className="card p-4">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="font-bold">Đăng ký chờ duyệt</h2>
+        <h2 className="font-bold">{t('Đăng ký chờ duyệt', 'Sign-ups awaiting approval')}</h2>
         <span
           className={`chip px-3 py-1 text-xs font-semibold ${users.length ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
         >
-          {users.length ? `${users.length} người đang chờ` : 'Không có ai chờ'}
+          {users.length
+            ? t(`${users.length} người đang chờ`, `${users.length} waiting`)
+            : t('Không có ai chờ', 'Nobody waiting')}
         </span>
       </div>
       <p className="mt-1 text-sm text-slate-500">
-        Tài khoản mới chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học
-        được ở chế độ khách.
+        {t(
+          'Tài khoản mới chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học được ở chế độ khách.',
+          'New accounts can sign in and sync only after you approve them. Meanwhile they can still learn as guests.'
+        )}
       </p>
       {users.length > 0 && (
         <ul className="mt-3 divide-y divide-slate-100 dark:divide-slate-800">
@@ -200,18 +257,19 @@ function PendingSignups({
               <div className="min-w-0">
                 <p className="truncate font-medium">{u.name || '—'}</p>
                 <p className="truncate text-xs text-slate-400">
-                  {u.email} · đăng ký {new Date(u.created_at).toLocaleString('vi-VN')}
+                  {u.email} · {t('đăng ký', 'signed up')}{' '}
+                  {new Date(u.created_at).toLocaleString(t('vi-VN', 'en-GB'))}
                 </p>
               </div>
               <div className="flex gap-1.5">
                 <button className="btn-primary !px-3 !py-1.5 text-sm" onClick={() => onApprove(u)}>
-                  <Check className="h-4 w-4" /> Duyệt
+                  <Check className="h-4 w-4" /> {t('Duyệt', 'Approve')}
                 </button>
                 <button
                   className="btn-ghost !px-3 !py-1.5 text-sm text-rose-600"
                   onClick={() => onReject(u)}
                 >
-                  <UserX className="h-4 w-4" /> Từ chối
+                  <UserX className="h-4 w-4" /> {t('Từ chối', 'Reject')}
                 </button>
               </div>
             </li>
@@ -222,13 +280,18 @@ function PendingSignups({
   )
 }
 
-const STATUS_CHIP: Record<AdminUser['status'], [string, string]> = {
+const STATUS_CHIP: Record<AdminUser['status'], [vi: string, en: string, cls: string]> = {
   active: [
     'Hoạt động',
+    'Active',
     'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
   ],
-  pending: ['Chờ duyệt', 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'],
-  locked: ['Đã khoá', 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'],
+  pending: [
+    'Chờ duyệt',
+    'Pending',
+    'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300',
+  ],
+  locked: ['Đã khoá', 'Locked', 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'],
 }
 
 function UsersTable({
@@ -240,15 +303,16 @@ function UsersTable({
   meId: string
   act: (fn: () => Promise<unknown>) => void
 }) {
+  const t = useT()
   return (
     <div className="card overflow-x-auto p-0">
       <table className="w-full min-w-[640px] text-sm">
         <thead className="border-b border-slate-200 text-left text-slate-400 dark:border-slate-800">
           <tr>
-            <th className="p-3">Người dùng</th>
+            <th className="p-3">{t('Người dùng', 'User')}</th>
             <th className="p-3">Vai</th>
-            <th className="p-3">Trạng thái</th>
-            <th className="p-3 text-right">Thao tác</th>
+            <th className="p-3">{t('Trạng thái', 'Status')}</th>
+            <th className="p-3 text-right">{t('Thao tác', 'Actions')}</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -257,7 +321,9 @@ function UsersTable({
               <td className="p-3">
                 <p className="font-medium">
                   {u.name || '—'}{' '}
-                  {u.id === meId && <span className="text-xs text-slate-400">(bạn)</span>}
+                  {u.id === meId && (
+                    <span className="text-xs text-slate-400">{t('(bạn)', '(you)')}</span>
+                  )}
                 </p>
                 <p className="text-xs text-slate-400">{u.email}</p>
               </td>
@@ -265,12 +331,12 @@ function UsersTable({
                 <span
                   className={`chip ${u.role === 'admin' ? 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
                 >
-                  {u.role === 'admin' ? 'Admin' : 'Học viên'}
+                  {u.role === 'admin' ? 'Admin' : t('Học viên', 'Learner')}
                 </span>
               </td>
               <td className="p-3">
-                <span className={`chip ${(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked)[1]}`}>
-                  {(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked)[0]}
+                <span className={`chip ${(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked)[2]}`}>
+                  {t(...pairOf(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked))}
                 </span>
               </td>
               <td className="p-3">
@@ -288,7 +354,7 @@ function UsersTable({
                         )
                       }
                     >
-                      {u.role === 'admin' ? '↓ Học viên' : '↑ Admin'}
+                      {u.role === 'admin' ? t('↓ Học viên', '↓ Learner') : '↑ Admin'}
                     </button>
                     <button
                       className="btn-ghost !px-2 text-xs"
@@ -301,27 +367,39 @@ function UsersTable({
                       }
                     >
                       {u.status === 'active'
-                        ? 'Khoá'
+                        ? t('Khoá', 'Lock')
                         : u.status === 'pending'
-                          ? 'Duyệt'
-                          : 'Mở khoá'}
+                          ? t('Duyệt', 'Approve')
+                          : t('Mở khoá', 'Unlock')}
                     </button>
                     <button
                       className="btn-ghost !px-2 text-xs"
                       onClick={() => {
-                        const p = prompt(`Mật khẩu mới cho ${u.email} (≥6 ký tự):`)
+                        const p = prompt(
+                          t(
+                            `Mật khẩu mới cho ${u.email} (≥6 ký tự):`,
+                            `New password for ${u.email} (≥6 characters):`
+                          )
+                        )
                         if (p) act(() => api.adminResetPassword(u.id, p))
                       }}
                     >
-                      Đặt lại MK
+                      {t('Đặt lại MK', 'Reset password')}
                     </button>
                     <button
                       className="btn-ghost !px-2 text-xs text-rose-500"
                       onClick={() => {
-                        if (confirm(`Xoá tài khoản ${u.email}? Không thể hoàn tác.`))
+                        if (
+                          confirm(
+                            t(
+                              `Xoá tài khoản ${u.email}? Không thể hoàn tác.`,
+                              `Delete the account ${u.email}? This cannot be undone.`
+                            )
+                          )
+                        )
                           act(() => api.adminDeleteUser(u.id))
                       }}
-                      aria-label="Xoá"
+                      aria-label={t('Xoá', 'Delete')}
                     >
                       <Trash2 className="h-3.5 w-3.5" />
                     </button>
@@ -334,4 +412,9 @@ function UsersTable({
       </table>
     </div>
   )
+}
+
+/** The Vietnamese/English pair of a status chip. */
+function pairOf(chip: [string, string, string]): [string, string] {
+  return [chip[0], chip[1]]
 }

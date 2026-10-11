@@ -1,6 +1,8 @@
 // Export/import all VocaStudy data (progress + settings) as a JSON file.
 // Everything lives under the "vocab." localStorage prefix.
 
+import { tx } from './i18n'
+
 const PREFIX = 'vocab.'
 const APP_TAG = 'vocab-study-backup'
 
@@ -44,7 +46,7 @@ export function downloadBackup(): void {
 export function importBackup(json: string): number {
   const parsed = JSON.parse(json) as BackupFile
   if (parsed.app !== APP_TAG || typeof parsed.data !== 'object') {
-    throw new Error('File sao lưu không hợp lệ.')
+    throw new Error(tx('File sao lưu không hợp lệ.', 'This is not a valid backup file.'))
   }
   let n = 0
   for (const [k, v] of Object.entries(parsed.data)) {

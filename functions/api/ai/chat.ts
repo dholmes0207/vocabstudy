@@ -16,6 +16,7 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
     history?: { role?: string; content?: string }[]
     level?: number
     context?: string
+    lang?: string
   }
   try {
     body = await request.json()
@@ -38,9 +39,11 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
 
   const level = typeof body.level === 'number' ? body.level : undefined
   const context = typeof body.context === 'string' ? body.context.slice(0, 600) : undefined
+  const lang = body.lang === 'en' ? 'en' : 'vi'
   const messages = buildMessages(turns, {
     levelInstruction: level ? levelInfo(level).aiInstruction : undefined,
     contextText: context,
+    replyLang: lang,
   })
 
   // Daily allowance. The counter is bumped first and judged after, so two
@@ -53,7 +56,7 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   if (limit > 0) {
     const used = await bumpAiUsage(env, user.id)
     if (used !== null) {
-      const verdict = quotaVerdict(used, limit)
+      const verdict = quotaVerdict(used, limit, lang)
       if (!verdict.allowed) return json({ error: verdict.message }, 429)
       remaining = verdict.remaining
     }

@@ -9,19 +9,20 @@ import { phaseOf } from '@/lib/srs'
 import type { CardPhase } from '@/types'
 import SpeakButton from '@/components/SpeakButton'
 import PosBadge from '@/components/PosBadge'
-import { POS_LABEL } from '@/lib/pos'
+import { posLabel } from '@/lib/pos'
 import WordInsight from '@/components/WordInsight'
 import MySentence from '@/components/MySentence'
 import { wordAudio } from '@/lib/audio'
 import { useProvideContext } from '@/store/contextStore'
+import { useT, useUiLang } from '@/lib/i18n'
 
 const PAGE_SIZE = 24
 
-const PHASE_META: Record<CardPhase, { label: string; dot: string }> = {
-  new: { label: 'Chưa học', dot: 'bg-slate-300 dark:bg-slate-600' },
-  learning: { label: 'Đang học', dot: 'bg-amber-400' },
-  review: { label: 'Đang ôn', dot: 'bg-brand-500' },
-  mastered: { label: 'Thành thạo', dot: 'bg-emerald-500' },
+const PHASE_META: Record<CardPhase, { label: string; labelEn: string; dot: string }> = {
+  new: { label: 'Chưa học', labelEn: 'Not started', dot: 'bg-slate-300 dark:bg-slate-600' },
+  learning: { label: 'Đang học', labelEn: 'Learning', dot: 'bg-amber-400' },
+  review: { label: 'Đang ôn', labelEn: 'Reviewing', dot: 'bg-brand-500' },
+  mastered: { label: 'Thành thạo', labelEn: 'Mastered', dot: 'bg-emerald-500' },
 }
 
 export default function Browse() {
@@ -35,6 +36,8 @@ export default function Browse() {
   const [pos, setPos] = useState<PosCategory | 'all'>('all')
   const [phaseFilter, setPhaseFilter] = useState<CardPhase | 'all'>('all')
   const [page, setPage] = useState(0)
+  const t = useT()
+  const uiLang = useUiLang()
   const [expanded, setExpanded] = useState<number | null>(() => {
     const q = params.get('q')?.trim().toLowerCase()
     return q ? (pack.words.find((w) => w.word.toLowerCase() === q)?.id ?? null) : null
@@ -85,12 +88,16 @@ export default function Browse() {
     <div className="space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Tra cứu từ vựng</span> <span aria-hidden="true">📚</span>
+          <span className="text-aurora">{t('Tra cứu từ vựng', 'Dictionary')}</span>{' '}
+          <span aria-hidden="true">📚</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          {pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.{' '}
+          {t(
+            `${pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.`,
+            `${pack.meta.count} words · search and filter as you like.`
+          )}{' '}
           <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
-            Đọc phiên âm thế nào? 👄
+            {t('Đọc phiên âm thế nào? 👄', 'How to read the respelling 👄')}
           </Link>
         </p>
       </header>
@@ -108,8 +115,11 @@ export default function Browse() {
             setQuery(e.target.value)
             resetPage()
           }}
-          aria-label="Tìm kiếm từ vựng"
-          placeholder="Tìm theo từ tiếng Anh hoặc nghĩa tiếng Việt…"
+          aria-label={t('Tìm kiếm từ vựng', 'Search words')}
+          placeholder={t(
+            'Tìm theo từ tiếng Anh hoặc nghĩa tiếng Việt…',
+            'Search an English word or a Vietnamese meaning…'
+          )}
           className="w-full rounded-xl border border-slate-300 bg-white py-3 pl-11 pr-4 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
         />
       </div>
@@ -123,7 +133,7 @@ export default function Browse() {
             resetPage()
           }}
         >
-          Tất cả từ loại
+          {t('Tất cả từ loại', 'All parts of speech')}
         </FilterChip>
         {categories.map((c) => (
           <FilterChip
@@ -134,7 +144,7 @@ export default function Browse() {
               resetPage()
             }}
           >
-            {POS_LABEL[c]}
+            {posLabel(c, uiLang)}
           </FilterChip>
         ))}
       </div>
@@ -147,7 +157,7 @@ export default function Browse() {
           }}
           subtle
         >
-          Mọi trạng thái
+          {t('Mọi trạng thái', 'Any status')}
         </FilterChip>
         {(Object.keys(PHASE_META) as CardPhase[]).map((p) => (
           <FilterChip
@@ -160,19 +170,21 @@ export default function Browse() {
             subtle
           >
             <span className={`h-2 w-2 rounded-full ${PHASE_META[p].dot}`} />
-            {PHASE_META[p].label}
+            {t(PHASE_META[p].label, PHASE_META[p].labelEn)}
           </FilterChip>
         ))}
       </div>
 
       <p className="text-sm text-slate-400">
-        {filtered.length} kết quả
+        {filtered.length} {t('kết quả', filtered.length === 1 ? 'result' : 'results')}
         {filtered.length > PAGE_SIZE ? ` · trang ${safePage + 1}/${pageCount}` : ''}
       </p>
 
       {/* Results */}
       {pageItems.length === 0 ? (
-        <p className="py-10 text-center text-slate-400">Không tìm thấy từ nào phù hợp.</p>
+        <p className="py-10 text-center text-slate-400">
+          {t('Không tìm thấy từ nào phù hợp.', 'No matching words.')}
+        </p>
       ) : (
         <ul className="grid gap-3 sm:grid-cols-2">
           {pageItems.map((w) => (
@@ -197,7 +209,7 @@ export default function Browse() {
             disabled={safePage === 0}
             onClick={() => setPage(safePage - 1)}
           >
-            <ChevronLeft className="h-4 w-4" /> Trước
+            <ChevronLeft className="h-4 w-4" /> {t('Trước', 'Previous')}
           </button>
           <span className="text-sm tabular-nums text-slate-500">
             {safePage + 1} / {pageCount}
@@ -207,7 +219,7 @@ export default function Browse() {
             disabled={safePage >= pageCount - 1}
             onClick={() => setPage(safePage + 1)}
           >
-            Sau <ChevronRight className="h-4 w-4" />
+            {t('Sau', 'Next')} <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       )}
@@ -230,6 +242,7 @@ function WordRow({
   expanded: boolean
   onToggle: () => void
 }) {
+  const t = useT()
   return (
     <li className="card overflow-hidden">
       <div className="flex items-center gap-3 p-4">
@@ -241,7 +254,7 @@ function WordRow({
         >
           <span
             className={`h-2.5 w-2.5 shrink-0 rounded-full ${PHASE_META[phase].dot}`}
-            title={PHASE_META[phase].label}
+            title={t(PHASE_META[phase].label, PHASE_META[phase].labelEn)}
           />
           <span className="min-w-0 flex-1">
             <span className="flex items-center gap-2">
