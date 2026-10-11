@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { accessDecision, adminDecision, isUuid } from './authz'
+import { accessDecision, accountBlockMessage, adminDecision, isUuid } from './authz'
 
 // Two server-side holes this closes:
 //
@@ -43,6 +43,15 @@ describe('accessDecision — any signed-in user', () => {
     const d = accessDecision({ ok: true, profile: { role: 'student', status: 'locked' } })
     expect(d.allow).toBe(false)
     if (!d.allow) expect(d.status).toBe(403)
+  })
+
+  it('keeps a new sign-up out until an admin approves it', () => {
+    const d = accessDecision({ ok: true, profile: { role: 'student', status: 'pending' } })
+    expect(d.allow).toBe(false)
+    if (!d.allow) {
+      expect(d.status).toBe(403)
+      expect(d.error).toContain('chờ quản trị viên duyệt')
+    }
   })
 
   it('lets an active student through', () => {
@@ -92,5 +101,14 @@ describe('adminDecision — admin-only endpoints', () => {
       allow: true,
       role: 'admin',
     })
+  })
+})
+
+describe('accountBlockMessage', () => {
+  it('explains pending and locked accounts, and lets active ones pass', () => {
+    expect(accountBlockMessage('pending')).toContain('chờ quản trị viên duyệt')
+    expect(accountBlockMessage('locked')).toContain('khoá')
+    expect(accountBlockMessage('active')).toBeNull()
+    expect(accountBlockMessage(undefined)).toBeNull()
   })
 })

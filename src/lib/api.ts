@@ -10,7 +10,7 @@ export interface AdminUser {
   email: string
   name: string
   role: 'student' | 'admin'
-  status: 'active' | 'locked'
+  status: 'active' | 'locked' | 'pending'
   created_at: string
   last_sign_in_at: string | null
 }

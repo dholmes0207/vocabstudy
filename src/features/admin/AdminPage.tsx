@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Trash2 } from 'lucide-react'
+import { Check, Trash2, UserX } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { api, ApiError, type AdminUser, type AiUsageReport } from '@/lib/api'
 
@@ -152,6 +152,94 @@ function UsersTab({ meId }: { meId: string }) {
 
   if (error) return <p className="text-rose-500">{error}</p>
 
+  const pending = users.filter((u) => u.status === 'pending')
+
+  return (
+    <>
+      <PendingSignups
+        users={pending}
+        onApprove={(u) => act(() => api.adminPatchUser(u.id, { status: 'active' }))}
+        onReject={(u) => {
+          if (confirm(`Từ chối và xoá đăng ký của ${u.email}?`))
+            act(() => api.adminDeleteUser(u.id))
+        }}
+      />
+      <UsersTable users={users} meId={meId} act={act} />
+    </>
+  )
+}
+
+/** New sign-ups waiting for an admin — first on the page, so none get forgotten. */
+function PendingSignups({
+  users,
+  onApprove,
+  onReject,
+}: {
+  users: AdminUser[]
+  onApprove: (u: AdminUser) => void
+  onReject: (u: AdminUser) => void
+}) {
+  return (
+    <section className="card p-4">
+      <div className="flex items-center justify-between gap-2">
+        <h2 className="font-bold">Đăng ký chờ duyệt</h2>
+        <span
+          className={`chip px-3 py-1 text-xs font-semibold ${users.length ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
+        >
+          {users.length ? `${users.length} người đang chờ` : 'Không có ai chờ'}
+        </span>
+      </div>
+      <p className="mt-1 text-sm text-slate-500">
+        Tài khoản mới chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học
+        được ở chế độ khách.
+      </p>
+      {users.length > 0 && (
+        <ul className="mt-3 divide-y divide-slate-100 dark:divide-slate-800">
+          {users.map((u) => (
+            <li key={u.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
+              <div className="min-w-0">
+                <p className="truncate font-medium">{u.name || '—'}</p>
+                <p className="truncate text-xs text-slate-400">
+                  {u.email} · đăng ký {new Date(u.created_at).toLocaleString('vi-VN')}
+                </p>
+              </div>
+              <div className="flex gap-1.5">
+                <button className="btn-primary !px-3 !py-1.5 text-sm" onClick={() => onApprove(u)}>
+                  <Check className="h-4 w-4" /> Duyệt
+                </button>
+                <button
+                  className="btn-ghost !px-3 !py-1.5 text-sm text-rose-600"
+                  onClick={() => onReject(u)}
+                >
+                  <UserX className="h-4 w-4" /> Từ chối
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )
+}
+
+const STATUS_CHIP: Record<AdminUser['status'], [string, string]> = {
+  active: [
+    'Hoạt động',
+    'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
+  ],
+  pending: ['Chờ duyệt', 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'],
+  locked: ['Đã khoá', 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'],
+}
+
+function UsersTable({
+  users,
+  meId,
+  act,
+}: {
+  users: AdminUser[]
+  meId: string
+  act: (fn: () => Promise<unknown>) => void
+}) {
   return (
     <div className="card overflow-x-auto p-0">
       <table className="w-full min-w-[640px] text-sm">
@@ -181,10 +269,8 @@ function UsersTab({ meId }: { meId: string }) {
                 </span>
               </td>
               <td className="p-3">
-                <span
-                  className={`chip ${u.status === 'active' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'}`}
-                >
-                  {u.status === 'active' ? 'Hoạt động' : 'Đã khoá'}
+                <span className={`chip ${(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked)[1]}`}>
+                  {(STATUS_CHIP[u.status] ?? STATUS_CHIP.locked)[0]}
                 </span>
               </td>
               <td className="p-3">
@@ -214,7 +300,11 @@ function UsersTab({ meId }: { meId: string }) {
                         )
                       }
                     >
-                      {u.status === 'active' ? 'Khoá' : 'Mở khoá'}
+                      {u.status === 'active'
+                        ? 'Khoá'
+                        : u.status === 'pending'
+                          ? 'Duyệt'
+                          : 'Mở khoá'}
                     </button>
                     <button
                       className="btn-ghost !px-2 text-xs"

@@ -2,14 +2,17 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BarChart3, LogIn, LogOut, Menu, Settings, ShieldCheck } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
+import { usePendingSignups } from '@/hooks/usePendingSignups'
 
 export default function UserMenu() {
+  // No loading placeholder: a returning learner's avatar comes from the cache
+  // at once, and everyone else gets a working menu right away.
   const user = useAuth((s) => s.user)
-  const status = useAuth((s) => s.status)
   const logout = useAuth((s) => s.logout)
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const pending = usePendingSignups(user?.role === 'admin', open)
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -24,9 +27,6 @@ export default function UserMenu() {
     }
   }, [])
 
-  if (status === 'loading')
-    return <div className="h-9 w-9 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
-
   const initial = user ? ((user.name || user.email)[0]?.toUpperCase() ?? '?') : null
   const close = () => setOpen(false)
 
@@ -36,14 +36,21 @@ export default function UserMenu() {
         onClick={() => setOpen((o) => !o)}
         className={
           user
-            ? 'grid h-9 w-9 place-items-center rounded-full bg-brand-600 font-bold text-white'
+            ? 'relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-violet-600 font-bold text-white shadow-md shadow-brand-600/30'
             : 'grid h-9 w-9 place-items-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700'
         }
-        aria-label={user ? 'Tài khoản & menu' : 'Menu'}
+        aria-label={
+          user
+            ? `Tài khoản & menu${pending ? ` — ${pending} đăng ký chờ duyệt` : ''}`
+            : 'Menu: đăng nhập, cài đặt, thống kê'
+        }
         aria-haspopup="menu"
         aria-expanded={open}
       >
         {user ? initial : <Menu className="h-5 w-5" />}
+        {pending > 0 && (
+          <span className="absolute -right-0.5 -top-0.5 h-3 w-3 rounded-full bg-rose-500 ring-2 ring-white dark:ring-slate-950" />
+        )}
       </button>
       {open && (
         <div
@@ -80,6 +87,11 @@ export default function UserMenu() {
           {user?.role === 'admin' && (
             <MenuLink to="/admin" onClick={close} icon={ShieldCheck}>
               Quản trị
+              {pending > 0 && (
+                <span className="ml-auto rounded-full bg-rose-500 px-1.5 text-xs font-bold text-white">
+                  {pending} chờ duyệt
+                </span>
+              )}
             </MenuLink>
           )}
 

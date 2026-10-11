@@ -26,8 +26,16 @@ export default function AuthPage() {
         navigate('/')
       } else {
         await register(email, password, name)
-        if (useAuth.getState().needsEmailConfirm) {
-          setInfo('Đã tạo tài khoản! Kiểm tra email để xác nhận, rồi quay lại đăng nhập nhé.')
+        const { needsEmailConfirm, pendingApproval } = useAuth.getState()
+        if (needsEmailConfirm) {
+          setInfo(
+            'Đã gửi đăng ký! Mở email để xác nhận địa chỉ. Sau đó tài khoản cần quản trị viên duyệt — trong lúc chờ, bạn cứ học ở chế độ khách nhé.'
+          )
+          setMode('login')
+        } else if (pendingApproval) {
+          setInfo(
+            'Đăng ký thành công! Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn cứ học ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
+          )
           setMode('login')
         } else {
           navigate('/')
@@ -71,6 +79,11 @@ export default function AuthPage() {
         </div>
 
         <form onSubmit={submit} className="space-y-3">
+          {mode === 'register' && (
+            <p className="rounded-lg bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/50 dark:text-sky-200">
+              🛡️ Tài khoản mới cần quản trị viên duyệt trước khi đăng nhập được.
+            </p>
+          )}
           {mode === 'register' && (
             <Field label="Tên hiển thị (tuỳ chọn)">
               <input

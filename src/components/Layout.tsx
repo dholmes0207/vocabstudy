@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { BarChart3, BookOpen, Dumbbell, Library, Repeat2, Settings, Sparkles } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
@@ -9,6 +10,7 @@ import { today } from '@/lib/date'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import UserMenu from './UserMenu'
+import { CenterSpinner, DataGate } from './DataGate'
 import ErrorBoundary from './ErrorBoundary'
 import LevelUp from './LevelUp'
 import { levelForXp } from '@/lib/xpLevel'
@@ -99,7 +101,13 @@ export default function Layout() {
           {/* Keyed by path so a crash on one screen clears the moment the
               learner taps another tab — the nav around it keeps working. */}
           <ErrorBoundary key={pathname}>
-            <Outlet />
+            {/* Only the screen waits for the word pack or its code chunk; the
+                header, avatar menu and navigation stay usable meanwhile. */}
+            <Suspense fallback={<CenterSpinner />}>
+              <DataGate>
+                <Outlet />
+              </DataGate>
+            </Suspense>
           </ErrorBoundary>
         </main>
       </div>

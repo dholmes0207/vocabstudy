@@ -22,6 +22,20 @@ export function isUuid(value: unknown): value is string {
 }
 
 /**
+ * Why an account may not be used yet, in words for the learner — or null when
+ * it may. New sign-ups start as `pending` until an admin approves them
+ * (docs/design/registration-approval.md); `locked` is an admin's decision.
+ * Shared by the Functions and the browser so both say the same thing.
+ */
+export function accountBlockMessage(status: string | null | undefined): string | null {
+  if (status === 'locked') return 'Tài khoản đã bị khoá. Liên hệ quản trị viên.'
+  if (status === 'pending') {
+    return 'Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn vẫn học được ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
+  }
+  return null
+}
+
+/**
  * Can this signed-in user use the app at all?
  *
  * A failed lookup is NOT the same as "nothing is wrong": the old code returned
@@ -39,9 +53,8 @@ export function accessDecision(lookup: ProfileLookup): Decision {
     }
   }
   const profile = lookup.profile
-  if (profile?.status === 'locked') {
-    return { allow: false, status: 403, error: 'Tài khoản đã bị khoá.' }
-  }
+  const blocked = accountBlockMessage(profile?.status)
+  if (blocked) return { allow: false, status: 403, error: blocked }
   return { allow: true, role: profile?.role === 'admin' ? 'admin' : 'student' }
 }
 
