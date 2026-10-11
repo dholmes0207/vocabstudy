@@ -5,6 +5,7 @@ import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { useAuth } from '@/store/authStore'
 import { levelInfo } from '@/lib/level'
 import { useContextStore } from '@/store/contextStore'
+import { useT } from '@/lib/i18n'
 
 export default function AssistantFab() {
   // Kept in the store so another screen can open the assistant with a
@@ -14,6 +15,7 @@ export default function AssistantFab() {
   const user = useAuth((s) => s.user)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
+  const t = useT()
 
   // Đóng bằng phím Esc (trang phía sau vẫn dùng được, không bị che mờ).
   useEffect(() => {
@@ -31,8 +33,16 @@ export default function AssistantFab() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          aria-label={user ? 'Mở trợ lý AI' : 'Trợ lý AI (cần đăng nhập)'}
-          title={user ? 'Trợ lý AI học từ vựng' : 'Trợ lý AI — cần đăng nhập'}
+          aria-label={
+            user
+              ? t('Mở trợ lý AI', 'Open AI tutor')
+              : t('Trợ lý AI (cần đăng nhập)', 'AI tutor (sign in required)')
+          }
+          title={
+            user
+              ? t('Trợ lý AI học từ vựng', 'AI vocabulary tutor')
+              : t('Trợ lý AI — cần đăng nhập', 'AI tutor — sign in required')
+          }
           className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-600/30 transition hover:scale-105 active:scale-95 lg:flex"
         >
           <Bot className="h-7 w-7" />
@@ -61,7 +71,7 @@ export default function AssistantFab() {
               </span>
               <div className="min-w-0 flex-1">
                 <p className="flex items-center gap-2 font-bold leading-tight">
-                  Trợ lý AI
+                  {t('Trợ lý AI', 'AI tutor')}
                   <span
                     className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200"
                     title={info.blurb}
@@ -69,12 +79,14 @@ export default function AssistantFab() {
                     {info.tag} · {info.name}
                   </span>
                 </p>
-                <p className="truncate text-xs text-slate-400">Chỉ hỗ trợ học từ vựng tiếng Anh</p>
+                <p className="truncate text-xs text-slate-400">
+                  {t('Chỉ hỗ trợ học từ vựng tiếng Anh', 'Helps with English vocabulary only')}
+                </p>
               </div>
               <button
                 onClick={() => setOpen(false)}
                 className="btn-ghost h-9 w-9 !px-0"
-                aria-label="Đóng"
+                aria-label={t('Đóng', 'Close')}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -95,10 +107,15 @@ export default function AssistantFab() {
 export function AssistantHeaderButton() {
   const user = useAuth((s) => s.user)
   const setOpen = useContextStore((s) => s.setAssistantOpen)
+  const t = useT()
   return (
     <button
       onClick={() => setOpen(true)}
-      aria-label={user ? 'Mở trợ lý AI' : 'Trợ lý AI (cần đăng nhập)'}
+      aria-label={
+        user
+          ? t('Mở trợ lý AI', 'Open AI tutor')
+          : t('Trợ lý AI (cần đăng nhập)', 'AI tutor (sign in required)')
+      }
       className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-sm active:scale-95 lg:hidden"
     >
       <Bot className="h-5 w-5" />

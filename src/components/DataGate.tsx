@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
+import { useT } from '@/lib/i18n'
 
 // The word pack is ~2 MB, so only the screen waits for it — never the app's
 // chrome. The header (avatar, sign-in, settings, stats) and the navigation are
@@ -10,6 +11,7 @@ import { useSettings } from '@/store/settingsStore'
 export function DataGate({ children }: { children: React.ReactNode }) {
   const currentLang = useSettings((s) => s.currentLang)
   const { manifest, pack, status, error, ensureManifest, loadLanguage } = useData()
+  const t = useT()
 
   useEffect(() => {
     ensureManifest()
@@ -24,10 +26,12 @@ export function DataGate({ children }: { children: React.ReactNode }) {
       <div className="grid min-h-[60vh] place-items-center p-6 text-center">
         <div className="card max-w-md p-8">
           <p className="text-4xl">😕</p>
-          <h1 className="mt-3 text-lg font-bold">Không tải được dữ liệu</h1>
+          <h1 className="mt-3 text-lg font-bold">
+            {t('Không tải được dữ liệu', "Couldn't load the word list")}
+          </h1>
           <p className="mt-2 text-sm text-slate-500">{error}</p>
           <button className="btn-primary mt-5" onClick={() => location.reload()}>
-            Thử lại
+            {t('Thử lại', 'Try again')}
           </button>
         </div>
       </div>
@@ -43,6 +47,7 @@ export function DataGate({ children }: { children: React.ReactNode }) {
 
 /** While a screen or the word pack loads: a tiny constellation drawing itself. */
 export function CenterSpinner() {
+  const t = useT()
   return (
     <div className="grid min-h-[60vh] place-items-center" role="status">
       <div className="flex flex-col items-center gap-3">
@@ -58,7 +63,9 @@ export function CenterSpinner() {
             <circle key={i} cx={x} cy={y} r="2.4" style={{ animationDelay: `${i * 0.18}s` }} />
           ))}
         </svg>
-        <span className="text-sm text-slate-500 dark:text-slate-400">Đang tải…</span>
+        <span className="text-sm text-slate-500 dark:text-slate-400">
+          {t('Đang tải…', 'Loading…')}
+        </span>
       </div>
     </div>
   )

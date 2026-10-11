@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { BarChart3, LogIn, LogOut, Menu, Settings, ShieldCheck } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { usePendingSignups } from '@/hooks/usePendingSignups'
+import { useT } from '@/lib/i18n'
 
 export default function UserMenu() {
   // No loading placeholder: a returning learner's avatar comes from the cache
@@ -13,6 +14,7 @@ export default function UserMenu() {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const pending = usePendingSignups(user?.role === 'admin', open)
+  const t = useT()
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -41,8 +43,11 @@ export default function UserMenu() {
         }
         aria-label={
           user
-            ? `Tài khoản & menu${pending ? ` — ${pending} đăng ký chờ duyệt` : ''}`
-            : 'Menu: đăng nhập, cài đặt, thống kê'
+            ? t(
+                `Tài khoản & menu${pending ? ` — ${pending} đăng ký chờ duyệt` : ''}`,
+                `Account & menu${pending ? ` — ${pending} sign-ups awaiting approval` : ''}`
+              )
+            : t('Menu: đăng nhập, cài đặt, thống kê', 'Menu: sign in, settings, stats')
         }
         aria-haspopup="menu"
         aria-expanded={open}
@@ -59,12 +64,14 @@ export default function UserMenu() {
         >
           {user ? (
             <div className="border-b border-slate-100 px-3 py-2.5 dark:border-slate-800">
-              <p className="truncate text-sm font-semibold">{user.name || 'Người học'}</p>
+              <p className="truncate text-sm font-semibold">
+                {user.name || t('Người học', 'Learner')}
+              </p>
               <p className="truncate text-xs text-slate-400">{user.email}</p>
               <span
                 className={`chip mt-1 ${user.role === 'admin' ? 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
               >
-                {user.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
+                {user.role === 'admin' ? t('Quản trị viên', 'Admin') : t('Học viên', 'Learner')}
               </span>
             </div>
           ) : (
@@ -74,22 +81,22 @@ export default function UserMenu() {
               className="m-1 flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white hover:bg-brand-700"
               role="menuitem"
             >
-              <LogIn className="h-4 w-4" /> Đăng nhập / Đăng ký
+              <LogIn className="h-4 w-4" /> {t('Đăng nhập / Đăng ký', 'Sign in / Sign up')}
             </Link>
           )}
 
           <MenuLink to="/settings" onClick={close} icon={Settings}>
-            Cài đặt
+            {t('Cài đặt', 'Settings')}
           </MenuLink>
           <MenuLink to="/stats" onClick={close} icon={BarChart3}>
-            Thống kê
+            {t('Thống kê', 'Stats')}
           </MenuLink>
           {user?.role === 'admin' && (
             <MenuLink to="/admin" onClick={close} icon={ShieldCheck}>
-              Quản trị
+              {t('Quản trị', 'Admin')}
               {pending > 0 && (
                 <span className="ml-auto rounded-full bg-rose-500 px-1.5 text-xs font-bold text-white">
-                  {pending} chờ duyệt
+                  {pending} {t('chờ duyệt', 'waiting')}
                 </span>
               )}
             </MenuLink>
@@ -107,7 +114,7 @@ export default function UserMenu() {
                 className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40"
                 role="menuitem"
               >
-                <LogOut className="h-4 w-4" /> Đăng xuất
+                <LogOut className="h-4 w-4" /> {t('Đăng xuất', 'Sign out')}
               </button>
             </>
           )}

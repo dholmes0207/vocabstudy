@@ -1,5 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { RefreshCw } from 'lucide-react'
+import { tx } from '@/lib/i18n'
 
 // A single unhandled render error used to take the whole app down: React
 // unmounts the tree, the learner gets a blank white page, and the only way out
@@ -39,17 +40,21 @@ export default class ErrorBoundary extends Component<Props, State> {
       <div role="alert" className="grid min-h-[60vh] place-items-center p-6 text-center">
         <div className="card max-w-md p-8">
           <p className="text-4xl">😥</p>
-          <h1 className="mt-3 text-lg font-bold">Có lỗi xảy ra ở màn hình này</h1>
+          <h1 className="mt-3 text-lg font-bold">
+            {tx('Có lỗi xảy ra ở màn hình này', 'Something went wrong on this screen')}
+          </h1>
           <p className="mt-2 text-sm text-slate-500">
-            Tiến độ học của bạn vẫn được giữ nguyên. Bấm thử lại, hoặc tải lại trang nếu vẫn chưa
-            được.
+            {tx(
+              'Tiến độ học của bạn vẫn được giữ nguyên. Bấm thử lại, hoặc tải lại trang nếu vẫn chưa được.',
+              "Your progress is safe. Try again, or reload the page if it still doesn't work."
+            )}
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             <button className="btn-primary" onClick={this.retry}>
-              <RefreshCw className="h-4 w-4" /> Thử lại
+              <RefreshCw className="h-4 w-4" /> {tx('Thử lại', 'Try again')}
             </button>
             <button className="btn-secondary" onClick={() => location.reload()}>
-              Tải lại trang
+              {tx('Tải lại trang', 'Reload page')}
             </button>
           </div>
           {import.meta.env.DEV && (

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
+import { useT } from '@/lib/i18n'
+import UiLangToggle from '@/components/UiLangToggle'
 
 export default function AuthPage() {
   const navigate = useNavigate()
@@ -14,6 +16,7 @@ export default function AuthPage() {
   const [error, setError] = useState<string | null>(null)
   const [info, setInfo] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const t = useT()
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,12 +32,18 @@ export default function AuthPage() {
         const { needsEmailConfirm, pendingApproval } = useAuth.getState()
         if (needsEmailConfirm) {
           setInfo(
-            'Đã gửi đăng ký! Mở email để xác nhận địa chỉ. Sau đó tài khoản cần quản trị viên duyệt — trong lúc chờ, bạn cứ học ở chế độ khách nhé.'
+            t(
+              'Đã gửi đăng ký! Mở email để xác nhận địa chỉ. Sau đó tài khoản cần quản trị viên duyệt — trong lúc chờ, bạn cứ học ở chế độ khách nhé.',
+              'Sign-up sent! Open your email to confirm the address. Then an admin needs to approve your account — meanwhile, keep learning as a guest.'
+            )
           )
           setMode('login')
         } else if (pendingApproval) {
           setInfo(
-            'Đăng ký thành công! Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn cứ học ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
+            t(
+              'Đăng ký thành công! Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn cứ học ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.',
+              "You're signed up! Your account is waiting for an admin's approval. Meanwhile, keep learning as a guest — your progress will sync once you're approved."
+            )
           )
           setMode('login')
         } else {
@@ -42,7 +51,11 @@ export default function AuthPage() {
         }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Có lỗi xảy ra, thử lại nhé.')
+      setError(
+        err instanceof Error
+          ? err.message
+          : t('Có lỗi xảy ra, thử lại nhé.', 'Something went wrong — please try again.')
+      )
     } finally {
       setBusy(false)
     }
@@ -50,7 +63,8 @@ export default function AuthPage() {
 
   return (
     <div className="grid min-h-[100dvh] place-items-center p-4">
-      <div className="card w-full max-w-sm p-7 animate-fade-in">
+      <div className="card relative w-full max-w-sm p-7 animate-fade-in">
+        <UiLangToggle className="absolute right-3 top-3" />
         <div className="mb-5 text-center">
           <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brand-600 text-2xl shadow">
             📚
@@ -59,7 +73,9 @@ export default function AuthPage() {
             <span className="text-aurora">VocaStudy</span>
           </h1>
           <p className="text-sm text-slate-400">
-            {mode === 'login' ? 'Đăng nhập để đồng bộ tiến độ' : 'Tạo tài khoản mới'}
+            {mode === 'login'
+              ? t('Đăng nhập để đồng bộ tiến độ', 'Sign in to sync your progress')
+              : t('Tạo tài khoản mới', 'Create a new account')}
           </p>
         </div>
 
@@ -68,29 +84,33 @@ export default function AuthPage() {
             onClick={() => setMode('login')}
             className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'login' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-500'}`}
           >
-            Đăng nhập
+            {t('Đăng nhập', 'Sign in')}
           </button>
           <button
             onClick={() => setMode('register')}
             className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'register' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-500'}`}
           >
-            Đăng ký
+            {t('Đăng ký', 'Sign up')}
           </button>
         </div>
 
         <form onSubmit={submit} className="space-y-3">
           {mode === 'register' && (
             <p className="rounded-lg bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/50 dark:text-sky-200">
-              🛡️ Tài khoản mới cần quản trị viên duyệt trước khi đăng nhập được.
+              🛡️{' '}
+              {t(
+                'Tài khoản mới cần quản trị viên duyệt trước khi đăng nhập được.',
+                'New accounts need an admin’s approval before you can sign in.'
+              )}
             </p>
           )}
           {mode === 'register' && (
-            <Field label="Tên hiển thị (tuỳ chọn)">
+            <Field label={t('Tên hiển thị (tuỳ chọn)', 'Display name (optional)')}>
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={inputCls}
-                placeholder="Nguyễn Văn A"
+                placeholder={t('Nguyễn Văn A', 'Jane Doe')}
               />
             </Field>
           )}
@@ -101,18 +121,18 @@ export default function AuthPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={inputCls}
-              placeholder="ban@email.com"
+              placeholder={t('ban@email.com', 'you@email.com')}
               autoComplete="email"
             />
           </Field>
-          <Field label="Mật khẩu">
+          <Field label={t('Mật khẩu', 'Password')}>
             <input
               type="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={inputCls}
-              placeholder="Tối thiểu 6 ký tự"
+              placeholder={t('Tối thiểu 6 ký tự', 'At least 6 characters')}
               autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
             />
           </Field>
@@ -130,12 +150,16 @@ export default function AuthPage() {
 
           <button type="submit" disabled={busy} className="btn-primary h-11 w-full">
             {mode === 'login' ? <LogIn className="h-4 w-4" /> : <UserPlus className="h-4 w-4" />}
-            {busy ? 'Đang xử lý…' : mode === 'login' ? 'Đăng nhập' : 'Đăng ký'}
+            {busy
+              ? t('Đang xử lý…', 'Working…')
+              : mode === 'login'
+                ? t('Đăng nhập', 'Sign in')
+                : t('Đăng ký', 'Sign up')}
           </button>
         </form>
 
         <button onClick={() => navigate('/')} className="btn-ghost mt-3 w-full text-sm">
-          Dùng thử không cần tài khoản →
+          {t('Dùng thử không cần tài khoản →', 'Try it without an account →')}
         </button>
       </div>
     </div>

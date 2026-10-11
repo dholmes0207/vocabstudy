@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { ReviewStyle, Settings, SkyEffects, Strictness, ThemeSetting } from '@/types'
+import type { ReviewStyle, Settings, SkyEffects, Strictness, ThemeSetting, UiLang } from '@/types'
 import { setPreferredVoiceURI } from '@/lib/tts'
 import { setAudioVoiceKey } from '@/lib/audio'
 
@@ -22,6 +22,7 @@ interface SettingsState extends Settings {
   setSnow: (b: boolean) => void
   setCursorTrail: (b: boolean) => void
   setDailyGoal: (n: number) => void
+  setUiLang: (l: UiLang) => void
 }
 
 const DEFAULTS: Settings = {
@@ -44,6 +45,7 @@ const DEFAULTS: Settings = {
   snow: true,
   cursorTrail: true,
   dailyGoal: 10,
+  uiLang: 'en',
 }
 
 export const useSettings = create<SettingsState>()(
@@ -68,6 +70,7 @@ export const useSettings = create<SettingsState>()(
       setSnow: (snow) => set({ snow }),
       setCursorTrail: (cursorTrail) => set({ cursorTrail }),
       setDailyGoal: (dailyGoal) => set({ dailyGoal: clamp(Math.round(dailyGoal), 1, 200) }),
+      setUiLang: (uiLang) => set({ uiLang: uiLang === 'vi' ? 'vi' : 'en' }),
     }),
     {
       name: 'vocab.settings.v1',

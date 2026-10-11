@@ -228,6 +228,9 @@ export type ThemeSetting = 'light' | 'dark' | 'system'
 /** The animated sky behind the app (see lib/sky). "auto" = full on desktop, light on phones. */
 export type SkyEffects = 'auto' | 'full' | 'lite' | 'off'
 
+/** Interface language (menus, buttons, messages). Word meanings stay Vietnamese. */
+export type UiLang = 'en' | 'vi'
+
 /**
  * How due words are reviewed: `recall` asks a question (harder as the card
  * matures); `flip` is the classic flashcard with self-grading.
@@ -271,4 +274,6 @@ export interface Settings {
   cursorTrail: boolean
   /** Answers per day the learner aims for (a small, reachable goal). */
   dailyGoal: number
+  /** Interface language; English unless the learner picks Vietnamese. */
+  uiLang: UiLang
 }

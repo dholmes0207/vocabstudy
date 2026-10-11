@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from 'react'
 import { Check, ChevronDown } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
+import { useT } from '@/lib/i18n'
 
 export default function LanguageSwitcher() {
   const manifest = useData((s) => s.manifest)
   const currentLang = useSettings((s) => s.currentLang)
   const setCurrentLang = useSettings((s) => s.setCurrentLang)
+  const t = useT()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -32,7 +34,7 @@ export default function LanguageSwitcher() {
         aria-expanded={open}
       >
         <span className="text-lg leading-none">{active.flag}</span>
-        <span className="hidden text-sm sm:inline">{active.nativeName}</span>
+        <span className="hidden text-sm sm:inline">{t(active.nativeName, active.name)}</span>
         <ChevronDown className="h-4 w-4 opacity-60" />
       </button>
 
@@ -55,8 +57,10 @@ export default function LanguageSwitcher() {
               >
                 <span className="text-lg">{l.flag}</span>
                 <span className="flex-1">
-                  <span className="block font-medium">{l.nativeName}</span>
-                  <span className="block text-xs text-slate-400">{l.count} từ</span>
+                  <span className="block font-medium">{t(l.nativeName, l.name)}</span>
+                  <span className="block text-xs text-slate-400">
+                    {l.count} {t('từ', 'words')}
+                  </span>
                 </span>
                 {l.code === currentLang && <Check className="h-4 w-4 text-brand-500" />}
               </button>

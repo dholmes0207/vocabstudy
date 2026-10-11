@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import { CenterSpinner } from './components/DataGate'
 import SkyBackdrop from './components/SkyBackdrop'
 import { useAuth } from './store/authStore'
+import { useSettings } from './store/settingsStore'
 
 const Dashboard = lazy(() => import('./features/dashboard/Dashboard'))
 const Learn = lazy(() => import('./features/learn/Learn'))
@@ -27,6 +28,14 @@ export default function App() {
   useEffect(() => {
     useAuth.getState().bootstrap()
   }, [])
+
+  // Screen readers, spell-check and the tab title follow the interface language.
+  const uiLang = useSettings((s) => s.uiLang)
+  useEffect(() => {
+    document.documentElement.lang = uiLang
+    document.title =
+      uiLang === 'vi' ? 'VocaStudy · Học từ vựng tiếng Anh' : 'VocaStudy · Learn English vocabulary'
+  }, [uiLang])
 
   return (
     <HashRouter>

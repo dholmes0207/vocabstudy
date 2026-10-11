@@ -27,10 +27,20 @@ export function isUuid(value: unknown): value is string {
  * (docs/design/registration-approval.md); `locked` is an admin's decision.
  * Shared by the Functions and the browser so both say the same thing.
  */
-export function accountBlockMessage(status: string | null | undefined): string | null {
-  if (status === 'locked') return 'Tài khoản đã bị khoá. Liên hệ quản trị viên.'
+export function accountBlockMessage(
+  status: string | null | undefined,
+  lang: 'vi' | 'en' = 'vi'
+): string | null {
+  const en = lang === 'en'
+  if (status === 'locked') {
+    return en
+      ? 'This account has been locked. Please contact an admin.'
+      : 'Tài khoản đã bị khoá. Liên hệ quản trị viên.'
+  }
   if (status === 'pending') {
-    return 'Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn vẫn học được ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
+    return en
+      ? "This account is waiting for an admin's approval. Meanwhile you can keep learning as a guest — your progress will sync once it's approved."
+      : 'Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn vẫn học được ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
   }
   return null
 }

@@ -1,8 +1,8 @@
 {
-  "name": "VocaStudy — Học từ vựng tiếng Anh",
+  "name": "VocaStudy — Learn English vocabulary",
   "short_name": "VocaStudy",
-  "description": "Học & ôn từ vựng tiếng Anh cho người Việt: tự nhớ lại, lặp lại ngắt quãng, trò chơi.",
-  "lang": "vi",
+  "description": "Learn and review English vocabulary: active recall, spaced repetition and games.",
+  "lang": "en",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

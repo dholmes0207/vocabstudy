@@ -6,6 +6,7 @@ import '@testing-library/jest-dom/vitest'
 import Layout from './Layout'
 import { useData } from '@/store/dataStore'
 import { useAuth } from '@/store/authStore'
+import { useSettings } from '@/store/settingsStore'
 
 // The bug this guards: the whole chrome — header, avatar, the menu with
 // sign-in / settings / stats — sat inside the data gate, so nothing could be
@@ -21,6 +22,7 @@ beforeEach(() => {
     loadLanguage: async () => {},
   })
   useAuth.setState({ user: null, status: 'loading' })
+  useSettings.setState({ uiLang: 'vi' })
 })
 afterEach(cleanup)
 
@@ -44,6 +46,14 @@ describe('Layout while the word pack is still loading', () => {
     expect(screen.getByRole('menuitem', { name: /Đăng nhập/ })).toBeInTheDocument()
     expect(screen.getByRole('menuitem', { name: /Cài đặt/ })).toBeInTheDocument()
     expect(screen.getByRole('menuitem', { name: /Thống kê/ })).toBeInTheDocument()
+  })
+
+  it('speaks English by default', () => {
+    useSettings.setState({ uiLang: 'en' })
+    renderShell()
+    fireEvent.click(screen.getByRole('button', { name: /Menu/ }))
+    expect(screen.getByRole('menuitem', { name: /Sign in/ })).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: /Review/ }).length).toBeGreaterThan(0)
   })
 
   it("shows a returning learner's avatar before the session check finishes", () => {

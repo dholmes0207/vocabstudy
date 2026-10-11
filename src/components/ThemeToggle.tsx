@@ -1,15 +1,22 @@
 import { Monitor, Moon, Sun } from 'lucide-react'
 import type { ThemeSetting } from '@/types'
 import { setThemeOrigin, useSettings } from '@/store/settingsStore'
+import { useT } from '@/lib/i18n'
 
 const ORDER: ThemeSetting[] = ['light', 'dark', 'system']
 const ICON = { light: Sun, dark: Moon, system: Monitor }
-const LABEL = { light: 'Sáng', dark: 'Tối', system: 'Theo hệ thống' }
+const LABEL: Record<ThemeSetting, [string, string]> = {
+  light: ['Sáng', 'Light'],
+  dark: ['Tối', 'Dark'],
+  system: ['Theo hệ thống', 'System'],
+}
 
 export default function ThemeToggle() {
   const theme = useSettings((s) => s.theme)
   const setTheme = useSettings((s) => s.setTheme)
+  const t = useT()
   const Icon = ICON[theme]
+  const label = t(...LABEL[theme])
 
   const next = (e: React.MouseEvent<HTMLButtonElement>) => {
     const r = e.currentTarget.getBoundingClientRect()
@@ -21,8 +28,8 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={next}
-      aria-label={`Giao diện: ${LABEL[theme]}. Bấm để đổi.`}
-      title={`Giao diện: ${LABEL[theme]}`}
+      aria-label={t(`Giao diện: ${label}. Bấm để đổi.`, `Theme: ${label}. Click to change.`)}
+      title={t(`Giao diện: ${label}`, `Theme: ${label}`)}
       className="btn-ghost h-10 w-10 !px-0"
     >
       <Icon className="h-5 w-5" />

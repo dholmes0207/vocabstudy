@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import { supabase, supabaseConfigured } from '@/lib/supabase'
 import { accountBlockMessage } from '@/lib/authz'
 import { readCachedUser, writeCachedUser, type CachedUser } from '@/lib/authCache'
+import { tx } from '@/lib/i18n'
+import { useSettings } from '@/store/settingsStore'
 
 // Auth via Supabase Auth. The session is managed by supabase-js (stored +
 // auto-refreshed); we mirror the current user + their profile (role/status).
@@ -65,7 +67,7 @@ export const useAuth = create<AuthState>((set, get) => {
 
   /** A profile that may not use the app yet is signed out on the spot. */
   const admit = async (profile: AuthUser | null): Promise<string | null> => {
-    const blocked = accountBlockMessage(profile?.status)
+    const blocked = accountBlockMessage(profile?.status, useSettings.getState().uiLang)
     if (blocked) {
       await supabase?.auth.signOut()
       setUser(null)
@@ -131,20 +133,25 @@ export const useAuth = create<AuthState>((set, get) => {
     },
 
     login: async (email, password) => {
-      if (!supabase) throw new Error('Chưa cấu hình Supabase.')
+      if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
       const { data, error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) throw new Error(mapAuthError(error.message))
       const profile = await loadProfile(data.user.id, data.user.email ?? '')
       if (!profile) {
         await supabase.auth.signOut()
-        throw new Error('Chưa kiểm tra được tài khoản. Thử lại sau giây lát nhé.')
+        throw new Error(
+          tx(
+            'Chưa kiểm tra được tài khoản. Thử lại sau giây lát nhé.',
+            "Couldn't verify the account. Please try again in a moment."
+          )
+        )
       }
       const blocked = await admit(profile)
       if (blocked) throw new Error(blocked)
     },
 
     register: async (email, password, name) => {
-      if (!supabase) throw new Error('Chưa cấu hình Supabase.')
+      if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
       set({ needsEmailConfirm: false, pendingApproval: false })
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -177,12 +184,20 @@ export const isAdmin = (u: AuthUser | null): boolean => u?.role === 'admin'
 
 function mapAuthError(msg: string): string {
   const m = msg.toLowerCase()
-  if (m.includes('invalid login')) return 'Email hoặc mật khẩu không đúng.'
+  if (m.includes('invalid login'))
+    return tx('Email hoặc mật khẩu không đúng.', 'Wrong email or password.')
   if (m.includes('email not confirmed'))
-    return 'Email chưa được xác nhận — mở hộp thư để xác nhận nhé.'
+    return tx(
+      'Email chưa được xác nhận — mở hộp thư để xác nhận nhé.',
+      'Your email is not confirmed yet — check your inbox.'
+    )
   if (m.includes('already registered') || m.includes('already exists'))
-    return 'Email đã được đăng ký.'
-  if (m.includes('password')) return 'Mật khẩu chưa hợp lệ (tối thiểu 6 ký tự).'
-  if (m.includes('email')) return 'Email không hợp lệ.'
+    return tx('Email đã được đăng ký.', 'This email is already registered.')
+  if (m.includes('password'))
+    return tx(
+      'Mật khẩu chưa hợp lệ (tối thiểu 6 ký tự).',
+      'Invalid password (at least 6 characters).'
+    )
+  if (m.includes('email')) return tx('Email không hợp lệ.', 'Invalid email address.')
   return msg
 }

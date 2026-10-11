@@ -110,5 +110,6 @@ describe('accountBlockMessage', () => {
     expect(accountBlockMessage('locked')).toContain('khoá')
     expect(accountBlockMessage('active')).toBeNull()
     expect(accountBlockMessage(undefined)).toBeNull()
+    expect(accountBlockMessage('pending', 'en')).toContain("admin's approval")
   })
 })

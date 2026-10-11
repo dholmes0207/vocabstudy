@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Smartphone, X } from 'lucide-react'
 import { INSTALL_DISMISS_KEY, isIos, shouldOfferInstall } from '@/lib/install'
+import { useT } from '@/lib/i18n'
 
 interface InstallEvent extends Event {
   prompt: () => Promise<void>
@@ -27,6 +28,7 @@ function isStandalone(): boolean {
  * and for a month after "Để sau".
  */
 export default function InstallPrompt() {
+  const t = useT()
   const [event, setEvent] = useState<InstallEvent | null>(null)
   const [hidden, setHidden] = useState(
     () =>
@@ -77,26 +79,34 @@ export default function InstallPrompt() {
         <Smartphone className="h-5 w-5" />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="font-bold">Đặt VocaStudy lên màn hình chính</p>
+        <p className="font-bold">
+          {t('Đặt VocaStudy lên màn hình chính', 'Add VocaStudy to your home screen')}
+        </p>
         <p className="text-sm text-slate-500 dark:text-slate-400">
           {ios
-            ? 'Mở học bằng một chạm như ứng dụng: bấm nút Chia sẻ (ô vuông có mũi tên) rồi chọn “Thêm vào MH chính”.'
-            : 'Mở học bằng một chạm như ứng dụng, chạy cả khi mất mạng.'}
+            ? t(
+                'Mở học bằng một chạm như ứng dụng: bấm nút Chia sẻ (ô vuông có mũi tên) rồi chọn “Thêm vào MH chính”.',
+                'Open it in one tap like an app: press Share (the square with an arrow), then “Add to Home Screen”.'
+              )
+            : t(
+                'Mở học bằng một chạm như ứng dụng, chạy cả khi mất mạng.',
+                'Open it in one tap like an app — it works offline too.'
+              )}
         </p>
         <div className="mt-3 flex gap-2">
           {event && (
             <button className="btn-primary !py-2" onClick={install}>
-              Cài đặt
+              {t('Cài đặt', 'Install')}
             </button>
           )}
           <button className="btn-ghost !py-2" onClick={dismiss}>
-            Để sau
+            {t('Để sau', 'Later')}
           </button>
         </div>
       </div>
       <button
         className="btn-ghost absolute right-2 top-2 h-8 w-8 !p-0"
-        aria-label="Đóng"
+        aria-label={t('Đóng', 'Close')}
         onClick={dismiss}
       >
         <X className="h-4 w-4" />

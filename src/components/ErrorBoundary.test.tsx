@@ -5,6 +5,7 @@ import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import ErrorBoundary from './ErrorBoundary'
+import { useSettings } from '@/store/settingsStore'
 
 // Without a boundary, one throw anywhere under <Routes> unmounts the whole tree
 // and the learner is left staring at a blank white page with no way back.
@@ -19,6 +20,7 @@ let consoleError: ReturnType<typeof vi.spyOn>
 beforeEach(() => {
   // React logs the caught error; keep the test output readable.
   consoleError = vi.spyOn(console, 'error').mockImplementation(() => {})
+  useSettings.setState({ uiLang: 'vi' })
 })
 afterEach(() => {
   // Vitest runs without globals, so Testing Library's automatic cleanup never
@@ -87,5 +89,18 @@ describe('ErrorBoundary', () => {
     )
     expect(onError).toHaveBeenCalledTimes(1)
     expect(onError.mock.calls[0][0]).toBeInstanceOf(Error)
+  })
+})
+
+describe('ErrorBoundary in English', () => {
+  it('speaks the interface language', () => {
+    useSettings.setState({ uiLang: 'en' })
+    render(
+      <ErrorBoundary>
+        <Boom />
+      </ErrorBoundary>
+    )
+    expect(screen.getByText(/something went wrong/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /try again/i })).toBeInTheDocument()
   })
 })

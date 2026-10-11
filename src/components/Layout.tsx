@@ -15,12 +15,17 @@ import ErrorBoundary from './ErrorBoundary'
 import LevelUp from './LevelUp'
 import { levelForXp } from '@/lib/xpLevel'
 import { useProgressSync } from '@/hooks/useProgressSync'
+import { useT } from '@/lib/i18n'
+import UiLangToggle from './UiLangToggle'
+
+/** A Vietnamese/English pair, picked by the interface language. */
+type Pair = [vi: string, en: string]
 
 interface NavItem {
   to: string
-  label: string
+  label: Pair
   /** Shorter label for the phone's bottom bar. */
-  short?: string
+  short?: Pair
   icon: typeof BookOpen
   primary?: boolean // shown in the mobile bottom bar
   /** Other routes that belong to this tab (keeps it highlighted there). */
@@ -31,19 +36,25 @@ interface NavItem {
 // speaking live under one "Luyện tập" hub; Stats/Settings stay in the sidebar
 // and the header menu.
 const NAV: NavItem[] = [
-  { to: '/', label: 'Trang chủ', icon: Sparkles, primary: true },
-  { to: '/learn', label: 'Học mới', short: 'Học', icon: BookOpen, primary: true },
-  { to: '/review', label: 'Ôn tập', icon: Repeat2, primary: true },
+  { to: '/', label: ['Trang chủ', 'Home'], icon: Sparkles, primary: true },
+  {
+    to: '/learn',
+    label: ['Học mới', 'Learn'],
+    short: ['Học', 'Learn'],
+    icon: BookOpen,
+    primary: true,
+  },
+  { to: '/review', label: ['Ôn tập', 'Review'], icon: Repeat2, primary: true },
   {
     to: '/practice',
-    label: 'Luyện tập',
+    label: ['Luyện tập', 'Practice'],
     icon: Dumbbell,
     primary: true,
     also: ['/quiz', '/games', '/speaking', '/listen', '/sounds'],
   },
-  { to: '/browse', label: 'Tra cứu', icon: Library, primary: true },
-  { to: '/stats', label: 'Thống kê', icon: BarChart3 },
-  { to: '/settings', label: 'Cài đặt', icon: Settings },
+  { to: '/browse', label: ['Tra cứu', 'Dictionary'], icon: Library, primary: true },
+  { to: '/stats', label: ['Thống kê', 'Stats'], icon: BarChart3 },
+  { to: '/settings', label: ['Cài đặt', 'Settings'], icon: Settings },
 ]
 
 const isOn = (item: NavItem, pathname: string) =>
@@ -89,6 +100,7 @@ export default function Layout() {
           </div>
           <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
             <LanguageSwitcher />
+            <UiLangToggle />
             <ThemeToggle />
             <AssistantHeaderButton />
             <UserMenu />
@@ -135,6 +147,7 @@ export default function Layout() {
 }
 
 function Brand({ compact = false }: { compact?: boolean }) {
+  const t = useT()
   return (
     <div className="flex items-center gap-2.5">
       <span className="brand-mark grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-lg shadow-md shadow-brand-600/30">
@@ -143,7 +156,9 @@ function Brand({ compact = false }: { compact?: boolean }) {
       {!compact && (
         <div className="leading-tight">
           <p className="font-extrabold tracking-tight">VocaStudy</p>
-          <p className="text-xs text-slate-400">Học từ vựng thông minh</p>
+          <p className="text-xs text-slate-400">
+            {t('Học từ vựng thông minh', 'Smart vocabulary learning')}
+          </p>
         </div>
       )}
       {compact && <p className="font-extrabold tracking-tight">VocaStudy</p>}
@@ -152,6 +167,7 @@ function Brand({ compact = false }: { compact?: boolean }) {
 }
 
 function SideLink({ item, badge, active }: { item: NavItem; badge: number; active: boolean }) {
+  const t = useT()
   const Icon = item.icon
   return (
     <NavLink
@@ -164,13 +180,14 @@ function SideLink({ item, badge, active }: { item: NavItem; badge: number; activ
       }`}
     >
       <Icon className="h-5 w-5" />
-      <span className="flex-1">{item.label}</span>
+      <span className="flex-1">{t(...item.label)}</span>
       {badge > 0 && <span className="chip bg-brand-600 text-white">{badge}</span>}
     </NavLink>
   )
 }
 
 function BottomLink({ item, badge, active }: { item: NavItem; badge: number; active: boolean }) {
+  const t = useT()
   const Icon = item.icon
   return (
     <NavLink
@@ -185,7 +202,7 @@ function BottomLink({ item, badge, active }: { item: NavItem; badge: number; act
       >
         <Icon className="h-5 w-5" />
       </span>
-      <span className="whitespace-nowrap">{item.short ?? item.label}</span>
+      <span className="whitespace-nowrap">{t(...(item.short ?? item.label))}</span>
       {badge > 0 && (
         <span className="absolute right-1/2 top-1 translate-x-5 rounded-full bg-rose-500 px-1.5 text-[10px] font-bold leading-4 text-white">
           {badge}
@@ -196,16 +213,24 @@ function BottomLink({ item, badge, active }: { item: NavItem; badge: number; act
 }
 
 function StreakPill({ streak, xp }: { streak: number; xp: number }) {
+  const t = useT()
   const lv = levelForXp(xp)
   return (
     <div className="mt-4 rounded-xl bg-slate-100/80 px-3 py-2.5 text-sm dark:bg-slate-800/70">
       <div
         className="mb-2"
-        title={`${xp - lv.floor}/${lv.next - lv.floor} XP tới cấp ${lv.level + 1}`}
+        title={t(
+          `${xp - lv.floor}/${lv.next - lv.floor} XP tới cấp ${lv.level + 1}`,
+          `${xp - lv.floor}/${lv.next - lv.floor} XP to level ${lv.level + 1}`
+        )}
       >
         <div className="flex items-center justify-between text-xs font-semibold">
-          <span>Cấp {lv.level}</span>
-          <span className="text-slate-400">cấp {lv.level + 1}</span>
+          <span>
+            {t('Cấp', 'Level')} {lv.level}
+          </span>
+          <span className="text-slate-400">
+            {t('cấp', 'level')} {lv.level + 1}
+          </span>
         </div>
         <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
           <div
@@ -215,12 +240,15 @@ function StreakPill({ streak, xp }: { streak: number; xp: number }) {
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <span className="flex items-center gap-1.5" title="Chuỗi ngày học liên tục">
-          🔥 <b>{streak}</b> ngày
+        <span
+          className="flex items-center gap-1.5"
+          title={t('Chuỗi ngày học liên tục', 'Study streak')}
+        >
+          🔥 <b>{streak}</b> {t('ngày', streak === 1 ? 'day' : 'days')}
         </span>
         <span
           className="flex items-center gap-1.5 text-brand-600 dark:text-brand-300"
-          title="Điểm kinh nghiệm"
+          title={t('Điểm kinh nghiệm', 'Experience points')}
         >
           ⭐ {xp}
         </span>
