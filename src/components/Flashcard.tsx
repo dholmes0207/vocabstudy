@@ -5,6 +5,7 @@ import PosBadge from './PosBadge'
 import WordInsight from './WordInsight'
 import { wordAudio } from '@/lib/audio'
 import { skyBurstAt } from '@/lib/skyEvents'
+import { useT } from '@/lib/i18n'
 
 interface Props {
   word: Word
@@ -15,6 +16,7 @@ interface Props {
 
 /** A 3D flip flashcard. Front = target word; back = meaning + example. */
 export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
+  const t = useT()
   // Turning to the meaning lets a little starlight out of the card.
   const flip = (el: Element) => {
     if (!flipped) skyBurstAt(el, 0.7)
@@ -25,7 +27,11 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
       <div
         role="button"
         tabIndex={0}
-        aria-label={flipped ? 'Xem lại mặt trước' : 'Lật thẻ để xem nghĩa'}
+        aria-label={
+          flipped
+            ? t('Xem lại mặt trước', 'Show the front again')
+            : t('Lật thẻ để xem nghĩa', 'Flip the card to see the meaning')
+        }
         onClick={(e) => flip(e.currentTarget)}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') {
@@ -47,7 +53,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
             {word.viRead && (
               <p className="text-sm text-slate-400">
-                cách đọc:{' '}
+                {t('cách đọc:', 'reads like:')}{' '}
                 <span className="font-semibold text-slate-500 dark:text-slate-300">
                   {word.viRead}
                 </span>
@@ -56,7 +62,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
           </div>
           <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="lg" />
           <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-slate-400">
-            <RotateCw className="h-4 w-4" /> Bấm để xem nghĩa
+            <RotateCw className="h-4 w-4" /> {t('Bấm để xem nghĩa', 'Tap to see the meaning')}
           </p>
         </div>
 

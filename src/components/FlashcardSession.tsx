@@ -6,6 +6,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
 import { exampleAudio, prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
+import { useT } from '@/lib/i18n'
 
 interface Props {
   words: Word[]
@@ -30,6 +31,7 @@ export default function FlashcardSession({
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
   const [correct, setCorrect] = useState(0)
+  const t = useT()
   const done = index >= words.length
   const current = words[index]
 
@@ -111,10 +113,10 @@ export default function FlashcardSession({
           <button
             onClick={onExit}
             className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
-            aria-label="Kết thúc phiên học"
-            title="Kết thúc phiên (tiến độ đã lưu)"
+            aria-label={t('Kết thúc phiên học', 'End session')}
+            title={t('Kết thúc phiên (tiến độ đã lưu)', 'End session (progress is saved)')}
           >
-            <LogOut className="h-4 w-4" /> Thoát
+            <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
           </button>
         )}
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
@@ -143,20 +145,20 @@ export default function FlashcardSession({
               onClick={() => answer(false)}
               className="btn h-14 bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300"
             >
-              <X className="h-5 w-5" /> Chưa nhớ
+              <X className="h-5 w-5" /> {t('Chưa nhớ', "Didn't know")}
               <kbd className="ml-1 hidden rounded bg-black/10 px-1.5 text-xs sm:inline">1</kbd>
             </button>
             <button
               onClick={() => answer(true)}
               className="btn h-14 bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-950 dark:text-emerald-300"
             >
-              <Check className="h-5 w-5" /> Đã nhớ
+              <Check className="h-5 w-5" /> {t('Đã nhớ', 'Knew it')}
               <kbd className="ml-1 hidden rounded bg-black/10 px-1.5 text-xs sm:inline">2</kbd>
             </button>
           </div>
         ) : (
           <button onClick={() => setFlipped(true)} className="btn-primary h-14 w-full">
-            Lật thẻ xem nghĩa
+            {t('Lật thẻ xem nghĩa', 'Flip to see the meaning')}
             <kbd className="ml-1 hidden rounded bg-white/20 px-1.5 text-xs sm:inline">Space</kbd>
           </button>
         )}

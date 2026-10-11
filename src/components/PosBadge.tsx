@@ -1,5 +1,6 @@
 import type { PosCategory } from '@/types'
-import { POS_LABEL } from '@/lib/pos'
+import { posLabel } from '@/lib/pos'
+import { useUiLang } from '@/lib/i18n'
 
 const STYLES: Record<PosCategory, string> = {
   noun: 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300',
@@ -22,9 +23,10 @@ interface Props {
 }
 
 export default function PosBadge({ category, raw, className = '' }: Props) {
+  const label = posLabel(category, useUiLang())
   return (
-    <span className={`chip ${STYLES[category]} ${className}`} title={POS_LABEL[category]}>
-      {raw || POS_LABEL[category]}
+    <span className={`chip ${STYLES[category]} ${className}`} title={label}>
+      {raw || label}
     </span>
   )
 }

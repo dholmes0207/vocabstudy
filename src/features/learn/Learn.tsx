@@ -13,6 +13,7 @@ import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
 import { Segment } from '@/components/Choice'
+import { useT } from '@/lib/i18n'
 
 export default function Learn() {
   const pack = useData((s) => s.pack)!
@@ -20,6 +21,7 @@ export default function Learn() {
   const dailyNewLimit = useSettings((s) => s.dailyNewLimit)
   const progress = useStudy((s) => s.progress[code])
   const recordAnswer = useStudy((s) => s.recordAnswer)
+  const t = useT()
 
   const [session, setSession] = useState<Word[] | null>(null)
   // Quick session length so busy learners can grab a short set without opening
@@ -46,17 +48,20 @@ export default function Learn() {
         renderComplete={(total) => (
           <SessionComplete
             emoji="🌟"
-            title="Học xong rồi!"
+            title={t('Học xong rồi!', 'Lesson done!')}
             correct={total}
             total={total}
             showScore={false}
-            note={`Bạn vừa làm quen và tự nhớ lại ${total} từ — thêm ${total} ngôi sao trên bầu trời của bạn ✨. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`}
+            note={t(
+              `Bạn vừa làm quen và tự nhớ lại ${total} từ — thêm ${total} ngôi sao trên bầu trời của bạn ✨. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`,
+              `You just met and recalled ${total} words — ${total} more stars in your sky ✨. Tomorrow the app will ask again — remembering after a night is what makes it stick.`
+            )}
           >
             <Link to="/review" className="btn-primary">
-              Ôn tập ngay
+              {t('Ôn tập ngay', 'Review now')}
             </Link>
             <button className="btn-secondary" onClick={() => setSession(null)}>
-              Học tiếp
+              {t('Học tiếp', 'Keep learning')}
             </button>
           </SessionComplete>
         )}
@@ -90,11 +95,14 @@ export default function Learn() {
     <div className="space-y-8 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Học từ mới</span> <span aria-hidden="true">📖</span>
+          <span className="text-aurora">{t('Học từ mới', 'Learn new words')}</span>{' '}
+          <span aria-hidden="true">📖</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Mỗi lần 5 từ: làm quen (nghe, đọc câu ví dụ, xem cụm hay đi chung) rồi tự nhớ lại ngay —
-          sai thì được giải thích và làm lại.
+          {t(
+            'Mỗi lần 5 từ: làm quen (nghe, đọc câu ví dụ, xem cụm hay đi chung) rồi tự nhớ lại ngay — sai thì được giải thích và làm lại.',
+            'Five words at a time: meet them (listen, read an example, see common phrases), then recall them right away — mistakes get explained and retried.'
+          )}
         </p>
       </header>
 
@@ -106,9 +114,12 @@ export default function Learn() {
             <Sparkles className="h-6 w-6" />
           </span>
           <div>
-            <h2 className="text-lg font-bold">Bài học hôm nay</h2>
+            <h2 className="text-lg font-bold">{t('Bài học hôm nay', "Today's lesson")}</h2>
             <p className="text-sm text-slate-400">
-              Đề xuất {s.newRemainingToday} từ mới · đã học {s.newDoneToday}/{dailyNewLimit}
+              {t(
+                `Đề xuất ${s.newRemainingToday} từ mới · đã học ${s.newDoneToday}/${dailyNewLimit}`,
+                `${s.newRemainingToday} new words suggested · ${s.newDoneToday}/${dailyNewLimit} learned`
+              )}
             </p>
           </div>
         </div>
@@ -117,36 +128,41 @@ export default function Learn() {
             {s.newRemainingToday > 5 && (
               <div className="mt-4">
                 <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                  Học bao nhiêu từ?
+                  {t('Học bao nhiêu từ?', 'How many words?')}
                 </p>
                 <div className="grid max-w-xs grid-cols-3 gap-2">
                   <Segment active={pick === 5} onClick={() => setPick(5)}>
-                    5 từ
+                    {t('5 từ', '5 words')}
                   </Segment>
                   <Segment
                     active={pick === 10}
                     onClick={() => setPick(10)}
                     disabled={s.newRemainingToday < 10}
                   >
-                    10 từ
+                    {t('10 từ', '10 words')}
                   </Segment>
                   <Segment active={pick === 'all'} onClick={() => setPick('all')}>
-                    Tất cả ({s.newRemainingToday})
+                    {t('Tất cả', 'All')} ({s.newRemainingToday})
                   </Segment>
                 </div>
               </div>
             )}
             <button onClick={startDaily} className="btn-primary mt-5 h-12 w-full sm:w-auto">
-              <BookOpen className="h-5 w-5" /> Bắt đầu học {plannedCount} từ
+              <BookOpen className="h-5 w-5" />{' '}
+              {t(`Bắt đầu học ${plannedCount} từ`, `Learn ${plannedCount} words`)}
             </button>
           </>
         ) : (
           <p className="mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-            🎯 Bạn đã hoàn thành hạn mức từ mới hôm nay. Hãy chuyển sang{' '}
+            🎯{' '}
+            {t(
+              'Bạn đã hoàn thành hạn mức từ mới hôm nay. Hãy chuyển sang',
+              "You've reached today's new-word limit. Switch to"
+            )}{' '}
             <Link to="/review" className="font-semibold underline">
-              ôn tập
+              {t('ôn tập', 'review')}
             </Link>{' '}
-            hoặc quay lại vào ngày mai nhé!
+            {t('hoặc quay lại vào ngày mai nhé!', 'or come back tomorrow!')}
           </p>
         )}
       </section>
@@ -155,14 +171,20 @@ export default function Learn() {
       <section>
         <div className="mb-3 flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
-            Các bộ từ ({decks.length} bộ · {pack.meta.count} từ)
+            {t(
+              `Các bộ từ (${decks.length} bộ · ${pack.meta.count} từ)`,
+              `Word sets (${decks.length} sets · ${pack.meta.count} words)`
+            )}
           </h2>
         </div>
         {s.fresh === 0 && s.mastered === s.total ? (
           <EmptyState
             emoji="🏆"
-            title="Bạn đã thành thạo toàn bộ từ!"
-            description="Quá xuất sắc. Hãy ôn lại định kỳ để giữ vững."
+            title={t('Bạn đã thành thạo toàn bộ từ!', "You've mastered every word!")}
+            description={t(
+              'Quá xuất sắc. Hãy ôn lại định kỳ để giữ vững.',
+              'Outstanding. Keep reviewing now and then to hold on to them.'
+            )}
           />
         ) : (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -182,7 +204,7 @@ export default function Learn() {
                     </span>
                   </ProgressRing>
                   <span className="text-sm font-semibold">
-                    {deck.title}
+                    {t(deck.title, deck.title.replace('Bộ', 'Set'))}
                     {deck.stage > 1 && (
                       <span className="chip ml-1.5 bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300">
                         B1
@@ -190,7 +212,7 @@ export default function Learn() {
                     )}
                   </span>
                   <span className="text-xs text-slate-400">
-                    {deck.mastered}/{deck.words.length} thành thạo
+                    {deck.mastered}/{deck.words.length} {t('thành thạo', 'mastered')}
                   </span>
                 </button>
               )
@@ -202,7 +224,9 @@ export default function Learn() {
             onClick={() => setShowAllDecks((v) => !v)}
             className="btn-secondary mt-3 w-full sm:w-auto"
           >
-            {showAllDecks ? 'Thu gọn' : `Xem tất cả ${decks.length} bộ`}
+            {showAllDecks
+              ? t('Thu gọn', 'Show less')
+              : t(`Xem tất cả ${decks.length} bộ`, `Show all ${decks.length} sets`)}
           </button>
         )}
       </section>

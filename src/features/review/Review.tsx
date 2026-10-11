@@ -13,6 +13,7 @@ import FlashcardSession from '@/components/FlashcardSession'
 import QuizRunner from '@/components/QuizRunner'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
+import { useT } from '@/lib/i18n'
 
 export default function Review() {
   const style = useSettings((s) => s.reviewStyle)
@@ -29,6 +30,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   const code = useSettings((s) => s.currentLang)
   const reviewLimit = useSettings((s) => s.dailyReviewLimit)
   const recordAnswer = useStudy((s) => s.recordAnswer)
+  const t = useT()
 
   const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w] as const)), [pack.words])
 
@@ -57,34 +59,45 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
     return (
       <EmptyState
         emoji="✅"
-        title="Không có từ nào cần ôn hôm nay!"
-        description="Bạn đã ôn hết các từ đến hạn. Học thêm từ mới để lấp đầy lịch ôn của ngày mai nhé."
+        title={t('Không có từ nào cần ôn hôm nay!', 'Nothing to review today!')}
+        description={t(
+          'Bạn đã ôn hết các từ đến hạn. Học thêm từ mới để lấp đầy lịch ôn của ngày mai nhé.',
+          "You've reviewed every due word. Learn a few new ones to fill tomorrow's reviews."
+        )}
       >
         <Link to="/learn?quick=1" className="btn-primary">
-          Học nhanh 5 từ
+          {t('Học nhanh 5 từ', 'Quick: 5 new words')}
         </Link>
         <Link to="/games/match" className="btn-secondary">
-          Chơi Ghép cặp
+          {t('Chơi Ghép cặp', 'Play Match')}
         </Link>
         <Link to="/listen" className="btn-secondary">
-          🎧 Nghe lại từ đã học
+          🎧 {t('Nghe lại từ đã học', 'Listen to learned words')}
         </Link>
       </EmptyState>
     )
   }
 
   const complete = (correct: number, total: number) => (
-    <SessionComplete emoji="🎉" title="Ôn xong hôm nay!" correct={correct} total={total}>
+    <SessionComplete
+      emoji="🎉"
+      title={t('Ôn xong hôm nay!', 'Reviews done for today!')}
+      correct={correct}
+      total={total}
+    >
       {correct < total && (
         <p className="w-full text-sm text-slate-500">
-          Những từ bạn quên đã được học lại ngay trong buổi và sẽ được hỏi lại vào ngày mai.
+          {t(
+            'Những từ bạn quên đã được học lại ngay trong buổi và sẽ được hỏi lại vào ngày mai.',
+            'The words you forgot were relearned right away and will be asked again tomorrow.'
+          )}
         </p>
       )}
       <Link to="/quiz" className="btn-primary">
-        Kiểm tra với quiz
+        {t('Kiểm tra với quiz', 'Take a quiz')}
       </Link>
       <Link to="/learn" className="btn-secondary">
-        Học từ mới
+        {t('Học từ mới', 'Learn new words')}
       </Link>
     </SessionComplete>
   )
@@ -93,25 +106,31 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
     <div className="animate-fade-in">
       <header className="mx-auto mb-4 max-w-xl">
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Ôn tập</span> <span aria-hidden="true">🔁</span>
+          <span className="text-aurora">{t('Ôn tập', 'Review')}</span>{' '}
+          <span aria-hidden="true">🔁</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          {due.length} từ đến hạn ·{' '}
+          {t(`${due.length} từ đến hạn`, `${due.length} words due`)} ·{' '}
           {style === 'recall'
-            ? 'từ càng "già" câu hỏi càng khó: chọn nghĩa → chọn từ → tự gõ ra.'
-            : 'lật thẻ và tự đánh giá thật lòng.'}
+            ? t(
+                'từ càng "già" câu hỏi càng khó: chọn nghĩa → chọn từ → tự gõ ra.',
+                'the older the word, the harder the question: pick the meaning → pick the word → type it.'
+              )
+            : t('lật thẻ và tự đánh giá thật lòng.', 'flip the card and grade yourself honestly.')}
         </p>
         <div
           className="mt-3 inline-flex rounded-xl bg-slate-100 p-1 dark:bg-slate-800"
           role="radiogroup"
-          aria-label="Kiểu ôn tập"
+          aria-label={t('Kiểu ôn tập', 'Review style')}
         >
           <StyleButton active={style === 'recall'} onClick={() => onStyle('recall')}>
-            <Brain className="h-4 w-4" /> Tự nhớ lại
-            <span className="hidden text-xs font-normal opacity-70 sm:inline">(khuyên dùng)</span>
+            <Brain className="h-4 w-4" /> {t('Tự nhớ lại', 'Recall')}
+            <span className="hidden text-xs font-normal opacity-70 sm:inline">
+              {t('(khuyên dùng)', '(recommended)')}
+            </span>
           </StyleButton>
           <StyleButton active={style === 'flip'} onClick={() => onStyle('flip')}>
-            <Layers className="h-4 w-4" /> Lật thẻ
+            <Layers className="h-4 w-4" /> {t('Lật thẻ', 'Flashcards')}
           </StyleButton>
         </div>
       </header>

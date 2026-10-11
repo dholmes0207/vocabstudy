@@ -1,5 +1,6 @@
 import type { QuizMode, QuizOption, QuizQuestion, Word } from '@/types'
 import { findWordInSentence } from './wordForms'
+import { tx } from './i18n'
 
 // ============================================================================
 // Quiz generation. Produces multiple-choice and typing questions, drawing
@@ -119,7 +120,7 @@ export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQues
       wordId: word.id,
       mode,
       prompt: gap?.gapped ?? word.meaning,
-      hint: gap ? word.meaning : 'Gõ từ tiếng Anh tương ứng',
+      hint: gap ? word.meaning : tx('Gõ từ tiếng Anh tương ứng', 'Type the English word'),
       options: [],
       answer: word.word,
       surface: gap?.surface,
@@ -151,7 +152,7 @@ export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQues
       wordId: word.id,
       mode,
       prompt: word.meaning,
-      hint: `${word.pos} · Nghe & gõ lại từ`,
+      hint: `${word.pos} · ${tx('Nghe & gõ lại từ', 'Listen & type the word')}`,
       options: [],
       answer: word.word,
     }
@@ -176,7 +177,10 @@ export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQues
   } else {
     // en-to-vi and listen both ask for the Vietnamese meaning.
     prompt = word.word
-    hint = mode === 'listen' ? '🔊 Nghe và chọn nghĩa đúng' : word.pos
+    hint =
+      mode === 'listen'
+        ? tx('🔊 Nghe và chọn nghĩa đúng', '🔊 Listen and pick the meaning')
+        : word.pos
     answer = word.meaning
     options = shuffle([
       { text: word.meaning, correct: true, wordId: word.id },

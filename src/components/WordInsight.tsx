@@ -6,6 +6,7 @@ import HighlightExample from './HighlightExample'
 import { exampleAudio, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import { useMySentence } from '@/store/notesStore'
+import { useT } from '@/lib/i18n'
 
 interface Props {
   word: Word
@@ -31,6 +32,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
   const deep = variant !== 'compact'
   const lang = useSettings((s) => s.currentLang)
   const mine = useMySentence(lang, word.id)
+  const t = useT()
   return (
     <div className={`space-y-4 ${className}`}>
       {variant === 'details' ? null : full ? (
@@ -53,7 +55,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
               {word.ipa && word.viRead && <span className="mx-1.5">·</span>}
               {word.viRead && (
                 <>
-                  đọc gần giống{' '}
+                  {t('đọc gần giống', 'reads like')}{' '}
                   <b className="font-semibold text-slate-600 dark:text-slate-300">{word.viRead}</b>
                 </>
               )}
@@ -82,7 +84,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
               lang={ttsLang}
               audioSrc={exampleAudio(word.id, word.exampleEn)}
               size="sm"
-              label="Nghe câu ví dụ"
+              label={t('Nghe câu ví dụ', 'Hear the example')}
               className="mt-0.5 shrink-0"
             />
             <p className="text-slate-700 dark:text-slate-200">
@@ -96,7 +98,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
       )}
 
       {deep && word.collocations && word.collocations.length > 0 && (
-        <Section icon={Link2} title="Hay đi chung với">
+        <Section icon={Link2} title={t('Hay đi chung với', 'Common phrases')}>
           <ul className="space-y-1.5">
             {word.collocations.map((c) => (
               <li key={c.en} className="flex items-center gap-2">
@@ -104,7 +106,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
                   text={c.en}
                   lang={ttsLang}
                   size="sm"
-                  label={`Nghe "${c.en}"`}
+                  label={t(`Nghe "${c.en}"`, `Hear "${c.en}"`)}
                   className="shrink-0"
                 />
                 <span>
@@ -118,7 +120,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
       )}
 
       {deep && word.family && word.family.length > 0 && (
-        <Section icon={Sprout} title="Cùng họ với">
+        <Section icon={Sprout} title={t('Cùng họ với', 'Word family')}>
           <ul className="flex flex-wrap gap-2">
             {word.family.map((f) => (
               <li
@@ -136,7 +138,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
       {variant === 'compact' && mine && (
         <p className="rounded-xl bg-emerald-50/60 px-3.5 py-2.5 text-left text-sm text-slate-700 dark:bg-emerald-950/30 dark:text-slate-200">
           <span className="font-semibold text-emerald-700 dark:text-emerald-300">
-            ✍️ Câu của bạn:{' '}
+            ✍️ {t('Câu của bạn:', 'Your sentence:')}{' '}
           </span>
           <HighlightExample sentence={mine.text} word={word.word} pos={word.posCategory} />
         </p>

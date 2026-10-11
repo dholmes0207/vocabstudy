@@ -52,7 +52,7 @@ const q = (w: Word): QuizQuestion => ({
   })),
 })
 
-beforeEach(() => useSettings.setState({ soundEnabled: false }))
+beforeEach(() => useSettings.setState({ soundEnabled: false, uiLang: 'vi' }))
 afterEach(cleanup)
 
 function setup(requeueWrong: boolean, questions = [q(apple), q(river), q(house)]) {

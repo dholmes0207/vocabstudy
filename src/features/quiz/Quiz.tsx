@@ -12,16 +12,17 @@ import SpeakButton from '@/components/SpeakButton'
 import { Field, Segment } from '@/components/Choice'
 import { wordAudio } from '@/lib/audio'
 import QuizRunner from '@/components/QuizRunner'
+import { useT } from '@/lib/i18n'
 
 type Scope = 'learned' | 'hard' | 'all'
 
-const MODE_LABELS: Record<QuizMode, string> = {
-  'en-to-vi': 'Anh → Việt',
-  'vi-to-en': 'Việt → Anh',
-  listen: 'Nghe → chọn từ',
-  spell: 'Đánh vần (gõ từ) ✍️',
-  context: 'Chọn từ điền vào câu',
-  fill: 'Gõ từ vào câu',
+const MODE_LABELS: Record<QuizMode, [vi: string, en: string]> = {
+  'en-to-vi': ['Anh → Việt', 'English → Vietnamese'],
+  'vi-to-en': ['Việt → Anh', 'Vietnamese → English'],
+  listen: ['Nghe → chọn từ', 'Listen → pick'],
+  spell: ['Đánh vần (gõ từ) ✍️', 'Spelling (type it) ✍️'],
+  context: ['Chọn từ điền vào câu', 'Pick the word for the gap'],
+  fill: ['Gõ từ vào câu', 'Type the word in the gap'],
 }
 
 const COUNTS = [10, 20, 30]
@@ -49,6 +50,7 @@ export default function Quiz() {
   )
   const [modes, setModes] = useState<QuizMode[]>(['en-to-vi', 'vi-to-en', 'listen', 'context'])
   const [count, setCount] = useState(10)
+  const t = useT()
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
 
   const scopeWords: Word[] =
@@ -63,10 +65,17 @@ export default function Quiz() {
         onAnswer={(id, correct) => recordAnswer(code, id, correct)}
         onExit={() => setQuestions(null)}
         renderComplete={(correct, total, wrongIds) => (
-          <SessionComplete emoji="🏁" title="Xong bài quiz!" correct={correct} total={total}>
+          <SessionComplete
+            emoji="🏁"
+            title={t('Xong bài quiz!', 'Quiz finished!')}
+            correct={correct}
+            total={total}
+          >
             {wrongIds.length > 0 && (
               <div className="w-full text-left">
-                <p className="mb-2 text-sm font-semibold text-slate-500">Từ cần xem lại:</p>
+                <p className="mb-2 text-sm font-semibold text-slate-500">
+                  {t('Từ cần xem lại:', 'Words to look at again:')}
+                </p>
                 <ul className="space-y-1.5">
                   {wrongIds.map((id) => {
                     const w = wordsById.get(id)
@@ -92,7 +101,7 @@ export default function Quiz() {
               </div>
             )}
             <button className="btn-primary" onClick={() => setQuestions(null)}>
-              Làm bộ mới
+              {t('Làm bộ mới', 'New quiz')}
             </button>
           </SessionComplete>
         )}
@@ -115,55 +124,61 @@ export default function Quiz() {
     <div className="mx-auto max-w-xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Kiểm tra</span> <span aria-hidden="true">🎯</span>
+          <span className="text-aurora">{t('Kiểm tra', 'Quiz')}</span>{' '}
+          <span aria-hidden="true">🎯</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Tự nhớ lại là cách nhớ lâu nhất. Câu sai sẽ được đưa vào lịch ôn lại; câu đúng khi từ chưa
-          tới hạn ôn thì không làm từ &quot;thành thạo&quot; nhanh hơn — nhớ sâu cần thời gian giãn
-          cách.
+          {t(
+            'Tự nhớ lại là cách nhớ lâu nhất. Câu sai sẽ được đưa vào lịch ôn lại; câu đúng khi từ chưa tới hạn ôn thì không làm từ "thành thạo" nhanh hơn — nhớ sâu cần thời gian giãn cách.',
+            'Recalling is the best way to remember. Missed words go back into your reviews; a right answer before a word is due doesn\'t make it "mastered" faster — deep memory needs spacing.'
+          )}
         </p>
       </header>
 
       {noLearned && scope !== 'all' ? (
         <EmptyState
           emoji="📝"
-          title="Bạn chưa học từ nào"
-          description={`Hãy học vài từ trước, hoặc chọn phạm vi “Toàn bộ ${pack.meta.count} từ” để kiểm tra thử.`}
+          title={t('Bạn chưa học từ nào', "You haven't learned any words yet")}
+          description={t(
+            `Hãy học vài từ trước, hoặc chọn phạm vi “Toàn bộ ${pack.meta.count} từ” để kiểm tra thử.`,
+            `Learn a few words first, or choose “All ${pack.meta.count} words” to try a quiz.`
+          )}
         >
           <Link to="/learn" className="btn-primary">
-            Học từ mới
+            {t('Học từ mới', 'Learn new words')}
           </Link>
           <button className="btn-secondary" onClick={() => setScope('all')}>
-            Kiểm tra toàn bộ
+            {t('Kiểm tra toàn bộ', 'Quiz on all words')}
           </button>
         </EmptyState>
       ) : (
         <div className="card space-y-6 p-6">
           {/* Scope */}
-          <Field label="Phạm vi">
+          <Field label={t('Phạm vi', 'Words')}>
             <div className="grid grid-cols-3 gap-2">
               <Segment
                 active={scope === 'learned'}
                 onClick={() => setScope('learned')}
                 disabled={noLearned}
               >
-                Đã học <span className="opacity-60">({learnedWords.length})</span>
+                {t('Đã học', 'Learned')} <span className="opacity-60">({learnedWords.length})</span>
               </Segment>
               <Segment
                 active={scope === 'hard'}
                 onClick={() => setScope('hard')}
                 disabled={hardWords.length === 0}
               >
-                Hay sai <span className="opacity-60">({hardWords.length})</span>
+                {t('Hay sai', 'Often missed')}{' '}
+                <span className="opacity-60">({hardWords.length})</span>
               </Segment>
               <Segment active={scope === 'all'} onClick={() => setScope('all')}>
-                Toàn bộ <span className="opacity-60">({pack.words.length})</span>
+                {t('Toàn bộ', 'All')} <span className="opacity-60">({pack.words.length})</span>
               </Segment>
             </div>
           </Field>
 
           {/* Modes */}
-          <Field label="Dạng câu hỏi">
+          <Field label={t('Dạng câu hỏi', 'Question types')}>
             <div className="grid grid-cols-2 gap-2">
               {(Object.keys(MODE_LABELS) as QuizMode[]).map((m) => (
                 <label
@@ -180,18 +195,18 @@ export default function Quiz() {
                     checked={modes.includes(m)}
                     onChange={() => toggleMode(m)}
                   />
-                  {MODE_LABELS[m]}
+                  {t(MODE_LABELS[m][0], MODE_LABELS[m][1])}
                 </label>
               ))}
             </div>
           </Field>
 
           {/* Count */}
-          <Field label="Số câu hỏi">
+          <Field label={t('Số câu hỏi', 'Number of questions')}>
             <div className="grid grid-cols-3 gap-2">
               {COUNTS.map((c) => (
                 <Segment key={c} active={count === c} onClick={() => setCount(c)}>
-                  {c} câu
+                  {c} {t('câu', 'questions')}
                 </Segment>
               ))}
             </div>
@@ -202,10 +217,13 @@ export default function Quiz() {
             disabled={modes.length === 0 || scopeWords.length === 0}
             className="btn-primary h-12 w-full"
           >
-            <GraduationCap className="h-5 w-5" /> Bắt đầu ({Math.min(count, scopeWords.length)} câu)
+            <GraduationCap className="h-5 w-5" /> {t('Bắt đầu', 'Start')} (
+            {Math.min(count, scopeWords.length)} {t('câu', 'questions')})
           </button>
           {modes.length === 0 && (
-            <p className="text-center text-sm text-rose-500">Chọn ít nhất một dạng câu hỏi.</p>
+            <p className="text-center text-sm text-rose-500">
+              {t('Chọn ít nhất một dạng câu hỏi.', 'Pick at least one question type.')}
+            </p>
           )}
         </div>
       )}

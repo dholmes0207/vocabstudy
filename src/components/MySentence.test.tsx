@@ -7,6 +7,7 @@ import MySentence from './MySentence'
 import { useNotes } from '@/store/notesStore'
 import { useAuth } from '@/store/authStore'
 import { useContextStore } from '@/store/contextStore'
+import { useSettings } from '@/store/settingsStore'
 
 // "Câu của bạn" only works if the sentence really uses the word — otherwise it
 // is a note, not practice. And the AI check must only be offered to someone
@@ -28,6 +29,7 @@ const saved = () => useNotes.getState().sentences.en?.[go.id]?.text
 
 beforeEach(() => {
   useNotes.setState({ sentences: {} })
+  useSettings.setState({ uiLang: 'vi' })
   useAuth.setState({ user: null })
   useContextStore.setState({ pendingAsk: null, assistantOpen: false })
 })

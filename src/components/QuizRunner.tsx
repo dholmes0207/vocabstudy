@@ -14,6 +14,7 @@ import HighlightExample from './HighlightExample'
 import PosBadge from './PosBadge'
 import SpeakButton from './SpeakButton'
 import WordInsight from './WordInsight'
+import { useT, useUiLang } from '@/lib/i18n'
 
 // One question at a time, for every place the app asks something: the quiz,
 // the practice rounds of a learning session, and recall-based review.
@@ -46,13 +47,13 @@ interface Item {
   attempt: number
 }
 
-const TASK: Record<QuizMode, string> = {
-  'en-to-vi': 'Chọn nghĩa đúng',
-  'vi-to-en': 'Chọn từ tiếng Anh đúng',
-  listen: 'Nghe rồi chọn nghĩa đúng',
-  context: 'Chọn từ hợp với chỗ trống',
-  fill: 'Gõ từ còn thiếu',
-  spell: 'Nghe và gõ lại từ',
+const TASK: Record<QuizMode, [vi: string, en: string]> = {
+  'en-to-vi': ['Chọn nghĩa đúng', 'Pick the right meaning'],
+  'vi-to-en': ['Chọn từ tiếng Anh đúng', 'Pick the right English word'],
+  listen: ['Nghe rồi chọn nghĩa đúng', 'Listen, then pick the meaning'],
+  context: ['Chọn từ hợp với chỗ trống', 'Pick the word that fits the gap'],
+  fill: ['Gõ từ còn thiếu', 'Type the missing word'],
+  spell: ['Nghe và gõ lại từ', 'Listen and type the word'],
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -89,6 +90,8 @@ export default function QuizRunner({
   const [wrongIds, setWrongIds] = useState<number[]>([])
   // Right answers in a row — a little momentum makes a session feel like a game.
   const [combo, setCombo] = useState(0)
+  const t = useT()
+  const lang = useUiLang()
   const inputRef = useRef<HTMLInputElement>(null)
   const nextRef = useRef<HTMLButtonElement>(null)
 
@@ -229,10 +232,10 @@ export default function QuizRunner({
           <button
             onClick={onExit}
             className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
-            aria-label="Kết thúc phiên"
-            title="Kết thúc (câu đã trả lời vẫn được lưu)"
+            aria-label={t('Kết thúc phiên', 'End session')}
+            title={t('Kết thúc (câu đã trả lời vẫn được lưu)', 'End (answers so far are saved)')}
           >
-            <LogOut className="h-4 w-4" /> Thoát
+            <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
           </button>
         )}
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
@@ -250,7 +253,7 @@ export default function QuizRunner({
           {caption}
           {item.attempt > 1 && (
             <span className="ml-2 inline-flex items-center gap-1 text-amber-600 dark:text-amber-400">
-              <RotateCcw className="h-3 w-3" /> thử lại
+              <RotateCcw className="h-3 w-3" /> {t('thử lại', 'retry')}
             </span>
           )}
         </p>
@@ -259,7 +262,7 @@ export default function QuizRunner({
       <div className="card p-6">
         <div className="flex flex-wrap items-center gap-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-            {TASK[q.mode]}
+            {t(TASK[q.mode][0], TASK[q.mode][1])}
           </p>
           {word && (q.mode === 'en-to-vi' || q.mode === 'vi-to-en') && (
             <PosBadge category={word.posCategory} />
@@ -268,14 +271,14 @@ export default function QuizRunner({
             <span
               key={combo}
               className="chip ml-auto animate-pop bg-orange-100 font-bold text-orange-700 dark:bg-orange-950 dark:text-orange-300"
-              title="Số câu đúng liên tiếp"
+              title={t('Số câu đúng liên tiếp', 'Correct in a row')}
             >
               🔥 x{combo}
             </span>
           )}
           {!caption && item.attempt > 1 && (
             <span className="chip bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-              <RotateCcw className="h-3 w-3" /> thử lại
+              <RotateCcw className="h-3 w-3" /> {t('thử lại', 'retry')}
             </span>
           )}
         </div>
@@ -289,7 +292,7 @@ export default function QuizRunner({
                 <button
                   onClick={play}
                   className="rounded-full bg-brand-50 p-2 text-brand-600 dark:bg-brand-950 dark:text-brand-300"
-                  aria-label="Nghe lại"
+                  aria-label={t('Nghe lại', 'Play again')}
                 >
                   <Volume2 className="h-5 w-5" />
                 </button>
@@ -298,7 +301,7 @@ export default function QuizRunner({
               <button
                 onClick={play}
                 className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg transition active:scale-95"
-                aria-label="Nghe lại"
+                aria-label={t('Nghe lại', 'Play again')}
               >
                 <Volume2 className="h-9 w-9" />
               </button>
@@ -314,7 +317,9 @@ export default function QuizRunner({
               </p>
               {q.hint && (
                 <p className="text-sm italic text-slate-500 dark:text-slate-400">
-                  {q.mode === 'fill' && q.surface ? `Nghĩa của từ: ${q.hint}` : q.hint}
+                  {q.mode === 'fill' && q.surface
+                    ? t(`Nghĩa của từ: ${q.hint}`, `Meaning: ${q.hint}`)
+                    : q.hint}
                 </p>
               )}
             </div>
@@ -345,7 +350,7 @@ export default function QuizRunner({
                 <button
                   onClick={play}
                   className="rounded-full bg-brand-50 p-2 text-brand-600 dark:bg-brand-950 dark:text-brand-300"
-                  aria-label="Phát âm"
+                  aria-label={t('Phát âm', 'Pronounce')}
                 >
                   <Volume2 className="h-5 w-5" />
                 </button>
@@ -363,8 +368,8 @@ export default function QuizRunner({
               readOnly={revealed}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && (revealed ? next() : submitTyping())}
-              placeholder="Gõ từ tiếng Anh…"
-              aria-label="Câu trả lời"
+              placeholder={t('Gõ từ tiếng Anh…', 'Type the English word…')}
+              aria-label={t('Câu trả lời', 'Your answer')}
               className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-lg tracking-wide outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
               autoCapitalize="off"
               autoCorrect="off"
@@ -373,12 +378,13 @@ export default function QuizRunner({
             />
             {q.mode === 'spell' && !revealed && hintCount < hiddenPositions.length && (
               <button onClick={() => setHintCount((h) => h + 1)} className="btn-ghost mt-2 text-sm">
-                <Lightbulb className="h-4 w-4" /> Gợi ý (mở thêm 1 chữ)
+                <Lightbulb className="h-4 w-4" />{' '}
+                {t('Gợi ý (mở thêm 1 chữ)', 'Hint (reveal 1 letter)')}
               </button>
             )}
             {revealed && !lastCorrect && (
               <div className="mt-3 text-sm">
-                <span className="font-medium text-rose-600">Đáp án: </span>
+                <span className="font-medium text-rose-600">{t('Đáp án:', 'Answer:')} </span>
                 <span className="font-mono text-base font-bold tracking-wide">
                   {answerForm.split('').map((ch, i) => {
                     const ok = (input.trim()[i] || '').toLowerCase() === ch.toLowerCase()
@@ -436,10 +442,11 @@ export default function QuizRunner({
             {lastCorrect ? (
               <>
                 <p className="font-semibold text-emerald-600">
-                  ✓ {praise(q.wordId + item.attempt)}
+                  ✓ {praise(q.wordId + item.attempt, lang)}
                   {isTyping && q.surface && norm(input) !== norm(q.surface) && (
                     <span className="ml-1 font-normal text-slate-500">
-                      Trong câu, từ này được viết là <b>{q.surface}</b>.
+                      {t('Trong câu, từ này được viết là', 'In this sentence it is written')}{' '}
+                      <b>{q.surface}</b>.
                     </span>
                   )}
                 </p>
@@ -448,7 +455,7 @@ export default function QuizRunner({
             ) : (
               <>
                 <p className="font-semibold text-rose-600">
-                  Chưa đúng — {nudge(q.wordId + item.attempt)}
+                  {t('Chưa đúng', 'Not quite')} — {nudge(q.wordId + item.attempt, lang)}
                 </p>
                 {chosenWord && <Contrast mode={q.mode} chosen={chosenWord} />}
                 <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
@@ -456,7 +463,11 @@ export default function QuizRunner({
                 </div>
                 {willReturn && (
                   <p className="flex items-center gap-1.5 text-sm text-amber-600 dark:text-amber-400">
-                    <RotateCcw className="h-4 w-4" /> Từ này sẽ quay lại sau vài câu nữa.
+                    <RotateCcw className="h-4 w-4" />{' '}
+                    {t(
+                      'Từ này sẽ quay lại sau vài câu nữa.',
+                      'This word will come back in a few questions.'
+                    )}
                   </p>
                 )}
               </>
@@ -476,7 +487,9 @@ export default function QuizRunner({
             </button>
           ) : revealed ? (
             <button ref={nextRef} onClick={next} className="btn-primary h-12 w-full">
-              {idx + 1 >= queue.length ? 'Xem kết quả' : 'Câu tiếp theo'}{' '}
+              {idx + 1 >= queue.length
+                ? t('Xem kết quả', 'See results')
+                : t('Câu tiếp theo', 'Next question')}{' '}
               <ArrowRight className="h-5 w-5" />
             </button>
           ) : null}
@@ -490,10 +503,21 @@ const norm = (s: string) => s.trim().toLowerCase()
 
 /** "What you picked is actually…" — turns a miss into a lesson on look-alikes. */
 function Contrast({ mode, chosen }: { mode: QuizMode; chosen: Word }) {
+  const lang = useUiLang()
   const pickedMeaning = mode === 'en-to-vi' || mode === 'listen'
   return (
     <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-900 dark:bg-rose-950/40 dark:text-rose-200">
-      {pickedMeaning ? (
+      {lang === 'en' ? (
+        pickedMeaning ? (
+          <>
+            You picked <b>“{chosen.meaning}”</b> — that is the meaning of <b>{chosen.word}</b>.
+          </>
+        ) : (
+          <>
+            You picked <b>{chosen.word}</b> — it means <b>“{chosen.meaning}”</b>.
+          </>
+        )
+      ) : pickedMeaning ? (
         <>
           Bạn chọn <b>“{chosen.meaning}”</b> — đó là nghĩa của từ <b>{chosen.word}</b>.
         </>
@@ -516,6 +540,7 @@ function CorrectEcho({
   ttsLang: string
   showSentence: boolean
 }) {
+  const t = useT()
   return (
     <div className="space-y-1 text-sm text-slate-600 dark:text-slate-300">
       <p>
@@ -530,7 +555,7 @@ function CorrectEcho({
             lang={ttsLang}
             audioSrc={exampleAudio(word.id, word.exampleEn)}
             size="sm"
-            label="Nghe câu ví dụ"
+            label={t('Nghe câu ví dụ', 'Hear the example')}
             className="shrink-0"
           />
           <span className="pt-1">

@@ -10,6 +10,7 @@ import { useImmersive } from '@/store/uiStore'
 import QuizRunner from '@/components/QuizRunner'
 import WordInsight from '@/components/WordInsight'
 import MySentence from '@/components/MySentence'
+import { useT } from '@/lib/i18n'
 
 // A learning session for a beginner, in small groups:
 //
@@ -46,6 +47,7 @@ export default function LearnSession({
   const [groupIdx, setGroupIdx] = useState(0)
   const [phase, setPhase] = useState<Phase>('meet')
   const [cardIdx, setCardIdx] = useState(0)
+  const t = useT()
 
   const group = groups[groupIdx] as Word[] | undefined
 
@@ -58,7 +60,10 @@ export default function LearnSession({
 
   if (!group) return <>{renderComplete(words.length)}</>
 
-  const groupLabel = groups.length > 1 ? `Nhóm ${groupIdx + 1}/${groups.length}` : ''
+  const groupLabel =
+    groups.length > 1
+      ? t(`Nhóm ${groupIdx + 1}/${groups.length}`, `Group ${groupIdx + 1}/${groups.length}`)
+      : ''
   const isLast = groupIdx + 1 >= groups.length
 
   if (phase === 'meet') {
@@ -83,7 +88,7 @@ export default function LearnSession({
       wordsById={byId}
       ttsLang={ttsLang}
       requeueWrong
-      caption={`Luyện nhớ${groupLabel ? ` · ${groupLabel.toLowerCase()}` : ''}`}
+      caption={`${t('Luyện nhớ', 'Recall practice')}${groupLabel ? ` · ${groupLabel.toLowerCase()}` : ''}`}
       onExit={onExit}
       onAnswer={(id, correct) => {
         const w = byId.get(id)
@@ -127,24 +132,30 @@ function BetweenGroups({
   onNext: () => void
   onExit: () => void
 }) {
+  const t = useT()
   return (
     <div className="mx-auto max-w-md animate-fade-in text-center">
       <div className="card p-8">
         <p className="text-5xl">✅</p>
-        <h2 className="mt-3 text-xl font-extrabold">Xong {label.toLowerCase()}!</h2>
+        <h2 className="mt-3 text-xl font-extrabold">
+          {t(`Xong ${label.toLowerCase()}!`, `${label} done!`)}
+        </h2>
         <p className="mt-2 text-slate-500">
-          Bạn nhớ đúng ngay lần đầu{' '}
+          {t('Bạn nhớ đúng ngay lần đầu', 'You got')}{' '}
           <b>
             {correct}/{total}
           </b>{' '}
-          câu. {size} từ vừa rồi đã vào lịch ôn — app sẽ tự hỏi lại đúng lúc bạn sắp quên.
+          {t(
+            `câu. ${size} từ vừa rồi đã vào lịch ôn — app sẽ tự hỏi lại đúng lúc bạn sắp quên.`,
+            `right on the first try. These ${size} words are now scheduled — the app will ask again just before you'd forget.`
+          )}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button className="btn-primary" autoFocus onClick={onNext}>
-            Nhóm tiếp theo <ArrowRight className="h-4 w-4" />
+            {t('Nhóm tiếp theo', 'Next group')} <ArrowRight className="h-4 w-4" />
           </button>
           <button className="btn-secondary" onClick={onExit}>
-            Để sau
+            {t('Để sau', 'Later')}
           </button>
         </div>
       </div>
@@ -174,6 +185,7 @@ function MeetCards({
   const lang = useSettings((s) => s.currentLang)
   const word = group[index]
   const last = index + 1 >= group.length
+  const t = useT()
 
   useProvideContext(`Đang làm quen từ "${word.word}"`, {
     word: word.word,
@@ -222,10 +234,10 @@ function MeetCards({
         <button
           onClick={onExit}
           className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
-          aria-label="Kết thúc phiên học"
-          title="Kết thúc (từ đã trả lời vẫn được lưu)"
+          aria-label={t('Kết thúc phiên học', 'End lesson')}
+          title={t('Kết thúc (từ đã trả lời vẫn được lưu)', 'End (answered words are saved)')}
         >
-          <LogOut className="h-4 w-4" /> Thoát
+          <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
         </button>
         <div className="flex flex-1 gap-1.5" aria-hidden>
           {group.map((w, i) => (
@@ -240,8 +252,12 @@ function MeetCards({
         </span>
       </div>
       <p className="-mt-2 mb-3 text-xs font-medium text-slate-400">
-        Làm quen{caption ? ` · ${caption.toLowerCase()}` : ''} — đọc to theo giọng mẫu, nhìn câu ví
-        dụ, rồi bấm Tiếp.
+        {t('Làm quen', 'Meet the words')}
+        {caption ? ` · ${caption.toLowerCase()}` : ''} —{' '}
+        {t(
+          'đọc to theo giọng mẫu, nhìn câu ví dụ, rồi bấm Tiếp.',
+          'say it aloud with the model voice, read the example, then tap Next.'
+        )}
       </p>
 
       <div className="card space-y-4 p-6">
@@ -254,7 +270,7 @@ function MeetCards({
           <button
             onClick={() => onIndex(index - 1)}
             className="btn-secondary h-14 !px-4"
-            aria-label="Từ trước"
+            aria-label={t('Từ trước', 'Previous word')}
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
@@ -262,11 +278,12 @@ function MeetCards({
         <button onClick={forward} className="btn-primary h-14 flex-1">
           {last ? (
             <>
-              <Brain className="h-5 w-5" /> Luyện nhớ {group.length} từ này
+              <Brain className="h-5 w-5" />{' '}
+              {t(`Luyện nhớ ${group.length} từ này`, `Practise these ${group.length} words`)}
             </>
           ) : (
             <>
-              Tiếp <ArrowRight className="h-5 w-5" />
+              {t('Tiếp', 'Next')} <ArrowRight className="h-5 w-5" />
             </>
           )}
         </button>
