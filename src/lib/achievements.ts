@@ -1,6 +1,8 @@
 // Achievements ("Huy hiệu") — light gamification derived purely from existing
 // study stats, so nothing extra needs to be persisted.
 
+import type { UiLang } from '@/types'
+
 export interface AchievementInput {
   learned: number
   mastered: number
@@ -223,14 +225,42 @@ const DEFS: Def[] = [
   },
 ]
 
-export function evaluateAchievements(m: AchievementInput): Achievement[] {
+/** English titles and descriptions, by badge id. */
+const EN: Record<string, [title: string, desc: string]> = {
+  first: ['First step', 'Learn your first word'],
+  learn50: ['Hard worker', 'Reach 50 words'],
+  learn200: ['Eager learner', 'Reach 200 words'],
+  learn500: ['Halfway there', 'Reach 500 words'],
+  learn1000: ['The full 1000', 'Reach 1000 words'],
+  streak3: ['Catching fire', '3 days in a row'],
+  streak7: ['Perfect week', '7 days in a row'],
+  streak30: ['Iron discipline', '30 days in a row'],
+  master10: ['Ten gems', 'Master 10 words'],
+  master100: ['A hundred words', 'Master 100 words'],
+  master500: ['Master', 'Master 500 words'],
+  master1000: ['Conqueror', 'Master them all'],
+  xp500: ['Shining', 'Earn 500 XP'],
+  xp2000: ['Explosive', 'Earn 2000 XP'],
+  learn2000: ['Milky Way', 'Learn 2000 words'],
+  learn3000: ['Word universe', 'Learn 3000 words'],
+  days10: ['Back again', 'Study on 10 different days (not necessarily in a row)'],
+  days30: ['Habit', 'Study on 30 different days'],
+  days100: ['Persistent', 'Study on 100 different days'],
+  stickers12: ['Collector', 'Open 12 daily-gift stickers'],
+  stickers48: ['Full collection', 'Open all 48 stickers'],
+  best14: ['Two solid weeks', 'A 14-day streak (shields count)'],
+  sharp: ['Sharpshooter', '≥90% accuracy (after 50 answers)'],
+}
+
+export function evaluateAchievements(m: AchievementInput, lang: UiLang = 'vi'): Achievement[] {
   return DEFS.map((d) => {
     const v = d.value(m)
+    const en = lang === 'en' ? EN[d.id] : undefined
     return {
       id: d.id,
       icon: d.icon,
-      title: d.title,
-      desc: d.desc,
+      title: en?.[0] ?? d.title,
+      desc: en?.[1] ?? d.desc,
       unlocked: v >= d.target,
       progress: Math.max(0, Math.min(1, v / d.target)),
     }

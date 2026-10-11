@@ -3,9 +3,10 @@ import { Bot, X } from 'lucide-react'
 import TutorChat from '@/features/tutor/TutorChat'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import { useAuth } from '@/store/authStore'
-import { levelInfo } from '@/lib/level'
+import { levelInfo, levelLabel } from '@/lib/level'
 import { useContextStore } from '@/store/contextStore'
 import { useT } from '@/lib/i18n'
+import { useSettings } from '@/store/settingsStore'
 
 export default function AssistantFab() {
   // Kept in the store so another screen can open the assistant with a
@@ -15,6 +16,10 @@ export default function AssistantFab() {
   const user = useAuth((s) => s.user)
   const level = useEffectiveLevel()
   const info = levelInfo(level)
+  const label = levelLabel(
+    info,
+    useSettings((s) => s.uiLang)
+  )
   const t = useT()
 
   // Đóng bằng phím Esc (trang phía sau vẫn dùng được, không bị che mờ).
@@ -74,9 +79,9 @@ export default function AssistantFab() {
                   {t('Trợ lý AI', 'AI tutor')}
                   <span
                     className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200"
-                    title={info.blurb}
+                    title={label.blurb}
                   >
-                    {info.tag} · {info.name}
+                    {info.tag} · {label.name}
                   </span>
                 </p>
                 <p className="truncate text-xs text-slate-400">

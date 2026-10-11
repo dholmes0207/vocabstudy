@@ -1,6 +1,8 @@
 // The "don't break the chain" calendar on the stats page: the last few weeks
 // as a grid, each studied day lit by how much was done.
 
+import type { UiLang } from '@/types'
+
 export interface CalendarCell {
   day: number
   count: number
@@ -69,22 +71,30 @@ export interface WeekCompare {
 export function compareWeeks(
   reviews: Record<number, number>,
   news: Record<number, number>,
-  today: number
+  today: number,
+  lang: UiLang = 'vi'
 ): WeekCompare | null {
+  const en = lang === 'en'
   const now = weekTotals(reviews, news, today)
   const before = weekTotals(reviews, news, today - 7)
   if (now.answers === 0 && before.answers === 0) return null
   let message: string
   if (before.answers === 0) {
-    message = 'Tuần đầu tiên — khởi đầu tốt lắm! 🌱'
+    message = en ? 'Your first week — a great start! 🌱' : 'Tuần đầu tiên — khởi đầu tốt lắm! 🌱'
   } else if (now.answers >= before.answers) {
     const pct = Math.round(((now.answers - before.answers) / before.answers) * 100)
     message =
       pct === 0
-        ? 'Đều đặn như tuần trước — giữ nhịp vậy là tuyệt 👏'
-        : `Nhiều hơn tuần trước ${pct}% — bạn đang tiến bộ thật đấy 📈`
+        ? en
+          ? 'As steady as last week — keeping the rhythm is great 👏'
+          : 'Đều đặn như tuần trước — giữ nhịp vậy là tuyệt 👏'
+        : en
+          ? `${pct}% more than last week — you're really improving 📈`
+          : `Nhiều hơn tuần trước ${pct}% — bạn đang tiến bộ thật đấy 📈`
   } else {
-    message = 'Tuần này nhẹ hơn một chút — không sao, vài câu hôm nay là lại vào nhịp 💪'
+    message = en
+      ? "A lighter week — that's fine, a few answers today gets you back in rhythm 💪"
+      : 'Tuần này nhẹ hơn một chút — không sao, vài câu hôm nay là lại vào nhịp 💪'
   }
   return { now, before, message }
 }

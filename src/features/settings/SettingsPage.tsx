@@ -7,38 +7,45 @@ import { useAuth } from '@/store/authStore'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { exampleAudio, pronounce } from '@/lib/audio'
 import { downloadBackup, importBackup } from '@/lib/backup'
-import { LEVELS, levelInfo } from '@/lib/level'
+import { LEVELS, levelInfo, levelLabel } from '@/lib/level'
 import { isRecognitionSupported } from '@/lib/speech'
 import { supabaseConfigured } from '@/lib/supabase'
 import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import ReminderSetup from '@/components/ReminderSetup'
 import { Row, Section, Segmented, Toggle } from './ui'
+import { useT } from '@/lib/i18n'
+
+// Options carry both languages: [value, Vietnamese, English].
+const UI_LANG_OPTIONS = [
+  ['en', 'English', 'English'],
+  ['vi', 'Tiếng Việt', 'Tiếng Việt'],
+] as const
 
 const THEME_OPTIONS = [
-  ['light', 'Sáng'],
-  ['dark', 'Tối'],
-  ['system', 'Theo máy'],
+  ['light', 'Sáng', 'Light'],
+  ['dark', 'Tối', 'Dark'],
+  ['system', 'Theo máy', 'System'],
 ] as const
 
 const SKY_OPTIONS = [
-  ['auto', 'Tự động'],
-  ['full', 'Đầy đủ'],
-  ['lite', 'Nhẹ'],
-  ['off', 'Tắt'],
+  ['auto', 'Tự động', 'Auto'],
+  ['full', 'Đầy đủ', 'Full'],
+  ['lite', 'Nhẹ', 'Lite'],
+  ['off', 'Tắt', 'Off'],
 ] as const
 
 const GOAL_CHOICES = [
-  ['5', '5 câu'],
-  ['10', '10 câu'],
-  ['20', '20 câu'],
-  ['40', '40 câu'],
+  ['5', '5 câu', '5'],
+  ['10', '10 câu', '10'],
+  ['20', '20 câu', '20'],
+  ['40', '40 câu', '40'],
 ] as const
 
 const STRICTNESS_OPTIONS = [
-  ['easy', 'Dễ'],
-  ['normal', 'Vừa'],
-  ['hard', 'Khó'],
+  ['easy', 'Dễ', 'Easy'],
+  ['normal', 'Vừa', 'Normal'],
+  ['hard', 'Khó', 'Strict'],
 ] as const
 
 export default function SettingsPage() {
@@ -62,6 +69,10 @@ export default function SettingsPage() {
   const hasNeuralAudio = audioVoices.length > 0
   const canPronounce = hasNeuralAudio || ttsOk
   const canRecognize = isRecognitionSupported()
+  const t = useT()
+  const opts = <T extends string>(list: readonly (readonly [T, string, string])[]) =>
+    list.map(([v, vi, en]) => [v, t(vi, en)] as const)
+  const level = (n: number) => levelLabel(levelInfo(n), settings.uiLang)
 
   // Installed voices load asynchronously; refresh when the browser reports them.
   const [voices, setVoices] = useState(() => listVoices(pack.meta.ttsLang))
@@ -83,12 +94,17 @@ export default function SettingsPage() {
         if (syncing) sessionStorage.setItem(RESTORE_FLAG, '1')
         setNotice(
           syncing
-            ? `Đã khôi phục ${n} mục và đang đồng bộ lên tài khoản. Đang tải lại…`
-            : `Đã khôi phục ${n} mục. Đang tải lại…`
+            ? t(
+                `Đã khôi phục ${n} mục và đang đồng bộ lên tài khoản. Đang tải lại…`,
+                `Restored ${n} items and syncing them to your account. Reloading…`
+              )
+            : t(`Đã khôi phục ${n} mục. Đang tải lại…`, `Restored ${n} items. Reloading…`)
         )
         setTimeout(() => location.reload(), 800)
       } catch (e) {
-        setNotice(e instanceof Error ? e.message : 'Không đọc được file.')
+        setNotice(
+          e instanceof Error ? e.message : t('Không đọc được file.', "Couldn't read the file.")
+        )
       }
     }
     reader.readAsText(file)
@@ -98,13 +114,20 @@ export default function SettingsPage() {
     <div className="mx-auto max-w-2xl space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Cài đặt</span> <span aria-hidden="true">⚙️</span>
+          <span className="text-aurora">{t('Cài đặt', 'Settings')}</span>{' '}
+          <span aria-hidden="true">⚙️</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Điều chỉnh trải nghiệm học của bạn.{' '}
+          {t('Điều chỉnh trải nghiệm học của bạn.', 'Tune how you learn.')}{' '}
           {syncing
-            ? 'Tiến độ được đồng bộ lên tài khoản của bạn (có kèm bản sao trên máy này).'
-            : 'Dữ liệu hiện lưu trên máy này — đăng nhập để đồng bộ lên tài khoản.'}
+            ? t(
+                'Tiến độ được đồng bộ lên tài khoản của bạn (có kèm bản sao trên máy này).',
+                'Your progress syncs to your account (with a copy on this device).'
+              )
+            : t(
+                'Dữ liệu hiện lưu trên máy này — đăng nhập để đồng bộ lên tài khoản.',
+                'Your data is stored on this device — sign in to sync it to your account.'
+              )}
         </p>
       </header>
 
@@ -115,70 +138,116 @@ export default function SettingsPage() {
       )}
 
       {/* Look & feel */}
-      <Section title="Giao diện">
-        <Row label="Chủ đề" hint="Bầu trời sao rõ nhất ở chủ đề Tối.">
+      <Section title={t('Giao diện', 'Appearance')}>
+        <Row
+          label={t('Ngôn ngữ giao diện', 'Interface language')}
+          hint={t(
+            'Menu, nút và lời nhắn. Nghĩa của từ vẫn bằng tiếng Việt.',
+            'Menus, buttons and messages. Word meanings stay in Vietnamese.'
+          )}
+        >
           <Segmented
-            label="Chủ đề"
+            label={t('Ngôn ngữ giao diện', 'Interface language')}
+            value={settings.uiLang}
+            options={opts(UI_LANG_OPTIONS)}
+            onChange={settings.setUiLang}
+          />
+        </Row>
+        <Row
+          label={t('Chủ đề', 'Theme')}
+          hint={t('Bầu trời sao rõ nhất ở chủ đề Tối.', 'The starry sky looks best in Dark.')}
+        >
+          <Segmented
+            label={t('Chủ đề', 'Theme')}
             value={settings.theme}
-            options={THEME_OPTIONS}
+            options={opts(THEME_OPTIONS)}
             onChange={settings.setTheme}
           />
         </Row>
         <Row
-          label="Bầu trời động"
+          label={t('Bầu trời động', 'Animated sky')}
           hint={
             reducedMotion
-              ? 'Máy đang bật “Giảm chuyển động” nên bầu trời đứng yên.'
-              : 'Sao lấp lánh, sao băng, cực quang. “Tự động” nhẹ hơn trên điện thoại để đỡ tốn pin.'
+              ? t(
+                  'Máy đang bật “Giảm chuyển động” nên bầu trời đứng yên.',
+                  '“Reduce motion” is on, so the sky stays still.'
+                )
+              : t(
+                  'Sao lấp lánh, sao băng, cực quang. “Tự động” nhẹ hơn trên điện thoại để đỡ tốn pin.',
+                  'Twinkling stars, meteors, aurora. “Auto” is lighter on phones to save battery.'
+                )
           }
         >
           <Segmented
-            label="Bầu trời động"
+            label={t('Bầu trời động', 'Animated sky')}
             value={settings.skyEffects}
-            options={SKY_OPTIONS}
+            options={opts(SKY_OPTIONS)}
             onChange={settings.setSkyEffects}
           />
         </Row>
-        <Row label="Tuyết rơi" hint="Rê chuột hoặc chạm để gạt tuyết sang bên.">
+        <Row
+          label={t('Tuyết rơi', 'Snowfall')}
+          hint={t(
+            'Rê chuột hoặc chạm để gạt tuyết sang bên.',
+            'Move the mouse or touch to brush the snow aside.'
+          )}
+        >
           <Toggle
             checked={settings.snow}
             onChange={settings.setSnow}
-            label="Tuyết rơi"
+            label={t('Tuyết rơi', 'Snowfall')}
             disabled={settings.skyEffects === 'off'}
           />
         </Row>
-        <Row label="Lấp lánh theo chuột" hint="Vệt sáng theo con trỏ, bung sao khi bấm hoặc chạm.">
+        <Row
+          label={t('Lấp lánh theo chuột', 'Cursor sparkles')}
+          hint={t(
+            'Vệt sáng theo con trỏ, bung sao khi bấm hoặc chạm.',
+            'A glowing trail follows the pointer; stars burst when you click or tap.'
+          )}
+        >
           <Toggle
             checked={settings.cursorTrail}
             onChange={settings.setCursorTrail}
-            label="Lấp lánh theo chuột"
+            label={t('Lấp lánh theo chuột', 'Cursor sparkles')}
             disabled={settings.skyEffects === 'off'}
           />
         </Row>
       </Section>
 
       {/* Learning */}
-      <Section title="Học tập">
+      <Section title={t('Học tập', 'Learning')}>
         <Row
-          label="Mục tiêu nhỏ mỗi ngày"
-          hint="Số câu trả lời mỗi ngày. Mục tiêu nhỏ dễ giữ hơn — đều đặn quan trọng hơn nhiều."
+          label={t('Mục tiêu nhỏ mỗi ngày', 'Small daily goal')}
+          hint={t(
+            'Số câu trả lời mỗi ngày. Mục tiêu nhỏ dễ giữ hơn — đều đặn quan trọng hơn nhiều.',
+            'Answers per day. Small goals are easier to keep — consistency matters far more.'
+          )}
         >
           <Segmented
-            label="Mục tiêu nhỏ mỗi ngày"
+            label={t('Mục tiêu nhỏ mỗi ngày', 'Small daily goal')}
             value={String(settings.dailyGoal)}
-            options={GOAL_CHOICES}
+            options={opts(GOAL_CHOICES)}
             onChange={(v) => settings.setDailyGoal(Number(v))}
           />
         </Row>
         <div className="py-3.5">
-          <p className="font-medium">Nhắc học mỗi ngày 🔔</p>
+          <p className="font-medium">{t('Nhắc học mỗi ngày 🔔', 'Daily study reminder 🔔')}</p>
           <p className="mb-3 text-sm text-slate-400">
-            Thêm một lịch hẹn lặp lại hằng ngày vào điện thoại — đến giờ chuông reo, bấm vào là mở
-            app.
+            {t(
+              'Thêm một lịch hẹn lặp lại hằng ngày vào điện thoại — đến giờ chuông reo, bấm vào là mở app.',
+              'Add a daily repeating event to your phone — it rings on time, and one tap opens the app.'
+            )}
           </p>
           <ReminderSetup />
         </div>
-        <Row label="Số từ mới mỗi ngày" hint="Khuyến nghị 10–15 từ để nhớ chất lượng.">
+        <Row
+          label={t('Số từ mới mỗi ngày', 'New words per day')}
+          hint={t(
+            'Khuyến nghị 10–15 từ để nhớ chất lượng.',
+            '10–15 words is recommended for lasting memory.'
+          )}
+        >
           <div className="flex items-center gap-3">
             <input
               type="range"
@@ -187,14 +256,17 @@ export default function SettingsPage() {
               step={5}
               value={settings.dailyNewLimit}
               onChange={(e) => settings.setDailyNewLimit(Number(e.target.value))}
-              aria-label="Số từ mới mỗi ngày"
-              aria-valuetext={`${settings.dailyNewLimit} từ`}
+              aria-label={t('Số từ mới mỗi ngày', 'New words per day')}
+              aria-valuetext={t(`${settings.dailyNewLimit} từ`, `${settings.dailyNewLimit} words`)}
               className="w-40 accent-brand-600"
             />
             <span className="w-10 text-right font-bold tabular-nums">{settings.dailyNewLimit}</span>
           </div>
         </Row>
-        <Row label="Giới hạn số từ ôn mỗi phiên" hint="0 = ôn tất cả từ đến hạn.">
+        <Row
+          label={t('Giới hạn số từ ôn mỗi phiên', 'Review limit per session')}
+          hint={t('0 = ôn tất cả từ đến hạn.', '0 = review every due word.')}
+        >
           <div className="flex items-center gap-3">
             <input
               type="range"
@@ -203,11 +275,11 @@ export default function SettingsPage() {
               step={10}
               value={settings.dailyReviewLimit}
               onChange={(e) => settings.setDailyReviewLimit(Number(e.target.value))}
-              aria-label="Giới hạn số từ ôn mỗi phiên"
+              aria-label={t('Giới hạn số từ ôn mỗi phiên', 'Review limit per session')}
               aria-valuetext={
                 settings.dailyReviewLimit === 0
-                  ? 'Không giới hạn'
-                  : `${settings.dailyReviewLimit} từ`
+                  ? t('Không giới hạn', 'No limit')
+                  : t(`${settings.dailyReviewLimit} từ`, `${settings.dailyReviewLimit} words`)
               }
               className="w-40 accent-brand-600"
             />
@@ -217,22 +289,31 @@ export default function SettingsPage() {
           </div>
         </Row>
         <Row
-          label="Âm thanh khi kiểm tra"
-          hint="Tiếng “tinh” khi đúng / “tút” khi sai lúc làm quiz."
+          label={t('Âm thanh khi kiểm tra', 'Quiz sounds')}
+          hint={t(
+            'Tiếng “tinh” khi đúng / “tút” khi sai lúc làm quiz.',
+            'A “ding” when right and a “buzz” when wrong.'
+          )}
         >
           <Toggle
             checked={settings.soundEnabled}
             onChange={settings.setSoundEnabled}
-            label="Âm thanh khi kiểm tra"
+            label={t('Âm thanh khi kiểm tra', 'Quiz sounds')}
           />
         </Row>
       </Section>
 
       {/* Pronunciation */}
-      <Section title="Phát âm">
+      <Section title={t('Phát âm', 'Pronunciation')}>
         {/* Preferred: pre-rendered neural voices (edge-tts). */}
         {hasNeuralAudio ? (
-          <Row label="Giọng đọc" hint="Giọng Neural bản xứ, nghe tự nhiên như người thật.">
+          <Row
+            label={t('Giọng đọc', 'Voice')}
+            hint={t(
+              'Giọng Neural bản xứ, nghe tự nhiên như người thật.',
+              'Natural-sounding native neural voices.'
+            )}
+          >
             <div className="flex items-center gap-2">
               <select
                 value={
@@ -241,7 +322,7 @@ export default function SettingsPage() {
                     : audioVoices[0].key
                 }
                 onChange={(e) => settings.setAudioVoice(e.target.value)}
-                aria-label="Chọn giọng đọc"
+                aria-label={t('Chọn giọng đọc', 'Choose a voice')}
                 className="max-w-[15rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
               >
                 {audioVoices.map((v) => (
@@ -260,7 +341,7 @@ export default function SettingsPage() {
                     rate: settings.ttsRate,
                   })
                 }
-                aria-label="Nghe thử giọng đã chọn"
+                aria-label={t('Nghe thử giọng đã chọn', 'Hear the chosen voice')}
               >
                 <Volume2 className="h-4 w-4" />
               </button>
@@ -271,29 +352,38 @@ export default function SettingsPage() {
             {/* Fallback: no pre-rendered audio -> pick the best browser voice. */}
             {!ttsOk && (
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                ⚠️ Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc
-                Safari.
+                ⚠️{' '}
+                {t(
+                  'Trình duyệt này không hỗ trợ phát âm (Web Speech API). Hãy thử Chrome, Edge hoặc Safari.',
+                  "This browser can't speak (no Web Speech API). Try Chrome, Edge or Safari."
+                )}
               </p>
             )}
             {ttsOk && voices.length === 0 && (
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                ⚠️ Máy bạn chưa có giọng đọc tiếng Anh. Hãy mở trang bằng Google Chrome hoặc
-                Microsoft Edge (bản mới) để nghe được phát âm nhé.
+                ⚠️{' '}
+                {t(
+                  'Máy bạn chưa có giọng đọc tiếng Anh. Hãy mở trang bằng Google Chrome hoặc Microsoft Edge (bản mới) để nghe được phát âm nhé.',
+                  'Your device has no English voice installed. Open the site in a recent Google Chrome or Microsoft Edge to hear pronunciation.'
+                )}
               </p>
             )}
             {ttsOk && voices.length > 0 && (
               <Row
-                label="Giọng đọc (trình duyệt)"
-                hint="Chưa có audio dựng sẵn — dùng giọng của trình duyệt."
+                label={t('Giọng đọc (trình duyệt)', 'Voice (browser)')}
+                hint={t(
+                  'Chưa có audio dựng sẵn — dùng giọng của trình duyệt.',
+                  "No recorded audio yet — using the browser's voice."
+                )}
               >
                 <div className="flex items-center gap-2">
                   <select
                     value={settings.ttsVoiceURI ?? ''}
                     onChange={(e) => settings.setTtsVoiceURI(e.target.value || null)}
-                    aria-label="Chọn giọng đọc trình duyệt"
+                    aria-label={t('Chọn giọng đọc trình duyệt', 'Choose a browser voice')}
                     className="max-w-[13rem] rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
                   >
-                    <option value="">Tự động (tốt nhất)</option>
+                    <option value="">{t('Tự động (tốt nhất)', 'Automatic (best)')}</option>
                     {voices.map((v) => (
                       <option key={v.voiceURI} value={v.voiceURI}>
                         {v.name} ({v.lang})
@@ -308,7 +398,7 @@ export default function SettingsPage() {
                         rate: settings.ttsRate,
                       })
                     }
-                    aria-label="Nghe thử giọng đã chọn"
+                    aria-label={t('Nghe thử giọng đã chọn', 'Hear the chosen voice')}
                   >
                     <Volume2 className="h-4 w-4" />
                   </button>
@@ -317,7 +407,13 @@ export default function SettingsPage() {
             )}
           </>
         )}
-        <Row label="Tốc độ đọc" hint="Chậm lại nếu bạn muốn nghe rõ từng âm.">
+        <Row
+          label={t('Tốc độ đọc', 'Speaking speed')}
+          hint={t(
+            'Chậm lại nếu bạn muốn nghe rõ từng âm.',
+            'Slow down to hear every sound clearly.'
+          )}
+        >
           <div className="flex items-center gap-3">
             <input
               type="range"
@@ -326,8 +422,11 @@ export default function SettingsPage() {
               step={0.05}
               value={settings.ttsRate}
               onChange={(e) => settings.setTtsRate(Number(e.target.value))}
-              aria-label="Tốc độ đọc"
-              aria-valuetext={`${settings.ttsRate.toFixed(2)} lần`}
+              aria-label={t('Tốc độ đọc', 'Speaking speed')}
+              aria-valuetext={t(
+                `${settings.ttsRate.toFixed(2)} lần`,
+                `${settings.ttsRate.toFixed(2)} times`
+              )}
               disabled={!canPronounce}
               className="w-40 accent-brand-600 disabled:opacity-40"
             />
@@ -345,34 +444,43 @@ export default function SettingsPage() {
                   rate: settings.ttsRate,
                 })
               }
-              aria-label="Nghe thử phát âm"
+              aria-label={t('Nghe thử phát âm', 'Play a sample')}
             >
-              <Volume2 className="h-4 w-4" /> Nghe thử
+              <Volume2 className="h-4 w-4" /> {t('Nghe thử', 'Try it')}
             </button>
           </div>
         </Row>
-        <Row label="Tự động phát âm" hint="Đọc từ ngay khi hiện thẻ mới.">
+        <Row
+          label={t('Tự động phát âm', 'Auto-pronounce')}
+          hint={t('Đọc từ ngay khi hiện thẻ mới.', 'Say the word as soon as a new card appears.')}
+        >
           <Toggle
             checked={canPronounce && settings.autoSpeak}
             onChange={settings.setAutoSpeak}
-            label="Tự động phát âm"
+            label={t('Tự động phát âm', 'Auto-pronounce')}
             disabled={!canPronounce}
           />
         </Row>
       </Section>
 
       {/* Speaking practice */}
-      <Section title="Luyện nói">
+      <Section title={t('Luyện nói', 'Speaking')}>
         <Row
-          label="Độ khó chấm điểm"
+          label={t('Độ khó chấm điểm', 'Scoring strictness')}
           hint={
             canRecognize
-              ? '“Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.'
-              : 'Trình duyệt này chưa chấm điểm tự động được — bạn ghi âm rồi tự so với giọng mẫu.'
+              ? t(
+                  '“Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.',
+                  '“Strict” accepts only the exact word; “Easy” also accepts close attempts.'
+                )
+              : t(
+                  'Trình duyệt này chưa chấm điểm tự động được — bạn ghi âm rồi tự so với giọng mẫu.',
+                  "This browser can't score speech — record yourself and compare with the model voice."
+                )
           }
         >
           <div className="flex gap-1.5">
-            {STRICTNESS_OPTIONS.map(([value, label]) => (
+            {opts(STRICTNESS_OPTIONS).map(([value, label]) => (
               <button
                 key={value}
                 onClick={() => settings.setSpeechStrictness(value)}
@@ -391,35 +499,41 @@ export default function SettingsPage() {
       </Section>
 
       {/* Personalization level */}
-      <Section title="Trình độ (cá nhân hoá)">
+      <Section title={t('Trình độ (cá nhân hoá)', 'Level (personalization)')}>
         <Row
-          label="Tự động đánh giá trình độ"
-          hint="Ước lượng theo số từ thành thạo & độ chính xác của bạn."
+          label={t('Tự động đánh giá trình độ', 'Estimate my level automatically')}
+          hint={t(
+            'Ước lượng theo số từ thành thạo & độ chính xác của bạn.',
+            'Based on how many words you have mastered and your accuracy.'
+          )}
         >
           <Toggle
             checked={settings.autoLevel}
             onChange={settings.setAutoLevel}
-            label="Tự động đánh giá trình độ"
+            label={t('Tự động đánh giá trình độ', 'Estimate my level automatically')}
           />
         </Row>
         <Row
-          label="Trình độ hiện tại"
-          hint={`${levelInfo(effLevel).name} — ${levelInfo(effLevel).blurb}. Trợ lý AI sẽ giảng theo mức này.`}
+          label={t('Trình độ hiện tại', 'Current level')}
+          hint={t(
+            `${level(effLevel).name} — ${level(effLevel).blurb}. Trợ lý AI sẽ giảng theo mức này.`,
+            `${level(effLevel).name} — ${level(effLevel).blurb}. The AI tutor explains at this level.`
+          )}
         >
           {settings.autoLevel ? (
             <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-200">
-              {levelInfo(effLevel).tag} · {levelInfo(effLevel).name}
+              {levelInfo(effLevel).tag} · {level(effLevel).name}
             </span>
           ) : (
             <select
               value={settings.level}
               onChange={(e) => settings.setLevel(Number(e.target.value))}
-              aria-label="Chọn trình độ"
+              aria-label={t('Chọn trình độ', 'Choose a level')}
               className="rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
             >
               {LEVELS.map((l) => (
                 <option key={l.level} value={l.level}>
-                  {l.tag} · {l.name}
+                  {l.tag} · {level(l.level).name}
                 </option>
               ))}
             </select>
@@ -428,15 +542,24 @@ export default function SettingsPage() {
       </Section>
 
       {/* Data */}
-      <Section title="Dữ liệu & sao lưu">
-        <Row label="Sao lưu tiến độ" hint="Tải toàn bộ tiến độ & cài đặt ra file JSON.">
+      <Section title={t('Dữ liệu & sao lưu', 'Data & backup')}>
+        <Row
+          label={t('Sao lưu tiến độ', 'Back up progress')}
+          hint={t(
+            'Tải toàn bộ tiến độ & cài đặt ra file JSON.',
+            'Download all progress & settings as a JSON file.'
+          )}
+        >
           <button className="btn-secondary" onClick={downloadBackup}>
-            <Download className="h-4 w-4" /> Xuất file
+            <Download className="h-4 w-4" /> {t('Xuất file', 'Export')}
           </button>
         </Row>
-        <Row label="Khôi phục" hint="Nhập lại tiến độ từ file đã sao lưu.">
+        <Row
+          label={t('Khôi phục', 'Restore')}
+          hint={t('Nhập lại tiến độ từ file đã sao lưu.', 'Load progress from a backup file.')}
+        >
           <button className="btn-secondary" onClick={() => fileRef.current?.click()}>
-            <Upload className="h-4 w-4" /> Chọn file
+            <Upload className="h-4 w-4" /> {t('Chọn file', 'Choose file')}
           </button>
           <input
             ref={fileRef}
@@ -453,10 +576,16 @@ export default function SettingsPage() {
       </Section>
 
       {/* Danger zone */}
-      <Section title="Vùng nguy hiểm" danger>
+      <Section title={t('Vùng nguy hiểm', 'Danger zone')} danger>
         <Row
-          label={`Đặt lại tiến độ (${pack.meta.nativeName})`}
-          hint="Xóa toàn bộ thẻ & thống kê của ngôn ngữ hiện tại. Không thể hoàn tác."
+          label={t(
+            `Đặt lại tiến độ (${pack.meta.nativeName})`,
+            `Reset progress (${pack.meta.name})`
+          )}
+          hint={t(
+            'Xóa toàn bộ thẻ & thống kê của ngôn ngữ hiện tại. Không thể hoàn tác.',
+            'Deletes every card and statistic for this language. This cannot be undone.'
+          )}
         >
           {confirmReset ? (
             <div className="flex items-center gap-2">
@@ -465,13 +594,13 @@ export default function SettingsPage() {
                 onClick={() => {
                   resetLanguage(settings.currentLang)
                   setConfirmReset(false)
-                  setNotice('Đã đặt lại tiến độ.')
+                  setNotice(t('Đã đặt lại tiến độ.', 'Progress has been reset.'))
                 }}
               >
-                <AlertTriangle className="h-4 w-4" /> Xác nhận xóa
+                <AlertTriangle className="h-4 w-4" /> {t('Xác nhận xóa', 'Yes, delete')}
               </button>
               <button className="btn-ghost" onClick={() => setConfirmReset(false)}>
-                Hủy
+                {t('Hủy', 'Cancel')}
               </button>
             </div>
           ) : (
@@ -479,14 +608,14 @@ export default function SettingsPage() {
               className="btn bg-rose-100 text-rose-700 hover:bg-rose-200 dark:bg-rose-950 dark:text-rose-300"
               onClick={() => setConfirmReset(true)}
             >
-              Đặt lại
+              {t('Đặt lại', 'Reset')}
             </button>
           )}
         </Row>
       </Section>
 
       <p className="pt-2 text-center text-xs text-slate-400">
-        VocaStudy · Nguồn: {pack.meta.source}
+        VocaStudy · {t('Nguồn', 'Source')}: {pack.meta.source}
       </p>
     </div>
   )

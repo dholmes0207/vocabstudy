@@ -11,6 +11,7 @@ import { compareWeeks, recentCalendar, type WeekTotals } from '@/lib/calendar'
 import { ALL_STICKERS, STICKER_SETS, collected } from '@/lib/stickers'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
+import { useT, useUiLang } from '@/lib/i18n'
 
 const DAYS = 14
 
@@ -22,6 +23,8 @@ export default function Stats() {
 
   const cards = cardsOf(progress, code)
   const stats = statsOf(progress, code)
+  const t = useT()
+  const lang = useUiLang()
   const s = summarize(pack.words, progress[code], dailyNewLimit)
 
   const boxCounts = useMemo(() => {
@@ -47,31 +50,37 @@ export default function Stats() {
     : 0
   const maxActivity = Math.max(1, ...activity.map((a) => a.reviews + a.news))
   const calendar = recentCalendar(stats.reviewsByDay, today())
-  const week = compareWeeks(stats.reviewsByDay, stats.newByDay, today())
+  const week = compareWeeks(stats.reviewsByDay, stats.newByDay, today(), lang)
   const album = collected(stats.stickers ?? {})
 
-  const achievements = evaluateAchievements({
-    learned: s.learned,
-    mastered: s.mastered,
-    streak: stats.streak,
-    xp: stats.xp,
-    totalReviews: stats.totalReviews,
-    accuracy,
-    daysStudied: Object.values(stats.reviewsByDay).filter((n) => n > 0).length,
-    bestStreak: stats.bestStreak ?? stats.streak,
-    stickers: collected(stats.stickers ?? {}).size,
-  })
+  const achievements = evaluateAchievements(
+    {
+      learned: s.learned,
+      mastered: s.mastered,
+      streak: stats.streak,
+      xp: stats.xp,
+      totalReviews: stats.totalReviews,
+      accuracy,
+      daysStudied: Object.values(stats.reviewsByDay).filter((n) => n > 0).length,
+      bestStreak: stats.bestStreak ?? stats.streak,
+      stickers: collected(stats.stickers ?? {}).size,
+    },
+    lang
+  )
   const unlockedCount = achievements.filter((a) => a.unlocked).length
 
   if (s.learned === 0) {
     return (
       <EmptyState
         emoji="📊"
-        title="Chưa có dữ liệu thống kê"
-        description="Bắt đầu học để xem tiến độ của bạn hiện lên ở đây."
+        title={t('Chưa có dữ liệu thống kê', 'No stats yet')}
+        description={t(
+          'Bắt đầu học để xem tiến độ của bạn hiện lên ở đây.',
+          'Start learning and your progress will show up here.'
+        )}
       >
         <Link to="/learn" className="btn-primary">
-          Học từ mới
+          {t('Học từ mới', 'Learn new words')}
         </Link>
       </EmptyState>
     )
@@ -81,41 +90,67 @@ export default function Stats() {
     <div className="space-y-6 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">Thống kê</span> <span aria-hidden="true">📈</span>
+          <span className="text-aurora">{t('Thống kê', 'Stats')}</span>{' '}
+          <span aria-hidden="true">📈</span>
         </h1>
         <p className="mt-1 text-slate-500">
-          Theo dõi hành trình chinh phục {pack.meta.count} từ của bạn.
+          {t(
+            `Theo dõi hành trình chinh phục ${pack.meta.count} từ của bạn.`,
+            `Follow your journey through ${pack.meta.count} words.`
+          )}
         </p>
       </header>
 
       {/* KPI cards */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Kpi icon={Flame} tone="text-orange-500" value={`${stats.streak}`} label="Ngày liên tiếp" />
-        <Kpi icon={Star} tone="text-amber-500" value={`${stats.xp}`} label="Điểm XP" />
-        <Kpi icon={Target} tone="text-brand-600" value={`${accuracy}%`} label="Độ chính xác" />
-        <Kpi icon={Award} tone="text-emerald-600" value={`${s.mastered}`} label="Từ thành thạo" />
+        <Kpi
+          icon={Flame}
+          tone="text-orange-500"
+          value={`${stats.streak}`}
+          label={t('Ngày liên tiếp', 'Day streak')}
+        />
+        <Kpi icon={Star} tone="text-amber-500" value={`${stats.xp}`} label={t('Điểm XP', 'XP')} />
+        <Kpi
+          icon={Target}
+          tone="text-brand-600"
+          value={`${accuracy}%`}
+          label={t('Độ chính xác', 'Accuracy')}
+        />
+        <Kpi
+          icon={Award}
+          tone="text-emerald-600"
+          value={`${s.mastered}`}
+          label={t('Từ thành thạo', 'Words mastered')}
+        />
       </div>
 
       {/* Overall composition */}
       <section className="card p-6">
-        <h2 className="mb-4 font-bold">Tổng quan tiến độ</h2>
+        <h2 className="mb-4 font-bold">{t('Tổng quan tiến độ', 'Progress overview')}</h2>
         <div className="flex h-4 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
           <Bar value={s.mastered} total={s.total} className="bg-emerald-500" />
           <Bar value={s.learning} total={s.total} className="bg-amber-400" />
           <Bar value={s.fresh} total={s.total} className="bg-slate-300 dark:bg-slate-600" />
         </div>
         <div className="mt-4 grid grid-cols-3 gap-3 text-center text-sm">
-          <Legend color="bg-emerald-500" label="Thành thạo" value={s.mastered} />
-          <Legend color="bg-amber-400" label="Đang học" value={s.learning} />
-          <Legend color="bg-slate-300 dark:bg-slate-600" label="Chưa học" value={s.fresh} />
+          <Legend color="bg-emerald-500" label={t('Thành thạo', 'Mastered')} value={s.mastered} />
+          <Legend color="bg-amber-400" label={t('Đang học', 'Learning')} value={s.learning} />
+          <Legend
+            color="bg-slate-300 dark:bg-slate-600"
+            label={t('Chưa học', 'Not started')}
+            value={s.fresh}
+          />
         </div>
       </section>
 
       {/* SRS box distribution */}
       <section className="card p-6">
-        <h2 className="mb-1 font-bold">Phân bố theo bậc ghi nhớ</h2>
+        <h2 className="mb-1 font-bold">{t('Phân bố theo bậc ghi nhớ', 'Cards by memory stage')}</h2>
         <p className="mb-4 text-sm text-slate-400">
-          Càng lên bậc cao, khoảng cách ôn càng dài (lặp lại ngắt quãng).
+          {t(
+            'Càng lên bậc cao, khoảng cách ôn càng dài (lặp lại ngắt quãng).',
+            'The higher the stage, the longer the gap before the next review (spaced repetition).'
+          )}
         </p>
         <div className="flex items-end gap-2" style={{ height: 160 }}>
           {boxCounts.map((cnt, box) => {
@@ -139,18 +174,21 @@ export default function Stats() {
           })}
         </div>
         <p className="mt-2 text-center text-xs text-slate-400">
-          Nhãn = khoảng cách ôn của mỗi bậc (ngày) · 🏆 = đã thành thạo
+          {t(
+            'Nhãn = khoảng cách ôn của mỗi bậc (ngày) · 🏆 = đã thành thạo',
+            'Labels = review gap for each stage (days) · 🏆 = mastered'
+          )}
         </p>
       </section>
 
       {/* This week against the last: progress measured against yourself */}
       {week && (
         <section className="card p-5">
-          <h2 className="font-bold">7 ngày qua</h2>
+          <h2 className="font-bold">{t('7 ngày qua', 'Last 7 days')}</h2>
           <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">{week.message}</p>
           <div className="grid grid-cols-3 gap-3">
-            {WEEK_TILES.map(([key, label]) => (
-              <WeekTile key={key} label={label} now={week.now[key]} before={week.before[key]} />
+            {WEEK_TILES.map(([key, vi, en]) => (
+              <WeekTile key={key} label={t(vi, en)} now={week.now[key]} before={week.before[key]} />
             ))}
           </div>
         </section>
@@ -158,27 +196,36 @@ export default function Stats() {
 
       {/* Study calendar: the last 5 weeks */}
       <section className="card p-5">
-        <h2 className="font-bold">5 tuần gần đây</h2>
+        <h2 className="font-bold">{t('5 tuần gần đây', 'Last 5 weeks')}</h2>
         <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">
-          Mỗi ô sáng là một ngày bạn đã học — cố đừng để chuỗi đứt nhé.
+          {t(
+            'Mỗi ô sáng là một ngày bạn đã học — cố đừng để chuỗi đứt nhé.',
+            'Each lit square is a day you studied — try not to break the chain.'
+          )}
         </p>
         <div className="grid max-w-sm grid-cols-7 gap-1.5">
           {calendar.map((c) => (
             <div
               key={c.day}
-              title={`${formatDay(c.day)}: ${c.count} câu`}
+              title={t(
+                `${formatDay(c.day)}: ${c.count} câu`,
+                `${formatDay(c.day)}: ${c.count} answers`
+              )}
               className={`cal-cell cal-${c.level} aspect-square rounded-md ${c.isToday ? 'ring-2 ring-brand-500' : ''}`}
             />
           ))}
         </div>
         <p className="mt-2 text-xs text-slate-400">
-          Đã học {calendar.filter((c) => c.count > 0).length}/{calendar.length} ngày
+          {t('Đã học', 'Studied on')} {calendar.filter((c) => c.count > 0).length}/{calendar.length}{' '}
+          {t('ngày', 'days')}
         </p>
       </section>
 
       {/* Activity last 14 days */}
       <section className="card p-6">
-        <h2 className="mb-4 font-bold">Hoạt động {DAYS} ngày gần đây</h2>
+        <h2 className="mb-4 font-bold">
+          {t(`Hoạt động ${DAYS} ngày gần đây`, `Activity in the last ${DAYS} days`)}
+        </h2>
         <div className="flex items-end gap-1.5" style={{ height: 140 }}>
           {activity.map((a) => {
             const total = a.reviews + a.news
@@ -187,7 +234,10 @@ export default function Stats() {
               <div
                 key={a.day}
                 className="group flex flex-1 flex-col items-center gap-1"
-                title={`${formatDay(a.day)}: ${a.news} từ mới, ${a.reviews} lượt ôn`}
+                title={t(
+                  `${formatDay(a.day)}: ${a.news} từ mới, ${a.reviews} lượt ôn`,
+                  `${formatDay(a.day)}: ${a.news} new words, ${a.reviews} reviews`
+                )}
               >
                 <div className="flex w-full flex-1 items-end">
                   <div
@@ -211,10 +261,10 @@ export default function Stats() {
         </div>
         <div className="mt-3 flex justify-center gap-4 text-xs text-slate-400">
           <span className="flex items-center gap-1.5">
-            <i className="h-2.5 w-2.5 rounded-full bg-emerald-400" /> Từ mới
+            <i className="h-2.5 w-2.5 rounded-full bg-emerald-400" /> {t('Từ mới', 'New words')}
           </span>
           <span className="flex items-center gap-1.5">
-            <i className="h-2.5 w-2.5 rounded-full bg-brand-500" /> Ôn tập
+            <i className="h-2.5 w-2.5 rounded-full bg-brand-500" /> {t('Ôn tập', 'Reviews')}
           </span>
         </div>
       </section>
@@ -222,7 +272,7 @@ export default function Stats() {
       {/* Achievements */}
       <section className="card p-6">
         <div className="mb-4 flex items-baseline justify-between">
-          <h2 className="font-bold">Huy hiệu 🏅</h2>
+          <h2 className="font-bold">{t('Huy hiệu 🏅', 'Badges 🏅')}</h2>
           <span className="text-sm text-slate-400">
             {unlockedCount}/{achievements.length}
           </span>
@@ -263,20 +313,23 @@ export default function Stats() {
       {/* "Quà mỗi ngày": the sticker album */}
       <section className="card p-6">
         <div className="flex items-baseline justify-between gap-3">
-          <h2 className="font-bold">Bộ sưu tập nhãn dán 🎁</h2>
+          <h2 className="font-bold">{t('Bộ sưu tập nhãn dán 🎁', 'Sticker collection 🎁')}</h2>
           <span className="text-sm text-slate-500">
             {album.size}/{ALL_STICKERS.length}
           </span>
         </div>
         <p className="text-sm text-slate-500 dark:text-slate-400">
-          Mỗi ngày đạt mục tiêu nhỏ mở được một nhãn dán mới — mỗi nhãn là một từ tiếng Anh.
+          {t(
+            'Mỗi ngày đạt mục tiêu nhỏ mở được một nhãn dán mới — mỗi nhãn là một từ tiếng Anh.',
+            'Each day you reach your small goal opens a new sticker — every sticker is an English word.'
+          )}
         </p>
         {STICKER_SETS.map((set) => {
           const got = set.stickers.filter((st) => album.has(ALL_STICKERS.indexOf(st))).length
           return (
             <div key={set.name} className="mt-4">
               <p className="mb-2 text-sm font-semibold">
-                {set.name}{' '}
+                {t(set.name, set.nameEn)}{' '}
                 <span className="font-normal text-slate-400">
                   {got}/{set.stickers.length}
                 </span>
@@ -298,7 +351,7 @@ export default function Stats() {
                   ) : (
                     <div
                       key={st.en}
-                      aria-label="Chưa mở"
+                      aria-label={t('Chưa mở', 'Not opened yet')}
                       className="grid place-items-center rounded-xl bg-slate-100 py-2 text-2xl font-bold text-slate-300 dark:bg-slate-800 dark:text-slate-600"
                     >
                       ?
@@ -350,13 +403,14 @@ function Legend({ color, label, value }: { color: string; label: string; value: 
   )
 }
 
-const WEEK_TILES: [keyof WeekTotals, string][] = [
-  ['answers', 'câu trả lời'],
-  ['words', 'từ mới'],
-  ['days', 'ngày học'],
+const WEEK_TILES: [keyof WeekTotals, string, string][] = [
+  ['answers', 'câu trả lời', 'answers'],
+  ['words', 'từ mới', 'new words'],
+  ['days', 'ngày học', 'study days'],
 ]
 
 function WeekTile({ label, now, before }: { label: string; now: number; before: number }) {
+  const t = useT()
   const diff = now - before
   return (
     <div className="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-800/60">
@@ -365,7 +419,11 @@ function WeekTile({ label, now, before }: { label: string; now: number; before: 
       <p
         className={`mt-1 text-xs font-semibold ${diff > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400'}`}
       >
-        {diff > 0 ? `▲ ${diff}` : diff < 0 ? `tuần trước ${before}` : '= tuần trước'}
+        {diff > 0
+          ? `▲ ${diff}`
+          : diff < 0
+            ? t(`tuần trước ${before}`, `last week ${before}`)
+            : t('= tuần trước', '= last week')}
       </p>
     </div>
   )

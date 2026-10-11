@@ -11,6 +11,7 @@ export interface Sticker {
 
 export interface StickerSet {
   name: string
+  nameEn: string
   stickers: Sticker[]
 }
 
@@ -19,6 +20,7 @@ const s = (emoji: string, en: string, vi: string): Sticker => ({ emoji, en, vi }
 export const STICKER_SETS: StickerSet[] = [
   {
     name: 'Bầu trời',
+    nameEn: 'Sky',
     stickers: [
       s('☀️', 'sun', 'mặt trời'),
       s('🌙', 'moon', 'mặt trăng'),
@@ -36,6 +38,7 @@ export const STICKER_SETS: StickerSet[] = [
   },
   {
     name: 'Động vật',
+    nameEn: 'Animals',
     stickers: [
       s('🐼', 'panda', 'gấu trúc'),
       s('🦊', 'fox', 'con cáo'),
@@ -53,6 +56,7 @@ export const STICKER_SETS: StickerSet[] = [
   },
   {
     name: 'Món ngon',
+    nameEn: 'Good food',
     stickers: [
       s('🍜', 'noodles', 'mì, phở'),
       s('🥖', 'baguette', 'bánh mì'),
@@ -70,6 +74,7 @@ export const STICKER_SETS: StickerSet[] = [
   },
   {
     name: 'Du lịch',
+    nameEn: 'Travel',
     stickers: [
       s('🏰', 'castle', 'lâu đài'),
       s('🗼', 'tower', 'tòa tháp'),

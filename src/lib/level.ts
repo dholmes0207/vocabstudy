@@ -2,6 +2,8 @@
 // teaches ("học 1 hiểu N") and which questions it suggests. It can be computed
 // automatically from progress, or overridden by the learner.
 
+import type { UiLang } from '@/types'
+
 export interface LevelInfo {
   level: number
   name: string
@@ -9,6 +11,8 @@ export interface LevelInfo {
   tag: string
   /** One-line description for the UI. */
   blurb: string
+  nameEn: string
+  blurbEn: string
   /** Instruction appended to the AI system prompt to set teaching depth. */
   aiInstruction: string
 }
@@ -19,6 +23,8 @@ export const LEVELS: LevelInfo[] = [
     name: 'Mới bắt đầu',
     tag: 'A1',
     blurb: 'Học nghĩa & mặt chữ cơ bản',
+    nameEn: 'Beginner',
+    blurbEn: 'Basic meanings and spelling',
     aiInstruction:
       'Người học MỚI BẮT ĐẦU, gần như mất gốc. Chỉ cần: nói NGHĨA bằng tiếng Việt thật đơn giản + đúng 1 ví dụ ngắn, đời thường (kèm nghĩa tiếng Việt). Dùng từ dễ nhất, KHÔNG thuật ngữ, KHÔNG liệt kê nhiều. Có thể thêm cách đọc gần đúng kiểu Việt để bạn ấy đọc theo.',
   },
@@ -27,6 +33,8 @@ export const LEVELS: LevelInfo[] = [
     name: 'Sơ cấp',
     tag: 'A2',
     blurb: 'Nghĩa + ví dụ + từ liên quan cơ bản',
+    nameEn: 'Elementary',
+    blurbEn: 'Meanings, examples and basic related words',
     aiInstruction:
       'Trình độ SƠ CẤP. Nói nghĩa + 1–2 ví dụ đời thường (kèm dịch) + 1 từ gần nghĩa hoặc trái nghĩa (giới thiệu mộc mạc, ví dụ "gần nghĩa với…", "ngược với…"). Vẫn thật dễ hiểu và khích lệ.',
   },
@@ -35,6 +43,8 @@ export const LEVELS: LevelInfo[] = [
     name: 'Trung cấp',
     tag: 'B1',
     blurb: '“Học 1 hiểu 3”: từ hay đi chung, từ cùng gốc',
+    nameEn: 'Intermediate',
+    blurbEn: '“Learn 1, know 3”: collocations and word families',
     aiInstruction:
       'Trình độ TRUNG CẤP — "học 1 hiểu 3". Ngoài nghĩa & ví dụ, thêm (diễn đạt thuần Việt, mỗi ý một dòng): 1–2 "từ/cụm hay đi chung với nó", vài "từ cùng gốc" (danh từ/động từ/tính từ liên quan), và so sánh ngắn với 1 từ dễ nhầm. Không dùng thuật ngữ.',
   },
@@ -43,6 +53,8 @@ export const LEVELS: LevelInfo[] = [
     name: 'Trung cao',
     tag: 'B2',
     blurb: '“Học 1 hiểu 5”: sắc thái, trang trọng/thân mật, thành ngữ',
+    nameEn: 'Upper intermediate',
+    blurbEn: '“Learn 1, know 5”: nuance, formal vs. casual, idioms',
     aiInstruction:
       'Trình độ TRUNG CAO — "học 1 hiểu 5". Thêm: sắc thái nghĩa; khi nào dùng trong tình huống trang trọng, khi nào thân mật; 1–2 cụm động từ/thành ngữ liên quan (kèm nghĩa); và 2–3 ví dụ ở các tình huống khác nhau. Giải thích khác biệt bằng lời thường, có ví dụ minh hoạ, KHÔNG liệt kê khô khan.',
   },
@@ -51,10 +63,19 @@ export const LEVELS: LevelInfo[] = [
     name: 'Nâng cao',
     tag: 'C1',
     blurb: '“Học 1 hiểu 10”: gốc từ, mở rộng sâu',
+    nameEn: 'Advanced',
+    blurbEn: '“Learn 1, know 10”: word roots, going deep',
     aiInstruction:
       'Trình độ NÂNG CAO — "học 1 hiểu 10". Đào sâu nhưng vẫn GIẢNG rõ ràng và có ví dụ: gốc của từ (nếu thú vị & giúp nhớ), các từ cùng gốc mở rộng, cách dùng trong văn viết/học thuật, và phân biệt tinh tế giữa vài từ gần nghĩa (nói rõ khi nào dùng từ nào). Tránh viết như từ điển; kết bằng 1 câu hỏi mở để bạn ấy luyện tư duy.',
   },
 ]
+
+/** Name and description in the interface language. */
+export function levelLabel(info: LevelInfo, lang: UiLang): { name: string; blurb: string } {
+  return lang === 'en'
+    ? { name: info.nameEn, blurb: info.blurbEn }
+    : { name: info.name, blurb: info.blurb }
+}
 
 export function levelInfo(level: number): LevelInfo {
   const l = Math.max(1, Math.min(LEVELS.length, Math.round(level)))
