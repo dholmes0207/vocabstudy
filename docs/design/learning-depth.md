@@ -13,7 +13,7 @@
 ## PHẦN 1 — VAI NGƯỜI HỌC (mất gốc)
 
 Mình 27 tuổi, đi làm văn phòng, tiếng Anh "trả lại thầy cô" từ hồi cấp 3. Mình
-dùng VocabStudy được 3 tuần, mỗi tối 15 phút. App đẹp, có tiếng đọc, có lịch ôn.
+dùng VocaStudy được 3 tuần, mỗi tối 15 phút. App đẹp, có tiếng đọc, có lịch ôn.
 Nhưng mình bắt đầu thấy mấy chuyện này:
 
 - **Mình "thuộc" mà không nhớ.** Lúc học từ mới, thẻ hiện "ability", mình lật

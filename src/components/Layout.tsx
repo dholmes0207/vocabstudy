@@ -142,11 +142,11 @@ function Brand({ compact = false }: { compact?: boolean }) {
       </span>
       {!compact && (
         <div className="leading-tight">
-          <p className="font-extrabold tracking-tight">VocabStudy</p>
+          <p className="font-extrabold tracking-tight">VocaStudy</p>
           <p className="text-xs text-slate-400">Học từ vựng thông minh</p>
         </div>
       )}
-      {compact && <p className="font-extrabold tracking-tight">VocabStudy</p>}
+      {compact && <p className="font-extrabold tracking-tight">VocaStudy</p>}
     </div>
   )
 }

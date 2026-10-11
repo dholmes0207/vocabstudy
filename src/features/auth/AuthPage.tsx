@@ -56,7 +56,7 @@ export default function AuthPage() {
             📚
           </span>
           <h1 className="mt-3 text-xl font-extrabold">
-            <span className="text-aurora">VocabStudy</span>
+            <span className="text-aurora">VocaStudy</span>
           </h1>
           <p className="text-sm text-slate-400">
             {mode === 'login' ? 'Đăng nhập để đồng bộ tiến độ' : 'Tạo tài khoản mới'}

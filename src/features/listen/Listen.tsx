@@ -307,7 +307,7 @@ function Player({
       ms.metadata = new MediaMetadata({
         title: word.word,
         artist: word.meaning,
-        album: 'VocabStudy · Nghe thụ động',
+        album: 'VocaStudy · Nghe thụ động',
       })
     }
     const handlers: [MediaSessionAction, () => void][] = [

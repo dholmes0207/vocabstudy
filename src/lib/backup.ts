@@ -1,4 +1,4 @@
-// Export/import all VocabStudy data (progress + settings) as a JSON file.
+// Export/import all VocaStudy data (progress + settings) as a JSON file.
 // Everything lives under the "vocab." localStorage prefix.
 
 const PREFIX = 'vocab.'

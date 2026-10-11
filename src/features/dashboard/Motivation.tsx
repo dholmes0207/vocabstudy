@@ -210,7 +210,7 @@ export function MySky({
     const url = 'https://vocastudy.app/'
     try {
       if (navigator.share) {
-        await navigator.share({ title: 'VocabStudy', text, url })
+        await navigator.share({ title: 'VocaStudy', text, url })
         return
       }
       await navigator.clipboard.writeText(`${text} ${url}`)

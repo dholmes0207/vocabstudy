@@ -1,4 +1,4 @@
-// VocabStudy service worker — offline support for the learning content.
+// VocaStudy service worker — offline support for the learning content.
 //
 // Written by hand and kept deliberately small so its behaviour is obvious:
 //

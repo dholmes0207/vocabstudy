@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pre-render high-quality Neural TTS audio for a VocabStudy language pack using
+Pre-render high-quality Neural TTS audio for a VocaStudy language pack using
 edge-tts (Microsoft Edge online neural voices — free, no API key).
 
 Supports MULTIPLE voices. For each voice it writes:

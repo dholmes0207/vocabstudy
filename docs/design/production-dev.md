@@ -4,7 +4,7 @@
 
 ---
 
-# VocabStudy — Thiết Kế Kỹ Thuật Production (Multi-user)
+# VocaStudy — Thiết Kế Kỹ Thuật Production (Multi-user)
 
 > Mục tiêu: giữ nguyên frontend React/Vite hiện có, bổ sung backend + DB + auth + admin + AI proxy server-side, deploy được, test được, ưu tiên chạy local không cần dịch vụ ngoài.
 
@@ -315,7 +315,7 @@ Giữ toàn bộ UI hiện có; thêm/đổi:
 ## 7. Cấu trúc thư mục (monorepo) & biến môi trường
 
 ```
-VocabStudy/
+VocaStudy/
 ├─ package.json                # workspaces: ["server"]  (frontend ở root, giữ nguyên)
 ├─ index.html  vite.config.ts  tsconfig*.json  tailwind.config.js
 ├─ src/                        # FRONTEND (giữ nguyên) + thêm:

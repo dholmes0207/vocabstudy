@@ -1,4 +1,4 @@
-# Deploy VocabStudy — Cloudflare Pages + Supabase
+# Deploy VocaStudy — Cloudflare Pages + Supabase
 
 Kiến trúc: **frontend tĩnh (Cloudflare Pages)** + **Supabase (Auth + Postgres + RLS)** + **Cloudflare Pages Functions** (AI proxy & admin, giữ secret server-side). Không cần server Node riêng.
 

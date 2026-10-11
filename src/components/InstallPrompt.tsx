@@ -77,7 +77,7 @@ export default function InstallPrompt() {
         <Smartphone className="h-5 w-5" />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="font-bold">Đặt VocabStudy lên màn hình chính</p>
+        <p className="font-bold">Đặt VocaStudy lên màn hình chính</p>
         <p className="text-sm text-slate-500 dark:text-slate-400">
           {ios
             ? 'Mở học bằng một chạm như ứng dụng: bấm nút Chia sẻ (ô vuông có mũi tên) rồi chọn “Thêm vào MH chính”.'

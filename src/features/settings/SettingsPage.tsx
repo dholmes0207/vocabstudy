@@ -486,7 +486,7 @@ export default function SettingsPage() {
       </Section>
 
       <p className="pt-2 text-center text-xs text-slate-400">
-        VocabStudy · Nguồn: {pack.meta.source}
+        VocaStudy · Nguồn: {pack.meta.source}
       </p>
     </div>
   )

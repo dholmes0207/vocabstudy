@@ -1,6 +1,6 @@
 # Production hoá — Vai Business Analyst
 
-# Tài liệu Phân tích Nghiệp vụ (BA) — Production hoá VocabStudy
+# Tài liệu Phân tích Nghiệp vụ (BA) — Production hoá VocaStudy
 
 _Phiên bản: 1.0 · Ngày: 08/08/2026 · Người soạn: BA · Trạng thái: Draft để review_
 
@@ -8,7 +8,7 @@ _Phiên bản: 1.0 · Ngày: 08/08/2026 · Người soạn: BA · Trạng thái:
 
 ## 0. Tóm tắt điều hành
 
-VocabStudy hiện là ứng dụng học 1000 từ vựng tiếng Anh chạy client-side (React + Vite), lưu tiến độ trong `localStorage`, và để lộ API key OpenAI cùng cơ chế "phân quyền" ngay trên trình duyệt — không an toàn cho nhiều người dùng. Tài liệu này định nghĩa phạm vi, yêu cầu và tiêu chí nghiệm thu để chuyển sản phẩm sang bản **production đa người dùng**: có database thật, đăng ký/đăng nhập, quản trị tài khoản, guardrail + API key AI đặt phía server, và triển khai được lên server.
+VocaStudy hiện là ứng dụng học 1000 từ vựng tiếng Anh chạy client-side (React + Vite), lưu tiến độ trong `localStorage`, và để lộ API key OpenAI cùng cơ chế "phân quyền" ngay trên trình duyệt — không an toàn cho nhiều người dùng. Tài liệu này định nghĩa phạm vi, yêu cầu và tiêu chí nghiệm thu để chuyển sản phẩm sang bản **production đa người dùng**: có database thật, đăng ký/đăng nhập, quản trị tài khoản, guardrail + API key AI đặt phía server, và triển khai được lên server.
 
 **Ràng buộc kiến trúc cốt lõi:** giữ nguyên frontend React/Vite hiện có; bổ sung một tầng backend + database chạy được local (không phụ thuộc dịch vụ đám mây bắt buộc) và test được.
 
@@ -29,7 +29,7 @@ VocabStudy hiện là ứng dụng học 1000 từ vựng tiếng Anh chạy cli
 
 ### 1.1 Tầm nhìn
 
-Đưa VocabStudy từ công cụ cá nhân thành **nền tảng học từ vựng nhiều người dùng an toàn**, nơi mỗi học sinh có tài khoản, tiến độ đồng bộ đa thiết bị, còn giáo viên/admin quản lý người dùng và cấu hình AI tập trung, chi phí và bảo mật được kiểm soát.
+Đưa VocaStudy từ công cụ cá nhân thành **nền tảng học từ vựng nhiều người dùng an toàn**, nơi mỗi học sinh có tài khoản, tiến độ đồng bộ đa thiết bị, còn giáo viên/admin quản lý người dùng và cấu hình AI tập trung, chi phí và bảo mật được kiểm soát.
 
 ### 1.2 Ngoài phạm vi (Out of scope) ở bản production đầu tiên
 

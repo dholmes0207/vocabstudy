@@ -1,4 +1,4 @@
-# KẾ HOẠCH DỰ ÁN — VocabStudy
+# KẾ HOẠCH DỰ ÁN — VocaStudy
 
 > **Website học & ôn từ vựng đa ngôn ngữ**, khởi đầu với **1000 từ tiếng Anh thông dụng** (chuẩn Oxford & Cambridge) dành cho **người Việt học tiếng Anh**.
 >

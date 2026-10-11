@@ -151,7 +151,7 @@ export function quickStartPath(due: number): string {
 
 /** The text shared by "Khoe bầu trời" — progress in one friendly line. */
 export function shareText(learned: number, streak: number): string {
-  const parts = [`Mình đã thắp sáng ${learned} ngôi sao (từ tiếng Anh) trên VocabStudy 🌟`]
+  const parts = [`Mình đã thắp sáng ${learned} ngôi sao (từ tiếng Anh) trên VocaStudy 🌟`]
   if (streak >= 2) parts.push(`chuỗi ${streak} ngày liên tục 🔥`)
   return `${parts.join(', ')}. Học cùng mình nhé!`
 }

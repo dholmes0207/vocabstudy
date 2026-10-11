@@ -82,7 +82,7 @@ export function reminderIcs(time: string, now: Date, url = APP_URL): string {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//VocabStudy//Nhac hoc//VI',
+    'PRODID:-//VocaStudy//Nhac hoc//VI',
     'CALSCALE:GREGORIAN',
     'BEGIN:VEVENT',
     `UID:vocabstudy-daily-${utc(now)}@vocastudy.app`,
@@ -91,7 +91,7 @@ export function reminderIcs(time: string, now: Date, url = APP_URL): string {
     `DURATION:PT${DURATION_MIN}M`,
     'RRULE:FREQ=DAILY',
     `SUMMARY:${esc(TITLE)}`,
-    `DESCRIPTION:${esc(`Mở VocabStudy và học nhanh 2 phút: ${url}`)}`,
+    `DESCRIPTION:${esc(`Mở VocaStudy và học nhanh 2 phút: ${url}`)}`,
     `URL:${url}`,
     'BEGIN:VALARM',
     'ACTION:DISPLAY',
@@ -111,7 +111,7 @@ export function googleCalendarUrl(time: string, now: Date, url = APP_URL): strin
   const q = new URLSearchParams({
     action: 'TEMPLATE',
     text: TITLE,
-    details: `Mở VocabStudy và học nhanh 2 phút: ${url}`,
+    details: `Mở VocaStudy và học nhanh 2 phút: ${url}`,
     dates: `${local(start)}/${local(end)}`,
     recur: 'RRULE:FREQ=DAILY',
   })

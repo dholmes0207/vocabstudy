@@ -1,4 +1,4 @@
-# 📚 VocabStudy — Học & ôn từ vựng thông minh
+# 📚 VocaStudy — Học & ôn từ vựng thông minh
 
 🌐 **[vocastudy.app](https://vocastudy.app)**
 

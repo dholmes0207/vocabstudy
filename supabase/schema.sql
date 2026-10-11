@@ -1,5 +1,5 @@
 -- ============================================================================
--- VocabStudy — Supabase schema. Run it in the Supabase SQL editor; it is safe
+-- VocaStudy — Supabase schema. Run it in the Supabase SQL editor; it is safe
 -- to run again after an update (every statement is idempotent).
 -- Tables: profiles (1:1 with auth.users) + progress (per user, per language).
 -- Security: Row Level Security so each user only touches their own rows.
