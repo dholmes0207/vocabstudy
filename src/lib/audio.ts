@@ -65,6 +65,14 @@ export function exampleAudio(id: number, text?: string): string {
   return text ? `${url}?v=${textHash(text)}` : url
 }
 
+/** URL of the recorded audio for an everyday phrase ('' when none). */
+export function phraseAudio(id: number, text?: string): string {
+  const v = effectiveVoice()
+  if (!v) return ''
+  const url = `${base}audio/${currentCode}/${v}/p${id}.mp3`
+  return text ? `${url}?v=${textHash(text)}` : url
+}
+
 // Clips already pulled into the HTTP cache this session, so a learner tapping
 // back and forth doesn't re-issue requests.
 const prefetched = new Set<string>()

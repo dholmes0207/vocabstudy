@@ -1,0 +1,185 @@
+{
+  "version": "1.0.0",
+  "topics": [
+    {
+      "id": "greetings",
+      "emoji": "👋",
+      "title": "Chào hỏi & làm quen",
+      "titleEn": "Greetings & introductions",
+      "phrases": [
+        { "id": 1, "en": "Hi! How are you?", "vi": "Chào bạn! Bạn khỏe không?", "note": "Câu chào phổ biến nhất. Trả lời: I'm good, thanks. And you?" },
+        { "id": 2, "en": "I'm good, thanks. And you?", "vi": "Mình khỏe, cảm ơn. Còn bạn?", "note": "Người bản xứ hay nói \"I'm good\" hơn \"I'm fine\"." },
+        { "id": 3, "en": "Nice to meet you.", "vi": "Rất vui được gặp bạn.", "note": "Dùng khi gặp ai lần đầu. Đáp lại: Nice to meet you too." },
+        { "id": 4, "en": "My name is Lan. What's your name?", "vi": "Mình tên là Lan. Bạn tên gì?", "note": "Thân mật hơn: I'm Lan." },
+        { "id": 5, "en": "Where are you from?", "vi": "Bạn đến từ đâu?", "note": "Đáp: I'm from Vietnam." },
+        { "id": 6, "en": "I'm from Vietnam.", "vi": "Mình đến từ Việt Nam." },
+        { "id": 7, "en": "What do you do?", "vi": "Bạn làm nghề gì?", "note": "Hỏi về công việc, không phải \"bạn đang làm gì\". Đáp: I'm a teacher." },
+        { "id": 8, "en": "Long time no see!", "vi": "Lâu rồi không gặp!", "note": "Thân mật, dùng với người quen." },
+        { "id": 9, "en": "See you later!", "vi": "Hẹn gặp lại nhé!", "note": "Chào tạm biệt thân mật. Trang trọng hơn: Goodbye." },
+        { "id": 10, "en": "Have a nice day!", "vi": "Chúc bạn một ngày tốt lành!" }
+      ]
+    },
+    {
+      "id": "understanding",
+      "emoji": "🤔",
+      "title": "Khi chưa nghe rõ",
+      "titleEn": "When you don't understand",
+      "phrases": [
+        { "id": 11, "en": "Sorry, could you say that again?", "vi": "Xin lỗi, bạn nói lại được không?", "note": "Câu cứu cánh số 1 cho người mới học!" },
+        { "id": 12, "en": "Could you speak more slowly, please?", "vi": "Bạn nói chậm hơn được không?", "note": "Thêm \"please\" cho lịch sự." },
+        { "id": 13, "en": "I don't understand.", "vi": "Mình không hiểu." },
+        { "id": 14, "en": "What does this word mean?", "vi": "Từ này nghĩa là gì?" },
+        { "id": 15, "en": "How do you say this in English?", "vi": "Cái này tiếng Anh nói thế nào?", "note": "Chỉ vào đồ vật khi hỏi." },
+        { "id": 16, "en": "How do you spell it?", "vi": "Từ đó đánh vần thế nào?" },
+        { "id": 17, "en": "Can you write it down for me?", "vi": "Bạn viết ra giúp mình được không?" },
+        { "id": 18, "en": "My English is not very good.", "vi": "Tiếng Anh của mình chưa tốt lắm.", "note": "Người nghe sẽ tự nói chậm và dễ hơn." },
+        { "id": 19, "en": "Do you mean this one?", "vi": "Ý bạn là cái này à?" },
+        { "id": 20, "en": "I see. Thank you for explaining.", "vi": "Mình hiểu rồi. Cảm ơn bạn đã giải thích.", "note": "\"I see\" = mình hiểu rồi (không phải \"mình thấy\")." }
+      ]
+    },
+    {
+      "id": "polite",
+      "emoji": "🙏",
+      "title": "Lịch sự hằng ngày",
+      "titleEn": "Everyday politeness",
+      "phrases": [
+        { "id": 21, "en": "Excuse me.", "vi": "Xin lỗi (cho tôi hỏi / cho tôi đi qua).", "note": "Dùng TRƯỚC khi làm phiền ai. \"Sorry\" dùng SAU khi đã lỡ làm gì." },
+        { "id": 22, "en": "I'm so sorry.", "vi": "Mình rất xin lỗi." },
+        { "id": 23, "en": "Thank you so much.", "vi": "Cảm ơn bạn rất nhiều." },
+        { "id": 24, "en": "You're welcome.", "vi": "Không có gì.", "note": "Thân mật hơn: No problem." },
+        { "id": 25, "en": "No worries.", "vi": "Không sao đâu.", "note": "Đáp lại lời xin lỗi hoặc cảm ơn, rất thân thiện." },
+        { "id": 26, "en": "Could you help me, please?", "vi": "Bạn giúp mình được không?" },
+        { "id": 27, "en": "After you.", "vi": "Mời bạn đi trước.", "note": "Nói khi nhường đường, nhường cửa." },
+        { "id": 28, "en": "Can I ask you something?", "vi": "Mình hỏi bạn một chút được không?" },
+        { "id": 29, "en": "That's very kind of you.", "vi": "Bạn thật tốt bụng." },
+        { "id": 30, "en": "Sorry to bother you.", "vi": "Xin lỗi đã làm phiền bạn." }
+      ]
+    },
+    {
+      "id": "food",
+      "emoji": "☕",
+      "title": "Gọi món & đồ uống",
+      "titleEn": "Ordering food & drinks",
+      "phrases": [
+        { "id": 31, "en": "Can I see the menu, please?", "vi": "Cho mình xem thực đơn được không?" },
+        { "id": 32, "en": "I'd like a coffee, please.", "vi": "Cho mình một ly cà phê.", "note": "\"I'd like…\" lịch sự hơn \"I want…\"." },
+        { "id": 33, "en": "What do you recommend?", "vi": "Bạn gợi ý món gì?" },
+        { "id": 34, "en": "Is it spicy?", "vi": "Món này có cay không?" },
+        { "id": 35, "en": "No ice, please.", "vi": "Không đá nhé." },
+        { "id": 36, "en": "For here or to go?", "vi": "Dùng ở đây hay mang đi?", "note": "Nhân viên hay hỏi câu này. Đáp: For here / To go, please." },
+        { "id": 37, "en": "Could I have some water?", "vi": "Cho mình xin ít nước." },
+        { "id": 38, "en": "This is delicious!", "vi": "Món này ngon quá!" },
+        { "id": 39, "en": "Can I have the bill, please?", "vi": "Cho mình tính tiền.", "note": "Mỹ hay nói: Can I get the check?" },
+        { "id": 40, "en": "Can I pay by card?", "vi": "Mình trả bằng thẻ được không?" }
+      ]
+    },
+    {
+      "id": "shopping",
+      "emoji": "🛍️",
+      "title": "Mua sắm",
+      "titleEn": "Shopping",
+      "phrases": [
+        { "id": 41, "en": "How much is this?", "vi": "Cái này bao nhiêu tiền?" },
+        { "id": 42, "en": "I'm just looking, thanks.", "vi": "Mình chỉ xem thôi, cảm ơn.", "note": "Đáp khi nhân viên hỏi \"Can I help you?\"." },
+        { "id": 43, "en": "Do you have this in a bigger size?", "vi": "Cái này có cỡ lớn hơn không?" },
+        { "id": 44, "en": "Can I try it on?", "vi": "Mình thử được không?", "note": "Dùng cho quần áo, giày dép." },
+        { "id": 45, "en": "Where is the fitting room?", "vi": "Phòng thử đồ ở đâu?" },
+        { "id": 46, "en": "Do you have it in black?", "vi": "Có màu đen không?" },
+        { "id": 47, "en": "It's a bit expensive.", "vi": "Hơi đắt một chút." },
+        { "id": 48, "en": "Is there a discount?", "vi": "Có giảm giá không?" },
+        { "id": 49, "en": "I'll take it.", "vi": "Mình lấy cái này.", "note": "Câu chốt khi quyết định mua." },
+        { "id": 50, "en": "Can I get a bag, please?", "vi": "Cho mình xin cái túi." }
+      ]
+    },
+    {
+      "id": "directions",
+      "emoji": "🧭",
+      "title": "Hỏi đường",
+      "titleEn": "Asking for directions",
+      "phrases": [
+        { "id": 51, "en": "Excuse me, where is the nearest bus stop?", "vi": "Xin lỗi, trạm xe buýt gần nhất ở đâu?" },
+        { "id": 52, "en": "How do I get to the train station?", "vi": "Đi tới ga tàu thế nào?" },
+        { "id": 53, "en": "Is it far from here?", "vi": "Có xa đây không?" },
+        { "id": 54, "en": "Can I walk there?", "vi": "Đi bộ tới đó được không?" },
+        { "id": 55, "en": "Go straight and turn left.", "vi": "Đi thẳng rồi rẽ trái.", "note": "Rẽ phải: turn right." },
+        { "id": 56, "en": "It's on your right.", "vi": "Nó ở bên tay phải bạn." },
+        { "id": 57, "en": "It's next to the bank.", "vi": "Nó ở cạnh ngân hàng.", "note": "Đối diện: opposite / across from." },
+        { "id": 58, "en": "Could you show me on the map?", "vi": "Bạn chỉ trên bản đồ giúp mình được không?" },
+        { "id": 59, "en": "I'm lost.", "vi": "Mình bị lạc rồi." },
+        { "id": 60, "en": "How long does it take?", "vi": "Mất bao lâu?" }
+      ]
+    },
+    {
+      "id": "travel",
+      "emoji": "✈️",
+      "title": "Sân bay & khách sạn",
+      "titleEn": "Airport & hotel",
+      "phrases": [
+        { "id": 61, "en": "Here is my passport.", "vi": "Đây là hộ chiếu của tôi." },
+        { "id": 62, "en": "I have a reservation.", "vi": "Tôi đã đặt phòng trước.", "note": "Đặt bàn nhà hàng cũng dùng: I have a reservation for two." },
+        { "id": 63, "en": "I'd like to check in, please.", "vi": "Tôi muốn nhận phòng." },
+        { "id": 64, "en": "What time is checkout?", "vi": "Mấy giờ phải trả phòng?" },
+        { "id": 65, "en": "Is breakfast included?", "vi": "Có bao gồm bữa sáng không?" },
+        { "id": 66, "en": "What's the Wi-Fi password?", "vi": "Mật khẩu Wi-Fi là gì?" },
+        { "id": 67, "en": "Where is the gate?", "vi": "Cửa ra máy bay ở đâu?" },
+        { "id": 68, "en": "My flight is delayed.", "vi": "Chuyến bay của tôi bị hoãn." },
+        { "id": 69, "en": "Can I leave my luggage here?", "vi": "Tôi gửi hành lý ở đây được không?" },
+        { "id": 70, "en": "Could you call a taxi for me?", "vi": "Bạn gọi giúp tôi một chiếc taxi được không?" }
+      ]
+    },
+    {
+      "id": "work",
+      "emoji": "💼",
+      "title": "Ở chỗ làm",
+      "titleEn": "At work",
+      "phrases": [
+        { "id": 71, "en": "Do you have a minute?", "vi": "Bạn rảnh một chút không?", "note": "Mở lời lịch sự trước khi hỏi đồng nghiệp." },
+        { "id": 72, "en": "Let me check and get back to you.", "vi": "Để mình kiểm tra rồi báo lại bạn." },
+        { "id": 73, "en": "Could you send me the file?", "vi": "Bạn gửi mình file được không?" },
+        { "id": 74, "en": "I'm working on it.", "vi": "Mình đang làm việc đó." },
+        { "id": 75, "en": "When is the deadline?", "vi": "Hạn chót là khi nào?" },
+        { "id": 76, "en": "Can we have a quick meeting?", "vi": "Mình họp nhanh một chút được không?" },
+        { "id": 77, "en": "I agree with you.", "vi": "Mình đồng ý với bạn." },
+        { "id": 78, "en": "Sorry, I'm running late.", "vi": "Xin lỗi, mình đến muộn một chút.", "note": "Nhắn trước khi tới trễ — rất được đánh giá cao." },
+        { "id": 79, "en": "Thanks for your help.", "vi": "Cảm ơn bạn đã giúp." },
+        { "id": 80, "en": "Have a good weekend!", "vi": "Cuối tuần vui vẻ nhé!", "note": "Câu chào quen thuộc chiều thứ Sáu." }
+      ]
+    },
+    {
+      "id": "plans",
+      "emoji": "📞",
+      "title": "Hẹn gặp & điện thoại",
+      "titleEn": "Plans & phone calls",
+      "phrases": [
+        { "id": 81, "en": "Are you free this weekend?", "vi": "Cuối tuần này bạn rảnh không?" },
+        { "id": 82, "en": "Let's grab a coffee.", "vi": "Đi uống cà phê nhé.", "note": "\"grab\" = làm nhanh, thân mật: grab lunch, grab a bite." },
+        { "id": 83, "en": "What time works for you?", "vi": "Mấy giờ thì tiện cho bạn?" },
+        { "id": 84, "en": "How about Saturday morning?", "vi": "Sáng thứ Bảy được không?" },
+        { "id": 85, "en": "Sounds good!", "vi": "Nghe hay đấy! / Được đó!", "note": "Đồng ý nhanh, rất tự nhiên." },
+        { "id": 86, "en": "Sorry, I can't make it.", "vi": "Xin lỗi, mình không đến được.", "note": "\"make it\" = đến được, kịp." },
+        { "id": 87, "en": "Hello, this is Minh speaking.", "vi": "Alô, Minh đây.", "note": "Câu mở đầu khi nghe/gọi điện thoại." },
+        { "id": 88, "en": "Can I call you back later?", "vi": "Mình gọi lại cho bạn sau được không?" },
+        { "id": 89, "en": "Sorry, you're breaking up.", "vi": "Xin lỗi, tiếng bạn bị ngắt quãng.", "note": "Dùng khi sóng điện thoại kém." },
+        { "id": 90, "en": "Text me when you get there.", "vi": "Tới nơi thì nhắn mình nhé." }
+      ]
+    },
+    {
+      "id": "feelings",
+      "emoji": "💬",
+      "title": "Cảm xúc & ý kiến",
+      "titleEn": "Feelings & opinions",
+      "phrases": [
+        { "id": 91, "en": "I think so too.", "vi": "Mình cũng nghĩ vậy." },
+        { "id": 92, "en": "I'm not sure.", "vi": "Mình không chắc." },
+        { "id": 93, "en": "In my opinion, it's a good idea.", "vi": "Theo mình, đó là ý hay." },
+        { "id": 94, "en": "That's amazing!", "vi": "Tuyệt quá!" },
+        { "id": 95, "en": "I'm so happy for you!", "vi": "Mình mừng cho bạn quá!", "note": "Chúc mừng khi bạn bè có tin vui." },
+        { "id": 96, "en": "Don't worry about it.", "vi": "Đừng lo về chuyện đó." },
+        { "id": 97, "en": "I'm a bit tired today.", "vi": "Hôm nay mình hơi mệt." },
+        { "id": 98, "en": "I really like it.", "vi": "Mình thích lắm." },
+        { "id": 99, "en": "What do you think?", "vi": "Bạn nghĩ sao?" },
+        { "id": 100, "en": "Good luck!", "vi": "Chúc may mắn!", "note": "Trước kỳ thi, buổi phỏng vấn…" }
+      ]
+    }
+  ]
+}

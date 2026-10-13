@@ -15,6 +15,8 @@ import { DailyGoal, FirstSteps, Journey, MySky, WelcomeBack } from './Motivation
 import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
+import { usePhrases } from '@/store/phrasesStore'
+import { isKnown } from '@/lib/phrases'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -144,6 +146,9 @@ export default function Dashboard() {
           />
         </div>
       </section>
+
+      {/* Beyond single words: ready-made sentences for real situations. */}
+      <PhrasesCard />
 
       {/* Progress overview */}
       <section className="grid gap-4 sm:grid-cols-[auto,1fr]">
@@ -350,6 +355,42 @@ function QuickLink({
         <p className="text-sm text-slate-400">{desc}</p>
       </div>
       <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-slate-300" />
+    </Link>
+  )
+}
+
+function PhrasesCard() {
+  const t = useT()
+  const known = usePhrases((s) => Object.values(s.progress).filter((r) => isKnown(r)).length)
+  return (
+    <Link
+      to="/phrases"
+      className="card group relative flex items-center gap-4 overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-sky-400 to-violet-500 opacity-10" />
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky-500 to-violet-600 text-2xl text-white shadow-md">
+        💬
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="flex flex-wrap items-center gap-2 font-bold">
+          {t('Mẫu câu giao tiếp', 'Everyday phrases')}
+          <span className="chip bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300">
+            {t('Mới', 'New')}
+          </span>
+        </span>
+        <span className="block text-sm text-slate-500 dark:text-slate-400">
+          {known > 0
+            ? t(
+                `Đã thuộc ${known} câu — luyện tiếp để nói trôi chảy hơn.`,
+                `${known} phrases learned — keep going to speak more fluently.`
+              )
+            : t(
+                'Câu nói dùng được ngay: chào hỏi, gọi món, hỏi đường… có giọng đọc bản xứ.',
+                'Sentences you can use today: greetings, ordering, directions… with native audio.'
+              )}
+        </span>
+      </span>
+      <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-brand-500" />
     </Link>
   )
 }

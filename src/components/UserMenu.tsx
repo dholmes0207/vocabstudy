@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { BarChart3, LogIn, LogOut, Menu, Settings, ShieldCheck } from 'lucide-react'
+import { BarChart3, Library, LogIn, LogOut, Menu, Settings, ShieldCheck } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { usePendingSignups } from '@/hooks/usePendingSignups'
 import { useT } from '@/lib/i18n'
@@ -90,6 +90,9 @@ export default function UserMenu() {
           </MenuLink>
           <MenuLink to="/stats" onClick={close} icon={BarChart3}>
             {t('Thống kê', 'Stats')}
+          </MenuLink>
+          <MenuLink to="/browse" onClick={close} icon={Library}>
+            {t('Tra cứu từ', 'Dictionary')}
           </MenuLink>
           {user?.role === 'admin' && (
             <MenuLink to="/admin" onClick={close} icon={ShieldCheck}>

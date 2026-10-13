@@ -1,6 +1,15 @@
 import { Suspense } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { BarChart3, BookOpen, Dumbbell, Library, Repeat2, Settings, Sparkles } from 'lucide-react'
+import {
+  BarChart3,
+  BookOpen,
+  Dumbbell,
+  Library,
+  MessagesSquare,
+  Repeat2,
+  Settings,
+  Sparkles,
+} from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
 import { useSettings } from '@/store/settingsStore'
@@ -53,7 +62,16 @@ const NAV: NavItem[] = [
     primary: true,
     also: ['/quiz', '/games', '/speaking', '/listen', '/sounds'],
   },
-  { to: '/browse', label: ['Tra cứu', 'Dictionary'], icon: Library, primary: true },
+  {
+    to: '/phrases',
+    label: ['Mẫu câu giao tiếp', 'Everyday phrases'],
+    short: ['Mẫu câu', 'Phrases'],
+    icon: MessagesSquare,
+    primary: true,
+  },
+  // The dictionary moved off the phone's bottom bar to make room for phrases;
+  // it stays in the sidebar, the account menu and on the home screen.
+  { to: '/browse', label: ['Tra cứu', 'Dictionary'], icon: Library },
   { to: '/stats', label: ['Thống kê', 'Stats'], icon: BarChart3 },
   { to: '/settings', label: ['Cài đặt', 'Settings'], icon: Settings },
 ]
