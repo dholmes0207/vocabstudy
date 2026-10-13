@@ -77,7 +77,7 @@ export default function Layout() {
   return (
     <div className="min-h-[100dvh] lg:flex">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-[100dvh] w-64 shrink-0 flex-col border-r border-white/60 bg-white/60 px-4 py-6 backdrop-blur-md dark:border-white/5 dark:bg-slate-950/50 lg:flex">
+      <aside className="sticky top-0 hidden h-[100dvh] w-64 shrink-0 flex-col border-r border-slate-200/70 bg-white/85 px-4 py-6 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/80 lg:flex">
         <Brand />
         <nav className="mt-8 flex flex-1 flex-col gap-1">
           {NAV.map((item) => (
@@ -93,9 +93,10 @@ export default function Layout() {
       </aside>
 
       {/* Main column */}
-      <div className="flex min-w-0 flex-1 flex-col">
+      {/* Full height on every screen size, so a short page still puts the footer at the bottom. */}
+      <div className="flex min-h-[100dvh] min-w-0 flex-1 flex-col">
         {/* Header */}
-        <header className="sticky top-0 z-20 flex items-center gap-2 border-b border-white/60 bg-white/75 px-4 py-2.5 pt-[max(0.625rem,env(safe-area-inset-top))] backdrop-blur-md dark:border-white/5 dark:bg-slate-950/60 lg:py-3">
+        <header className="sticky top-0 z-20 flex items-center gap-2 border-b border-slate-200/70 bg-white/90 px-4 py-2.5 pt-[max(0.625rem,env(safe-area-inset-top))] shadow-sm shadow-slate-900/[0.03] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/85 lg:py-3">
           <div className="lg:hidden">
             <Brand compact />
           </div>
@@ -109,26 +110,31 @@ export default function Layout() {
         </header>
 
         <main
-          className={`mx-auto w-full max-w-5xl flex-1 px-4 pt-6 lg:pb-10 ${immersive ? 'pb-6' : 'pb-28'}`}
+          className={`mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 pt-6 lg:pb-8 ${immersive ? 'pb-6' : 'pb-24'}`}
         >
           {/* Keyed by path so a crash on one screen clears the moment the
               learner taps another tab — the nav around it keeps working. */}
           <ErrorBoundary key={pathname}>
             {/* Only the screen waits for the word pack or its code chunk; the
                 header, avatar menu and navigation stay usable meanwhile. */}
-            <Suspense fallback={<CenterSpinner />}>
-              <DataGate>
-                <Outlet />
-              </DataGate>
-            </Suspense>
+            <div className="flex-1">
+              <Suspense fallback={<CenterSpinner />}>
+                <DataGate>
+                  <Outlet />
+                </DataGate>
+              </Suspense>
+            </div>
           </ErrorBoundary>
-          <SiteFooter className="mt-12 border-t border-slate-200/60 pt-5 dark:border-white/5" />
+          {/* Pinned to the bottom of short pages; hidden in study sessions to keep them focused. */}
+          {!immersive && (
+            <SiteFooter className="mt-12 border-t border-slate-200/70 pt-5 dark:border-white/10 lg:pr-20 xl:pr-0" />
+          )}
         </main>
       </div>
 
       {/* Mobile bottom navigation */}
       {!immersive && (
-        <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-white/60 bg-white/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md dark:border-white/5 dark:bg-slate-950/75 lg:hidden">
+        <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90 lg:hidden">
           {NAV.filter((n) => n.primary).map((item) => (
             <BottomLink
               key={item.to}

@@ -67,7 +67,7 @@ export default function Dashboard() {
             <span className="text-slate-500 dark:text-slate-400">— {proverb.vi}</span>
           </p>
         </div>
-        <div className="flex items-center gap-4 rounded-2xl bg-white px-4 py-2 shadow-sm dark:bg-slate-900">
+        <div className="card flex items-center gap-4 rounded-2xl px-4 py-2.5">
           <span className="text-sm" title={t('Chuỗi ngày học liên tục', 'Study streak')}>
             🔥 <b className="text-lg">{stats?.streak ?? 0}</b>{' '}
             {t('ngày', (stats?.streak ?? 0) === 1 ? 'day' : 'days')}
