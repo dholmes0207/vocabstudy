@@ -26,7 +26,7 @@ const DISABLED = false
 // v2: the pack moved to stale-while-revalidate; flushing v1 hands every learner
 // the current pack on their next visit and drops example clips cached under
 // their old, unversioned URLs.
-const VERSION = 'v2'
+const VERSION = 'v3'
 const SHELL_CACHE = `vocabstudy-shell-${VERSION}`
 const CONTENT_CACHE = `vocabstudy-content-${VERSION}`
 const CACHES = [SHELL_CACHE, CONTENT_CACHE]
@@ -210,7 +210,7 @@ async function networkFirst(request) {
   } catch (e) {
     const cached = await caches.match(request, MATCH)
     if (cached) return cached
-    // Every route is the same document (HashRouter), so the cached root is a
+    // Every route is the same document (the SPA shell), so the cached root is a
     // valid answer for any navigation the learner attempts offline.
     if (request.mode === 'navigate') {
       const shell = await caches.match(new URL('./', self.location.href).href, MATCH)

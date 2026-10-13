@@ -112,7 +112,7 @@ export default function UserMenu() {
                 onClick={async () => {
                   close()
                   await logout()
-                  navigate('/')
+                  navigate('/home')
                 }}
                 className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40"
                 role="menuitem"

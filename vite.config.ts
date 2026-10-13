@@ -29,10 +29,11 @@ function minifyPacks(): Plugin {
   }
 }
 
-// Relative base ('./') so the built site works whether hosted at a domain root
-// (Netlify/Vercel) or a sub-path (GitHub Pages project site).
+// Root base: the app uses clean paths (vocastudy.app/phrases/food), so every
+// asset must resolve from the domain root, not from the current page's folder.
+// Cloudflare Pages serves index.html for unknown paths (no top-level 404.html).
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [react(), minifyPacks()],
   build: {
     // The service worker precaches every emitted chunk at install so the app

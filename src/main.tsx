@@ -3,8 +3,14 @@ import { createRoot } from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { initTheme } from './store/settingsStore'
+import { hashToPath } from './lib/entry'
 
 initTheme()
+
+// The app used hash URLs (vocastudy.app/#/learn) until clean paths replaced
+// them; keep every old bookmark and shared link working.
+const fromHash = hashToPath(location.hash)
+if (fromHash) history.replaceState(null, '', fromHash)
 
 // Offline support (src/lib/swRoute.test.ts covers the routing rules). Only in
 // production builds: in dev a worker would sit in front of Vite's HMR and make

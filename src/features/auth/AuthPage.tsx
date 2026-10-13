@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from '@/components/UiLangToggle'
 import SiteFooter from '@/components/SiteFooter'
+import { LogoMark } from '@/components/Logo'
+import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 
 export default function AuthPage() {
   const navigate = useNavigate()
@@ -18,6 +20,9 @@ export default function AuthPage() {
   const [info, setInfo] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const t = useT()
+  useDocumentTitle(
+    `${mode === 'login' ? t('Đăng nhập', 'Sign in') : t('Đăng ký', 'Sign up')} · VocaStudy`
+  )
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -27,7 +32,7 @@ export default function AuthPage() {
     try {
       if (mode === 'login') {
         await login(email, password)
-        navigate('/')
+        navigate('/home')
       } else {
         await register(email, password, name)
         const { needsEmailConfirm, pendingApproval } = useAuth.getState()
@@ -48,7 +53,7 @@ export default function AuthPage() {
           )
           setMode('login')
         } else {
-          navigate('/')
+          navigate('/home')
         }
       }
     } catch (err) {
@@ -68,11 +73,11 @@ export default function AuthPage() {
         <div className="card relative w-full max-w-sm p-7 animate-fade-in">
           <UiLangToggle className="absolute right-3 top-3" />
           <div className="mb-5 text-center">
-            <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brand-600 text-2xl shadow">
-              📚
-            </span>
+            <Link to="/" aria-label="VocaStudy" className="inline-block">
+              <LogoMark className="mx-auto h-12 w-12 drop-shadow-md" />
+            </Link>
             <h1 className="mt-3 text-xl font-extrabold">
-              <span className="text-aurora">VocaStudy</span>
+              Voca<span className="text-aurora">Study</span>
             </h1>
             <p className="text-sm text-slate-400">
               {mode === 'login'
@@ -160,7 +165,7 @@ export default function AuthPage() {
             </button>
           </form>
 
-          <button onClick={() => navigate('/')} className="btn-ghost mt-3 w-full text-sm">
+          <button onClick={() => navigate('/home')} className="btn-ghost mt-3 w-full text-sm">
             {t('Dùng thử không cần tài khoản →', 'Try it without an account →')}
           </button>
         </div>

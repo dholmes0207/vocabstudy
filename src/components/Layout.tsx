@@ -1,5 +1,5 @@
-import { Suspense } from 'react'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { Suspense, useEffect } from 'react'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import {
   BarChart3,
   BookOpen,
@@ -27,6 +27,9 @@ import { useProgressSync } from '@/hooks/useProgressSync'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from './UiLangToggle'
 import SiteFooter from './SiteFooter'
+import Logo from './Logo'
+import { markEntered } from '@/lib/entry'
+import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 
 /** A Vietnamese/English pair, picked by the interface language. */
 type Pair = [vi: string, en: string]
@@ -46,7 +49,7 @@ interface NavItem {
 // speaking live under one "Luyện tập" hub; Stats/Settings stay in the sidebar
 // and the header menu.
 const NAV: NavItem[] = [
-  { to: '/', label: ['Trang chủ', 'Home'], icon: Sparkles, primary: true },
+  { to: '/home', label: ['Trang chủ', 'Home'], icon: Sparkles, primary: true },
   {
     to: '/learn',
     label: ['Học mới', 'Learn'],
@@ -77,12 +80,18 @@ const NAV: NavItem[] = [
 ]
 
 const isOn = (item: NavItem, pathname: string) =>
-  item.to === '/'
-    ? pathname === '/'
+  item.to === '/home'
+    ? pathname === '/home'
     : [item.to, ...(item.also ?? [])].some((p) => pathname === p || pathname.startsWith(p + '/'))
 
 export default function Layout() {
   useProgressSync()
+  const t = useT()
+  // Once the app has been opened here, "/" brings this device straight back to it.
+  useEffect(() => markEntered(localStorage), [])
+  useDocumentTitle(
+    t('VocaStudy · Học tiếng Anh mỗi ngày', 'VocaStudy · English, a little every day')
+  )
   const currentLang = useSettings((s) => s.currentLang)
   const progress = useStudy((s) => s.progress)
   const stats = progress[currentLang]?.stats
@@ -175,20 +184,11 @@ export default function Layout() {
 function Brand({ compact = false }: { compact?: boolean }) {
   const t = useT()
   return (
-    <div className="flex items-center gap-2.5">
-      <span className="brand-mark grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-lg shadow-md shadow-brand-600/30">
-        📚
-      </span>
-      {!compact && (
-        <div className="leading-tight">
-          <p className="font-extrabold tracking-tight">VocaStudy</p>
-          <p className="text-xs text-slate-400">
-            {t('Học từ vựng thông minh', 'Smart vocabulary learning')}
-          </p>
-        </div>
-      )}
-      {compact && <p className="font-extrabold tracking-tight">VocaStudy</p>}
-    </div>
+    <Link to="/home" aria-label="VocaStudy">
+      <Logo
+        tagline={compact ? undefined : t('Học tiếng Anh mỗi ngày', 'English, a little every day')}
+      />
+    </Link>
   )
 }
 

@@ -17,7 +17,7 @@ export default function AdminPage() {
           <h1 className="mt-3 text-lg font-bold">
             {t('Chỉ dành cho quản trị viên', 'Admins only')}
           </h1>
-          <Link to="/" className="btn-primary mt-4">
+          <Link to="/home" className="btn-primary mt-4">
             {t('Về trang chủ', 'Back to home')}
           </Link>
         </div>

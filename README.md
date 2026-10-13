@@ -266,11 +266,11 @@ Chi tiết đầy đủ trong [`docs/PLAN.md`](docs/PLAN.md) — Phần C & D.
 
 ## 🛠️ Công nghệ
 
-React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (HashRouter) · lucide-react · Supabase (Auth + Postgres + RLS) · Cloudflare Pages + Pages Functions · OpenAI o4-mini · audio Neural tạo sẵn (edge-tts) + Web Speech API fallback.
+React 18 · Vite 5 · TypeScript (strict) · Tailwind CSS 3 · Zustand (persist) · React Router (BrowserRouter, đường dẫn sạch) · lucide-react · Supabase (Auth + Postgres + RLS) · Cloudflare Pages + Pages Functions · OpenAI o4-mini · audio Neural tạo sẵn (edge-tts) + Web Speech API fallback.
 
 Chất lượng mã: ESLint + Prettier + TypeScript strict, unit test bằng Vitest, CI GitHub Actions chạy `lint → typecheck → test → build` trên mọi push/PR.
 
-> Phần `dist/` là tĩnh nên host ở đâu cũng chạy (`base: './'` + HashRouter, không lỗi 404 khi refresh), nhưng **AI và trang quản trị cần `functions/`** → phải deploy lên Cloudflare Pages (hoặc nền tảng có edge functions tương đương).
+> Đường dẫn sạch (`/phrases/food`) cần host trả `index.html` cho đường dẫn lạ. Cloudflare Pages tự làm việc này vì repo không có `404.html` ở gốc — đừng thêm file đó (xem `docs/design/landing.md`). **AI và trang quản trị cần `functions/`** → phải deploy lên Cloudflare Pages (hoặc nền tảng có edge functions tương đương).
 
 ---
 

@@ -1,19 +1,19 @@
 {
-  "name": "VocaStudy — Learn English vocabulary",
+  "name": "VocaStudy — Speak English with confidence",
   "short_name": "VocaStudy",
-  "description": "Learn and review English vocabulary: active recall, spaced repetition and games.",
+  "description": "Everyday English words and phrases with native audio, spaced repetition and games — made for Vietnamese learners.",
   "lang": "en",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/home",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0f172a",
   "theme_color": "#020617",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     {
-      "src": "icons/maskable-512.png",
+      "src": "/icons/maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react'
 import { useT } from '@/lib/i18n'
+import { Link } from 'react-router-dom'
 
 export const CONTACT_EMAIL = 'contact@vocastudy.app'
 
@@ -21,6 +22,17 @@ export default function SiteFooter({ className = '' }: { className?: string }) {
         <Mail className="h-3.5 w-3.5" />
         {t('Liên hệ', 'Contact')}: {CONTACT_EMAIL}
       </a>
+      <span className="flex basis-full justify-center gap-3 sm:basis-auto">
+        {[
+          ['/about', t('Giới thiệu', 'About')],
+          ['/privacy', t('Bảo mật', 'Privacy')],
+          ['/terms', t('Điều khoản', 'Terms')],
+        ].map(([to, label]) => (
+          <Link key={to} to={to} className="hover:text-brand-600 dark:hover:text-brand-300">
+            {label}
+          </Link>
+        ))}
+      </span>
     </footer>
   )
 }

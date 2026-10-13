@@ -330,19 +330,10 @@
   animation-delay: 0.3s;
 }
 
-/* The logo's little star twinkles now and then. */
-.brand-mark {
-  position: relative;
-}
-.brand-mark::after {
-  content: '✦';
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  font-size: 11px;
-  line-height: 1;
-  color: #fde047;
-  text-shadow: 0 0 6px rgb(253 224 71 / 0.9);
+/* The spark in the logo (components/Logo.tsx) twinkles now and then. */
+.logo-spark {
+  transform-box: fill-box;
+  transform-origin: center;
   animation: twinkle 3.2s ease-in-out infinite;
 }
 @keyframes twinkle {
@@ -361,7 +352,7 @@
   .text-aurora,
   .wave,
   .stagger > *,
-  .brand-mark::after {
+  .logo-spark {
     animation: none;
   }
 }

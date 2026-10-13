@@ -82,7 +82,7 @@ export default function SessionComplete({
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">{children}</div>
 
-        <Link to="/" className="btn-ghost mt-4 w-full">
+        <Link to="/home" className="btn-ghost mt-4 w-full">
           {t('Về trang chủ', 'Back to home')}
         </Link>
       </div>

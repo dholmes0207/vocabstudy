@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import ErrorBoundary from './components/ErrorBoundary'
 import { CenterSpinner } from './components/DataGate'
@@ -23,6 +23,16 @@ const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
 const AuthPage = lazy(() => import('./features/auth/AuthPage'))
 const AdminPage = lazy(() => import('./features/admin/AdminPage'))
+const MarketingLayout = lazy(() => import('./features/marketing/MarketingLayout'))
+const MarketingHome = lazy(() => import('./features/marketing/Home'))
+const Landing = lazy(() => import('./features/marketing/Landing'))
+const About = lazy(() => import('./features/marketing/About'))
+const Privacy = lazy(() =>
+  import('./features/marketing/LegalPage').then((m) => ({ default: m.Privacy }))
+)
+const Terms = lazy(() =>
+  import('./features/marketing/LegalPage').then((m) => ({ default: m.Terms }))
+)
 
 export default function App() {
   // Restore the session (HttpOnly cookie) on startup.
@@ -30,25 +40,32 @@ export default function App() {
     useAuth.getState().bootstrap()
   }, [])
 
-  // Screen readers, spell-check and the tab title follow the interface language.
+  // Screen readers and spell-check follow the interface language (each page
+  // sets its own tab title).
   const uiLang = useSettings((s) => s.uiLang)
   useEffect(() => {
     document.documentElement.lang = uiLang
-    document.title =
-      uiLang === 'vi' ? 'VocaStudy · Học từ vựng tiếng Anh' : 'VocaStudy · Learn English vocabulary'
   }, [uiLang])
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <SkyBackdrop />
       {/* Last line of defence: a throw in Layout, DataGate or a lazy chunk used
           to unmount everything and leave a blank white page. */}
       <ErrorBoundary>
         <Suspense fallback={<CenterSpinner />}>
           <Routes>
+            {/* Public pages: landing, about, legal (docs/design/landing.md). */}
+            <Route element={<MarketingLayout />}>
+              <Route path="/" element={<MarketingHome />} />
+              <Route path="/welcome" element={<Landing />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+            </Route>
             <Route path="/login" element={<AuthPage />} />
             <Route element={<Layout />}>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/home" element={<Dashboard />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/review" element={<Review />} />
               <Route path="/quiz" element={<Quiz />} />
@@ -69,6 +86,6 @@ export default function App() {
           </Routes>
         </Suspense>
       </ErrorBoundary>
-    </HashRouter>
+    </BrowserRouter>
   )
 }

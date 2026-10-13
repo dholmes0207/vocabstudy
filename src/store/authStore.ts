@@ -156,7 +156,10 @@ export const useAuth = create<AuthState>((set, get) => {
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
-        options: { data: { name: name ?? '' } },
+        // The confirmation link opens the app, not the landing page. Supabase
+        // honours it only if it is in Auth → URL Configuration → Redirect URLs;
+        // otherwise it falls back to the Site URL and "/" forwards it anyway.
+        options: { data: { name: name ?? '' }, emailRedirectTo: `${window.location.origin}/home` },
       })
       if (error) throw new Error(mapAuthError(error.message))
       if (data.session?.user) {

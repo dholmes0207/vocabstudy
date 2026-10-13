@@ -141,7 +141,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
           wordsById={byId}
           ttsLang={pack.meta.ttsLang}
           requeueWrong
-          onExit={() => navigate('/')}
+          onExit={() => navigate('/home')}
           onAnswer={(id, correct) => recordAnswer(code, id, correct)}
           renderComplete={(correct, total) => complete(correct, total)}
         />
@@ -150,7 +150,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
           words={due.map((d) => d.word)}
           ttsLang={pack.meta.ttsLang}
           onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
-          onExit={() => navigate('/')}
+          onExit={() => navigate('/home')}
           renderComplete={(correct, total) => complete(correct, total)}
         />
       )}
