@@ -14,6 +14,7 @@ import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import ReminderSetup from '@/components/ReminderSetup'
 import { Row, Section, Segmented, Toggle } from './ui'
+import { AccountSection, DeleteAccountRow } from './AccountSection'
 import { useT } from '@/lib/i18n'
 
 // Options carry both languages: [value, Vietnamese, English].
@@ -65,6 +66,11 @@ export default function SettingsPage() {
   const fileRef = useRef<HTMLInputElement>(null)
   const [confirmReset, setConfirmReset] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
+  /** Account actions happen far down the page; bring their result into view. */
+  const announce = (message: string) => {
+    setNotice(message)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const ttsOk = isTTSSupported()
   const hasNeuralAudio = audioVoices.length > 0
   const canPronounce = hasNeuralAudio || ttsOk
@@ -541,6 +547,8 @@ export default function SettingsPage() {
         </Row>
       </Section>
 
+      {syncing && <AccountSection onNotice={announce} />}
+
       {/* Data */}
       <Section title={t('Dữ liệu & sao lưu', 'Data & backup')}>
         <Row
@@ -577,6 +585,7 @@ export default function SettingsPage() {
 
       {/* Danger zone */}
       <Section title={t('Vùng nguy hiểm', 'Danger zone')} danger>
+        {syncing && <DeleteAccountRow onNotice={announce} />}
         <Row
           label={t(
             `Đặt lại tiến độ (${pack.meta.nativeName})`,

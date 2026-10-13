@@ -400,8 +400,8 @@ function Faq() {
     [
       t('Có cần tạo tài khoản không?', 'Do I need an account?'),
       t(
-        'Không bắt buộc. Bạn học ngay được, tiến độ lưu trên máy. Tạo tài khoản để đồng bộ giữa các thiết bị và dùng trợ lý AI — tài khoản mới được duyệt trong giai đoạn thử nghiệm.',
-        'No. You can start right away and your progress is saved on your device. An account syncs it across devices and unlocks the AI tutor — new accounts are approved during the beta.'
+        'Không bắt buộc. Bạn học ngay được, tiến độ lưu trên máy. Tài khoản giúp đồng bộ giữa các thiết bị và mở trợ lý AI — tài khoản đang trong giai đoạn beta: đăng ký để vào danh sách chờ.',
+        'No. You can start right away and your progress is saved on your device. An account syncs it across devices and unlocks the AI tutor — accounts are in beta: sign up to join the waitlist.'
       ),
     ],
     [

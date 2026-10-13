@@ -235,7 +235,7 @@ function PendingSignups({
   return (
     <section className="card p-4">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="font-bold">{t('Đăng ký chờ duyệt', 'Sign-ups awaiting approval')}</h2>
+        <h2 className="font-bold">{t('Danh sách chờ beta', 'Beta waitlist')}</h2>
         <span
           className={`chip px-3 py-1 text-xs font-semibold ${users.length ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
         >
@@ -246,8 +246,8 @@ function PendingSignups({
       </div>
       <p className="mt-1 text-sm text-slate-500">
         {t(
-          'Tài khoản mới chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học được ở chế độ khách.',
-          'New accounts can sign in and sync only after you approve them. Meanwhile they can still learn as guests.'
+          'Người đăng ký mới vào danh sách chờ; họ chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học được ở chế độ khách.',
+          'New sign-ups join the waitlist; they can sign in and sync only after you approve them. Meanwhile they can still learn as guests.'
         )}
       </p>
       {users.length > 0 && (
@@ -287,8 +287,8 @@ const STATUS_CHIP: Record<AdminUser['status'], [vi: string, en: string, cls: str
     'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
   ],
   pending: [
-    'Chờ duyệt',
-    'Pending',
+    'Danh sách chờ',
+    'Waitlist',
     'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300',
   ],
   locked: ['Đã khoá', 'Locked', 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300'],

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { ENTERED_KEY, hasUsedApp, hashToPath, isAuthCallback, markEntered } from './entry'
+import { ENTERED_KEY, authCallbackPath, hasUsedApp, hashToPath, markEntered } from './entry'
 
 function store(init: Record<string, string> = {}) {
   const data = new Map(Object.entries(init))
@@ -22,19 +22,26 @@ describe('hashToPath', () => {
   })
 })
 
-describe('isAuthCallback', () => {
-  it('recognises Supabase confirmation, recovery and error redirects', () => {
-    expect(isAuthCallback('#access_token=abc&type=signup')).toBe(true)
-    expect(isAuthCallback('#error=access_denied&error_code=otp_expired&error_description=x')).toBe(
-      true
+describe('authCallbackPath', () => {
+  it('sends Supabase confirmation and error redirects into the app', () => {
+    expect(authCallbackPath('#access_token=abc&type=signup')).toBe('/home')
+    expect(
+      authCallbackPath('#error=access_denied&error_code=otp_expired&error_description=x')
+    ).toBe('/home')
+    expect(authCallbackPath('', '?code=123')).toBe('/home')
+  })
+
+  it('sends a password-reset link to the reset page', () => {
+    expect(authCallbackPath('#access_token=abc&expires_in=3600&type=recovery')).toBe(
+      '/reset-password'
     )
-    expect(isAuthCallback('', '?code=123')).toBe(true)
+    expect(authCallbackPath('#access_token=abc&type=recoveryish')).toBe('/home')
   })
 
   it('ignores ordinary section links and queries', () => {
-    expect(isAuthCallback('#features')).toBe(false)
-    expect(isAuthCallback('')).toBe(false)
-    expect(isAuthCallback('', '?quick=1')).toBe(false)
+    expect(authCallbackPath('#features')).toBeNull()
+    expect(authCallbackPath('')).toBeNull()
+    expect(authCallbackPath('', '?quick=1')).toBeNull()
   })
 })
 

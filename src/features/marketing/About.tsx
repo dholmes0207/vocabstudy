@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Heart, Lock, Mail, Sprout, TrendingUp } from 'lucide-react'
 import { LogoMark } from '@/components/Logo'
-import { CONTACT_EMAIL } from '@/components/SiteFooter'
+import { CONTACT_EMAIL } from '@/lib/site'
 import { useT } from '@/lib/i18n'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 

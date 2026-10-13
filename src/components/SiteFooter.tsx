@@ -1,8 +1,7 @@
 import { Mail } from 'lucide-react'
 import { useT } from '@/lib/i18n'
 import { Link } from 'react-router-dom'
-
-export const CONTACT_EMAIL = 'contact@vocastudy.app'
+import { CONTACT_EMAIL } from '@/lib/site'
 
 /** Small site footer: who we are and how to reach us. */
 export default function SiteFooter({ className = '' }: { className?: string }) {

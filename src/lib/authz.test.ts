@@ -50,7 +50,7 @@ describe('accessDecision — any signed-in user', () => {
     expect(d.allow).toBe(false)
     if (!d.allow) {
       expect(d.status).toBe(403)
-      expect(d.error).toContain('chờ quản trị viên duyệt')
+      expect(d.error).toContain('danh sách chờ')
     }
   })
 
@@ -106,10 +106,10 @@ describe('adminDecision — admin-only endpoints', () => {
 
 describe('accountBlockMessage', () => {
   it('explains pending and locked accounts, and lets active ones pass', () => {
-    expect(accountBlockMessage('pending')).toContain('chờ quản trị viên duyệt')
+    expect(accountBlockMessage('pending')).toContain('danh sách chờ')
     expect(accountBlockMessage('locked')).toContain('khoá')
     expect(accountBlockMessage('active')).toBeNull()
     expect(accountBlockMessage(undefined)).toBeNull()
-    expect(accountBlockMessage('pending', 'en')).toContain("admin's approval")
+    expect(accountBlockMessage('pending', 'en')).toContain('beta waitlist')
   })
 })

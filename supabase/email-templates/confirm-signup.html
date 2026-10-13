@@ -1,0 +1,44 @@
+<!-- Supabase → Authentication → Emails → Confirm signup.
+     Subject: Confirm your email · Xác nhận email VocaStudy -->
+<!doctype html>
+<html lang="en">
+  <body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:32px 12px">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border-radius:16px;padding:32px 28px">
+            <tr>
+              <td align="center" style="padding-bottom:20px">
+                <img src="https://vocastudy.app/icons/icon-192.png" width="56" height="56" alt="VocaStudy" style="display:block;border-radius:14px" />
+                <p style="margin:12px 0 0;font-size:20px;font-weight:800">Voca<span style="color:#6d28d9">Study</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:16px;line-height:1.6">
+                <p style="margin:0 0 12px;font-weight:700">Confirm your email</p>
+                <p style="margin:0 0 20px">Thanks for joining the VocaStudy beta! Tap the button to confirm {{ .Email }}. You're then on the waitlist — new accounts are approved by hand, and you can keep learning as a guest meanwhile.</p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-bottom:24px">
+                <a href="{{ .ConfirmationURL }}" style="display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;font-weight:700;padding:12px 28px;border-radius:12px">Confirm my email</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:15px;line-height:1.6;color:#334155;border-top:1px solid #e2e8f0;padding-top:20px">
+                <p style="margin:0 0 12px;font-weight:700">Xác nhận email</p>
+                <p style="margin:0 0 20px">Cảm ơn bạn đã tham gia bản beta của VocaStudy! Bấm nút phía trên để xác nhận {{ .Email }}. Sau đó bạn có tên trong danh sách chờ — tài khoản mới được duyệt thủ công, trong lúc chờ bạn cứ học ở chế độ khách nhé.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:13px;line-height:1.5;color:#64748b">
+                <p style="margin:0">Didn't sign up? Ignore this email.<br />Bạn không đăng ký? Cứ bỏ qua email này.</p>
+              </td>
+            </tr>
+          </table>
+          <p style="margin:16px 0 0;font-size:12px;color:#94a3b8">VocaStudy · <a href="https://vocastudy.app" style="color:#94a3b8">vocastudy.app</a> · contact@vocastudy.app</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

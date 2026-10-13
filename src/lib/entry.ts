@@ -17,14 +17,16 @@ export function hashToPath(hash: string): string | null {
 }
 
 /**
- * Is this URL a Supabase auth redirect (email confirmation, password reset,
- * expired link)? Those must land in the app, not on the landing page, and the
- * fragment must survive the move so supabase-js can read it.
+ * Where a Supabase auth redirect (email confirmation, password reset, expired
+ * link) should continue, or null when the URL is not one. These must land in
+ * the app, not on the landing page, and the fragment must survive the move so
+ * supabase-js can read it (docs/design/account.md).
  */
-export function isAuthCallback(hash: string, search = ''): boolean {
-  return (
+export function authCallbackPath(hash: string, search = ''): string | null {
+  const callback =
     /^#(?:.*&)?(?:access_token|error_description|error)=/.test(hash) || /[?&]code=/.test(search)
-  )
+  if (!callback) return null
+  return /[#&]type=recovery(?:&|$)/.test(hash) ? '/reset-password' : '/home'
 }
 
 /** Has this device used the app before (studied, signed in, or opened it)? */

@@ -12,3 +12,6 @@ package-lock.json
 
 # Record of the sentence each example clip was recorded from (generate_audio.py).
 scripts/audio-texts/
+
+# Pasted verbatim into Supabase; email clients are picky about markup.
+supabase/email-templates/*.html

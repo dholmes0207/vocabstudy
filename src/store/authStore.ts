@@ -3,6 +3,8 @@ import { supabase, supabaseConfigured } from '@/lib/supabase'
 import { accountBlockMessage } from '@/lib/authz'
 import { readCachedUser, writeCachedUser, type CachedUser } from '@/lib/authCache'
 import { tx } from '@/lib/i18n'
+import { ApiError, api } from '@/lib/api'
+import { CONTACT_EMAIL } from '@/lib/site'
 import { useSettings } from '@/store/settingsStore'
 
 // Auth via Supabase Auth. The session is managed by supabase-js (stored +
@@ -27,6 +29,12 @@ interface AuthState {
   login: (email: string, password: string) => Promise<void>
   register: (email: string, password: string, name?: string) => Promise<void>
   logout: () => Promise<void>
+  /** Email a password-reset link. Says nothing about whether the address exists. */
+  requestPasswordReset: (email: string) => Promise<void>
+  /** Set a new password for the signed-in (or recovering) user. */
+  updatePassword: (password: string) => Promise<void>
+  /** Erase the account and its synced data after re-checking the password. */
+  deleteAccount: (password: string) => Promise<void>
 }
 
 /** How long the start-up session check may take before the app stops waiting on it. */
@@ -180,10 +188,80 @@ export const useAuth = create<AuthState>((set, get) => {
       if (supabase) await supabase.auth.signOut()
       setUser(null)
     },
+
+    requestPasswordReset: async (email) => {
+      if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      })
+      if (!error) return
+      if (/rate limit|security purposes|too many/i.test(error.message))
+        throw new Error(
+          tx(
+            'Bạn vừa yêu cầu rồi — đợi một phút rồi thử lại nhé.',
+            'You just asked for one — wait a minute and try again.'
+          )
+        )
+      throw new Error(
+        tx(
+          `Chưa gửi được email lúc này. Thử lại sau, hoặc viết cho ${CONTACT_EMAIL} để được giúp.`,
+          `We couldn't send the email right now. Try again later, or write to ${CONTACT_EMAIL} for help.`
+        )
+      )
+    },
+
+    updatePassword: async (password) => {
+      if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
+      const { error } = await supabase.auth.updateUser({ password })
+      if (error) throw new Error(mapAuthError(error.message))
+    },
+
+    deleteAccount: async (password) => {
+      const client = supabase
+      const user = get().user
+      if (!client || !user) throw new Error(tx('Bạn chưa đăng nhập.', 'You are not signed in.'))
+      if (user.role === 'admin') throw new Error(ADMIN_CANNOT_DELETE())
+      // Re-check the password: an unlocked phone in someone else's hands must
+      // not be enough to erase an account.
+      const { error } = await client.auth.signInWithPassword({ email: user.email, password })
+      if (error)
+        throw new Error(
+          /invalid login/i.test(error.message)
+            ? tx('Mật khẩu không đúng.', 'Wrong password.')
+            : mapAuthError(error.message)
+        )
+      const failure = await api.deleteAccount().then(
+        () => null,
+        (e: unknown) => e
+      )
+      if (failure) {
+        // A network failure already says "check your connection"; anything the
+        // server says is in one language only, so replace it.
+        const offline = failure instanceof ApiError && failure.status === 0
+        throw new Error(
+          offline
+            ? failure.message
+            : tx(
+                `Chưa xoá được tài khoản. Thử lại sau, hoặc viết cho ${CONTACT_EMAIL}.`,
+                `We couldn't delete the account. Try again later, or write to ${CONTACT_EMAIL}.`
+              )
+        )
+      }
+      // The server copy is gone, so only the local session is left to drop.
+      await client.auth.signOut({ scope: 'local' })
+      setUser(null)
+    },
   }
 })
 
 export const isAdmin = (u: AuthUser | null): boolean => u?.role === 'admin'
+
+/** Admins keep their account so there is always someone to let learners in. */
+export const ADMIN_CANNOT_DELETE = () =>
+  tx(
+    'Tài khoản quản trị không tự xoá được — hãy chuyển quyền quản trị cho người khác trước.',
+    'An admin account cannot delete itself — hand the admin role to someone else first.'
+  )
 
 function mapAuthError(msg: string): string {
   const m = msg.toLowerCase()
@@ -193,6 +271,16 @@ function mapAuthError(msg: string): string {
     return tx(
       'Email chưa được xác nhận — mở hộp thư để xác nhận nhé.',
       'Your email is not confirmed yet — check your inbox.'
+    )
+  if (m.includes('different from the old'))
+    return tx(
+      'Mật khẩu mới phải khác mật khẩu cũ.',
+      'The new password must be different from the old one.'
+    )
+  if (m.includes('session missing') || m.includes('session not found'))
+    return tx(
+      'Phiên đã hết hạn — mở lại link trong email hoặc đăng nhập lại nhé.',
+      'Your session has expired — open the email link again or sign in again.'
     )
   if (m.includes('already registered') || m.includes('already exists'))
     return tx('Email đã được đăng ký.', 'This email is already registered.')

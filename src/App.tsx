@@ -22,6 +22,7 @@ const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
 const AuthPage = lazy(() => import('./features/auth/AuthPage'))
+const ResetPassword = lazy(() => import('./features/auth/ResetPassword'))
 const AdminPage = lazy(() => import('./features/admin/AdminPage'))
 const MarketingLayout = lazy(() => import('./features/marketing/MarketingLayout'))
 const MarketingHome = lazy(() => import('./features/marketing/Home'))
@@ -64,6 +65,7 @@ export default function App() {
               <Route path="/terms" element={<Terms />} />
             </Route>
             <Route path="/login" element={<AuthPage />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route element={<Layout />}>
               <Route path="/home" element={<Dashboard />} />
               <Route path="/learn" element={<Learn />} />

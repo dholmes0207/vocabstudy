@@ -44,8 +44,8 @@ export default function UserMenu() {
         aria-label={
           user
             ? t(
-                `Tài khoản & menu${pending ? ` — ${pending} đăng ký chờ duyệt` : ''}`,
-                `Account & menu${pending ? ` — ${pending} sign-ups awaiting approval` : ''}`
+                `Tài khoản & menu${pending ? ` — ${pending} người trong danh sách chờ` : ''}`,
+                `Account & menu${pending ? ` — ${pending} on the waitlist` : ''}`
               )
             : t('Menu: đăng nhập, cài đặt, thống kê', 'Menu: sign in, settings, stats')
         }

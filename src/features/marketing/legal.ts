@@ -108,8 +108,12 @@ export const PRIVACY: LegalDoc = {
       title: ['5. Lưu giữ và xoá dữ liệu', '5. Keeping and deleting data'],
       items: [
         [
-          'Dữ liệu tài khoản được giữ cho tới khi bạn yêu cầu xoá. Gửi email tới contact@vocastudy.app — chúng tôi xoá trong vòng 30 ngày.',
-          'Account data is kept until you ask us to delete it. Email contact@vocastudy.app and we delete it within 30 days.',
+          'Dữ liệu tài khoản được giữ cho tới khi bạn xoá tài khoản. Bạn tự xoá được trong Cài đặt → Vùng nguy hiểm → Xoá tài khoản: tài khoản, tiến độ đã đồng bộ và số lượt dùng trợ lý AI bị xoá khỏi cơ sở dữ liệu ngay lập tức. Bản sao lưu của nhà cung cấp hạ tầng (nếu có) hết hạn theo lịch thường lệ của họ.',
+          'Account data is kept until you delete your account. You can do it yourself in Settings → Danger zone → Delete account: the account, its synced progress and its AI usage counts are removed from our database immediately. Infrastructure providers’ backups, if any, expire on their normal schedule.',
+        ],
+        [
+          'Không tự xoá được (ví dụ quên mật khẩu và không còn truy cập email)? Viết cho contact@vocastudy.app — chúng tôi xoá giúp trong vòng 30 ngày.',
+          'Can’t do it yourself (say, you lost access to your email)? Write to contact@vocastudy.app and we will delete it within 30 days.',
         ],
         [
           'Dữ liệu trên thiết bị: xoá trong Cài đặt → Vùng nguy hiểm → Đặt lại, hoặc xoá dữ liệu trang web trong trình duyệt.',
@@ -194,8 +198,8 @@ export const TERMS: LegalDoc = {
           'You can learn without an account. An account syncs your progress and unlocks the AI tutor.',
         ],
         [
-          'Trong giai đoạn beta, tài khoản mới được quản trị viên duyệt trước khi dùng.',
-          'During the beta, new accounts are approved by an administrator before use.',
+          'Trong giai đoạn beta, người đăng ký mới vào danh sách chờ và tài khoản được duyệt thủ công trước khi dùng. Chúng tôi có thể từ chối một đăng ký mà không cần nêu lý do.',
+          'During the beta, new sign-ups join a waitlist and accounts are approved by hand before use. We may decline a sign-up without giving a reason.',
         ],
         [
           'Bạn chịu trách nhiệm giữ an toàn mật khẩu và thông tin đăng ký chính xác.',
@@ -261,8 +265,8 @@ export const TERMS: LegalDoc = {
       title: ['7. Chấm dứt', '7. Ending'],
       paras: [
         [
-          'Bạn có thể ngừng dùng bất cứ lúc nào và yêu cầu xoá tài khoản qua contact@vocastudy.app.',
-          'You can stop at any time and ask us to delete your account at contact@vocastudy.app.',
+          'Bạn có thể ngừng dùng bất cứ lúc nào và tự xoá tài khoản trong Cài đặt → Vùng nguy hiểm, hoặc nhờ chúng tôi xoá qua contact@vocastudy.app.',
+          'You can stop at any time and delete your account yourself in Settings → Danger zone, or ask us to at contact@vocastudy.app.',
         ],
       ],
     },

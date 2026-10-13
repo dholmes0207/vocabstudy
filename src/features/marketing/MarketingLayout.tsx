@@ -4,7 +4,7 @@ import { Mail, Menu, X } from 'lucide-react'
 import Logo from '@/components/Logo'
 import UiLangToggle from '@/components/UiLangToggle'
 import ThemeToggle from '@/components/ThemeToggle'
-import { CONTACT_EMAIL } from '@/components/SiteFooter'
+import { CONTACT_EMAIL } from '@/lib/site'
 import { useT } from '@/lib/i18n'
 
 // Chrome for the public pages — landing, about, privacy, terms

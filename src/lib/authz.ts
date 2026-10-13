@@ -37,10 +37,12 @@ export function accountBlockMessage(
       ? 'This account has been locked. Please contact an admin.'
       : 'Tài khoản đã bị khoá. Liên hệ quản trị viên.'
   }
+  // Worded as a beta waitlist (docs/design/account.md): the mechanism is the
+  // same admin approval, but a learner should feel welcome, not suspected.
   if (status === 'pending') {
     return en
-      ? "This account is waiting for an admin's approval. Meanwhile you can keep learning as a guest — your progress will sync once it's approved."
-      : 'Tài khoản đang chờ quản trị viên duyệt. Trong lúc chờ, bạn vẫn học được ở chế độ khách — tiến độ sẽ được đồng bộ khi tài khoản được duyệt.'
+      ? "You're on the beta waitlist — new accounts are approved by hand. Meanwhile, keep learning as a guest: your progress on this device will sync once you're in."
+      : 'Bạn đang trong danh sách chờ bản beta — tài khoản mới được duyệt thủ công. Trong lúc chờ, cứ học ở chế độ khách nhé: tiến độ trên máy này sẽ được đồng bộ khi tài khoản được mở.'
   }
   return null
 }
