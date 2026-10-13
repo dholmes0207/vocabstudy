@@ -24,6 +24,7 @@ export default function SiteFooter({ className = '' }: { className?: string }) {
       <span className="flex basis-full justify-center gap-3 sm:basis-auto">
         {[
           ['/about', t('Giới thiệu', 'About')],
+          ['/changelog', t('Có gì mới', "What's new")],
           ['/privacy', t('Bảo mật', 'Privacy')],
           ['/terms', t('Điều khoản', 'Terms')],
         ].map(([to, label]) => (

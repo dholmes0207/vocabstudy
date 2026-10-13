@@ -4,8 +4,8 @@ import { Mail, Menu, X } from 'lucide-react'
 import Logo from '@/components/Logo'
 import UiLangToggle from '@/components/UiLangToggle'
 import ThemeToggle from '@/components/ThemeToggle'
-import { CONTACT_EMAIL } from '@/lib/site'
-import { useT } from '@/lib/i18n'
+import { CONTACT_EMAIL, feedbackHref } from '@/lib/site'
+import { useT, useUiLang } from '@/lib/i18n'
 
 // Chrome for the public pages — landing, about, privacy, terms
 // (docs/design/landing.md). Separate from the app shell: no study nav, a clear
@@ -106,12 +106,14 @@ export default function MarketingLayout() {
 
 function MarketingFooter() {
   const t = useT()
+  const lang = useUiLang()
   const cols = [
     {
       title: t('Sản phẩm', 'Product'),
       links: [
         { to: '/home', label: t('Vào học', 'Open the app') },
         { to: '/phrases', label: t('Mẫu câu giao tiếp', 'Everyday phrases') },
+        { to: '/changelog', label: t('Có gì mới', "What's new") },
         { to: '/browse', label: t('Tra cứu từ', 'Dictionary') },
         { to: '/#faq', label: t('Hỏi đáp', 'FAQ') },
       ],
@@ -121,6 +123,7 @@ function MarketingFooter() {
       links: [
         { to: '/about', label: t('Về chúng tôi', 'About us') },
         { to: `mailto:${CONTACT_EMAIL}`, label: t('Liên hệ', 'Contact') },
+        { to: feedbackHref(lang), label: t('Góp ý', 'Send feedback') },
       ],
     },
     {

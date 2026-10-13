@@ -1,0 +1,140 @@
+import type { Pair } from './legal'
+
+// "What's new" (/changelog). Every entry is a real release, taken from the git
+// history — newest first. Add one when a change is something a learner would
+// notice; leave out fixes and internal work.
+
+export interface Release {
+  /** ISO day it went live. */
+  date: string
+  title: Pair
+  items: Pair[]
+}
+
+export const RELEASES: Release[] = [
+  {
+    date: '2026-10-13',
+    title: ['Mẫu câu giao tiếp và diện mạo mới', 'Everyday phrases and a new look'],
+    items: [
+      [
+        'Mẫu câu giao tiếp: 100 câu dùng được ngay trong 10 tình huống, có giọng đọc bản xứ và bài luyện xếp câu.',
+        'Everyday phrases: 100 ready-to-use phrases across 10 situations, with native audio and sentence-building practice.',
+      ],
+      [
+        'Trang giới thiệu, logo và đường dẫn gọn (vocastudy.app/phrases).',
+        'A new homepage, logo and clean links (vocastudy.app/phrases).',
+      ],
+      [
+        'Quên mật khẩu, đổi mật khẩu và tự xoá tài khoản ngay trong app.',
+        'Forgot password, change password, and delete your account right in the app.',
+      ],
+      [
+        'Trang Giới thiệu, Chính sách bảo mật và Điều khoản sử dụng.',
+        'About, Privacy policy and Terms of use pages.',
+      ],
+    ],
+  },
+  {
+    date: '2026-10-11',
+    title: ['Giao diện tiếng Anh', 'English interface'],
+    items: [
+      [
+        'Chuyển giao diện giữa tiếng Anh và tiếng Việt bất cứ lúc nào; trợ lý AI trả lời theo ngôn ngữ bạn chọn.',
+        'Switch the interface between English and Vietnamese at any time; the AI tutor replies in your language.',
+      ],
+      [
+        'Menu tài khoản mở ngay, không phải chờ tải gói từ.',
+        'The account menu opens instantly instead of waiting for the word pack.',
+      ],
+      ['Tài khoản vào giai đoạn beta với danh sách chờ.', 'Accounts move to a beta waitlist.'],
+    ],
+  },
+  {
+    date: '2026-10-09',
+    title: ['4.440 từ', '4,440 words'],
+    items: [
+      [
+        'Thêm hàng trăm từ đời thường: cảm xúc, sức khoẻ, công sở, du lịch, sở thích…',
+        'Hundreds more everyday words: feelings, health, work, travel, hobbies…',
+      ],
+      [
+        '"Hôm nay còn bao nhiêu sức?" — chọn mức học vừa sức.',
+        '"How much energy today?" — pick a session that fits.',
+      ],
+      [
+        'Nghe trước những từ sắp học, rồi học luôn.',
+        'Listen to the words coming up next, then learn them straight away.',
+      ],
+    ],
+  },
+  {
+    date: '2026-10-08',
+    title: ['Nghe, phát âm và giữ nhịp học', 'Listening, pronunciation and keeping the habit'],
+    items: [
+      [
+        'Nghe thụ động: bấm một lần rồi cứ nghe, điều khiển từ màn hình khoá.',
+        'Hands-free listening: tap once and listen, controlled from the lock screen.',
+      ],
+      [
+        'Âm khó cho người Việt: 12 bài và trò thử tai.',
+        'Hard sounds for Vietnamese speakers: 12 lessons and an ear test.',
+      ],
+      [
+        'Khiên giữ chuỗi, mục tiêu nhỏ mỗi ngày, học nhanh 2 phút và quà nhãn dán.',
+        'Streak shields, a small daily goal, 2-minute quick study and sticker gifts.',
+      ],
+      [
+        'Nhắc học mỗi ngày qua lịch điện thoại; thống kê "7 ngày qua".',
+        'A daily reminder through your phone calendar; a "last 7 days" summary.',
+      ],
+    ],
+  },
+  {
+    date: '2026-10-01',
+    title: ['Bầu trời sống động', 'A living sky'],
+    items: [
+      [
+        'Nền trời sao, tuyết và sao băng phản hồi theo việc học — tắt được trong Cài đặt.',
+        'A sky of stars, snow and meteors that reacts as you learn — you can turn it off in Settings.',
+      ],
+    ],
+  },
+  {
+    date: '2026-09-24',
+    title: ['Học sâu, nhớ lâu', 'Learn deeply, remember longer'],
+    items: [
+      [
+        'Học theo nhóm 5 từ và tự nhớ lại thay vì tự chấm; trả lời sai thì được giảng.',
+        'Learn in groups of 5 and recall instead of grading yourself; a wrong answer gets explained.',
+      ],
+      [
+        'Ôn tập không còn "nhồi": chỉ câu trả lời đúng hạn mới đẩy từ lên.',
+        'No more cramming: only reviews on schedule move a word up.',
+      ],
+      [
+        'Trò chơi Ghép cặp và Xếp câu, Từ của ngày; vượt mốc 1.000 từ với các từ B1.',
+        'Match and Order games, Word of the day; past 1,000 words with B1 vocabulary.',
+      ],
+    ],
+  },
+  {
+    date: '2026-09-09',
+    title: ['Học cả khi mất mạng', 'Learn offline'],
+    items: [
+      [
+        'Sau lần mở đầu tiên, app vẫn chạy khi không có mạng.',
+        'After the first visit, the app keeps working without a connection.',
+      ],
+    ],
+  },
+  {
+    date: '2026-08-20',
+    title: ['1.000 từ cơ bản', '1,000 core words'],
+    items: [
+      [
+        'Đủ 1.000 từ cơ bản, mỗi từ có phiên âm, cách đọc kiểu Việt và giọng đọc bản xứ.',
+        'All 1,000 core words, each with IPA, a Vietnamese-letter respelling and native audio.',
+      ],
+    ],
+  },
+]

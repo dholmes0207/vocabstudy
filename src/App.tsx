@@ -28,6 +28,7 @@ const MarketingLayout = lazy(() => import('./features/marketing/MarketingLayout'
 const MarketingHome = lazy(() => import('./features/marketing/Home'))
 const Landing = lazy(() => import('./features/marketing/Landing'))
 const About = lazy(() => import('./features/marketing/About'))
+const Changelog = lazy(() => import('./features/marketing/Changelog'))
 const Privacy = lazy(() =>
   import('./features/marketing/LegalPage').then((m) => ({ default: m.Privacy }))
 )
@@ -61,6 +62,7 @@ export default function App() {
               <Route path="/" element={<MarketingHome />} />
               <Route path="/welcome" element={<Landing />} />
               <Route path="/about" element={<About />} />
+              <Route path="/changelog" element={<Changelog />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
             </Route>

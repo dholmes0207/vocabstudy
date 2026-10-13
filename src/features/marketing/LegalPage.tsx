@@ -1,17 +1,9 @@
 import { useT, useUiLang } from '@/lib/i18n'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { formatLongDate } from '@/lib/formatDate'
 import { PRIVACY, TERMS, type LegalDoc } from './legal'
 
 // Renders the privacy policy or the terms (content in ./legal.ts).
-
-function formatDate(iso: string, lang: 'vi' | 'en'): string {
-  const [y, m, d] = iso.split('-').map(Number)
-  return new Date(y, m - 1, d).toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
-}
 
 function LegalDocument({ doc }: { doc: LegalDoc }) {
   const t = useT()
@@ -20,7 +12,7 @@ function LegalDocument({ doc }: { doc: LegalDoc }) {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
       <p className="text-sm font-semibold text-brand-600 dark:text-brand-300">
-        {t('Cập nhật', 'Last updated')}: {formatDate(doc.updated, lang)}
+        {t('Cập nhật', 'Last updated')}: {formatLongDate(doc.updated, lang)}
       </p>
       <h1 className="mt-2 text-4xl font-extrabold tracking-tight">{t(...doc.title)}</h1>
       <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{t(...doc.intro)}</p>
