@@ -13,12 +13,30 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-14',
+    title: ['Chính sách và điều khoản theo luật mới', 'Policy and terms for the new laws'],
+    items: [
+      [
+        'Chính sách bảo mật và Điều khoản sử dụng cập nhật theo Luật Bảo vệ dữ liệu cá nhân 2025 và Luật Trí tuệ nhân tạo 2025.',
+        'The Privacy policy and Terms of use now follow Vietnam’s 2025 Personal Data Protection Law and AI Law.',
+      ],
+      [
+        'Khi đăng ký, bạn tự tích ô đồng ý — không có gì được chọn sẵn.',
+        'When you sign up, you tick the consent box yourself — nothing is pre-selected.',
+      ],
+      [
+        'Ghi rõ nội dung nào do AI tạo, gồm cả giọng đọc phát âm.',
+        'Clear labels for what AI produces, including the pronunciation voices.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-13',
     title: ['Mẫu câu giao tiếp và diện mạo mới', 'Everyday phrases and a new look'],
     items: [
       [
-        'Mẫu câu giao tiếp: 100 câu dùng được ngay trong 10 tình huống, có giọng đọc bản xứ và bài luyện xếp câu.',
-        'Everyday phrases: 100 ready-to-use phrases across 10 situations, with native audio and sentence-building practice.',
+        'Mẫu câu giao tiếp: 100 câu dùng được ngay trong 10 tình huống, có giọng đọc AI chuẩn Mỹ và bài luyện xếp câu.',
+        'Everyday phrases: 100 ready-to-use phrases across 10 situations, with natural AI voices and sentence-building practice.',
       ],
       [
         'Trang giới thiệu, logo và đường dẫn gọn (vocastudy.app/phrases).',
@@ -132,8 +150,8 @@ export const RELEASES: Release[] = [
     title: ['1.000 từ cơ bản', '1,000 core words'],
     items: [
       [
-        'Đủ 1.000 từ cơ bản, mỗi từ có phiên âm, cách đọc kiểu Việt và giọng đọc bản xứ.',
-        'All 1,000 core words, each with IPA, a Vietnamese-letter respelling and native audio.',
+        'Đủ 1.000 từ cơ bản, mỗi từ có phiên âm, cách đọc kiểu Việt và giọng đọc AI chuẩn Mỹ.',
+        'All 1,000 core words, each with IPA, a Vietnamese-letter respelling and a natural AI voice.',
       ],
     ],
   },

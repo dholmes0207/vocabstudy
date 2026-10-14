@@ -27,8 +27,10 @@ import { useProgressSync } from '@/hooks/useProgressSync'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from './UiLangToggle'
 import SiteFooter from './SiteFooter'
+import PolicyNotice from './PolicyNotice'
 import Logo from './Logo'
-import { markEntered } from '@/lib/entry'
+import { hasUsedApp, markEntered } from '@/lib/entry'
+import { markPolicySeen } from '@/lib/policyNotice'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 
 /** A Vietnamese/English pair, picked by the interface language. */
@@ -88,7 +90,12 @@ export default function Layout() {
   useProgressSync()
   const t = useT()
   // Once the app has been opened here, "/" brings this device straight back to it.
-  useEffect(() => markEntered(localStorage), [])
+  useEffect(() => {
+    // A first visit starts under the current privacy policy and terms, so it
+    // has no change to be told about (components/PolicyNotice.tsx).
+    if (!hasUsedApp(localStorage)) markPolicySeen(localStorage)
+    markEntered(localStorage)
+  }, [])
   useDocumentTitle(
     t('VocaStudy · Học tiếng Anh mỗi ngày', 'VocaStudy · English, a little every day')
   )
@@ -139,6 +146,7 @@ export default function Layout() {
         <main
           className={`mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 pt-6 lg:pb-8 ${immersive ? 'pb-6' : 'pb-24'}`}
         >
+          {!immersive && <PolicyNotice />}
           {/* Keyed by path so a crash on one screen clears the moment the
               learner taps another tab — the nav around it keeps working. */}
           <ErrorBoundary key={pathname}>

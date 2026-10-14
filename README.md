@@ -57,7 +57,7 @@ Chỉ **lần thử đầu tiên** của mỗi từ được ghi vào SRS — nh
 
 ### 🔊 Phát âm bằng giọng Neural
 
-Mỗi từ và câu ví dụ đều có **file MP3 giọng Neural bản xứ** (chất lượng như người thật), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong _Cài đặt → Phát âm_.
+Mỗi từ và câu ví dụ đều có **file MP3 giọng đọc AI (Neural) chuẩn Mỹ** (nghe tự nhiên), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong _Cài đặt → Phát âm_.
 
 ---
 

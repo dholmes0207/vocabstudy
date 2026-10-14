@@ -27,7 +27,16 @@ interface AuthState {
   pendingApproval: boolean
   bootstrap: () => Promise<void>
   login: (email: string, password: string) => Promise<void>
-  register: (email: string, password: string, name?: string) => Promise<void>
+  /**
+   * Create an account. `consentVersion` is the POLICY_VERSION the person ticked
+   * "I agree" to; it is stored with the account as proof of consent.
+   */
+  register: (
+    email: string,
+    password: string,
+    name?: string,
+    consentVersion?: string
+  ) => Promise<void>
   logout: () => Promise<void>
   /** Email a password-reset link. Says nothing about whether the address exists. */
   requestPasswordReset: (email: string) => Promise<void>
@@ -158,7 +167,7 @@ export const useAuth = create<AuthState>((set, get) => {
       if (blocked) throw new Error(blocked)
     },
 
-    register: async (email, password, name) => {
+    register: async (email, password, name, consentVersion) => {
       if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
       set({ needsEmailConfirm: false, pendingApproval: false })
       const { data, error } = await supabase.auth.signUp({
@@ -167,7 +176,18 @@ export const useAuth = create<AuthState>((set, get) => {
         // The confirmation link opens the app, not the landing page. Supabase
         // honours it only if it is in Auth → URL Configuration → Redirect URLs;
         // otherwise it falls back to the Site URL and "/" forwards it anyway.
-        options: { data: { name: name ?? '' }, emailRedirectTo: `${window.location.origin}/home` },
+        options: {
+          data: {
+            name: name ?? '',
+            // Proof of consent (Personal Data Protection Law 2025): which
+            // version of the terms and policy, and when. Kept in the auth
+            // user's metadata; the profile trigger only reads `name`.
+            ...(consentVersion
+              ? { consent_version: consentVersion, consented_at: new Date().toISOString() }
+              : {}),
+          },
+          emailRedirectTo: `${window.location.origin}/home`,
+        },
       })
       if (error) throw new Error(mapAuthError(error.message))
       if (data.session?.user) {

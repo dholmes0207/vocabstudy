@@ -63,8 +63,8 @@ export default function About() {
         </p>
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
           {t(
-            'Vì vậy chúng tôi làm một ứng dụng thật nhẹ nhàng: mỗi ngày vài phút, có giọng đọc bản xứ, cách đọc bằng chữ Việt, mẫu câu dùng được ngay — và luôn động viên thay vì chê trách.',
-            'So we built something gentle: a few minutes a day, native audio, Vietnamese-letter respellings, phrases you can use right away — and encouragement instead of blame.'
+            'Vì vậy chúng tôi làm một ứng dụng thật nhẹ nhàng: mỗi ngày vài phút, có giọng đọc AI chuẩn Mỹ, cách đọc bằng chữ Việt, mẫu câu dùng được ngay — và luôn động viên thay vì chê trách.',
+            'So we built something gentle: a few minutes a day, natural AI voices, Vietnamese-letter respellings, phrases you can use right away — and encouragement instead of blame.'
           )}
         </p>
       </section>

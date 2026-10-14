@@ -111,8 +111,8 @@ function TopicList({ pack }: { pack: PhrasePack }) {
           </h1>
           <p className="mt-1 max-w-2xl text-slate-500">
             {t(
-              'Những câu nói dùng được ngay theo từng tình huống — nghe giọng bản xứ, hiểu nghĩa, rồi luyện cho tới khi bật ra tự nhiên.',
-              'Ready-to-use sentences for real situations — hear a native voice, understand them, then practise until they come out naturally.'
+              'Những câu nói dùng được ngay theo từng tình huống — nghe giọng đọc AI chuẩn Mỹ, hiểu nghĩa, rồi luyện cho tới khi bật ra tự nhiên.',
+              'Ready-to-use sentences for real situations — hear a natural AI voice, understand them, then practise until they come out naturally.'
             )}
           </p>
         </div>

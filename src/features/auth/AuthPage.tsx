@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { KeyRound, LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { useT } from '@/lib/i18n'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { POLICY_VERSION } from '@/lib/site'
 import { AuthShell, Field, Notice, inputCls } from './AuthShell'
 
 type Mode = 'login' | 'register' | 'forgot'
@@ -18,6 +19,8 @@ export default function AuthPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
+  // Never pre-ticked: consent must be an action the person takes.
+  const [agreed, setAgreed] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [info, setInfo] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -39,6 +42,15 @@ export default function AuthPage() {
     e.preventDefault()
     setError(null)
     setInfo(null)
+    if (mode === 'register' && !agreed) {
+      setError(
+        t(
+          'Hãy đọc và đồng ý với Điều khoản sử dụng và Chính sách bảo mật để đăng ký.',
+          'Please read and accept the Terms of use and Privacy policy to sign up.'
+        )
+      )
+      return
+    }
     setBusy(true)
     try {
       if (mode === 'forgot') {
@@ -53,7 +65,7 @@ export default function AuthPage() {
         await login(email, password)
         navigate('/home')
       } else {
-        await register(email, password, name)
+        await register(email, password, name, POLICY_VERSION)
         const { needsEmailConfirm, pendingApproval } = useAuth.getState()
         if (needsEmailConfirm) {
           setInfo(
@@ -175,6 +187,28 @@ export default function AuthPage() {
           </div>
         )}
 
+        {mode === 'register' && (
+          <label className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+            <input
+              type="checkbox"
+              required
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-0.5 h-4 w-4 shrink-0 accent-brand-600"
+            />
+            <span>
+              {t('Tôi đồng ý với ', 'I agree to the ')}
+              <ConsentLink to="/terms">{t('Điều khoản sử dụng', 'Terms of use')}</ConsentLink>
+              {t(' và ', ' and the ')}
+              <ConsentLink to="/privacy">{t('Chính sách bảo mật', 'Privacy policy')}</ConsentLink>
+              {t(
+                ', gồm việc dữ liệu được lưu trữ và xử lý trên máy chủ ở nước ngoài. Nếu dưới 16 tuổi, tôi đã có sự đồng ý của cha mẹ hoặc người giám hộ.',
+                ', including storing and processing my data on servers outside Vietnam. If I am under 16, a parent or guardian has agreed too.'
+              )}
+            </span>
+          </label>
+        )}
+
         {info && <Notice tone="info">{info}</Notice>}
         {error && <Notice tone="error">{error}</Notice>}
 
@@ -206,5 +240,19 @@ export default function AuthPage() {
         </button>
       )}
     </AuthShell>
+  )
+}
+
+/** Opens in a new tab so the half-filled form is not lost. */
+function ConsentLink({ to, children }: { to: string; children: React.ReactNode }) {
+  return (
+    <Link
+      to={to}
+      target="_blank"
+      rel="noopener"
+      className="font-medium text-brand-600 underline-offset-2 hover:underline dark:text-brand-300"
+    >
+      {children}
+    </Link>
   )
 }

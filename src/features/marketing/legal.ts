@@ -1,15 +1,22 @@
+import { POLICY_VERSION } from '@/lib/site'
+
 // Privacy policy and terms of use, in both interface languages
-// (docs/design/landing.md). Written to match what the code actually does —
-// keep it in step: a new data flow (analytics, a new processor, uploads) must
-// be added here in the same change.
+// (docs/design/landing.md). Reviewed against Vietnamese law in October 2026
+// (Personal Data Protection Law 91/2025/QH15, Decree 356/2025/ND-CP, AI Law
+// 134/2025/QH15) and written to match what the code actually does — keep it in
+// step: a new data flow (analytics, a new processor, uploads) must be added
+// here in the same change, and an important change bumps POLICY_VERSION.
 
 /** A Vietnamese/English pair. */
 export type Pair = [vi: string, en: string]
 
 export interface LegalSection {
   title: Pair
-  paras?: Pair[]
+  /** Paragraphs before the list (e.g. the sentence that introduces it). */
+  lead?: Pair[]
   items?: Pair[]
+  /** Paragraphs after the list. */
+  paras?: Pair[]
 }
 
 export interface LegalDoc {
@@ -19,7 +26,7 @@ export interface LegalDoc {
   sections: LegalSection[]
 }
 
-export const LAST_UPDATED = '2026-10-13'
+export const LAST_UPDATED = POLICY_VERSION
 
 export const PRIVACY: LegalDoc = {
   title: ['Chính sách bảo mật', 'Privacy policy'],
@@ -33,20 +40,20 @@ export const PRIVACY: LegalDoc = {
       title: ['1. Dữ liệu chúng tôi thu thập', '1. What we collect'],
       items: [
         [
-          'Tài khoản (nếu bạn tạo): email, tên hiển thị bạn nhập, và mật khẩu — mật khẩu được nhà cung cấp xác thực mã hoá, chúng tôi không đọc được.',
-          'Account (if you create one): your email, the display name you enter, and a password — the password is hashed by our authentication provider and we cannot read it.',
+          'Tài khoản (nếu bạn tạo): email, tên hiển thị bạn nhập, mật khẩu, và thời điểm bạn đồng ý với Điều khoản và Chính sách này khi đăng ký. Mật khẩu được nhà cung cấp xác thực mã hoá, chúng tôi không đọc được.',
+          'Account (if you create one): your email, the display name you enter, a password, and when you accepted these Terms and this Policy at sign-up. The password is hashed by our authentication provider and we cannot read it.',
         ],
         [
-          'Tiến độ học: từ đã học, lịch ôn, thống kê, chuỗi ngày, nhãn dán… Khi bạn đăng nhập, dữ liệu này được đồng bộ lên máy chủ để dùng trên nhiều thiết bị.',
-          'Learning progress: words learned, review schedule, statistics, streak, stickers… When you are signed in it is synced to our servers so you can use several devices.',
+          'Tiến độ học từ vựng: từ đã học, lịch ôn, thống kê, chuỗi ngày, nhãn dán… Khi bạn đăng nhập, phần này được đồng bộ lên máy chủ để dùng trên nhiều thiết bị.',
+          'Vocabulary progress: words learned, review schedule, statistics, streak, stickers… When you are signed in, this is synced to our servers so you can use several devices.',
         ],
         [
-          'Câu hỏi gửi trợ lý AI: được chuyển tới OpenAI để tạo câu trả lời. Chúng tôi không lưu nội dung cuộc trò chuyện, chỉ đếm số lượt hỏi mỗi ngày để áp dụng hạn mức.',
-          'Questions to the AI tutor: sent to OpenAI to generate an answer. We do not store the conversation; we only count questions per day to apply the daily limit.',
+          'Câu hỏi gửi trợ lý AI: được chuyển qua API tới OpenAI để tạo câu trả lời. Chúng tôi không lưu nội dung cuộc trò chuyện, chỉ đếm số lượt hỏi mỗi ngày để áp dụng hạn mức. Theo chính sách API của OpenAI, dữ liệu gửi qua API không được dùng để huấn luyện mô hình của họ; OpenAI có thể lưu tạm theo chính sách của họ để phát hiện lạm dụng. Dù vậy, bạn hãy tránh nhập thông tin cá nhân nhạy cảm vào khung trò chuyện.',
+          'Questions to the AI tutor: sent through the API to OpenAI to generate an answer. We do not store the conversation; we only count questions per day to apply the daily limit. Under OpenAI’s API policy, data sent through the API is not used to train their models; OpenAI may keep it temporarily under its own policy to detect abuse. Even so, please do not type sensitive personal information into the chat.',
         ],
         [
-          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ của trình duyệt, kèm bộ nhớ đệm để học khi mất mạng. Những dữ liệu này ở lại trên máy bạn.',
-          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s storage, along with an offline cache. This data stays on your device.',
+          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ cục bộ của trình duyệt (Local Storage), kèm bộ nhớ đệm (Cache Storage) để học khi mất mạng. Câu bạn tự đặt và tiến độ mẫu câu hiện chỉ nằm trên máy bạn, không được đồng bộ.',
+          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s local storage, along with an offline cache. Your own sentences and phrase progress currently stay on your device only and are not synced.',
         ],
         [
           'Ghi âm luyện nói: chỉ nằm trong trình duyệt và không được tải lên máy chủ của chúng tôi. Tính năng chấm phát âm dùng nhận dạng giọng nói của trình duyệt — một số trình duyệt (ví dụ Chrome) gửi âm thanh tới máy chủ của nhà cung cấp trình duyệt để nhận dạng.',
@@ -71,7 +78,10 @@ export const PRIVACY: LegalDoc = {
           'Giữ an toàn: duyệt tài khoản mới, ngăn lạm dụng, áp dụng hạn mức.',
           'To keep the service safe: approving new accounts, preventing abuse, applying limits.',
         ],
-        ['Trả lời khi bạn liên hệ với chúng tôi.', 'To reply when you contact us.'],
+        [
+          'Trả lời và hỗ trợ khi bạn liên hệ với chúng tôi.',
+          'To reply and help when you contact us.',
+        ],
       ],
     },
     {
@@ -80,27 +90,42 @@ export const PRIVACY: LegalDoc = {
         ['Không bán hay cho thuê dữ liệu của bạn.', 'We do not sell or rent your data.'],
         ['Không chạy quảng cáo.', 'We do not run ads.'],
         [
-          'Không dùng cookie theo dõi hay công cụ phân tích của bên thứ ba.',
-          'We do not use tracking cookies or third-party analytics.',
+          'Không dùng cookie theo dõi hay quảng cáo, và không dùng công cụ phân tích hay thống kê của bên thứ ba. Chúng tôi chỉ dùng bộ nhớ cục bộ của trình duyệt cho mục đích kỹ thuật thiết yếu: giữ trạng thái đăng nhập, lưu cài đặt và giao diện, học khi mất mạng.',
+          'We use no tracking or advertising cookies and no third-party analytics. We only use your browser’s local storage for what the app needs to work: keeping you signed in, remembering settings and appearance, and learning offline.',
         ],
       ],
     },
     {
-      title: ['4. Đối tác xử lý dữ liệu', '4. Service providers'],
-      paras: [
+      title: ['4. Đối tác xử lý và lưu trữ dữ liệu', '4. Service providers and storage'],
+      lead: [
         [
-          'Chúng tôi dùng một số nhà cung cấp để vận hành dịch vụ. Họ chỉ xử lý dữ liệu theo yêu cầu của chúng tôi:',
-          'We rely on a few providers to run the service. They process data only on our behalf:',
+          'Chúng tôi dùng một số nhà cung cấp hạ tầng để vận hành dịch vụ. Họ chỉ xử lý dữ liệu theo yêu cầu kỹ thuật của chúng tôi:',
+          'We rely on a few infrastructure providers to run the service. They process data only as our service technically requires:',
         ],
       ],
       items: [
-        ['Supabase — tài khoản và cơ sở dữ liệu.', 'Supabase — accounts and database.'],
-        ['Cloudflare — lưu trữ trang web và máy chủ.', 'Cloudflare — website hosting and servers.'],
-        ['OpenAI — trợ lý AI.', 'OpenAI — the AI tutor.'],
-        ['Google Fonts — phông chữ hiển thị.', 'Google Fonts — the typeface.'],
         [
-          'Google Calendar — chỉ khi bạn tự chọn tạo nhắc học qua lịch Google.',
-          'Google Calendar — only if you choose to add a study reminder there.',
+          'Supabase — xác thực tài khoản và cơ sở dữ liệu.',
+          'Supabase — account sign-in and database.',
+        ],
+        [
+          'Cloudflare — lưu trữ trang web, máy chủ và bảo mật.',
+          'Cloudflare — website hosting, servers and security.',
+        ],
+        ['OpenAI — tạo câu trả lời của trợ lý AI.', 'OpenAI — generating the AI tutor’s answers.'],
+        [
+          'Google Fonts — phông chữ hiển thị (trình duyệt của bạn tải trực tiếp từ máy chủ của Google).',
+          'Google Fonts — the typeface (your browser downloads it directly from Google’s servers).',
+        ],
+        [
+          'Google Calendar — chỉ khi bạn bấm tạo nhắc học: app mở trang tạo sự kiện của Google với nội dung điền sẵn. VocaStudy không kết nối tới và không đọc được lịch của bạn.',
+          'Google Calendar — only when you tap to add a study reminder: the app opens Google’s new-event page with the details filled in. VocaStudy does not connect to or read your calendar.',
+        ],
+      ],
+      paras: [
+        [
+          'Máy chủ của các nhà cung cấp trên đặt ở ngoài Việt Nam. Khi tạo tài khoản, bạn đồng ý để dữ liệu cần thiết cho các tính năng trực tuyến được chuyển ra nước ngoài, lưu trữ và xử lý trên hạ tầng này theo quy định của pháp luật.',
+          'These providers’ servers are outside Vietnam. When you create an account, you agree that the data the online features need may be transferred abroad, stored and processed on this infrastructure in accordance with the law.',
         ],
       ],
     },
@@ -108,12 +133,12 @@ export const PRIVACY: LegalDoc = {
       title: ['5. Lưu giữ và xoá dữ liệu', '5. Keeping and deleting data'],
       items: [
         [
-          'Dữ liệu tài khoản được giữ cho tới khi bạn xoá tài khoản. Bạn tự xoá được trong Cài đặt → Vùng nguy hiểm → Xoá tài khoản: tài khoản, tiến độ đã đồng bộ và số lượt dùng trợ lý AI bị xoá khỏi cơ sở dữ liệu ngay lập tức. Bản sao lưu của nhà cung cấp hạ tầng (nếu có) hết hạn theo lịch thường lệ của họ.',
-          'Account data is kept until you delete your account. You can do it yourself in Settings → Danger zone → Delete account: the account, its synced progress and its AI usage counts are removed from our database immediately. Infrastructure providers’ backups, if any, expire on their normal schedule.',
+          'Dữ liệu tài khoản được giữ cho tới khi bạn xoá tài khoản. Bạn tự xoá được trong Cài đặt → Vùng nguy hiểm → Xoá tài khoản: tài khoản, tiến độ đã đồng bộ và số lượt dùng trợ lý AI bị xoá khỏi cơ sở dữ liệu ngay lập tức. Bản sao lưu tự động của nhà cung cấp hạ tầng (nếu có) tự hết hạn theo chu kỳ thường lệ của họ.',
+          'Account data is kept until you delete your account. You can do it yourself in Settings → Danger zone → Delete account: the account, its synced progress and its AI usage counts are removed from our database immediately. Infrastructure providers’ automatic backups, if any, expire on their normal schedule.',
         ],
         [
-          'Không tự xoá được (ví dụ quên mật khẩu và không còn truy cập email)? Viết cho contact@vocastudy.app — chúng tôi xoá giúp trong vòng 30 ngày.',
-          'Can’t do it yourself (say, you lost access to your email)? Write to contact@vocastudy.app and we will delete it within 30 days.',
+          'Không tự xoá được (ví dụ quên mật khẩu và không còn truy cập email)? Viết cho contact@vocastudy.app — chúng tôi phản hồi xác nhận trong vòng 02 ngày làm việc và hoàn tất việc xoá trong vòng 20 ngày.',
+          'Can’t do it yourself (say, you lost access to your email)? Write to contact@vocastudy.app — we confirm within 2 working days and complete the deletion within 20 days.',
         ],
         [
           'Dữ liệu trên thiết bị: xoá trong Cài đặt → Vùng nguy hiểm → Đặt lại, hoặc xoá dữ liệu trang web trong trình duyệt.',
@@ -129,8 +154,8 @@ export const PRIVACY: LegalDoc = {
       title: ['6. Quyền của bạn', '6. Your rights'],
       paras: [
         [
-          'Theo quy định về bảo vệ dữ liệu cá nhân (Nghị định 13/2023/NĐ-CP), bạn có quyền được biết, truy cập, chỉnh sửa, xoá dữ liệu, rút lại sự đồng ý và phản đối việc xử lý. Hãy liên hệ contact@vocastudy.app để thực hiện các quyền này.',
-          'Under Vietnam’s personal data protection rules (Decree 13/2023/ND-CP) you may be informed about, access, correct and delete your data, withdraw consent and object to processing. Contact contact@vocastudy.app to use these rights.',
+          'Theo Luật Bảo vệ dữ liệu cá nhân năm 2025 (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP, bạn có quyền được biết, đồng ý hoặc rút lại sự đồng ý, xem, chỉnh sửa, yêu cầu cung cấp, xoá dữ liệu, yêu cầu hạn chế xử lý và phản đối việc xử lý dữ liệu cá nhân của mình. Hãy liên hệ contact@vocastudy.app để thực hiện các quyền này — chúng tôi phản hồi trong vòng 02 ngày làm việc.',
+          'Under Vietnam’s Personal Data Protection Law 2025 (Law No. 91/2025/QH15) and Decree 356/2025/ND-CP, you may be informed; give or withdraw consent; view, correct, obtain and delete your data; ask us to restrict processing; and object to the processing of your personal data. Contact contact@vocastudy.app to use these rights — we reply within 2 working days.',
         ],
       ],
     },
@@ -138,8 +163,8 @@ export const PRIVACY: LegalDoc = {
       title: ['7. Bảo mật', '7. Security'],
       paras: [
         [
-          'Kết nối luôn được mã hoá (HTTPS). Cơ sở dữ liệu chỉ cho mỗi người đọc và ghi dữ liệu của chính mình. Các khoá bí mật chỉ nằm trên máy chủ, không bao giờ ở trong ứng dụng.',
-          'Connections are always encrypted (HTTPS). The database only lets each person read and write their own data. Secret keys live only on the server, never in the app.',
+          'Kết nối luôn được mã hoá (HTTPS). Cơ sở dữ liệu áp dụng phân quyền theo từng dòng (Row-Level Security), chỉ cho phép mỗi người đọc và ghi dữ liệu của chính mình. Các khoá bí mật chỉ nằm trên máy chủ, không bao giờ lộ ra trong ứng dụng ở trình duyệt.',
+          'Connections are always encrypted (HTTPS). The database enforces row-level security, so each person can only read and write their own data. Secret keys live only on the server and are never exposed in the app in your browser.',
         ],
       ],
     },
@@ -147,8 +172,8 @@ export const PRIVACY: LegalDoc = {
       title: ['8. Trẻ em', '8. Children'],
       paras: [
         [
-          'Nếu bạn dưới 16 tuổi, hãy dùng VocaStudy với sự đồng ý của cha mẹ hoặc người giám hộ.',
-          'If you are under 16, please use VocaStudy with the consent of a parent or guardian.',
+          'Theo quy định pháp luật Việt Nam, nếu bạn dưới 16 tuổi (đặc biệt từ đủ 07 tuổi đến dưới 16 tuổi), việc tạo tài khoản và xử lý dữ liệu trên VocaStudy cần có sự đồng ý của cả bạn và cha mẹ hoặc người giám hộ hợp pháp.',
+          'Under Vietnamese law, if you are under 16 (in particular from 7 to under 16), creating an account and processing your data on VocaStudy requires the consent of both you and a parent or legal guardian.',
         ],
       ],
     },
@@ -156,17 +181,17 @@ export const PRIVACY: LegalDoc = {
       title: ['9. Thay đổi chính sách', '9. Changes'],
       paras: [
         [
-          'Khi chính sách thay đổi, chúng tôi cập nhật ngày ở đầu trang. Thay đổi quan trọng sẽ được thông báo trong ứng dụng.',
-          'When this policy changes we update the date at the top. Important changes are announced in the app.',
+          'Khi chính sách thay đổi, chúng tôi cập nhật ngày ở đầu trang. Thay đổi quan trọng sẽ được thông báo trong ứng dụng. Việc bạn tiếp tục sử dụng VocaStudy sau khi chính sách được cập nhật đồng nghĩa với việc bạn đồng ý với các nội dung thay đổi đó.',
+          'When this policy changes we update the date at the top. Important changes are announced in the app. If you keep using VocaStudy after the policy is updated, you accept the changes.',
         ],
       ],
     },
     {
-      title: ['10. Liên hệ', '10. Contact'],
+      title: ['10. Đơn vị vận hành và liên hệ', '10. Who runs VocaStudy, and contact'],
       paras: [
         [
-          'Mọi câu hỏi về quyền riêng tư: contact@vocastudy.app',
-          'Any privacy question: contact@vocastudy.app',
+          'VocaStudy là dự án độc lập, được phát triển và vận hành tại Hà Nội, Việt Nam. Mọi câu hỏi hoặc yêu cầu về quyền riêng tư, vui lòng liên hệ: contact@vocastudy.app',
+          'VocaStudy is an independent project, developed and run in Hanoi, Vietnam. For any privacy question or request, contact: contact@vocastudy.app',
         ],
       ],
     },
@@ -185,8 +210,8 @@ export const TERMS: LegalDoc = {
       title: ['1. Dịch vụ', '1. The service'],
       paras: [
         [
-          'VocaStudy là ứng dụng học tiếng Anh miễn phí, đang trong giai đoạn thử nghiệm (beta). Tính năng có thể được thêm, thay đổi hoặc ngừng để sản phẩm tốt hơn.',
-          'VocaStudy is a free English-learning app, currently in beta. Features may be added, changed or removed as the product improves.',
+          'VocaStudy là ứng dụng học tiếng Anh hiện được cung cấp miễn phí trong giai đoạn thử nghiệm (beta). Tính năng và hạn mức sử dụng (như số lượt hỏi trợ lý AI mỗi ngày) có thể được thêm, điều chỉnh hoặc ngừng để sản phẩm tốt hơn và giữ hệ thống ổn định.',
+          'VocaStudy is an English-learning app, currently free during its beta. Features and usage limits (such as AI tutor questions per day) may be added, adjusted or removed to improve the product and keep the service stable.',
         ],
       ],
     },
@@ -194,15 +219,15 @@ export const TERMS: LegalDoc = {
       title: ['2. Tài khoản', '2. Accounts'],
       items: [
         [
-          'Bạn có thể học mà không cần tài khoản. Tài khoản giúp đồng bộ tiến độ và dùng trợ lý AI.',
-          'You can learn without an account. An account syncs your progress and unlocks the AI tutor.',
+          'Bạn có thể học mà không cần tài khoản. Tài khoản giúp đồng bộ tiến độ giữa các thiết bị và dùng trợ lý AI.',
+          'You can learn without an account. An account syncs your progress across devices and unlocks the AI tutor.',
         ],
         [
           'Trong giai đoạn beta, người đăng ký mới vào danh sách chờ và tài khoản được duyệt thủ công trước khi dùng. Chúng tôi có thể từ chối một đăng ký mà không cần nêu lý do.',
           'During the beta, new sign-ups join a waitlist and accounts are approved by hand before use. We may decline a sign-up without giving a reason.',
         ],
         [
-          'Bạn chịu trách nhiệm giữ an toàn mật khẩu và thông tin đăng ký chính xác.',
+          'Bạn chịu trách nhiệm giữ an toàn mật khẩu và bảo đảm thông tin đăng ký chính xác.',
           'You are responsible for keeping your password safe and your details accurate.',
         ],
       ],
@@ -211,12 +236,12 @@ export const TERMS: LegalDoc = {
       title: ['3. Sử dụng hợp lệ', '3. Acceptable use'],
       items: [
         [
-          'Dùng trợ lý AI cho việc học tiếng Anh; không cố vượt giới hạn hay dùng vào mục đích khác.',
-          'Use the AI tutor for learning English; do not try to bypass its limits or use it for other purposes.',
+          'Dùng trợ lý AI đúng mục đích học tiếng Anh; không cố vượt giới hạn, và không lợi dụng AI để tạo nội dung giả mạo, lừa dối, vi phạm pháp luật hoặc xâm phạm quyền hợp pháp của người khác.',
+          'Use the AI tutor for learning English; do not try to bypass its limits, or use it to create fake, deceptive or unlawful content or content that infringes anyone’s rights.',
         ],
         [
-          'Không tấn công, dò quét hay làm quá tải hệ thống; không thu thập dữ liệu tự động.',
-          'Do not attack, probe or overload the service, or scrape its content automatically.',
+          'Không tấn công, dò quét hay làm quá tải hệ thống; không thu thập dữ liệu tự động (scraping, crawling).',
+          'Do not attack, probe or overload the service, or collect its content automatically (scraping, crawling).',
         ],
         [
           'Không dùng dịch vụ cho mục đích trái pháp luật.',
@@ -225,17 +250,17 @@ export const TERMS: LegalDoc = {
       ],
       paras: [
         [
-          'Chúng tôi có thể khoá tài khoản vi phạm các điều trên.',
-          'We may lock accounts that break these rules.',
+          'Chúng tôi có thể tạm ngừng hoặc khoá tài khoản vi phạm các điều trên.',
+          'We may suspend or lock accounts that break these rules.',
         ],
       ],
     },
     {
-      title: ['4. Trợ lý AI', '4. The AI tutor'],
+      title: ['4. Minh bạch về trí tuệ nhân tạo (AI)', '4. Transparency about AI'],
       paras: [
         [
-          'Câu trả lời do trí tuệ nhân tạo tạo ra và có thể chưa chính xác. Hãy dùng như một gợi ý học tập, không thay thế giáo viên hay tài liệu chính thức.',
-          'Answers are generated by artificial intelligence and may be wrong. Treat them as study help, not a replacement for a teacher or official materials.',
+          'Theo Luật Trí tuệ nhân tạo năm 2025 (Luật số 134/2025/QH15), chúng tôi thông báo rõ: câu trả lời của trợ lý AI và giọng đọc phát âm trong VocaStudy được tạo tự động bằng trí tuệ nhân tạo; một phần nội dung học (như câu ví dụ, mẹo ghi nhớ) được soạn với sự hỗ trợ của công cụ AI. Nội dung do AI tạo ra có thể chưa hoàn toàn chính xác — hãy dùng như gợi ý học tập, không thay thế giáo viên hay tài liệu chính thức.',
+          'In line with Vietnam’s AI Law 2025 (Law No. 134/2025/QH15), we state clearly: the AI tutor’s answers and the pronunciation voices in VocaStudy are generated automatically by artificial intelligence, and part of the learning content (such as example sentences and memory tips) was written with the help of AI tools. AI-generated content may not be fully accurate — treat it as study help, not a replacement for a teacher or official materials.',
         ],
       ],
     },
@@ -243,39 +268,43 @@ export const TERMS: LegalDoc = {
       title: ['5. Nội dung và quyền sở hữu', '5. Content and ownership'],
       items: [
         [
-          'Bài học, dữ liệu từ vựng, mẫu câu, giọng đọc và thiết kế thuộc về VocaStudy. Bạn được dùng cho việc học cá nhân, không vì mục đích thương mại.',
-          'Lessons, word data, phrases, recordings and design belong to VocaStudy. You may use them for personal learning, not commercially.',
+          'Giao diện, mã nguồn, cấu trúc bài học và bộ dữ liệu từ vựng, mẫu câu được biên soạn trên VocaStudy thuộc về VocaStudy. Bạn được dùng cho việc học cá nhân; không dùng vào mục đích thương mại, không sao chép hay phân phối lại hàng loạt.',
+          'The interface, source code, lesson structure and the compiled word and phrase data belong to VocaStudy. You may use them for personal learning; not commercially, and not to copy or redistribute in bulk.',
         ],
         [
-          'Những gì bạn tự tạo (ví dụ câu bạn tự đặt) vẫn thuộc về bạn.',
-          'What you create yourself (such as your own sentences) stays yours.',
+          'Những gì bạn tự tạo (ví dụ câu bạn tự đặt, ghi chú) vẫn thuộc về bạn. Với dữ liệu được đồng bộ khi bạn đăng nhập, bạn cho phép VocaStudy lưu trữ, sao lưu và hiển thị lại cho chính bạn trên các thiết bị — chỉ để vận hành tính năng đồng bộ.',
+          'What you create yourself (such as your own sentences and notes) stays yours. For data synced while you are signed in, you allow VocaStudy to store, back up and show it back to you on your devices — only to run the sync feature.',
         ],
       ],
     },
     {
-      title: ['6. Không bảo đảm', '6. No warranty'],
+      title: ['6. Không bảo đảm và giới hạn trách nhiệm', '6. No warranty and limited liability'],
       paras: [
         [
-          'Dịch vụ được cung cấp "như hiện có". Chúng tôi cố gắng để dịch vụ luôn ổn định nhưng không bảo đảm không bao giờ gián đoạn hay mất dữ liệu — hãy dùng tính năng sao lưu trong Cài đặt. Trong phạm vi pháp luật cho phép, VocaStudy không chịu trách nhiệm cho thiệt hại gián tiếp phát sinh từ việc sử dụng dịch vụ.',
-          'The service is provided "as is". We work to keep it reliable but cannot promise it will never be interrupted or lose data — use the backup feature in Settings. To the extent the law allows, VocaStudy is not liable for indirect damages arising from use of the service.',
+          'Dịch vụ được cung cấp "như hiện có". Chúng tôi cố gắng để dịch vụ luôn ổn định nhưng không bảo đảm không bao giờ gián đoạn hay mất dữ liệu — hãy thường xuyên dùng tính năng sao lưu ra file trong Cài đặt. Trong phạm vi pháp luật cho phép, VocaStudy không chịu trách nhiệm cho thiệt hại gián tiếp phát sinh từ việc sử dụng dịch vụ, và tổng trách nhiệm bồi thường (nếu có) trong mọi trường hợp không vượt quá tổng số tiền bạn đã thanh toán cho VocaStudy trong 12 tháng trước đó (0 đồng đối với dịch vụ miễn phí).',
+          'The service is provided "as is". We work to keep it reliable but cannot promise it will never be interrupted or lose data — back up to a file regularly from Settings. To the extent the law allows, VocaStudy is not liable for indirect damages arising from use of the service, and our total liability (if any) will in no case exceed what you paid VocaStudy in the previous 12 months (zero for the free service).',
         ],
       ],
     },
     {
       title: ['7. Chấm dứt', '7. Ending'],
-      paras: [
+      items: [
         [
           'Bạn có thể ngừng dùng bất cứ lúc nào và tự xoá tài khoản trong Cài đặt → Vùng nguy hiểm, hoặc nhờ chúng tôi xoá qua contact@vocastudy.app.',
           'You can stop at any time and delete your account yourself in Settings → Danger zone, or ask us to at contact@vocastudy.app.',
         ],
+        [
+          'Chúng tôi có quyền tạm ngừng hoặc chấm dứt dịch vụ hay tài khoản nếu bạn vi phạm điều khoản, nếu tài khoản không hoạt động trong thời gian dài, hoặc khi giai đoạn thử nghiệm kết thúc — có thông báo trước hợp lý khi có thể.',
+          'We may suspend or end the service or an account if you break these terms, if an account stays inactive for a long time, or when the beta ends — with reasonable notice where possible.',
+        ],
       ],
     },
     {
-      title: ['8. Luật áp dụng', '8. Governing law'],
+      title: ['8. Luật áp dụng và giải quyết tranh chấp', '8. Governing law and disputes'],
       paras: [
         [
-          'Các điều khoản này tuân theo pháp luật Việt Nam.',
-          'These terms are governed by the laws of Vietnam.',
+          'Các điều khoản này tuân theo pháp luật Việt Nam. Mọi tranh chấp trước hết được giải quyết bằng thương lượng, hoà giải; nếu không đạt được thoả thuận, tranh chấp sẽ được đưa ra Toà án có thẩm quyền tại Việt Nam.',
+          'These terms are governed by the laws of Vietnam. Any dispute will first be settled by negotiation and mediation; if no agreement is reached, it will go to a competent court in Vietnam.',
         ],
       ],
     },
@@ -283,8 +312,8 @@ export const TERMS: LegalDoc = {
       title: ['9. Thay đổi và liên hệ', '9. Changes and contact'],
       paras: [
         [
-          'Khi điều khoản thay đổi, chúng tôi cập nhật ngày ở đầu trang. Câu hỏi: contact@vocastudy.app',
-          'When these terms change we update the date at the top. Questions: contact@vocastudy.app',
+          'Khi điều khoản thay đổi, chúng tôi cập nhật ngày ở đầu trang và thông báo trong ứng dụng nếu có thay đổi quan trọng. Việc bạn tiếp tục sử dụng VocaStudy sau khi điều khoản được cập nhật đồng nghĩa với việc bạn đồng ý với các nội dung thay đổi đó. Mọi câu hỏi xin gửi về: contact@vocastudy.app',
+          'When these terms change we update the date at the top and announce important changes in the app. If you keep using VocaStudy after the terms are updated, you accept the changes. Questions: contact@vocastudy.app',
         ],
       ],
     },

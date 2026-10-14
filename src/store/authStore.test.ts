@@ -6,6 +6,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 const { auth, deleteAccountApi } = vi.hoisted(() => ({
   auth: {
+    signUp: vi.fn(),
     resetPasswordForEmail: vi.fn(),
     updateUser: vi.fn(),
     signInWithPassword: vi.fn(),
@@ -43,6 +44,17 @@ beforeEach(() => {
   auth.signOut.mockResolvedValue({ error: null })
 })
 afterEach(() => vi.clearAllMocks())
+
+describe('register', () => {
+  it('stores which version of the terms and policy the person accepted, and when', async () => {
+    auth.signUp.mockResolvedValue({ data: { session: null }, error: null })
+    await useAuth.getState().register('lan@example.com', 'secret1', 'Lan', '2026-10-14')
+    const { options } = auth.signUp.mock.calls[0][0]
+    expect(options.data).toMatchObject({ name: 'Lan', consent_version: '2026-10-14' })
+    expect(Number.isNaN(Date.parse(options.data.consented_at))).toBe(false)
+    expect(useAuth.getState().needsEmailConfirm).toBe(true)
+  })
+})
 
 describe('requestPasswordReset', () => {
   it('asks Supabase for a link back to the reset page', async () => {

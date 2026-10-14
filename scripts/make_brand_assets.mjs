@@ -56,8 +56,19 @@ const stars = Array.from({ length: 70 }, (_, i) => {
   return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${(0.25 + ((i * 13) % 10) / 16).toFixed(2)}"/>`
 }).join('')
 
-const chip = (x, label) =>
-  `<g transform="translate(${x} 470)"><rect width="${label.length * 15 + 40}" height="52" rx="26" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.25"/><text x="20" y="34" font-family="Noto Sans" font-weight="600" font-size="24" fill="#e0e7ff">${label}</text></g>`
+const chipWidth = (label) => label.length * 15 + 40
+
+/** Pills laid out left to right from x = 82, 26 px apart. */
+const chips = (labels) => {
+  let x = 82
+  return labels
+    .map((label) => {
+      const g = `<g transform="translate(${x} 470)"><rect width="${chipWidth(label)}" height="52" rx="26" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.25"/><text x="20" y="34" font-family="Noto Sans" font-weight="600" font-size="24" fill="#e0e7ff">${label}</text></g>`
+      x += chipWidth(label) + 26
+      return g
+    })
+    .join('')
+}
 
 const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
@@ -74,7 +85,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   <text x="82" y="318" font-family="Noto Sans" font-weight="800" font-size="56" fill="#ffffff">Speak English with confidence,</text>
   <text x="82" y="386" font-family="Noto Sans" font-weight="800" font-size="56" fill="url(#word)">a little every day.</text>
   <text x="82" y="438" font-family="Noto Sans" font-weight="600" font-size="28" fill="#c7d2fe">Tự tin nói tiếng Anh — mỗi ngày một chút.</text>
-  ${chip(82, '4,400+ words')}${chip(352, '100 phrases')}${chip(605, 'Native audio')}${chip(870, 'Free')}
+  ${chips(['4,400+ words', '100 phrases', 'AI voices', 'Free'])}
   <text x="1118" y="590" text-anchor="end" font-family="Noto Sans" font-weight="700" font-size="26" fill="#a5b4fc">vocastudy.app</text>
 </svg>`
 

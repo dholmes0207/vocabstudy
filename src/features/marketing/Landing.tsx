@@ -76,8 +76,8 @@ function Hero() {
           </h1>
           <p className="mt-5 max-w-xl text-lg text-slate-600 dark:text-slate-300">
             {t(
-              'Hơn 4.400 từ thông dụng và 100 mẫu câu dùng ngay — có giọng đọc bản xứ, lặp lại ngắt quãng để nhớ lâu, và luyện phát âm dành riêng cho người Việt.',
-              '4,400+ everyday words and 100 ready-to-use phrases — with native audio, spaced repetition that makes them stick, and pronunciation practice built for Vietnamese speakers.'
+              'Hơn 4.400 từ thông dụng và 100 mẫu câu dùng ngay — có giọng đọc AI chuẩn Mỹ, lặp lại ngắt quãng để nhớ lâu, và luyện phát âm dành riêng cho người Việt.',
+              '4,400+ everyday words and 100 ready-to-use phrases — with natural AI voices, spaced repetition that makes them stick, and pronunciation practice built for Vietnamese speakers.'
             )}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -162,7 +162,7 @@ function Stats() {
   const items = [
     ['4.400+', '4,400+', t('từ thông dụng, A1 → B1', 'everyday words, A1 → B1')],
     ['100', '100', t('mẫu câu giao tiếp', 'everyday phrases')],
-    ['2', '2', t('giọng đọc bản xứ', 'native voices')],
+    ['2', '2', t('giọng đọc AI chuẩn Mỹ', 'natural AI voices')],
     ['0đ', '$0', t('học hoàn toàn miễn phí', 'completely free')],
   ] as const
   return (
