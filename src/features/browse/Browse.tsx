@@ -98,9 +98,12 @@ export default function Browse() {
             `${pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.`,
             `${pack.meta.count} words · search and filter as you like.`
           )}{' '}
-          <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
-            {t('Đọc phiên âm thế nào? 👄', 'How to read the respelling 👄')}
-          </Link>
+          {/* The respelling guide is written for English sounds. */}
+          {pack.meta.code === 'en' && (
+            <Link to="/sounds" className="font-semibold text-brand-600 dark:text-brand-300">
+              {t('Đọc phiên âm thế nào? 👄', 'How to read the respelling 👄')}
+            </Link>
+          )}
         </p>
       </header>
 

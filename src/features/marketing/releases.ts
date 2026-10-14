@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
     items: [
       [
+        'Tiếng Hàn (beta): 81 từ sơ cấp có cách đọc kiểu Việt và câu ví dụ — chọn ở nút ngôn ngữ trên cùng.',
+        'Korean (beta): 81 beginner words with Vietnamese-style readings and example sentences — pick it from the language button at the top.',
+      ],
+      [
         'Ngữ pháp căn bản: 12 bài cho người mới (to be, các thì, a/an/the, giới từ, so sánh, câu hỏi…) — giải thích bằng tiếng Việt, kèm lỗi hay gặp và bài luyện.',
         'Grammar basics: 12 beginner lessons (to be, tenses, a/an/the, prepositions, comparisons, questions…) — explained in Vietnamese, with common mistakes and practice.',
       ],

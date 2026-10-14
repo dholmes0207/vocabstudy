@@ -13,6 +13,18 @@
       "count": 4440,
       "file": "en.json",
       "description": "4440 từ vựng tiếng Anh thông dụng, từ cơ bản đến B1."
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "Tiếng Hàn",
+      "flag": "🇰🇷",
+      "learnerLang": "vi",
+      "learnerLangName": "Tiếng Việt",
+      "ttsLang": "ko-KR",
+      "count": 81,
+      "file": "ko.json",
+      "description": "Beta: 81 từ tiếng Hàn sơ cấp đầu tiên, đọc bằng giọng của trình duyệt."
     }
   ]
 }

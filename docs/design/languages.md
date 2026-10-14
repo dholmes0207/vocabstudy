@@ -36,5 +36,16 @@
     Chrome/Edge/Android/iOS);
   - muốn dùng audio edge-tts cho gói mới thì cần chuyển audio sang R2. **Việc này cần chủ
     dự án làm.**
+- **Gói tiếng Hàn beta** (`public/data/ko.json`, 81 từ): đã có.
+  - Chủ đề: chào hỏi, con người, ăn uống, nơi chốn, thời gian, đồ vật, động từ và tính từ
+    thông dụng.
+  - Câu ví dụ dùng đuôi lịch sự -아요/-어요.
+  - `viRead` đọc theo **cách phát âm thật**, không theo chính tả (감사합니다 →
+    "cam-xa-ham-ni-đa", 한국어 → "han-cu-gơ") và theo chính tả tiếng Việt (고기 →
+    "cô-ghi"). Âm căng (ㅃ, ㄸ…) không viết đôi.
+  - `src/lib/koreanPack.test.ts` kiểm tra gói có trong manifest, id liền mạch, đủ Hangul /
+    cách đọc / nghĩa / ví dụ, và `ipa` để trống.
+  - Đã chạy thử trọn một phiên học tiếng Hàn: thẻ, gạch chân từ trong ví dụ, câu hỏi chỗ
+    trống với chữ Hàn.
 - **Trợ lý AI:** lời nhắc hệ thống hiện chỉ cho phép phạm vi từ vựng tiếng Anh. Mở rộng
   sang ngôn ngữ khác cần soát lại guardrail; tạm giữ nguyên.
