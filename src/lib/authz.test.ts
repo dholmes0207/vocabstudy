@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { accessDecision, accountBlockMessage, adminDecision, isUuid } from './authz'
+import {
+  accessDecision,
+  accountBlockMessage,
+  adminDecision,
+  isUuid,
+  nameChangeDecision,
+} from './authz'
 
 // Two server-side holes this closes:
 //
@@ -111,5 +117,25 @@ describe('accountBlockMessage', () => {
     expect(accountBlockMessage('active')).toBeNull()
     expect(accountBlockMessage(undefined)).toBeNull()
     expect(accountBlockMessage('pending', 'en')).toContain('beta waitlist')
+  })
+})
+
+describe('nameChangeDecision', () => {
+  it('lets a waitlisted account choose its name, but not a locked one', () => {
+    expect(
+      nameChangeDecision({ ok: true, profile: { role: 'student', status: 'pending' } }).allow
+    ).toBe(true)
+    expect(
+      nameChangeDecision({ ok: true, profile: { role: 'student', status: 'active' } }).allow
+    ).toBe(true)
+    const locked = nameChangeDecision({ ok: true, profile: { role: 'student', status: 'locked' } })
+    expect(locked.allow).toBe(false)
+    if (!locked.allow) expect(locked.status).toBe(403)
+  })
+
+  it('fails closed when the profile cannot be checked', () => {
+    const d = nameChangeDecision({ ok: false })
+    expect(d.allow).toBe(false)
+    if (!d.allow) expect(d.status).toBe(503)
   })
 })

@@ -106,11 +106,11 @@ một nhóm làm nghiêm túc, không phải một trang demo.
   này được dùng ở ba chỗ:
   - ngày hiển thị trên trang (`legal.ts` `LAST_UPDATED`);
   - giá trị `consent_version` lưu khi đăng ký (`authStore.register`);
-  - thẻ thông báo (`lib/policyNotice.ts`, `components/PolicyNotice.tsx`, khoá
-    `vocab.policy.seen`).
+  - thông báo trong chuông (`lib/notifications.ts`, `components/NotificationBell.tsx`,
+    xem `docs/design/notifications.md`). Thẻ thông báo cũ đã được thay bằng chuông.
 - Chỉ tăng `POLICY_VERSION` khi có thay đổi quan trọng.
-- Người mới không thấy thẻ thông báo: `Layout` đánh dấu họ đã xem đúng lúc ghi nhận lần
-  vào app đầu tiên.
+- Người mới không thấy thông báo cũ: chuông đánh dấu tất cả là đã đọc ở lần vào app đầu
+  tiên.
 - `LegalSection.lead` được hiển thị trước danh sách, `paras` sau danh sách. Trước đây
   câu dẫn của mục 4 bị đẩy xuống cuối danh sách.
 - Sửa lần hai (cùng ngày, theo góp ý thứ hai của người rà soát):

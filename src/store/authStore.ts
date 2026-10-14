@@ -36,6 +36,14 @@ interface AuthState {
    */
   notice: 'pending' | 'locked' | null
   clearNotice: () => void
+  /**
+   * Set right after a first Google sign-in lands on the waitlist: the person
+   * picks their display name (prefilled from Google) before being signed out
+   * to wait for approval. Rendered by CompleteProfile.
+   */
+  onboarding: { userId: string; name: string } | null
+  /** Save the chosen name (or keep Google's when omitted), then join the waitlist. */
+  finishOnboarding: (name?: string) => Promise<void>
   bootstrap: () => Promise<void>
   login: (email: string, password: string) => Promise<void>
   /**
@@ -100,11 +108,12 @@ async function loadProfile(user: User): Promise<AuthUser | null> {
  * lands on the waitlist. Only for a Google sign-in, and only if this version
  * is not on record yet.
  */
-async function recordGoogleConsent(client: SupabaseClient, user: User): Promise<void> {
+async function recordGoogleConsent(client: SupabaseClient, user: User): Promise<boolean> {
   const pending = takePendingConsent(sessionStorage)
-  if (!pending) return
+  if (!pending) return false
   const viaGoogle = user.identities?.some((i) => i.provider === 'google') ?? false
-  if (!viaGoogle || user.user_metadata?.consent_version === pending.version) return
+  if (!viaGoogle) return false
+  if (user.user_metadata?.consent_version === pending.version) return true
   await client.auth
     .updateUser({
       data: {
@@ -114,6 +123,7 @@ async function recordGoogleConsent(client: SupabaseClient, user: User): Promise<
       },
     })
     .catch(() => undefined)
+  return true
 }
 
 function withTimeout<T>(p: Promise<T>, ms: number): Promise<T | 'timeout'> {
@@ -152,6 +162,38 @@ export const useAuth = create<AuthState>((set, get) => {
     pendingApproval: false,
     notice: null,
     clearNotice: () => set({ notice: null }),
+    onboarding: null,
+
+    finishOnboarding: async (raw) => {
+      const step = get().onboarding
+      if (!step) return
+      if (raw !== undefined) {
+        const name = cleanDisplayName(raw)
+        if (!name)
+          throw new Error(
+            tx(
+              'Hãy nhập tên hiển thị (tối đa 50 ký tự).',
+              'Please enter a display name (up to 50 characters).'
+            )
+          )
+        if (name !== step.name) {
+          const failed = await api.updateDisplayName(name).then(
+            () => false,
+            () => true
+          )
+          if (failed)
+            throw new Error(
+              tx(
+                'Chưa lưu được tên. Thử lại, hoặc bấm "Giữ tên này".',
+                "Couldn't save the name. Try again, or keep the current one."
+              )
+            )
+        }
+      }
+      await supabase?.auth.signOut()
+      setUser(null)
+      set({ onboarding: null, notice: 'pending' })
+    },
 
     bootstrap: async () => {
       if (!supabaseConfigured || !supabase) {
@@ -165,9 +207,12 @@ export const useAuth = create<AuthState>((set, get) => {
         if (res !== 'timeout') {
           const session = res.data.session
           if (session?.user) {
-            await recordGoogleConsent(client, session.user)
+            const backFromGoogle = await recordGoogleConsent(client, session.user)
             const profile = await loadProfile(session.user)
-            if (await admit(profile)) set({ notice: blockedStatus(profile) })
+            if (backFromGoogle && profile?.status === 'pending') {
+              // Name first, then the waitlist (finishOnboarding signs out).
+              set({ onboarding: { userId: profile.id, name: profile.name } })
+            } else if (await admit(profile)) set({ notice: blockedStatus(profile) })
           } else {
             setUser(null)
           }
@@ -194,7 +239,7 @@ export const useAuth = create<AuthState>((set, get) => {
         const user = s.user
         const { id } = user
         setTimeout(async () => {
-          await recordGoogleConsent(client, user)
+          const backFromGoogle = await recordGoogleConsent(client, user)
           const profile = await loadProfile(user)
           // By now the session may be gone (a pending sign-up is signed out
           // straight away); an anonymous lookup finds no row and must not be
@@ -202,6 +247,12 @@ export const useAuth = create<AuthState>((set, get) => {
           const { data } = await client.auth.getSession()
           if (data.session?.user.id !== id) return
           if (!profile) return
+          // Mid-way through choosing a name: leave the session alone.
+          if (get().onboarding?.userId === id) return
+          if (backFromGoogle && profile.status === 'pending') {
+            set({ onboarding: { userId: id, name: profile.name } })
+            return
+          }
           if (await admit(profile)) set({ notice: blockedStatus(profile) })
         }, 0)
       })

@@ -85,7 +85,7 @@ describe('Continue with Google', () => {
     expect(sessionStorage.getItem(PENDING_CONSENT_KEY)).toBeNull()
   })
 
-  it('back from Google: records consent first, then explains the waitlist', async () => {
+  it('back from Google: records consent before anything else', async () => {
     savePendingConsent(sessionStorage, '2026-10-14')
     const user = {
       id: learner.id,
@@ -96,7 +96,7 @@ describe('Continue with Google', () => {
     auth.getSession.mockResolvedValue({ data: { session: { user } } })
     auth.updateUser.mockResolvedValue({ error: null })
     from.mockReturnValue(profileRow({ name: 'Lan', role: 'student', status: 'pending' }))
-    useAuth.setState({ user: null, notice: null })
+    useAuth.setState({ user: null, notice: null, onboarding: null })
 
     await useAuth.getState().bootstrap()
 
@@ -107,11 +107,20 @@ describe('Continue with Google', () => {
         consent_method: 'google',
       },
     })
-    expect(auth.updateUser.mock.invocationCallOrder[0]).toBeLessThan(
-      auth.signOut.mock.invocationCallOrder[0]
-    )
     expect(useAuth.getState().user).toBeNull()
-    expect(useAuth.getState().notice).toBe('pending')
+    expect(useAuth.getState().onboarding).toEqual({ userId: learner.id, name: 'Lan' })
+  })
+
+  it('a waitlisted account that is not just back from Google is turned away with a reason', async () => {
+    const user = { id: learner.id, email: learner.email, identities: [{ provider: 'google' }] }
+    auth.getSession.mockResolvedValue({ data: { session: { user } } })
+    from.mockReturnValue(profileRow({ name: 'Lan', role: 'student', status: 'pending' }))
+    useAuth.setState({ user: null, notice: null, onboarding: null })
+
+    await useAuth.getState().bootstrap()
+
+    expect(auth.signOut).toHaveBeenCalled()
+    expect(useAuth.getState()).toMatchObject({ user: null, notice: 'pending', onboarding: null })
   })
 
   it('forgets the waitlist message once any account signs in', async () => {
@@ -128,6 +137,44 @@ describe('Continue with Google', () => {
 
     expect(useAuth.getState().user).toMatchObject({ role: 'admin', hasPassword: true })
     expect(useAuth.getState().notice).toBeNull()
+  })
+
+  it('first Google sign-in on the waitlist: asks for a name before signing out', async () => {
+    savePendingConsent(sessionStorage, '2026-10-14')
+    const user = {
+      id: learner.id,
+      email: learner.email,
+      identities: [{ provider: 'google' }],
+      user_metadata: { consent_version: '2026-10-14' },
+    }
+    auth.getSession.mockResolvedValue({ data: { session: { user } } })
+    from.mockReturnValue(profileRow({ name: 'Danh Vo', role: 'student', status: 'pending' }))
+    useAuth.setState({ user: null, notice: null, onboarding: null })
+
+    await useAuth.getState().bootstrap()
+
+    expect(useAuth.getState().onboarding).toEqual({ userId: learner.id, name: 'Danh Vo' })
+    expect(auth.signOut).not.toHaveBeenCalled()
+
+    updateNameApi.mockResolvedValue({ ok: true, name: 'Võ Danh' })
+    await useAuth.getState().finishOnboarding('  Võ Danh ')
+    expect(updateNameApi).toHaveBeenCalledWith('Võ Danh')
+    expect(auth.signOut).toHaveBeenCalled()
+    expect(useAuth.getState()).toMatchObject({ onboarding: null, notice: 'pending', user: null })
+  })
+
+  it("keeps Google's name when the person does not change it", async () => {
+    useAuth.setState({ user: null, onboarding: { userId: learner.id, name: 'Danh Vo' } })
+    await useAuth.getState().finishOnboarding()
+    expect(updateNameApi).not.toHaveBeenCalled()
+    expect(useAuth.getState()).toMatchObject({ onboarding: null, notice: 'pending' })
+  })
+
+  it('will not finish with an empty name', async () => {
+    useAuth.setState({ user: null, onboarding: { userId: learner.id, name: 'Danh Vo' } })
+    await expect(useAuth.getState().finishOnboarding('   ')).rejects.toThrow(/display name/)
+    expect(useAuth.getState().onboarding).not.toBeNull()
+    expect(auth.signOut).not.toHaveBeenCalled()
   })
 
   it('signs an approved Google account in and knows it has no password', async () => {

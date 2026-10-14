@@ -5,6 +5,7 @@ import { useAuth } from '@/store/authStore'
 import { useT } from '@/lib/i18n'
 import { fetchAuthSettings } from '@/lib/supabase'
 import { parseProviders } from '@/lib/authProviders'
+import { DISPLAY_NAME_MAX, cleanDisplayName } from '@/lib/displayName'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { POLICY_VERSION } from '@/lib/site'
 import { AuthShell, Field, Notice, inputCls } from './AuthShell'
@@ -46,6 +47,16 @@ export default function AuthPage() {
     e.preventDefault()
     setError(null)
     setInfo(null)
+    const displayName = cleanDisplayName(name)
+    if (mode === 'register' && !displayName) {
+      setError(
+        t(
+          'Hãy nhập tên hiển thị — quản trị viên sẽ thấy tên này khi duyệt.',
+          'Please enter a display name — the admin sees it when approving you.'
+        )
+      )
+      return
+    }
     if (mode === 'register' && !agreed) {
       setError(
         t(
@@ -69,7 +80,7 @@ export default function AuthPage() {
         await login(email, password)
         navigate('/home')
       } else {
-        await register(email, password, name, POLICY_VERSION)
+        await register(email, password, displayName ?? '', POLICY_VERSION)
         const { needsEmailConfirm, pendingApproval } = useAuth.getState()
         if (needsEmailConfirm) {
           setInfo(
@@ -194,10 +205,13 @@ export default function AuthPage() {
           </p>
         )}
         {mode === 'register' && (
-          <Field label={t('Tên hiển thị (tuỳ chọn)', 'Display name (optional)')}>
+          <Field label={t('Tên hiển thị', 'Display name')}>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
+              maxLength={DISPLAY_NAME_MAX}
+              autoComplete="name"
               className={inputCls}
               placeholder={t('Nguyễn Văn A', 'Jane Doe')}
             />

@@ -27,11 +27,10 @@ import { useProgressSync } from '@/hooks/useProgressSync'
 import { useT } from '@/lib/i18n'
 import UiLangToggle from './UiLangToggle'
 import SiteFooter from './SiteFooter'
-import PolicyNotice from './PolicyNotice'
+import NotificationBell from './NotificationBell'
 import AuthNotice from './AuthNotice'
-import Logo from './Logo'
-import { hasUsedApp, markEntered } from '@/lib/entry'
-import { markPolicySeen } from '@/lib/policyNotice'
+import Logo, { LogoMark } from './Logo'
+import { markEntered } from '@/lib/entry'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 
 /** A Vietnamese/English pair, picked by the interface language. */
@@ -91,12 +90,7 @@ export default function Layout() {
   useProgressSync()
   const t = useT()
   // Once the app has been opened here, "/" brings this device straight back to it.
-  useEffect(() => {
-    // A first visit starts under the current privacy policy and terms, so it
-    // has no change to be told about (components/PolicyNotice.tsx).
-    if (!hasUsedApp(localStorage)) markPolicySeen(localStorage)
-    markEntered(localStorage)
-  }, [])
+  useEffect(() => markEntered(localStorage), [])
   useDocumentTitle(
     t('VocaStudy · Học tiếng Anh mỗi ngày', 'VocaStudy · English, a little every day')
   )
@@ -135,10 +129,14 @@ export default function Layout() {
           <div className="lg:hidden">
             <Brand compact />
           </div>
-          <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+          {/* Fits a 360 px phone: the theme switch moves into the account menu there. */}
+          <div className="ml-auto flex items-center gap-1 sm:gap-2">
             <LanguageSwitcher />
             <UiLangToggle />
-            <ThemeToggle />
+            <span className="hidden sm:block">
+              <ThemeToggle />
+            </span>
+            <NotificationBell />
             <AssistantHeaderButton />
             <UserMenu />
           </div>
@@ -148,7 +146,6 @@ export default function Layout() {
           className={`mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 pt-6 lg:pb-8 ${immersive ? 'pb-6' : 'pb-24'}`}
         >
           {!immersive && <AuthNotice />}
-          {!immersive && <PolicyNotice />}
           {/* Keyed by path so a crash on one screen clears the moment the
               learner taps another tab — the nav around it keeps working. */}
           <ErrorBoundary key={pathname}>
@@ -193,11 +190,19 @@ export default function Layout() {
 
 function Brand({ compact = false }: { compact?: boolean }) {
   const t = useT()
+  if (compact)
+    return (
+      <Link to="/home" aria-label="VocaStudy">
+        {/* Just the mark on a small phone, where every header pixel counts. */}
+        <LogoMark className="h-9 w-9 sm:hidden" />
+        <span className="hidden sm:block">
+          <Logo />
+        </span>
+      </Link>
+    )
   return (
     <Link to="/home" aria-label="VocaStudy">
-      <Logo
-        tagline={compact ? undefined : t('Học tiếng Anh mỗi ngày', 'English, a little every day')}
-      />
+      <Logo tagline={t('Học tiếng Anh mỗi ngày', 'English, a little every day')} />
     </Link>
   )
 }

@@ -91,3 +91,32 @@
   - gộp khoảng trắng;
   - bỏ ký tự điều khiển;
   - tối đa 50 ký tự.
+
+## Bước "tên hiển thị" khi đăng ký (15/10/2026)
+
+**User**: "Đăng ký bằng email hay bằng Google đều phải có bước nhập tên hiển thị trước khi
+admin duyệt, chứ không bắt người dùng tự mò vào Cài đặt để đổi tên."
+
+**BA**
+
+- **Form email:** "Tên hiển thị" trở thành ô bắt buộc (tối đa 50 ký tự). App báo lỗi
+  ngay nếu bỏ trống.
+- **Lần đầu đăng nhập Google:**
+  - hiện bước "Một bước nữa thôi", điền sẵn tên lấy từ Google;
+  - bấm "Lưu và tiếp tục" hoặc "Giữ tên …" thì mới vào danh sách chờ và thấy thông báo;
+  - admin thấy đúng tên người dùng đã chọn.
+- **Lần đăng nhập sau khi vẫn đang chờ duyệt:** không hỏi lại tên, chỉ báo danh sách chờ.
+
+**Dev**
+
+- Bước này chỉ chạy khi người dùng vừa quay về từ Google (`recordGoogleConsent` trả về
+  `true`) **và** hồ sơ đang `pending`. Khi đó app đặt `authStore.onboarding` và **giữ
+  phiên** thay vì đăng xuất ngay.
+  - Phiên của tài khoản đang chờ không làm được gì: RLS chặn đồng bộ tiến độ, Function
+    chặn trợ lý AI.
+  - Listener bỏ qua phiên đang ở bước này.
+- `finishOnboarding(name?)`:
+  - đổi tên qua `PATCH /api/account`; endpoint này cho phép cả tài khoản `pending`
+    (`nameChangeDecision`), tài khoản `locked` thì không;
+  - sau đó đăng xuất và đặt `notice = 'pending'`.
+- `components/CompleteProfile.tsx` được gắn ở `App`, nên hiện được trên mọi trang.

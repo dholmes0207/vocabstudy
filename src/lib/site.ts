@@ -4,8 +4,8 @@ export const CONTACT_EMAIL = 'contact@vocastudy.app'
 /**
  * Date of the current privacy policy and terms (ISO day). Bump it only for a
  * change people must hear about: it is shown on both pages, recorded with each
- * sign-up's consent, and a new value re-shows the in-app notice
- * (lib/policyNotice.ts). Wording fixes keep the old date.
+ * sign-up's consent, and a new value adds an unread item to the notification
+ * bell (lib/notifications.ts). Wording fixes keep the old date.
  *
  * The privacy policy (section 9) promises more for one kind of change: if it
  * alters what personal data is collected or how it is processed, people must

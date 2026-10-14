@@ -1,5 +1,14 @@
 import { cleanDisplayName } from '../../src/lib/displayName'
-import { type Ctx, adminAuth, adminRest, json, requireUser } from '../_shared'
+import { nameChangeDecision } from '../../src/lib/authz'
+import {
+  type Ctx,
+  adminAuth,
+  adminRest,
+  getUser,
+  json,
+  lookupProfile,
+  requireUser,
+} from '../_shared'
 
 // /api/account — the signed-in learner's own account (docs/design/account.md).
 //
@@ -13,8 +22,12 @@ import { type Ctx, adminAuth, adminRest, json, requireUser } from '../_shared'
 // password before calling this.
 
 export const onRequestPatch = async (ctx: Ctx): Promise<Response> => {
-  const user = await requireUser(ctx.env, ctx.request)
-  if (user instanceof Response) return user
+  // A waitlisted (pending) account may name itself too — that happens right
+  // after sign-up — so this checks the profile itself instead of requireUser.
+  const user = await getUser(ctx.env, ctx.request)
+  if (!user) return json({ error: 'Chưa đăng nhập.' }, 401)
+  const decision = nameChangeDecision(await lookupProfile(ctx.env, user.id))
+  if (!decision.allow) return json({ error: decision.error }, decision.status)
   const body = (await ctx.request.json().catch(() => ({}))) as { name?: unknown }
   const name = cleanDisplayName(body.name)
   if (name === null) return json({ error: 'Tên hiển thị không hợp lệ.' }, 400)

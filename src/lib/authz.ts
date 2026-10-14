@@ -70,6 +70,19 @@ export function accessDecision(lookup: ProfileLookup): Decision {
   return { allow: true, role: profile?.role === 'admin' ? 'admin' : 'student' }
 }
 
+/**
+ * May this account change its own display name? Like accessDecision, except a
+ * `pending` account may too: the name is chosen right after sign-up, while
+ * the account is still on the beta waitlist (docs/design/google-login.md).
+ * A locked account may not.
+ */
+export function nameChangeDecision(lookup: ProfileLookup): Decision {
+  if (lookup.ok && lookup.profile?.status === 'pending') {
+    return { allow: true, role: lookup.profile.role === 'admin' ? 'admin' : 'student' }
+  }
+  return accessDecision(lookup)
+}
+
 /** Same, but the endpoint additionally requires the admin role. */
 export function adminDecision(lookup: ProfileLookup): Decision {
   const base = accessDecision(lookup)

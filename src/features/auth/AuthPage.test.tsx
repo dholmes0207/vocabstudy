@@ -73,6 +73,7 @@ describe('AuthPage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Sign up' }))
     const consent = screen.getByRole('checkbox')
     expect(consent).not.toBeChecked()
+    fireEvent.change(screen.getByLabelText('Display name'), { target: { value: '  Lan  ' } })
     fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'lan@example.com' } })
     fireEvent.change(screen.getByLabelText('Password'), { target: { value: 'secret1' } })
     const form = screen.getByRole('button', { name: /Join the waitlist/ }).closest('form')!
@@ -84,7 +85,18 @@ describe('AuthPage', () => {
     fireEvent.click(consent)
     fireEvent.submit(form)
     expect(await screen.findByText(/You're on the beta waitlist/)).toBeInTheDocument()
-    expect(register).toHaveBeenCalledWith('lan@example.com', 'secret1', '', POLICY_VERSION)
+    expect(register).toHaveBeenCalledWith('lan@example.com', 'secret1', 'Lan', POLICY_VERSION)
+  })
+
+  it('asks for a display name before anything else at sign-up', async () => {
+    renderAt()
+    fireEvent.click(screen.getByRole('button', { name: 'Sign up' }))
+    fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'lan@example.com' } })
+    fireEvent.change(screen.getByLabelText('Password'), { target: { value: 'secret1' } })
+    fireEvent.click(screen.getByRole('checkbox'))
+    fireEvent.submit(screen.getByRole('button', { name: /Join the waitlist/ }).closest('form')!)
+    expect(await screen.findByRole('alert')).toHaveTextContent(/enter a display name/)
+    expect(register).not.toHaveBeenCalled()
   })
 
   it('opens the terms and policy in a new tab so the form is not lost', () => {
