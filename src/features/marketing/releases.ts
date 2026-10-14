@@ -13,6 +13,32 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-15',
+    title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
+    items: [
+      [
+        'Gửi góp ý ngay trong app (không cần mở email) — có thể cho phép trích dẫn kèm tên.',
+        'Send feedback right in the app (no email needed) — and allow us to quote you if you like.',
+      ],
+      [
+        'Chuông thông báo cạnh nút ngôn ngữ: cập nhật chính sách và những gì mới ra mắt.',
+        'A notification bell beside the language button: policy updates and what just shipped.',
+      ],
+      [
+        'Đăng ký (cả bằng Google) có bước chọn tên hiển thị; đổi tên bất cứ lúc nào trong Cài đặt.',
+        'Signing up (Google too) now asks for your display name; change it any time in Settings.',
+      ],
+      [
+        'Đăng nhập bằng Google; quên mật khẩu, đổi mật khẩu và tự xoá tài khoản.',
+        'Sign in with Google; forgot password, change password and delete your account yourself.',
+      ],
+      [
+        'Giao diện điện thoại gọn hơn: thanh trên cùng và trang Cài đặt không còn tràn màn hình.',
+        'A tidier phone layout: the top bar and Settings no longer spill off the screen.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-14',
     title: ['Chính sách và điều khoản theo luật mới', 'Policy and terms for the new laws'],
     items: [
