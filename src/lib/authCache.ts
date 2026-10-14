@@ -11,6 +11,8 @@ export interface CachedUser {
   name: string
   role: 'student' | 'admin'
   status: 'active' | 'locked' | 'pending'
+  /** False for an account that only signs in with Google (no password to re-check). */
+  hasPassword?: boolean
 }
 
 export const AUTH_CACHE_KEY = 'vocab.auth.user.v1'
@@ -29,6 +31,7 @@ export function parseCachedUser(raw: string | null): CachedUser | null {
       name: typeof u.name === 'string' ? u.name : '',
       role: u.role === 'admin' ? 'admin' : 'student',
       status: 'active',
+      ...(typeof u.hasPassword === 'boolean' ? { hasPassword: u.hasPassword } : {}),
     }
   } catch {
     return null

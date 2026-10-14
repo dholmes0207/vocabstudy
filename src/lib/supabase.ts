@@ -15,6 +15,21 @@ export const supabase: SupabaseClient | null = supabaseConfigured
     })
   : null
 
+/**
+ * The project's public auth settings — which sign-in providers are switched on.
+ * Read by the sign-in page so "Continue with Google" appears as soon as Google
+ * is enabled in Supabase, with no redeploy. Null when unreachable.
+ */
+export async function fetchAuthSettings(): Promise<unknown> {
+  if (!url || !anon) return null
+  try {
+    const res = await fetch(`${url}/auth/v1/settings`, { headers: { apikey: anon } })
+    return res.ok ? await res.json() : null
+  } catch {
+    return null
+  }
+}
+
 /** Current access token (for authenticated calls to Pages Functions), or null. */
 export async function getAccessToken(): Promise<string | null> {
   if (!supabase) return null

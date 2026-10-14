@@ -3,6 +3,13 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
+
+const { fetchAuthSettings } = vi.hoisted(() => ({ fetchAuthSettings: vi.fn() }))
+vi.mock('@/lib/supabase', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/supabase')>()),
+  fetchAuthSettings,
+}))
+
 import AuthPage from './AuthPage'
 import { useAuth } from '@/store/authStore'
 import { useSettings } from '@/store/settingsStore'
@@ -12,13 +19,16 @@ import { POLICY_VERSION } from '@/lib/site'
 
 const requestPasswordReset = vi.fn()
 const register = vi.fn()
+const signInWithGoogle = vi.fn()
 
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en' })
+  fetchAuthSettings.mockResolvedValue({ external: { email: true, google: false } })
   useAuth.setState({
     user: null,
     requestPasswordReset,
     register,
+    signInWithGoogle,
     needsEmailConfirm: false,
     pendingApproval: true,
   })
@@ -82,6 +92,23 @@ describe('AuthPage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Sign up' }))
     expect(screen.getByRole('link', { name: 'Terms of use' })).toHaveAttribute('target', '_blank')
     expect(screen.getByRole('link', { name: 'Privacy policy' })).toHaveAttribute('href', '/privacy')
+  })
+
+  it('offers Google only once it is switched on in Supabase', async () => {
+    renderAt()
+    await vi.waitFor(() => expect(fetchAuthSettings).toHaveBeenCalled())
+    expect(screen.queryByRole('button', { name: /Continue with Google/ })).not.toBeInTheDocument()
+  })
+
+  it('continues with Google, stating what that agrees to', async () => {
+    fetchAuthSettings.mockResolvedValue({ external: { email: true, google: true } })
+    signInWithGoogle.mockReturnValue(new Promise(() => {}))
+    renderAt()
+    const google = await screen.findByRole('button', { name: /Continue with Google/ })
+    expect(screen.getByText(/By continuing with Google you agree to the/)).toBeInTheDocument()
+    fireEvent.click(google)
+    expect(signInWithGoogle).toHaveBeenCalledWith(POLICY_VERSION)
+    expect(google).toBeDisabled()
   })
 
   it('presents sign-up as joining the beta waitlist', () => {

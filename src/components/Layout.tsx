@@ -28,6 +28,7 @@ import { useT } from '@/lib/i18n'
 import UiLangToggle from './UiLangToggle'
 import SiteFooter from './SiteFooter'
 import PolicyNotice from './PolicyNotice'
+import AuthNotice from './AuthNotice'
 import Logo from './Logo'
 import { hasUsedApp, markEntered } from '@/lib/entry'
 import { markPolicySeen } from '@/lib/policyNotice'
@@ -146,6 +147,7 @@ export default function Layout() {
         <main
           className={`mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 pt-6 lg:pb-8 ${immersive ? 'pb-6' : 'pb-24'}`}
         >
+          {!immersive && <AuthNotice />}
           {!immersive && <PolicyNotice />}
           {/* Keyed by path so a crash on one screen clears the moment the
               learner taps another tab — the nav around it keeps working. */}

@@ -1,10 +1,12 @@
 import { create } from 'zustand'
+import type { SupabaseClient, User } from '@supabase/supabase-js'
 import { supabase, supabaseConfigured } from '@/lib/supabase'
 import { accountBlockMessage } from '@/lib/authz'
 import { readCachedUser, writeCachedUser, type CachedUser } from '@/lib/authCache'
 import { tx } from '@/lib/i18n'
 import { ApiError, api } from '@/lib/api'
 import { CONTACT_EMAIL } from '@/lib/site'
+import { hasPasswordLogin, savePendingConsent, takePendingConsent } from '@/lib/authProviders'
 import { useSettings } from '@/store/settingsStore'
 
 // Auth via Supabase Auth. The session is managed by supabase-js (stored +
@@ -25,6 +27,12 @@ interface AuthState {
   needsEmailConfirm: boolean
   /** True after register when the new account waits for an admin's approval. */
   pendingApproval: boolean
+  /**
+   * Why a sign-in that finished away from the sign-in page was turned back —
+   * a new Google account on the waitlist, say. Shown by AuthNotice.
+   */
+  notice: string | null
+  clearNotice: () => void
   bootstrap: () => Promise<void>
   login: (email: string, password: string) => Promise<void>
   /**
@@ -38,19 +46,30 @@ interface AuthState {
     consentVersion?: string
   ) => Promise<void>
   logout: () => Promise<void>
+  /**
+   * Leave for Google's sign-in page. Tapping the button is the consent to
+   * `consentVersion`; it is recorded when Google sends the person back.
+   */
+  signInWithGoogle: (consentVersion: string) => Promise<void>
   /** Email a password-reset link. Says nothing about whether the address exists. */
   requestPasswordReset: (email: string) => Promise<void>
   /** Set a new password for the signed-in (or recovering) user. */
   updatePassword: (password: string) => Promise<void>
-  /** Erase the account and its synced data after re-checking the password. */
-  deleteAccount: (password: string) => Promise<void>
+  /**
+   * Erase the account and its synced data. `confirmation` is the password, or
+   * — for an account that only signs in with Google — the account's email.
+   */
+  deleteAccount: (confirmation: string) => Promise<void>
 }
 
 /** How long the start-up session check may take before the app stops waiting on it. */
 const BOOT_TIMEOUT_MS = 8000
 
-async function loadProfile(userId: string, email: string): Promise<AuthUser | null> {
+async function loadProfile(user: User): Promise<AuthUser | null> {
   if (!supabase) return null
+  const userId = user.id
+  const email = user.email ?? ''
+  const hasPassword = hasPasswordLogin(user)
   const { data, error } = await supabase
     .from('profiles')
     .select('name, role, status')
@@ -59,14 +78,37 @@ async function loadProfile(userId: string, email: string): Promise<AuthUser | nu
   // A failed lookup must not quietly turn into "a student": callers keep what
   // they had instead (see onAuthStateChange / bootstrap).
   if (error && error.code !== 'PGRST116') return null
-  if (!data) return { id: userId, email, name: '', role: 'student', status: 'active' }
+  if (!data) return { id: userId, email, name: '', role: 'student', status: 'active', hasPassword }
   return {
     id: userId,
     email,
     name: data.name ?? '',
     role: data.role === 'admin' ? 'admin' : 'student',
     status: data.status === 'locked' || data.status === 'pending' ? data.status : 'active',
+    hasPassword,
   }
+}
+
+/**
+ * Back from Google: store the consent given by the tap (docs/design/google-login.md)
+ * before anything else — a new account is about to be signed out again if it
+ * lands on the waitlist. Only for a Google sign-in, and only if this version
+ * is not on record yet.
+ */
+async function recordGoogleConsent(client: SupabaseClient, user: User): Promise<void> {
+  const pending = takePendingConsent(sessionStorage)
+  if (!pending) return
+  const viaGoogle = user.identities?.some((i) => i.provider === 'google') ?? false
+  if (!viaGoogle || user.user_metadata?.consent_version === pending.version) return
+  await client.auth
+    .updateUser({
+      data: {
+        consent_version: pending.version,
+        consented_at: pending.at,
+        consent_method: pending.method,
+      },
+    })
+    .catch(() => undefined)
 }
 
 function withTimeout<T>(p: Promise<T>, ms: number): Promise<T | 'timeout'> {
@@ -99,6 +141,8 @@ export const useAuth = create<AuthState>((set, get) => {
     status: 'loading',
     needsEmailConfirm: false,
     pendingApproval: false,
+    notice: null,
+    clearNotice: () => set({ notice: null }),
 
     bootstrap: async () => {
       if (!supabaseConfigured || !supabase) {
@@ -112,7 +156,9 @@ export const useAuth = create<AuthState>((set, get) => {
         if (res !== 'timeout') {
           const session = res.data.session
           if (session?.user) {
-            await admit(await loadProfile(session.user.id, session.user.email ?? ''))
+            await recordGoogleConsent(client, session.user)
+            const blocked = await admit(await loadProfile(session.user))
+            if (blocked) set({ notice: blocked })
           } else {
             setUser(null)
           }
@@ -136,15 +182,19 @@ export const useAuth = create<AuthState>((set, get) => {
           if (event === 'SIGNED_OUT' || get().user) setUser(null)
           return
         }
-        const { id, email } = s.user
+        const user = s.user
+        const { id } = user
         setTimeout(async () => {
-          const profile = await loadProfile(id, email ?? '')
+          await recordGoogleConsent(client, user)
+          const profile = await loadProfile(user)
           // By now the session may be gone (a pending sign-up is signed out
           // straight away); an anonymous lookup finds no row and must not be
           // mistaken for a fresh student account.
           const { data } = await client.auth.getSession()
           if (data.session?.user.id !== id) return
-          if (profile) await admit(profile)
+          if (!profile) return
+          const blocked = await admit(profile)
+          if (blocked) set({ notice: blocked })
         }, 0)
       })
     },
@@ -153,7 +203,7 @@ export const useAuth = create<AuthState>((set, get) => {
       if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
       const { data, error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) throw new Error(mapAuthError(error.message))
-      const profile = await loadProfile(data.user.id, data.user.email ?? '')
+      const profile = await loadProfile(data.user)
       if (!profile) {
         await supabase.auth.signOut()
         throw new Error(
@@ -191,7 +241,7 @@ export const useAuth = create<AuthState>((set, get) => {
       })
       if (error) throw new Error(mapAuthError(error.message))
       if (data.session?.user) {
-        const profile = await loadProfile(data.session.user.id, data.session.user.email ?? '')
+        const profile = await loadProfile(data.session.user)
         if (profile?.status === 'pending') {
           await admit(profile)
           set({ pendingApproval: true })
@@ -207,6 +257,27 @@ export const useAuth = create<AuthState>((set, get) => {
     logout: async () => {
       if (supabase) await supabase.auth.signOut()
       setUser(null)
+    },
+
+    signInWithGoogle: async (consentVersion) => {
+      if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
+      savePendingConsent(sessionStorage, consentVersion)
+      // Google sends the person back to the app; if this address is not in
+      // Supabase's Redirect URLs it falls back to the Site URL, and "/"
+      // forwards the fragment to /home anyway.
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: `${window.location.origin}/home` },
+      })
+      if (error) {
+        takePendingConsent(sessionStorage)
+        throw new Error(
+          tx(
+            'Chưa mở được đăng nhập Google. Thử lại sau giây lát nhé.',
+            "Couldn't open Google sign-in. Please try again in a moment."
+          )
+        )
+      }
     },
 
     requestPasswordReset: async (email) => {
@@ -234,22 +305,37 @@ export const useAuth = create<AuthState>((set, get) => {
       if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
       const { error } = await supabase.auth.updateUser({ password })
       if (error) throw new Error(mapAuthError(error.message))
+      // A Google-only account can now also sign in with email + password.
+      const user = get().user
+      if (user && user.hasPassword === false) setUser({ ...user, hasPassword: true })
     },
 
-    deleteAccount: async (password) => {
+    deleteAccount: async (confirmation) => {
       const client = supabase
       const user = get().user
       if (!client || !user) throw new Error(tx('Bạn chưa đăng nhập.', 'You are not signed in.'))
       if (user.role === 'admin') throw new Error(ADMIN_CANNOT_DELETE())
-      // Re-check the password: an unlocked phone in someone else's hands must
-      // not be enough to erase an account.
-      const { error } = await client.auth.signInWithPassword({ email: user.email, password })
-      if (error)
-        throw new Error(
-          /invalid login/i.test(error.message)
-            ? tx('Mật khẩu không đúng.', 'Wrong password.')
-            : mapAuthError(error.message)
-        )
+      if (user.hasPassword === false) {
+        // A Google-only account has no password to re-check; typing the
+        // account's email is the deliberate step instead.
+        if (confirmation.trim().toLowerCase() !== user.email.toLowerCase())
+          throw new Error(
+            tx('Email chưa khớp với tài khoản này.', 'That email does not match this account.')
+          )
+      } else {
+        // Re-check the password: an unlocked phone in someone else's hands
+        // must not be enough to erase an account.
+        const { error } = await client.auth.signInWithPassword({
+          email: user.email,
+          password: confirmation,
+        })
+        if (error)
+          throw new Error(
+            /invalid login/i.test(error.message)
+              ? tx('Mật khẩu không đúng.', 'Wrong password.')
+              : mapAuthError(error.message)
+          )
+      }
       const failure = await api.deleteAccount().then(
         () => null,
         (e: unknown) => e

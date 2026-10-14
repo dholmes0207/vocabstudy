@@ -44,6 +44,10 @@ export const PRIVACY: LegalDoc = {
           'Account (if you create one): your email, the display name you enter, a password, and when you accepted these Terms and this Policy at sign-up. The password is hashed by our authentication provider and we cannot read it.',
         ],
         [
+          'Đăng nhập bằng Google (nếu bạn chọn): Google gửi cho chúng tôi email, tên và ảnh đại diện của tài khoản Google. Chúng tôi chỉ dùng email và tên; không nhận mật khẩu Google và không truy cập dữ liệu nào khác trong tài khoản Google của bạn.',
+          'Signing in with Google (if you choose it): Google sends us your Google account’s email, name and profile picture. We only use the email and name; we never receive your Google password and do not access anything else in your Google account.',
+        ],
+        [
           'Tiến độ học từ vựng: từ đã học, lịch ôn, thống kê, chuỗi ngày, nhãn dán… Khi bạn đăng nhập, phần này được đồng bộ lên máy chủ để dùng trên nhiều thiết bị.',
           'Vocabulary progress: words learned, review schedule, statistics, streak, stickers… When you are signed in, this is synced to our servers so you can use several devices.',
         ],
@@ -107,6 +111,10 @@ export const PRIVACY: LegalDoc = {
         [
           'Supabase — xác thực tài khoản và cơ sở dữ liệu.',
           'Supabase — account sign-in and database.',
+        ],
+        [
+          'Google — đăng nhập bằng tài khoản Google, khi bạn chọn.',
+          'Google — signing in with your Google account, if you choose it.',
         ],
         [
           'Cloudflare — lưu trữ trang web, máy chủ và bảo mật.',
@@ -219,8 +227,8 @@ export const TERMS: LegalDoc = {
       title: ['2. Tài khoản', '2. Accounts'],
       items: [
         [
-          'Bạn có thể học mà không cần tài khoản. Tài khoản giúp đồng bộ tiến độ giữa các thiết bị và dùng trợ lý AI.',
-          'You can learn without an account. An account syncs your progress across devices and unlocks the AI tutor.',
+          'Bạn có thể học mà không cần tài khoản. Tài khoản (bằng email hoặc Google) giúp đồng bộ tiến độ giữa các thiết bị và dùng trợ lý AI.',
+          'You can learn without an account. An account (with email or Google) syncs your progress across devices and unlocks the AI tutor.',
         ],
         [
           'Trong giai đoạn beta, người đăng ký mới vào danh sách chờ và tài khoản được duyệt thủ công trước khi dùng. Chúng tôi có thể từ chối một đăng ký mà không cần nêu lý do.',
@@ -326,8 +334,8 @@ export const TERMS: LegalDoc = {
       title: ['9. Thay đổi và liên hệ', '9. Changes and contact'],
       paras: [
         [
-          'Khi điều khoản thay đổi, chúng tôi cập nhật ngày ở đầu trang và thông báo trong ứng dụng nếu có thay đổi quan trọng. Việc bạn tiếp tục sử dụng VocaStudy sau khi điều khoản được cập nhật đồng nghĩa với việc bạn đồng ý với các nội dung thay đổi đó. Mọi câu hỏi xin gửi về: contact@vocastudy.app',
-          'When these terms change we update the date at the top and announce important changes in the app. If you keep using VocaStudy after the terms are updated, you accept the changes. Questions: contact@vocastudy.app',
+          'Khi điều khoản thay đổi, chúng tôi cập nhật ngày ở đầu trang và thông báo trong ứng dụng nếu có thay đổi quan trọng. Mọi câu hỏi xin gửi về: contact@vocastudy.app',
+          'When these terms change we update the date at the top and announce important changes in the app. Questions: contact@vocastudy.app',
         ],
       ],
     },

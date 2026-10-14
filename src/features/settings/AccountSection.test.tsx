@@ -60,6 +60,18 @@ describe('DeleteAccountRow', () => {
     expect(onNotice).not.toHaveBeenCalled()
   })
 
+  it('asks a Google-only account to retype its email', async () => {
+    useAuth.setState({ user: { ...learner, hasPassword: false } })
+    deleteAccount.mockResolvedValue(undefined)
+    renderRow()
+    fireEvent.click(screen.getByRole('button', { name: /Delete/ }))
+    expect(screen.queryByLabelText('Password')).not.toBeInTheDocument()
+    expect(screen.getByText(/Type this account's email \(lan@example.com\)/)).toBeInTheDocument()
+    fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'lan@example.com' } })
+    fireEvent.click(screen.getByRole('button', { name: /Delete permanently/ }))
+    await vi.waitFor(() => expect(deleteAccount).toHaveBeenCalledWith('lan@example.com'))
+  })
+
   it('offers no delete button to an admin', () => {
     useAuth.setState({ user: { ...learner, role: 'admin' } })
     renderRow()

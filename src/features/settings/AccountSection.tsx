@@ -16,6 +16,8 @@ export function AccountSection({ onNotice }: { onNotice: (message: string) => vo
   const updatePassword = useAuth((s) => s.updatePassword)
   const [changing, setChanging] = useState(false)
   if (!user) return null
+  // Signed in with Google only: there is no password yet, but one can be added.
+  const googleOnly = user.hasPassword === false
 
   return (
     <Section title={t('Tài khoản', 'Account')}>
@@ -26,11 +28,19 @@ export function AccountSection({ onNotice }: { onNotice: (message: string) => vo
       </Row>
       <Row
         label={t('Mật khẩu', 'Password')}
-        hint={t('Đổi mật khẩu dùng để đăng nhập.', 'Change the password you sign in with.')}
+        hint={
+          googleOnly
+            ? t(
+                'Bạn đang đăng nhập bằng Google. Tạo mật khẩu nếu muốn đăng nhập bằng email.',
+                'You sign in with Google. Create a password if you also want to sign in with email.'
+              )
+            : t('Đổi mật khẩu dùng để đăng nhập.', 'Change the password you sign in with.')
+        }
       >
         {!changing && (
           <button className="btn-secondary" onClick={() => setChanging(true)}>
-            <KeyRound className="h-4 w-4" /> {t('Đổi mật khẩu', 'Change')}
+            <KeyRound className="h-4 w-4" />{' '}
+            {googleOnly ? t('Tạo mật khẩu', 'Create') : t('Đổi mật khẩu', 'Change')}
           </button>
         )}
       </Row>
@@ -41,7 +51,14 @@ export function AccountSection({ onNotice }: { onNotice: (message: string) => vo
             onSubmit={async (password) => {
               await updatePassword(password)
               setChanging(false)
-              onNotice(t('Đã đổi mật khẩu.', 'Your password has been changed.'))
+              onNotice(
+                googleOnly
+                  ? t(
+                      'Đã tạo mật khẩu. Từ giờ bạn đăng nhập được bằng Google hoặc email.',
+                      'Password created. You can now sign in with Google or with email.'
+                    )
+                  : t('Đã đổi mật khẩu.', 'Your password has been changed.')
+              )
             }}
           />
           <button className="btn-ghost w-full text-sm" onClick={() => setChanging(false)}>
@@ -64,6 +81,9 @@ export function DeleteAccountRow({ onNotice }: { onNotice: (message: string) => 
   const [busy, setBusy] = useState(false)
   if (!user) return null
   const admin = user.role === 'admin'
+  // No password to re-check on a Google-only account: retyping the email is the
+  // deliberate step instead.
+  const googleOnly = user.hasPassword === false
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -112,26 +132,35 @@ export function DeleteAccountRow({ onNotice }: { onNotice: (message: string) => 
       </Row>
       {!admin && open && (
         <form onSubmit={submit} className="max-w-sm space-y-3 pb-4 pt-1">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            {t(
-              'Nhập mật khẩu để xác nhận. Quên mật khẩu? ',
-              'Enter your password to confirm. Forgot it? '
-            )}
-            <Link
-              to="/login?forgot=1"
-              className="font-medium text-brand-600 hover:underline dark:text-brand-300"
-            >
-              {t('Đặt lại qua email', 'Reset it by email')}
-            </Link>
-          </p>
-          <Field label={t('Mật khẩu', 'Password')}>
+          {googleOnly ? (
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                `Gõ lại email của tài khoản (${user.email}) để xác nhận.`,
+                `Type this account's email (${user.email}) to confirm.`
+              )}
+            </p>
+          ) : (
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                'Nhập mật khẩu để xác nhận. Quên mật khẩu? ',
+                'Enter your password to confirm. Forgot it? '
+              )}
+              <Link
+                to="/login?forgot=1"
+                className="font-medium text-brand-600 hover:underline dark:text-brand-300"
+              >
+                {t('Đặt lại qua email', 'Reset it by email')}
+              </Link>
+            </p>
+          )}
+          <Field label={googleOnly ? 'Email' : t('Mật khẩu', 'Password')}>
             <input
-              type="password"
+              type={googleOnly ? 'email' : 'password'}
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={inputCls}
-              autoComplete="current-password"
+              autoComplete={googleOnly ? 'off' : 'current-password'}
             />
           </Field>
           {error && <Notice tone="error">{error}</Notice>}

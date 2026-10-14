@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { KeyRound, LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { useT } from '@/lib/i18n'
+import { fetchAuthSettings } from '@/lib/supabase'
+import { parseProviders } from '@/lib/authProviders'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { POLICY_VERSION } from '@/lib/site'
 import { AuthShell, Field, Notice, inputCls } from './AuthShell'
@@ -15,6 +17,8 @@ export default function AuthPage() {
   const login = useAuth((s) => s.login)
   const register = useAuth((s) => s.register)
   const requestPasswordReset = useAuth((s) => s.requestPasswordReset)
+  const signInWithGoogle = useAuth((s) => s.signInWithGoogle)
+  const googleOn = useGoogleSignIn()
   const [mode, setMode] = useState<Mode>(() => (params.get('forgot') ? 'forgot' : 'login'))
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -98,6 +102,23 @@ export default function AuthPage() {
     }
   }
 
+  const continueWithGoogle = async () => {
+    setError(null)
+    setInfo(null)
+    setBusy(true)
+    try {
+      await signInWithGoogle(POLICY_VERSION)
+      // The browser is now on its way to Google; stay busy until it leaves.
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : t('Có lỗi xảy ra, thử lại nhé.', 'Something went wrong — please try again.')
+      )
+      setBusy(false)
+    }
+  }
+
   const subtitle = {
     login: t('Đăng nhập để đồng bộ tiến độ', 'Sign in to sync your progress'),
     register: t('Tham gia bản beta', 'Join the beta'),
@@ -120,6 +141,37 @@ export default function AuthPage() {
           >
             {t('Đăng ký', 'Sign up')}
           </button>
+        </div>
+      )}
+
+      {googleOn && mode !== 'forgot' && (
+        <div className="mb-4 space-y-2.5">
+          <button
+            type="button"
+            onClick={continueWithGoogle}
+            disabled={busy}
+            className="btn-secondary h-11 w-full"
+          >
+            <GoogleMark className="h-4 w-4" /> {t('Tiếp tục với Google', 'Continue with Google')}
+          </button>
+          <p className="text-center text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+            {t(
+              'Tiếp tục với Google nghĩa là bạn đồng ý với ',
+              'By continuing with Google you agree to the '
+            )}
+            <ConsentLink to="/terms">{t('Điều khoản sử dụng', 'Terms of use')}</ConsentLink>
+            {t(' và ', ' and the ')}
+            <ConsentLink to="/privacy">{t('Chính sách bảo mật', 'Privacy policy')}</ConsentLink>
+            {t(
+              ', gồm việc lưu trữ dữ liệu ở nước ngoài. Tài khoản mới vào danh sách chờ beta; nếu dưới 16 tuổi, bạn cần cha mẹ đồng ý.',
+              ', including storing data outside Vietnam. New accounts join the beta waitlist; if you are under 16, a parent must agree too.'
+            )}
+          </p>
+          <div className="flex items-center gap-3 text-xs text-slate-400">
+            <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />
+            {t('hoặc dùng email', 'or use email')}
+            <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />
+          </div>
         </div>
       )}
 
@@ -254,5 +306,47 @@ function ConsentLink({ to, children }: { to: string; children: React.ReactNode }
     >
       {children}
     </Link>
+  )
+}
+
+/**
+ * Is "Continue with Google" switched on in Supabase? Asked once per visit, so
+ * enabling the provider there is all it takes — no redeploy.
+ */
+function useGoogleSignIn(): boolean {
+  const [on, setOn] = useState(false)
+  useEffect(() => {
+    let alive = true
+    void fetchAuthSettings().then((json) => {
+      if (alive) setOn(parseProviders(json).google)
+    })
+    return () => {
+      alive = false
+    }
+  }, [])
+  return on
+}
+
+/** Google's "G", as its sign-in branding asks. */
+function GoogleMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
+      <path
+        fill="#FFC107"
+        d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"
+      />
+      <path
+        fill="#FF3D00"
+        d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"
+      />
+      <path
+        fill="#4CAF50"
+        d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"
+      />
+      <path
+        fill="#1976D2"
+        d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"
+      />
+    </svg>
   )
 }
