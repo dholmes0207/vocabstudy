@@ -25,11 +25,12 @@
   - mục dữ liệu "Góp ý bạn gửi trong app": cách trích dẫn và cách yêu cầu gỡ;
   - lý do sử dụng: đọc góp ý và trích dẫn khi người viết cho phép.
 - Xoá tài khoản thì xoá luôn các góp ý gắn với tài khoản đó (cascade).
-- **Phần tiếp theo:**
-  - thẻ góp ý trên trang Admin, có nút "Hiện trên trang chủ";
+- **Đã có thêm:**
+  - thẻ "Góp ý của học viên" trên trang Admin, có nút "Hiện trên trang chủ". Nút này chỉ
+    hiện với góp ý mà người viết đã cho phép trích dẫn;
   - API công khai `GET /api/testimonials`;
-  - mục "Người học nói gì" trên trang giới thiệu, chỉ hiện khi có ít nhất 1 cảm nhận được
-    chọn.
+  - mục "Người học nói gì" trên trang giới thiệu, **không hiện gì** cho tới khi có ít
+    nhất một cảm nhận được chọn.
 
 **Dev**
 
@@ -47,3 +48,10 @@
 - `store/feedbackStore.ts` lưu trạng thái mở/đóng; `components/FeedbackDialog.tsx` được
   gắn ở `App`.
 - `schema.sql`: bảng `feedback` bật RLS, không có policy nào.
+- `functions/api/admin/feedback.ts`:
+  - `GET` trả 50 góp ý mới nhất;
+  - `PATCH` đổi trạng thái `featured`. Khi bật lên, câu lệnh có thêm điều kiện
+    `allow_quote=eq.true`, nên server tự chặn góp ý chưa được phép trích dẫn.
+- `functions/api/testimonials.ts` chỉ trả góp ý vừa `featured` vừa `allow_quote` (tối đa 6),
+  cache 5 phút.
+- `lib/testimonials.ts` `parseTestimonials`; `features/marketing/Testimonials.tsx`.

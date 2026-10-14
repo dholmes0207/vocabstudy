@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { useT } from '@/lib/i18n'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import Testimonials from './Testimonials'
 
 // The public home page (docs/design/landing.md): what VocaStudy is, who it is
 // for, and one obvious way to start. Every number here is true of the product
@@ -34,6 +35,7 @@ export default function Landing() {
       <Features />
       <HowItWorks />
       <ForVietnamese />
+      <Testimonials />
       <Faq />
       <section className="px-4 pb-20 pt-6">
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-indigo-600 to-violet-700 px-6 py-14 text-center text-white shadow-xl">

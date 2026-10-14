@@ -40,6 +40,18 @@ export interface ClientErrorRow {
   last_seen: string
 }
 
+/** A learner's message from the in-app form (docs/design/feedback.md). */
+export interface FeedbackRow {
+  id: string
+  created_at: string
+  name: string
+  message: string
+  rating: number | null
+  allow_quote: boolean
+  featured: boolean
+  page: string
+}
+
 export class ApiError extends Error {
   status: number
   constructor(status: number, message: string) {
@@ -110,6 +122,12 @@ export const api = {
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
   adminAiUsage: () => req<AiUsageReport>('/admin/ai-usage'),
+  adminFeedback: () => req<{ enabled: boolean; feedback: FeedbackRow[] }>('/admin/feedback'),
+  adminFeatureFeedback: (id: string, featured: boolean) =>
+    req<{ ok: true }>('/admin/feedback', {
+      method: 'PATCH',
+      body: JSON.stringify({ id, featured }),
+    }),
   adminErrors: () => req<{ enabled: boolean; errors: ClientErrorRow[] }>('/admin/errors'),
   adminPatchUser: (
     id: string,
