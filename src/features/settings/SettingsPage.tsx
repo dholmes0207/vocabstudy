@@ -434,7 +434,7 @@ export default function SettingsPage() {
                 `${settings.ttsRate.toFixed(2)} times`
               )}
               disabled={!canPronounce}
-              className="w-40 accent-brand-600 disabled:opacity-40"
+              className="w-28 accent-brand-600 disabled:opacity-40 sm:w-40"
             />
             <span className="w-12 text-right font-bold tabular-nums">
               {settings.ttsRate.toFixed(2)}×

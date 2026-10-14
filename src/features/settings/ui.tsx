@@ -36,7 +36,7 @@ export function Row({
         <p className="font-medium">{label}</p>
         {hint && <p className="text-sm text-slate-400">{hint}</p>}
       </div>
-      <div className="shrink-0">{children}</div>
+      <div className="max-w-full shrink-0">{children}</div>
     </div>
   )
 }
