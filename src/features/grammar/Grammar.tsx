@@ -85,7 +85,7 @@ function UnitList({ pack }: { pack: GrammarPack }) {
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
           <span className="text-aurora">{t('Ngữ pháp căn bản', 'Grammar basics')}</span>{' '}
-          <span aria-hidden="true">🧩</span>
+          <span aria-hidden="true">📐</span>
         </h1>
         <p className="mt-1 text-slate-500">
           {t(

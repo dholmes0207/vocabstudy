@@ -12,6 +12,25 @@ export interface PracticeEntry {
 
 export const PRACTICE: PracticeEntry[] = [
   {
+    to: '/grammar',
+    icon: '📐',
+    title: 'Ngữ pháp căn bản',
+    desc: '12 bài ngắn: to be, các thì, a/an/the, giới từ… giải thích bằng tiếng Việt, có bài luyện.',
+    titleEn: 'Grammar basics',
+    descEn:
+      '12 short lessons: to be, tenses, a/an/the, prepositions… explained simply, with practice.',
+    tone: 'from-indigo-500 to-violet-600',
+  },
+  {
+    to: '/topics',
+    icon: '🗂️',
+    title: 'Học theo chủ đề',
+    desc: 'Công sở, ăn uống, sức khoẻ, công nghệ… 19 bộ từ theo tình huống.',
+    titleEn: 'Learn by topic',
+    descEn: 'Work, food, health, tech… 19 word decks for real situations.',
+    tone: 'from-sky-500 to-cyan-600',
+  },
+  {
     to: '/games/match',
     icon: '🧩',
     title: 'Ghép cặp',
