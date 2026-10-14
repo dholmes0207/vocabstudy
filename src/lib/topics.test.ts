@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import { parseTopics } from './topics'
 
 // The topic decks (docs/design/topics.md) only ever point at real words.
 
@@ -28,5 +29,25 @@ describe('topic decks', () => {
       expect(new Set(t.wordIds).size, t.id).toBe(t.wordIds.length)
       for (const id of t.wordIds) expect(ids.has(id), `${t.id}: ${id}`).toBe(true)
     }
+  })
+})
+
+describe('parseTopics', () => {
+  it('reads the shipped file', () => {
+    expect(parseTopics(topics).length).toBe(topics.topics.length)
+  })
+
+  it('drops malformed entries instead of throwing', () => {
+    expect(
+      parseTopics({
+        topics: [
+          { id: 'ok', emoji: '💼', title: ['Công sở', 'Work'], wordIds: [1, 2] },
+          { id: 'bad-title', emoji: '💼', title: ['only one'], wordIds: [1] },
+          { id: 'bad-ids', emoji: '💼', title: ['a', 'b'], wordIds: ['x'] },
+          null,
+        ],
+      }).map((t) => t.id)
+    ).toEqual(['ok'])
+    expect(parseTopics('nope')).toEqual([])
   })
 })
