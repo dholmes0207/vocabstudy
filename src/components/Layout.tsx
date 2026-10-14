@@ -10,6 +10,7 @@ import {
   Settings,
   Sparkles,
   FolderOpen,
+  GraduationCap,
 } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
@@ -77,6 +78,7 @@ const NAV: NavItem[] = [
   },
   // The dictionary moved off the phone's bottom bar to make room for phrases;
   // it stays in the sidebar, the account menu and on the home screen.
+  { to: '/grammar', label: ['Ngữ pháp căn bản', 'Grammar basics'], icon: GraduationCap },
   { to: '/topics', label: ['Học theo chủ đề', 'Learn by topic'], icon: FolderOpen },
   { to: '/browse', label: ['Tra cứu', 'Dictionary'], icon: Library },
   { to: '/stats', label: ['Thống kê', 'Stats'], icon: BarChart3 },

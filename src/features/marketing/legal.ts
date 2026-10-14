@@ -59,8 +59,8 @@ export const PRIVACY: LegalDoc = {
           'Questions to the AI tutor: sent through the API to OpenAI to generate an answer. We do not store the conversation; we only count questions per day to apply the daily limit. Under OpenAI’s API policy, data sent through the API is not used to train their models; OpenAI may keep it temporarily under its own policy to detect abuse. Even so, please do not type sensitive personal information into the chat.',
         ],
         [
-          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ cục bộ của trình duyệt (Local Storage), kèm bộ nhớ đệm (Cache Storage) để học khi mất mạng. Câu bạn tự đặt và tiến độ mẫu câu hiện chỉ nằm trên máy bạn, không được đồng bộ.',
-          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s local storage, along with an offline cache. Your own sentences and phrase progress currently stay on your device only and are not synced.',
+          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ cục bộ của trình duyệt (Local Storage), kèm bộ nhớ đệm (Cache Storage) để học khi mất mạng. Câu bạn tự đặt, tiến độ mẫu câu và tiến độ ngữ pháp hiện chỉ nằm trên máy bạn, không được đồng bộ.',
+          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s local storage, along with an offline cache. Your own sentences, phrase progress and grammar progress currently stay on your device only and are not synced.',
         ],
         [
           'Ghi âm luyện nói: chỉ nằm trong trình duyệt và không được tải lên máy chủ của chúng tôi. Tính năng chấm phát âm dùng nhận dạng giọng nói của trình duyệt — một số trình duyệt (ví dụ Chrome) gửi âm thanh tới máy chủ của nhà cung cấp trình duyệt để nhận dạng.',
@@ -315,8 +315,8 @@ export const TERMS: LegalDoc = {
       ],
       items: [
         [
-          'Chủ động sao lưu tiến độ: hãy thỉnh thoảng tải file sao lưu về máy trong Cài đặt → Dữ liệu & sao lưu, đặc biệt nếu bạn chỉ học trên trình duyệt mà chưa tạo tài khoản đồng bộ — xoá dữ liệu trình duyệt hoặc hỏng thiết bị sẽ làm mất dữ liệu trên máy. Kể cả khi đã đăng nhập, câu bạn tự đặt và tiến độ mẫu câu vẫn chỉ nằm trên máy; file sao lưu giữ được cả hai.',
-          'Back up your progress: now and then, download a backup file in Settings → Data & backup — especially if you learn in the browser without an account, since clearing browser data or losing the device erases what is stored on it. Even when signed in, your own sentences and phrase progress live only on the device; the backup file keeps both.',
+          'Chủ động sao lưu tiến độ: hãy thỉnh thoảng tải file sao lưu về máy trong Cài đặt → Dữ liệu & sao lưu, đặc biệt nếu bạn chỉ học trên trình duyệt mà chưa tạo tài khoản đồng bộ — xoá dữ liệu trình duyệt hoặc hỏng thiết bị sẽ làm mất dữ liệu trên máy. Kể cả khi đã đăng nhập, câu bạn tự đặt, tiến độ mẫu câu và ngữ pháp vẫn chỉ nằm trên máy; file sao lưu giữ được tất cả.',
+          'Back up your progress: now and then, download a backup file in Settings → Data & backup — especially if you learn in the browser without an account, since clearing browser data or losing the device erases what is stored on it. Even when signed in, your own sentences, phrase and grammar progress live only on the device; the backup file keeps them all.',
         ],
         [
           'Giới hạn trách nhiệm: dịch vụ được cung cấp "như hiện có". Trong phạm vi pháp luật cho phép, VocaStudy không chịu trách nhiệm cho thiệt hại gián tiếp hay việc mất dữ liệu trên thiết bị phát sinh từ sự cố kỹ thuật ngoài tầm kiểm soát trong quá trình bạn dùng bản thử nghiệm này. Nếu gặp bất kỳ lỗi nào, hãy nhắn cho chúng tôi qua contact@vocastudy.app để cùng khắc phục.',

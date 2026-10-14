@@ -1,0 +1,1751 @@
+{
+ "version": "1.0.0",
+ "units": [
+  {
+   "id": "to-be",
+   "emoji": "🙋",
+   "level": "A1",
+   "title": [
+    "Động từ to be: am / is / are",
+    "The verb to be: am / is / are"
+   ],
+   "summary": [
+    "Nói ai là ai, ở đâu, cảm thấy thế nào.",
+    "Say who someone is, where they are and how they feel."
+   ],
+   "explain": [
+    "\"To be\" nghĩa là \"là / thì / ở\". Dùng để giới thiệu bản thân, nói nghề nghiệp, tuổi, cảm xúc, nơi chốn.",
+    "I đi với am; he / she / it và danh từ số ít đi với is; you / we / they và danh từ số nhiều đi với are.",
+    "Phủ định thêm not: is not = isn't, are not = aren't, I am not = I'm not.",
+    "Câu hỏi: đưa am / is / are lên trước chủ ngữ: Are you tired? Is she here?"
+   ],
+   "patterns": [
+    "(+) I am / He is / They are + …",
+    "(−) She isn't / We aren't + …",
+    "(?) Is he …? / Are they …?"
+   ],
+   "examples": [
+    {
+     "en": "I am a student.",
+     "vi": "Tôi là học sinh."
+    },
+    {
+     "en": "She is 20 years old.",
+     "vi": "Cô ấy 20 tuổi."
+    },
+    {
+     "en": "We are at home.",
+     "vi": "Chúng tôi đang ở nhà."
+    },
+    {
+     "en": "They aren't hungry.",
+     "vi": "Họ không đói."
+    },
+    {
+     "en": "Is your brother a doctor?",
+     "vi": "Anh trai bạn là bác sĩ à?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I hungry.",
+     "right": "I am hungry.",
+     "why": "Tiếng Việt nói \"Tôi đói\", nhưng tiếng Anh cần động từ: I am hungry."
+    },
+    {
+     "wrong": "She are my teacher.",
+     "right": "She is my teacher.",
+     "why": "She đi với is."
+    },
+    {
+     "wrong": "I have 20 years old.",
+     "right": "I am 20 years old.",
+     "why": "Nói tuổi dùng be, không dùng have."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "My parents ___ teachers.",
+     "options": [
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 2,
+     "explain": "Parents là số nhiều → are."
+    },
+    {
+     "type": "choice",
+     "prompt": "I ___ from Vietnam.",
+     "options": [
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 0,
+     "explain": "I đi với am."
+    },
+    {
+     "type": "choice",
+     "prompt": "The coffee ___ hot.",
+     "options": [
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 1,
+     "explain": "Coffee không đếm được, coi như số ít → is."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ you ready?",
+     "options": [
+      "Am",
+      "Is",
+      "Are"
+     ],
+     "answer": 2,
+     "explain": "You đi với are."
+    },
+    {
+     "type": "choice",
+     "prompt": "He ___ not at school today.",
+     "options": [
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": 1,
+     "explain": "He đi với is."
+    },
+    {
+     "type": "choice",
+     "prompt": "I ___ 25 years old.",
+     "options": [
+      "have",
+      "am",
+      "is"
+     ],
+     "answer": 1,
+     "explain": "Nói tuổi dùng be: I am 25 years old."
+    },
+    {
+     "type": "order",
+     "en": "She is my best friend.",
+     "vi": "Cô ấy là bạn thân nhất của tôi."
+    },
+    {
+     "type": "order",
+     "en": "Are you a student?",
+     "vi": "Bạn là học sinh à?"
+    },
+    {
+     "type": "order",
+     "en": "We aren't tired today.",
+     "vi": "Hôm nay chúng tôi không mệt."
+    }
+   ]
+  },
+  {
+   "id": "present-simple",
+   "emoji": "🔁",
+   "level": "A1",
+   "title": [
+    "Thì hiện tại đơn",
+    "Present simple"
+   ],
+   "summary": [
+    "Thói quen, sự thật, lịch trình cố định.",
+    "Habits, facts and fixed timetables."
+   ],
+   "explain": [
+    "Dùng cho thói quen (I get up at 6), sự thật (Water boils at 100°C) và lịch trình cố định (The train leaves at 7).",
+    "Với he / she / it, động từ thêm -s hoặc -es: work → works, go → goes, watch → watches, study → studies.",
+    "Phủ định: don't / doesn't + động từ nguyên mẫu. Câu hỏi: Do / Does + chủ ngữ + động từ nguyên mẫu.",
+    "Sau doesn't và does, động từ KHÔNG thêm -s: She doesn't like coffee.",
+    "Từ hay đi kèm: always, usually, often, sometimes, never, every day."
+   ],
+   "patterns": [
+    "(+) I work / She works",
+    "(−) I don't work / She doesn't work",
+    "(?) Do you work? / Does she work?"
+   ],
+   "examples": [
+    {
+     "en": "I drink coffee every morning.",
+     "vi": "Sáng nào tôi cũng uống cà phê."
+    },
+    {
+     "en": "My mother works in a hospital.",
+     "vi": "Mẹ tôi làm việc ở bệnh viện."
+    },
+    {
+     "en": "He doesn't eat meat.",
+     "vi": "Anh ấy không ăn thịt."
+    },
+    {
+     "en": "Do you speak English?",
+     "vi": "Bạn có nói tiếng Anh không?"
+    },
+    {
+     "en": "The train leaves at seven o'clock.",
+     "vi": "Tàu chạy lúc bảy giờ."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "She like music.",
+     "right": "She likes music.",
+     "why": "Chủ ngữ she → động từ thêm -s."
+    },
+    {
+     "wrong": "He doesn't likes tea.",
+     "right": "He doesn't like tea.",
+     "why": "Sau doesn't, động từ giữ nguyên mẫu."
+    },
+    {
+     "wrong": "Do she work here?",
+     "right": "Does she work here?",
+     "why": "She dùng does."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "She ___ to work by bus.",
+     "options": [
+      "go",
+      "goes",
+      "going"
+     ],
+     "answer": 1,
+     "explain": "She → động từ thêm -es: goes."
+    },
+    {
+     "type": "choice",
+     "prompt": "They ___ live in Hanoi.",
+     "options": [
+      "doesn't",
+      "don't",
+      "isn't"
+     ],
+     "answer": 1,
+     "explain": "They đi với don't."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ your father drink coffee?",
+     "options": [
+      "Do",
+      "Does",
+      "Is"
+     ],
+     "answer": 1,
+     "explain": "Your father = he → does."
+    },
+    {
+     "type": "choice",
+     "prompt": "My brother ___ football on Sundays.",
+     "options": [
+      "play",
+      "plays",
+      "playing"
+     ],
+     "answer": 1,
+     "explain": "My brother = he → plays."
+    },
+    {
+     "type": "choice",
+     "prompt": "I never ___ breakfast.",
+     "options": [
+      "skip",
+      "skips",
+      "skipping"
+     ],
+     "answer": 0,
+     "explain": "I → động từ nguyên mẫu."
+    },
+    {
+     "type": "choice",
+     "prompt": "He doesn't ___ spicy food.",
+     "options": [
+      "likes",
+      "like",
+      "liking"
+     ],
+     "answer": 1,
+     "explain": "Sau doesn't, động từ nguyên mẫu."
+    },
+    {
+     "type": "order",
+     "en": "She watches TV every evening.",
+     "vi": "Tối nào cô ấy cũng xem TV."
+    },
+    {
+     "type": "order",
+     "en": "Do you like green tea?",
+     "vi": "Bạn có thích trà xanh không?"
+    },
+    {
+     "type": "order",
+     "en": "He doesn't work on Saturdays.",
+     "vi": "Anh ấy không làm việc vào thứ Bảy."
+    }
+   ]
+  },
+  {
+   "id": "present-continuous",
+   "emoji": "⏳",
+   "level": "A1",
+   "title": [
+    "Thì hiện tại tiếp diễn",
+    "Present continuous"
+   ],
+   "summary": [
+    "Việc đang xảy ra ngay lúc này.",
+    "What is happening right now."
+   ],
+   "explain": [
+    "Dùng cho hành động đang diễn ra lúc nói (now, right now, at the moment) hoặc kế hoạch gần đã sắp xếp (I'm meeting Lan tomorrow).",
+    "Cấu trúc: am / is / are + động từ thêm -ing.",
+    "Thêm -ing: make → making (bỏ e), sit → sitting (gấp đôi phụ âm cuối), study → studying.",
+    "Động từ chỉ trạng thái thường không dùng -ing: like, love, know, want, need, understand."
+   ],
+   "patterns": [
+    "(+) I am reading / She is reading",
+    "(−) He isn't reading",
+    "(?) Are you reading?"
+   ],
+   "examples": [
+    {
+     "en": "I am cooking dinner now.",
+     "vi": "Tôi đang nấu bữa tối."
+    },
+    {
+     "en": "She is talking on the phone.",
+     "vi": "Cô ấy đang nói chuyện điện thoại."
+    },
+    {
+     "en": "They aren't watching TV.",
+     "vi": "Họ không xem TV."
+    },
+    {
+     "en": "What are you doing?",
+     "vi": "Bạn đang làm gì vậy?"
+    },
+    {
+     "en": "It is raining outside.",
+     "vi": "Ngoài trời đang mưa."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I cooking now.",
+     "right": "I am cooking now.",
+     "why": "Cần am / is / are trước động từ -ing."
+    },
+    {
+     "wrong": "I am knowing the answer.",
+     "right": "I know the answer.",
+     "why": "Know là động từ trạng thái, không dùng -ing."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Listen! The baby ___.",
+     "options": [
+      "cries",
+      "is crying",
+      "cry"
+     ],
+     "answer": 1,
+     "explain": "Listen! → việc đang xảy ra."
+    },
+    {
+     "type": "choice",
+     "prompt": "We ___ for the bus right now.",
+     "options": [
+      "are waiting",
+      "wait",
+      "waits"
+     ],
+     "answer": 0,
+     "explain": "Right now → am / is / are + -ing."
+    },
+    {
+     "type": "choice",
+     "prompt": "She ___ a blue dress today.",
+     "options": [
+      "wear",
+      "is wearing",
+      "wearing"
+     ],
+     "answer": 1,
+     "explain": "Hôm nay đang mặc → is wearing."
+    },
+    {
+     "type": "choice",
+     "prompt": "I ___ what you mean.",
+     "options": [
+      "am understanding",
+      "understand",
+      "understanding"
+     ],
+     "answer": 1,
+     "explain": "Understand là động từ trạng thái, không dùng -ing."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ he sleeping?",
+     "options": [
+      "Does",
+      "Is",
+      "Are"
+     ],
+     "answer": 1,
+     "explain": "He → is."
+    },
+    {
+     "type": "choice",
+     "prompt": "They aren't ___ to music.",
+     "options": [
+      "listen",
+      "listening",
+      "listens"
+     ],
+     "answer": 1,
+     "explain": "Sau aren't là động từ -ing."
+    },
+    {
+     "type": "order",
+     "en": "I am learning English now.",
+     "vi": "Bây giờ tôi đang học tiếng Anh."
+    },
+    {
+     "type": "order",
+     "en": "What are you doing?",
+     "vi": "Bạn đang làm gì vậy?"
+    },
+    {
+     "type": "order",
+     "en": "It is raining outside.",
+     "vi": "Ngoài trời đang mưa."
+    }
+   ]
+  },
+  {
+   "id": "past-simple",
+   "emoji": "⏪",
+   "level": "A1",
+   "title": [
+    "Thì quá khứ đơn",
+    "Past simple"
+   ],
+   "summary": [
+    "Việc đã xảy ra và kết thúc trong quá khứ.",
+    "Finished actions in the past."
+   ],
+   "explain": [
+    "Dùng cho việc đã xong trong quá khứ, thường đi với yesterday, last week, ago, in 2020.",
+    "Be: was (I / he / she / it), were (you / we / they).",
+    "Động từ có quy tắc thêm -ed: work → worked, live → lived, study → studied, stop → stopped.",
+    "Nhiều động từ bất quy tắc phải học thuộc: go → went, eat → ate, see → saw, buy → bought, have → had.",
+    "Phủ định và câu hỏi dùng didn't / did + động từ nguyên mẫu: I didn't go. Did you go?"
+   ],
+   "patterns": [
+    "(+) I worked / She went",
+    "(−) I didn't work / She didn't go",
+    "(?) Did you work? / Did she go?"
+   ],
+   "examples": [
+    {
+     "en": "I visited my grandparents last weekend.",
+     "vi": "Cuối tuần trước tôi về thăm ông bà."
+    },
+    {
+     "en": "She was tired yesterday.",
+     "vi": "Hôm qua cô ấy mệt."
+    },
+    {
+     "en": "We went to the beach in July.",
+     "vi": "Tháng Bảy chúng tôi đi biển."
+    },
+    {
+     "en": "He didn't call me.",
+     "vi": "Anh ấy không gọi cho tôi."
+    },
+    {
+     "en": "Did you sleep well?",
+     "vi": "Bạn ngủ có ngon không?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I go to school yesterday.",
+     "right": "I went to school yesterday.",
+     "why": "Có yesterday → dùng quá khứ."
+    },
+    {
+     "wrong": "Did you went there?",
+     "right": "Did you go there?",
+     "why": "Sau did, động từ giữ nguyên mẫu."
+    },
+    {
+     "wrong": "They was late.",
+     "right": "They were late.",
+     "why": "They đi với were."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "I ___ a new phone last month.",
+     "options": [
+      "buy",
+      "bought",
+      "buyed"
+     ],
+     "answer": 1,
+     "explain": "Buy là động từ bất quy tắc: buy → bought."
+    },
+    {
+     "type": "choice",
+     "prompt": "We ___ at home yesterday evening.",
+     "options": [
+      "was",
+      "were",
+      "are"
+     ],
+     "answer": 1,
+     "explain": "We đi với were."
+    },
+    {
+     "type": "choice",
+     "prompt": "She ___ to the party.",
+     "options": [
+      "didn't come",
+      "didn't came",
+      "not came"
+     ],
+     "answer": 0,
+     "explain": "Didn't + động từ nguyên mẫu."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ you see the film?",
+     "options": [
+      "Do",
+      "Did",
+      "Was"
+     ],
+     "answer": 1,
+     "explain": "Hỏi về quá khứ → did."
+    },
+    {
+     "type": "choice",
+     "prompt": "They ___ in Da Nang two years ago.",
+     "options": [
+      "live",
+      "lived",
+      "living"
+     ],
+     "answer": 1,
+     "explain": "Two years ago → quá khứ: lived."
+    },
+    {
+     "type": "choice",
+     "prompt": "I ___ very happy at the party.",
+     "options": [
+      "were",
+      "was",
+      "am"
+     ],
+     "answer": 1,
+     "explain": "I đi với was."
+    },
+    {
+     "type": "order",
+     "en": "We went to the beach last summer.",
+     "vi": "Mùa hè năm ngoái chúng tôi đi biển."
+    },
+    {
+     "type": "order",
+     "en": "Did you eat breakfast?",
+     "vi": "Bạn đã ăn sáng chưa?"
+    },
+    {
+     "type": "order",
+     "en": "She didn't call me yesterday.",
+     "vi": "Hôm qua cô ấy không gọi cho tôi."
+    }
+   ]
+  },
+  {
+   "id": "future",
+   "emoji": "🔮",
+   "level": "A2",
+   "title": [
+    "Tương lai: will và be going to",
+    "The future: will and be going to"
+   ],
+   "summary": [
+    "Kế hoạch, quyết định tức thì và dự đoán.",
+    "Plans, quick decisions and predictions."
+   ],
+   "explain": [
+    "Be going to + động từ: kế hoạch đã có từ trước (I'm going to visit Hue next month) hoặc dự đoán có căn cứ (Look at the clouds — it's going to rain).",
+    "Will + động từ: quyết định ngay lúc nói (I'll help you), lời hứa, hoặc dự đoán chung (I think she will win).",
+    "Sau will luôn là động từ nguyên mẫu, không có to. Phủ định: won't (= will not)."
+   ],
+   "patterns": [
+    "I will (I'll) call you. / I won't forget.",
+    "I am going to study. / She isn't going to come.",
+    "Will you …? / Are you going to …?"
+   ],
+   "examples": [
+    {
+     "en": "I will call you tonight.",
+     "vi": "Tối nay tôi sẽ gọi cho bạn."
+    },
+    {
+     "en": "We are going to move to Hanoi.",
+     "vi": "Chúng tôi sắp chuyển ra Hà Nội."
+    },
+    {
+     "en": "It's going to rain.",
+     "vi": "Trời sắp mưa."
+    },
+    {
+     "en": "I won't tell anyone.",
+     "vi": "Tôi sẽ không nói với ai."
+    },
+    {
+     "en": "Will you help me?",
+     "vi": "Bạn giúp tôi nhé?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I will to call you.",
+     "right": "I will call you.",
+     "why": "Sau will không có to."
+    },
+    {
+     "wrong": "She going to travel.",
+     "right": "She is going to travel.",
+     "why": "Cần am / is / are trước going to."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Wait, I ___ open the door for you.",
+     "options": [
+      "will",
+      "am going",
+      "going to"
+     ],
+     "answer": 0,
+     "explain": "Quyết định ngay lúc nói → will."
+    },
+    {
+     "type": "choice",
+     "prompt": "Look at the sky! It ___ rain.",
+     "options": [
+      "is going to",
+      "will to",
+      "going"
+     ],
+     "answer": 0,
+     "explain": "Có dấu hiệu rõ ràng → is going to."
+    },
+    {
+     "type": "choice",
+     "prompt": "We ___ visit Hue next month. We booked the tickets.",
+     "options": [
+      "are going to",
+      "will to",
+      "going"
+     ],
+     "answer": 0,
+     "explain": "Kế hoạch đã có → are going to."
+    },
+    {
+     "type": "choice",
+     "prompt": "I promise I ___ be late.",
+     "options": [
+      "won't",
+      "don't",
+      "am not going"
+     ],
+     "answer": 0,
+     "explain": "Lời hứa → will / won't."
+    },
+    {
+     "type": "choice",
+     "prompt": "She will ___ the exam.",
+     "options": [
+      "passes",
+      "pass",
+      "passing"
+     ],
+     "answer": 1,
+     "explain": "Sau will, động từ nguyên mẫu."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ you going to buy a car?",
+     "options": [
+      "Will",
+      "Are",
+      "Do"
+     ],
+     "answer": 1,
+     "explain": "Be going to → Are you going to …?"
+    },
+    {
+     "type": "order",
+     "en": "I will call you tomorrow.",
+     "vi": "Ngày mai tôi sẽ gọi cho bạn."
+    },
+    {
+     "type": "order",
+     "en": "We are going to travel next week.",
+     "vi": "Tuần sau chúng tôi sẽ đi du lịch."
+    },
+    {
+     "type": "order",
+     "en": "It is going to rain soon.",
+     "vi": "Trời sắp mưa rồi."
+    }
+   ]
+  },
+  {
+   "id": "articles",
+   "emoji": "🅰️",
+   "level": "A1",
+   "title": [
+    "Mạo từ a / an / the",
+    "Articles: a / an / the"
+   ],
+   "summary": [
+    "Khi nào nói a, an, the — và khi nào không cần.",
+    "When to say a, an or the — and when to say nothing."
+   ],
+   "explain": [
+    "A / an nghĩa là \"một\" cái hay người bất kỳ, nhắc tới lần đầu, đi với danh từ đếm được số ít.",
+    "An đứng trước ÂM nguyên âm, không phải chữ cái: an apple, an hour (h câm); nhưng a university (đọc /j/).",
+    "The dùng cho thứ cả hai người đều biết là cái nào, đã nhắc tới trước đó, hoặc chỉ có một (the sun, the moon).",
+    "Không dùng a / an với danh từ số nhiều hoặc không đếm được: I like music, không nói a music.",
+    "Nói nghề nghiệp cần a / an: She is a nurse."
+   ],
+   "patterns": [
+    "a + âm phụ âm: a book, a university",
+    "an + âm nguyên âm: an egg, an hour",
+    "the + thứ đã xác định: the book on the table"
+   ],
+   "examples": [
+    {
+     "en": "I have a cat. The cat is black.",
+     "vi": "Tôi có một con mèo. Con mèo màu đen."
+    },
+    {
+     "en": "She is an engineer.",
+     "vi": "Cô ấy là kỹ sư."
+    },
+    {
+     "en": "Can you close the window?",
+     "vi": "Bạn đóng cửa sổ giúp được không?"
+    },
+    {
+     "en": "The sun is very hot today.",
+     "vi": "Hôm nay nắng rất gắt."
+    },
+    {
+     "en": "I waited for an hour.",
+     "vi": "Tôi đã đợi một tiếng."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "She is teacher.",
+     "right": "She is a teacher.",
+     "why": "Nói nghề nghiệp cần a / an."
+    },
+    {
+     "wrong": "a apple",
+     "right": "an apple",
+     "why": "Apple bắt đầu bằng âm nguyên âm → an."
+    },
+    {
+     "wrong": "I like the music. (nói chung)",
+     "right": "I like music.",
+     "why": "Nói chung chung thì không dùng the."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "I need ___ umbrella.",
+     "options": [
+      "a",
+      "an",
+      "the"
+     ],
+     "answer": 1,
+     "explain": "Umbrella bắt đầu bằng âm nguyên âm → an."
+    },
+    {
+     "type": "choice",
+     "prompt": "He is ___ doctor.",
+     "options": [
+      "a",
+      "an",
+      "(không cần)"
+     ],
+     "answer": 0,
+     "explain": "Nghề nghiệp cần a / an; doctor bắt đầu bằng phụ âm → a."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ moon is bright tonight.",
+     "options": [
+      "A",
+      "An",
+      "The"
+     ],
+     "answer": 2,
+     "explain": "Chỉ có một mặt trăng → the."
+    },
+    {
+     "type": "choice",
+     "prompt": "She studies at ___ university in Hanoi.",
+     "options": [
+      "a",
+      "an",
+      "the"
+     ],
+     "answer": 0,
+     "explain": "University đọc bắt đầu bằng âm /j/ (phụ âm) → a."
+    },
+    {
+     "type": "choice",
+     "prompt": "We waited for ___ hour.",
+     "options": [
+      "a",
+      "an",
+      "the"
+     ],
+     "answer": 1,
+     "explain": "Hour có h câm → âm nguyên âm → an."
+    },
+    {
+     "type": "choice",
+     "prompt": "I bought a book. ___ book is very interesting.",
+     "options": [
+      "A",
+      "An",
+      "The"
+     ],
+     "answer": 2,
+     "explain": "Cuốn sách đã nhắc tới → the."
+    },
+    {
+     "type": "order",
+     "en": "She is an English teacher.",
+     "vi": "Cô ấy là giáo viên tiếng Anh."
+    },
+    {
+     "type": "order",
+     "en": "Can you open the door?",
+     "vi": "Bạn mở cửa giúp được không?"
+    },
+    {
+     "type": "order",
+     "en": "I have a dog and a cat.",
+     "vi": "Tôi có một con chó và một con mèo."
+    }
+   ]
+  },
+  {
+   "id": "countable",
+   "emoji": "🔢",
+   "level": "A2",
+   "title": [
+    "Số nhiều, danh từ đếm được và không đếm được",
+    "Plurals, countable and uncountable nouns"
+   ],
+   "summary": [
+    "books, children, some water — how many hay how much?",
+    "books, children, some water — how many or how much?"
+   ],
+   "explain": [
+    "Số nhiều thường thêm -s: book → books; thêm -es sau s, x, ch, sh: box → boxes; phụ âm + y đổi thành -ies: city → cities.",
+    "Số nhiều bất quy tắc: man → men, woman → women, child → children, person → people, foot → feet, tooth → teeth.",
+    "Danh từ không đếm được không có số nhiều và không đi với a / an: water, rice, money, information, advice, furniture.",
+    "How many + danh từ đếm được số nhiều; how much + danh từ không đếm được.",
+    "Some dùng trong câu khẳng định; any dùng trong câu phủ định và câu hỏi."
+   ],
+   "patterns": [
+    "How many apples? / How much water?",
+    "There are some eggs. / There is some milk.",
+    "I don't have any money."
+   ],
+   "examples": [
+    {
+     "en": "I have two children.",
+     "vi": "Tôi có hai con."
+    },
+    {
+     "en": "How much money do you need?",
+     "vi": "Bạn cần bao nhiêu tiền?"
+    },
+    {
+     "en": "How many people are coming?",
+     "vi": "Có bao nhiêu người sẽ đến?"
+    },
+    {
+     "en": "There isn't any milk in the fridge.",
+     "vi": "Trong tủ lạnh hết sữa rồi."
+    },
+    {
+     "en": "Can I give you some advice?",
+     "vi": "Tôi cho bạn một lời khuyên nhé?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "three childs",
+     "right": "three children",
+     "why": "Child có số nhiều bất quy tắc: children."
+    },
+    {
+     "wrong": "an information",
+     "right": "some information",
+     "why": "Information không đếm được."
+    },
+    {
+     "wrong": "How many money?",
+     "right": "How much money?",
+     "why": "Money không đếm được → how much."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "How ___ students are in your class?",
+     "options": [
+      "much",
+      "many",
+      "any"
+     ],
+     "answer": 1,
+     "explain": "Students đếm được, số nhiều → how many."
+    },
+    {
+     "type": "choice",
+     "prompt": "There are three ___ in the room.",
+     "options": [
+      "man",
+      "mans",
+      "men"
+     ],
+     "answer": 2,
+     "explain": "Man → men (bất quy tắc)."
+    },
+    {
+     "type": "choice",
+     "prompt": "I don't have ___ time today.",
+     "options": [
+      "some",
+      "any",
+      "many"
+     ],
+     "answer": 1,
+     "explain": "Câu phủ định → any."
+    },
+    {
+     "type": "choice",
+     "prompt": "How ___ sugar do you want?",
+     "options": [
+      "many",
+      "much",
+      "few"
+     ],
+     "answer": 1,
+     "explain": "Sugar không đếm được → how much."
+    },
+    {
+     "type": "choice",
+     "prompt": "She bought two ___.",
+     "options": [
+      "boxs",
+      "boxes",
+      "box"
+     ],
+     "answer": 1,
+     "explain": "Tận cùng -x → thêm -es."
+    },
+    {
+     "type": "choice",
+     "prompt": "Can I ask for ___ advice?",
+     "options": [
+      "an",
+      "some",
+      "many"
+     ],
+     "answer": 1,
+     "explain": "Advice không đếm được → some, không dùng an."
+    },
+    {
+     "type": "order",
+     "en": "How many people live here?",
+     "vi": "Có bao nhiêu người sống ở đây?"
+    },
+    {
+     "type": "order",
+     "en": "There is some water in the bottle.",
+     "vi": "Trong chai có một ít nước."
+    },
+    {
+     "type": "order",
+     "en": "I don't have any money.",
+     "vi": "Tôi không có đồng nào."
+    }
+   ]
+  },
+  {
+   "id": "pronouns",
+   "emoji": "👥",
+   "level": "A1",
+   "title": [
+    "Đại từ và sở hữu: I – me – my – mine",
+    "Pronouns and possessives: I – me – my – mine"
+   ],
+   "summary": [
+    "Mỗi dạng đứng đúng chỗ của nó.",
+    "Each form in its own place."
+   ],
+   "explain": [
+    "Chủ ngữ (đứng trước động từ): I, you, he, she, it, we, they.",
+    "Tân ngữ (sau động từ hoặc giới từ): me, you, him, her, it, us, them.",
+    "Tính từ sở hữu (đứng trước danh từ): my, your, his, her, its, our, their.",
+    "Đại từ sở hữu (đứng một mình): mine, yours, his, hers, ours, theirs.",
+    "Sở hữu của người: thêm 's: Lan's bag (cái túi của Lan)."
+   ],
+   "patterns": [
+    "She loves him. / He loves her.",
+    "This is my bag. → This bag is mine.",
+    "Lan's phone / my parents' house"
+   ],
+   "examples": [
+    {
+     "en": "He helps me with my homework.",
+     "vi": "Anh ấy giúp tôi làm bài tập."
+    },
+    {
+     "en": "Is this your pen? — No, it's hers.",
+     "vi": "Đây là bút của bạn à? — Không, của cô ấy."
+    },
+    {
+     "en": "Their house is near the river.",
+     "vi": "Nhà họ ở gần sông."
+    },
+    {
+     "en": "Can you call them?",
+     "vi": "Bạn gọi cho họ được không?"
+    },
+    {
+     "en": "This is Minh's car.",
+     "vi": "Đây là xe của Minh."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Me like coffee.",
+     "right": "I like coffee.",
+     "why": "Làm chủ ngữ phải dùng I."
+    },
+    {
+     "wrong": "She is friend of me.",
+     "right": "She is my friend.",
+     "why": "Trước danh từ dùng my."
+    },
+    {
+     "wrong": "This book is my.",
+     "right": "This book is mine.",
+     "why": "Đứng một mình dùng mine."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Can you help ___?",
+     "options": [
+      "I",
+      "me",
+      "my"
+     ],
+     "answer": 1,
+     "explain": "Sau động từ help → tân ngữ me."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ name is Lan.",
+     "options": [
+      "Her",
+      "She",
+      "Hers"
+     ],
+     "answer": 0,
+     "explain": "Trước danh từ name → her."
+    },
+    {
+     "type": "choice",
+     "prompt": "This bag isn't mine. It's ___.",
+     "options": [
+      "your",
+      "yours",
+      "you"
+     ],
+     "answer": 1,
+     "explain": "Đứng một mình → yours."
+    },
+    {
+     "type": "choice",
+     "prompt": "We love ___ grandparents.",
+     "options": [
+      "our",
+      "us",
+      "ours"
+     ],
+     "answer": 0,
+     "explain": "Trước danh từ → our."
+    },
+    {
+     "type": "choice",
+     "prompt": "Please give ___ the keys.",
+     "options": [
+      "they",
+      "their",
+      "them"
+     ],
+     "answer": 2,
+     "explain": "Sau động từ give → tân ngữ them."
+    },
+    {
+     "type": "choice",
+     "prompt": "That is ___ car.",
+     "options": [
+      "Minh",
+      "Minh's",
+      "Minhs"
+     ],
+     "answer": 1,
+     "explain": "Sở hữu của người → Minh's."
+    },
+    {
+     "type": "order",
+     "en": "This is my brother's room.",
+     "vi": "Đây là phòng của anh trai tôi."
+    },
+    {
+     "type": "order",
+     "en": "She calls her mother every day.",
+     "vi": "Ngày nào cô ấy cũng gọi cho mẹ."
+    },
+    {
+     "type": "order",
+     "en": "Is this phone yours?",
+     "vi": "Điện thoại này là của bạn à?"
+    }
+   ]
+  },
+  {
+   "id": "prepositions",
+   "emoji": "📍",
+   "level": "A2",
+   "title": [
+    "Giới từ in / on / at",
+    "Prepositions: in / on / at"
+   ],
+   "summary": [
+    "at 7 o'clock, on Monday, in May; at home, on the table, in the box.",
+    "at 7 o'clock, on Monday, in May; at home, on the table, in the box."
+   ],
+   "explain": [
+    "Thời gian: at + giờ (at 7 o'clock, at night); on + ngày, thứ (on Monday, on May 2nd, on my birthday); in + tháng, năm, mùa, buổi (in May, in 2025, in summer, in the morning).",
+    "Nơi chốn: at + một điểm (at home, at school, at the bus stop); on + bề mặt (on the table, on the wall); in + bên trong một không gian (in the room, in Hanoi, in a car).",
+    "Mẹo nhớ: in rộng nhất, rồi đến on, at hẹp nhất."
+   ],
+   "patterns": [
+    "at 6 p.m. / on Friday / in July",
+    "at the door / on the desk / in the kitchen"
+   ],
+   "examples": [
+    {
+     "en": "I get up at six o'clock.",
+     "vi": "Tôi dậy lúc sáu giờ."
+    },
+    {
+     "en": "We have English on Monday.",
+     "vi": "Thứ Hai chúng tôi học tiếng Anh."
+    },
+    {
+     "en": "She was born in 2005.",
+     "vi": "Cô ấy sinh năm 2005."
+    },
+    {
+     "en": "Your keys are on the table.",
+     "vi": "Chìa khoá của bạn ở trên bàn."
+    },
+    {
+     "en": "My father is at work.",
+     "vi": "Bố tôi đang ở chỗ làm."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "in Monday",
+     "right": "on Monday",
+     "why": "Thứ trong tuần dùng on."
+    },
+    {
+     "wrong": "at the morning",
+     "right": "in the morning",
+     "why": "Buổi sáng / chiều / tối dùng in the (nhưng at night)."
+    },
+    {
+     "wrong": "I live at Hanoi.",
+     "right": "I live in Hanoi.",
+     "why": "Thành phố, quốc gia dùng in."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "The meeting starts ___ nine o'clock.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 2,
+     "explain": "Giờ → at."
+    },
+    {
+     "type": "choice",
+     "prompt": "My birthday is ___ July.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 0,
+     "explain": "Tháng → in."
+    },
+    {
+     "type": "choice",
+     "prompt": "We don't work ___ Sundays.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 1,
+     "explain": "Thứ trong tuần → on."
+    },
+    {
+     "type": "choice",
+     "prompt": "The picture is ___ the wall.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 1,
+     "explain": "Trên bề mặt → on."
+    },
+    {
+     "type": "choice",
+     "prompt": "She is waiting ___ the bus stop.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 2,
+     "explain": "Một điểm → at."
+    },
+    {
+     "type": "choice",
+     "prompt": "I usually read ___ the evening.",
+     "options": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 0,
+     "explain": "Buổi tối → in the evening."
+    },
+    {
+     "type": "order",
+     "en": "I was born in 2003.",
+     "vi": "Tôi sinh năm 2003."
+    },
+    {
+     "type": "order",
+     "en": "The cat is on the sofa.",
+     "vi": "Con mèo ở trên ghế sofa."
+    },
+    {
+     "type": "order",
+     "en": "See you at seven o'clock.",
+     "vi": "Hẹn gặp bạn lúc bảy giờ."
+    }
+   ]
+  },
+  {
+   "id": "comparatives",
+   "emoji": "⚖️",
+   "level": "A2",
+   "title": [
+    "So sánh hơn và so sánh nhất",
+    "Comparatives and superlatives"
+   ],
+   "summary": [
+    "taller, more beautiful, the best.",
+    "taller, more beautiful, the best."
+   ],
+   "explain": [
+    "Tính từ ngắn (1 âm tiết, hoặc 2 âm tiết tận cùng -y): thêm -er / -est: tall → taller → the tallest; big → bigger → the biggest; happy → happier → the happiest.",
+    "Tính từ dài: more / the most + tính từ: more expensive, the most expensive.",
+    "So sánh hơn đi với than: She is taller than me.",
+    "Bất quy tắc: good → better → the best; bad → worse → the worst.",
+    "So sánh bằng: as + tính từ + as: She is as tall as her mother."
+   ],
+   "patterns": [
+    "A is taller than B.",
+    "A is more expensive than B.",
+    "A is the tallest / the most expensive (in …)."
+   ],
+   "examples": [
+    {
+     "en": "My brother is taller than me.",
+     "vi": "Anh tôi cao hơn tôi."
+    },
+    {
+     "en": "This phone is more expensive than that one.",
+     "vi": "Điện thoại này đắt hơn cái kia."
+    },
+    {
+     "en": "It's the best restaurant in town.",
+     "vi": "Đây là nhà hàng ngon nhất thị trấn."
+    },
+    {
+     "en": "Today is hotter than yesterday.",
+     "vi": "Hôm nay nóng hơn hôm qua."
+    },
+    {
+     "en": "She is as tall as her mother.",
+     "vi": "Cô ấy cao bằng mẹ."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "more taller",
+     "right": "taller",
+     "why": "Đã có -er thì không dùng more."
+    },
+    {
+     "wrong": "the most good",
+     "right": "the best",
+     "why": "Good là bất quy tắc: better, the best."
+    },
+    {
+     "wrong": "bigger then",
+     "right": "bigger than",
+     "why": "So sánh dùng than, không phải then."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Hanoi is ___ than Hue.",
+     "options": [
+      "big",
+      "bigger",
+      "biggest"
+     ],
+     "answer": 1,
+     "explain": "So sánh hơn với than → bigger."
+    },
+    {
+     "type": "choice",
+     "prompt": "This is the ___ day of my life!",
+     "options": [
+      "happy",
+      "happier",
+      "happiest"
+     ],
+     "answer": 2,
+     "explain": "The … → so sánh nhất: happiest."
+    },
+    {
+     "type": "choice",
+     "prompt": "English is ___ than maths for me.",
+     "options": [
+      "easier",
+      "more easy",
+      "easiest"
+     ],
+     "answer": 0,
+     "explain": "Easy tận cùng -y → easier."
+    },
+    {
+     "type": "choice",
+     "prompt": "Her new car is ___ than her old one.",
+     "options": [
+      "expensive",
+      "more expensive",
+      "most expensive"
+     ],
+     "answer": 1,
+     "explain": "Tính từ dài → more expensive."
+    },
+    {
+     "type": "choice",
+     "prompt": "He is the ___ player in the team.",
+     "options": [
+      "good",
+      "better",
+      "best"
+     ],
+     "answer": 2,
+     "explain": "The … → so sánh nhất của good: best."
+    },
+    {
+     "type": "choice",
+     "prompt": "My bag is as heavy ___ yours.",
+     "options": [
+      "than",
+      "as",
+      "like"
+     ],
+     "answer": 1,
+     "explain": "So sánh bằng: as … as."
+    },
+    {
+     "type": "order",
+     "en": "My sister is older than me.",
+     "vi": "Chị tôi lớn tuổi hơn tôi."
+    },
+    {
+     "type": "order",
+     "en": "This is the best coffee in town.",
+     "vi": "Đây là cà phê ngon nhất thị trấn."
+    },
+    {
+     "type": "order",
+     "en": "Today is colder than yesterday.",
+     "vi": "Hôm nay lạnh hơn hôm qua."
+    }
+   ]
+  },
+  {
+   "id": "modals",
+   "emoji": "🧭",
+   "level": "A2",
+   "title": [
+    "Động từ khuyết thiếu: can, must, should",
+    "Modal verbs: can, must, should"
+   ],
+   "summary": [
+    "Khả năng, bắt buộc và lời khuyên.",
+    "Ability, obligation and advice."
+   ],
+   "explain": [
+    "Can: có thể, biết làm gì (khả năng), hoặc xin phép: I can swim. Can I sit here?",
+    "Must: phải (bắt buộc, quy định): You must wear a seatbelt. Mustn't nghĩa là không được phép.",
+    "Should: nên (lời khuyên): You should drink more water.",
+    "Sau can / must / should là động từ nguyên mẫu, không có to, không thêm -s: She can speak French.",
+    "Phủ định: can't, mustn't, shouldn't. Câu hỏi: đưa lên đầu câu: Can you …? Should I …?"
+   ],
+   "patterns": [
+    "She can swim. / She can't drive.",
+    "You must stop. / You mustn't smoke here.",
+    "You should rest. / Should I call her?"
+   ],
+   "examples": [
+    {
+     "en": "I can speak a little English.",
+     "vi": "Tôi nói được một chút tiếng Anh."
+    },
+    {
+     "en": "Can I open the window?",
+     "vi": "Tôi mở cửa sổ được không?"
+    },
+    {
+     "en": "You must be quiet in the library.",
+     "vi": "Trong thư viện bạn phải giữ trật tự."
+    },
+    {
+     "en": "You shouldn't stay up late.",
+     "vi": "Bạn không nên thức khuya."
+    },
+    {
+     "en": "Should I bring an umbrella?",
+     "vi": "Tôi có nên mang ô không?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "She can speaks English.",
+     "right": "She can speak English.",
+     "why": "Sau can, động từ nguyên mẫu."
+    },
+    {
+     "wrong": "You must to go.",
+     "right": "You must go.",
+     "why": "Sau must không có to."
+    },
+    {
+     "wrong": "You don't should smoke.",
+     "right": "You shouldn't smoke.",
+     "why": "Phủ định của should là shouldn't."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "My little sister ___ ride a bike.",
+     "options": [
+      "can",
+      "cans",
+      "can to"
+     ],
+     "answer": 0,
+     "explain": "Can không thêm -s, không có to."
+    },
+    {
+     "type": "choice",
+     "prompt": "You ___ smoke in the hospital. It's not allowed.",
+     "options": [
+      "mustn't",
+      "shouldn't to",
+      "can"
+     ],
+     "answer": 0,
+     "explain": "Không được phép → mustn't."
+    },
+    {
+     "type": "choice",
+     "prompt": "You look tired. You ___ go to bed early.",
+     "options": [
+      "must to",
+      "should",
+      "can to"
+     ],
+     "answer": 1,
+     "explain": "Lời khuyên → should."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ I use your phone, please?",
+     "options": [
+      "Must",
+      "Can",
+      "Should to"
+     ],
+     "answer": 1,
+     "explain": "Xin phép → Can I …?"
+    },
+    {
+     "type": "choice",
+     "prompt": "He can ___ three languages.",
+     "options": [
+      "speak",
+      "speaks",
+      "speaking"
+     ],
+     "answer": 0,
+     "explain": "Sau can, động từ nguyên mẫu."
+    },
+    {
+     "type": "choice",
+     "prompt": "Students ___ wear a uniform at my school.",
+     "options": [
+      "must",
+      "musts",
+      "must to"
+     ],
+     "answer": 0,
+     "explain": "Quy định → must (không thêm -s)."
+    },
+    {
+     "type": "order",
+     "en": "Can you help me, please?",
+     "vi": "Bạn giúp tôi được không?"
+    },
+    {
+     "type": "order",
+     "en": "You should drink more water.",
+     "vi": "Bạn nên uống nhiều nước hơn."
+    },
+    {
+     "type": "order",
+     "en": "We must leave now.",
+     "vi": "Chúng ta phải đi ngay bây giờ."
+    }
+   ]
+  },
+  {
+   "id": "questions",
+   "emoji": "❓",
+   "level": "A2",
+   "title": [
+    "Câu hỏi Yes/No và câu hỏi Wh-",
+    "Yes/No and Wh- questions"
+   ],
+   "summary": [
+    "what, where, when, who, why, how — đặt câu hỏi đúng trật tự.",
+    "what, where, when, who, why, how — in the right order."
+   ],
+   "explain": [
+    "Câu hỏi Yes/No: đưa trợ động từ (be, do / does / did, can, will…) lên trước chủ ngữ: Is she …? Do you …? Can he …?",
+    "Câu hỏi Wh-: từ để hỏi + trợ động từ + chủ ngữ + động từ: Where do you live? What did you eat?",
+    "Từ để hỏi: what (gì), where (ở đâu), when (khi nào), who (ai), why (tại sao), how (thế nào), how much / how many (bao nhiêu), how old (mấy tuổi).",
+    "Tiếng Việt giữ nguyên trật tự (\"Bạn sống ở đâu?\"), còn tiếng Anh phải đưa trợ động từ lên trước chủ ngữ."
+   ],
+   "patterns": [
+    "Do you like …? / Is he …? / Can you …?",
+    "Wh- + do / does / did + chủ ngữ + động từ?",
+    "Wh- + am / is / are + chủ ngữ …?"
+   ],
+   "examples": [
+    {
+     "en": "Where do you live?",
+     "vi": "Bạn sống ở đâu?"
+    },
+    {
+     "en": "What time is it?",
+     "vi": "Mấy giờ rồi?"
+    },
+    {
+     "en": "Why are you sad?",
+     "vi": "Sao bạn buồn vậy?"
+    },
+    {
+     "en": "How old is your son?",
+     "vi": "Con trai bạn mấy tuổi?"
+    },
+    {
+     "en": "When did you arrive?",
+     "vi": "Bạn đến lúc nào?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Where you live?",
+     "right": "Where do you live?",
+     "why": "Cần do / does trước chủ ngữ."
+    },
+    {
+     "wrong": "What you are doing?",
+     "right": "What are you doing?",
+     "why": "Đưa are lên trước you."
+    },
+    {
+     "wrong": "Where does she lives?",
+     "right": "Where does she live?",
+     "why": "Sau does, động từ nguyên mẫu."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "___ do you go to school? — By bus.",
+     "options": [
+      "What",
+      "How",
+      "Who"
+     ],
+     "answer": 1,
+     "explain": "Hỏi phương tiện, cách thức → how."
+    },
+    {
+     "type": "choice",
+     "prompt": "Where ___ she work?",
+     "options": [
+      "do",
+      "does",
+      "is"
+     ],
+     "answer": 1,
+     "explain": "She → does."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ is your birthday? — In May.",
+     "options": [
+      "When",
+      "Where",
+      "Who"
+     ],
+     "answer": 0,
+     "explain": "Hỏi thời gian → when."
+    },
+    {
+     "type": "choice",
+     "prompt": "Why ___ you late yesterday?",
+     "options": [
+      "was",
+      "were",
+      "did"
+     ],
+     "answer": 1,
+     "explain": "You + quá khứ của be → were."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ is that man? — He's my uncle.",
+     "options": [
+      "What",
+      "Who",
+      "Which"
+     ],
+     "answer": 1,
+     "explain": "Hỏi người → who."
+    },
+    {
+     "type": "choice",
+     "prompt": "How ___ does this shirt cost?",
+     "options": [
+      "many",
+      "much",
+      "old"
+     ],
+     "answer": 1,
+     "explain": "Hỏi giá tiền → how much."
+    },
+    {
+     "type": "order",
+     "en": "Where do you work?",
+     "vi": "Bạn làm việc ở đâu?"
+    },
+    {
+     "type": "order",
+     "en": "What are you eating?",
+     "vi": "Bạn đang ăn gì vậy?"
+    },
+    {
+     "type": "order",
+     "en": "How old is your sister?",
+     "vi": "Em gái bạn mấy tuổi?"
+    }
+   ]
+  }
+ ]
+}
