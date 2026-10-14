@@ -58,3 +58,36 @@
   - Sau khi tài khoản Google tạo mật khẩu, `updatePassword` đặt `hasPassword` thành
     `true`.
 - Hướng dẫn cấu hình cho chủ dự án nằm ở `supabase/google-login.md`.
+
+## Sửa sau khi chạy thật (14/10/2026)
+
+**User**
+
+- "Đăng nhập tài khoản admin mà khung 'You're on the beta waitlist' vẫn còn."
+- "Tạo tài khoản bằng Google thì không có chỗ nhập tên hiển thị."
+
+**BA**
+
+- Thông báo danh sách chờ chỉ dành cho lần đăng nhập bị chặn vừa rồi. Ai đăng nhập thành
+  công (kể cả một tài khoản khác) thì thông báo phải biến mất.
+- Thông báo phải theo ngôn ngữ giao diện hiện tại, không phải ngôn ngữ lúc bị chặn.
+- Tên hiển thị:
+  - với tài khoản Google, tên được lấy sẵn từ Google (ví dụ "Danh Vo");
+  - mọi tài khoản đều sửa được tên trong Cài đặt → Tài khoản → Tên hiển thị;
+  - tối đa 50 ký tự; để trống thì app hiện "Người học".
+
+**Dev**
+
+- `authStore.notice` lưu trạng thái (`'pending' | 'locked'`) thay vì chuỗi đã dịch.
+  `AuthNotice` dịch trạng thái đó bằng `accountBlockMessage(notice, lang)` lúc hiển thị.
+- `admit` xoá `notice` mỗi khi cho một hồ sơ vào app. `login` và `signInWithGoogle` cũng
+  xoá `notice` ngay từ đầu.
+- Đổi tên đi qua `PATCH /api/account` (`functions/api/account.ts`), dùng service role và
+  chỉ ghi cột `name` của chính người gọi.
+  - Bảng `profiles` cố ý **không** có policy UPDATE cho người dùng, để không ai tự nâng
+    quyền của mình.
+  - Cách này không cần chạy lại `schema.sql`.
+- `lib/displayName.ts` `cleanDisplayName` dùng chung cho trình duyệt và Function:
+  - gộp khoảng trắng;
+  - bỏ ký tự điều khiển;
+  - tối đa 50 ký tự.

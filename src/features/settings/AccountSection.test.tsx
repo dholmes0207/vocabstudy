@@ -3,7 +3,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
-import { DeleteAccountRow } from './AccountSection'
+import { AccountSection, DeleteAccountRow } from './AccountSection'
 import { useAuth } from '@/store/authStore'
 import { useSettings } from '@/store/settingsStore'
 
@@ -17,11 +17,12 @@ const learner = {
   status: 'active' as const,
 }
 const deleteAccount = vi.fn()
+const updateDisplayName = vi.fn()
 const onNotice = vi.fn()
 
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en' })
-  useAuth.setState({ user: learner, deleteAccount })
+  useAuth.setState({ user: learner, deleteAccount, updateDisplayName })
 })
 afterEach(() => {
   cleanup()
@@ -77,5 +78,27 @@ describe('DeleteAccountRow', () => {
     renderRow()
     expect(screen.queryByRole('button', { name: /Delete/ })).not.toBeInTheDocument()
     expect(screen.getByText(/hand the admin role to someone else/)).toBeInTheDocument()
+  })
+})
+
+describe('AccountSection display name', () => {
+  it('shows the current name and lets the learner change it', async () => {
+    updateDisplayName.mockResolvedValue(undefined)
+    render(
+      <MemoryRouter>
+        <AccountSection onNotice={onNotice} />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('Display name')).toBeInTheDocument()
+    expect(screen.getByText('Lan')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Edit/ }))
+    const input = screen.getByLabelText('Display name')
+    expect(input).toHaveValue('Lan')
+    fireEvent.change(input, { target: { value: 'Lan Anh' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }))
+    await vi.waitFor(() =>
+      expect(onNotice).toHaveBeenCalledWith('Your display name has been changed.')
+    )
+    expect(updateDisplayName).toHaveBeenCalledWith('Lan Anh')
   })
 })

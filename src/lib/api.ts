@@ -79,6 +79,11 @@ export const api = {
 
   // The signed-in learner's own account (docs/design/account.md)
   deleteAccount: () => req<{ ok: true }>('/account', { method: 'DELETE' }),
+  updateDisplayName: (name: string) =>
+    req<{ ok: true; name: string }>('/account', {
+      method: 'PATCH',
+      body: JSON.stringify({ name }),
+    }),
 
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),

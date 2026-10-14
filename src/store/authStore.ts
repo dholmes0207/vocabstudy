@@ -6,6 +6,7 @@ import { readCachedUser, writeCachedUser, type CachedUser } from '@/lib/authCach
 import { tx } from '@/lib/i18n'
 import { ApiError, api } from '@/lib/api'
 import { CONTACT_EMAIL } from '@/lib/site'
+import { cleanDisplayName } from '@/lib/displayName'
 import { hasPasswordLogin, savePendingConsent, takePendingConsent } from '@/lib/authProviders'
 import { useSettings } from '@/store/settingsStore'
 
@@ -29,9 +30,11 @@ interface AuthState {
   pendingApproval: boolean
   /**
    * Why a sign-in that finished away from the sign-in page was turned back —
-   * a new Google account on the waitlist, say. Shown by AuthNotice.
+   * a new Google account on the waitlist, say. Shown by AuthNotice, worded in
+   * whatever language the interface is in by then. Cleared as soon as anyone
+   * signs in successfully, so it never follows a different account around.
    */
-  notice: string | null
+  notice: 'pending' | 'locked' | null
   clearNotice: () => void
   bootstrap: () => Promise<void>
   login: (email: string, password: string) => Promise<void>
@@ -53,6 +56,8 @@ interface AuthState {
   signInWithGoogle: (consentVersion: string) => Promise<void>
   /** Email a password-reset link. Says nothing about whether the address exists. */
   requestPasswordReset: (email: string) => Promise<void>
+  /** Change the name shown in the account menu and on the Admin page. */
+  updateDisplayName: (name: string) => Promise<void>
   /** Set a new password for the signed-in (or recovering) user. */
   updatePassword: (password: string) => Promise<void>
   /**
@@ -132,7 +137,11 @@ export const useAuth = create<AuthState>((set, get) => {
       setUser(null)
       return blocked
     }
-    if (profile) setUser(profile)
+    if (profile) {
+      setUser(profile)
+      // Whoever was turned away before, this account is in.
+      set({ notice: null })
+    }
     return null
   }
 
@@ -157,8 +166,8 @@ export const useAuth = create<AuthState>((set, get) => {
           const session = res.data.session
           if (session?.user) {
             await recordGoogleConsent(client, session.user)
-            const blocked = await admit(await loadProfile(session.user))
-            if (blocked) set({ notice: blocked })
+            const profile = await loadProfile(session.user)
+            if (await admit(profile)) set({ notice: blockedStatus(profile) })
           } else {
             setUser(null)
           }
@@ -193,14 +202,14 @@ export const useAuth = create<AuthState>((set, get) => {
           const { data } = await client.auth.getSession()
           if (data.session?.user.id !== id) return
           if (!profile) return
-          const blocked = await admit(profile)
-          if (blocked) set({ notice: blocked })
+          if (await admit(profile)) set({ notice: blockedStatus(profile) })
         }, 0)
       })
     },
 
     login: async (email, password) => {
       if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
+      set({ notice: null })
       const { data, error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) throw new Error(mapAuthError(error.message))
       const profile = await loadProfile(data.user)
@@ -261,6 +270,7 @@ export const useAuth = create<AuthState>((set, get) => {
 
     signInWithGoogle: async (consentVersion) => {
       if (!supabase) throw new Error(tx('Chưa cấu hình Supabase.', 'Supabase is not configured.'))
+      set({ notice: null })
       savePendingConsent(sessionStorage, consentVersion)
       // Google sends the person back to the app; if this address is not in
       // Supabase's Redirect URLs it falls back to the Site URL, and "/"
@@ -299,6 +309,35 @@ export const useAuth = create<AuthState>((set, get) => {
           `We couldn't send the email right now. Try again later, or write to ${CONTACT_EMAIL} for help.`
         )
       )
+    },
+
+    updateDisplayName: async (raw) => {
+      const user = get().user
+      if (!user) throw new Error(tx('Bạn chưa đăng nhập.', 'You are not signed in.'))
+      const name = cleanDisplayName(raw)
+      if (name === null)
+        throw new Error(
+          tx('Tên hiển thị tối đa 50 ký tự.', 'The display name can be at most 50 characters.')
+        )
+      // Profiles have no user-facing UPDATE policy (no one may change their
+      // own role), so the name goes through the /api/account Function.
+      const failure = await api.updateDisplayName(name).then(
+        () => null,
+        (e: unknown) => e
+      )
+      if (failure) {
+        const offline = failure instanceof ApiError && failure.status === 0
+        throw new Error(
+          offline
+            ? failure.message
+            : tx(
+                'Chưa đổi được tên. Thử lại sau giây lát nhé.',
+                "Couldn't change the name. Please try again in a moment."
+              )
+        )
+      }
+      const current = get().user
+      if (current?.id === user.id) setUser({ ...current, name })
     },
 
     updatePassword: async (password) => {
@@ -361,6 +400,11 @@ export const useAuth = create<AuthState>((set, get) => {
 })
 
 export const isAdmin = (u: AuthUser | null): boolean => u?.role === 'admin'
+
+/** The status that kept a profile out (only called once admit refused it). */
+function blockedStatus(profile: AuthUser | null): 'pending' | 'locked' {
+  return profile?.status === 'locked' ? 'locked' : 'pending'
+}
 
 /** Admins keep their account so there is always someone to let learners in. */
 export const ADMIN_CANNOT_DELETE = () =>

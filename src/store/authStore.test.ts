@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 // The self-service account actions (docs/design/account.md) against a fake
 // Supabase client: what is sent, and what the learner is told when it fails.
 
-const { auth, from, deleteAccountApi } = vi.hoisted(() => ({
+const { auth, from, deleteAccountApi, updateNameApi } = vi.hoisted(() => ({
   auth: {
     getSession: vi.fn(),
     onAuthStateChange: vi.fn(() => ({ data: { subscription: { unsubscribe() {} } } })),
@@ -17,6 +17,7 @@ const { auth, from, deleteAccountApi } = vi.hoisted(() => ({
   },
   from: vi.fn(),
   deleteAccountApi: vi.fn(),
+  updateNameApi: vi.fn(),
 }))
 
 vi.mock('@/lib/supabase', () => ({
@@ -27,7 +28,10 @@ vi.mock('@/lib/supabase', () => ({
 
 vi.mock('@/lib/api', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/api')>()
-  return { ...real, api: { ...real.api, deleteAccount: deleteAccountApi } }
+  return {
+    ...real,
+    api: { ...real.api, deleteAccount: deleteAccountApi, updateDisplayName: updateNameApi },
+  }
 })
 
 import { ApiError } from '@/lib/api'
@@ -107,7 +111,23 @@ describe('Continue with Google', () => {
       auth.signOut.mock.invocationCallOrder[0]
     )
     expect(useAuth.getState().user).toBeNull()
-    expect(useAuth.getState().notice).toMatch(/beta waitlist/)
+    expect(useAuth.getState().notice).toBe('pending')
+  })
+
+  it('forgets the waitlist message once any account signs in', async () => {
+    useAuth.setState({ user: null, notice: 'pending' })
+    const admin = {
+      id: learner.id,
+      email: 'admin@example.com',
+      identities: [{ provider: 'email' }],
+    }
+    auth.signInWithPassword.mockResolvedValue({ data: { user: admin }, error: null })
+    from.mockReturnValue(profileRow({ name: 'Admin', role: 'admin', status: 'active' }))
+
+    await useAuth.getState().login('admin@example.com', 'secret1')
+
+    expect(useAuth.getState().user).toMatchObject({ role: 'admin', hasPassword: true })
+    expect(useAuth.getState().notice).toBeNull()
   })
 
   it('signs an approved Google account in and knows it has no password', async () => {
@@ -158,6 +178,29 @@ describe('requestPasswordReset', () => {
     await expect(useAuth.getState().requestPasswordReset('lan@example.com')).rejects.toThrow(
       /contact@vocastudy\.app/
     )
+  })
+})
+
+describe('updateDisplayName', () => {
+  it('saves a tidied name and shows it straight away', async () => {
+    updateNameApi.mockResolvedValue({ ok: true, name: 'Võ Danh' })
+    await useAuth.getState().updateDisplayName('  Võ   Danh ')
+    expect(updateNameApi).toHaveBeenCalledWith('Võ Danh')
+    expect(useAuth.getState().user?.name).toBe('Võ Danh')
+  })
+
+  it('refuses a name that is too long without calling the server', async () => {
+    await expect(useAuth.getState().updateDisplayName('a'.repeat(51))).rejects.toThrow(/50/)
+    expect(updateNameApi).not.toHaveBeenCalled()
+    expect(useAuth.getState().user?.name).toBe('Lan')
+  })
+
+  it('keeps the old name when the server says no', async () => {
+    updateNameApi.mockRejectedValue(new ApiError(502, 'Đổi tên thất bại.'))
+    await expect(useAuth.getState().updateDisplayName('Mai')).rejects.toThrow(
+      /Couldn't change the name/
+    )
+    expect(useAuth.getState().user?.name).toBe('Lan')
   })
 })
 

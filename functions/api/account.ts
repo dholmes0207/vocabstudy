@@ -1,11 +1,31 @@
-import { type Ctx, adminAuth, json, requireUser } from '../_shared'
+import { cleanDisplayName } from '../../src/lib/displayName'
+import { type Ctx, adminAuth, adminRest, json, requireUser } from '../_shared'
 
 // /api/account — the signed-in learner's own account (docs/design/account.md).
+//
+// PATCH { name } changes the display name — and nothing else. Profiles have no
+// user-facing UPDATE policy on purpose (no one may raise their own role), so
+// the one field a learner may edit goes through here with the service role.
 //
 // DELETE erases it. Only the auth user is deleted here: profiles, progress and
 // ai_usage reference auth.users ON DELETE CASCADE (supabase/schema.sql), so the
 // synced data goes with it in the same statement. The browser re-checks the
 // password before calling this.
+
+export const onRequestPatch = async (ctx: Ctx): Promise<Response> => {
+  const user = await requireUser(ctx.env, ctx.request)
+  if (user instanceof Response) return user
+  const body = (await ctx.request.json().catch(() => ({}))) as { name?: unknown }
+  const name = cleanDisplayName(body.name)
+  if (name === null) return json({ error: 'Tên hiển thị không hợp lệ.' }, 400)
+  const r = await adminRest(ctx.env, `/profiles?id=eq.${encodeURIComponent(user.id)}`, {
+    method: 'PATCH',
+    headers: { Prefer: 'return=minimal' },
+    body: JSON.stringify({ name }),
+  })
+  if (!r.ok) return json({ error: 'Đổi tên thất bại.' }, 502)
+  return json({ ok: true, name })
+}
 
 export const onRequestDelete = async (ctx: Ctx): Promise<Response> => {
   const user = await requireUser(ctx.env, ctx.request)
