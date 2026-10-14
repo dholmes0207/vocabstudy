@@ -90,6 +90,15 @@ export const api = {
       body: JSON.stringify(payload),
     }),
 
+  // The in-app feedback form (docs/design/feedback.md); guests may send too.
+  sendFeedback: (f: {
+    message: string
+    name: string
+    rating: number | null
+    allowQuote: boolean
+    page: string
+  }) => req<{ ok: true }>('/feedback', { method: 'POST', body: JSON.stringify(f) }),
+
   // The signed-in learner's own account (docs/design/account.md)
   deleteAccount: () => req<{ ok: true }>('/account', { method: 'DELETE' }),
   updateDisplayName: (name: string) =>

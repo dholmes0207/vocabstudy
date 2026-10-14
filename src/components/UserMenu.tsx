@@ -17,8 +17,8 @@ import { useAuth } from '@/store/authStore'
 import { setThemeOrigin, useSettings } from '@/store/settingsStore'
 import type { ThemeSetting } from '@/types'
 import { usePendingSignups } from '@/hooks/usePendingSignups'
-import { useT, useUiLang } from '@/lib/i18n'
-import { feedbackHref } from '@/lib/site'
+import { useT } from '@/lib/i18n'
+import { openFeedback } from '@/store/feedbackStore'
 
 export default function UserMenu() {
   // No loading placeholder: a returning learner's avatar comes from the cache
@@ -30,7 +30,6 @@ export default function UserMenu() {
   const ref = useRef<HTMLDivElement>(null)
   const pending = usePendingSignups(user?.role === 'admin', open)
   const t = useT()
-  const lang = useUiLang()
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -111,14 +110,17 @@ export default function UserMenu() {
           <MenuLink to="/browse" onClick={close} icon={Library}>
             {t('Tra cứu từ', 'Dictionary')}
           </MenuLink>
-          <a
-            href={feedbackHref(lang)}
-            onClick={close}
-            className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+          <button
+            type="button"
+            onClick={() => {
+              close()
+              openFeedback()
+            }}
+            className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
             role="menuitem"
           >
             <MessageSquareHeart className="h-4 w-4" /> {t('Góp ý', 'Send feedback')}
-          </a>
+          </button>
           {user?.role === 'admin' && (
             <MenuLink to="/admin" onClick={close} icon={ShieldCheck}>
               {t('Quản trị', 'Admin')}

@@ -4,8 +4,9 @@ import { Mail, Menu, X } from 'lucide-react'
 import Logo from '@/components/Logo'
 import UiLangToggle from '@/components/UiLangToggle'
 import ThemeToggle from '@/components/ThemeToggle'
-import { CONTACT_EMAIL, feedbackHref } from '@/lib/site'
-import { useT, useUiLang } from '@/lib/i18n'
+import { CONTACT_EMAIL } from '@/lib/site'
+import { openFeedback } from '@/store/feedbackStore'
+import { useT } from '@/lib/i18n'
 
 // Chrome for the public pages — landing, about, privacy, terms
 // (docs/design/landing.md). Separate from the app shell: no study nav, a clear
@@ -106,7 +107,6 @@ export default function MarketingLayout() {
 
 function MarketingFooter() {
   const t = useT()
-  const lang = useUiLang()
   const cols = [
     {
       title: t('Sản phẩm', 'Product'),
@@ -123,7 +123,8 @@ function MarketingFooter() {
       links: [
         { to: '/about', label: t('Về chúng tôi', 'About us') },
         { to: `mailto:${CONTACT_EMAIL}`, label: t('Liên hệ', 'Contact') },
-        { to: feedbackHref(lang), label: t('Góp ý', 'Send feedback') },
+        // Not a page: opens the in-app feedback form.
+        { to: '#feedback', label: t('Góp ý', 'Send feedback') },
       ],
     },
     {
@@ -158,7 +159,15 @@ function MarketingFooter() {
             <ul className="mt-3 space-y-2 text-sm">
               {c.links.map((l) => (
                 <li key={l.to}>
-                  {l.to.startsWith('mailto:') ? (
+                  {l.to === '#feedback' ? (
+                    <button
+                      type="button"
+                      onClick={openFeedback}
+                      className="text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300"
+                    >
+                      {l.label}
+                    </button>
+                  ) : l.to.startsWith('mailto:') ? (
                     <a
                       href={l.to}
                       className="text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300"

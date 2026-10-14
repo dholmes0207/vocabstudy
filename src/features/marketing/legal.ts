@@ -71,6 +71,10 @@ export const PRIVACY: LegalDoc = {
           'Technical data: our hosting provider keeps access logs (such as IP address and browser type) to run and protect the service.',
         ],
         [
+          'Góp ý bạn gửi trong app: nội dung, điểm đánh giá (nếu có), tên bạn nhập (nếu có) và tài khoản của bạn (nếu đang đăng nhập). Chúng tôi chỉ trích dẫn góp ý công khai trên trang giới thiệu khi bạn tích ô cho phép, kèm tên bạn đã nhập. Muốn gỡ một góp ý, hãy viết cho contact@vocastudy.app; xoá tài khoản cũng xoá các góp ý gắn với tài khoản đó.',
+          'Feedback you send in the app: the message, a rating (if any), the name you enter (if any) and your account (if signed in). We only quote feedback publicly on our website when you tick the box allowing it, with the name you entered. To have a message removed, write to contact@vocastudy.app; deleting your account also deletes feedback linked to it.',
+        ],
+        [
           'Báo lỗi kỹ thuật: khi app gặp lỗi, trình duyệt gửi mô tả lỗi (thông báo lỗi, trang đang mở, phiên bản app) để chúng tôi sửa. Mô tả này đã được lược bỏ email, mã đăng nhập và phần chi tiết của địa chỉ web; không kèm tài khoản hay nội dung học của bạn. Lỗi giống nhau được gộp lại và tự xoá sau 30 ngày.',
           'Error reports: when the app hits an error, your browser sends a description of it (the error message, the page and the app version) so we can fix it. Emails, sign-in tokens and the detailed parts of web addresses are removed first, and it carries no account or learning content. Repeats are grouped and deleted after 30 days.',
         ],
@@ -90,6 +94,10 @@ export const PRIVACY: LegalDoc = {
           'To keep the service safe: approving new accounts, preventing abuse, applying limits.',
         ],
         ['Tìm và sửa lỗi của ứng dụng.', 'To find and fix bugs in the app.'],
+        [
+          'Đọc góp ý để cải thiện app, và trích dẫn trên trang giới thiệu khi bạn cho phép.',
+          'To read feedback and improve the app, and to quote it on our website when you allow it.',
+        ],
         [
           'Trả lời và hỗ trợ khi bạn liên hệ với chúng tôi.',
           'To reply and help when you contact us.',

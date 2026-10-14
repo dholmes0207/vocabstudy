@@ -176,5 +176,48 @@ revoke execute on function public.report_client_error(text, text, text, text, te
 grant execute on function public.report_client_error(text, text, text, text, text, text)
   to service_role;
 
+-- ---- feedback and real testimonials (docs/design/feedback.md) -------------
+-- What learners write from the in-app "Send feedback" form. A message is only
+-- ever shown publicly when its author ticked "you may quote me" (allow_quote)
+-- AND an admin chose it (featured). Deleting an account deletes its feedback.
+create table if not exists public.feedback (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  user_id     uuid references auth.users(id) on delete cascade,
+  name        text not null default '',
+  message     text not null,
+  rating      smallint check (rating between 1 and 5),
+  allow_quote boolean not null default false,
+  featured    boolean not null default false,
+  page        text not null default ''
+);
+
+-- No policies: only the Pages Functions (service role) read or write feedback.
+alter table public.feedback enable row level security;
+
+-- Store one message, refusing a flood (more than 30 in ten minutes overall).
+create or replace function public.submit_feedback(
+  p_user uuid, p_name text, p_message text, p_rating smallint, p_allow_quote boolean, p_page text
+)
+returns boolean
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  if (select count(*) from public.feedback where created_at > now() - interval '10 minutes') >= 30 then
+    return false;
+  end if;
+  insert into public.feedback (user_id, name, message, rating, allow_quote, page)
+  values (p_user, left(coalesce(p_name, ''), 50), left(p_message, 1000), p_rating,
+          coalesce(p_allow_quote, false), left(coalesce(p_page, ''), 200));
+  return true;
+end;
+$$;
+
+revoke execute on function public.submit_feedback(uuid, text, text, smallint, boolean, text)
+  from public, anon, authenticated;
+grant execute on function public.submit_feedback(uuid, text, text, smallint, boolean, text)
+  to service_role;
+
 -- Make PostgREST pick up new/changed functions right away.
 notify pgrst, 'reload schema';

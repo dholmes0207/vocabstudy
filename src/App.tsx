@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import { CenterSpinner } from './components/DataGate'
 import SkyBackdrop from './components/SkyBackdrop'
 import CompleteProfile from './components/CompleteProfile'
+import FeedbackDialog from './components/FeedbackDialog'
 import { useAuth } from './store/authStore'
 import { useSettings } from './store/settingsStore'
 
@@ -54,6 +55,7 @@ export default function App() {
     <BrowserRouter>
       <SkyBackdrop />
       <CompleteProfile />
+      <FeedbackDialog />
       {/* Last line of defence: a throw in Layout, DataGate or a lazy chunk used
           to unmount everything and leave a blank white page. */}
       <ErrorBoundary>

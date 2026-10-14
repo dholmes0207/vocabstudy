@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Mail } from 'lucide-react'
 import { useT, useUiLang } from '@/lib/i18n'
 import { formatLongDate } from '@/lib/formatDate'
-import { feedbackHref } from '@/lib/site'
+import { openFeedback } from '@/store/feedbackStore'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { RELEASES } from './releases'
 
@@ -54,9 +54,9 @@ export default function Changelog() {
           {t('Muốn VocaStudy có thêm gì?', 'What should VocaStudy do next?')}
         </p>
         <div className="flex flex-wrap gap-2">
-          <a href={feedbackHref(lang)} className="btn-secondary">
+          <button type="button" onClick={openFeedback} className="btn-secondary">
             <Mail className="h-4 w-4" /> {t('Góp ý', 'Send feedback')}
-          </a>
+          </button>
           <Link to="/home" className="btn-primary">
             {t('Vào học', 'Open the app')}
           </Link>
