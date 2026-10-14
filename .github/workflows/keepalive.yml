@@ -1,0 +1,29 @@
+# Keeps the Supabase free project awake and doubles as a daily health check
+# (docs/design/keepalive.md). Supabase pauses a free project after 7 days with
+# no activity; /api/health runs a one-row query, which counts as activity.
+# A failed run means the app cannot reach its database — GitHub emails the
+# repository owner about failed scheduled runs.
+name: Keep database awake
+
+on:
+  schedule:
+    - cron: '17 3 * * *' # every day, 03:17 UTC (10:17 in Vietnam)
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask the app to query its database
+        run: |
+          for attempt in 1 2 3; do
+            code=$(curl -sS -o body.json -w '%{http_code}' https://vocastudy.app/api/health || true)
+            echo "attempt $attempt: HTTP $code $(cat body.json 2>/dev/null)"
+            if [ "$code" = "200" ]; then exit 0; fi
+            sleep 30
+          done
+          echo "::error::vocastudy.app could not reach its database"
+          exit 1
