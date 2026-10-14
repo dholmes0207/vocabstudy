@@ -181,8 +181,8 @@ export const PRIVACY: LegalDoc = {
       title: ['9. Thay đổi chính sách', '9. Changes'],
       paras: [
         [
-          'Khi chính sách thay đổi, chúng tôi cập nhật ngày ở đầu trang. Thay đổi quan trọng sẽ được thông báo trong ứng dụng. Việc bạn tiếp tục sử dụng VocaStudy sau khi chính sách được cập nhật đồng nghĩa với việc bạn đồng ý với các nội dung thay đổi đó.',
-          'When this policy changes we update the date at the top. Important changes are announced in the app. If you keep using VocaStudy after the policy is updated, you accept the changes.',
+          'Khi chính sách có cập nhật, chúng tôi sẽ đổi lại ngày ở đầu trang. Nếu có thay đổi quan trọng liên quan đến cách thu thập hoặc xử lý dữ liệu cá nhân, chúng tôi sẽ gửi thông báo ngay trong ứng dụng để bạn nắm rõ và chủ động xác nhận trước khi áp dụng.',
+          'When this policy is updated, we change the date at the top. If an important change affects how we collect or process personal data, we will tell you in the app so you know what changes and can confirm it yourself before it applies.',
         ],
       ],
     },
@@ -278,11 +278,25 @@ export const TERMS: LegalDoc = {
       ],
     },
     {
-      title: ['6. Không bảo đảm và giới hạn trách nhiệm', '6. No warranty and limited liability'],
-      paras: [
+      title: ['6. Lưu ý trong giai đoạn thử nghiệm (beta)', '6. Good to know during the beta'],
+      lead: [
         [
-          'Dịch vụ được cung cấp "như hiện có". Chúng tôi cố gắng để dịch vụ luôn ổn định nhưng không bảo đảm không bao giờ gián đoạn hay mất dữ liệu — hãy thường xuyên dùng tính năng sao lưu ra file trong Cài đặt. Trong phạm vi pháp luật cho phép, VocaStudy không chịu trách nhiệm cho thiệt hại gián tiếp phát sinh từ việc sử dụng dịch vụ, và tổng trách nhiệm bồi thường (nếu có) trong mọi trường hợp không vượt quá tổng số tiền bạn đã thanh toán cho VocaStudy trong 12 tháng trước đó (0 đồng đối với dịch vụ miễn phí).',
-          'The service is provided "as is". We work to keep it reliable but cannot promise it will never be interrupted or lose data — back up to a file regularly from Settings. To the extent the law allows, VocaStudy is not liable for indirect damages arising from use of the service, and our total liability (if any) will in no case exceed what you paid VocaStudy in the previous 12 months (zero for the free service).',
+          'VocaStudy được xây dựng với mong muốn tạo ra một môi trường học tiếng Anh miễn phí, nhẹ nhàng và hữu ích cho mọi người. Vì ứng dụng đang trong giai đoạn thử nghiệm (beta) và liên tục được hoàn thiện, đôi lúc hệ thống có thể gặp lỗi kỹ thuật, gián đoạn tạm thời hoặc phụ thuộc vào đường truyền của các nhà cung cấp hạ tầng (máy chủ đám mây, dịch vụ AI).',
+          'We built VocaStudy to be a free, gentle and useful place for anyone to learn English. Because the app is in beta and keeps improving, it may now and then hit a technical error, a short interruption, or a problem at one of our infrastructure providers (cloud servers, AI services).',
+        ],
+        [
+          'Để việc học của bạn luôn an toàn và không bị ảnh hưởng bởi các sự cố ngoài ý muốn, bạn lưu ý giúp chúng tôi:',
+          'To keep your learning safe from the unexpected, please keep in mind:',
+        ],
+      ],
+      items: [
+        [
+          'Chủ động sao lưu tiến độ: hãy thỉnh thoảng tải file sao lưu về máy trong Cài đặt → Dữ liệu & sao lưu, đặc biệt nếu bạn chỉ học trên trình duyệt mà chưa tạo tài khoản đồng bộ — xoá dữ liệu trình duyệt hoặc hỏng thiết bị sẽ làm mất dữ liệu trên máy. Kể cả khi đã đăng nhập, câu bạn tự đặt và tiến độ mẫu câu vẫn chỉ nằm trên máy; file sao lưu giữ được cả hai.',
+          'Back up your progress: now and then, download a backup file in Settings → Data & backup — especially if you learn in the browser without an account, since clearing browser data or losing the device erases what is stored on it. Even when signed in, your own sentences and phrase progress live only on the device; the backup file keeps both.',
+        ],
+        [
+          'Giới hạn trách nhiệm: dịch vụ được cung cấp "như hiện có". Trong phạm vi pháp luật cho phép, VocaStudy không chịu trách nhiệm cho thiệt hại gián tiếp hay việc mất dữ liệu trên thiết bị phát sinh từ sự cố kỹ thuật ngoài tầm kiểm soát trong quá trình bạn dùng bản thử nghiệm này. Nếu gặp bất kỳ lỗi nào, hãy nhắn cho chúng tôi qua contact@vocastudy.app để cùng khắc phục.',
+          'Limits of responsibility: the service is provided "as is". To the extent the law allows, VocaStudy is not liable for indirect damages or for data lost on your device because of technical problems beyond our control while you use this beta. If anything goes wrong, write to contact@vocastudy.app and we will fix it together.',
         ],
       ],
     },

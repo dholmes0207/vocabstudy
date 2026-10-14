@@ -113,6 +113,14 @@ một nhóm làm nghiêm túc, không phải một trang demo.
   vào app đầu tiên.
 - `LegalSection.lead` được hiển thị trước danh sách, `paras` sau danh sách. Trước đây
   câu dẫn của mục 4 bị đẩy xuống cuối danh sách.
-- Câu "tiếp tục sử dụng đồng nghĩa với đồng ý" trong Chính sách và mức trần bồi thường 0
-  đồng giữ theo bản rà soát. Người rà soát nên xem lại hai điểm này với yêu cầu "đồng ý
-  rõ ràng" của Luật 91/2025 và với Luật Bảo vệ quyền lợi người tiêu dùng.
+- Sửa lần hai (cùng ngày, theo góp ý thứ hai của người rà soát):
+  - Điều khoản mục 6 đổi thành "Lưu ý trong giai đoạn thử nghiệm": bỏ mức trần bồi thường
+    0 đồng, thay bằng lời dặn sao lưu và cách báo lỗi;
+  - Chính sách mục 9 bỏ câu "tiếp tục sử dụng đồng nghĩa với đồng ý". Thay vào đó cam kết:
+    thay đổi về cách **thu thập hoặc xử lý** dữ liệu phải được người dùng xác nhận trong
+    app **trước khi áp dụng**.
+  - Thẻ thông báo hiện tại chỉ báo tin, đủ cho lần cập nhật này vì không đổi luồng dữ
+    liệu. Lần sau nếu đổi luồng dữ liệu thì phải làm bước xin xác nhận trước (ghi chú ở
+    `POLICY_VERSION`).
+  - Điều khoản mục 9 vẫn giữ câu "tiếp tục sử dụng" vì đó là hợp đồng dịch vụ, không phải
+    sự đồng ý xử lý dữ liệu.
