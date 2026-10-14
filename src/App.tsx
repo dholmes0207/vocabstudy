@@ -20,6 +20,7 @@ const OrderGame = lazy(() => import('./features/games/OrderGame'))
 const Listen = lazy(() => import('./features/listen/Listen'))
 const Sounds = lazy(() => import('./features/sounds/Sounds'))
 const Phrases = lazy(() => import('./features/phrases/Phrases'))
+const Topics = lazy(() => import('./features/topics/Topics'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
@@ -84,6 +85,7 @@ export default function App() {
               <Route path="/listen" element={<Listen />} />
               <Route path="/sounds" element={<Sounds />} />
               <Route path="/phrases" element={<Phrases />} />
+              <Route path="/topics" element={<Topics />} />
               <Route path="/phrases/:topicId" element={<Phrases />} />
               <Route path="/browse" element={<Browse />} />
               <Route path="/stats" element={<Stats />} />

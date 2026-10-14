@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   BarChart3,
+  FolderOpen,
   Monitor,
   Moon,
   Sun,
@@ -106,6 +107,9 @@ export default function UserMenu() {
           </MenuLink>
           <MenuLink to="/stats" onClick={close} icon={BarChart3}>
             {t('Thống kê', 'Stats')}
+          </MenuLink>
+          <MenuLink to="/topics" onClick={close} icon={FolderOpen}>
+            {t('Học theo chủ đề', 'Learn by topic')}
           </MenuLink>
           <MenuLink to="/browse" onClick={close} icon={Library}>
             {t('Tra cứu từ', 'Dictionary')}
