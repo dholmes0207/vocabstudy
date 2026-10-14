@@ -1,5 +1,3 @@
-import { POLICY_VERSION } from '@/lib/site'
-
 // Privacy policy and terms of use, in both interface languages
 // (docs/design/landing.md). Reviewed against Vietnamese law in October 2026
 // (Personal Data Protection Law 91/2025/QH15, Decree 356/2025/ND-CP, AI Law
@@ -26,7 +24,12 @@ export interface LegalDoc {
   sections: LegalSection[]
 }
 
-export const LAST_UPDATED = POLICY_VERSION
+/**
+ * The date printed on both pages: moves with any change to the text. Separate
+ * from POLICY_VERSION (lib/site.ts), which moves only for a change people must
+ * be told about — that one drives consent records and the notification bell.
+ */
+export const LAST_UPDATED = '2026-10-15'
 
 export const PRIVACY: LegalDoc = {
   title: ['Chính sách bảo mật', 'Privacy policy'],
@@ -67,6 +70,10 @@ export const PRIVACY: LegalDoc = {
           'Dữ liệu kỹ thuật: nhà cung cấp hạ tầng ghi nhật ký truy cập (như địa chỉ IP, loại trình duyệt) để vận hành và bảo vệ dịch vụ.',
           'Technical data: our hosting provider keeps access logs (such as IP address and browser type) to run and protect the service.',
         ],
+        [
+          'Báo lỗi kỹ thuật: khi app gặp lỗi, trình duyệt gửi mô tả lỗi (thông báo lỗi, trang đang mở, phiên bản app) để chúng tôi sửa. Mô tả này đã được lược bỏ email, mã đăng nhập và phần chi tiết của địa chỉ web; không kèm tài khoản hay nội dung học của bạn. Lỗi giống nhau được gộp lại và tự xoá sau 30 ngày.',
+          'Error reports: when the app hits an error, your browser sends a description of it (the error message, the page and the app version) so we can fix it. Emails, sign-in tokens and the detailed parts of web addresses are removed first, and it carries no account or learning content. Repeats are grouped and deleted after 30 days.',
+        ],
       ],
     },
     {
@@ -82,6 +89,7 @@ export const PRIVACY: LegalDoc = {
           'Giữ an toàn: duyệt tài khoản mới, ngăn lạm dụng, áp dụng hạn mức.',
           'To keep the service safe: approving new accounts, preventing abuse, applying limits.',
         ],
+        ['Tìm và sửa lỗi của ứng dụng.', 'To find and fix bugs in the app.'],
         [
           'Trả lời và hỗ trợ khi bạn liên hệ với chúng tôi.',
           'To reply and help when you contact us.',

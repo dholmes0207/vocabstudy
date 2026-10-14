@@ -5,6 +5,8 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import { Privacy, Terms } from './LegalPage'
 import { useSettings } from '@/store/settingsStore'
+import { POLICY_VERSION } from '@/lib/site'
+import { LAST_UPDATED } from './legal'
 
 beforeEach(() => useSettings.setState({ uiLang: 'vi' }))
 afterEach(cleanup)
@@ -32,5 +34,11 @@ describe('legal pages', () => {
   it('tells people which content is made by AI', () => {
     renderDoc('terms')
     expect(screen.getByText(/Luật số 134\/2025\/QH15/)).toHaveTextContent(/giọng đọc phát âm/)
+  })
+})
+
+describe('dates', () => {
+  it('never prints a date older than the version people agreed to', () => {
+    expect(LAST_UPDATED >= POLICY_VERSION).toBe(true)
   })
 })

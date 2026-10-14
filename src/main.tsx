@@ -4,8 +4,10 @@ import App from './App'
 import './index.css'
 import { initTheme } from './store/settingsStore'
 import { hashToPath } from './lib/entry'
+import { installErrorReporting } from './lib/reportError'
 
 initTheme()
+installErrorReporting()
 
 // The app used hash URLs (vocastudy.app/#/learn) until clean paths replaced
 // them; keep every old bookmark and shared link working.

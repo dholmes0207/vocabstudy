@@ -35,6 +35,10 @@ function minifyPacks(): Plugin {
 export default defineConfig({
   base: '/',
   plugins: [react(), minifyPacks()],
+  // Which build an error report came from: Cloudflare Pages sets the commit.
+  define: {
+    __BUILD_ID__: JSON.stringify((process.env.CF_PAGES_COMMIT_SHA ?? 'local').slice(0, 7)),
+  },
   build: {
     // The service worker precaches every emitted chunk at install so the app
     // boots offline; this manifest is the only list that stays correct as

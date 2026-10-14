@@ -1,6 +1,7 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { RefreshCw } from 'lucide-react'
 import { tx } from '@/lib/i18n'
+import { reportError } from '@/lib/reportError'
 
 // A single unhandled render error used to take the whole app down: React
 // unmounts the tree, the learner gets a blank white page, and the only way out
@@ -25,6 +26,7 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo): void {
+    reportError(error, 'render')
     this.props.onError?.(error, info)
   }
 

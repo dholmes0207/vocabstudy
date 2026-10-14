@@ -125,5 +125,56 @@ begin
 end;
 $$;
 
+-- Only the Pages Functions (service role) may count AI usage. Supabase grants
+-- EXECUTE on new public functions to anon/authenticated by default, which let
+-- anyone with the public key inflate another learner's counter.
+revoke execute on function public.bump_ai_usage(uuid) from public, anon, authenticated;
+grant execute on function public.bump_ai_usage(uuid) to service_role;
+
+-- ---- client error reports (docs/design/error-reports.md) ------------------
+-- One row per distinct bug (grouped by signature) with a count, so the Admin
+-- page shows what is breaking for learners. Scrubbed in the browser and again
+-- in the Function: no account, email, learning content or query string.
+create table if not exists public.client_errors (
+  signature  text primary key,
+  message    text not null,
+  stack      text not null default '',
+  path       text not null default '/',
+  release    text not null default '',
+  kind       text not null default 'error',
+  count      integer not null default 1,
+  first_seen timestamptz not null default now(),
+  last_seen  timestamptz not null default now()
+);
+
+-- No policies: only the service role reads or writes error reports.
+alter table public.client_errors enable row level security;
+
+create or replace function public.report_client_error(
+  p_signature text, p_message text, p_stack text, p_path text, p_release text, p_kind text
+)
+returns void
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.client_errors as e (signature, message, stack, path, release, kind)
+  values (left(p_signature, 16), left(p_message, 300), left(p_stack, 2000),
+          left(p_path, 200), left(p_release, 40), left(p_kind, 12))
+  on conflict (signature) do update
+    set count = e.count + 1, last_seen = now(), path = excluded.path, release = excluded.release;
+  -- Stay small: 30 days of history, at most 500 distinct errors.
+  delete from public.client_errors where last_seen < now() - interval '30 days';
+  delete from public.client_errors
+   where signature in (select signature from public.client_errors
+                        order by last_seen desc offset 500);
+end;
+$$;
+
+revoke execute on function public.report_client_error(text, text, text, text, text, text)
+  from public, anon, authenticated;
+grant execute on function public.report_client_error(text, text, text, text, text, text)
+  to service_role;
+
 -- Make PostgREST pick up new/changed functions right away.
 notify pgrst, 'reload schema';

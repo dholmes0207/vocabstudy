@@ -27,6 +27,19 @@ export interface AiUsageReport {
   error?: string
 }
 
+/** One grouped bug from learners' browsers (docs/design/error-reports.md). */
+export interface ClientErrorRow {
+  signature: string
+  message: string
+  stack: string
+  path: string
+  release: string
+  kind: string
+  count: number
+  first_seen: string
+  last_seen: string
+}
+
 export class ApiError extends Error {
   status: number
   constructor(status: number, message: string) {
@@ -88,6 +101,7 @@ export const api = {
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
   adminAiUsage: () => req<AiUsageReport>('/admin/ai-usage'),
+  adminErrors: () => req<{ enabled: boolean; errors: ClientErrorRow[] }>('/admin/errors'),
   adminPatchUser: (
     id: string,
     patch: { role?: 'student' | 'admin'; status?: 'active' | 'locked' }
