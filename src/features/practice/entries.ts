@@ -8,6 +8,8 @@ export interface PracticeEntry {
   titleEn: string
   descEn: string
   tone: string
+  /** Content written for English only (grammar, topics, sounds): hidden for other packs. */
+  englishOnly?: boolean
 }
 
 export const PRACTICE: PracticeEntry[] = [
@@ -20,6 +22,7 @@ export const PRACTICE: PracticeEntry[] = [
     descEn:
       '12 short lessons: to be, tenses, a/an/the, prepositions… explained simply, with practice.',
     tone: 'from-indigo-500 to-violet-600',
+    englishOnly: true,
   },
   {
     to: '/topics',
@@ -29,6 +32,7 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Learn by topic',
     descEn: 'Work, food, health, tech… 19 word decks for real situations.',
     tone: 'from-sky-500 to-cyan-600',
+    englishOnly: true,
   },
   {
     to: '/games/match',
@@ -83,6 +87,7 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Tricky sounds for Vietnamese speakers',
     descEn: 'th, final sounds, ship/sheep… how to shape them, plus an ear test.',
     tone: 'from-pink-500 to-rose-600',
+    englishOnly: true,
   },
   {
     to: '/speaking',

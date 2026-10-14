@@ -15,6 +15,7 @@ import MySentence from '@/components/MySentence'
 import { wordAudio } from '@/lib/audio'
 import { useProvideContext } from '@/store/contextStore'
 import { useT, useUiLang } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 const PAGE_SIZE = 24
 
@@ -37,6 +38,7 @@ export default function Browse() {
   const [phaseFilter, setPhaseFilter] = useState<CardPhase | 'all'>('all')
   const [page, setPage] = useState(0)
   const t = useT()
+  const L = useTargetLang()
   const uiLang = useUiLang()
   const [expanded, setExpanded] = useState<number | null>(() => {
     const q = params.get('q')?.trim().toLowerCase()
@@ -117,8 +119,8 @@ export default function Browse() {
           }}
           aria-label={t('Tìm kiếm từ vựng', 'Search words')}
           placeholder={t(
-            'Tìm theo từ tiếng Anh hoặc nghĩa tiếng Việt…',
-            'Search an English word or a Vietnamese meaning…'
+            `Tìm theo từ ${L.vi} hoặc nghĩa tiếng Việt…`,
+            `Search a ${L.en} word or a Vietnamese meaning…`
           )}
           className="w-full rounded-xl border border-slate-300 bg-white py-3 pl-11 pr-4 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
         />

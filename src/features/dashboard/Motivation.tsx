@@ -23,6 +23,7 @@ import {
 } from '@/lib/motivation'
 import type { StudyStats } from '@/types'
 import { useT, useUiLang } from '@/lib/i18n'
+import { useData } from '@/store/dataStore'
 
 // Dashboard pieces that bring a discouraged learner back (docs/design/comeback.md):
 // a warm welcome after a break, a tiny daily goal with a one-tap 2-minute
@@ -270,6 +271,8 @@ export function MySky({
   const lit = Math.min(SKY_STARS, Math.ceil(learned / per))
   const bright = Math.min(lit, Math.ceil(mastered / per))
   const coverage = coverageEstimate(learned)
+  // The estimate comes from English word-frequency data; other packs skip it.
+  const englishPack = useData((st) => st.pack?.meta.code ?? 'en') === 'en'
   const m = nextMilestone(learned)
   const toNext = (learned - m.from) / Math.max(1, m.target - m.from)
 
@@ -305,8 +308,14 @@ export function MySky({
                 — <b className="text-amber-200">{mastered}</b> shine bright
               </>
             )}
-            . With that many common words you understand about{' '}
-            <b className="text-white">{coverage}%</b> of the words in everyday English text.
+            {englishPack ? (
+              <>
+                . With that many common words you understand about{' '}
+                <b className="text-white">{coverage}%</b> of the words in everyday English text.
+              </>
+            ) : (
+              '.'
+            )}
           </>
         ) : (
           <>
@@ -317,8 +326,15 @@ export function MySky({
                 — <b className="text-amber-200">{mastered}</b> sao đã thật sáng
               </>
             )}
-            . Với chừng ấy từ thông dụng, bạn hiểu khoảng <b className="text-white">{coverage}%</b>{' '}
-            số từ trong một đoạn tiếng Anh thường ngày.
+            {englishPack ? (
+              <>
+                . Với chừng ấy từ thông dụng, bạn hiểu khoảng{' '}
+                <b className="text-white">{coverage}%</b> số từ trong một đoạn tiếng Anh thường
+                ngày.
+              </>
+            ) : (
+              '.'
+            )}
           </>
         )}
       </p>

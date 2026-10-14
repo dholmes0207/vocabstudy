@@ -17,6 +17,7 @@ import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
 import { usePhrases } from '@/store/phrasesStore'
 import { isKnown } from '@/lib/phrases'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -26,6 +27,7 @@ export default function Dashboard() {
   const progress = useStudy((s) => s.progress[code])
   const stats = progress?.stats
   const t = useT()
+  const L = useTargetLang()
 
   const s = summarize(pack.words, progress, dailyNewLimit)
   const masteredPct = s.total ? s.mastered / s.total : 0
@@ -213,10 +215,7 @@ export default function Dashboard() {
             to="/games/order"
             emoji="🔤"
             title={t('Xếp câu', 'Build a sentence')}
-            desc={t(
-              'Xếp mảnh thành câu tiếng Anh đúng.',
-              'Put the pieces into a correct sentence.'
-            )}
+            desc={t(`Xếp mảnh thành câu ${L.vi} đúng.`, 'Put the pieces into a correct sentence.')}
           />
           <QuickLink
             to="/quiz"

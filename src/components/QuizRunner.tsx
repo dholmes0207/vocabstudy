@@ -15,6 +15,7 @@ import PosBadge from './PosBadge'
 import SpeakButton from './SpeakButton'
 import WordInsight from './WordInsight'
 import { useT, useUiLang } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 // One question at a time, for every place the app asks something: the quiz,
 // the practice rounds of a learning session, and recall-based review.
@@ -49,7 +50,7 @@ interface Item {
 
 const TASK: Record<QuizMode, [vi: string, en: string]> = {
   'en-to-vi': ['Chọn nghĩa đúng', 'Pick the right meaning'],
-  'vi-to-en': ['Chọn từ tiếng Anh đúng', 'Pick the right English word'],
+  'vi-to-en': ['Chọn từ đúng với nghĩa', 'Pick the word for this meaning'],
   listen: ['Nghe rồi chọn nghĩa đúng', 'Listen, then pick the meaning'],
   context: ['Chọn từ hợp với chỗ trống', 'Pick the word that fits the gap'],
   fill: ['Gõ từ còn thiếu', 'Type the missing word'],
@@ -91,6 +92,7 @@ export default function QuizRunner({
   // Right answers in a row — a little momentum makes a session feel like a game.
   const [combo, setCombo] = useState(0)
   const t = useT()
+  const L = useTargetLang()
   const lang = useUiLang()
   const inputRef = useRef<HTMLInputElement>(null)
   const nextRef = useRef<HTMLButtonElement>(null)
@@ -368,7 +370,7 @@ export default function QuizRunner({
               readOnly={revealed}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && (revealed ? next() : submitTyping())}
-              placeholder={t('Gõ từ tiếng Anh…', 'Type the English word…')}
+              placeholder={t(`Gõ từ ${L.vi}…`, `Type the ${L.en} word…`)}
               aria-label={t('Câu trả lời', 'Your answer')}
               className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-lg tracking-wide outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
               autoCapitalize="off"

@@ -120,7 +120,7 @@ export function makeQuestion(word: Word, pool: Word[], mode: QuizMode): QuizQues
       wordId: word.id,
       mode,
       prompt: gap?.gapped ?? word.meaning,
-      hint: gap ? word.meaning : tx('Gõ từ tiếng Anh tương ứng', 'Type the English word'),
+      hint: gap ? word.meaning : tx('Gõ từ có nghĩa này', 'Type the word with this meaning'),
       options: [],
       answer: word.word,
       surface: gap?.surface,

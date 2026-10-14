@@ -12,6 +12,7 @@ import { celebrate } from '@/lib/confetti'
 import { skyBurstAt, skyCelebrate } from '@/lib/skyEvents'
 import GameShell, { GameResult } from './GameShell'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 // "Ghép cặp": tap an English word, then its meaning. Six pairs against the
 // clock; the clock starts on the first tap. A wrong pair flashes red and counts
@@ -62,6 +63,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
 
   useProvideContext('Trò chơi Ghép cặp')
   const t = useT()
+  const L = useTargetLang()
 
   // Tick the clock while a round is running.
   useEffect(() => {
@@ -190,8 +192,8 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
     >
       <p className="mb-3 text-sm text-slate-500">
         {t(
-          'Chạm một từ tiếng Anh rồi chạm nghĩa của nó. Đồng hồ chạy từ lần chạm đầu tiên.',
-          'Tap an English word, then its meaning. The clock starts at your first tap.'
+          `Chạm một từ ${L.vi} rồi chạm nghĩa của nó. Đồng hồ chạy từ lần chạm đầu tiên.`,
+          `Tap a ${L.en} word, then its meaning. The clock starts at your first tap.`
         )}
         {best !== null && (
           <span className="ml-1 font-medium">

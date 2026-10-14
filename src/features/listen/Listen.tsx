@@ -412,7 +412,8 @@ function Player({
           {word.word}
         </p>
         <p className="text-slate-500">
-          /{word.ipa}/ · <span className="font-semibold">{word.viRead}</span>
+          {word.ipa && <>/{word.ipa}/ · </>}
+          <span className="font-semibold">{word.viRead}</span>
         </p>
         <p className={`rounded-xl px-3 py-2 text-xl font-semibold transition ${on('meaning')}`}>
           {word.meaning}

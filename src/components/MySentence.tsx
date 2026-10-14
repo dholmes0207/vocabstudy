@@ -7,6 +7,7 @@ import { useAuth } from '@/store/authStore'
 import { useContextStore } from '@/store/contextStore'
 import HighlightExample from './HighlightExample'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 interface Props {
   word: Word
@@ -30,6 +31,7 @@ export default function MySentence({ word, lang }: Props) {
   const [draft, setDraft] = useState('')
   const [hint, setHint] = useState<string | null>(null)
   const t = useT()
+  const L = useTargetLang()
 
   const headword = word.word.split('/')[0].trim()
 
@@ -125,8 +127,8 @@ export default function MySentence({ word, lang }: Props) {
             }
           }}
           placeholder={t(
-            `Gõ một câu tiếng Anh có từ “${headword}”…`,
-            `Type an English sentence with “${headword}”…`
+            `Gõ một câu ${L.vi} có từ “${headword}”…`,
+            `Type a ${L.en} sentence with “${headword}”…`
           )}
           maxLength={200}
           autoCapitalize="sentences"

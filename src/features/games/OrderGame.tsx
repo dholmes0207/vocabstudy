@@ -22,6 +22,7 @@ import { skyCelebrate } from '@/lib/skyEvents'
 import HighlightExample from '@/components/HighlightExample'
 import GameShell, { GameResult } from './GameShell'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 // "Xếp câu": rebuild an example sentence from shuffled tiles, guided by its
 // Vietnamese translation. It trains what a word list never does — where words
@@ -57,6 +58,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
   const [mistakes, setMistakes] = useState(0)
   const [result, setResult] = useState<{ xp: number; record: boolean } | null>(null)
   const t = useT()
+  const L = useTargetLang()
 
   const word = words[idx]
   useProvideContext(
@@ -152,7 +154,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
       <div className="card space-y-5 p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-            {t('Xếp thành câu tiếng Anh có nghĩa là', 'Build the English sentence that means')}
+            {t(`Xếp thành câu ${L.vi} có nghĩa là`, `Build the ${L.en} sentence that means`)}
           </p>
           <p className="mt-1 text-lg font-semibold">{word.exampleVi}</p>
           <p className="mt-1 text-sm text-slate-400">

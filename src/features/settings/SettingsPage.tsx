@@ -16,6 +16,7 @@ import ReminderSetup from '@/components/ReminderSetup'
 import { Row, Section, Segmented, Toggle } from './ui'
 import { AccountSection, DeleteAccountRow } from './AccountSection'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 // Options carry both languages: [value, Vietnamese, English].
 const UI_LANG_OPTIONS = [
@@ -76,6 +77,7 @@ export default function SettingsPage() {
   const canPronounce = hasNeuralAudio || ttsOk
   const canRecognize = isRecognitionSupported()
   const t = useT()
+  const L = useTargetLang()
   const opts = <T extends string>(list: readonly (readonly [T, string, string])[]) =>
     list.map(([v, vi, en]) => [v, t(vi, en)] as const)
   const level = (n: number) => levelLabel(levelInfo(n), settings.uiLang)
@@ -369,8 +371,8 @@ export default function SettingsPage() {
               <p className="mb-1 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
                 ⚠️{' '}
                 {t(
-                  'Máy bạn chưa có giọng đọc tiếng Anh. Hãy mở trang bằng Google Chrome hoặc Microsoft Edge (bản mới) để nghe được phát âm nhé.',
-                  'Your device has no English voice installed. Open the site in a recent Google Chrome or Microsoft Edge to hear pronunciation.'
+                  `Máy bạn chưa có giọng đọc ${L.vi}. Hãy mở trang bằng Google Chrome hoặc Microsoft Edge (bản mới) để nghe được phát âm nhé.`,
+                  `Your device has no ${L.en} voice installed. Open the site in a recent Google Chrome or Microsoft Edge to hear pronunciation.`
                 )}
               </p>
             )}
