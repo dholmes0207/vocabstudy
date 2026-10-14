@@ -1,4 +1,4 @@
-# Học theo chủ đề và ngữ vực (bản thiết kế, chưa làm)
+# Học theo chủ đề và ngữ vực
 
 **User**: "Không chỉ học từ vựng chung chung, mà phát triển lên nhiều ngữ vực khác nữa: tiếng
 Anh công sở, du lịch, sức khoẻ, công nghệ…; sau này cả những ngôn ngữ khác."
@@ -51,3 +51,21 @@ Anh công sở, du lịch, sức khoẻ, công nghệ…; sau này cả những 
     cần tách từ và thêm trường romaji/pinyin.
   - Gói đầu tiên khoảng 100 từ, nghĩa tiếng Việt chính xác, gắn nhãn "beta" trong bộ chọn
     ngôn ngữ.
+
+## Trạng thái (15/10/2026)
+
+- Đã có trang `/topics` với 19 bộ, mỗi bộ 20–47 từ.
+  - Các bộ: Công sở, Nghề nghiệp, Nơi chốn, Đường phố & đi lại, Quần áo, Ăn uống, Cơ thể,
+    Sức khoẻ, Gia đình, Nhà cửa, Trường học, Công nghệ & mạng xã hội, Thiên nhiên & thời
+    tiết, Con vật, Thời gian, Sở thích & thể thao, Cảm xúc, Màu sắc & hình khối, Tuổi thơ &
+    truyện kể.
+  - Mỗi lần học lấy tối đa 10 từ chưa thành thạo của bộ.
+- `scripts/build_topics.py` sinh ra `public/data/topics/en.json` từ danh sách từ đọc được.
+  - Script dừng và báo lỗi nếu có từ không nằm trong gói.
+  - Mỗi từ đã được đối chiếu với nghĩa ghi trong gói. Ví dụ "mouse" trong gói là con chuột
+    nên không xếp vào Công nghệ; "post" là động từ nên không xếp vào Nơi chốn.
+- **Bước tiếp theo:**
+  - ngữ vực chuyên sâu, tức các bộ từ **mới** cho tiếng Anh công sở, CNTT, du lịch –
+    khách sạn, y tế, kèm audio;
+  - ôn tập theo bộ;
+  - gói ngôn ngữ thứ hai.

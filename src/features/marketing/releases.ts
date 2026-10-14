@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
     items: [
       [
+        'Học theo chủ đề: 19 bộ từ theo tình huống — công sở, nghề nghiệp, ăn uống, sức khoẻ, công nghệ, gia đình, thiên nhiên…',
+        'Learn by topic: 19 decks for real situations — work, jobs, food, health, tech, family, nature…',
+      ],
+      [
         'Gửi góp ý ngay trong app (không cần mở email) — có thể cho phép trích dẫn kèm tên.',
         'Send feedback right in the app (no email needed) — and allow us to quote you if you like.',
       ],
