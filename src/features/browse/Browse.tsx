@@ -275,7 +275,16 @@ function WordRow({
                 )}
               </span>
             )}
-            <span className="block truncate text-sm text-slate-500">{word.meaning}</span>
+            <span className="block truncate text-sm text-slate-500">
+              {word.meaning}
+              {/* Sino-Vietnamese reading (Chinese, Sino-Korean words): safe next to the meaning. */}
+              {word.hanViet && (
+                <span className="text-slate-400">
+                  {' · '}
+                  <span className="uppercase tracking-wide">{word.hanViet}</span>
+                </span>
+              )}
+            </span>
           </span>
         </button>
         <SpeakButton
