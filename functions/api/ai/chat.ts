@@ -17,6 +17,7 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
     level?: number
     context?: string
     lang?: string
+    target?: string
   }
   try {
     body = await request.json()
@@ -44,6 +45,8 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
     levelInstruction: level ? levelInfo(level).aiInstruction : undefined,
     contextText: context,
     replyLang: lang,
+    // Only allow-listed codes have any effect (TARGET_LANGUAGES).
+    targetLang: typeof body.target === 'string' ? body.target.slice(0, 8) : undefined,
   })
 
   // Daily allowance. The counter is bumped first and judged after, so two

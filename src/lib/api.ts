@@ -96,6 +96,8 @@ export const api = {
     context?: string
     /** Interface language, so the tutor replies in it. */
     lang?: 'vi' | 'en'
+    /** The language pack being studied (only allow-listed codes matter server-side). */
+    target?: string
   }) =>
     req<{ reply: string; remaining?: number }>('/ai/chat', {
       method: 'POST',

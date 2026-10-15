@@ -24,7 +24,8 @@
       "ttsLang": "ko-KR",
       "count": 81,
       "file": "ko.json",
-      "description": "Beta: 81 từ tiếng Hàn sơ cấp đầu tiên, đọc bằng giọng của trình duyệt."
+      "description": "Beta: 81 từ tiếng Hàn sơ cấp đầu tiên, đọc bằng giọng của trình duyệt.",
+      "beta": true
     }
   ]
 }

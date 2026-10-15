@@ -41,7 +41,7 @@ export default function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="card absolute right-0 z-30 mt-2 w-56 overflow-hidden p-1 animate-fade-in"
+          className="card fixed inset-x-4 top-[calc(env(safe-area-inset-top)+3.75rem)] z-30 overflow-hidden p-1 animate-fade-in sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-56"
         >
           {langs.map((l) => (
             <li key={l.code}>
@@ -57,7 +57,14 @@ export default function LanguageSwitcher() {
               >
                 <span className="text-lg">{l.flag}</span>
                 <span className="flex-1">
-                  <span className="block font-medium">{t(l.nativeName, l.name)}</span>
+                  <span className="flex items-center gap-1.5 font-medium">
+                    {t(l.nativeName, l.name)}
+                    {l.beta && (
+                      <span className="chip bg-amber-100 px-1.5 py-0 text-[10px] font-bold uppercase text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">
+                        Beta
+                      </span>
+                    )}
+                  </span>
                   <span className="block text-xs text-slate-400">
                     {l.count} {t('từ', 'words')}
                   </span>

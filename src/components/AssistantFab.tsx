@@ -7,6 +7,7 @@ import { levelInfo, levelLabel } from '@/lib/level'
 import { useContextStore } from '@/store/contextStore'
 import { useT } from '@/lib/i18n'
 import { useSettings } from '@/store/settingsStore'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 export default function AssistantFab() {
   // Kept in the store so another screen can open the assistant with a
@@ -21,6 +22,7 @@ export default function AssistantFab() {
     useSettings((s) => s.uiLang)
   )
   const t = useT()
+  const L = useTargetLang()
 
   // Đóng bằng phím Esc (trang phía sau vẫn dùng được, không bị che mờ).
   useEffect(() => {
@@ -85,7 +87,7 @@ export default function AssistantFab() {
                   </span>
                 </p>
                 <p className="truncate text-xs text-slate-400">
-                  {t('Chỉ hỗ trợ học từ vựng tiếng Anh', 'Helps with English vocabulary only')}
+                  {t(`Chỉ hỗ trợ học từ vựng ${L.vi}`, `Helps with ${L.en} vocabulary only`)}
                 </p>
               </div>
               <button

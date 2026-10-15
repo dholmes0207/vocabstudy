@@ -9,6 +9,8 @@ import { suggestQuestions } from '@/lib/ai/suggestions'
 import { quotaHint } from '@/lib/quota'
 import Markdown from '@/components/Markdown'
 import { useT, useUiLang } from '@/lib/i18n'
+import { useSettings } from '@/store/settingsStore'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 interface Msg {
   id: number
@@ -17,9 +19,10 @@ interface Msg {
   isError?: boolean
 }
 
-const GREETING: [vi: string, en: string] = [
-  'Chào bạn 👋 Mình là trợ lý học từ vựng tiếng Anh. Hỏi mình về nghĩa, cách dùng, ví dụ, cách phân biệt hay mẹo nhớ từ nhé. (Mình chỉ hỗ trợ học từ vựng tiếng Anh.)',
-  "Hi 👋 I'm your English vocabulary tutor. Ask me about meanings, usage, examples, differences between words or memory tricks. (I only help with English vocabulary.)",
+/** The opening message, naming the language being studied (Tiếng Anh, Tiếng Hàn…). */
+const greeting = (vi: string, en: string): [vi: string, en: string] => [
+  `Chào bạn 👋 Mình là trợ lý học từ vựng ${vi}. Hỏi mình về nghĩa, cách dùng, ví dụ, cách phân biệt hay mẹo nhớ từ nhé. (Mình chỉ hỗ trợ học từ vựng.)`,
+  `Hi 👋 I'm your ${en} vocabulary tutor. Ask me about meanings, usage, examples, differences between words or memory tricks. (I only help with vocabulary.)`,
 ]
 
 function contextText(ctx: PageContext): string {
@@ -39,6 +42,8 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   const ctx = useContextStore()
   const t = useT()
   const lang = useUiLang()
+  const currentLang = useSettings((s) => s.currentLang)
+  const L = useTargetLang()
 
   const [configured, setConfigured] = useState<null | boolean>(null)
   const [messages, setMessages] = useState<Msg[]>([])
@@ -80,6 +85,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         level,
         context: contextText(ctx),
         lang,
+        target: currentLang,
       })
       setMessages((m) => [...m, { id: nextId(), role: 'assistant', content: reply }])
       setQuotaNote(quotaHint(remaining, lang))
@@ -141,7 +147,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
   return (
     <div className="flex h-full flex-col">
       <div className="scroll-thin flex-1 space-y-4 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-950/40">
-        <Bubble role="assistant" content={t(GREETING[0], GREETING[1])} />
+        <Bubble role="assistant" content={t(...greeting(L.vi, L.en))} />
         {ctx.word && messages.length === 0 && (
           <p className="text-center text-xs text-slate-400">
             💡{' '}
@@ -201,7 +207,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
               }
             }}
             rows={1}
-            placeholder={t('Hỏi về một từ tiếng Anh…', 'Ask about an English word…')}
+            placeholder={t(`Hỏi về một từ ${L.vi}…`, `Ask about a ${L.en} word…`)}
             className="max-h-28 min-h-[2.75rem] flex-1 resize-none rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-[15px] outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
           />
           <button

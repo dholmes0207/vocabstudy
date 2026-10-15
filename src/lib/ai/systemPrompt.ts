@@ -62,6 +62,11 @@ export interface BuildOptions {
   contextText?: string
   /** The learner's interface language; 'en' asks for replies in English. */
   replyLang?: 'vi' | 'en'
+  /**
+   * The language pack being studied. Only codes in TARGET_LANGUAGES change
+   * anything (English is the default scope); everything else is ignored.
+   */
+  targetLang?: string
   maxTurns?: number
 }
 
@@ -72,9 +77,31 @@ export interface BuildOptions {
 export const ENGLISH_REPLIES = `# NGÔN NGỮ TRẢ LỜI: TIẾNG ANH
 The learner has chosen the English interface. Write ALL explanations, refusals and questions in simple, clear English (CEFR A2–B1), not Vietnamese. Keep the Vietnamese meaning of the word being studied in brackets, e.g. "ability (khả năng)", because the learner is Vietnamese. Every other rule above still applies.`
 
+/**
+ * Other language packs the tutor may help with (docs/design/languages.md).
+ * Server-side allow-list: the browser sends only a code; the text appended is
+ * always ours, never the learner's. Any code not listed here is ignored.
+ */
+export const TARGET_LANGUAGES: Record<string, { vi: string; note: string }> = {
+  ko: {
+    vi: 'TIẾNG HÀN',
+    note: 'Phát âm: viết Hangul và cách đọc kiểu Việt (vd 감사합니다 → "cam-xa-ham-ni-đa") thay cho IPA. Câu ví dụ dùng đuôi lịch sự -아요/-어요 cho người mới, luôn kèm nghĩa tiếng Việt.',
+  },
+}
+
+/** The extra section that moves the tutor's scope to another language pack. */
+export function targetLanguageSection(code: string | undefined): string | null {
+  const lang = code ? TARGET_LANGUAGES[code] : undefined
+  if (!lang) return null
+  return `# NGÔN NGỮ NGƯỜI HỌC ĐANG HỌC: ${lang.vi}
+Người học đang học ${lang.vi} trong app. Mọi quy tắc phía trên áp dụng cho TỪ VỰNG ${lang.vi} thay cho tiếng Anh: giúp về từ ${lang.vi} là TRONG phạm vi; các ngôn ngữ khác ngoài tiếng Anh và ${lang.vi} vẫn NGOÀI phạm vi. ${lang.note} Mọi quy tắc an toàn và chống lợi dụng phía trên vẫn giữ nguyên.`
+}
+
 export function buildMessages(history: ChatTurn[], opts: BuildOptions = {}) {
-  const { levelInstruction, contextText, replyLang, maxTurns = 10 } = opts
+  const { levelInstruction, contextText, replyLang, targetLang, maxTurns = 10 } = opts
   let system = SYSTEM_PROMPT
+  const target = targetLanguageSection(targetLang)
+  if (target) system += `\n\n${target}`
   if (replyLang === 'en') system += `\n\n${ENGLISH_REPLIES}`
   if (levelInstruction) {
     system += `\n\n# PHÂN HÓA THEO TRÌNH ĐỘ NGƯỜI HỌC\n${levelInstruction}`

@@ -78,6 +78,8 @@ export interface LanguagePackMeta {
   version?: string
   file?: string
   description?: string
+  /** A young pack: small, browser voices only. Shown with a "Beta" chip. */
+  beta?: boolean
 }
 
 /** A fully loaded language pack: metadata + word list. */
