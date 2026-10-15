@@ -132,3 +132,12 @@ rõ.
   từng chữ từ tiếng Việt, ví dụ 我学习在学校) và ít nhất 5 bài luyện.
 - Câu xếp từ dùng ranh giới ZWSP giống câu ví dụ trong gói; test bảo đảm câu không có dấu
   cách thường. `/grammar` mở cho tiếng Trung.
+
+## Tra cứu không cần dấu (đã làm)
+
+- Trang Tra cứu tìm không phân biệt dấu tiếng Việt và dấu thanh pinyin (`lib/search.ts`):
+  - "xin chao" tìm ra "xin chào";
+  - "ni hao", "nihao" hay "nǐ hǎo" đều tìm ra 你好;
+  - "bang huu" tìm ra 朋友 (theo âm Hán Việt).
+- Cách đọc chỉ được tìm với từ không viết bằng chữ Latin (tiếng Hàn, tiếng Trung). Với từ
+  tiếng Anh, cách đọc kiểu Việt chỉ là phiên âm nên không đưa vào kết quả.

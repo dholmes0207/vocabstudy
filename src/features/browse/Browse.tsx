@@ -16,6 +16,7 @@ import { wordAudio } from '@/lib/audio'
 import { useProvideContext } from '@/store/contextStore'
 import { useT, useUiLang } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
+import { matchesQuery } from '@/lib/search'
 
 const PAGE_SIZE = 24
 
@@ -52,15 +53,12 @@ export default function Browse() {
   }, [pack.words])
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase()
     // The pack is stored in learning order (most common words first); a lookup
     // screen wants the alphabet instead.
     const list = pack.words.filter((w) => {
       if (pos !== 'all' && w.posCategory !== pos) return false
       if (phaseFilter !== 'all' && phaseOf(cards[w.id]) !== phaseFilter) return false
-      if (q && !w.word.toLowerCase().includes(q) && !w.meaning.toLowerCase().includes(q))
-        return false
-      return true
+      return matchesQuery(w, query)
     })
     return list.sort((x, y) => x.word.localeCompare(y.word, 'en'))
   }, [pack.words, query, pos, phaseFilter, cards])
