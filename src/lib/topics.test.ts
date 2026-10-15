@@ -32,6 +32,28 @@ describe('topic decks', () => {
   })
 })
 
+describe('Korean topic decks', () => {
+  const koPack = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as {
+    words: { id: number }[]
+  }
+  const ko = JSON.parse(readFileSync('public/data/topics/ko.json', 'utf8')) as typeof topics
+  const koIds = new Set(koPack.words.map((w) => w.id))
+
+  it('list real words of the Korean pack, each once, at least 10 per deck', () => {
+    expect(parseTopics(ko)).toHaveLength(ko.topics.length)
+    for (const t of ko.topics) {
+      expect(t.wordIds.length, t.id).toBeGreaterThanOrEqual(10)
+      expect(new Set(t.wordIds).size, t.id).toBe(t.wordIds.length)
+      for (const id of t.wordIds) expect(koIds.has(id), `${t.id}: ${id}`).toBe(true)
+    }
+  })
+
+  it('leave no word of the pack out of every deck', () => {
+    const covered = new Set(ko.topics.flatMap((t) => t.wordIds))
+    expect([...koIds].filter((id) => !covered.has(id))).toEqual([])
+  })
+})
+
 describe('parseTopics', () => {
   it('reads the shipped file', () => {
     expect(parseTopics(topics).length).toBe(topics.topics.length)

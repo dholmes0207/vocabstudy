@@ -75,3 +75,15 @@ Anh công sở, du lịch, sức khoẻ, công nghệ…; sau này cả những 
   - ngữ vực chuyên sâu, tức các bộ từ **mới** cho tiếng Anh công sở, CNTT, du lịch –
     khách sạn, y tế, kèm audio. Việc này cần chuyển audio sang R2 trước;
   - truyện đọc theo chủ đề (xem `reading.md`).
+
+## Tiếng Hàn (15/10/2026)
+
+- `public/data/topics/ko.json` có 12 bộ, sinh từ `scripts/build_topics_ko.py` (danh sách từ
+  gốc viết tay, cụm có dấu cách thì viết bằng "_").
+  - Các bộ: chào hỏi, con người, ăn uống, nơi chốn, đi lại, thời gian & thời tiết, mua sắm &
+    số đếm, cơ thể & sức khoẻ, màu sắc & miêu tả, hoạt động hằng ngày, sở thích & cảm xúc,
+    câu hỏi & từ cơ bản.
+  - Mỗi bộ 12–21 từ. Cả 182 từ của gói đều nằm trong ít nhất một bộ; script và test cùng
+    kiểm tra điều này.
+- `/topics` mở cho tiếng Hàn qua `lib/packContent.ts`. Lời giới thiệu và mô tả ở trang
+  Luyện tập đổi thành ví dụ dùng chung cho cả hai ngôn ngữ (ăn uống, đi lại, sức khoẻ…).

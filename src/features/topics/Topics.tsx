@@ -135,8 +135,8 @@ export default function Topics() {
         </h1>
         <p className="mt-1 text-slate-500">
           {t(
-            'Từ vựng gom theo tình huống: công sở, sức khoẻ, nhà cửa… "Học" lấy tối đa 10 từ chưa thành thạo, "Ôn" hỏi nhanh những từ bạn đã gặp trong bộ. Tiến độ dùng chung với cả app.',
-            'Words grouped by situation: work, health, home… "Learn" takes up to 10 words you have not mastered, "Review" quizzes the ones you have already met. Progress is shared with the whole app.'
+            'Từ vựng gom theo tình huống: ăn uống, đi lại, sức khoẻ… "Học" lấy tối đa 10 từ chưa thành thạo, "Ôn" hỏi nhanh những từ bạn đã gặp trong bộ. Tiến độ dùng chung với cả app.',
+            'Words grouped by situation: food, getting around, health… "Learn" takes up to 10 words you have not mastered, "Review" quizzes the ones you have already met. Progress is shared with the whole app.'
           )}
         </p>
       </header>

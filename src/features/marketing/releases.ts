@@ -29,8 +29,8 @@ export const RELEASES: Release[] = [
         'Korean (beta): 182 beginner words — greetings, numbers, colours, getting around, food… — with Vietnamese-style readings and example sentences. Pick it from the language button at the top.',
       ],
       [
-        'Bảng chữ cái Hangul cho người học tiếng Hàn: nghe từng chữ, tự ghép chữ, kiểm tra nhanh (có cả đọc từ). Thêm 4 truyện ngắn tiếng Hàn — chạm vào từ, kể cả từ có tiểu từ hay đuôi chia, để xem nghĩa. Khi học tiếng Hàn, menu chỉ còn những phần dùng được cho tiếng Hàn.',
-        'The Hangul alphabet for Korean learners: hear each letter, build syllables, take a quick check (reading whole words too). Plus 4 short Korean stories — tap any word, particles and verb endings included, to see what it means. While learning Korean, the menus only show what works for Korean.',
+        'Bảng chữ cái Hangul cho người học tiếng Hàn: nghe từng chữ, tự ghép chữ, kiểm tra nhanh (có cả đọc từ). Thêm 4 truyện ngắn tiếng Hàn — chạm vào từ, kể cả từ có tiểu từ hay đuôi chia, để xem nghĩa — và 12 bộ từ tiếng Hàn theo chủ đề. Khi học tiếng Hàn, menu chỉ còn những phần dùng được cho tiếng Hàn.',
+        'The Hangul alphabet for Korean learners: hear each letter, build syllables, take a quick check (reading whole words too). Plus 4 short Korean stories — tap any word, particles and verb endings included, to see what it means — and 12 Korean topic decks. While learning Korean, the menus only show what works for Korean.',
       ],
       [
         'Ngữ pháp căn bản: 12 bài cho người mới (to be, các thì, a/an/the, giới từ, so sánh, câu hỏi…) — giải thích bằng tiếng Việt, kèm lỗi hay gặp và bài luyện.',

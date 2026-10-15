@@ -36,9 +36,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/topics',
     icon: '🗂️',
     title: 'Học theo chủ đề',
-    desc: 'Công sở, ăn uống, sức khoẻ, công nghệ… 19 bộ từ theo tình huống.',
+    desc: 'Ăn uống, đi lại, sức khoẻ, công việc… từ vựng gom thành bộ theo tình huống, mỗi bộ có Học và Ôn.',
     titleEn: 'Learn by topic',
-    descEn: 'Work, food, health, tech… 19 word decks for real situations.',
+    descEn:
+      'Food, getting around, health, work… word decks for real situations, each with Learn and Review.',
     tone: 'from-sky-500 to-cyan-600',
   },
   {
