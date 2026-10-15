@@ -14,6 +14,7 @@ interface W {
   meaning: string
   exampleEn: string
   exampleVi: string
+  hanViet?: string
 }
 const pack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as {
   meta: { code: string; count: number; ttsLang: string; readingLabel?: string[] }
@@ -62,5 +63,15 @@ describe('Chinese pack', () => {
     // A break inside a word (between 喜 and 欢 of 喜欢, say) would hide it from the search.
     for (const w of pack.words)
       expect(findWordInSentence(w.word, w.exampleEn, w.posCategory as never), w.word).not.toBeNull()
+  })
+
+  it('gives most words their Hán Việt reading, one syllable per character', () => {
+    const withHv = pack.words.filter((w) => w.hanViet)
+    expect(withHv.length / pack.words.length).toBeGreaterThan(0.85)
+    for (const w of withHv) {
+      expect(w.hanViet!.split(' '), w.word).toHaveLength([...w.word].length)
+      expect(w.hanViet, w.word).toMatch(/^[\p{L} ]+$/u)
+      expect(w.hanViet, w.word).not.toMatch(HAN)
+    }
   })
 })

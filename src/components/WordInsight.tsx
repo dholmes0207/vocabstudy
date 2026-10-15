@@ -8,6 +8,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useMySentence } from '@/store/notesStore'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
+import HanViet from './HanViet'
 
 interface Props {
   word: Word
@@ -66,6 +67,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
           <p className="text-2xl font-extrabold text-brand-600 dark:text-brand-300 sm:text-3xl">
             {word.meaning}
           </p>
+          <HanViet word={word} />
         </div>
       ) : (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

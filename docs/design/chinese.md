@@ -91,3 +91,15 @@ rõ.
 - Âm thanh dùng giọng `zh-CN` của trình duyệt, đọc từng chữ Hán (妈 / 麻 / 马 / 骂).
 - Hành trình 7 ngày: ngày 5 có danh sách nhiệm vụ thay thế (`alts`). Tiếng Hàn lấy Hangul,
   tiếng Trung lấy Pinyin.
+
+## Bước 2: âm Hán Việt (đã làm)
+
+- Trường `hanViet` (không bắt buộc) của từ. Viết trong `HAN_VIET` của
+  `scripts/build_zh_pack.py`; script và test kiểm tra mỗi chữ Hán ứng với đúng một âm tiết.
+- 122/132 từ có âm Hán Việt. Cố ý để trống:
+  - các trợ từ 吗 / 呢 / 的 / 了;
+  - từ mượn 咖啡;
+  - 哪儿 / 这儿 / 那儿 (khẩu ngữ, có thêm âm nhi hoá);
+  - các từ có 吃, vì từ điển không thống nhất (cật / ngật / khiết). Không đoán khi chưa chắc.
+- Hiển thị (`components/HanViet.tsx`) ngay dưới nghĩa trên thẻ học và ở mặt sau thẻ lật,
+  không bao giờ ở mặt câu hỏi, vì âm Hán Việt hay trùng luôn với nghĩa (学生 = học sinh).

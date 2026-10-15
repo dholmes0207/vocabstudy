@@ -9,7 +9,7 @@
     "ttsLang": "zh-CN",
     "count": 132,
     "source": "VocaStudy (beta)",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "readingLabel": [
       "pinyin",
       "pinyin"
@@ -26,7 +26,8 @@
       "meaning": "xin chào",
       "exampleEn": "你好，​很​高兴​认识​你。",
       "exampleVi": "Xin chào, rất vui được làm quen với bạn.",
-      "emoji": "👋"
+      "emoji": "👋",
+      "hanViet": "nễ hảo"
     },
     {
       "id": 2,
@@ -38,7 +39,8 @@
       "meaning": "cảm ơn",
       "exampleEn": "谢谢​你！",
       "exampleVi": "Cảm ơn bạn!",
-      "emoji": "🙏"
+      "emoji": "🙏",
+      "hanViet": "tạ tạ"
     },
     {
       "id": 3,
@@ -50,7 +52,8 @@
       "meaning": "không có gì (đáp lời cảm ơn)",
       "exampleEn": "“谢谢​你！”​“不客气。”",
       "exampleVi": "“Cảm ơn bạn!” “Không có gì.”",
-      "emoji": "😊"
+      "emoji": "😊",
+      "hanViet": "bất khách khí"
     },
     {
       "id": 4,
@@ -62,7 +65,8 @@
       "meaning": "xin lỗi",
       "exampleEn": "对不起，​我​来​晚​了。",
       "exampleVi": "Xin lỗi, tôi đến muộn.",
-      "emoji": "🙇"
+      "emoji": "🙇",
+      "hanViet": "đối bất khởi"
     },
     {
       "id": 5,
@@ -74,7 +78,8 @@
       "meaning": "không sao",
       "exampleEn": "“对不起。”​“没关系。”",
       "exampleVi": "“Xin lỗi.” “Không sao.”",
-      "emoji": "👌"
+      "emoji": "👌",
+      "hanViet": "một quan hệ"
     },
     {
       "id": 6,
@@ -86,7 +91,8 @@
       "meaning": "tạm biệt",
       "exampleEn": "老师，​再见！",
       "exampleVi": "Em chào thầy ạ!",
-      "emoji": "👋"
+      "emoji": "👋",
+      "hanViet": "tái kiến"
     },
     {
       "id": 7,
@@ -98,7 +104,8 @@
       "meaning": "là",
       "exampleEn": "我​是​学生。",
       "exampleVi": "Tôi là học sinh.",
-      "emoji": "🟰"
+      "emoji": "🟰",
+      "hanViet": "thị"
     },
     {
       "id": 8,
@@ -110,7 +117,8 @@
       "meaning": "không (phủ định)",
       "exampleEn": "我​不​喝​茶。",
       "exampleVi": "Tôi không uống trà.",
-      "emoji": "🚫"
+      "emoji": "🚫",
+      "hanViet": "bất"
     },
     {
       "id": 9,
@@ -122,7 +130,8 @@
       "meaning": "không có; chưa",
       "exampleEn": "我​没有​时间。",
       "exampleVi": "Tôi không có thời gian.",
-      "emoji": "🈳"
+      "emoji": "🈳",
+      "hanViet": "một hữu"
     },
     {
       "id": 10,
@@ -134,7 +143,8 @@
       "meaning": "có",
       "exampleEn": "你​有​时间​吗？",
       "exampleVi": "Bạn có thời gian không?",
-      "emoji": "✅"
+      "emoji": "✅",
+      "hanViet": "hữu"
     },
     {
       "id": 11,
@@ -146,7 +156,8 @@
       "meaning": "tôi",
       "exampleEn": "我​是​越南​人。",
       "exampleVi": "Tôi là người Việt Nam.",
-      "emoji": "🙋"
+      "emoji": "🙋",
+      "hanViet": "ngã"
     },
     {
       "id": 12,
@@ -158,7 +169,8 @@
       "meaning": "bạn, anh, chị (ngôi thứ hai)",
       "exampleEn": "你​是​老师​吗？",
       "exampleVi": "Bạn là giáo viên à?",
-      "emoji": "🫵"
+      "emoji": "🫵",
+      "hanViet": "nễ"
     },
     {
       "id": 13,
@@ -170,7 +182,8 @@
       "meaning": "anh ấy, ông ấy",
       "exampleEn": "他​是​我​的​老师。",
       "exampleVi": "Anh ấy là thầy giáo của tôi.",
-      "emoji": "👨"
+      "emoji": "👨",
+      "hanViet": "tha"
     },
     {
       "id": 14,
@@ -182,7 +195,8 @@
       "meaning": "cô ấy, bà ấy",
       "exampleEn": "她​是​医生。",
       "exampleVi": "Cô ấy là bác sĩ.",
-      "emoji": "👩"
+      "emoji": "👩",
+      "hanViet": "tha"
     },
     {
       "id": 15,
@@ -194,7 +208,8 @@
       "meaning": "chúng tôi, chúng ta",
       "exampleEn": "我们​是​朋友。",
       "exampleVi": "Chúng tôi là bạn.",
-      "emoji": "👫"
+      "emoji": "👫",
+      "hanViet": "ngã môn"
     },
     {
       "id": 16,
@@ -206,7 +221,8 @@
       "meaning": "cái gì",
       "exampleEn": "你​想​吃​什么？",
       "exampleVi": "Bạn muốn ăn gì?",
-      "emoji": "❓"
+      "emoji": "❓",
+      "hanViet": "thập ma"
     },
     {
       "id": 17,
@@ -218,7 +234,8 @@
       "meaning": "ai",
       "exampleEn": "他​是​谁？",
       "exampleVi": "Anh ấy là ai?",
-      "emoji": "🕵️"
+      "emoji": "🕵️",
+      "hanViet": "thuỳ"
     },
     {
       "id": 18,
@@ -242,7 +259,8 @@
       "meaning": "bao nhiêu",
       "exampleEn": "你​有​多少​钱？",
       "exampleVi": "Bạn có bao nhiêu tiền?",
-      "emoji": "🔢"
+      "emoji": "🔢",
+      "hanViet": "đa thiểu"
     },
     {
       "id": 20,
@@ -254,7 +272,8 @@
       "meaning": "này, đây",
       "exampleEn": "这​是​什么？",
       "exampleVi": "Đây là cái gì?",
-      "emoji": "👇"
+      "emoji": "👇",
+      "hanViet": "giá"
     },
     {
       "id": 21,
@@ -266,7 +285,8 @@
       "meaning": "kia, đó",
       "exampleEn": "那​是​我们​的​学校。",
       "exampleVi": "Kia là trường của chúng tôi.",
-      "emoji": "👉"
+      "emoji": "👉",
+      "hanViet": "na"
     },
     {
       "id": 22,
@@ -302,7 +322,8 @@
       "meaning": "một",
       "exampleEn": "我​有​一​本​书。",
       "exampleVi": "Tôi có một quyển sách.",
-      "emoji": "1️⃣"
+      "emoji": "1️⃣",
+      "hanViet": "nhất"
     },
     {
       "id": 25,
@@ -314,7 +335,8 @@
       "meaning": "hai",
       "exampleEn": "今天​是​二​号。",
       "exampleVi": "Hôm nay là ngày mùng hai.",
-      "emoji": "2️⃣"
+      "emoji": "2️⃣",
+      "hanViet": "nhị"
     },
     {
       "id": 26,
@@ -326,7 +348,8 @@
       "meaning": "ba",
       "exampleEn": "我​家​有​三​口​人。",
       "exampleVi": "Nhà tôi có ba người.",
-      "emoji": "3️⃣"
+      "emoji": "3️⃣",
+      "hanViet": "tam"
     },
     {
       "id": 27,
@@ -338,7 +361,8 @@
       "meaning": "mười",
       "exampleEn": "现在​十​点。",
       "exampleVi": "Bây giờ là mười giờ.",
-      "emoji": "🔟"
+      "emoji": "🔟",
+      "hanViet": "thập"
     },
     {
       "id": 28,
@@ -350,7 +374,8 @@
       "meaning": "mấy",
       "exampleEn": "你​家​有​几​口​人？",
       "exampleVi": "Nhà bạn có mấy người?",
-      "emoji": "🤔"
+      "emoji": "🤔",
+      "hanViet": "kỷ"
     },
     {
       "id": 29,
@@ -362,7 +387,8 @@
       "meaning": "cái, chiếc (lượng từ chung)",
       "exampleEn": "我​有​一​个​儿子。",
       "exampleVi": "Tôi có một đứa con trai.",
-      "emoji": "🧮"
+      "emoji": "🧮",
+      "hanViet": "cá"
     },
     {
       "id": 30,
@@ -374,7 +400,8 @@
       "meaning": "quyển (lượng từ cho sách)",
       "exampleEn": "这​本​书​很​好。",
       "exampleVi": "Quyển sách này rất hay.",
-      "emoji": "📚"
+      "emoji": "📚",
+      "hanViet": "bản"
     },
     {
       "id": 31,
@@ -386,7 +413,8 @@
       "meaning": "đồng, tệ (đơn vị tiền, khẩu ngữ)",
       "exampleEn": "一​杯​咖啡​三十​块。",
       "exampleVi": "Một cốc cà phê ba mươi tệ.",
-      "emoji": "💴"
+      "emoji": "💴",
+      "hanViet": "khối"
     },
     {
       "id": 32,
@@ -398,7 +426,8 @@
       "meaning": "người",
       "exampleEn": "这儿​有​很​多​人。",
       "exampleVi": "Ở đây có rất nhiều người.",
-      "emoji": "🧑"
+      "emoji": "🧑",
+      "hanViet": "nhân"
     },
     {
       "id": 33,
@@ -410,7 +439,8 @@
       "meaning": "bạn bè",
       "exampleEn": "他​是​我​的​好​朋友。",
       "exampleVi": "Anh ấy là bạn tốt của tôi.",
-      "emoji": "🤝"
+      "emoji": "🤝",
+      "hanViet": "bằng hữu"
     },
     {
       "id": 34,
@@ -422,7 +452,8 @@
       "meaning": "giáo viên",
       "exampleEn": "我们​的​老师​很​好。",
       "exampleVi": "Thầy giáo của chúng tôi rất tốt.",
-      "emoji": "🧑‍🏫"
+      "emoji": "🧑‍🏫",
+      "hanViet": "lão sư"
     },
     {
       "id": 35,
@@ -434,7 +465,8 @@
       "meaning": "học sinh, sinh viên",
       "exampleEn": "他​是​我​的​学生。",
       "exampleVi": "Cậu ấy là học trò của tôi.",
-      "emoji": "🎒"
+      "emoji": "🎒",
+      "hanViet": "học sinh"
     },
     {
       "id": 36,
@@ -446,7 +478,8 @@
       "meaning": "bác sĩ",
       "exampleEn": "我​妈妈​是​医生。",
       "exampleVi": "Mẹ tôi là bác sĩ.",
-      "emoji": "🩺"
+      "emoji": "🩺",
+      "hanViet": "y sinh"
     },
     {
       "id": 37,
@@ -458,7 +491,8 @@
       "meaning": "bố",
       "exampleEn": "爸爸​在​家。",
       "exampleVi": "Bố đang ở nhà.",
-      "emoji": "👨‍🦱"
+      "emoji": "👨‍🦱",
+      "hanViet": "bá bá"
     },
     {
       "id": 38,
@@ -470,7 +504,8 @@
       "meaning": "mẹ",
       "exampleEn": "妈妈​做​的​饭​很​好吃。",
       "exampleVi": "Cơm mẹ nấu rất ngon.",
-      "emoji": "👩‍🦱"
+      "emoji": "👩‍🦱",
+      "hanViet": "ma ma"
     },
     {
       "id": 39,
@@ -482,7 +517,8 @@
       "meaning": "con trai",
       "exampleEn": "他​儿子​五​岁。",
       "exampleVi": "Con trai anh ấy năm tuổi.",
-      "emoji": "👦"
+      "emoji": "👦",
+      "hanViet": "nhi tử"
     },
     {
       "id": 40,
@@ -494,7 +530,8 @@
       "meaning": "con gái",
       "exampleEn": "我​女儿​很​漂亮。",
       "exampleVi": "Con gái tôi rất xinh.",
-      "emoji": "👧"
+      "emoji": "👧",
+      "hanViet": "nữ nhi"
     },
     {
       "id": 41,
@@ -506,7 +543,8 @@
       "meaning": "ông, ngài; chồng",
       "exampleEn": "王​先生​是​我​的​老师。",
       "exampleVi": "Ông Vương là thầy giáo của tôi.",
-      "emoji": "🎩"
+      "emoji": "🎩",
+      "hanViet": "tiên sinh"
     },
     {
       "id": 42,
@@ -518,7 +556,8 @@
       "meaning": "cô (gọi phụ nữ trẻ)",
       "exampleEn": "李​小姐，​你好！",
       "exampleVi": "Chào cô Lý!",
-      "emoji": "💁"
+      "emoji": "💁",
+      "hanViet": "tiểu thư"
     },
     {
       "id": 43,
@@ -530,7 +569,8 @@
       "meaning": "cơm",
       "exampleEn": "我​喜欢​吃​米饭。",
       "exampleVi": "Tôi thích ăn cơm.",
-      "emoji": "🍚"
+      "emoji": "🍚",
+      "hanViet": "mễ phạn"
     },
     {
       "id": 44,
@@ -542,7 +582,8 @@
       "meaning": "trà",
       "exampleEn": "请​喝​茶。",
       "exampleVi": "Mời anh uống trà.",
-      "emoji": "🍵"
+      "emoji": "🍵",
+      "hanViet": "trà"
     },
     {
       "id": 45,
@@ -554,7 +595,8 @@
       "meaning": "nước",
       "exampleEn": "我​想​喝​水。",
       "exampleVi": "Tôi muốn uống nước.",
-      "emoji": "💧"
+      "emoji": "💧",
+      "hanViet": "thuỷ"
     },
     {
       "id": 46,
@@ -566,7 +608,8 @@
       "meaning": "món ăn; rau",
       "exampleEn": "这个​菜​很​好吃。",
       "exampleVi": "Món này rất ngon.",
-      "emoji": "🥬"
+      "emoji": "🥬",
+      "hanViet": "thái"
     },
     {
       "id": 47,
@@ -578,7 +621,8 @@
       "meaning": "trái cây",
       "exampleEn": "我​每天​吃​水果。",
       "exampleVi": "Ngày nào tôi cũng ăn trái cây.",
-      "emoji": "🍇"
+      "emoji": "🍇",
+      "hanViet": "thuỷ quả"
     },
     {
       "id": 48,
@@ -590,7 +634,8 @@
       "meaning": "quả táo",
       "exampleEn": "这个​苹果​很​大。",
       "exampleVi": "Quả táo này rất to.",
-      "emoji": "🍎"
+      "emoji": "🍎",
+      "hanViet": "bình quả"
     },
     {
       "id": 49,
@@ -614,7 +659,8 @@
       "meaning": "cái cốc",
       "exampleEn": "杯子​在​桌子​上。",
       "exampleVi": "Cái cốc ở trên bàn.",
-      "emoji": "🥛"
+      "emoji": "🥛",
+      "hanViet": "bôi tử"
     },
     {
       "id": 51,
@@ -638,7 +684,8 @@
       "meaning": "uống",
       "exampleEn": "你​喝​什么？",
       "exampleVi": "Bạn uống gì?",
-      "emoji": "🥤"
+      "emoji": "🥤",
+      "hanViet": "hát"
     },
     {
       "id": 53,
@@ -650,7 +697,8 @@
       "meaning": "nhà hàng; khách sạn",
       "exampleEn": "我们​去​饭店​吃​饭。",
       "exampleVi": "Chúng tôi đi nhà hàng ăn cơm.",
-      "emoji": "🏨"
+      "emoji": "🏨",
+      "hanViet": "phạn điếm"
     },
     {
       "id": 54,
@@ -674,7 +722,8 @@
       "meaning": "nhà, gia đình",
       "exampleEn": "我​家​在​北京。",
       "exampleVi": "Nhà tôi ở Bắc Kinh.",
-      "emoji": "🏠"
+      "emoji": "🏠",
+      "hanViet": "gia"
     },
     {
       "id": 56,
@@ -686,7 +735,8 @@
       "meaning": "trường học",
       "exampleEn": "我​去​学校。",
       "exampleVi": "Tôi đi đến trường.",
-      "emoji": "🏫"
+      "emoji": "🏫",
+      "hanViet": "học hiệu"
     },
     {
       "id": 57,
@@ -698,7 +748,8 @@
       "meaning": "bệnh viện",
       "exampleEn": "医院​在​哪儿？",
       "exampleVi": "Bệnh viện ở đâu?",
-      "emoji": "🏥"
+      "emoji": "🏥",
+      "hanViet": "y viện"
     },
     {
       "id": 58,
@@ -710,7 +761,8 @@
       "meaning": "cửa hàng",
       "exampleEn": "我​去​商店​买​东西。",
       "exampleVi": "Tôi đi cửa hàng mua đồ.",
-      "emoji": "🏪"
+      "emoji": "🏪",
+      "hanViet": "thương điếm"
     },
     {
       "id": 59,
@@ -722,7 +774,8 @@
       "meaning": "Trung Quốc",
       "exampleEn": "我​想​去​中国。",
       "exampleVi": "Tôi muốn đi Trung Quốc.",
-      "emoji": "🇨🇳"
+      "emoji": "🇨🇳",
+      "hanViet": "Trung Quốc"
     },
     {
       "id": 60,
@@ -734,7 +787,8 @@
       "meaning": "Bắc Kinh",
       "exampleEn": "北京​很​大。",
       "exampleVi": "Bắc Kinh rất rộng lớn.",
-      "emoji": "🏯"
+      "emoji": "🏯",
+      "hanViet": "Bắc Kinh"
     },
     {
       "id": 61,
@@ -746,7 +800,8 @@
       "meaning": "ga tàu hoả",
       "exampleEn": "火车站​在​那儿。",
       "exampleVi": "Ga tàu ở đằng kia.",
-      "emoji": "🚉"
+      "emoji": "🚉",
+      "hanViet": "hoả xa trạm"
     },
     {
       "id": 62,
@@ -758,7 +813,8 @@
       "meaning": "hôm nay",
       "exampleEn": "今天​星期​一。",
       "exampleVi": "Hôm nay là thứ Hai.",
-      "emoji": "📅"
+      "emoji": "📅",
+      "hanViet": "kim thiên"
     },
     {
       "id": 63,
@@ -770,7 +826,8 @@
       "meaning": "ngày mai",
       "exampleEn": "明天​见！",
       "exampleVi": "Mai gặp nhé!",
-      "emoji": "🌅"
+      "emoji": "🌅",
+      "hanViet": "minh thiên"
     },
     {
       "id": 64,
@@ -782,7 +839,8 @@
       "meaning": "hôm qua",
       "exampleEn": "昨天​我​去​了​医院。",
       "exampleVi": "Hôm qua tôi đã đi bệnh viện.",
-      "emoji": "⏪"
+      "emoji": "⏪",
+      "hanViet": "tạc thiên"
     },
     {
       "id": 65,
@@ -794,7 +852,8 @@
       "meaning": "bây giờ",
       "exampleEn": "现在​几​点？",
       "exampleVi": "Bây giờ là mấy giờ?",
-      "emoji": "⏰"
+      "emoji": "⏰",
+      "hanViet": "hiện tại"
     },
     {
       "id": 66,
@@ -806,7 +865,8 @@
       "meaning": "giờ (lúc mấy giờ)",
       "exampleEn": "我​七​点​起床。",
       "exampleVi": "Tôi dậy lúc bảy giờ.",
-      "emoji": "🕖"
+      "emoji": "🕖",
+      "hanViet": "điểm"
     },
     {
       "id": 67,
@@ -818,7 +878,8 @@
       "meaning": "năm",
       "exampleEn": "我​在​北京​住​了​三​年。",
       "exampleVi": "Tôi đã sống ở Bắc Kinh ba năm.",
-      "emoji": "🗓️"
+      "emoji": "🗓️",
+      "hanViet": "niên"
     },
     {
       "id": 68,
@@ -830,7 +891,8 @@
       "meaning": "tháng",
       "exampleEn": "现在​是​十​月。",
       "exampleVi": "Bây giờ là tháng mười.",
-      "emoji": "🌙"
+      "emoji": "🌙",
+      "hanViet": "nguyệt"
     },
     {
       "id": 69,
@@ -842,7 +904,8 @@
       "meaning": "tuần; thứ (trong tuần)",
       "exampleEn": "今天​星期​几？",
       "exampleVi": "Hôm nay thứ mấy?",
-      "emoji": "📆"
+      "emoji": "📆",
+      "hanViet": "tinh kỳ"
     },
     {
       "id": 70,
@@ -854,7 +917,8 @@
       "meaning": "buổi sáng",
       "exampleEn": "我​上午​工作。",
       "exampleVi": "Buổi sáng tôi làm việc.",
-      "emoji": "🌤️"
+      "emoji": "🌤️",
+      "hanViet": "thượng ngọ"
     },
     {
       "id": 71,
@@ -866,7 +930,8 @@
       "meaning": "buổi trưa",
       "exampleEn": "中午​我​吃​米饭。",
       "exampleVi": "Buổi trưa tôi ăn cơm.",
-      "emoji": "🕛"
+      "emoji": "🕛",
+      "hanViet": "trung ngọ"
     },
     {
       "id": 72,
@@ -878,7 +943,8 @@
       "meaning": "buổi chiều",
       "exampleEn": "下午​我​去​商店。",
       "exampleVi": "Buổi chiều tôi đi cửa hàng.",
-      "emoji": "🌇"
+      "emoji": "🌇",
+      "hanViet": "hạ ngọ"
     },
     {
       "id": 73,
@@ -890,7 +956,8 @@
       "meaning": "lúc, khi",
       "exampleEn": "你​什么​时候​回​家？",
       "exampleVi": "Khi nào bạn về nhà?",
-      "emoji": "⏳"
+      "emoji": "⏳",
+      "hanViet": "thời hậu"
     },
     {
       "id": 74,
@@ -902,7 +969,8 @@
       "meaning": "đi (đến)",
       "exampleEn": "我们​去​北京​吧。",
       "exampleVi": "Chúng ta đi Bắc Kinh nhé.",
-      "emoji": "🧳"
+      "emoji": "🧳",
+      "hanViet": "khứ"
     },
     {
       "id": 75,
@@ -914,7 +982,8 @@
       "meaning": "đến, tới",
       "exampleEn": "你​明天​来​吗？",
       "exampleVi": "Mai bạn có đến không?",
-      "emoji": "🚶"
+      "emoji": "🚶",
+      "hanViet": "lai"
     },
     {
       "id": 76,
@@ -926,7 +995,8 @@
       "meaning": "về, trở về",
       "exampleEn": "我​想​回​家。",
       "exampleVi": "Tôi muốn về nhà.",
-      "emoji": "🔙"
+      "emoji": "🔙",
+      "hanViet": "hồi"
     },
     {
       "id": 77,
@@ -938,7 +1008,8 @@
       "meaning": "xem, nhìn",
       "exampleEn": "我​在​看​书。",
       "exampleVi": "Tôi đang đọc sách.",
-      "emoji": "👀"
+      "emoji": "👀",
+      "hanViet": "khán"
     },
     {
       "id": 78,
@@ -950,7 +1021,8 @@
       "meaning": "nghe",
       "exampleEn": "我​喜欢​听​音乐。",
       "exampleVi": "Tôi thích nghe nhạc.",
-      "emoji": "🎧"
+      "emoji": "🎧",
+      "hanViet": "thính"
     },
     {
       "id": 79,
@@ -962,7 +1034,8 @@
       "meaning": "nói",
       "exampleEn": "你​会​说​汉语​吗？",
       "exampleVi": "Bạn có biết nói tiếng Trung không?",
-      "emoji": "🗣️"
+      "emoji": "🗣️",
+      "hanViet": "thuyết"
     },
     {
       "id": 80,
@@ -974,7 +1047,8 @@
       "meaning": "đọc (thành tiếng)",
       "exampleEn": "请​读​这个​字。",
       "exampleVi": "Hãy đọc chữ này.",
-      "emoji": "📖"
+      "emoji": "📖",
+      "hanViet": "độc"
     },
     {
       "id": 81,
@@ -986,7 +1060,8 @@
       "meaning": "viết",
       "exampleEn": "我​会​写​汉字。",
       "exampleVi": "Tôi biết viết chữ Hán.",
-      "emoji": "✍️"
+      "emoji": "✍️",
+      "hanViet": "tả"
     },
     {
       "id": 82,
@@ -998,7 +1073,8 @@
       "meaning": "mua",
       "exampleEn": "我​想​买​一​杯​咖啡。",
       "exampleVi": "Tôi muốn mua một cốc cà phê.",
-      "emoji": "🛒"
+      "emoji": "🛒",
+      "hanViet": "mãi"
     },
     {
       "id": 83,
@@ -1010,7 +1086,8 @@
       "meaning": "làm",
       "exampleEn": "你​在​做​什么？",
       "exampleVi": "Bạn đang làm gì?",
-      "emoji": "🛠️"
+      "emoji": "🛠️",
+      "hanViet": "tố"
     },
     {
       "id": 84,
@@ -1022,7 +1099,8 @@
       "meaning": "học",
       "exampleEn": "我​在​学习​汉语。",
       "exampleVi": "Tôi đang học tiếng Trung.",
-      "emoji": "📝"
+      "emoji": "📝",
+      "hanViet": "học tập"
     },
     {
       "id": 85,
@@ -1034,7 +1112,8 @@
       "meaning": "làm việc; công việc",
       "exampleEn": "我​在​医院​工作。",
       "exampleVi": "Tôi làm việc ở bệnh viện.",
-      "emoji": "💼"
+      "emoji": "💼",
+      "hanViet": "công tác"
     },
     {
       "id": 86,
@@ -1046,7 +1125,8 @@
       "meaning": "thích",
       "exampleEn": "我​喜欢​中国​菜。",
       "exampleVi": "Tôi thích món Trung Quốc.",
-      "emoji": "❤️"
+      "emoji": "❤️",
+      "hanViet": "hỉ hoan"
     },
     {
       "id": 87,
@@ -1058,7 +1138,8 @@
       "meaning": "yêu",
       "exampleEn": "我​爱​我​的​家。",
       "exampleVi": "Tôi yêu gia đình mình.",
-      "emoji": "💕"
+      "emoji": "💕",
+      "hanViet": "ái"
     },
     {
       "id": 88,
@@ -1070,7 +1151,8 @@
       "meaning": "muốn; nhớ, nghĩ",
       "exampleEn": "我​想​去​商店。",
       "exampleVi": "Tôi muốn đi cửa hàng.",
-      "emoji": "💭"
+      "emoji": "💭",
+      "hanViet": "tưởng"
     },
     {
       "id": 89,
@@ -1082,7 +1164,8 @@
       "meaning": "biết (làm gì, nhờ học)",
       "exampleEn": "他​会​开车。",
       "exampleVi": "Anh ấy biết lái xe.",
-      "emoji": "🚗"
+      "emoji": "🚗",
+      "hanViet": "hội"
     },
     {
       "id": 90,
@@ -1094,7 +1177,8 @@
       "meaning": "có thể (có khả năng, được phép)",
       "exampleEn": "你​能​来​吗？",
       "exampleVi": "Bạn đến được không?",
-      "emoji": "💪"
+      "emoji": "💪",
+      "hanViet": "năng"
     },
     {
       "id": 91,
@@ -1106,7 +1190,8 @@
       "meaning": "gọi, tên là",
       "exampleEn": "我​叫​安娜。",
       "exampleVi": "Tôi tên là Anna.",
-      "emoji": "📛"
+      "emoji": "📛",
+      "hanViet": "khiếu"
     },
     {
       "id": 92,
@@ -1118,7 +1203,8 @@
       "meaning": "sống, ở",
       "exampleEn": "你​住​在​哪儿？",
       "exampleVi": "Bạn sống ở đâu?",
-      "emoji": "🏡"
+      "emoji": "🏡",
+      "hanViet": "trú"
     },
     {
       "id": 93,
@@ -1130,7 +1216,8 @@
       "meaning": "ngủ",
       "exampleEn": "我​十一​点​睡觉。",
       "exampleVi": "Tôi đi ngủ lúc mười một giờ.",
-      "emoji": "😴"
+      "emoji": "😴",
+      "hanViet": "thuỵ giác"
     },
     {
       "id": 94,
@@ -1142,7 +1229,8 @@
       "meaning": "gọi điện thoại",
       "exampleEn": "我​给​妈妈​打电话。",
       "exampleVi": "Tôi gọi điện cho mẹ.",
-      "emoji": "📞"
+      "emoji": "📞",
+      "hanViet": "đả điện thoại"
     },
     {
       "id": 95,
@@ -1154,7 +1242,8 @@
       "meaning": "quen biết",
       "exampleEn": "我​认识​他。",
       "exampleVi": "Tôi quen anh ấy.",
-      "emoji": "🫱"
+      "emoji": "🫱",
+      "hanViet": "nhận thức"
     },
     {
       "id": 96,
@@ -1166,7 +1255,8 @@
       "meaning": "mở; lái",
       "exampleEn": "请​开​门。",
       "exampleVi": "Làm ơn mở cửa.",
-      "emoji": "🚪"
+      "emoji": "🚪",
+      "hanViet": "khai"
     },
     {
       "id": 97,
@@ -1178,7 +1268,8 @@
       "meaning": "ngồi; đi (xe, tàu)",
       "exampleEn": "请​坐！",
       "exampleVi": "Mời ngồi!",
-      "emoji": "🪑"
+      "emoji": "🪑",
+      "hanViet": "toạ"
     },
     {
       "id": 98,
@@ -1190,7 +1281,8 @@
       "meaning": "mưa (trời mưa)",
       "exampleEn": "今天​下雨​了。",
       "exampleVi": "Hôm nay trời mưa rồi.",
-      "emoji": "🌧️"
+      "emoji": "🌧️",
+      "hanViet": "hạ vũ"
     },
     {
       "id": 99,
@@ -1202,7 +1294,8 @@
       "meaning": "ở; đang",
       "exampleEn": "他​在​家。",
       "exampleVi": "Anh ấy ở nhà.",
-      "emoji": "🏘️"
+      "emoji": "🏘️",
+      "hanViet": "tại"
     },
     {
       "id": 100,
@@ -1214,7 +1307,8 @@
       "meaning": "tốt, khỏe, hay",
       "exampleEn": "你​好​吗？",
       "exampleVi": "Bạn khỏe không?",
-      "emoji": "👍"
+      "emoji": "👍",
+      "hanViet": "hảo"
     },
     {
       "id": 101,
@@ -1226,7 +1320,8 @@
       "meaning": "to, lớn",
       "exampleEn": "他​的​家​很​大。",
       "exampleVi": "Nhà anh ấy rất rộng.",
-      "emoji": "🐘"
+      "emoji": "🐘",
+      "hanViet": "đại"
     },
     {
       "id": 102,
@@ -1238,7 +1333,8 @@
       "meaning": "nhỏ, bé",
       "exampleEn": "这个​杯子​很​小。",
       "exampleVi": "Cái cốc này rất nhỏ.",
-      "emoji": "🐭"
+      "emoji": "🐭",
+      "hanViet": "tiểu"
     },
     {
       "id": 103,
@@ -1250,7 +1346,8 @@
       "meaning": "nhiều",
       "exampleEn": "商店​里​人​很​多。",
       "exampleVi": "Trong cửa hàng rất đông người.",
-      "emoji": "➕"
+      "emoji": "➕",
+      "hanViet": "đa"
     },
     {
       "id": 104,
@@ -1262,7 +1359,8 @@
       "meaning": "ít",
       "exampleEn": "这儿​人​很​少。",
       "exampleVi": "Ở đây ít người.",
-      "emoji": "➖"
+      "emoji": "➖",
+      "hanViet": "thiểu"
     },
     {
       "id": 105,
@@ -1274,7 +1372,8 @@
       "meaning": "nóng",
       "exampleEn": "今天​很​热。",
       "exampleVi": "Hôm nay rất nóng.",
-      "emoji": "🔥"
+      "emoji": "🔥",
+      "hanViet": "nhiệt"
     },
     {
       "id": 106,
@@ -1286,7 +1385,8 @@
       "meaning": "lạnh",
       "exampleEn": "北京​的​冬天​很​冷。",
       "exampleVi": "Mùa đông ở Bắc Kinh rất lạnh.",
-      "emoji": "🥶"
+      "emoji": "🥶",
+      "hanViet": "lãnh"
     },
     {
       "id": 107,
@@ -1298,7 +1398,8 @@
       "meaning": "đẹp, xinh",
       "exampleEn": "她​很​漂亮。",
       "exampleVi": "Cô ấy rất xinh.",
-      "emoji": "🌸"
+      "emoji": "🌸",
+      "hanViet": "phiêu lượng"
     },
     {
       "id": 108,
@@ -1310,7 +1411,8 @@
       "meaning": "vui",
       "exampleEn": "认识​你​很​高兴。",
       "exampleVi": "Rất vui được biết bạn.",
-      "emoji": "😄"
+      "emoji": "😄",
+      "hanViet": "cao hứng"
     },
     {
       "id": 109,
@@ -1322,7 +1424,8 @@
       "meaning": "rất",
       "exampleEn": "我​很​累。",
       "exampleVi": "Tôi rất mệt.",
-      "emoji": "💯"
+      "emoji": "💯",
+      "hanViet": "ngận"
     },
     {
       "id": 110,
@@ -1334,7 +1437,8 @@
       "meaning": "quá",
       "exampleEn": "太​贵​了！",
       "exampleVi": "Đắt quá!",
-      "emoji": "😲"
+      "emoji": "😲",
+      "hanViet": "thái"
     },
     {
       "id": 111,
@@ -1346,7 +1450,8 @@
       "meaning": "đều",
       "exampleEn": "我们​都​喜欢​喝​茶。",
       "exampleVi": "Chúng tôi đều thích uống trà.",
-      "emoji": "🙌"
+      "emoji": "🙌",
+      "hanViet": "đô"
     },
     {
       "id": 112,
@@ -1358,7 +1463,8 @@
       "meaning": "sách",
       "exampleEn": "我​的​书​在​桌子​上。",
       "exampleVi": "Sách của tôi ở trên bàn.",
-      "emoji": "📕"
+      "emoji": "📕",
+      "hanViet": "thư"
     },
     {
       "id": 113,
@@ -1370,7 +1476,8 @@
       "meaning": "tiền",
       "exampleEn": "这个​多少​钱？",
       "exampleVi": "Cái này bao nhiêu tiền?",
-      "emoji": "💵"
+      "emoji": "💵",
+      "hanViet": "tiền"
     },
     {
       "id": 114,
@@ -1382,7 +1489,8 @@
       "meaning": "quần áo",
       "exampleEn": "我​想​买​衣服。",
       "exampleVi": "Tôi muốn mua quần áo.",
-      "emoji": "👕"
+      "emoji": "👕",
+      "hanViet": "y phục"
     },
     {
       "id": 115,
@@ -1394,7 +1502,8 @@
       "meaning": "máy tính",
       "exampleEn": "我​用​电脑​工作。",
       "exampleVi": "Tôi làm việc bằng máy tính.",
-      "emoji": "💻"
+      "emoji": "💻",
+      "hanViet": "điện não"
     },
     {
       "id": 116,
@@ -1406,7 +1515,8 @@
       "meaning": "ti vi",
       "exampleEn": "爸爸​在​看​电视。",
       "exampleVi": "Bố đang xem ti vi.",
-      "emoji": "📺"
+      "emoji": "📺",
+      "hanViet": "điện thị"
     },
     {
       "id": 117,
@@ -1418,7 +1528,8 @@
       "meaning": "đồ, đồ vật",
       "exampleEn": "你​买​什么​东西？",
       "exampleVi": "Bạn mua đồ gì?",
-      "emoji": "🛍️"
+      "emoji": "🛍️",
+      "hanViet": "đông tây"
     },
     {
       "id": 118,
@@ -1429,7 +1540,8 @@
       "posCategory": "noun",
       "meaning": "cái bàn",
       "exampleEn": "桌子​上​有​一​本​书。",
-      "exampleVi": "Trên bàn có một quyển sách."
+      "exampleVi": "Trên bàn có một quyển sách.",
+      "hanViet": "trác tử"
     },
     {
       "id": 119,
@@ -1441,7 +1553,8 @@
       "meaning": "cái ghế",
       "exampleEn": "椅子​在​这儿。",
       "exampleVi": "Cái ghế ở đây.",
-      "emoji": "🪑"
+      "emoji": "🪑",
+      "hanViet": "ỷ tử"
     },
     {
       "id": 120,
@@ -1453,7 +1566,8 @@
       "meaning": "tiếng Trung (tiếng Hán)",
       "exampleEn": "汉语​不​太​难。",
       "exampleVi": "Tiếng Trung không khó lắm.",
-      "emoji": "🀄"
+      "emoji": "🀄",
+      "hanViet": "Hán ngữ"
     },
     {
       "id": 121,
@@ -1465,7 +1579,8 @@
       "meaning": "chữ",
       "exampleEn": "这个​字​怎么​读？",
       "exampleVi": "Chữ này đọc thế nào?",
-      "emoji": "🔤"
+      "emoji": "🔤",
+      "hanViet": "tự"
     },
     {
       "id": 122,
@@ -1477,7 +1592,8 @@
       "meaning": "thời tiết",
       "exampleEn": "今天​天气​怎么样？",
       "exampleVi": "Hôm nay thời tiết thế nào?",
-      "emoji": "🌤️"
+      "emoji": "🌤️",
+      "hanViet": "thiên khí"
     },
     {
       "id": 123,
@@ -1489,7 +1605,8 @@
       "meaning": "tên",
       "exampleEn": "你​叫​什么​名字？",
       "exampleVi": "Bạn tên là gì?",
-      "emoji": "🏷️"
+      "emoji": "🏷️",
+      "hanViet": "danh tự"
     },
     {
       "id": 124,
@@ -1501,7 +1618,8 @@
       "meaning": "máy bay",
       "exampleEn": "我​坐​飞机​去​北京。",
       "exampleVi": "Tôi đi Bắc Kinh bằng máy bay.",
-      "emoji": "✈️"
+      "emoji": "✈️",
+      "hanViet": "phi cơ"
     },
     {
       "id": 125,
@@ -1513,7 +1631,8 @@
       "meaning": "taxi",
       "exampleEn": "我们​坐​出租车​吧。",
       "exampleVi": "Chúng ta đi taxi nhé.",
-      "emoji": "🚕"
+      "emoji": "🚕",
+      "hanViet": "xuất tô xa"
     },
     {
       "id": 126,
@@ -1525,7 +1644,8 @@
       "meaning": "con mèo",
       "exampleEn": "我​家​有​一​只​猫。",
       "exampleVi": "Nhà tôi có một con mèo.",
-      "emoji": "🐱"
+      "emoji": "🐱",
+      "hanViet": "miêu"
     },
     {
       "id": 127,
@@ -1537,7 +1657,8 @@
       "meaning": "con chó",
       "exampleEn": "这​只​狗​很​小。",
       "exampleVi": "Con chó này rất nhỏ.",
-      "emoji": "🐶"
+      "emoji": "🐶",
+      "hanViet": "cẩu"
     },
     {
       "id": 128,
@@ -1597,7 +1718,8 @@
       "meaning": "và",
       "exampleEn": "我​和​妈妈​去​商店。",
       "exampleVi": "Tôi và mẹ đi cửa hàng.",
-      "emoji": "🤲"
+      "emoji": "🤲",
+      "hanViet": "hoà"
     }
   ]
 }

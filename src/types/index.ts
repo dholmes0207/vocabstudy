@@ -34,6 +34,12 @@ export interface Word {
   /** A visual anchor for concrete words (dual coding), e.g. "🍎". */
   emoji?: string
   /**
+   * Chinese pack: the Sino-Vietnamese reading (âm Hán Việt), one syllable per
+   * character — 学生 "học sinh". Shown only where the meaning is shown too,
+   * since it often gives the meaning away.
+   */
+  hanViet?: string
+  /**
    * Curriculum stage: absent/1 = the core 1000 (A1–A2), 2 = the extension
    * beyond them (B1). Words are stored in learning order, stage 1 first.
    */

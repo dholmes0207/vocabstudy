@@ -29,8 +29,8 @@ export const RELEASES: Release[] = [
         'Korean (beta): 182 beginner words — greetings, numbers, colours, getting around, food… — with Vietnamese-style readings and example sentences. Pick it from the language button at the top.',
       ],
       [
-        'Tiếng Trung (beta): 132 từ sơ cấp HSK 1 có pinyin, nghĩa tiếng Việt và câu ví dụ — học, ôn, ghép cặp, xếp câu, nghe – chép đều dùng được — và trang Pinyin & thanh điệu (4 thanh, biến điệu, phụ âm đầu, kiểm tra nhanh). Chọn ở nút ngôn ngữ trên cùng.',
-        'Chinese (beta): 132 HSK 1 beginner words with pinyin, Vietnamese meanings and example sentences — learning, reviews, matching, sentence building and dictation all work — plus a Pinyin & tones page (the four tones, tone changes, initials, a quick check). Pick it from the language button at the top.',
+        'Tiếng Trung (beta): 132 từ sơ cấp HSK 1 có pinyin, âm Hán Việt, nghĩa tiếng Việt và câu ví dụ — học, ôn, ghép cặp, xếp câu, nghe – chép đều dùng được — và trang Pinyin & thanh điệu (4 thanh, biến điệu, phụ âm đầu, kiểm tra nhanh). Chọn ở nút ngôn ngữ trên cùng.',
+        'Chinese (beta): 132 HSK 1 beginner words with pinyin, Sino-Vietnamese readings, Vietnamese meanings and example sentences — learning, reviews, matching, sentence building and dictation all work — plus a Pinyin & tones page (the four tones, tone changes, initials, a quick check). Pick it from the language button at the top.',
       ],
       [
         'Bảng chữ cái Hangul cho người học tiếng Hàn: nghe từng chữ, tự ghép chữ, kiểm tra nhanh (có cả đọc từ). Thêm 4 truyện ngắn tiếng Hàn — chạm vào từ, kể cả từ có tiểu từ hay đuôi chia, để xem nghĩa — cùng 12 bộ từ theo chủ đề và 7 bài ngữ pháp tiếng Hàn (tiểu từ 은/는, 이/가, 을/를, 에/에서, đuôi -아요/-어요, phủ định 안). Khi học tiếng Hàn, menu chỉ còn những phần dùng được cho tiếng Hàn.',

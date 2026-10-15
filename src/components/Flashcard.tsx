@@ -7,6 +7,7 @@ import { wordAudio } from '@/lib/audio'
 import { skyBurstAt } from '@/lib/skyEvents'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
+import HanViet from './HanViet'
 
 interface Props {
   word: Word
@@ -86,6 +87,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
           <p className="text-center text-3xl font-extrabold text-brand-600 dark:text-brand-300">
             {word.meaning}
           </p>
+          <HanViet word={word} className="-mt-2 text-center" />
 
           <WordInsight word={word} ttsLang={ttsLang} variant="details" className="mt-2 text-sm" />
         </div>
