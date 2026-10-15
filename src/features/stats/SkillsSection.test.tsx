@@ -16,6 +16,7 @@ const files: Record<string, string> = {
   'reading/en.json': 'public/data/reading/en.json',
   'reading/ko.json': 'public/data/reading/ko.json',
   'grammar/en.json': 'public/data/grammar/en.json',
+  'grammar/ko.json': 'public/data/grammar/ko.json',
   'phrases/en.json': 'public/data/phrases/en.json',
 }
 
@@ -66,11 +67,15 @@ describe('Beyond vocabulary', () => {
     expect(value('Phrases known')).toBe('1/100')
   })
 
-  it('shows only the skills the Korean pack has, counted on its own stories', async () => {
+  it('shows only the skills the Korean pack has, counted on its own files', async () => {
+    const koStories = JSON.parse(readFileSync(files['reading/ko.json'], 'utf8')).stories.length
+    const koUnits = JSON.parse(readFileSync(files['grammar/ko.json'], 'utf8')).units.length
     renderFor('ko')
     await screen.findByRole('progressbar', { name: 'Stories read' })
-    expect(value('Stories read')).toBe('1/4')
-    expect(screen.queryByRole('progressbar', { name: 'Grammar lessons passed' })).toBeNull()
+    await screen.findByRole('progressbar', { name: 'Grammar lessons passed' })
+    expect(value('Stories read')).toBe(`1/${koStories}`)
+    expect(value('Grammar lessons passed')).toBe(`0/${koUnits}`)
+    // Korean has no phrase pack.
     expect(screen.queryByRole('progressbar', { name: 'Phrases known' })).toBeNull()
   })
 })

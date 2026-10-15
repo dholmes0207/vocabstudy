@@ -409,6 +409,208 @@
           "answer": 0
         }
       ]
+    },
+    {
+      "id": "ko-cafe",
+      "emoji": "☕",
+      "level": "A1",
+      "title": [
+        "Ở quán cà phê",
+        "카페에서"
+      ],
+      "sentences": [
+        {
+          "en": "오늘 친구와 카페에 가요.",
+          "vi": "Hôm nay tôi đi quán cà phê với bạn.",
+          "gloss": {
+            "오늘": 37,
+            "친구와": 8,
+            "가요": 52
+          }
+        },
+        {
+          "en": "저는 커피를 마시고 친구는 차를 마셔요.",
+          "vi": "Tôi uống cà phê, còn bạn tôi uống trà.",
+          "gloss": {
+            "커피를": 19,
+            "마시고": 55,
+            "친구는": 8,
+            "차를": 26,
+            "마셔요": 55
+          }
+        },
+        {
+          "en": "빵도 하나 사요.",
+          "vi": "Chúng tôi mua thêm một cái bánh mì.",
+          "gloss": {
+            "빵도": 25,
+            "하나": 94,
+            "사요": 62
+          }
+        },
+        {
+          "en": "커피가 조금 비싸요.",
+          "vi": "Cà phê hơi đắt.",
+          "gloss": {
+            "커피가": 19,
+            "비싸요": 78
+          }
+        },
+        {
+          "en": "하지만 정말 맛있어요.",
+          "vi": "Nhưng thật sự rất ngon.",
+          "gloss": {
+            "맛있어요": 75
+          }
+        },
+        {
+          "en": "우리는 음악을 듣고 이야기해요.",
+          "vi": "Chúng tôi nghe nhạc và trò chuyện.",
+          "gloss": {
+            "음악을": 165,
+            "듣고": 69
+          }
+        },
+        {
+          "en": "정말 행복한 주말이에요.",
+          "vi": "Thật là một cuối tuần hạnh phúc.",
+          "gloss": {
+            "행복한": 159,
+            "주말이에요": 44
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Tôi uống gì?",
+          "options": [
+            "Trà",
+            "Cà phê",
+            "Sữa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Họ mua thêm gì?",
+          "options": [
+            "Bánh mì",
+            "Kim chi",
+            "Táo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Cà phê ở quán thế nào?",
+          "options": [
+            "Rẻ và ngon",
+            "Hơi đắt nhưng ngon",
+            "Không ngon"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "ko-hospital",
+      "emoji": "🏥",
+      "level": "A1",
+      "title": [
+        "Đi bệnh viện",
+        "병원에 가요"
+      ],
+      "sentences": [
+        {
+          "en": "아침에 머리가 아파요.",
+          "vi": "Buổi sáng tôi bị đau đầu.",
+          "gloss": {
+            "아침에": 41,
+            "머리가": 103,
+            "아파요": 157
+          }
+        },
+        {
+          "en": "그래서 회사에 안 가요.",
+          "vi": "Vì vậy tôi không đi làm.",
+          "gloss": {
+            "회사에": 29,
+            "가요": 52
+          }
+        },
+        {
+          "en": "택시를 타고 병원에 가요.",
+          "vi": "Tôi đi taxi đến bệnh viện.",
+          "gloss": {
+            "택시를": 111,
+            "타고": 135,
+            "병원에": 30,
+            "가요": 52
+          }
+        },
+        {
+          "en": "의사가 정말 친절해요.",
+          "vi": "Bác sĩ rất tử tế.",
+          "gloss": {
+            "의사가": 176,
+            "친절해요": 162
+          }
+        },
+        {
+          "en": "약을 받고 집에 와요.",
+          "vi": "Tôi nhận thuốc rồi về nhà.",
+          "gloss": {
+            "받고": 131,
+            "집에": 27,
+            "와요": 53
+          }
+        },
+        {
+          "en": "물을 많이 마시고 쉬어요.",
+          "vi": "Tôi uống nhiều nước và nghỉ ngơi.",
+          "gloss": {
+            "물을": 18,
+            "많이": 74,
+            "마시고": 55,
+            "쉬어요": 139
+          }
+        },
+        {
+          "en": "저녁에는 조금 괜찮아요.",
+          "vi": "Đến tối tôi thấy đỡ hơn một chút.",
+          "gloss": {
+            "저녁에는": 42,
+            "괜찮아요": 6
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Buổi sáng tôi bị làm sao?",
+          "options": [
+            "Đau bụng",
+            "Đau đầu",
+            "Đau chân"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Tôi đến bệnh viện bằng gì?",
+          "options": [
+            "Xe buýt",
+            "Taxi",
+            "Tàu điện ngầm"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Về nhà tôi làm gì?",
+          "options": [
+            "Uống nhiều nước và nghỉ ngơi",
+            "Đi làm",
+            "Nấu ăn"
+          ],
+          "answer": 0
+        }
+      ]
     }
   ]
 }

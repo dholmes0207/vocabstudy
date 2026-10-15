@@ -23,8 +23,9 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   Trang Quyền riêng tư và Điều khoản đã ghi rõ điều này.
 - Trang hiện với gói nào có file truyện (`lib/packContent.ts`). Tiếng Trung có 3 truyện (xem
   `chinese.md`). Tiếng Anh có 14 truyện,
-  tiếng Hàn có 4 truyện A1 (`public/data/reading/ko.json`): một ngày của Min-su, đi chợ,
-  ngày mưa, người bạn mới.
+  tiếng Hàn có 6 truyện A1 (`public/data/reading/ko.json`, sinh từ
+  `scripts/build_reading_ko.py`): một ngày của Min-su, đi chợ, ngày mưa, người bạn mới, ở quán
+  cà phê, đi bệnh viện.
 
 **Dev**
 
