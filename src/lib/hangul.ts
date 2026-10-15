@@ -239,7 +239,16 @@ export interface HangulQuestion {
   say: string
   options: string[]
   answer: number
-  kind: 'letter' | 'syllable'
+  kind: 'letter' | 'syllable' | 'word'
+  /** Shown once answered: what a word question's word means. */
+  note?: string
+}
+
+/** A pack word to read: its Hangul and how the pack says it is pronounced. */
+export interface ReadableWord {
+  word: string
+  viRead: string
+  meaning: string
 }
 
 function shuffle<T>(arr: T[], rand: () => number): T[] {
@@ -264,9 +273,24 @@ function withDistractors(right: string, pool: string[], rand: () => number) {
 const QUIZ_INITIALS = 'ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅋㅌㅍㅎ'.split('')
 const QUIZ_MEDIALS = 'ㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ'.split('')
 
-export function hangulQuiz(count = 10, rand: () => number = Math.random): HangulQuestion[] {
-  const basics = [...CONSONANTS, ...VOWELS]
-  const letters = shuffle(basics, rand).slice(0, Math.ceil(count / 2))
+const ONE_WORD = /^[가-힣]{2,4}$/
+
+/**
+ * A quick check: letters, single blocks and — given the pack's words — whole
+ * words. Word readings come from the pack (`viRead`), which already applies the
+ * sound changes between blocks (한국어 → "han-cu-gơ") that `readSyllable` does not.
+ */
+export function hangulQuiz(
+  count = 10,
+  rand: () => number = Math.random,
+  words: ReadableWord[] = []
+): HangulQuestion[] {
+  const readable = words.filter((w) => ONE_WORD.test(w.word) && w.viRead.trim())
+  const nWords = readable.length >= 4 ? Math.floor(count * 0.3) : 0
+  const nLetters = nWords ? Math.round(count * 0.4) : Math.ceil(count / 2)
+  const nBlocks = count - nWords - nLetters
+
+  const letters = shuffle([...CONSONANTS, ...VOWELS], rand).slice(0, nLetters)
   const out: HangulQuestion[] = letters.map((j) => {
     const group = CONSONANTS.includes(j) ? CONSONANTS : VOWELS
     return {
@@ -280,12 +304,13 @@ export function hangulQuiz(count = 10, rand: () => number = Math.random): Hangul
       ),
     }
   })
+
   // Every simple block once, in random order: always terminates, never repeats.
   const blocks = shuffle(
     QUIZ_INITIALS.flatMap((i) => QUIZ_MEDIALS.map((m) => compose(i, m)!)),
     rand
   )
-  for (const syl of blocks.slice(0, count - out.length)) {
+  for (const syl of blocks.slice(0, nBlocks)) {
     const right = readSyllable(syl)!
     // Distractors share the consonant or the vowel, so the learner has to read both.
     const { initial, medial } = decompose(syl)!
@@ -294,6 +319,19 @@ export function hangulQuiz(count = 10, rand: () => number = Math.random): Hangul
       ...QUIZ_INITIALS.map((i) => compose(i, medial)!),
     ].map((s) => readSyllable(s)!)
     out.push({ prompt: syl, say: syl, kind: 'syllable', ...withDistractors(right, near, rand) })
+  }
+
+  for (const w of shuffle(readable, rand).slice(0, nWords)) {
+    // Readings of words just as long, so the count of blocks gives nothing away.
+    const same = readable.filter((o) => o.word.length === w.word.length)
+    const pool = (same.length >= 4 ? same : readable).map((o) => o.viRead)
+    out.push({
+      prompt: w.word,
+      say: w.word,
+      kind: 'word',
+      note: w.meaning,
+      ...withDistractors(w.viRead, pool, rand),
+    })
   }
   return shuffle(out, rand)
 }

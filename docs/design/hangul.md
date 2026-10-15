@@ -15,9 +15,12 @@ Hangul.
     đọc và đọc to lên.
   - **Phụ âm cuối (받침):** 7 âm cuối, mỗi âm có ví dụ từ gói (책, 돈, 옷, 물, 밤, 밥, 방).
   - **Kiểm tra nhanh** 10 câu:
-    - 5 câu nhìn chữ cái chọn cách đọc;
-    - 5 câu nhìn khối chữ chọn cách đọc. Đáp án nhiễu có chung phụ âm hoặc chung nguyên âm,
-      nên phải đọc cả hai phần.
+    - 4 câu nhìn chữ cái chọn cách đọc;
+    - 3 câu nhìn khối chữ chọn cách đọc. Đáp án nhiễu có chung phụ âm hoặc chung nguyên âm,
+      nên phải đọc cả hai phần;
+    - 3 câu đọc **cả từ** lấy từ gói (2–4 khối, ví dụ 남자 → "nam-cha"). Cách đọc lấy từ
+      `viRead` của gói, vốn đã tính biến âm giữa các khối. Đáp án nhiễu là từ có cùng số khối.
+      Trả lời xong thì hiện nghĩa của từ.
     - Làm xong được XP: 5 + 2 × câu đúng, cộng thêm 5 nếu đúng hết. Không lưu thêm dữ liệu
       mới, nên trang Quyền riêng tư không cần sửa.
 - **Menu theo ngôn ngữ:**
@@ -55,5 +58,7 @@ Hangul.
 
 ## Bước tiếp theo
 
-- Bài đọc ghép âm, ví dụ 한국어 → "han-cu-gơ" (nối âm).
+- Giải thích các quy tắc biến âm (nối âm 한국어 → "han-cu-gơ", mũi hoá 감사합니다 →
+  "cam-xa-ham-ni-đa"). Kiểm tra nhanh đã cho đọc cả từ, nhưng chưa giải thích vì sao đọc
+  như vậy.
 - Giọng thu sẵn (edge-tts `ko-KR-SunHiNeural`) sau khi audio chuyển sang R2.

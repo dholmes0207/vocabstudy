@@ -14,7 +14,7 @@ import {
 } from './hangul'
 
 const pack = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as {
-  words: { word: string; viRead: string }[]
+  words: { word: string; viRead: string; meaning: string }[]
 }
 const packWords = new Set(pack.words.map((w) => w.word))
 
@@ -92,8 +92,21 @@ describe('the quick check', () => {
     }
   })
 
+  it('adds whole words from the pack, read the way the pack says them', () => {
+    const qs = hangulQuiz(10, Math.random, pack.words)
+    const words = qs.filter((q) => q.kind === 'word')
+    expect(words).toHaveLength(3)
+    expect(qs.filter((q) => q.kind === 'letter')).toHaveLength(4)
+    for (const q of words) {
+      const w = pack.words.find((p) => p.word === q.prompt)!
+      expect(q.options[q.answer]).toBe(w.viRead)
+      expect(q.prompt).toMatch(/^[가-힣]{2,4}$/)
+      expect(new Set(q.options).size).toBe(q.options.length)
+    }
+  })
+
   it('finishes even when every random draw is the same', () => {
-    const qs = hangulQuiz(10, () => 0.42)
+    const qs = hangulQuiz(10, () => 0.42, pack.words)
     expect(qs).toHaveLength(10)
     expect(new Set(qs.map((q) => q.prompt)).size).toBe(10)
   })

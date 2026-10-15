@@ -35,8 +35,13 @@ function useSay() {
 
 export default function Hangul() {
   const t = useT()
+  const words = useData((s) => s.pack?.words)
   const [quiz, setQuiz] = useState<{ n: number; questions: HangulQuestion[] } | null>(null)
-  const start = () => setQuiz((q) => ({ n: (q?.n ?? 0) + 1, questions: hangulQuiz(QUIZ_SIZE) }))
+  const start = () =>
+    setQuiz((q) => ({
+      n: (q?.n ?? 0) + 1,
+      questions: hangulQuiz(QUIZ_SIZE, Math.random, words ?? []),
+    }))
 
   if (quiz)
     return (
@@ -410,9 +415,11 @@ function Quiz({
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
           {q.kind === 'letter'
             ? t('Chữ này đọc là gì?', 'How does this letter sound?')
-            : t('Khối này đọc là gì?', 'How do you read this block?')}
+            : q.kind === 'syllable'
+              ? t('Khối này đọc là gì?', 'How do you read this block?')
+              : t('Từ này đọc là gì?', 'How do you read this word?')}
         </p>
-        <p className="text-7xl font-bold">{q.prompt}</p>
+        <p className={`font-bold ${q.kind === 'word' ? 'text-5xl' : 'text-7xl'}`}>{q.prompt}</p>
         <div className="grid grid-cols-2 gap-2">
           {q.options.map((opt, i) => {
             const tone =
@@ -435,6 +442,11 @@ function Quiz({
             )
           })}
         </div>
+        {picked !== null && q.note && (
+          <p className="text-sm text-slate-500">
+            {q.prompt} = <b className="text-slate-700 dark:text-slate-200">{q.note}</b>
+          </p>
+        )}
         {picked !== null && (
           <button
             type="button"
