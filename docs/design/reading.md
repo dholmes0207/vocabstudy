@@ -1,0 +1,60 @@
+# Đọc truyện ngắn
+
+**User**: "Không chỉ dừng ở từ vựng, mà còn phát triển lên nhiều ngữ vực khác nữa." Người học
+đã thuộc vài trăm từ nhưng chưa từng đọc một đoạn văn tiếng Anh liền mạch. Họ cần thấy những
+từ đã học xuất hiện trong ngữ cảnh thật.
+
+**BA**
+
+- Trang **"Đọc truyện ngắn"** (`/reading`) là danh sách truyện ngắn có phân cấp độ A1–A2,
+  mỗi truyện 7–8 câu. Thẻ truyện hiện cấp độ, số câu và điểm cao nhất nếu đã đọc.
+- Trong một truyện (`/reading/:id`):
+  - **Chạm vào từ có gạch chân** để xem nghĩa tiếng Việt, cách đọc gần giống và nghe phát
+    âm. Chỉ những từ có trong gói từ vựng mới chạm được, nên nghĩa luôn khớp với thẻ học.
+  - **"Bản dịch"** bật hoặc tắt câu tiếng Việt dưới từng câu.
+  - **"Nghe cả bài"** đọc cả truyện; mỗi câu cũng có nút nghe riêng.
+  - Cuối truyện có 3 câu hỏi trắc nghiệm **bằng tiếng Việt**, để kiểm tra người học hiểu
+    nội dung chứ không phải đoán chữ. Thứ tự đáp án được xáo mỗi lần.
+- Đọc xong được XP: `5 + 3 × câu đúng`, cộng thêm 5 nếu đúng hết. Phần đọc không thay đổi
+  lịch ôn SRS.
+- Tiến độ đọc (điểm cao nhất, số lần đọc) chỉ lưu trên máy, giống Mẫu câu và Ngữ pháp.
+  Trang Quyền riêng tư và Điều khoản đã ghi rõ điều này.
+- Trang chỉ hiện khi ngôn ngữ đang học là tiếng Anh (`englishOnly`), vì truyện hiện chỉ có
+  bản tiếng Anh.
+
+**Dev**
+
+- **Dữ liệu:** `public/data/reading/en.json`, có dạng
+
+  ```text
+  stories[]: id, emoji, level, title [vi, en],
+             sentences[] { en, vi }, questions[] { q, options, answer }
+  ```
+
+  - Truyện được viết tay, chỉ dùng từ thông dụng. Mỗi câu không quá 14 từ.
+  - Test `src/lib/reading.test.ts` kiểm tra mọi truyện đều hợp lệ, mỗi câu ngắn, và hơn
+    75% số từ tra được trong gói.
+
+- **Tra nghĩa:** `buildGlossary` lập bảng từ dạng xuất hiện sang từ gốc bằng
+  `surfaceForms`. Ví dụ "drinks" → "drink", "went" → "go".
+  - Bỏ qua các cụm nhiều chữ.
+  - `bareWord` bỏ dấu câu và đuôi `'s`.
+- **Âm thanh:** câu và cả bài dùng giọng đọc của trình duyệt (`pronounce` với `ttsLang`),
+  còn từ đơn dùng file mp3 sẵn có (`wordAudio`).
+  - Chưa thêm file audio cho câu truyện, vì `public/` đã gần chạm giới hạn 20.000 file của
+    Cloudflare Pages. Cần chuyển audio sang R2 trước.
+- **Lưu trữ:** `store/readingStore.ts` (`vocab.reading.v1`) lưu `{ best, reads }` theo id
+  truyện.
+- **Lỗi đã gặp:**
+  - Hộp nghĩa `position: fixed` nằm trong khung trang có `animate-fade-in`. Hiệu ứng giữ
+    lại `transform` (fill-mode `both`), nên hộp bị neo theo trang thay vì theo màn hình.
+  - Cách sửa:
+    - đổi fill-mode của `fade-in` sang `backwards` cho toàn bộ app;
+    - render hộp nghĩa qua `createPortal` vào `document.body`.
+
+## Bước tiếp theo
+
+- Thêm truyện cấp A2–B1 và truyện theo chủ đề, nối với trang `/topics`.
+- Thêm audio thu sẵn cho từng câu, sau khi đã chuyển audio sang R2.
+- Truyện cho gói tiếng Hàn: cần tra nghĩa theo cách tách từ riêng, vì tiếng Hàn có tiểu từ
+  dính liền danh từ.

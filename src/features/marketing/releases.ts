@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
     items: [
       [
+        'Đọc truyện ngắn: 6 truyện tiếng Anh dễ hiểu — chạm vào từ để xem nghĩa, mở bản dịch, trả lời câu hỏi.',
+        'Short stories: 6 easy English stories — tap a word for its meaning, open the translation, answer questions.',
+      ],
+      [
         'Nghe – chép: nghe một câu ví dụ rồi gõ lại, xem từng từ bạn nghe đúng hay sót.',
         'Dictation: hear an example sentence, type it, and see which words you caught or missed.',
       ],

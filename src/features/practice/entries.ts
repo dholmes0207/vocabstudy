@@ -35,6 +35,16 @@ export const PRACTICE: PracticeEntry[] = [
     englishOnly: true,
   },
   {
+    to: '/reading',
+    icon: '📖',
+    title: 'Đọc truyện ngắn',
+    desc: 'Truyện ngắn tiếng Anh dễ hiểu — chạm vào từ để xem nghĩa, có bản dịch và câu hỏi.',
+    titleEn: 'Short stories',
+    descEn: 'Easy English stories — tap a word for its meaning, with translations and questions.',
+    tone: 'from-orange-400 to-rose-500',
+    englishOnly: true,
+  },
+  {
     to: '/dictation',
     icon: '✍️',
     title: 'Nghe – chép',

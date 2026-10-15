@@ -50,7 +50,10 @@ export default {
         },
       },
       animation: {
-        'fade-in': 'fade-in 0.35s ease-out both',
+        // 'backwards', not 'both': a transform left on a page wrapper after the
+        // animation would make it the containing block for every position:fixed
+        // child (popovers, sheets) and pin them to the page instead of the screen.
+        'fade-in': 'fade-in 0.35s ease-out backwards',
         pop: 'pop 0.25s ease-out',
         'flip-in': 'flip-in 0.3s ease-out both',
         'chat-in': 'chat-in 0.22s cubic-bezier(0.22, 1, 0.36, 1) both',

@@ -1,0 +1,429 @@
+{
+ "version": "1.0.0",
+ "stories": [
+  {
+   "id": "lans-morning",
+   "emoji": "🌅",
+   "level": "A1",
+   "title": [
+    "Buổi sáng của Lan",
+    "Lan's morning"
+   ],
+   "sentences": [
+    {
+     "en": "Lan wakes up at six o'clock every morning.",
+     "vi": "Lan thức dậy lúc sáu giờ mỗi sáng."
+    },
+    {
+     "en": "First, she drinks a glass of warm water.",
+     "vi": "Đầu tiên, cô ấy uống một cốc nước ấm."
+    },
+    {
+     "en": "Then she cooks breakfast for her family.",
+     "vi": "Sau đó cô ấy nấu bữa sáng cho cả nhà."
+    },
+    {
+     "en": "Her little brother is still sleeping.",
+     "vi": "Em trai cô ấy vẫn đang ngủ."
+    },
+    {
+     "en": "At seven o'clock, Lan takes the bus to work.",
+     "vi": "Lúc bảy giờ, Lan đi xe buýt đến chỗ làm."
+    },
+    {
+     "en": "The bus is crowded, but she reads a book on her phone.",
+     "vi": "Xe buýt đông người, nhưng cô ấy đọc sách trên điện thoại."
+    },
+    {
+     "en": "She arrives at the office early and smiles.",
+     "vi": "Cô ấy đến văn phòng sớm và mỉm cười."
+    },
+    {
+     "en": "It is going to be a good day.",
+     "vi": "Hôm nay sẽ là một ngày tốt lành."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Lan thức dậy lúc mấy giờ?",
+     "options": [
+      "Năm giờ",
+      "Sáu giờ",
+      "Bảy giờ"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Việc đầu tiên Lan làm là gì?",
+     "options": [
+      "Uống một cốc nước ấm",
+      "Nấu bữa sáng",
+      "Đọc sách"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Lan đến chỗ làm bằng gì?",
+     "options": [
+      "Xe máy",
+      "Xe buýt",
+      "Đi bộ"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "at-the-market",
+   "emoji": "🥭",
+   "level": "A1",
+   "title": [
+    "Đi chợ",
+    "At the market"
+   ],
+   "sentences": [
+    {
+     "en": "On Sunday, Minh goes to the market with his mother.",
+     "vi": "Chủ nhật, Minh đi chợ với mẹ."
+    },
+    {
+     "en": "The market is busy and noisy.",
+     "vi": "Chợ đông và ồn ào."
+    },
+    {
+     "en": "They buy fresh vegetables, some fish and a kilo of rice.",
+     "vi": "Họ mua rau tươi, một ít cá và một cân gạo."
+    },
+    {
+     "en": "Minh wants to buy some mangoes, too.",
+     "vi": "Minh cũng muốn mua vài quả xoài."
+    },
+    {
+     "en": "\"How much are these mangoes?\" his mother asks.",
+     "vi": "\"Mấy quả xoài này bao nhiêu tiền?\" mẹ cậu hỏi."
+    },
+    {
+     "en": "\"Thirty thousand dong a kilo,\" the seller says.",
+     "vi": "\"Ba mươi nghìn đồng một cân,\" người bán nói."
+    },
+    {
+     "en": "His mother buys two kilos, and Minh is very happy.",
+     "vi": "Mẹ cậu mua hai cân, và Minh rất vui."
+    },
+    {
+     "en": "They carry the heavy bags home together.",
+     "vi": "Hai mẹ con cùng xách những túi đồ nặng về nhà."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Minh đi chợ với ai?",
+     "options": [
+      "Bố",
+      "Mẹ",
+      "Bạn"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Một cân xoài giá bao nhiêu?",
+     "options": [
+      "Hai mươi nghìn đồng",
+      "Ba mươi nghìn đồng",
+      "Năm mươi nghìn đồng"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Mẹ Minh mua mấy cân xoài?",
+     "options": [
+      "Một cân",
+      "Hai cân",
+      "Ba cân"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "my-best-friend",
+   "emoji": "🤝",
+   "level": "A2",
+   "title": [
+    "Bạn thân của tôi",
+    "My best friend"
+   ],
+   "sentences": [
+    {
+     "en": "My best friend is called Hoa.",
+     "vi": "Bạn thân nhất của tôi tên là Hoa."
+    },
+    {
+     "en": "We met at primary school fifteen years ago.",
+     "vi": "Chúng tôi quen nhau ở trường tiểu học từ mười lăm năm trước."
+    },
+    {
+     "en": "Hoa is funny and very kind.",
+     "vi": "Hoa hài hước và rất tốt bụng."
+    },
+    {
+     "en": "Now she lives in another city, so we don't meet often.",
+     "vi": "Giờ cô ấy sống ở thành phố khác nên chúng tôi không hay gặp nhau."
+    },
+    {
+     "en": "But we call each other every weekend.",
+     "vi": "Nhưng cuối tuần nào chúng tôi cũng gọi điện cho nhau."
+    },
+    {
+     "en": "We talk about our work, our families and our plans.",
+     "vi": "Chúng tôi nói về công việc, gia đình và dự định của mình."
+    },
+    {
+     "en": "Next month, Hoa is going to visit me.",
+     "vi": "Tháng sau, Hoa sẽ đến thăm tôi."
+    },
+    {
+     "en": "I can't wait to see her again!",
+     "vi": "Tôi rất mong được gặp lại cô ấy!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Hai người quen nhau ở đâu?",
+     "options": [
+      "Ở trường tiểu học",
+      "Ở chỗ làm",
+      "Ở đại học"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Họ gọi điện cho nhau khi nào?",
+     "options": [
+      "Mỗi sáng",
+      "Mỗi cuối tuần",
+      "Mỗi tháng"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Khi nào Hoa đến thăm?",
+     "options": [
+      "Tuần sau",
+      "Tháng sau",
+      "Năm sau"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "rainy-weekend",
+   "emoji": "🌧️",
+   "level": "A2",
+   "title": [
+    "Cuối tuần mưa",
+    "A rainy weekend"
+   ],
+   "sentences": [
+    {
+     "en": "It rained all weekend, so Nam stayed at home.",
+     "vi": "Trời mưa suốt cuối tuần nên Nam ở nhà."
+    },
+    {
+     "en": "On Saturday morning, he cleaned his room and did the laundry.",
+     "vi": "Sáng thứ Bảy, anh ấy dọn phòng và giặt quần áo."
+    },
+    {
+     "en": "In the afternoon, he watched an old film with his sister.",
+     "vi": "Buổi chiều, anh ấy xem một bộ phim cũ với chị gái."
+    },
+    {
+     "en": "On Sunday, he tried to cook a new dish.",
+     "vi": "Chủ nhật, anh ấy thử nấu một món mới."
+    },
+    {
+     "en": "The first try was too salty, but the second one was delicious.",
+     "vi": "Lần đầu mặn quá, nhưng lần thứ hai thì rất ngon."
+    },
+    {
+     "en": "In the evening, he learned twenty new English words.",
+     "vi": "Buổi tối, anh ấy học hai mươi từ tiếng Anh mới."
+    },
+    {
+     "en": "\"A rainy weekend is not so bad,\" he thought.",
+     "vi": "\"Cuối tuần mưa cũng không tệ lắm,\" anh ấy nghĩ."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Vì sao Nam ở nhà?",
+     "options": [
+      "Vì trời mưa",
+      "Vì bị ốm",
+      "Vì phải làm việc"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Chiều thứ Bảy, Nam làm gì?",
+     "options": [
+      "Dọn phòng",
+      "Xem phim với chị gái",
+      "Nấu ăn"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Lần nấu đầu tiên thế nào?",
+     "options": [
+      "Rất ngon",
+      "Mặn quá",
+      "Bị cháy"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "first-day-at-work",
+   "emoji": "💼",
+   "level": "A2",
+   "title": [
+    "Ngày đầu đi làm",
+    "The first day at work"
+   ],
+   "sentences": [
+    {
+     "en": "Today is Mai's first day at a new company.",
+     "vi": "Hôm nay là ngày đầu tiên Mai làm ở công ty mới."
+    },
+    {
+     "en": "She feels a little nervous.",
+     "vi": "Cô ấy hơi hồi hộp."
+    },
+    {
+     "en": "Her manager shows her the office and introduces her to the team.",
+     "vi": "Quản lý dẫn cô đi xem văn phòng và giới thiệu cô với cả nhóm."
+    },
+    {
+     "en": "Everyone is friendly and helpful.",
+     "vi": "Mọi người đều thân thiện và nhiệt tình."
+    },
+    {
+     "en": "At lunch, a coworker invites her to a small restaurant nearby.",
+     "vi": "Buổi trưa, một đồng nghiệp mời cô đến một quán nhỏ gần đó."
+    },
+    {
+     "en": "In the afternoon, Mai has her first meeting.",
+     "vi": "Buổi chiều, Mai có cuộc họp đầu tiên."
+    },
+    {
+     "en": "She listens carefully and writes notes in her notebook.",
+     "vi": "Cô ấy chăm chú lắng nghe và ghi chép vào sổ."
+    },
+    {
+     "en": "When she goes home, she isn't nervous anymore.",
+     "vi": "Lúc về nhà, cô ấy không còn hồi hộp nữa."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Lúc đầu Mai cảm thấy thế nào?",
+     "options": [
+      "Buồn",
+      "Hơi hồi hộp",
+      "Rất mệt"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Ai mời Mai đi ăn trưa?",
+     "options": [
+      "Quản lý",
+      "Một đồng nghiệp",
+      "Bạn thân"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Trong cuộc họp, Mai làm gì?",
+     "options": [
+      "Lắng nghe và ghi chép",
+      "Nói rất nhiều",
+      "Ngủ gật"
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "trip-to-da-lat",
+   "emoji": "🌸",
+   "level": "A2",
+   "title": [
+    "Chuyến đi Đà Lạt",
+    "A trip to Da Lat"
+   ],
+   "sentences": [
+    {
+     "en": "Last summer, my family went to Da Lat for three days.",
+     "vi": "Mùa hè năm ngoái, gia đình tôi đi Đà Lạt ba ngày."
+    },
+    {
+     "en": "The weather was cool and the air was fresh.",
+     "vi": "Thời tiết mát mẻ và không khí trong lành."
+    },
+    {
+     "en": "We visited a flower garden and a beautiful lake.",
+     "vi": "Chúng tôi tham quan một vườn hoa và một hồ nước rất đẹp."
+    },
+    {
+     "en": "In the evening, we walked around the night market.",
+     "vi": "Buổi tối, chúng tôi dạo quanh chợ đêm."
+    },
+    {
+     "en": "My father bought some strawberries and hot soy milk.",
+     "vi": "Bố tôi mua ít dâu tây và sữa đậu nành nóng."
+    },
+    {
+     "en": "My little sister took a lot of photos.",
+     "vi": "Em gái tôi chụp rất nhiều ảnh."
+    },
+    {
+     "en": "It was a short trip, but we had a wonderful time.",
+     "vi": "Chuyến đi ngắn nhưng chúng tôi đã có những ngày thật tuyệt."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Gia đình đi Đà Lạt mấy ngày?",
+     "options": [
+      "Hai ngày",
+      "Ba ngày",
+      "Một tuần"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Thời tiết ở Đà Lạt thế nào?",
+     "options": [
+      "Nóng",
+      "Mát mẻ",
+      "Mưa nhiều"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Bố mua gì ở chợ đêm?",
+     "options": [
+      "Dâu tây và sữa đậu nành",
+      "Quần áo",
+      "Hoa"
+     ],
+     "answer": 0
+    }
+   ]
+  }
+ ]
+}

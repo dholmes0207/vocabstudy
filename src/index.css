@@ -312,7 +312,7 @@
   }
 }
 .stagger > * {
-  animation: fade-in 0.45s ease-out both;
+  animation: fade-in 0.45s ease-out backwards;
 }
 .stagger > *:nth-child(2) {
   animation-delay: 0.06s;
