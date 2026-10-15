@@ -17,6 +17,9 @@ const count = {
   koTopics: json('public/data/topics/ko.json').topics.length,
   koGrammar: json('public/data/grammar/ko.json').units.length,
   zhWords: json('public/data/zh.json').words.length,
+  zhTopics: json('public/data/topics/zh.json').topics.length,
+  zhGrammar: json('public/data/grammar/zh.json').units.length,
+  zhStories: json('public/data/reading/zh.json').stories.length,
   phrases: json('public/data/phrases/en.json').topics.reduce(
     (n: number, t: { phrases: unknown[] }) => n + t.phrases.length,
     0
@@ -39,6 +42,8 @@ describe('numbers on the landing page', () => {
       `${count.koStories} truyện ngắn`,
       `${count.zhWords} từ HSK 1 có pinyin`,
       `${count.zhWords} HSK 1 words with pinyin`,
+      `${count.zhTopics} bộ chủ đề, ${count.zhGrammar} bài ngữ pháp và ${count.zhStories} truyện ngắn`,
+      `${count.zhTopics} topic decks, ${count.zhGrammar} grammar lessons and ${count.zhStories} short stories`,
       `${count.koStories} short stories`,
       `${count.phrases} câu theo tình huống`,
       `${count.phrases} phrases for real situations`,
