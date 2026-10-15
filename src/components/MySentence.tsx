@@ -149,7 +149,7 @@ export default function MySentence({ word, lang }: Props) {
               setHint(null)
             }}
           >
-            Huỷ
+            {t('Huỷ', 'Cancel')}
           </button>
         )}
       </div>

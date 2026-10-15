@@ -6,6 +6,7 @@
 
 import type { Strictness } from '@/types'
 import { phoneticKey, similarity } from './phonetic'
+import { decompose } from './hangul'
 import type { UiLang } from '@/types'
 
 export type { Strictness }
@@ -54,6 +55,16 @@ function containsWord(haystack: string, needle: string): boolean {
   return haystack === needle || new RegExp(`(^| )${escapeRe(needle)}( |$)`).test(haystack)
 }
 
+/** Hangul blocks spelled out as letters (사람 → ㅅㅏㄹㅏㅁ), without spaces. */
+function spellOut(s: string): string {
+  return [...s.replace(/ /g, '')]
+    .map((ch) => {
+      const p = decompose(ch)
+      return p ? p.initial + p.medial + p.final : ch
+    })
+    .join('')
+}
+
 function escapeRe(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
@@ -72,6 +83,14 @@ function scorePair(form: string, heard: string): { score: number; exact: boolean
   // often comes back as "i scream" even when the learner said it perfectly.
   const fk = phoneticKey(form).replace(/ /g, '')
   const hk = phoneticKey(heard).replace(/ /g, '')
+  // The phonetic key is built for English letters; Korean has none, and two
+  // empty keys would count as a perfect sound match. Compare letter by letter
+  // instead, squared because without a sound model one wrong letter in a short
+  // word is usually another word (사람 "person" / 바람 "wind").
+  if (!fk || !hk) {
+    const near = similarity(spellOut(form), spellOut(heard))
+    return { score: Math.round(near * near * PARTIAL_MAX), exact: false, homo: false }
+  }
   if (fk && hk && fk === hk) return { score: HOMOPHONE_SCORE, exact: false, homo: true }
 
   // Weight sound over spelling: the learner is being graded on how it sounded,

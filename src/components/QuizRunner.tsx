@@ -332,7 +332,7 @@ export default function QuizRunner({
                 <button
                   onClick={play}
                   className="rounded-full bg-brand-600 p-2 text-white shadow transition active:scale-90"
-                  aria-label="Nghe từ"
+                  aria-label={t('Nghe từ', 'Play the word')}
                 >
                   <Volume2 className="h-5 w-5" />
                 </button>
@@ -485,7 +485,7 @@ export default function QuizRunner({
               disabled={!input.trim()}
               className="btn-primary h-12 w-full"
             >
-              Kiểm tra
+              {t('Kiểm tra', 'Check')}
             </button>
           ) : revealed ? (
             <button ref={nextRef} onClick={next} className="btn-primary h-12 w-full">

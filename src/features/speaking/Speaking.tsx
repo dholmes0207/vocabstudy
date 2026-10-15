@@ -257,7 +257,7 @@ function SpeakingSession({
           </div>
         )}
         <button className="btn-primary" onClick={onRestart}>
-          Luyện bộ mới
+          {t('Luyện bộ mới', 'Practise a new set')}
         </button>
       </SessionComplete>
     )

@@ -189,3 +189,19 @@ describe('feedbackFor', () => {
     expect(feedbackFor(scorePronunciation('cat', []), 'cat')).toContain('Chưa nghe thấy')
   })
 })
+
+describe('scorePronunciation for Korean', () => {
+  it('passes the exact word', () => {
+    expect(scorePronunciation('사람', ['사람'])).toMatchObject({ score: 100, verdict: 'great' })
+  })
+
+  it('does not hand out credit for an unrelated phrase', () => {
+    // Korean has no English phonetic key; two empty keys once counted as a match.
+    expect(scorePronunciation('사람', ['전혀 다른 말']).score).toBeLessThan(STRICTNESS.easy)
+  })
+
+  it('treats another word one letter away as a retry, but a slip in a long word as close', () => {
+    expect(scorePronunciation('사람', ['바람']).verdict).toBe('retry')
+    expect(scorePronunciation('처음 뵙겠습니다', ['처음 뵙겠습니까']).verdict).toBe('good')
+  })
+})
