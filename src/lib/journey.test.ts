@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { JOURNEY, journeyState } from './journey'
+import { JOURNEY, journeyFor, journeyState } from './journey'
 
 describe('journey', () => {
   it('has a mission for each day of the first week', () => {
@@ -31,5 +31,14 @@ describe('journey', () => {
     expect(journeyState(week, 100)).toMatchObject({ finished: true, current: 6, done: 7 })
     expect(journeyState(week, 101)).toBeNull()
     expect(journeyState({ ...week, 101: 2 }, 101)).toBeNull()
+  })
+
+  it('swaps a mission the pack does not have for its stand-in', () => {
+    const en = journeyFor('en').map((m) => m.to)
+    const ko = journeyFor('ko').map((m) => m.to)
+    expect(en).toContain('/sounds')
+    expect(ko).not.toContain('/sounds')
+    expect(ko).toContain('/hangul')
+    expect(ko).toHaveLength(JOURNEY.length)
   })
 })

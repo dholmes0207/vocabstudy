@@ -4,7 +4,8 @@ import { useProvideContext } from '@/store/contextStore'
 import { PRACTICE } from './entries'
 import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
-import { useData } from '@/store/dataStore'
+import { useSettings } from '@/store/settingsStore'
+import { availableIn } from '@/lib/packContent'
 
 // The "Luyện tập" hub: everything that practises words you have already met.
 // One tab on the phone's bottom bar instead of three.
@@ -13,8 +14,8 @@ export default function Practice() {
   useProvideContext('Luyện tập')
   const tilt = useTilt(6)
   const t = useT()
-  const english = useData((s) => s.pack?.meta.code ?? 'en') === 'en'
-  const entries = PRACTICE.filter((e) => english || !e.englishOnly)
+  const code = useSettings((s) => s.currentLang)
+  const entries = PRACTICE.filter((e) => availableIn(e.to, code))
   return (
     <div className="space-y-5 animate-fade-in">
       <header>

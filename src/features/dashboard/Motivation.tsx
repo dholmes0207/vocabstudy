@@ -8,7 +8,7 @@ import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
 import { savedReminder } from '@/lib/reminder'
 import { ALL_STICKERS, collected } from '@/lib/stickers'
-import { JOURNEY, journeyState, type Mission } from '@/lib/journey'
+import { journeyFor, journeyState, type Mission } from '@/lib/journey'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import {
@@ -442,6 +442,7 @@ export function Journey({
   const t = useT()
   const lang = useUiLang()
   const title = (m: Mission) => (lang === 'en' ? m.titleEn : m.title)
+  const journey = journeyFor(useSettings((s) => s.currentLang))
   const j = journeyState(reviewsByDay, day)
   const finished = j?.finished ?? false
 
@@ -458,19 +459,19 @@ export function Journey({
   }, [finished, day])
 
   if (!j) return null
-  const mission = JOURNEY[j.current]
-  const tomorrow = JOURNEY[j.done]
+  const mission = journey[j.current]
+  const tomorrow = journey[j.done]
 
   return (
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-3">
         <p className="font-bold">{t('Hành trình 7 ngày đầu 🗺️', 'Your first 7 days 🗺️')}</p>
         <span className="text-sm text-slate-500">
-          {j.done}/{JOURNEY.length} {t('ngày', 'days')}
+          {j.done}/{journey.length} {t('ngày', 'days')}
         </span>
       </div>
       <ol className="mt-3 grid max-w-md grid-cols-7 gap-1.5">
-        {JOURNEY.map((m, i) => (
+        {journey.map((m, i) => (
           <li
             key={m.title}
             title={t(`Ngày ${i + 1}: ${m.title}`, `Day ${i + 1}: ${m.titleEn}`)}

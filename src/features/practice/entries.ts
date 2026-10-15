@@ -8,11 +8,20 @@ export interface PracticeEntry {
   titleEn: string
   descEn: string
   tone: string
-  /** Content written for English only (grammar, topics, sounds): hidden for other packs. */
-  englishOnly?: boolean
 }
 
+// Entries written for one pack only (grammar, topics, Hangul…) are listed in
+// lib/packContent.ts; the hub hides them for every other pack.
 export const PRACTICE: PracticeEntry[] = [
+  {
+    to: '/hangul',
+    icon: '🔤',
+    title: 'Bảng chữ cái Hangul',
+    desc: '14 phụ âm, 10 nguyên âm cơ bản: nghe từng chữ, tự ghép thành chữ, kiểm tra nhanh.',
+    titleEn: 'The Hangul alphabet',
+    descEn: '14 consonants and 10 basic vowels: hear each letter, build blocks, quick check.',
+    tone: 'from-rose-500 to-fuchsia-600',
+  },
   {
     to: '/grammar',
     icon: '📐',
@@ -22,7 +31,6 @@ export const PRACTICE: PracticeEntry[] = [
     descEn:
       '12 short lessons: to be, tenses, a/an/the, prepositions… explained simply, with practice.',
     tone: 'from-indigo-500 to-violet-600',
-    englishOnly: true,
   },
   {
     to: '/topics',
@@ -32,7 +40,6 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Learn by topic',
     descEn: 'Work, food, health, tech… 19 word decks for real situations.',
     tone: 'from-sky-500 to-cyan-600',
-    englishOnly: true,
   },
   {
     to: '/reading',
@@ -42,7 +49,6 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Short stories',
     descEn: 'Easy English stories — tap a word for its meaning, with translations and questions.',
     tone: 'from-orange-400 to-rose-500',
-    englishOnly: true,
   },
   {
     to: '/dictation',
@@ -106,7 +112,6 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Tricky sounds for Vietnamese speakers',
     descEn: 'th, final sounds, ship/sheep… how to shape them, plus an ear test.',
     tone: 'from-pink-500 to-rose-600',
-    englishOnly: true,
   },
   {
     to: '/speaking',

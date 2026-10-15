@@ -23,7 +23,9 @@
   - đã thay các chuỗi viết cứng ở Cài đặt, Tra cứu, Ghép cặp, Xếp câu, Kiểm tra, Câu của
     bạn, trang chủ;
   - nhãn câu hỏi trắc nghiệm dùng cách nói trung lập;
-  - `PracticeEntry.englishOnly` ẩn Ngữ pháp, Chủ đề và Âm khó với gói khác tiếng Anh;
+  - `PracticeEntry.englishOnly` ẩn Ngữ pháp, Chủ đề và Âm khó với gói khác tiếng Anh. Từ
+    ngày 15/10/2026, việc này chuyển sang `lib/packContent.ts`, dùng chung cho mọi menu (xem
+    `hangul.md`);
   - Nghe thụ động chỉ hiện IPA khi từ có IPA.
 - **Định dạng từ cho gói không phải tiếng Anh:**
   - `ipa` để trống;

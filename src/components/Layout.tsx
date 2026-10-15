@@ -11,6 +11,7 @@ import {
   Sparkles,
   FolderOpen,
   GraduationCap,
+  Languages,
 } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
@@ -34,6 +35,8 @@ import AuthNotice from './AuthNotice'
 import Logo, { LogoMark } from './Logo'
 import { markEntered } from '@/lib/entry'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { availableIn, packsFor } from '@/lib/packContent'
+import PackOnly from './PackOnly'
 
 /** A Vietnamese/English pair, picked by the interface language. */
 type Pair = [vi: string, en: string]
@@ -76,6 +79,14 @@ const NAV: NavItem[] = [
     icon: MessagesSquare,
     primary: true,
   },
+  // Korean takes the phrases slot on the phone (lib/packContent.ts decides).
+  {
+    to: '/hangul',
+    label: ['Bảng chữ Hangul', 'Hangul alphabet'],
+    short: ['Hangul', 'Hangul'],
+    icon: Languages,
+    primary: true,
+  },
   // The dictionary moved off the phone's bottom bar to make room for phrases;
   // it stays in the sidebar, the account menu and on the home screen.
   { to: '/grammar', label: ['Ngữ pháp căn bản', 'Grammar basics'], icon: GraduationCap },
@@ -103,6 +114,9 @@ export default function Layout() {
   const stats = progress[currentLang]?.stats
   const dueCount = getDueCards(cardsOf(progress, currentLang), today()).length
   const { pathname } = useLocation()
+  // Screens written for another pack drop out of the menus and the bottom bar.
+  const nav = NAV.filter((item) => availableIn(item.to, currentLang))
+  const onlyFor = packsFor(pathname)
   // In a study session the phone gets the whole screen: no bottom bar, and the
   // session's own action bar sticks to the bottom instead.
   const immersive = useIsImmersive()
@@ -113,7 +127,7 @@ export default function Layout() {
       <aside className="sticky top-0 hidden h-[100dvh] w-64 shrink-0 flex-col border-r border-slate-200/70 bg-white/85 px-4 py-6 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/80 lg:flex">
         <Brand />
         <nav className="mt-8 flex flex-1 flex-col gap-1">
-          {NAV.map((item) => (
+          {nav.map((item) => (
             <SideLink
               key={item.to}
               item={item}
@@ -158,7 +172,11 @@ export default function Layout() {
             <div className="flex-1">
               <Suspense fallback={<CenterSpinner />}>
                 <DataGate>
-                  <Outlet />
+                  {onlyFor && !onlyFor.includes(currentLang) ? (
+                    <PackOnly packs={onlyFor} />
+                  ) : (
+                    <Outlet />
+                  )}
                 </DataGate>
               </Suspense>
             </div>
@@ -173,14 +191,16 @@ export default function Layout() {
       {/* Mobile bottom navigation */}
       {!immersive && (
         <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90 lg:hidden">
-          {NAV.filter((n) => n.primary).map((item) => (
-            <BottomLink
-              key={item.to}
-              item={item}
-              active={isOn(item, pathname)}
-              badge={item.to === '/review' ? dueCount : 0}
-            />
-          ))}
+          {nav
+            .filter((n) => n.primary)
+            .map((item) => (
+              <BottomLink
+                key={item.to}
+                item={item}
+                active={isOn(item, pathname)}
+                badge={item.to === '/review' ? dueCount : 0}
+              />
+            ))}
         </nav>
       )}
 

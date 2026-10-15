@@ -65,3 +65,46 @@ describe('Layout while the word pack is still loading', () => {
     expect(screen.getByRole('button', { name: /Tài khoản/ })).toHaveTextContent('L')
   })
 })
+
+describe('Layout for a Korean learner', () => {
+  const ko = { code: 'ko', name: 'Korean', nativeName: 'Tiếng Hàn', flag: '🇰🇷' }
+  const en = { code: 'en', name: 'English', nativeName: 'Tiếng Anh', flag: '🇬🇧' }
+  beforeEach(() => {
+    useSettings.setState({ uiLang: 'vi', currentLang: 'ko' })
+    useData.setState({
+      manifest: { languages: [en, ko] } as never,
+      pack: { meta: { ...ko, ttsLang: 'ko-KR' }, words: [] } as never,
+      status: 'ready',
+      ensureManifest: async () => {},
+      loadLanguage: async () => {},
+    })
+  })
+
+  function renderAt(path: string) {
+    render(
+      <MemoryRouter initialEntries={[path]}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/home" element={<p>màn hình chính</p>} />
+            <Route path="/grammar" element={<p>ngữ pháp tiếng Anh</p>} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    )
+  }
+
+  it('swaps the English phrases tab for the Hangul alphabet', () => {
+    renderAt('/home')
+    expect(screen.getAllByRole('link', { name: /Hangul/ }).length).toBeGreaterThan(0)
+    expect(screen.queryByRole('link', { name: /Mẫu câu/ })).not.toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: /Ngữ pháp/ })).not.toBeInTheDocument()
+  })
+
+  it('explains an English-only screen instead of showing it, with a way to switch', () => {
+    renderAt('/grammar')
+    expect(screen.queryByText('ngữ pháp tiếng Anh')).not.toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /dành cho tiếng Anh/ })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Chuyển sang tiếng Anh/ }))
+    expect(useSettings.getState().currentLang).toBe('en')
+  })
+})

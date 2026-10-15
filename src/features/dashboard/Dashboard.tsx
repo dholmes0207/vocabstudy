@@ -18,6 +18,7 @@ import { useT } from '@/lib/i18n'
 import { usePhrases } from '@/store/phrasesStore'
 import { isKnown } from '@/lib/phrases'
 import { useTargetLang } from '@/hooks/useTargetLang'
+import { availableIn } from '@/lib/packContent'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -149,8 +150,13 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* Beyond single words: ready-made sentences for real situations. */}
-      <PhrasesCard />
+      {/* Beyond single words: ready-made sentences for real situations, or for
+          Korean the alphabet itself. */}
+      {availableIn('/phrases', code) ? (
+        <PhrasesCard />
+      ) : (
+        availableIn('/hangul', code) && <HangulCard />
+      )}
 
       {/* Progress overview */}
       <section className="grid gap-4 sm:grid-cols-[auto,1fr]">
@@ -387,6 +393,31 @@ function PhrasesCard() {
                 'Câu nói dùng được ngay: chào hỏi, gọi món, hỏi đường… có giọng đọc AI chuẩn Mỹ.',
                 'Sentences you can use today: greetings, ordering, directions… with natural AI voices.'
               )}
+        </span>
+      </span>
+      <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-brand-500" />
+    </Link>
+  )
+}
+
+function HangulCard() {
+  const t = useT()
+  return (
+    <Link
+      to="/hangul"
+      className="card group relative flex items-center gap-4 overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-rose-400 to-fuchsia-500 opacity-10" />
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-rose-500 to-fuchsia-600 text-2xl font-bold text-white shadow-md">
+        한
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block font-bold">{t('Bảng chữ cái Hangul', 'The Hangul alphabet')}</span>
+        <span className="block text-sm text-slate-500 dark:text-slate-400">
+          {t(
+            'Đọc được chữ Hàn là bước đầu tiên: 24 chữ cái cơ bản, nghe từng chữ và tự ghép thành tiếng.',
+            'Reading Korean comes first: 24 basic letters — hear each one and build your own syllables.'
+          )}
         </span>
       </span>
       <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-brand-500" />

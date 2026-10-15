@@ -21,6 +21,7 @@ import type { ThemeSetting } from '@/types'
 import { usePendingSignups } from '@/hooks/usePendingSignups'
 import { useT } from '@/lib/i18n'
 import { openFeedback } from '@/store/feedbackStore'
+import { availableIn } from '@/lib/packContent'
 
 export default function UserMenu() {
   // No loading placeholder: a returning learner's avatar comes from the cache
@@ -31,6 +32,7 @@ export default function UserMenu() {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const pending = usePendingSignups(user?.role === 'admin', open)
+  const currentLang = useSettings((s) => s.currentLang)
   const t = useT()
 
   useEffect(() => {
@@ -109,12 +111,16 @@ export default function UserMenu() {
           <MenuLink to="/stats" onClick={close} icon={BarChart3}>
             {t('Thống kê', 'Stats')}
           </MenuLink>
-          <MenuLink to="/grammar" onClick={close} icon={GraduationCap}>
-            {t('Ngữ pháp căn bản', 'Grammar basics')}
-          </MenuLink>
-          <MenuLink to="/topics" onClick={close} icon={FolderOpen}>
-            {t('Học theo chủ đề', 'Learn by topic')}
-          </MenuLink>
+          {availableIn('/grammar', currentLang) && (
+            <MenuLink to="/grammar" onClick={close} icon={GraduationCap}>
+              {t('Ngữ pháp căn bản', 'Grammar basics')}
+            </MenuLink>
+          )}
+          {availableIn('/topics', currentLang) && (
+            <MenuLink to="/topics" onClick={close} icon={FolderOpen}>
+              {t('Học theo chủ đề', 'Learn by topic')}
+            </MenuLink>
+          )}
           <MenuLink to="/browse" onClick={close} icon={Library}>
             {t('Tra cứu từ', 'Dictionary')}
           </MenuLink>
