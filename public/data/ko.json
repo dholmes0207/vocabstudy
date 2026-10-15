@@ -9,7 +9,7 @@
     "ttsLang": "ko-KR",
     "count": 182,
     "source": "VocaStudy (beta)",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "words": [
     {
@@ -106,7 +106,8 @@
       "meaning": "bạn, bạn bè",
       "exampleEn": "친구랑 영화를 봐요.",
       "exampleVi": "Tôi xem phim với bạn.",
-      "emoji": "🧑‍🤝‍🧑"
+      "emoji": "🧑‍🤝‍🧑",
+      "hanViet": "thân cựu"
     },
     {
       "id": 9,
@@ -118,7 +119,8 @@
       "meaning": "gia đình",
       "exampleEn": "우리 가족은 네 명이에요.",
       "exampleVi": "Gia đình tôi có bốn người.",
-      "emoji": "👨‍👩‍👧"
+      "emoji": "👨‍👩‍👧",
+      "hanViet": "gia tộc"
     },
     {
       "id": 10,
@@ -154,7 +156,8 @@
       "meaning": "em (trai hoặc gái)",
       "exampleEn": "제 동생은 학생이에요.",
       "exampleVi": "Em tôi là học sinh.",
-      "emoji": "🧒"
+      "emoji": "🧒",
+      "hanViet": "đồng sinh"
     },
     {
       "id": 13,
@@ -178,7 +181,8 @@
       "meaning": "học sinh, sinh viên",
       "exampleEn": "그 학생은 열심히 공부해요.",
       "exampleVi": "Học sinh đó học rất chăm.",
-      "emoji": "🧑‍🎓"
+      "emoji": "🧑‍🎓",
+      "hanViet": "học sinh"
     },
     {
       "id": 15,
@@ -250,7 +254,8 @@
       "meaning": "sữa",
       "exampleEn": "아이가 우유를 마셔요.",
       "exampleVi": "Đứa trẻ uống sữa.",
-      "emoji": "🥛"
+      "emoji": "🥛",
+      "hanViet": "ngưu nhũ"
     },
     {
       "id": 21,
@@ -286,7 +291,8 @@
       "meaning": "quả táo; lời xin lỗi",
       "exampleEn": "사과 하나 주세요.",
       "exampleVi": "Cho tôi một quả táo.",
-      "emoji": "🍎"
+      "emoji": "🍎",
+      "hanViet": "sa quả"
     },
     {
       "id": 24,
@@ -322,7 +328,8 @@
       "meaning": "trà; xe ô tô",
       "exampleEn": "차 한 잔 드릴까요?",
       "exampleVi": "Tôi mời bạn một tách trà nhé?",
-      "emoji": "🍵"
+      "emoji": "🍵",
+      "hanViet": "trà"
     },
     {
       "id": 27,
@@ -346,7 +353,8 @@
       "meaning": "trường học",
       "exampleEn": "아침마다 학교에 가요.",
       "exampleVi": "Sáng nào tôi cũng đến trường.",
-      "emoji": "🏫"
+      "emoji": "🏫",
+      "hanViet": "học hiệu"
     },
     {
       "id": 29,
@@ -358,7 +366,8 @@
       "meaning": "công ty",
       "exampleEn": "회사가 멀어요.",
       "exampleVi": "Công ty xa.",
-      "emoji": "🏢"
+      "emoji": "🏢",
+      "hanViet": "hội xã"
     },
     {
       "id": 30,
@@ -370,7 +379,8 @@
       "meaning": "bệnh viện",
       "exampleEn": "병원에 가야 해요.",
       "exampleVi": "Tôi phải đi bệnh viện.",
-      "emoji": "🏥"
+      "emoji": "🏥",
+      "hanViet": "bệnh viện"
     },
     {
       "id": 31,
@@ -382,7 +392,8 @@
       "meaning": "chợ",
       "exampleEn": "시장에서 과일을 사요.",
       "exampleVi": "Tôi mua trái cây ở chợ.",
-      "emoji": "🛒"
+      "emoji": "🛒",
+      "hanViet": "thị trường"
     },
     {
       "id": 32,
@@ -394,7 +405,8 @@
       "meaning": "quán ăn, nhà hàng",
       "exampleEn": "이 식당은 맛있어요.",
       "exampleVi": "Quán này ngon.",
-      "emoji": "🍽️"
+      "emoji": "🍽️",
+      "hanViet": "thực đường"
     },
     {
       "id": 33,
@@ -406,7 +418,8 @@
       "meaning": "nhà vệ sinh",
       "exampleEn": "화장실이 어디예요?",
       "exampleVi": "Nhà vệ sinh ở đâu?",
-      "emoji": "🚻"
+      "emoji": "🚻",
+      "hanViet": "hoá trang thất"
     },
     {
       "id": 34,
@@ -418,7 +431,8 @@
       "meaning": "ngân hàng",
       "exampleEn": "은행이 몇 시에 열어요?",
       "exampleVi": "Ngân hàng mở cửa lúc mấy giờ?",
-      "emoji": "🏦"
+      "emoji": "🏦",
+      "hanViet": "ngân hàng"
     },
     {
       "id": 35,
@@ -430,7 +444,8 @@
       "meaning": "nhà ga",
       "exampleEn": "역이 가까워요.",
       "exampleVi": "Nhà ga ở gần.",
-      "emoji": "🚉"
+      "emoji": "🚉",
+      "hanViet": "dịch"
     },
     {
       "id": 36,
@@ -466,7 +481,8 @@
       "meaning": "ngày mai",
       "exampleEn": "내일 만나요.",
       "exampleVi": "Mai gặp nhé.",
-      "emoji": "➡️"
+      "emoji": "➡️",
+      "hanViet": "lai nhật"
     },
     {
       "id": 39,
@@ -490,7 +506,8 @@
       "meaning": "bây giờ",
       "exampleEn": "지금 뭐 해요?",
       "exampleVi": "Bây giờ bạn đang làm gì?",
-      "emoji": "⏱️"
+      "emoji": "⏱️",
+      "hanViet": "chỉ kim"
     },
     {
       "id": 41,
@@ -526,7 +543,8 @@
       "meaning": "thời gian; giờ",
       "exampleEn": "시간이 없어요.",
       "exampleVi": "Tôi không có thời gian.",
-      "emoji": "⏳"
+      "emoji": "⏳",
+      "hanViet": "thời gian"
     },
     {
       "id": 44,
@@ -538,7 +556,8 @@
       "meaning": "cuối tuần",
       "exampleEn": "주말에 쉬어요.",
       "exampleVi": "Cuối tuần tôi nghỉ.",
-      "emoji": "🛋️"
+      "emoji": "🛋️",
+      "hanViet": "chu mạt"
     },
     {
       "id": 45,
@@ -550,7 +569,8 @@
       "meaning": "sách",
       "exampleEn": "책을 읽어요.",
       "exampleVi": "Tôi đọc sách.",
-      "emoji": "📕"
+      "emoji": "📕",
+      "hanViet": "sách"
     },
     {
       "id": 46,
@@ -562,7 +582,8 @@
       "meaning": "điện thoại; cuộc gọi",
       "exampleEn": "전화해 주세요.",
       "exampleVi": "Hãy gọi điện cho tôi nhé.",
-      "emoji": "📞"
+      "emoji": "📞",
+      "hanViet": "điện thoại"
     },
     {
       "id": 47,
@@ -610,7 +631,8 @@
       "meaning": "tiếng Hàn",
       "exampleEn": "한국어를 배워요.",
       "exampleVi": "Tôi học tiếng Hàn.",
-      "emoji": "🇰🇷"
+      "emoji": "🇰🇷",
+      "hanViet": "Hàn Quốc ngữ"
     },
     {
       "id": 51,
@@ -1174,7 +1196,8 @@
       "meaning": "won (tiền Hàn Quốc)",
       "exampleEn": "이 책은 만 원이에요.",
       "exampleVi": "Quyển sách này giá mười nghìn won.",
-      "emoji": "💴"
+      "emoji": "💴",
+      "hanViet": "viên"
     },
     {
       "id": 98,
@@ -1330,7 +1353,8 @@
       "meaning": "tàu điện ngầm",
       "exampleEn": "지하철로 회사에 가요.",
       "exampleVi": "Tôi đi làm bằng tàu điện ngầm.",
-      "emoji": "🚇"
+      "emoji": "🚇",
+      "hanViet": "địa hạ thiết"
     },
     {
       "id": 111,
@@ -1354,7 +1378,8 @@
       "meaning": "máy bay",
       "exampleEn": "비행기로 한국에 가요.",
       "exampleVi": "Tôi đi Hàn Quốc bằng máy bay.",
-      "emoji": "✈️"
+      "emoji": "✈️",
+      "hanViet": "phi hành cơ"
     },
     {
       "id": 113,
@@ -1366,7 +1391,8 @@
       "meaning": "sân bay",
       "exampleEn": "공항에서 친구를 만나요.",
       "exampleVi": "Tôi gặp bạn ở sân bay.",
-      "emoji": "🛫"
+      "emoji": "🛫",
+      "hanViet": "không cảng"
     },
     {
       "id": 114,
@@ -1402,7 +1428,8 @@
       "meaning": "công viên",
       "exampleEn": "주말에 공원에 가요.",
       "exampleVi": "Cuối tuần tôi đi công viên.",
-      "emoji": "🌳"
+      "emoji": "🌳",
+      "hanViet": "công viên"
     },
     {
       "id": 117,
@@ -1414,7 +1441,8 @@
       "meaning": "thư viện",
       "exampleEn": "도서관에서 공부해요.",
       "exampleVi": "Tôi học ở thư viện.",
-      "emoji": "📚"
+      "emoji": "📚",
+      "hanViet": "đồ thư quán"
     },
     {
       "id": 118,
@@ -1426,7 +1454,8 @@
       "meaning": "căn phòng",
       "exampleEn": "제 방은 작아요.",
       "exampleVi": "Phòng của tôi nhỏ.",
-      "emoji": "🛏️"
+      "emoji": "🛏️",
+      "hanViet": "phòng"
     },
     {
       "id": 119,
@@ -1450,7 +1479,8 @@
       "meaning": "trứng (gà)",
       "exampleEn": "아침에 계란을 먹어요.",
       "exampleVi": "Buổi sáng tôi ăn trứng.",
-      "emoji": "🥚"
+      "emoji": "🥚",
+      "hanViet": "kê noãn"
     },
     {
       "id": 121,
@@ -1462,7 +1492,8 @@
       "meaning": "bia",
       "exampleEn": "친구와 맥주를 마셔요.",
       "exampleVi": "Tôi uống bia với bạn.",
-      "emoji": "🍺"
+      "emoji": "🍺",
+      "hanViet": "mạch tửu"
     },
     {
       "id": 122,
@@ -1486,7 +1517,8 @@
       "meaning": "cá (làm món ăn)",
       "exampleEn": "생선을 좋아해요.",
       "exampleVi": "Tôi thích ăn cá.",
-      "emoji": "🐟"
+      "emoji": "🐟",
+      "hanViet": "sinh tiên"
     },
     {
       "id": 124,
@@ -1498,7 +1530,8 @@
       "meaning": "buổi sáng (giờ AM)",
       "exampleEn": "오전에 회의가 있어요.",
       "exampleVi": "Buổi sáng tôi có cuộc họp.",
-      "emoji": "🌤️"
+      "emoji": "🌤️",
+      "hanViet": "ngọ tiền"
     },
     {
       "id": 125,
@@ -1510,7 +1543,8 @@
       "meaning": "buổi chiều (giờ PM)",
       "exampleEn": "오후에 친구를 만나요.",
       "exampleVi": "Buổi chiều tôi gặp bạn.",
-      "emoji": "🌇"
+      "emoji": "🌇",
+      "hanViet": "ngọ hậu"
     },
     {
       "id": 126,
@@ -1534,7 +1568,8 @@
       "meaning": "sinh nhật",
       "exampleEn": "오늘은 제 생일이에요.",
       "exampleVi": "Hôm nay là sinh nhật tôi.",
-      "emoji": "🎂"
+      "emoji": "🎂",
+      "hanViet": "sinh nhật"
     },
     {
       "id": 128,
@@ -1546,7 +1581,8 @@
       "meaning": "thứ Hai",
       "exampleEn": "월요일에 회의가 있어요.",
       "exampleVi": "Thứ Hai tôi có cuộc họp.",
-      "emoji": "📅"
+      "emoji": "📅",
+      "hanViet": "nguyệt diệu nhật"
     },
     {
       "id": 129,
@@ -1558,7 +1594,8 @@
       "meaning": "Chủ nhật",
       "exampleEn": "일요일에 가족과 쉬어요.",
       "exampleVi": "Chủ nhật tôi nghỉ ngơi cùng gia đình.",
-      "emoji": "🗓️"
+      "emoji": "🗓️",
+      "hanViet": "nhật diệu nhật"
     },
     {
       "id": 130,
@@ -1990,7 +2027,8 @@
       "meaning": "âm nhạc",
       "exampleEn": "음악을 들어요.",
       "exampleVi": "Tôi nghe nhạc.",
-      "emoji": "🎵"
+      "emoji": "🎵",
+      "hanViet": "âm nhạc"
     },
     {
       "id": 166,
@@ -2002,7 +2040,8 @@
       "meaning": "bộ phim",
       "exampleEn": "주말에 영화를 봐요.",
       "exampleVi": "Cuối tuần tôi xem phim.",
-      "emoji": "🎬"
+      "emoji": "🎬",
+      "hanViet": "ánh hoạ"
     },
     {
       "id": 167,
@@ -2014,7 +2053,8 @@
       "meaning": "bức ảnh",
       "exampleEn": "사진을 찍어요.",
       "exampleVi": "Tôi chụp ảnh.",
-      "emoji": "📷"
+      "emoji": "📷",
+      "hanViet": "tả chân"
     },
     {
       "id": 168,
@@ -2026,7 +2066,8 @@
       "meaning": "món quà",
       "exampleEn": "선물 고마워요!",
       "exampleVi": "Cảm ơn vì món quà!",
-      "emoji": "🎁"
+      "emoji": "🎁",
+      "hanViet": "thiện vật"
     },
     {
       "id": 169,
@@ -2038,7 +2079,8 @@
       "meaning": "cửa",
       "exampleEn": "문을 열어 주세요.",
       "exampleVi": "Làm ơn mở cửa giúp tôi.",
-      "emoji": "🚪"
+      "emoji": "🚪",
+      "hanViet": "môn"
     },
     {
       "id": 170,
@@ -2074,7 +2116,8 @@
       "meaning": "đàn ông, con trai",
       "exampleEn": "그 남자는 키가 커요.",
       "exampleVi": "Người đàn ông đó cao.",
-      "emoji": "👨"
+      "emoji": "👨",
+      "hanViet": "nam tử"
     },
     {
       "id": 173,
@@ -2086,7 +2129,8 @@
       "meaning": "phụ nữ, con gái",
       "exampleEn": "여자 친구가 있어요.",
       "exampleVi": "Tôi có bạn gái.",
-      "emoji": "👩"
+      "emoji": "👩",
+      "hanViet": "nữ tử"
     },
     {
       "id": 174,
@@ -2110,7 +2154,8 @@
       "meaning": "anh trai (em trai gọi)",
       "exampleEn": "형은 회사원이에요.",
       "exampleVi": "Anh trai tôi là nhân viên công ty.",
-      "emoji": "👬"
+      "emoji": "👬",
+      "hanViet": "huynh"
     },
     {
       "id": 176,
@@ -2122,7 +2167,8 @@
       "meaning": "bác sĩ",
       "exampleEn": "의사가 되고 싶어요.",
       "exampleVi": "Tôi muốn trở thành bác sĩ.",
-      "emoji": "🩺"
+      "emoji": "🩺",
+      "hanViet": "y sư"
     },
     {
       "id": 177,
@@ -2134,7 +2180,8 @@
       "meaning": "nhân viên công ty",
       "exampleEn": "저는 회사원이에요.",
       "exampleVi": "Tôi là nhân viên công ty.",
-      "emoji": "💼"
+      "emoji": "💼",
+      "hanViet": "hội xã viên"
     },
     {
       "id": 178,
@@ -2170,7 +2217,8 @@
       "meaning": "núi",
       "exampleEn": "주말에 산에 가요.",
       "exampleVi": "Cuối tuần tôi đi leo núi.",
-      "emoji": "⛰️"
+      "emoji": "⛰️",
+      "hanViet": "sơn"
     },
     {
       "id": 181,

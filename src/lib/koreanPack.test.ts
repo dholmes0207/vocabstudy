@@ -12,6 +12,7 @@ interface W {
   meaning: string
   exampleEn: string
   exampleVi: string
+  hanViet?: string
 }
 const pack = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as {
   meta: { code: string; count: number; ttsLang: string }
@@ -59,5 +60,17 @@ describe('Korean pack', () => {
     for (const w of pack.words)
       if (w.posCategory !== 'verb' && w.posCategory !== 'adjective')
         expect(w.exampleEn, w.word).toContain(w.word)
+  })
+
+  it('gives Sino-Korean words their Hán Việt reading, one syllable per Hangul block', () => {
+    const withHv = pack.words.filter((w) => w.hanViet)
+    expect(withHv.length).toBeGreaterThanOrEqual(40)
+    for (const w of withHv) {
+      expect(w.hanViet!.split(' '), w.word).toHaveLength([...w.word].length)
+      expect(w.hanViet, w.word).not.toMatch(HANGUL)
+    }
+    // Mixed words (先生 + 님, anything + 하다) stay without one.
+    for (const w of pack.words.filter((x) => x.word.endsWith('하다') || x.word === '선생님'))
+      expect(w.hanViet, w.word).toBeUndefined()
   })
 })

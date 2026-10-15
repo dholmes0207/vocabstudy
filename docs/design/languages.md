@@ -75,3 +75,17 @@
   - `meta.readingLabel`: gói nào có trường này thì nhãn cách đọc lấy tên từ đó ("pinyin"),
     thay vì "đọc gần giống".
 - Nghe – chép so từng chữ với chữ Hán. Trợ lý AI có thêm mục `zh` trong danh sách cho phép.
+
+## Âm Hán Việt cho tiếng Hàn (16/10/2026)
+
+- Từ Hán Hàn cũng có âm Hán Việt (학생 學生 = học sinh, 병원 病院 = bệnh viện). Thẻ học của
+  tiếng Hàn hiện thêm dòng này, dùng chung `components/HanViet.tsx` với tiếng Trung.
+- 48 từ có âm Hán Việt. Chỉ ghi khi **mọi** khối trong từ đều là Hán Hàn, và mỗi khối ứng
+  với đúng một âm tiết. Không ghi cho:
+  - từ thuần Hàn (사람, 이름);
+  - từ mượn (택시, 호텔);
+  - từ ghép lẫn (선생님 = 先生 + 님, mọi từ có 하다).
+
+  Test kiểm tra các điều kiện này.
+
+- Tra cứu tìm được theo âm Hán Việt cho cả hai gói: "hoc sinh" ra 학생 và 学生.
