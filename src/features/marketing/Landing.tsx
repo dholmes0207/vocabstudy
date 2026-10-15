@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
+  BookOpenText,
   Bot,
   Brain,
   Check,
   ChevronDown,
   Headphones,
+  Languages,
   MessagesSquare,
   Mic,
   Trophy,
@@ -242,6 +244,24 @@ function Features() {
       ),
     },
     {
+      icon: BookOpenText,
+      tone: 'from-orange-400 to-rose-500',
+      title: t('Đọc truyện, ngữ pháp, chủ đề', 'Stories, grammar, topics'),
+      desc: t(
+        '14 truyện ngắn chạm vào từ là ra nghĩa, 12 bài ngữ pháp giải thích bằng tiếng Việt, 19 bộ từ theo tình huống.',
+        '14 short stories where any word is a tap away from its meaning, 12 grammar lessons explained in Vietnamese, 19 topic decks.'
+      ),
+    },
+    {
+      icon: Languages,
+      tone: 'from-fuchsia-500 to-rose-600',
+      title: t('Thêm tiếng Hàn (beta)', 'Korean too (beta)'),
+      desc: t(
+        'Bảng chữ Hangul, 182 từ sơ cấp có cách đọc kiểu Việt và 4 truyện ngắn — đọc bằng giọng của trình duyệt.',
+        'The Hangul alphabet, 182 beginner words with Vietnamese-style readings and 4 short stories — read aloud by your browser.'
+      ),
+    },
+    {
       icon: Trophy,
       tone: 'from-amber-500 to-orange-600',
       title: t('Vui để quay lại mỗi ngày', 'Fun to come back to'),
@@ -260,7 +280,7 @@ function Features() {
           'Everything you need — to learn and to keep going'
         )}
       />
-      <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((f) => (
           <div key={f.title} className="card p-6 transition hover:-translate-y-0.5 hover:shadow-md">
             <span

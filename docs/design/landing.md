@@ -124,3 +124,13 @@ một nhóm làm nghiêm túc, không phải một trang demo.
     `POLICY_VERSION`).
   - Điều khoản mục 9 vẫn giữ câu "tiếp tục sử dụng" vì đó là hợp đồng dịch vụ, không phải
     sự đồng ý xử lý dữ liệu.
+
+## Cập nhật 15/10/2026: thêm tính năng mới vào trang chủ
+
+- Mục Tính năng có thêm 2 ô, tổng cộng 8 ô, xếp 4 cột trên máy tính:
+  - "Đọc truyện, ngữ pháp, chủ đề": 14 truyện, 12 bài, 19 bộ từ;
+  - "Thêm tiếng Hàn (beta)": bảng chữ Hangul, 182 từ, 4 truyện. Ghi rõ là đọc bằng giọng
+    của trình duyệt, không phải giọng thu sẵn.
+- `src/features/marketing/landingClaims.test.ts` so mọi con số trên trang với file dữ liệu
+  mà nó đếm. Thêm một truyện hay một bộ từ thì test báo đỏ, cho đến khi trang chủ được sửa
+  theo. Như vậy trang chủ không thể nói sai về sản phẩm.
