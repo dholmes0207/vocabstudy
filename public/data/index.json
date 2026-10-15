@@ -22,9 +22,9 @@
       "learnerLang": "vi",
       "learnerLangName": "Tiếng Việt",
       "ttsLang": "ko-KR",
-      "count": 81,
+      "count": 182,
       "file": "ko.json",
-      "description": "Beta: 81 từ tiếng Hàn sơ cấp đầu tiên, đọc bằng giọng của trình duyệt.",
+      "description": "Beta: 182 từ tiếng Hàn sơ cấp (chào hỏi, số đếm, màu sắc, đi lại, ăn uống…), đọc bằng giọng của trình duyệt.",
       "beta": true
     }
   ]

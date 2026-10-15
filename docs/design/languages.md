@@ -36,9 +36,23 @@
     Chrome/Edge/Android/iOS);
   - muốn dùng audio edge-tts cho gói mới thì cần chuyển audio sang R2. **Việc này cần chủ
     dự án làm.**
-- **Gói tiếng Hàn beta** (`public/data/ko.json`, 81 từ): đã có.
-  - Chủ đề: chào hỏi, con người, ăn uống, nơi chốn, thời gian, đồ vật, động từ và tính từ
-    thông dụng.
+- **Gói tiếng Hàn beta** (`public/data/ko.json`): bản đầu có 81 từ, ngày 15/10/2026 tăng
+  lên 182 từ.
+  - Chủ đề của bản đầu: chào hỏi, con người, ăn uống, nơi chốn, thời gian, đồ vật, động từ
+    và tính từ thông dụng.
+  - Đợt 2 thêm:
+    - câu chào khi chia tay, trước bữa ăn, lần đầu gặp;
+    - từ để hỏi: 뭐, 어디, 언제, 누구, 얼마, 왜;
+    - số đếm thuần Hàn 하나 / 둘 / 셋 và đơn vị tiền 원;
+    - màu sắc, bộ phận cơ thể, phương tiện đi lại, nơi chốn trong thành phố, đồ ăn uống,
+      buổi trong ngày, thứ;
+    - 23 động từ và 13 tính từ hay dùng.
+  - Hai quy tắc giữ cho gói dùng tốt với trắc nghiệm, đều có test:
+    - **Mỗi từ một nghĩa riêng.** Khi hai từ gần nghĩa thì ghi rõ khác biệt. Ví dụ 공부하다
+      là "học", còn 배우다 là "học (một kỹ năng, môn học)".
+    - **Ví dụ của danh từ và cụm cố định phải chứa đúng mặt chữ của từ**, vì thẻ học gạch
+      chân và câu hỏi điền chỗ trống tìm theo chuỗi Hangul. Cũng tránh ví dụ mà từ chỉ nằm
+      bên trong một từ dài hơn (밤 trong 어젯밤).
   - Câu ví dụ dùng đuôi lịch sự -아요/-어요.
   - `viRead` đọc theo **cách phát âm thật**, không theo chính tả (감사합니다 →
     "cam-xa-ham-ni-đa", 한국어 → "han-cu-gơ") và theo chính tả tiếng Việt (고기 →

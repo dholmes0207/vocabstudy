@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest'
 interface W {
   id: number
   word: string
+  posCategory: string
   ipa: string
   viRead: string
   meaning: string
@@ -43,5 +44,20 @@ describe('Korean pack', () => {
       // Readings use Vietnamese letters only (no doubled "pp"/"tt" from romanisation).
       expect(w.viRead, w.word).not.toMatch(/pp|tt|kk|ss|jj/)
     }
+  })
+
+  it('gives every word its own meaning, so a multiple-choice question has one right answer', () => {
+    const seen = new Map<string, string>()
+    for (const w of pack.words) {
+      expect(seen.get(w.meaning), `${w.word} / ${seen.get(w.meaning)}`).toBeUndefined()
+      seen.set(w.meaning, w.word)
+    }
+  })
+
+  it('writes nouns and set phrases into their example as-is, so the card can underline them', () => {
+    // Verbs and adjectives change shape (마시다 → 마셔요) and are not underlined.
+    for (const w of pack.words)
+      if (w.posCategory !== 'verb' && w.posCategory !== 'adjective')
+        expect(w.exampleEn, w.word).toContain(w.word)
   })
 })

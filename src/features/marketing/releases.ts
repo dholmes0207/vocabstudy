@@ -25,8 +25,8 @@ export const RELEASES: Release[] = [
         'Dictation: hear an example sentence, type it, and see which words you caught or missed.',
       ],
       [
-        'Tiếng Hàn (beta): 81 từ sơ cấp có cách đọc kiểu Việt và câu ví dụ — chọn ở nút ngôn ngữ trên cùng.',
-        'Korean (beta): 81 beginner words with Vietnamese-style readings and example sentences — pick it from the language button at the top.',
+        'Tiếng Hàn (beta): 182 từ sơ cấp — chào hỏi, số đếm, màu sắc, đi lại, ăn uống… — có cách đọc kiểu Việt và câu ví dụ. Chọn ở nút ngôn ngữ trên cùng.',
+        'Korean (beta): 182 beginner words — greetings, numbers, colours, getting around, food… — with Vietnamese-style readings and example sentences. Pick it from the language button at the top.',
       ],
       [
         'Ngữ pháp căn bản: 12 bài cho người mới (to be, các thì, a/an/the, giới từ, so sánh, câu hỏi…) — giải thích bằng tiếng Việt, kèm lỗi hay gặp và bài luyện.',
