@@ -151,11 +151,13 @@ export default function Dashboard() {
       </section>
 
       {/* Beyond single words: ready-made sentences for real situations, or for
-          Korean the alphabet itself. */}
+          Korean and Chinese the writing and sounds themselves. */}
       {availableIn('/phrases', code) ? (
         <PhrasesCard />
+      ) : availableIn('/hangul', code) ? (
+        <HangulCard />
       ) : (
-        availableIn('/hangul', code) && <HangulCard />
+        availableIn('/pinyin', code) && <PinyinCard />
       )}
 
       {/* Progress overview */}
@@ -417,6 +419,31 @@ function HangulCard() {
           {t(
             'Đọc được chữ Hàn là bước đầu tiên: 24 chữ cái cơ bản, nghe từng chữ và tự ghép thành tiếng.',
             'Reading Korean comes first: 24 basic letters — hear each one and build your own syllables.'
+          )}
+        </span>
+      </span>
+      <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-brand-500" />
+    </Link>
+  )
+}
+
+function PinyinCard() {
+  const t = useT()
+  return (
+    <Link
+      to="/pinyin"
+      className="card group relative flex items-center gap-4 overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-red-400 to-amber-500 opacity-10" />
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-red-500 to-amber-500 text-xl font-bold text-white shadow-md">
+        mā
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block font-bold">{t('Pinyin & thanh điệu', 'Pinyin & tones')}</span>
+        <span className="block text-sm text-slate-500 dark:text-slate-400">
+          {t(
+            'Nghe ra 4 thanh là nửa chặng đường: mā má mǎ mà — chạm để nghe, rồi kiểm tra nhanh.',
+            'Hearing the four tones is half the battle: mā má mǎ mà — tap to listen, then a quick check.'
           )}
         </span>
       </span>

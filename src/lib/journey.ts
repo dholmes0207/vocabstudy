@@ -12,8 +12,8 @@ export interface Mission {
   titleEn: string
   descEn: string
   to: string
-  /** Stand-in for a pack that does not have `to` (e.g. Hangul instead of English sounds). */
-  alt?: Mission
+  /** Stand-ins, in order, for a pack that does not have `to` (Hangul, pinyin…). */
+  alts?: Mission[]
 }
 
 export const JOURNEY: Mission[] = [
@@ -56,14 +56,24 @@ export const JOURNEY: Mission[] = [
     titleEn: 'Train your ear on tricky sounds',
     descEn: 'ship or sheep? Listen and choose.',
     to: '/sounds',
-    alt: {
-      emoji: '🔤',
-      title: 'Đọc bảng chữ Hangul',
-      desc: 'Nhìn chữ, chọn cách đọc.',
-      titleEn: 'Read the Hangul alphabet',
-      descEn: 'See a letter, pick how it sounds.',
-      to: '/hangul',
-    },
+    alts: [
+      {
+        emoji: '🔤',
+        title: 'Đọc bảng chữ Hangul',
+        desc: 'Nhìn chữ, chọn cách đọc.',
+        titleEn: 'Read the Hangul alphabet',
+        descEn: 'See a letter, pick how it sounds.',
+        to: '/hangul',
+      },
+      {
+        emoji: '🎵',
+        title: 'Nghe ra 4 thanh tiếng Trung',
+        desc: 'Pinyin, thanh điệu và kiểm tra nhanh.',
+        titleEn: 'Hear the four Chinese tones',
+        descEn: 'Pinyin, tones and a quick check.',
+        to: '/pinyin',
+      },
+    ],
   },
   {
     emoji: '🎙️',
@@ -94,9 +104,7 @@ export interface JourneyState {
 
 /** The week as the learner's pack sees it: a mission it lacks swaps to its stand-in. */
 export function journeyFor(code: string): Mission[] {
-  return JOURNEY.map(
-    (m) => [m, m.alt].find((x): x is Mission => !!x && availableIn(x.to, code)) ?? m
-  )
+  return JOURNEY.map((m) => [m, ...(m.alts ?? [])].find((x) => availableIn(x.to, code)) ?? m)
 }
 
 /**

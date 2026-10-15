@@ -48,3 +48,46 @@
   tiếng Hàn: chỉ hỏi về từ vựng, câu ví dụ và cách đọc.
 - **Âm thanh:** dùng giọng đọc của trình duyệt (zh-CN), cùng lý do giới hạn 20.000 file như
   gói tiếng Hàn.
+
+## Bước 1: "Pinyin & thanh điệu" (`/pinyin`)
+
+**User**: người mới học tiếng Trung chưa đọc được pinyin và nghe chưa ra thanh điệu. Thanh
+điệu là chỗ người Việt có lợi thế, vì tiếng Việt cũng có thanh, nhưng cần được chỉ ra cho
+rõ.
+
+**BA**
+
+- Trang chỉ hiện khi học tiếng Trung. Trên thanh dưới điện thoại, nó nằm ở ô thứ năm, giống
+  ô Hangul của tiếng Hàn.
+- Trang có các phần:
+  - **5 thanh**, mỗi thanh một ví dụ:
+    - thanh 1 mā 妈: cao và bằng;
+    - thanh 2 má 麻: đi lên, gần thanh sắc;
+    - thanh 3 mǎ 马: xuống thấp rồi lên, gần thanh hỏi;
+    - thanh 4 mà 骂: rơi mạnh từ cao xuống;
+    - thanh nhẹ ma 吗: ngắn, không có dấu.
+
+    Chạm vào thì nghe.
+
+  - **Biến điệu:**
+    - 3 + 3 thì âm đầu đọc thành thanh 2 (你好 đọc "ní hǎo");
+    - 不 đứng trước thanh 4 thì đọc bú (不客气);
+    - 一 đổi thanh theo chữ đứng sau.
+  - **Thanh mẫu (phụ âm đầu):** 21 chữ, mỗi chữ có gợi ý cách đọc theo âm tiếng Việt và
+    một chữ ví dụ lấy trong gói (b 爸, zh 中, x 学…).
+  - **Vận mẫu khó:** e, ü, ou, ei, ie, uo, an / ang, en / eng, er.
+  - **Kiểm tra nhanh** 10 câu:
+    - nhìn dấu thanh của một chữ trong gói (茶 chá), chọn đó là thanh mấy;
+    - nhìn một từ chữ Hán trong gói, chọn pinyin đúng (đáp án nhiễu có cùng số chữ).
+
+    Làm xong được XP.
+
+**Dev**
+
+- `src/lib/pinyin.ts` chứa các bảng dữ liệu, `toneOf(syllable)` (trả về 1–4, hoặc 5 cho
+  thanh nhẹ) và `pinyinQuiz(count, rand, words)`.
+- Câu hỏi về thanh chỉ lấy từ **một chữ**, vì một chữ là một âm tiết. Như vậy không phải
+  tách âm tiết trong những pinyin viết liền như "xǐhuan".
+- Âm thanh dùng giọng `zh-CN` của trình duyệt, đọc từng chữ Hán (妈 / 麻 / 马 / 骂).
+- Hành trình 7 ngày: ngày 5 có danh sách nhiệm vụ thay thế (`alts`). Tiếng Hàn lấy Hangul,
+  tiếng Trung lấy Pinyin.

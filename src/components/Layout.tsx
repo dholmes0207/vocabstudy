@@ -12,6 +12,7 @@ import {
   FolderOpen,
   GraduationCap,
   Languages,
+  AudioWaveform,
 } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
@@ -80,12 +81,20 @@ const NAV: NavItem[] = [
     icon: MessagesSquare,
     primary: true,
   },
-  // Korean takes the phrases slot on the phone (lib/packContent.ts decides).
+  // Korean and Chinese take the phrases slot on the phone with their own
+  // sounds page (lib/packContent.ts decides which pack sees which).
   {
     to: '/hangul',
     label: ['Bảng chữ Hangul', 'Hangul alphabet'],
     short: ['Hangul', 'Hangul'],
     icon: Languages,
+    primary: true,
+  },
+  {
+    to: '/pinyin',
+    label: ['Pinyin & thanh điệu', 'Pinyin & tones'],
+    short: ['Pinyin', 'Pinyin'],
+    icon: AudioWaveform,
     primary: true,
   },
   // The dictionary moved off the phone's bottom bar to make room for phrases;

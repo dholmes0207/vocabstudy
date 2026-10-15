@@ -14,6 +14,16 @@ export interface PracticeEntry {
 // lib/packContent.ts; the hub hides them for every other pack.
 export const PRACTICE: PracticeEntry[] = [
   {
+    to: '/pinyin',
+    icon: '🎵',
+    title: 'Pinyin & thanh điệu',
+    desc: '4 thanh và thanh nhẹ, biến điệu, phụ âm đầu và vần khó — chạm để nghe, kiểm tra nhanh.',
+    titleEn: 'Pinyin & tones',
+    descEn:
+      'The four tones and the neutral one, tone changes, initials and tricky finals — tap to hear, then a quick check.',
+    tone: 'from-red-500 to-amber-500',
+  },
+  {
     to: '/hangul',
     icon: '🔤',
     title: 'Bảng chữ cái Hangul',

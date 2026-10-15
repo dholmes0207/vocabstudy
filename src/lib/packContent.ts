@@ -11,6 +11,7 @@ const ONLY: Record<string, readonly string[]> = {
   '/phrases': ['en'],
   '/sounds': ['en'],
   '/hangul': ['ko'],
+  '/pinyin': ['zh'],
 }
 
 /** The screen a path belongs to: "/reading/lans-morning" → "/reading". */

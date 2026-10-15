@@ -40,5 +40,8 @@ describe('journey', () => {
     expect(ko).not.toContain('/sounds')
     expect(ko).toContain('/hangul')
     expect(ko).toHaveLength(JOURNEY.length)
+    const zh = journeyFor('zh').map((m) => m.to)
+    expect(zh).toContain('/pinyin')
+    expect(zh).not.toContain('/hangul')
   })
 })
