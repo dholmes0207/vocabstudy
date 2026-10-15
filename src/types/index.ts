@@ -80,6 +80,12 @@ export interface LanguagePackMeta {
   description?: string
   /** A young pack: small, browser voices only. Shown with a "Beta" chip. */
   beta?: boolean
+  /**
+   * What `viRead` is, when it is a standard romanisation rather than a
+   * Vietnamese-style respelling: ["pinyin", "pinyin"] for Chinese. Cards then
+   * say "pinyin: nǐ hǎo" instead of "reads like …".
+   */
+  readingLabel?: [vi: string, en: string]
 }
 
 /** A fully loaded language pack: metadata + word list. */

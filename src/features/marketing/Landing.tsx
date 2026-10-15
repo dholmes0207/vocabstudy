@@ -255,10 +255,10 @@ function Features() {
     {
       icon: Languages,
       tone: 'from-fuchsia-500 to-rose-600',
-      title: t('Thêm tiếng Hàn (beta)', 'Korean too (beta)'),
+      title: t('Thêm tiếng Hàn, tiếng Trung (beta)', 'Korean and Chinese too (beta)'),
       desc: t(
-        'Bảng chữ Hangul, 182 từ sơ cấp có cách đọc kiểu Việt, 12 bộ chủ đề, 7 bài ngữ pháp và 4 truyện ngắn — đọc bằng giọng của trình duyệt.',
-        'The Hangul alphabet, 182 beginner words with Vietnamese-style readings, 12 topic decks, 7 grammar lessons and 4 short stories — read aloud by your browser.'
+        'Tiếng Hàn: bảng chữ Hangul, 182 từ sơ cấp có cách đọc kiểu Việt, 12 bộ chủ đề, 7 bài ngữ pháp và 4 truyện ngắn. Tiếng Trung: 132 từ HSK 1 có pinyin. Đọc bằng giọng của trình duyệt.',
+        'Korean: the Hangul alphabet, 182 beginner words with Vietnamese-style readings, 12 topic decks, 7 grammar lessons and 4 short stories. Chinese: 132 HSK 1 words with pinyin. Read aloud by your browser.'
       ),
     },
     {

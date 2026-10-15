@@ -14,6 +14,7 @@ import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import { Field, Segment } from '@/components/Choice'
 import { useT } from '@/lib/i18n'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 type Scope = 'learned' | 'hard' | 'all'
 
@@ -208,6 +209,7 @@ function SpeakingSession({
   /** Words the learner never cleared, so the summary can list them. */
   const [missed, setMissed] = useState<Word[]>([])
   const t = useT()
+  const readLabel = useReadingLabel('cách đọc:', 'reads like:')
   /** Whether the current word has already been graded (avoids double-counting). */
   const [graded, setGraded] = useState(false)
 
@@ -304,7 +306,7 @@ function SpeakingSession({
           {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
           {word.viRead && (
             <p className="text-sm text-slate-400">
-              {t('cách đọc:', 'reads like:')}{' '}
+              {readLabel}{' '}
               <span className="font-semibold text-slate-500 dark:text-slate-300">
                 {word.viRead}
               </span>

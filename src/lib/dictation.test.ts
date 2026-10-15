@@ -48,6 +48,20 @@ describe('diffWords', () => {
     ])
   })
 
+  it('marks Chinese character by character, since it is typed without spaces', () => {
+    const parts = diffWords('我\u200b喜欢\u200b喝\u200b咖啡。', '我喜欢吃咖啡')
+    expect(parts.map((p) => `${p.text}:${p.status}`)).toEqual([
+      '我:ok',
+      '喜:ok',
+      '欢:ok',
+      '吃:extra',
+      '喝:missing',
+      '咖:ok',
+      '啡:ok',
+    ])
+    expect(dictationScore(diffWords('我\u200b喜欢\u200b喝\u200b咖啡。', '我喜欢喝咖啡'))).toBe(1)
+  })
+
   it('accepts a copy without punctuation or capitals', () => {
     const parts = diffWords('Where do you live?', 'where do you live')
     expect(parts.every((p) => p.status === 'ok')).toBe(true)

@@ -65,3 +65,13 @@
     trống với chữ Hàn.
 - **Trợ lý AI:** lời nhắc hệ thống hiện chỉ cho phép phạm vi từ vựng tiếng Anh. Mở rộng
   sang ngôn ngữ khác cần soát lại guardrail; tạm giữ nguyên.
+
+## Gói thứ ba: tiếng Trung (15/10/2026)
+
+- `public/data/zh.json` có 132 từ HSK 1 kèm pinyin, sinh từ `scripts/build_zh_pack.py`.
+  Chi tiết thiết kế ở `chinese.md`.
+- Hai thay đổi dùng chung cho mọi gói:
+  - `tokenize()` tách cả theo ZWSP (U+200B), là ranh giới từ vô hình trong câu tiếng Trung.
+  - `meta.readingLabel`: gói nào có trường này thì nhãn cách đọc lấy tên từ đó ("pinyin"),
+    thay vì "đọc gần giống".
+- Nghe – chép so từng chữ với chữ Hán. Trợ lý AI có thêm mục `zh` trong danh sách cho phép.

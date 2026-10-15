@@ -9,6 +9,7 @@ import { today } from '@/lib/date'
 import { wordAudio } from '@/lib/audio'
 import SpeakButton from '@/components/SpeakButton'
 import { useT } from '@/lib/i18n'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 /**
  * "Từ của ngày": one word worth a second look — something already met but not
@@ -22,6 +23,7 @@ export default function WordOfDay() {
   const w = useMemo(() => wordOfDay(pack.words, cards, today()), [pack.words, cards])
   const chunk = w.collocations?.[0]
   const t = useT()
+  const readLabel = useReadingLabel('đọc:', 'reads like:')
 
   return (
     <section className="card relative overflow-hidden p-5">
@@ -45,7 +47,7 @@ export default function WordOfDay() {
         <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
         {w.viRead && (
           <span className="text-sm text-slate-400">
-            {t('đọc:', 'reads like:')} {w.viRead}
+            {readLabel} {w.viRead}
           </span>
         )}
       </div>

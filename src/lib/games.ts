@@ -83,8 +83,16 @@ export function matchXp(pairs: number, mistakes: number, seconds: number): numbe
 // ---------------------------------------------------------------------------
 
 /** Word tiles for a sentence; punctuation stays on its word ("today."). */
+/**
+ * The words of a sentence. Spaces separate them; Chinese has none, so its
+ * example sentences mark word breaks with an invisible zero-width space
+ * (U+200B, docs/design/chinese.md) — "我\u200b喜欢\u200b喝\u200b咖啡。".
+ */
 export function tokenize(sentence: string): string[] {
-  return sentence.trim().split(/\s+/).filter(Boolean)
+  return sentence
+    .trim()
+    .split(/[\s\u200b]+/)
+    .filter(Boolean)
 }
 
 export interface OrderState {

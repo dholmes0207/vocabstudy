@@ -87,6 +87,10 @@ export const TARGET_LANGUAGES: Record<string, { vi: string; note: string }> = {
     vi: 'TIẾNG HÀN',
     note: 'Phát âm: viết Hangul và cách đọc kiểu Việt (vd 감사합니다 → "cam-xa-ham-ni-đa") thay cho IPA. Câu ví dụ dùng đuôi lịch sự -아요/-어요 cho người mới, luôn kèm nghĩa tiếng Việt.',
   },
+  zh: {
+    vi: 'TIẾNG TRUNG',
+    note: 'Viết chữ giản thể kèm pinyin có dấu thanh (vd 你好 nǐ hǎo) thay cho IPA; khi hữu ích thì nêu âm Hán Việt (vd 学生 = "học sinh"). Câu ví dụ ngắn, trình độ HSK 1–2, luôn kèm pinyin và nghĩa tiếng Việt.',
+  },
 }
 
 /** The extra section that moves the tutor's scope to another language pack. */

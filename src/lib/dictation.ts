@@ -10,7 +10,7 @@ import { tokenize } from './games'
  * "dont" typed on a phone keyboard matches "don't".
  */
 export function normalizeWords(sentence: string): string[] {
-  return tokenize(sentence)
+  return units(sentence)
     .map((w) =>
       w
         .toLowerCase()
@@ -18,6 +18,18 @@ export function normalizeWords(sentence: string): string[] {
         .replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '')
     )
     .filter(Boolean)
+}
+
+const HAN = /\p{Script=Han}/u
+
+/**
+ * What gets compared: words — or, for Chinese, single characters. A learner
+ * types Chinese with a pinyin keyboard and no spaces, so there are no word
+ * breaks to line up; character by character is also how a teacher marks it.
+ */
+function units(sentence: string): string[] {
+  if (!HAN.test(sentence)) return tokenize(sentence)
+  return [...sentence].filter((c) => /[\p{L}\p{N}]/u.test(c))
 }
 
 export interface DiffPart {
@@ -32,7 +44,7 @@ export interface DiffPart {
  * that are not in the sentence are "extra". Order follows the sentence.
  */
 export function diffWords(sentence: string, typed: string): DiffPart[] {
-  const shown = tokenize(sentence)
+  const shown = units(sentence)
   const a = normalizeWords(sentence)
   const b = normalizeWords(typed)
   // `shown` and `a` line up one-to-one unless a token was pure punctuation.

@@ -31,6 +31,7 @@ import { useT } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 // "Đọc truyện ngắn" (docs/design/reading.md): short graded stories in the
 // language being learned (public/data/reading/<code>.json). Tap any word from
@@ -141,6 +142,7 @@ function StoryList({ pack }: { pack: ReadingPack }) {
 
 function StoryView({ story }: { story: Story }) {
   const t = useT()
+  const readLabel = useReadingLabel('đọc gần giống', 'sounds like')
   const pack = useData((s) => s.pack)!
   const rate = useSettings((s) => s.ttsRate)
   const glossary = useMemo(() => buildGlossary(pack.words), [pack.words])
@@ -319,7 +321,7 @@ function StoryView({ story }: { story: Story }) {
                 </p>
                 {gloss.viRead && (
                   <p className="text-sm text-slate-500">
-                    {t('đọc gần giống', 'sounds like')} <b>{gloss.viRead}</b>
+                    {readLabel} <b>{gloss.viRead}</b>
                   </p>
                 )}
                 <p className="mt-1 font-semibold text-brand-700 dark:text-brand-300">

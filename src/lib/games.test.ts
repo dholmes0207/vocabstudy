@@ -102,6 +102,10 @@ describe('tokenize', () => {
     ])
   })
 
+  it('splits Chinese at the invisible word breaks its examples carry', () => {
+    expect(tokenize('我\u200b喜欢\u200b喝\u200b咖啡。')).toEqual(['我', '喜欢', '喝', '咖啡。'])
+  })
+
   it('collapses extra spaces', () => {
     expect(tokenize('  Hello   there  ')).toEqual(['Hello', 'there'])
   })

@@ -7,6 +7,7 @@ import { exampleAudio, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import { useMySentence } from '@/store/notesStore'
 import { useT } from '@/lib/i18n'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 interface Props {
   word: Word
@@ -33,6 +34,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
   const lang = useSettings((s) => s.currentLang)
   const mine = useMySentence(lang, word.id)
   const t = useT()
+  const readLabel = useReadingLabel('đọc gần giống', 'reads like')
   return (
     <div className={`space-y-4 ${className}`}>
       {variant === 'details' ? null : full ? (
@@ -55,7 +57,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
               {word.ipa && word.viRead && <span className="mx-1.5">·</span>}
               {word.viRead && (
                 <>
-                  {t('đọc gần giống', 'reads like')}{' '}
+                  {readLabel}{' '}
                   <b className="font-semibold text-slate-600 dark:text-slate-300">{word.viRead}</b>
                 </>
               )}

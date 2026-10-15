@@ -6,6 +6,7 @@ import WordInsight from './WordInsight'
 import { wordAudio } from '@/lib/audio'
 import { skyBurstAt } from '@/lib/skyEvents'
 import { useT } from '@/lib/i18n'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 interface Props {
   word: Word
@@ -17,6 +18,7 @@ interface Props {
 /** A 3D flip flashcard. Front = target word; back = meaning + example. */
 export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
   const t = useT()
+  const readLabel = useReadingLabel('cách đọc:', 'reads like:')
   // Turning to the meaning lets a little starlight out of the card.
   const flip = (el: Element) => {
     if (!flipped) skyBurstAt(el, 0.7)
@@ -53,7 +55,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
             {word.viRead && (
               <p className="text-sm text-slate-400">
-                {t('cách đọc:', 'reads like:')}{' '}
+                {readLabel}{' '}
                 <span className="font-semibold text-slate-500 dark:text-slate-300">
                   {word.viRead}
                 </span>

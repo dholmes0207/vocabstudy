@@ -23,6 +23,9 @@ describe('pack-specific screens', () => {
     expect(availableIn('/hangul', 'ko')).toBe(true)
     expect(availableIn('/hangul', 'en')).toBe(false)
     expect(packsFor('/hangul')).toEqual(['ko'])
+    // Chinese (beta) has words only so far: every pack-specific screen stays closed.
+    for (const path of ['/hangul', '/grammar', '/topics', '/reading', '/phrases', '/sounds'])
+      expect(availableIn(path, 'zh'), path).toBe(false)
   })
 
   it('leave every shared screen open to every pack', () => {
