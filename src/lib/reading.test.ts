@@ -18,7 +18,7 @@ describe('the shipped stories', () => {
   const reading = validateReadingPack(shipped)
 
   it('validate, with short sentences a beginner can follow', () => {
-    expect(reading.stories.length).toBeGreaterThanOrEqual(6)
+    expect(reading.stories.length).toBeGreaterThanOrEqual(14)
     for (const s of reading.stories)
       for (const line of s.sentences)
         expect(line.en.split(/\s+/).length, line.en).toBeLessThanOrEqual(14)
@@ -39,8 +39,15 @@ describe('glossary', () => {
 
   it('finds a word from its inflected form', () => {
     expect(glossFor('drinks', glossary)?.word).toBe('drink')
-    expect(glossFor('went', glossary)?.word).toBe('go')
+    expect(glossFor('bought', glossary)?.word).toBe('buy')
     expect(glossFor('mangoes?"', glossary)).not.toBeNull()
+  })
+
+  it('prefers a headword over a form of another word', () => {
+    expect(glossFor('evening,', glossary)?.word).toBe('evening')
+    expect(glossFor('rose', glossary)?.word).toBe('rose')
+    // The pack's own entry for a past form says what it is: "đã đi (quá khứ của go)".
+    expect(glossFor('went', glossary)?.word).toBe('went')
   })
 
   it('reads through punctuation and possessives', () => {

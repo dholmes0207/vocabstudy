@@ -77,9 +77,13 @@ export type Glossary = Map<string, Word>
 
 export function buildGlossary(words: Word[]): Glossary {
   const map: Glossary = new Map()
-  for (const w of words)
-    for (const form of surfaceForms(w.word, w.posCategory))
-      if (!form.includes(' ') && !map.has(form)) map.set(form, w)
+  const add = (form: string, w: Word) => {
+    if (form && !form.includes(' ') && !map.has(form)) map.set(form, w)
+  }
+  // Headwords first: "evening" is the noun, not "even" + -ing, and "rose" the
+  // flower wins over the past of "rise" whenever the pack has both.
+  for (const w of words) for (const head of w.word.toLowerCase().split('/')) add(head.trim(), w)
+  for (const w of words) for (const form of surfaceForms(w.word, w.posCategory)) add(form, w)
   return map
 }
 

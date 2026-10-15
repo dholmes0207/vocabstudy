@@ -6,7 +6,7 @@ từ đã học xuất hiện trong ngữ cảnh thật.
 
 **BA**
 
-- Trang **"Đọc truyện ngắn"** (`/reading`) là danh sách truyện ngắn có phân cấp độ A1–A2,
+- Trang **"Đọc truyện ngắn"** (`/reading`) là danh sách truyện ngắn có phân cấp độ A1–B1,
   mỗi truyện 7–8 câu. Thẻ truyện hiện cấp độ, số câu và điểm cao nhất nếu đã đọc.
 - Trong một truyện (`/reading/:id`):
   - **Chạm vào từ có gạch chân** để xem nghĩa tiếng Việt, cách đọc gần giống và nghe phát
@@ -35,10 +35,21 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   - Test `src/lib/reading.test.ts` kiểm tra mọi truyện đều hợp lệ, mỗi câu ngắn, và hơn
     75% số từ tra được trong gói.
 
-- **Tra nghĩa:** `buildGlossary` lập bảng từ dạng xuất hiện sang từ gốc bằng
-  `surfaceForms`. Ví dụ "drinks" → "drink", "went" → "go".
+- **Tra nghĩa:** `buildGlossary` lập bảng từ dạng xuất hiện sang từ gốc.
+  - Lượt 1 lấy **từ gốc** (headword) trước: "evening" là "buổi tối", không phải "even" + -ing.
+    Từ có mục riêng trong gói như "went" ("đã đi (quá khứ của go)") giữ nghĩa của mục đó.
+  - Lượt 2 mới đến các dạng biến đổi từ `surfaceForms`, ví dụ "drinks" → "drink",
+    "bought" → "buy".
   - Bỏ qua các cụm nhiều chữ.
   - `bareWord` bỏ dấu câu và đuôi `'s`.
+- **Soát nghĩa khi viết truyện mới:** máy chỉ khớp được mặt chữ, không hiểu nghĩa trong câu.
+  Vì vậy mỗi truyện mới phải in ra danh sách "từ → mục trong gói: nghĩa" và đọc lại từng dòng.
+  Câu nào bị ghép sai nghĩa thì sửa câu, không sửa gói. Một số lỗi đã gặp:
+  - "draw" (hoà) bị ghép thành "vẽ" → viết lại thành "the score was one to one";
+  - "lasts" (kéo dài) bị ghép thành "last" (cuối cùng) → đổi câu;
+  - tên "Hung" trùng quá khứ của "hang" → đổi tên nhân vật thành "Huy";
+  - "crowded" bị ghép thành danh từ "crowd" → "full of people".
+  - Truyện dùng chính tả Mỹ (favorite, neighbor, Mom) cho khớp gói từ và giọng đọc Mỹ.
 - **Âm thanh:** câu và cả bài dùng giọng đọc của trình duyệt (`pronounce` với `ttsLang`),
   còn từ đơn dùng file mp3 sẵn có (`wordAudio`).
   - Chưa thêm file audio cho câu truyện, vì `public/` đã gần chạm giới hạn 20.000 file của
