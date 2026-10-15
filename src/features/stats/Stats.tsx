@@ -11,6 +11,7 @@ import { compareWeeks, recentCalendar, type WeekTotals } from '@/lib/calendar'
 import { ALL_STICKERS, STICKER_SETS, collected } from '@/lib/stickers'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
+import SkillsSection from './SkillsSection'
 import { useT, useUiLang } from '@/lib/i18n'
 
 const DAYS = 14
@@ -70,19 +71,23 @@ export default function Stats() {
   const unlockedCount = achievements.filter((a) => a.unlocked).length
 
   if (s.learned === 0) {
+    // No words yet, but stories or grammar may already have been done.
     return (
-      <EmptyState
-        emoji="📊"
-        title={t('Chưa có dữ liệu thống kê', 'No stats yet')}
-        description={t(
-          'Bắt đầu học để xem tiến độ của bạn hiện lên ở đây.',
-          'Start learning and your progress will show up here.'
-        )}
-      >
-        <Link to="/learn" className="btn-primary">
-          {t('Học từ mới', 'Learn new words')}
-        </Link>
-      </EmptyState>
+      <div className="space-y-6">
+        <EmptyState
+          emoji="📊"
+          title={t('Chưa có dữ liệu thống kê', 'No stats yet')}
+          description={t(
+            'Bắt đầu học để xem tiến độ của bạn hiện lên ở đây.',
+            'Start learning and your progress will show up here.'
+          )}
+        >
+          <Link to="/learn" className="btn-primary">
+            {t('Học từ mới', 'Learn new words')}
+          </Link>
+        </EmptyState>
+        <SkillsSection key={code} code={code} />
+      </div>
     )
   }
 
@@ -142,6 +147,8 @@ export default function Stats() {
           />
         </div>
       </section>
+
+      <SkillsSection key={code} code={code} />
 
       {/* SRS box distribution */}
       <section className="card p-6">
