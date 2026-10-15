@@ -95,6 +95,15 @@ describe('buildSkeleton', () => {
     expect(rendered).toBe('i_')
   })
 
+  it('hides part of a Korean word too, one block counting as one letter', () => {
+    const show = (w: string) =>
+      buildSkeleton(w)
+        .map((c) => (c.revealed ? c.ch : '_'))
+        .join('')
+    expect(show('사람')).toBe('사_')
+    expect(show('도서관')).toBe('도_관')
+  })
+
   it('never hides a non-letter character', () => {
     for (const c of buildSkeleton('ice cream')) {
       if (!c.isLetter) expect(c.revealed).toBe(true)

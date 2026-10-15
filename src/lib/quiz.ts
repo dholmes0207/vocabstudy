@@ -95,7 +95,9 @@ export interface SkeletonCell {
 export function buildSkeleton(word: string): SkeletonCell[] {
   const target = word.split('/')[0].trim()
   const chars = [...target]
-  const isLetter = (c: string) => /[a-zA-Z]/.test(c)
+  // Any script's letters: a Hangul block counts as one, so "사람" shows as "사_"
+  // instead of giving the whole word away.
+  const isLetter = (c: string) => /\p{L}/u.test(c)
   const letters = chars.map((c, i) => (isLetter(c) ? i : -1)).filter((i) => i >= 0)
   const hide = new Set<number>()
   const middle = letters.slice(1, -1)
