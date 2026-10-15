@@ -12,7 +12,9 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   - **Chạm vào từ có gạch chân** để xem nghĩa tiếng Việt, cách đọc gần giống và nghe phát
     âm. Chỉ những từ có trong gói từ vựng mới chạm được, nên nghĩa luôn khớp với thẻ học.
   - **"Bản dịch"** bật hoặc tắt câu tiếng Việt dưới từng câu.
-  - **"Nghe cả bài"** đọc cả truyện; mỗi câu cũng có nút nghe riêng.
+  - **"Nghe cả bài"** đọc lần lượt từng câu. Câu đang đọc được tô nền và tự cuộn vào khung
+    nhìn; nút đổi thành "Dừng" trong lúc đọc. Mỗi câu cũng có nút nghe riêng. Bấm loa trong
+    hộp nghĩa của một từ thì dừng phần đọc cả bài.
   - Cuối truyện có 3 câu hỏi trắc nghiệm **bằng tiếng Việt**, để kiểm tra người học hiểu
     nội dung chứ không phải đoán chữ. Thứ tự đáp án được xáo mỗi lần.
 - Đọc xong được XP: `5 + 3 × câu đúng`, cộng thêm 5 nếu đúng hết. Phần đọc không thay đổi
@@ -54,6 +56,10 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   còn từ đơn dùng file mp3 sẵn có (`wordAudio`).
   - Chưa thêm file audio cho câu truyện, vì `public/` đã gần chạm giới hạn 20.000 file của
     Cloudflare Pages. Cần chuyển audio sang R2 trước.
+- **Đọc theo câu:** `playLine(i, all)` gọi `pronounce` cho từng câu và đọc câu kế tiếp trong
+  `onEnd`. Mỗi lần bắt đầu đọc hoặc bấm Dừng thì tăng biến đếm `run`. Câu bị huỷ vẫn gọi
+  `onEnd` (Web Speech báo lỗi "interrupted"), nhưng callback cũ có `run` khác nên không làm
+  gì. Test `Reading.test.tsx` giả lập giọng đọc để kiểm tra điều này.
 - **Lưu trữ:** `store/readingStore.ts` (`vocab.reading.v1`) lưu `{ best, reads }` theo id
   truyện.
 - **Lỗi đã gặp:**

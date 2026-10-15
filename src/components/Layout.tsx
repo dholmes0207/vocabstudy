@@ -37,6 +37,7 @@ import { markEntered } from '@/lib/entry'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { availableIn, packsFor } from '@/lib/packContent'
 import PackOnly from './PackOnly'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 /** A Vietnamese/English pair, picked by the interface language. */
 type Pair = [vi: string, en: string]
@@ -104,11 +105,10 @@ const isOn = (item: NavItem, pathname: string) =>
 export default function Layout() {
   useProgressSync()
   const t = useT()
+  const L = useTargetLang()
   // Once the app has been opened here, "/" brings this device straight back to it.
   useEffect(() => markEntered(localStorage), [])
-  useDocumentTitle(
-    t('VocaStudy · Học tiếng Anh mỗi ngày', 'VocaStudy · English, a little every day')
-  )
+  useDocumentTitle(t(`VocaStudy · Học ${L.vi} mỗi ngày`, `VocaStudy · ${L.en}, a little every day`))
   const currentLang = useSettings((s) => s.currentLang)
   const progress = useStudy((s) => s.progress)
   const stats = progress[currentLang]?.stats
@@ -214,6 +214,7 @@ export default function Layout() {
 
 function Brand({ compact = false }: { compact?: boolean }) {
   const t = useT()
+  const L = useTargetLang()
   if (compact)
     return (
       <Link to="/home" aria-label="VocaStudy">
@@ -226,7 +227,7 @@ function Brand({ compact = false }: { compact?: boolean }) {
     )
   return (
     <Link to="/home" aria-label="VocaStudy">
-      <Logo tagline={t('Học tiếng Anh mỗi ngày', 'English, a little every day')} />
+      <Logo tagline={t(`Học ${L.vi} mỗi ngày`, `${L.en}, a little every day`)} />
     </Link>
   )
 }

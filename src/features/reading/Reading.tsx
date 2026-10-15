@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, useParams } from 'react-router-dom'
 import {
@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookOpenText,
   CheckCircle2,
+  Square,
   Languages,
   Volume2,
   X,
@@ -15,7 +16,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useReading } from '@/store/readingStore'
-import { pronounce, wordAudio } from '@/lib/audio'
+import { pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import {
   buildGlossary,
   glossFor,
@@ -144,7 +145,42 @@ function StoryView({ story }: { story: Story }) {
   const [gloss, setGloss] = useState<Word | null>(null)
   const [quiz, setQuiz] = useState(false)
 
-  const say = (text: string) => pronounce({ text, lang: pack.meta.ttsLang, rate })
+  // The line being read aloud. "Nghe cả bài" reads one sentence after another,
+  // so the line lights up as it is spoken; a newer play or Stop bumps `run` and
+  // the old chain's callbacks (a cancelled utterance still fires onEnd) do nothing.
+  const [reading, setReading] = useState<{ line: number; all: boolean } | null>(null)
+  const run = useRef(0)
+  const lineRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  const playLine = (line: number, all: boolean) => {
+    const id = ++run.current
+    setReading({ line, all })
+    lineRefs.current[line]?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' })
+    pronounce({
+      text: story.sentences[line].en,
+      lang: pack.meta.ttsLang,
+      rate,
+      onEnd: () => {
+        if (id !== run.current) return
+        if (all && line + 1 < story.sentences.length) playLine(line + 1, true)
+        else setReading(null)
+      },
+    })
+  }
+  const stop = () => {
+    run.current++
+    stopPronounce()
+    setReading(null)
+  }
+
+  // Leaving the story (or opening the quiz) stops the voice.
+  useEffect(
+    () => () => {
+      run.current++
+      stopPronounce()
+    },
+    []
+  )
 
   if (quiz) return <StoryQuiz story={story} onBack={() => setQuiz(false)} />
 
@@ -165,12 +201,18 @@ function StoryView({ story }: { story: Story }) {
           <p className="text-slate-500">{story.title[0]}</p>
         </div>
         <div className="flex gap-2">
-          <button
-            className="btn-secondary"
-            onClick={() => say(story.sentences.map((s) => s.en).join(' '))}
-          >
-            <Volume2 className="h-4 w-4" /> {t('Nghe cả bài', 'Listen')}
-          </button>
+          {reading?.all ? (
+            <button
+              className="btn-secondary !border-brand-400 !text-brand-700 dark:!text-brand-300"
+              onClick={stop}
+            >
+              <Square className="h-4 w-4" /> {t('Dừng', 'Stop')}
+            </button>
+          ) : (
+            <button className="btn-secondary" onClick={() => playLine(0, true)}>
+              <Volume2 className="h-4 w-4" /> {t('Nghe cả bài', 'Listen')}
+            </button>
+          )}
           <button
             className={`btn-secondary ${showVi ? '!border-brand-400 !text-brand-700 dark:!text-brand-300' : ''}`}
             onClick={() => setShowVi((v) => !v)}
@@ -190,7 +232,16 @@ function StoryView({ story }: { story: Story }) {
 
       <section className="card space-y-4 p-5 text-lg leading-relaxed">
         {story.sentences.map((line, i) => (
-          <div key={i}>
+          <div
+            key={i}
+            ref={(el) => {
+              lineRefs.current[i] = el
+            }}
+            className={`-mx-2 rounded-xl px-2 transition-colors ${
+              reading?.line === i ? 'bg-brand-50 dark:bg-brand-950/60' : ''
+            }`}
+            aria-current={reading?.line === i ? 'true' : undefined}
+          >
             <p>
               {line.en.split(/\s+/).map((token, j) => {
                 const w = glossFor(token, glossary)
@@ -212,7 +263,7 @@ function StoryView({ story }: { story: Story }) {
               })}
               <button
                 type="button"
-                onClick={() => say(line.en)}
+                onClick={() => playLine(i, false)}
                 className="ml-1 inline-grid h-7 w-7 place-items-center rounded-full align-middle text-slate-400 hover:bg-slate-100 hover:text-brand-600 dark:hover:bg-slate-800"
                 aria-label={t('Nghe câu này', 'Listen to this sentence')}
               >
@@ -242,14 +293,16 @@ function StoryView({ story }: { story: Story }) {
             <div className="flex items-start gap-3">
               <button
                 type="button"
-                onClick={() =>
+                onClick={() => {
+                  // The word's own voice ends the story read-through first.
+                  stop()
                   pronounce({
                     audioSrc: wordAudio(gloss.id),
                     text: gloss.word,
                     lang: pack.meta.ttsLang,
                     rate,
                   })
-                }
+                }}
                 className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-300"
                 aria-label={t('Nghe từ này', 'Listen to this word')}
               >

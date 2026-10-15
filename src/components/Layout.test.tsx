@@ -98,6 +98,9 @@ describe('Layout for a Korean learner', () => {
     expect(screen.getAllByRole('link', { name: /Hangul/ }).length).toBeGreaterThan(0)
     expect(screen.queryByRole('link', { name: /Mẫu câu/ })).not.toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /Ngữ pháp/ })).not.toBeInTheDocument()
+    // The tagline names the language being learned.
+    expect(screen.getByText('Học từ vựng tiếng Hàn mỗi ngày')).toBeInTheDocument()
+    expect(document.title).toBe('VocaStudy · Học tiếng Hàn mỗi ngày')
   })
 
   it('explains an English-only screen instead of showing it, with a way to switch', () => {
