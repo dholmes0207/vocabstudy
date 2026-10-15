@@ -35,6 +35,15 @@ export const PRACTICE: PracticeEntry[] = [
     englishOnly: true,
   },
   {
+    to: '/dictation',
+    icon: '✍️',
+    title: 'Nghe – chép',
+    desc: 'Nghe một câu rồi gõ lại — luyện tai và chính tả, xem từng từ bạn nghe được.',
+    titleEn: 'Dictation',
+    descEn: 'Hear a sentence, then type it — train your ear and spelling, word by word.',
+    tone: 'from-teal-500 to-emerald-600',
+  },
+  {
     to: '/games/match',
     icon: '🧩',
     title: 'Ghép cặp',

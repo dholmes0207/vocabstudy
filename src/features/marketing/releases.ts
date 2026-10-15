@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
     items: [
       [
+        'Nghe – chép: nghe một câu ví dụ rồi gõ lại, xem từng từ bạn nghe đúng hay sót.',
+        'Dictation: hear an example sentence, type it, and see which words you caught or missed.',
+      ],
+      [
         'Tiếng Hàn (beta): 81 từ sơ cấp có cách đọc kiểu Việt và câu ví dụ — chọn ở nút ngôn ngữ trên cùng.',
         'Korean (beta): 81 beginner words with Vietnamese-style readings and example sentences — pick it from the language button at the top.',
       ],

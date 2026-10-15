@@ -22,6 +22,7 @@ const Sounds = lazy(() => import('./features/sounds/Sounds'))
 const Phrases = lazy(() => import('./features/phrases/Phrases'))
 const Topics = lazy(() => import('./features/topics/Topics'))
 const Grammar = lazy(() => import('./features/grammar/Grammar'))
+const Dictation = lazy(() => import('./features/dictation/Dictation'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
@@ -88,6 +89,7 @@ export default function App() {
               <Route path="/phrases" element={<Phrases />} />
               <Route path="/topics" element={<Topics />} />
               <Route path="/grammar" element={<Grammar />} />
+              <Route path="/dictation" element={<Dictation />} />
               <Route path="/grammar/:unitId" element={<Grammar />} />
               <Route path="/phrases/:topicId" element={<Phrases />} />
               <Route path="/browse" element={<Browse />} />
