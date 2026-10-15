@@ -86,7 +86,7 @@ describe('Layout for a Korean learner', () => {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/home" element={<p>màn hình chính</p>} />
-            <Route path="/grammar" element={<p>ngữ pháp tiếng Anh</p>} />
+            <Route path="/phrases" element={<p>mẫu câu tiếng Anh</p>} />
           </Route>
         </Routes>
       </MemoryRouter>
@@ -97,15 +97,16 @@ describe('Layout for a Korean learner', () => {
     renderAt('/home')
     expect(screen.getAllByRole('link', { name: /Hangul/ }).length).toBeGreaterThan(0)
     expect(screen.queryByRole('link', { name: /Mẫu câu/ })).not.toBeInTheDocument()
-    expect(screen.queryByRole('link', { name: /Ngữ pháp/ })).not.toBeInTheDocument()
+    // Grammar has Korean lessons too, so it stays in the menu.
+    expect(screen.getAllByRole('link', { name: /Ngữ pháp/ }).length).toBeGreaterThan(0)
     // The tagline names the language being learned.
     expect(screen.getByText('Học từ vựng tiếng Hàn mỗi ngày')).toBeInTheDocument()
     expect(document.title).toBe('VocaStudy · Học tiếng Hàn mỗi ngày')
   })
 
   it('explains an English-only screen instead of showing it, with a way to switch', () => {
-    renderAt('/grammar')
-    expect(screen.queryByText('ngữ pháp tiếng Anh')).not.toBeInTheDocument()
+    renderAt('/phrases')
+    expect(screen.queryByText('mẫu câu tiếng Anh')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /dành cho tiếng Anh/ })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /Chuyển sang tiếng Anh/ }))
     expect(useSettings.getState().currentLang).toBe('en')

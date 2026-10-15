@@ -26,10 +26,9 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/grammar',
     icon: '📐',
     title: 'Ngữ pháp căn bản',
-    desc: '12 bài ngắn: to be, các thì, a/an/the, giới từ… giải thích bằng tiếng Việt, có bài luyện.',
+    desc: 'Bài ngắn cho người mới, giải thích bằng tiếng Việt, kèm lỗi hay gặp và bài luyện.',
     titleEn: 'Grammar basics',
-    descEn:
-      '12 short lessons: to be, tenses, a/an/the, prepositions… explained simply, with practice.',
+    descEn: 'Short beginner lessons explained in Vietnamese, with common mistakes and practice.',
     tone: 'from-indigo-500 to-violet-600',
   },
   {

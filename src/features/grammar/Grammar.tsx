@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, CheckCircle2, GraduationCap, LogOut, XCircle } from 'lucide-react'
+import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useGrammar } from '@/store/grammarStore'
@@ -29,7 +30,8 @@ import BuildTiles from '@/components/BuildTiles'
 // plain Vietnamese, the pattern, examples to listen to, the mistakes Vietnamese
 // learners usually make, then a round of practice.
 
-const TTS_LANG = 'en-US'
+/** Examples are read in the pack's own voice (en-US, ko-KR…). */
+const useTtsLang = () => useData((s) => s.pack?.meta.ttsLang ?? 'en-US')
 
 function useGrammarPack(): { pack: GrammarPack | null; error: string | null } {
   const code = useSettings((s) => s.currentLang)
@@ -137,6 +139,7 @@ function UnitList({ pack }: { pack: GrammarPack }) {
 
 function UnitView({ unit }: { unit: GrammarUnit }) {
   const t = useT()
+  const ttsLang = useTtsLang()
   const rec = useGrammar((s) => s.progress[unit.id])
   const [round, setRound] = useState<{ n: number; items: GrammarExercise[] } | null>(null)
 
@@ -196,7 +199,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
         <ul className="mt-2 divide-y divide-slate-100 dark:divide-slate-800">
           {unit.examples.map((ex) => (
             <li key={ex.en} className="flex items-start gap-3 py-2.5">
-              <SpeakButton text={ex.en} lang={TTS_LANG} size="sm" />
+              <SpeakButton text={ex.en} lang={ttsLang} size="sm" />
               <span>
                 <span className="block font-semibold">{ex.en}</span>
                 <span className="text-sm text-slate-500">{ex.vi}</span>
@@ -255,6 +258,7 @@ function Practice({
 }) {
   useImmersive()
   const t = useT()
+  const ttsLang = useTtsLang()
   const lang = useUiLang()
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
@@ -420,7 +424,7 @@ function Practice({
             {q.type === 'choice' && q.explain && <p className="mt-1">💡 {q.explain}</p>}
             {q.type === 'order' && (
               <p className="mt-1 flex items-center gap-2">
-                <SpeakButton text={q.en} lang={TTS_LANG} size="sm" />
+                <SpeakButton text={q.en} lang={ttsLang} size="sm" />
                 <b>{q.en}</b>
               </p>
             )}

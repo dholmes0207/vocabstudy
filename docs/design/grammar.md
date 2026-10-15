@@ -54,3 +54,19 @@ Tính năng thứ hai vượt ra ngoài từ vựng. Tính năng thứ nhất l�
     (`grid-cols-1` + `min-w-0` đã sửa);
   - nút Luyện tập để trong `.session-actions` bị thanh điều hướng dưới che, nên đã chuyển
     về vị trí bình thường trong trang.
+
+## Tiếng Hàn (15/10/2026)
+
+- `public/data/grammar/ko.json` có 7 bài A1:
+  - 이에요/예요 ("là");
+  - các tiểu từ 은/는, 이/가, 을/를, 에/에서;
+  - đuôi lịch sự -아요/-어요;
+  - phủ định bằng 안.
+- Cách trình bày giống bài tiếng Anh: giải thích bằng tiếng Việt, mẫu câu, ví dụ, lỗi hay
+  gặp, ít nhất 5 bài luyện. Trường `en` chứa câu tiếng Hàn, theo cách đặt tên của gói.
+- Phần lớn câu chọn tiểu từ phụ thuộc một quy tắc: danh từ có kết thúc bằng phụ âm (받침)
+  hay không. Test `grammar.test.ts` tự tính 받침 từ mã Unicode của khối chữ cuối và đối chiếu
+  với đáp án của từng câu (hiện có 20 câu). Nhờ vậy viết nhầm 은 thành 는 sẽ bị bắt ngay.
+- Giọng đọc ví dụ lấy theo gói (`pack.meta.ttsLang`), không còn cố định `en-US`.
+- `/grammar` mở cho tiếng Hàn qua `lib/packContent.ts`. Mô tả ở trang Luyện tập không còn
+  liệt kê chủ đề riêng của tiếng Anh.

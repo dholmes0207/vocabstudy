@@ -10,12 +10,12 @@ describe('pack-specific screens', () => {
   })
 
   it('keep English content for English and Hangul for Korean', () => {
-    for (const path of ['/grammar', '/phrases', '/sounds']) {
+    for (const path of ['/phrases', '/sounds']) {
       expect(availableIn(path, 'en'), path).toBe(true)
       expect(availableIn(path, 'ko'), path).toBe(false)
     }
-    // Stories and topic decks exist for both packs (public/data/{reading,topics}/en|ko.json).
-    for (const path of ['/reading/x', '/topics']) {
+    // Stories, topic decks and grammar exist for both packs (public/data/{reading,topics,grammar}/).
+    for (const path of ['/reading/x', '/topics', '/grammar']) {
       expect(availableIn(path, 'en'), path).toBe(true)
       expect(availableIn(path, 'ko'), path).toBe(true)
       expect(availableIn(path, 'ja'), path).toBe(false)

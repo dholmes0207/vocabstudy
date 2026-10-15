@@ -32,6 +32,36 @@ describe('the shipped grammar pack', () => {
   })
 })
 
+describe('the Korean grammar pack', () => {
+  const ko = validateGrammarPack(JSON.parse(readFileSync('public/data/grammar/ko.json', 'utf8')))
+
+  it('validates, in Korean, with lessons for the particles and the polite ending', () => {
+    expect(ko.units.map((u) => u.id)).toEqual(
+      expect.arrayContaining(['ko-ieyo', 'ko-eun-neun', 'ko-i-ga', 'ko-eul-reul', 'ko-ayo-eoyo'])
+    )
+    for (const u of ko.units) for (const ex of u.examples) expect(ex.en, u.id).toMatch(/[가-힣]/)
+  })
+
+  it('picks each particle by whether the noun ends in a consonant (받침)', () => {
+    const pairs = [
+      ['이에요', '예요'],
+      ['은', '는'],
+      ['이', '가'],
+      ['을', '를'],
+    ]
+    const hasFinal = (s: string) => (s.charCodeAt(s.length - 1) - 0xac00) % 28 !== 0
+    let checked = 0
+    for (const u of ko.units)
+      for (const e of u.exercises) {
+        if (e.type !== 'choice' || !pairs.some((p) => p.join() === e.options.join())) continue
+        const noun = /([가-힣]+)___/.exec(e.prompt)![1]
+        expect(e.answer, e.prompt).toBe(hasFinal(noun) ? 0 : 1)
+        checked++
+      }
+    expect(checked).toBeGreaterThanOrEqual(15)
+  })
+})
+
 describe('validateGrammarPack', () => {
   const unit = (over: Partial<GrammarUnit>): GrammarUnit => ({
     id: 'x',
