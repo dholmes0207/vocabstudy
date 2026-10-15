@@ -1,0 +1,820 @@
+{
+  "version": "1.0.0",
+  "units": [
+    {
+      "id": "zh-shi",
+      "emoji": "🙋",
+      "level": "A1",
+      "title": [
+        "是: \"là\"",
+        "是: \"to be\""
+      ],
+      "summary": [
+        "Nói ai là ai, cái gì là cái gì.",
+        "Say who someone is or what something is."
+      ],
+      "explain": [
+        "是 nghĩa là \"là\", nối hai danh từ: 我是学生 = tôi là học sinh.",
+        "Phủ định là 不是 (không phải là): 他不是老师.",
+        "Câu hỏi có / không thì thêm 吗 ở cuối: 你是中国人吗？",
+        "Không đặt 是 trước tính từ: nói 我很好, không nói 我是好 (xem bài 很)."
+      ],
+      "patterns": [
+        "A 是 B",
+        "A 不是 B",
+        "A 是 B 吗？"
+      ],
+      "examples": [
+        {
+          "en": "我是学生。",
+          "vi": "Tôi là học sinh."
+        },
+        {
+          "en": "他是我的老师。",
+          "vi": "Anh ấy là thầy giáo của tôi."
+        },
+        {
+          "en": "她不是医生。",
+          "vi": "Cô ấy không phải là bác sĩ."
+        },
+        {
+          "en": "你是中国人吗？",
+          "vi": "Bạn là người Trung Quốc à?"
+        },
+        {
+          "en": "这是我的书。",
+          "vi": "Đây là sách của tôi."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我是很好。",
+          "right": "我很好。",
+          "why": "Trước tính từ dùng 很, không dùng 是."
+        },
+        {
+          "wrong": "他不老师。",
+          "right": "他不是老师。",
+          "why": "Phủ định của 是 là 不是."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我___学生。",
+          "options": [
+            "是",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "Nối hai danh từ dùng 是."
+        },
+        {
+          "type": "choice",
+          "prompt": "她___医生，她是老师。",
+          "options": [
+            "不是",
+            "没有"
+          ],
+          "answer": 0,
+          "explain": "Phủ định của 是 là 不是."
+        },
+        {
+          "type": "choice",
+          "prompt": "你是中国人___？",
+          "options": [
+            "吗",
+            "呢"
+          ],
+          "answer": 0,
+          "explain": "Câu hỏi có / không thêm 吗."
+        },
+        {
+          "type": "choice",
+          "prompt": "这___我的书。",
+          "options": [
+            "是",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "Đây là sách của tôi → 是."
+        },
+        {
+          "type": "choice",
+          "prompt": "他___我的朋友。",
+          "options": [
+            "是",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "Anh ấy là bạn tôi → 是."
+        },
+        {
+          "type": "order",
+          "en": "我​是​越南​人。",
+          "vi": "Tôi là người Việt Nam."
+        },
+        {
+          "type": "order",
+          "en": "他​不​是​我​的​老师。",
+          "vi": "Anh ấy không phải là thầy giáo của tôi."
+        }
+      ]
+    },
+    {
+      "id": "zh-bu-mei",
+      "emoji": "🙅",
+      "level": "A1",
+      "title": [
+        "不 và 没: hai cách nói \"không\"",
+        "不 and 没: two kinds of \"not\""
+      ],
+      "summary": [
+        "不 cho thói quen, ý muốn, hiện tại; 没 cho việc đã qua và \"không có\".",
+        "不 for habits, wishes and now; 没 for the past and for \"have not\"."
+      ],
+      "explain": [
+        "不 phủ định thói quen, ý muốn, hiện tại và tương lai: 我不喝茶 (tôi không uống trà), 明天我不去.",
+        "没 (没有) phủ định việc đã xảy ra: 昨天我没去 (hôm qua tôi đã không đi).",
+        "\"Không có\" luôn là 没有, không bao giờ là 不有: 我没有钱.",
+        "是 chỉ đi với 不: 不是, không nói 没是."
+      ],
+      "patterns": [
+        "不 + động từ / tính từ: 不喝, 不冷",
+        "没 + động từ (đã không): 没去",
+        "没有 + danh từ: 没有钱"
+      ],
+      "examples": [
+        {
+          "en": "我不喝咖啡。",
+          "vi": "Tôi không uống cà phê."
+        },
+        {
+          "en": "今天不冷。",
+          "vi": "Hôm nay không lạnh."
+        },
+        {
+          "en": "昨天我没去学校。",
+          "vi": "Hôm qua tôi không đến trường."
+        },
+        {
+          "en": "我没有时间。",
+          "vi": "Tôi không có thời gian."
+        },
+        {
+          "en": "他不是医生。",
+          "vi": "Anh ấy không phải là bác sĩ."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我不有钱。",
+          "right": "我没有钱。",
+          "why": "\"Không có\" là 没有, không dùng 不有."
+        },
+        {
+          "wrong": "昨天我不去学校。",
+          "right": "昨天我没去学校。",
+          "why": "Việc đã qua (hôm qua) phủ định bằng 没."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我___有钱。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 1,
+          "explain": "有 chỉ phủ định bằng 没 → 没有."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___喝茶，我喜欢喝咖啡。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Thói quen, sở thích → 不."
+        },
+        {
+          "type": "choice",
+          "prompt": "昨天他___来。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 1,
+          "explain": "Việc đã qua → 没."
+        },
+        {
+          "type": "choice",
+          "prompt": "今天___冷。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Tính từ phủ định bằng 不."
+        },
+        {
+          "type": "choice",
+          "prompt": "他___是老师。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "是 đi với 不."
+        },
+        {
+          "type": "order",
+          "en": "我​没有​时间。",
+          "vi": "Tôi không có thời gian."
+        }
+      ]
+    },
+    {
+      "id": "zh-questions",
+      "emoji": "❓",
+      "level": "A1",
+      "title": [
+        "Câu hỏi: 吗 và từ để hỏi",
+        "Questions: 吗 and question words"
+      ],
+      "summary": [
+        "Hỏi có / không bằng 吗; hỏi thông tin bằng 什么, 谁, 哪儿, 几…",
+        "Yes / no questions with 吗; information questions with 什么, 谁, 哪儿, 几…"
+      ],
+      "explain": [
+        "Câu hỏi có / không: thêm 吗 vào cuối câu kể: 你是学生 → 你是学生吗？",
+        "Câu có từ để hỏi (什么, 谁, 哪儿, 几, 多少) thì giữ trật tự câu kể và KHÔNG thêm 吗: 你叫什么名字？",
+        "Từ để hỏi đứng đúng chỗ của thông tin cần hỏi: 他是谁？ (anh ấy là ai?), 你去哪儿？ (bạn đi đâu?)",
+        "呢 dùng để hỏi lại \"còn … thì sao?\": 我很好，你呢？"
+      ],
+      "patterns": [
+        "Câu kể + 吗？",
+        "Từ để hỏi ở chỗ cần hỏi, không có 吗",
+        "…，你呢？"
+      ],
+      "examples": [
+        {
+          "en": "你好吗？",
+          "vi": "Bạn khỏe không?"
+        },
+        {
+          "en": "你叫什么名字？",
+          "vi": "Bạn tên là gì?"
+        },
+        {
+          "en": "他是谁？",
+          "vi": "Anh ấy là ai?"
+        },
+        {
+          "en": "你去哪儿？",
+          "vi": "Bạn đi đâu?"
+        },
+        {
+          "en": "我很好，你呢？",
+          "vi": "Tôi khỏe, còn bạn?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "你叫什么名字吗？",
+          "right": "你叫什么名字？",
+          "why": "Câu đã có 什么 thì không thêm 吗."
+        },
+        {
+          "wrong": "什么你叫名字？",
+          "right": "你叫什么名字？",
+          "why": "Từ để hỏi đứng ở chỗ của thông tin cần hỏi, không đưa lên đầu câu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "你是老师___？",
+          "options": [
+            "吗",
+            "什么"
+          ],
+          "answer": 0,
+          "explain": "Câu hỏi có / không → 吗."
+        },
+        {
+          "type": "choice",
+          "prompt": "你想吃___？",
+          "options": [
+            "什么",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Hỏi \"ăn gì\" → 什么, không thêm 吗."
+        },
+        {
+          "type": "choice",
+          "prompt": "他是___？",
+          "options": [
+            "谁",
+            "哪儿"
+          ],
+          "answer": 0,
+          "explain": "Hỏi người → 谁."
+        },
+        {
+          "type": "choice",
+          "prompt": "医院在___？",
+          "options": [
+            "哪儿",
+            "几"
+          ],
+          "answer": 0,
+          "explain": "Hỏi nơi chốn → 哪儿."
+        },
+        {
+          "type": "choice",
+          "prompt": "你家有___口人？",
+          "options": [
+            "几",
+            "什么"
+          ],
+          "answer": 0,
+          "explain": "Hỏi số lượng nhỏ → 几."
+        },
+        {
+          "type": "choice",
+          "prompt": "我很好，你___？",
+          "options": [
+            "呢",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Hỏi lại \"còn bạn?\" → 呢."
+        },
+        {
+          "type": "order",
+          "en": "你​叫​什么​名字？",
+          "vi": "Bạn tên là gì?"
+        }
+      ]
+    },
+    {
+      "id": "zh-de",
+      "emoji": "🔗",
+      "level": "A1",
+      "title": [
+        "的: \"của\"",
+        "的: possession"
+      ],
+      "summary": [
+        "Người sở hữu + 的 + vật: 我的书 = sách của tôi.",
+        "Owner + 的 + thing: 我的书 = my book."
+      ],
+      "explain": [
+        "的 nối người sở hữu với vật: 我的书 = sách của tôi. Trật tự ngược với tiếng Việt: người sở hữu đứng TRƯỚC.",
+        "Với người thân và nơi thân thuộc thường bỏ 的: 我妈妈, 我家.",
+        "的 cũng nối cụm tính từ với danh từ: 很好的朋友 (người bạn rất tốt)."
+      ],
+      "patterns": [
+        "Người + 的 + vật: 我的书",
+        "我 + người thân: 我妈妈"
+      ],
+      "examples": [
+        {
+          "en": "这是我的书。",
+          "vi": "Đây là sách của tôi."
+        },
+        {
+          "en": "他是我的老师。",
+          "vi": "Anh ấy là thầy giáo của tôi."
+        },
+        {
+          "en": "妈妈的衣服很漂亮。",
+          "vi": "Quần áo của mẹ rất đẹp."
+        },
+        {
+          "en": "我妈妈是医生。",
+          "vi": "Mẹ tôi là bác sĩ."
+        },
+        {
+          "en": "他是我很好的朋友。",
+          "vi": "Anh ấy là người bạn rất tốt của tôi."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "书的我",
+          "right": "我的书",
+          "why": "Người sở hữu đứng trước 的, vật đứng sau."
+        },
+        {
+          "wrong": "这是书我。",
+          "right": "这是我的书。",
+          "why": "Không đặt người sở hữu sau vật như tiếng Việt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "这是我___书。",
+          "options": [
+            "的",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Sở hữu → 的."
+        },
+        {
+          "type": "choice",
+          "prompt": "他是我___朋友。",
+          "options": [
+            "的",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "Bạn của tôi → 我的朋友."
+        },
+        {
+          "type": "choice",
+          "prompt": "老师___名字是什么？",
+          "options": [
+            "的",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Tên của thầy → 老师的名字."
+        },
+        {
+          "type": "choice",
+          "prompt": "妈妈___衣服很漂亮。",
+          "options": [
+            "的",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "Quần áo của mẹ → 妈妈的衣服."
+        },
+        {
+          "type": "choice",
+          "prompt": "这是谁___书？",
+          "options": [
+            "的",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Sách của ai → 谁的书."
+        },
+        {
+          "type": "order",
+          "en": "这​是​我​的​书。",
+          "vi": "Đây là sách của tôi."
+        }
+      ]
+    },
+    {
+      "id": "zh-measure",
+      "emoji": "🧮",
+      "level": "A1",
+      "title": [
+        "Lượng từ: 个, 本, 杯, 只",
+        "Measure words: 个, 本, 杯, 只"
+      ],
+      "summary": [
+        "Số + lượng từ + danh từ: 三本书 = ba quyển sách.",
+        "Number + measure word + noun: 三本书 = three books."
+      ],
+      "explain": [
+        "Giữa số đếm (hoặc 这 / 那) và danh từ phải có lượng từ: 一个人, 三本书 — giống \"một CON mèo, ba QUYỂN sách\" trong tiếng Việt.",
+        "个 là lượng từ chung, dùng cho người và nhiều đồ vật: 一个苹果.",
+        "本 cho sách vở (三本书), 杯 cho đồ uống (一杯茶), 只 cho nhiều con vật (一只猫).",
+        "Đứng trước lượng từ, số hai là 两 chứ không phải 二: 两个人."
+      ],
+      "patterns": [
+        "Số + lượng từ + danh từ",
+        "这 / 那 + lượng từ + danh từ: 这个苹果"
+      ],
+      "examples": [
+        {
+          "en": "我有一个儿子。",
+          "vi": "Tôi có một đứa con trai."
+        },
+        {
+          "en": "桌子上有三本书。",
+          "vi": "Trên bàn có ba quyển sách."
+        },
+        {
+          "en": "我想喝一杯茶。",
+          "vi": "Tôi muốn uống một cốc trà."
+        },
+        {
+          "en": "我家有一只猫。",
+          "vi": "Nhà tôi có một con mèo."
+        },
+        {
+          "en": "这个苹果很大。",
+          "vi": "Quả táo này rất to."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我有三书。",
+          "right": "我有三本书。",
+          "why": "Thiếu lượng từ: số + lượng từ + danh từ."
+        },
+        {
+          "wrong": "二个人",
+          "right": "两个人",
+          "why": "Trước lượng từ, số hai là 两."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我有三___书。",
+          "options": [
+            "本",
+            "杯"
+          ],
+          "answer": 0,
+          "explain": "Sách dùng 本."
+        },
+        {
+          "type": "choice",
+          "prompt": "我想喝一___咖啡。",
+          "options": [
+            "杯",
+            "本"
+          ],
+          "answer": 0,
+          "explain": "Đồ uống dùng 杯."
+        },
+        {
+          "type": "choice",
+          "prompt": "他有一___儿子。",
+          "options": [
+            "个",
+            "本"
+          ],
+          "answer": 0,
+          "explain": "Người dùng 个."
+        },
+        {
+          "type": "choice",
+          "prompt": "我家有一___猫。",
+          "options": [
+            "只",
+            "本"
+          ],
+          "answer": 0,
+          "explain": "Nhiều con vật dùng 只."
+        },
+        {
+          "type": "choice",
+          "prompt": "这___苹果很好吃。",
+          "options": [
+            "个",
+            "杯"
+          ],
+          "answer": 0,
+          "explain": "Quả táo dùng 个."
+        },
+        {
+          "type": "order",
+          "en": "我​有​两​个​朋友。",
+          "vi": "Tôi có hai người bạn."
+        }
+      ]
+    },
+    {
+      "id": "zh-zai",
+      "emoji": "📍",
+      "level": "A1",
+      "title": [
+        "在: ở đâu, đang làm gì",
+        "在: where, and doing now"
+      ],
+      "summary": [
+        "在 + nơi chốn = \"ở\"; nơi chốn đứng trước động từ; 在 + động từ = \"đang\".",
+        "在 + place = \"at\"; the place comes before the verb; 在 + verb = \"-ing\"."
+      ],
+      "explain": [
+        "在 + nơi chốn = \"ở …\": 我在家 (tôi ở nhà).",
+        "Làm việc gì ở đâu thì nơi chốn đứng TRƯỚC động từ: 我在学校学习 = tôi học ở trường (tiếng Việt nói \"học ở trường\").",
+        "在 + động từ còn có nghĩa \"đang\": 我在看书 (tôi đang đọc sách)."
+      ],
+      "patterns": [
+        "Ai + 在 + nơi chốn",
+        "Ai + 在 + nơi chốn + làm gì",
+        "Ai + 在 + động từ (đang)"
+      ],
+      "examples": [
+        {
+          "en": "爸爸在家。",
+          "vi": "Bố đang ở nhà."
+        },
+        {
+          "en": "我在医院工作。",
+          "vi": "Tôi làm việc ở bệnh viện."
+        },
+        {
+          "en": "你住在哪儿？",
+          "vi": "Bạn sống ở đâu?"
+        },
+        {
+          "en": "他在看电视。",
+          "vi": "Anh ấy đang xem ti vi."
+        },
+        {
+          "en": "我在学校学习汉语。",
+          "vi": "Tôi học tiếng Trung ở trường."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我学习在学校。",
+          "right": "我在学校学习。",
+          "why": "Nơi chốn với 在 đứng trước động từ."
+        },
+        {
+          "wrong": "我是在家。",
+          "right": "我在家。",
+          "why": "\"Ở\" là 在, không cần thêm 是."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我___家。",
+          "options": [
+            "在",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Ở nhà → 在家."
+        },
+        {
+          "type": "choice",
+          "prompt": "他___医院工作。",
+          "options": [
+            "在",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Làm việc ở bệnh viện → 在医院工作."
+        },
+        {
+          "type": "choice",
+          "prompt": "你___做什么？",
+          "options": [
+            "在",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Đang làm gì → 在 + động từ."
+        },
+        {
+          "type": "choice",
+          "prompt": "书___桌子上。",
+          "options": [
+            "在",
+            "有"
+          ],
+          "answer": 0,
+          "explain": "Sách ở trên bàn → 在."
+        },
+        {
+          "type": "choice",
+          "prompt": "她___北京住了三年。",
+          "options": [
+            "在",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Sống ở Bắc Kinh → 在北京."
+        },
+        {
+          "type": "order",
+          "en": "我​在​学校​学习​汉语。",
+          "vi": "Tôi học tiếng Trung ở trường."
+        }
+      ]
+    },
+    {
+      "id": "zh-hen",
+      "emoji": "✨",
+      "level": "A1",
+      "title": [
+        "很 + tính từ: câu miêu tả",
+        "很 + adjective: describing"
+      ],
+      "summary": [
+        "Chủ ngữ + 很 + tính từ, không dùng 是: 天气很好.",
+        "Subject + 很 + adjective, no 是: 天气很好."
+      ],
+      "explain": [
+        "Câu miêu tả: chủ ngữ + 很 + tính từ: 天气很好. Không đặt 是 trước tính từ.",
+        "很 nghĩa gốc là \"rất\", nhưng trong câu miêu tả nó gần như bắt buộc và nghĩa nhẹ đi: 我很好 = tôi khỏe.",
+        "Phủ định thì bỏ 很 và dùng 不: 今天不冷. Muốn nói \"quá\" thì dùng 太 … 了: 太贵了！"
+      ],
+      "patterns": [
+        "Chủ ngữ + 很 + tính từ",
+        "Chủ ngữ + 不 + tính từ",
+        "太 + tính từ + 了！"
+      ],
+      "examples": [
+        {
+          "en": "天气很好。",
+          "vi": "Thời tiết rất đẹp."
+        },
+        {
+          "en": "这个苹果很大。",
+          "vi": "Quả táo này rất to."
+        },
+        {
+          "en": "今天不冷。",
+          "vi": "Hôm nay không lạnh."
+        },
+        {
+          "en": "她很漂亮。",
+          "vi": "Cô ấy rất xinh."
+        },
+        {
+          "en": "太贵了！",
+          "vi": "Đắt quá!"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "他是很高兴。",
+          "right": "他很高兴。",
+          "why": "Trước tính từ không dùng 是."
+        },
+        {
+          "wrong": "太贵！",
+          "right": "太贵了！",
+          "why": "太 thường đi với 了 ở cuối: 太 … 了."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "她___漂亮。",
+          "options": [
+            "很",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Tính từ đi với 很, không dùng 是."
+        },
+        {
+          "type": "choice",
+          "prompt": "今天___冷，很热。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Phủ định tính từ → 不."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个菜___好吃了！",
+          "options": [
+            "太",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Khen \"ngon quá\" → 太 … 了."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___高兴认识你。",
+          "options": [
+            "很",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "很高兴: rất vui."
+        },
+        {
+          "type": "choice",
+          "prompt": "北京的冬天___冷。",
+          "options": [
+            "很",
+            "是"
+          ],
+          "answer": 0,
+          "explain": "Tính từ đi với 很."
+        },
+        {
+          "type": "order",
+          "en": "今天​天气​很​好。",
+          "vi": "Hôm nay thời tiết rất đẹp."
+        }
+      ]
+    }
+  ]
+}

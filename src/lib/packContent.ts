@@ -5,7 +5,7 @@
 // error when a link to one of these screens is opened with another pack.
 
 const ONLY: Record<string, readonly string[]> = {
-  '/grammar': ['en', 'ko'],
+  '/grammar': ['en', 'ko', 'zh'],
   '/topics': ['en', 'ko', 'zh'],
   '/reading': ['en', 'ko', 'zh'],
   '/phrases': ['en'],

@@ -62,6 +62,27 @@ describe('the Korean grammar pack', () => {
   })
 })
 
+describe('the Chinese grammar pack', () => {
+  const zh = validateGrammarPack(JSON.parse(readFileSync('public/data/grammar/zh.json', 'utf8')))
+
+  it('validates, in Chinese, with the core beginner points', () => {
+    expect(zh.units.map((u) => u.id)).toEqual(
+      expect.arrayContaining(['zh-shi', 'zh-bu-mei', 'zh-questions', 'zh-de', 'zh-measure'])
+    )
+    for (const u of zh.units)
+      for (const ex of u.examples) expect(ex.en, u.id).toMatch(/\p{Script=Han}/u)
+  })
+
+  it('builds word-order tiles from invisible word breaks, never visible spaces', () => {
+    for (const u of zh.units)
+      for (const e of u.exercises)
+        if (e.type === 'order') {
+          expect(e.en, u.id).toContain('\u200b')
+          expect(e.en, u.id).not.toMatch(/ /)
+        }
+  })
+})
+
 describe('validateGrammarPack', () => {
   const unit = (over: Partial<GrammarUnit>): GrammarUnit => ({
     id: 'x',

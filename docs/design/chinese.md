@@ -123,3 +123,12 @@ rõ.
 - Màn hình đọc tách từ bằng `tokenize()` và chỉ chèn dấu cách nếu câu gốc có dấu cách. Nhờ
   vậy câu tiếng Trung hiện liền mạch, mỗi từ vẫn chạm được riêng.
 - `/reading` mở cho tiếng Trung.
+
+## Bước 5: ngữ pháp căn bản (đã làm)
+
+- `public/data/grammar/zh.json` có 7 bài A1, sinh từ `scripts/build_grammar_zh.py`:
+  是, 不 / 没, câu hỏi với 吗 và từ để hỏi, 的, lượng từ 个 / 本 / 杯 / 只, 在, 很 + tính từ.
+- Mỗi bài có giải thích bằng tiếng Việt, mẫu câu, ví dụ, lỗi hay gặp (nhiều lỗi do dịch
+  từng chữ từ tiếng Việt, ví dụ 我学习在学校) và ít nhất 5 bài luyện.
+- Câu xếp từ dùng ranh giới ZWSP giống câu ví dụ trong gói; test bảo đảm câu không có dấu
+  cách thường. `/grammar` mở cho tiếng Trung.
