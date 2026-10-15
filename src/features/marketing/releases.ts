@@ -33,8 +33,8 @@ export const RELEASES: Release[] = [
         'Grammar basics: 12 beginner lessons (to be, tenses, a/an/the, prepositions, comparisons, questions…) — explained in Vietnamese, with common mistakes and practice.',
       ],
       [
-        'Học theo chủ đề: 19 bộ từ theo tình huống — công sở, nghề nghiệp, ăn uống, sức khoẻ, công nghệ, gia đình, thiên nhiên…',
-        'Learn by topic: 19 decks for real situations — work, jobs, food, health, tech, family, nature…',
+        'Học theo chủ đề: 19 bộ từ theo tình huống — công sở, nghề nghiệp, ăn uống, sức khoẻ, công nghệ, gia đình, thiên nhiên… Mỗi bộ có nút Học và Ôn riêng.',
+        'Learn by topic: 19 decks for real situations — work, jobs, food, health, tech, family, nature… Each deck has its own Learn and Review.',
       ],
       [
         'Gửi góp ý ngay trong app (không cần mở email) — có thể cho phép trích dẫn kèm tên.',

@@ -64,8 +64,14 @@ Anh công sở, du lịch, sức khoẻ, công nghệ…; sau này cả những 
   - Script dừng và báo lỗi nếu có từ không nằm trong gói.
   - Mỗi từ đã được đối chiếu với nghĩa ghi trong gói. Ví dụ "mouse" trong gói là con chuột
     nên không xếp vào Công nghệ; "post" là động từ nên không xếp vào Nơi chốn.
+- **Ôn theo bộ:** mỗi thẻ chủ đề có 2 nút, "Học" và "Ôn (n)", với n là số từ của bộ bạn đã
+  gặp.
+  - "Ôn" là bài quiz trắc nghiệm, tối đa 10 câu, lấy từ những từ đã có thẻ SRS. Câu trả lời
+    được ghi qua `recordAnswer` giống trang Kiểm tra: trả lời sai thì từ quay lại lịch ôn,
+    trả lời đúng khi chưa đến hạn thì không làm từ "thành thạo" nhanh hơn.
+  - Không làm thành route `/review?topic=` như dự định ban đầu. Trang Ôn tập chỉ hỏi những từ
+    đến hạn, nên khi lọc theo bộ thì thường không còn từ nào để hỏi.
 - **Bước tiếp theo:**
   - ngữ vực chuyên sâu, tức các bộ từ **mới** cho tiếng Anh công sở, CNTT, du lịch –
-    khách sạn, y tế, kèm audio;
-  - ôn tập theo bộ;
-  - gói ngôn ngữ thứ hai.
+    khách sạn, y tế, kèm audio. Việc này cần chuyển audio sang R2 trước;
+  - truyện đọc theo chủ đề (xem `reading.md`).
