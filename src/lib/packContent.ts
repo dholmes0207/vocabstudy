@@ -6,7 +6,7 @@
 
 const ONLY: Record<string, readonly string[]> = {
   '/grammar': ['en', 'ko'],
-  '/topics': ['en', 'ko'],
+  '/topics': ['en', 'ko', 'zh'],
   '/reading': ['en', 'ko'],
   '/phrases': ['en'],
   '/sounds': ['en'],

@@ -103,3 +103,12 @@ rõ.
   - các từ có 吃, vì từ điển không thống nhất (cật / ngật / khiết). Không đoán khi chưa chắc.
 - Hiển thị (`components/HanViet.tsx`) ngay dưới nghĩa trên thẻ học và ở mặt sau thẻ lật,
   không bao giờ ở mặt câu hỏi, vì âm Hán Việt hay trùng luôn với nghĩa (学生 = học sinh).
+
+## Bước 3: bộ từ theo chủ đề (đã làm)
+
+- `public/data/topics/zh.json` có 10 bộ, sinh từ `scripts/build_topics_zh.py`:
+  - chào hỏi, con người & gia đình, ăn uống, nơi chốn & đi lại;
+  - thời gian, số đếm & mua sắm, hoạt động hằng ngày, đồ vật quanh nhà;
+  - miêu tả & thời tiết, từ để hỏi & từ ngữ pháp.
+- Mỗi bộ 12–19 từ. Cả 132 từ đều nằm trong ít nhất một bộ; script và test cùng kiểm tra.
+- `/topics` mở cho tiếng Trung (`lib/packContent.ts`).

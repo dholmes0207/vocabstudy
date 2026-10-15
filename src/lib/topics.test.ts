@@ -54,6 +54,25 @@ describe('Korean topic decks', () => {
   })
 })
 
+describe('Chinese topic decks', () => {
+  const zhPack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as {
+    words: { id: number }[]
+  }
+  const zh = JSON.parse(readFileSync('public/data/topics/zh.json', 'utf8')) as typeof topics
+  const zhIds = new Set(zhPack.words.map((w) => w.id))
+
+  it('list real words of the Chinese pack, each once, at least 10 per deck, none left out', () => {
+    expect(parseTopics(zh)).toHaveLength(zh.topics.length)
+    for (const t of zh.topics) {
+      expect(t.wordIds.length, t.id).toBeGreaterThanOrEqual(10)
+      expect(new Set(t.wordIds).size, t.id).toBe(t.wordIds.length)
+      for (const id of t.wordIds) expect(zhIds.has(id), `${t.id}: ${id}`).toBe(true)
+    }
+    const covered = new Set(zh.topics.flatMap((t) => t.wordIds))
+    expect([...zhIds].filter((id) => !covered.has(id))).toEqual([])
+  })
+})
+
 describe('parseTopics', () => {
   it('reads the shipped file', () => {
     expect(parseTopics(topics).length).toBe(topics.topics.length)
