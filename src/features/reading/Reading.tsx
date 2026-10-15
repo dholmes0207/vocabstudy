@@ -19,7 +19,7 @@ import { useReading } from '@/store/readingStore'
 import { pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import {
   buildGlossary,
-  glossFor,
+  glossInLine,
   loadReadingPack,
   readingXp,
   shuffleOptions,
@@ -28,12 +28,14 @@ import {
 } from '@/lib/reading'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 
-// "Đọc truyện ngắn" (docs/design/reading.md): short graded stories. Tap any
-// word you know from the pack to see what it means, show the Vietnamese line by
-// line when you need it, then answer a few questions.
+// "Đọc truyện ngắn" (docs/design/reading.md): short graded stories in the
+// language being learned (public/data/reading/<code>.json). Tap any word from
+// the pack to see what it means, show the Vietnamese line by line when you need
+// it, then answer a few questions.
 
 function useReadingPack(): { pack: ReadingPack | null; error: boolean } {
   const code = useSettings((s) => s.currentLang)
@@ -79,6 +81,7 @@ export default function Reading() {
 
 function StoryList({ pack }: { pack: ReadingPack }) {
   const t = useT()
+  const L = useTargetLang()
   const progress = useReading((s) => s.progress)
   return (
     <div className="space-y-6 animate-fade-in">
@@ -89,8 +92,8 @@ function StoryList({ pack }: { pack: ReadingPack }) {
         </h1>
         <p className="mt-1 text-slate-500">
           {t(
-            'Truyện ngắn bằng tiếng Anh dễ hiểu. Chạm vào một từ để xem nghĩa, mở bản dịch khi cần, rồi trả lời vài câu hỏi.',
-            'Short stories in easy English. Tap a word to see its meaning, open the translation when you need it, then answer a few questions.'
+            `Truyện ngắn bằng ${L.vi} dễ hiểu. Chạm vào một từ để xem nghĩa, mở bản dịch khi cần, rồi trả lời vài câu hỏi.`,
+            `Short stories in easy ${L.en}. Tap a word to see its meaning, open the translation when you need it, then answer a few questions.`
           )}
         </p>
       </header>
@@ -141,6 +144,7 @@ function StoryView({ story }: { story: Story }) {
   const pack = useData((s) => s.pack)!
   const rate = useSettings((s) => s.ttsRate)
   const glossary = useMemo(() => buildGlossary(pack.words), [pack.words])
+  const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
   const [showVi, setShowVi] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
   const [quiz, setQuiz] = useState(false)
@@ -244,7 +248,7 @@ function StoryView({ story }: { story: Story }) {
           >
             <p>
               {line.en.split(/\s+/).map((token, j) => {
-                const w = glossFor(token, glossary)
+                const w = glossInLine(token, line, glossary, byId)
                 return (
                   <span key={j}>
                     {w ? (

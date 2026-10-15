@@ -21,8 +21,9 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   lịch ôn SRS.
 - Tiến độ đọc (điểm cao nhất, số lần đọc) chỉ lưu trên máy, giống Mẫu câu và Ngữ pháp.
   Trang Quyền riêng tư và Điều khoản đã ghi rõ điều này.
-- Trang chỉ hiện khi ngôn ngữ đang học là tiếng Anh (`englishOnly`), vì truyện hiện chỉ có
-  bản tiếng Anh.
+- Trang hiện với gói nào có file truyện (`lib/packContent.ts`). Tiếng Anh có 14 truyện,
+  tiếng Hàn có 4 truyện A1 (`public/data/reading/ko.json`): một ngày của Min-su, đi chợ,
+  ngày mưa, người bạn mới.
 
 **Dev**
 
@@ -52,6 +53,16 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   - tên "Hung" trùng quá khứ của "hang" → đổi tên nhân vật thành "Huy";
   - "crowded" bị ghép thành danh từ "crowd" → "full of people".
   - Truyện dùng chính tả Mỹ (favorite, neighbor, Mom) cho khớp gói từ và giọng đọc Mỹ.
+- **Tiếng Hàn:** không đoán được từ gốc từ mặt chữ. Tiểu từ dính liền danh từ (시장에서 →
+  시장), còn động từ chia và rút gọn (마시다 → 마셔요, 보다 → 봐요). Vì vậy mỗi câu có thêm
+  trường `gloss: { token: id }`, viết tay, và được ưu tiên hơn bảng tra (`glossInLine`).
+  - Khi viết, ghi `token → từ gốc` (ví dụ `"마셔요": "마시다"`). Một script đổi từ gốc sang
+    id trong gói, nên không phải gõ id bằng tay.
+  - `validateReadingPack` báo lỗi nếu khoá của `gloss` không có trong câu.
+  - Test kiểm tra: mọi id có trong gói `ko.json`; mỗi câu có ít nhất một từ chạm được; hơn
+    60% số từ chạm được.
+  - Những từ chưa có trong gói (그리고, 정말, 열심히…) để không chạm được, không thêm nghĩa
+    ngoài gói.
 - **Âm thanh:** câu và cả bài dùng giọng đọc của trình duyệt (`pronounce` với `ttsLang`),
   còn từ đơn dùng file mp3 sẵn có (`wordAudio`).
   - Chưa thêm file audio cho câu truyện, vì `public/` đã gần chạm giới hạn 20.000 file của

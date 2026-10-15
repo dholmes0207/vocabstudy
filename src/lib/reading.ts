@@ -1,6 +1,7 @@
 // "Đọc truyện ngắn" — graded reading (docs/design/reading.md). Short stories at
-// A1–A2, every sentence with its Vietnamese translation, words from the pack
-// tappable for their meaning, then a few comprehension questions.
+// A1–B1 in the language being learned, every sentence with its Vietnamese
+// translation, words from the pack tappable for their meaning, then a few
+// comprehension questions.
 
 import type { Word } from '@/types'
 import { surfaceForms } from './wordForms'
@@ -8,8 +9,15 @@ import { surfaceForms } from './wordForms'
 export type Pair = [vi: string, en: string]
 
 export interface StorySentence {
+  /** The sentence in the language being learned (named like a pack's `exampleEn`). */
   en: string
   vi: string
+  /**
+   * Hand-written lookups, token → pack word id, for languages where a word's
+   * form gives no clue to its headword: Korean particles (시장에서 → 시장) and
+   * contracted verbs (마셔요 → 마시다). Takes priority over the glossary.
+   */
+  gloss?: Record<string, number>
 }
 
 export interface StoryQuestion {
@@ -43,9 +51,13 @@ export function validateReadingPack(data: unknown): ReadingPack {
     ids.add(s.id)
     if (!Array.isArray(s.sentences) || s.sentences.length < 3)
       throw new Error(`Story "${s.id}" is too short`)
-    for (const line of s.sentences)
+    for (const line of s.sentences) {
       if (!line.en?.trim() || !line.vi?.trim())
         throw new Error(`Story "${s.id}" has a sentence without its translation`)
+      const tokens = new Set(line.en.split(/\s+/).map(bareWord))
+      for (const key of Object.keys(line.gloss ?? {}))
+        if (!tokens.has(key)) throw new Error(`Story "${s.id}": "${key}" is not in "${line.en}"`)
+    }
     if (!Array.isArray(s.questions) || s.questions.length < 2)
       throw new Error(`Story "${s.id}" needs questions`)
     for (const q of s.questions)
@@ -99,6 +111,18 @@ export function bareWord(token: string): string {
 export function glossFor(token: string, glossary: Glossary): Word | null {
   const w = bareWord(token)
   return w ? (glossary.get(w) ?? null) : null
+}
+
+/** The pack word behind a token of `line`: its own lookups first, then the glossary. */
+export function glossInLine(
+  token: string,
+  line: StorySentence,
+  glossary: Glossary,
+  byId: Map<number, Word>
+): Word | null {
+  const id = line.gloss?.[bareWord(token)]
+  if (id !== undefined) return byId.get(id) ?? null
+  return glossFor(token, glossary)
 }
 
 // ---------------------------------------------------------------------------

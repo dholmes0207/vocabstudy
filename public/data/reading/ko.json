@@ -1,0 +1,414 @@
+{
+  "version": "1.0.0",
+  "stories": [
+    {
+      "id": "ko-minsu-day",
+      "emoji": "🌞",
+      "level": "A1",
+      "title": [
+        "Một ngày của Min-su",
+        "민수의 하루"
+      ],
+      "sentences": [
+        {
+          "en": "민수는 아침 일곱 시에 일어나요.",
+          "vi": "Min-su dậy lúc bảy giờ sáng.",
+          "gloss": {
+            "아침": 41,
+            "일어나요": 137
+          }
+        },
+        {
+          "en": "아침에 빵을 먹고 우유를 마셔요.",
+          "vi": "Buổi sáng cậu ăn bánh mì và uống sữa.",
+          "gloss": {
+            "아침에": 41,
+            "빵을": 25,
+            "먹고": 54,
+            "우유를": 20,
+            "마셔요": 55
+          }
+        },
+        {
+          "en": "그리고 지하철로 회사에 가요.",
+          "vi": "Rồi cậu đi tàu điện ngầm đến công ty.",
+          "gloss": {
+            "지하철로": 110,
+            "회사에": 29,
+            "가요": 52
+          }
+        },
+        {
+          "en": "회사에서 열심히 일해요.",
+          "vi": "Ở công ty, cậu làm việc chăm chỉ.",
+          "gloss": {
+            "회사에서": 29,
+            "일해요": 59
+          }
+        },
+        {
+          "en": "오후에 친구를 만나요.",
+          "vi": "Buổi chiều cậu gặp bạn.",
+          "gloss": {
+            "오후에": 125,
+            "친구를": 8,
+            "만나요": 63
+          }
+        },
+        {
+          "en": "저녁에 집에서 쉬어요.",
+          "vi": "Buổi tối cậu nghỉ ngơi ở nhà.",
+          "gloss": {
+            "저녁에": 42,
+            "집에서": 27,
+            "쉬어요": 139
+          }
+        },
+        {
+          "en": "밤에는 한국어를 공부해요.",
+          "vi": "Ban đêm cậu học tiếng Hàn.",
+          "gloss": {
+            "밤에는": 126,
+            "한국어를": 50,
+            "공부해요": 58
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Min-su dậy lúc mấy giờ?",
+          "options": [
+            "Sáu giờ",
+            "Bảy giờ",
+            "Tám giờ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Min-su đi làm bằng gì?",
+          "options": [
+            "Xe buýt",
+            "Tàu điện ngầm",
+            "Taxi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Buổi tối Min-su làm gì?",
+          "options": [
+            "Nghỉ ngơi ở nhà",
+            "Đi chợ",
+            "Gặp bạn"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "ko-market",
+      "emoji": "🛒",
+      "level": "A1",
+      "title": [
+        "Ở chợ",
+        "시장에서"
+      ],
+      "sentences": [
+        {
+          "en": "오늘은 주말이에요.",
+          "vi": "Hôm nay là cuối tuần.",
+          "gloss": {
+            "오늘은": 37,
+            "주말이에요": 44
+          }
+        },
+        {
+          "en": "엄마와 시장에 가요.",
+          "vi": "Tôi đi chợ với mẹ.",
+          "gloss": {
+            "엄마와": 10,
+            "시장에": 31,
+            "가요": 52
+          }
+        },
+        {
+          "en": "시장에는 사람이 많아요.",
+          "vi": "Chợ rất đông người.",
+          "gloss": {
+            "시장에는": 31,
+            "사람이": 7,
+            "많아요": 74
+          }
+        },
+        {
+          "en": "과일이 아주 싸요.",
+          "vi": "Trái cây rất rẻ.",
+          "gloss": {
+            "과일이": 22,
+            "싸요": 152
+          }
+        },
+        {
+          "en": "엄마가 사과를 보고 물어요.",
+          "vi": "Mẹ nhìn táo rồi hỏi.",
+          "gloss": {
+            "엄마가": 10,
+            "사과를": 23,
+            "보고": 56
+          }
+        },
+        {
+          "en": "\"이 사과 얼마예요?\"",
+          "vi": "\"Chỗ táo này bao nhiêu tiền?\"",
+          "gloss": {
+            "사과": 23,
+            "얼마예요": 92
+          }
+        },
+        {
+          "en": "\"만 원이에요.\"",
+          "vi": "\"Mười nghìn won.\"",
+          "gloss": {
+            "원이에요": 97
+          }
+        },
+        {
+          "en": "우리는 사과를 사고 생선도 사요.",
+          "vi": "Chúng tôi mua táo và mua cả cá.",
+          "gloss": {
+            "사과를": 23,
+            "사고": 62,
+            "생선도": 123,
+            "사요": 62
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Hôm nay là ngày gì?",
+          "options": [
+            "Thứ Hai",
+            "Cuối tuần",
+            "Sinh nhật"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Ở chợ, cái gì rất rẻ?",
+          "options": [
+            "Trái cây",
+            "Thịt",
+            "Quần áo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Táo giá bao nhiêu?",
+          "options": [
+            "Một nghìn won",
+            "Mười nghìn won",
+            "Một trăm nghìn won"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "ko-rainy-day",
+      "emoji": "🌧️",
+      "level": "A1",
+      "title": [
+        "Ngày mưa",
+        "비 오는 날"
+      ],
+      "sentences": [
+        {
+          "en": "오늘은 비가 와요.",
+          "vi": "Hôm nay trời mưa.",
+          "gloss": {
+            "오늘은": 37,
+            "비가": 178,
+            "와요": 53
+          }
+        },
+        {
+          "en": "날씨가 추워요.",
+          "vi": "Trời lạnh.",
+          "gloss": {
+            "날씨가": 51,
+            "추워요": 77
+          }
+        },
+        {
+          "en": "그래서 집에 있어요.",
+          "vi": "Vì thế tôi ở nhà.",
+          "gloss": {
+            "집에": 27,
+            "있어요": 65
+          }
+        },
+        {
+          "en": "동생과 영화를 봐요.",
+          "vi": "Tôi xem phim với em.",
+          "gloss": {
+            "동생과": 12,
+            "영화를": 166,
+            "봐요": 56
+          }
+        },
+        {
+          "en": "영화가 정말 재미있어요.",
+          "vi": "Bộ phim thật thú vị.",
+          "gloss": {
+            "영화가": 166,
+            "재미있어요": 81
+          }
+        },
+        {
+          "en": "저녁에는 라면을 먹어요.",
+          "vi": "Buổi tối chúng tôi ăn mì gói.",
+          "gloss": {
+            "저녁에는": 42,
+            "라면을": 119,
+            "먹어요": 54
+          }
+        },
+        {
+          "en": "비 오는 날도 좋아요.",
+          "vi": "Ngày mưa cũng thật dễ chịu.",
+          "gloss": {
+            "비": 178,
+            "오는": 53,
+            "좋아요": 71
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Hôm nay thời tiết thế nào?",
+          "options": [
+            "Nắng và nóng",
+            "Mưa và lạnh",
+            "Có tuyết"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Tôi xem phim với ai?",
+          "options": [
+            "Bạn",
+            "Em",
+            "Bố"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Buổi tối ăn gì?",
+          "options": [
+            "Cơm",
+            "Mì gói",
+            "Bánh mì"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "ko-new-friend",
+      "emoji": "🤝",
+      "level": "A1",
+      "title": [
+        "Người bạn mới",
+        "새 친구"
+      ],
+      "sentences": [
+        {
+          "en": "저는 마이예요. 베트남 사람이에요.",
+          "vi": "Tôi là Mai. Tôi là người Việt Nam.",
+          "gloss": {
+            "사람이에요": 7
+          }
+        },
+        {
+          "en": "지금 서울에 살아요.",
+          "vi": "Bây giờ tôi sống ở Seoul.",
+          "gloss": {
+            "지금": 40,
+            "살아요": 136
+          }
+        },
+        {
+          "en": "학교에서 한국어를 배워요.",
+          "vi": "Tôi học tiếng Hàn ở trường.",
+          "gloss": {
+            "학교에서": 28,
+            "한국어를": 50,
+            "배워요": 133
+          }
+        },
+        {
+          "en": "어제 학교에서 새 친구를 만났어요.",
+          "vi": "Hôm qua tôi gặp một người bạn mới ở trường.",
+          "gloss": {
+            "어제": 39,
+            "학교에서": 28,
+            "친구를": 8,
+            "만났어요": 63
+          }
+        },
+        {
+          "en": "친구 이름은 지수예요.",
+          "vi": "Bạn ấy tên là Ji-su.",
+          "gloss": {
+            "친구": 8,
+            "이름은": 16
+          }
+        },
+        {
+          "en": "지수는 정말 친절해요.",
+          "vi": "Ji-su rất tử tế.",
+          "gloss": {
+            "친절해요": 162
+          }
+        },
+        {
+          "en": "우리는 주말에 같이 공원에 가요.",
+          "vi": "Cuối tuần chúng tôi cùng đi công viên.",
+          "gloss": {
+            "주말에": 44,
+            "공원에": 116,
+            "가요": 52
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Mai đang sống ở đâu?",
+          "options": [
+            "Hà Nội",
+            "Seoul",
+            "Busan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Bạn mới tên là gì?",
+          "options": [
+            "Min-su",
+            "Ji-su",
+            "Hoa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Cuối tuần hai người đi đâu?",
+          "options": [
+            "Công viên",
+            "Chợ",
+            "Biển"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ]
+}

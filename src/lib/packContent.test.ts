@@ -10,10 +10,14 @@ describe('pack-specific screens', () => {
   })
 
   it('keep English content for English and Hangul for Korean', () => {
-    for (const path of ['/grammar', '/topics', '/reading/x', '/phrases', '/sounds']) {
+    for (const path of ['/grammar', '/topics', '/phrases', '/sounds']) {
       expect(availableIn(path, 'en'), path).toBe(true)
       expect(availableIn(path, 'ko'), path).toBe(false)
     }
+    // Stories exist in both packs (public/data/reading/en.json and ko.json).
+    expect(availableIn('/reading/x', 'en')).toBe(true)
+    expect(availableIn('/reading/x', 'ko')).toBe(true)
+    expect(availableIn('/reading/x', 'ja')).toBe(false)
     expect(availableIn('/hangul', 'ko')).toBe(true)
     expect(availableIn('/hangul', 'en')).toBe(false)
     expect(packsFor('/hangul')).toEqual(['ko'])

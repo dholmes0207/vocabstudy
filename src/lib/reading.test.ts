@@ -5,6 +5,7 @@ import {
   bareWord,
   buildGlossary,
   glossFor,
+  glossInLine,
   readingXp,
   recordReading,
   shuffleOptions,
@@ -81,5 +82,40 @@ describe('shuffleOptions', () => {
   it('does not always leave the answer in its written slot', () => {
     const slots = new Set([0, 0.5, 0.99].map((r) => shuffleOptions(q, () => r).answer))
     expect(slots.size).toBeGreaterThan(1)
+  })
+})
+
+describe('the Korean stories', () => {
+  const ko = validateReadingPack(JSON.parse(readFileSync('public/data/reading/ko.json', 'utf8')))
+  const koPack = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as { words: Word[] }
+  const byId = new Map(koPack.words.map((w) => [w.id, w]))
+  const glossary = buildGlossary(koPack.words)
+
+  it('point every lookup at a real word of the Korean pack', () => {
+    for (const s of ko.stories)
+      for (const line of s.sentences) {
+        expect(Object.keys(line.gloss ?? {}).length, line.en).toBeGreaterThan(0)
+        for (const id of Object.values(line.gloss ?? {})) expect(byId.has(id), line.en).toBe(true)
+      }
+  })
+
+  it('let the learner tap most words, particles and verb endings included', () => {
+    for (const s of ko.stories) {
+      const tokens = s.sentences.flatMap((l) => l.en.split(/\s+/).map((t) => [t, l] as const))
+      const known = tokens.filter(([t, l]) => glossInLine(t, l, glossary, byId)).length
+      expect(known / tokens.length, s.id).toBeGreaterThan(0.6)
+    }
+  })
+
+  it('read a particle or an ending through to its headword', () => {
+    const line = ko.stories[0].sentences.find((l) => l.en.includes('마셔요'))!
+    expect(glossInLine('마셔요.', line, glossary, byId)?.word).toBe('마시다')
+    expect(glossInLine('우유를', line, glossary, byId)?.word).toBe('우유')
+  })
+
+  it('reject a lookup for a token the sentence does not have', () => {
+    const bad = structuredClone(ko)
+    bad.stories[0].sentences[0].gloss = { 없는말: 1 }
+    expect(() => validateReadingPack(bad)).toThrow(/없는말/)
   })
 })
