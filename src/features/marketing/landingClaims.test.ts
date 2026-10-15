@@ -14,6 +14,8 @@ const count = {
   grammar: json('public/data/grammar/en.json').units.length,
   topics: json('public/data/topics/en.json').topics.length,
   koWords: json('public/data/ko.json').words.length,
+  koTopics: json('public/data/topics/ko.json').topics.length,
+  koGrammar: json('public/data/grammar/ko.json').units.length,
   phrases: json('public/data/phrases/en.json').topics.reduce(
     (n: number, t: { phrases: unknown[] }) => n + t.phrases.length,
     0
@@ -31,6 +33,8 @@ describe('numbers on the landing page', () => {
       `${count.topics} topic decks`,
       `${count.koWords} từ sơ cấp`,
       `${count.koWords} beginner words`,
+      `${count.koTopics} bộ chủ đề, ${count.koGrammar} bài ngữ pháp và ${count.koStories} truyện ngắn`,
+      `${count.koTopics} topic decks, ${count.koGrammar} grammar lessons and ${count.koStories} short stories`,
       `${count.koStories} truyện ngắn`,
       `${count.koStories} short stories`,
       `${count.phrases} câu theo tình huống`,

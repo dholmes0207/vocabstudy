@@ -257,8 +257,8 @@ function Features() {
       tone: 'from-fuchsia-500 to-rose-600',
       title: t('Thêm tiếng Hàn (beta)', 'Korean too (beta)'),
       desc: t(
-        'Bảng chữ Hangul, 182 từ sơ cấp có cách đọc kiểu Việt và 4 truyện ngắn — đọc bằng giọng của trình duyệt.',
-        'The Hangul alphabet, 182 beginner words with Vietnamese-style readings and 4 short stories — read aloud by your browser.'
+        'Bảng chữ Hangul, 182 từ sơ cấp có cách đọc kiểu Việt, 12 bộ chủ đề, 7 bài ngữ pháp và 4 truyện ngắn — đọc bằng giọng của trình duyệt.',
+        'The Hangul alphabet, 182 beginner words with Vietnamese-style readings, 12 topic decks, 7 grammar lessons and 4 short stories — read aloud by your browser.'
       ),
     },
     {
