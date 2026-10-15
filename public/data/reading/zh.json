@@ -1,0 +1,208 @@
+{
+  "version": "1.0.0",
+  "stories": [
+    {
+      "id": "zh-my-day",
+      "emoji": "🌞",
+      "level": "A1",
+      "title": [
+        "Một ngày của tôi",
+        "我的一天"
+      ],
+      "sentences": [
+        {
+          "en": "我​叫​安娜，​我​是​学生。",
+          "vi": "Tôi tên là Anna, tôi là học sinh."
+        },
+        {
+          "en": "我​上午​七​点​去​学校。",
+          "vi": "Bảy giờ sáng tôi đến trường."
+        },
+        {
+          "en": "中午​我​和​朋友​吃​米饭。",
+          "vi": "Buổi trưa tôi ăn cơm với bạn."
+        },
+        {
+          "en": "下午​我​在​家​学习​汉语。",
+          "vi": "Buổi chiều tôi học tiếng Trung ở nhà."
+        },
+        {
+          "en": "我​很​喜欢​汉语。",
+          "vi": "Tôi rất thích tiếng Trung."
+        },
+        {
+          "en": "我​十一​点​睡觉。",
+          "vi": "Mười một giờ tôi đi ngủ."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Anna là ai?",
+          "options": [
+            "Giáo viên",
+            "Học sinh",
+            "Bác sĩ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Buổi trưa Anna ăn gì?",
+          "options": [
+            "Cơm",
+            "Táo",
+            "Bánh mì"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Buổi chiều Anna làm gì?",
+          "options": [
+            "Đi mua sắm",
+            "Học tiếng Trung ở nhà",
+            "Xem ti vi"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-shopping",
+      "emoji": "🛍️",
+      "level": "A1",
+      "title": [
+        "Ở cửa hàng",
+        "在商店"
+      ],
+      "sentences": [
+        {
+          "en": "今天​星期​六。",
+          "vi": "Hôm nay là thứ Bảy."
+        },
+        {
+          "en": "我​和​妈妈​去​商店​买​东西。",
+          "vi": "Tôi và mẹ đi cửa hàng mua đồ."
+        },
+        {
+          "en": "商店​里​人​很​多。",
+          "vi": "Trong cửa hàng rất đông người."
+        },
+        {
+          "en": "妈妈​想​买​衣服。",
+          "vi": "Mẹ muốn mua quần áo."
+        },
+        {
+          "en": "我​想​买​一​个​杯子。",
+          "vi": "Tôi muốn mua một cái cốc."
+        },
+        {
+          "en": "“这个​杯子​多少​钱？”",
+          "vi": "“Cái cốc này bao nhiêu tiền?”"
+        },
+        {
+          "en": "“二十​块。”",
+          "vi": "“Hai mươi tệ.”"
+        },
+        {
+          "en": "杯子​很​漂亮，​我​很​高兴。",
+          "vi": "Cái cốc rất đẹp, tôi rất vui."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Hôm nay là thứ mấy?",
+          "options": [
+            "Thứ Hai",
+            "Thứ Bảy",
+            "Chủ nhật"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Mẹ muốn mua gì?",
+          "options": [
+            "Quần áo",
+            "Cái cốc",
+            "Táo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Cái cốc giá bao nhiêu?",
+          "options": [
+            "Mười tệ",
+            "Hai mươi tệ",
+            "Ba mươi tệ"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-rainy-day",
+      "emoji": "🌧️",
+      "level": "A1",
+      "title": [
+        "Trời mưa rồi",
+        "下雨了"
+      ],
+      "sentences": [
+        {
+          "en": "今天​下雨​了。",
+          "vi": "Hôm nay trời mưa."
+        },
+        {
+          "en": "天气​很​冷。",
+          "vi": "Thời tiết rất lạnh."
+        },
+        {
+          "en": "我​没有​去​学校。",
+          "vi": "Tôi không đến trường."
+        },
+        {
+          "en": "我​在​家​看​电视。",
+          "vi": "Tôi ở nhà xem ti vi."
+        },
+        {
+          "en": "我​的​猫​在​椅子​上​睡觉。",
+          "vi": "Con mèo của tôi đang ngủ trên ghế."
+        },
+        {
+          "en": "中午​妈妈​做​的​菜​很​好吃。",
+          "vi": "Buổi trưa, món mẹ nấu rất ngon."
+        },
+        {
+          "en": "下雨​的​时候，​在​家​也​很​好。",
+          "vi": "Trời mưa thì ở nhà cũng thật dễ chịu."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Hôm nay thời tiết thế nào?",
+          "options": [
+            "Nắng và nóng",
+            "Mưa và lạnh",
+            "Đẹp và mát"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Con mèo đang làm gì?",
+          "options": [
+            "Ăn cơm",
+            "Ngủ trên ghế",
+            "Xem ti vi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Hôm nay tôi có đến trường không?",
+          "options": [
+            "Có",
+            "Không"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ]
+}

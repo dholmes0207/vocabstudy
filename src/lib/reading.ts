@@ -5,6 +5,7 @@
 
 import type { Word } from '@/types'
 import { surfaceForms } from './wordForms'
+import { tokenize } from './games'
 
 export type Pair = [vi: string, en: string]
 
@@ -54,7 +55,7 @@ export function validateReadingPack(data: unknown): ReadingPack {
     for (const line of s.sentences) {
       if (!line.en?.trim() || !line.vi?.trim())
         throw new Error(`Story "${s.id}" has a sentence without its translation`)
-      const tokens = new Set(line.en.split(/\s+/).map(bareWord))
+      const tokens = new Set(tokenize(line.en).map(bareWord))
       for (const key of Object.keys(line.gloss ?? {}))
         if (!tokens.has(key)) throw new Error(`Story "${s.id}": "${key}" is not in "${line.en}"`)
     }

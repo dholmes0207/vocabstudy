@@ -21,7 +21,8 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   lịch ôn SRS.
 - Tiến độ đọc (điểm cao nhất, số lần đọc) chỉ lưu trên máy, giống Mẫu câu và Ngữ pháp.
   Trang Quyền riêng tư và Điều khoản đã ghi rõ điều này.
-- Trang hiện với gói nào có file truyện (`lib/packContent.ts`). Tiếng Anh có 14 truyện,
+- Trang hiện với gói nào có file truyện (`lib/packContent.ts`). Tiếng Trung có 3 truyện (xem
+  `chinese.md`). Tiếng Anh có 14 truyện,
   tiếng Hàn có 4 truyện A1 (`public/data/reading/ko.json`): một ngày của Min-su, đi chợ,
   ngày mưa, người bạn mới.
 

@@ -32,6 +32,7 @@ import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
+import { tokenize } from '@/lib/games'
 
 // "Đọc truyện ngắn" (docs/design/reading.md): short graded stories in the
 // language being learned (public/data/reading/<code>.json). Tap any word from
@@ -249,7 +250,7 @@ function StoryView({ story }: { story: Story }) {
             aria-current={reading?.line === i ? 'true' : undefined}
           >
             <p>
-              {line.en.split(/\s+/).map((token, j) => {
+              {tokenize(line.en).map((token, j) => {
                 const w = glossInLine(token, line, glossary, byId)
                 return (
                   <span key={j}>
@@ -263,7 +264,10 @@ function StoryView({ story }: { story: Story }) {
                       </button>
                     ) : (
                       token
-                    )}{' '}
+                    )}
+                    {/* Chinese is written without spaces (its words are split by
+                        invisible breaks); every other language gets one back. */}
+                    {line.en.includes(' ') ? ' ' : ''}
                   </span>
                 )
               })}

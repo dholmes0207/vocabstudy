@@ -23,10 +23,11 @@ describe('pack-specific screens', () => {
     expect(availableIn('/hangul', 'ko')).toBe(true)
     expect(availableIn('/hangul', 'en')).toBe(false)
     expect(packsFor('/hangul')).toEqual(['ko'])
-    // Chinese (beta) has its words, topic decks and the pinyin page; the rest stays closed.
-    for (const path of ['/hangul', '/grammar', '/reading', '/phrases', '/sounds'])
+    // Chinese (beta) has its words, topic decks, stories and the pinyin page; the rest stays closed.
+    for (const path of ['/hangul', '/grammar', '/phrases', '/sounds'])
       expect(availableIn(path, 'zh'), path).toBe(false)
     expect(availableIn('/topics', 'zh')).toBe(true)
+    expect(availableIn('/reading/x', 'zh')).toBe(true)
     expect(availableIn('/pinyin', 'zh')).toBe(true)
     expect(availableIn('/pinyin', 'en')).toBe(false)
     expect(availableIn('/pinyin', 'ko')).toBe(false)

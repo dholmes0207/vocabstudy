@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { Word } from '@/types'
+import { tokenize } from './games'
 import {
   bareWord,
   buildGlossary,
@@ -117,5 +118,30 @@ describe('the Korean stories', () => {
     const bad = structuredClone(ko)
     bad.stories[0].sentences[0].gloss = { 없는말: 1 }
     expect(() => validateReadingPack(bad)).toThrow(/없는말/)
+  })
+})
+
+describe('the Chinese stories', () => {
+  const zh = validateReadingPack(JSON.parse(readFileSync('public/data/reading/zh.json', 'utf8')))
+  const zhPack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as { words: Word[] }
+  const byId = new Map(zhPack.words.map((w) => [w.id, w]))
+  const glossary = buildGlossary(zhPack.words)
+
+  it('mark word breaks invisibly, never with a visible space', () => {
+    for (const s of zh.stories)
+      for (const line of s.sentences) {
+        expect(line.en, s.id).toContain('\u200b')
+        expect(line.en, s.id).not.toMatch(/ /)
+      }
+  })
+
+  it('let the learner tap most words, straight from the pack (no lookups needed)', () => {
+    for (const s of zh.stories) {
+      const tokens = s.sentences.flatMap((l) => tokenize(l.en).map((t) => [t, l] as const))
+      const known = tokens.filter(([t, l]) => glossInLine(t, l, glossary, byId)).length
+      expect(known / tokens.length, s.id).toBeGreaterThan(0.7)
+    }
+    const line = zh.stories[0].sentences[2]
+    expect(glossInLine('米饭。', line, glossary, byId)?.meaning).toBe('cơm')
   })
 })

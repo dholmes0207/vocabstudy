@@ -112,3 +112,14 @@ rõ.
   - miêu tả & thời tiết, từ để hỏi & từ ngữ pháp.
 - Mỗi bộ 12–19 từ. Cả 132 từ đều nằm trong ít nhất một bộ; script và test cùng kiểm tra.
 - `/topics` mở cho tiếng Trung (`lib/packContent.ts`).
+
+## Bước 4: truyện ngắn (đã làm)
+
+- `public/data/reading/zh.json` có 3 truyện A1, sinh từ `scripts/build_reading_zh.py`:
+  "Một ngày của tôi", "Ở cửa hàng", "Trời mưa rồi". Câu viết với dấu "|", script đổi
+  thành ZWSP.
+- Tiếng Trung không chia từ, nên token chính là từ gốc: bảng tra tìm thẳng được, không cần
+  trường `gloss` viết tay như tiếng Hàn. Test yêu cầu hơn 70% số từ chạm được.
+- Màn hình đọc tách từ bằng `tokenize()` và chỉ chèn dấu cách nếu câu gốc có dấu cách. Nhờ
+  vậy câu tiếng Trung hiện liền mạch, mỗi từ vẫn chạm được riêng.
+- `/reading` mở cho tiếng Trung.
