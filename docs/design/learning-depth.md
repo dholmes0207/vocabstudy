@@ -330,3 +330,24 @@ Tham khảo: cuối lượt học của Memrise ghi "từ đã thành thạo +2"
     review < mastered.
 - `components/SessionChanges.tsx` đọc thẻ hiện tại từ `studyStore`.
 - `Review` chụp trong `useState` lúc mở trang. `Quiz` chụp khi bấm bắt đầu.
+
+## "Nói thử từ này" trên thẻ làm quen (18/10/2026)
+
+**User**: "Gặp từ mới thì muốn nói thử luôn, không phải sang trang Luyện nói."
+
+Tham khảo: thẻ từ mới của Memrise cho ghi âm và chấm ngay trên thẻ (REA, vòng 4).
+
+**BA**
+
+- Thẻ làm quen có nút "Nói thử từ này". Bấm vào thì bộ luyện phát âm của trang Luyện nói mở
+  ngay trên thẻ: nghe mẫu, bấm micro, được chấm điểm, nghe lại giọng mình.
+- Bộ luyện đóng sẵn. Micro chỉ mở khi người học bấm. Sang từ khác thì bộ luyện đóng lại.
+- Chỉ để luyện: kết quả không ghi vào lịch ôn và không cộng XP.
+
+**Dev**
+
+- `TrySaying` trong `LearnSession.tsx` dùng lại `components/PronounceTrainer.tsx`, không truyền
+  `onAttempt`.
+- Có `key` theo id của từ, nên trạng thái mở/đóng tự về ban đầu khi sang từ mới.
+- Chưa thử bằng giọng thật trong lần này, vì khung trình duyệt kiểm tra chặn micro. Bộ luyện
+  này vẫn là bộ đang chạy trên trang Luyện nói.

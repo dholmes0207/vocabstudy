@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowLeft, ArrowRight, Brain, CheckCheck, LogOut } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Brain, CheckCheck, LogOut, Mic } from 'lucide-react'
 import type { Word } from '@/types'
 import { GROUP_SIZE, chunk, learnDrills } from '@/lib/practice'
 import { makeQuestion } from '@/lib/quiz'
@@ -11,6 +11,7 @@ import { useImmersive } from '@/store/uiStore'
 import QuizRunner from '@/components/QuizRunner'
 import WordInsight from '@/components/WordInsight'
 import MySentence from '@/components/MySentence'
+import PronounceTrainer from '@/components/PronounceTrainer'
 import { useT } from '@/lib/i18n'
 import { KNOWN_CHECK_DAYS, phaseOf } from '@/lib/srs'
 
@@ -296,6 +297,7 @@ function MeetCards({
       <div className="card space-y-4 p-6">
         <WordInsight key={word.id} word={word} ttsLang={ttsLang} variant="full" />
         <MySentence key={`mine-${word.id}`} word={word} lang={lang} />
+        <TrySaying key={`say-${word.id}`} word={word} ttsLang={ttsLang} />
         {onKnown && isNew && (
           <div className="border-t border-slate-100 pt-3 text-center dark:border-slate-800">
             <button
@@ -339,6 +341,34 @@ function MeetCards({
           )}
         </button>
       </div>
+    </div>
+  )
+}
+
+/**
+ * "Nói thử từ này" on a meet card (docs/design/learning-depth.md): the Speaking
+ * page's trainer, opened on demand so it never takes the microphone unasked.
+ * Practice only — no onAttempt, so nothing reaches the SRS.
+ */
+function TrySaying({ word, ttsLang }: { word: Word; ttsLang: string }) {
+  const t = useT()
+  const [open, setOpen] = useState(false)
+  if (open)
+    return (
+      <div className="border-t border-slate-100 pt-4 dark:border-slate-800">
+        <PronounceTrainer word={word} ttsLang={ttsLang} />
+      </div>
+    )
+  return (
+    <div className="text-center">
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="btn-secondary h-10 gap-1.5 text-sm"
+      >
+        <Mic className="h-4 w-4" aria-hidden="true" />
+        {t('Nói thử từ này', 'Try saying it')}
+      </button>
     </div>
   )
 }

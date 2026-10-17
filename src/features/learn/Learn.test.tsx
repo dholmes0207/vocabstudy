@@ -119,3 +119,20 @@ describe('"I already know this word" on a meet card', () => {
     ).not.toBeInTheDocument()
   })
 })
+
+describe('"Try saying it" on a meet card', () => {
+  it('opens the pronunciation trainer for that word only when asked, outside the SRS', () => {
+    renderLearn()
+    fireEvent.click(screen.getByRole('button', { name: /^Learn \d+ words$/ }))
+    const first = pack.words[0]
+    expect(screen.queryByRole('button', { name: `Say "${first.word}"` })).not.toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: /Try saying it/ }))
+    expect(screen.getByRole('button', { name: `Say "${first.word}"` })).toBeInTheDocument()
+    expect(useStudy.getState().progress.en).toBeUndefined()
+
+    // The next word starts closed again.
+    fireEvent.click(screen.getByRole('button', { name: /^Next/ }))
+    expect(screen.getByRole('button', { name: /Try saying it/ })).toBeInTheDocument()
+  })
+})
