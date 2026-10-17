@@ -8,6 +8,8 @@ import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { generateQuiz } from '@/lib/quiz'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
+import SessionChanges from '@/components/SessionChanges'
+import { snapshotPhases, type PhaseSnapshot } from '@/lib/sessionDelta'
 import SpeakButton from '@/components/SpeakButton'
 import { Field, Segment } from '@/components/Choice'
 import { wordAudio } from '@/lib/audio'
@@ -52,6 +54,8 @@ export default function Quiz() {
   const [count, setCount] = useState(10)
   const t = useT()
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
+  // Stages before the first answer, for the end-of-session changes.
+  const [before, setBefore] = useState<PhaseSnapshot>({})
 
   const scopeWords: Word[] =
     scope === 'all' ? pack.words : scope === 'hard' ? hardWords : learnedWords
@@ -71,6 +75,7 @@ export default function Quiz() {
             correct={correct}
             total={total}
           >
+            <SessionChanges before={before} />
             {wrongIds.length > 0 && (
               <div className="w-full text-left">
                 <p className="mb-2 text-sm font-semibold text-slate-500">
@@ -112,7 +117,14 @@ export default function Quiz() {
   const start = () => {
     if (scopeWords.length === 0 || modes.length === 0) return
     const qs = generateQuiz({ words: scopeWords, pool: pack.words, modes, limit: count })
-    if (qs.length) setQuestions(qs)
+    if (!qs.length) return
+    setBefore(
+      snapshotPhases(
+        qs.map((q) => q.wordId),
+        useStudy.getState().progress[code]?.cards ?? {}
+      )
+    )
+    setQuestions(qs)
   }
 
   const toggleMode = (m: QuizMode) =>

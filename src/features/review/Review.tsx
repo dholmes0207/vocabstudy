@@ -13,6 +13,8 @@ import FlashcardSession from '@/components/FlashcardSession'
 import QuizRunner from '@/components/QuizRunner'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
+import SessionChanges from '@/components/SessionChanges'
+import { snapshotPhases } from '@/lib/sessionDelta'
 import { useT } from '@/lib/i18n'
 
 export default function Review() {
@@ -46,6 +48,14 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
       return word ? [{ card, word }] : []
     })
   })
+
+  // Stages before the first answer, for the end-of-session changes.
+  const [before] = useState(() =>
+    snapshotPhases(
+      due.map((d) => d.word.id),
+      useStudy.getState().progress[code]?.cards ?? {}
+    )
+  )
 
   // Recall mode: the question gets harder as the card matures.
   const [questions] = useState<QuizQuestion[]>(() => {
@@ -85,6 +95,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
       correct={correct}
       total={total}
     >
+      <SessionChanges before={before} />
       {correct < total && (
         <p className="w-full text-sm text-slate-500">
           {t(
