@@ -171,3 +171,18 @@ mới gõ ra được chữ.
     chúng đổi theo chữ đứng sau).
 - Trên màn hình, dòng pinyin chỉ hiện khi từ có `exampleRead`. Tiếng Anh và tiếng Hàn không
   thay đổi.
+
+## Bước 7: pinyin cho truyện ngắn
+
+- Màn hình đọc có thêm nút **pinyin** bên cạnh "Bản dịch". Nút chỉ hiện khi truyện có
+  pinyin; bật lên thì dưới mỗi câu chữ Hán có một dòng pinyin.
+- Mỗi câu truyện có thêm trường `read`. Nguồn là `SENTENCE_PINYIN` trong
+  `scripts/build_reading_zh.py`, viết mỗi chữ một âm tiết.
+- `build_zh_pack.py` và `build_reading_zh.py` dùng chung module `scripts/zh_pinyin.py` để
+  ghép dòng pinyin. Sau khi tách module, gói từ được sinh lại giống hệt từng byte.
+- Script truyện kiểm tra:
+  - số âm tiết bằng số chữ Hán;
+  - mọi từ trong câu có mặt trong gói thì đọc đúng như `viRead` của gói (trừ 一 / 不).
+- Test lặp lại phép kiểm tra thứ hai trên file đã sinh ra.
+- Thứ tự chạy: `build_zh_pack.py` trước, `build_reading_zh.py` sau (script truyện đọc cách
+  đọc từ gói).

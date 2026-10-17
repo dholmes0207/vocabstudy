@@ -19,6 +19,8 @@ export interface StorySentence {
    * contracted verbs (마셔요 → 마시다). Takes priority over the glossary.
    */
   gloss?: Record<string, number>
+  /** How the sentence reads, for scripts a beginner cannot read yet (Chinese pinyin). */
+  read?: string
 }
 
 export interface StoryQuestion {

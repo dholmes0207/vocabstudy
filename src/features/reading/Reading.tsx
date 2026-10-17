@@ -7,6 +7,7 @@ import {
   BookOpenText,
   CheckCircle2,
   Square,
+  Baseline,
   Languages,
   Volume2,
   X,
@@ -149,6 +150,10 @@ function StoryView({ story }: { story: Story }) {
   const glossary = useMemo(() => buildGlossary(pack.words), [pack.words])
   const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
   const [showVi, setShowVi] = useState(false)
+  // Chinese stories carry a pinyin line per sentence; other packs read as written.
+  const hasRead = story.sentences.some((s) => s.read)
+  const readName = useReadingLabel('cách đọc', 'reading')
+  const [showRead, setShowRead] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
   const [quiz, setQuiz] = useState(false)
 
@@ -207,7 +212,7 @@ function StoryView({ story }: { story: Story }) {
           <h1 className="mt-1 text-2xl font-extrabold tracking-tight">{story.title[1]}</h1>
           <p className="text-slate-500">{story.title[0]}</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {reading?.all ? (
             <button
               className="btn-secondary !border-brand-400 !text-brand-700 dark:!text-brand-300"
@@ -227,6 +232,15 @@ function StoryView({ story }: { story: Story }) {
           >
             <Languages className="h-4 w-4" /> {t('Bản dịch', 'Translation')}
           </button>
+          {hasRead && (
+            <button
+              className={`btn-secondary ${showRead ? '!border-brand-400 !text-brand-700 dark:!text-brand-300' : ''}`}
+              onClick={() => setShowRead((v) => !v)}
+              aria-pressed={showRead}
+            >
+              <Baseline className="h-4 w-4" /> {readName}
+            </button>
+          )}
         </div>
       </header>
 
@@ -280,6 +294,9 @@ function StoryView({ story }: { story: Story }) {
                 <Volume2 className="h-4 w-4" />
               </button>
             </p>
+            {showRead && line.read && (
+              <p className="mt-0.5 text-base text-slate-600 dark:text-slate-300">{line.read}</p>
+            )}
             {showVi && <p className="mt-0.5 text-base text-slate-500">{line.vi}</p>}
           </div>
         ))}

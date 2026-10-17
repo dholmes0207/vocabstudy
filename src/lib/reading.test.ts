@@ -144,4 +144,18 @@ describe('the Chinese stories', () => {
     const line = zh.stories[0].sentences[2]
     expect(glossInLine('米饭。', line, glossary, byId)?.meaning).toBe('cơm')
   })
+
+  it('give every sentence a pinyin line that reads each tappable word as the pack does', () => {
+    const flat = (r: string) => r.toLowerCase().replace(/[^\p{L}]/gu, '')
+    for (const s of zh.stories)
+      for (const line of s.sentences) {
+        expect(line.read, line.en).toBeTruthy()
+        for (const token of tokenize(line.en)) {
+          const w = glossInLine(token, line, glossary, byId)
+          // 一 and 不 change tone with the next character, so they are not compared.
+          if (w && w.word !== '一' && w.word !== '不')
+            expect(flat(line.read!), `${w.word} in ${line.read}`).toContain(flat(w.viRead))
+        }
+      }
+  })
 })

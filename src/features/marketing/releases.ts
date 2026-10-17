@@ -24,6 +24,10 @@ export const RELEASES: Release[] = [
         'Nghe – chép tiếng Trung có thêm gợi ý pinyin, đúng thứ cần để gõ bằng bộ gõ pinyin.',
         'Chinese dictation has a pinyin hint — exactly what you need to type with a pinyin keyboard.',
       ],
+      [
+        'Truyện ngắn tiếng Trung có nút "pinyin": bật lên để thấy cách đọc dưới từng câu.',
+        'Chinese short stories have a "pinyin" button: turn it on to see how each sentence reads.',
+      ],
     ],
   },
   {

@@ -16,6 +16,8 @@ import re
 import sys
 from pathlib import Path
 
+from zh_pinyin import pinyin_line, syllables_for, word_mismatch
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'data' / 'zh.json'
 ZWSP = '\u200b'
@@ -326,51 +328,16 @@ EXAMPLE_PINYIN = {
     '和': 'wǒ hé mā ma qù shāng diàn',
 }
 
-# Chinese punctuation as it reads in a pinyin line.
-PUNCT = {'，': ',', '。': '.', '？': '?', '！': '!', '：': ':', '、': ','}
-TONE_FREE = {'一', '不'}  # their tone follows the next character
-
-
-def is_han(c: str) -> bool:
-    return '一' <= c <= '鿿'
-
-
-def flat(reading: str) -> str:
-    return reading.replace(' ', '').replace("'", '').lower()
-
-
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
     """Pinyin line for one example ("我|喜欢|喝|咖啡。" → "Wǒ xǐhuan hē kāfēi.")."""
-    syllables = EXAMPLE_PINYIN.get(word, '').split()
-    sentence = example.replace('|', '')
-    han = [c for c in sentence if is_han(c)]
-    if len(syllables) != len(han):
-        errors.append(f'{word}: {len(han)} characters but {len(syllables)} pinyin syllables')
+    syllables, error = syllables_for(example, EXAMPLE_PINYIN.get(word, ''))
+    if error:
+        errors.append(f'{word}: {error}')
         return None
-    at = ''.join(han).find(word)
-    if word not in TONE_FREE and at >= 0:
-        got = ''.join(syllables[at : at + len(word)])
-        if flat(got) != flat(pack_reads[word]):
-            errors.append(f'{word}: example reads "{got}", the word reads "{pack_reads[word]}"')
-    out, i = [], 0
-    for token in example.split('|'):
-        chars = [c for c in token if is_han(c)]
-        part = syllables[i : i + len(chars)]
-        i += len(chars)
-        core = ''.join(chars)
-        # A pack word written in two parts keeps its spacing ("nǐ hǎo", "dǎ diànhuà").
-        spaced = pack_reads.get(core, '')
-        read = spaced if ' ' in spaced and flat(spaced) == flat(''.join(part)) else ''.join(part)
-        head = ''.join(c for c in token[: token.index(chars[0])] if not is_han(c)) if chars else ''
-        tail = ''.join(PUNCT.get(c, c) for c in token[token.rindex(chars[-1]) + 1 :]) if chars else token
-        out.append(head + read + tail)
-    line = ' '.join(out)
-    # Capital letter to open each sentence, after any opening quote.
-    return re.sub(
-        r'(^|[.!?]["”]?\s+)(["“]?)(\w)',
-        lambda m: m.group(1) + m.group(2) + m.group(3).upper(),
-        line,
-    )
+    mismatch = word_mismatch(word, example, syllables, pack_reads[word])
+    if mismatch:
+        errors.append(f'{word}: {mismatch}')
+    return pinyin_line(example, syllables, pack_reads)
 
 
 PINYIN = re.compile(r"^[a-zA-ZüāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜĀÁǍÀĒÉĚÈŌÓǑÒ' ]+$")

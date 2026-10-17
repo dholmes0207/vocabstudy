@@ -12,27 +12,33 @@
       "sentences": [
         {
           "en": "我​叫​安娜，​我​是​学生。",
-          "vi": "Tôi tên là Anna, tôi là học sinh."
+          "vi": "Tôi tên là Anna, tôi là học sinh.",
+          "read": "Wǒ jiào Ānnà, wǒ shì xuésheng."
         },
         {
           "en": "我​上午​七​点​去​学校。",
-          "vi": "Bảy giờ sáng tôi đến trường."
+          "vi": "Bảy giờ sáng tôi đến trường.",
+          "read": "Wǒ shàngwǔ qī diǎn qù xuéxiào."
         },
         {
           "en": "中午​我​和​朋友​吃​米饭。",
-          "vi": "Buổi trưa tôi ăn cơm với bạn."
+          "vi": "Buổi trưa tôi ăn cơm với bạn.",
+          "read": "Zhōngwǔ wǒ hé péngyou chī mǐfàn."
         },
         {
           "en": "下午​我​在​家​学习​汉语。",
-          "vi": "Buổi chiều tôi học tiếng Trung ở nhà."
+          "vi": "Buổi chiều tôi học tiếng Trung ở nhà.",
+          "read": "Xiàwǔ wǒ zài jiā xuéxí Hànyǔ."
         },
         {
           "en": "我​很​喜欢​汉语。",
-          "vi": "Tôi rất thích tiếng Trung."
+          "vi": "Tôi rất thích tiếng Trung.",
+          "read": "Wǒ hěn xǐhuan Hànyǔ."
         },
         {
           "en": "我​十一​点​睡觉。",
-          "vi": "Mười một giờ tôi đi ngủ."
+          "vi": "Mười một giờ tôi đi ngủ.",
+          "read": "Wǒ shíyī diǎn shuìjiào."
         }
       ],
       "questions": [
@@ -76,35 +82,43 @@
       "sentences": [
         {
           "en": "今天​星期​六。",
-          "vi": "Hôm nay là thứ Bảy."
+          "vi": "Hôm nay là thứ Bảy.",
+          "read": "Jīntiān xīngqī liù."
         },
         {
           "en": "我​和​妈妈​去​商店​买​东西。",
-          "vi": "Tôi và mẹ đi cửa hàng mua đồ."
+          "vi": "Tôi và mẹ đi cửa hàng mua đồ.",
+          "read": "Wǒ hé māma qù shāngdiàn mǎi dōngxi."
         },
         {
           "en": "商店​里​人​很​多。",
-          "vi": "Trong cửa hàng rất đông người."
+          "vi": "Trong cửa hàng rất đông người.",
+          "read": "Shāngdiàn lǐ rén hěn duō."
         },
         {
           "en": "妈妈​想​买​衣服。",
-          "vi": "Mẹ muốn mua quần áo."
+          "vi": "Mẹ muốn mua quần áo.",
+          "read": "Māma xiǎng mǎi yīfu."
         },
         {
           "en": "我​想​买​一​个​杯子。",
-          "vi": "Tôi muốn mua một cái cốc."
+          "vi": "Tôi muốn mua một cái cốc.",
+          "read": "Wǒ xiǎng mǎi yí gè bēizi."
         },
         {
           "en": "“这个​杯子​多少​钱？”",
-          "vi": "“Cái cốc này bao nhiêu tiền?”"
+          "vi": "“Cái cốc này bao nhiêu tiền?”",
+          "read": "“Zhège bēizi duōshao qián?”"
         },
         {
           "en": "“二十​块。”",
-          "vi": "“Hai mươi tệ.”"
+          "vi": "“Hai mươi tệ.”",
+          "read": "“Èrshí kuài.”"
         },
         {
           "en": "杯子​很​漂亮，​我​很​高兴。",
-          "vi": "Cái cốc rất đẹp, tôi rất vui."
+          "vi": "Cái cốc rất đẹp, tôi rất vui.",
+          "read": "Bēizi hěn piàoliang, wǒ hěn gāoxìng."
         }
       ],
       "questions": [
@@ -148,31 +162,38 @@
       "sentences": [
         {
           "en": "今天​下雨​了。",
-          "vi": "Hôm nay trời mưa."
+          "vi": "Hôm nay trời mưa.",
+          "read": "Jīntiān xià yǔ le."
         },
         {
           "en": "天气​很​冷。",
-          "vi": "Thời tiết rất lạnh."
+          "vi": "Thời tiết rất lạnh.",
+          "read": "Tiānqì hěn lěng."
         },
         {
           "en": "我​没有​去​学校。",
-          "vi": "Tôi không đến trường."
+          "vi": "Tôi không đến trường.",
+          "read": "Wǒ méiyǒu qù xuéxiào."
         },
         {
           "en": "我​在​家​看​电视。",
-          "vi": "Tôi ở nhà xem ti vi."
+          "vi": "Tôi ở nhà xem ti vi.",
+          "read": "Wǒ zài jiā kàn diànshì."
         },
         {
           "en": "我​的​猫​在​椅子​上​睡觉。",
-          "vi": "Con mèo của tôi đang ngủ trên ghế."
+          "vi": "Con mèo của tôi đang ngủ trên ghế.",
+          "read": "Wǒ de māo zài yǐzi shàng shuìjiào."
         },
         {
           "en": "中午​妈妈​做​的​菜​很​好吃。",
-          "vi": "Buổi trưa, món mẹ nấu rất ngon."
+          "vi": "Buổi trưa, món mẹ nấu rất ngon.",
+          "read": "Zhōngwǔ māma zuò de cài hěn hǎochī."
         },
         {
           "en": "下雨​的​时候，​在​家​也​很​好。",
-          "vi": "Trời mưa thì ở nhà cũng thật dễ chịu."
+          "vi": "Trời mưa thì ở nhà cũng thật dễ chịu.",
+          "read": "Xià yǔ de shíhou, zài jiā yě hěn hǎo."
         }
       ],
       "questions": [

@@ -4,15 +4,19 @@
 Sentences mark word breaks with "|"; they become invisible zero-width spaces,
 so the reading screen can make each word tappable while showing the sentence
 unbroken. Words of the Chinese pack get their meaning on tap; names and words
-outside the pack simply are not tappable.
+outside the pack simply are not tappable. Each sentence also gets its pinyin
+line ("read"), checked syllable by syllable against the pack.
 
-Usage:  python3 scripts/build_reading_zh.py
+Usage:  python3 scripts/build_zh_pack.py && python3 scripts/build_reading_zh.py
 """
 import json
 import sys
 from pathlib import Path
 
+from zh_pinyin import han_of, pinyin_line, syllables_for, word_mismatch
+
 ROOT = Path(__file__).resolve().parent.parent
+PACK = ROOT / 'public' / 'data' / 'zh.json'
 OUT = ROOT / 'public' / 'data' / 'reading' / 'zh.json'
 ZWSP = chr(0x200B)
 
@@ -96,11 +100,58 @@ STORIES = [
 ]
 
 
+# Pinyin of each sentence, one syllable per character (same conventions as the
+# pack's examples: 一 / 不 carry their changed tone, neutral tones unmarked).
+SENTENCE_PINYIN = {
+    '我|叫|安娜，|我|是|学生。': 'wǒ jiào Ān nà wǒ shì xué sheng',
+    '我|上午|七|点|去|学校。': 'wǒ shàng wǔ qī diǎn qù xué xiào',
+    '中午|我|和|朋友|吃|米饭。': 'zhōng wǔ wǒ hé péng you chī mǐ fàn',
+    '下午|我|在|家|学习|汉语。': 'xià wǔ wǒ zài jiā xué xí Hàn yǔ',
+    '我|很|喜欢|汉语。': 'wǒ hěn xǐ huan Hàn yǔ',
+    '我|十一|点|睡觉。': 'wǒ shí yī diǎn shuì jiào',
+    '今天|星期|六。': 'jīn tiān xīng qī liù',
+    '我|和|妈妈|去|商店|买|东西。': 'wǒ hé mā ma qù shāng diàn mǎi dōng xi',
+    '商店|里|人|很|多。': 'shāng diàn lǐ rén hěn duō',
+    '妈妈|想|买|衣服。': 'mā ma xiǎng mǎi yī fu',
+    '我|想|买|一|个|杯子。': 'wǒ xiǎng mǎi yí gè bēi zi',
+    '“这个|杯子|多少|钱？”': 'zhè ge bēi zi duō shao qián',
+    '“二十|块。”': 'èr shí kuài',
+    '杯子|很|漂亮，|我|很|高兴。': 'bēi zi hěn piào liang wǒ hěn gāo xìng',
+    '今天|下雨|了。': 'jīn tiān xià yǔ le',
+    '天气|很|冷。': 'tiān qì hěn lěng',
+    '我|没有|去|学校。': 'wǒ méi yǒu qù xué xiào',
+    '我|在|家|看|电视。': 'wǒ zài jiā kàn diàn shì',
+    '我|的|猫|在|椅子|上|睡觉。': 'wǒ de māo zài yǐ zi shàng shuì jiào',
+    '中午|妈妈|做|的|菜|很|好吃。': 'zhōng wǔ mā ma zuò de cài hěn hǎo chī',
+    '下雨|的|时候，|在|家|也|很|好。': 'xià yǔ de shí hou zài jiā yě hěn hǎo',
+}
+
+
 def main() -> int:
-    stories = []
+    words = json.loads(PACK.read_text(encoding='utf-8'))['words']
+    pack_reads = {w['word']: w['viRead'] for w in words}
+    stories, errors = [], []
     for s in STORIES:
-        sentences = [{'en': zh.replace('|', ZWSP), 'vi': vi} for zh, vi in s['sentences']]
+        sentences = []
+        for zh, vi in s['sentences']:
+            syllables, error = syllables_for(zh, SENTENCE_PINYIN.get(zh, ''))
+            if error:
+                errors.append(f'{zh}: {error}')
+                continue
+            # Every pack word in the sentence must read as the pack reads it.
+            for token in zh.split('|'):
+                word = ''.join(han_of(token))
+                if word in pack_reads:
+                    mismatch = word_mismatch(word, zh, syllables, pack_reads[word])
+                    if mismatch:
+                        errors.append(f'{zh}: {mismatch}')
+            sentences.append(
+                {'en': zh.replace('|', ZWSP), 'vi': vi, 'read': pinyin_line(zh, syllables, pack_reads)}
+            )
         stories.append({**s, 'sentences': sentences})
+    if errors:
+        print('\n'.join(errors), file=sys.stderr)
+        return 1
     OUT.write_text(
         json.dumps({'version': '1.0.0', 'stories': stories}, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8',
