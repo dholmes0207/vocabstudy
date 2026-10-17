@@ -15,12 +15,20 @@ một nhóm làm nghiêm túc, không phải một trang demo.
 - `/` là trang giới thiệu, gồm các phần:
   1. Hero: lời hứa, hai nút "Học miễn phí" và "Xem cách học", hình minh hoạ dựng bằng HTML
      từ chính giao diện thẻ.
-  2. Số liệu thật.
-  3. 6 tính năng.
-  4. 3 bước học.
-  5. "Dành cho người Việt".
-  6. Hỏi đáp.
-  7. Lời mời cuối trang.
+  2. "Bạn muốn học ngôn ngữ nào?" (`LanguagePicker`, thêm ngày 17/10/2026).
+     - Mỗi ngôn ngữ có trong `public/data/index.json` là một thẻ: cờ, tên, số từ, nhãn beta.
+       Bấm vào thẻ là mở `/home?lang=…`. Ô cuối mời người học gửi email gợi ý ngôn ngữ.
+     - Danh sách sinh từ manifest, nên thêm gói mới thì thẻ tự hiện, không phải sửa trang.
+     - Trang giới thiệu tự tải manifest và không ghi gì vào `dataStore`. Tải lỗi thì mục này
+       ẩn đi, còn app không bị chuyển sang trạng thái lỗi.
+     - Lý do: Busuu, Babbel, Clozemaster, Cake đều hỏi câu này ngay đầu trang (xem
+       `docs/research/2026-10-17-language-apps.md`).
+  3. Số liệu thật.
+  4. 6 tính năng.
+  5. 3 bước học.
+  6. "Dành cho người Việt".
+  7. Hỏi đáp.
+  8. Lời mời cuối trang.
 - Mọi con số và tính năng phải có thật trong app:
   - 4.440 từ trong `data/en.json`;
   - 100 mẫu câu;

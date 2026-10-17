@@ -1,0 +1,117 @@
+# Tham khảo các web học ngoại ngữ khác (17/10/2026)
+
+**User**: "Xem tham khảo các web học tiếng nổi tiếng khác ngoài Duolingo, ELSA, Memrise." Định
+hướng sản phẩm: VocaStudy là nơi người Việt học **nhiều** ngoại ngữ, không chỉ tiếng Anh.
+
+## Cách làm
+
+- Công cụ: [REA](https://github.com/morluto/rea) `rea-agents@6.5.0`, chạy bằng CLI.
+  - Mỗi trang được mở trong một Chrome riêng, profile tạm, chỉ nghe ở `127.0.0.1`.
+  - `inspect-web-page` chụp cấu trúc trang và cây accessibility (tiêu đề, link).
+  - `analyze-web-bundle` đọc tĩnh các file JS mà trang tải về, để nhận ra framework.
+- Chỉ xem **trang giới thiệu công khai**: không đăng nhập, không bấm, không chép code hay
+  nội dung.
+  - Một số đoạn mô tả được đọc thêm bằng trình duyệt thường (TTMIK, Du Chinese).
+  - Pleco từ chối phiên quan sát (`target_not_allowed`), nên không có dữ liệu.
+- Giới hạn:
+  - REA chỉ giữ một phần chữ của trang. Những gì nằm sau đăng nhập không thấy được.
+  - Các ý ghi **[PRIOR]** là hiểu biết sẵn có về sản phẩm đó, chưa kiểm chứng trong lần quét
+    này.
+
+| Web                  | Evidence trang / bundle                 | Công nghệ REA nhận ra   |
+| -------------------- | --------------------------------------- | ----------------------- |
+| Busuu                | `ev_e8327f54163a…` / `ev_7987e92c8a8a…` | Next.js, React, webpack |
+| LingQ                | `ev_d65e3ae97e89…` / `ev_43211ca243d7…` | –                       |
+| Clozemaster          | `ev_3bf5b7dc9820…` / `ev_11eae4a4b7f7…` | React                   |
+| HelloChinese         | `ev_f54745c07f70…` / `ev_c875a272940d…` | –                       |
+| Migii                | `ev_b03e22366279…` / `ev_d5abd9d1facc…` | –                       |
+| MochiMochi           | `ev_8618b8949eb2…` / `ev_0f44d9e56576…` | –                       |
+| LingoDeer            | `ev_223cf1717ff9…` / `ev_e61ca9f4e16f…` | Vite, Vue               |
+| Babbel               | `ev_68a1e0a3fccb…` / `ev_4cbea42f4b00…` | Next.js, React          |
+| Drops                | `ev_0420bda164e0…` / `ev_0d9c28a92eac…` | –                       |
+| Cake                 | `ev_3fbebc98c8ac…` / `ev_a88cf55a8b74…` | –                       |
+| Talk To Me In Korean | `ev_88b091bf041e…` / `ev_3e34772dd576…` | –                       |
+| Prep                 | `ev_6ae656b30426…` / `ev_17e156ad452e…` | –                       |
+| Du Chinese           | `ev_b62906acddd8…` / `ev_09cf18a4631b…` | –                       |
+
+## Mỗi web làm gì nổi bật
+
+- **Busuu**: 14 ngôn ngữ trong menu.
+  - Đầu trang chủ là ô chọn "Tôi muốn học…".
+  - Mỗi ngôn ngữ có trang riêng ("Learn Korean online"…).
+  - Nhấn mạnh "người thật": cộng đồng chữa bài, gia sư.
+- **Babbel**: trang chủ có mục "Bạn muốn học ngôn ngữ nào?" và một trang chuyên đề cho từng
+  ngôn ngữ (Spanish Learning Hub). Bài học ngắn, hướng tới nói sớm.
+- **Clozemaster**: hơn 50 ngôn ngữ, cùng một cách học: xem câu thật, điền chỗ trống, lên mức
+  thành thạo. Trang chủ cũng hỏi "Bạn đang học ngôn ngữ nào?".
+- **Drops**: hơn 55 ngôn ngữ.
+  - Phiên học ngắn bằng hình ảnh, có từ điển hình ảnh.
+  - Vừa mở rộng sang ngữ pháp và luyện nói cho hội thoại.
+- **LingQ**: học qua nội dung thật (tin tức, phim, chủ đề).
+  - Có tiện ích trình duyệt để nhập bài đọc bất kỳ.
+  - Từ gặp khi đọc được lưu lại để ôn **[PRIOR]**.
+- **Du Chinese**: thư viện truyện chia 6 cấp.
+  - Chạm vào từ là ra nghĩa, có giải thích ngữ pháp ngay trong bài.
+  - **Lưu từ chưa biết vào thẻ ôn**.
+  - "Khoá học" nhắc lại từ mới qua nhiều ngữ cảnh.
+  - Có lời gợi ý bắt đầu bằng pinyin nếu chưa đọc được chữ.
+- **Talk To Me In Korean**: mỗi bài học 4 bước (khởi động, học, **nói thành tiếng**, ôn
+  nhanh).
+  - **Bài kiểm tra trình độ 3 phút** để biết nên bắt đầu từ đâu.
+  - Lộ trình từ Hangul đến nâng cao.
+- **LingoDeer**: tập trung vào ngôn ngữ châu Á (Nhật, Hàn, Trung, Thái, cả tiếng Việt).
+  Giải thích ngữ pháp kỹ, có truyện.
+- **Cake**: tiếng Anh và tiếng Hàn qua clip ngắn, "10 phút mỗi ngày".
+- **Migii** (Việt Nam): luyện thi JLPT, HSK/HSKK, TOPIK/EPS-TOPIK, TOEIC; có cộng đồng người
+  luyện thi.
+- **Prep** (Việt Nam): luyện thi IELTS, TOEIC, VSTEP, HSK, HSK 3.0; có lộ trình cá nhân hoá
+  và AI chấm bài.
+- **MochiMochi** (Việt Nam): mỗi ngôn ngữ một app riêng (MochiVocab, MochiKana, MochiKanji,
+  Mochi Chinese…).
+  - Có tiện ích tra từ trên trình duyệt.
+  - Nhấn mạnh thói quen học mỗi ngày.
+
+## Điều rút ra cho VocaStudy
+
+1. **Web nhiều ngôn ngữ đều hỏi ngay "Bạn muốn học ngôn ngữ nào?"** (Busuu, Babbel,
+   Clozemaster, Cake).
+   - VocaStudy chỉ có một dòng nhỏ "Hoặc học tiếng Hàn · tiếng Trung" dưới nút chính.
+   - Đây là điểm khớp nhất với định hướng "học nhiều ngôn ngữ".
+2. **Đối thủ Việt chia mỗi ngôn ngữ thành một app riêng** (Mochi) hoặc đi theo hướng luyện
+   thi (Migii, Prep).
+   - VocaStudy khác ở chỗ: **một app, một cách học, nhiều ngôn ngữ, giải thích bằng tiếng
+     Việt**. Đây nên là thông điệp chính.
+3. **Luyện thi là thứ người Việt sẵn sàng trả tiền** (Migii, Prep đều có HSK và TOPIK).
+   - VocaStudy đã có đủ 150 từ HSK 1, nhưng chưa nói ra theo cách người luyện thi tìm kiếm.
+4. **Đọc → lưu từ → ôn** (Du Chinese, LingQ): VocaStudy có truyện và có chạm để xem nghĩa,
+   nhưng chưa có nút đưa từ đó vào lịch ôn.
+5. **Biết bắt đầu từ đâu** (bài kiểm tra trình độ của TTMIK): gói tiếng Anh có 4.440 từ, người
+   đã biết kha khá vẫn phải học lại từ đầu danh sách.
+6. **Busuu và Babbel dùng Next.js** để mỗi trang ngôn ngữ có HTML sẵn cho Google.
+   - VocaStudy là SPA. Nếu làm trang riêng cho từng ngôn ngữ để lên Google, cần render sẵn
+     (prerender) các trang đó.
+
+## Đề xuất, xếp theo giá trị trên công sức
+
+| #   | Việc                                                                  | Học từ                           | Công sức  | Trạng thái         |
+| --- | --------------------------------------------------------------------- | -------------------------------- | --------- | ------------------ |
+| 1   | Mục "Bạn muốn học ngôn ngữ nào?" trên trang chủ, sinh từ `index.json` | Busuu, Babbel, Clozemaster, Cake | nhỏ       | **làm ngày 17/10** |
+| 2   | Nút "Thêm vào ôn tập" trong hộp nghĩa khi đọc truyện                  | Du Chinese, LingQ                | vừa       | đề xuất            |
+| 3   | Kiểm tra trình độ 3 phút: đánh dấu những từ đã biết để bỏ qua         | TTMIK                            | vừa       | đề xuất            |
+| 4   | Lộ trình HSK 1 / TOPIK I: tiến độ theo danh sách thi, đề thử ngắn     | Migii, Prep                      | vừa → lớn | đề xuất            |
+| 5   | Bước "nói thành tiếng" trong bài ngữ pháp                             | TTMIK                            | vừa       | đề xuất            |
+| 6   | Trang riêng cho từng ngôn ngữ (render sẵn để lên Google)              | Busuu, LingoDeer, Drops          | lớn       | cần bạn quyết      |
+| 7   | Tiện ích trình duyệt tra từ / nhập bài đọc                            | LingQ, Mochi                     | lớn       | để sau             |
+
+Không đề xuất: cộng đồng, bootcamp, gia sư. Những thứ đó cần người kiểm duyệt và vận hành
+liên tục.
+
+## Cài REA
+
+- Đăng ký MCP `rea` ở cấp người dùng trong `~/.claude.json`.
+  - Lệnh được ghim vào Node 22, vì REA cần Node ≥ 22.19 mà Node mặc định của máy là 20.
+  - `rea doctor --client claude_code` báo `aligned`.
+- Skill ở `~/.claude/skills/reverse-engineer-anything`.
+- **Phải khởi động lại Claude Code** thì các công cụ MCP của REA mới hiện trong phiên. Trước
+  đó vẫn dùng được CLI `rea`.
+- Chrome dùng để quan sát là profile tạm, đã tắt sau khi quét.

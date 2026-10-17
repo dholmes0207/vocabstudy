@@ -44,6 +44,10 @@ export const RELEASES: Release[] = [
         'Trang chủ có lối vào thẳng tiếng Hàn và tiếng Trung; đường dẫn /home?lang=ko hay /home?lang=zh mở app ngay ở ngôn ngữ đó.',
         'The home page links straight to Korean and Chinese; /home?lang=ko or /home?lang=zh opens the app in that language.',
       ],
+      [
+        'VocaStudy giờ giới thiệu mình là nơi người Việt học nhiều ngoại ngữ: trang chủ có mục "Bạn muốn học ngôn ngữ nào?", trang Về chúng tôi viết lại, và bạn có thể gợi ý ngôn ngữ muốn học tiếp theo.',
+        'VocaStudy now presents itself as a place for Vietnamese speakers to learn many languages: the home page asks "Which language do you want to learn?", the About page is rewritten, and you can suggest the next language.',
+      ],
     ],
   },
   {

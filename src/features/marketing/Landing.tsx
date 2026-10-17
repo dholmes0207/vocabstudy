@@ -16,6 +16,7 @@ import {
 import { useT } from '@/lib/i18n'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import Testimonials from './Testimonials'
+import LanguagePicker from './LanguagePicker'
 
 // The public home page (docs/design/landing.md): what VocaStudy is, who it is
 // for, and one obvious way to start. Every number here is true of the product
@@ -33,6 +34,7 @@ export default function Landing() {
   return (
     <div className="overflow-x-clip">
       <Hero />
+      <LanguagePicker />
       <Stats />
       <Features />
       <HowItWorks />
