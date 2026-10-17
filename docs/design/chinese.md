@@ -207,3 +207,41 @@ mới gõ ra được chữ.
 - 4 từ ngoài HSK 1 vẫn giữ lại: 你好, 咖啡, 好吃, 火车站.
 - "năm" (năm, 年) và "năm (số 5)" (五) có nghĩa ghi khác nhau, để câu trắc nghiệm luôn có
   một đáp án đúng.
+
+## Cùng chữ Hán Việt và nhãn HSK 1 (18/10/2026)
+
+**User**: "Học 学生 xong, muốn biết chữ 学 còn ở trong những từ nào nữa."
+
+Tham khảo, quét trang từ công khai bằng REA (`docs/research/2026-10-17-language-apps.md`, vòng
+5):
+
+- Hanzii ghi âm Hán Việt cho cả từ (学习 [HỌC TẬP]), nhãn HSK 1 / TOCFL 1, từ ghép và cách tách
+  chữ.
+- Naver Hàn–Việt ghi chữ Hán gốc (工夫) và các từ phái sinh.
+
+VocaStudy không làm từ điển như họ. App nối các từ **trong chính gói đang học** bằng âm Hán
+Việt: một từ đã biết trở thành chìa khoá để nhớ các từ khác. Cách này dùng được cho cả tiếng
+Trung và tiếng Hàn.
+
+**BA**
+
+- Trên thẻ từ (thẻ làm quen, mục Tra cứu, mặt sau thẻ lật) có thêm mục "Cùng chữ Hán Việt".
+  - Mỗi chữ hiện kèm âm Hán Việt (学 HỌC), rồi các từ khác trong gói có chữ đó, **đọc cùng một
+    âm**. Ví dụ: 学校 HỌC HIỆU · trường học, 学习, 同学.
+  - Tiếng Hàn tính theo khối âm tiết: 학 HỌC có trong 학생 và 학교.
+  - Từ không có Hán Việt, hoặc không có từ nào cùng chữ trong gói, thì không hiện mục này.
+- Từ tiếng Trung thuộc danh sách HSK 1 có nhãn **HSK 1** cạnh từ loại. TOPIK I không có danh
+  sách chính thức mà gói bao trọn, nên tiếng Hàn không có nhãn.
+- Số liệu ngày 18/10: tiếng Trung có 36 họ chữ, phủ 66 từ. Tiếng Hàn có 10 họ, phủ 17 từ.
+
+**Dev**
+
+- `lib/hanVietFamily.ts`:
+  - `hanVietUnits(word)` ghép từng chữ (hoặc khối Hangul) với từng âm của `hanViet`. Số chữ
+    và số âm phải bằng nhau, nếu không thì bỏ qua từ đó;
+  - `familyIndex(words)` lập bảng (chữ, âm) → các từ, có cache theo mảng `words`;
+  - `familiesOf(word, words)`.
+- `components/HanVietFamily.tsx`, hiện trong `WordInsight` (biến thể `full` và `details`).
+- `lib/exams.ts` `examLabelFor(lang, word)` trả về nhãn, chỉ cho kỳ thi có `wordList`.
+- Ghép theo **cả chữ lẫn âm**, vì một chữ có thể có hai âm: 不 trong 不客气 và 对不起 cùng là
+  "bất", nhưng nếu một chữ đọc khác thì nó thuộc họ khác.

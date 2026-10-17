@@ -1,0 +1,52 @@
+import { readFileSync } from 'node:fs'
+import { describe, expect, it } from 'vitest'
+import type { LanguagePack } from '@/types'
+import { familiesOf, hanVietUnits } from './hanVietFamily'
+
+const pack = (code: string) =>
+  JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as LanguagePack
+
+const words = (code: string) => pack(code).words
+const find = (code: string, w: string) => words(code).find((x) => x.word === w)!
+const summary = (code: string, w: string) =>
+  familiesOf(find(code, w), words(code)).map((f) => [f.char, f.hv, f.others.map((o) => o.word)])
+
+describe('hanVietUnits', () => {
+  it('pairs each character or syllable block with its Hán Việt syllable', () => {
+    expect(hanVietUnits({ word: '学生', hanViet: 'học sinh' })).toEqual([
+      { char: '学', hv: 'học' },
+      { char: '生', hv: 'sinh' },
+    ])
+    expect(hanVietUnits({ word: '학교', hanViet: 'Học Hiệu' })).toEqual([
+      { char: '학', hv: 'học' },
+      { char: '교', hv: 'hiệu' },
+    ])
+  })
+
+  it('gives up when the readings do not line up', () => {
+    expect(hanVietUnits({ word: '一点儿', hanViet: 'nhất điểm' })).toBeNull()
+    expect(hanVietUnits({ word: 'apple', hanViet: undefined })).toBeNull()
+    expect(hanVietUnits({ word: '공부하다', hanViet: 'công phu' })).toBeNull()
+  })
+})
+
+describe('familiesOf', () => {
+  it('finds the Chinese words that share a character, read the same way', () => {
+    expect(summary('zh', '学生')).toEqual([
+      ['学', 'học', ['学校', '学习', '同学']],
+      ['生', 'sinh', ['医生', '先生']],
+    ])
+  })
+
+  it('works for Korean Sino words, each word listed once', () => {
+    const fams = summary('ko', '생일')
+    expect(fams.map((f) => f[0])).toEqual(['생', '일'])
+    const ilWords = fams[1][2] as string[]
+    expect(new Set(ilWords).size).toBe(ilWords.length)
+    expect(ilWords).toContain('일요일')
+  })
+
+  it('returns nothing for a word without a family', () => {
+    expect(familiesOf(find('en', 'apple'), words('en'))).toEqual([])
+  })
+})
