@@ -280,3 +280,28 @@ day)`.
   - nhận `onKnown`; nhóm từ được lọc trong `useMemo`, để câu hỏi không bị xáo lại mỗi lần
     render;
   - `renderComplete(total, known)`.
+
+## "Hiện không nghe được" (18/10/2026)
+
+**User**: "Đang trên xe buýt, không bật tiếng được, mà bài ôn cứ bắt nghe."
+
+Tham khảo: nút "Hiện không nghe được" của Duolingo, xem bằng REA (vòng 4). VocaStudy không
+bỏ hẳn câu nghe: câu đó **đổi thành câu đọc**. Người học vẫn được hỏi về từ, chỉ là đọc thay
+vì nghe.
+
+**BA**
+
+- Câu nghe trong Ôn tập, Quiz, bài Học, Kiểm tra từ vựng có thêm nút "Hiện không nghe được
+  (tắt câu nghe 15 phút)", nằm dưới nút loa.
+- Bấm vào thì trong 15 phút, mọi câu nghe hiện chữ của từ thay cho nút loa. Đáp án vẫn là
+  các nghĩa như cũ, và app không tự phát tiếng. Câu gõ chính tả cũng không tự phát tiếng.
+- Đầu thẻ câu hỏi có dòng "Câu nghe đang tạm tắt · Bật lại".
+- Hết 15 phút thì câu nghe tự bật lại. Trạng thái nằm trên máy (`vocab.listenpause.v1`), nên
+  tải lại trang vẫn giữ.
+
+**Dev**
+
+- `store/listenPauseStore.ts`: lưu `until` (mili giây), có `pause()`, `resume()` và
+  `useListenPaused()`.
+- `QuizRunner` đổi câu `listen` thành `en-to-vi` trong `useMemo` khi đang tạm tắt. Hai dạng
+  có cùng đáp án (nghĩa), nên không phải tạo lại câu hỏi.

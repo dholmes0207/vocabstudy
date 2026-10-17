@@ -7,6 +7,7 @@ import { PRAISE } from '@/lib/encourage'
 
 vi.mock('@/lib/audio', () => ({
   pronounce: vi.fn(),
+  stopPronounce: vi.fn(),
   prefetchAudio: vi.fn(),
   wordAudio: () => '',
   exampleAudio: () => '',
@@ -14,6 +15,8 @@ vi.mock('@/lib/audio', () => ({
 
 const { default: QuizRunner } = await import('./QuizRunner')
 const { useSettings } = await import('@/store/settingsStore')
+const { useListenPause } = await import('@/store/listenPauseStore')
+const { pronounce } = await import('@/lib/audio')
 
 // A quiz that only grades teaches nothing. These pin the two behaviours that
 // make the runner a teacher: it explains a miss (including what the wrong pick
@@ -52,7 +55,11 @@ const q = (w: Word): QuizQuestion => ({
   })),
 })
 
-beforeEach(() => useSettings.setState({ soundEnabled: false, uiLang: 'vi' }))
+beforeEach(() => {
+  useSettings.setState({ soundEnabled: false, uiLang: 'vi' })
+  useListenPause.setState({ until: 0 })
+  vi.mocked(pronounce).mockClear()
+})
 afterEach(cleanup)
 
 function setup(requeueWrong: boolean, questions = [q(apple), q(river), q(house)]) {
@@ -167,5 +174,39 @@ describe('QuizRunner', () => {
     }
     expect(screen.getByText('DONE')).toBeInTheDocument()
     expect(done).toHaveBeenLastCalledWith(0, 1, [1])
+  })
+})
+
+describe('"Hiện không nghe được"', () => {
+  const heard = (w: Word): QuizQuestion => ({ ...q(w), mode: 'listen' })
+
+  it('turns a listening question into a reading one, and can turn it back', () => {
+    setup(false, [heard(apple)])
+    expect(screen.queryByRole('heading', { name: 'apple' })).not.toBeInTheDocument()
+    expect(pronounce).toHaveBeenCalledTimes(1)
+
+    fireEvent.click(screen.getByRole('button', { name: /Hiện không nghe được/ }))
+    expect(useListenPause.getState().until).toBeGreaterThan(Date.now())
+    expect(screen.getByText('apple')).toBeInTheDocument()
+    expect(screen.getByText('Câu nghe đang tạm tắt.')).toBeInTheDocument()
+    // Same options: the meanings.
+    expect(screen.getByRole('button', { name: /quả táo/ })).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Bật lại' }))
+    expect(screen.queryByText('Câu nghe đang tạm tắt.')).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Hiện không nghe được/ })).toBeInTheDocument()
+  })
+
+  it('stays quiet for a session started while paused', () => {
+    useListenPause.getState().pause()
+    setup(false, [heard(apple)])
+    expect(pronounce).not.toHaveBeenCalled()
+    expect(screen.getByText('apple')).toBeInTheDocument()
+  })
+
+  it('wears off by itself', () => {
+    useListenPause.getState().pause(Date.now() - 16 * 60_000)
+    setup(false, [heard(apple)])
+    expect(screen.getByRole('button', { name: /Hiện không nghe được/ })).toBeInTheDocument()
   })
 })

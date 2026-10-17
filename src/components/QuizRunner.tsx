@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRight, Check, Lightbulb, LogOut, RotateCcw, Volume2, X } from 'lucide-react'
+import { ArrowRight, Check, Lightbulb, LogOut, RotateCcw, Volume2, VolumeX, X } from 'lucide-react'
 import type { QuizMode, QuizQuestion, Word } from '@/types'
 import { GAP, buildSkeleton, checkFillAnswer } from '@/lib/quiz'
 import { MAX_ATTEMPTS, requeue } from '@/lib/practice'
-import { exampleAudio, pronounce, wordAudio } from '@/lib/audio'
+import { exampleAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { buzz, playCorrect, playWrong } from '@/lib/sound'
 import { nudge, praise } from '@/lib/encourage'
 import { skyBurstAt } from '@/lib/skyEvents'
 import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
+import { LISTEN_PAUSE_MINUTES, useListenPause, useListenPaused } from '@/store/listenPauseStore'
 import HighlightExample from './HighlightExample'
 import PosBadge from './PosBadge'
 import SpeakButton from './SpeakButton'
@@ -99,7 +100,18 @@ export default function QuizRunner({
 
   const done = idx >= queue.length
   const item = queue[idx]
-  const q = item?.q
+  // "Hiện không nghe được": a listening question is asked as a reading one —
+  // same options (the meaning), the word shown instead of played.
+  const listenPaused = useListenPaused()
+  const pauseListening = useListenPause((s) => s.pause)
+  const resumeListening = useListenPause((s) => s.resume)
+  const q = useMemo(
+    () =>
+      item?.q && listenPaused && item.q.mode === 'listen'
+        ? { ...item.q, mode: 'en-to-vi' as const }
+        : item?.q,
+    [item, listenPaused]
+  )
   const word = q ? wordsById.get(q.wordId) : undefined
 
   // Spelling skeleton (abi__ty) + the positions the learner still must recall.
@@ -137,7 +149,7 @@ export default function QuizRunner({
 
   useEffect(() => {
     if (done || !q) return
-    if (q.mode === 'listen' || q.mode === 'spell') play()
+    if (q.mode === 'listen' || (q.mode === 'spell' && !listenPaused)) play()
     if (q.mode === 'fill' || q.mode === 'spell') inputRef.current?.focus()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, done])
@@ -262,6 +274,19 @@ export default function QuizRunner({
       )}
 
       <div className="card p-6">
+        {listenPaused && (
+          <p className="-mt-2 mb-3 flex flex-wrap items-center gap-x-2 text-xs text-slate-500">
+            <VolumeX className="h-3.5 w-3.5" aria-hidden="true" />
+            {t('Câu nghe đang tạm tắt.', 'Listening questions are paused.')}
+            <button
+              type="button"
+              onClick={resumeListening}
+              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+            >
+              {t('Bật lại', 'Turn back on')}
+            </button>
+          </p>
+        )}
         <div className="flex flex-wrap items-center gap-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             {t(TASK[q.mode][0], TASK[q.mode][1])}
@@ -300,13 +325,29 @@ export default function QuizRunner({
                 </button>
               </div>
             ) : (
-              <button
-                onClick={play}
-                className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg transition active:scale-95"
-                aria-label={t('Nghe lại', 'Play again')}
-              >
-                <Volume2 className="h-9 w-9" />
-              </button>
+              <div className="flex flex-col items-center gap-2">
+                <button
+                  onClick={play}
+                  className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg transition active:scale-95"
+                  aria-label={t('Nghe lại', 'Play again')}
+                >
+                  <Volume2 className="h-9 w-9" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    stopPronounce()
+                    pauseListening()
+                  }}
+                  className="btn-ghost h-9 gap-1.5 text-xs text-slate-500"
+                >
+                  <VolumeX className="h-4 w-4" aria-hidden="true" />
+                  {t(
+                    `Hiện không nghe được (tắt câu nghe ${LISTEN_PAUSE_MINUTES} phút)`,
+                    `Can't listen now (no listening for ${LISTEN_PAUSE_MINUTES} min)`
+                  )}
+                </button>
+              </div>
             )
           ) : sentencePrompt ? (
             <div className="space-y-2">
