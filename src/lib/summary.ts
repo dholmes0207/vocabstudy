@@ -60,13 +60,22 @@ export function summarize(
   }
 }
 
-/** The next batch of never-studied words, in id order. */
+/**
+ * The next batch of never-studied words in the pack's order. With a placement
+ * start (docs/design/placement.md), words from `startAt` on come first; the
+ * skipped ones that are still new follow once those run out.
+ */
 export function nextNewWords(
   words: Word[],
   progress: LanguageProgress | undefined,
-  limit: number
+  limit: number,
+  startAt = 0
 ): Word[] {
   const cards = progress?.cards ?? {}
-  const fresh = words.filter((w) => !cards[w.id])
-  return fresh.slice(0, Math.max(0, limit))
+  const ahead: Word[] = []
+  const behind: Word[] = []
+  words.forEach((w, i) => {
+    if (!cards[w.id]) (i >= startAt ? ahead : behind).push(w)
+  })
+  return [...ahead, ...behind].slice(0, Math.max(0, limit))
 }

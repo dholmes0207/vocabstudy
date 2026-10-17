@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { BookOpen, BookmarkCheck, Sparkles } from 'lucide-react'
+import { BookOpen, BookmarkCheck, Gauge, Sparkles } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
-import { buildDecks } from '@/lib/decks'
+import { DECK_SIZE, buildDecks } from '@/lib/decks'
 import { phaseOf } from '@/lib/srs'
 import { pendingSaved } from '@/lib/savedWords'
 import { useSavedIds, useSavedWords } from '@/store/savedWordsStore'
+import { usePlacement } from '@/store/placementStore'
+import { useTargetLang } from '@/hooks/useTargetLang'
 import LearnSession from './LearnSession'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
@@ -17,6 +19,8 @@ import ProgressRing from '@/components/ProgressRing'
 import { Segment } from '@/components/Choice'
 import { useT } from '@/lib/i18n'
 
+/** The placement check is offered until this many words have been started. */
+const PLACEMENT_OFFER_BELOW = 30
 /** Saved words per session, and how many are named on the card. */
 const SAVED_BATCH = 10
 const SAVED_SHOWN = 12
@@ -28,6 +32,10 @@ export default function Learn() {
   const progress = useStudy((s) => s.progress[code])
   const recordAnswer = useStudy((s) => s.recordAnswer)
   const t = useT()
+  const lang = useTargetLang()
+  // Placement check (docs/design/placement.md): where new words start.
+  const placement = usePlacement((s) => s.results[code])
+  const startAt = placement?.start ?? 0
 
   const [session, setSession] = useState<Word[] | null>(null)
   // Quick session length so busy learners can grab a short set without opening
@@ -91,14 +99,16 @@ export default function Learn() {
   const plannedCount = pick === 'all' ? s.newRemainingToday : Math.min(pick, s.newRemainingToday)
 
   const startDaily = () => {
-    const batch = nextNewWords(pack.words, progress, plannedCount)
+    const batch = nextNewWords(pack.words, progress, plannedCount, startAt)
     if (batch.length) setSession(batch)
   }
 
-  const firstUnfinished = Math.max(
-    0,
-    decks.findIndex((d) => d.mastered < d.words.length)
-  )
+  // Open the deck list where the learner is: the first unfinished deck at or
+  // after the placement start, else the first unfinished one.
+  const unfinished = (d: (typeof decks)[number]) => d.mastered < d.words.length
+  const fromStart = decks.findIndex((d) => unfinished(d) && (d.index + 1) * DECK_SIZE > startAt)
+  const firstUnfinished = Math.max(0, fromStart >= 0 ? fromStart : decks.findIndex(unfinished))
+  const startedCount = Object.keys(cards).length
   const DECK_WINDOW = 8
   const visibleDecks = showAllDecks
     ? decks
@@ -171,6 +181,28 @@ export default function Learn() {
         </section>
       )}
 
+      {!placement && startedCount < PLACEMENT_OFFER_BELOW && (
+        <section className="card flex flex-wrap items-center gap-4 p-5">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow">
+            <Gauge className="h-6 w-6" aria-hidden="true" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h2 className="font-bold">
+              {t(`Đã biết một ít ${lang.vi} rồi?`, `Already know some ${lang.en}?`)}
+            </h2>
+            <p className="text-sm text-slate-500">
+              {t(
+                'Kiểm tra trình độ khoảng 3 phút để bài học bắt đầu đúng chỗ.',
+                'Take a 3-minute placement check so lessons start at the right place.'
+              )}
+            </p>
+          </div>
+          <Link to="/placement" className="btn-secondary h-11 w-full sm:w-auto">
+            {t('Kiểm tra trình độ', 'Placement check')}
+          </Link>
+        </section>
+      )}
+
       {/* Today's lesson */}
       <section className="card relative overflow-hidden p-6">
         <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 opacity-10" />
@@ -216,6 +248,18 @@ export default function Learn() {
               <BookOpen className="h-5 w-5" />{' '}
               {t(`Bắt đầu học ${plannedCount} từ`, `Learn ${plannedCount} words`)}
             </button>
+            {placement && (
+              <p className="mt-3 text-sm text-slate-500">
+                🧭{' '}
+                {t(
+                  `Theo bài kiểm tra trình độ, từ mới bắt đầu từ từ thứ ${placement.start + 1}.`,
+                  `From your placement check, new words start at word ${placement.start + 1}.`
+                )}{' '}
+                <Link to="/placement" className="font-semibold text-brand-600 dark:text-brand-300">
+                  {t('Làm lại', 'Retake')}
+                </Link>
+              </p>
+            )}
           </>
         ) : (
           <p className="mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">

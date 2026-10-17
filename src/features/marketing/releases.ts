@@ -15,10 +15,14 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-17',
     title: [
-      'Lưu từ khi đọc truyện, pinyin cho câu ví dụ tiếng Trung',
-      'Save words while reading, pinyin for Chinese examples',
+      'Kiểm tra trình độ, lưu từ khi đọc truyện, pinyin cho tiếng Trung',
+      'Placement check, saving words while reading, pinyin for Chinese',
     ],
     items: [
+      [
+        'Kiểm tra trình độ khoảng 3 phút ở trang Học: chọn nghĩa đúng của từ dễ trước, khó dần. Bài học sau đó bắt đầu từ chỗ bạn chưa chắc, không phải học lại từ "hello". Không cộng XP, không đổi lịch ôn.',
+        'A 3-minute placement check on the Learn page: pick the meaning of easy words first, then harder ones. Lessons then start where you are no longer sure, not back at "hello". No XP, no change to your reviews.',
+      ],
       [
         'Đọc truyện gặp từ chưa biết? Chạm vào từ, bấm "Lưu để học". Từ đó chờ bạn ở trang Học và được học như mọi từ mới: làm quen, tự nhớ lại, rồi vào lịch ôn. Dùng được cho cả tiếng Anh, tiếng Hàn và tiếng Trung.',
         'Met a word you don’t know in a story? Tap it and press "Save to learn". It waits for you on the Learn page and is learned like any new word: meet it, recall it, then it joins your reviews. Works in English, Korean and Chinese.',

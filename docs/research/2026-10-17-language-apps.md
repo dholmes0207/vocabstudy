@@ -97,7 +97,7 @@ hướng sản phẩm: VocaStudy là nơi người Việt học **nhiều** ngo�
 | --- | --------------------------------------------------------------------- | -------------------------------- | --------- | ------------------ |
 | 1   | Mục "Bạn muốn học ngôn ngữ nào?" trên trang chủ, sinh từ `index.json` | Busuu, Babbel, Clozemaster, Cake | nhỏ       | **làm ngày 17/10** |
 | 2   | Nút "Lưu để học" trong hộp nghĩa khi đọc truyện                       | Du Chinese, LingQ, Readlang      | vừa       | **làm ngày 17/10** |
-| 3   | Kiểm tra trình độ 3 phút: đánh dấu những từ đã biết để bỏ qua         | TTMIK                            | vừa       | đề xuất            |
+| 3   | Kiểm tra trình độ 3 phút: chọn chỗ bắt đầu của bài Học                | TTMIK, Lingvist                  | vừa       | **làm ngày 17/10** |
 | 4   | Lộ trình HSK 1 / TOPIK I: tiến độ theo danh sách thi, đề thử ngắn     | Migii, Prep                      | vừa → lớn | đề xuất            |
 | 5   | Bước "nói thành tiếng" trong bài ngữ pháp                             | TTMIK                            | vừa       | đề xuất            |
 | 6   | Trang riêng cho từng ngôn ngữ (render sẵn để lên Google)              | Busuu, LingoDeer, Drops          | lớn       | cần bạn quyết      |
@@ -146,3 +146,23 @@ của app, trên từ lấy mẫu theo từng nấc độ khó. Không dùng t�
 - **Phải khởi động lại Claude Code** thì các công cụ MCP của REA mới hiện trong phiên. Trước
   đó vẫn dùng được CLI `rea`.
 - Chrome dùng để quan sát là profile tạm, đã tắt sau khi quét.
+
+## Vòng 3 (tối 17/10): Duolingo, ELSA, Memrise
+
+Hai vòng trước bỏ qua ba web này, vì yêu cầu ban đầu là tìm các web "khác với" chúng. Khi
+được hỏi lại thì quét luôn, cũng chỉ trang giới thiệu công khai. Nội dung trong app của cả
+ba đều cần đăng nhập, nên không xem.
+
+| Web        | Evidence trang / bundle                 | Ý đáng chú ý                                                                                   |
+| ---------- | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Duolingo   | `ev_999b6a4a61ee…` / `ev_ab742023866f…` | "Free. fun. effective.", bài ngắn, điểm và cấp độ; tách riêng Duolingo English Test            |
+| ELSA Speak | `ev_4b355c8d6d0a…` / `ev_2e808e59035c…` | Chấm phát âm bằng AI, phản hồi tức thì; chia theo nhóm người học (đi làm, phỏng vấn, du lịch…) |
+| Memrise    | `ev_1e36c37f1cae…` / `ev_0d926ee6fddb…` | "Nghe – học – nói theo" bằng video người bản xứ; chọn trong hơn 145 ngôn ngữ                   |
+
+**Việc #3 đã làm theo cách riêng** (`docs/design/placement.md`):
+
+- Không hỏi tự khai "biết / không biết". Bài dùng câu chọn nghĩa có sẵn của app, thêm nút
+  "Tôi chưa biết từ này" để khỏi đoán bừa.
+- Các mức có ranh giới 25, 50, 100, 200… từ, nên người mới học cũng được xếp chính xác.
+- Kết quả chỉ đổi chỗ bắt đầu của bài Học. App không đánh dấu từ nào là đã thuộc, nên số
+  liệu và lịch ôn vẫn trung thực.
