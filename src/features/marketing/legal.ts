@@ -59,8 +59,8 @@ export const PRIVACY: LegalDoc = {
           'Questions to the AI tutor: sent through the API to OpenAI to generate an answer. We do not store the conversation; we only count questions per day to apply the daily limit. Under OpenAI’s API policy, data sent through the API is not used to train their models; OpenAI may keep it temporarily under its own policy to detect abuse. Even so, please do not type sensitive personal information into the chat.',
         ],
         [
-          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ cục bộ của trình duyệt (Local Storage), kèm bộ nhớ đệm (Cache Storage) để học khi mất mạng. Câu bạn tự đặt và tiến độ của Mẫu câu, Ngữ pháp, Đọc truyện hiện chỉ nằm trên máy bạn, không được đồng bộ.',
-          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s local storage, along with an offline cache. Your own sentences and your progress in Phrases, Grammar and Stories currently stay on your device only and are not synced.',
+          'Trên thiết bị của bạn: cài đặt, tiến độ, câu bạn tự đặt, tiến độ mẫu câu… được lưu trong bộ nhớ cục bộ của trình duyệt (Local Storage), kèm bộ nhớ đệm (Cache Storage) để học khi mất mạng. Câu bạn tự đặt, từ bạn lưu khi đọc truyện và tiến độ của Mẫu câu, Ngữ pháp, Đọc truyện hiện chỉ nằm trên máy bạn, không được đồng bộ.',
+          'On your device: settings, progress, sentences you write, phrase progress… are kept in your browser’s local storage, along with an offline cache. Your own sentences, the words you save while reading and your progress in Phrases, Grammar and Stories currently stay on your device only and are not synced.',
         ],
         [
           'Ghi âm luyện nói: chỉ nằm trong trình duyệt và không được tải lên máy chủ của chúng tôi. Tính năng chấm phát âm dùng nhận dạng giọng nói của trình duyệt — một số trình duyệt (ví dụ Chrome) gửi âm thanh tới máy chủ của nhà cung cấp trình duyệt để nhận dạng.',

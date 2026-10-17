@@ -14,8 +14,15 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-10-17',
-    title: ['Pinyin cho câu ví dụ tiếng Trung', 'Pinyin for Chinese example sentences'],
+    title: [
+      'Lưu từ khi đọc truyện, pinyin cho câu ví dụ tiếng Trung',
+      'Save words while reading, pinyin for Chinese examples',
+    ],
     items: [
+      [
+        'Đọc truyện gặp từ chưa biết? Chạm vào từ, bấm "Lưu để học". Từ đó chờ bạn ở trang Học và được học như mọi từ mới: làm quen, tự nhớ lại, rồi vào lịch ôn. Dùng được cho cả tiếng Anh, tiếng Hàn và tiếng Trung.',
+        'Met a word you don’t know in a story? Tap it and press "Save to learn". It waits for you on the Learn page and is learned like any new word: meet it, recall it, then it joins your reviews. Works in English, Korean and Chinese.',
+      ],
       [
         'Mọi câu ví dụ tiếng Trung có thêm dòng pinyin ngay bên dưới — trên thẻ học, thẻ lật và Nghe thụ động — để đọc được ngay cả khi chưa thuộc chữ Hán.',
         'Every Chinese example sentence now has a pinyin line right under it — on learning cards, flashcards and hands-free listening — so you can read it before you know the characters.',

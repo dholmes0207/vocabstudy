@@ -96,7 +96,7 @@ hướng sản phẩm: VocaStudy là nơi người Việt học **nhiều** ngo�
 | #   | Việc                                                                  | Học từ                           | Công sức  | Trạng thái         |
 | --- | --------------------------------------------------------------------- | -------------------------------- | --------- | ------------------ |
 | 1   | Mục "Bạn muốn học ngôn ngữ nào?" trên trang chủ, sinh từ `index.json` | Busuu, Babbel, Clozemaster, Cake | nhỏ       | **làm ngày 17/10** |
-| 2   | Nút "Thêm vào ôn tập" trong hộp nghĩa khi đọc truyện                  | Du Chinese, LingQ                | vừa       | đề xuất            |
+| 2   | Nút "Lưu để học" trong hộp nghĩa khi đọc truyện                       | Du Chinese, LingQ, Readlang      | vừa       | **làm ngày 17/10** |
 | 3   | Kiểm tra trình độ 3 phút: đánh dấu những từ đã biết để bỏ qua         | TTMIK                            | vừa       | đề xuất            |
 | 4   | Lộ trình HSK 1 / TOPIK I: tiến độ theo danh sách thi, đề thử ngắn     | Migii, Prep                      | vừa → lớn | đề xuất            |
 | 5   | Bước "nói thành tiếng" trong bài ngữ pháp                             | TTMIK                            | vừa       | đề xuất            |
@@ -105,6 +105,37 @@ hướng sản phẩm: VocaStudy là nơi người Việt học **nhiều** ngo�
 
 Không đề xuất: cộng đồng, bootcamp, gia sư. Những thứ đó cần người kiểm duyệt và vận hành
 liên tục.
+
+## Vòng 2 (tối 17/10): tập trung vào việc #2 và #3
+
+Cũng chỉ xem trang giới thiệu công khai, bằng REA (sau khi khởi động lại thì có cả công cụ
+MCP).
+
+**Nguyên tắc: chỉ tham khảo, không làm giống hệt.** Mỗi ý lấy từ web khác phải được viết
+lại theo cách học sẵn có của VocaStudy.
+
+| Web           | Evidence trang / bundle                 | Ý đáng chú ý                                                                          |
+| ------------- | --------------------------------------- | ------------------------------------------------------------------------------------- |
+| Readlang      | `ev_35aa4316f499…` / `ev_1dc0f84318ce…` | Bấm để dịch. Mọi từ đã dịch được lưu lại, ôn bằng thẻ                                 |
+| Lingvist      | `ev_a9a331ba5b69…` / `ev_c942de3f6702…` | Thuật toán xếp người học vào đúng trình độ; học từ thông dụng trước; 10 phút mỗi ngày |
+| Glossika      | `ev_48eab5f9d04a…` / `ev_b5c4218eb64c…` | Lộ trình theo trình độ và sở thích; luyện cả câu; chế độ "rảnh tay"                   |
+| Speak         | `ev_9ddf7e7d5109…` / `ev_03c8585ddde8…` | Lấy nói làm trung tâm; nói lại cho tới khi tự tin                                     |
+| Lingopie      | `ev_0ce61fe4225f…` / `ev_bf4d03b81a5e…` | Học qua phim; nội dung chia theo cấp                                                  |
+| Hanzii (VN)   | `ev_b6915bda6e07…` / `ev_64c5a348af9c…` | Từ điển Trung, có danh sách từ theo chủ đề                                            |
+| Dungmori (VN) | `ev_11094099d224…` / `ev_26981190f327…` | Luyện thi JLPT, lớp Zoom, kho từ vựng                                                 |
+
+Mondly trả lỗi `403 Forbidden` cho trình duyệt quan sát. Tôi bỏ qua, không tìm cách vượt.
+
+**Việc #2 đã làm theo cách riêng** (`docs/design/saved-words.md`):
+
+- Readlang tự lưu mọi từ được bấm. VocaStudy chỉ lưu khi người học bấm "Lưu để học", vì
+  chạm vào từ nhiều khi chỉ để chắc nghĩa.
+- Readlang và Du Chinese đưa từ vào thẻ ôn rời. Ở VocaStudy, từ đã lưu đi qua bài Học sẵn
+  có: làm quen → tự nhớ lại → lịch ôn ngắt quãng.
+
+**Việc #3 (gợi ý cho lần sau):** Lingvist và TTMIK cho thấy người học cần được xếp đúng
+trình độ. Cách hợp với VocaStudy là một bài kiểm tra nhanh bằng chính dạng câu hỏi nhớ lại
+của app, trên từ lấy mẫu theo từng nấc độ khó. Không dùng tự khai "biết / không biết".
 
 ## Cài REA
 

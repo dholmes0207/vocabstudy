@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { BookOpen, Sparkles } from 'lucide-react'
+import { BookOpen, BookmarkCheck, Sparkles } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
@@ -8,12 +8,18 @@ import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
 import { buildDecks } from '@/lib/decks'
 import { phaseOf } from '@/lib/srs'
+import { pendingSaved } from '@/lib/savedWords'
+import { useSavedIds, useSavedWords } from '@/store/savedWordsStore'
 import LearnSession from './LearnSession'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
 import { Segment } from '@/components/Choice'
 import { useT } from '@/lib/i18n'
+
+/** Saved words per session, and how many are named on the card. */
+const SAVED_BATCH = 10
+const SAVED_SHOWN = 12
 
 export default function Learn() {
   const pack = useData((s) => s.pack)!
@@ -36,6 +42,19 @@ export default function Learn() {
   const s = summarize(pack.words, progress, dailyNewLimit)
   const cards = progress?.cards ?? NO_CARDS
   const decks = useMemo(() => buildDecks(pack.words, cards), [pack.words, cards])
+
+  // "Lưu để học" (docs/design/saved-words.md): words saved while reading, learned
+  // before the suggested ones. Once a word has a card it leaves the list.
+  const savedIds = useSavedIds(code)
+  const removeSaved = useSavedWords((st) => st.remove)
+  const saved = useMemo(
+    () => pendingSaved(savedIds, pack.words, cards),
+    [savedIds, pack.words, cards]
+  )
+  useEffect(() => {
+    const started = savedIds.filter((id) => phaseOf(cards[id]) !== 'new')
+    if (started.length) removeSaved(code, started)
+  }, [savedIds, cards, code, removeSaved])
 
   if (session) {
     return (
@@ -105,6 +124,52 @@ export default function Learn() {
           )}
         </p>
       </header>
+
+      {saved.length > 0 && (
+        <section className="card p-6" aria-labelledby="saved-words-title">
+          <div className="flex items-center gap-3">
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow">
+              <BookmarkCheck className="h-6 w-6" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 id="saved-words-title" className="text-lg font-bold">
+                {t(`Từ bạn đã lưu (${saved.length})`, `Words you saved (${saved.length})`)}
+              </h2>
+              <p className="text-sm text-slate-400">
+                {t(
+                  'Những từ bạn bấm "Lưu để học" khi đọc truyện.',
+                  'Words you tapped "Save to learn" on while reading.'
+                )}
+              </p>
+            </div>
+          </div>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {saved.slice(0, SAVED_SHOWN).map((w) => (
+              <li
+                key={w.id}
+                className="chip bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+              >
+                {w.word}
+              </li>
+            ))}
+            {saved.length > SAVED_SHOWN && (
+              <li className="chip text-slate-400">+{saved.length - SAVED_SHOWN}</li>
+            )}
+          </ul>
+          <button
+            onClick={() => setSession(saved.slice(0, SAVED_BATCH))}
+            className="btn-primary mt-5 h-12 w-full sm:w-auto"
+          >
+            <BookOpen className="h-5 w-5" />{' '}
+            {t(
+              `Học ${Math.min(saved.length, SAVED_BATCH)} từ đã lưu`,
+              saved.length === 1
+                ? 'Learn 1 saved word'
+                : `Learn ${Math.min(saved.length, SAVED_BATCH)} saved words`
+            )}
+          </button>
+        </section>
+      )}
 
       {/* Today's lesson */}
       <section className="card relative overflow-hidden p-6">

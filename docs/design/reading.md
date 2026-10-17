@@ -11,6 +11,7 @@ từ đã học xuất hiện trong ngữ cảnh thật.
 - Trong một truyện (`/reading/:id`):
   - **Chạm vào từ có gạch chân** để xem nghĩa tiếng Việt, cách đọc gần giống và nghe phát
     âm. Chỉ những từ có trong gói từ vựng mới chạm được, nên nghĩa luôn khớp với thẻ học.
+  - Hộp nghĩa có nút **"Lưu để học"**: từ được lưu chờ ở trang Học (xem `saved-words.md`).
   - **"Bản dịch"** bật hoặc tắt câu tiếng Việt dưới từng câu.
   - **"Nghe cả bài"** đọc lần lượt từng câu. Câu đang đọc được tô nền và tự cuộn vào khung
     nhìn; nút đổi thành "Dừng" trong lúc đọc. Mỗi câu cũng có nút nghe riêng. Bấm loa trong

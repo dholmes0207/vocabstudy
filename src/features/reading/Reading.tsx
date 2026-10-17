@@ -32,6 +32,7 @@ import { useT } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
+import SaveWordButton from '@/components/SaveWordButton'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import { tokenize } from '@/lib/games'
 
@@ -348,6 +349,9 @@ function StoryView({ story }: { story: Story }) {
                 <p className="mt-1 font-semibold text-brand-700 dark:text-brand-300">
                   {gloss.meaning}
                 </p>
+                <div className="mt-3">
+                  <SaveWordButton wordId={gloss.id} />
+                </div>
               </div>
               <button
                 type="button"
