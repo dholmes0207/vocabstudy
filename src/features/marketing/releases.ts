@@ -13,6 +13,20 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-17',
+    title: ['Pinyin cho câu ví dụ tiếng Trung', 'Pinyin for Chinese example sentences'],
+    items: [
+      [
+        'Mọi câu ví dụ tiếng Trung có thêm dòng pinyin ngay bên dưới — trên thẻ học, thẻ lật và Nghe thụ động — để đọc được ngay cả khi chưa thuộc chữ Hán.',
+        'Every Chinese example sentence now has a pinyin line right under it — on learning cards, flashcards and hands-free listening — so you can read it before you know the characters.',
+      ],
+      [
+        'Nghe – chép tiếng Trung có thêm gợi ý pinyin, đúng thứ cần để gõ bằng bộ gõ pinyin.',
+        'Chinese dictation has a pinyin hint — exactly what you need to type with a pinyin keyboard.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-15',
     title: ['Góp ý ngay trong app và chuông thông báo', 'In-app feedback and a notification bell'],
     items: [

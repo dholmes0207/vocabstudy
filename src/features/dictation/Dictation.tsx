@@ -18,6 +18,7 @@ import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import SessionComplete from '@/components/SessionComplete'
+import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 // "Nghe – chép" (docs/design/dictation.md): hear an example sentence from words
 // you have met, type it, then see word by word what you caught. Trains the ear
@@ -92,6 +93,8 @@ function Round({
   const [result, setResult] = useState<{ parts: DiffPart[]; score: number } | null>(null)
   const [caught, setCaught] = useState(0)
   const [showHint, setShowHint] = useState(false)
+  const [showRead, setShowRead] = useState(false)
+  const readLabel = useReadingLabel('cách đọc', 'reading')
   const [finished, setFinished] = useState<{ xp: number } | null>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const nextRef = useRef<HTMLButtonElement>(null)
@@ -143,6 +146,7 @@ function Round({
       setTyped('')
       setResult(null)
       setShowHint(false)
+      setShowRead(false)
       return
     }
     const xp = dictationXp(caught, words.length)
@@ -244,17 +248,32 @@ function Round({
               placeholder={t('Gõ lại câu bạn vừa nghe…', 'Type the sentence you heard…')}
               className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-lg outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
             />
-            {showHint ? (
-              <p className="text-sm text-slate-500">💡 {word.exampleVi}</p>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setShowHint(true)}
-                className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
-              >
-                {t('Gợi ý: xem nghĩa tiếng Việt', 'Hint: show the Vietnamese meaning')}
-              </button>
-            )}
+            <div className="flex flex-col items-start gap-1">
+              {showHint ? (
+                <p className="text-sm text-slate-500">💡 {word.exampleVi}</p>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowHint(true)}
+                  className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
+                >
+                  {t('Gợi ý: xem nghĩa tiếng Việt', 'Hint: show the Vietnamese meaning')}
+                </button>
+              )}
+              {/* Chinese is typed through a pinyin keyboard: the reading is the real help. */}
+              {word.exampleRead &&
+                (showRead ? (
+                  <p className="text-sm text-slate-500">🔤 {word.exampleRead}</p>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setShowRead(true)}
+                    className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
+                  >
+                    {t(`Gợi ý: xem ${readLabel}`, `Hint: show the ${readLabel}`)}
+                  </button>
+                ))}
+            </div>
           </>
         ) : (
           <div className="space-y-3" aria-live="polite">
@@ -278,6 +297,12 @@ function Round({
             </p>
             <p className="rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
               <b>{word.exampleEn}</b>
+              {word.exampleRead && (
+                <>
+                  <br />
+                  <span className="text-slate-600 dark:text-slate-300">{word.exampleRead}</span>
+                </>
+              )}
               <br />
               <span className="text-slate-500">{word.exampleVi}</span>
             </p>

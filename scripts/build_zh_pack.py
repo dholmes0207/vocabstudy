@@ -186,11 +186,202 @@ HAN_VIET = {
     '和': 'hoà',
 }
 
+# Pinyin of each example, one syllable per Chinese character, in order
+# (docs/design/chinese.md, bước 6). HSK textbook style: 一 and 不 carry their
+# changed tone (一个 yí gè, 不客气 bú kèqi), a 3 + 3 pair keeps its written
+# tones, neutral tones have no mark. The 儿 of 哪儿 / 这儿 / 那儿 joins the
+# syllable before it and is written "r".
+EXAMPLE_PINYIN = {
+    '你好': 'nǐ hǎo hěn gāo xìng rèn shi nǐ',
+    '谢谢': 'xiè xie nǐ',
+    '不客气': 'xiè xie nǐ bú kè qi',
+    '对不起': 'duì bu qǐ wǒ lái wǎn le',
+    '没关系': 'duì bu qǐ méi guān xi',
+    '再见': 'lǎo shī zài jiàn',
+    '是': 'wǒ shì xué sheng',
+    '不': 'wǒ bù hē chá',
+    '没有': 'wǒ méi yǒu shí jiān',
+    '有': 'nǐ yǒu shí jiān ma',
+    '我': 'wǒ shì Yuè nán rén',
+    '你': 'nǐ shì lǎo shī ma',
+    '他': 'tā shì wǒ de lǎo shī',
+    '她': 'tā shì yī shēng',
+    '我们': 'wǒ men shì péng you',
+    '什么': 'nǐ xiǎng chī shén me',
+    '谁': 'tā shì shéi',
+    '哪儿': 'nǐ qù nǎ r',
+    '多少': 'nǐ yǒu duō shao qián',
+    '这': 'zhè shì shén me',
+    '那': 'nà shì wǒ men de xué xiào',
+    '这儿': 'wǒ zài zhè r',
+    '那儿': 'nǐ de shū zài nà r',
+    '一': 'wǒ yǒu yì běn shū',
+    '二': 'jīn tiān shì èr hào',
+    '三': 'wǒ jiā yǒu sān kǒu rén',
+    '十': 'xiàn zài shí diǎn',
+    '几': 'nǐ jiā yǒu jǐ kǒu rén',
+    '个': 'wǒ yǒu yí gè ér zi',
+    '本': 'zhè běn shū hěn hǎo',
+    '块': 'yì bēi kā fēi sān shí kuài',
+    '人': 'zhè r yǒu hěn duō rén',
+    '朋友': 'tā shì wǒ de hǎo péng you',
+    '老师': 'wǒ men de lǎo shī hěn hǎo',
+    '学生': 'tā shì wǒ de xué sheng',
+    '医生': 'wǒ mā ma shì yī shēng',
+    '爸爸': 'bà ba zài jiā',
+    '妈妈': 'mā ma zuò de fàn hěn hǎo chī',
+    '儿子': 'tā ér zi wǔ suì',
+    '女儿': 'wǒ nǚ ér hěn piào liang',
+    '先生': 'Wáng xiān sheng shì wǒ de lǎo shī',
+    '小姐': 'Lǐ xiǎo jiě nǐ hǎo',
+    '米饭': 'wǒ xǐ huan chī mǐ fàn',
+    '茶': 'qǐng hē chá',
+    '水': 'wǒ xiǎng hē shuǐ',
+    '菜': 'zhè ge cài hěn hǎo chī',
+    '水果': 'wǒ měi tiān chī shuǐ guǒ',
+    '苹果': 'zhè ge píng guǒ hěn dà',
+    '咖啡': 'wǒ xǐ huan hē kā fēi',
+    '杯子': 'bēi zi zài zhuō zi shàng',
+    '吃': 'nǐ chī fàn le ma',
+    '喝': 'nǐ hē shén me',
+    '饭店': 'wǒ men qù fàn diàn chī fàn',
+    '好吃': 'Běi jīng cài hěn hǎo chī',
+    '家': 'wǒ jiā zài Běi jīng',
+    '学校': 'wǒ qù xué xiào',
+    '医院': 'yī yuàn zài nǎ r',
+    '商店': 'wǒ qù shāng diàn mǎi dōng xi',
+    '中国': 'wǒ xiǎng qù Zhōng guó',
+    '北京': 'Běi jīng hěn dà',
+    '火车站': 'huǒ chē zhàn zài nà r',
+    '今天': 'jīn tiān xīng qī yī',
+    '明天': 'míng tiān jiàn',
+    '昨天': 'zuó tiān wǒ qù le yī yuàn',
+    '现在': 'xiàn zài jǐ diǎn',
+    '点': 'wǒ qī diǎn qǐ chuáng',
+    '年': 'wǒ zài Běi jīng zhù le sān nián',
+    '月': 'xiàn zài shì shí yuè',
+    '星期': 'jīn tiān xīng qī jǐ',
+    '上午': 'wǒ shàng wǔ gōng zuò',
+    '中午': 'zhōng wǔ wǒ chī mǐ fàn',
+    '下午': 'xià wǔ wǒ qù shāng diàn',
+    '时候': 'nǐ shén me shí hou huí jiā',
+    '去': 'wǒ men qù Běi jīng ba',
+    '来': 'nǐ míng tiān lái ma',
+    '回': 'wǒ xiǎng huí jiā',
+    '看': 'wǒ zài kàn shū',
+    '听': 'wǒ xǐ huan tīng yīn yuè',
+    '说': 'nǐ huì shuō Hàn yǔ ma',
+    '读': 'qǐng dú zhè ge zì',
+    '写': 'wǒ huì xiě Hàn zì',
+    '买': 'wǒ xiǎng mǎi yì bēi kā fēi',
+    '做': 'nǐ zài zuò shén me',
+    '学习': 'wǒ zài xué xí Hàn yǔ',
+    '工作': 'wǒ zài yī yuàn gōng zuò',
+    '喜欢': 'wǒ xǐ huan Zhōng guó cài',
+    '爱': 'wǒ ài wǒ de jiā',
+    '想': 'wǒ xiǎng qù shāng diàn',
+    '会': 'tā huì kāi chē',
+    '能': 'nǐ néng lái ma',
+    '叫': 'wǒ jiào Ān nà',
+    '住': 'nǐ zhù zài nǎ r',
+    '睡觉': 'wǒ shí yī diǎn shuì jiào',
+    '打电话': 'wǒ gěi mā ma dǎ diàn huà',
+    '认识': 'wǒ rèn shi tā',
+    '开': 'qǐng kāi mén',
+    '坐': 'qǐng zuò',
+    '下雨': 'jīn tiān xià yǔ le',
+    '在': 'tā zài jiā',
+    '好': 'nǐ hǎo ma',
+    '大': 'tā de jiā hěn dà',
+    '小': 'zhè ge bēi zi hěn xiǎo',
+    '多': 'shāng diàn lǐ rén hěn duō',
+    '少': 'zhè r rén hěn shǎo',
+    '热': 'jīn tiān hěn rè',
+    '冷': 'Běi jīng de dōng tiān hěn lěng',
+    '漂亮': 'tā hěn piào liang',
+    '高兴': 'rèn shi nǐ hěn gāo xìng',
+    '很': 'wǒ hěn lèi',
+    '太': 'tài guì le',
+    '都': 'wǒ men dōu xǐ huan hē chá',
+    '书': 'wǒ de shū zài zhuō zi shàng',
+    '钱': 'zhè ge duō shao qián',
+    '衣服': 'wǒ xiǎng mǎi yī fu',
+    '电脑': 'wǒ yòng diàn nǎo gōng zuò',
+    '电视': 'bà ba zài kàn diàn shì',
+    '东西': 'nǐ mǎi shén me dōng xi',
+    '桌子': 'zhuō zi shàng yǒu yì běn shū',
+    '椅子': 'yǐ zi zài zhè r',
+    '汉语': 'Hàn yǔ bú tài nán',
+    '字': 'zhè ge zì zěn me dú',
+    '天气': 'jīn tiān tiān qì zěn me yàng',
+    '名字': 'nǐ jiào shén me míng zi',
+    '飞机': 'wǒ zuò fēi jī qù Běi jīng',
+    '出租车': 'wǒ men zuò chū zū chē ba',
+    '猫': 'wǒ jiā yǒu yì zhī māo',
+    '狗': 'zhè zhī gǒu hěn xiǎo',
+    '吗': 'nǐ shì Zhōng guó rén ma',
+    '呢': 'wǒ hěn hǎo nǐ ne',
+    '的': 'zhè shì wǒ de shū',
+    '了': 'wǒ chī fàn le',
+    '和': 'wǒ hé mā ma qù shāng diàn',
+}
+
+# Chinese punctuation as it reads in a pinyin line.
+PUNCT = {'，': ',', '。': '.', '？': '?', '！': '!', '：': ':', '、': ','}
+TONE_FREE = {'一', '不'}  # their tone follows the next character
+
+
+def is_han(c: str) -> bool:
+    return '一' <= c <= '鿿'
+
+
+def flat(reading: str) -> str:
+    return reading.replace(' ', '').replace("'", '').lower()
+
+
+def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
+    """Pinyin line for one example ("我|喜欢|喝|咖啡。" → "Wǒ xǐhuan hē kāfēi.")."""
+    syllables = EXAMPLE_PINYIN.get(word, '').split()
+    sentence = example.replace('|', '')
+    han = [c for c in sentence if is_han(c)]
+    if len(syllables) != len(han):
+        errors.append(f'{word}: {len(han)} characters but {len(syllables)} pinyin syllables')
+        return None
+    at = ''.join(han).find(word)
+    if word not in TONE_FREE and at >= 0:
+        got = ''.join(syllables[at : at + len(word)])
+        if flat(got) != flat(pack_reads[word]):
+            errors.append(f'{word}: example reads "{got}", the word reads "{pack_reads[word]}"')
+    out, i = [], 0
+    for token in example.split('|'):
+        chars = [c for c in token if is_han(c)]
+        part = syllables[i : i + len(chars)]
+        i += len(chars)
+        core = ''.join(chars)
+        # A pack word written in two parts keeps its spacing ("nǐ hǎo", "dǎ diànhuà").
+        spaced = pack_reads.get(core, '')
+        read = spaced if ' ' in spaced and flat(spaced) == flat(''.join(part)) else ''.join(part)
+        head = ''.join(c for c in token[: token.index(chars[0])] if not is_han(c)) if chars else ''
+        tail = ''.join(PUNCT.get(c, c) for c in token[token.rindex(chars[-1]) + 1 :]) if chars else token
+        out.append(head + read + tail)
+    line = ' '.join(out)
+    # Capital letter to open each sentence, after any opening quote.
+    return re.sub(
+        r'(^|[.!?]["”]?\s+)(["“]?)(\w)',
+        lambda m: m.group(1) + m.group(2) + m.group(3).upper(),
+        line,
+    )
+
+
 PINYIN = re.compile(r"^[a-zA-ZüāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜĀÁǍÀĒÉĚÈŌÓǑÒ' ]+$")
 
 
 def main() -> int:
     words, errors, meanings = [], [], {}
+    pack_reads = {
+        c[0]: c[1]
+        for c in ([x.strip() for x in (l.rstrip() + ' ').split(' | ')] for l in ROWS.strip().split('\n') if l.strip())
+    }
     for n, line in enumerate(l for l in ROWS.strip().split('\n') if l.strip()):
         # Columns are " | "; a bare "|" inside the example is a word break. The
         # trailing space keeps an empty last column (no emoji) a column.
@@ -220,13 +411,19 @@ def main() -> int:
         }
         if emoji:
             entry['emoji'] = emoji
+        if word in EXAMPLE_PINYIN:
+            read = example_reading(word, example, pack_reads, errors)
+            if read:
+                entry['exampleRead'] = read
         hv = HAN_VIET.get(word)
         if hv:
             if len(hv.split()) != len(word):
                 errors.append(f'{word}: Hán Việt "{hv}" needs one syllable per character')
             entry['hanViet'] = hv
         words.append(entry)
-    unknown = sorted(set(HAN_VIET) - {w['word'] for w in words})
+    missing = sorted({w['word'] for w in words} - set(EXAMPLE_PINYIN))
+    errors += [f'{w}: example has no pinyin' for w in missing]
+    unknown = sorted((set(HAN_VIET) | set(EXAMPLE_PINYIN)) - {w['word'] for w in words})
     errors += [f'Hán Việt for a word not in the pack: {w}' for w in unknown]
     heads = [w['word'] for w in words]
     errors += [f'{h}: listed twice' for h in sorted({h for h in heads if heads.count(h) > 1})]
@@ -244,7 +441,7 @@ def main() -> int:
             'ttsLang': 'zh-CN',
             'count': len(words),
             'source': 'VocaStudy (beta)',
-            'version': '0.2.0',
+            'version': '0.3.0',
             'readingLabel': ['pinyin', 'pinyin'],
         },
         'words': words,

@@ -141,3 +141,33 @@ rõ.
   - "bang huu" tìm ra 朋友 (theo âm Hán Việt).
 - Cách đọc chỉ được tìm với từ không viết bằng chữ Latin (tiếng Hàn, tiếng Trung). Với từ
   tiếng Anh, cách đọc kiểu Việt chỉ là phiên âm nên không đưa vào kết quả.
+
+## Bước 6: pinyin cho câu ví dụ
+
+**User**: người mới học chưa đọc được chữ Hán. Câu ví dụ 我喜欢喝咖啡。 trên thẻ học là một dòng
+ký hiệu họ không đọc ra. Ở trang Nghe – chép, họ gõ bằng bộ gõ pinyin, nên cần biết pinyin
+mới gõ ra được chữ.
+
+**BA**
+
+- Dưới mỗi câu ví dụ tiếng Trung hiện thêm một dòng pinyin, chia theo từ: "Wǒ xǐhuan hē
+  kāfēi."
+  - Dòng này có trên thẻ học, mặt sau thẻ lật và trang Nghe thụ động.
+- Nghe – chép có thêm nút gợi ý "xem pinyin", bên cạnh gợi ý nghĩa tiếng Việt.
+- Quy ước ghi dấu theo giáo trình HSK chuẩn:
+  - đánh dấu biến điệu của 一 và 不 (一个 yí gè, 不客气 bú kèqi);
+  - không đánh dấu biến điệu 3 + 3 (你好 vẫn ghi nǐ hǎo);
+  - thanh nhẹ không có dấu (朋友 péngyou).
+
+**Dev**
+
+- Trường `exampleRead` (không bắt buộc) của từ: cách đọc của câu ví dụ.
+  - Gói tiếng Trung lấy trường này từ `EXAMPLE_PINYIN` trong `scripts/build_zh_pack.py`.
+  - Mỗi chữ Hán ứng với **một âm tiết**, viết cách nhau. Script ghép âm tiết theo ranh giới
+    từ trong câu, đổi dấu câu Trung sang dấu Latin, rồi viết hoa chữ đầu câu.
+- Script từ chối khi:
+  - số âm tiết khác số chữ Hán;
+  - các âm tiết của chính từ đang học khác `viRead` của từ đó (bỏ qua 一 và 不, vì thanh của
+    chúng đổi theo chữ đứng sau).
+- Trên màn hình, dòng pinyin chỉ hiện khi từ có `exampleRead`. Tiếng Anh và tiếng Hàn không
+  thay đổi.

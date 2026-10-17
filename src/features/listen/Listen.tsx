@@ -421,6 +421,9 @@ function Player({
         {word.exampleEn && (
           <div className={`rounded-xl px-3 py-2 transition ${on('example')}`}>
             <p className="text-lg">{word.exampleEn}</p>
+            {word.exampleRead && (
+              <p className="text-sm text-slate-600 dark:text-slate-300">{word.exampleRead}</p>
+            )}
             <p className="text-sm text-slate-500">{word.exampleVi}</p>
           </div>
         )}

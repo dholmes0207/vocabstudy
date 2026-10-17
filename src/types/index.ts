@@ -40,6 +40,11 @@ export interface Word {
    */
   hanViet?: string
   /**
+   * How the example sentence reads, for packs whose script a beginner cannot
+   * read yet — the pinyin line "Wǒ xǐhuan hē kāfēi." under 我喜欢喝咖啡。
+   */
+  exampleRead?: string
+  /**
    * Curriculum stage: absent/1 = the core 1000 (A1–A2), 2 = the extension
    * beyond them (B1). Words are stored in learning order, stage 1 first.
    */

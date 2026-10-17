@@ -15,6 +15,7 @@ interface W {
   exampleEn: string
   exampleVi: string
   hanViet?: string
+  exampleRead?: string
 }
 const pack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as {
   meta: { code: string; count: number; ttsLang: string; readingLabel?: string[] }
@@ -72,6 +73,18 @@ describe('Chinese pack', () => {
       expect(w.hanViet!.split(' '), w.word).toHaveLength([...w.word].length)
       expect(w.hanViet, w.word).toMatch(/^[\p{L} ]+$/u)
       expect(w.hanViet, w.word).not.toMatch(HAN)
+    }
+  })
+
+  it('gives every example a pinyin line that contains the word, read as the pack reads it', () => {
+    const flat = (r: string) => r.toLowerCase().replace(/[^\p{L}]/gu, '')
+    for (const w of pack.words) {
+      expect(w.exampleRead, w.word).toBeTruthy()
+      expect(w.exampleRead, w.word).toMatch(/^[“"]?[A-ZĀÁǍÀĒÉĚÈŌÓǑÒ]/u)
+      expect(w.exampleRead, w.word).not.toMatch(HAN)
+      // 一 and 不 change tone with the next character (一个 yí gè), so they are not compared.
+      if (w.word !== '一' && w.word !== '不')
+        expect(flat(w.exampleRead!), w.word).toContain(flat(w.viRead))
     }
   })
 })

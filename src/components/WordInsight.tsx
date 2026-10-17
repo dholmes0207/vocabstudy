@@ -95,6 +95,9 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
               <HighlightExample sentence={word.exampleEn} word={word.word} pos={word.posCategory} />
             </p>
           </div>
+          {word.exampleRead && (
+            <p className="pl-10 text-sm text-slate-600 dark:text-slate-300">{word.exampleRead}</p>
+          )}
           <p className="pl-10 text-sm italic text-slate-500 dark:text-slate-400">
             {word.exampleVi}
           </p>
