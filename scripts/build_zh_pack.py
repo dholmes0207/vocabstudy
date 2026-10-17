@@ -155,6 +155,30 @@ ROWS = '''
 的 | de | part. | other | (trợ từ sở hữu: của) | 这|是|我|的|书。 | Đây là sách của tôi. | 🔗
 了 | le | part. | other | (trợ từ: đã, rồi) | 我|吃|饭|了。 | Tôi ăn cơm rồi. | ✔️
 和 | hé | conj. | conjunction | và | 我|和|妈妈|去|商店。 | Tôi và mẹ đi cửa hàng. | 🤲
+八 | bā | num. | other | tám | 我|八|点|去|学校。 | Tám giờ tôi đến trường. | 8️⃣
+九 | jiǔ | num. | other | chín | 现在|九|点。 | Bây giờ là chín giờ. | 9️⃣
+六 | liù | num. | other | sáu | 我|家|有|六|口|人。 | Nhà tôi có sáu người. | 6️⃣
+七 | qī | num. | other | bảy | 一|个|星期|有|七|天。 | Một tuần có bảy ngày. | 7️⃣
+四 | sì | num. | other | bốn | 我|有|四|本|书。 | Tôi có bốn quyển sách. | 4️⃣
+五 | wǔ | num. | other | năm (số 5) | 我们|五|点|回|家。 | Năm giờ chúng tôi về nhà. | 5️⃣
+岁 | suì | n. | noun | tuổi | 我|女儿|五|岁。 | Con gái tôi năm tuổi. | 🎂
+号 | hào | n. | noun | ngày (trong tháng); số | 今天|几|号？ | Hôm nay ngày mấy? | 🗒️
+分钟 | fēnzhōng | n. | noun | phút | 我|等|了|十|分钟。 | Tôi đã đợi mười phút. | ⏱️
+电影 | diànyǐng | n. | noun | phim | 我|喜欢|看|电影。 | Tôi thích xem phim. | 🎬
+后面 | hòumiàn | n. | noun | phía sau | 学校|后面|有|一|个|商店。 | Phía sau trường có một cửa hàng. | 🔙
+前面 | qiánmiàn | n. | noun | phía trước | 医院|在|前面。 | Bệnh viện ở phía trước. | ⏩
+里 | lǐ | n. | noun | trong, bên trong | 杯子|里|有|水。 | Trong cốc có nước. | 📥
+上 | shàng | n. | noun | trên, phía trên | 猫|在|椅子|上。 | Con mèo ở trên ghế. | 🔝
+下 | xià | n. | noun | dưới; sau, tới (下个月: tháng sau) | 下|个|月|我|去|北京。 | Tháng sau tôi đi Bắc Kinh. | ⬇️
+哪 | nǎ | pron. | pronoun | nào | 你|是|哪|国|人？ | Bạn là người nước nào? | 🌏
+怎么 | zěnme | pron. | pronoun | thế nào, sao (hỏi cách làm) | 去|医院|怎么|走？ | Đi đến bệnh viện thế nào? | 🧭
+怎么样 | zěnmeyàng | pron. | pronoun | thế nào (hỏi tình hình, ý kiến) | 这个|菜|怎么样？ | Món này thế nào? | ⁉️
+请 | qǐng | v. | verb | mời; xin, làm ơn | 请|进！ | Mời vào! | 🤗
+同学 | tóngxué | n. | noun | bạn học | 他|是|我|的|同学。 | Cậu ấy là bạn học của tôi. | 🧑‍🎓
+喂 | wèi | expr. | other | a lô (nghe điện thoại) | 喂，|你好！ | A lô, xin chào! | ☎️
+些 | xiē | m. | other | một số, vài | 我|想|买|些|水果。 | Tôi muốn mua ít trái cây. | 🧺
+一点儿 | yìdiǎnr | m. | other | một chút | 我|会|说|一点儿|汉语。 | Tôi biết nói một chút tiếng Trung. | 🤏
+看见 | kànjiàn | v. | verb | nhìn thấy | 你|看见|我|的|猫|了|吗？ | Bạn có thấy con mèo của tôi không? | 👁️
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -186,6 +210,10 @@ HAN_VIET = {
     '桌子': 'trác tử', '椅子': 'ỷ tử', '汉语': 'Hán ngữ', '字': 'tự', '天气': 'thiên khí',
     '名字': 'danh tự', '飞机': 'phi cơ', '出租车': 'xuất tô xa', '猫': 'miêu', '狗': 'cẩu',
     '和': 'hoà',
+    '八': 'bát', '九': 'cửu', '六': 'lục', '七': 'thất', '四': 'tứ', '五': 'ngũ', '岁': 'tuế',
+    '号': 'hiệu', '分钟': 'phân chung', '电影': 'điện ảnh', '后面': 'hậu diện',
+    '前面': 'tiền diện', '里': 'lý', '上': 'thượng', '下': 'hạ', '怎么': 'chẩm ma',
+    '怎么样': 'chẩm ma dạng', '请': 'thỉnh', '同学': 'đồng học', '些': 'ta', '看见': 'khán kiến',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -326,6 +354,30 @@ EXAMPLE_PINYIN = {
     '的': 'zhè shì wǒ de shū',
     '了': 'wǒ chī fàn le',
     '和': 'wǒ hé mā ma qù shāng diàn',
+    '八': 'wǒ bā diǎn qù xué xiào',
+    '九': 'xiàn zài jiǔ diǎn',
+    '六': 'wǒ jiā yǒu liù kǒu rén',
+    '七': 'yí gè xīng qī yǒu qī tiān',
+    '四': 'wǒ yǒu sì běn shū',
+    '五': 'wǒ men wǔ diǎn huí jiā',
+    '岁': 'wǒ nǚ ér wǔ suì',
+    '号': 'jīn tiān jǐ hào',
+    '分钟': 'wǒ děng le shí fēn zhōng',
+    '电影': 'wǒ xǐ huan kàn diàn yǐng',
+    '后面': 'xué xiào hòu miàn yǒu yí gè shāng diàn',
+    '前面': 'yī yuàn zài qián miàn',
+    '里': 'bēi zi lǐ yǒu shuǐ',
+    '上': 'māo zài yǐ zi shàng',
+    '下': 'xià gè yuè wǒ qù Běi jīng',
+    '哪': 'nǐ shì nǎ guó rén',
+    '怎么': 'qù yī yuàn zěn me zǒu',
+    '怎么样': 'zhè ge cài zěn me yàng',
+    '请': 'qǐng jìn',
+    '同学': 'tā shì wǒ de tóng xué',
+    '喂': 'wèi nǐ hǎo',
+    '些': 'wǒ xiǎng mǎi xiē shuǐ guǒ',
+    '一点儿': 'wǒ huì shuō yì diǎn r Hàn yǔ',
+    '看见': 'nǐ kàn jiàn wǒ de māo le ma',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
@@ -408,7 +460,7 @@ def main() -> int:
             'ttsLang': 'zh-CN',
             'count': len(words),
             'source': 'VocaStudy (beta)',
-            'version': '0.3.0',
+            'version': '0.4.0',
             'readingLabel': ['pinyin', 'pinyin'],
         },
         'words': words,

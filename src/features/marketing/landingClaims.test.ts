@@ -40,8 +40,9 @@ describe('numbers on the landing page', () => {
       `${count.koTopics} bộ chủ đề, ${count.koGrammar} bài ngữ pháp và ${count.koStories} truyện ngắn`,
       `${count.koTopics} topic decks, ${count.koGrammar} grammar lessons and ${count.koStories} short stories`,
       `${count.koStories} truyện ngắn`,
-      `${count.zhWords} từ HSK 1 có pinyin`,
-      `${count.zhWords} HSK 1 words with pinyin`,
+      // "all 150 of HSK 1" itself is checked word by word in lib/chinesePack.test.ts.
+      `${count.zhWords} từ (đủ 150 từ HSK 1) có pinyin`,
+      `${count.zhWords} words (all 150 of HSK 1) with pinyin`,
       `${count.zhTopics} bộ chủ đề, ${count.zhGrammar} bài ngữ pháp và ${count.zhStories} truyện ngắn`,
       `${count.zhTopics} topic decks, ${count.zhGrammar} grammar lessons and ${count.zhStories} short stories`,
       `${count.koStories} short stories`,

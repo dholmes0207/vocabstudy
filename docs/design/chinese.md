@@ -96,10 +96,10 @@ rõ.
 
 - Trường `hanViet` (không bắt buộc) của từ. Viết trong `HAN_VIET` của
   `scripts/build_zh_pack.py`; script và test kiểm tra mỗi chữ Hán ứng với đúng một âm tiết.
-- 122/132 từ có âm Hán Việt. Cố ý để trống:
+- 143/156 từ có âm Hán Việt (lúc đầu là 122/132). Cố ý để trống:
   - các trợ từ 吗 / 呢 / 的 / 了;
   - từ mượn 咖啡;
-  - 哪儿 / 这儿 / 那儿 (khẩu ngữ, có thêm âm nhi hoá);
+  - 哪 / 哪儿 / 这儿 / 那儿 / 一点儿 (khẩu ngữ, có thêm âm nhi hoá), thán từ 喂;
   - các từ có 吃, vì từ điển không thống nhất (cật / ngật / khiết). Không đoán khi chưa chắc.
 - Hiển thị (`components/HanViet.tsx`) ngay dưới nghĩa trên thẻ học và ở mặt sau thẻ lật,
   không bao giờ ở mặt câu hỏi, vì âm Hán Việt hay trùng luôn với nghĩa (学生 = học sinh).
@@ -110,7 +110,8 @@ rõ.
   - chào hỏi, con người & gia đình, ăn uống, nơi chốn & đi lại;
   - thời gian, số đếm & mua sắm, hoạt động hằng ngày, đồ vật quanh nhà;
   - miêu tả & thời tiết, từ để hỏi & từ ngữ pháp.
-- Mỗi bộ 12–19 từ. Cả 132 từ đều nằm trong ít nhất một bộ; script và test cùng kiểm tra.
+- Mỗi bộ 12–23 từ. Mọi từ trong gói đều nằm trong ít nhất một bộ; script và test cùng kiểm
+  tra.
 - `/topics` mở cho tiếng Trung (`lib/packContent.ts`).
 
 ## Bước 4: truyện ngắn (đã làm)
@@ -189,3 +190,20 @@ mới gõ ra được chữ.
 - Ví dụ trong 7 bài ngữ pháp cũng có dòng pinyin (trường `read` của `GrammarExample`). Nguồn
   là `EXAMPLE_PINYIN` trong `scripts/build_grammar_zh.py`, kiểm tra theo cùng cách với ví dụ
   của gói. Dòng pinyin hiện giữa câu chữ Hán và nghĩa.
+
+## Bước 8: đủ 150 từ HSK 1
+
+- Gói tăng từ 132 lên 156 từ: thêm 24 từ HSK 1 còn thiếu, gồm:
+  - số đếm 四 / 五 / 六 / 七 / 八 / 九;
+  - từ chỉ vị trí 上 / 下 / 里 / 前面 / 后面;
+  - 岁, 号, 分钟, 电影, 哪, 怎么, 怎么样, 请, 同学, 喂, 些, 一点儿, 看见.
+
+  Mỗi từ mới có đủ pinyin, câu ví dụ có ranh giới từ, pinyin của câu ví dụ, và âm Hán Việt
+  khi chắc chắn.
+
+- Danh sách HSK 1 (đề cương 2012) có 150 mục. 哪（哪儿）và 那（那儿）mỗi mục có hai dạng,
+  nên tổng cộng là 152 từ. Danh sách này nằm trong `src/lib/chinesePack.test.ts`; test kiểm
+  tra gói có đủ từng từ. Câu "đủ 150 từ HSK 1" trên trang chủ dựa vào test này.
+- 4 từ ngoài HSK 1 vẫn giữ lại: 你好, 咖啡, 好吃, 火车站.
+- "năm" (năm, 年) và "năm (số 5)" (五) có nghĩa ghi khác nhau, để câu trắc nghiệm luôn có
+  một đáp án đúng.

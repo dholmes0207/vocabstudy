@@ -28,6 +28,10 @@ export const RELEASES: Release[] = [
         'Truyện ngắn tiếng Trung có nút "pinyin": bật lên để thấy cách đọc dưới từng câu. Ví dụ trong các bài ngữ pháp tiếng Trung cũng có pinyin.',
         'Chinese short stories have a "pinyin" button: turn it on to see how each sentence reads. Chinese grammar examples have pinyin too.',
       ],
+      [
+        'Gói tiếng Trung tăng lên 156 từ, phủ đủ 150 từ HSK 1: thêm số đếm 4–9, 上 / 下 / 里 / 前面 / 后面, 怎么, 怎么样, 请, 喂, 电影…',
+        'The Chinese pack grows to 156 words and now covers all 150 HSK 1 words: numbers 4–9, 上 / 下 / 里 / 前面 / 后面, 怎么, 怎么样, 请, 喂, 电影…',
+      ],
     ],
   },
   {

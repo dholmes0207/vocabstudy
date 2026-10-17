@@ -35,9 +35,9 @@
       "learnerLang": "vi",
       "learnerLangName": "Tiếng Việt",
       "ttsLang": "zh-CN",
-      "count": 132,
+      "count": 156,
       "file": "zh.json",
-      "description": "Beta: 132 từ tiếng Trung sơ cấp (HSK 1) có pinyin, đọc bằng giọng của trình duyệt.",
+      "description": "Beta: 156 từ tiếng Trung sơ cấp, đủ 150 từ HSK 1, có pinyin và âm Hán Việt, đọc bằng giọng của trình duyệt.",
       "beta": true
     }
   ]
