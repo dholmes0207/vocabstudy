@@ -49,9 +49,15 @@ một nhóm làm nghiêm túc, không phải một trang demo.
     ngôn ngữ.
   - Phần "Dành cho người Việt" thêm ví dụ cách đọc tiếng Hàn và âm Hán Việt.
 - Trang học chuyển từ `/` sang `/home`.
-  - Ai đã dùng app trên máy này (đã mở app, đã đăng nhập hoặc đã có tiến độ) mà gõ thẳng
-    `vocastudy.app` thì được đưa vào `/home`.
-  - Bấm "Tính năng" hay logo từ một trang giới thiệu khác vẫn ở lại trang giới thiệu.
+  - **Từ 18/10/2026, `vocastudy.app` luôn mở trang giới thiệu, với mọi người.** User: "khi truy
+    cập web, thì ưu tiên trỏ về trang about trước, chứ không phải là trang home". Khi được hỏi
+    lại, user chọn trang giới thiệu `/`, không phải `/about`.
+  - Trước đó, máy đã dùng app (đã mở app, đã đăng nhập hoặc đã có tiến độ) mà gõ thẳng
+    `vocastudy.app` thì được đưa vào `/home`. Lệnh chuyển hướng này đã bỏ.
+  - Thay vào đó, máy đã từng học thấy nút "Tiếp tục học" ở đầu trang và ở phần hero, thay
+    cho "Học miễn phí". Một lần bấm là vào app.
+  - App cài trên màn hình chính vẫn mở thẳng `/home` (`start_url` trong manifest), nên người
+    học hằng ngày qua icon app không phải đi qua trang giới thiệu.
 - Link xác nhận email của Supabase luôn đi vào app, giữ nguyên `#access_token…`.
 - Trang `/about`: sứ mệnh, câu chuyện, giá trị, liên hệ. Không bịa ra đội ngũ.
   - Từ 17/10/2026, trang giới thiệu VocaStudy là **nơi học nhiều ngoại ngữ** cho người Việt,
@@ -87,12 +93,14 @@ một nhóm làm nghiêm túc, không phải một trang demo.
     trước khi render;
   - `isAuthCallback` nhận diện fragment/`?code=` của Supabase;
   - `hasUsedApp` / `markEntered` dùng khoá `vocab.app.entered`, được ghi khi `Layout` mở.
+    Từ 18/10 khoá này chỉ dùng để đổi chữ trên nút ("Tiếp tục học") và để chuông thông báo
+    biết ai là người mới. Nó không còn dùng để chuyển trang.
 - `signUp` gửi `emailRedirectTo: <origin>/home`.
   - Supabase chỉ dùng URL này nếu nó nằm trong Auth → URL Configuration → Redirect URLs.
   - Nếu không, nó quay về Site URL và `/` tự chuyển tiếp vào app.
 - Phần giới thiệu nằm trong `src/features/marketing/`:
   - `MarketingLayout` (header, menu điện thoại, footer 4 cột);
-  - `Home` (chọn giữa trang giới thiệu và chuyển hướng);
+  - `Home` (trang giới thiệu; chỉ chuyển tiếp link đăng nhập từ email);
   - `Landing`, `About`;
   - `LegalPage` dùng nội dung trong `legal.ts`.
   - Tất cả tải lười: trang học không phải tải thêm byte nào.

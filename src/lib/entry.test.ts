@@ -65,7 +65,7 @@ describe('hasUsedApp', () => {
     expect(hasUsedApp(store({ 'vocab.progress.v1': '{oops' }))).toBe(false)
   })
 
-  it('markEntered makes the next visit go straight to the app', () => {
+  it('markEntered remembers that this device has used the app', () => {
     const s = store()
     markEntered(s)
     expect(hasUsedApp(s)).toBe(true)

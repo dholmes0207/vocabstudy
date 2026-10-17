@@ -7,6 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle'
 import { CONTACT_EMAIL } from '@/lib/site'
 import { openFeedback } from '@/store/feedbackStore'
 import { useT } from '@/lib/i18n'
+import { hasUsedApp } from '@/lib/entry'
 
 // Chrome for the public pages — landing, about, privacy, terms
 // (docs/design/landing.md). Separate from the app shell: no study nav, a clear
@@ -16,6 +17,12 @@ export default function MarketingLayout() {
   const t = useT()
   const { pathname, hash } = useLocation()
   const [open, setOpen] = useState(false)
+  // The site opens on its introduction for everyone; someone who has studied
+  // here gets "continue" rather than "start" (Home.tsx).
+  const [returning] = useState(() => hasUsedApp(localStorage))
+  const startLabel = returning
+    ? t('Tiếp tục học', 'Continue learning')
+    : t('Học miễn phí', 'Start free')
 
   // A new page starts at the top (or at its #section); the mobile menu closes.
   useEffect(() => {
@@ -61,7 +68,7 @@ export default function MarketingLayout() {
               {t('Đăng nhập', 'Sign in')}
             </Link>
             <Link to="/home" className="btn-primary hidden h-10 sm:inline-flex">
-              {t('Học miễn phí', 'Start free')}
+              {startLabel}
             </Link>
             <button
               className="btn-ghost h-10 w-10 !px-0 md:hidden"
@@ -89,7 +96,7 @@ export default function MarketingLayout() {
                 {t('Đăng nhập', 'Sign in')}
               </Link>
               <Link to="/home" className="btn-primary">
-                {t('Học miễn phí', 'Start free')}
+                {startLabel}
               </Link>
             </div>
           </nav>

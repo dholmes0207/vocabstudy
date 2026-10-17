@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
@@ -14,6 +15,7 @@ import {
   Volume2,
 } from 'lucide-react'
 import { useT } from '@/lib/i18n'
+import { hasUsedApp } from '@/lib/entry'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import Testimonials from './Testimonials'
 import LanguagePicker from './LanguagePicker'
@@ -69,6 +71,7 @@ export default function Landing() {
 
 function Hero() {
   const t = useT()
+  const [returning] = useState(() => hasUsedApp(localStorage))
   return (
     <section className="px-4 pb-16 pt-12 sm:pt-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr,1fr]">
@@ -89,7 +92,10 @@ function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/home" className="btn-primary h-12 px-6 text-base">
-              {t('Bắt đầu học miễn phí', 'Start learning free')} <ArrowRight className="h-5 w-5" />
+              {returning
+                ? t('Tiếp tục học', 'Continue learning')
+                : t('Bắt đầu học miễn phí', 'Start learning free')}{' '}
+              <ArrowRight className="h-5 w-5" />
             </Link>
             <Link to="/#how" className="btn-secondary h-12 px-6 text-base">
               {t('Xem cách học', 'See how it works')}
