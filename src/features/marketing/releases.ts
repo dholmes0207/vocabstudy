@@ -20,6 +20,14 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Thẻ từ tiếng Trung và tiếng Hàn có mục "Cùng chữ Hán Việt": học 学生 (học sinh) là thấy ngay chữ 学 còn có trong 学校, 学习, 同学. Từ trong danh sách HSK 1 có nhãn HSK 1.',
+        'Chinese and Korean word cards show "Same Sino-Vietnamese character": learn 学生 and see 学 in 学校, 学习 and 同学 too. HSK 1 words carry an HSK 1 badge.',
+      ],
+      [
+        'Đọc truyện: chạm vào biểu tượng dịch cuối câu để xem nghĩa riêng câu đó, nút "Đọc chậm" khi nghe, và nút "Truyện tiếp theo" khi đọc xong.',
+        'Stories: tap the translate icon at the end of a sentence for that sentence only, a "Slow" button for listening, and "Next story" when you finish.',
+      ],
+      [
         'Đang ở chỗ đông người? Ở câu nghe, bấm "Hiện không nghe được": trong 15 phút câu nghe thành câu đọc, không phát tiếng.',
         'Somewhere you can’t play sound? On a listening question, tap "Can’t listen now": for 15 minutes listening questions become reading ones, silently.',
       ],

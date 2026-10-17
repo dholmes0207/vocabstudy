@@ -115,3 +115,40 @@ describe('Reading a story aloud', () => {
     expect(screen.queryByRole('button', { name: /Save to learn/ })).not.toBeInTheDocument()
   })
 })
+
+describe('reading help, one sentence at a time', () => {
+  it("opens one sentence's meaning without the whole translation", async () => {
+    renderStory()
+    const buttons = await screen.findAllByRole('button', { name: "This sentence's meaning" })
+    fireEvent.click(buttons[0])
+    expect(screen.getByText(lan.sentences[0].vi)).toBeInTheDocument()
+    expect(screen.queryByText(lan.sentences[1].vi)).not.toBeInTheDocument()
+    fireEvent.click(buttons[0])
+    expect(screen.queryByText(lan.sentences[0].vi)).not.toBeInTheDocument()
+  })
+
+  it('reads aloud more slowly when asked', async () => {
+    renderStory()
+    fireEvent.click(await screen.findByRole('button', { name: 'Slow' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Listen' }))
+    const rate = useSettings.getState().ttsRate
+    expect((spoken[0] as { rate?: number }).rate).toBeCloseTo(rate * 0.7)
+  })
+
+  it('offers the next story once the questions are done', async () => {
+    renderStory()
+    fireEvent.click(await screen.findByRole('button', { name: /Answer \d+ questions/ }))
+    for (let i = 0; i < lan.questions.length; i++) {
+      fireEvent.click(
+        screen.getAllByRole('button').find((b) => b.textContent === lan.questions[i].options[0]) ??
+          screen.getAllByRole('button')[2]
+      )
+      fireEvent.click(screen.getByRole('button', { name: /Next|See results/ }))
+    }
+    const next = stories.stories[stories.stories.indexOf(lan) + 1]
+    expect(screen.getByRole('link', { name: /Next story/ })).toHaveAttribute(
+      'href',
+      `/reading/${next.id}`
+    )
+  })
+})

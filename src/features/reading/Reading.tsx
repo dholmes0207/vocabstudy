@@ -9,6 +9,7 @@ import {
   Square,
   Baseline,
   Languages,
+  Snail,
   Volume2,
   X,
 } from 'lucide-react'
@@ -80,7 +81,10 @@ export default function Reading() {
         </Link>
       </p>
     )
-  return story ? <StoryView key={story.id} story={story} /> : <StoryList pack={pack} />
+  // The next story in the list, offered when this one is finished (Du Chinese's
+  // "next lesson", docs/design/reading.md).
+  const next = story ? pack.stories[pack.stories.indexOf(story) + 1] : undefined
+  return story ? <StoryView key={story.id} story={story} next={next} /> : <StoryList pack={pack} />
 }
 
 function StoryList({ pack }: { pack: ReadingPack }) {
@@ -143,7 +147,10 @@ function StoryList({ pack }: { pack: ReadingPack }) {
   )
 }
 
-function StoryView({ story }: { story: Story }) {
+/** Read-aloud speed when "Đọc chậm" is on, relative to the learner's own rate. */
+const SLOW = 0.7
+
+function StoryView({ story, next }: { story: Story; next?: Story }) {
   const t = useT()
   const readLabel = useReadingLabel('đọc gần giống', 'sounds like')
   const pack = useData((s) => s.pack)!
@@ -151,6 +158,16 @@ function StoryView({ story }: { story: Story }) {
   const glossary = useMemo(() => buildGlossary(pack.words), [pack.words])
   const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
   const [showVi, setShowVi] = useState(false)
+  // One sentence's translation at a time, for a reader who only needs help here
+  // and there (Du Chinese's "sentence meaning").
+  const [opened, setOpened] = useState<ReadonlySet<number>>(new Set())
+  const toggleLine = (i: number) =>
+    setOpened((o) => {
+      const n = new Set(o)
+      if (!n.delete(i)) n.add(i)
+      return n
+    })
+  const [slow, setSlow] = useState(false)
   // Chinese stories carry a pinyin line per sentence; other packs read as written.
   const hasRead = story.sentences.some((s) => s.read)
   const readName = useReadingLabel('cách đọc', 'reading')
@@ -172,7 +189,7 @@ function StoryView({ story }: { story: Story }) {
     pronounce({
       text: story.sentences[line].en,
       lang: pack.meta.ttsLang,
-      rate,
+      rate: slow ? rate * SLOW : rate,
       onEnd: () => {
         if (id !== run.current) return
         if (all && line + 1 < story.sentences.length) playLine(line + 1, true)
@@ -195,7 +212,7 @@ function StoryView({ story }: { story: Story }) {
     []
   )
 
-  if (quiz) return <StoryQuiz story={story} onBack={() => setQuiz(false)} />
+  if (quiz) return <StoryQuiz story={story} nextStory={next} onBack={() => setQuiz(false)} />
 
   return (
     <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
@@ -242,6 +259,13 @@ function StoryView({ story }: { story: Story }) {
               <Baseline className="h-4 w-4" /> {readName}
             </button>
           )}
+          <button
+            className={`btn-secondary ${slow ? '!border-brand-400 !text-brand-700 dark:!text-brand-300' : ''}`}
+            onClick={() => setSlow((v) => !v)}
+            aria-pressed={slow}
+          >
+            <Snail className="h-4 w-4" /> {t('Đọc chậm', 'Slow')}
+          </button>
         </div>
       </header>
 
@@ -294,11 +318,26 @@ function StoryView({ story }: { story: Story }) {
               >
                 <Volume2 className="h-4 w-4" />
               </button>
+              {!showVi && (
+                <button
+                  type="button"
+                  onClick={() => toggleLine(i)}
+                  aria-pressed={opened.has(i)}
+                  className={`inline-grid h-7 w-7 place-items-center rounded-full align-middle hover:bg-slate-100 dark:hover:bg-slate-800 ${
+                    opened.has(i) ? 'text-brand-600 dark:text-brand-300' : 'text-slate-400'
+                  }`}
+                  aria-label={t('Nghĩa của câu này', "This sentence's meaning")}
+                >
+                  <Languages className="h-4 w-4" />
+                </button>
+              )}
             </p>
             {showRead && line.read && (
               <p className="mt-0.5 text-base text-slate-600 dark:text-slate-300">{line.read}</p>
             )}
-            {showVi && <p className="mt-0.5 text-base text-slate-500">{line.vi}</p>}
+            {(showVi || opened.has(i)) && (
+              <p className="mt-0.5 text-base text-slate-500">{line.vi}</p>
+            )}
           </div>
         ))}
       </section>
@@ -369,7 +408,15 @@ function StoryView({ story }: { story: Story }) {
   )
 }
 
-function StoryQuiz({ story, onBack }: { story: Story; onBack: () => void }) {
+function StoryQuiz({
+  story,
+  nextStory,
+  onBack,
+}: {
+  story: Story
+  nextStory?: Story
+  onBack: () => void
+}) {
   const t = useT()
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
@@ -413,12 +460,18 @@ function StoryQuiz({ story, onBack }: { story: Story; onBack: () => void }) {
         <p className="w-full text-sm font-semibold text-brand-600 dark:text-brand-300">
           +{finished.xp} XP ⭐
         </p>
+        {nextStory ? (
+          <Link to={`/reading/${nextStory.id}`} className="btn-primary">
+            {t('Truyện tiếp theo', 'Next story')}: {nextStory.emoji} {nextStory.title[1]}
+          </Link>
+        ) : (
+          <Link to="/reading" className="btn-primary">
+            {t('Truyện khác', 'Another story')}
+          </Link>
+        )}
         <button className="btn-secondary" onClick={onBack}>
           {t('Đọc lại truyện', 'Read it again')}
         </button>
-        <Link to="/reading" className="btn-primary">
-          {t('Truyện khác', 'Another story')}
-        </Link>
       </SessionComplete>
     )
 

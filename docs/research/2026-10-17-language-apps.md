@@ -240,3 +240,25 @@ trị trên công sức:
 **Không làm**: tim / mạng và cảnh báo mất chuỗi. Hai cơ chế này phạt người học, trái với giá
 trị "động viên, không chê trách" của VocaStudy. Chuỗi ngày học của VocaStudy đã có khiên bảo
 vệ.
+
+## Vòng 5 (18/10): trang nội dung học công khai
+
+Không đăng nhập. REA quan sát trang qua một Chrome riêng (profile tạm, chỉ nghe ở `127.0.0.1`).
+
+| Trang                                           | Evidence            | Ý đáng chú ý                                                                                                                                          |
+| ----------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Du Chinese, chương miễn phí "How Much Is This?" | `ev_d5686a59e0bad…` | Chỉnh tốc độ; chạm để xem "nghĩa của câu" hoặc "nghĩa của từ"; bật/tắt pinyin, giản thể/phồn thể, nhãn HSK; bài trước/sau trong khoá; đánh dấu đã đọc |
+| Hanzii, từ 学习                                 | `ev_eff6dbaef3fe6…` | Âm Hán Việt cho cả từ [HỌC TẬP]; HSK 1 / TOCFL 1; bộ thủ, số nét, thứ tự nét, lục thư; từ ghép, cận nghĩa, trái nghĩa, phân biệt từ                   |
+| Naver Hàn–Việt, từ 공부                         | `ev_4d9b5e41dc049…` | Chữ Hán gốc 工夫; từ phái sinh (공부하다, 시험공부); cụm hay đi chung; "lưu vào sổ từ" ở mọi mục                                                      |
+| Cambridge Dictionary                            | –                   | Trả về trang chặn trình duyệt tự động ("Just a moment…"); **bỏ qua, không vượt**                                                                      |
+
+**Đã làm theo cách riêng**:
+
+- "Cùng chữ Hán Việt" và nhãn HSK 1 trên thẻ từ (`docs/design/chinese.md`).
+- Nghĩa từng câu, đọc chậm và "Truyện tiếp theo" trong phần Đọc truyện
+  (`docs/design/reading.md`).
+
+**Để sau**:
+
+- Thứ tự nét và luyện viết chữ Hán (cần dữ liệu nét, ví dụ thư viện hanzi-writer).
+- Tô màu từ trong truyện theo trạng thái đã học hay chưa (giống nút HSK của Du Chinese).
