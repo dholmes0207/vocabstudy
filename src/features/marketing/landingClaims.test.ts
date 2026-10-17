@@ -20,6 +20,17 @@ const count = {
   zhTopics: json('public/data/topics/zh.json').topics.length,
   zhGrammar: json('public/data/grammar/zh.json').units.length,
   zhStories: json('public/data/reading/zh.json').stories.length,
+  languages: json('public/data/index.json').languages.length,
+  // Words across every pack, rounded down to the hundred ("4.700+").
+  allWords: (() => {
+    const packs = json('public/data/index.json').languages as { file: string }[]
+    const n = packs.reduce((sum, p) => sum + json(`public/data/${p.file}`).words.length, 0)
+    return Math.floor(n / 100) * 100
+  })(),
+  allStories: (json('public/data/index.json').languages as { code: string }[]).reduce(
+    (n, { code }) => n + json(`public/data/reading/${code}.json`).stories.length,
+    0
+  ),
   phrases: json('public/data/phrases/en.json').topics.reduce(
     (n: number, t: { phrases: unknown[] }) => n + t.phrases.length,
     0
@@ -46,6 +57,11 @@ describe('numbers on the landing page', () => {
       `${count.zhTopics} bộ chủ đề, ${count.zhGrammar} bài ngữ pháp và ${count.zhStories} truyện ngắn`,
       `${count.zhTopics} topic decks, ${count.zhGrammar} grammar lessons and ${count.zhStories} short stories`,
       `${count.koStories} short stories`,
+      // The stats strip under the hero. A new language changes the first one —
+      // update the hero sentence that names them too.
+      `['${count.languages}', '${count.languages}', t('ngôn ngữ`,
+      `['${count.allWords.toLocaleString('vi-VN')}+', '${count.allWords.toLocaleString('en-US')}+'`,
+      `['${count.allStories}', '${count.allStories}', t('truyện ngắn`,
       `${count.phrases} câu theo tình huống`,
       `${count.phrases} phrases for real situations`,
     ])

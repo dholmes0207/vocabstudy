@@ -82,10 +82,10 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   ${stars}
   <g transform="translate(80 92) scale(2.1)"><rect width="64" height="64" rx="16" fill="url(#m)"/>${inner('m')}</g>
   <text x="240" y="178" font-family="Noto Sans" font-weight="900" font-size="88" fill="#ffffff">Voca<tspan fill="url(#word)">Study</tspan></text>
-  <text x="82" y="318" font-family="Noto Sans" font-weight="800" font-size="56" fill="#ffffff">Speak English with confidence,</text>
-  <text x="82" y="386" font-family="Noto Sans" font-weight="800" font-size="56" fill="url(#word)">a little every day.</text>
-  <text x="82" y="438" font-family="Noto Sans" font-weight="600" font-size="28" fill="#c7d2fe">Tự tin nói tiếng Anh — mỗi ngày một chút.</text>
-  ${chips(['4,400+ words', '100 phrases', 'AI voices', 'Free'])}
+  <text x="82" y="318" font-family="Noto Sans" font-weight="800" font-size="56" fill="#ffffff">Speak a new language,</text>
+  <text x="82" y="386" font-family="Noto Sans" font-weight="800" font-size="56" fill="url(#word)">with confidence, every day.</text>
+  <text x="82" y="438" font-family="Noto Sans" font-weight="600" font-size="28" fill="#c7d2fe">Tự tin nói ngoại ngữ — mỗi ngày một chút.</text>
+  ${chips(['English', 'Korean', 'Chinese', '4,700+ words', 'Free'])}
   <text x="1118" y="590" text-anchor="end" font-family="Noto Sans" font-weight="700" font-size="26" fill="#a5b4fc">vocastudy.app</text>
 </svg>`
 

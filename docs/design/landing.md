@@ -29,11 +29,25 @@ một nhóm làm nghiêm túc, không phải một trang demo.
   6. "Dành cho người Việt".
   7. Hỏi đáp.
   8. Lời mời cuối trang.
-- Mọi con số và tính năng phải có thật trong app:
-  - 4.440 từ trong `data/en.json`;
-  - 100 mẫu câu;
-  - 2 giọng đọc (aria, guy).
-  - Không có lời chứng thực, logo báo chí hay số người dùng bịa ra.
+- Mọi con số và tính năng phải có thật trong app. Không có lời chứng thực, logo báo chí hay
+  số người dùng bịa ra.
+  - Dải số liệu dưới hero (từ 17/10/2026): số ngôn ngữ, tổng số từ của mọi gói (làm tròn
+    xuống hàng trăm, "4.700+") và tổng số truyện. `landingClaims.test.ts` tính lại cả ba từ
+    `public/data`.
+  - Trước đó dải này là 4.440 từ tiếng Anh, 100 mẫu câu và 2 giọng đọc. Các số này giờ chỉ
+    nằm trong phần tính năng.
+- **Tiêu đề theo hướng nhiều ngôn ngữ (17/10/2026).** User: "đổi luôn tiêu đề trang chủ
+  sang hướng nhiều ngôn ngữ".
+  - Hero: "Tự tin nói ngoại ngữ, mỗi ngày một chút." Câu dưới nêu tên các ngôn ngữ đang
+    có, kèm "và sẽ còn thêm".
+  - Dòng "Hoặc học tiếng Hàn · tiếng Trung" đổi thành link "Chọn ngôn ngữ bạn muốn học",
+    trỏ tới `#languages`.
+  - Tiêu đề tab, `<title>`, mô tả cho Google, thẻ og, tên app khi cài (manifest) và ảnh xem
+    trước link đều đổi theo. `og:locale` vẫn là `en_US`, vì giao diện mặc định là tiếng
+    Anh.
+  - Câu hỏi đáp "mất gốc tiếng Anh" thành "bắt đầu từ con số 0". Câu trả lời nói cả ba
+    ngôn ngữ.
+  - Phần "Dành cho người Việt" thêm ví dụ cách đọc tiếng Hàn và âm Hán Việt.
 - Trang học chuyển từ `/` sang `/home`.
   - Ai đã dùng app trên máy này (đã mở app, đã đăng nhập hoặc đã có tiến độ) mà gõ thẳng
     `vocastudy.app` thì được đưa vào `/home`.

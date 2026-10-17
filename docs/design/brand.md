@@ -15,9 +15,12 @@ không giống một sản phẩm thật."
   favicon, icon cài đặt, ảnh xem trước link.
 - Ảnh xem trước link (1200×630) gồm:
   - bầu trời đêm;
-  - logo và lời hứa "Speak English with confidence, a little every day.", kèm một dòng
-    tiếng Việt;
-  - 4 nhãn số liệu thật.
+  - logo và lời hứa "Speak a new language, with confidence, every day.", kèm dòng tiếng
+    Việt "Tự tin nói ngoại ngữ — mỗi ngày một chút." (đổi ngày 17/10/2026; trước đó là
+    "Speak English with confidence");
+  - các nhãn English · Korean · Chinese · 4,700+ words · Free.
+  - `index.html` trỏ tới `og-image.png?v=2`. Mỗi lần vẽ lại ảnh thì tăng số `v`, nếu
+    không Zalo/Facebook sẽ giữ ảnh cũ trong bộ nhớ đệm.
 
 **Dev**
 

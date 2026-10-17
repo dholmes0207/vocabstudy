@@ -2,7 +2,7 @@
 
 🌐 **[vocastudy.app](https://vocastudy.app)**
 
-Website học và ôn **từ vựng đa ngôn ngữ**, gồm **1000 từ tiếng Anh thông dụng nhất** (chuẩn Oxford & Cambridge) làm lõi, cộng **phần mở rộng bậc B1** (tổng hơn 2000 từ), dành cho **người Việt học tiếng Anh**.
+Nơi **người Việt học nhiều ngoại ngữ**: hiện có **tiếng Anh** (4.440 từ từ cơ bản đến B1, mẫu câu, phát âm), **tiếng Hàn** và **tiếng Trung** (beta). Mọi ngôn ngữ dùng chung một cách học (lặp lại ngắt quãng, chủ đề, ngữ pháp, truyện ngắn, nghe – chép), giải thích bằng tiếng Việt.
 
 Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker** nên sau lần tải đầu, từ vựng và file phát âm đã nghe qua vẫn dùng được **khi mất mạng**; phần vỏ ứng dụng luôn ưu tiên tải bản mới nên không bao giờ bị kẹt ở bản cũ. Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 

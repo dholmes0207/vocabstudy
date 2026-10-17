@@ -1,7 +1,7 @@
 {
-  "name": "VocaStudy — Speak English with confidence",
+  "name": "VocaStudy — Learn languages every day",
   "short_name": "VocaStudy",
-  "description": "Everyday English words and phrases with natural AI voices, spaced repetition and games — made for Vietnamese learners.",
+  "description": "English, Korean and Chinese words, grammar and short stories explained in Vietnamese, with spaced repetition and games — made for Vietnamese speakers.",
   "lang": "en",
   "start_url": "/home",
   "scope": "/",

@@ -18,16 +18,17 @@ import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import Testimonials from './Testimonials'
 import LanguagePicker from './LanguagePicker'
 
-// The public home page (docs/design/landing.md): what VocaStudy is, who it is
-// for, and one obvious way to start. Every number here is true of the product
+// The public home page (docs/design/landing.md): what VocaStudy is — one place
+// for Vietnamese speakers to learn many languages — who it is for, and one
+// obvious way to start. Every number here is true of the product
 // as shipped — no invented users, ratings or testimonials.
 
 export default function Landing() {
   const t = useT()
   useDocumentTitle(
     t(
-      'VocaStudy — Học từ vựng & mẫu câu tiếng Anh mỗi ngày',
-      'VocaStudy — Learn English words & everyday phrases, a little every day'
+      'VocaStudy — Học ngoại ngữ mỗi ngày: tiếng Anh, tiếng Hàn, tiếng Trung',
+      'VocaStudy — Learn languages every day: English, Korean, Chinese'
     )
   )
 
@@ -77,13 +78,13 @@ function Hero() {
             {t('Miễn phí · Dành cho người Việt', 'Free · Made for Vietnamese learners')}
           </span>
           <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            {t('Tự tin nói tiếng Anh,', 'Speak English with confidence,')}{' '}
+            {t('Tự tin nói ngoại ngữ,', 'Speak a new language with confidence,')}{' '}
             <span className="text-aurora">{t('mỗi ngày một chút.', 'a little every day.')}</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-slate-600 dark:text-slate-300">
             {t(
-              'Hơn 4.400 từ thông dụng và 100 mẫu câu dùng ngay — có giọng đọc AI chuẩn Mỹ, lặp lại ngắt quãng để nhớ lâu, và luyện phát âm dành riêng cho người Việt.',
-              '4,400+ everyday words and 100 ready-to-use phrases — with natural AI voices, spaced repetition that makes them stick, and pronunciation practice built for Vietnamese speakers.'
+              'Tiếng Anh, tiếng Hàn, tiếng Trung — và sẽ còn thêm ngôn ngữ mới. Cùng một cách học nhẹ nhàng: nghĩa và cách đọc giải thích bằng tiếng Việt, lặp lại ngắt quãng để nhớ lâu, mỗi ngày chỉ vài phút.',
+              'English, Korean, Chinese — with more languages to come. One gentle way to learn them all: meanings and pronunciation explained in Vietnamese, spaced repetition that makes words stick, a few minutes a day.'
             )}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -94,26 +95,15 @@ function Hero() {
               {t('Xem cách học', 'See how it works')}
             </Link>
           </div>
-          {/* The other packs, one tap away (hooks/useLangParam). */}
-          <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
-            {t('Hoặc học', 'Or learn')}{' '}
-            <Link
-              to="/home?lang=ko"
-              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
-            >
-              🇰🇷 {t('tiếng Hàn', 'Korean')}
-            </Link>
-            {' · '}
-            <Link
-              to="/home?lang=zh"
-              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
-            >
-              🇨🇳 {t('tiếng Trung', 'Chinese')}
-            </Link>{' '}
-            <span className="chip bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-              beta
-            </span>
-          </p>
+          {/* Every pack, with its word count, is in LanguagePicker right below. */}
+          <Link
+            to="/#languages"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:underline dark:text-brand-300"
+          >
+            <Languages className="h-4 w-4" aria-hidden="true" />
+            {t('Chọn ngôn ngữ bạn muốn học', 'Choose the language you want to learn')}
+            <ChevronDown className="h-4 w-4" aria-hidden="true" />
+          </Link>
           <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
             {[
               t('Không cần tài khoản để thử', 'No account needed to try'),
@@ -186,9 +176,9 @@ function HeroPreview() {
 function Stats() {
   const t = useT()
   const items = [
-    ['4.400+', '4,400+', t('từ thông dụng, A1 → B1', 'everyday words, A1 → B1')],
-    ['100', '100', t('mẫu câu giao tiếp', 'everyday phrases')],
-    ['2', '2', t('giọng đọc AI chuẩn Mỹ', 'natural AI voices')],
+    ['3', '3', t('ngôn ngữ, và sẽ còn thêm', 'languages, with more to come')],
+    ['4.700+', '4,700+', t('từ vựng có nghĩa tiếng Việt', 'words with Vietnamese meanings')],
+    ['25', '25', t('truyện ngắn chạm là ra nghĩa', 'short stories, tap for meanings')],
     ['0đ', '$0', t('học hoàn toàn miễn phí', 'completely free')],
   ] as const
   return (
@@ -373,8 +363,8 @@ function ForVietnamese() {
   const t = useT()
   const points = [
     t(
-      'Cách đọc gần đúng bằng chữ Việt cho mọi từ — "improve" đọc "im-PRUV".',
-      'A Vietnamese-letter respelling for every word — "improve" reads "im-PRUV".'
+      'Cách đọc gần đúng bằng chữ Việt — "improve" đọc "im-PRUV", "안녕하세요" đọc "an-nyơng-ha-xê-yô". Từ tiếng Trung có thêm âm Hán Việt.',
+      'A Vietnamese-letter respelling — "improve" reads "im-PRUV", "안녕하세요" reads "an-nyơng-ha-xê-yô". Chinese words also show their Sino-Vietnamese reading.'
     ),
     t(
       'Nghĩa và câu dịch bằng tiếng Việt tự nhiên.',
@@ -456,10 +446,13 @@ function Faq() {
       ),
     ],
     [
-      t('Mình mất gốc tiếng Anh, có học được không?', 'I am a complete beginner — is this for me?'),
       t(
-        'Được. App bắt đầu từ 1.000 từ cơ bản nhất, có cách đọc bằng chữ Việt và lời giải thích dễ hiểu.',
-        'Yes. It starts with the 1,000 most basic words, with Vietnamese respellings and plain explanations.'
+        'Mình bắt đầu từ con số 0, có học được không?',
+        'I am a complete beginner — is this for me?'
+      ),
+      t(
+        'Được. Tiếng Anh bắt đầu từ 1.000 từ cơ bản nhất, có cách đọc bằng chữ Việt. Tiếng Hàn có bài bảng chữ Hangul, tiếng Trung có bài pinyin và thanh điệu để bắt đầu. Mọi lời giải thích đều bằng tiếng Việt dễ hiểu.',
+        'Yes. English starts with the 1,000 most basic words, with Vietnamese respellings. Korean has a Hangul alphabet lesson and Chinese a pinyin & tones lesson to start with. Every explanation is in plain Vietnamese.'
       ),
     ],
     [
