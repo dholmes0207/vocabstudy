@@ -137,16 +137,6 @@ Mondly trả lỗi `403 Forbidden` cho trình duyệt quan sát. Tôi bỏ qua, 
 trình độ. Cách hợp với VocaStudy là một bài kiểm tra nhanh bằng chính dạng câu hỏi nhớ lại
 của app, trên từ lấy mẫu theo từng nấc độ khó. Không dùng tự khai "biết / không biết".
 
-## Cài REA
-
-- Đăng ký MCP `rea` ở cấp người dùng trong `~/.claude.json`.
-  - Lệnh được ghim vào Node 22, vì REA cần Node ≥ 22.19 mà Node mặc định của máy là 20.
-  - `rea doctor --client claude_code` báo `aligned`.
-- Skill ở `~/.claude/skills/reverse-engineer-anything`.
-- **Phải khởi động lại Claude Code** thì các công cụ MCP của REA mới hiện trong phiên. Trước
-  đó vẫn dùng được CLI `rea`.
-- Chrome dùng để quan sát là profile tạm, đã tắt sau khi quét.
-
 ## Vòng 3 (tối 17/10): Duolingo, ELSA, Memrise
 
 Hai vòng trước bỏ qua ba web này, vì yêu cầu ban đầu là tìm các web "khác với" chúng. Khi

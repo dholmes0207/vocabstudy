@@ -1,5 +1,8 @@
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig } from 'vitest/config'
+import type { Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 import path from 'node:path'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 
@@ -46,9 +49,21 @@ export default defineConfig({
     // (Cloudflare Pages among them) can skip dot-directories.
     manifest: 'asset-manifest.json',
   },
+  css: {
+    postcss: {
+      plugins: [tailwindcss(), autoprefixer()],
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
+  },
+  // Most tests cover pure logic and run in Node. Component tests opt into a DOM
+  // per file with a `@vitest-environment jsdom` docblock, so the fast majority
+  // never pays for jsdom startup.
+  test: {
+    environment: 'node',
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 })

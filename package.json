@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "VocaStudy — web học 1000 từ vựng tiếng Anh (React + Vite + Supabase + Cloudflare Pages).",
+  "description": "VocaStudy — nơi người Việt học nhiều ngoại ngữ: tiếng Anh, tiếng Hàn, tiếng Trung (React + Vite + Supabase + Cloudflare Pages).",
   "license": "MIT",
   "homepage": "https://vocastudy.app",
   "repository": {
@@ -58,5 +58,14 @@
     "typescript-eslint": "^8.66.0",
     "vite": "^8.2.2",
     "vitest": "^4.1.10"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "arrowParens": "always",
+    "endOfLine": "lf"
   }
 }

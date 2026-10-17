@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # cloudflare / wrangler
 .wrangler/
+
+# Python bytecode from running the build scripts.
+__pycache__/

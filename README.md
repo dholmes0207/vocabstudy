@@ -7,7 +7,7 @@ Nơi **người Việt học nhiều ngoại ngữ**: hiện có **tiếng Anh**
 Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker** nên sau lần tải đầu, từ vựng và file phát âm đã nghe qua vẫn dùng được **khi mất mạng**; phần vỏ ứng dụng luôn ưu tiên tải bản mới nên không bao giờ bị kẹt ở bản cũ. Đăng nhập là **tuỳ chọn**: chưa đăng nhập thì tiến độ lưu ở `localStorage`; đăng nhập thì đồng bộ qua **Supabase** giữa các thiết bị và mở khoá **trợ lý AI**.
 
 > 📄 Tài liệu kế hoạch chi tiết (theo quy trình 3 vai: Người học → BA → DEV): [`docs/PLAN.md`](docs/PLAN.md)
-> 📖 Tài liệu nguồn: [`docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`](docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf) — xem ghi chú về [nguồn dữ liệu](#-nguồn--giấy-phép)
+> 📖 Tài liệu nguồn: [`docs/sources/1000-tu-vung-tieng-anh-thong-dung.pdf`](docs/sources/1000-tu-vung-tieng-anh-thong-dung.pdf) — xem ghi chú về [nguồn dữ liệu](#-nguồn--giấy-phép)
 
 ---
 
@@ -70,7 +70,7 @@ Bong bóng trợ lý (`src/components/AssistantFab.tsx`) nổi ở mọi trang, 
 - **Đọc ngữ cảnh trang** (`src/store/contextStore.ts`): trợ lý biết đang xem/ôn/kiểm tra từ nào để gợi ý & trả lời sát hơn.
 - **Lớp client** (`src/lib/ai/guardrail.ts`): chặn input rỗng/quá dài trước khi gọi.
 
-Yêu cầu **đăng nhập** để dùng AI. Cấu hình key = biến `OPENAI_API_KEY` trên Cloudflare (xem [DEPLOY.md](DEPLOY.md)).
+Yêu cầu **đăng nhập** để dùng AI. Cấu hình key = biến `OPENAI_API_KEY` trên Cloudflare (xem [docs/DEPLOY.md](docs/DEPLOY.md)).
 
 ## 🚀 Chạy dự án
 
@@ -113,7 +113,7 @@ npm run build          # Vite production build
 | Auth model   | Supabase Auth + bảng `profiles`                 | RBAC `student`/`admin` kiểm **ở server**; user đầu tiên = admin (trigger).                                      |
 | Đồng bộ      | bảng `progress(user_id, lang_code, data jsonb)` | Tải khi đăng nhập, lưu debounce; **migrate localStorage → tài khoản** lần đầu.                                  |
 
-**Deploy:** xem [**DEPLOY.md**](DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocastudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
+**Deploy:** xem [**docs/DEPLOY.md**](docs/DEPLOY.md) (Supabase → GitHub → Cloudflare Pages → domain `vocastudy.app`). Thiết kế 3 vai: [`docs/design/`](docs/design/) và `docs/PLAN.md` (Phần G, H).
 
 > ⚠️ **Bảo mật:** mật khẩu do Supabase Auth quản lý; **RLS** chặn truy cập chéo; **key OpenAI + service-role chỉ ở Cloudflare secret**; quyền admin kiểm ở server (fail-closed — Supabase lỗi thì từ chối kèm 503 chứ không cho qua); mọi id gửi lên endpoint admin phải đúng dạng UUID. Trợ lý AI có **hạn mức `AI_DAILY_LIMIT` lượt/học sinh/ngày** (mặc định 30, đếm nguyên tử trong Postgres, mốc ngày theo giờ Việt Nam). Học sinh được nhắc số lượt còn lại khi sắp hết; admin xem được hạn mức có đang đếm thật hay không ngay ở trang Quản trị. Roadmap: quản lý lớp (mã lớp/CSV), quên-mật-khẩu email.
 
@@ -155,29 +155,30 @@ python3 scripts/generate_phonetics.py    # điền ipa + viRead vào public/data
 ## 📁 Cấu trúc dự án
 
 ```
-Vocabulary-Study/
-├─ docs/                       # PLAN.md, thiết kế 3 vai (design/) + tài liệu PDF gốc
+vocabstudy/
+├─ docs/
+│  ├─ DEPLOY.md                # Hướng dẫn deploy: Supabase → GitHub → Cloudflare Pages
+│  ├─ PLAN.md                  # Kế hoạch dự án (3 vai: Người học → BA → DEV)
+│  ├─ design/                  # Thiết kế từng tính năng
+│  ├─ research/                # Ghi chép quan sát các web học ngoại ngữ khác
+│  └─ sources/                 # Tài liệu PDF gốc
 ├─ public/
-│  ├─ data/
-│  │  ├─ index.json            # Manifest liệt kê các ngôn ngữ
-│  │  └─ en.json               # Gói ngôn ngữ tiếng Anh (app đọc qua fetch) — nguồn chân lý
-│  └─ audio/en/                # MP3 giọng Neural sinh sẵn (~56MB) + index.json
+│  ├─ data/                    # Gói ngôn ngữ en / ko / zh (+ grammar, reading, topics, phrases)
+│  │  └─ index.json            # Manifest liệt kê các ngôn ngữ
+│  └─ audio/en/                # MP3 giọng Neural sinh sẵn (2 giọng) + index.json
 ├─ functions/                  # Cloudflare Pages Functions — API giữ secret server-side
 │  ├─ _shared.ts               # Xác thực token Supabase, helper response
-│  └─ api/                     # ai/chat, ai/status, admin/users
+│  └─ api/                     # ai/, admin/, account, feedback, errors, health…
 ├─ src/
 │  ├─ types/                   # Kiểu dữ liệu dùng chung
-│  ├─ lib/                     # Logic thuần: srs, quiz, level, phonetic, pronunciation,
-│  │                           #   tts, speech, recorder, date, summary, decks, backup…
-│  │  └─ ai/                   # systemPrompt, guardrail, suggestions
-│  ├─ store/                   # Zustand: auth, settings, study, data, context
-│  ├─ hooks/                   # useEffectiveLevel, useProgressSync
-│  ├─ components/              # UI tái sử dụng: Layout, Flashcard, SpeakButton, ProgressRing…
-│  └─ features/                # Màn hình: dashboard, learn, review, quiz, speaking,
-│                              #           browse, stats, settings, auth, admin, tutor
-├─ supabase/schema.sql         # Bảng profiles/progress, RLS, trigger admin đầu tiên
-├─ scripts/                    # Python: sinh audio (edge-tts) & phiên âm IPA
-└─ (vite / tsconfig / tailwind / eslint / prettier configs)
+│  ├─ lib/                     # Logic thuần (srs, quiz, level, pronunciation, sync…) + test
+│  ├─ store/                   # Zustand stores
+│  ├─ hooks/                   # React hooks dùng chung
+│  ├─ components/              # UI tái sử dụng
+│  └─ features/                # Từng màn hình / tính năng
+├─ supabase/                   # schema.sql, mẫu email, hướng dẫn bật đăng nhập Google
+├─ scripts/                    # Python: dựng gói dữ liệu, sinh audio (edge-tts) & phiên âm IPA
+└─ vite.config.ts …            # Cấu hình Vite + Vitest + PostCSS; tsconfig, tailwind, eslint
 ```
 
 Nguyên tắc: **dữ liệu và logic (`src/lib`) độc lập với React** → dễ kiểm thử (xem `src/lib/*.test.ts`); **store** nối logic với UI và lo phần lưu trữ; **UI** chỉ render + phát sự kiện.

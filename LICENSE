@@ -28,7 +28,7 @@ This license covers the SOURCE CODE of this repository only. It does NOT cover
 the bundled learning content, which is third-party material included for
 educational use:
 
-  - docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf
+  - docs/sources/1000-tu-vung-tieng-anh-thong-dung.pdf
   - public/data/en.json   (vocabulary dataset derived from the PDF above)
   - public/audio/         (speech audio generated with Microsoft Edge TTS voices)
 

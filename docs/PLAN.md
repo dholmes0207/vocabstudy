@@ -1047,7 +1047,7 @@ Thêm 1 ngôn ngữ = thêm `public/data/<code>.json` (đúng interface `Languag
 
 ---
 
-_Tài liệu gốc: `docs/Tailieu_1000_Tu_Vung_Tieng_Anh_Thong_Dung.md.pdf`. Ba vai (Người học, BA, DEV) được tạo song song bằng quy trình role-play, phần D là tổng hợp & chốt quyết định của người tổng thầu._
+_Tài liệu gốc: `docs/sources/1000-tu-vung-tieng-anh-thong-dung.pdf`. Ba vai (Người học, BA, DEV) được tạo song song bằng quy trình role-play, phần D là tổng hợp & chốt quyết định của người tổng thầu._
 
 ---
 
@@ -1139,6 +1139,6 @@ Theo yêu cầu deploy lên **Cloudflare Pages** + **Supabase**, backend Express
 - **Cloudflare Pages Functions** (`functions/`): `/api/ai/chat` (proxy OpenAI, guardrail + level + context, key = secret), `/api/ai/status`, `/api/admin/users` (service-role, chỉ admin).
 - **Đồng bộ**: bảng `progress(user_id, lang_code, data jsonb)` qua supabase-js; migrate localStorage → tài khoản.
 - Secret (OPENAI_API_KEY, SUPABASE_SERVICE_ROLE_KEY) chỉ ở Cloudflare; `VITE_SUPABASE_*` build-time.
-- Hướng dẫn từng bước: **`DEPLOY.md`**. Repo: github.com/dholmes0207/vocabstudy (private).
+- Hướng dẫn từng bước: **`docs/DEPLOY.md`**. Repo: github.com/dholmes0207/vocabstudy (private).
 
 _Ghi chú: mình không test trực tiếp được Supabase/Cloudflare (cần project + key của bạn); code đã build sạch (frontend + Functions type-check) và chạy chế độ khách OK. Live end-to-end xác minh sau khi bạn cắm Supabase + secret theo DEPLOY.md._
