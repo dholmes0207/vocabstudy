@@ -92,6 +92,26 @@ function Hero() {
               {t('Xem cách học', 'See how it works')}
             </Link>
           </div>
+          {/* The other packs, one tap away (hooks/useLangParam). */}
+          <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            {t('Hoặc học', 'Or learn')}{' '}
+            <Link
+              to="/home?lang=ko"
+              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+            >
+              🇰🇷 {t('tiếng Hàn', 'Korean')}
+            </Link>
+            {' · '}
+            <Link
+              to="/home?lang=zh"
+              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+            >
+              🇨🇳 {t('tiếng Trung', 'Chinese')}
+            </Link>{' '}
+            <span className="chip bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+              beta
+            </span>
+          </p>
           <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
             {[
               t('Không cần tài khoản để thử', 'No account needed to try'),

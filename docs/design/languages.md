@@ -89,3 +89,18 @@
   Test kiểm tra các điều kiện này.
 
 - Tra cứu tìm được theo âm Hán Việt cho cả hai gói: "hoc sinh" ra 학생 và 学生.
+
+## Mở app thẳng vào một ngôn ngữ (17/10/2026)
+
+- **User:** người muốn học tiếng Hàn hay tiếng Trung vào trang chủ thì luôn rơi vào tiếng
+  Anh, phải tự tìm nút ngôn ngữ trong app.
+- **BA:**
+  - Dưới nút "Bắt đầu học miễn phí" của trang chủ có thêm dòng "Hoặc học 🇰🇷 tiếng Hàn · 🇨🇳
+    tiếng Trung (beta)".
+  - Đường dẫn `/home?lang=ko` hoặc `/home?lang=zh` mở app ở ngôn ngữ đó; dùng được cả khi
+    chia sẻ.
+- **Dev:** hook `useLangParam` chạy trong `Layout`.
+  - Đợi danh sách gói tải xong, rồi chuyển ngôn ngữ nếu mã có trong danh sách. Mã lạ
+    (`?lang=fr`) bị bỏ qua.
+  - Sau đó xoá `lang` khỏi URL, để tải lại trang không ghi đè lựa chọn người học làm sau.
+  - Có test cho cả ba trường hợp: mã hợp lệ, mã lạ, danh sách gói chưa tải xong.

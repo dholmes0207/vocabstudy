@@ -39,6 +39,7 @@ import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { availableIn, packsFor } from '@/lib/packContent'
 import PackOnly from './PackOnly'
 import { useTargetLang } from '@/hooks/useTargetLang'
+import { useLangParam } from '@/hooks/useLangParam'
 
 /** A Vietnamese/English pair, picked by the interface language. */
 type Pair = [vi: string, en: string]
@@ -113,6 +114,7 @@ const isOn = (item: NavItem, pathname: string) =>
 
 export default function Layout() {
   useProgressSync()
+  useLangParam()
   const t = useT()
   const L = useTargetLang()
   // Once the app has been opened here, "/" brings this device straight back to it.

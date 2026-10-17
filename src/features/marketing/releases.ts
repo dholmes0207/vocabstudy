@@ -32,6 +32,10 @@ export const RELEASES: Release[] = [
         'Gói tiếng Trung tăng lên 156 từ, phủ đủ 150 từ HSK 1: thêm số đếm 4–9, 上 / 下 / 里 / 前面 / 后面, 怎么, 怎么样, 请, 喂, 电影…',
         'The Chinese pack grows to 156 words and now covers all 150 HSK 1 words: numbers 4–9, 上 / 下 / 里 / 前面 / 后面, 怎么, 怎么样, 请, 喂, 电影…',
       ],
+      [
+        'Trang chủ có lối vào thẳng tiếng Hàn và tiếng Trung; đường dẫn /home?lang=ko hay /home?lang=zh mở app ngay ở ngôn ngữ đó.',
+        'The home page links straight to Korean and Chinese; /home?lang=ko or /home?lang=zh opens the app in that language.',
+      ],
     ],
   },
   {
