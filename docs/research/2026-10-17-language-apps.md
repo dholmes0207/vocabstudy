@@ -166,3 +166,76 @@ ba đều cần đăng nhập, nên không xem.
 - Các mức có ranh giới 25, 50, 100, 200… từ, nên người mới học cũng được xếp chính xác.
 - Kết quả chỉ đổi chỗ bắt đầu của bài Học. App không đánh dấu từ nào là đã thuộc, nên số
   liệu và lịch ôn vẫn trung thực.
+
+## Vòng 4 (18/10): xem bên trong Duolingo và Memrise khi đã đăng nhập
+
+**Cách làm**
+
+- Mở một cửa sổ Chrome riêng: profile tạm, cổng điều khiển chỉ nghe ở `127.0.0.1`.
+- **Chủ dự án tự đăng nhập** vào Duolingo, Memrise và ELSA rồi tự làm một bài trên mỗi web.
+  Mật khẩu không đi qua công cụ nào.
+- REA (`inspect-web-page`) chụp cấu trúc màn hình mỗi vài giây, chỉ đọc, không bấm.
+  - REA không lưu cookie, giá trị lưu trữ hay header đăng nhập.
+  - Bản chụp chứa trang của tài khoản người dùng, nên **đã xoá sau khi rút ra kết luận**. Chỉ
+    giữ Evidence ID.
+- Sau đó đóng cửa sổ và xoá profile tạm, phiên đăng nhập trong đó cũng mất theo.
+- ELSA: trên web không vào được phần học (chủ yếu là app điện thoại), nên không có dữ liệu.
+
+**Duolingo** (trang `/learn`: `ev_d78097efbba8…`; bài học: 18 màn, ví dụ `ev_d7b7485d5403…`,
+`ev_82efd9b6f16f…`, `ev_a0bc9cd1f27c…`, `ev_87365400fcde…`, `ev_0fe6ac10f71b…`,
+`ev_e5def540ad9b…`)
+
+- **Lộ trình:**
+  - chia theo Phần → Cửa;
+  - mỗi phần có nút "Hướng dẫn" (sổ tay của phần đó) và "Học vượt?" (kiểm tra để bỏ qua
+    phần đã biết);
+  - bên cạnh có nhiệm vụ hằng ngày, giải đấu tuần, tim (mạng) và mục Phát âm.
+- **Trong bài:**
+  - từ mới gắn nhãn "TỪ MỚI";
+  - các dạng câu: chọn nghĩa, xếp chữ để dịch, hoàn thành hội thoại, nghe rồi điền;
+  - đáp án có phím tắt 1/2/3;
+  - có nút "Hiện không nghe được" để tạm bỏ câu nghe.
+- **Phản hồi:**
+  - "Tuyệt vời!" kèm "5 lần liên tiếp", và hai nút "Quá dễ" / "Quá khó";
+  - sai thì mất một tim.
+- **Cuối bài:**
+  - "Cùng xem lại những câu chưa đúng nhé!" rồi hỏi lại các câu sai (nhãn "LỖI SAI CŨ");
+  - sau đó là màn chọn mục tiêu chuỗi 7/14/30/50 ngày, kèm cảnh báo chuỗi về 0 nếu mai quên
+    học.
+
+**Memrise** (trang chủ: `ev_7e60a69a9d65…`; lượt học: 13 màn, ví dụ `ev_3feaa4cbfd86…`,
+`ev_fd4a7c13455d…`, `ev_1d522b6bd932…`, `ev_1b23a6cfecb7…`, `ev_4203515257f4…`)
+
+- **Trang chủ** tách việc ôn theo kỹ năng: "Học từ mới", "Nghe các từ đã học", "Dùng các
+  từ đã học", có điểm để lên cấp và mục "Bạn thân AI" (ghép câu, hội thoại).
+- **Thẻ từ mới:**
+  - nghe hai giọng hoặc video người bản xứ;
+  - nút **"Tôi đã biết từ này"**;
+  - nút "đánh dấu từ khó" để luyện nhiều hơn;
+  - **nói thử ngay trên thẻ**: xin quyền micro → ghi âm → "Không hề tệ, hãy thử lại để hoàn
+    thiện hơn nhé!".
+- **Dạng câu:**
+  - gõ bản dịch bằng các chữ cái cho sẵn, có nút "Gợi ý";
+  - xếp ô chữ thành câu, có ô gây nhiễu và nút "Tôi không biết".
+- **Cuối lượt:**
+  - màn "Kỷ lục học đã dài ra" kèm lịch tuần;
+  - tóm tắt thay đổi: điểm +6, từ đã thành thạo +2.
+
+**Đã làm theo cách riêng**
+
+- "Mình biết từ này rồi" trên thẻ làm quen (`docs/design/learning-depth.md`). Khác Memrise:
+  từ đó không tính là đã thuộc, mà được hỏi lại sau 5 ngày.
+
+**Gợi ý cho lần sau**, xếp theo giá trị trên công sức:
+
+1. "Tạm thời không nghe được" trong Ôn tập và Quiz, cho người đang ở nơi công cộng: đổi câu
+   nghe thành câu đọc trong 15 phút. Học từ Duolingo.
+2. Tóm tắt cuối buổi theo thay đổi: "đã thuộc +2, ôn tiếp +3", thay vì chỉ số câu đúng. Học
+   từ Memrise.
+3. Nói thử ngay trên thẻ làm quen, dùng lại bộ chấm một từ có sẵn. Học từ Memrise.
+4. "Kiểm tra để bỏ qua bộ từ này" trong danh sách bộ từ, dùng lại `bandQuestions` của bài
+   kiểm tra trình độ. Học từ "Học vượt?" của Duolingo.
+
+**Không làm**: tim / mạng và cảnh báo mất chuỗi. Hai cơ chế này phạt người học, trái với giá
+trị "động viên, không chê trách" của VocaStudy. Chuỗi ngày học của VocaStudy đã có khiên bảo
+vệ.

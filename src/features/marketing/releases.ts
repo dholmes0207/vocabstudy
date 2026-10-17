@@ -13,6 +13,23 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-18',
+    title: [
+      '"Mình biết từ này rồi" và trang giới thiệu cho mọi người',
+      '"I already know this word", and the introduction for everyone',
+    ],
+    items: [
+      [
+        'Trên thẻ làm quen của bài học có nút "Mình biết từ này rồi": từ đó được bỏ qua trong bài, và app hỏi lại sau 5 ngày để chắc chắn. Không tính là đã thuộc cho tới khi bạn trả lời đúng.',
+        'Meet cards now have "I already know this word": the word is skipped in the lesson and checked again in 5 days. It doesn’t count as mastered until you answer it.',
+      ],
+      [
+        'Vào vocastudy.app giờ luôn mở trang giới thiệu. Nếu đã từng học, bạn thấy nút "Tiếp tục học" để vào thẳng app. App cài trên điện thoại vẫn mở vào phần học như cũ.',
+        'vocastudy.app now always opens on the introduction. If you have studied before, a "Continue learning" button takes you straight in. The installed app still opens straight to your lessons.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-17',
     title: [
       'Lộ trình HSK 1 / TOPIK I, kiểm tra trình độ, lưu từ khi đọc',

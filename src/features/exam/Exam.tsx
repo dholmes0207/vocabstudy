@@ -41,6 +41,7 @@ function Roadmap({ exam }: { exam: ExamInfo }) {
   const pack = useData((s) => s.pack)!
   const cards = useStudy((s) => s.progress[code]?.cards) ?? NO_CARDS
   const recordAnswer = useStudy((s) => s.recordAnswer)
+  const markKnown = useStudy((s) => s.markKnown)
   const best = useExam((s) => s.records[exam.id])
   const totals = usePackTotals(code)
   const grammarDone = useGrammar((s) =>
@@ -64,6 +65,7 @@ function Roadmap({ exam }: { exam: ExamInfo }) {
         pool={pack.words}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        onKnown={(w) => markKnown(code, w.id)}
         onExit={() => setMode(null)}
         renderComplete={(total) => (
           <SessionComplete

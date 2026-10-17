@@ -23,6 +23,7 @@ export default function Topics() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   const recordAnswer = useStudy((s) => s.recordAnswer)
+  const markKnown = useStudy((s) => s.markKnown)
   const t = useT()
   const [topics, setTopics] = useState<Topic[] | null>(null)
   const [session, setSession] = useState<
@@ -91,6 +92,7 @@ export default function Topics() {
         pool={pack.words}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        onKnown={(w) => markKnown(code, w.id)}
         onExit={() => setSession(null)}
         renderComplete={(total) => (
           <SessionComplete

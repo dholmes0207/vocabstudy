@@ -241,3 +241,42 @@ emoji?: string                              // mã hoá kép cho từ cụ thể
 6. fix(dữ liệu): viết lại câu ví dụ hỏng + nghĩa cụt, đọc lại audio
 7. feat(dữ liệu): cụm đi kèm, từ cùng họ, mẹo nhớ, emoji cho 1000 từ
 8. feat: câu của bạn + nhờ AI xem câu
+
+## "Mình biết từ này rồi" (18/10/2026)
+
+**User**: "Trong bài học có những từ mình biết rồi, vẫn phải đi qua hết."
+
+Tham khảo: thẻ học của Memrise có nút "Tôi đã biết từ này". Quan sát bằng REA khi người dùng
+đăng nhập và tự làm một lượt học (xem `docs/research/2026-10-17-language-apps.md`, vòng 4).
+VocaStudy **không làm giống hệt**: ở Memrise, từ đó được tính là đã thuộc. Ở VocaStudy, từ đó
+**chỉ được bỏ qua tạm**, rồi được kiểm tra lại.
+
+**BA**
+
+- Thẻ làm quen (bài Học, Chủ đề, Lộ trình luyện thi) có nút "Mình biết từ này rồi", kèm
+  dòng nhỏ: "app sẽ hỏi lại sau 5 ngày để chắc chắn".
+- Bấm vào thì từ rời khỏi bài đang học. Thẻ sau hiện ngay. Nếu cả nhóm đều đã biết thì sang
+  nhóm tiếp theo.
+- Từ đó vào lịch ôn ở **hộp 3**: qua bước đầu, nhưng không tính là đã thuộc.
+  - Sau 5 ngày, phần Ôn tập hỏi nó bằng dạng câu của hộp 3. Đây là dạng khó hơn, không phải
+    chọn nghĩa.
+  - Trả lời sai thì từ quay về hộp 0 và học lại như từ mới.
+- Không cộng XP và không tính vào số từ mới của ngày, nên bài học hôm đó đề xuất thêm từ
+  khác.
+- Nút chỉ hiện với từ **chưa có** trong lịch ôn. Khi học lại cả một bộ từ, những từ đang ôn
+  không có nút này.
+- Cuối bài, app báo: "Bạn đã bỏ qua N từ đã biết — app sẽ hỏi lại sau 5 ngày."
+
+**Dev**
+
+- `lib/srs.ts`: `KNOWN_BOX = 3`, `KNOWN_CHECK_DAYS = INTERVALS[2]` (5 ngày) và `knownCard(id,
+day)`.
+- `studyStore.markKnown(code, id)`:
+  - tạo thẻ bằng `knownCard`;
+  - không đụng `stats`, nên không có XP, không đổi `newByDay` và chuỗi ngày học;
+  - từ đã có thẻ thì bỏ qua.
+- Thẻ dùng các trường như mọi thẻ khác, nên đồng bộ và sao lưu không phải sửa gì.
+- `LearnSession`:
+  - nhận `onKnown`; nhóm từ được lọc trong `useMemo`, để câu hỏi không bị xáo lại mỗi lần
+    render;
+  - `renderComplete(total, known)`.

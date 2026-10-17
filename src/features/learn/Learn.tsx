@@ -7,7 +7,7 @@ import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
 import { DECK_SIZE, buildDecks } from '@/lib/decks'
-import { phaseOf } from '@/lib/srs'
+import { KNOWN_CHECK_DAYS, phaseOf } from '@/lib/srs'
 import { pendingSaved } from '@/lib/savedWords'
 import { useSavedIds, useSavedWords } from '@/store/savedWordsStore'
 import { usePlacement } from '@/store/placementStore'
@@ -31,6 +31,7 @@ export default function Learn() {
   const dailyNewLimit = useSettings((s) => s.dailyNewLimit)
   const progress = useStudy((s) => s.progress[code])
   const recordAnswer = useStudy((s) => s.recordAnswer)
+  const markKnown = useStudy((s) => s.markKnown)
   const t = useT()
   const lang = useTargetLang()
   // Placement check (docs/design/placement.md): where new words start.
@@ -71,18 +72,29 @@ export default function Learn() {
         pool={pack.words}
         ttsLang={pack.meta.ttsLang}
         onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        onKnown={(w) => markKnown(code, w.id)}
         onExit={() => setSession(null)}
-        renderComplete={(total) => (
+        renderComplete={(total, known) => (
           <SessionComplete
             emoji="🌟"
             title={t('Học xong rồi!', 'Lesson done!')}
             correct={total}
             total={total}
             showScore={false}
-            note={t(
-              `Bạn vừa làm quen và tự nhớ lại ${total} từ — thêm ${total} ngôi sao trên bầu trời của bạn ✨. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`,
-              `You just met and recalled ${total} words — ${total} more stars in your sky ✨. Tomorrow the app will ask again — remembering after a night is what makes it stick.`
-            )}
+            note={[
+              total > 0 &&
+                t(
+                  `Bạn vừa làm quen và tự nhớ lại ${total} từ — thêm ${total} ngôi sao trên bầu trời của bạn ✨. Ngày mai app sẽ hỏi lại — nhớ lại được sau một đêm mới là nhớ thật.`,
+                  `You just met and recalled ${total} words — ${total} more stars in your sky ✨. Tomorrow the app will ask again — remembering after a night is what makes it stick.`
+                ),
+              known > 0 &&
+                t(
+                  `Bạn đã bỏ qua ${known} từ đã biết — app sẽ hỏi lại sau ${KNOWN_CHECK_DAYS} ngày.`,
+                  `You skipped ${known} word${known === 1 ? '' : 's'} you already know — the app will check in ${KNOWN_CHECK_DAYS} days.`
+                ),
+            ]
+              .filter(Boolean)
+              .join(' ')}
           >
             <Link to="/review" className="btn-primary">
               {t('Ôn tập ngay', 'Review now')}

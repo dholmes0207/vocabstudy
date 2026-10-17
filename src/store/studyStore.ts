@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { LanguageProgress, SRSCard, StudyStats } from '@/types'
-import { newCard, review } from '@/lib/srs'
+import { knownCard, newCard, review } from '@/lib/srs'
 import { today } from '@/lib/date'
 import { nextStreak } from '@/lib/motivation'
 import { pickSticker } from '@/lib/stickers'
@@ -19,6 +19,12 @@ interface StudyState {
 
   /** Record a review/answer for a word; creates the card if it is new. */
   recordAnswer: (code: string, wordId: number, correct: boolean) => void
+  /**
+   * The learner already knows a word they have not studied here: schedule a
+   * check instead of a lesson (lib/srs.ts knownCard). No XP, not a new word of
+   * the day, and a word already in the schedule is left alone.
+   */
+  markKnown: (code: string, wordId: number) => void
   /**
    * XP from play (games): counts as a study day for the streak but never
    * touches an SRS card — see lib/games.ts.
@@ -60,6 +66,18 @@ export const useStudy = create<StudyState>()(
   persist(
     (set, get) => ({
       progress: {},
+
+      markKnown: (code, wordId) =>
+        set((state) => {
+          const lang = state.progress[code] ?? emptyProgress()
+          if (lang.cards[wordId]) return state
+          return {
+            progress: {
+              ...state.progress,
+              [code]: { ...lang, cards: { ...lang.cards, [wordId]: knownCard(wordId, today()) } },
+            },
+          }
+        }),
 
       recordAnswer: (code, wordId, correct) => {
         const day = today()

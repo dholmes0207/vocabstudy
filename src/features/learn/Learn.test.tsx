@@ -10,6 +10,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useSavedWords } from '@/store/savedWordsStore'
 import { usePlacement } from '@/store/placementStore'
+import { KNOWN_BOX } from '@/lib/srs'
 
 // "Lưu để học" on the Learn page (docs/design/saved-words.md).
 
@@ -83,5 +84,38 @@ describe('placement check on the Learn page', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /^Learn \d+ words$/ }))
     expect(screen.getAllByText(pack.words[400].word).length).toBeGreaterThan(0)
+  })
+})
+
+describe('"I already know this word" on a meet card', () => {
+  it('skips the word, schedules a check, and moves to the next card', () => {
+    renderLearn()
+    fireEvent.click(screen.getByRole('button', { name: /^Learn \d+ words$/ }))
+    const [first, second] = pack.words
+    expect(screen.getAllByText(first.word).length).toBeGreaterThan(0)
+
+    fireEvent.click(screen.getByRole('button', { name: /I already know this word/ }))
+    expect(useStudy.getState().progress.en.cards[first.id]).toMatchObject({ box: KNOWN_BOX })
+    expect(screen.getAllByText(second.word).length).toBeGreaterThan(0)
+    expect(useStudy.getState().newIntroducedToday('en')).toBe(0)
+  })
+
+  it('says so at the end when every word was already known', () => {
+    const a = byWord('umbrella')
+    useSavedWords.setState({ saved: { en: [a.id] } })
+    renderLearn()
+    fireEvent.click(screen.getByRole('button', { name: /Learn 1 saved word/ }))
+    fireEvent.click(screen.getByRole('button', { name: /I already know this word/ }))
+    expect(screen.getByText(/You skipped 1 word you already know/)).toBeInTheDocument()
+  })
+
+  it('is not offered for a word already in the review schedule', () => {
+    // A deck replay also shows started words; the first deck holds pack.words[0..19].
+    useStudy.getState().recordAnswer('en', pack.words[0].id, true)
+    renderLearn()
+    fireEvent.click(screen.getAllByRole('button', { name: /Set 1/ })[0])
+    expect(
+      screen.queryByRole('button', { name: /I already know this word/ })
+    ).not.toBeInTheDocument()
   })
 })

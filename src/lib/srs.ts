@@ -46,6 +46,27 @@ export function newCard(id: number, day: number = today()): SRSCard {
 }
 
 /**
+ * "Mình biết từ này rồi" (docs/design/learning-depth.md): a word the learner
+ * says they already know skips the early steps but is not mastered — it waits
+ * KNOWN_CHECK_DAYS, then a review asks for it at that box's (harder) question
+ * type. A wrong answer there sends it back to box 0 like any other card.
+ */
+export const KNOWN_BOX = 3
+export const KNOWN_CHECK_DAYS = INTERVALS[2]
+
+export function knownCard(id: number, day: number = today()): SRSCard {
+  return {
+    id,
+    box: KNOWN_BOX,
+    dueDay: day + KNOWN_CHECK_DAYS,
+    lastReviewedDay: day,
+    correctCount: 0,
+    wrongCount: 0,
+    createdDay: day,
+  }
+}
+
+/**
  * Apply a review outcome to a card and return the *new* card (pure function).
  * @param card    the card being reviewed
  * @param correct whether the learner answered correctly

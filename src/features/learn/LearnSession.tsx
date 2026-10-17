@@ -1,16 +1,18 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowLeft, ArrowRight, Brain, LogOut } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Brain, CheckCheck, LogOut } from 'lucide-react'
 import type { Word } from '@/types'
 import { GROUP_SIZE, chunk, learnDrills } from '@/lib/practice'
 import { makeQuestion } from '@/lib/quiz'
 import { exampleAudio, prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
+import { useStudy } from '@/store/studyStore'
 import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
 import QuizRunner from '@/components/QuizRunner'
 import WordInsight from '@/components/WordInsight'
 import MySentence from '@/components/MySentence'
 import { useT } from '@/lib/i18n'
+import { KNOWN_CHECK_DAYS, phaseOf } from '@/lib/srs'
 
 // A learning session for a beginner, in small groups:
 //
@@ -27,9 +29,14 @@ interface Props {
   pool: Word[]
   ttsLang: string
   onAnswer: (word: Word, correct: boolean) => void
+  /**
+   * "Mình biết từ này rồi" on a meet card: the word leaves this session and the
+   * caller schedules a check (studyStore.markKnown). No button without it.
+   */
+  onKnown?: (word: Word) => void
   onExit: () => void
-  /** Rendered once every group is done. */
-  renderComplete: (total: number) => React.ReactNode
+  /** Rendered once every group is done: words studied, and words skipped as known. */
+  renderComplete: (total: number, known: number) => React.ReactNode
 }
 
 type Phase = 'meet' | 'practice'
@@ -39,6 +46,7 @@ export default function LearnSession({
   pool,
   ttsLang,
   onAnswer,
+  onKnown,
   onExit,
   renderComplete,
 }: Props) {
@@ -47,9 +55,28 @@ export default function LearnSession({
   const [groupIdx, setGroupIdx] = useState(0)
   const [phase, setPhase] = useState<Phase>('meet')
   const [cardIdx, setCardIdx] = useState(0)
+  const [known, setKnown] = useState<number[]>([])
   const t = useT()
 
-  const group = groups[groupIdx] as Word[] | undefined
+  // Memoised: a fresh array every render would rebuild (and reshuffle) the drills.
+  const group = useMemo(
+    () => groups[groupIdx]?.filter((w) => !known.includes(w.id)),
+    [groups, groupIdx, known]
+  )
+
+  const markKnown = (w: Word) => {
+    onKnown?.(w)
+    setKnown((k) => [...k, w.id])
+    const left = group!.filter((x) => x.id !== w.id).length
+    if (left === 0) {
+      // Nothing left to meet or practise in this group.
+      setGroupIdx((g) => g + 1)
+      setCardIdx(0)
+      setPhase('meet')
+    } else if (cardIdx >= left) {
+      setPhase('practice')
+    }
+  }
 
   // Built once per group, so options don't reshuffle on re-render.
   const questions = useMemo(
@@ -58,7 +85,7 @@ export default function LearnSession({
     [group, byId, pool]
   )
 
-  if (!group) return <>{renderComplete(words.length)}</>
+  if (!group) return <>{renderComplete(words.length - known.length, known.length)}</>
 
   const groupLabel =
     groups.length > 1
@@ -76,6 +103,7 @@ export default function LearnSession({
         caption={groupLabel}
         onIndex={setCardIdx}
         onDone={() => setPhase('practice')}
+        onKnown={onKnown && ((w) => markKnown(w))}
         onExit={onExit}
       />
     )
@@ -96,7 +124,7 @@ export default function LearnSession({
       }}
       renderComplete={(correct, total) =>
         isLast ? (
-          renderComplete(words.length)
+          renderComplete(words.length - known.length, known.length)
         ) : (
           <BetweenGroups
             label={groupLabel}
@@ -170,6 +198,7 @@ function MeetCards({
   caption,
   onIndex,
   onDone,
+  onKnown,
   onExit,
 }: {
   group: Word[]
@@ -178,6 +207,7 @@ function MeetCards({
   caption: string
   onIndex: (i: number) => void
   onDone: () => void
+  onKnown?: (word: Word) => void
   onExit: () => void
 }) {
   useImmersive()
@@ -186,6 +216,9 @@ function MeetCards({
   const word = group[index]
   const last = index + 1 >= group.length
   const t = useT()
+  // Only for a word not in the schedule yet: a deck replay also shows words
+  // being reviewed, and those already get checked at the right time.
+  const isNew = useStudy((s) => phaseOf(s.progress[lang]?.cards[word.id]) === 'new')
 
   useProvideContext(`Đang làm quen từ "${word.word}"`, {
     word: word.word,
@@ -263,6 +296,24 @@ function MeetCards({
       <div className="card space-y-4 p-6">
         <WordInsight key={word.id} word={word} ttsLang={ttsLang} variant="full" />
         <MySentence key={`mine-${word.id}`} word={word} lang={lang} />
+        {onKnown && isNew && (
+          <div className="border-t border-slate-100 pt-3 text-center dark:border-slate-800">
+            <button
+              type="button"
+              onClick={() => onKnown(word)}
+              className="btn-ghost h-10 gap-1.5 text-sm"
+            >
+              <CheckCheck className="h-4 w-4" aria-hidden="true" />
+              {t('Mình biết từ này rồi', 'I already know this word')}
+            </button>
+            <p className="text-xs text-slate-400">
+              {t(
+                `Bỏ qua trong bài này — app sẽ hỏi lại sau ${KNOWN_CHECK_DAYS} ngày để chắc chắn.`,
+                `Skipped here — the app will check it again in ${KNOWN_CHECK_DAYS} days to be sure.`
+              )}
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="session-actions flex gap-3">
