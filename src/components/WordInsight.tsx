@@ -9,6 +9,8 @@ import { useMySentence } from '@/store/notesStore'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import HanViet from './HanViet'
+import HanVietFamily from './HanVietFamily'
+import { examLabelFor } from '@/lib/exams'
 
 interface Props {
   word: Word
@@ -36,11 +38,19 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
   const mine = useMySentence(lang, word.id)
   const t = useT()
   const readLabel = useReadingLabel('đọc gần giống', 'reads like')
+  const exam = examLabelFor(lang, word)
   return (
     <div className={`space-y-4 ${className}`}>
       {variant === 'details' ? null : full ? (
         <div className="flex flex-col items-center gap-2 text-center">
-          <PosBadge category={word.posCategory} raw={word.pos} />
+          <div className="flex items-center gap-1.5">
+            <PosBadge category={word.posCategory} raw={word.pos} />
+            {exam && (
+              <span className="chip bg-red-50 font-semibold text-red-700 dark:bg-red-950/50 dark:text-red-300">
+                {exam}
+              </span>
+            )}
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             {word.emoji && (
               <span className="text-4xl" aria-hidden>
@@ -141,6 +151,8 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
           </ul>
         </Section>
       )}
+
+      {deep && <HanVietFamily word={word} />}
 
       {variant === 'compact' && mine && (
         <p className="rounded-xl bg-emerald-50/60 px-3.5 py-2.5 text-left text-sm text-slate-700 dark:bg-emerald-950/30 dark:text-slate-200">

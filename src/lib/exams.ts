@@ -124,3 +124,17 @@ export function mockQuestions(
     makeQuestion(w, pool, i < half ? 'listen' : i % 2 ? 'en-to-vi' : 'context')
   )
 }
+
+const listSets = new Map<string, Set<string>>()
+
+/**
+ * The exam whose official list has this word ("HSK 1"), for a badge on the word
+ * card. Only exams with a list the pack covers — TOPIK I has none, so no badge.
+ */
+export function examLabelFor(lang: string, word: Pick<Word, 'word'>): string | null {
+  const exam = examFor(lang)
+  if (!exam?.wordList) return null
+  let set = listSets.get(exam.id)
+  if (!set) listSets.set(exam.id, (set = new Set(exam.wordList)))
+  return set.has(word.word) ? exam.name : null
+}
