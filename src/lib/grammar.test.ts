@@ -81,6 +81,16 @@ describe('the Chinese grammar pack', () => {
           expect(e.en, u.id).not.toMatch(/ /)
         }
   })
+
+  it('gives every example a pinyin line starting with a capital letter', () => {
+    for (const u of zh.units)
+      for (const ex of u.examples) {
+        expect(ex.read, ex.en).toMatch(
+          /^[A-Z\u0100\u00c1\u01cd\u00c0\u0112\u00c9\u011a\u00c8\u014c\u00d3\u01d1\u00d2]/u
+        )
+        expect(ex.read, ex.en).not.toMatch(/\p{Script=Han}/u)
+      }
+  })
 })
 
 describe('validateGrammarPack', () => {

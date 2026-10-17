@@ -27,23 +27,28 @@
       "examples": [
         {
           "en": "我是学生。",
-          "vi": "Tôi là học sinh."
+          "vi": "Tôi là học sinh.",
+          "read": "Wǒ shì xuésheng."
         },
         {
           "en": "他是我的老师。",
-          "vi": "Anh ấy là thầy giáo của tôi."
+          "vi": "Anh ấy là thầy giáo của tôi.",
+          "read": "Tā shì wǒ de lǎoshī."
         },
         {
           "en": "她不是医生。",
-          "vi": "Cô ấy không phải là bác sĩ."
+          "vi": "Cô ấy không phải là bác sĩ.",
+          "read": "Tā bú shì yīshēng."
         },
         {
           "en": "你是中国人吗？",
-          "vi": "Bạn là người Trung Quốc à?"
+          "vi": "Bạn là người Trung Quốc à?",
+          "read": "Nǐ shì Zhōngguó rén ma?"
         },
         {
           "en": "这是我的书。",
-          "vi": "Đây là sách của tôi."
+          "vi": "Đây là sách của tôi.",
+          "read": "Zhè shì wǒ de shū."
         }
       ],
       "mistakes": [
@@ -147,23 +152,28 @@
       "examples": [
         {
           "en": "我不喝咖啡。",
-          "vi": "Tôi không uống cà phê."
+          "vi": "Tôi không uống cà phê.",
+          "read": "Wǒ bù hē kāfēi."
         },
         {
           "en": "今天不冷。",
-          "vi": "Hôm nay không lạnh."
+          "vi": "Hôm nay không lạnh.",
+          "read": "Jīntiān bù lěng."
         },
         {
           "en": "昨天我没去学校。",
-          "vi": "Hôm qua tôi không đến trường."
+          "vi": "Hôm qua tôi không đến trường.",
+          "read": "Zuótiān wǒ méi qù xuéxiào."
         },
         {
           "en": "我没有时间。",
-          "vi": "Tôi không có thời gian."
+          "vi": "Tôi không có thời gian.",
+          "read": "Wǒ méiyǒu shíjiān."
         },
         {
           "en": "他不是医生。",
-          "vi": "Anh ấy không phải là bác sĩ."
+          "vi": "Anh ấy không phải là bác sĩ.",
+          "read": "Tā bú shì yīshēng."
         }
       ],
       "mistakes": [
@@ -262,23 +272,28 @@
       "examples": [
         {
           "en": "你好吗？",
-          "vi": "Bạn khỏe không?"
+          "vi": "Bạn khỏe không?",
+          "read": "Nǐ hǎo ma?"
         },
         {
           "en": "你叫什么名字？",
-          "vi": "Bạn tên là gì?"
+          "vi": "Bạn tên là gì?",
+          "read": "Nǐ jiào shénme míngzi?"
         },
         {
           "en": "他是谁？",
-          "vi": "Anh ấy là ai?"
+          "vi": "Anh ấy là ai?",
+          "read": "Tā shì shéi?"
         },
         {
           "en": "你去哪儿？",
-          "vi": "Bạn đi đâu?"
+          "vi": "Bạn đi đâu?",
+          "read": "Nǐ qù nǎr?"
         },
         {
           "en": "我很好，你呢？",
-          "vi": "Tôi khỏe, còn bạn?"
+          "vi": "Tôi khỏe, còn bạn?",
+          "read": "Wǒ hěn hǎo, nǐ ne?"
         }
       ],
       "mistakes": [
@@ -385,23 +400,28 @@
       "examples": [
         {
           "en": "这是我的书。",
-          "vi": "Đây là sách của tôi."
+          "vi": "Đây là sách của tôi.",
+          "read": "Zhè shì wǒ de shū."
         },
         {
           "en": "他是我的老师。",
-          "vi": "Anh ấy là thầy giáo của tôi."
+          "vi": "Anh ấy là thầy giáo của tôi.",
+          "read": "Tā shì wǒ de lǎoshī."
         },
         {
           "en": "妈妈的衣服很漂亮。",
-          "vi": "Quần áo của mẹ rất đẹp."
+          "vi": "Quần áo của mẹ rất đẹp.",
+          "read": "Māma de yīfu hěn piàoliang."
         },
         {
           "en": "我妈妈是医生。",
-          "vi": "Mẹ tôi là bác sĩ."
+          "vi": "Mẹ tôi là bác sĩ.",
+          "read": "Wǒ māma shì yīshēng."
         },
         {
           "en": "他是我很好的朋友。",
-          "vi": "Anh ấy là người bạn rất tốt của tôi."
+          "vi": "Anh ấy là người bạn rất tốt của tôi.",
+          "read": "Tā shì wǒ hěn hǎo de péngyou."
         }
       ],
       "mistakes": [
@@ -499,23 +519,28 @@
       "examples": [
         {
           "en": "我有一个儿子。",
-          "vi": "Tôi có một đứa con trai."
+          "vi": "Tôi có một đứa con trai.",
+          "read": "Wǒ yǒu yí gè érzi."
         },
         {
           "en": "桌子上有三本书。",
-          "vi": "Trên bàn có ba quyển sách."
+          "vi": "Trên bàn có ba quyển sách.",
+          "read": "Zhuōzi shàng yǒu sān běn shū."
         },
         {
           "en": "我想喝一杯茶。",
-          "vi": "Tôi muốn uống một cốc trà."
+          "vi": "Tôi muốn uống một cốc trà.",
+          "read": "Wǒ xiǎng hē yì bēi chá."
         },
         {
           "en": "我家有一只猫。",
-          "vi": "Nhà tôi có một con mèo."
+          "vi": "Nhà tôi có một con mèo.",
+          "read": "Wǒ jiā yǒu yì zhī māo."
         },
         {
           "en": "这个苹果很大。",
-          "vi": "Quả táo này rất to."
+          "vi": "Quả táo này rất to.",
+          "read": "Zhège píngguǒ hěn dà."
         }
       ],
       "mistakes": [
@@ -613,23 +638,28 @@
       "examples": [
         {
           "en": "爸爸在家。",
-          "vi": "Bố đang ở nhà."
+          "vi": "Bố đang ở nhà.",
+          "read": "Bàba zài jiā."
         },
         {
           "en": "我在医院工作。",
-          "vi": "Tôi làm việc ở bệnh viện."
+          "vi": "Tôi làm việc ở bệnh viện.",
+          "read": "Wǒ zài yīyuàn gōngzuò."
         },
         {
           "en": "你住在哪儿？",
-          "vi": "Bạn sống ở đâu?"
+          "vi": "Bạn sống ở đâu?",
+          "read": "Nǐ zhù zài nǎr?"
         },
         {
           "en": "他在看电视。",
-          "vi": "Anh ấy đang xem ti vi."
+          "vi": "Anh ấy đang xem ti vi.",
+          "read": "Tā zài kàn diànshì."
         },
         {
           "en": "我在学校学习汉语。",
-          "vi": "Tôi học tiếng Trung ở trường."
+          "vi": "Tôi học tiếng Trung ở trường.",
+          "read": "Wǒ zài xuéxiào xuéxí Hànyǔ."
         }
       ],
       "mistakes": [
@@ -727,23 +757,28 @@
       "examples": [
         {
           "en": "天气很好。",
-          "vi": "Thời tiết rất đẹp."
+          "vi": "Thời tiết rất đẹp.",
+          "read": "Tiānqì hěn hǎo."
         },
         {
           "en": "这个苹果很大。",
-          "vi": "Quả táo này rất to."
+          "vi": "Quả táo này rất to.",
+          "read": "Zhège píngguǒ hěn dà."
         },
         {
           "en": "今天不冷。",
-          "vi": "Hôm nay không lạnh."
+          "vi": "Hôm nay không lạnh.",
+          "read": "Jīntiān bù lěng."
         },
         {
           "en": "她很漂亮。",
-          "vi": "Cô ấy rất xinh."
+          "vi": "Cô ấy rất xinh.",
+          "read": "Tā hěn piàoliang."
         },
         {
           "en": "太贵了！",
-          "vi": "Đắt quá!"
+          "vi": "Đắt quá!",
+          "read": "Tài guì le!"
         }
       ],
       "mistakes": [

@@ -25,8 +25,8 @@ export const RELEASES: Release[] = [
         'Chinese dictation has a pinyin hint — exactly what you need to type with a pinyin keyboard.',
       ],
       [
-        'Truyện ngắn tiếng Trung có nút "pinyin": bật lên để thấy cách đọc dưới từng câu.',
-        'Chinese short stories have a "pinyin" button: turn it on to see how each sentence reads.',
+        'Truyện ngắn tiếng Trung có nút "pinyin": bật lên để thấy cách đọc dưới từng câu. Ví dụ trong các bài ngữ pháp tiếng Trung cũng có pinyin.',
+        'Chinese short stories have a "pinyin" button: turn it on to see how each sentence reads. Chinese grammar examples have pinyin too.',
       ],
     ],
   },

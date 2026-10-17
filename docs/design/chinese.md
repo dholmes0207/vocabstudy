@@ -186,3 +186,6 @@ mới gõ ra được chữ.
 - Test lặp lại phép kiểm tra thứ hai trên file đã sinh ra.
 - Thứ tự chạy: `build_zh_pack.py` trước, `build_reading_zh.py` sau (script truyện đọc cách
   đọc từ gói).
+- Ví dụ trong 7 bài ngữ pháp cũng có dòng pinyin (trường `read` của `GrammarExample`). Nguồn
+  là `EXAMPLE_PINYIN` trong `scripts/build_grammar_zh.py`, kiểm tra theo cùng cách với ví dụ
+  của gói. Dòng pinyin hiện giữa câu chữ Hán và nghĩa.

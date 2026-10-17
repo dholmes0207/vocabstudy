@@ -202,6 +202,11 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
               <SpeakButton text={ex.en} lang={ttsLang} size="sm" />
               <span>
                 <span className="block font-semibold">{ex.en}</span>
+                {ex.read && (
+                  <span className="block text-sm text-slate-600 dark:text-slate-300">
+                    {ex.read}
+                  </span>
+                )}
                 <span className="text-sm text-slate-500">{ex.vi}</span>
               </span>
             </li>

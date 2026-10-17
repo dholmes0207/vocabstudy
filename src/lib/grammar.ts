@@ -9,6 +9,8 @@ export type Pair = [vi: string, en: string]
 export interface GrammarExample {
   en: string
   vi: string
+  /** How the example reads, for scripts a beginner cannot read yet (Chinese pinyin). */
+  read?: string
 }
 
 export interface GrammarMistake {

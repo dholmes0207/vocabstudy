@@ -3,21 +3,81 @@
 
 Same shape as grammar/en.json and ko.json. Word-order exercises mark word
 breaks with "|", turned into invisible zero-width spaces so the tiles are
-real words; examples and gap prompts are plain Chinese.
+real words; gap prompts are plain Chinese. Every example carries its pinyin
+line ("read"), checked against the pack like the pack's own examples.
 
-Usage:  python3 scripts/build_grammar_zh.py
+Usage:  python3 scripts/build_zh_pack.py && python3 scripts/build_grammar_zh.py
 """
 import json
 import sys
 from pathlib import Path
 
+from zh_pinyin import han_of, pinyin_line, syllables_for, word_mismatch
+
 ROOT = Path(__file__).resolve().parent.parent
+PACK = ROOT / 'public' / 'data' / 'zh.json'
 OUT = ROOT / 'public' / 'data' / 'grammar' / 'zh.json'
 ZWSP = chr(0x200B)
+PACK_READS = {w['word']: w['viRead'] for w in json.loads(PACK.read_text(encoding='utf-8'))['words']}
+ERRORS: list[str] = []
+
+# Each example: its word breaks, and one pinyin syllable per character (一 / 不
+# carry their changed tone, neutral tones unmarked, erhua 儿 written "r").
+EXAMPLE_PINYIN = {
+    '我是学生。': ('我|是|学生。', 'wǒ shì xué sheng'),
+    '他是我的老师。': ('他|是|我|的|老师。', 'tā shì wǒ de lǎo shī'),
+    '她不是医生。': ('她|不|是|医生。', 'tā bú shì yī shēng'),
+    '你是中国人吗？': ('你|是|中国|人|吗？', 'nǐ shì Zhōng guó rén ma'),
+    '这是我的书。': ('这|是|我|的|书。', 'zhè shì wǒ de shū'),
+    '我不喝咖啡。': ('我|不|喝|咖啡。', 'wǒ bù hē kā fēi'),
+    '今天不冷。': ('今天|不|冷。', 'jīn tiān bù lěng'),
+    '昨天我没去学校。': ('昨天|我|没|去|学校。', 'zuó tiān wǒ méi qù xué xiào'),
+    '我没有时间。': ('我|没有|时间。', 'wǒ méi yǒu shí jiān'),
+    '他不是医生。': ('他|不|是|医生。', 'tā bú shì yī shēng'),
+    '你好吗？': ('你|好|吗？', 'nǐ hǎo ma'),
+    '你叫什么名字？': ('你|叫|什么|名字？', 'nǐ jiào shén me míng zi'),
+    '他是谁？': ('他|是|谁？', 'tā shì shéi'),
+    '你去哪儿？': ('你|去|哪儿？', 'nǐ qù nǎ r'),
+    '我很好，你呢？': ('我|很|好，|你|呢？', 'wǒ hěn hǎo nǐ ne'),
+    '妈妈的衣服很漂亮。': ('妈妈|的|衣服|很|漂亮。', 'mā ma de yī fu hěn piào liang'),
+    '我妈妈是医生。': ('我|妈妈|是|医生。', 'wǒ mā ma shì yī shēng'),
+    '他是我很好的朋友。': ('他|是|我|很|好|的|朋友。', 'tā shì wǒ hěn hǎo de péng you'),
+    '我有一个儿子。': ('我|有|一|个|儿子。', 'wǒ yǒu yí gè ér zi'),
+    '桌子上有三本书。': ('桌子|上|有|三|本|书。', 'zhuō zi shàng yǒu sān běn shū'),
+    '我想喝一杯茶。': ('我|想|喝|一|杯|茶。', 'wǒ xiǎng hē yì bēi chá'),
+    '我家有一只猫。': ('我|家|有|一|只|猫。', 'wǒ jiā yǒu yì zhī māo'),
+    '这个苹果很大。': ('这个|苹果|很|大。', 'zhè ge píng guǒ hěn dà'),
+    '爸爸在家。': ('爸爸|在|家。', 'bà ba zài jiā'),
+    '我在医院工作。': ('我|在|医院|工作。', 'wǒ zài yī yuàn gōng zuò'),
+    '你住在哪儿？': ('你|住|在|哪儿？', 'nǐ zhù zài nǎ r'),
+    '他在看电视。': ('他|在|看|电视。', 'tā zài kàn diàn shì'),
+    '我在学校学习汉语。': ('我|在|学校|学习|汉语。', 'wǒ zài xué xiào xué xí Hàn yǔ'),
+    '天气很好。': ('天气|很|好。', 'tiān qì hěn hǎo'),
+    '她很漂亮。': ('她|很|漂亮。', 'tā hěn piào liang'),
+    '太贵了！': ('太|贵|了！', 'tài guì le'),
+}
 
 
 def ex(zh, vi):
-    return {'en': zh, 'vi': vi}
+    entry = {'en': zh, 'vi': vi}
+    if zh not in EXAMPLE_PINYIN:
+        ERRORS.append(f'{zh}: no pinyin')
+        return entry
+    seg, pinyin = EXAMPLE_PINYIN[zh]
+    if seg.replace('|', '') != zh:
+        ERRORS.append(f'{zh}: word breaks spell "{seg}"')
+    syllables, error = syllables_for(seg, pinyin)
+    if error:
+        ERRORS.append(f'{zh}: {error}')
+        return entry
+    for token in seg.split('|'):
+        word = ''.join(han_of(token))
+        if word in PACK_READS:
+            mismatch = word_mismatch(word, seg, syllables, PACK_READS[word])
+            if mismatch:
+                ERRORS.append(f'{zh}: {mismatch}')
+    entry['read'] = pinyin_line(seg, syllables, PACK_READS)
+    return entry
 
 
 def mi(wrong, right, why):
@@ -212,7 +272,7 @@ UNITS = [
 
 
 def main() -> int:
-    errors = []
+    errors = list(ERRORS)
     for u in UNITS:
         for e in u['exercises']:
             if e['type'] == 'choice' and '___' not in e['prompt']:
