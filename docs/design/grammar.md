@@ -70,3 +70,19 @@ Tính năng thứ hai vượt ra ngoài từ vựng. Tính năng thứ nhất l�
 - Giọng đọc ví dụ lấy theo gói (`pack.meta.ttsLang`), không còn cố định `en-US`.
 - `/grammar` mở cho tiếng Hàn qua `lib/packContent.ts`. Mô tả ở trang Luyện tập không còn
   liệt kê chủ đề riêng của tiếng Anh.
+
+## Tiếng Hàn A2 (17/10/2026)
+
+- Thêm 4 bài A2, tổng cộng 11 bài:
+  - quá khứ -았/었어요;
+  - muốn làm gì -고 싶어요 (kèm nghĩa "nhớ" của 보고 싶어요);
+  - dự định -(으)ㄹ 거예요;
+  - phủ định dài -지 않아요.
+- Nguồn nay nằm trong repo ở `scripts/build_grammar_ko.py`. Bản nguồn cũ ở thư mục tạm đã mất
+  khi máy khởi động lại, nên script được sinh lại từ `grammar/ko.json`; nó tái tạo đúng nội
+  dung 7 bài cũ.
+- Script kiểm tra trước khi ghi file:
+  - câu chọn tiểu từ khớp với 받침 của danh từ;
+  - câu có chỗ trống;
+  - câu xếp dài 3–10 từ;
+  - mỗi bài có ít nhất 5 bài luyện.

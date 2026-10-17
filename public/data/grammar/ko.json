@@ -818,6 +818,483 @@
           "vi": "Tôi không uống rượu."
         }
       ]
+    },
+    {
+      "id": "ko-past",
+      "emoji": "⏪",
+      "level": "A2",
+      "title": [
+        "-았어요 / -었어요: thì quá khứ",
+        "-았어요 / -었어요: the past tense"
+      ],
+      "summary": [
+        "Kể việc đã xảy ra.",
+        "Say what happened."
+      ],
+      "explain": [
+        "Kể việc đã xảy ra: thân + 았어요 / 었어요, chọn giống đuôi hiện tại -아요 / -어요.",
+        "Thân có ㅏ hoặc ㅗ thì thêm 았어요: 가다 → 갔어요, 오다 → 왔어요. Còn lại thêm 었어요: 먹다 → 먹었어요, 마시다 → 마셨어요.",
+        "하다 thành 했어요: 공부했어요, 일했어요.",
+        "Thường đi với từ chỉ thời gian đã qua: 어제 (hôm qua), 지난주 (tuần trước), 아까 (lúc nãy)."
+      ],
+      "patterns": [
+        "Thân có ㅏ / ㅗ + 았어요: 갔어요, 봤어요",
+        "Thân khác + 었어요: 먹었어요, 읽었어요",
+        "하다 → 했어요"
+      ],
+      "examples": [
+        {
+          "en": "어제 친구를 만났어요.",
+          "vi": "Hôm qua tôi đã gặp bạn."
+        },
+        {
+          "en": "아침에 빵을 먹었어요.",
+          "vi": "Buổi sáng tôi đã ăn bánh mì."
+        },
+        {
+          "en": "주말에 영화를 봤어요.",
+          "vi": "Cuối tuần tôi đã xem phim."
+        },
+        {
+          "en": "어제 한국어를 공부했어요.",
+          "vi": "Hôm qua tôi đã học tiếng Hàn."
+        },
+        {
+          "en": "지난주에 비가 왔어요.",
+          "vi": "Tuần trước trời đã mưa."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "먹았어요.",
+          "right": "먹었어요.",
+          "why": "Nguyên âm của 먹 là ㅓ, không phải ㅏ / ㅗ → 었어요."
+        },
+        {
+          "wrong": "공부하었어요.",
+          "right": "공부했어요.",
+          "why": "하다 luôn thành 했어요."
+        },
+        {
+          "wrong": "어제 학교에 가요.",
+          "right": "어제 학교에 갔어요.",
+          "why": "Việc hôm qua phải dùng đuôi quá khứ."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "어제 친구를 (만나다 →) ___.",
+          "options": [
+            "만났어요",
+            "만나었어요",
+            "만나요"
+          ],
+          "answer": 0,
+          "explain": "만나 + 았어요: hai ㅏ gộp làm một → 만났어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "아침에 커피를 (마시다 →) ___.",
+          "options": [
+            "마셨어요",
+            "마시았어요",
+            "마셔요"
+          ],
+          "answer": 0,
+          "explain": "마시 + 었어요 → 마셨어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "어제 한국어를 (공부하다 →) ___.",
+          "options": [
+            "공부했어요",
+            "공부하었어요",
+            "공부해요"
+          ],
+          "answer": 0,
+          "explain": "하다 → 했어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "주말에 책을 (읽다 →) ___.",
+          "options": [
+            "읽었어요",
+            "읽았어요",
+            "읽어요"
+          ],
+          "answer": 0,
+          "explain": "읽 có nguyên âm ㅣ → 었어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "어제 친구가 집에 (오다 →) ___.",
+          "options": [
+            "왔어요",
+            "오었어요",
+            "와요"
+          ],
+          "answer": 0,
+          "explain": "오 + 았어요 gộp thành 왔어요."
+        },
+        {
+          "type": "order",
+          "en": "어제 친구를 만났어요.",
+          "vi": "Hôm qua tôi đã gặp bạn."
+        }
+      ]
+    },
+    {
+      "id": "ko-want",
+      "emoji": "💭",
+      "level": "A2",
+      "title": [
+        "-고 싶어요: muốn làm gì",
+        "-고 싶어요: wanting to do something"
+      ],
+      "summary": [
+        "Nói điều mình muốn làm.",
+        "Say what you want to do."
+      ],
+      "explain": [
+        "Thân động từ + 고 싶어요 = muốn làm gì: 가다 → 가고 싶어요 (muốn đi).",
+        "Không đổi theo nguyên âm: 먹고 싶어요, 보고 싶어요, 공부하고 싶어요.",
+        "Hỏi người khác muốn gì: 뭐 먹고 싶어요? (Bạn muốn ăn gì?)",
+        "보고 싶어요 còn có nghĩa là \"nhớ (ai đó)\": 엄마가 보고 싶어요 = tôi nhớ mẹ."
+      ],
+      "patterns": [
+        "Thân + 고 싶어요",
+        "뭐 + động từ + 고 싶어요? (muốn … gì?)"
+      ],
+      "examples": [
+        {
+          "en": "한국에 가고 싶어요.",
+          "vi": "Tôi muốn đi Hàn Quốc."
+        },
+        {
+          "en": "뭐 먹고 싶어요?",
+          "vi": "Bạn muốn ăn gì?"
+        },
+        {
+          "en": "커피를 마시고 싶어요.",
+          "vi": "Tôi muốn uống cà phê."
+        },
+        {
+          "en": "오늘은 집에서 쉬고 싶어요.",
+          "vi": "Hôm nay tôi muốn nghỉ ở nhà."
+        },
+        {
+          "en": "엄마가 보고 싶어요.",
+          "vi": "Tôi nhớ mẹ."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "가요 싶어요.",
+          "right": "가고 싶어요.",
+          "why": "Dùng thân động từ (bỏ 다) + 고 싶어요, không dùng dạng đã chia."
+        },
+        {
+          "wrong": "먹다 싶어요.",
+          "right": "먹고 싶어요.",
+          "why": "Bỏ 다 rồi mới thêm 고 싶어요."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "한국어를 배우___ 싶어요.",
+          "options": [
+            "고",
+            "어"
+          ],
+          "answer": 0,
+          "explain": "Thân + 고 싶어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "뭐 ___ 싶어요?",
+          "options": [
+            "먹고",
+            "먹어"
+          ],
+          "answer": 0,
+          "explain": "먹다 → 먹고 싶어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "주말에 영화를 (보다 →) ___.",
+          "options": [
+            "보고 싶어요",
+            "봐고 싶어요",
+            "보다 싶어요"
+          ],
+          "answer": 0,
+          "explain": "보 + 고 싶어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "피곤해요. 집에서 (쉬다 →) ___.",
+          "options": [
+            "쉬고 싶어요",
+            "쉬어 싶어요",
+            "쉬다 싶어요"
+          ],
+          "answer": 0,
+          "explain": "쉬 + 고 싶어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "물을 (마시다 →) ___.",
+          "options": [
+            "마시고 싶어요",
+            "마셔고 싶어요",
+            "마시다 싶어요"
+          ],
+          "answer": 0,
+          "explain": "마시 + 고 싶어요."
+        },
+        {
+          "type": "order",
+          "en": "한국에 가고 싶어요.",
+          "vi": "Tôi muốn đi Hàn Quốc."
+        }
+      ]
+    },
+    {
+      "id": "ko-future",
+      "emoji": "🗓️",
+      "level": "A2",
+      "title": [
+        "-(으)ㄹ 거예요: sẽ làm gì",
+        "-(으)ㄹ 거예요: plans and the future"
+      ],
+      "summary": [
+        "Nói dự định, việc sẽ làm.",
+        "Say what you are going to do."
+      ],
+      "explain": [
+        "Nói việc sẽ làm: thân kết thúc bằng nguyên âm + ㄹ 거예요; thân kết thúc bằng phụ âm + 을 거예요.",
+        "가다 → 갈 거예요, 보다 → 볼 거예요; 먹다 → 먹을 거예요, 읽다 → 읽을 거예요.",
+        "하다 thành 할 거예요: 공부할 거예요.",
+        "Thân có ㄹ ở cuối thì chỉ thêm 거예요: 살다 → 살 거예요, 만들다 → 만들 거예요."
+      ],
+      "patterns": [
+        "Thân (nguyên âm) + ㄹ 거예요: 갈 거예요",
+        "Thân (phụ âm) + 을 거예요: 먹을 거예요",
+        "하다 → 할 거예요"
+      ],
+      "examples": [
+        {
+          "en": "내일 친구를 만날 거예요.",
+          "vi": "Ngày mai tôi sẽ gặp bạn."
+        },
+        {
+          "en": "주말에 영화를 볼 거예요.",
+          "vi": "Cuối tuần tôi sẽ xem phim."
+        },
+        {
+          "en": "저녁에 김치를 먹을 거예요.",
+          "vi": "Buổi tối tôi sẽ ăn kim chi."
+        },
+        {
+          "en": "내년에 한국에 갈 거예요.",
+          "vi": "Năm sau tôi sẽ đi Hàn Quốc."
+        },
+        {
+          "en": "오늘 밤에 공부할 거예요.",
+          "vi": "Tối nay tôi sẽ học bài."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "먹 거예요.",
+          "right": "먹을 거예요.",
+          "why": "먹 kết thúc bằng phụ âm → 을 거예요."
+        },
+        {
+          "wrong": "가을 거예요.",
+          "right": "갈 거예요.",
+          "why": "가 kết thúc bằng nguyên âm → ㄹ gắn vào dưới: 갈."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "내일 학교에 (가다 →) ___.",
+          "options": [
+            "갈 거예요",
+            "가을 거예요",
+            "갔어요"
+          ],
+          "answer": 0,
+          "explain": "Ngày mai → tương lai; 가 + ㄹ 거예요 → 갈 거예요."
+        },
+        {
+          "type": "choice",
+          "prompt": "저녁에 밥을 (먹다 →) ___.",
+          "options": [
+            "먹을 거예요",
+            "먹 거예요",
+            "먹었어요"
+          ],
+          "answer": 0,
+          "explain": "먹 có phụ âm cuối → 을 거예요."
+        },
+        {
+          "type": "choice",
+          "prompt": "주말에 친구를 (만나다 →) ___.",
+          "options": [
+            "만날 거예요",
+            "만나을 거예요",
+            "만나 거예요"
+          ],
+          "answer": 0,
+          "explain": "만나 + ㄹ 거예요 → 만날 거예요."
+        },
+        {
+          "type": "choice",
+          "prompt": "내일 한국어를 (공부하다 →) ___.",
+          "options": [
+            "공부할 거예요",
+            "공부하을 거예요",
+            "공부해 거예요"
+          ],
+          "answer": 0,
+          "explain": "하다 → 할 거예요."
+        },
+        {
+          "type": "choice",
+          "prompt": "이 책을 (읽다 →) ___.",
+          "options": [
+            "읽을 거예요",
+            "읽 거예요",
+            "일 거예요"
+          ],
+          "answer": 0,
+          "explain": "읽 có phụ âm cuối → 을 거예요."
+        },
+        {
+          "type": "order",
+          "en": "내일 친구를 만날 거예요.",
+          "vi": "Ngày mai tôi sẽ gặp bạn."
+        }
+      ]
+    },
+    {
+      "id": "ko-ji-anayo",
+      "emoji": "🚫",
+      "level": "A2",
+      "title": [
+        "-지 않아요: phủ định dạng dài",
+        "-지 않아요: the long negative"
+      ],
+      "summary": [
+        "Một cách nói \"không\" nữa, trang trọng hơn 안 một chút.",
+        "Another way to say \"not\", a little more formal than 안."
+      ],
+      "explain": [
+        "Ngoài 안 + động từ, còn có cách phủ định dài: thân + 지 않아요. 가다 → 가지 않아요, 먹다 → 먹지 않아요.",
+        "Hai cách cùng nghĩa; -지 않아요 nghe trang trọng hơn một chút và hay gặp trong văn viết.",
+        "Với từ có 하다, cứ thêm vào thân: 공부하지 않아요, 일하지 않아요.",
+        "Quá khứ: -지 않았어요 — 어제 가지 않았어요 (hôm qua tôi đã không đi)."
+      ],
+      "patterns": [
+        "Thân + 지 않아요",
+        "Thân + 지 않았어요 (quá khứ)"
+      ],
+      "examples": [
+        {
+          "en": "저는 술을 마시지 않아요.",
+          "vi": "Tôi không uống rượu."
+        },
+        {
+          "en": "오늘은 춥지 않아요.",
+          "vi": "Hôm nay không lạnh."
+        },
+        {
+          "en": "이 가방은 비싸지 않아요.",
+          "vi": "Cái túi này không đắt."
+        },
+        {
+          "en": "주말에는 일하지 않아요.",
+          "vi": "Cuối tuần tôi không làm việc."
+        },
+        {
+          "en": "어제 학교에 가지 않았어요.",
+          "vi": "Hôm qua tôi không đi học."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "가지 안아요.",
+          "right": "가지 않아요.",
+          "why": "Viết 않아요 (phụ âm cuối ㄶ), không phải 안아요."
+        },
+        {
+          "wrong": "먹다지 않아요.",
+          "right": "먹지 않아요.",
+          "why": "Bỏ 다 rồi mới thêm 지 않아요."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "저는 고기를 먹___ 않아요.",
+          "options": [
+            "지",
+            "고"
+          ],
+          "answer": 0,
+          "explain": "Thân + 지 않아요."
+        },
+        {
+          "type": "choice",
+          "prompt": "오늘은 바쁘지 ___.",
+          "options": [
+            "않아요",
+            "안아요"
+          ],
+          "answer": 0,
+          "explain": "Chính tả: 않아요."
+        },
+        {
+          "type": "choice",
+          "prompt": "이 영화는 재미있___ 않아요.",
+          "options": [
+            "지",
+            "어"
+          ],
+          "answer": 0,
+          "explain": "Thân + 지 않아요."
+        },
+        {
+          "type": "choice",
+          "prompt": "어제 학교에 가지 ___.",
+          "options": [
+            "않았어요",
+            "않아요"
+          ],
+          "answer": 0,
+          "explain": "Việc hôm qua → 않았어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "주말에는 (일하다 →) ___.",
+          "options": [
+            "일하지 않아요",
+            "일하 않아요",
+            "일지 않아요"
+          ],
+          "answer": 0,
+          "explain": "일하 + 지 않아요."
+        },
+        {
+          "type": "order",
+          "en": "저는 술을 마시지 않아요.",
+          "vi": "Tôi không uống rượu."
+        }
+      ]
     }
   ]
 }

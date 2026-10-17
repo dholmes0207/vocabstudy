@@ -40,6 +40,10 @@ describe('the Korean grammar pack', () => {
       expect.arrayContaining(['ko-ieyo', 'ko-eun-neun', 'ko-i-ga', 'ko-eul-reul', 'ko-ayo-eoyo'])
     )
     for (const u of ko.units) for (const ex of u.examples) expect(ex.en, u.id).toMatch(/[가-힣]/)
+    // A2: past, wanting, plans, the long negative.
+    expect(ko.units.filter((u) => u.level === 'A2').map((u) => u.id)).toEqual(
+      expect.arrayContaining(['ko-past', 'ko-want', 'ko-future', 'ko-ji-anayo'])
+    )
   })
 
   it('picks each particle by whether the noun ends in a consonant (받침)', () => {

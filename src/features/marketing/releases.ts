@@ -33,6 +33,10 @@ export const RELEASES: Release[] = [
         'The Chinese pack grows to 156 words and now covers all 150 HSK 1 words: numbers 4–9, 上 / 下 / 里 / 前面 / 后面, 怎么, 怎么样, 请, 喂, 电影…',
       ],
       [
+        'Tiếng Hàn có thêm 4 bài ngữ pháp A2: thì quá khứ -았/었어요, muốn làm gì -고 싶어요, dự định -(으)ㄹ 거예요, phủ định dài -지 않아요.',
+        'Korean gets 4 A2 grammar lessons: the past tense -았/었어요, wanting -고 싶어요, plans -(으)ㄹ 거예요 and the long negative -지 않아요.',
+      ],
+      [
         'Trang chủ có lối vào thẳng tiếng Hàn và tiếng Trung; đường dẫn /home?lang=ko hay /home?lang=zh mở app ngay ở ngôn ngữ đó.',
         'The home page links straight to Korean and Chinese; /home?lang=ko or /home?lang=zh opens the app in that language.',
       ],
