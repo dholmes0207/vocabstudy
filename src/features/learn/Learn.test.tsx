@@ -11,6 +11,7 @@ import { useStudy } from '@/store/studyStore'
 import { useSavedWords } from '@/store/savedWordsStore'
 import { usePlacement } from '@/store/placementStore'
 import { KNOWN_BOX } from '@/lib/srs'
+import { buildDecks } from '@/lib/decks'
 
 // "Lưu để học" on the Learn page (docs/design/saved-words.md).
 
@@ -21,7 +22,7 @@ vi.mock('@/lib/audio', async (importOriginal) => ({
   prefetchAudio: () => {},
 }))
 
-const { default: Learn } = await import('./Learn')
+const { default: Learn, TestOutResult } = await import('./Learn')
 
 const pack = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
 const byWord = (w: string) => pack.words.find((x) => x.word === w)!
@@ -134,5 +135,48 @@ describe('"Try saying it" on a meet card', () => {
     // The next word starts closed again.
     fireEvent.click(screen.getByRole('button', { name: /^Next/ }))
     expect(screen.getByRole('button', { name: /Try saying it/ })).toBeInTheDocument()
+  })
+})
+
+describe('test out of the next set', () => {
+  it('is offered once placement is settled, on the set the next new word comes from', () => {
+    usePlacement.setState({ results: { en: { start: 40, day: 1, asked: 15, correct: 12 } } })
+    renderLearn()
+    expect(screen.getByRole('heading', { name: 'Already know set 3?' })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Check set 3' }))
+    expect(screen.getByText('Test out of set 3')).toBeInTheDocument()
+  })
+
+  it('is not offered to a newcomer, who gets the placement check instead', () => {
+    renderLearn()
+    expect(screen.queryByRole('heading', { name: /Already know set/ })).not.toBeInTheDocument()
+  })
+
+  const deck = buildDecks(pack.words, {})[2]
+  const renderResult = (correct: number) =>
+    render(
+      <MemoryRouter>
+        <TestOutResult
+          deck={deck}
+          fresh={deck.words}
+          correct={correct}
+          total={8}
+          onLearn={() => {}}
+          onBack={() => {}}
+        />
+      </MemoryRouter>
+    )
+
+  it('skips every new word of the set on a pass, to be checked later', () => {
+    renderResult(7)
+    expect(screen.getByText('You tested out of set 3!')).toBeInTheDocument()
+    const cards = useStudy.getState().progress.en.cards
+    expect(deck.words.every((w) => cards[w.id]?.box === KNOWN_BOX)).toBe(true)
+  })
+
+  it('changes nothing and offers the lesson on a miss', () => {
+    renderResult(6)
+    expect(screen.getByRole('button', { name: 'Learn set 3' })).toBeInTheDocument()
+    expect(useStudy.getState().progress.en).toBeUndefined()
   })
 })

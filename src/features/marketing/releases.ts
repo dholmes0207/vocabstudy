@@ -20,6 +20,22 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Đang ở chỗ đông người? Ở câu nghe, bấm "Hiện không nghe được": trong 15 phút câu nghe thành câu đọc, không phát tiếng.',
+        'Somewhere you can’t play sound? On a listening question, tap "Can’t listen now": for 15 minutes listening questions become reading ones, silently.',
+      ],
+      [
+        'Cuối buổi Ôn tập và Quiz giờ có tóm tắt thay đổi: bao nhiêu từ đã thuộc, lên bậc, hay cần học lại.',
+        'The end of Review and Quiz now shows what changed: words mastered, moved up, or to relearn.',
+      ],
+      [
+        'Trên thẻ làm quen có nút "Nói thử từ này" để luyện phát âm ngay tại chỗ, không phải sang trang Luyện nói.',
+        'Meet cards have "Try saying it" to practise pronunciation right there, without going to the Speaking page.',
+      ],
+      [
+        'Trang Học có "Đã biết bộ N rồi?": làm 8 câu, đúng 7 thì bỏ qua cả bộ — các từ được hỏi lại sau 5 ngày để chắc chắn.',
+        'Learn has "Already know set N?": answer 8 questions, get 7 right and skip the whole set — its words are checked again in 5 days.',
+      ],
+      [
         'Trên thẻ làm quen của bài học có nút "Mình biết từ này rồi": từ đó được bỏ qua trong bài, và app hỏi lại sau 5 ngày để chắc chắn. Không tính là đã thuộc cho tới khi bạn trả lời đúng.',
         'Meet cards now have "I already know this word": the word is skipped in the lesson and checked again in 5 days. It doesn’t count as mastered until you answer it.',
       ],
