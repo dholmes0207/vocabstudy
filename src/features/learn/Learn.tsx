@@ -1,18 +1,26 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { BookOpen, BookmarkCheck, Gauge, Sparkles } from 'lucide-react'
-import type { Word } from '@/types'
+import { BookOpen, BookmarkCheck, FastForward, Gauge, Sparkles } from 'lucide-react'
+import type { QuizQuestion, Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { summarize, nextNewWords } from '@/lib/summary'
-import { DECK_SIZE, buildDecks } from '@/lib/decks'
+import { DECK_SIZE, buildDecks, type Deck } from '@/lib/decks'
 import { KNOWN_CHECK_DAYS, phaseOf } from '@/lib/srs'
 import { pendingSaved } from '@/lib/savedWords'
 import { useSavedIds, useSavedWords } from '@/store/savedWordsStore'
 import { usePlacement } from '@/store/placementStore'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import LearnSession from './LearnSession'
+import QuizRunner from '@/components/QuizRunner'
+import {
+  TEST_OUT_MIN_NEW,
+  TEST_OUT_SIZE,
+  newWordsOf,
+  testOutPassMark,
+  testOutQuestions,
+} from '@/lib/testOut'
 import SessionComplete from '@/components/SessionComplete'
 import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
@@ -39,6 +47,12 @@ export default function Learn() {
   const startAt = placement?.start ?? 0
 
   const [session, setSession] = useState<Word[] | null>(null)
+  // "Học vượt bộ này" (lib/testOut.ts): a short check on the next deck.
+  const [testOut, setTestOut] = useState<{
+    deck: Deck
+    fresh: Word[]
+    questions: QuizQuestion[]
+  } | null>(null)
   // Quick session length so busy learners can grab a short set without opening
   // Settings. 'all' = however many new words remain today. See F6.
   // "Học nhanh 2 phút" from the dashboard arrives with ?quick=1: five words.
@@ -64,6 +78,37 @@ export default function Learn() {
     const started = savedIds.filter((id) => phaseOf(cards[id]) !== 'new')
     if (started.length) removeSaved(code, started)
   }, [savedIds, cards, code, removeSaved])
+
+  if (testOut) {
+    const wordsById = new Map(pack.words.map((w) => [w.id, w] as const))
+    return (
+      <QuizRunner
+        questions={testOut.questions}
+        wordsById={wordsById}
+        ttsLang={pack.meta.ttsLang}
+        // A check, not study: only a pass changes the schedule (TestOutResult).
+        onAnswer={() => {}}
+        onExit={() => setTestOut(null)}
+        caption={t(
+          `Học vượt bộ ${testOut.deck.index + 1}`,
+          `Test out of set ${testOut.deck.index + 1}`
+        )}
+        renderComplete={(correct, total) => (
+          <TestOutResult
+            deck={testOut.deck}
+            fresh={testOut.fresh}
+            correct={correct}
+            total={total}
+            onLearn={() => {
+              setTestOut(null)
+              setSession(testOut.fresh)
+            }}
+            onBack={() => setTestOut(null)}
+          />
+        )}
+      />
+    )
+  }
 
   if (session) {
     return (
@@ -121,6 +166,12 @@ export default function Learn() {
   const fromStart = decks.findIndex((d) => unfinished(d) && (d.index + 1) * DECK_SIZE > startAt)
   const firstUnfinished = Math.max(0, fromStart >= 0 ? fromStart : decks.findIndex(unfinished))
   const startedCount = Object.keys(cards).length
+  const offerPlacement = !placement && startedCount < PLACEMENT_OFFER_BELOW
+  // The deck the next new word comes from, if it still has enough new words.
+  const nextNew = nextNewWords(pack.words, progress, 1, startAt)[0]
+  const nextDeck = nextNew && decks.find((d) => d.words.some((w) => w.id === nextNew.id))
+  const nextDeckFresh = nextDeck ? newWordsOf(nextDeck.words, cards) : []
+  const offerTestOut = !offerPlacement && nextDeckFresh.length >= TEST_OUT_MIN_NEW
   const DECK_WINDOW = 8
   const visibleDecks = showAllDecks
     ? decks
@@ -193,7 +244,7 @@ export default function Learn() {
         </section>
       )}
 
-      {!placement && startedCount < PLACEMENT_OFFER_BELOW && (
+      {offerPlacement && (
         <section className="card flex flex-wrap items-center gap-4 p-5">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow">
             <Gauge className="h-6 w-6" aria-hidden="true" />
@@ -288,6 +339,40 @@ export default function Learn() {
         )}
       </section>
 
+      {offerTestOut && nextDeck && (
+        <section className="card flex flex-wrap items-center gap-4 p-5">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500 text-white shadow">
+            <FastForward className="h-6 w-6" aria-hidden="true" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h2 className="font-bold">
+              {t(
+                `Đã biết bộ ${nextDeck.index + 1} rồi?`,
+                `Already know set ${nextDeck.index + 1}?`
+              )}
+            </h2>
+            <p className="text-sm text-slate-500">
+              {t(
+                `Kiểm tra nhanh: đúng ${testOutPassMark(Math.min(TEST_OUT_SIZE, nextDeckFresh.length))}/${Math.min(TEST_OUT_SIZE, nextDeckFresh.length)} thì bỏ qua ${nextDeckFresh.length} từ mới của bộ này (app hỏi lại sau ${KNOWN_CHECK_DAYS} ngày).`,
+                `Quick check: get ${testOutPassMark(Math.min(TEST_OUT_SIZE, nextDeckFresh.length))}/${Math.min(TEST_OUT_SIZE, nextDeckFresh.length)} to skip this set's ${nextDeckFresh.length} new words (checked again in ${KNOWN_CHECK_DAYS} days).`
+              )}
+            </p>
+          </div>
+          <button
+            className="btn-secondary h-11 w-full sm:w-auto"
+            onClick={() =>
+              setTestOut({
+                deck: nextDeck,
+                fresh: nextDeckFresh,
+                questions: testOutQuestions(nextDeck.words, nextDeckFresh),
+              })
+            }
+          >
+            {t(`Kiểm tra bộ ${nextDeck.index + 1}`, `Check set ${nextDeck.index + 1}`)}
+          </button>
+        </section>
+      )}
+
       {/* Decks */}
       <section>
         <div className="mb-3 flex items-baseline justify-between">
@@ -352,5 +437,69 @@ export default function Learn() {
         )}
       </section>
     </div>
+  )
+}
+
+/** After the test-out check: a pass skips the set's new words, a miss offers the lesson. */
+export function TestOutResult({
+  deck,
+  fresh,
+  correct,
+  total,
+  onLearn,
+  onBack,
+}: {
+  deck: Deck
+  fresh: Word[]
+  correct: number
+  total: number
+  onLearn: () => void
+  onBack: () => void
+}) {
+  const t = useT()
+  const code = useSettings((s) => s.currentLang)
+  const markKnown = useStudy((s) => s.markKnown)
+  const passed = correct >= testOutPassMark(total)
+  const n = deck.index + 1
+
+  // Apply once, even if this screen renders again.
+  const applied = useRef(false)
+  useEffect(() => {
+    if (!passed || applied.current) return
+    applied.current = true
+    for (const w of fresh) markKnown(code, w.id)
+  }, [passed, fresh, markKnown, code])
+
+  return (
+    <SessionComplete
+      emoji={passed ? '⏭️' : '📖'}
+      title={
+        passed
+          ? t(`Bạn đã vượt bộ ${n}!`, `You tested out of set ${n}!`)
+          : t(`Bộ ${n} còn vài từ chưa chắc`, `Set ${n} still has a few new ones`)
+      }
+      correct={correct}
+      total={total}
+    >
+      <p className="w-full text-sm text-slate-500">
+        {passed
+          ? t(
+              `${fresh.length} từ mới của bộ này được bỏ qua — app sẽ hỏi lại sau ${KNOWN_CHECK_DAYS} ngày để chắc chắn.`,
+              `This set's ${fresh.length} new words are skipped — the app will check them in ${KNOWN_CHECK_DAYS} days to be sure.`
+            )
+          : t(
+              `Cần đúng ít nhất ${testOutPassMark(total)}/${total}. Học bộ này là cách nhanh nhất để chắc chắn.`,
+              `You need ${testOutPassMark(total)}/${total}. Learning the set is the quickest way to be sure.`
+            )}
+      </p>
+      {!passed && (
+        <button className="btn-primary" onClick={onLearn}>
+          {t(`Học bộ ${n}`, `Learn set ${n}`)}
+        </button>
+      )}
+      <button className={passed ? 'btn-primary' : 'btn-secondary'} onClick={onBack}>
+        {t('Về trang Học', 'Back to Learn')}
+      </button>
+    </SessionComplete>
   )
 }

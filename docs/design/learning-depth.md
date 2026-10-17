@@ -351,3 +351,33 @@ Tham khảo: thẻ từ mới của Memrise cho ghi âm và chấm ngay trên th
 - Có `key` theo id của từ, nên trạng thái mở/đóng tự về ban đầu khi sang từ mới.
 - Chưa thử bằng giọng thật trong lần này, vì khung trình duyệt kiểm tra chặn micro. Bộ luyện
   này vẫn là bộ đang chạy trên trang Luyện nói.
+
+## Học vượt bộ từ (18/10/2026)
+
+**User**: "Bộ từ tiếp theo mình biết gần hết rồi, mà vẫn phải học từng từ."
+
+Tham khảo: nút "Học vượt?" ở mỗi phần của Duolingo (REA, vòng 4). Bài kiểm tra trình độ chỉ
+xếp chỗ bắt đầu một lần. Học vượt thì dùng được bất cứ lúc nào, cho đúng bộ sắp học.
+
+**BA**
+
+- Trang Học có thẻ "Đã biết bộ N rồi?" dưới "Bài học hôm nay".
+  - N là bộ chứa từ mới tiếp theo, tính cả chỗ bắt đầu theo kiểm tra trình độ.
+  - Thẻ chỉ hiện khi bộ còn ít nhất 5 từ mới, và khi người học không còn được mời làm kiểm
+    tra trình độ. Người mới thấy lời mời kiểm tra trình độ trước.
+- Bài kiểm tra: 8 câu chọn nghĩa, lấy ngẫu nhiên trong các từ mới của bộ.
+  - Đáp án sai lấy từ nghĩa của các từ cùng bộ.
+  - Không ghi vào lịch ôn trong lúc làm.
+- Kết quả:
+  - **Đạt** (từ 7/8): mọi từ mới của bộ được bỏ qua giống như "Mình biết từ này rồi". Chúng
+    vào hộp 3 và được hỏi lại sau 5 ngày, không tính là đã thuộc.
+  - **Chưa đạt**: không có gì thay đổi. App mời học bộ đó.
+
+**Dev**
+
+- `lib/testOut.ts`: `TEST_OUT_SIZE = 8`, `TEST_OUT_MIN_NEW = 5`, `testOutPassMark(total)` (làm
+  tròn lên 87,5%), `newWordsOf`, `testOutQuestions`.
+- `Learn.tsx`:
+  - dùng lại `QuizRunner`, với `onAnswer` không làm gì;
+  - `TestOutResult` gọi `markKnown` cho từng từ mới khi đạt, có `useRef` để không chạy hai
+    lần.

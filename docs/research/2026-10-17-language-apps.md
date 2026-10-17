@@ -226,7 +226,8 @@ ba đều cần đăng nhập, nên không xem.
 - "Mình biết từ này rồi" trên thẻ làm quen (`docs/design/learning-depth.md`). Khác Memrise:
   từ đó không tính là đã thuộc, mà được hỏi lại sau 5 ngày.
 
-**Gợi ý cho lần sau**, xếp theo giá trị trên công sức:
+**Gợi ý cho lần sau** (cả 4 đã làm ngày 18/10, xem `docs/design/learning-depth.md`), xếp theo giá
+trị trên công sức:
 
 1. "Tạm thời không nghe được" trong Ôn tập và Quiz, cho người đang ở nơi công cộng: đổi câu
    nghe thành câu đọc trong 15 phút. Học từ Duolingo.
