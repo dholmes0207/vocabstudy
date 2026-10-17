@@ -104,3 +104,10 @@
     (`?lang=fr`) bị bỏ qua.
   - Sau đó xoá `lang` khỏi URL, để tải lại trang không ghi đè lựa chọn người học làm sau.
   - Có test cho cả ba trường hợp: mã hợp lệ, mã lạ, danh sách gói chưa tải xong.
+
+## Gói tiếng Hàn: 192 từ (17/10/2026)
+
+- Thêm 10 từ rất hay gặp mà truyện A2 cần: 저, 정말, 아주, 조금, 같이, 그리고, 그래서, 요즘,
+  열심히, 내년. Riêng 내년 (來年) có âm Hán Việt "lai niên".
+- Cách đọc theo quy ước cũ: ㄱ đứng đầu ghi "c" trước ư (그리고 → "cư-ri-gô"), và đọc theo
+  phát âm thật (열심히 → "yơl-xi-mi", 같이 → "ca-chi").

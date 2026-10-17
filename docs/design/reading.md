@@ -23,9 +23,14 @@ từ đã học xuất hiện trong ngữ cảnh thật.
   Trang Quyền riêng tư và Điều khoản đã ghi rõ điều này.
 - Trang hiện với gói nào có file truyện (`lib/packContent.ts`). Tiếng Trung có 3 truyện (xem
   `chinese.md`). Tiếng Anh có 14 truyện,
-  tiếng Hàn có 6 truyện A1 (`public/data/reading/ko.json`, sinh từ
-  `scripts/build_reading_ko.py`): một ngày của Min-su, đi chợ, ngày mưa, người bạn mới, ở quán
-  cà phê, đi bệnh viện.
+  tiếng Hàn có 8 truyện (`public/data/reading/ko.json`, sinh từ
+  `scripts/build_reading_ko.py`):
+  - 6 truyện A1: một ngày của Min-su, đi chợ, ngày mưa, người bạn mới, ở quán cà phê, đi bệnh
+    viện;
+  - 2 truyện A2 (17/10/2026), dùng ngữ pháp A2: "Cuối tuần trước" (quá khứ) và "Kế hoạch đi Hàn
+    Quốc" (-고 싶어요, -(으)ㄹ 거예요).
+  - Từ không đổi dạng như 정말, 그리고, 그래서, 저는 được gắn nghĩa tự động ở mọi câu (`COMMON`
+    trong script), không cần ghi từng câu.
 
 **Dev**
 

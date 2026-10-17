@@ -122,10 +122,54 @@ S = [
       {"q": "Về nhà tôi làm gì?", "options": ["Uống nhiều nước và nghỉ ngơi", "Đi làm", "Nấu ăn"], "answer": 0},
     ],
   },
+  # --- A2 (17/10/2026): past tense, -고 싶어요, -(으)ㄹ 거예요 ---------------
+  {
+    "id": "ko-last-weekend", "emoji": "📸", "level": "A2",
+    "title": ["Cuối tuần trước", "지난 주말"],
+    "sentences": [
+      ("지난 주말에 친구와 바다에 갔어요.", "Cuối tuần trước tôi đã đi biển với bạn.", {"주말에": "주말", "친구와": "친구", "바다에": "바다", "갔어요": "가다"}),
+      ("날씨가 정말 좋았어요.", "Thời tiết thật đẹp.", {"날씨가": "날씨", "좋았어요": "좋다"}),
+      ("우리는 바다에서 사진을 많이 찍었어요.", "Chúng tôi đã chụp rất nhiều ảnh ở biển.", {"바다에서": "바다", "사진을": "사진", "많이": "많다"}),
+      ("점심에 식당에서 생선을 먹었어요.", "Buổi trưa chúng tôi ăn cá ở nhà hàng.", {"식당에서": "식당", "생선을": "생선", "먹었어요": "먹다"}),
+      ("생선이 아주 맛있었어요.", "Món cá rất ngon.", {"생선이": "생선", "맛있었어요": "맛있다"}),
+      ("저녁에 버스를 타고 집에 왔어요.", "Buổi tối chúng tôi đi xe buýt về nhà.", {"저녁에": "저녁", "버스를": "버스", "타고": "타다", "집에": "집", "왔어요": "오다"}),
+      ("조금 피곤했지만 정말 행복했어요.", "Hơi mệt nhưng thật sự rất vui.", {"피곤했지만": "피곤하다", "행복했어요": "행복하다"}),
+    ],
+    "questions": [
+      {"q": "Cuối tuần trước họ đã đi đâu?", "options": ["Núi", "Biển", "Công viên"], "answer": 1},
+      {"q": "Buổi trưa họ ăn gì?", "options": ["Thịt", "Cá", "Mì gói"], "answer": 1},
+      {"q": "Họ về nhà bằng gì?", "options": ["Taxi", "Xe buýt", "Tàu điện ngầm"], "answer": 1},
+    ],
+  },
+  {
+    "id": "ko-trip-plan", "emoji": "✈️", "level": "A2",
+    "title": ["Kế hoạch đi Hàn Quốc", "한국 여행 계획"],
+    "sentences": [
+      ("저는 한국에 가고 싶어요.", "Tôi muốn đi Hàn Quốc.", {"가고": "가다"}),
+      ("그래서 요즘 한국어를 열심히 배워요.", "Vì vậy dạo này tôi chăm chỉ học tiếng Hàn.", {"한국어를": "한국어", "배워요": "배우다"}),
+      ("내년 여름에 비행기를 타고 서울에 갈 거예요.", "Mùa hè năm sau tôi sẽ đi máy bay đến Seoul.", {"여름에": "여름", "비행기를": "비행기", "타고": "타다", "갈": "가다"}),
+      ("서울에서는 호텔에서 잘 거예요.", "Ở Seoul tôi sẽ ngủ ở khách sạn.", {"호텔에서": "호텔", "잘": "자다"}),
+      ("시장에서 김치를 사고 싶어요.", "Tôi muốn mua kim chi ở chợ.", {"시장에서": "시장", "김치를": "김치", "사고": "사다"}),
+      ("그리고 한국 친구도 만날 거예요.", "Tôi cũng sẽ gặp người bạn Hàn Quốc.", {"친구도": "친구", "만날": "만나다"}),
+      ("저는 지금 정말 행복해요.", "Bây giờ tôi thật sự rất vui.", {"지금": "지금", "행복해요": "행복하다"}),
+    ],
+    "questions": [
+      {"q": "Tôi muốn đi đâu?", "options": ["Nhật Bản", "Hàn Quốc", "Trung Quốc"], "answer": 1},
+      {"q": "Khi nào tôi sẽ đi?", "options": ["Mùa đông năm nay", "Mùa hè năm sau", "Tuần sau"], "answer": 1},
+      {"q": "Ở Seoul tôi sẽ ngủ ở đâu?", "options": ["Nhà bạn", "Khách sạn", "Ký túc xá"], "answer": 1},
+    ],
+  },
 ]
 
 def bare(tok):
     return re.sub(r'^[^\w]+|[^\w]+$', '', tok)
+
+# Words that never change shape (or always carry the same particle), tapped in
+# every story without listing them sentence by sentence.
+COMMON = {
+    '저는': '저', '정말': '정말', '아주': '아주', '조금': '조금', '같이': '같이',
+    '그리고': '그리고', '그래서': '그래서', '요즘': '요즘', '열심히': '열심히', '내년': '내년',
+}
 
 out = []
 errs = []
@@ -133,6 +177,7 @@ for st in S:
     sents = []
     for ko, vi, gl in st['sentences']:
         toks = [bare(t) for t in ko.split()]
+        gl = {**{t: COMMON[t] for t in toks if t in COMMON}, **gl}
         g = {}
         for tok, head in gl.items():
             if tok not in toks: errs.append(f"{st['id']}: token {tok} not in {ko}")

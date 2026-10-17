@@ -37,6 +37,10 @@ export const RELEASES: Release[] = [
         'Korean gets 4 A2 grammar lessons: the past tense -았/었어요, wanting -고 싶어요, plans -(으)ㄹ 거예요 and the long negative -지 않아요.',
       ],
       [
+        'Thêm 2 truyện tiếng Hàn A2 ("Cuối tuần trước", "Kế hoạch đi Hàn Quốc") và 10 từ rất hay gặp (저, 정말, 그리고, 그래서, 요즘…) — gói tiếng Hàn có 192 từ, các truyện chạm được nhiều từ hơn.',
+        'Two A2 Korean stories ("Last weekend", "A trip to Korea") and 10 very common words (저, 정말, 그리고, 그래서, 요즘…) — the Korean pack has 192 words, and more of each story is tappable.',
+      ],
+      [
         'Trang chủ có lối vào thẳng tiếng Hàn và tiếng Trung; đường dẫn /home?lang=ko hay /home?lang=zh mở app ngay ở ngôn ngữ đó.',
         'The home page links straight to Korean and Chinese; /home?lang=ko or /home?lang=zh opens the app in that language.',
       ],

@@ -7,9 +7,9 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "ko-KR",
-    "count": 182,
+    "count": 192,
     "source": "VocaStudy (beta)",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "words": [
     {
@@ -2243,6 +2243,127 @@
       "exampleEn": "겨울에 눈이 와요.",
       "exampleVi": "Mùa đông có tuyết rơi.",
       "emoji": "❄️"
+    },
+    {
+      "id": 183,
+      "word": "저",
+      "ipa": "",
+      "viRead": "chơ",
+      "pos": "pron.",
+      "posCategory": "pronoun",
+      "meaning": "tôi (khiêm nhường)",
+      "exampleEn": "저는 베트남 사람이에요.",
+      "exampleVi": "Tôi là người Việt Nam.",
+      "emoji": "🙋"
+    },
+    {
+      "id": 184,
+      "word": "정말",
+      "ipa": "",
+      "viRead": "chơng-mal",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "thật sự, thật là",
+      "exampleEn": "정말 맛있어요!",
+      "exampleVi": "Thật sự rất ngon!",
+      "emoji": "✨"
+    },
+    {
+      "id": 185,
+      "word": "아주",
+      "ipa": "",
+      "viRead": "a-chu",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "rất",
+      "exampleEn": "오늘은 아주 더워요.",
+      "exampleVi": "Hôm nay rất nóng.",
+      "emoji": "💯"
+    },
+    {
+      "id": 186,
+      "word": "조금",
+      "ipa": "",
+      "viRead": "chô-gưm",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "một chút, hơi",
+      "exampleEn": "조금 피곤해요.",
+      "exampleVi": "Tôi hơi mệt.",
+      "emoji": "🤏"
+    },
+    {
+      "id": 187,
+      "word": "같이",
+      "ipa": "",
+      "viRead": "ca-chi",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "cùng nhau",
+      "exampleEn": "같이 가요!",
+      "exampleVi": "Cùng đi nào!",
+      "emoji": "🤝"
+    },
+    {
+      "id": 188,
+      "word": "그리고",
+      "ipa": "",
+      "viRead": "cư-ri-gô",
+      "pos": "conj.",
+      "posCategory": "conjunction",
+      "meaning": "và, rồi (nối hai câu)",
+      "exampleEn": "밥을 먹어요. 그리고 커피를 마셔요.",
+      "exampleVi": "Tôi ăn cơm. Rồi tôi uống cà phê.",
+      "emoji": "🔗"
+    },
+    {
+      "id": 189,
+      "word": "그래서",
+      "ipa": "",
+      "viRead": "cư-re-xơ",
+      "pos": "conj.",
+      "posCategory": "conjunction",
+      "meaning": "vì vậy, cho nên",
+      "exampleEn": "비가 와요. 그래서 집에 있어요.",
+      "exampleVi": "Trời mưa. Vì vậy tôi ở nhà.",
+      "emoji": "➡️"
+    },
+    {
+      "id": 190,
+      "word": "요즘",
+      "ipa": "",
+      "viRead": "yô-chưm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dạo này",
+      "exampleEn": "요즘 바빠요.",
+      "exampleVi": "Dạo này tôi bận.",
+      "emoji": "🗓️"
+    },
+    {
+      "id": 191,
+      "word": "열심히",
+      "ipa": "",
+      "viRead": "yơl-xi-mi",
+      "pos": "adv.",
+      "posCategory": "adverb",
+      "meaning": "chăm chỉ",
+      "exampleEn": "열심히 공부해요.",
+      "exampleVi": "Tôi học chăm chỉ.",
+      "emoji": "💪"
+    },
+    {
+      "id": 192,
+      "word": "내년",
+      "ipa": "",
+      "viRead": "ne-nyơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "năm sau",
+      "exampleEn": "내년에 한국에 갈 거예요.",
+      "exampleVi": "Năm sau tôi sẽ đi Hàn Quốc.",
+      "emoji": "🎆",
+      "hanViet": "lai niên"
     }
   ]
 }
