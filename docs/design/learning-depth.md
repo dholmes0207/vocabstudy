@@ -305,3 +305,28 @@ vì nghe.
   `useListenPaused()`.
 - `QuizRunner` đổi câu `listen` thành `en-to-vi` trong `useMemo` khi đang tạm tắt. Hai dạng
   có cùng đáp án (nghĩa), nên không phải tạo lại câu hỏi.
+
+## Tóm tắt cuối buổi theo thay đổi (18/10/2026)
+
+**User**: "Ôn xong chỉ thấy 8/10 đúng, không biết mình tiến bộ thế nào."
+
+Tham khảo: cuối lượt học của Memrise ghi "từ đã thành thạo +2" (REA, vòng 4).
+
+**BA**
+
+- Màn kết thúc của Ôn tập và Quiz có thêm một hàng nhãn, dưới số câu đúng:
+  - "⭐ +N từ đã thuộc";
+  - "📈 N từ lên bậc ôn";
+  - "🌱 +N từ vào lịch ôn";
+  - "🔁 N từ cần học lại".
+- Nhãn nào bằng 0 thì ẩn. Không có thay đổi nào thì không hiện cả hàng.
+- Bài Học không có hàng này, vì lời chúc cuối bài đã nói số từ mới.
+
+**Dev**
+
+- `lib/sessionDelta.ts`:
+  - `snapshotPhases(ids, cards)` chụp giai đoạn của các từ trước câu trả lời đầu tiên;
+  - `phaseDelta(before, cards)` so với thẻ sau buổi học. Thứ bậc: new < learning <
+    review < mastered.
+- `components/SessionChanges.tsx` đọc thẻ hiện tại từ `studyStore`.
+- `Review` chụp trong `useState` lúc mở trang. `Quiz` chụp khi bấm bắt đầu.
