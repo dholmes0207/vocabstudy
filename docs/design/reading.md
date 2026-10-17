@@ -94,3 +94,27 @@ từ đã học xuất hiện trong ngữ cảnh thật.
 - Thêm audio thu sẵn cho từng câu, sau khi đã chuyển audio sang R2.
 - Truyện cho gói tiếng Hàn: cần tra nghĩa theo cách tách từ riêng, vì tiếng Hàn có tiểu từ
   dính liền danh từ.
+
+## Đọc với trợ giúp từng câu (18/10/2026)
+
+**User**: "Bật bản dịch thì thấy hết, không còn tự đọc nữa. Chỉ muốn xem nghĩa câu mình bí."
+
+Tham khảo: trình đọc của Du Chinese (REA, vòng 5) có chế độ "Nghĩa của câu", chỉnh tốc độ đọc,
+và nút "bài tiếp theo" trong khoá học.
+
+**BA**
+
+- Cuối mỗi câu, cạnh nút nghe, có nút **"Nghĩa của câu này"**: chạm để hiện nghĩa tiếng Việt
+  của riêng câu đó, chạm lần nữa để ẩn. Khi đã bật "Bản dịch" cho cả bài thì nút này ẩn đi.
+- Nút **"Đọc chậm"** trên thanh công cụ: khi nghe cả bài hoặc nghe từng câu, giọng đọc chậm
+  còn 0,7 lần tốc độ đang cài.
+- Trả lời xong câu hỏi, nút chính là **"Truyện tiếp theo: …"** (truyện kế tiếp trong danh
+  sách). Truyện cuối cùng thì vẫn là "Truyện khác".
+
+**Dev**
+
+- `Reading.tsx`:
+  - `opened: Set<number>` lưu các câu đang mở nghĩa;
+  - `SLOW = 0.7` nhân vào `ttsRate` trong `playLine`;
+  - `Reading` truyền `next` (truyện kế tiếp trong `pack.stories`) xuống `StoryQuiz` qua prop
+    `nextStory`.
