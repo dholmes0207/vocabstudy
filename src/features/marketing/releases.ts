@@ -15,10 +15,14 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-17',
     title: [
-      'Kiểm tra trình độ, lưu từ khi đọc truyện, pinyin cho tiếng Trung',
-      'Placement check, saving words while reading, pinyin for Chinese',
+      'Lộ trình HSK 1 / TOPIK I, kiểm tra trình độ, lưu từ khi đọc',
+      'HSK 1 / TOPIK I roadmaps, a placement check, saving words while reading',
     ],
     items: [
+      [
+        'Lộ trình luyện thi HSK 1 (tiếng Trung) và TOPIK I (tiếng Hàn): thông tin kỳ thi có nguồn, 6 bước theo thứ tự nên học kèm chỗ bạn đã tới, và bài kiểm tra từ vựng 20 câu (10 nghe, 10 đọc). Từ làm sai có thể lưu lại để học.',
+        'Exam roadmaps for HSK 1 (Chinese) and TOPIK I (Korean): exam facts with sources, six steps in the order to learn them with how far you have got, and a 20-question vocabulary check (10 listening, 10 reading). Save the words you miss to learn them.',
+      ],
       [
         'Kiểm tra trình độ khoảng 3 phút ở trang Học: chọn nghĩa đúng của từ dễ trước, khó dần. Bài học sau đó bắt đầu từ chỗ bạn chưa chắc, không phải học lại từ "hello". Không cộng XP, không đổi lịch ôn.',
         'A 3-minute placement check on the Learn page: pick the meaning of easy words first, then harder ones. Lessons then start where you are no longer sure, not back at "hello". No XP, no change to your reviews.',

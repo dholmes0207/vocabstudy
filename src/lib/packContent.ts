@@ -12,6 +12,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/sounds': ['en'],
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
+  // HSK 1 and TOPIK I (lib/exams.ts).
+  '/exam': ['ko', 'zh'],
 }
 
 /** The screen a path belongs to: "/reading/lans-morning" → "/reading". */

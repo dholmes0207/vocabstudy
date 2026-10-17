@@ -10,6 +10,7 @@ import {
   Settings,
   Sparkles,
   FolderOpen,
+  Target,
   GraduationCap,
   Languages,
   AudioWaveform,
@@ -102,6 +103,7 @@ const NAV: NavItem[] = [
   // it stays in the sidebar, the account menu and on the home screen.
   { to: '/grammar', label: ['Ngữ pháp căn bản', 'Grammar basics'], icon: GraduationCap },
   { to: '/topics', label: ['Học theo chủ đề', 'Learn by topic'], icon: FolderOpen },
+  { to: '/exam', label: ['Lộ trình luyện thi', 'Exam roadmap'], icon: Target },
   { to: '/browse', label: ['Tra cứu', 'Dictionary'], icon: Library },
   { to: '/stats', label: ['Thống kê', 'Stats'], icon: BarChart3 },
   { to: '/settings', label: ['Cài đặt', 'Settings'], icon: Settings },

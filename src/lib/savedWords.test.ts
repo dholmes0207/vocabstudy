@@ -37,4 +37,10 @@ describe('saved words store', () => {
     useSavedWords.getState().remove('en', [1, 3])
     expect(useSavedWords.getState().saved).toEqual({ en: [2] })
   })
+
+  it('adds several words at once, keeping order and skipping ones already saved', () => {
+    useSavedWords.setState({ saved: { zh: [3] } })
+    useSavedWords.getState().add('zh', [5, 3, 5, 8])
+    expect(useSavedWords.getState().saved.zh).toEqual([3, 5, 8])
+  })
 })

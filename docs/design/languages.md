@@ -111,3 +111,10 @@
   열심히, 내년. Riêng 내년 (來年) có âm Hán Việt "lai niên".
 - Cách đọc theo quy ước cũ: ㄱ đứng đầu ghi "c" trước ư (그리고 → "cư-ri-gô"), và đọc theo
   phát âm thật (열심히 → "yơl-xi-mi", 같이 → "ca-chi").
+
+## Lộ trình luyện thi (17/10/2026)
+
+- Gói tiếng Trung có lộ trình HSK 1, gói tiếng Hàn có lộ trình TOPIK I (`/exam`; xem
+  `exam-track.md`).
+- Thêm kỳ thi cho một gói mới thì thêm một mục vào `EXAMS` trong `lib/exams.ts` và mã gói
+  vào `/exam` trong `lib/packContent.ts`.

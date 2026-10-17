@@ -10,6 +10,8 @@ interface SavedWordsState {
   /** lang code → word ids, oldest first. */
   saved: Record<string, number[]>
   toggle: (lang: string, wordId: number) => void
+  /** Save several words at once (those already saved keep their place). */
+  add: (lang: string, wordIds: readonly number[]) => void
   remove: (lang: string, wordIds: readonly number[]) => void
 }
 
@@ -24,6 +26,12 @@ export const useSavedWords = create<SavedWordsState>()(
             ? list.filter((id) => id !== wordId)
             : [...list, wordId]
           return { saved: { ...s.saved, [lang]: next } }
+        }),
+      add: (lang, wordIds) =>
+        set((s) => {
+          const list = s.saved[lang] ?? []
+          const fresh = [...new Set(wordIds)].filter((id) => !list.includes(id))
+          return fresh.length ? { saved: { ...s.saved, [lang]: [...list, ...fresh] } } : s
         }),
       remove: (lang, wordIds) =>
         set((s) => {

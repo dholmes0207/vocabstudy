@@ -93,15 +93,15 @@ hướng sản phẩm: VocaStudy là nơi người Việt học **nhiều** ngo�
 
 ## Đề xuất, xếp theo giá trị trên công sức
 
-| #   | Việc                                                                  | Học từ                           | Công sức  | Trạng thái         |
-| --- | --------------------------------------------------------------------- | -------------------------------- | --------- | ------------------ |
-| 1   | Mục "Bạn muốn học ngôn ngữ nào?" trên trang chủ, sinh từ `index.json` | Busuu, Babbel, Clozemaster, Cake | nhỏ       | **làm ngày 17/10** |
-| 2   | Nút "Lưu để học" trong hộp nghĩa khi đọc truyện                       | Du Chinese, LingQ, Readlang      | vừa       | **làm ngày 17/10** |
-| 3   | Kiểm tra trình độ 3 phút: chọn chỗ bắt đầu của bài Học                | TTMIK, Lingvist                  | vừa       | **làm ngày 17/10** |
-| 4   | Lộ trình HSK 1 / TOPIK I: tiến độ theo danh sách thi, đề thử ngắn     | Migii, Prep                      | vừa → lớn | đề xuất            |
-| 5   | Bước "nói thành tiếng" trong bài ngữ pháp                             | TTMIK                            | vừa       | đề xuất            |
-| 6   | Trang riêng cho từng ngôn ngữ (render sẵn để lên Google)              | Busuu, LingoDeer, Drops          | lớn       | cần bạn quyết      |
-| 7   | Tiện ích trình duyệt tra từ / nhập bài đọc                            | LingQ, Mochi                     | lớn       | để sau             |
+| #   | Việc                                                                   | Học từ                           | Công sức  | Trạng thái         |
+| --- | ---------------------------------------------------------------------- | -------------------------------- | --------- | ------------------ |
+| 1   | Mục "Bạn muốn học ngôn ngữ nào?" trên trang chủ, sinh từ `index.json`  | Busuu, Babbel, Clozemaster, Cake | nhỏ       | **làm ngày 17/10** |
+| 2   | Nút "Lưu để học" trong hộp nghĩa khi đọc truyện                        | Du Chinese, LingQ, Readlang      | vừa       | **làm ngày 17/10** |
+| 3   | Kiểm tra trình độ 3 phút: chọn chỗ bắt đầu của bài Học                 | TTMIK, Lingvist                  | vừa       | **làm ngày 17/10** |
+| 4   | Lộ trình HSK 1 / TOPIK I: tiến độ theo danh sách thi, kiểm tra từ vựng | Migii, Prep                      | vừa → lớn | **làm ngày 17/10** |
+| 5   | Bước "nói thành tiếng" trong bài ngữ pháp                              | TTMIK                            | vừa       | đề xuất            |
+| 6   | Trang riêng cho từng ngôn ngữ (render sẵn để lên Google)               | Busuu, LingoDeer, Drops          | lớn       | cần bạn quyết      |
+| 7   | Tiện ích trình duyệt tra từ / nhập bài đọc                             | LingQ, Mochi                     | lớn       | để sau             |
 
 Không đề xuất: cộng đồng, bootcamp, gia sư. Những thứ đó cần người kiểm duyệt và vận hành
 liên tục.
