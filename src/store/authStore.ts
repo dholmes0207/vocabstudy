@@ -450,8 +450,6 @@ export const useAuth = create<AuthState>((set, get) => {
   }
 })
 
-export const isAdmin = (u: AuthUser | null): boolean => u?.role === 'admin'
-
 /** The status that kept a profile out (only called once admit refused it). */
 function blockedStatus(profile: AuthUser | null): 'pending' | 'locked' {
   return profile?.status === 'locked' ? 'locked' : 'pending'

@@ -101,9 +101,6 @@ export function welcomeBack(
       }
 }
 
-/** Daily goal choices (answers per day), from "barely anything" up. */
-export const GOAL_OPTIONS = [5, 10, 20, 40] as const
-
 export interface GoalProgress {
   done: number
   goal: number

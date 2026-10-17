@@ -32,13 +32,3 @@ export function preCheckInput(text: string, lang: 'vi' | 'en' = 'vi'): PreCheck 
   }
   return { ok: true }
 }
-
-/** Suggested in-scope prompts shown as chips to steer valid usage. */
-export const SUGGESTED_PROMPTS: string[] = [
-  'Giải thích từ "ability" và cho 2 ví dụ',
-  'Phân biệt "affect" và "effect"',
-  'Cho mình 3 câu ví dụ với "improve"',
-  'Mẹo ghi nhớ từ "necessary"',
-  'Kiểm tra mình 5 từ vựng ngẫu nhiên',
-  'Các collocation thường gặp với "make"',
-]
