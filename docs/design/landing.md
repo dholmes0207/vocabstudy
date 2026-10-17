@@ -32,6 +32,17 @@ một nhóm làm nghiêm túc, không phải một trang demo.
   - Bấm "Tính năng" hay logo từ một trang giới thiệu khác vẫn ở lại trang giới thiệu.
 - Link xác nhận email của Supabase luôn đi vào app, giữ nguyên `#access_token…`.
 - Trang `/about`: sứ mệnh, câu chuyện, giá trị, liên hệ. Không bịa ra đội ngũ.
+  - Từ 17/10/2026, trang giới thiệu VocaStudy là **nơi học nhiều ngoại ngữ** cho người Việt,
+    không phải app tiếng Anh. User: "không chỉ học 1, 2 hay 3 ngôn ngữ, mà hướng tới là học
+    nhiều ngôn ngữ".
+  - Phần "Một cách học, cho mọi ngôn ngữ" gồm một thẻ cho mỗi ngôn ngữ đang có, mỗi thẻ có
+    link `/home?lang=…`. Cuối danh sách là ô "Ngôn ngữ tiếp theo", mời người học gửi email
+    gợi ý.
+  - Không nêu tên ngôn ngữ sắp làm và không ghi số liệu, vì số liệu đổi theo từng đợt nội
+    dung; số liệu chỉ nằm trên trang chủ và đã có test.
+  - `About.test.tsx` đọc `public/data/index.json`: thêm ngôn ngữ mới mà quên thẻ trên trang
+    About thì test báo lỗi.
+  - Câu giới thiệu ở chân trang cũng không nhắc riêng tiếng Anh.
 - Trang `/privacy` và `/terms`:
   - viết đúng theo luồng dữ liệu thật (Supabase, Cloudflare, OpenAI, Google Fonts, Google
     Calendar khi người dùng bật, nhận dạng giọng nói của trình duyệt);

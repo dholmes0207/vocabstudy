@@ -142,8 +142,8 @@ function MarketingFooter() {
           <Logo />
           <p className="mt-3 max-w-xs text-sm text-slate-500 dark:text-slate-400">
             {t(
-              'Học từ vựng và mẫu câu tiếng Anh mỗi ngày một chút — dành cho người Việt, kể cả người mất gốc.',
-              'English vocabulary and everyday phrases, a little every day — made for Vietnamese learners, including complete beginners.'
+              'Học ngoại ngữ mỗi ngày một chút, giải thích bằng tiếng Việt — dành cho người Việt, kể cả người bắt đầu từ con số 0.',
+              'Learn languages a little every day, explained in Vietnamese — made for Vietnamese speakers, including complete beginners.'
             )}
           </p>
           <a
