@@ -25,6 +25,7 @@ import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 import SpeakButton from '@/components/SpeakButton'
 import BuildTiles from '@/components/BuildTiles'
+import SpeakAloud from './SpeakAloud'
 
 // "Ngữ pháp căn bản" (docs/design/grammar.md): twelve short units — the rule in
 // plain Vietnamese, the pattern, examples to listen to, the mistakes Vietnamese
@@ -232,6 +233,9 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
           ))}
         </ul>
       </section>
+
+      {/* Learn → say it → practise (docs/design/grammar.md). */}
+      <SpeakAloud examples={unit.examples} lang={ttsLang} />
 
       {/* In the page flow, not the sticky session bar: the bottom nav is still here. */}
       <div>

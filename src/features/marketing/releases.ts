@@ -20,6 +20,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Bài ngữ pháp có thêm mục "Nói thành tiếng": nghe mẫu, bấm micro và đọc to 3 câu ví dụ. App chấm cả câu và tô đỏ chữ chưa nghe rõ, dùng được cho tiếng Anh, tiếng Hàn và tiếng Trung.',
+        'Grammar lessons now have "Say it aloud": hear the model, tap the mic and read three examples. The app scores the whole sentence and marks the words that did not come through — in English, Korean and Chinese.',
+      ],
+      [
         'Lộ trình luyện thi HSK 1 (tiếng Trung) và TOPIK I (tiếng Hàn): thông tin kỳ thi có nguồn, 6 bước theo thứ tự nên học kèm chỗ bạn đã tới, và bài kiểm tra từ vựng 20 câu (10 nghe, 10 đọc). Từ làm sai có thể lưu lại để học.',
         'Exam roadmaps for HSK 1 (Chinese) and TOPIK I (Korean): exam facts with sources, six steps in the order to learn them with how far you have got, and a 20-question vocabulary check (10 listening, 10 reading). Save the words you miss to learn them.',
       ],

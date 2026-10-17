@@ -86,3 +86,46 @@ Tính năng thứ hai vượt ra ngoài từ vựng. Tính năng thứ nhất l�
   - câu có chỗ trống;
   - câu xếp dài 3–10 từ;
   - mỗi bài có ít nhất 5 bài luyện.
+
+## Nói thành tiếng (17/10/2026)
+
+**User**: "Làm bài trắc nghiệm ngữ pháp thì đúng, mà mở miệng nói vẫn ngập ngừng."
+
+Tham khảo: mỗi bài học của Talk To Me In Korean có 4 bước: khởi động, học, **nói thành
+tiếng**, ôn nhanh (`docs/research/2026-10-17-language-apps.md`). VocaStudy không làm giống
+hệt: không thêm màn hình riêng, chỉ thêm một mục giữa phần giải thích và bài luyện. Thứ tự
+thành: hiểu → nói → luyện.
+
+**BA**
+
+- Mục "Nói thành tiếng" nằm sau "Lỗi người Việt hay gặp", trước nút "Luyện tập". Mục có 3 câu
+  ví dụ đầu tiên của bài.
+- Mỗi câu có nút nghe mẫu và nút micro. Nói xong, app hiện:
+  - điểm: "Rất tốt" từ 85%, "Khá tốt" từ 60%, dưới đó là "Thử lại nhé";
+  - câu mẫu, tô đỏ những chữ máy chưa nghe ra;
+  - "Máy nghe được: …".
+- Mỗi lúc chỉ một micro mở. Bấm vào câu khác thì câu đang nghe dừng lại.
+- Trình duyệt không chấm được giọng nói (Firefox) thì hiện lời giải thích. Người học vẫn
+  nghe mẫu và đọc theo được.
+- Không lưu điểm, không cộng XP, không lưu ghi âm. App dùng nhận dạng giọng nói của trình
+  duyệt, giống trang Luyện nói; trang Quyền riêng tư đã ghi điều này, và mục có link tới đó.
+
+**Dev**
+
+- `lib/sentenceScore.ts` chấm cả câu. `lib/pronunciation.ts` chỉ chấm một từ.
+  - Đơn vị so sánh tuỳ chữ viết (`unitFor(ttsLang)`):
+    - tiếng Anh so từng từ;
+    - tiếng Hàn so từng âm tiết, vì máy nhận dạng đặt khoảng trắng khác sách;
+    - tiếng Trung so từng chữ.
+  - Điểm: 0,8 × phần câu mẫu nghe được (theo dãy con chung dài nhất, giữ đúng thứ tự) +
+    0,2 × phần lời nói khớp với câu mẫu. Nói thêm vài chữ thừa chỉ bị trừ nhẹ.
+  - Quy về cùng một dạng trước khi so:
+    - dạng viết tắt tiếng Anh (doesn't = does not, I'm = I am);
+    - số tiếng Anh từ 0–99 (twenty = 20);
+    - số viết bằng chữ số trong tiếng Trung (3 → 三, 25 → 二十五).
+  - Chưa xử lý số trong tiếng Hàn. Hàn có hai hệ số đếm, "3" có thể là 셋 hoặc 삼.
+- `features/grammar/SpeakAloud.tsx`:
+  - dùng `listenOnce` của `lib/speech.ts` với `ttsLang` của gói;
+  - nhận dạng giọng nói thật không chạy được trong test, nên test thay nó bằng bản giả.
+- **Chưa kiểm tra bằng giọng nói thật.** Khung trình duyệt dùng để kiểm tra chặn micro. Cần
+  thử trên Chrome điện thoại với cả 3 ngôn ngữ.
