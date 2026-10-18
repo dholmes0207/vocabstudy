@@ -99,6 +99,17 @@ export const MEASURE_ITEMS: MeasureItem[] = [
   { noun: '鱼', measure: '条', also: ['只'], vi: 'một con cá' },
   { noun: '路', measure: '条', vi: 'một con đường' },
   { noun: '桌子', measure: '张', vi: 'một cái bàn' },
+  { noun: '票', measure: '张', vi: 'một tấm vé' },
+  { noun: '报纸', measure: '张', vi: 'một tờ báo' },
+  {
+    noun: '事情',
+    measure: '件',
+    vi: 'một việc',
+    tip: ['件 đếm cả việc, chuyện: 一件事情.', '件 also counts matters: 一件事情.'],
+  },
+  { noun: '孩子', measure: '个', vi: 'một đứa trẻ' },
+  { noun: '房间', measure: '个', vi: 'một căn phòng' },
+  { noun: '船', measure: '条', also: ['只'], vi: 'một chiếc thuyền' },
   { noun: '手表', measure: '块', also: ['只'], vi: 'một chiếc đồng hồ đeo tay' },
   {
     noun: '钱',
