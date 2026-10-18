@@ -13,6 +13,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
   '/measure-words': ['zh'],
+  // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
+  '/han-viet': ['zh', 'ko'],
   // HSK 1 and TOPIK I (lib/exams.ts).
   '/exam': ['ko', 'zh'],
 }

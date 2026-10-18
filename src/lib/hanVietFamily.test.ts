@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import type { LanguagePack } from '@/types'
-import { familiesOf, hanVietUnits } from './hanVietFamily'
+import type { LanguagePack, Word } from '@/types'
+import { familiesOf, foldVi, hanVietTable, hanVietUnits, searchHanViet } from './hanVietFamily'
 
 const pack = (code: string) =>
   JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as LanguagePack
@@ -48,5 +48,32 @@ describe('familiesOf', () => {
 
   it('returns nothing for a word without a family', () => {
     expect(familiesOf(find('en', 'apple'), words('en'))).toEqual([])
+  })
+})
+
+describe('hanVietTable', () => {
+  const zhWords = (JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as { words: Word[] })
+    .words
+
+  it('lists characters shared by at least two words, most-used first', () => {
+    const table = hanVietTable(zhWords)
+    expect(table.length).toBeGreaterThan(20)
+    for (let i = 1; i < table.length; i++)
+      expect(table[i - 1].words.length).toBeGreaterThanOrEqual(table[i].words.length)
+    const hoc = table.find((e) => e.char === '学')!
+    expect(hoc.hv).toBe('học')
+    expect(hoc.words.map((w) => w.word)).toEqual(
+      expect.arrayContaining(['学生', '学校', '学习', '同学'])
+    )
+  })
+
+  it('finds an entry by character, by Hán Việt with or without marks, or by a word', () => {
+    const table = hanVietTable(zhWords)
+    expect(searchHanViet(table, '学').map((e) => e.char)).toContain('学')
+    expect(searchHanViet(table, 'hoc').map((e) => e.char)).toContain('学')
+    expect(searchHanViet(table, 'HỌC').map((e) => e.char)).toContain('学')
+    expect(searchHanViet(table, '学校').map((e) => e.char)).toContain('学')
+    expect(searchHanViet(table, '')).toHaveLength(table.length)
+    expect(foldVi('Đông')).toBe('dong')
   })
 })

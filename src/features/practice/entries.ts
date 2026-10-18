@@ -33,6 +33,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-amber-500 to-red-500',
   },
   {
+    to: '/han-viet',
+    icon: '🀄',
+    title: 'Chữ Hán qua âm Hán Việt',
+    desc: 'Chữ dùng chung trong nhiều từ, kèm âm Hán Việt: biết 学 là "học" là đoán được 学校, 学习.',
+    titleEn: 'Characters by Sino-Vietnamese',
+    descEn:
+      'Characters shared by several words, with their Sino-Vietnamese reading: know 学 is "học", guess 学校 and 学习.',
+    tone: 'from-red-600 to-rose-500',
+  },
+  {
     to: '/hangul',
     icon: '🔤',
     title: 'Bảng chữ cái Hangul',
