@@ -15,12 +15,14 @@ import { Field, Segment } from '@/components/Choice'
 import { wordAudio } from '@/lib/audio'
 import QuizRunner from '@/components/QuizRunner'
 import { useT } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 
 type Scope = 'learned' | 'hard' | 'all'
 
+// The two direction labels name the pack's language ("Trung → Việt"); see modeLabel.
 const MODE_LABELS: Record<QuizMode, [vi: string, en: string]> = {
-  'en-to-vi': ['Anh → Việt', 'English → Vietnamese'],
-  'vi-to-en': ['Việt → Anh', 'Vietnamese → English'],
+  'en-to-vi': ['{L} → Việt', '{L} → Vietnamese'],
+  'vi-to-en': ['Việt → {L}', 'Vietnamese → {L}'],
   listen: ['Nghe → chọn từ', 'Listen → pick'],
   spell: ['Đánh vần (gõ từ) ✍️', 'Spelling (type it) ✍️'],
   context: ['Chọn từ điền vào câu', 'Pick the word for the gap'],
@@ -53,6 +55,11 @@ export default function Quiz() {
   const [modes, setModes] = useState<QuizMode[]>(['en-to-vi', 'vi-to-en', 'listen', 'context'])
   const [count, setCount] = useState(10)
   const t = useT()
+  const L = useTargetLang()
+  // "tiếng Trung" → "Trung", "English" stays "English".
+  const short: [string, string] = [L.vi.replace(/^tiếng\s+/i, ''), L.en]
+  const modeLabel = (m: QuizMode) =>
+    t(MODE_LABELS[m][0].replace('{L}', short[0]), MODE_LABELS[m][1].replace('{L}', short[1]))
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
   // Stages before the first answer, for the end-of-session changes.
   const [before, setBefore] = useState<PhaseSnapshot>({})
@@ -207,7 +214,7 @@ export default function Quiz() {
                     checked={modes.includes(m)}
                     onChange={() => toggleMode(m)}
                   />
-                  {t(MODE_LABELS[m][0], MODE_LABELS[m][1])}
+                  {modeLabel(m)}
                 </label>
               ))}
             </div>

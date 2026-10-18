@@ -121,9 +121,9 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/games/order',
     icon: '🔤',
     title: 'Xếp câu',
-    desc: 'Xếp các mảnh thành câu tiếng Anh đúng — hiểu từ đứng ở đâu trong câu.',
+    desc: 'Xếp các mảnh thành câu đúng — hiểu từ đứng ở đâu trong câu.',
     titleEn: 'Build a sentence',
-    descEn: 'Put the pieces into a correct English sentence — see where each word goes.',
+    descEn: 'Put the pieces into a correct sentence — see where each word goes.',
     tone: 'from-emerald-500 to-teal-600',
   },
   {
