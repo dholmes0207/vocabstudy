@@ -252,6 +252,27 @@ STORIES = [
             {'q': 'Về nhà tôi làm gì?', 'options': ['Gọi điện cho mẹ', 'Đi ngủ', 'Xem tivi'], 'answer': 0},
         ],
     },
+    {
+        'id': 'zh-fruit-shopping',
+        'emoji': '🍉',
+        'level': 'A2',
+        'title': ['Đi mua trái cây', '买水果'],
+        'sentences': [
+            ('星期天|上午，|我|和|妈妈|去|买|水果。', 'Sáng Chủ nhật, tôi và mẹ đi mua trái cây.'),
+            ('“西瓜|多少|钱|一|公斤？”', '“Dưa hấu bao nhiêu tiền một cân?”'),
+            ('“八|块。”', '“Tám tệ.”'),
+            ('妈妈|说：|“有点儿|贵，|便宜|一点儿|吧！”', 'Mẹ nói: “Hơi đắt, bớt một chút đi!”'),
+            ('“好，|七|块。|您|要|几|个？”', '“Được, bảy tệ. Bà lấy mấy quả?”'),
+            ('我们|买|了|两|个|西瓜。', 'Chúng tôi mua hai quả dưa hấu.'),
+            ('回|家|的|时候，|天气|有点儿|热。', 'Lúc về nhà, trời hơi nóng.'),
+            ('我们|吃|了|一点儿|西瓜，|真|好吃！', 'Chúng tôi ăn một chút dưa hấu, ngon thật!'),
+        ],
+        'questions': [
+            {'q': 'Lúc đầu dưa hấu giá bao nhiêu một cân?', 'options': ['7 tệ', '8 tệ', '10 tệ'], 'answer': 1},
+            {'q': 'Họ mua mấy quả dưa hấu?', 'options': ['Một quả', 'Hai quả', 'Ba quả'], 'answer': 1},
+            {'q': 'Mẹ nói gì về giá?', 'options': ['Rẻ quá', 'Hơi đắt', 'Vừa phải'], 'answer': 1},
+        ],
+    },
 ]
 
 
@@ -335,6 +356,14 @@ SENTENCE_PINYIN = {
     '我|买|了|这个|手机。': 'wǒ mǎi le zhè ge shǒu jī',
     '回|家|以后，|我|给|妈妈|打电话。': 'huí jiā yǐ hòu wǒ gěi mā ma dǎ diàn huà',
     '妈妈|说：|“你|的|新|手机|真|漂亮！”': 'mā ma shuō nǐ de xīn shǒu jī zhēn piào liang',
+    '星期天|上午，|我|和|妈妈|去|买|水果。': 'xīng qī tiān shàng wǔ wǒ hé mā ma qù mǎi shuǐ guǒ',
+    '“西瓜|多少|钱|一|公斤？”': 'xī guā duō shao qián yì gōng jīn',
+    '“八|块。”': 'bā kuài',
+    '妈妈|说：|“有点儿|贵，|便宜|一点儿|吧！”': 'mā ma shuō yǒu diǎn r guì pián yi yì diǎn r ba',
+    '“好，|七|块。|您|要|几|个？”': 'hǎo qī kuài nín yào jǐ gè',
+    '我们|买|了|两|个|西瓜。': 'wǒ men mǎi le liǎng gè xī guā',
+    '回|家|的|时候，|天气|有点儿|热。': 'huí jiā de shí hou tiān qì yǒu diǎn r rè',
+    '我们|吃|了|一点儿|西瓜，|真|好吃！': 'wǒ men chī le yì diǎn r xī guā zhēn hǎo chī',
 }
 
 
