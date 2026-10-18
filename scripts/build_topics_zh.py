@@ -165,6 +165,24 @@ TOPICS = [
         打篮球 踢
         ''',
     ),
+    (
+        'weather-seasons',
+        '🌦️',
+        ('Thời tiết & bốn mùa', 'Weather & seasons'),
+        '''
+        天气 冷 热 下雨 雪 晴 阴 春天 夏天 秋天 冬天 外面
+        今天 明天 可能
+        ''',
+    ),
+    (
+        'restaurant',
+        '🍽️',
+        ('Ở nhà hàng', 'At the restaurant'),
+        '''
+        饭店 服务员 欢迎 菜 米饭 面条 鱼 羊肉 鸡蛋 茶 咖啡 水
+        牛奶 杯 要 好吃 多少 钱 块 元 饿
+        ''',
+    ),
 ]
 
 

@@ -448,3 +448,10 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - **Chiếc điện thoại mới** (`zh-new-phone`): dùng 比 + số lượng (比那个便宜五百块), 告诉, 给…打电话.
 - Người học gặp lại các mẫu của Bước 14–15 trong một câu chuyện. Cách viết vẫn như cũ: 8 câu có
   pinyin, 3 câu hỏi. Tổng cộng 10 truyện tiếng Trung, 32 truyện cho cả app.
+
+## Bước 19: bộ "Thời tiết & bốn mùa" và "Ở nhà hàng" (19/10/2026)
+
+- Hai tình huống người học gặp sớm, ghép từ những từ đã có trong gói, không thêm từ mới.
+  - **Thời tiết & bốn mùa**: 15 từ (天气, 冷/热, 下雨, 雪, 晴, 阴, bốn mùa, 外面, 可能…).
+  - **Ở nhà hàng**: 21 từ (饭店, 服务员, 欢迎, món ăn, đồ uống, 杯, 要, 多少钱, 块/元, 饿…).
+- Tổng cộng 15 bộ chủ đề tiếng Trung. Trang chủ đã cập nhật.
