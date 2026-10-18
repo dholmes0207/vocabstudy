@@ -270,3 +270,17 @@ describe('generateQuiz', () => {
     expect(generateQuiz({ words: [], pool })).toEqual([])
   })
 })
+
+describe('checkFillAnswer in pinyin', () => {
+  const xiexie = word({ id: 50, word: '谢谢', viRead: 'xièxie' })
+  it('accepts a Chinese word typed in pinyin, tones aside', () => {
+    expect(checkFillAnswer(xiexie, '谢谢')).toBe(true)
+    expect(checkFillAnswer(xiexie, 'xiexie')).toBe(true)
+    expect(checkFillAnswer(xiexie, 'xie4 xie')).toBe(true)
+    expect(checkFillAnswer(xiexie, 'xie')).toBe(false)
+  })
+  it('never reads a Vietnamese-style respelling as an answer', () => {
+    const ko = word({ id: 51, word: '사람', viRead: 'xa-ram' })
+    expect(checkFillAnswer(ko, 'xaram')).toBe(false)
+  })
+})

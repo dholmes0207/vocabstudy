@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Tiếng Trung: không cần bàn phím chữ Hán nữa — ở Nghe – chép và câu điền từ, gõ bính âm không dấu (ví dụ "xiexie" cho 谢谢) cũng được chấm, rồi app hiện lại chữ Hán.',
+        'Chinese: no Chinese keyboard needed — in dictation and gap questions you can type pinyin without tones (say "xiexie" for 谢谢), and the app shows the characters afterwards.',
+      ],
+      [
         'Học tiếng Hàn, tiếng Trung mà máy chưa có bàn phím Hàn hay bàn phím bính âm: dưới ô gõ có hướng dẫn thêm bàn phím cho đúng loại máy, kèm nút "Làm không cần gõ" — Nghe – chép thành xếp thẻ chữ, câu điền từ thành câu chọn đáp án.',
         'Learning Korean or Chinese without a Hangul or pinyin keyboard yet: under the typing box there are steps to add one for your device, plus "Do it without typing" — dictation becomes tapping tiles in order, and gap questions become multiple choice.',
       ],

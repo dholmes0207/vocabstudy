@@ -51,8 +51,7 @@ Không làm:
 
 - **Bàn phím chữ Hàn trên màn hình.** Điện thoại nào cũng có sẵn bàn phím Hàn miễn phí, nên
   hướng dẫn cài là đủ.
-- **Chấp nhận đáp án gõ bằng bính âm.** Gõ đúng bính âm chưa chứng tỏ người học nhận ra mặt
-  chữ Hán. Để sau, nếu người học cần.
+- **Chấp nhận đáp án gõ bằng bính âm**: ban đầu chưa làm, nay đã làm. Xem `pinyin-input.md`.
 
 **Dev**
 

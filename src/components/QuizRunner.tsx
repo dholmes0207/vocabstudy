@@ -12,6 +12,7 @@ import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
 import { LISTEN_PAUSE_MINUTES, useListenPause, useListenPaused } from '@/store/listenPauseStore'
 import { useNoTyping } from '@/store/noTypingStore'
+import { acceptsPinyin, isPinyinAnswer } from '@/lib/pinyinInput'
 import KeyboardHelp, { NoTypingNote } from './KeyboardHelp'
 import HighlightExample from './HighlightExample'
 import PosBadge from './PosBadge'
@@ -82,6 +83,7 @@ export default function QuizRunner({
   useImmersive()
   const ttsRate = useSettings((s) => s.ttsRate)
   const soundEnabled = useSettings((s) => s.soundEnabled)
+  const code = useSettings((s) => s.currentLang)
   const [queue, setQueue] = useState<Item[]>(() => questions.map((q) => ({ q, attempt: 1 })))
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
@@ -424,7 +426,11 @@ export default function QuizRunner({
               readOnly={revealed}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && (revealed ? next() : submitTyping())}
-              placeholder={t(`Gõ từ ${L.vi}…`, `Type the ${L.en} word…`)}
+              placeholder={
+                acceptsPinyin(code)
+                  ? t('Gõ chữ Hán hoặc bính âm…', 'Type the characters or pinyin…')
+                  : t(`Gõ từ ${L.vi}…`, `Type the ${L.en} word…`)
+              }
               aria-label={t('Câu trả lời', 'Your answer')}
               className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-lg tracking-wide outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
               autoCapitalize="off"
@@ -504,11 +510,19 @@ export default function QuizRunner({
               <>
                 <p className="font-semibold text-emerald-600">
                   ✓ {praise(q.wordId + item.attempt, lang)}
-                  {isTyping && q.surface && norm(input) !== norm(q.surface) && (
+                  {isTyping && isPinyinAnswer(input) && /\p{Script=Han}/u.test(word.word) ? (
                     <span className="ml-1 font-normal text-slate-500 dark:text-slate-400">
-                      {t('Trong câu, từ này được viết là', 'In this sentence it is written')}{' '}
-                      <b>{q.surface}</b>.
+                      {t('Viết bằng chữ Hán:', 'In characters:')} <b>{q.surface ?? word.word}</b>
                     </span>
+                  ) : (
+                    isTyping &&
+                    q.surface &&
+                    norm(input) !== norm(q.surface) && (
+                      <span className="ml-1 font-normal text-slate-500 dark:text-slate-400">
+                        {t('Trong câu, từ này được viết là', 'In this sentence it is written')}{' '}
+                        <b>{q.surface}</b>.
+                      </span>
+                    )
                   )}
                 </p>
                 <CorrectEcho word={word} ttsLang={ttsLang} showSentence={!sentencePrompt} />

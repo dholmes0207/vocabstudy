@@ -1,6 +1,7 @@
 import type { QuizMode, QuizOption, QuizQuestion, Word } from '@/types'
 import { findWordInSentence } from './wordForms'
 import { tx } from './i18n'
+import { isPinyinAnswer, matchesPinyin } from './pinyinInput'
 
 // ============================================================================
 // Quiz generation. Produces multiple-choice and typing questions, drawing
@@ -227,5 +228,9 @@ export function checkFillAnswer(word: Word, input: string, surface?: string): bo
   if (!target) return false
   const forms = word.word.split('/').map((s) => norm(s))
   if (surface) forms.push(norm(surface))
-  return forms.some((f) => f === target)
+  if (forms.some((f) => f === target)) return true
+  // A Chinese word may be typed in pinyin, tones aside (lib/pinyinInput).
+  return (
+    /\p{Script=Han}/u.test(word.word) && isPinyinAnswer(input) && matchesPinyin(input, word.viRead)
+  )
 }
