@@ -66,3 +66,5 @@ Tham khảo, quét trang công khai bằng REA (`docs/research/2026-10-17-langua
   `{ key, text, vi, read?, audioSrc? }[]`. Trang Nghe – chép cũ chuyển từ danh sách từ sang
   `items` qua `fromWords`.
 - `Reading.tsx` và `Grammar.tsx` dựng `items` từ câu truyện hoặc câu ví dụ.
+
+Chưa có bàn phím Hàn hoặc bàn phím bính âm thì làm bằng thẻ chữ, xem `typing-help.md`.

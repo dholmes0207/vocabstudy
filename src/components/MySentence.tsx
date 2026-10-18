@@ -8,6 +8,7 @@ import { useContextStore } from '@/store/contextStore'
 import HighlightExample from './HighlightExample'
 import { useT } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
+import KeyboardHelp from './KeyboardHelp'
 
 interface Props {
   word: Word
@@ -154,6 +155,9 @@ export default function MySentence({ word, lang }: Props) {
         )}
       </div>
       {hint && <p className="mt-1.5 text-xs text-amber-700 dark:text-amber-400">{hint}</p>}
+      <div className="mt-1.5">
+        <KeyboardHelp />
+      </div>
     </div>
   )
 }

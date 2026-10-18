@@ -84,6 +84,35 @@ export function dictationScore(parts: DiffPart[]): number {
   return Math.max(0, (ok - extras * 0.5) / total)
 }
 
+/**
+ * Tiles for writing a sentence down without a keyboard: its words, as the
+ * other tile games split them. A Chinese sentence with no marked word breaks
+ * (the grammar examples) is split into characters instead, punctuation kept
+ * on the character next to it.
+ */
+export function dictationTiles(sentence: string): string[] {
+  const words = tokenize(sentence)
+  if (!HAN.test(sentence) || words.length > 1) return words
+  const tiles: string[] = []
+  let lead = '' // an opening quote waits for the character it belongs to
+  for (const c of sentence.trim()) {
+    if (/[\p{L}\p{N}]/u.test(c)) {
+      tiles.push(lead + c)
+      lead = ''
+    } else if (tiles.length === 0) lead += c
+    else tiles[tiles.length - 1] += c
+  }
+  return tiles
+}
+
+/**
+ * Score for a sentence built from tiles. A wrong tap costs half a tile, like an
+ * extra typed word, so one slip in a short sentence still counts as caught.
+ */
+export function tileScore(tiles: number, mistakes: number): number {
+  return tiles === 0 ? 0 : Math.max(0, (tiles - mistakes * 0.5) / tiles)
+}
+
 /** At or above this a sentence counts as caught. */
 export const DICTATION_PASS = 0.8
 
