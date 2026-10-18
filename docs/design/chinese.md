@@ -455,3 +455,15 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
   - **Thời tiết & bốn mùa**: 15 từ (天气, 冷/热, 下雨, 雪, 晴, 阴, bốn mùa, 外面, 可能…).
   - **Ở nhà hàng**: 21 từ (饭店, 服务员, 欢迎, món ăn, đồ uống, 杯, 要, 多少钱, 块/元, 饿…).
 - Tổng cộng 15 bộ chủ đề tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 20: bài 几 / 多少 và 有点儿 / 一点儿 (19/10/2026)
+
+- **几 / 多少** (`zh-ji-duoshao`, A1):
+  - 几 cho số nhỏ và cần lượng từ;
+  - 多少 cho số bất kỳ và để hỏi giá;
+  - giờ, ngày, thứ thì hỏi bằng 几.
+  - Câu chọn chỉ đưa ra phương án chắc chắn sai: 星期多少, 几学生 (thiếu lượng từ). Không dùng
+    "多少口人", vì câu đó vẫn có thể gặp.
+- **有点儿 / 一点儿** (`zh-youdianr`, A2): 有点儿 đứng trước tính từ (hơi, thường là điều không vừa
+  ý); 一点儿 đứng sau tính từ (hơn một chút) hoặc trước danh từ (một ít).
+- Tổng cộng 18 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
