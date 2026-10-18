@@ -56,4 +56,18 @@ describe('Pinyin', () => {
     expect(screen.getByText('Xong bài kiểm tra pinyin!')).toBeInTheDocument()
     expect(useStudy.getState().progress.zh?.stats.xp).toBeGreaterThanOrEqual(5)
   })
+
+  it('plays a word by ear and shows its characters only after the answer', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('button', { name: /Nghe chọn thanh/ }))
+    const card = screen.getByText('Nghe rồi chọn thanh đúng').parentElement!
+    expect(within(card).getByRole('button', { name: 'Nghe lại' })).toBeInTheDocument()
+    expect(within(card).queryByText(/\p{Script=Han}{2}/u)).not.toBeInTheDocument()
+    const options = within(card)
+      .getAllByRole('button')
+      .filter((b) => b.textContent && b.getAttribute('aria-label') !== 'Nghe lại')
+    expect(options).toHaveLength(4)
+    fireEvent.click(options[0])
+    expect(within(card).getByText(/^\p{Script=Han}{2}$/u)).toBeInTheDocument()
+  })
 })

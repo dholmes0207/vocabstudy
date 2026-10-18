@@ -1,6 +1,18 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { INITIALS, SANDHI, TONES, TRICKY_FINALS, pinyinQuiz, pinyinXp, toneOf } from './pinyin'
+import {
+  INITIALS,
+  SANDHI,
+  TONES,
+  TRICKY_FINALS,
+  earQuiz,
+  hasThirdToneRun,
+  pinyinQuiz,
+  pinyinXp,
+  toneOf,
+  toneVariants,
+  type ZhWord,
+} from './pinyin'
 
 const pack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as {
   words: { word: string; viRead: string; meaning: string }[]
@@ -74,5 +86,38 @@ describe('the quick check', () => {
   it('gives XP for trying and for each right answer', () => {
     expect(pinyinXp(0, 10)).toBe(5)
     expect(pinyinXp(10, 10)).toBe(30)
+  })
+})
+
+describe('earQuiz: hear a word, pick its tones', () => {
+  it('makes options that differ from the reading in tones only', () => {
+    const v = toneVariants('xǐhuan')
+    expect(v).toHaveLength(3)
+    expect(new Set(v).size).toBe(3)
+    for (const r of v) {
+      expect(r).not.toBe('xǐhuan')
+      expect(r.normalize('NFD').replace(/[̀-ͯ]/g, '')).toBe('xihuan')
+    }
+    expect(toneVariants('ma')).toEqual([])
+  })
+
+  it('leaves out words whose two third tones are said 2 + 3', () => {
+    expect(hasThirdToneRun('nǐ hǎo')).toBe(true)
+    expect(hasThirdToneRun('xǐhuan')).toBe(false)
+    expect(hasThirdToneRun('lǎoshī')).toBe(false)
+  })
+
+  it('asks about two-character words of the pack, the reading among four options', () => {
+    const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as { words: ZhWord[] }
+    const qs = earQuiz(zh.words, 10)
+    expect(qs).toHaveLength(10)
+    for (const q of qs) {
+      if (q.kind !== 'ear') throw new Error('kind')
+      expect([...q.prompt]).toHaveLength(2)
+      expect(new Set(q.options).size).toBe(4)
+      const w = zh.words.find((x) => x.word === q.prompt)!
+      expect(q.options[q.answer]).toBe(w.viRead)
+      expect(hasThirdToneRun(w.viRead)).toBe(false)
+    }
   })
 })

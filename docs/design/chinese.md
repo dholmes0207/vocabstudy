@@ -338,3 +338,36 @@ chưa gặp lại các từ mới của Bước 9 trong ngữ cảnh.
 - `scripts/zh_pinyin.py`: viết hoa chữ đầu của câu trích dẫn sau dấu hai chấm (`shuō: “Nǐ …`).
   Dựng lại gói từ và bài ngữ pháp thì dữ liệu không đổi.
 - Trang chủ ghi 6 truyện ngắn tiếng Trung.
+
+## Bước 12: nghe chọn thanh (19/10/2026)
+
+**User**: "Cải thiện thêm phần học tiếng Trung."
+
+Bài kiểm tra pinyin cũ chỉ hỏi bằng mắt: nhìn chữ để đoán thanh, hoặc chọn cách đọc. Trong khi
+đó, cái khó nhất với người mới là nghe ra thanh, nhất là khi hai thanh đi liền nhau trong một từ.
+
+**BA**
+
+- Trang Pinyin có thêm nút **"Nghe chọn thanh (10 câu)"**, cạnh nút "Kiểm tra nhanh".
+- Mỗi câu:
+  - Câu tự phát một từ hai chữ (bấm nút loa to để nghe lại). Chữ Hán **ẩn** cho đến khi trả lời,
+    để người học phải nghe chứ không đọc.
+  - Có 4 cách viết bính âm, chỉ khác nhau ở dấu thanh: xǐhuan, xīhuan, xíhuan, xìhuan.
+  - Trả lời xong thì hiện chữ Hán và nghĩa, có nút nghe lại. Cuối lượt cộng XP như bài kiểm tra
+    nhanh.
+- **Bỏ các từ có hai thanh 3 liền nhau** (你好, 可以, 手表…). Hai thanh 3 đi liền thì thanh đầu
+  được đọc thành thanh 2, nên tai nghe "ní hǎo" trong khi chữ viết là "nǐ hǎo". Hỏi những từ này
+  sẽ chấm sai người nghe đúng.
+- Tiếng Trung đọc bằng giọng của trình duyệt. Máy không có giọng tiếng Trung thì câu hỏi im lặng,
+  giống mọi phần khác của gói tiếng Trung.
+
+**Dev**
+
+- `lib/pinyin.ts`:
+  - `toneVariants(reading)` đổi dấu thanh trên từng nguyên âm có dấu, không cần tách âm tiết.
+  - `hasThirdToneRun(reading)`.
+  - `earQuiz(words)` lấy từ hai chữ, bỏ từ viết hoa (tên riêng) và từ có hai thanh 3 liền nhau.
+  - `PinyinQuestion` có thêm loại `ear`.
+- `features/pinyin/Pinyin.tsx`: câu loại `ear` tự phát khi hiện ra, và giấu chữ cho tới khi trả
+  lời.
+- Test: `lib/pinyin.test.ts`, `features/pinyin/Pinyin.test.tsx`.
