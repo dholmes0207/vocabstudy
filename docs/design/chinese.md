@@ -467,3 +467,8 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - **有点儿 / 一点儿** (`zh-youdianr`, A2): 有点儿 đứng trước tính từ (hơi, thường là điều không vừa
   ý); 一点儿 đứng sau tính từ (hơn một chút) hoặc trước danh từ (một ít).
 - Tổng cộng 18 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 21: truyện "Đi mua trái cây" (19/10/2026)
+
+- `zh-fruit-shopping` (A2): một lần mặc cả ngắn, ôn 多少钱一公斤, 有点儿贵, 便宜一点儿吧, 您要几个,
+  吃了一点儿 (Bước 20). Tổng cộng 11 truyện tiếng Trung, 33 truyện cho cả app.

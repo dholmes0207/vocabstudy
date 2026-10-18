@@ -783,6 +783,86 @@
           "answer": 0
         }
       ]
+    },
+    {
+      "id": "zh-fruit-shopping",
+      "emoji": "🍉",
+      "level": "A2",
+      "title": [
+        "Đi mua trái cây",
+        "买水果"
+      ],
+      "sentences": [
+        {
+          "en": "星期天​上午，​我​和​妈妈​去​买​水果。",
+          "vi": "Sáng Chủ nhật, tôi và mẹ đi mua trái cây.",
+          "read": "Xīngqītiān shàngwǔ, wǒ hé māma qù mǎi shuǐguǒ."
+        },
+        {
+          "en": "“西瓜​多少​钱​一​公斤？”",
+          "vi": "“Dưa hấu bao nhiêu tiền một cân?”",
+          "read": "“Xīguā duōshao qián yì gōngjīn?”"
+        },
+        {
+          "en": "“八​块。”",
+          "vi": "“Tám tệ.”",
+          "read": "“Bā kuài.”"
+        },
+        {
+          "en": "妈妈​说：​“有点儿​贵，​便宜​一点儿​吧！”",
+          "vi": "Mẹ nói: “Hơi đắt, bớt một chút đi!”",
+          "read": "Māma shuō: “Yǒudiǎnr guì, piányi yìdiǎnr ba!”"
+        },
+        {
+          "en": "“好，​七​块。​您​要​几​个？”",
+          "vi": "“Được, bảy tệ. Bà lấy mấy quả?”",
+          "read": "“Hǎo, qī kuài. Nín yào jǐ gè?”"
+        },
+        {
+          "en": "我们​买​了​两​个​西瓜。",
+          "vi": "Chúng tôi mua hai quả dưa hấu.",
+          "read": "Wǒmen mǎi le liǎng gè xīguā."
+        },
+        {
+          "en": "回​家​的​时候，​天气​有点儿​热。",
+          "vi": "Lúc về nhà, trời hơi nóng.",
+          "read": "Huí jiā de shíhou, tiānqì yǒudiǎnr rè."
+        },
+        {
+          "en": "我们​吃​了​一点儿​西瓜，​真​好吃！",
+          "vi": "Chúng tôi ăn một chút dưa hấu, ngon thật!",
+          "read": "Wǒmen chī le yìdiǎnr xīguā, zhēn hǎochī!"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Lúc đầu dưa hấu giá bao nhiêu một cân?",
+          "options": [
+            "7 tệ",
+            "8 tệ",
+            "10 tệ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Họ mua mấy quả dưa hấu?",
+          "options": [
+            "Một quả",
+            "Hai quả",
+            "Ba quả"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Mẹ nói gì về giá?",
+          "options": [
+            "Rẻ quá",
+            "Hơi đắt",
+            "Vừa phải"
+          ],
+          "answer": 1
+        }
+      ]
     }
   ]
 }
