@@ -29,6 +29,8 @@ export interface KeyboardGuide {
   steps: Record<Device, Pair[]>
   /** How typing works once the keyboard is there. */
   howTo: Pair
+  /** What to do meanwhile without the keyboard, when the app has a way. */
+  noKeyboard?: Pair
 }
 
 const GUIDES: Record<string, KeyboardGuide> = {
@@ -152,6 +154,10 @@ const GUIDES: Record<string, KeyboardGuide> = {
     howTo: [
       'Gõ bính âm không dấu (wo shi → 我是), rồi chọn chữ đúng trong hàng gợi ý; phím cách chọn chữ đầu tiên.',
       'Type pinyin without tones (wo shi → 我是), then pick the right characters from the suggestions; space takes the first one.',
+    ],
+    noKeyboard: [
+      'Chưa cài được? Ở Nghe – chép và câu điền từ, cứ gõ thẳng bính âm không dấu vào ô — app vẫn chấm.',
+      'Cannot add it yet? In dictation and gap questions, just type pinyin without tones into the box — it is graded too.',
     ],
   },
 }
