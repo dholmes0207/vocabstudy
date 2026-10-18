@@ -323,6 +323,8 @@ export interface ZhWord {
 export type PinyinQuestion =
   | { kind: 'tone'; prompt: string; reading: string; answer: 1 | 2 | 3 | 4 | 5; note: string }
   | { kind: 'word'; prompt: string; options: string[]; answer: number; note: string }
+  /** Hear the word, pick its tones: the options differ only in tone marks. */
+  | { kind: 'ear'; prompt: string; options: string[]; answer: number; note: string }
 
 function shuffle<T>(arr: T[], rand: () => number): T[] {
   const a = [...arr]
@@ -380,4 +382,81 @@ export function pinyinQuiz(
 /** XP for a quick check: a little for trying, more for each right answer. */
 export function pinyinXp(correct: number, total: number): number {
   return 5 + correct * 2 + (correct === total && total > 0 ? 5 : 0)
+}
+
+// "Nghe chọn thanh" (docs/design/chinese.md, bước 12): ear training on tone
+// pairs. Each tone-marked vowel is swapped for the same vowel in another tone.
+
+const MARKED: Record<string, string[]> = {
+  a: ['ā', 'á', 'ǎ', 'à'],
+  e: ['ē', 'é', 'ě', 'è'],
+  i: ['ī', 'í', 'ǐ', 'ì'],
+  o: ['ō', 'ó', 'ǒ', 'ò'],
+  u: ['ū', 'ú', 'ǔ', 'ù'],
+  ü: ['ǖ', 'ǘ', 'ǚ', 'ǜ'],
+}
+const MARK_OF = new Map(
+  Object.entries(MARKED).flatMap(([base, forms]) =>
+    forms.map((f, t) => [f, { base, tone: t + 1 }] as const)
+  )
+)
+
+/**
+ * Up to `n` readings that differ from `reading` in tones only ("xǐhuan" →
+ * "xīhuan", "xíhuan", "xìhuan"). Neutral syllables stay neutral.
+ */
+export function toneVariants(reading: string, n = 3, rand: () => number = Math.random): string[] {
+  const chars = [...reading]
+  const at = chars.flatMap((c, i) => (MARK_OF.has(c) ? [i] : []))
+  if (!at.length) return []
+  const combos: number[][] = [[]]
+  for (let k = 0; k < at.length; k++) {
+    const grown: number[][] = []
+    for (const c of combos) for (let t = 1; t <= 4; t++) grown.push([...c, t])
+    combos.splice(0, combos.length, ...grown)
+  }
+  const spell = (tones: number[]) => {
+    const out = [...chars]
+    at.forEach((i, k) => (out[i] = MARKED[MARK_OF.get(chars[i])!.base][tones[k] - 1]))
+    return out.join('')
+  }
+  const all = [...new Set(combos.map(spell))].filter((r) => r !== reading)
+  return shuffle(all, rand).slice(0, n)
+}
+
+/**
+ * Two third tones in a row are said 2 + 3 (nǐ hǎo sounds ní hǎo), so the ear
+ * cannot tell the written form from a "wrong" option: such words are left out.
+ */
+export function hasThirdToneRun(reading: string): boolean {
+  const tones = [...reading].flatMap((c) => (MARK_OF.has(c) ? [MARK_OF.get(c)!.tone] : []))
+  return tones.some((t, i) => t === 3 && tones[i + 1] === 3)
+}
+
+/** A listening round on two-character words: hear it, pick the tones. */
+export function earQuiz(
+  words: ZhWord[],
+  count = 10,
+  rand: () => number = Math.random
+): PinyinQuestion[] {
+  const pool = words.filter(
+    (w) =>
+      [...w.word].length === 2 &&
+      HAN_ONLY.test(w.word) &&
+      !/[A-ZĀÁǍÀĒÉĚÈŌÓǑÒ]/.test(w.viRead) &&
+      !hasThirdToneRun(w.viRead) &&
+      toneVariants(w.viRead, 3, rand).length === 3
+  )
+  return shuffle(pool, rand)
+    .slice(0, count)
+    .map((w) => {
+      const options = shuffle([w.viRead, ...toneVariants(w.viRead, 3, rand)], rand)
+      return {
+        kind: 'ear' as const,
+        prompt: w.word,
+        options,
+        answer: options.indexOf(w.viRead),
+        note: w.meaning,
+      }
+    })
 }

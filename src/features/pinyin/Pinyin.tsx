@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, LogOut, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
@@ -12,6 +12,7 @@ import {
   SANDHI,
   TONES,
   TRICKY_FINALS,
+  earQuiz,
   pinyinQuiz,
   pinyinXp,
   type PinyinQuestion,
@@ -34,12 +35,23 @@ export default function Pinyin() {
   const t = useT()
   const words = useData((s) => s.pack?.words)
   const [quiz, setQuiz] = useState<{ n: number; questions: PinyinQuestion[] } | null>(null)
-  const start = () =>
-    setQuiz((q) => ({ n: (q?.n ?? 0) + 1, questions: pinyinQuiz(words ?? [], QUIZ_SIZE) }))
+  const [ear, setEar] = useState(false)
+  const start = (byEar = ear) => {
+    setEar(byEar)
+    setQuiz((q) => ({
+      n: (q?.n ?? 0) + 1,
+      questions: (byEar ? earQuiz : pinyinQuiz)(words ?? [], QUIZ_SIZE),
+    }))
+  }
 
   if (quiz)
     return (
-      <Quiz key={quiz.n} questions={quiz.questions} onExit={() => setQuiz(null)} onAgain={start} />
+      <Quiz
+        key={quiz.n}
+        questions={quiz.questions}
+        onExit={() => setQuiz(null)}
+        onAgain={() => start()}
+      />
     )
 
   return (
@@ -55,9 +67,15 @@ export default function Pinyin() {
             'Pinyin spells how a character is read in Latin letters: initial + final + tone. Vietnamese has tones too, so you start ahead — you just need to hear the four tones and the neutral one.'
           )}
         </p>
-        <button className="btn-primary mt-4 h-11" onClick={start}>
-          {t(`Kiểm tra nhanh (${QUIZ_SIZE} câu)`, `Quick check (${QUIZ_SIZE} questions)`)}
-        </button>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button className="btn-primary h-11" onClick={() => start(false)}>
+            {t(`Kiểm tra nhanh (${QUIZ_SIZE} câu)`, `Quick check (${QUIZ_SIZE} questions)`)}
+          </button>
+          <button className="btn-secondary h-11" onClick={() => start(true)}>
+            <Volume2 className="h-4 w-4" />{' '}
+            {t(`Nghe chọn thanh (${QUIZ_SIZE} câu)`, `Hear the tones (${QUIZ_SIZE} questions)`)}
+          </button>
+        </div>
       </header>
 
       <Tones />
@@ -239,6 +257,16 @@ function Quiz({
   const [correct, setCorrect] = useState(0)
   const [finished, setFinished] = useState<{ xp: number } | null>(null)
   const q = questions[idx]
+  const hidden = q?.kind === 'ear' && picked === null
+
+  // A listening question plays as it appears; its characters stay hidden until answered.
+  useEffect(() => {
+    const it = questions[idx]
+    if (it?.kind !== 'ear') return
+    const timer = setTimeout(() => say(it.prompt), 250)
+    return () => clearTimeout(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once per question
+  }, [idx, questions])
 
   // A tone question offers the five tones; a word question its own options.
   const labels =
@@ -316,9 +344,22 @@ function Quiz({
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {q.kind === 'tone'
             ? t('Chữ này mang thanh mấy?', 'Which tone does this character have?')
-            : t('Từ này đọc là gì?', 'How do you read this word?')}
+            : q.kind === 'ear'
+              ? t('Nghe rồi chọn thanh đúng', 'Listen, then pick the tones')
+              : t('Từ này đọc là gì?', 'How do you read this word?')}
         </p>
-        <p className="text-6xl font-bold">{q.prompt}</p>
+        {hidden ? (
+          <button
+            type="button"
+            onClick={() => say(q.prompt)}
+            className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg transition hover:scale-105 active:scale-95"
+            aria-label={t('Nghe lại', 'Play again')}
+          >
+            <Volume2 className="h-9 w-9" />
+          </button>
+        ) : (
+          <p className="text-6xl font-bold">{q.prompt}</p>
+        )}
         {q.kind === 'tone' && <p className="text-2xl font-semibold text-slate-600">{q.reading}</p>}
         <div className="grid grid-cols-2 gap-2">
           {labels.map((opt, i) => {
