@@ -14,7 +14,10 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-10-19',
-    title: ['Buổi học đầu dễ hơn, cách đọc rõ hơn', 'An easier first lesson, clearer readings'],
+    title: [
+      'Buổi học đầu dễ hơn, cách đọc rõ hơn; tiếng Trung: HSK 2, gõ bính âm, lượng từ, chữ Hán qua âm Hán Việt',
+      'An easier first lesson, clearer readings; Chinese: HSK 2, pinyin typing, measure words, characters by Sino-Vietnamese reading',
+    ],
     items: [
       [
         'Bấm "Học 5 từ đầu tiên" là vào bài ngay. Mỗi bài có tối đa một phần ba là từ ngữ pháp (the, of, is…), phần còn lại là từ dễ hình dung như look, go, little.',
@@ -32,15 +35,6 @@ export const RELEASES: Release[] = [
         'Chữ phụ đậm hơn, dễ đọc hơn khi ra ngoài trời, ở cả giao diện sáng và tối.',
         'Secondary text is darker and easier to read outdoors, in both light and dark themes.',
       ],
-    ],
-  },
-  {
-    date: '2026-10-18',
-    title: [
-      '"Mình biết từ này rồi" và trang giới thiệu cho mọi người',
-      '"I already know this word", and the introduction for everyone',
-    ],
-    items: [
       [
         'Lộ trình luyện thi tiếng Trung có thêm HSK 2: chọn HSK 1 hoặc HSK 2 ở đầu trang, mỗi cấp có thông tin đề thi, danh sách từ, bài kiểm tra từ vựng 20 câu riêng. Thẻ từ ghi nhãn HSK 1 hoặc HSK 2.',
         'The Chinese exam roadmap adds HSK 2: pick HSK 1 or HSK 2 at the top; each level has its own exam facts, word list and 20-question vocabulary check. Word cards carry an HSK 1 or HSK 2 badge.',
@@ -77,6 +71,15 @@ export const RELEASES: Release[] = [
         'Học tiếng Hàn, tiếng Trung mà máy chưa có bàn phím Hàn hay bàn phím bính âm: dưới ô gõ có hướng dẫn thêm bàn phím cho đúng loại máy, kèm nút "Làm không cần gõ" — Nghe – chép thành xếp thẻ chữ, câu điền từ thành câu chọn đáp án.',
         'Learning Korean or Chinese without a Hangul or pinyin keyboard yet: under the typing box there are steps to add one for your device, plus "Do it without typing" — dictation becomes tapping tiles in order, and gap questions become multiple choice.',
       ],
+    ],
+  },
+  {
+    date: '2026-10-18',
+    title: [
+      '"Mình biết từ này rồi" và trang giới thiệu cho mọi người',
+      '"I already know this word", and the introduction for everyone',
+    ],
+    items: [
       [
         'Nghe – chép theo truyện: trong trang đọc truyện, bấm "Nghe – chép" để chép lần lượt mọi câu của truyện. Bài ngữ pháp cũng có "Nghe – chép ví dụ".',
         'Story dictation: on a story, tap "Dictation" to write the whole story sentence by sentence. Grammar lessons have "Dictation: the examples" too.',
