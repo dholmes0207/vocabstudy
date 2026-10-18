@@ -35,3 +35,34 @@ chính tả."
   - Audio dùng `exampleAudio(id, text)`, tức đúng file câu ví dụ đã có. Không thêm file
     mới, nên không chạm giới hạn 20.000 file.
 - Vào từ trang Luyện tập.
+
+## Chép theo truyện và theo bài ngữ pháp (18/10/2026)
+
+**User**: "Chép câu rời rạc mau chán. Muốn chép cả một câu chuyện, hoặc chép lại đúng câu của
+bài ngữ pháp vừa học."
+
+Tham khảo, quét trang công khai bằng REA (`docs/research/2026-10-17-language-apps.md`, vòng
+6):
+
+- **Daily Dictation**: chép cả một truyện, từng câu (1/21), có chỉnh tốc độ, nút Check/Skip
+  và ghi cấp độ từ vựng.
+- **How to Study Korean**: mỗi bài kết thúc bằng phần luyện câu và luyện nghe – chép dùng
+  chính câu của bài.
+
+**BA**
+
+- Trang đọc truyện có nút **"Nghe – chép"**: chép lần lượt mọi câu của truyện, đầu màn hiện
+  tên truyện. Truyện có pinyin thì gợi ý pinyin vẫn dùng được.
+- Bài ngữ pháp có nút **"Nghe – chép ví dụ (N câu)"** dưới nút Luyện tập: chép các câu ví dụ
+  của bài.
+- Cách chấm, nghe chậm, gợi ý nghĩa và XP giống hệt Nghe – chép thường. Không có nút "Thêm
+  một lượt", vì đã chép xong cả bài.
+- Câu truyện và câu ngữ pháp đọc bằng giọng của trình duyệt. Không thêm file audio, nên không
+  chạm giới hạn 20.000 file.
+
+**Dev**
+
+- `Dictation.tsx` xuất `DictationRound({ items, caption, onExit, onAgain? })`, với `items` là
+  `{ key, text, vi, read?, audioSrc? }[]`. Trang Nghe – chép cũ chuyển từ danh sách từ sang
+  `items` qua `fromWords`.
+- `Reading.tsx` và `Grammar.tsx` dựng `items` từ câu truyện hoặc câu ví dụ.

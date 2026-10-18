@@ -152,3 +152,21 @@ describe('reading help, one sentence at a time', () => {
     )
   })
 })
+
+describe('dictation of a whole story', () => {
+  it('goes through the story sentence by sentence and marks what was caught', async () => {
+    renderStory()
+    fireEvent.click(await screen.findByRole('button', { name: 'Dictation' }))
+    expect(screen.getByText(`1/${lan.sentences.length}`)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(lan.title[1]))).toBeInTheDocument()
+
+    fireEvent.change(screen.getByRole('textbox', { name: 'What you heard' }), {
+      target: { value: lan.sentences[0].en },
+    })
+    fireEvent.click(screen.getByRole('button', { name: 'Check' }))
+    expect(screen.getByText(/Great listening/)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: /Next/ }))
+    expect(screen.getByText(`2/${lan.sentences.length}`)).toBeInTheDocument()
+  })
+})

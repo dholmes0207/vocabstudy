@@ -10,6 +10,7 @@ import {
   Baseline,
   Languages,
   Snail,
+  PenLine,
   Volume2,
   X,
 } from 'lucide-react'
@@ -34,6 +35,7 @@ import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 import SaveWordButton from '@/components/SaveWordButton'
+import { DictationRound } from '@/features/dictation/Dictation'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import { tokenize } from '@/lib/games'
 
@@ -168,6 +170,8 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
       return n
     })
   const [slow, setSlow] = useState(false)
+  // "Nghe – chép" the whole story, sentence by sentence (Daily Dictation's way).
+  const [dictate, setDictate] = useState(false)
   // Chinese stories carry a pinyin line per sentence; other packs read as written.
   const hasRead = story.sentences.some((s) => s.read)
   const readName = useReadingLabel('cách đọc', 'reading')
@@ -213,6 +217,19 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
   )
 
   if (quiz) return <StoryQuiz story={story} nextStory={next} onBack={() => setQuiz(false)} />
+  if (dictate)
+    return (
+      <DictationRound
+        items={story.sentences.map((s, i) => ({
+          key: `${story.id}-${i}`,
+          text: s.en,
+          vi: s.vi,
+          read: s.read,
+        }))}
+        caption={`${story.emoji} ${story.title[1]}`}
+        onExit={() => setDictate(false)}
+      />
+    )
 
   return (
     <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
@@ -265,6 +282,15 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
             aria-pressed={slow}
           >
             <Snail className="h-4 w-4" /> {t('Đọc chậm', 'Slow')}
+          </button>
+          <button
+            className="btn-secondary"
+            onClick={() => {
+              stop()
+              setDictate(true)
+            }}
+          >
+            <PenLine className="h-4 w-4" /> {t('Nghe – chép', 'Dictation')}
           </button>
         </div>
       </header>
