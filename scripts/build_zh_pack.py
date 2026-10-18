@@ -289,6 +289,70 @@ ROWS = '''
 头发 | tóufa | n. | noun | tóc | 我|妹妹|的|头发|很|漂亮。 | Tóc em gái tôi rất đẹp. | 💇
 一起 | yìqǐ | adv. | adverb | cùng nhau | 我们|一起|去|吧。 | Chúng ta cùng đi nhé. | 👯
 带 | dài | v. | verb | mang theo; dẫn, đưa (ai đi) | 我|带|你|去|商店。 | Tôi dẫn bạn đi cửa hàng. | 🎒
+白 | bái | adj. | adjective | trắng | 她|的|衣服|很|白。 | Quần áo cô ấy rất trắng. | 🤍
+报纸 | bàozhǐ | n. | noun | báo (giấy) | 爸爸|每天|看|报纸。 | Ngày nào bố cũng đọc báo. | 📰
+比 | bǐ | prep. | preposition | so với, hơn | 哥哥|比|我|高。 | Anh trai cao hơn tôi. | 📊
+别 | bié | adv. | adverb | đừng | 别|走！ | Đừng đi! | ✋
+出 | chū | v. | verb | ra | 他|出|去|了。 | Anh ấy ra ngoài rồi. | 🚪➡️
+穿 | chuān | v. | verb | mặc; đi (giày) | 今天|很|冷，|你|要|多|穿|衣服。 | Hôm nay lạnh, bạn phải mặc thêm áo. | 🧥
+船 | chuán | n. | noun | thuyền, tàu thuỷ | 我们|坐|船|去。 | Chúng tôi đi thuyền. | ⛴️
+次 | cì | m. | other | lần (lượng từ) | 我|去|过|两|次|北京。 | Tôi đã đến Bắc Kinh hai lần. | 🔂
+从 | cóng | prep. | preposition | từ (nơi, lúc) | 我|从|越南|来。 | Tôi đến từ Việt Nam. | 🛬
+错 | cuò | adj. | adjective | sai | 对不起，|我|错|了。 | Xin lỗi, tôi sai rồi. | ❌
+打篮球 | dǎ lánqiú | v. | verb | chơi bóng rổ | 他|喜欢|打篮球。 | Anh ấy thích chơi bóng rổ. | 🏀
+大家 | dàjiā | pron. | pronoun | mọi người | 大家|好！ | Chào mọi người! | 👥
+到 | dào | v. | verb | tới nơi, đến (đích) | 我|到|家|了。 | Tôi về đến nhà rồi. | 🏁
+得 | de | part. | other | (trợ từ nối động từ với lời nhận xét) | 他|走|得|很|快。 | Anh ấy đi rất nhanh. | 🎯
+第一 | dìyī | num. | other | thứ nhất | 这|是|我|第一|次|来|中国。 | Đây là lần đầu tiên tôi đến Trung Quốc. | 🥇
+房间 | fángjiān | n. | noun | căn phòng | 我|的|房间|很|小。 | Phòng của tôi rất nhỏ. | 🛏️
+非常 | fēicháng | adv. | adverb | vô cùng, cực kỳ | 今天|非常|热。 | Hôm nay nóng vô cùng. | 🔥
+服务员 | fúwùyuán | n. | noun | người phục vụ | 服务员，|请|给|我|一|杯|茶。 | Phục vụ ơi, cho tôi một cốc trà. | 🧑‍🍳
+告诉 | gàosu | v. | verb | nói cho biết, bảo | 请|告诉|我|你|的|名字。 | Hãy cho tôi biết tên bạn. | 🗣️
+公斤 | gōngjīn | m. | other | ki-lô-gam (cân) | 我|买|了|两|公斤|苹果。 | Tôi đã mua hai cân táo. | ⚖️
+还 | hái | adv. | adverb | vẫn, còn | 他|还|在|睡觉。 | Anh ấy vẫn đang ngủ. | 🔄
+黑 | hēi | adj. | adjective | đen; tối | 外面|很|黑。 | Bên ngoài rất tối. | 🌑
+红 | hóng | adj. | adjective | đỏ | 她|的|脸|很|红。 | Mặt cô ấy đỏ bừng. | 🍒
+欢迎 | huānyíng | v. | verb | hoan nghênh, chào mừng | 欢迎|你|来|越南！ | Chào mừng bạn đến Việt Nam! | 🎊
+回答 | huídá | v. | verb | trả lời | 请|回答|我|的|问题。 | Hãy trả lời câu hỏi của tôi. | 💬
+就 | jiù | adv. | adverb | thì; ngay, liền | 我|马上|就|来。 | Tôi đến ngay. | ⏩
+觉得 | juéde | v. | verb | cảm thấy, thấy rằng | 我|觉得|汉语|很|有意思。 | Tôi thấy tiếng Trung rất thú vị. | 🤔
+开始 | kāishǐ | v. | verb | bắt đầu | 我们|开始|上|课|吧。 | Chúng ta bắt đầu vào học nhé. | 🚀
+可能 | kěnéng | adv. | adverb | có lẽ, có thể | 明天|可能|下雨。 | Ngày mai có lẽ sẽ mưa. | 🌦️
+课 | kè | n. | noun | bài học, tiết học | 今天|有|汉语|课。 | Hôm nay có tiết tiếng Trung. | 📘
+快乐 | kuàilè | adj. | adjective | vui vẻ | 生日|快乐！ | Chúc mừng sinh nhật! | 🥳
+忙 | máng | adj. | adjective | bận | 我|今天|很|忙。 | Hôm nay tôi rất bận. | 🏃‍♀️
+男人 | nánrén | n. | noun | đàn ông | 那个|男人|是|我|的|老师。 | Người đàn ông kia là thầy giáo của tôi. | 👨‍💼
+女人 | nǚrén | n. | noun | phụ nữ | 那个|女人|是|医生。 | Người phụ nữ kia là bác sĩ. | 👩‍⚕️
+您 | nín | pron. | pronoun | ông, bà, ngài (lịch sự) | 您|好！ | Kính chào ông/bà! | 🙇‍♂️
+旁边 | pángbiān | n. | noun | bên cạnh | 商店|在|学校|旁边。 | Cửa hàng ở cạnh trường học. | ↔️
+票 | piào | n. | noun | vé | 我|买|了|两|张|票。 | Tôi đã mua hai vé. | 🎫
+千 | qiān | num. | other | nghìn | 这个|手机|三|千|块。 | Chiếc điện thoại này ba nghìn tệ. | 🔢
+让 | ràng | v. | verb | để, bảo (ai làm gì) | 妈妈|让|我|去|买|水果。 | Mẹ bảo tôi đi mua trái cây. | 👉
+事情 | shìqing | n. | noun | việc, chuyện | 我|有|一|件|事情。 | Tôi có một việc. | 📌
+送 | sòng | v. | verb | tặng; tiễn, đưa | 我|送|你|一|本|书。 | Tôi tặng bạn một quyển sách. | 💝
+它 | tā | pron. | pronoun | nó (con vật, đồ vật) | 我|有|一|只|猫，|它|很|小。 | Tôi có một con mèo, nó rất nhỏ. | 🐈
+踢 | tī | v. | verb | đá (bằng chân) | 别|踢|门！ | Đừng đá cửa! | 🦶
+题 | tí | n. | noun | đề, câu (bài tập) | 这|道|题|很|难。 | Câu này rất khó. | ✏️
+外 | wài | n. | noun | ngoài | 门|外|有|人。 | Ngoài cửa có người. | 🌳
+完 | wán | v. | verb | xong, hết | 我|吃|完|了。 | Tôi ăn xong rồi. | 🏆
+为 | wèi | prep. | preposition | vì, cho | 我|为|你|高兴。 | Tôi mừng cho bạn. | 🤗
+问 | wèn | v. | verb | hỏi | 我|可以|问|你|一|个|问题|吗？ | Tôi hỏi bạn một câu được không? | 🙋‍♀️
+希望 | xīwàng | v. | verb | hy vọng, mong | 我|希望|明天|不|下雨。 | Tôi hy vọng ngày mai không mưa. | 🌈
+洗 | xǐ | v. | verb | rửa, giặt | 吃|饭|前|要|洗|手。 | Trước khi ăn phải rửa tay. | 🧼
+向 | xiàng | prep. | preposition | về phía, hướng về | 向|左边|走。 | Đi về phía bên trái. | 🧭
+笑 | xiào | v. | verb | cười | 她|笑|了。 | Cô ấy cười. | 😄
+姓 | xìng | v. | verb | họ (là) | 我|姓|王。 | Tôi họ Vương. | 🪪
+意思 | yìsi | n. | noun | ý nghĩa | 这个|字|是|什么|意思？ | Chữ này nghĩa là gì? | 💭
+阴 | yīn | adj. | adjective | (trời) âm u, nhiều mây | 今天|是|阴|天。 | Hôm nay trời âm u. | ☁️
+元 | yuán | m. | other | đồng (đơn vị tiền tệ) | 一|杯|茶|十|元。 | Một cốc trà mười đồng. | 💰
+再 | zài | adv. | adverb | lại, nữa | 请|再|说|一|次。 | Xin nói lại một lần nữa. | 🔁
+找 | zhǎo | v. | verb | tìm | 我|在|找|我|的|手机。 | Tôi đang tìm điện thoại. | 🔍
+着 | zhe | part. | other | (trợ từ: đang, vẫn ở trạng thái) | 门|开|着。 | Cửa đang mở. | 🚪
+真 | zhēn | adv. | adverb | thật, thật là | 你|真|漂亮！ | Bạn thật xinh! | 😍
+正在 | zhèngzài | adv. | adverb | đang | 我|正在|吃|饭。 | Tôi đang ăn cơm. | ⏯️
+准备 | zhǔnbèi | v. | verb | chuẩn bị | 我|在|准备|考试。 | Tôi đang chuẩn bị cho kỳ thi. | 📋
+自行车 | zìxíngchē | n. | noun | xe đạp | 我|骑|自行车|去|学校。 | Tôi đạp xe đến trường. | 🚲
+最 | zuì | adv. | adverb | nhất | 我|最|喜欢|夏天。 | Tôi thích mùa hè nhất. | 🏅
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -431,6 +495,68 @@ HAN_VIET = {
     '头发': 'đầu phát',
     '一起': 'nhất khởi',
     '带': 'đới',
+    '白': 'bạch',
+    '报纸': 'báo chỉ',
+    '比': 'tỷ',
+    '别': 'biệt',
+    '出': 'xuất',
+    '穿': 'xuyên',
+    '船': 'thuyền',
+    '次': 'thứ',
+    '从': 'tùng',
+    '错': 'thác',
+    '打篮球': 'đả lam cầu',
+    '大家': 'đại gia',
+    '到': 'đáo',
+    '得': 'đắc',
+    '第一': 'đệ nhất',
+    '房间': 'phòng gian',
+    '非常': 'phi thường',
+    '服务员': 'phục vụ viên',
+    '告诉': 'cáo tố',
+    '公斤': 'công cân',
+    '还': 'hoàn',
+    '黑': 'hắc',
+    '红': 'hồng',
+    '欢迎': 'hoan nghênh',
+    '回答': 'hồi đáp',
+    '就': 'tựu',
+    '觉得': 'giác đắc',
+    '开始': 'khai thuỷ',
+    '可能': 'khả năng',
+    '课': 'khoá',
+    '快乐': 'khoái lạc',
+    '忙': 'mang',
+    '男人': 'nam nhân',
+    '女人': 'nữ nhân',
+    '旁边': 'bàng biên',
+    '票': 'phiếu',
+    '千': 'thiên',
+    '让': 'nhượng',
+    '事情': 'sự tình',
+    '送': 'tống',
+    '它': 'tha',
+    '题': 'đề',
+    '外': 'ngoại',
+    '完': 'hoàn',
+    '为': 'vị',
+    '问': 'vấn',
+    '希望': 'hy vọng',
+    '洗': 'tẩy',
+    '向': 'hướng',
+    '笑': 'tiếu',
+    '姓': 'tính',
+    '意思': 'ý tư',
+    '阴': 'âm',
+    '元': 'nguyên',
+    '再': 'tái',
+    '找': 'trảo',
+    '着': 'trứ',
+    '真': 'chân',
+    '正在': 'chính tại',
+    '准备': 'chuẩn bị',
+    '自行车': 'tự hành xa',
+    '最': 'tối',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -705,6 +831,70 @@ EXAMPLE_PINYIN = {
     '头发': 'wǒ mèi mei de tóu fa hěn piào liang',
     '一起': 'wǒ men yì qǐ qù ba',
     '带': 'wǒ dài nǐ qù shāng diàn',
+    '白': 'tā de yī fu hěn bái',
+    '报纸': 'bà ba měi tiān kàn bào zhǐ',
+    '比': 'gē ge bǐ wǒ gāo',
+    '别': 'bié zǒu',
+    '出': 'tā chū qù le',
+    '穿': 'jīn tiān hěn lěng nǐ yào duō chuān yī fu',
+    '船': 'wǒ men zuò chuán qù',
+    '次': 'wǒ qù guo liǎng cì Běi jīng',
+    '从': 'wǒ cóng Yuè nán lái',
+    '错': 'duì bu qǐ wǒ cuò le',
+    '打篮球': 'tā xǐ huan dǎ lán qiú',
+    '大家': 'dà jiā hǎo',
+    '到': 'wǒ dào jiā le',
+    '得': 'tā zǒu de hěn kuài',
+    '第一': 'zhè shì wǒ dì yī cì lái Zhōng guó',
+    '房间': 'wǒ de fáng jiān hěn xiǎo',
+    '非常': 'jīn tiān fēi cháng rè',
+    '服务员': 'fú wù yuán qǐng gěi wǒ yì bēi chá',
+    '告诉': 'qǐng gào su wǒ nǐ de míng zi',
+    '公斤': 'wǒ mǎi le liǎng gōng jīn píng guǒ',
+    '还': 'tā hái zài shuì jiào',
+    '黑': 'wài miàn hěn hēi',
+    '红': 'tā de liǎn hěn hóng',
+    '欢迎': 'huān yíng nǐ lái Yuè nán',
+    '回答': 'qǐng huí dá wǒ de wèn tí',
+    '就': 'wǒ mǎ shàng jiù lái',
+    '觉得': 'wǒ jué de Hàn yǔ hěn yǒu yì si',
+    '开始': 'wǒ men kāi shǐ shàng kè ba',
+    '可能': 'míng tiān kě néng xià yǔ',
+    '课': 'jīn tiān yǒu Hàn yǔ kè',
+    '快乐': 'shēng rì kuài lè',
+    '忙': 'wǒ jīn tiān hěn máng',
+    '男人': 'nà ge nán rén shì wǒ de lǎo shī',
+    '女人': 'nà ge nǚ rén shì yī shēng',
+    '您': 'nín hǎo',
+    '旁边': 'shāng diàn zài xué xiào páng biān',
+    '票': 'wǒ mǎi le liǎng zhāng piào',
+    '千': 'zhè ge shǒu jī sān qiān kuài',
+    '让': 'mā ma ràng wǒ qù mǎi shuǐ guǒ',
+    '事情': 'wǒ yǒu yí jiàn shì qing',
+    '送': 'wǒ sòng nǐ yì běn shū',
+    '它': 'wǒ yǒu yì zhī māo tā hěn xiǎo',
+    '踢': 'bié tī mén',
+    '题': 'zhè dào tí hěn nán',
+    '外': 'mén wài yǒu rén',
+    '完': 'wǒ chī wán le',
+    '为': 'wǒ wèi nǐ gāo xìng',
+    '问': 'wǒ kě yǐ wèn nǐ yí gè wèn tí ma',
+    '希望': 'wǒ xī wàng míng tiān bú xià yǔ',
+    '洗': 'chī fàn qián yào xǐ shǒu',
+    '向': 'xiàng zuǒ bian zǒu',
+    '笑': 'tā xiào le',
+    '姓': 'wǒ xìng Wáng',
+    '意思': 'zhè ge zì shì shén me yì si',
+    '阴': 'jīn tiān shì yīn tiān',
+    '元': 'yì bēi chá shí yuán',
+    '再': 'qǐng zài shuō yí cì',
+    '找': 'wǒ zài zhǎo wǒ de shǒu jī',
+    '着': 'mén kāi zhe',
+    '真': 'nǐ zhēn piào liang',
+    '正在': 'wǒ zhèng zài chī fàn',
+    '准备': 'wǒ zài zhǔn bèi kǎo shì',
+    '自行车': 'wǒ qí zì xíng chē qù xué xiào',
+    '最': 'wǒ zuì xǐ huan xià tiān',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
@@ -787,7 +977,7 @@ def main() -> int:
             'ttsLang': 'zh-CN',
             'count': len(words),
             'source': 'VocaStudy (beta)',
-            'version': '0.6.0',
+            'version': '0.7.0',
             'readingLabel': ['pinyin', 'pinyin'],
         },
         'words': words,

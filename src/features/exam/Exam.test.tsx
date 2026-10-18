@@ -120,3 +120,19 @@ describe('after the vocabulary check', () => {
     )
   })
 })
+
+describe('HSK 2 roadmap', () => {
+  it('switches level with the tabs, with its own facts and word list', () => {
+    renderExam()
+    expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
+    expect(screen.getByRole('heading', { name: /HSK 2 roadmap/ })).toBeInTheDocument()
+    expect(screen.getByText(/60 questions: 35 listening/)).toBeInTheDocument()
+    expect(screen.getByText('Sources (checked 19 Oct 2026):')).toBeInTheDocument()
+    expect(screen.getByText(/The HSK 2 list \(147 entries\)/)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /complete-hsk-vocabulary/ })).toHaveAttribute(
+      'href',
+      'https://github.com/drkameleon/complete-hsk-vocabulary'
+    )
+  })
+})
