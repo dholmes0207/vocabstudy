@@ -36,6 +36,10 @@ export const RELEASES: Release[] = [
         'Secondary text is darker and easier to read outdoors, in both light and dark themes.',
       ],
       [
+        'Màn "Nghe số" cho tiếng Trung: nghe giá tiền, giờ giấc, ngày tháng, thứ trong tuần rồi chọn đúng — luôn có phương án dễ nhầm như 14 / 41 hay 7:30 / 7:00, như phần nghe của HSK.',
+        'A "Hear the numbers" page for Chinese: hear prices, times, dates and weekdays and pick the right one — always with the classic trap like 14 / 41 or 7:30 / 7:00, as in the HSK listening parts.',
+      ],
+      [
         'Lộ trình luyện thi tiếng Trung có thêm HSK 2: chọn HSK 1 hoặc HSK 2 ở đầu trang, mỗi cấp có thông tin đề thi, danh sách từ, bài kiểm tra từ vựng 20 câu riêng. Thẻ từ ghi nhãn HSK 1 hoặc HSK 2.',
         'The Chinese exam roadmap adds HSK 2: pick HSK 1 or HSK 2 at the top; each level has its own exam facts, word list and 20-question vocabulary check. Word cards carry an HSK 1 or HSK 2 badge.',
       ],
