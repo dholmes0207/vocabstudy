@@ -24,6 +24,15 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-red-500 to-amber-500',
   },
   {
+    to: '/measure-words',
+    icon: '🧮',
+    title: 'Lượng từ',
+    desc: '个, 本, 杯, 只… đặt cạnh "cái, quyển, cốc, con" của tiếng Việt, kèm bài luyện 10 câu.',
+    titleEn: 'Measure words',
+    descEn: '个, 本, 杯, 只… next to their Vietnamese counterparts, with a 10-question round.',
+    tone: 'from-amber-500 to-red-500',
+  },
+  {
     to: '/hangul',
     icon: '🔤',
     title: 'Bảng chữ cái Hangul',

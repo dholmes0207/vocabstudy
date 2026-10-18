@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Tiếng Trung có màn "Lượng từ" trong Luyện tập: 个, 本, 杯, 只, 条, 张… đặt cạnh "cái, quyển, cốc, con" của tiếng Việt, kèm bài luyện 10 câu — trả lời xong là thấy cả cụm 一本书 (yì běn shū) và nghe được.',
+        'Chinese gets a "Measure words" page under Practice: 个, 本, 杯, 只, 条, 张… next to their Vietnamese counterparts, with a 10-question round — each answer shows and plays the whole phrase, like 一本书 (yì běn shū).',
+      ],
+      [
         'Thêm 3 truyện tiếng Trung có pinyin từng câu: "Gia đình tôi", "Tôi bị ốm" và "Du lịch Bắc Kinh", dùng các từ mới của gói.',
         'Three new Chinese stories with pinyin for every sentence: "My family", "A sick day" and "A trip to Beijing", built on the pack’s new words.',
       ],

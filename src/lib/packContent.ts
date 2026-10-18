@@ -12,6 +12,7 @@ const ONLY: Record<string, readonly string[]> = {
   '/sounds': ['en'],
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
+  '/measure-words': ['zh'],
   // HSK 1 and TOPIK I (lib/exams.ts).
   '/exam': ['ko', 'zh'],
 }
