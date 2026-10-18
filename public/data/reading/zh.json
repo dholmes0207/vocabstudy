@@ -464,6 +464,166 @@
           "answer": 1
         }
       ]
+    },
+    {
+      "id": "zh-restaurant",
+      "emoji": "🍜",
+      "level": "A2",
+      "title": [
+        "Ở nhà hàng",
+        "在饭店"
+      ],
+      "sentences": [
+        {
+          "en": "服务员​说：​“欢迎！”",
+          "vi": "Người phục vụ nói: “Xin mời vào!”",
+          "read": "Fúwùyuán shuō: “Huānyíng!”"
+        },
+        {
+          "en": "我们​三​个​人。",
+          "vi": "Chúng tôi có ba người.",
+          "read": "Wǒmen sān gè rén."
+        },
+        {
+          "en": "我​想​吃​面条，​妈妈​想​吃​鱼。",
+          "vi": "Tôi muốn ăn mì, mẹ muốn ăn cá.",
+          "read": "Wǒ xiǎng chī miàntiáo, māma xiǎng chī yú."
+        },
+        {
+          "en": "爸爸​要​了​一​杯​茶。",
+          "vi": "Bố gọi một cốc trà.",
+          "read": "Bàba yào le yì bēi chá."
+        },
+        {
+          "en": "这儿​的​菜​非常​好吃。",
+          "vi": "Đồ ăn ở đây ngon tuyệt.",
+          "read": "Zhèr de cài fēicháng hǎochī."
+        },
+        {
+          "en": "“服务员，​一共​多少​钱？”",
+          "vi": "“Phục vụ ơi, tất cả bao nhiêu tiền?”",
+          "read": "“Fúwùyuán, yígòng duōshao qián?”"
+        },
+        {
+          "en": "“一百​二十​元。”",
+          "vi": "“Một trăm hai mươi đồng.”",
+          "read": "“Yìbǎi èrshí yuán.”"
+        },
+        {
+          "en": "我们​吃​得​很​高兴。",
+          "vi": "Chúng tôi ăn rất vui.",
+          "read": "Wǒmen chī de hěn gāoxìng."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Có mấy người đi ăn?",
+          "options": [
+            "Hai người",
+            "Ba người",
+            "Bốn người"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Bố gọi gì?",
+          "options": [
+            "Một cốc cà phê",
+            "Một cốc trà",
+            "Một bát mì"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Bữa ăn hết bao nhiêu tiền?",
+          "options": [
+            "100 đồng",
+            "120 đồng",
+            "200 đồng"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-first-time",
+      "emoji": "🛬",
+      "level": "A2",
+      "title": [
+        "Lần đầu đến Trung Quốc",
+        "第一次来中国"
+      ],
+      "sentences": [
+        {
+          "en": "这​是​我​第一​次​来​中国。",
+          "vi": "Đây là lần đầu tiên tôi đến Trung Quốc.",
+          "read": "Zhè shì wǒ dìyī cì lái Zhōngguó."
+        },
+        {
+          "en": "我​从​越南​坐​飞机​来。",
+          "vi": "Tôi đi máy bay từ Việt Nam sang.",
+          "read": "Wǒ cóng Yuènán zuò fēijī lái."
+        },
+        {
+          "en": "到​了​机场，​我​朋友​已经​在​等​我​了。",
+          "vi": "Đến sân bay thì bạn tôi đã đợi sẵn.",
+          "read": "Dào le jīchǎng, wǒ péngyou yǐjīng zài děng wǒ le."
+        },
+        {
+          "en": "他​带​我​去​饭店，​我​的​房间​很​大。",
+          "vi": "Bạn đưa tôi về khách sạn, phòng tôi rất rộng.",
+          "read": "Tā dài wǒ qù fàndiàn, wǒ de fángjiān hěn dà."
+        },
+        {
+          "en": "第二​天，​我们​坐​公共汽车​去​玩。",
+          "vi": "Hôm sau, chúng tôi đi xe buýt đi chơi.",
+          "read": "Dìèr tiān, wǒmen zuò gōnggòng qìchē qù wán."
+        },
+        {
+          "en": "我​说​汉语，​大家​都​能​听​懂。",
+          "vi": "Tôi nói tiếng Trung, mọi người đều nghe hiểu.",
+          "read": "Wǒ shuō Hànyǔ, dàjiā dōu néng tīng dǒng."
+        },
+        {
+          "en": "我​觉得​中国​很​有意思。",
+          "vi": "Tôi thấy Trung Quốc rất thú vị.",
+          "read": "Wǒ juéde Zhōngguó hěn yǒu yìsi."
+        },
+        {
+          "en": "我​希望​明年​再​来。",
+          "vi": "Tôi mong năm sau lại đến.",
+          "read": "Wǒ xīwàng míngnián zài lái."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Đây là lần thứ mấy tôi đến Trung Quốc?",
+          "options": [
+            "Lần đầu",
+            "Lần thứ hai",
+            "Lần thứ ba"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Ai đợi tôi ở sân bay?",
+          "options": [
+            "Bố mẹ",
+            "Bạn tôi",
+            "Người phục vụ"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Tôi mong điều gì?",
+          "options": [
+            "Năm sau lại đến",
+            "Về nhà sớm",
+            "Học tiếng Anh"
+          ],
+          "answer": 0
+        }
+      ]
     }
   ]
 }
