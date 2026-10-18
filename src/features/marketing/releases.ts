@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Gói tiếng Trung tăng từ 156 lên 234 từ: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
+        'The Chinese pack grows from 156 to 234 words: everyday words beyond HSK 1 — siblings, colours, medicine and health, the bus, left/right, cheap/expensive, exams, the office, swimming, singing, 因为 / 所以 / 但是… — and 3 new topic decks: Health & colours, Study & work, Hobbies & sport.',
+      ],
+      [
         'Tiếng Trung: không cần bàn phím chữ Hán nữa — ở Nghe – chép và câu điền từ, gõ bính âm không dấu (ví dụ "xiexie" cho 谢谢) cũng được chấm, rồi app hiện lại chữ Hán.',
         'Chinese: no Chinese keyboard needed — in dictation and gap questions you can type pinyin without tones (say "xiexie" for 谢谢), and the app shows the characters afterwards.',
       ],

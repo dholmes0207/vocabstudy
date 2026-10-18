@@ -245,3 +245,44 @@ Trung và tiếng Hàn.
 - `lib/exams.ts` `examLabelFor(lang, word)` trả về nhãn, chỉ cho kỳ thi có `wordList`.
 - Ghép theo **cả chữ lẫn âm**, vì một chữ có thể có hai âm: 不 trong 不客气 và 对不起 cùng là
   "bất", nhưng nếu một chữ đọc khác thì nó thuộc họ khác.
+
+## Bước 9: từ đời thường ngoài HSK 1 (19/10/2026)
+
+**User**: "Thêm bộ từ hợp lý." Gói đã đủ 150 từ HSK 1 (Bước 8), nhưng người mới học vẫn thiếu
+những từ nói hằng ngày: anh/chị/em, màu sắc, ốm/thuốc, xe buýt, trái/phải, đắt/rẻ.
+
+**BA**
+
+- Thêm 78 từ, gói tăng từ 156 lên 234 từ. Phần lớn là từ HSK 2 (bản 2012), chọn theo chủ đề
+  đời thường:
+  - **gia đình**: 哥哥 姐姐 弟弟 妹妹 孩子 丈夫 妻子;
+  - **sức khoẻ**: 身体 眼睛 生病 药 累 休息;
+  - **màu sắc**: 颜色 红色 白色 黑色;
+  - **ăn uống**: 鸡蛋 牛奶 面条 鱼 羊肉 西瓜 饿;
+  - **thời gian**: 早上 晚上 小时 时间 每 已经 去年 生日;
+  - **mua sắm**: 便宜 贵 卖 件 两 百 手机 手表;
+  - **đi lại**: 公共汽车 路 远 近 走 左边 右边 机场 旅游;
+  - **học tập và công việc**: 考试 问题 教室 公司 上班 懂 知道 帮助 介绍;
+  - **sở thích**: 运动 游泳 跑步 唱歌 跳舞 踢足球 玩;
+  - **miêu tả**: 晴 雪 高 长 新 快 慢 难 有意思;
+  - **liên từ, trợ động từ**: 可以 因为 所以 但是.
+- Từ mới nào cũng đủ các phần như từ cũ: nghĩa tiếng Việt, pinyin, câu ví dụ ngắn đã tách từ,
+  câu dịch và pinyin của câu.
+  - Câu ví dụ dùng chủ yếu từ đã có trong gói.
+  - Âm Hán Việt có cho 76/78 từ. 跑步 và 踢足球 không ghi, vì các từ điển đọc 跑 và 踢 khác nhau.
+- Thêm 3 bộ chủ đề: **Sức khoẻ & màu sắc**, **Học tập & công việc**, **Sở thích & thể thao**.
+  Từ mới cũng được xếp vào các bộ cũ (con người, ăn uống, nơi chốn, thời gian, mua sắm, miêu tả,
+  từ ngữ pháp). Tổng cộng có 13 bộ, và từ nào cũng nằm trong ít nhất một bộ.
+- Lộ trình HSK 1 không đổi: danh sách thi vẫn là 152 mục trong `lib/exams.ts`, nên từ mới không
+  làm sai tiến độ thi.
+- Tiếng Trung đọc bằng giọng của trình duyệt, nên không thêm file audio (giới hạn 20.000 file của
+  Cloudflare Pages không bị ảnh hưởng).
+
+**Dev**
+
+- Dữ liệu viết trong `scripts/build_zh_pack.py`: `ROWS`, `EXAMPLE_PINYIN` (một âm tiết cho mỗi
+  chữ) và `HAN_VIET`. Script dừng nếu số âm tiết không khớp số chữ, hoặc nếu từ trong câu đọc
+  khác cách đọc của gói. Phiên bản gói 0.5.0.
+- `scripts/build_topics_zh.py` có 3 bộ mới. `public/data/index.json` có số từ và mô tả mới.
+- Trang chủ (`Landing.tsx`) ghi 234 từ, 13 bộ chủ đề, tổng "4.800+". `landingClaims.test.ts`
+  tính lại các số này từ dữ liệu.
