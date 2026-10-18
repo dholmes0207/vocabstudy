@@ -224,6 +224,246 @@
           "answer": 1
         }
       ]
+    },
+    {
+      "id": "zh-my-family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "level": "A1",
+      "title": [
+        "Gia đình tôi",
+        "我的家"
+      ],
+      "sentences": [
+        {
+          "en": "我​家​有​五​口​人。",
+          "vi": "Nhà tôi có năm người.",
+          "read": "Wǒ jiā yǒu wǔ kǒu rén."
+        },
+        {
+          "en": "爸爸，​妈妈，​哥哥，​妹妹​和​我。",
+          "vi": "Bố, mẹ, anh trai, em gái và tôi.",
+          "read": "Bàba, māma, gēge, mèimei hé wǒ."
+        },
+        {
+          "en": "爸爸​是​医生，​他​在​医院​工作。",
+          "vi": "Bố là bác sĩ, bố làm việc ở bệnh viện.",
+          "read": "Bàba shì yīshēng, tā zài yīyuàn gōngzuò."
+        },
+        {
+          "en": "妈妈​是​老师。",
+          "vi": "Mẹ là giáo viên.",
+          "read": "Māma shì lǎoshī."
+        },
+        {
+          "en": "哥哥​很​高，​他​喜欢​踢足球。",
+          "vi": "Anh trai rất cao, anh ấy thích đá bóng.",
+          "read": "Gēge hěn gāo, tā xǐhuan tī zúqiú."
+        },
+        {
+          "en": "妹妹​今年​六​岁，​她​喜欢​唱歌。",
+          "vi": "Em gái năm nay sáu tuổi, em thích hát.",
+          "read": "Mèimei jīnnián liù suì, tā xǐhuan chànggē."
+        },
+        {
+          "en": "晚上​我们​一起​吃​饭。",
+          "vi": "Buổi tối cả nhà cùng ăn cơm.",
+          "read": "Wǎnshang wǒmen yìqǐ chī fàn."
+        },
+        {
+          "en": "我​爱​我​的​家。",
+          "vi": "Tôi yêu gia đình tôi.",
+          "read": "Wǒ ài wǒ de jiā."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Nhà tôi có mấy người?",
+          "options": [
+            "Bốn người",
+            "Năm người",
+            "Sáu người"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Bố làm nghề gì?",
+          "options": [
+            "Giáo viên",
+            "Bác sĩ",
+            "Tài xế"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Em gái thích làm gì?",
+          "options": [
+            "Hát",
+            "Bơi",
+            "Đá bóng"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "zh-sick-day",
+      "emoji": "🤒",
+      "level": "A2",
+      "title": [
+        "Tôi bị ốm",
+        "我生病了"
+      ],
+      "sentences": [
+        {
+          "en": "今天​早上​我​很​累。",
+          "vi": "Sáng nay tôi rất mệt.",
+          "read": "Jīntiān zǎoshang wǒ hěn lèi."
+        },
+        {
+          "en": "我​生病​了，​不​能​去​上班。",
+          "vi": "Tôi bị ốm, không đi làm được.",
+          "read": "Wǒ shēngbìng le, bù néng qù shàngbān."
+        },
+        {
+          "en": "我​给​公司​打电话。",
+          "vi": "Tôi gọi điện cho công ty.",
+          "read": "Wǒ gěi gōngsī dǎ diànhuà."
+        },
+        {
+          "en": "妻子​带​我​去​医院。",
+          "vi": "Vợ đưa tôi đến bệnh viện.",
+          "read": "Qīzi dài wǒ qù yīyuàn."
+        },
+        {
+          "en": "医生​说：​“你​要​多​休息，​多​喝​水。”",
+          "vi": "Bác sĩ nói: “Anh phải nghỉ ngơi nhiều, uống nhiều nước.”",
+          "read": "Yīshēng shuō: “Nǐ yào duō xiūxi, duō hē shuǐ.”"
+        },
+        {
+          "en": "医生​给​我​药。",
+          "vi": "Bác sĩ cho tôi thuốc.",
+          "read": "Yīshēng gěi wǒ yào."
+        },
+        {
+          "en": "下午​我​在​家​睡觉。",
+          "vi": "Buổi chiều tôi ngủ ở nhà.",
+          "read": "Xiàwǔ wǒ zài jiā shuìjiào."
+        },
+        {
+          "en": "晚上，​我​的​身体​好​多​了。",
+          "vi": "Đến tối, tôi đã khoẻ hơn nhiều.",
+          "read": "Wǎnshang, wǒ de shēntǐ hǎo duō le."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Vì sao hôm nay tôi không đi làm?",
+          "options": [
+            "Vì trời mưa",
+            "Vì bị ốm",
+            "Vì là chủ nhật"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Ai đưa tôi đến bệnh viện?",
+          "options": [
+            "Vợ",
+            "Mẹ",
+            "Bạn"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Bác sĩ dặn gì?",
+          "options": [
+            "Đi làm sớm",
+            "Nghỉ ngơi và uống nhiều nước",
+            "Tập thể thao"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-beijing-trip",
+      "emoji": "🧳",
+      "level": "A2",
+      "title": [
+        "Du lịch Bắc Kinh",
+        "去北京旅游"
+      ],
+      "sentences": [
+        {
+          "en": "去年​夏天，​我​和​朋友​去​北京​旅游。",
+          "vi": "Mùa hè năm ngoái, tôi và bạn đi du lịch Bắc Kinh.",
+          "read": "Qùnián xiàtiān, wǒ hé péngyou qù Běijīng lǚyóu."
+        },
+        {
+          "en": "我们​坐​飞机​去，​很​快。",
+          "vi": "Chúng tôi đi máy bay, rất nhanh.",
+          "read": "Wǒmen zuò fēijī qù, hěn kuài."
+        },
+        {
+          "en": "我们​坐​出租车​去​饭店。",
+          "vi": "Chúng tôi đi taxi về khách sạn.",
+          "read": "Wǒmen zuò chūzūchē qù fàndiàn."
+        },
+        {
+          "en": "北京​很​大，​人​也​很​多。",
+          "vi": "Bắc Kinh rất rộng, người cũng rất đông.",
+          "read": "Běijīng hěn dà, rén yě hěn duō."
+        },
+        {
+          "en": "我们​每天​走​很​多​路。",
+          "vi": "Ngày nào chúng tôi cũng đi bộ rất nhiều.",
+          "read": "Wǒmen měitiān zǒu hěn duō lù."
+        },
+        {
+          "en": "北京​菜​很​好吃，​但是​太​贵​了。",
+          "vi": "Món Bắc Kinh rất ngon nhưng đắt quá.",
+          "read": "Běijīng cài hěn hǎochī, dànshì tài guì le."
+        },
+        {
+          "en": "我​买​了​一​件​红色​的​衣服。",
+          "vi": "Tôi đã mua một bộ quần áo màu đỏ.",
+          "read": "Wǒ mǎi le yí jiàn hóngsè de yīfu."
+        },
+        {
+          "en": "北京​旅游​很​有意思！",
+          "vi": "Du lịch Bắc Kinh rất thú vị!",
+          "read": "Běijīng lǚyóu hěn yǒu yìsi!"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Họ đi Bắc Kinh bằng gì?",
+          "options": [
+            "Tàu hoả",
+            "Máy bay",
+            "Xe buýt"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Món ăn Bắc Kinh thế nào?",
+          "options": [
+            "Ngon nhưng đắt",
+            "Rẻ và ngon",
+            "Không ngon"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Tôi đã mua gì?",
+          "options": [
+            "Một chiếc đồng hồ",
+            "Một bộ quần áo màu đỏ",
+            "Một quyển sách"
+          ],
+          "answer": 1
+        }
+      ]
     }
   ]
 }

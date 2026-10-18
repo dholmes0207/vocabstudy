@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Thêm 3 truyện tiếng Trung có pinyin từng câu: "Gia đình tôi", "Tôi bị ốm" và "Du lịch Bắc Kinh", dùng các từ mới của gói.',
+        'Three new Chinese stories with pinyin for every sentence: "My family", "A sick day" and "A trip to Beijing", built on the pack’s new words.',
+      ],
+      [
         'Ngữ pháp tiếng Trung thêm 4 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, và 因为…所以… / 但是.',
         'Chinese grammar gets 4 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, and 因为…所以… / 但是.',
       ],

@@ -316,3 +316,25 @@ những từ nói hằng ngày: anh/chị/em, màu sắc, ốm/thuốc, xe buýt
   `EXAMPLE_PINYIN`. Script kiểm tra số âm tiết, cách đọc của từ có trong gói, chỗ trống của câu
   chọn và độ dài câu xếp chữ.
 - Trang chủ ghi 11 bài ngữ pháp. `landingClaims.test.ts` tính lại số này từ dữ liệu.
+
+## Bước 11: thêm 3 truyện ngắn (19/10/2026)
+
+**User**: "Cải thiện thêm phần học tiếng Trung." Trước đây chỉ có 3 truyện (Bước 4), nên người học
+chưa gặp lại các từ mới của Bước 9 trong ngữ cảnh.
+
+**BA**
+
+- **Gia đình tôi** (A1, `zh-my-family`): 哥哥, 妹妹, 高, 踢足球, 唱歌, 一起.
+- **Tôi bị ốm** (A2, `zh-sick-day`): 累, 生病, 上班, 公司, 妻子, 药, 休息, 身体.
+- **Du lịch Bắc Kinh** (A2, `zh-beijing-trip`): 去年, 旅游, 走路, 但是, 贵, 件, 红色, 有意思.
+- Mỗi truyện có 8 câu, mỗi câu có pinyin và câu dịch, cuối truyện có 3 câu hỏi.
+  - Hơn 70% từ chạm được để xem nghĩa (`reading.test.ts` kiểm tra tỉ lệ này).
+  - Tên riêng và vài từ ngoài gói (口, 给, 带, 也, 一起) không chạm được, giống các truyện cũ.
+
+**Dev**
+
+- `scripts/build_reading_zh.py`: thêm 3 truyện vào `STORIES` và pinyin từng câu vào
+  `SENTENCE_PINYIN`.
+- `scripts/zh_pinyin.py`: viết hoa chữ đầu của câu trích dẫn sau dấu hai chấm (`shuō: “Nǐ …`).
+  Dựng lại gói từ và bài ngữ pháp thì dữ liệu không đổi.
+- Trang chủ ghi 6 truyện ngắn tiếng Trung.
