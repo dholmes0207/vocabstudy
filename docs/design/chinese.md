@@ -371,3 +371,30 @@ Bài kiểm tra pinyin cũ chỉ hỏi bằng mắt: nhìn chữ để đoán th
 - `features/pinyin/Pinyin.tsx`: câu loại `ear` tự phát khi hiện ra, và giấu chữ cho tới khi trả
   lời.
 - Test: `lib/pinyin.test.ts`, `features/pinyin/Pinyin.test.tsx`.
+
+## Bước 13: đợt từ thứ hai, lấy từ chính nội dung của app (19/10/2026)
+
+**User**: "Thêm bộ từ hợp lý."
+
+Cách chọn từ: đếm những từ đã xuất hiện trong câu ví dụ và truyện nhưng chưa có trong gói, nên
+người học chạm vào thì không ra nghĩa. Có 41 từ như vậy.
+
+**BA**
+
+- Thêm 32 từ, gói tăng từ 234 lên 266 từ:
+  - **bốn mùa**: 春天 夏天 秋天 冬天;
+  - **thời gian**: 天 今年 晚 起床 一下;
+  - **lượng từ**: 杯 只 条 张 口;
+  - **động từ**: 给 带 等 用 进 要 开车;
+  - **hư từ**: 也 一起 吧 离;
+  - **danh từ**: 饭 越南 音乐 汉字 门 外面 头发.
+- Không thêm:
+  - tên riêng (安娜, 王, 李);
+  - số ghép (十一, 二十, 一百), vì đã học được từ các số đơn;
+  - 这个 (这 + 个, cả hai đã có trong gói);
+  - 每天 (每 và 天 đều đã có);
+  - 得 (trợ từ bổ ngữ, cần một bài ngữ pháp riêng).
+- Từ nào cũng có câu ví dụ riêng kèm pinyin. 31/32 từ có âm Hán Việt; 吧 không có, vì là trợ từ.
+- Mỗi từ được xếp vào ít nhất một bộ chủ đề. Các bài ngữ pháp và truyện được dựng lại: các từ vừa
+  thêm có trong câu đều đọc đúng như cách đọc của gói.
+- Trang chủ ghi 266 từ. Tổng số từ vẫn trên 4.800.
