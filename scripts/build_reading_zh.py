@@ -168,6 +168,48 @@ STORIES = [
             },
         ],
     },
+    {
+        'id': 'zh-restaurant',
+        'emoji': '🍜',
+        'level': 'A2',
+        'title': ['Ở nhà hàng', '在饭店'],
+        'sentences': [
+            ('服务员|说：|“欢迎！”', 'Người phục vụ nói: “Xin mời vào!”'),
+            ('我们|三|个|人。', 'Chúng tôi có ba người.'),
+            ('我|想|吃|面条，|妈妈|想|吃|鱼。', 'Tôi muốn ăn mì, mẹ muốn ăn cá.'),
+            ('爸爸|要|了|一|杯|茶。', 'Bố gọi một cốc trà.'),
+            ('这儿|的|菜|非常|好吃。', 'Đồ ăn ở đây ngon tuyệt.'),
+            ('“服务员，|一共|多少|钱？”', '“Phục vụ ơi, tất cả bao nhiêu tiền?”'),
+            ('“一百|二十|元。”', '“Một trăm hai mươi đồng.”'),
+            ('我们|吃|得|很|高兴。', 'Chúng tôi ăn rất vui.'),
+        ],
+        'questions': [
+            {'q': 'Có mấy người đi ăn?', 'options': ['Hai người', 'Ba người', 'Bốn người'], 'answer': 1},
+            {'q': 'Bố gọi gì?', 'options': ['Một cốc cà phê', 'Một cốc trà', 'Một bát mì'], 'answer': 1},
+            {'q': 'Bữa ăn hết bao nhiêu tiền?', 'options': ['100 đồng', '120 đồng', '200 đồng'], 'answer': 1},
+        ],
+    },
+    {
+        'id': 'zh-first-time',
+        'emoji': '🛬',
+        'level': 'A2',
+        'title': ['Lần đầu đến Trung Quốc', '第一次来中国'],
+        'sentences': [
+            ('这|是|我|第一|次|来|中国。', 'Đây là lần đầu tiên tôi đến Trung Quốc.'),
+            ('我|从|越南|坐|飞机|来。', 'Tôi đi máy bay từ Việt Nam sang.'),
+            ('到|了|机场，|我|朋友|已经|在|等|我|了。', 'Đến sân bay thì bạn tôi đã đợi sẵn.'),
+            ('他|带|我|去|饭店，|我|的|房间|很|大。', 'Bạn đưa tôi về khách sạn, phòng tôi rất rộng.'),
+            ('第二|天，|我们|坐|公共汽车|去|玩。', 'Hôm sau, chúng tôi đi xe buýt đi chơi.'),
+            ('我|说|汉语，|大家|都|能|听|懂。', 'Tôi nói tiếng Trung, mọi người đều nghe hiểu.'),
+            ('我|觉得|中国|很|有意思。', 'Tôi thấy Trung Quốc rất thú vị.'),
+            ('我|希望|明年|再|来。', 'Tôi mong năm sau lại đến.'),
+        ],
+        'questions': [
+            {'q': 'Đây là lần thứ mấy tôi đến Trung Quốc?', 'options': ['Lần đầu', 'Lần thứ hai', 'Lần thứ ba'], 'answer': 0},
+            {'q': 'Ai đợi tôi ở sân bay?', 'options': ['Bố mẹ', 'Bạn tôi', 'Người phục vụ'], 'answer': 1},
+            {'q': 'Tôi mong điều gì?', 'options': ['Năm sau lại đến', 'Về nhà sớm', 'Học tiếng Anh'], 'answer': 0},
+        ],
+    },
 ]
 
 
@@ -219,6 +261,22 @@ SENTENCE_PINYIN = {
     '北京|菜|很|好吃，|但是|太|贵|了。': 'Běi jīng cài hěn hǎo chī dàn shì tài guì le',
     '我|买|了|一|件|红色|的|衣服。': 'wǒ mǎi le yí jiàn hóng sè de yī fu',
     '北京|旅游|很|有意思！': 'Běi jīng lǚ yóu hěn yǒu yì si',
+    '服务员|说：|“欢迎！”': 'fú wù yuán shuō huān yíng',
+    '我们|三|个|人。': 'wǒ men sān gè rén',
+    '我|想|吃|面条，|妈妈|想|吃|鱼。': 'wǒ xiǎng chī miàn tiáo mā ma xiǎng chī yú',
+    '爸爸|要|了|一|杯|茶。': 'bà ba yào le yì bēi chá',
+    '这儿|的|菜|非常|好吃。': 'zhè r de cài fēi cháng hǎo chī',
+    '“服务员，|一共|多少|钱？”': 'fú wù yuán yí gòng duō shao qián',
+    '“一百|二十|元。”': 'yì bǎi èr shí yuán',
+    '我们|吃|得|很|高兴。': 'wǒ men chī de hěn gāo xìng',
+    '这|是|我|第一|次|来|中国。': 'zhè shì wǒ dì yī cì lái Zhōng guó',
+    '我|从|越南|坐|飞机|来。': 'wǒ cóng Yuè nán zuò fēi jī lái',
+    '到|了|机场，|我|朋友|已经|在|等|我|了。': 'dào le jī chǎng wǒ péng you yǐ jīng zài děng wǒ le',
+    '他|带|我|去|饭店，|我|的|房间|很|大。': 'tā dài wǒ qù fàn diàn wǒ de fáng jiān hěn dà',
+    '第二|天，|我们|坐|公共汽车|去|玩。': 'dì èr tiān wǒ men zuò gōng gòng qì chē qù wán',
+    '我|说|汉语，|大家|都|能|听|懂。': 'wǒ shuō Hàn yǔ dà jiā dōu néng tīng dǒng',
+    '我|觉得|中国|很|有意思。': 'wǒ jué de Zhōng guó hěn yǒu yì si',
+    '我|希望|明年|再|来。': 'wǒ xī wàng míng nián zài lái',
 }
 
 

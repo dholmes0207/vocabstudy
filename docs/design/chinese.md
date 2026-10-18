@@ -426,3 +426,11 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
   - Thiếu 了 thì câu dở dang.
   - Có mốc thời gian cụ thể thì dùng 就要 … 了, không dùng 快 … 了. Câu chọn hỏi đúng điểm này.
 - Trang chủ ghi 15 bài ngữ pháp tiếng Trung.
+
+## Bước 16: 2 truyện mức HSK 2 (19/10/2026)
+
+- **Ở nhà hàng** (A2, `zh-restaurant`): 服务员, 欢迎, 面条, 杯, 非常, 元.
+- **Lần đầu đến Trung Quốc** (A2, `zh-first-time`): 第一, 次, 从, 机场, 已经, 等, 房间, 大家, 觉得,
+  希望, 再.
+- Cách viết giống Bước 11: 8 câu, mỗi câu có pinyin và câu dịch, 3 câu hỏi. Từ ngoài gói (一共,
+  第二, 明年) không chạm được. Tổng cộng 8 truyện tiếng Trung, 30 truyện cho cả app.
