@@ -850,6 +850,485 @@
           "vi": "Hôm nay thời tiết rất đẹp."
         }
       ]
+    },
+    {
+      "id": "zh-word-order",
+      "emoji": "🧭",
+      "level": "A1",
+      "title": [
+        "Trật tự câu: thời gian, nơi chốn trước động từ",
+        "Word order: time and place before the verb"
+      ],
+      "summary": [
+        "Ai + khi nào + ở đâu + làm gì: 我明天在家学习.",
+        "Who + when + where + does what: 我明天在家学习."
+      ],
+      "explain": [
+        "Tiếng Việt hay để thời gian và nơi chốn ở cuối câu: \"Tôi học tiếng Trung ở trường vào buổi tối\". Tiếng Trung đặt chúng TRƯỚC động từ: 我晚上在学校学习汉语.",
+        "Thứ tự quen dùng: chủ ngữ + thời gian + 在 + nơi chốn + động từ + tân ngữ. Thời gian cũng có thể đứng đầu câu: 明天我去北京.",
+        "Nơi làm việc gì đó (在 + nơi chốn) đứng trước động từ: nói 我在医院工作, không nói 我工作在医院. Chỉ vài động từ như 住, 坐 mới đi với 在 phía sau: 住在北京."
+      ],
+      "patterns": [
+        "Chủ ngữ + thời gian + động từ",
+        "Thời gian + chủ ngữ + động từ",
+        "Chủ ngữ + 在 + nơi chốn + động từ"
+      ],
+      "examples": [
+        {
+          "en": "我明天去北京。",
+          "vi": "Ngày mai tôi đi Bắc Kinh.",
+          "read": "Wǒ míngtiān qù Běijīng."
+        },
+        {
+          "en": "他晚上在家看电视。",
+          "vi": "Buổi tối anh ấy xem tivi ở nhà.",
+          "read": "Tā wǎnshang zài jiā kàn diànshì."
+        },
+        {
+          "en": "我在医院工作。",
+          "vi": "Tôi làm việc ở bệnh viện.",
+          "read": "Wǒ zài yīyuàn gōngzuò."
+        },
+        {
+          "en": "昨天我在商店买了一件衣服。",
+          "vi": "Hôm qua tôi mua một bộ quần áo ở cửa hàng.",
+          "read": "Zuótiān wǒ zài shāngdiàn mǎi le yí jiàn yīfu."
+        },
+        {
+          "en": "我们中午在饭店吃饭。",
+          "vi": "Buổi trưa chúng tôi ăn cơm ở nhà hàng.",
+          "read": "Wǒmen zhōngwǔ zài fàndiàn chī fàn."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我工作在医院。",
+          "right": "我在医院工作。",
+          "why": "Nơi làm việc (在 + nơi chốn) đứng trước động từ."
+        },
+        {
+          "wrong": "我去北京明天。",
+          "right": "我明天去北京。",
+          "why": "Thời gian đứng trước động từ, không đặt ở cuối câu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我们___吃饭。",
+          "options": [
+            "在饭店",
+            "饭店在"
+          ],
+          "answer": 0,
+          "explain": "在 + nơi chốn, đặt trước động từ: 在饭店吃饭."
+        },
+        {
+          "type": "choice",
+          "prompt": "___我去学校。",
+          "options": [
+            "明天",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "Thời gian có thể đứng đầu câu: 明天我去学校."
+        },
+        {
+          "type": "choice",
+          "prompt": "我晚上___看书。",
+          "options": [
+            "在家",
+            "家在"
+          ],
+          "answer": 0,
+          "explain": "Nơi chốn là 在 + 家, đặt trước động từ 看."
+        },
+        {
+          "type": "choice",
+          "prompt": "我明天___。",
+          "options": [
+            "去北京",
+            "北京去"
+          ],
+          "answer": 0,
+          "explain": "Nơi đến đứng sau 去: 去北京."
+        },
+        {
+          "type": "choice",
+          "prompt": "他___学习汉语。",
+          "options": [
+            "在学校",
+            "学校"
+          ],
+          "answer": 0,
+          "explain": "Nói làm việc gì ở đâu thì cần 在: 在学校学习."
+        },
+        {
+          "type": "order",
+          "en": "我​明天​在​家​学习。",
+          "vi": "Ngày mai tôi học ở nhà."
+        }
+      ]
+    },
+    {
+      "id": "zh-le",
+      "emoji": "✅",
+      "level": "A1",
+      "title": [
+        "了: việc đã xảy ra",
+        "了: something has happened"
+      ],
+      "summary": [
+        "Động từ + 了: việc đã làm. Phủ định: 没 + động từ, bỏ 了.",
+        "Verb + 了: an action that happened. Negative: 没 + verb, without 了."
+      ],
+      "explain": [
+        "Đặt 了 sau động từ hoặc cuối câu để nói việc đã xảy ra: 我买了一本书 = tôi (đã) mua một quyển sách. Gần giống \"đã … rồi\" của tiếng Việt.",
+        "了 không phải \"thì quá khứ\": thói quen trong quá khứ không dùng 了. 去年我每天跑步 (năm ngoái ngày nào tôi cũng chạy bộ) không có 了.",
+        "Phủ định việc chưa xảy ra: 没 (hoặc 没有) + động từ, và BỎ 了: nói 我没去, không nói 我没去了.",
+        "了 ở cuối câu còn báo một sự thay đổi: 下雨了 (trời mưa rồi), 我饿了 (tôi đói rồi)."
+      ],
+      "patterns": [
+        "Động từ + 了 + tân ngữ",
+        "… 了。(đã xảy ra, hoặc đã thay đổi)",
+        "没 + động từ (không có 了)"
+      ],
+      "examples": [
+        {
+          "en": "我买了一本书。",
+          "vi": "Tôi đã mua một quyển sách.",
+          "read": "Wǒ mǎi le yì běn shū."
+        },
+        {
+          "en": "他已经回家了。",
+          "vi": "Anh ấy về nhà rồi.",
+          "read": "Tā yǐjīng huí jiā le."
+        },
+        {
+          "en": "昨天我没去学校。",
+          "vi": "Hôm qua tôi không đi học.",
+          "read": "Zuótiān wǒ méi qù xuéxiào."
+        },
+        {
+          "en": "下雨了。",
+          "vi": "Trời mưa rồi.",
+          "read": "Xià yǔ le."
+        },
+        {
+          "en": "你吃饭了吗？",
+          "vi": "Bạn ăn cơm chưa?",
+          "read": "Nǐ chī fàn le ma?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我没去了。",
+          "right": "我没去。",
+          "why": "Câu phủ định với 没 không có 了."
+        },
+        {
+          "wrong": "去年我每天跑步了。",
+          "right": "去年我每天跑步。",
+          "why": "Thói quen trong quá khứ không dùng 了."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我昨天买___一件衣服。",
+          "options": [
+            "了",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Việc đã xảy ra: động từ + 了."
+        },
+        {
+          "type": "choice",
+          "prompt": "他昨天___来。",
+          "options": [
+            "没",
+            "不"
+          ],
+          "answer": 0,
+          "explain": "Việc đã không xảy ra → 没, không dùng 不."
+        },
+        {
+          "type": "choice",
+          "prompt": "我饿___。",
+          "options": [
+            "了",
+            "的"
+          ],
+          "answer": 0,
+          "explain": "了 cuối câu báo thay đổi: 我饿了 = tôi đói rồi."
+        },
+        {
+          "type": "choice",
+          "prompt": "你吃饭___吗？",
+          "options": [
+            "了",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Hỏi đã làm chưa: … 了吗？"
+        },
+        {
+          "type": "choice",
+          "prompt": "我没___咖啡。",
+          "options": [
+            "喝",
+            "喝了"
+          ],
+          "answer": 0,
+          "explain": "Sau 没 không dùng 了: 我没喝咖啡."
+        },
+        {
+          "type": "order",
+          "en": "我​已经​吃​饭​了。",
+          "vi": "Tôi ăn cơm rồi."
+        }
+      ]
+    },
+    {
+      "id": "zh-can",
+      "emoji": "🛠️",
+      "level": "A2",
+      "title": [
+        "会, 能, 可以: ba cách nói \"có thể\"",
+        "会, 能, 可以: three kinds of \"can\""
+      ],
+      "summary": [
+        "会 = biết (phải học mới làm được), 能 = làm được, 可以 = được phép.",
+        "会 = know how (learned), 能 = able to, 可以 = allowed to."
+      ],
+      "explain": [
+        "Tiếng Việt nói \"biết\", \"được\", \"có thể\"; tiếng Trung chia ra ba từ.",
+        "会: kỹ năng phải học mới có: 我会说汉语 (tôi biết nói tiếng Trung), 他会游泳 (anh ấy biết bơi).",
+        "能: làm được, có điều kiện để làm: 你明天能来吗？ (mai bạn đến được không?), 我生病了，不能去 (tôi ốm nên không đi được).",
+        "可以: được phép, dùng khi xin phép: 我可以坐这儿吗？ (tôi ngồi đây được không?).",
+        "Ranh giới giữa 能 và 可以 không cứng, người bản xứ đôi khi dùng thay nhau. Mẹo trên đủ cho người mới học."
+      ],
+      "patterns": [
+        "会 + động từ (biết làm)",
+        "能 + động từ (làm được)",
+        "可以 + động từ (được phép)"
+      ],
+      "examples": [
+        {
+          "en": "我会说汉语。",
+          "vi": "Tôi biết nói tiếng Trung.",
+          "read": "Wǒ huì shuō Hànyǔ."
+        },
+        {
+          "en": "他不会游泳。",
+          "vi": "Anh ấy không biết bơi.",
+          "read": "Tā bú huì yóuyǒng."
+        },
+        {
+          "en": "我生病了，不能去。",
+          "vi": "Tôi ốm rồi, không đi được.",
+          "read": "Wǒ shēngbìng le, bù néng qù."
+        },
+        {
+          "en": "你明天能来吗？",
+          "vi": "Ngày mai bạn đến được không?",
+          "read": "Nǐ míngtiān néng lái ma?"
+        },
+        {
+          "en": "我可以坐这儿吗？",
+          "vi": "Tôi ngồi đây được không?",
+          "read": "Wǒ kěyǐ zuò zhèr ma?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我会坐这儿吗？",
+          "right": "我可以坐这儿吗？",
+          "why": "Xin phép → 可以, không dùng 会."
+        },
+        {
+          "wrong": "我生病了，不会去。",
+          "right": "我生病了，不能去。",
+          "why": "Không đi được vì một lý do (ốm) → 不能. 不会去 nghĩa là \"sẽ không đi\"."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我___说汉语。",
+          "options": [
+            "会",
+            "可以"
+          ],
+          "answer": 0,
+          "explain": "Biết một thứ tiếng là kỹ năng đã học → 会."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___坐这儿吗？",
+          "options": [
+            "可以",
+            "会"
+          ],
+          "answer": 0,
+          "explain": "Xin phép → 可以."
+        },
+        {
+          "type": "choice",
+          "prompt": "他生病了，不___来。",
+          "options": [
+            "能",
+            "会"
+          ],
+          "answer": 0,
+          "explain": "Không đến được vì ốm → 不能."
+        },
+        {
+          "type": "choice",
+          "prompt": "妹妹___游泳，她学了两年。",
+          "options": [
+            "会",
+            "可以"
+          ],
+          "answer": 0,
+          "explain": "Bơi là kỹ năng phải học → 会."
+        },
+        {
+          "type": "choice",
+          "prompt": "这儿___吃东西吗？",
+          "options": [
+            "可以",
+            "会"
+          ],
+          "answer": 0,
+          "explain": "Hỏi có được phép không → 可以."
+        },
+        {
+          "type": "order",
+          "en": "我​会​说​一点儿​汉语。",
+          "vi": "Tôi biết nói một chút tiếng Trung."
+        }
+      ]
+    },
+    {
+      "id": "zh-because",
+      "emoji": "🔗",
+      "level": "A2",
+      "title": [
+        "因为…所以…, 但是: vì… nên…, nhưng",
+        "因为…所以…, 但是: because… so…, but"
+      ],
+      "summary": [
+        "Giống \"vì… nên…\" của tiếng Việt: 因为下雨，所以我不去了.",
+        "Like Vietnamese \"vì… nên…\": 因为下雨，所以我不去了."
+      ],
+      "explain": [
+        "因为 = vì, 所以 = nên. Thứ tự giống tiếng Việt: lý do trước, kết quả sau.",
+        "Có thể dùng cả hai, hoặc chỉ một: 因为今天是我的生日，我很高兴 / 我很累，所以想休息.",
+        "但是 = nhưng, nối hai ý trái nhau: 汉语很难，但是很有意思."
+      ],
+      "patterns": [
+        "因为 + lý do，所以 + kết quả",
+        "…，所以 + kết quả",
+        "…，但是 + ý trái lại"
+      ],
+      "examples": [
+        {
+          "en": "因为下雨，所以我不去了。",
+          "vi": "Vì trời mưa nên tôi không đi nữa.",
+          "read": "Yīnwèi xià yǔ, suǒyǐ wǒ bú qù le."
+        },
+        {
+          "en": "我很累，所以想休息。",
+          "vi": "Tôi rất mệt nên muốn nghỉ ngơi.",
+          "read": "Wǒ hěn lèi, suǒyǐ xiǎng xiūxi."
+        },
+        {
+          "en": "因为今天是我的生日，我很高兴。",
+          "vi": "Vì hôm nay là sinh nhật tôi nên tôi rất vui.",
+          "read": "Yīnwèi jīntiān shì wǒ de shēngrì, wǒ hěn gāoxìng."
+        },
+        {
+          "en": "汉语很难，但是很有意思。",
+          "vi": "Tiếng Trung khó nhưng rất thú vị.",
+          "read": "Hànyǔ hěn nán, dànshì hěn yǒu yìsi."
+        },
+        {
+          "en": "这件衣服很漂亮，但是太贵了。",
+          "vi": "Bộ quần áo này rất đẹp nhưng đắt quá.",
+          "read": "Zhè jiàn yīfu hěn piàoliang, dànshì tài guì le."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "所以下雨，因为我不去了。",
+          "right": "因为下雨，所以我不去了。",
+          "why": "因为 đi với lý do, 所以 đi với kết quả."
+        },
+        {
+          "wrong": "因为我很累，但是我想休息。",
+          "right": "因为我很累，所以我想休息。",
+          "why": "Kết quả của một lý do → 所以; 但是 là \"nhưng\"."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "因为下雨，___我不去了。",
+          "options": [
+            "所以",
+            "但是"
+          ],
+          "answer": 0,
+          "explain": "Kết quả → 所以."
+        },
+        {
+          "type": "choice",
+          "prompt": "___我饿了，我想吃饭。",
+          "options": [
+            "因为",
+            "所以"
+          ],
+          "answer": 0,
+          "explain": "Lý do → 因为."
+        },
+        {
+          "type": "choice",
+          "prompt": "汉语很难，___很有意思。",
+          "options": [
+            "但是",
+            "所以"
+          ],
+          "answer": 0,
+          "explain": "Hai ý trái nhau → 但是."
+        },
+        {
+          "type": "choice",
+          "prompt": "他生病了，___没去上班。",
+          "options": [
+            "所以",
+            "但是"
+          ],
+          "answer": 0,
+          "explain": "Ốm nên không đi làm → 所以."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个手机很好，___太贵了。",
+          "options": [
+            "但是",
+            "因为"
+          ],
+          "answer": 0,
+          "explain": "Tốt nhưng đắt → 但是."
+        },
+        {
+          "type": "order",
+          "en": "因为​很​累，​所以​我​想​休息。",
+          "vi": "Vì rất mệt nên tôi muốn nghỉ ngơi."
+        }
+      ]
     }
   ]
 }

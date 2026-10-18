@@ -286,3 +286,33 @@ những từ nói hằng ngày: anh/chị/em, màu sắc, ốm/thuốc, xe buýt
 - `scripts/build_topics_zh.py` có 3 bộ mới. `public/data/index.json` có số từ và mô tả mới.
 - Trang chủ (`Landing.tsx`) ghi 234 từ, 13 bộ chủ đề, tổng "4.800+". `landingClaims.test.ts`
   tính lại các số này từ dữ liệu.
+
+## Bước 10: thêm 4 bài ngữ pháp (19/10/2026)
+
+**User**: "Cải thiện thêm phần học tiếng Trung." 7 bài cũ đã có 是, 不/没, câu hỏi, 的, lượng từ,
+在 và 很. Còn thiếu những điểm người Việt hay sai khi bắt đầu nói câu dài hơn.
+
+**BA**
+
+- **Trật tự câu** (`zh-word-order`): thời gian và nơi chốn đứng TRƯỚC động từ.
+  - Tiếng Việt quen đặt chúng ở cuối câu, nên người Việt hay nói 我工作在医院.
+  - Lỗi mẫu: 我工作在医院 → 我在医院工作, và 我去北京明天 → 我明天去北京.
+- **了** (`zh-le`):
+  - việc đã xảy ra;
+  - 了 ở cuối câu báo một thay đổi (下雨了);
+  - phủ định bằng 没 thì bỏ 了;
+  - 了 không phải "thì quá khứ", nên thói quen trong quá khứ không dùng 了.
+- **会 / 能 / 可以** (`zh-can`): biết (kỹ năng đã học), làm được, được phép.
+  - Bài nói rõ là ranh giới giữa 能 và 可以 không cứng.
+  - Lỗi mẫu chỉ chọn những câu chắc chắn sai hoặc đổi nghĩa: 我会坐这儿吗, 不会去 ("sẽ không
+    đi").
+- **因为…所以…, 但是** (`zh-because`): dùng các từ mới ở Bước 9.
+- Mỗi bài có cấu trúc giống bài cũ: 5 câu ví dụ có pinyin, 2 lỗi hay gặp, 5 câu chọn và 1 câu
+  xếp chữ. Câu ví dụ cũng dùng được cho "Nói thành tiếng" và "Nghe – chép ví dụ".
+
+**Dev**
+
+- `scripts/build_grammar_zh.py`: thêm 4 bài vào `UNITS` và pinyin của câu ví dụ vào
+  `EXAMPLE_PINYIN`. Script kiểm tra số âm tiết, cách đọc của từ có trong gói, chỗ trống của câu
+  chọn và độ dài câu xếp chữ.
+- Trang chủ ghi 11 bài ngữ pháp. `landingClaims.test.ts` tính lại số này từ dữ liệu.
