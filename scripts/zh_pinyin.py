@@ -61,9 +61,10 @@ def pinyin_line(sentence: str, syllables: list[str], pack_reads: dict[str, str])
         head = ''.join(c for c in token[: token.index(chars[0])] if not is_han(c))
         tail = ''.join(PUNCT.get(c, c) for c in token[token.rindex(chars[-1]) + 1 :])
         out.append(head + read + tail)
-    # Capital letter to open each sentence, after any opening quote.
+    # Capital letter to open each sentence, after any opening quote — and to open
+    # a quotation after a colon ('Tā shuō: “Nǐ hǎo.”').
     return re.sub(
-        r'(^|[.!?]["”]?\s+)(["“]?)(\w)',
+        r'(^|[.!?]["”]?\s+|:\s+(?=["“]))(["“]?)(\w)',
         lambda m: m.group(1) + m.group(2) + m.group(3).upper(),
         ' '.join(out),
     )
