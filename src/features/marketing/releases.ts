@@ -20,6 +20,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Nghe – chép theo truyện: trong trang đọc truyện, bấm "Nghe – chép" để chép lần lượt mọi câu của truyện. Bài ngữ pháp cũng có "Nghe – chép ví dụ".',
+        'Story dictation: on a story, tap "Dictation" to write the whole story sentence by sentence. Grammar lessons have "Dictation: the examples" too.',
+      ],
+      [
         'Thẻ từ tiếng Trung và tiếng Hàn có mục "Cùng chữ Hán Việt": học 学生 (học sinh) là thấy ngay chữ 学 còn có trong 学校, 学习, 同学. Từ trong danh sách HSK 1 có nhãn HSK 1.',
         'Chinese and Korean word cards show "Same Sino-Vietnamese character": learn 学生 and see 学 in 学校, 学习 and 同学 too. HSK 1 words carry an HSK 1 badge.',
       ],

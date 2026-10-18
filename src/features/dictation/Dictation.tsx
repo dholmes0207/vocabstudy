@@ -26,6 +26,28 @@ import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 const ROUND = 6
 
+/**
+ * One sentence to write down. Example sentences carry their recorded clip;
+ * story and grammar sentences are read by the browser's voice.
+ */
+export interface DictationItem {
+  key: string
+  text: string
+  vi: string
+  /** Pinyin line for Chinese. */
+  read?: string
+  audioSrc?: string
+}
+
+const fromWords = (words: Word[]): DictationItem[] =>
+  words.map((w) => ({
+    key: `w${w.id}`,
+    text: w.exampleEn,
+    vi: w.exampleVi,
+    read: w.exampleRead,
+    audioSrc: exampleAudio(w.id, w.exampleEn),
+  }))
+
 export default function Dictation() {
   const t = useT()
   const L = useTargetLang()
@@ -38,7 +60,14 @@ export default function Dictation() {
     setRound((r) => ({ n: (r?.n ?? 0) + 1, words: pickDictationRound(pack.words, cards, ROUND) }))
 
   if (round)
-    return <Round key={round.n} words={round.words} onExit={() => setRound(null)} onAgain={start} />
+    return (
+      <DictationRound
+        key={round.n}
+        items={fromWords(round.words)}
+        onExit={() => setRound(null)}
+        onAgain={start}
+      />
+    )
 
   return (
     <div className="mx-auto max-w-xl space-y-5 animate-fade-in">
@@ -72,14 +101,22 @@ export default function Dictation() {
   )
 }
 
-function Round({
-  words,
+/**
+ * A dictation session over any list of sentences — example sentences here, a
+ * whole story sentence by sentence, or a grammar lesson's examples.
+ */
+export function DictationRound({
+  items,
+  caption,
   onExit,
   onAgain,
 }: {
-  words: Word[]
+  items: DictationItem[]
+  /** Shown above the progress bar, e.g. the story's title. */
+  caption?: string
   onExit: () => void
-  onAgain: () => void
+  /** "Thêm một lượt"; left out where a second round makes no sense. */
+  onAgain?: () => void
 }) {
   useImmersive()
   const t = useT()
@@ -99,31 +136,31 @@ function Round({
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const nextRef = useRef<HTMLButtonElement>(null)
 
-  const word = words[idx]
+  const item = items[idx]
   const play = (slow = false) =>
     pronounce({
-      audioSrc: exampleAudio(word.id, word.exampleEn),
-      text: word.exampleEn,
+      audioSrc: item.audioSrc,
+      text: item.text,
       lang: pack.meta.ttsLang,
       rate: slow ? Math.min(rate, 0.7) : rate,
     })
 
   // Each sentence plays as soon as it appears.
   useEffect(() => {
-    const w = words[idx]
-    if (!w) return
+    const it = items[idx]
+    if (!it) return
     const timer = setTimeout(
       () =>
         pronounce({
-          audioSrc: exampleAudio(w.id, w.exampleEn),
-          text: w.exampleEn,
+          audioSrc: it.audioSrc,
+          text: it.text,
           lang: pack.meta.ttsLang,
           rate,
         }),
       250
     )
     return () => clearTimeout(timer)
-  }, [idx, words, pack.meta.ttsLang, rate])
+  }, [idx, items, pack.meta.ttsLang, rate])
 
   useEffect(() => {
     if (result) nextRef.current?.focus()
@@ -132,7 +169,7 @@ function Round({
 
   const check = () => {
     if (!typed.trim() || result) return
-    const parts = diffWords(word.exampleEn, typed)
+    const parts = diffWords(item.text, typed)
     const score = dictationScore(parts)
     setResult({ parts, score })
     const ok = score >= DICTATION_PASS
@@ -141,7 +178,7 @@ function Round({
   }
 
   const next = () => {
-    if (idx + 1 < words.length) {
+    if (idx + 1 < items.length) {
       setIdx(idx + 1)
       setTyped('')
       setResult(null)
@@ -149,12 +186,12 @@ function Round({
       setShowRead(false)
       return
     }
-    const xp = dictationXp(caught, words.length)
+    const xp = dictationXp(caught, items.length)
     addPlayXp(code, xp)
     setFinished({ xp })
   }
 
-  if (words.length === 0)
+  if (items.length === 0)
     return (
       <p className="card p-6 text-slate-500">
         {t('Chưa có câu nào phù hợp để nghe – chép.', 'There are no sentences to write yet.')}
@@ -167,15 +204,17 @@ function Round({
         emoji="✍️"
         title={t('Xong một lượt nghe – chép!', 'Dictation complete!')}
         correct={caught}
-        total={words.length}
+        total={items.length}
       >
         <p className="w-full text-sm font-semibold text-brand-600 dark:text-brand-300">
           +{finished.xp} XP ⭐
         </p>
-        <button className="btn-primary" onClick={onAgain}>
-          {t('Thêm một lượt', 'Another round')}
-        </button>
-        <button className="btn-secondary" onClick={onExit}>
+        {onAgain && (
+          <button className="btn-primary" onClick={onAgain}>
+            {t('Thêm một lượt', 'Another round')}
+          </button>
+        )}
+        <button className={onAgain ? 'btn-secondary' : 'btn-primary'} onClick={onExit}>
           {t('Xong', 'Done')}
         </button>
       </SessionComplete>
@@ -190,6 +229,9 @@ function Round({
 
   return (
     <div className="mx-auto max-w-xl animate-fade-in">
+      {caption && (
+        <p className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">{caption}</p>
+      )}
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
@@ -201,11 +243,11 @@ function Round({
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div
             className="h-full rounded-full bg-brand-500 transition-all"
-            style={{ width: `${(idx / words.length) * 100}%` }}
+            style={{ width: `${(idx / items.length) * 100}%` }}
           />
         </div>
         <span className="text-sm font-medium tabular-nums text-slate-500">
-          {idx + 1}/{words.length}
+          {idx + 1}/{items.length}
         </span>
       </div>
 
@@ -250,7 +292,7 @@ function Round({
             />
             <div className="flex flex-col items-start gap-1">
               {showHint ? (
-                <p className="text-sm text-slate-500">💡 {word.exampleVi}</p>
+                <p className="text-sm text-slate-500">💡 {item.vi}</p>
               ) : (
                 <button
                   type="button"
@@ -261,9 +303,9 @@ function Round({
                 </button>
               )}
               {/* Chinese is typed through a pinyin keyboard: the reading is the real help. */}
-              {word.exampleRead &&
+              {item.read &&
                 (showRead ? (
-                  <p className="text-sm text-slate-500">🔤 {word.exampleRead}</p>
+                  <p className="text-sm text-slate-500">🔤 {item.read}</p>
                 ) : (
                   <button
                     type="button"
@@ -296,15 +338,15 @@ function Round({
               ({Math.round(result.score * 100)}%)
             </p>
             <p className="rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
-              <b>{word.exampleEn}</b>
-              {word.exampleRead && (
+              <b>{item.text}</b>
+              {item.read && (
                 <>
                   <br />
-                  <span className="text-slate-600 dark:text-slate-300">{word.exampleRead}</span>
+                  <span className="text-slate-600 dark:text-slate-300">{item.read}</span>
                 </>
               )}
               <br />
-              <span className="text-slate-500">{word.exampleVi}</span>
+              <span className="text-slate-500">{item.vi}</span>
             </p>
           </div>
         )}
@@ -321,7 +363,7 @@ function Round({
           </button>
         ) : (
           <button ref={nextRef} onClick={next} className="btn-primary h-12 w-full">
-            {idx + 1 < words.length ? t('Câu tiếp theo', 'Next') : t('Xem kết quả', 'See results')}{' '}
+            {idx + 1 < items.length ? t('Câu tiếp theo', 'Next') : t('Xem kết quả', 'See results')}{' '}
             <ArrowRight className="h-5 w-5" />
           </button>
         )}

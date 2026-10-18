@@ -252,3 +252,21 @@ Không đăng nhập. REA quan sát trang qua một Chrome riêng (profile tạm
 
 - Thứ tự nét và luyện viết chữ Hán (cần dữ liệu nét, ví dụ thư viện hanzi-writer).
 - Tô màu từ trong truyện theo trạng thái đã học hay chưa (giống nút HSK của Du Chinese).
+
+## Vòng 6 (18/10): trang nội dung học công khai
+
+| Trang                                  | Evidence           | Ý đáng chú ý                                                                                            |
+| -------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------- |
+| Daily Dictation, bài "First snowfall"  | `ev_3637cb2ba366…` | Chép cả truyện từng câu (1/21), chỉnh tốc độ, Check/Skip, cấp độ từ vựng, "chép xong thì đọc to câu đó" |
+| Chinese Grammar Wiki, ngữ pháp HSK 1   | `ev_e6145bc7ad2d…` | Chia theo từ loại và theo cấu trúc; có mục riêng "So sánh các điểm ngữ pháp dễ nhầm"                    |
+| How to Study Korean, bài 1             | `ev_11242be89464…` | Từ vựng chia theo từ loại, có nút nghe; cuối bài có luyện câu, luyện nghe – chép, đọc biển hiệu thật    |
+| BBC Learning English, 6 Minute English | `ev_704d9b422a7c…` | Bài nghe hằng tuần theo chủ đề, cấp trung cấp                                                           |
+| YouGlish, từ "improve"                 | `ev_9cf1cf9f039e…` | Nghe từ trong 80.518 đoạn video thật; mẹo phát âm; từ có âm gần giống                                   |
+
+**Đã làm theo cách riêng**: nghe – chép theo truyện và theo bài ngữ pháp, dùng chung một bộ
+máy (`docs/design/dictation.md`).
+
+**Để sau**:
+
+- Bài "so sánh điểm ngữ pháp dễ nhầm" (不/没, 은/는–이/가, a/the).
+- Nghe một từ trong ngữ cảnh thật: cần nguồn video có bản quyền.

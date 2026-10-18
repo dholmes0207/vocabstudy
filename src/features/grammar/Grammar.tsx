@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, CheckCircle2, GraduationCap, LogOut, XCircle } from 'lucide-react'
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  GraduationCap,
+  LogOut,
+  PenLine,
+  XCircle,
+} from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
@@ -26,6 +34,7 @@ import SessionComplete from '@/components/SessionComplete'
 import SpeakButton from '@/components/SpeakButton'
 import BuildTiles from '@/components/BuildTiles'
 import SpeakAloud from './SpeakAloud'
+import { DictationRound } from '@/features/dictation/Dictation'
 
 // "Ngữ pháp căn bản" (docs/design/grammar.md): twelve short units — the rule in
 // plain Vietnamese, the pattern, examples to listen to, the mistakes Vietnamese
@@ -143,6 +152,23 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
   const ttsLang = useTtsLang()
   const rec = useGrammar((s) => s.progress[unit.id])
   const [round, setRound] = useState<{ n: number; items: GrammarExercise[] } | null>(null)
+  // Write the lesson's examples from dictation (How to Study Korean ends each
+  // lesson this way): the pattern heard, then typed.
+  const [dictate, setDictate] = useState(false)
+
+  if (dictate)
+    return (
+      <DictationRound
+        items={unit.examples.map((ex, i) => ({
+          key: `${unit.id}-${i}`,
+          text: ex.en,
+          vi: ex.vi,
+          read: ex.read,
+        }))}
+        caption={`${unit.emoji} ${t(...unit.title)}`}
+        onExit={() => setDictate(false)}
+      />
+    )
 
   if (round)
     return (
@@ -245,6 +271,13 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
         >
           <GraduationCap className="h-5 w-5" />
           {t(`Luyện tập (${unit.exercises.length} câu)`, `Practise (${unit.exercises.length})`)}
+        </button>
+        <button className="btn-secondary mt-3 h-12 w-full" onClick={() => setDictate(true)}>
+          <PenLine className="h-5 w-5" />
+          {t(
+            `Nghe – chép ví dụ (${unit.examples.length} câu)`,
+            `Dictation: the examples (${unit.examples.length})`
+          )}
         </button>
       </div>
     </article>
