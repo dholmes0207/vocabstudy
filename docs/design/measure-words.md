@@ -40,3 +40,7 @@ có loại từ ("một **quyển** sách", "một **con** mèo"): chỉ cần �
   - `lib/measureWords.test.ts`: danh từ có trong gói, mọi lượng từ đều được hỏi, đáp án sai không
     bao giờ là lượng từ cũng đúng, 一 đọc đúng thanh;
   - `features/measure/MeasureWords.test.tsx`.
+
+**Bổ sung (19/10/2026)**: thêm 6 danh từ của gói mới để đề đa dạng hơn: 票 và 报纸 (张), 事情 (件,
+kèm mẹo "件 đếm cả việc"), 孩子 và 房间 (个), 船 (条; 只 cũng đúng nên không bao giờ là phương án
+sai). Danh sách hỏi có 27 danh từ.
