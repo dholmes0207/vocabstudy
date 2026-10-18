@@ -1808,6 +1808,125 @@
           "vi": "Em gái tôi sắp dậy rồi."
         }
       ]
+    },
+    {
+      "id": "zh-same-sound",
+      "emoji": "👂",
+      "level": "A2",
+      "title": [
+        "Cùng âm, khác chữ: 在/再, 他/她/它, 的/得",
+        "Same sound, different character: 在/再, 他/她/它, 的/得"
+      ],
+      "summary": [
+        "Nghe giống hệt nhau nhưng viết khác: chọn chữ theo nghĩa.",
+        "They sound the same but are written differently: pick by meaning."
+      ],
+      "explain": [
+        "在 (zài) = ở, đang: 我在家. 再 (zài) = lại, nữa: 请再说一次. Cùng âm, cùng thanh, nên chỉ phân biệt được bằng nghĩa. Mẹo: 再见 (tái kiến) là \"gặp lại\".",
+        "他 (anh ấy), 她 (cô ấy), 它 (nó: con vật, đồ vật) đều đọc tā. Nghe thì không phân biệt được; khi viết phải chọn đúng chữ.",
+        "的 và 得 đều đọc nhẹ \"de\": 的 đứng trước danh từ (我的书), 得 đứng sau động từ, trước lời nhận xét (他走得很快)."
+      ],
+      "patterns": [
+        "在 + nơi chốn, 在 + động từ (đang)",
+        "再 + động từ (lại, nữa)",
+        "他 / 她 / 它 — cùng đọc tā"
+      ],
+      "examples": [
+        {
+          "en": "我在家等你。",
+          "vi": "Tôi đợi bạn ở nhà.",
+          "read": "Wǒ zài jiā děng nǐ."
+        },
+        {
+          "en": "请再说一次。",
+          "vi": "Xin nói lại một lần nữa.",
+          "read": "Qǐng zài shuō yí cì."
+        },
+        {
+          "en": "她是我姐姐。",
+          "vi": "Cô ấy là chị gái tôi.",
+          "read": "Tā shì wǒ jiějie."
+        },
+        {
+          "en": "我有一只狗，它很大。",
+          "vi": "Tôi có một con chó, nó rất to.",
+          "read": "Wǒ yǒu yì zhī gǒu, tā hěn dà."
+        },
+        {
+          "en": "他写字写得很好。",
+          "vi": "Anh ấy viết chữ rất đẹp.",
+          "read": "Tā xiě zì xiě de hěn hǎo."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "请在说一次。",
+          "right": "请再说一次。",
+          "why": "\"Lại, nữa\" là 再; 在 là \"ở, đang\"."
+        },
+        {
+          "wrong": "我有一只猫，他很小。",
+          "right": "我有一只猫，它很小。",
+          "why": "Con vật, đồ vật → 它."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "明天___见！",
+          "options": [
+            "再",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "再见 = hẹn gặp lại: 再 là \"lại\"."
+        },
+        {
+          "type": "choice",
+          "prompt": "妈妈___家做饭。",
+          "options": [
+            "在",
+            "再"
+          ],
+          "answer": 0,
+          "explain": "Ở nhà → 在."
+        },
+        {
+          "type": "choice",
+          "prompt": "我的猫很漂亮，___喜欢睡觉。",
+          "options": [
+            "它",
+            "他"
+          ],
+          "answer": 0,
+          "explain": "Con vật → 它."
+        },
+        {
+          "type": "choice",
+          "prompt": "我姐姐是老师，___很忙。",
+          "options": [
+            "她",
+            "他"
+          ],
+          "answer": 0,
+          "explain": "Chị gái (nữ) → 她."
+        },
+        {
+          "type": "choice",
+          "prompt": "这是我___手机。",
+          "options": [
+            "的",
+            "得"
+          ],
+          "answer": 0,
+          "explain": "Trước danh từ → 的."
+        },
+        {
+          "type": "order",
+          "en": "请​再​说​一​次。",
+          "vi": "Xin nói lại một lần nữa."
+        }
+      ]
     }
   ]
 }
