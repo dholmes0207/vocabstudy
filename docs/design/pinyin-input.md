@@ -47,3 +47,11 @@ Giới hạn, nói thẳng với người học:
 - `Dictation.tsx`: `result.pinyin = { peeked }`. Câu tính đạt khi điểm ≥ `DICTATION_PASS`
   và chưa xem gợi ý bính âm.
 - Test: `lib/pinyinInput.test.ts`, `lib/quiz.test.ts`, `features/dictation/Dictation.test.tsx`.
+
+**Bổ sung (19/10/2026)**: người học cần biết là có cách này.
+
+- Màn mở đầu Nghe – chép tiếng Trung có dòng "Chưa có bàn phím chữ Hán? Gõ bính âm không dấu cũng
+  được chấm."
+- Phần hướng dẫn bàn phím chữ Hán (`KeyboardHelp`, trường `noKeyboard` của hướng dẫn tiếng Trung)
+  có dòng: chưa cài được bàn phím thì cứ gõ bính âm không dấu vào ô.
+- Tiếng Hàn chưa có cách tương tự, nên không có dòng này.

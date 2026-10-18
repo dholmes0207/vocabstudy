@@ -79,6 +79,7 @@ export default function KeyboardHelp({ canSkip = false }: { canSkip?: boolean })
             ))}
           </ol>
           <p>💡 {t(...guide.howTo)}</p>
+          {guide.noKeyboard && <p>🔤 {t(...guide.noKeyboard)}</p>}
           {(device === 'windows' || device === 'mac' || device === 'linux') && (
             <p className="text-xs text-amber-700 dark:text-amber-300">
               {t(...VIETNAMESE_IME_NOTE)}

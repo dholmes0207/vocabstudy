@@ -29,3 +29,10 @@ describe('keyboardGuide', () => {
     for (const { id } of DEVICES) expect(guide.steps[id].length, id).toBeGreaterThan(0)
   })
 })
+
+describe('noKeyboard', () => {
+  it('points Chinese learners to pinyin answers; Korean has no such way yet', () => {
+    expect(keyboardGuide('zh')?.noKeyboard?.[0]).toMatch(/bính âm/)
+    expect(keyboardGuide('ko')?.noKeyboard).toBeUndefined()
+  })
+})

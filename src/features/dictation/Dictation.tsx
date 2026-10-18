@@ -105,6 +105,15 @@ export default function Dictation() {
             'Capitals and punctuation do not matter — just the words.'
           )}
         </li>
+        {acceptsPinyin(code) && (
+          <li>
+            🔤{' '}
+            {t(
+              'Chưa có bàn phím chữ Hán? Gõ bính âm không dấu (wo shi xuesheng) cũng được chấm.',
+              'No Chinese keyboard yet? Pinyin without tones (wo shi xuesheng) is graded too.'
+            )}
+          </li>
+        )}
       </ul>
       <button className="btn-primary h-12 w-full" onClick={start}>
         <Ear className="h-5 w-5" /> {t(`Bắt đầu (${ROUND} câu)`, `Start (${ROUND} sentences)`)}
