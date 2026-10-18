@@ -1569,6 +1569,245 @@
           "vi": "Đi máy bay nhanh hơn đi tàu hoả."
         }
       ]
+    },
+    {
+      "id": "zh-guo",
+      "emoji": "🗺️",
+      "level": "A2",
+      "title": [
+        "过: đã từng",
+        "过: have done before"
+      ],
+      "summary": [
+        "Động từ + 过: đã từng làm (một lần nào đó): 我去过北京.",
+        "Verb + 过: have done it at some point: 我去过北京."
+      ],
+      "explain": [
+        "Đặt 过 (đọc nhẹ \"guo\") ngay sau động từ để nói đã từng trải qua việc đó: 我去过北京 = tôi đã từng đến Bắc Kinh. Giống \"đã từng\" của tiếng Việt.",
+        "Khác với 了: 了 kể một việc đã xảy ra (我昨天去了北京), còn 过 nói về trải nghiệm, không cần biết lúc nào.",
+        "Phủ định: 没(有) + động từ + 过, GIỮ 过: 我没去过中国 (tôi chưa từng đến Trung Quốc).",
+        "Hỏi: … 过 … 吗？ — 你吃过羊肉吗？ Muốn nói số lần thì thêm sau động từ: 看过两次."
+      ],
+      "patterns": [
+        "Động từ + 过 + tân ngữ",
+        "没 + động từ + 过",
+        "Động từ + 过 + … 吗？"
+      ],
+      "examples": [
+        {
+          "en": "我去过北京。",
+          "vi": "Tôi đã từng đến Bắc Kinh.",
+          "read": "Wǒ qù guo Běijīng."
+        },
+        {
+          "en": "你吃过羊肉吗？",
+          "vi": "Bạn đã từng ăn thịt cừu chưa?",
+          "read": "Nǐ chī guo yángròu ma?"
+        },
+        {
+          "en": "我没去过中国。",
+          "vi": "Tôi chưa từng đến Trung Quốc.",
+          "read": "Wǒ méi qù guo Zhōngguó."
+        },
+        {
+          "en": "他学过两年汉语。",
+          "vi": "Anh ấy từng học tiếng Trung hai năm.",
+          "read": "Tā xué guo liǎng nián Hànyǔ."
+        },
+        {
+          "en": "这个电影我看过两次。",
+          "vi": "Bộ phim này tôi đã xem hai lần.",
+          "read": "Zhège diànyǐng wǒ kàn guo liǎng cì."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我没去中国过。",
+          "right": "我没去过中国。",
+          "why": "过 đứng ngay sau động từ, trước tân ngữ."
+        },
+        {
+          "wrong": "我没去过了。",
+          "right": "我没去过。",
+          "why": "Câu phủ định với 没 … 过 không thêm 了."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我吃___北京菜。",
+          "options": [
+            "过",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "Đã từng ăn → động từ + 过."
+        },
+        {
+          "type": "choice",
+          "prompt": "他没___过中国。",
+          "options": [
+            "去",
+            "去了"
+          ],
+          "answer": 0,
+          "explain": "没 + động từ + 过, không có 了."
+        },
+        {
+          "type": "choice",
+          "prompt": "你看___这本书吗？",
+          "options": [
+            "过",
+            "着"
+          ],
+          "answer": 0,
+          "explain": "Hỏi đã từng đọc chưa → 过."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___去过上海。",
+          "options": [
+            "没",
+            "不"
+          ],
+          "answer": 0,
+          "explain": "Phủ định trải nghiệm → 没 … 过."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个电影我看过两___。",
+          "options": [
+            "次",
+            "个"
+          ],
+          "answer": 0,
+          "explain": "Số lần làm một việc → 次."
+        },
+        {
+          "type": "order",
+          "en": "我​没​吃​过​西瓜。",
+          "vi": "Tôi chưa từng ăn dưa hấu."
+        }
+      ]
+    },
+    {
+      "id": "zh-yao-le",
+      "emoji": "⏳",
+      "level": "A2",
+      "title": [
+        "要…了, 快…了: sắp",
+        "要…了, 快…了: about to"
+      ],
+      "summary": [
+        "(快)要 + động từ + 了: việc sắp xảy ra: 要下雨了 = trời sắp mưa.",
+        "(快)要 + verb + 了: something is about to happen: 要下雨了."
+      ],
+      "explain": [
+        "Muốn nói \"sắp\", đặt 要 hoặc 快 (hoặc 快要) trước động từ và 了 ở cuối câu: 要下雨了, 火车快到了.",
+        "了 cuối câu ở đây không phải \"đã xong\": nó báo một thay đổi sắp đến. Thiếu 了 thì câu nghe dở dang.",
+        "Có mốc thời gian cụ thể (明天, 下个月…) thì dùng 就要 … 了, không dùng 快 … 了: 明天就要放假了."
+      ],
+      "patterns": [
+        "要 + động từ + 了",
+        "快(要) + động từ + 了",
+        "Thời gian + 就要 + động từ + 了"
+      ],
+      "examples": [
+        {
+          "en": "要下雨了。",
+          "vi": "Trời sắp mưa rồi.",
+          "read": "Yào xià yǔ le."
+        },
+        {
+          "en": "火车快到了。",
+          "vi": "Tàu sắp đến rồi.",
+          "read": "Huǒchē kuài dào le."
+        },
+        {
+          "en": "我们快要考试了。",
+          "vi": "Chúng tôi sắp thi rồi.",
+          "read": "Wǒmen kuài yào kǎoshì le."
+        },
+        {
+          "en": "明天就要放假了。",
+          "vi": "Ngày mai là được nghỉ rồi.",
+          "read": "Míngtiān jiù yào fàngjià le."
+        },
+        {
+          "en": "电影快开始了。",
+          "vi": "Phim sắp bắt đầu rồi.",
+          "read": "Diànyǐng kuài kāishǐ le."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "要下雨。",
+          "right": "要下雨了。",
+          "why": "\"Sắp\" cần 了 ở cuối câu."
+        },
+        {
+          "wrong": "明天快放假了。",
+          "right": "明天就要放假了。",
+          "why": "Có mốc thời gian cụ thể → 就要 … 了."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "要下雨___，我们回家吧。",
+          "options": [
+            "了",
+            "的"
+          ],
+          "answer": 0,
+          "explain": "要 … 了: sắp."
+        },
+        {
+          "type": "choice",
+          "prompt": "火车___到了。",
+          "options": [
+            "快",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "快 … 了: sắp."
+        },
+        {
+          "type": "choice",
+          "prompt": "明天___要考试了。",
+          "options": [
+            "就",
+            "快"
+          ],
+          "answer": 0,
+          "explain": "Có mốc thời gian (明天) → 就要 … 了."
+        },
+        {
+          "type": "choice",
+          "prompt": "电影快开始___。",
+          "options": [
+            "了",
+            "过"
+          ],
+          "answer": 0,
+          "explain": "Câu \"sắp\" kết thúc bằng 了."
+        },
+        {
+          "type": "choice",
+          "prompt": "我们快___回家了。",
+          "options": [
+            "要",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "快要 … 了: sắp."
+        },
+        {
+          "type": "order",
+          "en": "我​妹妹​快​要​起床​了。",
+          "vi": "Em gái tôi sắp dậy rồi."
+        }
+      ]
     }
   ]
 }
