@@ -1,7 +1,14 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack, Word } from '@/types'
-import { familiesOf, foldVi, hanVietTable, hanVietUnits, searchHanViet } from './hanVietFamily'
+import {
+  familiesOf,
+  foldVi,
+  hanVietQuiz,
+  hanVietTable,
+  hanVietUnits,
+  searchHanViet,
+} from './hanVietFamily'
 
 const pack = (code: string) =>
   JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as LanguagePack
@@ -75,5 +82,25 @@ describe('hanVietTable', () => {
     expect(searchHanViet(table, '学校').map((e) => e.char)).toContain('学')
     expect(searchHanViet(table, '')).toHaveLength(table.length)
     expect(foldVi('Đông')).toBe('dong')
+  })
+})
+
+describe('hanVietQuiz', () => {
+  const zhWords = (JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as { words: Word[] })
+    .words
+
+  it('asks about words whose characters can be reasoned from other words', () => {
+    const qs = hanVietQuiz(zhWords, 10)
+    expect(qs).toHaveLength(10)
+    for (const q of qs) {
+      expect([...q.word.word].length).toBeGreaterThanOrEqual(2)
+      expect(q.clues.length).toBeGreaterThan(0)
+      for (const c of q.clues) {
+        expect(c.via.id).not.toBe(q.word.id)
+        expect(c.via.word).toContain(c.char)
+      }
+      expect(new Set(q.options).size).toBe(4)
+      expect(q.options[q.answer]).toBe(q.word.meaning)
+    }
   })
 })

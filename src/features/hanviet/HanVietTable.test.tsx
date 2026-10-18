@@ -1,11 +1,13 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import type { LanguagePack } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
+import { useStudy } from '@/store/studyStore'
 
 // "Chữ Hán qua âm Hán Việt" (docs/design/han-viet-table.md) with the real packs.
 
@@ -37,5 +39,23 @@ describe('HanVietTable', () => {
     render(<HanVietTable />)
     expect(screen.getByText(/Gốc Hán qua âm Hán Việt/)).toBeInTheDocument()
     expect(screen.getAllByRole('listitem').length).toBeGreaterThan(0)
+  })
+
+  it('runs a guessing round: clues from known words, four meanings, XP at the end', () => {
+    useData.setState({ pack: pack('zh'), status: 'ready' })
+    useStudy.setState({ progress: {} })
+    render(<HanVietTable />, { wrapper: MemoryRouter })
+    fireEvent.click(screen.getByRole('button', { name: /Đoán nghĩa nhờ Hán Việt/ }))
+    for (let i = 0; i < 10; i++) {
+      expect(screen.getAllByText(/như trong/).length).toBeGreaterThan(0)
+      const options = screen
+        .getAllByRole('button')
+        .filter((b) => b.className.includes('rounded-xl border-2'))
+      expect(options).toHaveLength(4)
+      fireEvent.click(options[0])
+      fireEvent.click(screen.getByRole('button', { name: /Câu tiếp theo|Xem kết quả/ }))
+    }
+    expect(screen.getByText('Xong một lượt!')).toBeInTheDocument()
+    expect(useStudy.getState().progress.zh?.stats.xp).toBeGreaterThanOrEqual(5)
   })
 })

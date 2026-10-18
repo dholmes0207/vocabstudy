@@ -44,8 +44,8 @@ export const RELEASES: Release[] = [
         'The Chinese exam roadmap adds HSK 2: pick HSK 1 or HSK 2 at the top; each level has its own exam facts, word list and 20-question vocabulary check. Word cards carry an HSK 1 or HSK 2 badge.',
       ],
       [
-        'Trang mới "Chữ Hán qua âm Hán Việt" trong Luyện tập: những chữ dùng chung trong nhiều từ, kèm âm Hán Việt — biết 学 là "học" là đoán được 学校, 学习. Tìm được bằng chữ hoặc âm Hán Việt không dấu ("hoc"). Tiếng Hàn cũng có: 학 là "học" trong 학생, 학교.',
-        'New page under Practice, "Characters by Sino-Vietnamese reading": characters shared by several words, with their Sino-Vietnamese reading — know 学 is "học" and guess 学校 and 学习. Search by character or by reading without marks ("hoc"). Korean has it too: 학 is "học" in 학생 and 학교.',
+        'Trang mới "Chữ Hán qua âm Hán Việt" trong Luyện tập: những chữ dùng chung trong nhiều từ, kèm âm Hán Việt — biết 学 là "học" là đoán được 学校, 学习. Tìm được bằng chữ hoặc âm Hán Việt không dấu ("hoc"), và có bài "Đoán nghĩa nhờ Hán Việt": thấy 学校 (học hiệu) cùng gợi ý 学 = học như trong 学生, đoán ra "trường học". Tiếng Hàn cũng có: 학 là "học" trong 학생, 학교.',
+        'New page under Practice, "Characters by Sino-Vietnamese reading": characters shared by several words, with their Sino-Vietnamese reading — know 学 is "học" and guess 学校 and 学习. Search by character or by reading without marks ("hoc"), and try "Guess by Sino-Vietnamese": see 学校 (học hiệu) with the clue 学 = học as in 学生, and work out "school". Korean has it too: 학 is "học" in 학생 and 학교.',
       ],
       [
         'Trang Pinyin có bài "Nghe chọn thanh": nghe một từ hai chữ rồi chọn đúng dấu thanh trong 4 cách viết — luyện tai cho cặp thanh điệu, chữ Hán chỉ hiện sau khi trả lời.',
