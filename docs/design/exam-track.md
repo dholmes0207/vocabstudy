@@ -74,3 +74,44 @@ xem lại trên trang chính thức trước khi đăng ký thi.
   - dùng lại `LearnSession` cho bước 2 và `QuizRunner` cho bước 6;
   - lấy tiến độ ngữ pháp và đọc truyện từ `grammarStore` và `readingStore`.
 - `lib/packContent.ts`: `/exam` chỉ dành cho `ko` và `zh`.
+
+## HSK 2 (19/10/2026)
+
+**User**: "Cải thiện thêm phần học tiếng Trung, thêm bộ từ hợp lý." Học xong HSK 1 thì bước tiếp
+theo là HSK 2, và các đợt từ mới đã phủ được phần lớn danh sách này.
+
+**Thông tin kỳ thi**, kiểm tra ngày 19/10/2026 trên tờ thông tin HSK 2 của Viện Khổng Tử Anh
+(bản 2015):
+
+- 60 câu: 35 câu nghe (khoảng 25 phút) và 25 câu đọc (22 phút). Cả bài khoảng 55 phút, gồm 5
+  phút điền thông tin.
+- Tổng 200 điểm, đạt từ 120 điểm.
+- Người học cần khoảng 300 từ tính gộp.
+
+**Danh sách từ**: dùng bảng tổng hợp mở `drkameleon/complete-hsk-vocabulary` (cấp 2 bản "old",
+147 mục).
+
+- Lấy phần cấp 1 của bảng đó so với danh sách HSK 1 của app thì lệch vài mục (饭馆 / 饭店, 说话 /
+  说…), vì các bản in danh sách 2012 khác nhau.
+- Trang nói rõ điều này trong lời nhắc, cùng lời nhắc về chuẩn HSK 3.0.
+
+**BA**
+
+- Gói tiếng Trung có hai lộ trình. Ở đầu trang có tab **HSK 1 | HSK 2**; mặc định là HSK 1.
+- Mỗi cấp có thông tin kỳ thi, nguồn, danh sách từ, tiến độ và bài kiểm tra từ vựng 20 câu riêng.
+  Điểm cao nhất lưu theo từng cấp (`hsk1`, `hsk2`).
+- Thêm 64 từ HSK 2 còn thiếu vào gói (gói lên 330 từ). Mỗi từ có câu ví dụ và pinyin; 62/64 từ
+  có âm Hán Việt (您 và 踢 không ghi, vì cách đọc không chắc chắn).
+- Nhãn trên thẻ từ ghi **cấp dễ nhất** có từ đó: 学生 là HSK 1, 哥哥 là HSK 2. Từ nằm ở cả hai danh
+  sách (号) mang nhãn HSK 1.
+
+**Dev**
+
+- `lib/exams.ts`:
+  - thêm `HSK2` và mục `hsk2` trong `EXAMS`;
+  - `examsFor(lang)` trả về các kỳ thi của một gói, cấp dễ trước;
+  - `examFor(lang, id?)` trả về kỳ thi theo id, không có id thì lấy kỳ đầu tiên;
+  - `examLabelFor` lấy cấp dễ nhất có từ đó.
+- `features/exam/Exam.tsx`: `Exam()` giữ cấp đang chọn và truyền tab vào phần đầu của `Roadmap`
+  (chỉ hiện khi gói có hơn một kỳ thi).
+- Test: `lib/exams.test.ts` (mọi từ HSK 2 có trong gói, nhãn theo cấp), `Exam.test.tsx` (đổi tab).

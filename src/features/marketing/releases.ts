@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Lộ trình luyện thi tiếng Trung có thêm HSK 2: chọn HSK 1 hoặc HSK 2 ở đầu trang, mỗi cấp có thông tin đề thi, danh sách từ, bài kiểm tra từ vựng 20 câu riêng. Thẻ từ ghi nhãn HSK 1 hoặc HSK 2.',
+        'The Chinese exam roadmap adds HSK 2: pick HSK 1 or HSK 2 at the top; each level has its own exam facts, word list and 20-question vocabulary check. Word cards carry an HSK 1 or HSK 2 badge.',
+      ],
+      [
         'Trang mới "Chữ Hán qua âm Hán Việt" trong Luyện tập: những chữ dùng chung trong nhiều từ, kèm âm Hán Việt — biết 学 là "học" là đoán được 学校, 学习. Tìm được bằng chữ hoặc âm Hán Việt không dấu ("hoc"). Tiếng Hàn cũng có: 학 là "học" trong 학생, 학교.',
         'New page under Practice, "Characters by Sino-Vietnamese reading": characters shared by several words, with their Sino-Vietnamese reading — know 学 is "học" and guess 学校 and 学习. Search by character or by reading without marks ("hoc"). Korean has it too: 학 is "học" in 학생 and 학교.',
       ],
@@ -62,8 +66,8 @@ export const RELEASES: Release[] = [
         'Chinese grammar gets 6 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快) and comparing with 比.',
       ],
       [
-        'Gói tiếng Trung tăng từ 156 lên 266 từ: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, bốn mùa, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, lượng từ 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
-        'The Chinese pack grows from 156 to 266 words: everyday words beyond HSK 1 — siblings, colours, the four seasons, medicine and health, the bus, left/right, cheap/expensive, exams, the office, swimming, singing, the measure words 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — and 3 new topic decks: Health & colours, Study & work, Hobbies & sport.',
+        'Gói tiếng Trung tăng từ 156 lên 330 từ, phủ đủ từ vựng HSK 2: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, bốn mùa, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, lượng từ 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
+        'The Chinese pack grows from 156 to 330 words and covers HSK 2: everyday words beyond HSK 1 — siblings, colours, the four seasons, medicine and health, the bus, left/right, cheap/expensive, exams, the office, swimming, singing, the measure words 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — and 3 new topic decks: Health & colours, Study & work, Hobbies & sport.',
       ],
       [
         'Tiếng Trung: không cần bàn phím chữ Hán nữa — ở Nghe – chép và câu điền từ, gõ bính âm không dấu (ví dụ "xiexie" cho 谢谢) cũng được chấm, rồi app hiện lại chữ Hán.',

@@ -1,25 +1,38 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
-import { EXAMS, HSK1, MOCK_SIZE, examFor, examWords, mockQuestions } from './exams'
+import {
+  EXAMS,
+  HSK1,
+  HSK2,
+  MOCK_SIZE,
+  examFor,
+  examLabelFor,
+  examWords,
+  examsFor,
+  mockQuestions,
+} from './exams'
 
 const pack = (code: string) =>
   JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as LanguagePack
 
 describe('exam roadmaps', () => {
-  it('belong to packs that ship, one exam per pack, with https sources', () => {
+  it('belong to packs that ship, each with its own id and https sources', () => {
     const shipped = new Set(
       (
         JSON.parse(readFileSync('public/data/index.json', 'utf8')).languages as { code: string }[]
       ).map((l) => l.code)
     )
-    expect(new Set(EXAMS.map((e) => e.lang)).size).toBe(EXAMS.length)
+    expect(new Set(EXAMS.map((e) => e.id)).size).toBe(EXAMS.length)
     for (const e of EXAMS) {
       expect(shipped.has(e.lang)).toBe(true)
       expect(e.sources.length).toBeGreaterThan(0)
       for (const s of e.sources) expect(s.url).toMatch(/^https:\/\//)
     }
     expect(examFor('zh')?.id).toBe('hsk1')
+    expect(examFor('zh', 'hsk2')?.id).toBe('hsk2')
+    expect(examFor('zh', 'nope')?.id).toBe('hsk1')
+    expect(examsFor('zh').map((e) => e.id)).toEqual(['hsk1', 'hsk2'])
     expect(examFor('ko')?.id).toBe('topik1')
     expect(examFor('en')).toBeUndefined()
   })
@@ -27,6 +40,20 @@ describe('exam roadmaps', () => {
   it('finds every HSK 1 headword in the Chinese pack', () => {
     expect(HSK1).toHaveLength(152)
     expect(examWords(examFor('zh')!, pack('zh').words)).toHaveLength(152)
+  })
+
+  it('finds every HSK 2 headword in the Chinese pack', () => {
+    expect(HSK2).toHaveLength(147)
+    expect(new Set(HSK2).size).toBe(147)
+    expect(examWords(examFor('zh', 'hsk2')!, pack('zh').words)).toHaveLength(147)
+  })
+
+  it('labels a word with the easiest level whose list has it', () => {
+    expect(examLabelFor('zh', { word: '学生' })).toBe('HSK 1')
+    expect(examLabelFor('zh', { word: '哥哥' })).toBe('HSK 2')
+    expect(examLabelFor('zh', { word: '号' })).toBe('HSK 1')
+    expect(examLabelFor('zh', { word: '越南' })).toBeNull()
+    expect(examLabelFor('ko', { word: '학생' })).toBeNull()
   })
 
   it('uses the whole Korean pack for TOPIK I', () => {

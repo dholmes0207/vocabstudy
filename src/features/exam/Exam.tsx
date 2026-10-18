@@ -9,7 +9,7 @@ import { useGrammar } from '@/store/grammarStore'
 import { useReading } from '@/store/readingStore'
 import { useExam } from '@/store/examStore'
 import { useSavedWords } from '@/store/savedWordsStore'
-import { examFor, examWords, mockQuestions, type Exam as ExamInfo } from '@/lib/exams'
+import { examFor, examWords, examsFor, mockQuestions, type Exam as ExamInfo } from '@/lib/exams'
 import { isPassed, loadGrammarPack } from '@/lib/grammar'
 import { loadReadingPack } from '@/lib/reading'
 import { phaseOf } from '@/lib/srs'
@@ -30,12 +30,45 @@ type Mode = { kind: 'learn'; words: Word[] } | { kind: 'mock'; questions: QuizQu
 
 export default function Exam() {
   const code = useSettings((s) => s.currentLang)
-  const exam = examFor(code)
+  const [picked, setPicked] = useState<string | null>(null)
+  const all = examsFor(code)
+  const exam = examFor(code, picked)
   // Layout shows the "switch language" note for packs without an exam.
-  return exam ? <Roadmap key={exam.id} exam={exam} /> : null
+  if (!exam) return null
+  return (
+    <Roadmap
+      key={exam.id}
+      exam={exam}
+      levels={
+        all.length > 1 && (
+          <div
+            role="tablist"
+            className="mt-3 inline-flex rounded-xl bg-slate-100 p-1 dark:bg-slate-800"
+          >
+            {all.map((e) => (
+              <button
+                key={e.id}
+                type="button"
+                role="tab"
+                aria-selected={e.id === exam.id}
+                onClick={() => setPicked(e.id)}
+                className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition ${
+                  e.id === exam.id
+                    ? 'bg-white text-brand-700 shadow-sm dark:bg-slate-900 dark:text-brand-300'
+                    : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-200'
+                }`}
+              >
+                {e.name}
+              </button>
+            ))}
+          </div>
+        )
+      }
+    />
+  )
 }
 
-function Roadmap({ exam }: { exam: ExamInfo }) {
+function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode }) {
   const t = useT()
   const code = useSettings((s) => s.currentLang)
   const pack = useData((s) => s.pack)!
@@ -120,6 +153,7 @@ function Roadmap({ exam }: { exam: ExamInfo }) {
             'What the exam needs, in the order to learn it, with how far you have got.'
           )}
         </p>
+        {levels}
       </header>
 
       <section className="card p-5" aria-labelledby="exam-facts">
@@ -136,7 +170,9 @@ function Roadmap({ exam }: { exam: ExamInfo }) {
           {t(...exam.caveat)}
         </p>
         <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
-          <span>{t('Nguồn (xem ngày 17/10/2026):', 'Sources (checked 17 Oct 2026):')}</span>
+          <span>
+            {t(`Nguồn (xem ngày ${exam.checked[0]}):`, `Sources (checked ${exam.checked[1]}):`)}
+          </span>
           {exam.sources.map((s) => (
             <a
               key={s.url}
