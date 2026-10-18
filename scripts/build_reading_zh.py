@@ -210,6 +210,48 @@ STORIES = [
             {'q': 'Tôi mong điều gì?', 'options': ['Năm sau lại đến', 'Về nhà sớm', 'Học tiếng Anh'], 'answer': 0},
         ],
     },
+    {
+        'id': 'zh-weekend',
+        'emoji': '🏀',
+        'level': 'A2',
+        'title': ['Cuối tuần', '周末'],
+        'sentences': [
+            ('星期|六|早上，|天气|比|昨天|好。', 'Sáng thứ Bảy, trời đẹp hơn hôm qua.'),
+            ('我|和|哥哥|去|打篮球。', 'Tôi và anh trai đi chơi bóng rổ.'),
+            ('哥哥|比|我|高，|他|打|得|很|好。', 'Anh trai cao hơn tôi, anh ấy chơi rất giỏi.'),
+            ('下午|我们|去|看|电影。', 'Buổi chiều chúng tôi đi xem phim.'),
+            ('这个|电影|我|没|看|过。', 'Bộ phim này tôi chưa xem bao giờ.'),
+            ('电影|非常|有意思。', 'Bộ phim cực kỳ thú vị.'),
+            ('要|下雨|了，|我们|快|回|家|吧。', 'Trời sắp mưa rồi, chúng ta mau về nhà thôi.'),
+            ('这个|周末|真|快乐！', 'Cuối tuần này thật vui!'),
+        ],
+        'questions': [
+            {'q': 'Ai cao hơn?', 'options': ['Tôi', 'Anh trai', 'Bằng nhau'], 'answer': 1},
+            {'q': 'Tôi đã xem bộ phim đó trước đây chưa?', 'options': ['Rồi', 'Chưa'], 'answer': 1},
+            {'q': 'Vì sao họ về nhà?', 'options': ['Vì trời sắp mưa', 'Vì mệt', 'Vì đói'], 'answer': 0},
+        ],
+    },
+    {
+        'id': 'zh-new-phone',
+        'emoji': '📱',
+        'level': 'A2',
+        'title': ['Chiếc điện thoại mới', '新手机'],
+        'sentences': [
+            ('我|的|手机|太|旧|了。', 'Điện thoại của tôi cũ quá rồi.'),
+            ('我|想|买|一|个|新|手机。', 'Tôi muốn mua một chiếc điện thoại mới.'),
+            ('商店|里|的|手机|很|多，|也|很|贵。', 'Trong cửa hàng có rất nhiều điện thoại, cũng rất đắt.'),
+            ('这个|手机|比|那个|便宜|五百|块。', 'Chiếc này rẻ hơn chiếc kia năm trăm tệ.'),
+            ('商店|的|人|告诉|我，|这个|手机|很|好。', 'Người ở cửa hàng nói với tôi chiếc này rất tốt.'),
+            ('我|买|了|这个|手机。', 'Tôi đã mua chiếc điện thoại này.'),
+            ('回|家|以后，|我|给|妈妈|打电话。', 'Về đến nhà, tôi gọi điện cho mẹ.'),
+            ('妈妈|说：|“你|的|新|手机|真|漂亮！”', 'Mẹ nói: “Điện thoại mới của con đẹp thật!”'),
+        ],
+        'questions': [
+            {'q': 'Vì sao tôi muốn mua điện thoại mới?', 'options': ['Vì điện thoại cũ quá', 'Vì bị mất', 'Vì là sinh nhật'], 'answer': 0},
+            {'q': 'Chiếc tôi mua so với chiếc kia thế nào?', 'options': ['Đắt hơn', 'Rẻ hơn 500 tệ', 'Bằng giá'], 'answer': 1},
+            {'q': 'Về nhà tôi làm gì?', 'options': ['Gọi điện cho mẹ', 'Đi ngủ', 'Xem tivi'], 'answer': 0},
+        ],
+    },
 ]
 
 
@@ -277,6 +319,22 @@ SENTENCE_PINYIN = {
     '我|说|汉语，|大家|都|能|听|懂。': 'wǒ shuō Hàn yǔ dà jiā dōu néng tīng dǒng',
     '我|觉得|中国|很|有意思。': 'wǒ jué de Zhōng guó hěn yǒu yì si',
     '我|希望|明年|再|来。': 'wǒ xī wàng míng nián zài lái',
+    '星期|六|早上，|天气|比|昨天|好。': 'xīng qī liù zǎo shang tiān qì bǐ zuó tiān hǎo',
+    '我|和|哥哥|去|打篮球。': 'wǒ hé gē ge qù dǎ lán qiú',
+    '哥哥|比|我|高，|他|打|得|很|好。': 'gē ge bǐ wǒ gāo tā dǎ de hěn hǎo',
+    '下午|我们|去|看|电影。': 'xià wǔ wǒ men qù kàn diàn yǐng',
+    '这个|电影|我|没|看|过。': 'zhè ge diàn yǐng wǒ méi kàn guo',
+    '电影|非常|有意思。': 'diàn yǐng fēi cháng yǒu yì si',
+    '要|下雨|了，|我们|快|回|家|吧。': 'yào xià yǔ le wǒ men kuài huí jiā ba',
+    '这个|周末|真|快乐！': 'zhè ge zhōu mò zhēn kuài lè',
+    '我|的|手机|太|旧|了。': 'wǒ de shǒu jī tài jiù le',
+    '我|想|买|一|个|新|手机。': 'wǒ xiǎng mǎi yí gè xīn shǒu jī',
+    '商店|里|的|手机|很|多，|也|很|贵。': 'shāng diàn lǐ de shǒu jī hěn duō yě hěn guì',
+    '这个|手机|比|那个|便宜|五百|块。': 'zhè ge shǒu jī bǐ nà ge pián yi wǔ bǎi kuài',
+    '商店|的|人|告诉|我，|这个|手机|很|好。': 'shāng diàn de rén gào su wǒ zhè ge shǒu jī hěn hǎo',
+    '我|买|了|这个|手机。': 'wǒ mǎi le zhè ge shǒu jī',
+    '回|家|以后，|我|给|妈妈|打电话。': 'huí jiā yǐ hòu wǒ gěi mā ma dǎ diàn huà',
+    '妈妈|说：|“你|的|新|手机|真|漂亮！”': 'mā ma shuō nǐ de xīn shǒu jī zhēn piào liang',
 }
 
 

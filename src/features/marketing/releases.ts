@@ -56,8 +56,8 @@ export const RELEASES: Release[] = [
         'Chinese gets a "Measure words" page under Practice: 个, 本, 杯, 只, 条, 张… next to their Vietnamese counterparts, with a 10-question round — each answer shows and plays the whole phrase, like 一本书 (yì běn shū).',
       ],
       [
-        'Thêm 5 truyện tiếng Trung có pinyin từng câu: "Gia đình tôi", "Tôi bị ốm", "Du lịch Bắc Kinh", "Ở nhà hàng" và "Lần đầu đến Trung Quốc", dùng các từ mới của gói.',
-        'Five new Chinese stories with pinyin for every sentence: "My family", "A sick day", "A trip to Beijing", "At the restaurant" and "First time in China", built on the pack’s new words.',
+        'Thêm 7 truyện tiếng Trung có pinyin từng câu: "Gia đình tôi", "Tôi bị ốm", "Du lịch Bắc Kinh", "Ở nhà hàng", "Lần đầu đến Trung Quốc", "Cuối tuần" và "Chiếc điện thoại mới", dùng các từ và mẫu ngữ pháp mới.',
+        'Seven new Chinese stories with pinyin for every sentence: "My family", "A sick day", "A trip to Beijing", "At the restaurant", "First time in China", "The weekend" and "A new phone", built on the new words and grammar.',
       ],
       [
         'Ngữ pháp tiếng Trung thêm 9 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快), so sánh với 比, 过 (đã từng), 要…了 (sắp) và chữ cùng âm 在/再, 他/她/它, 的/得.',

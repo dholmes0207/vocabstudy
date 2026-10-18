@@ -624,6 +624,165 @@
           "answer": 0
         }
       ]
+    },
+    {
+      "id": "zh-weekend",
+      "emoji": "🏀",
+      "level": "A2",
+      "title": [
+        "Cuối tuần",
+        "周末"
+      ],
+      "sentences": [
+        {
+          "en": "星期​六​早上，​天气​比​昨天​好。",
+          "vi": "Sáng thứ Bảy, trời đẹp hơn hôm qua.",
+          "read": "Xīngqī liù zǎoshang, tiānqì bǐ zuótiān hǎo."
+        },
+        {
+          "en": "我​和​哥哥​去​打篮球。",
+          "vi": "Tôi và anh trai đi chơi bóng rổ.",
+          "read": "Wǒ hé gēge qù dǎ lánqiú."
+        },
+        {
+          "en": "哥哥​比​我​高，​他​打​得​很​好。",
+          "vi": "Anh trai cao hơn tôi, anh ấy chơi rất giỏi.",
+          "read": "Gēge bǐ wǒ gāo, tā dǎ de hěn hǎo."
+        },
+        {
+          "en": "下午​我们​去​看​电影。",
+          "vi": "Buổi chiều chúng tôi đi xem phim.",
+          "read": "Xiàwǔ wǒmen qù kàn diànyǐng."
+        },
+        {
+          "en": "这个​电影​我​没​看​过。",
+          "vi": "Bộ phim này tôi chưa xem bao giờ.",
+          "read": "Zhège diànyǐng wǒ méi kàn guo."
+        },
+        {
+          "en": "电影​非常​有意思。",
+          "vi": "Bộ phim cực kỳ thú vị.",
+          "read": "Diànyǐng fēicháng yǒu yìsi."
+        },
+        {
+          "en": "要​下雨​了，​我们​快​回​家​吧。",
+          "vi": "Trời sắp mưa rồi, chúng ta mau về nhà thôi.",
+          "read": "Yào xià yǔ le, wǒmen kuài huí jiā ba."
+        },
+        {
+          "en": "这个​周末​真​快乐！",
+          "vi": "Cuối tuần này thật vui!",
+          "read": "Zhège zhōumò zhēn kuàilè!"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Ai cao hơn?",
+          "options": [
+            "Tôi",
+            "Anh trai",
+            "Bằng nhau"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Tôi đã xem bộ phim đó trước đây chưa?",
+          "options": [
+            "Rồi",
+            "Chưa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Vì sao họ về nhà?",
+          "options": [
+            "Vì trời sắp mưa",
+            "Vì mệt",
+            "Vì đói"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "zh-new-phone",
+      "emoji": "📱",
+      "level": "A2",
+      "title": [
+        "Chiếc điện thoại mới",
+        "新手机"
+      ],
+      "sentences": [
+        {
+          "en": "我​的​手机​太​旧​了。",
+          "vi": "Điện thoại của tôi cũ quá rồi.",
+          "read": "Wǒ de shǒujī tài jiù le."
+        },
+        {
+          "en": "我​想​买​一​个​新​手机。",
+          "vi": "Tôi muốn mua một chiếc điện thoại mới.",
+          "read": "Wǒ xiǎng mǎi yí gè xīn shǒujī."
+        },
+        {
+          "en": "商店​里​的​手机​很​多，​也​很​贵。",
+          "vi": "Trong cửa hàng có rất nhiều điện thoại, cũng rất đắt.",
+          "read": "Shāngdiàn lǐ de shǒujī hěn duō, yě hěn guì."
+        },
+        {
+          "en": "这个​手机​比​那个​便宜​五百​块。",
+          "vi": "Chiếc này rẻ hơn chiếc kia năm trăm tệ.",
+          "read": "Zhège shǒujī bǐ nàge piányi wǔbǎi kuài."
+        },
+        {
+          "en": "商店​的​人​告诉​我，​这个​手机​很​好。",
+          "vi": "Người ở cửa hàng nói với tôi chiếc này rất tốt.",
+          "read": "Shāngdiàn de rén gàosu wǒ, zhège shǒujī hěn hǎo."
+        },
+        {
+          "en": "我​买​了​这个​手机。",
+          "vi": "Tôi đã mua chiếc điện thoại này.",
+          "read": "Wǒ mǎi le zhège shǒujī."
+        },
+        {
+          "en": "回​家​以后，​我​给​妈妈​打电话。",
+          "vi": "Về đến nhà, tôi gọi điện cho mẹ.",
+          "read": "Huí jiā yǐhòu, wǒ gěi māma dǎ diànhuà."
+        },
+        {
+          "en": "妈妈​说：​“你​的​新​手机​真​漂亮！”",
+          "vi": "Mẹ nói: “Điện thoại mới của con đẹp thật!”",
+          "read": "Māma shuō: “Nǐ de xīn shǒujī zhēn piàoliang!”"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Vì sao tôi muốn mua điện thoại mới?",
+          "options": [
+            "Vì điện thoại cũ quá",
+            "Vì bị mất",
+            "Vì là sinh nhật"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Chiếc tôi mua so với chiếc kia thế nào?",
+          "options": [
+            "Đắt hơn",
+            "Rẻ hơn 500 tệ",
+            "Bằng giá"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Về nhà tôi làm gì?",
+          "options": [
+            "Gọi điện cho mẹ",
+            "Đi ngủ",
+            "Xem tivi"
+          ],
+          "answer": 0
+        }
+      ]
     }
   ]
 }
