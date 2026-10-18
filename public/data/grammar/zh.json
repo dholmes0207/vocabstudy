@@ -1329,6 +1329,246 @@
           "vi": "Vì rất mệt nên tôi muốn nghỉ ngơi."
         }
       ]
+    },
+    {
+      "id": "zh-de-degree",
+      "emoji": "🏃",
+      "level": "A2",
+      "title": [
+        "得: làm việc gì đó thế nào",
+        "得: how well something is done"
+      ],
+      "summary": [
+        "Động từ + 得 + 很 + tính từ: 他走得很快 = anh ấy đi rất nhanh.",
+        "Verb + 得 + 很 + adjective: 他走得很快 = he walks fast."
+      ],
+      "explain": [
+        "Muốn nhận xét một việc được làm thế nào (nhanh, chậm, giỏi…), đặt 得 sau động từ rồi đến lời nhận xét: 他走得很快 (anh ấy đi rất nhanh).",
+        "Lời nhận xét thường có 很, 太 hoặc 不: 你说得很好, 她唱得不好.",
+        "Nếu động từ có tân ngữ thì nhắc lại động từ: 他说汉语说得很好 (anh ấy nói tiếng Trung rất giỏi). Cũng có thể đưa tân ngữ lên trước: 他汉语说得很好.",
+        "得 ở đây đọc nhẹ là \"de\", cùng âm với 的 nhưng là chữ khác: 的 đứng trước danh từ (我的书), 得 đứng sau động từ."
+      ],
+      "patterns": [
+        "Động từ + 得 + 很 + tính từ",
+        "Động từ + 得 + 不 + tính từ",
+        "Động từ + tân ngữ + động từ + 得 + …"
+      ],
+      "examples": [
+        {
+          "en": "他走得很快。",
+          "vi": "Anh ấy đi rất nhanh.",
+          "read": "Tā zǒu de hěn kuài."
+        },
+        {
+          "en": "你说得很好。",
+          "vi": "Bạn nói rất hay.",
+          "read": "Nǐ shuō de hěn hǎo."
+        },
+        {
+          "en": "她唱歌唱得很好。",
+          "vi": "Cô ấy hát rất hay.",
+          "read": "Tā chànggē chàng de hěn hǎo."
+        },
+        {
+          "en": "我今天起得很早。",
+          "vi": "Hôm nay tôi dậy rất sớm.",
+          "read": "Wǒ jīntiān qǐ de hěn zǎo."
+        },
+        {
+          "en": "他汉语说得不太好。",
+          "vi": "Anh ấy nói tiếng Trung không giỏi lắm.",
+          "read": "Tā Hànyǔ shuō de bú tài hǎo."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "他走很快。",
+          "right": "他走得很快。",
+          "why": "Nhận xét cách làm một việc thì cần 得 sau động từ."
+        },
+        {
+          "wrong": "他说汉语得很好。",
+          "right": "他说汉语说得很好。",
+          "why": "Có tân ngữ thì nhắc lại động từ trước 得: 说汉语说得很好."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "他跑___很快。",
+          "options": [
+            "得",
+            "的"
+          ],
+          "answer": 0,
+          "explain": "Sau động từ, trước lời nhận xét → 得."
+        },
+        {
+          "type": "choice",
+          "prompt": "你写___很好。",
+          "options": [
+            "得",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "写得很好: viết rất đẹp."
+        },
+        {
+          "type": "choice",
+          "prompt": "妹妹唱歌唱得___。",
+          "options": [
+            "很好",
+            "好很"
+          ],
+          "answer": 0,
+          "explain": "Sau 得 là 很 + tính từ."
+        },
+        {
+          "type": "choice",
+          "prompt": "他游泳游得___好。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Nhận xét phủ định → 不: 游得不好."
+        },
+        {
+          "type": "choice",
+          "prompt": "这是我___书。",
+          "options": [
+            "的",
+            "得"
+          ],
+          "answer": 0,
+          "explain": "Sở hữu (của tôi) → 的; 得 chỉ đứng sau động từ."
+        },
+        {
+          "type": "order",
+          "en": "他​说​汉语​说​得​很​好。",
+          "vi": "Anh ấy nói tiếng Trung rất giỏi."
+        }
+      ]
+    },
+    {
+      "id": "zh-bi",
+      "emoji": "⚖️",
+      "level": "A2",
+      "title": [
+        "比: so sánh hơn",
+        "比: comparing"
+      ],
+      "summary": [
+        "A 比 B + tính từ: 哥哥比我高 = anh trai cao hơn tôi.",
+        "A 比 B + adjective: 哥哥比我高 = my brother is taller than me."
+      ],
+      "explain": [
+        "So sánh hơn: A + 比 + B + tính từ. 哥哥比我高 = anh trai cao hơn tôi. Thứ tự khác tiếng Việt: \"比 B\" đứng TRƯỚC tính từ.",
+        "Câu có 比 không dùng 很: nói 他比我高, không nói 他比我很高. Muốn nói \"hơn nhiều\" thì thêm 多了 sau tính từ: 他比我高多了.",
+        "Hơn một chút: thêm 一点儿 sau tính từ: 今天比昨天冷一点儿.",
+        "Nói \"A không bằng B\": A + 没有 + B + tính từ: 我没有哥哥高 (tôi không cao bằng anh trai)."
+      ],
+      "patterns": [
+        "A 比 B + tính từ",
+        "A 比 B + tính từ + 一点儿 / 多了",
+        "A 没有 B + tính từ"
+      ],
+      "examples": [
+        {
+          "en": "哥哥比我高。",
+          "vi": "Anh trai cao hơn tôi.",
+          "read": "Gēge bǐ wǒ gāo."
+        },
+        {
+          "en": "今天比昨天冷。",
+          "vi": "Hôm nay lạnh hơn hôm qua.",
+          "read": "Jīntiān bǐ zuótiān lěng."
+        },
+        {
+          "en": "这件衣服比那件贵一点儿。",
+          "vi": "Bộ quần áo này đắt hơn bộ kia một chút.",
+          "read": "Zhè jiàn yīfu bǐ nà jiàn guì yìdiǎnr."
+        },
+        {
+          "en": "坐飞机比坐火车快多了。",
+          "vi": "Đi máy bay nhanh hơn đi tàu hoả nhiều.",
+          "read": "Zuò fēijī bǐ zuò huǒchē kuài duō le."
+        },
+        {
+          "en": "我没有哥哥高。",
+          "vi": "Tôi không cao bằng anh trai.",
+          "read": "Wǒ méiyǒu gēge gāo."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "他比我很高。",
+          "right": "他比我高。",
+          "why": "Câu có 比 không dùng 很."
+        },
+        {
+          "wrong": "我高比他。",
+          "right": "我比他高。",
+          "why": "\"比 + B\" đứng trước tính từ."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "哥哥___我高。",
+          "options": [
+            "比",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "So sánh hơn → 比."
+        },
+        {
+          "type": "choice",
+          "prompt": "今天比昨天___。",
+          "options": [
+            "热",
+            "很热"
+          ],
+          "answer": 0,
+          "explain": "Câu có 比 không dùng 很."
+        },
+        {
+          "type": "choice",
+          "prompt": "北京比这儿冷___。",
+          "options": [
+            "多了",
+            "很多"
+          ],
+          "answer": 0,
+          "explain": "\"Hơn nhiều\" → tính từ + 多了."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___哥哥高。",
+          "options": [
+            "没有",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "A 没有 B + tính từ: A không bằng B."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个苹果比那个大___。",
+          "options": [
+            "一点儿",
+            "很"
+          ],
+          "answer": 0,
+          "explain": "Hơn một chút → tính từ + 一点儿."
+        },
+        {
+          "type": "order",
+          "en": "坐​飞机​比​坐​火车​快。",
+          "vi": "Đi máy bay nhanh hơn đi tàu hoả."
+        }
+      ]
     }
   ]
 }

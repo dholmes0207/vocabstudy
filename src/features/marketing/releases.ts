@@ -54,8 +54,8 @@ export const RELEASES: Release[] = [
         'Three new Chinese stories with pinyin for every sentence: "My family", "A sick day" and "A trip to Beijing", built on the pack’s new words.',
       ],
       [
-        'Ngữ pháp tiếng Trung thêm 4 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, và 因为…所以… / 但是.',
-        'Chinese grammar gets 4 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, and 因为…所以… / 但是.',
+        'Ngữ pháp tiếng Trung thêm 6 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快) và so sánh với 比.',
+        'Chinese grammar gets 6 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快) and comparing with 比.',
       ],
       [
         'Gói tiếng Trung tăng từ 156 lên 266 từ: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, bốn mùa, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, lượng từ 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
