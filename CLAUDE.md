@@ -28,9 +28,10 @@ Repo này không ghi công cho Claude hay bất kỳ công cụ AI nào.
 - **Tài liệu** nằm trong `docs/`: `DEPLOY.md`, `PLAN.md`, `design/` (thiết kế từng tính
   năng), `research/` (quan sát web khác), `sources/` (tài liệu gốc). Ở thư mục gốc chỉ có
   `README.md` và `CLAUDE.md`.
-- **Cấu hình**: Vite, Vitest và PostCSS dùng chung `vite.config.ts`; Prettier nằm trong khoá
-  `prettier` của `package.json`. Không tạo file cấu hình mới ở thư mục gốc khi file sẵn có
-  chứa được.
+- **Cấu hình**: Vite, Vitest, PostCSS và Tailwind dùng chung `vite.config.ts`; Prettier nằm
+  trong khoá `prettier` của `package.json`. `tsconfig.json` ở gốc chỉ trỏ tới
+  `src/tsconfig.json` (app, kèm `vite.config.ts`) và `functions/tsconfig.json` (Workers). Không
+  tạo file cấu hình mới ở thư mục gốc khi file sẵn có chứa được.
 - **Code**
   - `src/lib/`: logic thuần, test đặt cạnh file (`*.test.ts`).
   - `src/store/`, `src/hooks/`, `src/components/`: store Zustand, hook, UI dùng chung.

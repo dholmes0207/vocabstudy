@@ -167,9 +167,11 @@ vocabstudy/
 │  │  └─ index.json            # Manifest liệt kê các ngôn ngữ
 │  └─ audio/en/                # MP3 giọng Neural sinh sẵn (2 giọng) + index.json
 ├─ functions/                  # Cloudflare Pages Functions — API giữ secret server-side
+│  ├─ tsconfig.json            # Kiểu cho môi trường Workers
 │  ├─ _shared.ts               # Xác thực token Supabase, helper response
 │  └─ api/                     # ai/, admin/, account, feedback, errors, health…
 ├─ src/
+│  ├─ tsconfig.json            # Kiểu cho app (kèm vite.config.ts)
 │  ├─ types/                   # Kiểu dữ liệu dùng chung
 │  ├─ lib/                     # Logic thuần (srs, quiz, level, pronunciation, sync…) + test
 │  ├─ store/                   # Zustand stores
@@ -178,7 +180,8 @@ vocabstudy/
 │  └─ features/                # Từng màn hình / tính năng
 ├─ supabase/                   # schema.sql, mẫu email, hướng dẫn bật đăng nhập Google
 ├─ scripts/                    # Python: dựng gói dữ liệu, sinh audio (edge-tts) & phiên âm IPA
-└─ vite.config.ts …            # Cấu hình Vite + Vitest + PostCSS; tsconfig, tailwind, eslint
+├─ tsconfig.json               # Chỉ trỏ tới src/ và functions/ (tsc -b kiểm cả hai)
+└─ vite.config.ts …            # Cấu hình Vite + Vitest + PostCSS + Tailwind; eslint.config.js
 ```
 
 Nguyên tắc: **dữ liệu và logic (`src/lib`) độc lập với React** → dễ kiểm thử (xem `src/lib/*.test.ts`); **store** nối logic với UI và lo phần lưu trữ; **UI** chỉ render + phát sự kiện.
