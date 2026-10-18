@@ -413,3 +413,16 @@ Tiếp nối Bước 10. Hai điểm HSK 2 người học gặp ngay sau các b�
 - Câu chọn chỉ đưa ra phương án sai khi chắc chắn sai. Ví dụ, 不比 không được dùng làm phương án
   sai cho 没有, vì 不比 vẫn đúng ngữ pháp, chỉ khác nghĩa.
 - Trang chủ ghi 13 bài ngữ pháp tiếng Trung.
+
+## Bước 15: bài 过 và 要…了 (19/10/2026)
+
+Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, 开始, 考试, 次, 羊肉).
+
+- **过** (`zh-guo`): đã từng (我去过北京).
+  - Khác với 了: 了 kể việc đã xảy ra, 过 nói về trải nghiệm.
+  - Phủ định bằng 没 … 过 thì giữ 过 và không thêm 了.
+  - Số lần đặt sau động từ: 看过两次.
+- **要…了, 快…了** (`zh-yao-le`): sắp (要下雨了, 火车快到了).
+  - Thiếu 了 thì câu dở dang.
+  - Có mốc thời gian cụ thể thì dùng 就要 … 了, không dùng 快 … 了. Câu chọn hỏi đúng điểm này.
+- Trang chủ ghi 15 bài ngữ pháp tiếng Trung.
