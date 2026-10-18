@@ -56,3 +56,26 @@ describe('Dictation without typing', () => {
     expect(screen.getByRole('textbox', { name: 'Câu bạn nghe được' })).toBeInTheDocument()
   })
 })
+
+describe('Dictation in pinyin', () => {
+  const type = (text: string) => {
+    fireEvent.change(screen.getByRole('textbox', { name: 'Câu bạn nghe được' }), {
+      target: { value: text },
+    })
+    fireEvent.click(screen.getByRole('button', { name: 'Kiểm tra' }))
+  }
+
+  it('grades a sentence typed in pinyin, tones aside', () => {
+    render(<DictationRound items={items} onExit={() => {}} />)
+    type('wo shi xuesheng')
+    expect(screen.getByText(/Nghe rất tốt/)).toHaveTextContent('(100%)')
+    expect(screen.getByText(/Chấm theo bính âm/)).toBeInTheDocument()
+  })
+
+  it('does not count it once the pinyin hint was open', () => {
+    render(<DictationRound items={items} onExit={() => {}} />)
+    fireEvent.click(screen.getByRole('button', { name: /xem cách đọc/ }))
+    type('woshixuesheng')
+    expect(screen.getByText(/nên câu này chưa tính/)).toBeInTheDocument()
+  })
+})

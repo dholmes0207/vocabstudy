@@ -16,6 +16,7 @@ import {
   tileScore,
   type DiffPart,
 } from '@/lib/dictation'
+import { acceptsPinyin, diffPinyin, isPinyinAnswer } from '@/lib/pinyinInput'
 import { placeToken, shuffledOrder, startOrder, type OrderState } from '@/lib/games'
 import { useNoTyping } from '@/store/noTypingStore'
 import { buzz } from '@/lib/sound'
@@ -143,6 +144,8 @@ export function DictationRound({
     score: number
     /** Built from tiles: the wrong taps, instead of a word-by-word diff. */
     mistakes?: number
+    /** Typed in pinyin; `peeked` when the pinyin hint was open, which gives it away. */
+    pinyin?: { peeked: boolean }
   } | null>(null)
   const [caught, setCaught] = useState(0)
   const [showHint, setShowHint] = useState(false)
@@ -190,10 +193,12 @@ export function DictationRound({
 
   const check = () => {
     if (!typed.trim() || result) return
-    const parts = diffWords(item.text, typed)
+    // No Chinese keyboard: the sentence can be written in pinyin, tones aside.
+    const pinyin = acceptsPinyin(code) && !!item.read && isPinyinAnswer(typed)
+    const parts = pinyin ? diffPinyin(item.read!, typed) : diffWords(item.text, typed)
     const score = dictationScore(parts)
-    setResult({ parts, score })
-    const ok = score >= DICTATION_PASS
+    setResult({ parts, score, pinyin: pinyin ? { peeked: showRead } : undefined })
+    const ok = score >= DICTATION_PASS && !(pinyin && showRead)
     if (ok) setCaught((c) => c + 1)
     if (soundOn) buzz(ok)
   }
@@ -255,6 +260,7 @@ export function DictationRound({
       </SessionComplete>
     )
 
+  const passed = !!result && result.score >= DICTATION_PASS && !result.pinyin?.peeked
   const tone: Record<DiffPart['status'], string> = {
     ok: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200',
     missing:
@@ -330,7 +336,14 @@ export function DictationRound({
                   autoCorrect="off"
                   spellCheck={false}
                   aria-label={t('Câu bạn nghe được', 'What you heard')}
-                  placeholder={t('Gõ lại câu bạn vừa nghe…', 'Type the sentence you heard…')}
+                  placeholder={
+                    acceptsPinyin(code) && item.read
+                      ? t(
+                          'Gõ lại câu bạn vừa nghe (chữ Hán hoặc bính âm)…',
+                          'Type what you heard (characters or pinyin)…'
+                        )
+                      : t('Gõ lại câu bạn vừa nghe…', 'Type the sentence you heard…')
+                  }
                   className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-lg outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
                 />
                 <KeyboardHelp canSkip />
@@ -375,21 +388,34 @@ export function DictationRound({
               </p>
             )}
             <p
-              className={`text-sm font-semibold ${result.score >= DICTATION_PASS ? 'text-emerald-600 dark:text-emerald-300' : 'text-amber-600 dark:text-amber-300'}`}
+              className={`text-sm font-semibold ${passed ? 'text-emerald-600 dark:text-emerald-300' : 'text-amber-600 dark:text-amber-300'}`}
             >
-              {result.score >= DICTATION_PASS
-                ? t('Nghe rất tốt! 👂', 'Great listening! 👂')
-                : result.mistakes !== undefined
-                  ? t(
-                      `Nhầm ${result.mistakes} lần — nghe lại câu rồi đọc theo nhé.`,
-                      `${result.mistakes} wrong taps — play it again and read along.`
-                    )
-                  : t(
-                      'Chưa trọn câu — nghe lại phần màu vàng nhé.',
-                      'Not quite — listen again for the yellow words.'
-                    )}{' '}
+              {result.pinyin?.peeked && result.score >= DICTATION_PASS
+                ? t(
+                    'Đúng bính âm, nhưng bạn đã xem gợi ý bính âm nên câu này chưa tính.',
+                    'The pinyin is right, but the pinyin hint was open, so this one does not count.'
+                  )
+                : passed
+                  ? t('Nghe rất tốt! 👂', 'Great listening! 👂')
+                  : result.mistakes !== undefined
+                    ? t(
+                        `Nhầm ${result.mistakes} lần — nghe lại câu rồi đọc theo nhé.`,
+                        `${result.mistakes} wrong taps — play it again and read along.`
+                      )
+                    : t(
+                        'Chưa trọn câu — nghe lại phần màu vàng nhé.',
+                        'Not quite — listen again for the yellow words.'
+                      )}{' '}
               ({Math.round(result.score * 100)}%)
             </p>
+            {result.pinyin && (
+              <p className="text-xs text-slate-500">
+                {t(
+                  'Chấm theo bính âm, không tính dấu thanh. Gõ bằng chữ Hán để luyện cả mặt chữ.',
+                  'Graded on the pinyin, tones aside. Type the characters to practise them too.'
+                )}
+              </p>
+            )}
             <p className="rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
               <b>{item.text}</b>
               {item.read && (
