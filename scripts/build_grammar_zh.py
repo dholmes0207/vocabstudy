@@ -93,6 +93,11 @@ EXAMPLE_PINYIN = {
     '我们快要考试了。': ('我们|快|要|考试|了。', 'wǒ men kuài yào kǎo shì le'),
     '明天就要放假了。': ('明天|就|要|放假|了。', 'míng tiān jiù yào fàng jià le'),
     '电影快开始了。': ('电影|快|开始|了。', 'diàn yǐng kuài kāi shǐ le'),
+    '我在家等你。': ('我|在|家|等|你。', 'wǒ zài jiā děng nǐ'),
+    '请再说一次。': ('请|再|说|一|次。', 'qǐng zài shuō yí cì'),
+    '她是我姐姐。': ('她|是|我|姐姐。', 'tā shì wǒ jiě jie'),
+    '我有一只狗，它很大。': ('我|有|一|只|狗，|它|很|大。', 'wǒ yǒu yì zhī gǒu tā hěn dà'),
+    '他写字写得很好。': ('他|写|字|写|得|很|好。', 'tā xiě zì xiě de hěn hǎo'),
 }
 
 
@@ -506,6 +511,30 @@ UNITS = [
             ch('电影快开始___。', ['了', '过'], 0, 'Câu "sắp" kết thúc bằng 了.'),
             ch('我们快___回家了。', ['要', '在'], 0, '快要 … 了: sắp.'),
             od('我|妹妹|快|要|起床|了。', 'Em gái tôi sắp dậy rồi.'),
+        ],
+    },
+    {
+        'id': 'zh-same-sound', 'emoji': '👂', 'level': 'A2',
+        'title': ['Cùng âm, khác chữ: 在/再, 他/她/它, 的/得', 'Same sound, different character: 在/再, 他/她/它, 的/得'],
+        'summary': ['Nghe giống hệt nhau nhưng viết khác: chọn chữ theo nghĩa.', 'They sound the same but are written differently: pick by meaning.'],
+        'explain': [
+            '在 (zài) = ở, đang: 我在家. 再 (zài) = lại, nữa: 请再说一次. Cùng âm, cùng thanh, nên chỉ phân biệt được bằng nghĩa. Mẹo: 再见 (tái kiến) là "gặp lại".',
+            '他 (anh ấy), 她 (cô ấy), 它 (nó: con vật, đồ vật) đều đọc tā. Nghe thì không phân biệt được; khi viết phải chọn đúng chữ.',
+            '的 và 得 đều đọc nhẹ "de": 的 đứng trước danh từ (我的书), 得 đứng sau động từ, trước lời nhận xét (他走得很快).',
+        ],
+        'patterns': ['在 + nơi chốn, 在 + động từ (đang)', '再 + động từ (lại, nữa)', '他 / 她 / 它 — cùng đọc tā'],
+        'examples': [ex('我在家等你。', 'Tôi đợi bạn ở nhà.'), ex('请再说一次。', 'Xin nói lại một lần nữa.'),
+                     ex('她是我姐姐。', 'Cô ấy là chị gái tôi.'), ex('我有一只狗，它很大。', 'Tôi có một con chó, nó rất to.'),
+                     ex('他写字写得很好。', 'Anh ấy viết chữ rất đẹp.')],
+        'mistakes': [mi('请在说一次。', '请再说一次。', '"Lại, nữa" là 再; 在 là "ở, đang".'),
+                     mi('我有一只猫，他很小。', '我有一只猫，它很小。', 'Con vật, đồ vật → 它.')],
+        'exercises': [
+            ch('明天___见！', ['再', '在'], 0, '再见 = hẹn gặp lại: 再 là "lại".'),
+            ch('妈妈___家做饭。', ['在', '再'], 0, 'Ở nhà → 在.'),
+            ch('我的猫很漂亮，___喜欢睡觉。', ['它', '他'], 0, 'Con vật → 它.'),
+            ch('我姐姐是老师，___很忙。', ['她', '他'], 0, 'Chị gái (nữ) → 她.'),
+            ch('这是我___手机。', ['的', '得'], 0, 'Trước danh từ → 的.'),
+            od('请|再|说|一|次。', 'Xin nói lại một lần nữa.'),
         ],
     },
 ]

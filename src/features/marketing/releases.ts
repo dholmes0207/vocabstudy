@@ -60,8 +60,8 @@ export const RELEASES: Release[] = [
         'Five new Chinese stories with pinyin for every sentence: "My family", "A sick day", "A trip to Beijing", "At the restaurant" and "First time in China", built on the pack’s new words.',
       ],
       [
-        'Ngữ pháp tiếng Trung thêm 8 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快), so sánh với 比, 过 (đã từng) và 要…了 (sắp).',
-        'Chinese grammar gets 8 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快), comparing with 比, 过 (have done before) and 要…了 (about to).',
+        'Ngữ pháp tiếng Trung thêm 9 bài cho những chỗ người Việt hay nhầm: trật tự câu (thời gian, nơi chốn đứng trước động từ), 了 cho việc đã xảy ra, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快), so sánh với 比, 过 (đã từng), 要…了 (sắp) và chữ cùng âm 在/再, 他/她/它, 的/得.',
+        'Chinese grammar gets 9 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, 因为…所以… / 但是, 得 (他走得很快), comparing with 比, 过 (have done before), 要…了 (about to) and same-sound characters 在/再, 他/她/它, 的/得.',
       ],
       [
         'Gói tiếng Trung tăng từ 156 lên 330 từ, phủ đủ từ vựng HSK 2: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, bốn mùa, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, lượng từ 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',

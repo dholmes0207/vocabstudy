@@ -434,3 +434,10 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
   希望, 再.
 - Cách viết giống Bước 11: 8 câu, mỗi câu có pinyin và câu dịch, 3 câu hỏi. Từ ngoài gói (一共,
   第二, 明年) không chạm được. Tổng cộng 8 truyện tiếng Trung, 30 truyện cho cả app.
+
+## Bước 17: bài "Cùng âm, khác chữ" (19/10/2026)
+
+- `zh-same-sound`: 在 / 再 (zài), 他 / 她 / 它 (tā), 的 / 得 (de). Nghe thì giống hệt nhau, nên bài
+  dạy cách chọn chữ theo nghĩa, kèm mẹo 再见 = "gặp lại". Đây là lỗi viết hay gặp khi người học bắt
+  đầu gõ chữ Hán, kể cả khi gõ bằng bính âm rồi chọn chữ.
+- Trang chủ ghi 16 bài ngữ pháp tiếng Trung, và nhắc tới màn lượng từ và nghe số.
