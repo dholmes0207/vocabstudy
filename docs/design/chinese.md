@@ -441,3 +441,10 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
   dạy cách chọn chữ theo nghĩa, kèm mẹo 再见 = "gặp lại". Đây là lỗi viết hay gặp khi người học bắt
   đầu gõ chữ Hán, kể cả khi gõ bằng bính âm rồi chọn chữ.
 - Trang chủ ghi 16 bài ngữ pháp tiếng Trung, và nhắc tới màn lượng từ và nghe số.
+
+## Bước 18: 2 truyện ôn ngữ pháp mới (19/10/2026)
+
+- **Cuối tuần** (`zh-weekend`): dùng 比 (天气比昨天好), 得 (打得很好), 过 (没看过), 要…了 (要下雨了).
+- **Chiếc điện thoại mới** (`zh-new-phone`): dùng 比 + số lượng (比那个便宜五百块), 告诉, 给…打电话.
+- Người học gặp lại các mẫu của Bước 14–15 trong một câu chuyện. Cách viết vẫn như cũ: 8 câu có
+  pinyin, 3 câu hỏi. Tổng cộng 10 truyện tiếng Trung, 32 truyện cho cả app.
