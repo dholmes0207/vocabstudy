@@ -5,7 +5,9 @@ import {
   dictationScore,
   diffWords,
   normalizeWords,
+  dictationTiles,
   pickDictationRound,
+  tileScore,
 } from './dictation'
 
 describe('normalizeWords', () => {
@@ -100,5 +102,26 @@ describe('pickDictationRound', () => {
   it('still has something to offer before any study', () => {
     const words = Array.from({ length: 10 }, (_, i) => word(i + 1, 'This is a simple sentence.'))
     expect(pickDictationRound(words, {}, 6)).toHaveLength(6)
+  })
+})
+
+describe('tiles for dictation without a keyboard', () => {
+  it('uses the words of a sentence', () => {
+    expect(dictationTiles('저는 학생이에요.')).toEqual(['저는', '학생이에요.'])
+    expect(dictationTiles('我\u200b叫\u200b安娜。')).toEqual(['我', '叫', '安娜。'])
+  })
+
+  it('splits an unsegmented Chinese sentence into characters, punctuation kept on', () => {
+    expect(dictationTiles('他是我的老师。')).toEqual(['他', '是', '我', '的', '老', '师。'])
+    expect(dictationTiles('“谢谢！”')).toEqual(['“谢', '谢！”'])
+  })
+
+  it('scores a wrong tap as half a tile, like an extra typed word', () => {
+    expect(tileScore(5, 0)).toBe(1)
+    expect(tileScore(4, 1)).toBe(0.875)
+    expect(tileScore(4, 1)).toBeGreaterThanOrEqual(DICTATION_PASS)
+    expect(tileScore(4, 2)).toBeLessThan(DICTATION_PASS)
+    expect(tileScore(2, 5)).toBe(0)
+    expect(tileScore(0, 0)).toBe(0)
   })
 })

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, Check, Lightbulb, LogOut, RotateCcw, Volume2, VolumeX, X } from 'lucide-react'
 import type { QuizMode, QuizQuestion, Word } from '@/types'
-import { GAP, buildSkeleton, checkFillAnswer } from '@/lib/quiz'
+import { GAP, buildSkeleton, checkFillAnswer, makeQuestion } from '@/lib/quiz'
 import { MAX_ATTEMPTS, requeue } from '@/lib/practice'
 import { exampleAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { buzz, playCorrect, playWrong } from '@/lib/sound'
@@ -11,6 +11,8 @@ import { useSettings } from '@/store/settingsStore'
 import { useProvideContext } from '@/store/contextStore'
 import { useImmersive } from '@/store/uiStore'
 import { LISTEN_PAUSE_MINUTES, useListenPause, useListenPaused } from '@/store/listenPauseStore'
+import { useNoTyping } from '@/store/noTypingStore'
+import KeyboardHelp, { NoTypingNote } from './KeyboardHelp'
 import HighlightExample from './HighlightExample'
 import PosBadge from './PosBadge'
 import SpeakButton from './SpeakButton'
@@ -105,13 +107,19 @@ export default function QuizRunner({
   const listenPaused = useListenPaused()
   const pauseListening = useListenPause((s) => s.pause)
   const resumeListening = useListenPause((s) => s.resume)
-  const q = useMemo(
-    () =>
-      item?.q && listenPaused && item.q.mode === 'listen'
-        ? { ...item.q, mode: 'en-to-vi' as const }
-        : item?.q,
-    [item, listenPaused]
-  )
+  // "Làm không cần gõ" (no Hangul / pinyin keyboard): a typing question is
+  // asked as the choice question closest to it — the gap keeps its sentence.
+  const noTyping = useNoTyping()
+  const pool = useMemo(() => [...wordsById.values()], [wordsById])
+  const q = useMemo(() => {
+    const base = item?.q
+    if (!base) return base
+    if (listenPaused && base.mode === 'listen') return { ...base, mode: 'en-to-vi' as const }
+    const w = wordsById.get(base.wordId)
+    if (noTyping && w && (base.mode === 'fill' || base.mode === 'spell'))
+      return makeQuestion(w, pool, base.mode === 'fill' ? 'context' : 'vi-to-en')
+    return base
+  }, [item, listenPaused, noTyping, wordsById, pool])
   const word = q ? wordsById.get(q.wordId) : undefined
 
   // Spelling skeleton (abi__ty) + the positions the learner still must recall.
@@ -287,6 +295,11 @@ export default function QuizRunner({
             </button>
           </p>
         )}
+        {noTyping && (item.q.mode === 'fill' || item.q.mode === 'spell') && (
+          <div className="-mt-2 mb-3">
+            <NoTypingNote />
+          </div>
+        )}
         <div className="flex flex-wrap items-center gap-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t(TASK[q.mode][0], TASK[q.mode][1])}
@@ -419,6 +432,11 @@ export default function QuizRunner({
               autoComplete="off"
               spellCheck={false}
             />
+            {!revealed && (
+              <div className="mt-2">
+                <KeyboardHelp canSkip />
+              </div>
+            )}
             {q.mode === 'spell' && !revealed && hintCount < hiddenPositions.length && (
               <button onClick={() => setHintCount((h) => h + 1)} className="btn-ghost mt-2 text-sm">
                 <Lightbulb className="h-4 w-4" />{' '}

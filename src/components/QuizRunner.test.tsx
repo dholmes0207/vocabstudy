@@ -16,6 +16,7 @@ vi.mock('@/lib/audio', () => ({
 const { default: QuizRunner } = await import('./QuizRunner')
 const { useSettings } = await import('@/store/settingsStore')
 const { useListenPause } = await import('@/store/listenPauseStore')
+const { useNoTypingStore } = await import('@/store/noTypingStore')
 const { pronounce } = await import('@/lib/audio')
 
 // A quiz that only grades teaches nothing. These pin the two behaviours that
@@ -56,8 +57,9 @@ const q = (w: Word): QuizQuestion => ({
 })
 
 beforeEach(() => {
-  useSettings.setState({ soundEnabled: false, uiLang: 'vi' })
+  useSettings.setState({ soundEnabled: false, uiLang: 'vi', currentLang: 'en' })
   useListenPause.setState({ until: 0 })
+  useNoTypingStore.setState({ langs: {} })
   vi.mocked(pronounce).mockClear()
 })
 afterEach(cleanup)
@@ -208,5 +210,43 @@ describe('"Hiện không nghe được"', () => {
     useListenPause.getState().pause(Date.now() - 16 * 60_000)
     setup(false, [heard(apple)])
     expect(screen.getByRole('button', { name: /Hiện không nghe được/ })).toBeInTheDocument()
+  })
+})
+
+describe('without a Korean / Chinese keyboard', () => {
+  const fill = (w: Word): QuizQuestion => ({
+    wordId: w.id,
+    mode: 'fill',
+    prompt: `I like the ${GAP_TEXT}.`,
+    hint: w.meaning,
+    answer: w.word,
+    options: [],
+    surface: w.word,
+  })
+  const GAP_TEXT = '_____'
+
+  it('offers no keyboard help for English', () => {
+    setup(false, [fill(apple)])
+    expect(screen.getByRole('textbox', { name: 'Câu trả lời' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Chưa gõ được/ })).not.toBeInTheDocument()
+  })
+
+  it('shows how to add the keyboard, and turns the gap into a choice on request', () => {
+    useSettings.setState({ currentLang: 'ko' })
+    const { onAnswer } = setup(false, [fill(apple)])
+    fireEvent.click(screen.getByRole('button', { name: /Chưa gõ được chữ Hàn/ }))
+    // jsdom reports itself as Linux: the guide opens on the learner's own device.
+    expect(screen.getByRole('button', { name: 'Linux', pressed: true })).toBeInTheDocument()
+    expect(screen.getByText(/ibus-hangul/)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: /Làm không cần gõ/ }))
+    expect(useNoTypingStore.getState().langs).toEqual({ ko: true })
+    expect(screen.queryByRole('textbox', { name: 'Câu trả lời' })).not.toBeInTheDocument()
+    expect(screen.getByText('Chọn từ hợp với chỗ trống')).toBeInTheDocument()
+    pick('apple')
+    expect(onAnswer).toHaveBeenCalledWith(apple.id, true)
+
+    fireEvent.click(screen.getByRole('button', { name: 'Gõ bằng bàn phím' }))
+    expect(useNoTypingStore.getState().langs).toEqual({})
   })
 })

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, Ear, LogOut, Snail, Volume2 } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -11,13 +11,19 @@ import {
   dictationScore,
   dictationXp,
   diffWords,
+  dictationTiles,
   pickDictationRound,
+  tileScore,
   type DiffPart,
 } from '@/lib/dictation'
+import { placeToken, shuffledOrder, startOrder, type OrderState } from '@/lib/games'
+import { useNoTyping } from '@/store/noTypingStore'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import SessionComplete from '@/components/SessionComplete'
+import BuildTiles from '@/components/BuildTiles'
+import KeyboardHelp, { NoTypingNote } from '@/components/KeyboardHelp'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 
 // "Nghe – chép" (docs/design/dictation.md): hear an example sentence from words
@@ -37,6 +43,11 @@ export interface DictationItem {
   /** Pinyin line for Chinese. */
   read?: string
   audioSrc?: string
+}
+
+const freshTiles = (it: DictationItem | undefined): OrderState => {
+  const tiles = it ? dictationTiles(it.text) : []
+  return startOrder(tiles, shuffledOrder(tiles.length))
 }
 
 const fromWords = (words: Word[]): DictationItem[] =>
@@ -127,7 +138,12 @@ export function DictationRound({
   const addPlayXp = useStudy((s) => s.addPlayXp)
   const [idx, setIdx] = useState(0)
   const [typed, setTyped] = useState('')
-  const [result, setResult] = useState<{ parts: DiffPart[]; score: number } | null>(null)
+  const [result, setResult] = useState<{
+    parts: DiffPart[]
+    score: number
+    /** Built from tiles: the wrong taps, instead of a word-by-word diff. */
+    mistakes?: number
+  } | null>(null)
   const [caught, setCaught] = useState(0)
   const [showHint, setShowHint] = useState(false)
   const [showRead, setShowRead] = useState(false)
@@ -137,6 +153,11 @@ export function DictationRound({
   const nextRef = useRef<HTMLButtonElement>(null)
 
   const item = items[idx]
+  // No Hangul / pinyin keyboard: hear the sentence, then tap its tiles in order.
+  const noTyping = useNoTyping()
+  const shuffled = useMemo(() => freshTiles(items[idx]), [items, idx])
+  const [tapped, setTapped] = useState<{ idx: number; order: OrderState } | null>(null)
+  const order = tapped?.idx === idx ? tapped.order : shuffled
   const play = (slow = false) =>
     pronounce({
       audioSrc: item.audioSrc,
@@ -165,7 +186,7 @@ export function DictationRound({
   useEffect(() => {
     if (result) nextRef.current?.focus()
     else inputRef.current?.focus()
-  }, [result])
+  }, [result, noTyping])
 
   const check = () => {
     if (!typed.trim() || result) return
@@ -175,6 +196,20 @@ export function DictationRound({
     const ok = score >= DICTATION_PASS
     if (ok) setCaught((c) => c + 1)
     if (soundOn) buzz(ok)
+  }
+
+  const tap = (pos: number): boolean => {
+    if (result) return false
+    const { state, correct } = placeToken(order, pos)
+    setTapped({ idx, order: state })
+    if (state.done) {
+      const score = tileScore(state.tokens.length, state.mistakes)
+      setResult({ parts: [], score, mistakes: state.mistakes })
+      const ok = score >= DICTATION_PASS
+      if (ok) setCaught((c) => c + 1)
+      if (soundOn) buzz(ok)
+    }
+    return correct
   }
 
   const next = () => {
@@ -269,27 +304,38 @@ export function DictationRound({
           </button>
         </div>
 
+        {(result ? result.mistakes !== undefined : noTyping) && (
+          <BuildTiles order={order} onTap={tap} />
+        )}
+
         {!result ? (
           <>
-            <textarea
-              ref={inputRef}
-              value={typed}
-              onChange={(e) => setTyped(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                  e.preventDefault()
-                  check()
-                }
-              }}
-              rows={2}
-              maxLength={300}
-              autoCapitalize="off"
-              autoCorrect="off"
-              spellCheck={false}
-              aria-label={t('Câu bạn nghe được', 'What you heard')}
-              placeholder={t('Gõ lại câu bạn vừa nghe…', 'Type the sentence you heard…')}
-              className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-lg outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
-            />
+            {noTyping ? (
+              <NoTypingNote />
+            ) : (
+              <>
+                <textarea
+                  ref={inputRef}
+                  value={typed}
+                  onChange={(e) => setTyped(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      check()
+                    }
+                  }}
+                  rows={2}
+                  maxLength={300}
+                  autoCapitalize="off"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  aria-label={t('Câu bạn nghe được', 'What you heard')}
+                  placeholder={t('Gõ lại câu bạn vừa nghe…', 'Type the sentence you heard…')}
+                  className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-lg outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+                />
+                <KeyboardHelp canSkip />
+              </>
+            )}
             <div className="flex flex-col items-start gap-1">
               {showHint ? (
                 <p className="text-sm text-slate-500">💡 {item.vi}</p>
@@ -319,22 +365,29 @@ export function DictationRound({
           </>
         ) : (
           <div className="space-y-3" aria-live="polite">
-            <p className="flex flex-wrap gap-1.5 text-lg">
-              {result.parts.map((p, i) => (
-                <span key={i} className={`rounded-md px-1.5 py-0.5 ${tone[p.status]}`}>
-                  {p.text}
-                </span>
-              ))}
-            </p>
+            {result.parts.length > 0 && (
+              <p className="flex flex-wrap gap-1.5 text-lg">
+                {result.parts.map((p, i) => (
+                  <span key={i} className={`rounded-md px-1.5 py-0.5 ${tone[p.status]}`}>
+                    {p.text}
+                  </span>
+                ))}
+              </p>
+            )}
             <p
               className={`text-sm font-semibold ${result.score >= DICTATION_PASS ? 'text-emerald-600 dark:text-emerald-300' : 'text-amber-600 dark:text-amber-300'}`}
             >
               {result.score >= DICTATION_PASS
                 ? t('Nghe rất tốt! 👂', 'Great listening! 👂')
-                : t(
-                    'Chưa trọn câu — nghe lại phần màu vàng nhé.',
-                    'Not quite — listen again for the yellow words.'
-                  )}{' '}
+                : result.mistakes !== undefined
+                  ? t(
+                      `Nhầm ${result.mistakes} lần — nghe lại câu rồi đọc theo nhé.`,
+                      `${result.mistakes} wrong taps — play it again and read along.`
+                    )
+                  : t(
+                      'Chưa trọn câu — nghe lại phần màu vàng nhé.',
+                      'Not quite — listen again for the yellow words.'
+                    )}{' '}
               ({Math.round(result.score * 100)}%)
             </p>
             <p className="rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
@@ -354,13 +407,15 @@ export function DictationRound({
 
       <div className="session-actions mt-4">
         {!result ? (
-          <button
-            onClick={check}
-            disabled={!typed.trim()}
-            className="btn-primary h-12 w-full disabled:opacity-50"
-          >
-            {t('Kiểm tra', 'Check')}
-          </button>
+          !noTyping && (
+            <button
+              onClick={check}
+              disabled={!typed.trim()}
+              className="btn-primary h-12 w-full disabled:opacity-50"
+            >
+              {t('Kiểm tra', 'Check')}
+            </button>
+          )
         ) : (
           <button ref={nextRef} onClick={next} className="btn-primary h-12 w-full">
             {idx + 1 < items.length ? t('Câu tiếp theo', 'Next') : t('Xem kết quả', 'See results')}{' '}
