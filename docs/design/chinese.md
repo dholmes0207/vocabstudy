@@ -398,3 +398,18 @@ người học chạm vào thì không ra nghĩa. Có 41 từ như vậy.
 - Mỗi từ được xếp vào ít nhất một bộ chủ đề. Các bài ngữ pháp và truyện được dựng lại: các từ vừa
   thêm có trong câu đều đọc đúng như cách đọc của gói.
 - Trang chủ ghi 266 từ. Tổng số từ vẫn trên 4.800.
+
+## Bước 14: bài 得 và 比 (19/10/2026)
+
+Tiếp nối Bước 10. Hai điểm HSK 2 người học gặp ngay sau các bài A1, nay dùng được các từ mới
+(快, 高, 唱歌, 游泳).
+
+- **得** (`zh-de-degree`): động từ + 得 + lời nhận xét (他走得很快). Có tân ngữ thì nhắc lại động từ
+  (他说汉语说得很好). Bài phân biệt 得 với 的: cùng đọc "de" nhưng khác chữ, khác vị trí.
+- **比** (`zh-bi`):
+  - A 比 B + tính từ; câu có 比 thì không dùng 很;
+  - "hơn nhiều" là 多了, "hơn một chút" là 一点儿;
+  - "không bằng" là A 没有 B + tính từ.
+- Câu chọn chỉ đưa ra phương án sai khi chắc chắn sai. Ví dụ, 不比 không được dùng làm phương án
+  sai cho 没有, vì 不比 vẫn đúng ngữ pháp, chỉ khác nghĩa.
+- Trang chủ ghi 13 bài ngữ pháp tiếng Trung.
