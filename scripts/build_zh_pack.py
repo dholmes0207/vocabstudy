@@ -257,6 +257,38 @@ ROWS = '''
 因为 | yīnwèi | conj. | conjunction | vì, bởi vì | 因为|下雨，|我|不|去|了。 | Vì trời mưa nên tôi không đi nữa. | 🔗
 所以 | suǒyǐ | conj. | conjunction | cho nên, vì vậy | 我|很|累，|所以|想|休息。 | Tôi rất mệt nên muốn nghỉ ngơi. | 🔀
 但是 | dànshì | conj. | conjunction | nhưng | 汉语|很|难，|但是|很|有意思。 | Tiếng Trung khó nhưng rất thú vị. | ⚖️
+饭 | fàn | n. | noun | bữa ăn; cơm | 我们|一起|吃|饭|吧。 | Chúng ta cùng ăn cơm nhé. | 🍱
+吧 | ba | part. | other | nhé, đi (rủ rê); chắc là (đoán) | 你|是|老师|吧？ | Bạn là giáo viên phải không? | 💬
+口 | kǒu | m. | other | miệng; (lượng từ đếm người trong nhà) | 我|家|有|四|口|人。 | Nhà tôi có bốn người. | 👄
+给 | gěi | v./prep. | verb | cho, đưa; cho (ai) | 妈妈|给|我|一|个|苹果。 | Mẹ cho tôi một quả táo. | 🎁
+天 | tiān | n. | noun | ngày; trời | 我|在|北京|住|了|三|天。 | Tôi đã ở Bắc Kinh ba ngày. | 🗓️
+春天 | chūntiān | n. | noun | mùa xuân | 春天|的|天气|很|好。 | Thời tiết mùa xuân rất đẹp. | 🌸
+夏天 | xiàtiān | n. | noun | mùa hè | 北京|的|夏天|很|热。 | Mùa hè ở Bắc Kinh rất nóng. | 🏖️
+秋天 | qiūtiān | n. | noun | mùa thu | 我|最|喜欢|秋天。 | Tôi thích mùa thu nhất. | 🍂
+冬天 | dōngtiān | n. | noun | mùa đông | 冬天|我|喜欢|喝|热|茶。 | Mùa đông tôi thích uống trà nóng. | ⛄
+杯 | bēi | m. | other | cốc, ly (lượng từ cho đồ uống) | 我|要|一|杯|咖啡。 | Tôi muốn một cốc cà phê. | 🧋
+只 | zhī | m. | other | con (lượng từ cho con vật nhỏ) | 我|家|有|一|只|狗。 | Nhà tôi có một con chó. | 🐾
+条 | tiáo | m. | other | con, cái (lượng từ cho vật dài) | 我|买|了|一|条|鱼。 | Tôi đã mua một con cá. | 🎏
+张 | zhāng | m. | other | tờ, tấm (lượng từ cho vật phẳng) | 这|张|桌子|很|大。 | Cái bàn này rất to. | 📄
+起床 | qǐchuáng | v. | verb | thức dậy, ra khỏi giường | 你|几|点|起床？ | Bạn mấy giờ dậy? | ⏰
+今年 | jīnnián | n. | noun | năm nay | 你|今年|多|大？ | Năm nay bạn bao nhiêu tuổi? | 🎉
+要 | yào | v. | verb | muốn; cần, phải | 我|要|这个。 | Tôi muốn cái này. | 🙋‍♂️
+一下 | yíxià | expr. | other | một chút, thử (sau động từ) | 请|等|一下。 | Xin đợi một chút. | 🤏🏻
+离 | lí | prep. | preposition | cách (bao xa) | 我|家|离|学校|很|近。 | Nhà tôi cách trường rất gần. | 📐
+也 | yě | adv. | adverb | cũng | 我|也|是|学生。 | Tôi cũng là học sinh. | ➕
+晚 | wǎn | adj. | adjective | muộn | 现在|太|晚|了。 | Bây giờ muộn quá rồi. | 🌃
+越南 | Yuènán | n. | noun | Việt Nam | 越南|菜|很|好吃。 | Món ăn Việt Nam rất ngon. | 🇻🇳
+音乐 | yīnyuè | n. | noun | âm nhạc | 这个|音乐|很|好听。 | Bản nhạc này rất hay. | 🎵
+汉字 | Hànzì | n. | noun | chữ Hán | 汉字|很|有意思。 | Chữ Hán rất thú vị. | 🀄
+开车 | kāichē | v. | verb | lái xe | 爸爸|开车|去|上班。 | Bố lái xe đi làm. | 🚗
+门 | mén | n. | noun | cửa | 门|在|那儿。 | Cửa ở kia. | 🚪
+用 | yòng | v. | verb | dùng | 我|用|手机|打电话。 | Tôi dùng điện thoại di động để gọi. | 🛠️
+等 | děng | v. | verb | đợi, chờ | 我|在|这儿|等|你。 | Tôi đợi bạn ở đây. | ⏱️
+进 | jìn | v. | verb | vào | 请|进！ | Mời vào! | 🚶‍♀️
+外面 | wàimiàn | n. | noun | bên ngoài | 外面|下雨|了。 | Bên ngoài trời mưa rồi. | 🌧️
+头发 | tóufa | n. | noun | tóc | 我|妹妹|的|头发|很|漂亮。 | Tóc em gái tôi rất đẹp. | 💇
+一起 | yìqǐ | adv. | adverb | cùng nhau | 我们|一起|去|吧。 | Chúng ta cùng đi nhé. | 👯
+带 | dài | v. | verb | mang theo; dẫn, đưa (ai đi) | 我|带|你|去|商店。 | Tôi dẫn bạn đi cửa hàng. | 🎒
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -368,6 +400,37 @@ HAN_VIET = {
     '因为': 'nhân vị',
     '所以': 'sở dĩ',
     '但是': 'đãn thị',
+    '饭': 'phạn',
+    '口': 'khẩu',
+    '给': 'cấp',
+    '天': 'thiên',
+    '春天': 'xuân thiên',
+    '夏天': 'hạ thiên',
+    '秋天': 'thu thiên',
+    '冬天': 'đông thiên',
+    '杯': 'bôi',
+    '只': 'chích',
+    '条': 'điều',
+    '张': 'trương',
+    '起床': 'khởi sàng',
+    '今年': 'kim niên',
+    '要': 'yếu',
+    '一下': 'nhất hạ',
+    '离': 'ly',
+    '也': 'dã',
+    '晚': 'vãn',
+    '越南': 'Việt Nam',
+    '音乐': 'âm nhạc',
+    '汉字': 'Hán tự',
+    '开车': 'khai xa',
+    '门': 'môn',
+    '用': 'dụng',
+    '等': 'đẳng',
+    '进': 'tiến',
+    '外面': 'ngoại diện',
+    '头发': 'đầu phát',
+    '一起': 'nhất khởi',
+    '带': 'đới',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -610,6 +673,38 @@ EXAMPLE_PINYIN = {
     '因为': 'yīn wèi xià yǔ wǒ bú qù le',
     '所以': 'wǒ hěn lèi suǒ yǐ xiǎng xiū xi',
     '但是': 'Hàn yǔ hěn nán dàn shì hěn yǒu yì si',
+    '饭': 'wǒ men yì qǐ chī fàn ba',
+    '吧': 'nǐ shì lǎo shī ba',
+    '口': 'wǒ jiā yǒu sì kǒu rén',
+    '给': 'mā ma gěi wǒ yí gè píng guǒ',
+    '天': 'wǒ zài Běi jīng zhù le sān tiān',
+    '春天': 'chūn tiān de tiān qì hěn hǎo',
+    '夏天': 'Běi jīng de xià tiān hěn rè',
+    '秋天': 'wǒ zuì xǐ huan qiū tiān',
+    '冬天': 'dōng tiān wǒ xǐ huan hē rè chá',
+    '杯': 'wǒ yào yì bēi kā fēi',
+    '只': 'wǒ jiā yǒu yì zhī gǒu',
+    '条': 'wǒ mǎi le yì tiáo yú',
+    '张': 'zhè zhāng zhuō zi hěn dà',
+    '起床': 'nǐ jǐ diǎn qǐ chuáng',
+    '今年': 'nǐ jīn nián duō dà',
+    '要': 'wǒ yào zhè ge',
+    '一下': 'qǐng děng yí xià',
+    '离': 'wǒ jiā lí xué xiào hěn jìn',
+    '也': 'wǒ yě shì xué sheng',
+    '晚': 'xiàn zài tài wǎn le',
+    '越南': 'Yuè nán cài hěn hǎo chī',
+    '音乐': 'zhè ge yīn yuè hěn hǎo tīng',
+    '汉字': 'Hàn zì hěn yǒu yì si',
+    '开车': 'bà ba kāi chē qù shàng bān',
+    '门': 'mén zài nà r',
+    '用': 'wǒ yòng shǒu jī dǎ diàn huà',
+    '等': 'wǒ zài zhè r děng nǐ',
+    '进': 'qǐng jìn',
+    '外面': 'wài miàn xià yǔ le',
+    '头发': 'wǒ mèi mei de tóu fa hěn piào liang',
+    '一起': 'wǒ men yì qǐ qù ba',
+    '带': 'wǒ dài nǐ qù shāng diàn',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
@@ -692,7 +787,7 @@ def main() -> int:
             'ttsLang': 'zh-CN',
             'count': len(words),
             'source': 'VocaStudy (beta)',
-            'version': '0.5.0',
+            'version': '0.6.0',
             'readingLabel': ['pinyin', 'pinyin'],
         },
         'words': words,

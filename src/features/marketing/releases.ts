@@ -58,8 +58,8 @@ export const RELEASES: Release[] = [
         'Chinese grammar gets 4 lessons on points Vietnamese speakers often trip on: word order (time and place before the verb), 了 for what has happened, 会 / 能 / 可以, and 因为…所以… / 但是.',
       ],
       [
-        'Gói tiếng Trung tăng từ 156 lên 234 từ: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
-        'The Chinese pack grows from 156 to 234 words: everyday words beyond HSK 1 — siblings, colours, medicine and health, the bus, left/right, cheap/expensive, exams, the office, swimming, singing, 因为 / 所以 / 但是… — and 3 new topic decks: Health & colours, Study & work, Hobbies & sport.',
+        'Gói tiếng Trung tăng từ 156 lên 266 từ: thêm từ đời thường ngoài HSK 1 — anh chị em, màu sắc, bốn mùa, thuốc và sức khoẻ, xe buýt, trái/phải, đắt/rẻ, thi cử, công ty, bơi, hát, lượng từ 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — và 3 bộ chủ đề mới: Sức khoẻ & màu sắc, Học tập & công việc, Sở thích & thể thao.',
+        'The Chinese pack grows from 156 to 266 words: everyday words beyond HSK 1 — siblings, colours, the four seasons, medicine and health, the bus, left/right, cheap/expensive, exams, the office, swimming, singing, the measure words 杯 / 只 / 条 / 张, 因为 / 所以 / 但是… — and 3 new topic decks: Health & colours, Study & work, Hobbies & sport.',
       ],
       [
         'Tiếng Trung: không cần bàn phím chữ Hán nữa — ở Nghe – chép và câu điền từ, gõ bính âm không dấu (ví dụ "xiexie" cho 谢谢) cũng được chấm, rồi app hiện lại chữ Hán.',
