@@ -20,6 +20,9 @@ pnpm-debug.log*
 .idea/
 *.local
 
+# AI assistant local settings (see CLAUDE.md)
+.claude/
+
 # env / secrets
 .env
 .env.*
