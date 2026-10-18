@@ -179,6 +179,84 @@ ROWS = '''
 些 | xiē | m. | other | một số, vài | 我|想|买|些|水果。 | Tôi muốn mua ít trái cây. | 🧺
 一点儿 | yìdiǎnr | m. | other | một chút | 我|会|说|一点儿|汉语。 | Tôi biết nói một chút tiếng Trung. | 🤏
 看见 | kànjiàn | v. | verb | nhìn thấy | 你|看见|我|的|猫|了|吗？ | Bạn có thấy con mèo của tôi không? | 👁️
+哥哥 | gēge | n. | noun | anh trai | 我|哥哥|是|医生。 | Anh trai tôi là bác sĩ. | 👦
+姐姐 | jiějie | n. | noun | chị gái | 我|姐姐|在|北京|工作。 | Chị gái tôi làm việc ở Bắc Kinh. | 👩‍💼
+弟弟 | dìdi | n. | noun | em trai | 我|弟弟|今年|八|岁。 | Em trai tôi năm nay tám tuổi. | 🧒
+妹妹 | mèimei | n. | noun | em gái | 我|妹妹|喜欢|猫。 | Em gái tôi thích mèo. | 👧🏻
+孩子 | háizi | n. | noun | đứa trẻ; con (cái) | 孩子|在|睡觉。 | Đứa bé đang ngủ. | 👶
+丈夫 | zhàngfu | n. | noun | chồng | 她|丈夫|是|老师。 | Chồng cô ấy là giáo viên. | 🤵
+妻子 | qīzi | n. | noun | vợ | 我|妻子|会|说|汉语。 | Vợ tôi biết nói tiếng Trung. | 👰
+身体 | shēntǐ | n. | noun | cơ thể; sức khoẻ | 你|身体|好|吗？ | Bạn có khoẻ không? | 💪
+眼睛 | yǎnjing | n. | noun | mắt | 她|的|眼睛|很|大。 | Mắt cô ấy rất to. | 👀
+生病 | shēngbìng | v. | verb | bị ốm | 我|生病|了。 | Tôi bị ốm rồi. | 🤒
+药 | yào | n. | noun | thuốc | 你|要|吃|药。 | Bạn phải uống thuốc. | 💊
+累 | lèi | adj. | adjective | mệt | 今天|我|很|累。 | Hôm nay tôi rất mệt. | 😩
+休息 | xiūxi | v. | verb | nghỉ ngơi | 你|休息|一下|吧。 | Bạn nghỉ một chút đi. | 🛋️
+颜色 | yánsè | n. | noun | màu sắc | 你|喜欢|什么|颜色？ | Bạn thích màu gì? | 🎨
+红色 | hóngsè | n. | noun | màu đỏ | 我|喜欢|红色。 | Tôi thích màu đỏ. | 🔴
+白色 | báisè | n. | noun | màu trắng | 这|件|衣服|是|白色|的。 | Bộ quần áo này màu trắng. | ⚪
+黑色 | hēisè | n. | noun | màu đen | 他|的|猫|是|黑色|的。 | Con mèo của anh ấy màu đen. | ⚫
+鸡蛋 | jīdàn | n. | noun | trứng gà | 我|早上|吃|鸡蛋。 | Buổi sáng tôi ăn trứng gà. | 🥚
+牛奶 | niúnǎi | n. | noun | sữa bò | 孩子|每天|喝|牛奶。 | Ngày nào đứa bé cũng uống sữa. | 🍼
+面条 | miàntiáo | n. | noun | mì sợi | 中午|我|吃|面条。 | Buổi trưa tôi ăn mì. | 🍜
+鱼 | yú | n. | noun | cá | 妈妈|做|的|鱼|很|好吃。 | Cá mẹ nấu rất ngon. | 🐟
+羊肉 | yángròu | n. | noun | thịt cừu | 北京|人|喜欢|吃|羊肉。 | Người Bắc Kinh thích ăn thịt cừu. | 🍖
+西瓜 | xīguā | n. | noun | dưa hấu | 夏天|的|西瓜|很|好吃。 | Dưa hấu mùa hè rất ngon. | 🍉
+饿 | è | adj. | adjective | đói | 我|饿|了。 | Tôi đói rồi. | 🤤
+早上 | zǎoshang | n. | noun | sáng sớm | 我|早上|六|点|起床。 | Tôi dậy lúc sáu giờ sáng. | 🌅
+晚上 | wǎnshang | n. | noun | buổi tối | 晚上|我|看|电视。 | Buổi tối tôi xem tivi. | 🌙
+小时 | xiǎoshí | n. | noun | tiếng (đồng hồ) | 我|每天|工作|八|个|小时。 | Mỗi ngày tôi làm việc tám tiếng. | ⏳
+时间 | shíjiān | n. | noun | thời gian | 现在|没有|时间|了。 | Bây giờ không còn thời gian nữa. | ⌛
+每 | měi | pron. | pronoun | mỗi | 我|每|天|学习|汉语。 | Ngày nào tôi cũng học tiếng Trung. | 🔁
+已经 | yǐjīng | adv. | adverb | đã … rồi | 我|已经|吃|饭|了。 | Tôi ăn cơm rồi. | ✔️
+去年 | qùnián | n. | noun | năm ngoái | 我|去年|去|了|中国。 | Năm ngoái tôi đã đi Trung Quốc. | 📅
+生日 | shēngrì | n. | noun | sinh nhật | 今天|是|我|的|生日。 | Hôm nay là sinh nhật tôi. | 🎂
+便宜 | piányi | adj. | adjective | rẻ | 这|件|衣服|很|便宜。 | Bộ quần áo này rất rẻ. | 🏷️
+贵 | guì | adj. | adjective | đắt | 这儿|的|咖啡|太|贵|了。 | Cà phê ở đây đắt quá. | 💸
+卖 | mài | v. | verb | bán | 这个|商店|卖|水果。 | Cửa hàng này bán trái cây. | 🏪
+件 | jiàn | m. | other | chiếc, bộ (lượng từ cho quần áo, sự việc) | 我|想|买|这|件|衣服。 | Tôi muốn mua bộ quần áo này. | 👕
+两 | liǎng | num. | other | hai (đứng trước lượng từ) | 我|有|两|个|妹妹。 | Tôi có hai em gái. | ✌️
+百 | bǎi | num. | other | trăm | 这|本|书|一百|块。 | Quyển sách này một trăm tệ. | 💯
+手机 | shǒujī | n. | noun | điện thoại di động | 我|的|手机|在|哪儿？ | Điện thoại của tôi đâu rồi? | 📱
+手表 | shǒubiǎo | n. | noun | đồng hồ đeo tay | 这|块|手表|很|贵。 | Chiếc đồng hồ này rất đắt. | ⌚
+公共汽车 | gōnggòng qìchē | n. | noun | xe buýt | 我|坐|公共汽车|去|学校。 | Tôi đi xe buýt đến trường. | 🚌
+路 | lù | n. | noun | đường, con đường | 这|条|路|很|长。 | Con đường này rất dài. | 🛣️
+远 | yuǎn | adj. | adjective | xa | 学校|离|我|家|很|远。 | Trường cách nhà tôi rất xa. | 🔭
+近 | jìn | adj. | adjective | gần | 医院|离|这儿|很|近。 | Bệnh viện cách đây rất gần. | 🤏
+走 | zǒu | v. | verb | đi bộ; rời đi | 我们|走|吧！ | Chúng ta đi thôi! | 🚶
+左边 | zuǒbian | n. | noun | bên trái | 商店|在|医院|左边。 | Cửa hàng ở bên trái bệnh viện. | ⬅️
+右边 | yòubian | n. | noun | bên phải | 我|家|在|学校|右边。 | Nhà tôi ở bên phải trường học. | ➡️
+机场 | jīchǎng | n. | noun | sân bay | 我们|坐|出租车|去|机场。 | Chúng tôi đi taxi ra sân bay. | 🛫
+旅游 | lǚyóu | v. | verb | đi du lịch | 我|想|去|中国|旅游。 | Tôi muốn đi du lịch Trung Quốc. | 🧳
+考试 | kǎoshì | n. | noun | kỳ thi, bài thi | 明天|有|汉语|考试。 | Ngày mai có bài thi tiếng Trung. | 📝
+问题 | wèntí | n. | noun | câu hỏi; vấn đề | 我|有|一|个|问题。 | Tôi có một câu hỏi. | ❔
+教室 | jiàoshì | n. | noun | phòng học | 老师|在|教室|里。 | Thầy giáo ở trong phòng học. | 🏫
+公司 | gōngsī | n. | noun | công ty | 我|在|一|家|公司|工作。 | Tôi làm việc ở một công ty. | 🏢
+上班 | shàngbān | v. | verb | đi làm | 爸爸|八|点|上班。 | Bố đi làm lúc tám giờ. | 💼
+懂 | dǒng | v. | verb | hiểu | 你|懂|了|吗？ | Bạn hiểu chưa? | 💡
+知道 | zhīdào | v. | verb | biết (một điều gì) | 我|不|知道。 | Tôi không biết. | 🤷
+帮助 | bāngzhù | v./n. | verb | giúp đỡ; sự giúp đỡ | 谢谢|你|的|帮助！ | Cảm ơn sự giúp đỡ của bạn! | 🤲
+介绍 | jièshào | v. | verb | giới thiệu | 我|来|介绍|一下。 | Để tôi giới thiệu một chút. | 🙌
+运动 | yùndòng | v./n. | verb | tập thể thao; thể thao | 我|每天|都|运动。 | Ngày nào tôi cũng tập thể thao. | 🏋️
+游泳 | yóuyǒng | v. | verb | bơi | 夏天|我|喜欢|游泳。 | Mùa hè tôi thích bơi. | 🏊
+跑步 | pǎobù | v. | verb | chạy bộ | 他|早上|跑步。 | Anh ấy chạy bộ vào buổi sáng. | 🏃‍♂️
+唱歌 | chànggē | v. | verb | hát | 她|很|喜欢|唱歌。 | Cô ấy rất thích hát. | 🎤
+跳舞 | tiàowǔ | v. | verb | nhảy, khiêu vũ | 我们|去|跳舞|吧！ | Chúng ta đi nhảy đi! | 💃
+踢足球 | tī zúqiú | v. | verb | đá bóng | 他|喜欢|踢足球。 | Cậu ấy thích đá bóng. | ⚽
+玩 | wán | v. | verb | chơi | 孩子|在|外面|玩。 | Đứa trẻ đang chơi ở ngoài. | 🪁
+晴 | qíng | adj. | adjective | (trời) nắng, quang | 今天|是|晴|天。 | Hôm nay trời nắng. | ☀️
+雪 | xuě | n. | noun | tuyết | 北京|下|雪|了。 | Bắc Kinh có tuyết rơi rồi. | ❄️
+高 | gāo | adj. | adjective | cao | 我|哥哥|很|高。 | Anh trai tôi rất cao. | 🦒
+长 | cháng | adj. | adjective | dài | 她|的|头发|很|长。 | Tóc cô ấy rất dài. | 📏
+新 | xīn | adj. | adjective | mới | 这|是|我|的|新|手机。 | Đây là điện thoại mới của tôi. | ✨
+快 | kuài | adj. | adjective | nhanh | 他|走|得|很|快。 | Anh ấy đi rất nhanh. | ⚡
+慢 | màn | adj. | adjective | chậm | 请|说|慢|一点儿。 | Xin nói chậm một chút. | 🐢
+难 | nán | adj. | adjective | khó | 这个|问题|很|难。 | Câu hỏi này rất khó. | 🧩
+有意思 | yǒu yìsi | adj. | adjective | thú vị, hay | 这|本|书|很|有意思。 | Quyển sách này rất thú vị. | 🤩
+可以 | kěyǐ | v. | verb | có thể; được phép | 我|可以|坐|这儿|吗？ | Tôi ngồi đây được không? | 🙆
+因为 | yīnwèi | conj. | conjunction | vì, bởi vì | 因为|下雨，|我|不|去|了。 | Vì trời mưa nên tôi không đi nữa. | 🔗
+所以 | suǒyǐ | conj. | conjunction | cho nên, vì vậy | 我|很|累，|所以|想|休息。 | Tôi rất mệt nên muốn nghỉ ngơi. | 🔀
+但是 | dànshì | conj. | conjunction | nhưng | 汉语|很|难，|但是|很|有意思。 | Tiếng Trung khó nhưng rất thú vị. | ⚖️
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -214,6 +292,82 @@ HAN_VIET = {
     '号': 'hiệu', '分钟': 'phân chung', '电影': 'điện ảnh', '后面': 'hậu diện',
     '前面': 'tiền diện', '里': 'lý', '上': 'thượng', '下': 'hạ', '怎么': 'chẩm ma',
     '怎么样': 'chẩm ma dạng', '请': 'thỉnh', '同学': 'đồng học', '些': 'ta', '看见': 'khán kiến',
+    '哥哥': 'ca ca',
+    '姐姐': 'tỷ tỷ',
+    '弟弟': 'đệ đệ',
+    '妹妹': 'muội muội',
+    '孩子': 'hài tử',
+    '丈夫': 'trượng phu',
+    '妻子': 'thê tử',
+    '身体': 'thân thể',
+    '眼睛': 'nhãn tình',
+    '生病': 'sinh bệnh',
+    '药': 'dược',
+    '累': 'luỵ',
+    '休息': 'hưu tức',
+    '颜色': 'nhan sắc',
+    '红色': 'hồng sắc',
+    '白色': 'bạch sắc',
+    '黑色': 'hắc sắc',
+    '鸡蛋': 'kê đản',
+    '牛奶': 'ngưu nãi',
+    '面条': 'miến điều',
+    '鱼': 'ngư',
+    '羊肉': 'dương nhục',
+    '西瓜': 'tây qua',
+    '饿': 'ngạ',
+    '早上': 'tảo thượng',
+    '晚上': 'vãn thượng',
+    '小时': 'tiểu thời',
+    '时间': 'thời gian',
+    '每': 'mỗi',
+    '已经': 'dĩ kinh',
+    '去年': 'khứ niên',
+    '生日': 'sinh nhật',
+    '便宜': 'tiện nghi',
+    '贵': 'quý',
+    '卖': 'mại',
+    '件': 'kiện',
+    '两': 'lưỡng',
+    '百': 'bách',
+    '手机': 'thủ cơ',
+    '手表': 'thủ biểu',
+    '公共汽车': 'công cộng khí xa',
+    '路': 'lộ',
+    '远': 'viễn',
+    '近': 'cận',
+    '走': 'tẩu',
+    '左边': 'tả biên',
+    '右边': 'hữu biên',
+    '机场': 'cơ trường',
+    '旅游': 'lữ du',
+    '考试': 'khảo thí',
+    '问题': 'vấn đề',
+    '教室': 'giáo thất',
+    '公司': 'công ty',
+    '上班': 'thượng ban',
+    '懂': 'đổng',
+    '知道': 'tri đạo',
+    '帮助': 'bang trợ',
+    '介绍': 'giới thiệu',
+    '运动': 'vận động',
+    '游泳': 'du vịnh',
+    '唱歌': 'xướng ca',
+    '跳舞': 'khiêu vũ',
+    '玩': 'ngoạn',
+    '晴': 'tình',
+    '雪': 'tuyết',
+    '高': 'cao',
+    '长': 'trường',
+    '新': 'tân',
+    '快': 'khoái',
+    '慢': 'mạn',
+    '难': 'nan',
+    '有意思': 'hữu ý tư',
+    '可以': 'khả dĩ',
+    '因为': 'nhân vị',
+    '所以': 'sở dĩ',
+    '但是': 'đãn thị',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -378,6 +532,84 @@ EXAMPLE_PINYIN = {
     '些': 'wǒ xiǎng mǎi xiē shuǐ guǒ',
     '一点儿': 'wǒ huì shuō yì diǎn r Hàn yǔ',
     '看见': 'nǐ kàn jiàn wǒ de māo le ma',
+    '哥哥': 'wǒ gē ge shì yī shēng',
+    '姐姐': 'wǒ jiě jie zài Běi jīng gōng zuò',
+    '弟弟': 'wǒ dì di jīn nián bā suì',
+    '妹妹': 'wǒ mèi mei xǐ huan māo',
+    '孩子': 'hái zi zài shuì jiào',
+    '丈夫': 'tā zhàng fu shì lǎo shī',
+    '妻子': 'wǒ qī zi huì shuō Hàn yǔ',
+    '身体': 'nǐ shēn tǐ hǎo ma',
+    '眼睛': 'tā de yǎn jing hěn dà',
+    '生病': 'wǒ shēng bìng le',
+    '药': 'nǐ yào chī yào',
+    '累': 'jīn tiān wǒ hěn lèi',
+    '休息': 'nǐ xiū xi yí xià ba',
+    '颜色': 'nǐ xǐ huan shén me yán sè',
+    '红色': 'wǒ xǐ huan hóng sè',
+    '白色': 'zhè jiàn yī fu shì bái sè de',
+    '黑色': 'tā de māo shì hēi sè de',
+    '鸡蛋': 'wǒ zǎo shang chī jī dàn',
+    '牛奶': 'hái zi měi tiān hē niú nǎi',
+    '面条': 'zhōng wǔ wǒ chī miàn tiáo',
+    '鱼': 'mā ma zuò de yú hěn hǎo chī',
+    '羊肉': 'Běi jīng rén xǐ huan chī yáng ròu',
+    '西瓜': 'xià tiān de xī guā hěn hǎo chī',
+    '饿': 'wǒ è le',
+    '早上': 'wǒ zǎo shang liù diǎn qǐ chuáng',
+    '晚上': 'wǎn shang wǒ kàn diàn shì',
+    '小时': 'wǒ měi tiān gōng zuò bā gè xiǎo shí',
+    '时间': 'xiàn zài méi yǒu shí jiān le',
+    '每': 'wǒ měi tiān xué xí Hàn yǔ',
+    '已经': 'wǒ yǐ jīng chī fàn le',
+    '去年': 'wǒ qù nián qù le Zhōng guó',
+    '生日': 'jīn tiān shì wǒ de shēng rì',
+    '便宜': 'zhè jiàn yī fu hěn pián yi',
+    '贵': 'zhè r de kā fēi tài guì le',
+    '卖': 'zhè ge shāng diàn mài shuǐ guǒ',
+    '件': 'wǒ xiǎng mǎi zhè jiàn yī fu',
+    '两': 'wǒ yǒu liǎng gè mèi mei',
+    '百': 'zhè běn shū yì bǎi kuài',
+    '手机': 'wǒ de shǒu jī zài nǎ r',
+    '手表': 'zhè kuài shǒu biǎo hěn guì',
+    '公共汽车': 'wǒ zuò gōng gòng qì chē qù xué xiào',
+    '路': 'zhè tiáo lù hěn cháng',
+    '远': 'xué xiào lí wǒ jiā hěn yuǎn',
+    '近': 'yī yuàn lí zhè r hěn jìn',
+    '走': 'wǒ men zǒu ba',
+    '左边': 'shāng diàn zài yī yuàn zuǒ bian',
+    '右边': 'wǒ jiā zài xué xiào yòu bian',
+    '机场': 'wǒ men zuò chū zū chē qù jī chǎng',
+    '旅游': 'wǒ xiǎng qù Zhōng guó lǚ yóu',
+    '考试': 'míng tiān yǒu Hàn yǔ kǎo shì',
+    '问题': 'wǒ yǒu yí gè wèn tí',
+    '教室': 'lǎo shī zài jiào shì lǐ',
+    '公司': 'wǒ zài yì jiā gōng sī gōng zuò',
+    '上班': 'bà ba bā diǎn shàng bān',
+    '懂': 'nǐ dǒng le ma',
+    '知道': 'wǒ bù zhī dào',
+    '帮助': 'xiè xie nǐ de bāng zhù',
+    '介绍': 'wǒ lái jiè shào yí xià',
+    '运动': 'wǒ měi tiān dōu yùn dòng',
+    '游泳': 'xià tiān wǒ xǐ huan yóu yǒng',
+    '跑步': 'tā zǎo shang pǎo bù',
+    '唱歌': 'tā hěn xǐ huan chàng gē',
+    '跳舞': 'wǒ men qù tiào wǔ ba',
+    '踢足球': 'tā xǐ huan tī zú qiú',
+    '玩': 'hái zi zài wài miàn wán',
+    '晴': 'jīn tiān shì qíng tiān',
+    '雪': 'Běi jīng xià xuě le',
+    '高': 'wǒ gē ge hěn gāo',
+    '长': 'tā de tóu fa hěn cháng',
+    '新': 'zhè shì wǒ de xīn shǒu jī',
+    '快': 'tā zǒu de hěn kuài',
+    '慢': 'qǐng shuō màn yì diǎn r',
+    '难': 'zhè ge wèn tí hěn nán',
+    '有意思': 'zhè běn shū hěn yǒu yì si',
+    '可以': 'wǒ kě yǐ zuò zhè r ma',
+    '因为': 'yīn wèi xià yǔ wǒ bú qù le',
+    '所以': 'wǒ hěn lèi suǒ yǐ xiǎng xiū xi',
+    '但是': 'Hàn yǔ hěn nán dàn shì hěn yǒu yì si',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
@@ -460,7 +692,7 @@ def main() -> int:
             'ttsLang': 'zh-CN',
             'count': len(words),
             'source': 'VocaStudy (beta)',
-            'version': '0.4.0',
+            'version': '0.5.0',
             'readingLabel': ['pinyin', 'pinyin'],
         },
         'words': words,

@@ -185,7 +185,7 @@ function Stats() {
   const t = useT()
   const items = [
     ['3', '3', t('ngôn ngữ, và sẽ còn thêm', 'languages, with more to come')],
-    ['4.700+', '4,700+', t('từ vựng có nghĩa tiếng Việt', 'words with Vietnamese meanings')],
+    ['4.800+', '4,800+', t('từ vựng có nghĩa tiếng Việt', 'words with Vietnamese meanings')],
     ['25', '25', t('truyện ngắn chạm là ra nghĩa', 'short stories, tap for meanings')],
     ['0đ', '$0', t('học hoàn toàn miễn phí', 'completely free')],
   ] as const
@@ -277,8 +277,8 @@ function Features() {
       tone: 'from-fuchsia-500 to-rose-600',
       title: t('Thêm tiếng Hàn, tiếng Trung (beta)', 'Korean and Chinese too (beta)'),
       desc: t(
-        'Tiếng Hàn: bảng chữ Hangul, 192 từ sơ cấp có cách đọc kiểu Việt, 12 bộ chủ đề, 11 bài ngữ pháp và 8 truyện ngắn. Tiếng Trung: 156 từ (đủ 150 từ HSK 1) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, 10 bộ chủ đề, 7 bài ngữ pháp và 3 truyện ngắn. Đọc bằng giọng của trình duyệt.',
-        'Korean: the Hangul alphabet, 192 beginner words with Vietnamese-style readings, 12 topic decks, 11 grammar lessons and 8 short stories. Chinese: 156 words (all 150 of HSK 1) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, 10 topic decks, 7 grammar lessons and 3 short stories. Read aloud by your browser.'
+        'Tiếng Hàn: bảng chữ Hangul, 192 từ sơ cấp có cách đọc kiểu Việt, 12 bộ chủ đề, 11 bài ngữ pháp và 8 truyện ngắn. Tiếng Trung: 234 từ (đủ 150 từ HSK 1) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, 13 bộ chủ đề, 7 bài ngữ pháp và 3 truyện ngắn. Đọc bằng giọng của trình duyệt.',
+        'Korean: the Hangul alphabet, 192 beginner words with Vietnamese-style readings, 12 topic decks, 11 grammar lessons and 8 short stories. Chinese: 234 words (all 150 of HSK 1) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, 13 topic decks, 7 grammar lessons and 3 short stories. Read aloud by your browser.'
       ),
     },
     {

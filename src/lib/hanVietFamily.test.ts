@@ -34,7 +34,7 @@ describe('familiesOf', () => {
   it('finds the Chinese words that share a character, read the same way', () => {
     expect(summary('zh', '学生')).toEqual([
       ['学', 'học', ['学校', '学习', '同学']],
-      ['生', 'sinh', ['医生', '先生']],
+      ['生', 'sinh', ['医生', '先生', '生病', '生日']],
     ])
   })
 
