@@ -1927,6 +1927,245 @@
           "vi": "Xin nói lại một lần nữa."
         }
       ]
+    },
+    {
+      "id": "zh-ji-duoshao",
+      "emoji": "❔",
+      "level": "A1",
+      "title": [
+        "几 và 多少: hỏi \"mấy\", \"bao nhiêu\"",
+        "几 and 多少: asking how many"
+      ],
+      "summary": [
+        "几 cho số nhỏ, cần lượng từ; 多少 cho số bất kỳ và để hỏi giá.",
+        "几 for small numbers, with a measure word; 多少 for any number and for prices."
+      ],
+      "explain": [
+        "几 (mấy) hỏi số nhỏ, thường dưới 10, và phải có lượng từ: 你有几个孩子？",
+        "多少 (bao nhiêu) hỏi số bất kỳ, nhất là số lớn; lượng từ có thể bỏ: 你们学校有多少学生？ Hỏi giá luôn là 多少钱？",
+        "Hỏi giờ, ngày, thứ thì dùng 几: 现在几点？ 今天几号？ 今天星期几？"
+      ],
+      "patterns": [
+        "几 + lượng từ + danh từ",
+        "多少 (+ lượng từ) + danh từ",
+        "…多少钱？"
+      ],
+      "examples": [
+        {
+          "en": "你有几个孩子？",
+          "vi": "Bạn có mấy đứa con?",
+          "read": "Nǐ yǒu jǐ gè háizi?"
+        },
+        {
+          "en": "你们学校有多少学生？",
+          "vi": "Trường các bạn có bao nhiêu học sinh?",
+          "read": "Nǐmen xuéxiào yǒu duōshao xuésheng?"
+        },
+        {
+          "en": "这个多少钱？",
+          "vi": "Cái này bao nhiêu tiền?",
+          "read": "Zhège duōshao qián?"
+        },
+        {
+          "en": "现在几点？",
+          "vi": "Bây giờ mấy giờ?",
+          "read": "Xiànzài jǐ diǎn?"
+        },
+        {
+          "en": "今天星期几？",
+          "vi": "Hôm nay thứ mấy?",
+          "read": "Jīntiān xīngqī jǐ?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "你有几孩子？",
+          "right": "你有几个孩子？",
+          "why": "Sau 几 phải có lượng từ."
+        },
+        {
+          "wrong": "这个几钱？",
+          "right": "这个多少钱？",
+          "why": "Hỏi giá dùng 多少钱."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "现在___点？",
+          "options": [
+            "几",
+            "多少"
+          ],
+          "answer": 0,
+          "explain": "Hỏi giờ → 几点."
+        },
+        {
+          "type": "choice",
+          "prompt": "这件衣服___钱？",
+          "options": [
+            "多少",
+            "几"
+          ],
+          "answer": 0,
+          "explain": "Hỏi giá → 多少钱."
+        },
+        {
+          "type": "choice",
+          "prompt": "今天星期___？",
+          "options": [
+            "几",
+            "多少"
+          ],
+          "answer": 0,
+          "explain": "Hỏi thứ → 星期几."
+        },
+        {
+          "type": "choice",
+          "prompt": "你们学校有___学生？",
+          "options": [
+            "多少",
+            "几"
+          ],
+          "answer": 0,
+          "explain": "Số lớn, không có lượng từ → 多少."
+        },
+        {
+          "type": "choice",
+          "prompt": "你有几___朋友？",
+          "options": [
+            "个",
+            "本"
+          ],
+          "answer": 0,
+          "explain": "Sau 几 cần lượng từ; người → 个."
+        },
+        {
+          "type": "order",
+          "en": "这​件​衣服​多少​钱？",
+          "vi": "Bộ quần áo này bao nhiêu tiền?"
+        }
+      ]
+    },
+    {
+      "id": "zh-youdianr",
+      "emoji": "🤏",
+      "level": "A2",
+      "title": [
+        "有点儿 và 一点儿: \"hơi\" và \"một chút\"",
+        "有点儿 and 一点儿: \"a bit\""
+      ],
+      "summary": [
+        "有点儿 đứng TRƯỚC tính từ (hơi…), 一点儿 đứng SAU tính từ (…hơn một chút).",
+        "有点儿 goes before the adjective, 一点儿 after it."
+      ],
+      "explain": [
+        "有点儿 + tính từ = hơi …, thường là điều không vừa ý: 今天有点儿冷 (hôm nay hơi lạnh), 这件衣服有点儿贵.",
+        "Tính từ + 一点儿 = … hơn một chút, hay dùng khi so sánh hoặc nhờ ai: 便宜一点儿吧 (rẻ hơn chút đi), 请说慢一点儿.",
+        "Động từ + 一点儿 + danh từ = một ít: 我想喝一点儿水.",
+        "Mẹo nhớ: 有点儿 đứng trước tính từ, 一点儿 đứng sau tính từ."
+      ],
+      "patterns": [
+        "有点儿 + tính từ",
+        "Tính từ + 一点儿",
+        "Động từ + 一点儿 + danh từ"
+      ],
+      "examples": [
+        {
+          "en": "今天有点儿冷。",
+          "vi": "Hôm nay hơi lạnh.",
+          "read": "Jīntiān yǒudiǎnr lěng."
+        },
+        {
+          "en": "这件衣服有点儿贵。",
+          "vi": "Bộ quần áo này hơi đắt.",
+          "read": "Zhè jiàn yīfu yǒudiǎnr guì."
+        },
+        {
+          "en": "便宜一点儿吧！",
+          "vi": "Rẻ hơn một chút đi!",
+          "read": "Piányi yìdiǎnr ba!"
+        },
+        {
+          "en": "请说慢一点儿。",
+          "vi": "Xin nói chậm hơn một chút.",
+          "read": "Qǐng shuō màn yìdiǎnr."
+        },
+        {
+          "en": "我想喝一点儿水。",
+          "vi": "Tôi muốn uống một chút nước.",
+          "read": "Wǒ xiǎng hē yìdiǎnr shuǐ."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "今天一点儿冷。",
+          "right": "今天有点儿冷。",
+          "why": "\"Hơi + tính từ\" → 有点儿 đứng trước tính từ."
+        },
+        {
+          "wrong": "请说一点儿慢。",
+          "right": "请说慢一点儿。",
+          "why": "一点儿 đứng sau tính từ."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "今天___冷。",
+          "options": [
+            "有点儿",
+            "一点儿"
+          ],
+          "answer": 0,
+          "explain": "Hơi lạnh → 有点儿 + tính từ."
+        },
+        {
+          "type": "choice",
+          "prompt": "便宜___吧！",
+          "options": [
+            "一点儿",
+            "有点儿"
+          ],
+          "answer": 0,
+          "explain": "Rẻ hơn chút → tính từ + 一点儿."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个房间___小。",
+          "options": [
+            "有点儿",
+            "一点儿"
+          ],
+          "answer": 0,
+          "explain": "Hơi nhỏ (không vừa ý) → 有点儿."
+        },
+        {
+          "type": "choice",
+          "prompt": "我想吃___米饭。",
+          "options": [
+            "一点儿",
+            "有点儿"
+          ],
+          "answer": 0,
+          "explain": "Một ít + danh từ → 一点儿."
+        },
+        {
+          "type": "choice",
+          "prompt": "请走慢___。",
+          "options": [
+            "一点儿",
+            "有点儿"
+          ],
+          "answer": 0,
+          "explain": "Nhờ đi chậm hơn → tính từ + 一点儿."
+        },
+        {
+          "type": "order",
+          "en": "请​说​慢​一点儿。",
+          "vi": "Xin nói chậm hơn một chút."
+        }
+      ]
     }
   ]
 }
