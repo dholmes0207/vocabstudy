@@ -33,3 +33,26 @@ Thẻ từ đã có mục "Cùng chữ Hán Việt" (`chinese.md`): học 学生
 - `lib/packContent.ts`: `'/han-viet': ['zh', 'ko']`. Mục trong trang Luyện tập nằm ở
   `features/practice/entries.ts`.
 - Test: `lib/hanVietFamily.test.ts`, `features/hanviet/HanVietTable.test.tsx`.
+
+## Đoán nghĩa nhờ Hán Việt (19/10/2026)
+
+Danh sách cho người học xem các "chìa khoá". Phần này cho họ **dùng** chìa khoá để mở một từ mới.
+
+**BA**
+
+- Trên trang có nút **"Đoán nghĩa nhờ Hán Việt (10 câu)"**.
+- Mỗi câu:
+  - Hiện một từ, ví dụ 学校, kèm âm Hán Việt của cả từ (HỌC HIỆU).
+  - Với mỗi chữ cũng có trong một từ khác, hiện một gợi ý, ví dụ "学 = học, như trong 学生 (học
+    sinh, sinh viên)".
+  - Chọn nghĩa đúng trong 4 nghĩa. Trả lời xong thì đọc từ đó lên và hiện cách đọc cùng nghĩa.
+- Chỉ hỏi những từ có từ hai chữ trở lên, trong đó ít nhất một chữ dùng chung với từ khác, để lúc
+  nào cũng có đường suy luận.
+- Cuối lượt cộng XP như các phần luyện nhanh khác. Kết quả không ghi vào lịch ôn.
+- Gói tiếng Hàn cũng dùng được, với khối âm tiết (학 = học, như trong 학생).
+
+**Dev**
+
+- `lib/hanVietFamily.ts`: `hanVietQuiz(words, count)` trả về `{ word, clues, options, answer }`;
+  `clues` lấy từ `familyIndex`.
+- `features/hanviet/HanVietTable.tsx`: `GuessRound` dùng `GameShell` và `GameResult`.

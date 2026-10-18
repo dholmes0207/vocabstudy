@@ -105,3 +105,51 @@ export function searchHanViet(table: HanVietEntry[], query: string): HanVietEntr
       e.words.some((w) => w.word.includes(query.trim()))
   )
 }
+
+export interface HanVietClue extends HanVietUnit {
+  /** Another word of the pack with this unit read the same way. */
+  via: Word
+}
+
+export interface HanVietQuestion {
+  word: Word
+  /** One clue per unit that another word shares — the way in. */
+  clues: HanVietClue[]
+  options: string[]
+  answer: number
+}
+
+/**
+ * "Đoán nghĩa nhờ Hán Việt": words of two or more units where at least one unit
+ * is shared with another word, so the learner can reason from what they know.
+ * Wrong options are other words' meanings.
+ */
+export function hanVietQuiz(
+  words: readonly Word[],
+  count = 10,
+  rand: () => number = Math.random
+): HanVietQuestion[] {
+  const index = familyIndex(words)
+  const shuffle = <T>(arr: T[]): T[] => {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+  const cluesOf = (w: Word): HanVietClue[] =>
+    (hanVietUnits(w) ?? []).flatMap((u) => {
+      const via = (index.get(key(u)) ?? []).find((o) => o.id !== w.id)
+      return via ? [{ ...u, via }] : []
+    })
+  const pool = words.filter((w) => (hanVietUnits(w)?.length ?? 0) >= 2 && cluesOf(w).length > 0)
+  const meanings = [...new Set(words.map((w) => w.meaning))]
+  return shuffle(pool)
+    .slice(0, count)
+    .map((word) => {
+      const wrong = shuffle(meanings.filter((m) => m !== word.meaning)).slice(0, 3)
+      const options = shuffle([word.meaning, ...wrong])
+      return { word, clues: cluesOf(word), options, answer: options.indexOf(word.meaning) }
+    })
+}
