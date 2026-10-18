@@ -68,3 +68,40 @@ export function familiesOf(word: Word, words: readonly Word[]): HanVietFamily[] 
     return others.length ? [{ ...u, others }] : []
   })
 }
+
+export interface HanVietEntry extends HanVietUnit {
+  /** The pack's words that contain this unit read this way, in pack order. */
+  words: Word[]
+}
+
+/**
+ * Every (unit, syllable) shared by at least `min` words — the "bảng chữ" page.
+ * Most-used first, then by syllable, so the keys that open the most words lead.
+ */
+export function hanVietTable(words: readonly Word[], min = 2): HanVietEntry[] {
+  return [...familyIndex(words).entries()]
+    .filter(([, list]) => list.length >= min)
+    .map(([k, list]) => {
+      const [char, hv] = k.split('|')
+      return { char, hv, words: list }
+    })
+    .sort((a, b) => b.words.length - a.words.length || a.hv.localeCompare(b.hv, 'vi'))
+}
+
+/** Lower case without Vietnamese marks, so "hoc" finds "học". */
+export function foldVi(s: string): string {
+  return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').trim()
+}
+
+/** Entries whose character, syllable or one of whose words matches the query. */
+export function searchHanViet(table: HanVietEntry[], query: string): HanVietEntry[] {
+  const q = foldVi(query)
+  if (!q) return table
+  return table.filter(
+    (e) =>
+      e.char === query.trim() ||
+      foldVi(e.hv) === q ||
+      foldVi(e.hv).startsWith(q) ||
+      e.words.some((w) => w.word.includes(query.trim()))
+  )
+}

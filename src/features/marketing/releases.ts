@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'Trang mới "Chữ Hán qua âm Hán Việt" trong Luyện tập: những chữ dùng chung trong nhiều từ, kèm âm Hán Việt — biết 学 là "học" là đoán được 学校, 学习. Tìm được bằng chữ hoặc âm Hán Việt không dấu ("hoc"). Tiếng Hàn cũng có: 학 là "học" trong 학생, 학교.',
+        'New page under Practice, "Characters by Sino-Vietnamese reading": characters shared by several words, with their Sino-Vietnamese reading — know 学 is "học" and guess 学校 and 学习. Search by character or by reading without marks ("hoc"). Korean has it too: 학 is "học" in 학생 and 학교.',
+      ],
+      [
         'Trang Pinyin có bài "Nghe chọn thanh": nghe một từ hai chữ rồi chọn đúng dấu thanh trong 4 cách viết — luyện tai cho cặp thanh điệu, chữ Hán chỉ hiện sau khi trả lời.',
         'The Pinyin page gets "Hear the tones": listen to a two-character word and pick the right tone marks out of four spellings — ear training for tone pairs, with the characters shown only after you answer.',
       ],

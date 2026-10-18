@@ -27,6 +27,7 @@ const Reading = lazy(() => import('./features/reading/Reading'))
 const Hangul = lazy(() => import('./features/hangul/Hangul'))
 const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
+const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Placement = lazy(() => import('./features/placement/Placement'))
 const Exam = lazy(() => import('./features/exam/Exam'))
 const Browse = lazy(() => import('./features/browse/Browse'))
@@ -103,6 +104,7 @@ export default function App() {
               <Route path="/hangul" element={<Hangul />} />
               <Route path="/pinyin" element={<Pinyin />} />
               <Route path="/measure-words" element={<MeasureWords />} />
+              <Route path="/han-viet" element={<HanVietTable />} />
               <Route path="/grammar/:unitId" element={<Grammar />} />
               <Route path="/phrases/:topicId" element={<Phrases />} />
               <Route path="/browse" element={<Browse />} />
