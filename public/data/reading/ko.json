@@ -839,6 +839,232 @@
           "answer": 1
         }
       ]
+    },
+    {
+      "id": "ko-birthday",
+      "emoji": "🎂",
+      "level": "A1",
+      "title": [
+        "Sinh nhật bạn",
+        "친구의 생일"
+      ],
+      "sentences": [
+        {
+          "en": "오늘은 친구 생일이에요.",
+          "vi": "Hôm nay là sinh nhật bạn tôi.",
+          "gloss": {
+            "오늘은": 37,
+            "친구": 8,
+            "생일이에요": 127
+          }
+        },
+        {
+          "en": "저는 가게에서 선물을 사요.",
+          "vi": "Tôi mua quà ở cửa hàng.",
+          "gloss": {
+            "저는": 183,
+            "가게에서": 115,
+            "선물을": 168,
+            "사요": 62
+          }
+        },
+        {
+          "en": "선물은 예쁜 가방이에요.",
+          "vi": "Món quà là một chiếc túi đẹp.",
+          "gloss": {
+            "선물은": 168,
+            "예쁜": 79,
+            "가방이에요": 48
+          }
+        },
+        {
+          "en": "저녁에 친구들과 식당에 가요.",
+          "vi": "Buổi tối tôi đi nhà hàng với các bạn.",
+          "gloss": {
+            "저녁에": 42,
+            "친구들과": 8,
+            "식당에": 32,
+            "가요": 52
+          }
+        },
+        {
+          "en": "우리는 같이 고기를 먹어요.",
+          "vi": "Chúng tôi cùng ăn thịt.",
+          "gloss": {
+            "같이": 187,
+            "고기를": 21,
+            "먹어요": 54
+          }
+        },
+        {
+          "en": "친구가 노래해요.",
+          "vi": "Bạn tôi hát.",
+          "gloss": {
+            "친구가": 8,
+            "노래해요": 149
+          }
+        },
+        {
+          "en": "우리는 사진을 찍어요.",
+          "vi": "Chúng tôi chụp ảnh.",
+          "gloss": {
+            "사진을": 167
+          }
+        },
+        {
+          "en": "정말 행복한 밤이에요.",
+          "vi": "Thật là một buổi tối hạnh phúc.",
+          "gloss": {
+            "정말": 184,
+            "행복한": 159,
+            "밤이에요": 126
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Tôi mua quà gì?",
+          "options": [
+            "Một quyển sách",
+            "Một chiếc túi",
+            "Một bộ quần áo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Buổi tối mọi người ăn gì?",
+          "options": [
+            "Cá",
+            "Thịt",
+            "Mì"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Ai hát?",
+          "options": [
+            "Tôi",
+            "Bạn tôi",
+            "Mẹ tôi"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "ko-library",
+      "emoji": "📚",
+      "level": "A2",
+      "title": [
+        "Một ngày ở thư viện",
+        "도서관에서"
+      ],
+      "sentences": [
+        {
+          "en": "주말에 도서관에 가요.",
+          "vi": "Cuối tuần tôi đi thư viện.",
+          "gloss": {
+            "주말에": 44,
+            "도서관에": 117,
+            "가요": 52
+          }
+        },
+        {
+          "en": "도서관은 아주 조용해요.",
+          "vi": "Thư viện rất yên tĩnh.",
+          "gloss": {
+            "아주": 185,
+            "도서관은": 117,
+            "조용해요": 161
+          }
+        },
+        {
+          "en": "저는 한국어 책을 읽어요.",
+          "vi": "Tôi đọc sách tiếng Hàn.",
+          "gloss": {
+            "저는": 183,
+            "한국어": 50,
+            "책을": 45,
+            "읽어요": 67
+          }
+        },
+        {
+          "en": "책이 조금 어려워요.",
+          "vi": "Sách hơi khó.",
+          "gloss": {
+            "조금": 186,
+            "책이": 45,
+            "어려워요": 155
+          }
+        },
+        {
+          "en": "친구도 와서 같이 공부해요.",
+          "vi": "Bạn tôi cũng đến và chúng tôi cùng học.",
+          "gloss": {
+            "같이": 187,
+            "친구도": 8,
+            "와서": 53,
+            "공부해요": 58
+          }
+        },
+        {
+          "en": "오후에 컴퓨터로 숙제를 해요.",
+          "vi": "Buổi chiều tôi làm bài tập trên máy tính.",
+          "gloss": {
+            "오후에": 125,
+            "컴퓨터로": 171,
+            "해요": 57
+          }
+        },
+        {
+          "en": "조금 쉬고 커피를 마셔요.",
+          "vi": "Tôi nghỉ một chút rồi uống cà phê.",
+          "gloss": {
+            "조금": 186,
+            "쉬고": 139,
+            "커피를": 19,
+            "마셔요": 55
+          }
+        },
+        {
+          "en": "저녁에 집에 와요.",
+          "vi": "Buổi tối tôi về nhà.",
+          "gloss": {
+            "저녁에": 42,
+            "집에": 27,
+            "와요": 53
+          }
+        }
+      ],
+      "questions": [
+        {
+          "q": "Thư viện thế nào?",
+          "options": [
+            "Rất yên tĩnh",
+            "Rất đông",
+            "Rất ồn"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Tôi đọc sách gì?",
+          "options": [
+            "Sách tiếng Anh",
+            "Sách tiếng Hàn",
+            "Truyện tranh"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Buổi chiều tôi làm gì?",
+          "options": [
+            "Làm bài tập trên máy tính",
+            "Đi chợ",
+            "Ngủ"
+          ],
+          "answer": 0
+        }
+      ]
     }
   ]
 }

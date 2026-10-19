@@ -118,3 +118,14 @@ và nút "bài tiếp theo" trong khoá học.
   - `SLOW = 0.7` nhân vào `ttsRate` trong `playLine`;
   - `Reading` truyền `next` (truyện kế tiếp trong `pack.stories`) xuống `StoryQuiz` qua prop
     `nextStory`.
+
+## Tiếng Hàn: thêm 2 truyện (20/10/2026)
+
+- **Sinh nhật bạn** (A1, `ko-birthday`): mua quà, đi nhà hàng, hát, chụp ảnh; ôn 생일, 선물, 가방,
+  식당, 같이, 노래하다, 행복하다. Chạm được 88% số từ.
+- **Một ngày ở thư viện** (A2, `ko-library`): đọc sách tiếng Hàn, học cùng bạn, làm bài trên máy
+  tính; ôn 도서관, 조용하다, 어렵다, 같이, 공부하다, 컴퓨터, 쉬다. Chọn chủ đề này vì đã có truyện
+  "Đi bệnh viện" (`ko-hospital`), nên không viết thêm một truyện khám bệnh gần như trùng nội dung.
+- Chỉ dùng từ đã có trong gói tiếng Hàn trên `main`. Mỗi câu ghi tay bảng ghép từ đã chia đuôi
+  với từ gốc (친절해요 → 친절하다), như các truyện tiếng Hàn trước.
+- Tổng cộng 10 truyện tiếng Hàn, 35 truyện cho cả app. Trang chủ đã cập nhật.

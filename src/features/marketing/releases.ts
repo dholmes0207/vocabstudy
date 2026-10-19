@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories',
     ],
     items: [
       [
@@ -38,6 +38,10 @@ export const RELEASES: Release[] = [
       [
         'Ngữ pháp tiếng Hàn thêm 2 bài: 못 ("không thể" — khác 안) và -(으)세요 để mời, nhờ lịch sự (앉으세요, 만드세요, 드세요).',
         'Korean grammar gets 2 lessons: 못 ("cannot", not the same as 안) and -(으)세요 for polite requests (앉으세요, 만드세요, 드세요).',
+      ],
+      [
+        'Thêm 2 truyện tiếng Hàn chạm từ là ra nghĩa: "Sinh nhật bạn" (A1) và "Một ngày ở thư viện" (A2), mỗi truyện 8 câu và 3 câu hỏi.',
+        'Two more Korean stories with tap-for-meaning: "A friend’s birthday" (A1) and "A day at the library" (A2), 8 sentences and 3 questions each.',
       ],
     ],
   },
