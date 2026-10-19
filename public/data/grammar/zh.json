@@ -2286,6 +2286,122 @@
           "vi": "Tôi cũng là học sinh."
         }
       ]
+    },
+    {
+      "id": "zh-xiang-yao",
+      "emoji": "🙋",
+      "level": "A1",
+      "title": [
+        "想 và 要: hai cách nói \"muốn\"",
+        "想 and 要: two kinds of \"want\""
+      ],
+      "summary": [
+        "想 + động từ = muốn (nhẹ nhàng); 要 + món đồ = cho tôi…, muốn lấy. \"Không muốn\" là 不想, còn 不要 là \"đừng\".",
+        "想 + verb = would like to; 要 + thing = I want / I'll have. \"Don't want to\" is 不想; 不要 means \"don't!\"."
+      ],
+      "explain": [
+        "想 + động từ = muốn làm gì, nói nhẹ nhàng: 我想喝咖啡 (tôi muốn uống cà phê).",
+        "要 + danh từ = muốn lấy, cho tôi…: gọi món, mua đồ đều dùng 要: 我要一杯茶 (cho tôi một ly trà). 要 + động từ cũng là \"muốn\", nhưng dứt khoát hơn 想.",
+        "\"Không muốn\" là 不想: 我不想去. Còn 不要 + động từ = đừng…: 请不要说话 (xin đừng nói chuyện).",
+        "想 + người hay nơi chốn = nhớ: 我很想你 (mình nhớ bạn lắm), 我想家了 (tôi nhớ nhà)."
+      ],
+      "patterns": [
+        "想 + động từ",
+        "要 + danh từ",
+        "不想 + động từ (không muốn)",
+        "不要 + động từ (đừng)"
+      ],
+      "examples": [
+        {
+          "en": "我想喝咖啡。",
+          "vi": "Tôi muốn uống cà phê.",
+          "read": "Wǒ xiǎng hē kāfēi."
+        },
+        {
+          "en": "我要一杯茶。",
+          "vi": "Cho tôi một ly trà.",
+          "read": "Wǒ yào yì bēi chá."
+        },
+        {
+          "en": "我不想去。",
+          "vi": "Tôi không muốn đi.",
+          "read": "Wǒ bù xiǎng qù."
+        },
+        {
+          "en": "请不要说话。",
+          "vi": "Xin đừng nói chuyện.",
+          "read": "Qǐng búyào shuōhuà."
+        },
+        {
+          "en": "我很想你。",
+          "vi": "Mình nhớ bạn lắm.",
+          "read": "Wǒ hěn xiǎng nǐ."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我想一杯茶。",
+          "right": "我要一杯茶。",
+          "why": "Muốn lấy một món đồ → 要 + danh từ. 想 đi với động từ: 我想喝茶."
+        },
+        {
+          "wrong": "我喝想咖啡。",
+          "right": "我想喝咖啡。",
+          "why": "想 đứng trước động từ, như \"muốn\" trong tiếng Việt."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "服务员，我___一杯咖啡。",
+          "options": [
+            "要",
+            "想"
+          ],
+          "answer": 0,
+          "explain": "Gọi món: 要 + danh từ (cho tôi…)."
+        },
+        {
+          "type": "choice",
+          "prompt": "我想___咖啡。",
+          "options": [
+            "喝",
+            "杯"
+          ],
+          "answer": 0,
+          "explain": "想 + động từ: 想喝 (muốn uống)."
+        },
+        {
+          "type": "choice",
+          "prompt": "请___说话。",
+          "options": [
+            "不要",
+            "不想"
+          ],
+          "answer": 0,
+          "explain": "Xin đừng… → 请不要 + động từ."
+        },
+        {
+          "type": "choice",
+          "prompt": "我很___你。",
+          "options": [
+            "想",
+            "要"
+          ],
+          "answer": 0,
+          "explain": "想 + người = nhớ: 我很想你."
+        },
+        {
+          "type": "order",
+          "en": "我​不​想​去。",
+          "vi": "Tôi không muốn đi."
+        },
+        {
+          "type": "order",
+          "en": "我​要​一​杯​茶。",
+          "vi": "Cho tôi một ly trà."
+        }
+      ]
     }
   ]
 }

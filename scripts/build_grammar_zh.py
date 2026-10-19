@@ -113,6 +113,11 @@ EXAMPLE_PINYIN = {
     '他们也都喜欢喝茶。': ('他们|也|都|喜欢|喝|茶。', 'tā men yě dōu xǐ huan hē chá'),
     '我们都不去。': ('我们|都|不|去。', 'wǒ men dōu bú qù'),
     '我们不都去。': ('我们|不|都|去。', 'wǒ men bù dōu qù'),
+    '我想喝咖啡。': ('我|想|喝|咖啡。', 'wǒ xiǎng hē kā fēi'),
+    '我要一杯茶。': ('我|要|一|杯|茶。', 'wǒ yào yì bēi chá'),
+    '我不想去。': ('我|不|想|去。', 'wǒ bù xiǎng qù'),
+    '请不要说话。': ('请|不要|说话。', 'qǐng bú yào shuō huà'),
+    '我很想你。': ('我|很|想|你。', 'wǒ hěn xiǎng nǐ'),
 }
 
 
@@ -625,6 +630,31 @@ UNITS = [
             ch('他们也___喜欢喝茶。', ['都', '也'], 0, '也 rồi đến 都: 也都 (cũng đều).'),
             od('我们|都|是|学生。', 'Chúng tôi đều là học sinh.'),
             od('我|也|是|学生。', 'Tôi cũng là học sinh.'),
+        ],
+    },
+    {
+        'id': 'zh-xiang-yao', 'emoji': '🙋', 'level': 'A1',
+        'title': ['想 và 要: hai cách nói "muốn"', '想 and 要: two kinds of "want"'],
+        'summary': ['想 + động từ = muốn (nhẹ nhàng); 要 + món đồ = cho tôi…, muốn lấy. "Không muốn" là 不想, còn 不要 là "đừng".', '想 + verb = would like to; 要 + thing = I want / I\'ll have. "Don\'t want to" is 不想; 不要 means "don\'t!".'],
+        'explain': [
+            '想 + động từ = muốn làm gì, nói nhẹ nhàng: 我想喝咖啡 (tôi muốn uống cà phê).',
+            '要 + danh từ = muốn lấy, cho tôi…: gọi món, mua đồ đều dùng 要: 我要一杯茶 (cho tôi một ly trà). 要 + động từ cũng là "muốn", nhưng dứt khoát hơn 想.',
+            '"Không muốn" là 不想: 我不想去. Còn 不要 + động từ = đừng…: 请不要说话 (xin đừng nói chuyện).',
+            '想 + người hay nơi chốn = nhớ: 我很想你 (mình nhớ bạn lắm), 我想家了 (tôi nhớ nhà).',
+        ],
+        'patterns': ['想 + động từ', '要 + danh từ', '不想 + động từ (không muốn)', '不要 + động từ (đừng)'],
+        'examples': [ex('我想喝咖啡。', 'Tôi muốn uống cà phê.'), ex('我要一杯茶。', 'Cho tôi một ly trà.'),
+                     ex('我不想去。', 'Tôi không muốn đi.'), ex('请不要说话。', 'Xin đừng nói chuyện.'),
+                     ex('我很想你。', 'Mình nhớ bạn lắm.')],
+        'mistakes': [mi('我想一杯茶。', '我要一杯茶。', 'Muốn lấy một món đồ → 要 + danh từ. 想 đi với động từ: 我想喝茶.'),
+                     mi('我喝想咖啡。', '我想喝咖啡。', '想 đứng trước động từ, như "muốn" trong tiếng Việt.')],
+        'exercises': [
+            ch('服务员，我___一杯咖啡。', ['要', '想'], 0, 'Gọi món: 要 + danh từ (cho tôi…).'),
+            ch('我想___咖啡。', ['喝', '杯'], 0, '想 + động từ: 想喝 (muốn uống).'),
+            ch('请___说话。', ['不要', '不想'], 0, 'Xin đừng… → 请不要 + động từ.'),
+            ch('我很___你。', ['想', '要'], 0, '想 + người = nhớ: 我很想你.'),
+            od('我|不|想|去。', 'Tôi không muốn đi.'),
+            od('我|要|一|杯|茶。', 'Cho tôi một ly trà.'),
         ],
     },
 ]

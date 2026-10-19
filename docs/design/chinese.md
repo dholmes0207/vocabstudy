@@ -484,3 +484,15 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - Câu chọn chỉ đưa ra phương án chắc chắn sai: 都 với chủ ngữ một người, 都都, 也也. Không dùng
   "我每天___喝茶" với hai phương án 都 / 也, vì 我每天也喝茶 vẫn đúng khi có ngữ cảnh.
 - Tổng cộng 19 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 23: bài 想 / 要 (20/10/2026)
+
+- **想 / 要** (`zh-xiang-yao`, A1). Người Việt hay dịch cả hai là "muốn", rồi nói 不要 khi
+  định nói "không muốn". Bài này tách rõ:
+  - 想 + động từ = muốn (nhẹ nhàng);
+  - 要 + danh từ = cho tôi…, muốn lấy (gọi món, mua đồ);
+  - "không muốn" là 不想, còn 不要 + động từ = đừng;
+  - 想 + người hay nơi chốn = nhớ.
+- Câu chọn chỉ đưa ra phương án chắc chắn sai: 我想一杯咖啡, 想杯咖啡, 请不想说话, 我很要你. Không
+  dùng 我不要去 làm câu sai, vì câu đó vẫn có người nói khi từ chối thẳng.
+- Tổng cộng 20 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
