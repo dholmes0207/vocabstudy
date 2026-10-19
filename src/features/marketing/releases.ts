@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch',
-      'Hear the numbers, in Korean; Grammar on a review schedule',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words',
     ],
     items: [
       [
@@ -26,6 +26,10 @@ export const RELEASES: Release[] = [
       [
         'Bài ngữ pháp đã đạt giờ quay lại để ôn sau 3, 7, 21 rồi 60 ngày, như từ vựng. Trang chủ có thẻ "Ôn ngữ pháp" khi có bài đến hạn; ôn trượt thì bài quay lại ngày hôm sau.',
         'Passed grammar lessons now come back for review after 3, 7, 21 and then 60 days, like words. Home shows a "Grammar review" card when one is due; a missed review comes back the next day.',
+      ],
+      [
+        'Gói tiếng Hàn tăng từ 192 lên 253 từ: người trong gia đình (아버지, 할머니, 오빠…), các thứ trong tuần, mùa xuân và mùa thu, số Hán Hàn và thuần Hàn, đồ dùng, nơi chốn (편의점, 우체국…), động từ, tính từ và trạng từ hay gặp — mỗi từ có cách đọc kiểu Việt và câu ví dụ.',
+        'The Korean pack grows from 192 to 253 words: family (아버지, 할머니, 오빠…), the days of the week, spring and autumn, Sino-Korean and native numbers, everyday things, places (편의점, 우체국…), and common verbs, adjectives and adverbs — each with a Vietnamese-style reading and an example.',
       ],
     ],
   },

@@ -118,3 +118,44 @@
   `exam-track.md`).
 - Thêm kỳ thi cho một gói mới thì thêm một mục vào `EXAMS` trong `lib/exams.ts` và mã gói
   vào `/exam` trong `lib/packContent.ts`.
+
+## Tiếng Hàn: thêm 61 từ (20/10/2026)
+
+**User**: "Tiếp tục cho mình". Hướng đã đề xuất là làm cho tiếng Hàn tương tự tiếng Trung. Gói
+tiếng Hàn mới có 192 từ, ít hơn hẳn 330 từ của tiếng Trung, và còn thiếu nhiều từ cơ bản của
+trình độ TOPIK I.
+
+**BA**
+
+- Thêm 61 từ, gói tăng lên **253 từ**:
+  - **gia đình**: 아버지, 어머니, 할머니, 할아버지, 오빠, 누나, 남편, 아내, 아들, 딸;
+  - **thứ trong tuần**: 화요일 → 토요일 (trước đây chỉ có 월요일, 일요일);
+  - **mùa**: 봄, 가을;
+  - **số Hán Hàn** (일, 이, 삼, 십, 백, 천, 만) và **số thuần Hàn** (넷, 다섯, 열). Đi đôi với
+    màn "Nghe số" của tiếng Hàn (`numbers.md`);
+  - **đồ vật**: 시계, 우산, 신발, 책상, 의자, 안경;
+  - **nơi chốn**: 백화점, 편의점, 우체국, 대학교;
+  - **động từ**: 입다, 씻다, 놀다, 웃다, 울다, 팔다, 보내다, 시작하다, 끝나다;
+  - **tính từ**: 길다, 짧다, 높다, 따뜻하다, 시원하다, 깨끗하다, 무겁다;
+  - **trạng từ**: 많이, 빨리, 천천히, 다시, 항상, 자주, 아직, 너무.
+- **Cách đọc kiểu Việt** viết tay theo quy ước sẵn có, có áp dụng biến âm:
+  - nối âm: 목요일 → mô-gyô-il;
+  - âm hữu thanh giữa từ: 아들 → a-đưl, 시계 → xi-ghê;
+  - âm ㅎ bị nuốt: 시원하다 → xi-uơ-na-đa, 천천히 → chơn-chơ-ni;
+  - bật hơi: 백화점 → be-khoa-chơm, 시작하다 → xi-cha-kha-đa;
+  - phụ âm căng: 오빠 → ôp-pa, 짧다 → chal-ta.
+- **Âm Hán Việt** có cho 23 từ gốc Hán, ví dụ 화요일 hoả diệu nhật, 우체국 bưu đệ cục, 편의점 tiện
+  nghi điếm. Các từ này được thêm vào trang "Gốc Hán qua âm Hán Việt".
+- **Nghĩa không trùng**: 많이 và 빨리 ghi "(trạng từ)" để không trùng với 많다 ("nhiều") và 빠르다
+  ("nhanh"). Mỗi câu hỏi chọn nghĩa vì vậy chỉ có một đáp án đúng.
+- Mỗi từ có câu ví dụ ngắn. Danh từ, số và trạng từ xuất hiện nguyên dạng trong câu, nên thẻ gạch
+  chân được.
+- Mọi từ đều nằm trong bộ chủ đề (gia đình, nơi chốn, thời gian, mua sắm, miêu tả, hoạt động
+  hằng ngày). Trang chủ ghi 253 từ, tổng "5.000+".
+
+**Dev**
+
+- `public/data/ko.json` được sửa tay như các đợt trước (không có script dựng); phiên bản 0.5.0.
+- `scripts/build_topics_ko.py` (danh sách bộ chủ đề) và `public/data/index.json`.
+- `koreanPack.test.ts`, `topics.test.ts`, `landingClaims.test.ts` kiểm tra số từ, nghĩa không
+  trùng, từ có trong câu ví dụ, âm Hán Việt một âm cho mỗi khối chữ.
