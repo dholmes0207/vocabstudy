@@ -1034,6 +1034,38 @@ UNITS = [
             {"type": "order", "en": "여기에 이름을 쓰세요.", "vi": "Hãy viết tên vào đây."},
         ],
     },
+    {
+        "id": "ko-do-man", "emoji": "➕", "level": "A1",
+        "title": ["도 và 만: \"cũng\" và \"chỉ\"", "도 and 만: \"also\" and \"only\""],
+        "summary": ["도 (cũng) và 만 (chỉ) gắn thẳng vào sau danh từ, thay cho 은/는, 이/가, 을/를.", "도 (also) and 만 (only) go right after the noun, in place of 은/는, 이/가, 을/를."],
+        "explain": [
+            "Danh từ + 도 = … cũng: 저도 학생이에요 (tôi cũng là học sinh), 커피도 마셔요 (cũng uống cà phê).",
+            "Danh từ + 만 = chỉ …: 물만 마셔요 (chỉ uống nước).",
+            "도 và 만 THAY cho 은/는, 이/가, 을/를: không nói 저는도, 커피를도. Với 에, 에서 thì giữ lại và thêm vào sau: 주말에만 (chỉ vào cuối tuần), 한국에도 (cả ở Hàn Quốc).",
+            "Không đổi theo patchim: 물도, 커피도, 물만, 커피만.",
+        ],
+        "patterns": ["Danh từ + 도 (cũng)", "Danh từ + 만 (chỉ)", "Danh từ + 에도 / 에만"],
+        "examples": [
+            {"en": "저도 학생이에요.", "vi": "Tôi cũng là học sinh."},
+            {"en": "동생도 커피를 좋아해요.", "vi": "Em tôi cũng thích cà phê."},
+            {"en": "저는 물만 마셔요.", "vi": "Tôi chỉ uống nước."},
+            {"en": "주말에만 운동해요.", "vi": "Tôi chỉ tập thể dục vào cuối tuần."},
+            {"en": "내일도 와요.", "vi": "Mai tôi cũng đến."},
+        ],
+        "mistakes": [
+            {"wrong": "저는도 학생이에요.", "right": "저도 학생이에요.", "why": "도 thay cho 은/는, không đứng sau 은/는."},
+            {"wrong": "커피를도 마셔요.", "right": "커피도 마셔요.", "why": "도 thay cho 을/를."},
+            {"wrong": "물을만 마셔요.", "right": "물만 마셔요.", "why": "만 gắn thẳng vào danh từ: 물만."},
+        ],
+        "exercises": [
+            {"type": "choice", "prompt": "친구가 학생이에요. 저___ 학생이에요.", "options": ["도", "는도"], "answer": 0, "explain": "Tôi cũng → 저도. 도 thay cho 는."},
+            {"type": "choice", "prompt": "차도 마시고 커피___ 마셔요. (cũng uống cà phê)", "options": ["도", "를도"], "answer": 0, "explain": "도 thay cho 를: 커피도."},
+            {"type": "choice", "prompt": "저는 물___ 마셔요. (chỉ uống nước)", "options": ["만", "도"], "answer": 0, "explain": "Chỉ → 만."},
+            {"type": "choice", "prompt": "주말___ 운동해요. (chỉ vào cuối tuần)", "options": ["에만", "만에"], "answer": 0, "explain": "Giữ 에 rồi thêm 만: 주말에만."},
+            {"type": "choice", "prompt": "민수는 한국 사람이 아니에요. 저___ 한국 사람이 아니에요.", "options": ["도", "는도"], "answer": 0, "explain": "Tôi cũng không phải → 저도."},
+            {"type": "order", "en": "저는 물만 마셔요.", "vi": "Tôi chỉ uống nước."},
+        ],
+    },
 ]
 
 PARTICLE_PAIRS = {('이에요', '예요'), ('은', '는'), ('이', '가'), ('을', '를')}

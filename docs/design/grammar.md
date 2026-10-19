@@ -180,3 +180,20 @@ Hai điểm người mới gặp ngay ở trình độ TOPIK I, bổ sung vào 1
   chỉ khác sắc thái: "바빠서 안 가요" vẫn đúng ngữ pháp, nên không dùng làm phương án sai.
 - Dữ liệu viết trong `scripts/build_grammar_ko.py`. Script kiểm tra chỗ trống, độ dài câu xếp chữ và
   patchim của các cặp trợ từ.
+
+## Tiếng Hàn: bài 도 và 만 (20/10/2026)
+
+**User**: "Mình nói 저는도 학생이에요 và bị sửa, nhưng không hiểu vì sao."
+
+**BA**
+
+- Bài `ko-do-man` (A1): 도 (cũng) và 만 (chỉ) gắn thẳng vào danh từ và thay cho 은/는, 이/가,
+  을/를. Với 에, 에서 thì giữ lại rồi thêm vào sau (주말에만, 한국에도). Hai tiểu từ này không đổi
+  theo patchim.
+- 5 câu ví dụ, 3 lỗi hay gặp (저는도, 커피를도, 물을만) và 6 bài tập.
+- Phương án sai trong câu chọn đều chắc chắn sai (는도, 를도, 만에). Câu chọn giữa 만 và 도 có ghi
+  nghĩa trong ngoặc, vì nếu không có thì cả hai đều đúng.
+- Trang chủ: 14 bài ngữ pháp tiếng Hàn.
+
+**Dev**: thêm vào `UNITS` trong `scripts/build_grammar_ko.py`, chạy lại script để ghi
+`public/data/grammar/ko.json`.
