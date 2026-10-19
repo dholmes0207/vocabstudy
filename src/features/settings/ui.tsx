@@ -12,7 +12,7 @@ export function Section({
   return (
     <section className={`card p-5 ${danger ? 'border-rose-200 dark:border-rose-900/60' : ''}`}>
       <h2
-        className={`mb-2 text-sm font-bold uppercase tracking-wide ${danger ? 'text-rose-500' : 'text-slate-400'}`}
+        className={`mb-2 text-sm font-bold uppercase tracking-wide ${danger ? 'text-rose-600 dark:text-rose-400' : 'text-slate-500 dark:text-slate-400'}`}
       >
         {title}
       </h2>
@@ -34,7 +34,7 @@ export function Row({
     <div className="flex flex-wrap items-center justify-between gap-3 py-3.5">
       <div className="min-w-0">
         <p className="font-medium">{label}</p>
-        {hint && <p className="text-sm text-slate-400">{hint}</p>}
+        {hint && <p className="text-sm text-slate-500 dark:text-slate-400">{hint}</p>}
       </div>
       <div className="max-w-full shrink-0">{children}</div>
     </div>

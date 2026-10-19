@@ -10,12 +10,16 @@ export default function SiteFooter({ className = '' }: { className?: string }) {
   const L = useTargetLang()
   return (
     <footer
-      className={`flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-xs text-slate-400 dark:text-slate-500 ${className}`}
+      className={`flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-xs text-slate-500 dark:text-slate-400 ${className}`}
     >
       <span>© {new Date().getFullYear()} VocaStudy</span>
-      <span aria-hidden="true">·</span>
+      <span aria-hidden="true" className="hidden sm:inline">
+        ·
+      </span>
       <span>{t(`Học từ vựng ${L.vi} mỗi ngày`, `${L.en} vocabulary, a little every day`)}</span>
-      <span aria-hidden="true">·</span>
+      <span aria-hidden="true" className="hidden sm:inline">
+        ·
+      </span>
       <a
         href={`mailto:${CONTACT_EMAIL}`}
         className="inline-flex items-center gap-1 font-semibold text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300"

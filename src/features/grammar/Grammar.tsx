@@ -67,7 +67,7 @@ export default function Grammar() {
   const { pack, error } = useGrammarPack()
   if (error)
     return (
-      <p className="card p-6 text-slate-500">
+      <p className="card p-6 text-slate-500 dark:text-slate-400">
         {t(
           'Ngôn ngữ này chưa có bài ngữ pháp.',
           'There are no grammar lessons for this language yet.'
@@ -122,7 +122,7 @@ function UnitList({ pack }: { pack: GrammarPack }) {
                   {u.emoji}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-xs font-semibold text-slate-400">
+                  <span className="block text-xs font-semibold text-slate-500 dark:text-slate-400">
                     {t(`Bài ${i + 1}`, `Lesson ${i + 1}`)} · {u.level}
                   </span>
                   <span className="block font-bold">{t(...u.title)}</span>
@@ -134,7 +134,7 @@ function UnitList({ pack }: { pack: GrammarPack }) {
                     aria-label={t('Đã xong', 'Done')}
                   />
                 ) : rec ? (
-                  <span className="shrink-0 text-sm font-bold tabular-nums text-slate-400">
+                  <span className="shrink-0 text-sm font-bold tabular-nums text-slate-500 dark:text-slate-400">
                     {rec.best}%
                   </span>
                 ) : null}
@@ -185,7 +185,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
     <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
       <Link
         to="/grammar"
-        className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-600"
+        className="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600"
       >
         <ArrowLeft className="h-4 w-4" /> {t('Tất cả bài', 'All lessons')}
       </Link>
@@ -195,7 +195,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
           {rec && ` · ${t('Điểm cao nhất', 'Best score')} ${rec.best}%`}
         </p>
         <h1 className="mt-1 text-2xl font-extrabold tracking-tight">{t(...unit.title)}</h1>
-        <p className="mt-1 text-slate-500">{t(...unit.summary)}</p>
+        <p className="mt-1 text-slate-500 dark:text-slate-400">{t(...unit.summary)}</p>
       </header>
 
       <section className="card p-5">
@@ -234,7 +234,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
                     {ex.read}
                   </span>
                 )}
-                <span className="text-sm text-slate-500">{ex.vi}</span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">{ex.vi}</span>
               </span>
             </li>
           ))}
@@ -254,7 +254,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
                 {m.right}
               </p>
-              <p className="ml-6 text-slate-500">{m.why}</p>
+              <p className="ml-6 text-slate-500 dark:text-slate-400">{m.why}</p>
             </li>
           ))}
         </ul>
@@ -374,7 +374,7 @@ function Practice({
           +{finished.xp} XP ⭐
         </p>
         {finished.score < PASS_SCORE && (
-          <p className="w-full text-sm text-slate-500">
+          <p className="w-full text-sm text-slate-500 dark:text-slate-400">
             {t(
               `Đạt ${PASS_SCORE}% để hoàn thành bài — xem lại ví dụ rồi thử lần nữa nhé.`,
               `Score ${PASS_SCORE}% to complete the lesson — look at the examples again, then retry.`
@@ -395,7 +395,7 @@ function Practice({
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Kết thúc phiên', 'End session')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
@@ -406,13 +406,13 @@ function Practice({
             style={{ width: `${(idx / items.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{items.length}
         </span>
       </div>
 
       <div className="card space-y-5 p-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {q.type === 'choice'
             ? t('Chọn từ đúng cho chỗ trống', 'Pick the word for the gap')
             : t('Xếp các từ thành câu', 'Put the words in order')}

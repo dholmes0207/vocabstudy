@@ -16,7 +16,7 @@ export default function HanVietFamily({ word }: { word: Word }) {
   if (!families.length) return null
   return (
     <div className="text-left">
-      <h3 className="mb-1.5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-slate-400">
+      <h3 className="mb-1.5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
         <Puzzle className="h-3.5 w-3.5" aria-hidden="true" />
         {t('Cùng chữ Hán Việt', 'Same Sino-Vietnamese character')}
       </h3>

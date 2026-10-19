@@ -39,6 +39,10 @@ VOWEL = {
     "AA": "a", "AE": "e", "AH": "ơ", "AO": "o", "AW": "ao", "AY": "ai", "EH": "e",
     "ER": "ơ", "EY": "ây", "IH": "i", "IY": "i", "OW": "âu", "OY": "oi", "UH": "u", "UW": "u",
 }
+# A stressed long vowel is doubled so the pairs Vietnamese learners mix up stay
+# apart: sheep SHIIP / ship SHIP, leave LIIV / live LIV, food PHUUĐ / foot PHUT.
+# Unstressed ones (the -y of "happy", the u of "to") stay single; see _vr_token.
+LONG_STRESSED = {"IY": "ii", "UW": "uu"}
 CONS = {
     "B": "b", "CH": "ch", "D": "đ", "DH": "đ", "F": "ph", "G": "g", "HH": "h", "JH": "gi",
     "K": "k", "L": "l", "M": "m", "N": "n", "NG": "ng", "P": "p", "R": "r", "S": "s",
@@ -77,7 +81,12 @@ def _vr_token(word: str) -> str:
     out = []
     for s in syls:
         t = "".join(CONS.get(_base(p), "") for p in s["onset"])
-        t += VOWEL.get(_base(s["vowel"]), "")
+        v = _base(s["vowel"])
+        # Primary stress, or secondary stress in a closed syllable (ath-LEET,
+        # SEA-food). An open one with secondary stress — the -ty of "ability" —
+        # sounds short in speech, so it stays single.
+        stressed = s["vowel"].endswith("1") or (s["vowel"].endswith("2") and bool(s["coda"]))
+        t += (LONG_STRESSED.get(v) if stressed else None) or VOWEL.get(v, "")
         t += "".join(CONS.get(_base(p), "") for p in s["coda"])
         out.append(t.upper() if s["vowel"].endswith("1") else t)
     return "-".join(out)

@@ -49,7 +49,7 @@ export default function Pinyin() {
           <span className="text-aurora">{t('Pinyin & thanh điệu', 'Pinyin & tones')}</span>{' '}
           <span aria-hidden="true">🎵</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Pinyin ghi cách đọc chữ Hán bằng chữ Latin: phụ âm đầu + vần + thanh điệu. Tiếng Việt cũng có thanh, nên bạn đã có lợi thế — chỉ cần nghe ra 4 thanh và thanh nhẹ.',
             'Pinyin spells how a character is read in Latin letters: initial + final + tone. Vietnamese has tones too, so you start ahead — you just need to hear the four tones and the neutral one.'
@@ -90,7 +90,7 @@ function Tones() {
       <h2 className="font-bold">
         {t('Bốn thanh và thanh nhẹ', 'Four tones and the neutral tone')}
       </h2>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Cùng âm "ma", đổi thanh là đổi nghĩa. Chạm để nghe.',
           'The same "ma" means different things in each tone. Tap to listen.'
@@ -112,7 +112,7 @@ function Tones() {
                   {tone.n < 5 ? t(`Thanh ${tone.n}`, `Tone ${tone.n}`) : t('Thanh nhẹ', 'Neutral')}{' '}
                   · <span className="text-base">{tone.char}</span> {tone.read} — {tone.meaning}
                 </span>
-                <span className="text-slate-500">{t(...tone.how)}</span>
+                <span className="text-slate-500 dark:text-slate-400">{t(...tone.how)}</span>
               </span>
               <Volume2 className="mt-1 h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
             </button>
@@ -143,7 +143,7 @@ function Sandhi() {
                   {t('viết', 'written')} <b>{r.read}</b> → {t('đọc', 'said')}{' '}
                   <b className="text-brand-700 dark:text-brand-300">{r.said}</b>
                 </span>
-                <span className="text-slate-500">{t(...r.rule)}</span>
+                <span className="text-slate-500 dark:text-slate-400">{t(...r.rule)}</span>
               </span>
               <Volume2 className="mt-1 h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
             </button>
@@ -164,7 +164,7 @@ function SoundGroup({ title, note, sounds }: { title: string; note: string; soun
   return (
     <section>
       <h2 className="font-bold">{title}</h2>
-      <p className="text-sm text-slate-500">{note}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400">{note}</p>
       <ul className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
         {sounds.map((s) => (
           <li key={s.ch} className="min-w-0">
@@ -201,7 +201,7 @@ function SoundGroup({ title, note, sounds }: { title: string; note: string; soun
             <p>
               <b className="text-lg">{picked.ch}</b> · {picked.char} <b>{picked.read}</b>
             </p>
-            <p className="mt-1 text-slate-500">💡 {t(...picked.hint)}</p>
+            <p className="mt-1 text-slate-500 dark:text-slate-400">💡 {t(...picked.hint)}</p>
             {picked.word && (
               <button
                 type="button"
@@ -296,7 +296,7 @@ function Quiz({
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Kết thúc phiên', 'End session')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
@@ -307,13 +307,13 @@ function Quiz({
             style={{ width: `${(idx / questions.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{questions.length}
         </span>
       </div>
 
       <div className="card space-y-5 p-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {q.kind === 'tone'
             ? t('Chữ này mang thanh mấy?', 'Which tone does this character have?')
             : t('Từ này đọc là gì?', 'How do you read this word?')}
@@ -343,7 +343,7 @@ function Quiz({
           })}
         </div>
         {picked !== null && (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             {q.prompt} = <b className="text-slate-700 dark:text-slate-200">{q.note}</b>
           </p>
         )}

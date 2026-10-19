@@ -65,7 +65,7 @@ export default function SessionComplete({
         <h1 className="mt-4 text-2xl font-extrabold">
           <span className="text-aurora">{title ?? t('Hoàn thành!', 'All done!')}</span>
         </h1>
-        <p className="mt-1 text-slate-500">{praise}</p>
+        <p className="mt-1 text-slate-500 dark:text-slate-400">{praise}</p>
         <GoalNudge />
 
         {showScore && total > 0 && (
@@ -107,7 +107,7 @@ function Stat({
         <CountUp to={value} />
         {suffix}
       </p>
-      <p className="text-xs text-slate-400">{label}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
     </div>
   )
 }

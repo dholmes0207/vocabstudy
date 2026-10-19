@@ -73,7 +73,7 @@ export default function Placement() {
             'Not sure? Tap "I don’t know this word". Guessing would start your lessons too far ahead.'
           )}
         </p>
-        <p className="text-slate-500">
+        <p className="text-slate-500 dark:text-slate-400">
           {t(
             'Bài này không cộng XP và không đổi lịch ôn — nó chỉ chọn chỗ bắt đầu.',
             'No XP and no change to your reviews — it only picks where to start.'
@@ -140,7 +140,7 @@ function Quiz({
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Dừng kiểm tra', 'Stop the check')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
@@ -159,7 +159,7 @@ function Quiz({
       </div>
 
       <div className="card space-y-5 p-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('Từ này nghĩa là gì?', 'What does this word mean?')}
         </p>
         <div>
@@ -262,7 +262,7 @@ function Result({ outcome, onAgain }: { outcome: Outcome; onAgain: () => void })
             )}
           </p>
         )}
-        <p className="text-sm text-slate-500">
+        <p className="text-sm text-slate-500 dark:text-slate-400">
           {t(
             `Đây là ước lượng từ ${asked} câu (đúng ${correct}).`,
             `This is an estimate from ${asked} questions (${correct} right).`

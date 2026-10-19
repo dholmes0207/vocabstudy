@@ -91,7 +91,7 @@ export default function Browse() {
           <span className="text-aurora">{t('Tra cứu từ vựng', 'Dictionary')}</span>{' '}
           <span aria-hidden="true">📚</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             `${pack.meta.count} từ · tìm kiếm và lọc theo ý bạn.`,
             `${pack.meta.count} words · search and filter as you like.`
@@ -109,7 +109,7 @@ export default function Browse() {
       <div className="relative">
         <Search
           aria-hidden
-          className="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+          className="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500 dark:text-slate-400"
         />
         <input
           type="search"
@@ -178,14 +178,14 @@ export default function Browse() {
         ))}
       </div>
 
-      <p className="text-sm text-slate-400">
+      <p className="text-sm text-slate-500 dark:text-slate-400">
         {filtered.length} {t('kết quả', filtered.length === 1 ? 'result' : 'results')}
         {filtered.length > PAGE_SIZE ? ` · trang ${safePage + 1}/${pageCount}` : ''}
       </p>
 
       {/* Results */}
       {pageItems.length === 0 ? (
-        <p className="py-10 text-center text-slate-400">
+        <p className="py-10 text-center text-slate-500 dark:text-slate-400">
           {t('Không tìm thấy từ nào phù hợp.', 'No matching words.')}
         </p>
       ) : (
@@ -214,7 +214,7 @@ export default function Browse() {
           >
             <ChevronLeft className="h-4 w-4" /> {t('Trước', 'Previous')}
           </button>
-          <span className="text-sm tabular-nums text-slate-500">
+          <span className="text-sm tabular-nums text-slate-500 dark:text-slate-400">
             {safePage + 1} / {pageCount}
           </span>
           <button
@@ -275,11 +275,11 @@ function WordRow({
                 )}
               </span>
             )}
-            <span className="block truncate text-sm text-slate-500">
+            <span className="block truncate text-sm text-slate-500 dark:text-slate-400">
               {word.meaning}
               {/* Sino-Vietnamese reading (Chinese, Sino-Korean words): safe next to the meaning. */}
               {word.hanViet && (
-                <span className="text-slate-400">
+                <span className="text-slate-500 dark:text-slate-400">
                   {' · '}
                   <span className="uppercase tracking-wide">{word.hanViet}</span>
                 </span>

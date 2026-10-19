@@ -97,7 +97,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
     >
       <SessionChanges before={before} />
       {correct < total && (
-        <p className="w-full text-sm text-slate-500">
+        <p className="w-full text-sm text-slate-500 dark:text-slate-400">
           {t(
             'Những từ bạn quên đã được học lại ngay trong buổi và sẽ được hỏi lại vào ngày mai.',
             'The words you forgot were relearned right away and will be asked again tomorrow.'
@@ -120,7 +120,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
           <span className="text-aurora">{t('Ôn tập', 'Review')}</span>{' '}
           <span aria-hidden="true">🔁</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(`${due.length} từ đến hạn`, `${due.length} words due`)} ·{' '}
           {style === 'recall'
             ? t(

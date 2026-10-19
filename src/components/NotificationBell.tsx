@@ -130,7 +130,9 @@ export default function NotificationBell() {
                     />
                     <span className="min-w-0 flex-1">
                       <span className="block text-sm font-semibold">{t(...n.title)}</span>
-                      <span className="text-xs text-slate-400">{formatLongDate(n.date, lang)}</span>
+                      <span className="text-xs text-slate-500 dark:text-slate-400">
+                        {formatLongDate(n.date, lang)}
+                      </span>
                     </span>
                     {!read.has(n.id) && (
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand-500">

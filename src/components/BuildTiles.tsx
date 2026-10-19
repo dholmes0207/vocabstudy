@@ -41,7 +41,7 @@ export default function BuildTiles({
             </span>
           ))
         ) : (
-          <span className="self-center text-sm text-slate-400">
+          <span className="self-center text-sm text-slate-500 dark:text-slate-400">
             {t('Chạm các ô bên dưới theo thứ tự…', 'Tap the tiles below in order…')}
           </span>
         )}
@@ -70,7 +70,7 @@ export default function BuildTiles({
         </div>
       )}
       {order.mistakes > 0 && !order.done && (
-        <p className="text-xs text-amber-600 dark:text-amber-400">
+        <p className="text-xs text-amber-700 dark:text-amber-400">
           {t(
             `Nhầm ${order.mistakes} lần — cứ bình tĩnh nhé.`,
             `${order.mistakes} wrong taps — take your time.`

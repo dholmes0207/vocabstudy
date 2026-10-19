@@ -196,7 +196,7 @@ function MarketingFooter() {
         ))}
       </div>
       <div className="border-t border-slate-200/70 dark:border-white/10">
-        <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-slate-400">
+        <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-slate-500 dark:text-slate-400">
           © {new Date().getFullYear()} VocaStudy. {t('Bảo lưu mọi quyền.', 'All rights reserved.')}
         </p>
       </div>

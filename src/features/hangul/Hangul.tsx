@@ -55,7 +55,7 @@ export default function Hangul() {
           <span className="text-aurora">{t('Bảng chữ cái Hangul', 'The Hangul alphabet')}</span>{' '}
           <span aria-hidden="true">🔤</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Hangul có 14 phụ âm và 10 nguyên âm cơ bản. Chạm vào một chữ để nghe và xem ví dụ. Cách đọc ghi theo kiểu tiếng Việt cho dễ nhớ; tai nghe vẫn là chuẩn nhất.',
             'Hangul has 14 consonants and 10 basic vowels. Tap a letter to hear it and see an example. Readings are spelled the Vietnamese way to help you remember; your ear is still the best guide.'
@@ -119,7 +119,7 @@ function BlockIntro() {
   return (
     <section className="card p-5">
       <h2 className="font-bold">{t('Mỗi chữ là một khối', 'Every syllable is a block')}</h2>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Phụ âm đầu + nguyên âm, có khi thêm phụ âm cuối (받침) ở dưới. Đọc từ trái sang phải, từ trên xuống dưới.',
           'First consonant + vowel, sometimes a final consonant (받침) underneath. Read left to right, top to bottom.'
@@ -134,7 +134,7 @@ function BlockIntro() {
             className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-left transition hover:bg-brand-50 dark:bg-slate-800/60 dark:hover:bg-brand-950"
           >
             <span className="text-4xl font-bold">{b.syl}</span>
-            <span className="text-sm text-slate-500">
+            <span className="text-sm text-slate-500 dark:text-slate-400">
               = {b.parts.join(' + ')}
               <br />
               <b className="text-slate-700 dark:text-slate-200">"{readSyllable(b.syl)}"</b>
@@ -157,7 +157,7 @@ function LetterGroup({ title, note, letters }: { title: string; note: string; le
   return (
     <section>
       <h2 className="font-bold">{title}</h2>
-      <p className="text-sm text-slate-500">{note}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400">{note}</p>
       <ul className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-7">
         {letters.map((j) => (
           <li key={j.ch} className="min-w-0">
@@ -193,11 +193,15 @@ function LetterGroup({ title, note, letters }: { title: string; note: string; le
           <div className="min-w-0 text-sm">
             <p>
               <b className="text-lg">{picked.ch}</b>
-              {picked.name && <span className="text-slate-500"> · {picked.name}</span>} ·{' '}
-              {t('đọc', 'sounds like')} <b>{picked.vi}</b> · {t('mẫu', 'sample')}{' '}
+              {picked.name && (
+                <span className="text-slate-500 dark:text-slate-400"> · {picked.name}</span>
+              )}{' '}
+              · {t('đọc', 'sounds like')} <b>{picked.vi}</b> · {t('mẫu', 'sample')}{' '}
               <b>{picked.sample}</b> ({readSyllable(picked.sample)})
             </p>
-            {picked.tip && <p className="mt-1 text-slate-500">💡 {t(...picked.tip)}</p>}
+            {picked.tip && (
+              <p className="mt-1 text-slate-500 dark:text-slate-400">💡 {t(...picked.tip)}</p>
+            )}
             {picked.word && (
               <button
                 type="button"
@@ -229,7 +233,9 @@ function Builder() {
 
   const row = (label: string, options: string[], value: string, set: (v: string) => void) => (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+        {label}
+      </p>
       <div className="mt-1.5 flex flex-wrap gap-1.5" role="radiogroup" aria-label={label}>
         {options.map((o) => (
           <button
@@ -264,7 +270,7 @@ function Builder() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h2 className="font-bold">{t('Tự ghép chữ', 'Build a block')}</h2>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             {t(
               'Chọn phụ âm đầu, nguyên âm và (nếu muốn) phụ âm cuối.',
               'Pick a first consonant, a vowel and, if you like, a final one.'
@@ -297,7 +303,7 @@ function FinalSounds() {
   return (
     <section>
       <h2 className="font-bold">{t('Phụ âm cuối (받침)', 'Final consonants (받침)')}</h2>
-      <p className="text-sm text-slate-500">
+      <p className="text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Ở cuối khối, mọi phụ âm chỉ còn 7 âm. Âm tắc (c, t, p) đọc ngắn, dứt khoát — nên cách đọc có dấu sắc.',
           'At the end of a block every consonant falls into 7 sounds. The stops (k, t, p) are short and clipped.'
@@ -316,7 +322,7 @@ function FinalSounds() {
               </span>
               <span className="min-w-0 flex-1 text-sm">
                 <span className="block font-semibold">{f.letters}</span>
-                <span className="text-slate-500">
+                <span className="text-slate-500 dark:text-slate-400">
                   {f.word} → {f.read}
                 </span>
               </span>
@@ -395,7 +401,7 @@ function Quiz({
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Kết thúc phiên', 'End session')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
@@ -406,13 +412,13 @@ function Quiz({
             style={{ width: `${(idx / questions.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{questions.length}
         </span>
       </div>
 
       <div className="card space-y-5 p-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {q.kind === 'letter'
             ? t('Chữ này đọc là gì?', 'How does this letter sound?')
             : q.kind === 'syllable'
@@ -443,7 +449,7 @@ function Quiz({
           })}
         </div>
         {picked !== null && q.note && (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             {q.prompt} = <b className="text-slate-700 dark:text-slate-200">{q.note}</b>
           </p>
         )}

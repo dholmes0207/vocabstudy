@@ -245,7 +245,7 @@ export default function QuizRunner({
         {onExit && (
           <button
             onClick={onExit}
-            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
             aria-label={t('Kết thúc phiên', 'End session')}
             title={t('Kết thúc (câu đã trả lời vẫn được lưu)', 'End (answers so far are saved)')}
           >
@@ -258,15 +258,15 @@ export default function QuizRunner({
             style={{ width: `${(idx / queue.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{queue.length}
         </span>
       </div>
       {caption && (
-        <p className="-mt-3 mb-3 text-xs font-medium text-slate-400">
+        <p className="-mt-3 mb-3 text-xs font-medium text-slate-500 dark:text-slate-400">
           {caption}
           {item.attempt > 1 && (
-            <span className="ml-2 inline-flex items-center gap-1 text-amber-600 dark:text-amber-400">
+            <span className="ml-2 inline-flex items-center gap-1 text-amber-700 dark:text-amber-400">
               <RotateCcw className="h-3 w-3" /> {t('thử lại', 'retry')}
             </span>
           )}
@@ -275,7 +275,7 @@ export default function QuizRunner({
 
       <div className="card p-6">
         {listenPaused && (
-          <p className="-mt-2 mb-3 flex flex-wrap items-center gap-x-2 text-xs text-slate-500">
+          <p className="-mt-2 mb-3 flex flex-wrap items-center gap-x-2 text-xs text-slate-500 dark:text-slate-400">
             <VolumeX className="h-3.5 w-3.5" aria-hidden="true" />
             {t('Câu nghe đang tạm tắt.', 'Listening questions are paused.')}
             <button
@@ -288,7 +288,7 @@ export default function QuizRunner({
           </p>
         )}
         <div className="flex flex-wrap items-center gap-2">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t(TASK[q.mode][0], TASK[q.mode][1])}
           </p>
           {word && (q.mode === 'en-to-vi' || q.mode === 'vi-to-en') && (
@@ -339,7 +339,7 @@ export default function QuizRunner({
                     stopPronounce()
                     pauseListening()
                   }}
-                  className="btn-ghost h-9 gap-1.5 text-xs text-slate-500"
+                  className="btn-ghost h-9 gap-1.5 text-xs text-slate-500 dark:text-slate-400"
                 >
                   <VolumeX className="h-4 w-4" aria-hidden="true" />
                   {t(
@@ -466,7 +466,7 @@ export default function QuizRunner({
                   }`}
                 >
                   <span className="flex items-center gap-3">
-                    <kbd className="hidden h-6 w-6 shrink-0 place-items-center rounded-md bg-slate-100 text-xs text-slate-400 dark:bg-slate-800 sm:grid">
+                    <kbd className="hidden h-6 w-6 shrink-0 place-items-center rounded-md bg-slate-100 text-xs text-slate-500 dark:text-slate-400 dark:bg-slate-800 sm:grid">
                       {i + 1}
                     </kbd>
                     {opt.text}
@@ -487,7 +487,7 @@ export default function QuizRunner({
                 <p className="font-semibold text-emerald-600">
                   ✓ {praise(q.wordId + item.attempt, lang)}
                   {isTyping && q.surface && norm(input) !== norm(q.surface) && (
-                    <span className="ml-1 font-normal text-slate-500">
+                    <span className="ml-1 font-normal text-slate-500 dark:text-slate-400">
                       {t('Trong câu, từ này được viết là', 'In this sentence it is written')}{' '}
                       <b>{q.surface}</b>.
                     </span>
@@ -505,7 +505,7 @@ export default function QuizRunner({
                   <WordInsight word={word} ttsLang={ttsLang} variant="compact" />
                 </div>
                 {willReturn && (
-                  <p className="flex items-center gap-1.5 text-sm text-amber-600 dark:text-amber-400">
+                  <p className="flex items-center gap-1.5 text-sm text-amber-700 dark:text-amber-400">
                     <RotateCcw className="h-4 w-4" />{' '}
                     {t(
                       'Từ này sẽ quay lại sau vài câu nữa.',
@@ -589,7 +589,10 @@ function CorrectEcho({
       <p>
         {word.emoji && <span aria-hidden>{word.emoji} </span>}
         <b>{word.word}</b>
-        {word.viRead && <span className="text-slate-400"> ({word.viRead})</span>} — {word.meaning}
+        {word.viRead && (
+          <span className="text-slate-500 dark:text-slate-400"> ({word.viRead})</span>
+        )}{' '}
+        — {word.meaning}
       </p>
       {showSentence && word.exampleEn && (
         <p className="flex items-start gap-2">
@@ -603,7 +606,9 @@ function CorrectEcho({
           />
           <span className="pt-1">
             <HighlightExample sentence={word.exampleEn} word={word.word} pos={word.posCategory} />
-            <span className="block italic text-slate-400">{word.exampleVi}</span>
+            <span className="block italic text-slate-500 dark:text-slate-400">
+              {word.exampleVi}
+            </span>
           </span>
         </p>
       )}
@@ -630,7 +635,7 @@ function Skeleton({
       {cells.map((cell, i) => {
         if (!cell.isLetter) {
           return (
-            <span key={i} className="px-1 text-2xl font-bold text-slate-400">
+            <span key={i} className="px-1 text-2xl font-bold text-slate-500 dark:text-slate-400">
               {cell.ch === ' ' ? ' ' : cell.ch}
             </span>
           )

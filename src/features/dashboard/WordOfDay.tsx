@@ -34,7 +34,7 @@ export default function WordOfDay() {
         <i>✦</i>
         <i>✦</i>
       </span>
-      <p className="text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">
+      <p className="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
         ✨ {t('Từ của ngày', 'Word of the day')}
       </p>
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -46,7 +46,7 @@ export default function WordOfDay() {
         <span className="text-2xl font-extrabold">{w.word}</span>
         <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
         {w.viRead && (
-          <span className="text-sm text-slate-400">
+          <span className="text-sm text-slate-500">
             {readLabel} {w.viRead}
           </span>
         )}

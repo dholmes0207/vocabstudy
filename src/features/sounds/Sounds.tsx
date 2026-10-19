@@ -19,15 +19,22 @@ const READING_TIPS = [
   [
     ['VIẾT HOA', 'CAPITALS'],
     [
-      'là âm nhấn: đọc to, dài và cao hơn — kơm-PYU-tơ.',
-      'mark the stressed syllable: louder, longer, higher — kơm-PYU-tơ.',
+      'là âm nhấn: đọc to, dài và cao hơn — kơm-PYUU-tơ.',
+      'mark the stressed syllable: louder, longer, higher — kơm-PYUU-tơ.',
+    ],
+  ],
+  [
+    ['ii, uu', 'ii, uu'],
+    [
+      'nguyên âm viết đôi là âm kéo dài: sheep → SHIIP (con cừu) khác ship → SHIP (con tàu).',
+      'a doubled vowel is a long sound: sheep → SHIIP is not ship → SHIP.',
     ],
   ],
   [
     ['đ / d', 'đ / d'],
     [
-      '"đ" là /d/ tiếng Anh (red → REĐ); "d" là /z/ như giọng Bắc (zoo → DU).',
-      '"đ" is English /d/ (red → REĐ); "d" is /z/ as in Northern Vietnamese (zoo → DU).',
+      '"đ" là /d/ tiếng Anh (red → REĐ); "d" là /z/ như giọng Bắc (zoo → DUU).',
+      '"đ" is English /d/ (red → REĐ); "d" is /z/ as in Northern Vietnamese (zoo → DUU).',
     ],
   ],
   [
@@ -74,7 +81,7 @@ export default function Sounds() {
           </span>{' '}
           <span aria-hidden="true">👄</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Những âm người Việt hay đọc sai nhất — cách đặt lưỡi, lỗi thường gặp, và trò “thử tai” để nghe ra khác biệt. Bấm vào từ nào cũng nghe được.',
             'The sounds Vietnamese speakers most often get wrong — how to shape them, the usual slips, and an “ear test” to hear the difference. Tap any word to hear it.'
@@ -96,10 +103,10 @@ export default function Sounds() {
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-sm text-slate-500">
+        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
           {t(
-            'Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như “ship” và “sheep”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.',
-            'The respelling is only an approximation in Vietnamese letters. Some differences cannot be written (like “ship” and “sheep”) — your ear is the teacher, so always listen to the model voice.'
+            'Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như “bad” và “bed”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.',
+            'The respelling is only an approximation in Vietnamese letters. Some differences cannot be written (like “bad” and “bed”) — your ear is the teacher, so always listen to the model voice.'
           )}
         </p>
       </section>
@@ -127,7 +134,7 @@ function WordChip({ text, play, word }: { text: string; play: Play; word?: Word 
     >
       <Volume2 className="h-3.5 w-3.5 text-brand-500" />
       <b>{text}</b>
-      {word && <span className="text-xs text-slate-400">/{word.ipa}/</span>}
+      {word && <span className="text-xs text-slate-500 dark:text-slate-400">/{word.ipa}/</span>}
     </button>
   )
 }
@@ -164,7 +171,7 @@ function Lesson({
       </div>
       {lesson.pairs.length > 0 && (
         <>
-          <p className="mt-4 text-sm font-semibold text-slate-500">
+          <p className="mt-4 text-sm font-semibold text-slate-500 dark:text-slate-400">
             {t('Cặp dễ nhầm', 'Easily confused pairs')}
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
@@ -174,7 +181,7 @@ function Lesson({
                 className="inline-flex items-center gap-1 rounded-2xl bg-slate-100/80 p-1 dark:bg-slate-800/70"
               >
                 <WordChip text={a} play={play} />
-                <span className="text-slate-400">↔</span>
+                <span className="text-slate-500 dark:text-slate-400">↔</span>
                 <WordChip text={b} play={play} />
               </span>
             ))}
@@ -226,7 +233,7 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
         <p className="text-sm font-semibold">
           {t('Bạn nghe thấy từ nào?', 'Which word did you hear?')}
         </p>
-        <span className="text-xs text-slate-500">
+        <span className="text-xs text-slate-500 dark:text-slate-400">
           {t('Đúng', 'Right')} {score.right}/{score.total}
         </span>
       </div>

@@ -35,7 +35,7 @@ Phần học chạy **hoàn toàn phía trình duyệt**. Có **service worker**
 
 ### 🔤 Phiên âm & cách đọc
 
-Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). _Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural._
+Mỗi từ có **phiên âm IPA** (chuẩn General American, vd `/əˈbɪləˌti/`) và **gợi ý cách đọc kiểu Việt** (vd `ơ-BI-lơ-ti`, âm tiết nhấn viết HOA; nguyên âm dài có trọng âm viết đôi để tách các cặp dễ nhầm: sheep `SHIIP` / ship `SHIP`) — giúp người mới chưa quen ký hiệu IPA. Sinh sẵn bằng `scripts/generate_phonetics.py` (IPA từ `eng-to-ipa`, cách đọc suy ra từ CMU Pronouncing Dictionary). _Cách đọc kiểu Việt là gợi ý gần đúng — âm chuẩn vẫn là file audio Neural._
 
 ### 🎙️ Luyện nói (ghi âm + chấm điểm)
 

@@ -23,7 +23,7 @@ export default function Practice() {
           <span className="text-aurora">{t('Luyện tập', 'Practice')}</span>{' '}
           <span aria-hidden="true">💪</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Dùng lại những từ đã gặp theo nhiều cách — càng đa dạng càng nhớ lâu.',
             'Use the words you have met in many ways — the more varied, the longer they stick.'
@@ -45,7 +45,9 @@ export default function Practice() {
             </span>
             <span className="min-w-0 flex-1">
               <span className="block font-bold">{t(e.title, e.titleEn)}</span>
-              <span className="block text-sm text-slate-500">{t(e.desc, e.descEn)}</span>
+              <span className="block text-sm text-slate-500 dark:text-slate-400">
+                {t(e.desc, e.descEn)}
+              </span>
             </span>
             <ArrowRight className="h-5 w-5 shrink-0 text-slate-300" />
           </Link>

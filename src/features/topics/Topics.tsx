@@ -69,7 +69,7 @@ export default function Topics() {
             total={total}
           >
             {correct < total && (
-              <p className="w-full text-sm text-slate-500">
+              <p className="w-full text-sm text-slate-500 dark:text-slate-400">
                 {t(
                   'Những từ bạn quên đã được đưa vào lịch ôn để hỏi lại sớm.',
                   'The words you missed are back in your reviews and will come up again soon.'
@@ -135,7 +135,7 @@ export default function Topics() {
           <span className="text-aurora">{t('Học theo chủ đề', 'Learn by topic')}</span>{' '}
           <span aria-hidden="true">🗂️</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Từ vựng gom theo tình huống: ăn uống, đi lại, sức khoẻ… "Học" lấy tối đa 10 từ chưa thành thạo, "Ôn" hỏi nhanh những từ bạn đã gặp trong bộ. Tiến độ dùng chung với cả app.',
             'Words grouped by situation: food, getting around, health… "Learn" takes up to 10 words you have not mastered, "Review" quizzes the ones you have already met. Progress is shared with the whole app.'
@@ -143,9 +143,11 @@ export default function Topics() {
         </p>
       </header>
 
-      {topics === null && <p className="text-slate-400">{t('Đang tải…', 'Loading…')}</p>}
+      {topics === null && (
+        <p className="text-slate-500 dark:text-slate-400">{t('Đang tải…', 'Loading…')}</p>
+      )}
       {topics !== null && decks.length === 0 && (
-        <p className="card p-6 text-slate-500">
+        <p className="card p-6 text-slate-500 dark:text-slate-400">
           {t('Ngôn ngữ này chưa có bộ chủ đề. ', 'This language has no topic decks yet. ')}
           <Link to="/learn" className="font-medium text-brand-600 dark:text-brand-300">
             {t('Học theo bộ từ', 'Learn by word set')}
@@ -166,7 +168,7 @@ export default function Topics() {
                 </ProgressRing>
                 <span className="min-w-0 flex-1">
                   <span className="block font-bold">{t(...topic.title)}</span>
-                  <span className="text-sm text-slate-500">
+                  <span className="text-sm text-slate-500 dark:text-slate-400">
                     {done
                       ? t('Đã thành thạo cả bộ 🎉', 'All mastered 🎉')
                       : t(

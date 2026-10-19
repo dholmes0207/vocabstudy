@@ -86,7 +86,7 @@ export default function UserMenu() {
               <p className="truncate text-sm font-semibold">
                 {user.name || t('Người học', 'Learner')}
               </p>
-              <p className="truncate text-xs text-slate-400">{user.email}</p>
+              <p className="truncate text-xs text-slate-500 dark:text-slate-400">{user.email}</p>
               <span
                 className={`chip mt-1 ${user.role === 'admin' ? 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' : 'bg-slate-100 text-slate-500 dark:bg-slate-800'}`}
               >

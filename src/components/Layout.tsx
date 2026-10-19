@@ -307,7 +307,7 @@ function StreakPill({ streak, xp }: { streak: number; xp: number }) {
           <span>
             {t('Cấp', 'Level')} {lv.level}
           </span>
-          <span className="text-slate-400">
+          <span className="text-slate-500 dark:text-slate-400">
             {t('cấp', 'level')} {lv.level + 1}
           </span>
         </div>

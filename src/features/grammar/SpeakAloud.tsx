@@ -70,7 +70,7 @@ export default function SpeakAloud({
       <h2 id="speak-aloud" className="font-bold">
         {t('Nói thành tiếng', 'Say it aloud')}
       </h2>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Hiểu một câu và nói được câu đó là hai chuyện khác nhau. Nghe mẫu, rồi bấm micro và đọc to từng câu.',
           'Understanding a sentence and saying it are two different things. Hear the model, then tap the mic and read each one aloud.'
@@ -142,7 +142,7 @@ export default function SpeakAloud({
       </ul>
 
       {supported && (
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
           {done > 0 &&
             t(`Đã nói đạt ${done}/${items.length} câu. `, `${done} of ${items.length} said well. `)}
           {t(
@@ -198,7 +198,7 @@ function RowFeedback({ row }: { row: Row }) {
               )}
       </p>
       {heard && (
-        <p className="text-slate-500">
+        <p className="text-slate-500 dark:text-slate-400">
           {t('Máy nghe được:', 'Heard:')} “{heard}”
         </p>
       )}

@@ -114,7 +114,7 @@ function Roadmap({ exam }: { exam: ExamInfo }) {
           </span>{' '}
           <span aria-hidden="true">🎯</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Những phần cần cho kỳ thi, theo thứ tự nên học, kèm chỗ bạn đã tới.',
             'What the exam needs, in the order to learn it, with how far you have got.'
@@ -374,7 +374,7 @@ export function MockComplete({
     >
       {wrong.length > 0 && (
         <div className="w-full text-left">
-          <p className="text-sm font-semibold text-slate-500">
+          <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
             {t('Từ cần học thêm:', 'Words to work on:')}
           </p>
           <ul className="mt-2 flex flex-wrap gap-2">

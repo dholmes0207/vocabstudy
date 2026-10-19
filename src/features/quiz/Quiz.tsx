@@ -78,7 +78,7 @@ export default function Quiz() {
             <SessionChanges before={before} />
             {wrongIds.length > 0 && (
               <div className="w-full text-left">
-                <p className="mb-2 text-sm font-semibold text-slate-500">
+                <p className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
                   {t('Từ cần xem lại:', 'Words to look at again:')}
                 </p>
                 <ul className="space-y-1.5">
@@ -97,7 +97,7 @@ export default function Quiz() {
                           size="sm"
                         />
                         <b>{w.word}</b>
-                        <span className="text-slate-400">—</span>
+                        <span className="text-slate-500 dark:text-slate-400">—</span>
                         <span className="text-slate-600 dark:text-slate-300">{w.meaning}</span>
                       </li>
                     )
@@ -139,7 +139,7 @@ export default function Quiz() {
           <span className="text-aurora">{t('Kiểm tra', 'Quiz')}</span>{' '}
           <span aria-hidden="true">🎯</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Tự nhớ lại là cách nhớ lâu nhất. Câu sai sẽ được đưa vào lịch ôn lại; câu đúng khi từ chưa tới hạn ôn thì không làm từ "thành thạo" nhanh hơn — nhớ sâu cần thời gian giãn cách.',
             'Recalling is the best way to remember. Missed words go back into your reviews; a right answer before a word is due doesn\'t make it "mastered" faster — deep memory needs spacing.'

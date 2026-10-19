@@ -67,6 +67,34 @@ describe('words saved while reading', () => {
   })
 })
 
+describe('quick lesson (?quick=1)', () => {
+  const renderQuick = () =>
+    render(
+      <MemoryRouter initialEntries={['/learn?quick=1']}>
+        <Learn />
+      </MemoryRouter>
+    )
+
+  it('opens straight on the first of five new words, no extra tap', () => {
+    renderQuick()
+    expect(screen.getByText('1/5')).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: 'Placement check' })).not.toBeInTheDocument()
+  })
+
+  it('shows the Learn page when no new words are left today', () => {
+    const { dailyNewLimit } = useSettings.getState()
+    useSettings.setState({ dailyNewLimit: 0 })
+    try {
+      renderQuick()
+      expect(
+        screen.getByRole('heading', { name: 'Already know some English?' })
+      ).toBeInTheDocument()
+    } finally {
+      useSettings.setState({ dailyNewLimit })
+    }
+  })
+})
+
 describe('placement check on the Learn page', () => {
   it('is offered to a new learner', () => {
     renderLearn()
