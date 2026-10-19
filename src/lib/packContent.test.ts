@@ -10,10 +10,10 @@ describe('pack-specific screens', () => {
   })
 
   it('keep English content for English and Hangul for Korean', () => {
-    for (const path of ['/phrases', '/sounds']) {
-      expect(availableIn(path, 'en'), path).toBe(true)
-      expect(availableIn(path, 'ko'), path).toBe(false)
-    }
+    expect(availableIn('/sounds', 'en')).toBe(true)
+    expect(availableIn('/sounds', 'ko')).toBe(false)
+    // Everyday phrases have an English and a Korean pack.
+    expect(packsFor('/phrases')).toEqual(['en', 'ko'])
     // Stories, topic decks and grammar exist for both packs (public/data/{reading,topics,grammar}/).
     for (const path of ['/reading/x', '/topics', '/grammar']) {
       expect(availableIn(path, 'en'), path).toBe(true)

@@ -84,7 +84,8 @@ const NAV: NavItem[] = [
     primary: true,
   },
   // Korean and Chinese take the phrases slot on the phone with their own
-  // sounds page (lib/packContent.ts decides which pack sees which).
+  // sounds page (lib/packContent.ts decides which pack sees which); Korean
+  // phrases then stay in the sidebar and the practice hub.
   {
     to: '/hangul',
     label: ['Bảng chữ Hangul', 'Hangul alphabet'],
@@ -129,6 +130,7 @@ export default function Layout() {
   const { pathname } = useLocation()
   // Screens written for another pack drop out of the menus and the bottom bar.
   const nav = NAV.filter((item) => availableIn(item.to, currentLang))
+  const hasSoundsPage = nav.some((item) => item.to === '/hangul' || item.to === '/pinyin')
   const onlyFor = packsFor(pathname)
   // In a study session the phone gets the whole screen: no bottom bar, and the
   // session's own action bar sticks to the bottom instead.
@@ -205,7 +207,7 @@ export default function Layout() {
       {!immersive && (
         <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90 lg:hidden">
           {nav
-            .filter((n) => n.primary)
+            .filter((n) => n.primary && !(n.to === '/phrases' && hasSoundsPage))
             .map((item) => (
               <BottomLink
                 key={item.to}

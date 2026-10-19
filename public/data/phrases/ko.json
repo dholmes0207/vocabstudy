@@ -1,0 +1,135 @@
+{
+  "version": "1.0.0",
+  "topics": [
+    {
+      "id": "greetings",
+      "emoji": "👋",
+      "title": "Chào hỏi & làm quen",
+      "titleEn": "Greetings & introductions",
+      "phrases": [
+        { "id": 2001, "en": "안녕하세요.", "vi": "Xin chào.", "note": "Câu chào dùng được với mọi người, vào mọi lúc trong ngày." },
+        { "id": 2002, "en": "처음 뵙겠습니다.", "vi": "Rất hân hạnh được gặp anh/chị.", "note": "Trang trọng, chỉ dùng khi gặp ai đó lần đầu." },
+        { "id": 2003, "en": "만나서 반가워요.", "vi": "Rất vui được gặp bạn." },
+        { "id": 2004, "en": "저는 란이에요. 이름이 뭐예요?", "vi": "Mình tên là Lan. Bạn tên gì?", "note": "Tên có patchim thì dùng 이에요 (란이에요), không có thì dùng 예요 (민수예요)." },
+        { "id": 2005, "en": "어디에서 왔어요?", "vi": "Bạn đến từ đâu?", "note": "Đáp: 베트남에서 왔어요." },
+        { "id": 2006, "en": "베트남에서 왔어요.", "vi": "Mình đến từ Việt Nam." },
+        { "id": 2007, "en": "잘 지냈어요?", "vi": "Dạo này bạn có khỏe không?", "note": "Hỏi người quen đã lâu không gặp." },
+        { "id": 2008, "en": "안녕히 가세요.", "vi": "Đi về cẩn thận nhé.", "note": "Người ở lại nói với người ra về." },
+        { "id": 2009, "en": "안녕히 계세요.", "vi": "Ở lại mạnh khỏe nhé.", "note": "Người ra về nói với người ở lại, ví dụ khi rời cửa hàng." }
+      ]
+    },
+    {
+      "id": "understanding",
+      "emoji": "👂",
+      "title": "Khi chưa nghe rõ",
+      "titleEn": "When you didn't catch it",
+      "phrases": [
+        { "id": 2011, "en": "다시 한번 말해 주세요.", "vi": "Bạn nói lại lần nữa giúp mình." },
+        { "id": 2012, "en": "천천히 말해 주세요.", "vi": "Bạn nói chậm lại giúp mình." },
+        { "id": 2013, "en": "잘 모르겠어요.", "vi": "Mình không rõ lắm.", "note": "Nhẹ nhàng hơn 몰라요 (không biết)." },
+        { "id": 2014, "en": "한국어를 조금 해요.", "vi": "Mình nói được một chút tiếng Hàn." },
+        { "id": 2015, "en": "이게 한국어로 뭐예요?", "vi": "Cái này tiếng Hàn gọi là gì?", "note": "Chỉ vào đồ vật rồi hỏi." },
+        { "id": 2016, "en": "무슨 뜻이에요?", "vi": "Nghĩa là gì vậy?" },
+        { "id": 2017, "en": "영어 할 수 있어요?", "vi": "Bạn nói được tiếng Anh không?" },
+        { "id": 2018, "en": "여기에 써 주세요.", "vi": "Bạn viết vào đây giúp mình.", "note": "Đưa sổ hay điện thoại khi nghe không kịp." }
+      ]
+    },
+    {
+      "id": "polite",
+      "emoji": "🙏",
+      "title": "Lịch sự hằng ngày",
+      "titleEn": "Everyday courtesy",
+      "phrases": [
+        { "id": 2021, "en": "감사합니다.", "vi": "Xin cảm ơn.", "note": "Lịch sự, dùng được với mọi người. Với bạn bè có thể nói 고마워요." },
+        { "id": 2022, "en": "죄송합니다.", "vi": "Xin lỗi.", "note": "Trang trọng. Thân mật hơn: 미안해요." },
+        { "id": 2023, "en": "괜찮아요.", "vi": "Không sao đâu.", "note": "Cũng dùng để từ chối khéo: \"không cần đâu\"." },
+        { "id": 2024, "en": "저기요!", "vi": "Anh/chị ơi!", "note": "Gọi nhân viên trong quán hay hỏi người lạ." },
+        { "id": 2025, "en": "잠깐만요.", "vi": "Đợi một chút nhé.", "note": "Cũng dùng khi xin đi qua chỗ đông người." },
+        { "id": 2026, "en": "실례합니다.", "vi": "Xin phép làm phiền một chút.", "note": "Nói trước khi hỏi người lạ hay vào phòng ai." },
+        { "id": 2027, "en": "천만에요.", "vi": "Không có gì đâu.", "note": "Đáp lại lời cảm ơn. Người Hàn cũng hay đáp 아니에요." },
+        { "id": 2028, "en": "수고하셨습니다.", "vi": "Anh/chị vất vả rồi.", "note": "Nói với đồng nghiệp lúc tan làm, hay với nhân viên khi rời quán." }
+      ]
+    },
+    {
+      "id": "food",
+      "emoji": "🍜",
+      "title": "Gọi món & đồ uống",
+      "titleEn": "Ordering food & drinks",
+      "phrases": [
+        { "id": 2031, "en": "메뉴 좀 주세요.", "vi": "Cho mình xem thực đơn." },
+        { "id": 2032, "en": "이거 주세요.", "vi": "Cho mình món này.", "note": "Chỉ vào món trên thực đơn. 주세요 là \"cho tôi\", dùng được ở mọi nơi." },
+        { "id": 2033, "en": "물 좀 주세요.", "vi": "Cho mình xin nước.", "note": "Ở nhiều quán, nước lọc miễn phí và khách tự lấy." },
+        { "id": 2034, "en": "이거 매워요?", "vi": "Món này có cay không?" },
+        { "id": 2035, "en": "안 맵게 해 주세요.", "vi": "Làm không cay giúp mình." },
+        { "id": 2036, "en": "맛있어요!", "vi": "Ngon quá!" },
+        { "id": 2037, "en": "계산해 주세요.", "vi": "Tính tiền giúp mình.", "note": "Ở Hàn thường ra quầy gần cửa để trả tiền." },
+        { "id": 2038, "en": "포장해 주세요.", "vi": "Gói mang về giúp mình." },
+        { "id": 2039, "en": "잘 먹겠습니다.", "vi": "Mình xin phép ăn ạ.", "note": "Nói trước khi ăn, nhất là khi được mời. Ăn xong nói 잘 먹었습니다." }
+      ]
+    },
+    {
+      "id": "shopping",
+      "emoji": "🛍️",
+      "title": "Mua sắm",
+      "titleEn": "Shopping",
+      "phrases": [
+        { "id": 2041, "en": "이거 얼마예요?", "vi": "Cái này bao nhiêu tiền?" },
+        { "id": 2042, "en": "너무 비싸요.", "vi": "Đắt quá." },
+        { "id": 2043, "en": "좀 깎아 주세요.", "vi": "Bớt cho mình chút đi.", "note": "Chỉ nên mặc cả ở chợ, không mặc cả ở cửa hàng có giá niêm yết." },
+        { "id": 2044, "en": "다른 색 있어요?", "vi": "Có màu khác không?" },
+        { "id": 2045, "en": "입어 봐도 돼요?", "vi": "Mình mặc thử được không?" },
+        { "id": 2046, "en": "카드 돼요?", "vi": "Trả bằng thẻ được không?", "note": "Gần như mọi cửa hàng ở Hàn đều nhận thẻ." },
+        { "id": 2047, "en": "그냥 구경하는 거예요.", "vi": "Mình chỉ xem thôi.", "note": "Đáp khi nhân viên hỏi bạn cần gì." },
+        { "id": 2048, "en": "이걸로 할게요.", "vi": "Mình lấy cái này." }
+      ]
+    },
+    {
+      "id": "directions",
+      "emoji": "🧭",
+      "title": "Hỏi đường",
+      "titleEn": "Asking the way",
+      "phrases": [
+        { "id": 2051, "en": "화장실이 어디예요?", "vi": "Nhà vệ sinh ở đâu?" },
+        { "id": 2052, "en": "지하철역이 어디에 있어요?", "vi": "Ga tàu điện ngầm ở đâu?" },
+        { "id": 2053, "en": "여기에서 멀어요?", "vi": "Từ đây có xa không?" },
+        { "id": 2054, "en": "걸어서 갈 수 있어요?", "vi": "Đi bộ tới được không?" },
+        { "id": 2055, "en": "쭉 가세요.", "vi": "Cứ đi thẳng." },
+        { "id": 2056, "en": "오른쪽으로 가세요.", "vi": "Đi về bên phải.", "note": "Bên trái là 왼쪽." },
+        { "id": 2057, "en": "길을 잃었어요.", "vi": "Mình bị lạc đường." },
+        { "id": 2058, "en": "이 버스 명동에 가요?", "vi": "Xe buýt này có đi Myeongdong không?", "note": "Thay 명동 bằng nơi bạn muốn đến." }
+      ]
+    },
+    {
+      "id": "travel",
+      "emoji": "🏨",
+      "title": "Đi lại & khách sạn",
+      "titleEn": "Getting around & hotels",
+      "phrases": [
+        { "id": 2061, "en": "예약했어요.", "vi": "Mình đã đặt trước rồi." },
+        { "id": 2062, "en": "체크인하고 싶어요.", "vi": "Mình muốn nhận phòng." },
+        { "id": 2063, "en": "와이파이 비밀번호가 뭐예요?", "vi": "Mật khẩu wifi là gì?" },
+        { "id": 2064, "en": "짐을 맡길 수 있어요?", "vi": "Mình gửi hành lý được không?" },
+        { "id": 2065, "en": "여기로 가 주세요.", "vi": "Cho mình đến chỗ này.", "note": "Nói với tài xế taxi, kèm địa chỉ trên điện thoại." },
+        { "id": 2066, "en": "공항까지 얼마나 걸려요?", "vi": "Đến sân bay mất bao lâu?" },
+        { "id": 2067, "en": "여기서 내릴게요.", "vi": "Mình xuống ở đây." },
+        { "id": 2068, "en": "사진 좀 찍어 주세요.", "vi": "Chụp giúp mình tấm ảnh." }
+      ]
+    },
+    {
+      "id": "feelings",
+      "emoji": "💭",
+      "title": "Cảm xúc & ý kiến",
+      "titleEn": "Feelings & opinions",
+      "phrases": [
+        { "id": 2071, "en": "좋아요!", "vi": "Được đấy!", "note": "Đồng ý với một lời rủ: \"được, làm vậy đi\"." },
+        { "id": 2072, "en": "재미있어요.", "vi": "Vui lắm." },
+        { "id": 2073, "en": "피곤해요.", "vi": "Mình mệt." },
+        { "id": 2074, "en": "배고파요.", "vi": "Mình đói." },
+        { "id": 2075, "en": "정말요?", "vi": "Thật à?" },
+        { "id": 2076, "en": "저도요.", "vi": "Mình cũng vậy." },
+        { "id": 2077, "en": "걱정하지 마세요.", "vi": "Đừng lo." },
+        { "id": 2078, "en": "축하해요!", "vi": "Chúc mừng nhé!", "note": "Sinh nhật thì nói 생일 축하해요." }
+      ]
+    }
+  ]
+}

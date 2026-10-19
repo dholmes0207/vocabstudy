@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases',
     ],
     items: [
       [
@@ -46,6 +46,10 @@ export const RELEASES: Release[] = [
       [
         'Trang Hangul có phần "Biến âm khi đọc liền": nối âm, ㅎ yếu đi, bật hơi, âm mũi hoá, căng hoá — vì sao 음악 đọc là ư-mác, 감사합니다 là cam-xa-ham-ni-đa. Chạm từ để nghe.',
         'The Hangul page explains sound changes: linking, weak ㅎ, aspiration, nasalisation, tensing — why 음악 reads ư-mác and 감사합니다 cam-xa-ham-ni-đa. Tap a word to hear it.',
+      ],
+      [
+        'Gói tiếng Hàn có thêm "Mẫu câu giao tiếp": 66 câu cho 8 tình huống như chào hỏi, gọi món, mua sắm, hỏi đường, kèm nghĩa và mẹo dùng. Luyện bằng cách nghe chọn nghĩa, chọn câu đúng và xếp từ thành câu.',
+        'The Korean pack now has "Everyday phrases": 66 sentences for 8 situations such as greetings, ordering, shopping and directions, with meanings and usage tips. Practise by hearing and picking the meaning, picking the right sentence and building it from tiles.',
       ],
     ],
   },

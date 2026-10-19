@@ -16,7 +16,7 @@ import { today } from '@/lib/date'
 import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
 import { usePhrases } from '@/store/phrasesStore'
-import { isKnown } from '@/lib/phrases'
+import { isKnown, phraseInPack } from '@/lib/phrases'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import { availableIn } from '@/lib/packContent'
 import GrammarReviewCard from '@/features/grammar/GrammarReviewCard'
@@ -157,12 +157,12 @@ export default function Dashboard() {
 
       {/* Beyond single words: ready-made sentences for real situations, or for
           Korean and Chinese the writing and sounds themselves. */}
-      {availableIn('/phrases', code) ? (
-        <PhrasesCard />
-      ) : availableIn('/hangul', code) ? (
+      {availableIn('/hangul', code) ? (
         <HangulCard />
+      ) : availableIn('/pinyin', code) ? (
+        <PinyinCard />
       ) : (
-        availableIn('/pinyin', code) && <PinyinCard />
+        availableIn('/phrases', code) && <PhrasesCard code={code} />
       )}
 
       {/* Progress overview */}
@@ -383,9 +383,13 @@ function QuickLink({
   )
 }
 
-function PhrasesCard() {
+function PhrasesCard({ code }: { code: string }) {
   const t = useT()
-  const known = usePhrases((s) => Object.values(s.progress).filter((r) => isKnown(r)).length)
+  const known = usePhrases(
+    (s) =>
+      Object.entries(s.progress).filter(([id, r]) => phraseInPack(Number(id), code) && isKnown(r))
+        .length
+  )
   return (
     <Link
       to="/phrases"
