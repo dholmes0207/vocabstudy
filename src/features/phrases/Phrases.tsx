@@ -10,6 +10,7 @@ import {
   Volume2,
 } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
+import { useData } from '@/store/dataStore'
 import { useStudy } from '@/store/studyStore'
 import { usePhrases } from '@/store/phrasesStore'
 import { useImmersive } from '@/store/uiStore'
@@ -32,6 +33,7 @@ import { nudge, praise } from '@/lib/encourage'
 import { buzz } from '@/lib/sound'
 import { skyBurstAt } from '@/lib/skyEvents'
 import { useT, useUiLang } from '@/lib/i18n'
+import { useTargetLang } from '@/hooks/useTargetLang'
 import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 import SpeakButton from '@/components/SpeakButton'
@@ -40,7 +42,8 @@ import ProgressRing from '@/components/ProgressRing'
 // "Mẫu câu giao tiếp" (docs/design/phrases.md): everyday sentences by
 // situation — hear them, understand them, put them together, say them.
 
-const TTS_LANG = 'en-US'
+/** Phrases are read in the pack's own voice (en-US, ko-KR…). */
+const useTtsLang = () => useData((s) => s.pack?.meta.ttsLang ?? 'en-US')
 
 /** The phrase pack, loaded once per visit (it is small and cached by the SW). */
 function usePhrasePack(): { pack: PhrasePack | null; error: string | null } {
@@ -61,8 +64,8 @@ function usePhrasePack(): { pack: PhrasePack | null; error: string | null } {
   return state
 }
 
-function play(p: Phrase, rate: number) {
-  pronounce({ audioSrc: phraseAudio(p.id, p.en), text: p.en, lang: TTS_LANG, rate })
+function play(p: Phrase, rate: number, lang: string) {
+  pronounce({ audioSrc: phraseAudio(p.id, p.en), text: p.en, lang, rate })
 }
 
 export default function Phrases() {
@@ -112,8 +115,8 @@ function TopicList({ pack }: { pack: PhrasePack }) {
           </h1>
           <p className="mt-1 max-w-2xl text-slate-500 dark:text-slate-400">
             {t(
-              'Những câu nói dùng được ngay theo từng tình huống — nghe giọng đọc AI chuẩn Mỹ, hiểu nghĩa, rồi luyện cho tới khi bật ra tự nhiên.',
-              'Ready-to-use sentences for real situations — hear a natural AI voice, understand them, then practise until they come out naturally.'
+              'Những câu nói dùng được ngay theo từng tình huống — nghe câu đọc mẫu, hiểu nghĩa, rồi luyện cho tới khi bật ra tự nhiên.',
+              'Ready-to-use sentences for real situations — hear them read aloud, understand them, then practise until they come out naturally.'
             )}
           </p>
         </div>
@@ -157,6 +160,7 @@ function TopicList({ pack }: { pack: PhrasePack }) {
 function TopicView({ topic, pack }: { topic: PhraseTopic; pack: PhrasePack }) {
   const t = useT()
   const rate = useSettings((s) => s.ttsRate)
+  const ttsLang = useTtsLang()
   const progress = usePhrases((s) => s.progress)
   // `round` remounts the practice for "Practise again", even with the same phrases.
   const [session, setSession] = useState<{ round: number; questions: PhraseQuestion[] } | null>(
@@ -217,7 +221,7 @@ function TopicView({ topic, pack }: { topic: PhraseTopic; pack: PhrasePack }) {
         {topic.phrases.map((p) => (
           <li key={p.id}>
             <button
-              onClick={() => play(p, rate)}
+              onClick={() => play(p, rate, ttsLang)}
               className="card flex w-full items-start gap-3 p-4 text-left transition hover:border-brand-300 active:scale-[0.995] dark:hover:border-brand-700"
             >
               <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-300">
@@ -273,6 +277,8 @@ function PhrasePractice({
   const lang = useUiLang()
   const code = useSettings((s) => s.currentLang)
   const rate = useSettings((s) => s.ttsRate)
+  const ttsLang = useTtsLang()
+  const L = useTargetLang()
   const soundOn = useSettings((s) => s.soundEnabled)
   const record = usePhrases((s) => s.record)
   const addPlayXp = useStudy((s) => s.addPlayXp)
@@ -293,9 +299,9 @@ function PhrasePractice({
   useEffect(() => {
     const cur = questions[idx]
     if (cur.kind !== 'meaning') return
-    const timer = setTimeout(() => play(cur.phrase, rate), 150)
+    const timer = setTimeout(() => play(cur.phrase, rate, ttsLang), 150)
     return () => clearTimeout(timer)
-  }, [idx, questions, rate])
+  }, [idx, questions, rate, ttsLang])
 
   useEffect(() => {
     if (answered) nextRef.current?.focus()
@@ -308,7 +314,7 @@ function PhrasePractice({
       if (el) skyBurstAt(el, 0.6)
     }
     if (soundOn) buzz(right)
-    if (q.kind !== 'meaning') play(q.phrase, rate)
+    if (q.kind !== 'meaning') play(q.phrase, rate, ttsLang)
   }
 
   const choose = (i: number, el: HTMLElement) => {
@@ -363,7 +369,7 @@ function PhrasePractice({
     q.kind === 'meaning'
       ? t('Nghe rồi chọn nghĩa đúng', 'Listen, then pick the meaning')
       : q.kind === 'phrase'
-        ? t('Chọn câu tiếng Anh đúng', 'Pick the right English phrase')
+        ? t(`Chọn câu ${L.vi} đúng`, `Pick the right ${L.en} phrase`)
         : t('Xếp các từ thành câu', 'Put the words in order')
 
   return (
@@ -395,7 +401,7 @@ function PhrasePractice({
         {q.kind === 'meaning' ? (
           <div className="flex flex-col items-center gap-2 py-2">
             <button
-              onClick={() => play(q.phrase, rate)}
+              onClick={() => play(q.phrase, rate, ttsLang)}
               className="grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg transition hover:scale-105 active:scale-95"
               aria-label={t('Nghe lại', 'Play again')}
             >
@@ -447,7 +453,7 @@ function PhrasePractice({
             <p className="mt-1 flex items-center gap-2">
               <SpeakButton
                 text={q.phrase.en}
-                lang={TTS_LANG}
+                lang={ttsLang}
                 audioSrc={phraseAudio(q.phrase.id, q.phrase.en)}
                 size="sm"
               />

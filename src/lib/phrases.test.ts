@@ -4,6 +4,7 @@ import {
   buildPhraseSession,
   canBuild,
   isKnown,
+  phraseInPack,
   phraseXp,
   recordPhrase,
   topicProgress,
@@ -63,6 +64,28 @@ describe('phrase pack (public/data/phrases/en.json)', () => {
       ],
     }
     expect(() => validatePhrasePack(dup)).toThrow(/Duplicate/)
+  })
+})
+
+describe('Korean phrase pack (public/data/phrases/ko.json)', () => {
+  const ko = validatePhrasePack(
+    JSON.parse(readFileSync('public/data/phrases/ko.json', 'utf8')) as unknown
+  )
+  const koAll = ko.topics.flatMap((t) => t.phrases)
+
+  it('has full topics, numbered in its own range so progress never mixes', () => {
+    expect(ko.topics.length).toBeGreaterThanOrEqual(8)
+    for (const t of ko.topics) expect(t.phrases.length).toBeGreaterThanOrEqual(8)
+    expect(koAll.every((p) => phraseInPack(p.id, 'ko'))).toBe(true)
+    expect(all.every((p) => phraseInPack(p.id, 'en'))).toBe(true)
+    expect(koAll.some((p) => phraseInPack(p.id, 'en'))).toBe(false)
+  })
+
+  it('is written in Hangul, with a distinct meaning for every phrase', () => {
+    for (const p of koAll) expect(p.en).toMatch(/[가-힣]/)
+    // Two phrases meaning the same would make a choice question unanswerable.
+    expect(new Set(koAll.map((p) => p.vi)).size).toBe(koAll.length)
+    expect(new Set(koAll.map((p) => p.en)).size).toBe(koAll.length)
   })
 })
 

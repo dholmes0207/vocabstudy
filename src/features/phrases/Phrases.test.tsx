@@ -11,14 +11,19 @@ import { usePhrases } from '@/store/phrasesStore'
 // The phrase screens read the real pack, so a broken JSON file or a renamed
 // field shows up here, not on the learner's phone.
 
-const pack = readFileSync('public/data/phrases/en.json', 'utf8')
+const packs: Record<string, string> = {
+  en: readFileSync('public/data/phrases/en.json', 'utf8'),
+  ko: readFileSync('public/data/phrases/ko.json', 'utf8'),
+}
 
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   usePhrases.setState({ progress: {} })
   vi.stubGlobal(
     'fetch',
-    vi.fn(async () => new Response(pack, { status: 200 }))
+    vi.fn(
+      async (url: string) => new Response(packs[url.match(/(\w+)\.json$/)![1]], { status: 200 })
+    )
   )
 })
 afterEach(() => {
@@ -68,6 +73,14 @@ describe('Everyday phrases', () => {
     }
     expect(await screen.findByRole('button', { name: /Next|See results/ })).toBeInTheDocument()
     expect(Object.keys(usePhrases.getState().progress)).toHaveLength(1)
+  })
+
+  it('has Korean phrases for the Korean pack', async () => {
+    useSettings.setState({ uiLang: 'vi', currentLang: 'ko' })
+    at('/phrases/food')
+    expect(await screen.findByText('Gọi món & đồ uống')).toBeInTheDocument()
+    expect(screen.getByText('이거 주세요.')).toBeInTheDocument()
+    expect(screen.getByText('Cho mình món này.')).toBeInTheDocument()
   })
 
   it('says so when the situation does not exist', async () => {

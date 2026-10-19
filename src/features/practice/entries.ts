@@ -92,6 +92,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-emerald-500 to-teal-600',
   },
   {
+    to: '/phrases',
+    icon: '💬',
+    title: 'Mẫu câu giao tiếp',
+    desc: 'Câu nói dùng được ngay theo tình huống: chào hỏi, gọi món, hỏi đường… nghe, hiểu, xếp câu.',
+    titleEn: 'Everyday phrases',
+    descEn:
+      'Ready-made sentences by situation: greetings, ordering, directions… hear, understand, build.',
+    tone: 'from-sky-500 to-violet-600',
+  },
+  {
     to: '/reading',
     icon: '📖',
     title: 'Đọc truyện ngắn',

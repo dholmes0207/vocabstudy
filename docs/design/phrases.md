@@ -39,3 +39,35 @@ Mình cần những câu dùng được ngay."
   `public/audio/en/<voice>/p<id>.mp3`, có `?v=<textHash>`.
   - Câu nào đổi chữ sẽ được ghi âm lại.
   - Test sẽ lỗi nếu thiếu file audio hoặc file audio cũ.
+
+## Mẫu câu tiếng Hàn
+
+**User** (người học tiếng Hàn): "Học chữ Hangul và từ rồi, nhưng đến quán vẫn không biết
+nói 'cho tôi món này' hay 'tính tiền'."
+
+**BA**
+
+- 8 tình huống, 66 câu: chào hỏi, khi chưa nghe rõ, lịch sự hằng ngày, gọi món, mua sắm,
+  hỏi đường, đi lại & khách sạn, cảm xúc & ý kiến. Bỏ "ở chỗ làm" và "hẹn gặp & điện
+  thoại" của bản tiếng Anh vì người mới sang Hàn cần câu đi đường, ăn uống trước.
+- Câu viết ở thể lịch sự -요 (해요체); câu chào trang trọng giữ thể -ㅂ니다 như người Hàn
+  vẫn nói (감사합니다, 처음 뵙겠습니다). Mẹo nói rõ khi nào dùng câu nào: 안녕히 가세요 hay
+  안녕히 계세요, 감사합니다 hay 고마워요.
+- Không có hai câu cùng nghĩa (ví dụ không để cả 감사합니다 lẫn 고마워요 thành câu riêng), vì
+  câu hỏi chọn nghĩa sẽ có hai đáp án đúng. Câu gần nghĩa đi vào phần mẹo.
+- Màn hình, cách luyện, tiến độ giống bản tiếng Anh. Câu hỏi "chọn câu đúng" ghi tên
+  ngôn ngữ đang học.
+- Lối vào: mục trên sidebar và thẻ trong trang Luyện tập. Thanh dưới điện thoại vẫn giữ
+  tab Hangul, vì thêm tab thứ sáu thì chữ quá nhỏ. Thẻ ở Trang chủ vẫn là bảng chữ Hangul.
+
+**Dev**
+
+- Dữ liệu ở `public/data/phrases/ko.json`, cùng khuôn với `en.json` (trường `en` là câu ở
+  ngôn ngữ đang học, như trong gói ngữ pháp).
+- Tiến độ chỉ lưu theo id câu, nên mỗi gói có dải id riêng: tiếng Anh từ 1, tiếng Hàn từ
+  2001 (`PHRASE_ID_BASE`, `phraseInPack` trong `src/lib/phrases.ts`). Test bắt lỗi nếu id
+  ra ngoài dải. Thẻ ở Trang chủ chỉ đếm câu của gói đang học.
+- Chưa có audio ghi sẵn cho tiếng Hàn: câu được đọc bằng giọng tiếng Hàn của trình duyệt
+  (`meta.ttsLang` = `ko-KR`), như các phần khác của gói tiếng Hàn.
+- Chưa có cách đọc kiểu Việt cho từng câu. Nếu thêm sau thì phải áp dụng biến âm như
+  trên thẻ từ (xem `docs/design/hangul.md`).

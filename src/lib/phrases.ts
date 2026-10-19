@@ -50,6 +50,19 @@ export function validatePhrasePack(data: unknown): PhrasePack {
   return { version: pack.version ?? '0', topics: pack.topics }
 }
 
+/**
+ * Each pack numbers its phrases from its own base (English 1…, Korean 2001…),
+ * because progress is stored by phrase id alone: a Korean phrase must never
+ * inherit the record of an English one.
+ */
+export const PHRASE_ID_BASE: Record<string, number> = { en: 0, ko: 2000 }
+
+/** Whether a phrase id belongs to a pack's range. */
+export function phraseInPack(id: number, code: string): boolean {
+  const base = PHRASE_ID_BASE[code]
+  return base !== undefined && id > base && id <= base + 999
+}
+
 export async function loadPhrasePack(code: string): Promise<PhrasePack> {
   const res = await fetch(`${import.meta.env.BASE_URL}data/phrases/${code}.json`)
   if (!res.ok) throw new Error(`Phrase pack "${code}" (${res.status})`)
@@ -109,7 +122,7 @@ export function recordPhrase(
 export type PhraseQuestion =
   /** Hear the phrase, pick its meaning. */
   | { kind: 'meaning'; phrase: Phrase; options: string[]; answer: number }
-  /** Read the meaning, pick the English phrase. */
+  /** Read the meaning, pick the phrase. */
   | { kind: 'phrase'; phrase: Phrase; options: string[]; answer: number }
   /** Put the words of the phrase in order. */
   | { kind: 'build'; phrase: Phrase; tokens: string[] }
