@@ -118,6 +118,11 @@ EXAMPLE_PINYIN = {
     '我不想去。': ('我|不|想|去。', 'wǒ bù xiǎng qù'),
     '请不要说话。': ('请|不要|说话。', 'qǐng bú yào shuō huà'),
     '我很想你。': ('我|很|想|你。', 'wǒ hěn xiǎng nǐ'),
+    '我和他是朋友。': ('我|和|他|是|朋友。', 'wǒ hé tā shì péng you'),
+    '我喜欢猫和狗。': ('我|喜欢|猫|和|狗。', 'wǒ xǐ huan māo hé gǒu'),
+    '我和妈妈一起去。': ('我|和|妈妈|一起|去。', 'wǒ hé mā ma yì qǐ qù'),
+    '我去过北京和上海。': ('我|去|过|北京|和|上海。', 'wǒ qù guo Běi jīng hé Shàng hǎi'),
+    '他会说汉语，也会说英语。': ('他|会|说|汉语，|也|会|说|英语。', 'tā huì shuō Hàn yǔ yě huì shuō Yīng yǔ'),
 }
 
 
@@ -655,6 +660,30 @@ UNITS = [
             ch('我很___你。', ['想', '要'], 0, '想 + người = nhớ: 我很想你.'),
             od('我|不|想|去。', 'Tôi không muốn đi.'),
             od('我|要|一|杯|茶。', 'Cho tôi một ly trà.'),
+        ],
+    },
+    {
+        'id': 'zh-he', 'emoji': '🔗', 'level': 'A1',
+        'title': ['和: "và" chỉ nối danh từ', '和: "and" joins only nouns'],
+        'summary': ['和 nối hai người, hai vật (我和他, 猫和狗). Nối hai vế câu thì không dùng 和, mà dùng 也.', '和 joins people and things (我和他, 猫和狗); to join two clauses use 也, not 和.'],
+        'explain': [
+            '和 = và, nối hai danh từ: 我和他 (tôi và anh ấy), 猫和狗 (mèo và chó), 北京和上海.',
+            'Tiếng Việt dùng "và" để nối cả hai vế câu, nhưng tiếng Trung thì không: không nói 他会说汉语和会说英语. Nối hai vế dùng 也 (cũng): 他会说汉语，也会说英语.',
+            'Nếu hai vế có cùng động từ, chỉ cần nói động từ một lần rồi nối hai danh từ: 我去过北京和上海.',
+            '和 … 一起 = cùng với ai: 我和妈妈一起去 (tôi đi cùng mẹ).',
+        ],
+        'patterns': ['Danh từ + 和 + danh từ', '和 + người + 一起 + động từ', 'Vế 1，也 + vế 2'],
+        'examples': [ex('我和他是朋友。', 'Tôi và anh ấy là bạn.'), ex('我喜欢猫和狗。', 'Tôi thích mèo và chó.'),
+                     ex('我和妈妈一起去。', 'Tôi đi cùng mẹ.'), ex('我去过北京和上海。', 'Tôi đã đến Bắc Kinh và Thượng Hải.'),
+                     ex('他会说汉语，也会说英语。', 'Anh ấy nói được tiếng Trung, và cũng nói được tiếng Anh.')],
+        'mistakes': [mi('他会说汉语和会说英语。', '他会说汉语，也会说英语。', '和 không nối hai vế câu. Nối hai vế dùng 也.'),
+                     mi('我去过北京和去过上海。', '我去过北京和上海。', 'Cùng một động từ thì nói một lần, rồi dùng 和 nối hai nơi.')],
+        'exercises': [
+            ch('我___他是朋友。', ['和', '也'], 0, 'Nối hai người (我, 他) → 和.'),
+            ch('我喜欢猫___狗。', ['和', '也'], 0, 'Nối hai con vật → 和.'),
+            ch('我___妈妈一起去。', ['和', '也'], 0, '和 + người + 一起 = cùng với ai.'),
+            ch('他会说汉语，___会说英语。', ['也', '和'], 0, 'Nối hai vế câu → 也, không dùng 和.'),
+            od('他|会|说|汉语，|也|会|说|英语。', 'Anh ấy nói được tiếng Trung, và cũng nói được tiếng Anh.'),
         ],
     },
 ]

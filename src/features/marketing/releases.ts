@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn; Tiếng Trung: bài ngữ pháp 也 / 都; Tiếng Trung: bài ngữ pháp 想 / 要',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases; Chinese: a 也 / 都 grammar lesson; Chinese: a 想 / 要 grammar lesson',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn; Tiếng Trung: bài ngữ pháp 也 / 都; Tiếng Trung: bài ngữ pháp 想 / 要; Tiếng Trung: bài ngữ pháp 和',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases; Chinese: a 也 / 都 grammar lesson; Chinese: a 想 / 要 grammar lesson; Chinese: a 和 grammar lesson',
     ],
     items: [
       [
@@ -58,6 +58,10 @@ export const RELEASES: Release[] = [
       [
         'Bài ngữ pháp tiếng Trung mới: 想 và 要 đều là "muốn", nhưng gọi món thì dùng 要, "không muốn" là 不想, còn 不要 nghĩa là "đừng".',
         'A new Chinese grammar lesson: 想 and 要 both mean "want", but you order with 要, "don\'t want to" is 不想, and 不要 means "don\'t!".',
+      ],
+      [
+        'Bài ngữ pháp tiếng Trung mới: 和 ("và") chỉ nối hai danh từ như 我和他, 猫和狗. Muốn nối hai vế câu thì dùng 也.',
+        'A new Chinese grammar lesson: 和 ("and") only joins nouns, like 我和他 or 猫和狗. To join two clauses, use 也.',
       ],
     ],
   },
