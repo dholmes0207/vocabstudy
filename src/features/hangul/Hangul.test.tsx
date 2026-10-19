@@ -58,4 +58,11 @@ describe('Hangul', () => {
     expect(screen.getByText('Xong bài kiểm tra Hangul!')).toBeInTheDocument()
     expect(useStudy.getState().progress.ko?.stats.xp).toBeGreaterThanOrEqual(5)
   })
+
+  it('explains the sound changes with pack words, written and as said', () => {
+    renderPage()
+    expect(screen.getByText('Biến âm khi đọc liền')).toBeInTheDocument()
+    expect(screen.getByText('[으막]')).toBeInTheDocument()
+    expect(screen.getByText('ư-mác')).toBeInTheDocument()
+  })
 })

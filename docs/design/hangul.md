@@ -62,3 +62,32 @@ Hangul.
   "cam-xa-ham-ni-đa"). Kiểm tra nhanh đã cho đọc cả từ, nhưng chưa giải thích vì sao đọc
   như vậy.
 - Giọng thu sẵn (edge-tts `ko-KR-SunHiNeural`) sau khi audio chuyển sang R2.
+
+## Biến âm khi đọc liền (20/10/2026)
+
+**User**: "Làm tiếp". Cách đọc kiểu Việt trên thẻ từ tiếng Hàn đã áp dụng biến âm: 음악 đọc ư-mác,
+không phải ưm-ác. Nhưng chưa chỗ nào giải thích vì sao, nên người học thấy cách đọc "không khớp"
+với chữ.
+
+**BA**
+
+- Trang Hangul có thêm phần **"Biến âm khi đọc liền"**, sau phần phụ âm cuối, gồm 6 quy tắc. Mỗi quy
+  tắc có một câu giải thích và vài từ ví dụ: chữ viết, cách đọc thật trong ngoặc vuông, cách đọc
+  kiểu Việt. Chạm một từ để nghe.
+  - **Nối âm**: 음악 [으막] ư-mác, 한국어, 일어나다.
+  - **ㅎ yếu đi**: 은행 [으냉] ư-neng, 전화, 좋아하다.
+  - **Bật hơi**: 축하해요 [추카해요], 좋다, 많다.
+  - **Âm mũi hoá**: 감사합니다 [감사함니다], 잘 먹겠습니다.
+  - **Căng hoá**: 식당 [식땅], 학교, 맥주.
+  - **Hữu thanh giữa từ**: 고기 cô-ghi, 친구 chin-gu, 오다 ô-đa. Hangul không đổi chữ, chỉ đọc nhẹ
+    hơn, nên không có ngoặc vuông.
+- Mọi ví dụ đều là từ có trong gói. Cách đọc kiểu Việt trong bài **chính là** cách đọc trên thẻ của
+  từ đó, nên bài và thẻ không bao giờ lệch nhau (có test kiểm tra).
+
+**Dev**
+
+- `lib/hangul.ts`: dữ liệu `SOUND_CHANGES`.
+- `features/hangul/Hangul.tsx`: thành phần `SoundChanges`.
+- Test:
+  - `lib/hangul.test.ts`: từ có trong gói và cách đọc trùng `viRead`;
+  - `features/hangul/Hangul.test.tsx`.

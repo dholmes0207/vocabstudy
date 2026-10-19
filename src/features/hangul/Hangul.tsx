@@ -11,6 +11,7 @@ import {
   COMPOUND_VOWELS,
   CONSONANTS,
   FINAL_SOUNDS,
+  SOUND_CHANGES,
   TENSE,
   VOWELS,
   compose,
@@ -105,6 +106,7 @@ export default function Hangul() {
       />
 
       <FinalSounds />
+      <SoundChanges />
     </div>
   )
 }
@@ -331,6 +333,51 @@ function FinalSounds() {
           </li>
         ))}
       </ul>
+    </section>
+  )
+}
+
+/** "Biến âm": why the readings are not block by block (docs/design/hangul.md). */
+function SoundChanges() {
+  const t = useT()
+  const say = useSay()
+  return (
+    <section>
+      <h2 className="font-bold">{t('Biến âm khi đọc liền', 'Sound changes in a word')}</h2>
+      <p className="text-sm text-slate-500 dark:text-slate-400">
+        {t(
+          'Viết từng khối nhưng đọc liền cả từ, nên một số âm đổi đi. Đây là lý do cách đọc trên thẻ từ không giống ghép từng khối. Chạm một từ để nghe.',
+          'Words are written block by block but said in one breath, so some sounds change. That is why the card readings are not block by block. Tap a word to hear it.'
+        )}
+      </p>
+      <div className="mt-3 space-y-3">
+        {SOUND_CHANGES.map((c) => (
+          <div key={c.id} className="card p-4">
+            <h3 className="font-semibold">{t(...c.name)}</h3>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{t(...c.rule)}</p>
+            <ul className="mt-2 flex flex-wrap gap-2">
+              {c.examples.map((ex) => (
+                <li key={ex.word}>
+                  <button
+                    type="button"
+                    onClick={() => say(ex.word)}
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 px-3 py-1.5 text-sm transition hover:border-brand-400 dark:border-slate-700"
+                  >
+                    <b lang="ko">{ex.word}</b>
+                    {ex.said !== ex.word && (
+                      <span lang="ko" className="text-slate-500 dark:text-slate-400">
+                        [{ex.said}]
+                      </span>
+                    )}
+                    <span className="text-brand-700 dark:text-brand-300">{ex.read}</span>
+                    <Volume2 className="h-3.5 w-3.5 text-brand-500" aria-hidden="true" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
