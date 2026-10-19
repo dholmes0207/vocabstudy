@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn; Tiếng Trung: bài ngữ pháp 也 / 都; Tiếng Trung: bài ngữ pháp 想 / 要; Tiếng Trung: bài ngữ pháp 和',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases; Chinese: a 也 / 都 grammar lesson; Chinese: a 想 / 要 grammar lesson; Chinese: a 和 grammar lesson',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn; Tiếng Trung: bài ngữ pháp 也 / 都; Tiếng Trung: bài ngữ pháp 想 / 要; Tiếng Trung: bài ngữ pháp 和; Tiếng Trung: bài ngữ pháp 吧',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases; Chinese: a 也 / 都 grammar lesson; Chinese: a 想 / 要 grammar lesson; Chinese: a 和 grammar lesson; Chinese: a 吧 grammar lesson',
     ],
     items: [
       [
@@ -62,6 +62,10 @@ export const RELEASES: Release[] = [
       [
         'Bài ngữ pháp tiếng Trung mới: 和 ("và") chỉ nối hai danh từ như 我和他, 猫和狗. Muốn nối hai vế câu thì dùng 也.',
         'A new Chinese grammar lesson: 和 ("and") only joins nouns, like 我和他 or 猫和狗. To join two clauses, use 也.',
+      ],
+      [
+        'Bài ngữ pháp tiếng Trung mới: 吧 ở cuối câu để rủ rê (我们走吧, "đi thôi") hay hỏi lại điều mình đoán (你是越南人吧？), khác với câu hỏi thật bằng 吗.',
+        'A new Chinese grammar lesson: 吧 at the end of a sentence makes a suggestion (我们走吧, "let\'s go") or checks a guess (你是越南人吧？), unlike a real 吗 question.',
       ],
     ],
   },

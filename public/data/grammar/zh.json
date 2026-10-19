@@ -2512,6 +2512,111 @@
           "vi": "Anh ấy nói được tiếng Trung, và cũng nói được tiếng Anh."
         }
       ]
+    },
+    {
+      "id": "zh-ba",
+      "emoji": "👉",
+      "level": "A1",
+      "title": [
+        "吧: rủ rê, \"nhé\", \"phải không\"",
+        "吧: suggestions and \"…, right?\""
+      ],
+      "summary": [
+        "吧 ở cuối câu để rủ, đề nghị (…nhé, …thôi) hoặc hỏi lại điều mình đoán (…phải không?). 吗 là hỏi thật, chưa biết câu trả lời.",
+        "吧 at the end of a sentence makes a suggestion or checks a guess; 吗 asks a real yes/no question."
+      ],
+      "explain": [
+        "Rủ, đề nghị: thêm 吧 vào cuối câu, giống \"…nhé\", \"…thôi\": 我们走吧 (mình đi thôi), 我们一起吃饭吧 (cùng ăn cơm nhé).",
+        "Nhờ hay khuyên nhẹ nhàng: 你明天来吧 (mai bạn đến nhé). Câu nghe mềm hơn nhiều so với không có 吧.",
+        "Hỏi lại điều mình đã đoán: 你是越南人吧？ (bạn là người Việt, phải không?). Nếu chưa biết gì thì hỏi bằng 吗: 你是越南人吗？",
+        "吧 luôn đứng cuối câu, giống 吗."
+      ],
+      "patterns": [
+        "Câu + 吧。 (rủ, đề nghị)",
+        "Câu + 吧？ (đoán rồi hỏi lại)",
+        "Câu + 吗？ (hỏi thật)"
+      ],
+      "examples": [
+        {
+          "en": "我们走吧。",
+          "vi": "Mình đi thôi.",
+          "read": "Wǒmen zǒu ba."
+        },
+        {
+          "en": "我们一起吃饭吧。",
+          "vi": "Chúng mình cùng ăn cơm nhé.",
+          "read": "Wǒmen yìqǐ chī fàn ba."
+        },
+        {
+          "en": "你明天来吧。",
+          "vi": "Mai bạn đến nhé.",
+          "read": "Nǐ míngtiān lái ba."
+        },
+        {
+          "en": "你是越南人吧？",
+          "vi": "Bạn là người Việt Nam, phải không?",
+          "read": "Nǐ shì Yuènán rén ba?"
+        },
+        {
+          "en": "你是越南人吗？",
+          "vi": "Bạn có phải người Việt Nam không?",
+          "read": "Nǐ shì Yuènán rén ma?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我们走吗！",
+          "right": "我们走吧！",
+          "why": "Rủ ai làm gì → 吧. 吗 chỉ để hỏi."
+        },
+        {
+          "wrong": "吧我们走。",
+          "right": "我们走吧。",
+          "why": "吧 đứng cuối câu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我们一起去___！",
+          "options": [
+            "吧",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Rủ cùng đi → 吧."
+        },
+        {
+          "type": "choice",
+          "prompt": "太晚了，我们回家___。",
+          "options": [
+            "吧",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Đề nghị (…thôi) → 吧. Câu kết thúc bằng dấu chấm nên không phải câu hỏi."
+        },
+        {
+          "type": "choice",
+          "prompt": "你累了，休息___！",
+          "options": [
+            "吧",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Khuyên nhẹ nhàng → 吧."
+        },
+        {
+          "type": "order",
+          "en": "我们​一起​吃​饭​吧。",
+          "vi": "Chúng mình cùng ăn cơm nhé."
+        },
+        {
+          "type": "order",
+          "en": "你​是​越南​人​吧？",
+          "vi": "Bạn là người Việt Nam, phải không?"
+        }
+      ]
     }
   ]
 }

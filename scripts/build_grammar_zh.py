@@ -123,6 +123,11 @@ EXAMPLE_PINYIN = {
     '我和妈妈一起去。': ('我|和|妈妈|一起|去。', 'wǒ hé mā ma yì qǐ qù'),
     '我去过北京和上海。': ('我|去|过|北京|和|上海。', 'wǒ qù guo Běi jīng hé Shàng hǎi'),
     '他会说汉语，也会说英语。': ('他|会|说|汉语，|也|会|说|英语。', 'tā huì shuō Hàn yǔ yě huì shuō Yīng yǔ'),
+    '我们走吧。': ('我们|走|吧。', 'wǒ men zǒu ba'),
+    '我们一起吃饭吧。': ('我们|一起|吃|饭|吧。', 'wǒ men yì qǐ chī fàn ba'),
+    '你明天来吧。': ('你|明天|来|吧。', 'nǐ míng tiān lái ba'),
+    '你是越南人吧？': ('你|是|越南|人|吧？', 'nǐ shì Yuè nán rén ba'),
+    '你是越南人吗？': ('你|是|越南|人|吗？', 'nǐ shì Yuè nán rén ma'),
 }
 
 
@@ -684,6 +689,30 @@ UNITS = [
             ch('我___妈妈一起去。', ['和', '也'], 0, '和 + người + 一起 = cùng với ai.'),
             ch('他会说汉语，___会说英语。', ['也', '和'], 0, 'Nối hai vế câu → 也, không dùng 和.'),
             od('他|会|说|汉语，|也|会|说|英语。', 'Anh ấy nói được tiếng Trung, và cũng nói được tiếng Anh.'),
+        ],
+    },
+    {
+        'id': 'zh-ba', 'emoji': '👉', 'level': 'A1',
+        'title': ['吧: rủ rê, "nhé", "phải không"', '吧: suggestions and "…, right?"'],
+        'summary': ['吧 ở cuối câu để rủ, đề nghị (…nhé, …thôi) hoặc hỏi lại điều mình đoán (…phải không?). 吗 là hỏi thật, chưa biết câu trả lời.', '吧 at the end of a sentence makes a suggestion or checks a guess; 吗 asks a real yes/no question.'],
+        'explain': [
+            'Rủ, đề nghị: thêm 吧 vào cuối câu, giống "…nhé", "…thôi": 我们走吧 (mình đi thôi), 我们一起吃饭吧 (cùng ăn cơm nhé).',
+            'Nhờ hay khuyên nhẹ nhàng: 你明天来吧 (mai bạn đến nhé). Câu nghe mềm hơn nhiều so với không có 吧.',
+            'Hỏi lại điều mình đã đoán: 你是越南人吧？ (bạn là người Việt, phải không?). Nếu chưa biết gì thì hỏi bằng 吗: 你是越南人吗？',
+            '吧 luôn đứng cuối câu, giống 吗.',
+        ],
+        'patterns': ['Câu + 吧。 (rủ, đề nghị)', 'Câu + 吧？ (đoán rồi hỏi lại)', 'Câu + 吗？ (hỏi thật)'],
+        'examples': [ex('我们走吧。', 'Mình đi thôi.'), ex('我们一起吃饭吧。', 'Chúng mình cùng ăn cơm nhé.'),
+                     ex('你明天来吧。', 'Mai bạn đến nhé.'), ex('你是越南人吧？', 'Bạn là người Việt Nam, phải không?'),
+                     ex('你是越南人吗？', 'Bạn có phải người Việt Nam không?')],
+        'mistakes': [mi('我们走吗！', '我们走吧！', 'Rủ ai làm gì → 吧. 吗 chỉ để hỏi.'),
+                     mi('吧我们走。', '我们走吧。', '吧 đứng cuối câu.')],
+        'exercises': [
+            ch('我们一起去___！', ['吧', '吗'], 0, 'Rủ cùng đi → 吧.'),
+            ch('太晚了，我们回家___。', ['吧', '吗'], 0, 'Đề nghị (…thôi) → 吧. Câu kết thúc bằng dấu chấm nên không phải câu hỏi.'),
+            ch('你累了，休息___！', ['吧', '吗'], 0, 'Khuyên nhẹ nhàng → 吧.'),
+            od('我们|一起|吃|饭|吧。', 'Chúng mình cùng ăn cơm nhé.'),
+            od('你|是|越南|人|吧？', 'Bạn là người Việt Nam, phải không?'),
         ],
     },
 ]

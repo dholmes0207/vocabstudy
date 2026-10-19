@@ -508,3 +508,14 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - Câu chọn có hai phương án 和 / 也; ở mỗi câu, phương án sai đều chắc chắn sai (我也他, 猫也狗,
   汉语，和会说).
 - Tổng cộng 21 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 25: bài 吧 (20/10/2026)
+
+- **吧** (`zh-ba`, A1): 吧 ở cuối câu dùng để:
+  - rủ, đề nghị (我们走吧, giống "…thôi", "…nhé");
+  - nhờ hay khuyên nhẹ nhàng (你明天来吧);
+  - hỏi lại điều mình đã đoán (你是越南人吧？).
+- Bài đặt 吧 cạnh 吗 (hỏi thật, chưa biết câu trả lời), vì cả hai đều đứng cuối câu.
+- Câu chọn chỉ có những câu rủ hay khuyên, kết thúc bằng "！" hoặc "。", nên 吗 chắc chắn sai.
+  Không dùng câu hỏi "你是学生___？", vì cả 吧 lẫn 吗 đều đúng ở đó.
+- Tổng cộng 22 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
