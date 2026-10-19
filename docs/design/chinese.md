@@ -496,3 +496,15 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - Câu chọn chỉ đưa ra phương án chắc chắn sai: 我想一杯咖啡, 想杯咖啡, 请不想说话, 我很要你. Không
   dùng 我不要去 làm câu sai, vì câu đó vẫn có người nói khi từ chối thẳng.
 - Tổng cộng 20 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 24: bài 和 (20/10/2026)
+
+- **和** (`zh-he`, A1): tiếng Việt dùng "và" để nối cả danh từ lẫn hai vế câu, nên người Việt
+  hay nói 他会说汉语和会说英语. Bài này nói rõ:
+  - 和 chỉ nối danh từ (我和他, 猫和狗, 北京和上海);
+  - nối hai vế câu dùng 也;
+  - hai vế cùng động từ thì nói động từ một lần;
+  - 和 … 一起 = cùng với ai.
+- Câu chọn có hai phương án 和 / 也; ở mỗi câu, phương án sai đều chắc chắn sai (我也他, 猫也狗,
+  汉语，和会说).
+- Tổng cộng 21 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
