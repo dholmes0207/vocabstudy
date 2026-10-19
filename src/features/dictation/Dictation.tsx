@@ -418,7 +418,7 @@ export function DictationRound({
               ({Math.round(result.score * 100)}%)
             </p>
             {result.pinyin && (
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-slate-500 dark:text-slate-400">
                 {t(
                   'Chấm theo bính âm, không tính dấu thanh. Gõ bằng chữ Hán để luyện cả mặt chữ.',
                   'Graded on the pinyin, tones aside. Type the characters to practise them too.'

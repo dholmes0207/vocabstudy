@@ -43,7 +43,7 @@ export default function HanVietTable() {
           </span>{' '}
           <span aria-hidden="true">🀄</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {zh
             ? t(
                 'Người Việt có sẵn một chìa khoá: âm Hán Việt. Biết 学 là "học" trong 学生 (học sinh) thì đoán được 学校 (học hiệu → trường học) và 学习 (học tập). Đây là những chữ xuất hiện trong ít nhất hai từ của gói.',
@@ -64,7 +64,7 @@ export default function HanVietTable() {
 
       <label className="relative block">
         <Search
-          className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+          className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
           aria-hidden="true"
         />
         <input
@@ -80,7 +80,7 @@ export default function HanVietTable() {
         />
       </label>
 
-      <p className="text-sm text-slate-500" aria-live="polite">
+      <p className="text-sm text-slate-500 dark:text-slate-400" aria-live="polite">
         {query.trim()
           ? t(
               `${shown.length} kết quả`,
@@ -107,7 +107,7 @@ export default function HanVietTable() {
               <span className="text-lg font-extrabold uppercase tracking-wide text-brand-600 dark:text-brand-300">
                 {e.hv}
               </span>
-              <span className="ml-auto text-xs text-slate-400">
+              <span className="ml-auto text-xs text-slate-500 dark:text-slate-400">
                 {t(`${e.words.length} từ`, `${e.words.length} words`)}
               </span>
             </div>
@@ -119,9 +119,12 @@ export default function HanVietTable() {
                     onClick={() => say(w.word)}
                     className="text-left hover:underline"
                   >
-                    <b lang={code}>{w.word}</b> <span className="text-slate-500">{w.viRead}</span> —{' '}
+                    <b lang={code}>{w.word}</b>{' '}
+                    <span className="text-slate-500 dark:text-slate-400">{w.viRead}</span> —{' '}
                     <span className="text-slate-700 dark:text-slate-200">{w.meaning}</span>
-                    {w.hanViet && <span className="text-slate-400"> ({w.hanViet})</span>}
+                    {w.hanViet && (
+                      <span className="text-slate-500 dark:text-slate-400"> ({w.hanViet})</span>
+                    )}
                   </button>
                 </li>
               ))}
@@ -130,7 +133,7 @@ export default function HanVietTable() {
         ))}
       </ul>
       {shown.length === 0 && (
-        <p className="card p-5 text-sm text-slate-500">
+        <p className="card p-5 text-sm text-slate-500 dark:text-slate-400">
           {t('Không thấy chữ nào khớp.', 'No character matches.')}
         </p>
       )}
@@ -246,7 +249,7 @@ function GuessRound({ questions, onAgain }: { questions: HanVietQuestion[]; onAg
           })}
         </div>
         {answered && (
-          <p className="text-center text-sm text-slate-500" aria-live="polite">
+          <p className="text-center text-sm text-slate-500 dark:text-slate-400" aria-live="polite">
             <b lang={code}>{q.word.word}</b> {q.word.viRead} — {q.word.meaning}
           </p>
         )}

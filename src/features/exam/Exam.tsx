@@ -55,7 +55,7 @@ export default function Exam() {
                 className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition ${
                   e.id === exam.id
                     ? 'bg-white text-brand-700 shadow-sm dark:bg-slate-900 dark:text-brand-300'
-                    : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-200'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                 }`}
               >
                 {e.name}

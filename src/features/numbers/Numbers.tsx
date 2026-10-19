@@ -45,7 +45,7 @@ export default function Numbers() {
           <span className="text-aurora">{t('Nghe số', 'Hear the numbers')}</span>{' '}
           <span aria-hidden="true">🔢</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Giá tiền, giờ giấc, ngày tháng xuất hiện liên tục trong phần nghe của HSK. Nghe rồi chọn đúng con số.',
             'Prices, times and dates come up again and again in the HSK listening parts. Listen, then pick what was said.'
@@ -131,7 +131,7 @@ function Round({ questions, onAgain }: { questions: NumberQuestion[]; onAgain: (
       }
     >
       <div className="card space-y-5 p-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('Nghe rồi chọn điều bạn nghe được', 'Listen, then pick what you heard')}
         </p>
         <button
@@ -178,7 +178,7 @@ function Round({ questions, onAgain }: { questions: NumberQuestion[]; onAgain: (
               {q.item.han}
             </p>
             <p className="text-slate-600 dark:text-slate-300">{numberPinyin(q.item.han)}</p>
-            <p className="text-sm text-slate-500">= {t(...q.item.label)}</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">= {t(...q.item.label)}</p>
           </div>
         )}
       </div>
