@@ -3,8 +3,9 @@ name: CI
 on:
   push:
     branches: [main]
+  # Every PR, including ones stacked on another feature branch: their base is
+  # not main, but they still have to pass the same checks before merging.
   pull_request:
-    branches: [main]
 
 # A new push to the same branch makes the previous run obsolete.
 concurrency:
