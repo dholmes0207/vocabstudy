@@ -129,3 +129,36 @@ thành: hiểu → nói → luyện.
   - nhận dạng giọng nói thật không chạy được trong test, nên test thay nó bằng bản giả.
 - **Chưa kiểm tra bằng giọng nói thật.** Khung trình duyệt dùng để kiểm tra chặn micro. Cần
   thử trên Chrome điện thoại với cả 3 ngôn ngữ.
+
+## Ôn ngữ pháp theo lịch (20/10/2026)
+
+**User**: "Tiếp tục cho mình". Hướng đã đề xuất là đưa bài ngữ pháp vào lịch ôn như từ vựng.
+
+Hiện bài ngữ pháp đạt 80% là "xong" mãi mãi: không có gì nhắc người học làm lại. Trong khi đó một
+mẫu câu không dùng tới cũng quên nhanh như một từ.
+
+**BA**
+
+- Bài đạt từ 80% có lịch ôn: sau **3, 7, 21, rồi 60 ngày**. Mỗi lần ôn đạt, bài giãn sang mốc kế
+  tiếp; tới 60 ngày thì giữ ở 60 ngày.
+- Luyện lại khi **chưa đến hạn** thì lịch giữ nguyên, để luyện thêm không bị phạt.
+- Ôn **trượt** (dưới 80% khi đã đến hạn): bài quay lại vào ngày hôm sau. Lần đạt kế tiếp bắt đầu lại
+  từ mốc 3 ngày. Điểm cao nhất vẫn giữ, nên bài vẫn tính là đã học.
+- **Trang chủ** có thẻ "Ôn ngữ pháp" khi có bài đến hạn: số bài, tối đa 3 bài, bài quá hạn lâu nhất
+  đứng đầu. Chạm một bài là mở bài đó. Không có bài nào đến hạn thì thẻ ẩn.
+- **Danh sách bài** gắn nhãn "Đến hạn ôn" thay cho dấu tích. **Trong bài** có dòng nhắc làm lại
+  phần luyện tập.
+- Bản ghi lưu từ trước khi có lịch ôn vẫn dùng được: hạn ôn tính bằng ngày làm cuối cộng 3 ngày.
+
+**Dev**
+
+- `lib/grammar.ts`:
+  - `GrammarRecord` thêm `step` (bậc trên `REVIEW_DAYS`; -1 là đang học lại) và `due`;
+  - `REVIEW_DAYS`, `dueDay(rec)`, `dueUnits(progress, ids, day)`;
+  - lịch ôn được tính trong `recordAttempt`.
+- `features/grammar/GrammarReviewCard.tsx` đặt trên trang chủ (`Dashboard.tsx`). Thẻ tải gói ngữ
+  pháp của ngôn ngữ đang học, chỉ với gói có ngữ pháp.
+- Dữ liệu vẫn ở `vocab.grammar.v1` trên máy, nên nằm trong file sao lưu. Chỉ thêm trường, không
+  đổi phiên bản lưu.
+- Test: `lib/grammar.test.ts` (lịch ôn, ôn trượt, bản ghi cũ, thứ tự đến hạn),
+  `GrammarReviewCard.test.tsx`.

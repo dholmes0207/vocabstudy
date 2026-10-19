@@ -3,10 +3,13 @@ import { describe, expect, it } from 'vitest'
 import {
   PASS_SCORE,
   buildGrammarRound,
+  dueDay,
+  dueUnits,
   grammarXp,
   isPassed,
   recordAttempt,
   validateGrammarPack,
+  type GrammarProgress,
   type GrammarUnit,
 } from './grammar'
 
@@ -152,7 +155,7 @@ describe('progress', () => {
     let p = recordAttempt({}, 'to-be', 6, 9, 100)
     p = recordAttempt(p, 'to-be', 9, 9, 101)
     p = recordAttempt(p, 'to-be', 3, 9, 102)
-    expect(p['to-be']).toEqual({ best: 100, attempts: 3, lastDay: 102 })
+    expect(p['to-be']).toMatchObject({ best: 100, attempts: 3, lastDay: 102 })
     expect(isPassed(p['to-be'])).toBe(true)
     expect(isPassed(recordAttempt({}, 'x', 7, 9, 1).x)).toBe(PASS_SCORE <= 78)
   })
@@ -181,5 +184,50 @@ describe('grammarXp', () => {
   it('rewards a perfect round', () => {
     expect(grammarXp(9, 9)).toBe(32)
     expect(grammarXp(0, 9)).toBe(3)
+  })
+})
+
+describe('grammar review schedule', () => {
+  const pass = (p: GrammarProgress, day: number) => recordAttempt(p, 'u', 9, 10, day)
+  const fail = (p: GrammarProgress, day: number) => recordAttempt(p, 'u', 3, 10, day)
+
+  it('schedules a passed lesson 3, 7, 21, then 60 days out, advancing only when due', () => {
+    let p = pass({}, 100)
+    expect(dueDay(p.u)).toBe(103)
+    p = pass(p, 101) // practising early changes nothing
+    expect(dueDay(p.u)).toBe(103)
+    p = pass(p, 103)
+    expect(dueDay(p.u)).toBe(110)
+    p = pass(p, 110)
+    expect(dueDay(p.u)).toBe(131)
+    p = pass(p, 131)
+    expect(dueDay(p.u)).toBe(191)
+    p = pass(p, 191)
+    expect(dueDay(p.u)).toBe(251)
+  })
+
+  it('brings a failed review back tomorrow, then restarts the ladder', () => {
+    let p = pass({}, 100)
+    p = fail(p, 103)
+    expect(dueDay(p.u)).toBe(104)
+    expect(isPassed(p.u)).toBe(true) // the best score still stands
+    p = pass(p, 104)
+    expect(dueDay(p.u)).toBe(107)
+  })
+
+  it('reads records saved before the schedule existed', () => {
+    const old: GrammarProgress = { u: { best: 90, attempts: 1, lastDay: 50 } }
+    expect(dueDay(old.u)).toBe(53)
+    expect(dueDay({ best: 40, attempts: 1, lastDay: 50 })).toBeNull()
+  })
+
+  it('lists the due lessons, most overdue first', () => {
+    const p: GrammarProgress = {
+      a: { best: 90, attempts: 1, lastDay: 1, step: 0, due: 10 },
+      b: { best: 90, attempts: 1, lastDay: 1, step: 0, due: 5 },
+      c: { best: 90, attempts: 1, lastDay: 1, step: 0, due: 30 },
+      d: { best: 50, attempts: 1, lastDay: 1 },
+    }
+    expect(dueUnits(p, ['a', 'b', 'c', 'd', 'e'], 12)).toEqual(['b', 'a'])
   })
 })

@@ -17,6 +17,7 @@ import { useImmersive } from '@/store/uiStore'
 import {
   PASS_SCORE,
   buildGrammarRound,
+  dueDay,
   grammarXp,
   isPassed,
   loadGrammarPack,
@@ -35,6 +36,7 @@ import SpeakButton from '@/components/SpeakButton'
 import BuildTiles from '@/components/BuildTiles'
 import SpeakAloud from './SpeakAloud'
 import { DictationRound } from '@/features/dictation/Dictation'
+import { today } from '@/lib/date'
 
 // "Ngữ pháp căn bản" (docs/design/grammar.md): twelve short units — the rule in
 // plain Vietnamese, the pattern, examples to listen to, the mistakes Vietnamese
@@ -92,6 +94,7 @@ function UnitList({ pack }: { pack: GrammarPack }) {
   const t = useT()
   const progress = useGrammar((s) => s.progress)
   const passed = pack.units.filter((u) => isPassed(progress[u.id])).length
+  const day = today()
   return (
     <div className="space-y-6 animate-fade-in">
       <header>
@@ -128,7 +131,11 @@ function UnitList({ pack }: { pack: GrammarPack }) {
                   <span className="block font-bold">{t(...u.title)}</span>
                   <span className="block truncate text-sm text-slate-500">{t(...u.summary)}</span>
                 </span>
-                {isPassed(rec) ? (
+                {(dueDay(rec) ?? Infinity) <= day ? (
+                  <span className="shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-950/60 dark:text-amber-200">
+                    {t('Đến hạn ôn', 'Review due')}
+                  </span>
+                ) : isPassed(rec) ? (
                   <CheckCircle2
                     className="h-6 w-6 shrink-0 text-emerald-500"
                     aria-label={t('Đã xong', 'Done')}
@@ -194,6 +201,14 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
           {unit.emoji} {unit.level}
           {rec && ` · ${t('Điểm cao nhất', 'Best score')} ${rec.best}%`}
         </p>
+        {(dueDay(rec) ?? Infinity) <= today() && (
+          <p className="mt-2 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:bg-amber-950/50 dark:text-amber-200">
+            {t(
+              `Bài này đến hạn ôn: làm lại phần luyện tập, đạt ${PASS_SCORE}% là lần ôn sau giãn xa hơn.`,
+              `This lesson is due for review: redo the practice — ${PASS_SCORE}% pushes the next review further out.`
+            )}
+          </p>
+        )}
         <h1 className="mt-1 text-2xl font-extrabold tracking-tight">{t(...unit.title)}</h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">{t(...unit.summary)}</p>
       </header>
