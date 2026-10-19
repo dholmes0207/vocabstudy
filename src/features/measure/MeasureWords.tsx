@@ -15,6 +15,7 @@ import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import SpeakButton from '@/components/SpeakButton'
 import GameShell, { GameResult } from '@/features/games/GameShell'
+import KoCounters from './KoCounters'
 
 // "Lượng từ" (docs/design/measure-words.md): the table of measure words next to
 // their Vietnamese classifiers, then a 10-question round: pick the one that
@@ -23,6 +24,12 @@ import GameShell, { GameResult } from '@/features/games/GameShell'
 const ROUND = 10
 
 export default function MeasureWords() {
+  const code = useSettings((s) => s.currentLang)
+  // Korean has counters (단위 명사) where Chinese has measure words.
+  return code === 'ko' ? <KoCounters /> : <ChineseMeasureWords />
+}
+
+function ChineseMeasureWords() {
   const t = useT()
   const ttsLang = useData((s) => s.pack!.meta.ttsLang)
   const [round, setRound] = useState<{ n: number; questions: MeasureQuestion[] } | null>(null)

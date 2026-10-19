@@ -44,3 +44,36 @@ có loại từ ("một **quyển** sách", "một **con** mèo"): chỉ cần �
 **Bổ sung (19/10/2026)**: thêm 6 danh từ của gói mới để đề đa dạng hơn: 票 và 报纸 (张), 事情 (件,
 kèm mẹo "件 đếm cả việc"), 孩子 và 房间 (个), 船 (条; 只 cũng đúng nên không bao giờ là phương án
 sai). Danh sách hỏi có 27 danh từ.
+
+## Đơn vị đếm tiếng Hàn (20/10/2026)
+
+**User**: "Tiếp tục cho mình". Hướng đã đề xuất là làm cho tiếng Hàn tương tự tiếng Trung.
+
+Tiếng Hàn cũng có loại từ, gọi là đơn vị đếm (단위 명사): 책 두 권 = "hai quyển sách". Ý tưởng giống
+lượng từ tiếng Trung, có thêm hai điểm khác: thứ tự là **danh từ + số + đơn vị**, và số là số
+thuần Hàn ở **dạng rút gọn** (한, 두, 세, 네, 다섯).
+
+**BA**
+
+- Với gói tiếng Hàn, màn `/measure-words` hiện **"Đơn vị đếm"**: 9 đơn vị 개, 명, 마리, 권, 잔, 병, 장,
+  대, 벌, mỗi đơn vị đặt cạnh loại từ tiếng Việt gần nhất, có nút nghe ("한 권"…).
+- **Bài luyện 10 câu**:
+  - Đề có dạng "책 두 ___", kèm nghĩa của danh từ. Không hiện cả cụm "hai quyển sách", vì chữ
+    "quyển" sẽ lộ đáp án.
+  - Số lượng ngẫu nhiên từ 1 đến 5, để gặp đủ 한 / 두 / 세 / 네 / 다섯.
+  - Trả lời xong hiện "책 두 권", nghĩa "hai quyển sách", có nút nghe, dòng giải thích đơn vị và mẹo
+    nếu có: 잔 với 병 cho đồ uống, 분 là cách đếm người lịch sự, mọi con vật kể cả cá đều đếm bằng
+    마리.
+- **Không bắt lỗi oan**: 우유 (잔/병), 맥주 (병/잔), 물 (병/잔), 휴대폰 (대/개), 옷 (벌/개). Đơn vị
+  nào cũng đúng thì không bao giờ bị đưa vào làm phương án sai.
+- Chỉ dùng danh từ đã có trong gói. Mục trong trang Luyện tập đổi thành mô tả chung cho cả hai
+  ngôn ngữ.
+
+**Dev**
+
+- `lib/koCounters.ts`: `COUNTERS`, `COUNTER_ITEMS`, `counterPhrase`, `counterMeaning`,
+  `koCounterQuiz`.
+- `features/measure/KoCounters.tsx`. `MeasureWords.tsx` chọn theo gói: `ko` thì hiện `KoCounters`,
+  còn lại hiện phần tiếng Trung, giữ nguyên như cũ.
+- `lib/packContent.ts`: `'/measure-words': ['zh', 'ko']`.
+- Test: `lib/koCounters.test.ts`, `features/measure/KoCounters.test.tsx`.

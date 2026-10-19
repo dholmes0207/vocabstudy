@@ -12,7 +12,7 @@ const ONLY: Record<string, readonly string[]> = {
   '/sounds': ['en'],
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
-  '/measure-words': ['zh'],
+  '/measure-words': ['zh', 'ko'],
   '/numbers': ['zh', 'ko'],
   // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
   '/han-viet': ['zh', 'ko'],
