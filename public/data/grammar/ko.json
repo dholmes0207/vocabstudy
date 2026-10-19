@@ -1295,6 +1295,241 @@
           "vi": "Tôi không uống rượu."
         }
       ]
+    },
+    {
+      "id": "ko-mot",
+      "emoji": "🚫",
+      "level": "A1",
+      "title": [
+        "못: \"không thể\"",
+        "못: \"cannot\""
+      ],
+      "summary": [
+        "못 + động từ: muốn mà không làm được. 안 chỉ là \"không\".",
+        "못 + verb: you cannot. 안 is simply \"not\"."
+      ],
+      "explain": [
+        "못 đứng trước động từ giống 안 nhưng nghĩa khác: 안 가요 = không đi; 못 가요 = không đi được (muốn mà không thể).",
+        "Với danh từ + 하다, 못 đứng ngay trước 해요: 운동 못 해요 (không tập được).",
+        "Dạng dài: động từ + -지 못해요: 가지 못해요 = 못 가요.",
+        "Cách đọc: 못 + phụ âm sau đọc căng hoặc thành âm mũi: 못 가요 [몯까요], 못 먹어요 [몬머거요]."
+      ],
+      "patterns": [
+        "못 + động từ: 못 가요",
+        "N + 못 해요: 운동 못 해요",
+        "Động từ + -지 못해요: 가지 못해요"
+      ],
+      "examples": [
+        {
+          "en": "오늘은 바빠서 못 가요.",
+          "vi": "Hôm nay bận nên tôi không đi được."
+        },
+        {
+          "en": "저는 수영을 못 해요.",
+          "vi": "Tôi không biết bơi."
+        },
+        {
+          "en": "매운 음식을 못 먹어요.",
+          "vi": "Tôi không ăn được đồ cay."
+        },
+        {
+          "en": "어제 잠을 못 잤어요.",
+          "vi": "Hôm qua tôi không ngủ được."
+        },
+        {
+          "en": "한국어를 잘 못 해요.",
+          "vi": "Tôi nói tiếng Hàn chưa giỏi."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "저는 못 운동해요.",
+          "right": "저는 운동 못 해요.",
+          "why": "Với danh từ + 하다, đặt 못 ngay trước 해요."
+        },
+        {
+          "wrong": "저는 못 가요 학교에.",
+          "right": "저는 학교에 못 가요.",
+          "why": "못 đứng ngay trước động từ, động từ ở cuối câu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "아파서 학교에 ___.",
+          "options": [
+            "못 가요",
+            "가요 못"
+          ],
+          "answer": 0,
+          "explain": "Ốm nên không đi được: 못 đứng trước động từ."
+        },
+        {
+          "type": "choice",
+          "prompt": "저는 피아노를 ___.",
+          "options": [
+            "못 쳐요",
+            "쳐요 못"
+          ],
+          "answer": 0,
+          "explain": "못 đứng trước động từ: 못 쳐요."
+        },
+        {
+          "type": "choice",
+          "prompt": "오늘은 운동 ___.",
+          "options": [
+            "못 해요",
+            "해요 못"
+          ],
+          "answer": 0,
+          "explain": "Danh từ + 못 해요."
+        },
+        {
+          "type": "choice",
+          "prompt": "숙제를 다 ___.",
+          "options": [
+            "하지 못했어요",
+            "못하지 했어요"
+          ],
+          "answer": 0,
+          "explain": "Dạng dài: gốc + -지 못했어요."
+        },
+        {
+          "type": "choice",
+          "prompt": "너무 매워서 ___.",
+          "options": [
+            "못 먹어요",
+            "먹어요 못"
+          ],
+          "answer": 0,
+          "explain": "Cay quá nên không ăn được: 못 먹어요."
+        },
+        {
+          "type": "order",
+          "en": "저는 한국어를 잘 못 해요.",
+          "vi": "Tôi nói tiếng Hàn chưa giỏi."
+        }
+      ]
+    },
+    {
+      "id": "ko-seyo",
+      "emoji": "🙏",
+      "level": "A1",
+      "title": [
+        "-(으)세요: mời, nhờ lịch sự",
+        "-(으)세요: polite requests"
+      ],
+      "summary": [
+        "Gốc động từ + 세요 (không có patchim) / 으세요 (có patchim): 오세요, 앉으세요.",
+        "Verb stem + 세요 (no final consonant) / 으세요 (with one): 오세요, 앉으세요."
+      ],
+      "explain": [
+        "Dùng khi mời hoặc nhờ ai làm gì một cách lịch sự: 앉으세요 (mời ngồi), 들어오세요 (mời vào).",
+        "Gốc không có patchim thêm 세요: 가다 → 가세요, 오다 → 오세요. Có patchim thêm 으세요: 앉다 → 앉으세요, 읽다 → 읽으세요.",
+        "Gốc tận cùng ㄹ thì bỏ ㄹ rồi thêm 세요: 만들다 → 만드세요, 살다 → 사세요.",
+        "Vài động từ có dạng kính ngữ riêng: 먹다 / 마시다 → 드세요, 자다 → 주무세요, 있다 → 계세요 (như 안녕히 계세요)."
+      ],
+      "patterns": [
+        "Gốc (không patchim) + 세요: 가세요",
+        "Gốc (có patchim) + 으세요: 앉으세요",
+        "먹다 / 마시다 → 드세요"
+      ],
+      "examples": [
+        {
+          "en": "여기 앉으세요.",
+          "vi": "Mời ngồi đây."
+        },
+        {
+          "en": "천천히 말하세요.",
+          "vi": "Xin hãy nói chậm."
+        },
+        {
+          "en": "이 책을 읽으세요.",
+          "vi": "Hãy đọc quyển sách này."
+        },
+        {
+          "en": "많이 드세요.",
+          "vi": "Ăn nhiều vào nhé."
+        },
+        {
+          "en": "안녕히 가세요.",
+          "vi": "Tạm biệt (nói với người ra về)."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "여기 앉세요.",
+          "right": "여기 앉으세요.",
+          "why": "앉다 có patchim nên thêm 으세요."
+        },
+        {
+          "wrong": "김치를 만들으세요.",
+          "right": "김치를 만드세요.",
+          "why": "Gốc tận cùng ㄹ: bỏ ㄹ rồi thêm 세요."
+        },
+        {
+          "wrong": "할머니, 많이 먹으세요.",
+          "right": "할머니, 많이 드세요.",
+          "why": "Mời người lớn ăn thì dùng dạng kính ngữ riêng 드세요."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "이 책을 (읽다 →) ___.",
+          "options": [
+            "읽으세요",
+            "읽세요"
+          ],
+          "answer": 0,
+          "explain": "읽다 có patchim (ㄱ) nên thêm 으세요."
+        },
+        {
+          "type": "choice",
+          "prompt": "내일 학교에 (오다 →) ___.",
+          "options": [
+            "오세요",
+            "오으세요"
+          ],
+          "answer": 0,
+          "explain": "오다 không có patchim nên thêm 세요."
+        },
+        {
+          "type": "choice",
+          "prompt": "여기에 이름을 (쓰다 →) ___.",
+          "options": [
+            "쓰세요",
+            "쓰으세요"
+          ],
+          "answer": 0,
+          "explain": "쓰다 không có patchim nên thêm 세요."
+        },
+        {
+          "type": "choice",
+          "prompt": "케이크를 (만들다 →) ___.",
+          "options": [
+            "만드세요",
+            "만들으세요"
+          ],
+          "answer": 0,
+          "explain": "Gốc tận cùng ㄹ: bỏ ㄹ rồi thêm 세요."
+        },
+        {
+          "type": "choice",
+          "prompt": "커피 (마시다 →) ___.",
+          "options": [
+            "드세요",
+            "마시으세요"
+          ],
+          "answer": 0,
+          "explain": "Mời uống lịch sự: 드세요. 마시으세요 thì sai, vì 마시다 không có patchim."
+        },
+        {
+          "type": "order",
+          "en": "여기에 이름을 쓰세요.",
+          "vi": "Hãy viết tên vào đây."
+        }
+      ]
     }
   ]
 }
