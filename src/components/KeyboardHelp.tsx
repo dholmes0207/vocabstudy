@@ -85,7 +85,7 @@ export default function KeyboardHelp({ canSkip = false }: { canSkip?: boolean })
               {t(...VIETNAMESE_IME_NOTE)}
             </p>
           )}
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-500 dark:text-slate-400">
             {t(
               'Tên mục có thể hơi khác tuỳ phiên bản máy.',
               'Menu names can differ a little between versions.'
@@ -103,7 +103,7 @@ export function NoTypingNote() {
   const code = useSettings((s) => s.currentLang)
   const setNoTyping = useNoTypingStore((s) => s.set)
   return (
-    <p className="flex flex-wrap items-center gap-x-2 text-xs text-slate-500">
+    <p className="flex flex-wrap items-center gap-x-2 text-xs text-slate-500 dark:text-slate-400">
       <Hand className="h-3.5 w-3.5" aria-hidden="true" />
       {t('Đang làm không cần gõ.', 'Typing is off.')}
       <button

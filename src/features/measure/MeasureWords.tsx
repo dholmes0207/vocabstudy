@@ -37,7 +37,7 @@ export default function MeasureWords() {
           <span className="text-aurora">{t('Lượng từ', 'Measure words')}</span>{' '}
           <span lang="zh">量词</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Tiếng Trung đặt một lượng từ giữa số và danh từ: 一本书 — y như "một quyển sách" của tiếng Việt. Cái khó chỉ là nhớ danh từ nào đi với lượng từ nào.',
             'Chinese puts a measure word between a number and a noun: 一本书, just like Vietnamese "một quyển sách". The only hard part is remembering which noun takes which.'
@@ -55,7 +55,7 @@ export default function MeasureWords() {
               <p className="font-semibold">
                 {m.pinyin} · <span className="text-brand-600 dark:text-brand-300">“{m.vi}”</span>
               </p>
-              <p className="text-sm text-slate-500">{t(...m.use)}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">{t(...m.use)}</p>
             </div>
             <SpeakButton text={`一${m.ch}`} lang={ttsLang} size="sm" />
           </li>
@@ -134,14 +134,14 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
     >
       <div className="card space-y-5 p-6">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t('Chọn lượng từ đúng', 'Pick the right measure word')}
           </p>
           <p lang="zh" className="mt-3 text-4xl font-extrabold">
             {gapped}
           </p>
           {word && (
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               {q.item.noun} · {word.viRead} · {word.meaning}
             </p>
           )}
@@ -172,7 +172,9 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
                 }`}
               >
                 <span lang="zh">{ch}</span>
-                <span className="text-sm font-medium text-slate-500">{measureOf(ch).pinyin}</span>
+                <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                  {measureOf(ch).pinyin}
+                </span>
                 {state === 'right' && <Check className="h-5 w-5" aria-hidden="true" />}
                 {state === 'wrong' && <X className="h-5 w-5" aria-hidden="true" />}
               </button>
@@ -197,7 +199,9 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
                   {shown.zh}
                 </p>
                 <p className="text-slate-600 dark:text-slate-300">{shown.pinyin}</p>
-                <p className="text-slate-500">{q.item.frame?.vi ?? q.item.vi}</p>
+                <p className="text-slate-500 dark:text-slate-400">
+                  {q.item.frame?.vi ?? q.item.vi}
+                </p>
               </div>
             </div>
             <p className="text-slate-600 dark:text-slate-300">
