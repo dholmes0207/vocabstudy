@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn; Mẫu câu giao tiếp tiếng Hàn; Tiếng Trung: bài ngữ pháp 也 / 都; Tiếng Trung: bài ngữ pháp 想 / 要; Tiếng Trung: bài ngữ pháp 和; Tiếng Trung: bài ngữ pháp 吧',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes; Everyday Korean phrases; Chinese: a 也 / 都 grammar lesson; Chinese: a 想 / 要 grammar lesson; Chinese: a 和 grammar lesson; Chinese: a 吧 grammar lesson',
+      'Tiếng Hàn: mẫu câu giao tiếp, nghe số, đơn vị đếm, biến âm, thêm từ, truyện và ngữ pháp; tiếng Trung: 4 bài ngữ pháp mới; ôn ngữ pháp theo lịch',
+      'Korean: everyday phrases, numbers, counters, sound changes, more words, stories and grammar; Chinese: 4 new grammar lessons; grammar on a review schedule',
     ],
     items: [
       [
@@ -66,6 +66,10 @@ export const RELEASES: Release[] = [
       [
         'Bài ngữ pháp tiếng Trung mới: 吧 ở cuối câu để rủ rê (我们走吧, "đi thôi") hay hỏi lại điều mình đoán (你是越南人吧？), khác với câu hỏi thật bằng 吗.',
         'A new Chinese grammar lesson: 吧 at the end of a sentence makes a suggestion (我们走吧, "let\'s go") or checks a guess (你是越南人吧？), unlike a real 吗 question.',
+      ],
+      [
+        'Bài ngữ pháp tiếng Hàn mới: 도 (cũng) và 만 (chỉ) gắn thẳng vào danh từ, thay cho 은/는, 이/가, 을/를 — vì sao nói 저도 chứ không nói 저는도.',
+        'A new Korean grammar lesson: 도 (also) and 만 (only) go right after the noun, in place of 은/는, 이/가, 을/를 — why it is 저도, not 저는도.',
       ],
     ],
   },
