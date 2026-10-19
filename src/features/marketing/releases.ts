@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요; Thêm 2 truyện tiếng Hàn; Biến âm tiếng Hàn',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요; Two more Korean stories; Korean sound changes',
     ],
     items: [
       [
@@ -42,6 +42,10 @@ export const RELEASES: Release[] = [
       [
         'Thêm 2 truyện tiếng Hàn chạm từ là ra nghĩa: "Sinh nhật bạn" (A1) và "Một ngày ở thư viện" (A2), mỗi truyện 8 câu và 3 câu hỏi.',
         'Two more Korean stories with tap-for-meaning: "A friend’s birthday" (A1) and "A day at the library" (A2), 8 sentences and 3 questions each.',
+      ],
+      [
+        'Trang Hangul có phần "Biến âm khi đọc liền": nối âm, ㅎ yếu đi, bật hơi, âm mũi hoá, căng hoá — vì sao 음악 đọc là ư-mác, 감사합니다 là cam-xa-ham-ni-đa. Chạm từ để nghe.',
+        'The Hangul page explains sound changes: linking, weak ㅎ, aspiration, nasalisation, tensing — why 음악 reads ư-mác and 감사합니다 cam-xa-ham-ni-đa. Tap a word to hear it.',
       ],
     ],
   },

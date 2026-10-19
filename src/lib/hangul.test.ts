@@ -4,6 +4,7 @@ import {
   COMPOUND_VOWELS,
   CONSONANTS,
   FINAL_SOUNDS,
+  SOUND_CHANGES,
   TENSE,
   VOWELS,
   compose,
@@ -114,5 +115,21 @@ describe('the quick check', () => {
   it('gives XP for trying and for each right answer', () => {
     expect(hangulXp(0, 10)).toBe(5)
     expect(hangulXp(10, 10)).toBe(30)
+  })
+})
+
+describe('SOUND_CHANGES', () => {
+  const pack = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as {
+    words: { word: string; viRead: string }[]
+  }
+  const readOf = new Map(pack.words.map((w) => [w.word, w.viRead]))
+
+  it('only uses words of the pack, read exactly as their cards read them', () => {
+    for (const rule of SOUND_CHANGES)
+      for (const ex of rule.examples) {
+        expect(readOf.has(ex.word), ex.word).toBe(true)
+        expect(ex.read, ex.word).toBe(readOf.get(ex.word))
+        expect(ex.said, ex.word).toMatch(/[가-힣]/)
+      }
   })
 })

@@ -140,6 +140,96 @@ export const FINAL_SOUNDS: { sound: string; letters: string; word: string; read:
   { sound: 'ng', letters: 'ㅇ', word: '방', read: 'bang' },
 ]
 
+/**
+ * Sound changes between blocks (docs/design/hangul.md, "Biến âm"): why a word
+ * is not read block by block. Every example is a word of the pack, and `read`
+ * is that word's own reading, so the lesson and the cards never disagree.
+ */
+export const SOUND_CHANGES: {
+  id: string
+  name: Pair
+  rule: Pair
+  examples: { word: string; said: string; read: string }[]
+}[] = [
+  {
+    id: 'liaison',
+    name: ['Nối âm', 'Linking'],
+    rule: [
+      'Phụ âm cuối gặp nguyên âm ở khối sau thì chuyển sang đọc với nguyên âm đó.',
+      'A final consonant before a vowel moves over to the next block.',
+    ],
+    examples: [
+      { word: '음악', said: '으막', read: 'ư-mác' },
+      { word: '한국어', said: '한구거', read: 'han-cu-gơ' },
+      { word: '일어나다', said: '이러나다', read: 'i-rơ-na-đa' },
+    ],
+  },
+  {
+    id: 'h-drop',
+    name: ['ㅎ yếu đi', 'Weak ㅎ'],
+    rule: [
+      'ㅎ đứng giữa từ, sau nguyên âm hoặc ㄴ ㅁ ㅇ ㄹ, thường đọc rất nhẹ hoặc mất hẳn.',
+      'ㅎ inside a word, after a vowel or ㄴ ㅁ ㅇ ㄹ, goes very faint or silent.',
+    ],
+    examples: [
+      { word: '은행', said: '으냉', read: 'ư-neng' },
+      { word: '전화', said: '저놔', read: 'chơ-noa' },
+      { word: '좋아하다', said: '조아하다', read: 'chô-a-ha-đa' },
+    ],
+  },
+  {
+    id: 'aspiration',
+    name: ['Bật hơi', 'Aspiration'],
+    rule: [
+      'ㄱ ㄷ ㅂ gặp ㅎ (trước hoặc sau) thành ㅋ ㅌ ㅍ, đọc bật hơi.',
+      'ㄱ ㄷ ㅂ next to ㅎ become the aspirated ㅋ ㅌ ㅍ.',
+    ],
+    examples: [
+      { word: '축하해요', said: '추카해요', read: 'chu-kha-he-yô' },
+      { word: '좋다', said: '조타', read: 'chô-tha' },
+      { word: '많다', said: '만타', read: 'man-tha' },
+    ],
+  },
+  {
+    id: 'nasal',
+    name: ['Âm mũi hoá', 'Nasalisation'],
+    rule: [
+      'Âm tắc cuối gặp ㄴ ㅁ thì đọc thành âm mũi: ㅂ → ㅁ, ㄷ → ㄴ, ㄱ → ㅇ.',
+      'A final stop before ㄴ ㅁ turns nasal: ㅂ → ㅁ, ㄷ → ㄴ, ㄱ → ㅇ.',
+    ],
+    examples: [
+      { word: '감사합니다', said: '감사함니다', read: 'cam-xa-ham-ni-đa' },
+      { word: '잘 먹겠습니다', said: '잘 먹껟씀니다', read: 'chal mớc-kết-xưm-ni-đa' },
+    ],
+  },
+  {
+    id: 'tensing',
+    name: ['Căng hoá', 'Tensing'],
+    rule: [
+      'Sau âm tắc cuối, ㄱ ㄷ ㅂ ㅅ ㅈ của khối sau đọc căng: ㄲ ㄸ ㅃ ㅆ ㅉ.',
+      'After a final stop, ㄱ ㄷ ㅂ ㅅ ㅈ in the next block are said tense: ㄲ ㄸ ㅃ ㅆ ㅉ.',
+    ],
+    examples: [
+      { word: '식당', said: '식땅', read: 'xíc-tang' },
+      { word: '학교', said: '학꾜', read: 'hắc-kyô' },
+      { word: '맥주', said: '맥쭈', read: 'méc-chu' },
+    ],
+  },
+  {
+    id: 'voicing',
+    name: ['Hữu thanh giữa từ', 'Voicing inside a word'],
+    rule: [
+      'Giữa hai âm hữu thanh, ㄱ ㄷ ㅂ ㅈ đọc gần g, đ, b, j — nên cách đọc ghi ghi, đa, gu.',
+      'Between voiced sounds ㄱ ㄷ ㅂ ㅈ sound close to g, d, b, j — hence ghi, đa, gu in the readings.',
+    ],
+    examples: [
+      { word: '고기', said: '고기', read: 'cô-ghi' },
+      { word: '친구', said: '친구', read: 'chin-gu' },
+      { word: '오다', said: '오다', read: 'ô-đa' },
+    ],
+  },
+]
+
 // ---------------------------------------------------------------------------
 // Building syllable blocks. Unicode lays every block out as
 // 0xAC00 + (initial × 21 + vowel) × 28 + final.
