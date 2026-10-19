@@ -472,3 +472,15 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 
 - `zh-fruit-shopping` (A2): một lần mặc cả ngắn, ôn 多少钱一公斤, 有点儿贵, 便宜一点儿吧, 您要几个,
   吃了一点儿 (Bước 20). Tổng cộng 11 truyện tiếng Trung, 33 truyện cho cả app.
+
+## Bước 22: bài 也 / 都 (20/10/2026)
+
+- **也 / 都** (`zh-ye-dou`, A1): 也 (cũng) và 都 (đều) đứng sau chủ ngữ, trước động từ, giống
+  "cũng", "đều" trong tiếng Việt. Bài nói thêm:
+  - 都 gom những gì đứng trước nó, nên chủ ngữ thường là số nhiều;
+  - 每天都 (ngày nào cũng);
+  - có cả hai thì 也 đứng trước (也都);
+  - 都不 (đều không) khác 不都 (không phải tất cả).
+- Câu chọn chỉ đưa ra phương án chắc chắn sai: 都 với chủ ngữ một người, 都都, 也也. Không dùng
+  "我每天___喝茶" với hai phương án 都 / 也, vì 我每天也喝茶 vẫn đúng khi có ngữ cảnh.
+- Tổng cộng 19 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
