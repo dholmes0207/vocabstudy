@@ -277,8 +277,8 @@ function Features() {
       tone: 'from-fuchsia-500 to-rose-600',
       title: t('Thêm tiếng Hàn, tiếng Trung (beta)', 'Korean and Chinese too (beta)'),
       desc: t(
-        'Tiếng Hàn: bảng chữ Hangul, 253 từ sơ cấp có cách đọc kiểu Việt, nghe số, 12 bộ chủ đề, 13 bài ngữ pháp và 10 truyện ngắn. Tiếng Trung: 330 từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, 15 bộ chủ đề, 21 bài ngữ pháp và 11 truyện ngắn. Đọc bằng giọng của trình duyệt.',
-        'Korean: the Hangul alphabet, 253 beginner words with Vietnamese-style readings, number listening, 12 topic decks, 13 grammar lessons and 10 short stories. Chinese: 330 words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, 15 topic decks, 21 grammar lessons and 11 short stories. Read aloud by your browser.'
+        'Tiếng Hàn: bảng chữ Hangul, 253 từ sơ cấp có cách đọc kiểu Việt, nghe số, 12 bộ chủ đề, 13 bài ngữ pháp và 10 truyện ngắn. Tiếng Trung: 330 từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, 15 bộ chủ đề, 22 bài ngữ pháp và 11 truyện ngắn. Đọc bằng giọng của trình duyệt.',
+        'Korean: the Hangul alphabet, 253 beginner words with Vietnamese-style readings, number listening, 12 topic decks, 13 grammar lessons and 10 short stories. Chinese: 330 words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, 15 topic decks, 22 grammar lessons and 11 short stories. Read aloud by your browser.'
       ),
     },
     {
