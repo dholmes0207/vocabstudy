@@ -36,10 +36,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/numbers',
     icon: '🔢',
     title: 'Nghe số',
-    desc: 'Nghe giá tiền, giờ giấc, ngày tháng bằng tiếng Trung rồi chọn đúng — như phần nghe của HSK.',
+    desc: 'Nghe giá tiền, giờ giấc, ngày tháng rồi chọn đúng — như phần nghe của đề HSK, TOPIK.',
     titleEn: 'Hear the numbers',
     descEn:
-      'Hear prices, times and dates in Chinese and pick the right one — like the HSK listening parts.',
+      'Hear prices, times and dates and pick the right one — like the HSK and TOPIK listening parts.',
     tone: 'from-sky-500 to-indigo-600',
   },
   {

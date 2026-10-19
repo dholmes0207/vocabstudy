@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-20',
+    title: ['Nghe số cho tiếng Hàn', 'Hear the numbers, in Korean'],
+    items: [
+      [
+        'Màn "Nghe số" có thêm tiếng Hàn: nghe giá tiền, giờ, ngày tháng, tuổi rồi chọn đúng — luyện chỗ khó nhất của tiếng Hàn là hai bộ số (세 시 이십 분, 오천 원, 스무 살, 유월).',
+        '"Hear the numbers" now does Korean: prices, times, dates and ages — practice for the hardest part, its two sets of numbers (세 시 이십 분, 오천 원, 스무 살, 유월).',
+      ],
+    ],
+  },
+  {
     date: '2026-10-19',
     title: [
       'Buổi học đầu dễ hơn, cách đọc rõ hơn; tiếng Trung: HSK 2, gõ bính âm, lượng từ, chữ Hán qua âm Hán Việt',

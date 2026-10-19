@@ -58,4 +58,17 @@ describe('Numbers', () => {
     fireEvent.click(screen.getByRole('button', { name: /Xem kết quả/ }))
     expect(screen.getByText('Đúng 0/1 câu')).toBeInTheDocument()
   })
+
+  it('in Korean, explains the two number sets and reads Hangul without a pinyin line', () => {
+    const ko = JSON.parse(readFileSync('public/data/ko.json', 'utf8')) as LanguagePack
+    useSettings.setState({ currentLang: 'ko' })
+    useData.setState({ pack: ko, status: 'ready' })
+    render(<Numbers />, { wrapper: MemoryRouter })
+    expect(screen.getByText(/hai bộ số/)).toBeInTheDocument()
+    expect(screen.getByText(/유월/)).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Nghe 10 câu/ }))
+    vi.advanceTimersByTime(300)
+    expect(spoken).toHaveLength(1)
+    expect(spoken[0]).toMatch(/[가-힣]/)
+  })
 })

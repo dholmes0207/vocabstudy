@@ -4,15 +4,33 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { pronounce } from '@/lib/audio'
-import { numberPinyin, numberQuiz, numbersXp, type NumberQuestion } from '@/lib/zhNumbers'
+import { numberPinyin, numberQuiz, numbersXp } from '@/lib/zhNumbers'
+import { koNumberQuiz } from '@/lib/koNumbers'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
 // "Nghe số" (docs/design/numbers.md): hear a number, a price, a clock time, a
-// date or a weekday in Chinese and pick what was said.
+// date or a weekday and pick what was said — in Chinese, or in Korean with its
+// two sets of numbers.
 
-const RULES: [vi: string, en: string][] = [
+type Pair = [vi: string, en: string]
+
+/** What a round needs to know about one language. */
+interface Question {
+  item: { label: Pair; han: string }
+  options: { label: Pair; han: string }[]
+  answer: number
+}
+interface Kit {
+  quiz: () => Question[]
+  /** A romanised line under the answer (pinyin), when the language has one here. */
+  reading?: (han: string) => string
+  intro: Pair
+  rules: Pair[]
+}
+
+const ZH_RULES: Pair[] = [
   [
     '十四 (14) và 四十 (40): chữ 十 đứng sau là "mười mấy", đứng giữa là "mấy mươi".',
     '十四 (14) vs 四十 (40): 十 first is the teens, 十 in the middle is the tens.',
@@ -31,12 +49,53 @@ const RULES: [vi: string, en: string][] = [
   ],
 ]
 
+const KO_RULES: Pair[] = [
+  [
+    'Tiếng Hàn có hai bộ số: Hán Hàn (일, 이, 삼…) và thuần Hàn (하나, 둘, 셋…). Dùng bộ nào là tuỳ thứ đi kèm.',
+    'Korean has two sets of numbers: Sino-Korean (일, 이, 삼…) and native (하나, 둘, 셋…). Which one depends on what follows.',
+  ],
+  [
+    'Giờ dùng số thuần Hàn, phút dùng Hán Hàn: 세 시 이십 분 (3:20). 30 phút là 반: 세 시 반.',
+    'Hours take native numbers, minutes Sino-Korean: 세 시 이십 분 (3:20). Half past is 반: 세 시 반.',
+  ],
+  [
+    'Tiền và ngày tháng dùng Hán Hàn: 오천 원, 삼월 십이일. Tháng 6 là 유월, tháng 10 là 시월; 10.000 là 만, không nói 일만.',
+    'Money and dates take Sino-Korean: 오천 원, 삼월 십이일. June is 유월, October 시월; 10,000 is 만, never 일만.',
+  ],
+  [
+    'Đếm đồ vật, tuổi dùng thuần Hàn và rút gọn trước danh từ: 한 개, 두 개, 세 개, 네 개; 스물 → 스무 살.',
+    'Things and age take native numbers, shortened before a counter: 한 개, 두 개, 세 개, 네 개; 스물 → 스무 살.',
+  ],
+]
+
+const KITS: Record<string, Kit> = {
+  zh: {
+    quiz: numberQuiz,
+    reading: numberPinyin,
+    intro: [
+      'Giá tiền, giờ giấc, ngày tháng xuất hiện liên tục trong phần nghe của HSK. Nghe rồi chọn đúng con số.',
+      'Prices, times and dates come up again and again in the HSK listening parts. Listen, then pick what was said.',
+    ],
+    rules: ZH_RULES,
+  },
+  ko: {
+    quiz: koNumberQuiz,
+    intro: [
+      'Giá tiền, giờ giấc, ngày tháng, tuổi xuất hiện liên tục khi nghe tiếng Hàn — và mỗi thứ lại đi với một bộ số khác nhau. Nghe rồi chọn đúng.',
+      'Prices, times, dates and ages come up all the time in spoken Korean — each with its own set of numbers. Listen, then pick what was said.',
+    ],
+    rules: KO_RULES,
+  },
+}
+
 export default function Numbers() {
   const t = useT()
-  const [round, setRound] = useState<{ n: number; questions: NumberQuestion[] } | null>(null)
-  const start = () => setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: numberQuiz() }))
+  const code = useSettings((s) => s.currentLang)
+  const kit = KITS[code] ?? KITS.zh
+  const [round, setRound] = useState<{ n: number; questions: Question[] } | null>(null)
+  const start = () => setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: kit.quiz() }))
 
-  if (round) return <Round key={round.n} questions={round.questions} onAgain={start} />
+  if (round) return <Round key={round.n} questions={round.questions} kit={kit} onAgain={start} />
 
   return (
     <div className="mx-auto max-w-2xl space-y-5 animate-fade-in">
@@ -45,15 +104,10 @@ export default function Numbers() {
           <span className="text-aurora">{t('Nghe số', 'Hear the numbers')}</span>{' '}
           <span aria-hidden="true">🔢</span>
         </h1>
-        <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(
-            'Giá tiền, giờ giấc, ngày tháng xuất hiện liên tục trong phần nghe của HSK. Nghe rồi chọn đúng con số.',
-            'Prices, times and dates come up again and again in the HSK listening parts. Listen, then pick what was said.'
-          )}
-        </p>
+        <p className="mt-1 text-slate-500 dark:text-slate-400">{t(...kit.intro)}</p>
       </header>
       <ul className="card space-y-2 p-5 text-sm text-slate-600 dark:text-slate-300">
-        {RULES.map((r) => (
+        {kit.rules.map((r) => (
           <li key={r[0]}>• {t(...r)}</li>
         ))}
       </ul>
@@ -64,7 +118,15 @@ export default function Numbers() {
   )
 }
 
-function Round({ questions, onAgain }: { questions: NumberQuestion[]; onAgain: () => void }) {
+function Round({
+  questions,
+  kit,
+  onAgain,
+}: {
+  questions: Question[]
+  kit: Kit
+  onAgain: () => void
+}) {
   const t = useT()
   const ttsLang = useData((s) => s.pack!.meta.ttsLang)
   const code = useSettings((s) => s.currentLang)
@@ -174,10 +236,12 @@ function Round({ questions, onAgain }: { questions: NumberQuestion[]; onAgain: (
         </div>
         {answered && (
           <div className="rounded-xl bg-slate-50 p-4 dark:bg-slate-800/60" aria-live="polite">
-            <p lang="zh" className="text-2xl font-bold">
+            <p lang={code} className="text-2xl font-bold">
               {q.item.han}
             </p>
-            <p className="text-slate-600 dark:text-slate-300">{numberPinyin(q.item.han)}</p>
+            {kit.reading && (
+              <p className="text-slate-600 dark:text-slate-300">{kit.reading(q.item.han)}</p>
+            )}
             <p className="text-sm text-slate-500 dark:text-slate-400">= {t(...q.item.label)}</p>
           </div>
         )}
