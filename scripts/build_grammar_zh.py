@@ -108,6 +108,11 @@ EXAMPLE_PINYIN = {
     '便宜一点儿吧！': ('便宜|一点儿|吧！', 'pián yi yì diǎn r ba'),
     '请说慢一点儿。': ('请|说|慢|一点儿。', 'qǐng shuō màn yì diǎn r'),
     '我想喝一点儿水。': ('我|想|喝|一点儿|水。', 'wǒ xiǎng hē yì diǎn r shuǐ'),
+    '我也是学生。': ('我|也|是|学生。', 'wǒ yě shì xué sheng'),
+    '我们都是学生。': ('我们|都|是|学生。', 'wǒ men dōu shì xué sheng'),
+    '他们也都喜欢喝茶。': ('他们|也|都|喜欢|喝|茶。', 'tā men yě dōu xǐ huan hē chá'),
+    '我们都不去。': ('我们|都|不|去。', 'wǒ men dōu bú qù'),
+    '我们不都去。': ('我们|不|都|去。', 'wǒ men bù dōu qù'),
 }
 
 
@@ -594,6 +599,32 @@ UNITS = [
             ch('我想吃___米饭。', ['一点儿', '有点儿'], 0, 'Một ít + danh từ → 一点儿.'),
             ch('请走慢___。', ['一点儿', '有点儿'], 0, 'Nhờ đi chậm hơn → tính từ + 一点儿.'),
             od('请|说|慢|一点儿。', 'Xin nói chậm hơn một chút.'),
+        ],
+    },
+    {
+        'id': 'zh-ye-dou', 'emoji': '🤝', 'level': 'A1',
+        'title': ['也 và 都: "cũng" và "đều"', '也 and 都: "also" and "all"'],
+        'summary': ['也 (cũng) và 都 (đều) đứng sau chủ ngữ, trước động từ — đúng chỗ của "cũng", "đều" trong tiếng Việt.', '也 (also) and 都 (all) go after the subject, before the verb.'],
+        'explain': [
+            '也 = cũng, 都 = đều. Cả hai đứng SAU chủ ngữ, TRƯỚC động từ hay tính từ, giống tiếng Việt: 我也是学生 (tôi cũng là học sinh), 我们都是学生 (chúng tôi đều là học sinh).',
+            'Không đặt 也, 都 ở đầu câu: không nói 也我是学生 hay 都我们是学生.',
+            '都 gom những gì đứng TRƯỚC nó, nên chủ ngữ thường là nhiều người, nhiều vật: 我们都…, 他们都…. Có 每 (mỗi) thì hay có 都: 我每天都喝茶 (ngày nào tôi cũng uống trà).',
+            'Có cả hai thì 也 đứng trước: 也都. 都不 = đều không (không ai…), còn 不都 = không phải tất cả.',
+        ],
+        'patterns': ['Chủ ngữ + 也 + động từ', 'Chủ ngữ số nhiều + 都 + động từ', '也都 · 都不 / 不都'],
+        'examples': [ex('我也是学生。', 'Tôi cũng là học sinh.'), ex('我们都是学生。', 'Chúng tôi đều là học sinh.'),
+                     ex('他们也都喜欢喝茶。', 'Họ cũng đều thích uống trà.'), ex('我们都不去。', 'Chúng tôi đều không đi.'),
+                     ex('我们不都去。', 'Không phải ai trong chúng tôi cũng đi.')],
+        'mistakes': [mi('也我是学生。', '我也是学生。', '也 đứng sau chủ ngữ, trước động từ.'),
+                     mi('都我们是学生。', '我们都是学生。', '都 đứng sau chủ ngữ, không đứng đầu câu.'),
+                     mi('他们都也喜欢喝茶。', '他们也都喜欢喝茶。', 'Có cả hai thì 也 đứng trước 都.')],
+        'exercises': [
+            ch('他喜欢喝茶，我___喜欢喝茶。', ['也', '都'], 0, 'Chủ ngữ chỉ có một người (我), nói "cũng" → 也.'),
+            ch('我爸爸是医生，我妈妈___是医生。', ['也', '都'], 0, 'Thêm một người giống vậy → 也 (cũng).'),
+            ch('他们___都喜欢喝茶。', ['也', '都'], 0, 'Có cả 也 và 都 thì 也 đứng trước: 也都.'),
+            ch('他们也___喜欢喝茶。', ['都', '也'], 0, '也 rồi đến 都: 也都 (cũng đều).'),
+            od('我们|都|是|学生。', 'Chúng tôi đều là học sinh.'),
+            od('我|也|是|学生。', 'Tôi cũng là học sinh.'),
         ],
     },
 ]

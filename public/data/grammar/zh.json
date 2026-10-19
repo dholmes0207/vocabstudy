@@ -2166,6 +2166,126 @@
           "vi": "Xin nói chậm hơn một chút."
         }
       ]
+    },
+    {
+      "id": "zh-ye-dou",
+      "emoji": "🤝",
+      "level": "A1",
+      "title": [
+        "也 và 都: \"cũng\" và \"đều\"",
+        "也 and 都: \"also\" and \"all\""
+      ],
+      "summary": [
+        "也 (cũng) và 都 (đều) đứng sau chủ ngữ, trước động từ — đúng chỗ của \"cũng\", \"đều\" trong tiếng Việt.",
+        "也 (also) and 都 (all) go after the subject, before the verb."
+      ],
+      "explain": [
+        "也 = cũng, 都 = đều. Cả hai đứng SAU chủ ngữ, TRƯỚC động từ hay tính từ, giống tiếng Việt: 我也是学生 (tôi cũng là học sinh), 我们都是学生 (chúng tôi đều là học sinh).",
+        "Không đặt 也, 都 ở đầu câu: không nói 也我是学生 hay 都我们是学生.",
+        "都 gom những gì đứng TRƯỚC nó, nên chủ ngữ thường là nhiều người, nhiều vật: 我们都…, 他们都…. Có 每 (mỗi) thì hay có 都: 我每天都喝茶 (ngày nào tôi cũng uống trà).",
+        "Có cả hai thì 也 đứng trước: 也都. 都不 = đều không (không ai…), còn 不都 = không phải tất cả."
+      ],
+      "patterns": [
+        "Chủ ngữ + 也 + động từ",
+        "Chủ ngữ số nhiều + 都 + động từ",
+        "也都 · 都不 / 不都"
+      ],
+      "examples": [
+        {
+          "en": "我也是学生。",
+          "vi": "Tôi cũng là học sinh.",
+          "read": "Wǒ yě shì xuésheng."
+        },
+        {
+          "en": "我们都是学生。",
+          "vi": "Chúng tôi đều là học sinh.",
+          "read": "Wǒmen dōu shì xuésheng."
+        },
+        {
+          "en": "他们也都喜欢喝茶。",
+          "vi": "Họ cũng đều thích uống trà.",
+          "read": "Tāmen yě dōu xǐhuan hē chá."
+        },
+        {
+          "en": "我们都不去。",
+          "vi": "Chúng tôi đều không đi.",
+          "read": "Wǒmen dōu bú qù."
+        },
+        {
+          "en": "我们不都去。",
+          "vi": "Không phải ai trong chúng tôi cũng đi.",
+          "read": "Wǒmen bù dōu qù."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "也我是学生。",
+          "right": "我也是学生。",
+          "why": "也 đứng sau chủ ngữ, trước động từ."
+        },
+        {
+          "wrong": "都我们是学生。",
+          "right": "我们都是学生。",
+          "why": "都 đứng sau chủ ngữ, không đứng đầu câu."
+        },
+        {
+          "wrong": "他们都也喜欢喝茶。",
+          "right": "他们也都喜欢喝茶。",
+          "why": "Có cả hai thì 也 đứng trước 都."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "他喜欢喝茶，我___喜欢喝茶。",
+          "options": [
+            "也",
+            "都"
+          ],
+          "answer": 0,
+          "explain": "Chủ ngữ chỉ có một người (我), nói \"cũng\" → 也."
+        },
+        {
+          "type": "choice",
+          "prompt": "我爸爸是医生，我妈妈___是医生。",
+          "options": [
+            "也",
+            "都"
+          ],
+          "answer": 0,
+          "explain": "Thêm một người giống vậy → 也 (cũng)."
+        },
+        {
+          "type": "choice",
+          "prompt": "他们___都喜欢喝茶。",
+          "options": [
+            "也",
+            "都"
+          ],
+          "answer": 0,
+          "explain": "Có cả 也 và 都 thì 也 đứng trước: 也都."
+        },
+        {
+          "type": "choice",
+          "prompt": "他们也___喜欢喝茶。",
+          "options": [
+            "都",
+            "也"
+          ],
+          "answer": 0,
+          "explain": "也 rồi đến 都: 也都 (cũng đều)."
+        },
+        {
+          "type": "order",
+          "en": "我们​都​是​学生。",
+          "vi": "Chúng tôi đều là học sinh."
+        },
+        {
+          "type": "order",
+          "en": "我​也​是​学生。",
+          "vi": "Tôi cũng là học sinh."
+        }
+      ]
     }
   ]
 }
