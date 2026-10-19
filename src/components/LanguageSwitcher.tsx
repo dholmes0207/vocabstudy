@@ -65,7 +65,7 @@ export default function LanguageSwitcher() {
                       </span>
                     )}
                   </span>
-                  <span className="block text-xs text-slate-400">
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">
                     {l.count} {t('từ', 'words')}
                   </span>
                 </span>

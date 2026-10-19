@@ -13,6 +13,28 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-19',
+    title: ['Buổi học đầu dễ hơn, cách đọc rõ hơn', 'An easier first lesson, clearer readings'],
+    items: [
+      [
+        'Bấm "Học 5 từ đầu tiên" là vào bài ngay. Mỗi bài có tối đa một phần ba là từ ngữ pháp (the, of, is…), phần còn lại là từ dễ hình dung như look, go, little.',
+        'Tap "Learn your first 5 words" and the lesson starts right away. At most a third of a lesson are grammar words (the, of, is…); the rest are words you can picture, like look, go, little.',
+      ],
+      [
+        'Cách đọc kiểu Việt viết đôi nguyên âm dài: sheep đọc SHIIP, ship đọc SHIP; leave LIIV, live LIV; food PHUUĐ, foot PHUT.',
+        'The Vietnamese-letter readings now double long vowels: sheep reads SHIIP, ship reads SHIP; leave LIIV, live LIV; food PHUUĐ, foot PHUT.',
+      ],
+      [
+        'Câu nói hay mỗi ngày trên Trang chủ giờ theo ngôn ngữ bạn đang học: tiếng Hàn, tiếng Trung có câu riêng.',
+        'The daily saying on Home now follows the language you are learning, with its own Korean and Chinese sayings.',
+      ],
+      [
+        'Chữ phụ đậm hơn, dễ đọc hơn khi ra ngoài trời, ở cả giao diện sáng và tối.',
+        'Secondary text is darker and easier to read outdoors, in both light and dark themes.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-18',
     title: [
       '"Mình biết từ này rồi" và trang giới thiệu cho mọi người',

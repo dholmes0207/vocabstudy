@@ -20,13 +20,13 @@ export default function GameShell({
       <div className="mb-4 flex items-center gap-3">
         <Link
           to="/practice"
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Thoát trò chơi', 'Leave the game')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
         </Link>
         <h1 className="flex-1 truncate text-lg font-extrabold">{title}</h1>
-        <div className="flex shrink-0 items-center gap-3 text-sm font-semibold tabular-nums text-slate-500">
+        <div className="flex shrink-0 items-center gap-3 text-sm font-semibold tabular-nums text-slate-500 dark:text-slate-400">
           {stats}
         </div>
       </div>
@@ -61,7 +61,7 @@ export function GameResult({
           🏆 {t('Kỷ lục mới của bạn!', 'New personal record!')}
         </p>
       )}
-      <ul className="mt-4 space-y-1 text-slate-500">
+      <ul className="mt-4 space-y-1 text-slate-500 dark:text-slate-400">
         {lines.map((l) => (
           <li key={l}>{l}</li>
         ))}

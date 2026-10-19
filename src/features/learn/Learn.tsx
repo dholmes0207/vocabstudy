@@ -32,6 +32,8 @@ const PLACEMENT_OFFER_BELOW = 30
 /** Saved words per session, and how many are named on the card. */
 const SAVED_BATCH = 10
 const SAVED_SHOWN = 12
+/** Words in a quick lesson (?quick=1): the "5 words in 2 minutes" promise. */
+const QUICK_COUNT = 5
 
 export default function Learn() {
   const pack = useData((s) => s.pack)!
@@ -46,7 +48,16 @@ export default function Learn() {
   const placement = usePlacement((s) => s.results[code])
   const startAt = placement?.start ?? 0
 
-  const [session, setSession] = useState<Word[] | null>(null)
+  // "Học 5 từ đầu tiên" / "Học nhanh 2 phút" arrive with ?quick=1: five words,
+  // straight into the lesson instead of one more tap on this page.
+  const [params] = useSearchParams()
+  const quick = params.has('quick')
+  const [session, setSession] = useState<Word[] | null>(() => {
+    if (!quick) return null
+    const left = summarize(pack.words, progress, dailyNewLimit).newRemainingToday
+    const batch = nextNewWords(pack.words, progress, Math.min(QUICK_COUNT, left), startAt)
+    return batch.length ? batch : null
+  })
   // "Học vượt bộ này" (lib/testOut.ts): a short check on the next deck.
   const [testOut, setTestOut] = useState<{
     deck: Deck
@@ -55,9 +66,7 @@ export default function Learn() {
   } | null>(null)
   // Quick session length so busy learners can grab a short set without opening
   // Settings. 'all' = however many new words remain today. See F6.
-  // "Học nhanh 2 phút" from the dashboard arrives with ?quick=1: five words.
-  const [params] = useSearchParams()
-  const [pick, setPick] = useState<number | 'all'>(() => (params.get('quick') ? 5 : 'all'))
+  const [pick, setPick] = useState<number | 'all'>(() => (quick ? QUICK_COUNT : 'all'))
   // With 1000 words the pack is 50 decks — dumping all of them on the page
   // overwhelms a beginner, so show the stretch they are actually on.
   const [showAllDecks, setShowAllDecks] = useState(false)
@@ -190,7 +199,7 @@ export default function Learn() {
           <span className="text-aurora">{t('Học từ mới', 'Learn new words')}</span>{' '}
           <span aria-hidden="true">📖</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Mỗi lần 5 từ: làm quen (nghe, đọc câu ví dụ, xem cụm hay đi chung) rồi tự nhớ lại ngay — sai thì được giải thích và làm lại.',
             'Five words at a time: meet them (listen, read an example, see common phrases), then recall them right away — mistakes get explained and retried.'
@@ -208,7 +217,7 @@ export default function Learn() {
               <h2 id="saved-words-title" className="text-lg font-bold">
                 {t(`Từ bạn đã lưu (${saved.length})`, `Words you saved (${saved.length})`)}
               </h2>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
                 {t(
                   'Những từ bạn bấm "Lưu để học" khi đọc truyện.',
                   'Words you tapped "Save to learn" on while reading.'
@@ -226,7 +235,7 @@ export default function Learn() {
               </li>
             ))}
             {saved.length > SAVED_SHOWN && (
-              <li className="chip text-slate-400">+{saved.length - SAVED_SHOWN}</li>
+              <li className="chip text-slate-500">+{saved.length - SAVED_SHOWN}</li>
             )}
           </ul>
           <button
@@ -253,7 +262,7 @@ export default function Learn() {
             <h2 className="font-bold">
               {t(`Đã biết một ít ${lang.vi} rồi?`, `Already know some ${lang.en}?`)}
             </h2>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               {t(
                 'Kiểm tra trình độ khoảng 3 phút để bài học bắt đầu đúng chỗ.',
                 'Take a 3-minute placement check so lessons start at the right place.'
@@ -275,7 +284,7 @@ export default function Learn() {
           </span>
           <div>
             <h2 className="text-lg font-bold">{t('Bài học hôm nay', "Today's lesson")}</h2>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               {t(
                 `Đề xuất ${s.newRemainingToday} từ mới · đã học ${s.newDoneToday}/${dailyNewLimit}`,
                 `${s.newRemainingToday} new words suggested · ${s.newDoneToday}/${dailyNewLimit} learned`
@@ -287,7 +296,7 @@ export default function Learn() {
           <>
             {s.newRemainingToday > 5 && (
               <div className="mt-4">
-                <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                   {t('Học bao nhiêu từ?', 'How many words?')}
                 </p>
                 <div className="grid max-w-xs grid-cols-3 gap-2">
@@ -312,7 +321,7 @@ export default function Learn() {
               {t(`Bắt đầu học ${plannedCount} từ`, `Learn ${plannedCount} words`)}
             </button>
             {placement && (
-              <p className="mt-3 text-sm text-slate-500">
+              <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
                 🧭{' '}
                 {t(
                   `Theo bài kiểm tra trình độ, từ mới bắt đầu từ từ thứ ${placement.start + 1}.`,
@@ -351,7 +360,7 @@ export default function Learn() {
                 `Already know set ${nextDeck.index + 1}?`
               )}
             </h2>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               {t(
                 `Kiểm tra nhanh: đúng ${testOutPassMark(Math.min(TEST_OUT_SIZE, nextDeckFresh.length))}/${Math.min(TEST_OUT_SIZE, nextDeckFresh.length)} thì bỏ qua ${nextDeckFresh.length} từ mới của bộ này (app hỏi lại sau ${KNOWN_CHECK_DAYS} ngày).`,
                 `Quick check: get ${testOutPassMark(Math.min(TEST_OUT_SIZE, nextDeckFresh.length))}/${Math.min(TEST_OUT_SIZE, nextDeckFresh.length)} to skip this set's ${nextDeckFresh.length} new words (checked again in ${KNOWN_CHECK_DAYS} days).`
@@ -376,7 +385,7 @@ export default function Learn() {
       {/* Decks */}
       <section>
         <div className="mb-3 flex items-baseline justify-between">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t(
               `Các bộ từ (${decks.length} bộ · ${pack.meta.count} từ)`,
               `Word sets (${decks.length} sets · ${pack.meta.count} words)`
@@ -417,7 +426,7 @@ export default function Learn() {
                       </span>
                     )}
                   </span>
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
                     {deck.mastered}/{deck.words.length} {t('thành thạo', 'mastered')}
                   </span>
                 </button>
@@ -481,7 +490,7 @@ export function TestOutResult({
       correct={correct}
       total={total}
     >
-      <p className="w-full text-sm text-slate-500">
+      <p className="w-full text-sm text-slate-500 dark:text-slate-400">
         {passed
           ? t(
               `${fresh.length} từ mới của bộ này được bỏ qua — app sẽ hỏi lại sau ${KNOWN_CHECK_DAYS} ngày để chắc chắn.`,

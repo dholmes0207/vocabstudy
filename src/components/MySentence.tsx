@@ -100,12 +100,12 @@ export default function MySentence({ word, lang }: Props) {
     <div className="rounded-xl border border-dashed border-slate-300 p-3.5 text-left text-sm dark:border-slate-700">
       <label
         htmlFor={`my-sentence-${word.id}`}
-        className="text-xs font-semibold uppercase tracking-wide text-slate-400"
+        className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400"
       >
         ✍️ {t(`Tự đặt 1 câu với “${headword}”`, `Write your own sentence with “${headword}”`)}{' '}
         <span className="normal-case">{t('(không bắt buộc)', '(optional)')}</span>
       </label>
-      <p className="mt-0.5 text-xs text-slate-400">
+      <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
         {t(
           'Câu về chính cuộc sống của bạn — cách nhớ từ lâu nhất.',
           'A sentence about your own life — the most lasting way to remember a word.'
@@ -153,7 +153,7 @@ export default function MySentence({ word, lang }: Props) {
           </button>
         )}
       </div>
-      {hint && <p className="mt-1.5 text-xs text-amber-600 dark:text-amber-400">{hint}</p>}
+      {hint && <p className="mt-1.5 text-xs text-amber-700 dark:text-amber-400">{hint}</p>}
     </div>
   )
 }

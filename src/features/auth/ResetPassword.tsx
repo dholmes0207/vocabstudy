@@ -41,7 +41,7 @@ export default function ResetPassword() {
   return (
     <AuthShell subtitle={t('Đặt mật khẩu mới', 'Set a new password')}>
       {phase === 'checking' && (
-        <p role="status" className="py-6 text-center text-sm text-slate-500">
+        <p role="status" className="py-6 text-center text-sm text-slate-500 dark:text-slate-400">
           {t('Đang kiểm tra link…', 'Checking your link…')}
         </p>
       )}

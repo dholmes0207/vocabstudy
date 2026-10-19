@@ -57,7 +57,9 @@ export default function Logo({
         >
           Voca<span className="text-aurora">Study</span>
         </span>
-        {tagline && <span className="block text-xs text-slate-400">{tagline}</span>}
+        {tagline && (
+          <span className="block text-xs text-slate-500 dark:text-slate-400">{tagline}</span>
+        )}
       </span>
     </span>
   )

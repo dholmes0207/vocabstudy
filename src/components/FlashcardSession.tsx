@@ -112,7 +112,7 @@ export default function FlashcardSession({
         {onExit && (
           <button
             onClick={onExit}
-            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
             aria-label={t('Kết thúc phiên học', 'End session')}
             title={t('Kết thúc phiên (tiến độ đã lưu)', 'End session (progress is saved)')}
           >
@@ -125,7 +125,7 @@ export default function FlashcardSession({
             style={{ width: `${(index / words.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {index + 1}/{words.length}
         </span>
       </div>

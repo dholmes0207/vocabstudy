@@ -76,7 +76,7 @@ export default function Phrases() {
       <div className="card mx-auto max-w-md p-8 text-center">
         <p className="text-4xl">😕</p>
         <p className="mt-3 font-bold">{t('Không tải được mẫu câu', "Couldn't load the phrases")}</p>
-        <p className="mt-1 text-sm text-slate-500">{error}</p>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{error}</p>
       </div>
     )
   }
@@ -110,7 +110,7 @@ function TopicList({ pack }: { pack: PhrasePack }) {
             <span className="text-aurora">{t('Mẫu câu giao tiếp', 'Everyday phrases')}</span>{' '}
             <span aria-hidden="true">💬</span>
           </h1>
-          <p className="mt-1 max-w-2xl text-slate-500">
+          <p className="mt-1 max-w-2xl text-slate-500 dark:text-slate-400">
             {t(
               'Những câu nói dùng được ngay theo từng tình huống — nghe giọng đọc AI chuẩn Mỹ, hiểu nghĩa, rồi luyện cho tới khi bật ra tự nhiên.',
               'Ready-to-use sentences for real situations — hear a natural AI voice, understand them, then practise until they come out naturally.'
@@ -141,7 +141,7 @@ function TopicList({ pack }: { pack: PhrasePack }) {
               </ProgressRing>
               <span className="min-w-0 flex-1">
                 <span className="block font-bold">{t(topic.title, topic.titleEn)}</span>
-                <span className="block text-sm text-slate-500">
+                <span className="block text-sm text-slate-500 dark:text-slate-400">
                   {pr.known}/{pr.total} {t('câu đã thuộc', 'learned')}
                 </span>
               </span>
@@ -192,7 +192,7 @@ function TopicView({ topic, pack }: { topic: PhraseTopic; pack: PhrasePack }) {
     <div className="mx-auto max-w-3xl space-y-5 animate-fade-in">
       <Link
         to="/phrases"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-brand-600 dark:hover:text-brand-300"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-300"
       >
         <ArrowLeft className="h-4 w-4" /> {t('Tất cả tình huống', 'All situations')}
       </Link>
@@ -203,7 +203,7 @@ function TopicView({ topic, pack }: { topic: PhraseTopic; pack: PhrasePack }) {
         </span>
         <div className="min-w-0 flex-1">
           <h1 className="text-xl font-extrabold tracking-tight">{t(topic.title, topic.titleEn)}</h1>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             {pr.known}/{pr.total} {t('câu đã thuộc', 'phrases learned')} ·{' '}
             {t('bấm vào câu để nghe', 'tap a phrase to hear it')}
           </p>
@@ -371,7 +371,7 @@ function PhrasePractice({
       <div className="mb-5 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Kết thúc phiên', 'End session')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
@@ -382,13 +382,15 @@ function PhrasePractice({
             style={{ width: `${(idx / questions.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{questions.length}
         </span>
       </div>
 
       <div className="card space-y-5 p-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{prompt}</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          {prompt}
+        </p>
 
         {q.kind === 'meaning' ? (
           <div className="flex flex-col items-center gap-2 py-2">

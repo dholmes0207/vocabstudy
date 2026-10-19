@@ -53,9 +53,11 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             </h2>
           </div>
           <div className="space-y-0.5 text-center">
-            {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
+            {word.ipa && (
+              <p className="font-mono text-slate-500 dark:text-slate-400">/{word.ipa}/</p>
+            )}
             {word.viRead && (
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
                 {readLabel}{' '}
                 <span className="font-semibold text-slate-500 dark:text-slate-300">
                   {word.viRead}
@@ -64,7 +66,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             )}
           </div>
           <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="lg" />
-          <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-slate-400">
+          <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400">
             <RotateCw className="h-4 w-4" /> {t('Bấm để xem nghĩa', 'Tap to see the meaning')}
           </p>
         </div>
@@ -78,7 +80,7 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
             <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="sm" />
           </div>
           {(word.ipa || word.viRead) && (
-            <p className="text-center text-sm text-slate-400">
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400">
               {word.ipa && <span className="font-mono">/{word.ipa}/</span>}
               {word.ipa && word.viRead && <span className="mx-1.5">·</span>}
               {word.viRead && <span>{word.viRead}</span>}

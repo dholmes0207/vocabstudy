@@ -39,7 +39,7 @@ export default function AdminPage() {
           <span className="text-aurora">{t('Quản trị', 'Admin')}</span>{' '}
           <span aria-hidden="true">🛡️</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Quản lý tài khoản người dùng. Quyền được kiểm ở server (Cloudflare Function + Supabase).',
             'Manage user accounts. Permissions are enforced on the server (Cloudflare Function + Supabase).'
@@ -107,7 +107,7 @@ export function AiQuotaPanel() {
   }
   if (!report)
     return (
-      <div className="card p-4 text-sm text-slate-400">
+      <div className="card p-4 text-sm text-slate-500 dark:text-slate-400">
         {t('Đang kiểm tra hạn mức AI…', 'Checking the AI quota…')}
       </div>
     )
@@ -137,7 +137,7 @@ export function AiQuotaPanel() {
         </span>
       </div>
 
-      <p className="mt-2 text-sm text-slate-500">
+      <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
         {off
           ? t(
               'AI_DAILY_LIMIT đang là 0 — học sinh hỏi không giới hạn.',
@@ -163,7 +163,7 @@ export function AiQuotaPanel() {
           {t('lượt hỏi từ', 'questions from')} <b>{report.today.users}</b>{' '}
           {t('học sinh.', 'learners.')}
           {!off && !counted && (
-            <span className="text-slate-400">
+            <span className="text-slate-500 dark:text-slate-400">
               {' '}
               {t(
                 'Chưa có lượt nào — hỏi thử một câu rồi tải lại trang để chắc chắn bộ đếm chạy.',
@@ -233,14 +233,16 @@ function FeedbackInbox() {
         <MessageSquareHeart className="h-4 w-4 text-brand-500" />{' '}
         {t('Góp ý của học viên', 'Learner feedback')}
       </h2>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Chỉ góp ý mà người viết cho phép trích dẫn mới hiện được trên trang chủ — không bao giờ dùng lời tự bịa.',
           'Only feedback whose author allowed quoting can appear on the homepage — never anything made up.'
         )}
       </p>
       {state.kind === 'loading' && (
-        <p className="mt-3 text-sm text-slate-400">{t('Đang tải…', 'Loading…')}</p>
+        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+          {t('Đang tải…', 'Loading…')}
+        </p>
       )}
       {state.kind === 'failed' && <p className="mt-3 text-sm text-rose-600">{state.message}</p>}
       {state.kind === 'ready' && !state.enabled && (
@@ -252,13 +254,15 @@ function FeedbackInbox() {
         </p>
       )}
       {state.kind === 'ready' && state.enabled && state.feedback.length === 0 && (
-        <p className="mt-3 text-sm text-slate-400">{t('Chưa có góp ý nào.', 'No feedback yet.')}</p>
+        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+          {t('Chưa có góp ý nào.', 'No feedback yet.')}
+        </p>
       )}
       {state.kind === 'ready' && state.feedback.length > 0 && (
         <ul className="mt-3 divide-y divide-slate-100 dark:divide-slate-800">
           {state.feedback.map((f) => (
             <li key={f.id} className="py-3">
-              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
                 <span className="font-semibold text-slate-600 dark:text-slate-300">
                   {f.name || t('Ẩn danh', 'Anonymous')}
                 </span>
@@ -342,14 +346,16 @@ function RecentErrors() {
           </span>
         )}
       </div>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Trình duyệt của học viên tự gửi mô tả lỗi đã lược bỏ thông tin cá nhân. Lỗi giống nhau được gộp lại và đếm số lần.',
           'Learners’ browsers send a scrubbed description of each error — nothing personal. Repeats of the same bug are grouped and counted.'
         )}
       </p>
       {state.kind === 'loading' && (
-        <p className="mt-3 text-sm text-slate-400">{t('Đang tải…', 'Loading…')}</p>
+        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+          {t('Đang tải…', 'Loading…')}
+        </p>
       )}
       {state.kind === 'failed' && <p className="mt-3 text-sm text-rose-600">{state.message}</p>}
       {state.kind === 'ready' && !state.enabled && (
@@ -375,7 +381,7 @@ function RecentErrors() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block break-words font-mono text-xs">{e.message}</span>
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
                     {e.path} · {e.release} ·{' '}
                     {new Date(e.last_seen).toLocaleString(t('vi-VN', 'en-GB'))}
                   </span>
@@ -472,7 +478,7 @@ function PendingSignups({
             : t('Không có ai chờ', 'Nobody waiting')}
         </span>
       </div>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Người đăng ký mới vào danh sách chờ; họ chỉ đăng nhập và đồng bộ được sau khi bạn duyệt. Trong lúc chờ, họ vẫn học được ở chế độ khách.',
           'New sign-ups join the waitlist; they can sign in and sync only after you approve them. Meanwhile they can still learn as guests.'
@@ -484,7 +490,7 @@ function PendingSignups({
             <li key={u.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
               <div className="min-w-0">
                 <p className="truncate font-medium">{u.name || '—'}</p>
-                <p className="truncate text-xs text-slate-400">
+                <p className="truncate text-xs text-slate-500 dark:text-slate-400">
                   {u.email} · {t('đăng ký', 'signed up')}{' '}
                   {new Date(u.created_at).toLocaleString(t('vi-VN', 'en-GB'))}
                 </p>
@@ -535,7 +541,7 @@ function UsersTable({
   return (
     <div className="card overflow-x-auto p-0">
       <table className="w-full min-w-[640px] text-sm">
-        <thead className="border-b border-slate-200 text-left text-slate-400 dark:border-slate-800">
+        <thead className="border-b border-slate-200 text-left text-slate-500 dark:text-slate-400 dark:border-slate-800">
           <tr>
             <th className="p-3">{t('Người dùng', 'User')}</th>
             <th className="p-3">Vai</th>
@@ -550,10 +556,12 @@ function UsersTable({
                 <p className="font-medium">
                   {u.name || '—'}{' '}
                   {u.id === meId && (
-                    <span className="text-xs text-slate-400">{t('(bạn)', '(you)')}</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                      {t('(bạn)', '(you)')}
+                    </span>
                   )}
                 </p>
-                <p className="text-xs text-slate-400">{u.email}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">{u.email}</p>
               </td>
               <td className="p-3">
                 <span
@@ -569,7 +577,9 @@ function UsersTable({
               </td>
               <td className="p-3">
                 {u.id === meId ? (
-                  <span className="block text-right text-xs text-slate-400">—</span>
+                  <span className="block text-right text-xs text-slate-500 dark:text-slate-400">
+                    —
+                  </span>
                 ) : (
                   <div className="flex flex-wrap justify-end gap-1.5">
                     <button

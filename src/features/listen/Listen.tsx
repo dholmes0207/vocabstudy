@@ -106,7 +106,7 @@ export default function Listen() {
           <span className="text-aurora">{t('Nghe thụ động', 'Hands-free listening')}</span>{' '}
           <span aria-hidden="true">🎧</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Mệt, bận tay, đang trên xe? Bấm một lần rồi cứ thế nghe: từ → nghĩa → câu ví dụ. Không chấm điểm, không áp lực.',
             'Tired, hands busy, on the bus? Tap once and just listen: word → meaning → example. No scores, no pressure.'
@@ -129,7 +129,7 @@ export default function Listen() {
             ))}
           </div>
           {source === 'upcoming' && (
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               {t(
                 'Nghe trước những từ sắp học — đến lúc học thật sẽ thấy quen tai.',
                 "Hear the words you'll learn next — they'll sound familiar when you study them."
@@ -180,7 +180,7 @@ export default function Listen() {
         )}
       </div>
 
-      <p className="text-center text-sm text-slate-500">
+      <p className="text-center text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Mẹo: trên điện thoại, bạn có thể tạm dừng hoặc chuyển từ ngay ở màn hình khoá.',
           'Tip: on a phone you can pause or skip straight from the lock screen.'
@@ -384,7 +384,7 @@ function Player({
 
   return (
     <div className="mx-auto max-w-xl space-y-5 animate-fade-in">
-      <div className="flex items-center justify-between text-sm text-slate-500">
+      <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
         <span>
           🎧 {t('Từ', 'Word')} {index + 1}/{words.length}
         </span>
@@ -411,7 +411,7 @@ function Player({
         >
           {word.word}
         </p>
-        <p className="text-slate-500">
+        <p className="text-slate-500 dark:text-slate-400">
           {word.ipa && <>/{word.ipa}/ · </>}
           <span className="font-semibold">{word.viRead}</span>
         </p>

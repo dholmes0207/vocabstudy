@@ -45,7 +45,7 @@ export default class ErrorBoundary extends Component<Props, State> {
           <h1 className="mt-3 text-lg font-bold">
             {tx('Có lỗi xảy ra ở màn hình này', 'Something went wrong on this screen')}
           </h1>
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
             {tx(
               'Tiến độ học của bạn vẫn được giữ nguyên. Bấm thử lại, hoặc tải lại trang nếu vẫn chưa được.',
               "Your progress is safe. Try again, or reload the page if it still doesn't work."

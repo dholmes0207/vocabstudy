@@ -23,7 +23,7 @@ export function AuthShell({ subtitle, children }: { subtitle: string; children: 
             <h1 className="mt-3 text-xl font-extrabold">
               Voca<span className="text-aurora">Study</span>
             </h1>
-            <p className="text-sm text-slate-400">{subtitle}</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{subtitle}</p>
           </div>
           {children}
         </div>

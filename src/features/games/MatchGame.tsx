@@ -126,7 +126,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
   if (pairs.length < 2) {
     return (
       <GameShell title={t('Ghép cặp', 'Match')} stats={null}>
-        <p className="card p-6 text-center text-slate-500">
+        <p className="card p-6 text-center text-slate-500 dark:text-slate-400">
           {t('Chưa đủ từ để chơi.', 'Not enough words to play yet.')}
         </p>
       </GameShell>
@@ -190,7 +190,7 @@ function MatchRound({ onAgain }: { onAgain: () => void }) {
         </>
       }
     >
-      <p className="mb-3 text-sm text-slate-500">
+      <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">
         {t(
           `Chạm một từ ${L.vi} rồi chạm nghĩa của nó. Đồng hồ chạy từ lần chạm đầu tiên.`,
           `Tap a ${L.en} word, then its meaning. The clock starts at your first tap.`

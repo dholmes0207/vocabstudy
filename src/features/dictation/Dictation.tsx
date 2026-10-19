@@ -193,7 +193,7 @@ export function DictationRound({
 
   if (items.length === 0)
     return (
-      <p className="card p-6 text-slate-500">
+      <p className="card p-6 text-slate-500 dark:text-slate-400">
         {t('Chưa có câu nào phù hợp để nghe – chép.', 'There are no sentences to write yet.')}
       </p>
     )
@@ -246,7 +246,7 @@ export function DictationRound({
             style={{ width: `${(idx / items.length) * 100}%` }}
           />
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {idx + 1}/{items.length}
         </span>
       </div>

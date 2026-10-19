@@ -140,22 +140,24 @@ function HeroPreview() {
             <span className="chip bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">
               verb
             </span>
-            <span className="text-xs font-semibold text-slate-400">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               {t('Từ của ngày', 'Word of the day')}
             </span>
           </div>
           <p className="mt-4 text-4xl font-extrabold tracking-tight">improve</p>
-          <p className="mt-1 text-slate-500">
-            /ɪmˈpruv/ · {t('đọc gần giống', 'reads like')} <b>im-PRUV</b>
+          <p className="mt-1 text-slate-500 dark:text-slate-400">
+            /ɪmˈpruv/ · {t('đọc gần giống', 'reads like')} <b>im-PRUUV</b>
           </p>
           <p className="mt-3 text-xl font-bold text-brand-600 dark:text-brand-300">cải thiện</p>
           <p className="mt-3 rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
             I want to <b className="text-brand-600 dark:text-brand-300">improve</b> my English.
-            <span className="block italic text-slate-500">Tôi muốn cải thiện tiếng Anh.</span>
+            <span className="block italic text-slate-500 dark:text-slate-400">
+              Tôi muốn cải thiện tiếng Anh.
+            </span>
           </p>
         </div>
         <div className="card ml-auto w-[88%] rotate-[1.5deg] p-5 shadow-xl">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             💬 {t('Mẫu câu giao tiếp', 'Everyday phrases')}
           </p>
           <p className="mt-2 flex items-center gap-2 text-lg font-semibold">
@@ -164,7 +166,7 @@ function HeroPreview() {
             </span>
             Could you say that again?
           </p>
-          <p className="mt-1 pl-10 text-slate-500">Bạn nói lại được không?</p>
+          <p className="mt-1 pl-10 text-slate-500 dark:text-slate-400">Bạn nói lại được không?</p>
         </div>
         <div className="flex gap-3">
           <div className="card flex items-center gap-2 px-4 py-3 text-sm font-semibold shadow-lg">
@@ -266,8 +268,8 @@ function Features() {
       tone: 'from-orange-400 to-rose-500',
       title: t('Đọc truyện, ngữ pháp, chủ đề', 'Stories, grammar, topics'),
       desc: t(
-        '14 truyện ngắn chạm vào từ là ra nghĩa, 12 bài ngữ pháp giải thích bằng tiếng Việt, 19 bộ từ theo tình huống.',
-        '14 short stories where any word is a tap away from its meaning, 12 grammar lessons explained in Vietnamese, 19 topic decks.'
+        'Tiếng Anh: 14 truyện ngắn chạm vào từ là ra nghĩa, 12 bài ngữ pháp giải thích bằng tiếng Việt, 19 bộ từ theo tình huống.',
+        'English: 14 short stories where any word is a tap away from its meaning, 12 grammar lessons explained in Vietnamese, 19 topic decks.'
       ),
     },
     {
@@ -369,8 +371,8 @@ function ForVietnamese() {
   const t = useT()
   const points = [
     t(
-      'Cách đọc gần đúng bằng chữ Việt — "improve" đọc "im-PRUV", "안녕하세요" đọc "an-nyơng-ha-xê-yô". Từ tiếng Trung có thêm âm Hán Việt.',
-      'A Vietnamese-letter respelling — "improve" reads "im-PRUV", "안녕하세요" reads "an-nyơng-ha-xê-yô". Chinese words also show their Sino-Vietnamese reading.'
+      'Cách đọc gần đúng bằng chữ Việt — "improve" đọc "im-PRUUV", âm dài viết đôi (sheep SHIIP, ship SHIP), "안녕하세요" đọc "an-nyơng-ha-xê-yô". Từ tiếng Trung có thêm âm Hán Việt.',
+      'A Vietnamese-letter respelling — "improve" reads "im-PRUUV", long sounds doubled (sheep SHIIP, ship SHIP), "안녕하세요" reads "an-nyơng-ha-xê-yô". Chinese words also show their Sino-Vietnamese reading.'
     ),
     t(
       'Nghĩa và câu dịch bằng tiếng Việt tự nhiên.',
@@ -409,13 +411,13 @@ function ForVietnamese() {
         <div className="grid gap-3 sm:grid-cols-2" aria-hidden="true">
           {[
             ['think', '/θɪŋk/', 'THINGK', 'nghĩ'],
-            ['sheep', '/ʃip/', 'SHIP', 'con cừu'],
-            ['computer', '/kəmˈpjutər/', 'kơm-PYU-tơ', 'máy tính'],
+            ['sheep', '/ʃip/', 'SHIIP', 'con cừu'],
+            ['computer', '/kəmˈpjutər/', 'kơm-PYUU-tơ', 'máy tính'],
             ['rice', '/raɪs/', 'RAIS', 'gạo, cơm'],
           ].map(([w, ipa, vi, m]) => (
             <div key={w} className="rounded-2xl bg-slate-50 p-4 dark:bg-slate-800/60">
               <p className="text-xl font-extrabold">{w}</p>
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
                 {ipa} · <b>{vi}</b>
               </p>
               <p className="mt-1 font-semibold text-brand-600 dark:text-brand-300">{m}</p>
@@ -487,12 +489,12 @@ function Faq() {
           <details key={q} className="card group p-0 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-semibold">
               {q}
-              <ChevronDown className="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" />
+              <ChevronDown className="h-5 w-5 shrink-0 text-slate-500 dark:text-slate-400 transition group-open:rotate-180" />
             </summary>
             <p className="px-5 pb-5 text-slate-600 dark:text-slate-300">{a}</p>
           </details>
         ))}
-        <p className="pt-2 text-center text-sm text-slate-500">
+        <p className="pt-2 text-center text-sm text-slate-500 dark:text-slate-400">
           {t('Còn câu hỏi khác?', 'Another question?')}{' '}
           <Link to="/privacy" className="font-semibold text-brand-600 dark:text-brand-300">
             {t('Chính sách bảo mật', 'Privacy policy')}

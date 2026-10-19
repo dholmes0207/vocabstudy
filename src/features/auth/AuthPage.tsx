@@ -142,13 +142,13 @@ export default function AuthPage() {
         <div className="mb-5 grid grid-cols-2 gap-1 rounded-xl bg-slate-100 p-1 dark:bg-slate-800">
           <button
             onClick={() => switchMode('login')}
-            className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'login' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-500'}`}
+            className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'login' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-600 dark:text-slate-300'}`}
           >
             {t('Đăng nhập', 'Sign in')}
           </button>
           <button
             onClick={() => switchMode('register')}
-            className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'register' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-500'}`}
+            className={`rounded-lg py-2 text-sm font-semibold transition ${mode === 'register' ? 'bg-white shadow dark:bg-slate-900' : 'text-slate-600 dark:text-slate-300'}`}
           >
             {t('Đăng ký', 'Sign up')}
           </button>
@@ -178,7 +178,7 @@ export default function AuthPage() {
               ', including storing data outside Vietnam. New accounts join the beta waitlist; if you are under 16, a parent must agree too.'
             )}
           </p>
-          <div className="flex items-center gap-3 text-xs text-slate-400">
+          <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
             <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />
             {t('hoặc dùng email', 'or use email')}
             <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />

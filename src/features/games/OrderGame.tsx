@@ -110,7 +110,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
   if (!word || !state) {
     return (
       <GameShell title={t('Xếp câu', 'Build a sentence')} stats={null}>
-        <p className="card p-6 text-center text-slate-500">
+        <p className="card p-6 text-center text-slate-500 dark:text-slate-400">
           {t('Chưa đủ câu để chơi.', 'Not enough sentences to play yet.')}
         </p>
       </GameShell>
@@ -153,11 +153,11 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
     >
       <div className="card space-y-5 p-5">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t(`Xếp thành câu ${L.vi} có nghĩa là`, `Build the ${L.en} sentence that means`)}
           </p>
           <p className="mt-1 text-lg font-semibold">{word.exampleVi}</p>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             {t('Từ đang luyện:', 'Practising:')}{' '}
             <b className="text-slate-600 dark:text-slate-300">{word.word}</b> · {word.meaning}
           </p>
@@ -199,7 +199,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
               </span>
             ))
           ) : (
-            <span className="self-center text-sm text-slate-400">
+            <span className="self-center text-sm text-slate-500 dark:text-slate-400">
               {t('Chạm các ô bên dưới theo thứ tự…', 'Tap the tiles below in order…')}
             </span>
           )}

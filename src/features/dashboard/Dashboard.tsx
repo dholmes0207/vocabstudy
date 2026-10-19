@@ -35,7 +35,7 @@ export default function Dashboard() {
   const learnedPct = s.total ? s.learned / s.total : 0
 
   useProvideContext('Trang chủ')
-  const proverb = proverbOfDay(today())
+  const proverb = proverbOfDay(today(), pack.meta.code)
 
   const hour = new Date().getHours()
   const greeting =
@@ -56,21 +56,23 @@ export default function Dashboard() {
               👋
             </span>
           </h1>
-          <p className="mt-1 text-slate-500">
+          <p className="mt-1 text-slate-500 dark:text-slate-400">
             {t('Học', 'Learning')} <b>{t(pack.meta.nativeName, pack.meta.name)}</b> ·{' '}
             {t('mỗi ngày một chút là đủ.', 'a little every day is enough.')}
           </p>
-          <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm">
-            <span aria-hidden>💬</span>
-            <i className="font-semibold text-slate-700 dark:text-slate-200">{proverb.en}</i>
-            <SpeakButton
-              text={proverb.en}
-              lang={pack.meta.ttsLang}
-              size="sm"
-              label={t('Nghe câu này', 'Listen')}
-            />
-            <span className="text-slate-500 dark:text-slate-400">— {proverb.vi}</span>
-          </p>
+          {proverb && (
+            <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm">
+              <span aria-hidden>💬</span>
+              <i className="font-semibold text-slate-700 dark:text-slate-200">{proverb.text}</i>
+              <SpeakButton
+                text={proverb.text}
+                lang={pack.meta.ttsLang}
+                size="sm"
+                label={t('Nghe câu này', 'Listen')}
+              />
+              <span className="text-slate-500 dark:text-slate-400">— {proverb.vi}</span>
+            </p>
+          )}
         </div>
         <div className="card flex items-center gap-4 rounded-2xl px-4 py-2.5">
           <span className="text-sm" title={t('Chuỗi ngày học liên tục', 'Study streak')}>
@@ -112,7 +114,7 @@ export default function Dashboard() {
 
       {/* Today's plan */}
       <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('Kế hoạch hôm nay', "Today's plan")}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -166,7 +168,9 @@ export default function Dashboard() {
           <ProgressRing value={masteredPct} size={150} stroke={12}>
             <div>
               <p className="text-3xl font-extrabold">{Math.round(masteredPct * 100)}%</p>
-              <p className="text-xs text-slate-400">{t('thành thạo', 'mastered')}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                {t('thành thạo', 'mastered')}
+              </p>
             </div>
           </ProgressRing>
         </div>
@@ -183,8 +187,16 @@ export default function Dashboard() {
             total={s.total}
             tone="text-emerald-600"
           />
-          <Metric label={t('Đang học', 'Learning')} value={s.learning} tone="text-amber-600" />
-          <Metric label={t('Chưa học', 'Not started')} value={s.fresh} tone="text-slate-400" />
+          <Metric
+            label={t('Đang học', 'Learning')}
+            value={s.learning}
+            tone="text-amber-700 dark:text-amber-600"
+          />
+          <Metric
+            label={t('Chưa học', 'Not started')}
+            value={s.fresh}
+            tone="text-slate-500 dark:text-slate-400"
+          />
           <div className="col-span-2 sm:col-span-4">
             <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
               <div
@@ -192,7 +204,7 @@ export default function Dashboard() {
                 style={{ width: `${learnedPct * 100}%` }}
               />
             </div>
-            <p className="mt-1.5 text-xs text-slate-400">
+            <p className="mt-1.5 text-xs text-slate-500 dark:text-slate-400">
               {t(
                 `Bạn đã chạm tới ${s.learned}/${s.total} từ.`,
                 `You've met ${s.learned}/${s.total} words.`
@@ -206,7 +218,7 @@ export default function Dashboard() {
 
       {/* Play & practise */}
       <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('Chơi mà học', 'Learn through play')}
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -300,11 +312,11 @@ function ActionCard({
         </div>
         <p className="mt-4">
           <span className="text-4xl font-extrabold">{count}</span>{' '}
-          <span className="text-slate-500">{unit}</span>
+          <span className="text-slate-500 dark:text-slate-400">{unit}</span>
         </p>
-        <p className="mt-1 text-xs text-slate-400">{hint}</p>
+        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{hint}</p>
         <div
-          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-400' : 'text-brand-600 dark:text-brand-300'}`}
+          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-500' : 'text-brand-600 dark:text-brand-300'}`}
         >
           {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
         </div>
@@ -329,9 +341,11 @@ function Metric({
     <div>
       <p className={`text-2xl font-extrabold ${tone}`}>
         {value}
-        {total != null && <span className="text-sm font-medium text-slate-400">/{total}</span>}
+        {total != null && (
+          <span className="text-sm font-medium text-slate-500 dark:text-slate-400">/{total}</span>
+        )}
       </p>
-      <p className="text-xs text-slate-400">{label}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
     </div>
   )
 }
@@ -359,7 +373,7 @@ function QuickLink({
       </span>
       <div className="min-w-0">
         <h3 className="font-bold">{title}</h3>
-        <p className="text-sm text-slate-400">{desc}</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">{desc}</p>
       </div>
       <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-slate-300" />
     </Link>

@@ -228,7 +228,7 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
           <Play className="h-4 w-4" /> {t('Nghe mẫu', 'Hear the model')}
         </button>
         {!canRecognize && (
-          <p className="text-center text-xs text-slate-400">
+          <p className="text-center text-xs text-slate-500 dark:text-slate-400">
             {t(
               'Trình duyệt này không chấm điểm được — bạn ghi âm rồi tự so với giọng mẫu nhé.',
               "This browser can't score — record yourself and compare with the model voice."

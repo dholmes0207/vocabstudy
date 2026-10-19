@@ -63,7 +63,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
             <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="md" />
           </div>
           {(word.ipa || word.viRead) && (
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               {word.ipa && <span className="font-mono">/{word.ipa}/</span>}
               {word.ipa && word.viRead && <span className="mx-1.5">·</span>}
               {word.viRead && (
@@ -84,8 +84,10 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
           {word.emoji && <span aria-hidden>{word.emoji}</span>}
           <span className="text-lg font-bold">{word.word}</span>
           <SpeakButton text={word.word} lang={ttsLang} audioSrc={wordAudio(word.id)} size="sm" />
-          {word.viRead && <span className="text-sm text-slate-400">({word.viRead})</span>}
-          <span className="text-slate-400">—</span>
+          {word.viRead && (
+            <span className="text-sm text-slate-500 dark:text-slate-400">({word.viRead})</span>
+          )}
+          <span className="text-slate-500 dark:text-slate-400">—</span>
           <span className="font-semibold text-brand-700 dark:text-brand-300">{word.meaning}</span>
         </div>
       )}
@@ -184,7 +186,7 @@ function Section({
 }) {
   return (
     <section className="text-left">
-      <h3 className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">
+      <h3 className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
         <Icon className="h-3.5 w-3.5" aria-hidden /> {title}
       </h3>
       {children}

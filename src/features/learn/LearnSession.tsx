@@ -169,7 +169,7 @@ function BetweenGroups({
         <h2 className="mt-3 text-xl font-extrabold">
           {t(`Xong ${label.toLowerCase()}!`, `${label} done!`)}
         </h2>
-        <p className="mt-2 text-slate-500">
+        <p className="mt-2 text-slate-500 dark:text-slate-400">
           {t('Bạn nhớ đúng ngay lần đầu', 'You got')}{' '}
           <b>
             {correct}/{total}
@@ -267,7 +267,7 @@ function MeetCards({
       <div className="mb-4 flex items-center gap-3">
         <button
           onClick={onExit}
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500"
+          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
           aria-label={t('Kết thúc phiên học', 'End lesson')}
           title={t('Kết thúc (từ đã trả lời vẫn được lưu)', 'End (answered words are saved)')}
         >
@@ -281,11 +281,11 @@ function MeetCards({
             />
           ))}
         </div>
-        <span className="text-sm font-medium tabular-nums text-slate-500">
+        <span className="text-sm font-medium tabular-nums text-slate-500 dark:text-slate-400">
           {index + 1}/{group.length}
         </span>
       </div>
-      <p className="-mt-2 mb-3 text-xs font-medium text-slate-400">
+      <p className="-mt-2 mb-3 text-xs font-medium text-slate-500 dark:text-slate-400">
         {t('Làm quen', 'Meet the words')}
         {caption ? ` · ${caption.toLowerCase()}` : ''} —{' '}
         {t(
@@ -308,7 +308,7 @@ function MeetCards({
               <CheckCheck className="h-4 w-4" aria-hidden="true" />
               {t('Mình biết từ này rồi', 'I already know this word')}
             </button>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               {t(
                 `Bỏ qua trong bài này — app sẽ hỏi lại sau ${KNOWN_CHECK_DAYS} ngày để chắc chắn.`,
                 `Skipped here — the app will check it again in ${KNOWN_CHECK_DAYS} days to be sure.`

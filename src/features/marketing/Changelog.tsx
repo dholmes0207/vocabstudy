@@ -35,7 +35,10 @@ export default function Changelog() {
               className="absolute -left-[31px] top-6 h-3 w-3 rounded-full bg-brand-500 ring-4 ring-white dark:ring-slate-950"
             />
             <section className="card p-6">
-              <time dateTime={r.date} className="text-sm font-semibold text-slate-400">
+              <time
+                dateTime={r.date}
+                className="text-sm font-semibold text-slate-500 dark:text-slate-400"
+              >
                 {formatLongDate(r.date, lang)}
               </time>
               <h2 className="mt-1 text-xl font-bold">{t(...r.title)}</h2>

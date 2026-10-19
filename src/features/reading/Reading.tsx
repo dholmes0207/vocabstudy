@@ -68,7 +68,7 @@ export default function Reading() {
   const { pack, error } = useReadingPack()
   if (error)
     return (
-      <p className="card p-6 text-slate-500">
+      <p className="card p-6 text-slate-500 dark:text-slate-400">
         {t('Ngôn ngữ này chưa có truyện đọc.', 'There are no stories for this language yet.')}
       </p>
     )
@@ -123,7 +123,7 @@ function StoryList({ pack }: { pack: ReadingPack }) {
                   {s.emoji}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-xs font-semibold text-slate-400">
+                  <span className="block text-xs font-semibold text-slate-500 dark:text-slate-400">
                     {s.level} · {t(`${s.sentences.length} câu`, `${s.sentences.length} sentences`)}
                   </span>
                   <span className="block font-bold">{t(...s.title)}</span>
@@ -135,7 +135,7 @@ function StoryList({ pack }: { pack: ReadingPack }) {
                       aria-label={t('Hiểu trọn', 'Fully understood')}
                     />
                   ) : (
-                    <span className="shrink-0 text-sm font-bold tabular-nums text-slate-400">
+                    <span className="shrink-0 text-sm font-bold tabular-nums text-slate-500 dark:text-slate-400">
                       {rec.best}%
                     </span>
                   )
@@ -235,7 +235,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
     <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
       <Link
         to="/reading"
-        className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-600"
+        className="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600"
       >
         <ArrowLeft className="h-4 w-4" /> {t('Tất cả truyện', 'All stories')}
       </Link>
@@ -245,7 +245,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
             {story.emoji} {story.level}
           </p>
           <h1 className="mt-1 text-2xl font-extrabold tracking-tight">{story.title[1]}</h1>
-          <p className="text-slate-500">{story.title[0]}</p>
+          <p className="text-slate-500 dark:text-slate-400">{story.title[0]}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {reading?.all ? (
@@ -295,7 +295,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
         </div>
       </header>
 
-      <p className="text-sm text-slate-400">
+      <p className="text-sm text-slate-500 dark:text-slate-400">
         {t(
           'Chạm vào từ có gạch chân để xem nghĩa.',
           'Tap an underlined word to see what it means.'
@@ -339,7 +339,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
               <button
                 type="button"
                 onClick={() => playLine(i, false)}
-                className="ml-1 inline-grid h-7 w-7 place-items-center rounded-full align-middle text-slate-400 hover:bg-slate-100 hover:text-brand-600 dark:hover:bg-slate-800"
+                className="ml-1 inline-grid h-7 w-7 place-items-center rounded-full align-middle text-slate-500 dark:text-slate-400 hover:bg-slate-100 hover:text-brand-600 dark:hover:bg-slate-800"
                 aria-label={t('Nghe câu này', 'Listen to this sentence')}
               >
                 <Volume2 className="h-4 w-4" />
@@ -350,7 +350,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
                   onClick={() => toggleLine(i)}
                   aria-pressed={opened.has(i)}
                   className={`inline-grid h-7 w-7 place-items-center rounded-full align-middle hover:bg-slate-100 dark:hover:bg-slate-800 ${
-                    opened.has(i) ? 'text-brand-600 dark:text-brand-300' : 'text-slate-400'
+                    opened.has(i) ? 'text-brand-600 dark:text-brand-300' : 'text-slate-500'
                   }`}
                   aria-label={t('Nghĩa của câu này', "This sentence's meaning")}
                 >
@@ -362,7 +362,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
               <p className="mt-0.5 text-base text-slate-600 dark:text-slate-300">{line.read}</p>
             )}
             {(showVi || opened.has(i)) && (
-              <p className="mt-0.5 text-base text-slate-500">{line.vi}</p>
+              <p className="mt-0.5 text-base text-slate-500 dark:text-slate-400">{line.vi}</p>
             )}
           </div>
         ))}
@@ -505,12 +505,12 @@ function StoryQuiz({
     <div className="mx-auto max-w-xl space-y-4 animate-fade-in">
       <button
         onClick={onBack}
-        className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-600"
+        className="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600"
       >
         <ArrowLeft className="h-4 w-4" /> {t('Xem lại truyện', 'Back to the story')}
       </button>
       <div className="card space-y-4 p-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('Câu hỏi', 'Question')} {idx + 1}/{story.questions.length}
         </p>
         <p className="text-lg font-semibold">{q.q}</p>

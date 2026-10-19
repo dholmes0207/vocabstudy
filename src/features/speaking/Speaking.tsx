@@ -84,7 +84,7 @@ export default function Speaking() {
           <span className="text-aurora">{t('Luyện nói', 'Speaking')}</span>{' '}
           <span aria-hidden="true">🎙️</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             'Nghe mẫu → đọc vào micro → nghe lại giọng mình. Kết quả được đưa vào lịch ôn.',
             'Hear the model → speak into the mic → play yourself back. Results go into your reviews.'
@@ -171,7 +171,7 @@ export default function Speaking() {
                 </Segment>
               ))}
             </div>
-            <p className="mt-2 text-xs text-slate-400">
+            <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
               {t(
                 '“Khó” chỉ chấp nhận khi máy nghe đúng hẳn từ; “Dễ” chấp nhận cả khi đọc gần đúng.',
                 '“Strict” accepts only the exact word; “Easy” also accepts close attempts.'
@@ -240,7 +240,7 @@ function SpeakingSession({
       >
         {missed.length > 0 && (
           <div className="w-full text-left">
-            <p className="mb-2 text-sm font-semibold text-slate-500">
+            <p className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
               {t('Từ nên luyện thêm:', 'Words to practise more:')}
             </p>
             <ul className="space-y-1.5">
@@ -250,8 +250,12 @@ function SpeakingSession({
                   className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm dark:bg-slate-800/60"
                 >
                   <b>{w.word}</b>
-                  {w.ipa && <span className="font-mono text-xs text-slate-400">/{w.ipa}/</span>}
-                  <span className="text-slate-400">—</span>
+                  {w.ipa && (
+                    <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
+                      /{w.ipa}/
+                    </span>
+                  )}
+                  <span className="text-slate-500 dark:text-slate-400">—</span>
                   <span className="text-slate-600 dark:text-slate-300">{w.meaning}</span>
                 </li>
               ))}
@@ -284,7 +288,7 @@ function SpeakingSession({
 
   return (
     <div className="mx-auto max-w-xl space-y-5 animate-fade-in">
-      <div className="flex items-center justify-between text-sm text-slate-500">
+      <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
         <span>
           Từ {idx + 1}/{words.length}
         </span>
@@ -303,9 +307,9 @@ function SpeakingSession({
           <h2 className="text-center text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             {word.word}
           </h2>
-          {word.ipa && <p className="font-mono text-slate-400">/{word.ipa}/</p>}
+          {word.ipa && <p className="font-mono text-slate-500 dark:text-slate-400">/{word.ipa}/</p>}
           {word.viRead && (
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               {readLabel}{' '}
               <span className="font-semibold text-slate-500 dark:text-slate-300">
                 {word.viRead}

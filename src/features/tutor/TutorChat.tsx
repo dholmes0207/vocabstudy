@@ -149,7 +149,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
       <div className="scroll-thin flex-1 space-y-4 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-950/40">
         <Bubble role="assistant" content={t(...greeting(L.vi, L.en))} />
         {ctx.word && messages.length === 0 && (
-          <p className="text-center text-xs text-slate-400">
+          <p className="text-center text-xs text-slate-500 dark:text-slate-400">
             💡{' '}
             {t(
               `Mình biết bạn đang xem từ "${ctx.word.word}".`,
@@ -161,10 +161,10 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
           <Bubble key={m.id} role={m.role} content={m.content} isError={m.isError} />
         ))}
         {quotaNote && !loading && (
-          <p className="text-center text-xs text-amber-600 dark:text-amber-400">⏳ {quotaNote}</p>
+          <p className="text-center text-xs text-amber-700 dark:text-amber-400">⏳ {quotaNote}</p>
         )}
         {loading && (
-          <div className="flex items-center gap-2 text-slate-400">
+          <div className="flex items-center gap-2 text-slate-500">
             <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300">
               <Bot className="h-4 w-4" />
             </span>
@@ -175,7 +175,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
         )}
         {messages.length === 0 && !loading && configured && (
           <div className="pt-1">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
               {t('Gợi ý câu hỏi', 'Suggested questions')}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -195,7 +195,7 @@ export default function TutorChat({ level, onClose }: { level: number; onClose?:
       </div>
 
       <div className="border-t border-slate-200 p-3 dark:border-slate-800">
-        {warn && <p className="mb-2 text-sm text-amber-600 dark:text-amber-400">{warn}</p>}
+        {warn && <p className="mb-2 text-sm text-amber-700 dark:text-amber-400">{warn}</p>}
         <div className="flex items-end gap-2">
           <textarea
             value={input}
@@ -274,7 +274,11 @@ function Dot({ delay = '0s' }: { delay?: string }) {
 }
 
 function Centered({ children }: { children: React.ReactNode }) {
-  return <div className="grid h-full place-items-center p-6 text-sm text-slate-400">{children}</div>
+  return (
+    <div className="grid h-full place-items-center p-6 text-sm text-slate-500 dark:text-slate-400">
+      {children}
+    </div>
+  )
 }
 
 function LoginPrompt({ onClose }: { onClose?: () => void }) {
@@ -288,7 +292,7 @@ function LoginPrompt({ onClose }: { onClose?: () => void }) {
         <h2 className="mt-4 text-lg font-bold">
           {t('Trợ lý AI học từ vựng', 'AI vocabulary tutor')}
         </h2>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
           {t(
             'Đăng nhập để trò chuyện với trợ lý (miễn phí, tiến độ được lưu theo tài khoản).',
             'Sign in to chat with the tutor (free; progress is saved to your account).'
@@ -315,7 +319,7 @@ function NotConfigured({ admin, onClose }: { admin: boolean; onClose?: () => voi
         </h2>
         {admin ? (
           <>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               {t(
                 'Bạn cần thêm một AI provider (API key) ở trang Quản trị để bật trợ lý.',
                 'Add an AI provider (API key) on the Admin page to turn the tutor on.'
@@ -326,7 +330,7 @@ function NotConfigured({ admin, onClose }: { admin: boolean; onClose?: () => voi
             </Link>
           </>
         ) : (
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
             {t(
               'Trợ lý chưa được bật. Nhờ quản trị viên (giáo viên) cấu hình giúp bạn nhé.',
               'The tutor is not switched on yet. Ask your admin (teacher) to set it up.'

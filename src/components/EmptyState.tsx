@@ -11,7 +11,9 @@ export default function EmptyState({ emoji = '✨', title, description, children
       <div className="card p-8">
         <p className="text-5xl">{emoji}</p>
         <h2 className="mt-4 text-xl font-bold">{title}</h2>
-        {description && <p className="mt-2 text-sm text-slate-500">{description}</p>}
+        {description && (
+          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{description}</p>
+        )}
         {children && <div className="mt-6 flex flex-wrap justify-center gap-3">{children}</div>}
       </div>
     </div>

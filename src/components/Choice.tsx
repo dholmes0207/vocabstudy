@@ -4,7 +4,7 @@
 export function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="mb-2 text-sm font-semibold text-slate-500">{label}</p>
+      <p className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">{label}</p>
       {children}
     </div>
   )

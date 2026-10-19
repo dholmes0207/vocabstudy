@@ -29,7 +29,7 @@ export default function PackOnly({ packs }: { packs: readonly string[] }) {
           ? t(`Phần này dành cho ${list('vi')}`, `This part is for ${list('en')}`)
           : t('Phần này chưa có cho ngôn ngữ bạn đang học', 'Not available for this language yet')}
       </h1>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         {t(
           `Bạn đang học ${current.vi}. Đổi ngôn ngữ để mở phần này — tiến độ của mỗi ngôn ngữ được giữ riêng.`,
           `You are learning ${current.en}. Switch languages to open it — each language keeps its own progress.`

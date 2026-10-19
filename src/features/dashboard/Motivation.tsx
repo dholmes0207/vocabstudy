@@ -102,7 +102,9 @@ export function DailyGoal({
         <ProgressRing value={g.ratio} size={88} stroke={9}>
           <div className="text-center leading-tight">
             <p className="text-lg font-extrabold">{g.reached ? '🎉' : `${g.done}/${g.goal}`}</p>
-            <p className="text-[10px] text-slate-400">{t('hôm nay', 'today')}</p>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400">
+              {t('hôm nay', 'today')}
+            </p>
           </div>
         </ProgressRing>
         <div className="min-w-0">
@@ -162,7 +164,7 @@ export function DailyGoal({
         </div>
       ) : (
         !g.reached && (
-          <p className="mt-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+          <p className="mt-2 text-xs font-semibold text-amber-700 dark:text-amber-400">
             🎁{' '}
             {t(
               'Đạt mục tiêu để mở quà hôm nay — một nhãn dán mới cho bộ sưu tập.',
@@ -182,7 +184,7 @@ export function DailyGoal({
       )}
       {!g.reached && (
         <>
-          <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {t('Hôm nay bạn còn bao nhiêu sức?', 'How much energy do you have today?')}
           </p>
           <div className="mt-2 grid grid-cols-3 gap-2">
@@ -466,7 +468,7 @@ export function Journey({
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-3">
         <p className="font-bold">{t('Hành trình 7 ngày đầu 🗺️', 'Your first 7 days 🗺️')}</p>
-        <span className="text-sm text-slate-500">
+        <span className="text-sm text-slate-500 dark:text-slate-400">
           {j.done}/{journey.length} {t('ngày', 'days')}
         </span>
       </div>
@@ -498,7 +500,7 @@ export function Journey({
       ) : (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               {j.studiedToday
                 ? t(
                     `Xong ngày ${j.done} ✓ — nhiệm vụ hôm nay`,

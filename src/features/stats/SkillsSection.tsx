@@ -85,12 +85,14 @@ export default function SkillsSection({ code }: { code: string }) {
               to={x.to}
               className="block rounded-xl bg-slate-50 p-4 transition hover:bg-brand-50 dark:bg-slate-800/60 dark:hover:bg-brand-950"
             >
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
                 <span aria-hidden="true">{x.emoji}</span> {x.label}
               </p>
               <p className="mt-1 text-2xl font-extrabold tabular-nums">
                 {x.done}
-                <span className="text-base font-semibold text-slate-400">/{x.total}</span>
+                <span className="text-base font-semibold text-slate-500 dark:text-slate-400">
+                  /{x.total}
+                </span>
               </p>
               <div
                 className="mt-2 h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700"

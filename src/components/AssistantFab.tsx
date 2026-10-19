@@ -86,7 +86,7 @@ export default function AssistantFab() {
                     {info.tag} · {label.name}
                   </span>
                 </p>
-                <p className="truncate text-xs text-slate-400">
+                <p className="truncate text-xs text-slate-500">
                   {t(`Chỉ hỗ trợ học từ vựng ${L.vi}`, `Helps with ${L.en} vocabulary only`)}
                 </p>
               </div>

@@ -125,7 +125,7 @@ export default function SettingsPage() {
           <span className="text-aurora">{t('Cài đặt', 'Settings')}</span>{' '}
           <span aria-hidden="true">⚙️</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t('Điều chỉnh trải nghiệm học của bạn.', 'Tune how you learn.')}{' '}
           {syncing
             ? t(
@@ -241,7 +241,7 @@ export default function SettingsPage() {
         </Row>
         <div className="py-3.5">
           <p className="font-medium">{t('Nhắc học mỗi ngày 🔔', 'Daily study reminder 🔔')}</p>
-          <p className="mb-3 text-sm text-slate-400">
+          <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">
             {t(
               'Thêm một lịch hẹn lặp lại hằng ngày vào điện thoại — đến giờ chuông reo, bấm vào là mở app.',
               'Add a daily repeating event to your phone — it rings on time, and one tap opens the app.'
@@ -625,7 +625,7 @@ export default function SettingsPage() {
         </Row>
       </Section>
 
-      <p className="pt-2 text-center text-xs text-slate-400">
+      <p className="pt-2 text-center text-xs text-slate-500 dark:text-slate-400">
         VocaStudy · {t('Nguồn', 'Source')}: {pack.meta.source}
       </p>
     </div>

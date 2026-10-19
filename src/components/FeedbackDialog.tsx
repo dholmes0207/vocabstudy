@@ -180,7 +180,7 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
                   'VocaStudy may quote this feedback with my name on the website.'
                 )}
                 {name.trim() === '' && (
-                  <span className="block text-xs text-slate-400">
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">
                     {t('Cần nhập tên để được trích dẫn.', 'Add your name to allow quoting.')}
                   </span>
                 )}
@@ -195,7 +195,7 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
             <button type="submit" disabled={busy} className="btn-primary h-11 w-full">
               {busy ? t('Đang gửi…', 'Sending…') : t('Gửi góp ý', 'Send')}
             </button>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               {t(
                 'Góp ý được lưu để chúng tôi đọc và cải thiện app. ',
                 'Feedback is stored so we can read it and improve the app. '

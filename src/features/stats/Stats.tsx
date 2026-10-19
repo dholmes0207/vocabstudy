@@ -98,7 +98,7 @@ export default function Stats() {
           <span className="text-aurora">{t('Thống kê', 'Stats')}</span>{' '}
           <span aria-hidden="true">📈</span>
         </h1>
-        <p className="mt-1 text-slate-500">
+        <p className="mt-1 text-slate-500 dark:text-slate-400">
           {t(
             `Theo dõi hành trình chinh phục ${pack.meta.count} từ của bạn.`,
             `Follow your journey through ${pack.meta.count} words.`
@@ -153,7 +153,7 @@ export default function Stats() {
       {/* SRS box distribution */}
       <section className="card p-6">
         <h2 className="mb-1 font-bold">{t('Phân bố theo bậc ghi nhớ', 'Cards by memory stage')}</h2>
-        <p className="mb-4 text-sm text-slate-400">
+        <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
           {t(
             'Càng lên bậc cao, khoảng cách ôn càng dài (lặp lại ngắt quãng).',
             'The higher the stage, the longer the gap before the next review (spaced repetition).'
@@ -166,21 +166,23 @@ export default function Stats() {
             const isMaster = box === MASTERED_BOX
             return (
               <div key={box} className="flex flex-1 flex-col items-center gap-1.5">
-                <span className="text-xs font-semibold tabular-nums text-slate-500">{cnt}</span>
+                <span className="text-xs font-semibold tabular-nums text-slate-500 dark:text-slate-400">
+                  {cnt}
+                </span>
                 <div className="flex w-full flex-1 items-end">
                   <div
                     className={`w-full rounded-t-md transition-all ${isMaster ? 'bg-emerald-500' : 'bg-brand-500'}`}
                     style={{ height: `${Math.max(cnt ? 6 : 0, h)}%` }}
                   />
                 </div>
-                <span className="text-[11px] text-slate-400">
+                <span className="text-[11px] text-slate-500 dark:text-slate-400">
                   {isMaster ? '🏆' : box === 0 ? 'mới' : `${INTERVALS[box - 1]}n`}
                 </span>
               </div>
             )
           })}
         </div>
-        <p className="mt-2 text-center text-xs text-slate-400">
+        <p className="mt-2 text-center text-xs text-slate-500 dark:text-slate-400">
           {t(
             'Nhãn = khoảng cách ôn của mỗi bậc (ngày) · 🏆 = đã thành thạo',
             'Labels = review gap for each stage (days) · 🏆 = mastered'
@@ -222,7 +224,7 @@ export default function Stats() {
             />
           ))}
         </div>
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
           {t('Đã học', 'Studied on')} {calendar.filter((c) => c.count > 0).length}/{calendar.length}{' '}
           {t('ngày', 'days')}
         </p>
@@ -261,12 +263,14 @@ export default function Stats() {
                     />
                   </div>
                 </div>
-                <span className="text-[9px] text-slate-400">{formatDay(a.day).slice(0, 2)}</span>
+                <span className="text-[9px] text-slate-500 dark:text-slate-400">
+                  {formatDay(a.day).slice(0, 2)}
+                </span>
               </div>
             )
           })}
         </div>
-        <div className="mt-3 flex justify-center gap-4 text-xs text-slate-400">
+        <div className="mt-3 flex justify-center gap-4 text-xs text-slate-500 dark:text-slate-400">
           <span className="flex items-center gap-1.5">
             <i className="h-2.5 w-2.5 rounded-full bg-emerald-400" /> {t('Từ mới', 'New words')}
           </span>
@@ -280,7 +284,7 @@ export default function Stats() {
       <section className="card p-6">
         <div className="mb-4 flex items-baseline justify-between">
           <h2 className="font-bold">{t('Huy hiệu 🏅', 'Badges 🏅')}</h2>
-          <span className="text-sm text-slate-400">
+          <span className="text-sm text-slate-500 dark:text-slate-400">
             {unlockedCount}/{achievements.length}
           </span>
         </div>
@@ -299,10 +303,12 @@ export default function Stats() {
                 {a.icon}
               </span>
               <div className="min-w-0 flex-1">
-                <p className={`truncate text-sm font-bold ${a.unlocked ? '' : 'text-slate-400'}`}>
+                <p
+                  className={`truncate text-sm font-bold ${a.unlocked ? '' : 'text-slate-500 dark:text-slate-400'}`}
+                >
                   {a.title}
                 </p>
-                <p className="truncate text-xs text-slate-400">{a.desc}</p>
+                <p className="truncate text-xs text-slate-500 dark:text-slate-400">{a.desc}</p>
                 {!a.unlocked && a.progress > 0 && (
                   <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
                     <div
@@ -321,7 +327,7 @@ export default function Stats() {
       <section className="card p-6">
         <div className="flex items-baseline justify-between gap-3">
           <h2 className="font-bold">{t('Bộ sưu tập nhãn dán 🎁', 'Sticker collection 🎁')}</h2>
-          <span className="text-sm text-slate-500">
+          <span className="text-sm text-slate-500 dark:text-slate-400">
             {album.size}/{ALL_STICKERS.length}
           </span>
         </div>
@@ -337,7 +343,7 @@ export default function Stats() {
             <div key={set.name} className="mt-4">
               <p className="mb-2 text-sm font-semibold">
                 {t(set.name, set.nameEn)}{' '}
-                <span className="font-normal text-slate-400">
+                <span className="font-normal text-slate-500 dark:text-slate-400">
                   {got}/{set.stickers.length}
                 </span>
                 {got === set.stickers.length && ' ✅'}
@@ -389,7 +395,7 @@ function Kpi({
     <div className="card p-4">
       <Icon className={`h-6 w-6 ${tone}`} />
       <p className="mt-2 text-2xl font-extrabold">{value}</p>
-      <p className="text-xs text-slate-400">{label}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
     </div>
   )
 }
@@ -405,7 +411,7 @@ function Legend({ color, label, value }: { color: string; label: string; value: 
     <div>
       <span className={`mx-auto mb-1 block h-2.5 w-2.5 rounded-full ${color}`} />
       <p className="font-bold">{value}</p>
-      <p className="text-xs text-slate-400">{label}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
     </div>
   )
 }
@@ -424,7 +430,7 @@ function WeekTile({ label, now, before }: { label: string; now: number; before: 
       <p className="text-2xl font-extrabold tabular-nums">{now}</p>
       <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
       <p
-        className={`mt-1 text-xs font-semibold ${diff > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400'}`}
+        className={`mt-1 text-xs font-semibold ${diff > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-500'}`}
       >
         {diff > 0
           ? `▲ ${diff}`

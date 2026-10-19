@@ -60,10 +60,36 @@ export function summarize(
   }
 }
 
+// Grammar words: frequent, so the pack lists them first, but abstract — a
+// lesson made only of "the, of, to, in, is" teaches a beginner very little.
+const GRAMMAR_POS: ReadonlySet<string> = new Set([
+  'article',
+  'preposition',
+  'determiner',
+  'pronoun',
+  'conjunction',
+  'adverb',
+])
+// Forms of be/have/do and the modals: verbs by part of speech, grammar in use.
+const AUXILIARIES: ReadonlySet<string> = new Set([
+  ...['be', 'am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  ...['have', 'has', 'had', 'having', 'do', 'does', 'did'],
+  ...['can', 'could', 'will', 'would', 'shall', 'should', 'may', 'might', 'must'],
+])
+
+/** A word that carries grammar more than meaning (the, of, you, is, can…). */
+export function isGrammarWord(w: Word): boolean {
+  return GRAMMAR_POS.has(w.posCategory) || AUXILIARIES.has(w.word.toLowerCase())
+}
+
 /**
  * The next batch of never-studied words in the pack's order. With a placement
  * start (docs/design/placement.md), words from `startAt` on come first; the
  * skipped ones that are still new follow once those run out.
+ *
+ * At most a third of a batch (at least one) are grammar words; the others wait
+ * at the front of the queue for the next batch, so every lesson mixes words a
+ * learner can picture with the little words that hold sentences together.
  */
 export function nextNewWords(
   words: Word[],
@@ -77,5 +103,22 @@ export function nextNewWords(
   words.forEach((w, i) => {
     if (!cards[w.id]) (i >= startAt ? ahead : behind).push(w)
   })
-  return [...ahead, ...behind].slice(0, Math.max(0, limit))
+  const queue = [...ahead, ...behind]
+  const size = Math.max(0, limit)
+  let grammarLeft = Math.max(1, Math.floor(size / 3))
+  const batch: Word[] = []
+  for (const w of queue) {
+    if (batch.length >= size) break
+    if (isGrammarWord(w)) {
+      if (grammarLeft === 0) continue
+      grammarLeft--
+    }
+    batch.push(w)
+  }
+  // Near the end of a pack only grammar words may be left: fill up with them.
+  for (const w of queue) {
+    if (batch.length >= size) break
+    if (!batch.includes(w)) batch.push(w)
+  }
+  return batch
 }
