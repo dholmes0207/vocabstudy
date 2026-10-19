@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters',
     ],
     items: [
       [
@@ -30,6 +30,10 @@ export const RELEASES: Release[] = [
       [
         'Gói tiếng Hàn tăng từ 192 lên 253 từ: người trong gia đình (아버지, 할머니, 오빠…), các thứ trong tuần, mùa xuân và mùa thu, số Hán Hàn và thuần Hàn, đồ dùng, nơi chốn (편의점, 우체국…), động từ, tính từ và trạng từ hay gặp — mỗi từ có cách đọc kiểu Việt và câu ví dụ.',
         'The Korean pack grows from 192 to 253 words: family (아버지, 할머니, 오빠…), the days of the week, spring and autumn, Sino-Korean and native numbers, everyday things, places (편의점, 우체국…), and common verbs, adjectives and adverbs — each with a Vietnamese-style reading and an example.',
+      ],
+      [
+        'Màn "Lượng từ" có thêm tiếng Hàn: 9 đơn vị đếm (개, 명, 마리, 권, 잔, 병, 장, 대, 벌) đặt cạnh "cái, người, con, quyển…" của tiếng Việt, kèm bài luyện "책 두 ___" — luyện cả số rút gọn 한, 두, 세, 네.',
+        'The "Measure words" page now does Korean: 9 counters (개, 명, 마리, 권, 잔, 병, 장, 대, 벌) next to their Vietnamese counterparts, with "책 두 ___" questions that also drill the short numbers 한, 두, 세, 네.',
       ],
     ],
   },
