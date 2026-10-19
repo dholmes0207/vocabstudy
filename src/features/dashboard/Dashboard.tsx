@@ -19,6 +19,7 @@ import { usePhrases } from '@/store/phrasesStore'
 import { isKnown } from '@/lib/phrases'
 import { useTargetLang } from '@/hooks/useTargetLang'
 import { availableIn } from '@/lib/packContent'
+import GrammarReviewCard from '@/features/grammar/GrammarReviewCard'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -151,6 +152,8 @@ export default function Dashboard() {
           />
         </div>
       </section>
+
+      <GrammarReviewCard />
 
       {/* Beyond single words: ready-made sentences for real situations, or for
           Korean and Chinese the writing and sounds themselves. */}

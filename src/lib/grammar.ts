@@ -97,6 +97,10 @@ export interface GrammarRecord {
   attempts: number
   /** Day number of the last attempt (lib/date `today()`). */
   lastDay: number
+  /** Rung on REVIEW_DAYS once passed; -1 after a failed review (relearning). */
+  step?: number
+  /** Day the next review is due. Missing on records saved before reviews existed. */
+  due?: number
 }
 
 export type GrammarProgress = Record<string, GrammarRecord>
@@ -104,6 +108,27 @@ export type GrammarProgress = Record<string, GrammarRecord>
 export const PASS_SCORE = 80
 
 export const isPassed = (rec: GrammarRecord | undefined) => (rec?.best ?? 0) >= PASS_SCORE
+
+/**
+ * Days to the next review after each successful one (docs/design/grammar.md,
+ * "Ôn ngữ pháp"): a passed lesson comes back like a word card does.
+ */
+export const REVIEW_DAYS = [3, 7, 21, 60]
+
+/** The day a passed lesson is due for review; null while it is not passed. */
+export function dueDay(rec: GrammarRecord | undefined): number | null {
+  if (!rec || !isPassed(rec)) return null
+  return rec.due ?? rec.lastDay + REVIEW_DAYS[0]
+}
+
+/** Passed lessons due on `day`, most overdue first. */
+export function dueUnits(progress: GrammarProgress, unitIds: string[], day: number): string[] {
+  return unitIds
+    .map((id) => ({ id, due: dueDay(progress[id]) }))
+    .filter((u): u is { id: string; due: number } => u.due !== null && u.due <= day)
+    .sort((a, b) => a.due - b.due)
+    .map((u) => u.id)
+}
 
 export function recordAttempt(
   progress: GrammarProgress,
@@ -114,14 +139,24 @@ export function recordAttempt(
 ): GrammarProgress {
   const score = total > 0 ? Math.round((correct / total) * 100) : 0
   const prev = progress[unitId]
-  return {
-    ...progress,
-    [unitId]: {
-      best: Math.max(prev?.best ?? 0, score),
-      attempts: (prev?.attempts ?? 0) + 1,
-      lastDay: day,
-    },
+  const best = Math.max(prev?.best ?? 0, score)
+  let { step, due } = prev ?? {}
+  const wasDue = (dueDay(prev) ?? Infinity) <= day
+  if (score >= PASS_SCORE) {
+    // A first pass starts the ladder; a passed review climbs it. Practising
+    // again before the lesson is due leaves the schedule alone.
+    if (!isPassed(prev)) step = 0
+    else if (wasDue) step = Math.min((step ?? 0) + 1, REVIEW_DAYS.length - 1)
+    if (!isPassed(prev) || wasDue) due = day + REVIEW_DAYS[step!]
+  } else if (wasDue) {
+    // A failed review: back tomorrow, and the next pass restarts the ladder.
+    step = -1
+    due = day + 1
   }
+  const rec: GrammarRecord = { best, attempts: (prev?.attempts ?? 0) + 1, lastDay: day }
+  if (step !== undefined) rec.step = step
+  if (due !== undefined) rec.due = due
+  return { ...progress, [unitId]: rec }
 }
 
 // ---------------------------------------------------------------------------

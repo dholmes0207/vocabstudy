@@ -14,11 +14,18 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
-    title: ['Nghe số cho tiếng Hàn', 'Hear the numbers, in Korean'],
+    title: [
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch',
+      'Hear the numbers, in Korean; Grammar on a review schedule',
+    ],
     items: [
       [
         'Màn "Nghe số" có thêm tiếng Hàn: nghe giá tiền, giờ, ngày tháng, tuổi rồi chọn đúng — luyện chỗ khó nhất của tiếng Hàn là hai bộ số (세 시 이십 분, 오천 원, 스무 살, 유월).',
         '"Hear the numbers" now does Korean: prices, times, dates and ages — practice for the hardest part, its two sets of numbers (세 시 이십 분, 오천 원, 스무 살, 유월).',
+      ],
+      [
+        'Bài ngữ pháp đã đạt giờ quay lại để ôn sau 3, 7, 21 rồi 60 ngày, như từ vựng. Trang chủ có thẻ "Ôn ngữ pháp" khi có bài đến hạn; ôn trượt thì bài quay lại ngày hôm sau.',
+        'Passed grammar lessons now come back for review after 3, 7, 21 and then 60 days, like words. Home shows a "Grammar review" card when one is due; a missed review comes back the next day.',
       ],
     ],
   },
