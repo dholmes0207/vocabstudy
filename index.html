@@ -45,17 +45,28 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
-    <!-- Start the language pack (the largest download, ~430 KB compressed) in
-         parallel with the JS bundle instead of after it: on mobile this is the
-         biggest single win at startup. Absolute href: pages live at clean
-         paths like /phrases/food. -->
-    <link rel="preload" href="/data/en.json" as="fetch" type="application/json" crossorigin />
-    <!-- Prevent flash of wrong theme: apply saved theme before paint -->
+    <!-- Before paint: apply the saved theme (no flash of the wrong one), and on
+         app pages start the pack being studied (the largest download, ~570 KB
+         compressed for English) in parallel with the JS bundle instead of after
+         it. Marketing and sign-in pages never need a pack, so they skip it. -->
     <script>
       ;(function () {
         try {
           var raw = localStorage.getItem('vocab.settings.v1')
-          var theme = raw ? (JSON.parse(raw).state || {}).theme : null
+          var state = (raw && JSON.parse(raw).state) || {}
+          var lang = /^[a-z]{2,3}$/.test(state.currentLang) ? state.currentLang : 'en'
+          var noPack = /^\/(welcome|about|changelog|privacy|terms|login|reset-password)?\/?$/
+          if (!noPack.test(location.pathname)) {
+            var link = document.createElement('link')
+            link.rel = 'preload'
+            link.as = 'fetch'
+            link.type = 'application/json'
+            link.crossOrigin = 'anonymous'
+            // Absolute href: pages live at clean paths like /phrases/food.
+            link.href = '/data/' + lang + '.json'
+            document.head.appendChild(link)
+          }
+          var theme = state.theme
           var dark =
             theme === 'dark' ||
             ((!theme || theme === 'system') &&
