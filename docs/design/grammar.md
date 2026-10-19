@@ -162,3 +162,21 @@ mẫu câu không dùng tới cũng quên nhanh như một từ.
   đổi phiên bản lưu.
 - Test: `lib/grammar.test.ts` (lịch ôn, ôn trượt, bản ghi cũ, thứ tự đến hạn),
   `GrammarReviewCard.test.tsx`.
+
+## Tiếng Hàn: bài 못 và -(으)세요 (20/10/2026)
+
+Hai điểm người mới gặp ngay ở trình độ TOPIK I, bổ sung vào 11 bài cũ (tổng 13 bài):
+
+- **못** (`ko-mot`):
+  - "không thể", khác 안 "không": 안 가요 là không đi, 못 가요 là không đi được;
+  - với danh từ + 하다 thì 못 đứng ngay trước 해요;
+  - dạng dài -지 못해요;
+  - cách đọc 못 가요 [몯까요], 못 먹어요 [몬머거요].
+- **-(으)세요** (`ko-seyo`): lời mời, nhờ lịch sự.
+  - 세요 sau gốc không có patchim, 으세요 sau gốc có patchim;
+  - gốc tận cùng ㄹ thì bỏ ㄹ (만들다 → 만드세요);
+  - dạng kính ngữ riêng: 드세요, 주무세요, 계세요.
+- Câu chọn chỉ đưa ra phương án chắc chắn sai (sai trật tự, sai patchim). Không đưa ra phương án
+  chỉ khác sắc thái: "바빠서 안 가요" vẫn đúng ngữ pháp, nên không dùng làm phương án sai.
+- Dữ liệu viết trong `scripts/build_grammar_ko.py`. Script kiểm tra chỗ trống, độ dài câu xếp chữ và
+  patchim của các cặp trợ từ.

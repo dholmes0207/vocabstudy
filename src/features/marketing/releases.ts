@@ -15,8 +15,8 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-20',
     title: [
-      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn',
-      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters',
+      'Nghe số cho tiếng Hàn; Ôn ngữ pháp theo lịch; Thêm 61 từ tiếng Hàn; Đơn vị đếm tiếng Hàn; Ngữ pháp tiếng Hàn: 못 và -(으)세요',
+      'Hear the numbers, in Korean; Grammar on a review schedule; 61 more Korean words; Korean counters; Korean grammar: 못 and -(으)세요',
     ],
     items: [
       [
@@ -34,6 +34,10 @@ export const RELEASES: Release[] = [
       [
         'Màn "Lượng từ" có thêm tiếng Hàn: 9 đơn vị đếm (개, 명, 마리, 권, 잔, 병, 장, 대, 벌) đặt cạnh "cái, người, con, quyển…" của tiếng Việt, kèm bài luyện "책 두 ___" — luyện cả số rút gọn 한, 두, 세, 네.',
         'The "Measure words" page now does Korean: 9 counters (개, 명, 마리, 권, 잔, 병, 장, 대, 벌) next to their Vietnamese counterparts, with "책 두 ___" questions that also drill the short numbers 한, 두, 세, 네.',
+      ],
+      [
+        'Ngữ pháp tiếng Hàn thêm 2 bài: 못 ("không thể" — khác 안) và -(으)세요 để mời, nhờ lịch sự (앉으세요, 만드세요, 드세요).',
+        'Korean grammar gets 2 lessons: 못 ("cannot", not the same as 안) and -(으)세요 for polite requests (앉으세요, 만드세요, 드세요).',
       ],
     ],
   },
