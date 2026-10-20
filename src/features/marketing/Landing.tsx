@@ -232,8 +232,8 @@ function Features() {
       tone: 'from-sky-500 to-cyan-600',
       title: t('Mẫu câu dùng ngay', 'Phrases you can use today'),
       desc: t(
-        '100 câu theo tình huống: chào hỏi, gọi món, hỏi đường, công sở… nghe, hiểu, xếp câu.',
-        '100 phrases for real situations: greetings, ordering, directions, work… hear, understand, build.'
+        '100 câu tiếng Anh và 66 câu tiếng Hàn theo tình huống: chào hỏi, gọi món, hỏi đường… nghe, hiểu, xếp câu.',
+        '100 English and 66 Korean phrases for real situations: greetings, ordering, directions… hear, understand, build.'
       ),
     },
     {
@@ -277,8 +277,8 @@ function Features() {
       tone: 'from-fuchsia-500 to-rose-600',
       title: t('Thêm tiếng Hàn, tiếng Trung (beta)', 'Korean and Chinese too (beta)'),
       desc: t(
-        'Tiếng Hàn: bảng chữ Hangul, 253 từ sơ cấp có cách đọc kiểu Việt, nghe số, 12 bộ chủ đề, 14 bài ngữ pháp và 10 truyện ngắn. Tiếng Trung: 330 từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, 15 bộ chủ đề, 22 bài ngữ pháp và 11 truyện ngắn. Đọc bằng giọng của trình duyệt.',
-        'Korean: the Hangul alphabet, 253 beginner words with Vietnamese-style readings, number listening, 12 topic decks, 14 grammar lessons and 10 short stories. Chinese: 330 words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, 15 topic decks, 22 grammar lessons and 11 short stories. Read aloud by your browser.'
+        'Tiếng Hàn: bảng chữ Hangul, 253 từ sơ cấp có cách đọc kiểu Việt, 66 mẫu câu giao tiếp, nghe số, đơn vị đếm, 12 bộ chủ đề, 14 bài ngữ pháp và 10 truyện ngắn. Tiếng Trung: 330 từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, 15 bộ chủ đề, 22 bài ngữ pháp và 11 truyện ngắn. Đọc bằng giọng của trình duyệt.',
+        'Korean: the Hangul alphabet, 253 beginner words with Vietnamese-style readings, 66 everyday phrases, number listening, counters, 12 topic decks, 14 grammar lessons and 10 short stories. Chinese: 330 words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, 15 topic decks, 22 grammar lessons and 11 short stories. Read aloud by your browser.'
       ),
     },
     {
