@@ -175,3 +175,12 @@ một nhóm làm nghiêm túc, không phải một trang demo.
 - `src/features/marketing/landingClaims.test.ts` so mọi con số trên trang với file dữ liệu
   mà nó đếm. Thêm một truyện hay một bộ từ thì test báo đỏ, cho đến khi trang chủ được sửa
   theo. Như vậy trang chủ không thể nói sai về sản phẩm.
+
+## Cập nhật 20/10/2026: mẫu câu tiếng Hàn
+
+- Ô "Mẫu câu dùng ngay" ghi cả hai gói: 100 câu tiếng Anh và 66 câu tiếng Hàn theo tình huống.
+  Bỏ chữ "công sở" khỏi danh sách ví dụ, vì gói tiếng Hàn không có tình huống ở chỗ làm.
+- Dòng giới thiệu tiếng Hàn thêm "66 mẫu câu giao tiếp" và "đơn vị đếm". Màn đơn vị đếm đã
+  có từ trước nhưng trang chủ chưa nhắc tới.
+- Trang Giới thiệu: mô tả tiếng Hàn thêm "mẫu câu giao tiếp".
+- `landingClaims.test.ts` đếm thêm số câu trong `public/data/phrases/ko.json`.

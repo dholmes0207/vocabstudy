@@ -35,8 +35,8 @@ export default function About() {
       learn: t('Học tiếng Hàn', 'Learn Korean'),
       beta: true,
       desc: t(
-        'Bắt đầu từ bảng chữ Hangul: nghe từng chữ, ghép thành khối, rồi tự kiểm tra. Sau đó là từ vựng sơ cấp có cách đọc kiểu Việt, ngữ pháp và truyện ngắn A1–A2.',
-        'Start with the Hangul alphabet: hear each letter, build syllable blocks, then check yourself. Then beginner words with Vietnamese-style readings, grammar and A1–A2 short stories.'
+        'Bắt đầu từ bảng chữ Hangul: nghe từng chữ, ghép thành khối, rồi tự kiểm tra. Sau đó là từ vựng sơ cấp có cách đọc kiểu Việt, mẫu câu giao tiếp, ngữ pháp và truyện ngắn A1–A2.',
+        'Start with the Hangul alphabet: hear each letter, build syllable blocks, then check yourself. Then beginner words with Vietnamese-style readings, everyday phrases, grammar and A1–A2 short stories.'
       ),
     },
     {

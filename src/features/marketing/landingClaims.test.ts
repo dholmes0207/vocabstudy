@@ -35,6 +35,10 @@ const count = {
     (n: number, t: { phrases: unknown[] }) => n + t.phrases.length,
     0
   ),
+  koPhrases: json('public/data/phrases/ko.json').topics.reduce(
+    (n: number, t: { phrases: unknown[] }) => n + t.phrases.length,
+    0
+  ),
 }
 
 describe('numbers on the landing page', () => {
@@ -63,8 +67,10 @@ describe('numbers on the landing page', () => {
       `['${count.languages}', '${count.languages}', t('ngôn ngữ`,
       `['${count.allWords.toLocaleString('vi-VN')}+', '${count.allWords.toLocaleString('en-US')}+'`,
       `['${count.allStories}', '${count.allStories}', t('truyện ngắn`,
-      `${count.phrases} câu theo tình huống`,
-      `${count.phrases} phrases for real situations`,
+      `${count.phrases} câu tiếng Anh và ${count.koPhrases} câu tiếng Hàn theo tình huống`,
+      `${count.phrases} English and ${count.koPhrases} Korean phrases for real situations`,
+      `${count.koPhrases} mẫu câu giao tiếp`,
+      `${count.koPhrases} everyday phrases`,
     ])
       expect(page, claim).toContain(claim)
   })
