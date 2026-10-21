@@ -5,7 +5,9 @@ import tailwindcss from 'tailwindcss'
 import type { Config as TailwindConfig } from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import path from 'node:path'
+import { readFileSync } from 'node:fs'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
+import type { ContentStats, PackStats } from './src/lib/contentStats'
 
 // public/data/*.json stays pretty-printed in the repo (readable diffs for the
 // word scripts); the copy we ship is minified. A third smaller to download and,
@@ -100,6 +102,42 @@ const tailwind: TailwindConfig = {
   plugins: [],
 }
 
+// What ships in public/data, counted once per build for the landing page (via
+// `define`, see src/lib/contentStats.ts). Numbers on the page then follow the
+// data by themselves, and PRs that add content don't all edit the same sentence.
+function contentStats(): ContentStats {
+  const dataDir = path.resolve(__dirname, 'public/data')
+  const read = (file: string) => JSON.parse(readFileSync(path.join(dataDir, file), 'utf8'))
+  const length = (file: string, key: string): number => {
+    try {
+      return read(file)[key]?.length ?? 0
+    } catch {
+      return 0 // this pack has no such section (yet)
+    }
+  }
+  const phrases = (code: string): number => {
+    try {
+      const topics: { phrases: unknown[] }[] = read(`phrases/${code}.json`).topics
+      return topics.reduce((n, t) => n + t.phrases.length, 0)
+    } catch {
+      return 0
+    }
+  }
+  const languages: { code: string; file?: string }[] = read('index.json').languages
+  const packs: Record<string, PackStats> = {}
+  for (const { code, file } of languages) {
+    packs[code] = {
+      words: length(file ?? `${code}.json`, 'words'),
+      stories: length(`reading/${code}.json`, 'stories'),
+      grammar: length(`grammar/${code}.json`, 'units'),
+      topics: length(`topics/${code}.json`, 'topics'),
+      phrases: phrases(code),
+    }
+  }
+  const total = (key: keyof PackStats) => Object.values(packs).reduce((n, p) => n + p[key], 0)
+  return { languages: languages.length, words: total('words'), stories: total('stories'), packs }
+}
+
 // Root base: the app uses clean paths (vocastudy.app/phrases/food), so every
 // asset must resolve from the domain root, not from the current page's folder.
 // Cloudflare Pages serves index.html for unknown paths (no top-level 404.html).
@@ -109,6 +147,7 @@ export default defineConfig({
   // Which build an error report came from: Cloudflare Pages sets the commit.
   define: {
     __BUILD_ID__: JSON.stringify((process.env.CF_PAGES_COMMIT_SHA ?? 'local').slice(0, 7)),
+    __CONTENT_STATS__: JSON.stringify(contentStats()),
   },
   build: {
     // The service worker precaches every emitted chunk at install so the app

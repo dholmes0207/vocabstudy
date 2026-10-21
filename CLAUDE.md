@@ -40,6 +40,8 @@ Repo này không ghi công cho Claude hay bất kỳ công cụ AI nào.
   - `public/data/`, `public/audio/`: dữ liệu và audio sinh sẵn.
   - `scripts/`: script dựng dữ liệu. `supabase/`: schema, mẫu email.
 - Không để file tạm, file nháp, code chết hay sản phẩm build trong repo.
+- Số liệu trên trang giới thiệu (số từ, truyện, bài ngữ pháp…) lấy từ `src/lib/contentStats.ts`,
+  tự đếm từ `public/data` lúc build. Không viết tay con số vào `Landing.tsx`.
 
 ## 3. Trước khi commit
 

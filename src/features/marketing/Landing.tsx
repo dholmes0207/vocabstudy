@@ -15,6 +15,7 @@ import {
   Volume2,
 } from 'lucide-react'
 import { useT } from '@/lib/i18n'
+import { CONTENT, atLeast, packStats } from '@/lib/contentStats'
 import { hasUsedApp } from '@/lib/entry'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import Testimonials from './Testimonials'
@@ -184,9 +185,21 @@ function HeroPreview() {
 function Stats() {
   const t = useT()
   const items = [
-    ['3', '3', t('ngôn ngữ, và sẽ còn thêm', 'languages, with more to come')],
-    ['5.000+', '5,000+', t('từ vựng có nghĩa tiếng Việt', 'words with Vietnamese meanings')],
-    ['35', '35', t('truyện ngắn chạm là ra nghĩa', 'short stories, tap for meanings')],
+    [
+      `${CONTENT.languages}`,
+      `${CONTENT.languages}`,
+      t('ngôn ngữ, và sẽ còn thêm', 'languages, with more to come'),
+    ],
+    [
+      atLeast(CONTENT.words, 'vi'),
+      atLeast(CONTENT.words, 'en'),
+      t('từ vựng có nghĩa tiếng Việt', 'words with Vietnamese meanings'),
+    ],
+    [
+      `${CONTENT.stories}`,
+      `${CONTENT.stories}`,
+      t('truyện ngắn chạm là ra nghĩa', 'short stories, tap for meanings'),
+    ],
     ['0đ', '$0', t('học hoàn toàn miễn phí', 'completely free')],
   ] as const
   return (
@@ -217,6 +230,7 @@ function SectionTitle({ kicker, title, sub }: { kicker: string; title: string; s
 
 function Features() {
   const t = useT()
+  const [en, ko, zh] = [packStats('en'), packStats('ko'), packStats('zh')]
   const items = [
     {
       icon: Brain,
@@ -232,8 +246,8 @@ function Features() {
       tone: 'from-sky-500 to-cyan-600',
       title: t('Mẫu câu dùng ngay', 'Phrases you can use today'),
       desc: t(
-        '100 câu tiếng Anh và 66 câu tiếng Hàn theo tình huống: chào hỏi, gọi món, hỏi đường… nghe, hiểu, xếp câu.',
-        '100 English and 66 Korean phrases for real situations: greetings, ordering, directions… hear, understand, build.'
+        `${en.phrases} câu tiếng Anh và ${ko.phrases} câu tiếng Hàn theo tình huống: chào hỏi, gọi món, hỏi đường… nghe, hiểu, xếp câu.`,
+        `${en.phrases} English and ${ko.phrases} Korean phrases for real situations: greetings, ordering, directions… hear, understand, build.`
       ),
     },
     {
@@ -268,8 +282,8 @@ function Features() {
       tone: 'from-orange-400 to-rose-500',
       title: t('Đọc truyện, ngữ pháp, chủ đề', 'Stories, grammar, topics'),
       desc: t(
-        'Tiếng Anh: 14 truyện ngắn chạm vào từ là ra nghĩa, 12 bài ngữ pháp giải thích bằng tiếng Việt, 19 bộ từ theo tình huống.',
-        'English: 14 short stories where any word is a tap away from its meaning, 12 grammar lessons explained in Vietnamese, 19 topic decks.'
+        `Tiếng Anh: ${en.stories} truyện ngắn chạm vào từ là ra nghĩa, ${en.grammar} bài ngữ pháp giải thích bằng tiếng Việt, ${en.topics} bộ từ theo tình huống.`,
+        `English: ${en.stories} short stories where any word is a tap away from its meaning, ${en.grammar} grammar lessons explained in Vietnamese, ${en.topics} topic decks.`
       ),
     },
     {
@@ -277,8 +291,8 @@ function Features() {
       tone: 'from-fuchsia-500 to-rose-600',
       title: t('Thêm tiếng Hàn, tiếng Trung (beta)', 'Korean and Chinese too (beta)'),
       desc: t(
-        'Tiếng Hàn: bảng chữ Hangul, 253 từ sơ cấp có cách đọc kiểu Việt, 66 mẫu câu giao tiếp, nghe số, đơn vị đếm, 12 bộ chủ đề, 14 bài ngữ pháp và 10 truyện ngắn. Tiếng Trung: 330 từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, 15 bộ chủ đề, 22 bài ngữ pháp và 11 truyện ngắn. Đọc bằng giọng của trình duyệt.',
-        'Korean: the Hangul alphabet, 253 beginner words with Vietnamese-style readings, 66 everyday phrases, number listening, counters, 12 topic decks, 14 grammar lessons and 10 short stories. Chinese: 330 words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, 15 topic decks, 22 grammar lessons and 11 short stories. Read aloud by your browser.'
+        `Tiếng Hàn: bảng chữ Hangul, ${ko.words} từ sơ cấp có cách đọc kiểu Việt, ${ko.phrases} mẫu câu giao tiếp, nghe số, đơn vị đếm, ${ko.topics} bộ chủ đề, ${ko.grammar} bài ngữ pháp và ${ko.stories} truyện ngắn. Tiếng Trung: ${zh.words} từ (đủ từ vựng HSK 1 và HSK 2) có pinyin và âm Hán Việt, bài pinyin & thanh điệu, lượng từ, nghe số, ${zh.topics} bộ chủ đề, ${zh.grammar} bài ngữ pháp và ${zh.stories} truyện ngắn. Đọc bằng giọng của trình duyệt.`,
+        `Korean: the Hangul alphabet, ${ko.words} beginner words with Vietnamese-style readings, ${ko.phrases} everyday phrases, number listening, counters, ${ko.topics} topic decks, ${ko.grammar} grammar lessons and ${ko.stories} short stories. Chinese: ${zh.words} words (all of HSK 1 and HSK 2) with pinyin and Sino-Vietnamese readings, a pinyin & tones guide, measure words, number listening, ${zh.topics} topic decks, ${zh.grammar} grammar lessons and ${zh.stories} short stories. Read aloud by your browser.`
       ),
     },
     {

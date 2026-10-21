@@ -184,3 +184,19 @@ một nhóm làm nghiêm túc, không phải một trang demo.
   có từ trước nhưng trang chủ chưa nhắc tới.
 - Trang Giới thiệu: mô tả tiếng Hàn thêm "mẫu câu giao tiếp".
 - `landingClaims.test.ts` đếm thêm số câu trong `public/data/phrases/ko.json`.
+
+## Cập nhật 20/10/2026: số liệu tự tính từ dữ liệu
+
+- Vấn đề: mỗi lần thêm truyện, bài hay từ, PR phải sửa tay con số trên trang chủ. Đợt 13 PR
+  ngày 19–20/10 cùng sửa một câu nên merge cái đầu xong thì 12 cái còn lại xung đột.
+- `vite.config.ts` (`contentStats`) đếm `public/data` mỗi lần build: số gói, tổng số từ, tổng
+  số truyện, và theo từng gói số từ, truyện, bài ngữ pháp, bộ chủ đề, mẫu câu. Kết quả vào
+  app qua `define` (`__CONTENT_STATS__`), đọc bằng `src/lib/contentStats.ts`.
+- `Landing.tsx` chỉ ghép các số đó vào câu. Tổng số từ vẫn làm tròn xuống hàng trăm
+  (`atLeast`: "5.000+" / "5,000+").
+- `landingClaims.test.ts` giờ kiểm tra ba điều: số đếm khớp với file dữ liệu, trang render
+  đúng số ở cả tiếng Việt và tiếng Anh, và `Landing.tsx` không có con số viết tay nào.
+- Thêm nội dung không cần sửa trang chủ nữa. Chỉ khi thêm loại nội dung mới (ví dụ mẫu câu
+  tiếng Trung) mới phải sửa câu giới thiệu.
+- Khi chạy `npm run dev`, số liệu được tính lúc khởi động; sửa dữ liệu thì khởi động lại để
+  thấy số mới.
