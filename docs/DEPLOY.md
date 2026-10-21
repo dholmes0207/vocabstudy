@@ -97,8 +97,14 @@ npm run build && npm run pages:dev   # chạy đầy đủ Functions + static b�
 | `/api/*` và mọi origin khác | **không đụng tới** | Trả lời của AI và Supabase không được cache                     |
 
 Lúc cài đặt, worker precache vỏ app (đọc `asset-manifest.json` do Vite sinh, nên
-gồm cả các chunk lazy) + gói từ vựng ≈ **875 KB**. **Không** precache audio (57 MB)
-— audio chỉ được cache khi người học đã nghe qua.
+gồm cả các chunk lazy) + gói từ vựng ≈ **875 KB**. **Không** precache audio — audio
+chỉ được cache khi người học đã nghe qua, và chỉ khi máy chủ trả cả file (mã 200).
+
+## Audio trên R2
+
+Pages (gói Free) nhận tối đa 20.000 file mỗi lần deploy, riêng audio đã gần chạm mức đó.
+Audio được đồng bộ lên bucket R2 và trả qua `functions/audio/[[path]].ts`, cùng đường dẫn
+`/audio/*` nên offline vẫn chạy. Cách cài đặt và lý do: [`design/audio-r2.md`](design/audio-r2.md).
 
 **Kill switch:** nếu service worker gây sự cố, sửa `DISABLED = false` thành `true`
 trong `public/sw.js` rồi deploy. Lần vào tiếp theo worker sẽ tự gỡ đăng ký và xoá

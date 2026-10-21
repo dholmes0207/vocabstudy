@@ -60,6 +60,8 @@ Chỉ **lần thử đầu tiên** của mỗi từ được ghi vào SRS — nh
 Mỗi từ và câu ví dụ đều có **file MP3 giọng đọc AI (Neural) chuẩn Mỹ** (nghe tự nhiên), tạo sẵn bằng thư viện **`edge-tts`** (giọng Microsoft Edge, miễn phí, không cần API key) và đặt trong `public/audio/en/`. App phát file tĩnh (chỉnh tốc độ qua `playbackRate`), tự động **fallback sang Web Speech API** của trình duyệt nếu thiếu file. Có thể chọn giọng fallback trong _Cài đặt → Phát âm_.
 
 **Tiếng Hàn, tiếng Trung:** cùng cách làm, mỗi gói có hai giọng riêng (SunHi / InJoon, Xiaoxiao / Yunxi), khai báo trong `VOICES_BY_CODE` của `scripts/generate_audio.py`. Sinh bằng workflow **"Generate audio"** trên GitHub (tab Actions → Run workflow → chọn gói): workflow ghi từ, câu ví dụ, mẫu câu, chạy `src/lib/packAudio.test.ts` rồi đẩy lên nhánh `chore/audio-<gói>`. Khi gói chưa có `public/audio/<gói>/index.json`, app đọc bằng giọng của trình duyệt như trước.
+
+**Lưu trữ:** `public/audio/` trong repo là nguồn gốc; bản deploy lấy audio từ bucket Cloudflare R2 (workflow **"Sync audio to R2"** tự đồng bộ khi `main` đổi audio), vì Pages giới hạn 20.000 file mỗi lần deploy. Chi tiết: [`docs/design/audio-r2.md`](docs/design/audio-r2.md).
 ---
 
 ## 🤖 Trợ lý AI (có Guardrail, chạy server-side)

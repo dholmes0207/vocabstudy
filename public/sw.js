@@ -169,7 +169,9 @@ async function cacheFirst(request) {
   const cached = await caches.match(request, MATCH)
   if (cached) return cached
   const response = await fetch(request)
-  if (response && response.ok) {
+  // Only a whole 200 response can be stored: the Cache API rejects a 206 (a
+  // player asking for part of a clip), and that must not cost the playback.
+  if (response && response.status === 200) {
     const cache = await caches.open(CONTENT_CACHE)
     await cache.put(request, response.clone())
   }
