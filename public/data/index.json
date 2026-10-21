@@ -24,7 +24,7 @@
       "ttsLang": "ko-KR",
       "count": 253,
       "file": "ko.json",
-      "description": "Beta: 253 từ tiếng Hàn sơ cấp (chào hỏi, số đếm, màu sắc, đi lại, ăn uống…), đọc bằng giọng của trình duyệt.",
+      "description": "Beta: 253 từ tiếng Hàn sơ cấp (chào hỏi, số đếm, màu sắc, đi lại, ăn uống…).",
       "beta": true
     },
     {
@@ -37,7 +37,7 @@
       "ttsLang": "zh-CN",
       "count": 330,
       "file": "zh.json",
-      "description": "Beta: 330 từ tiếng Trung sơ cấp, đủ từ vựng HSK 1 và HSK 2, thêm từ đời thường (gia đình, màu sắc, đi lại, mua sắm, sở thích…), có pinyin và âm Hán Việt, đọc bằng giọng của trình duyệt.",
+      "description": "Beta: 330 từ tiếng Trung sơ cấp, đủ từ vựng HSK 1 và HSK 2, thêm từ đời thường (gia đình, màu sắc, đi lại, mua sắm, sở thích…), có pinyin và âm Hán Việt.",
       "beta": true
     }
   ]

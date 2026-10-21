@@ -413,7 +413,7 @@ function PhrasesCard({ code }: { code: string }) {
                 `${known} phrases learned — keep going to speak more fluently.`
               )
             : t(
-                'Câu nói dùng được ngay: chào hỏi, gọi món, hỏi đường… có giọng đọc AI chuẩn Mỹ.',
+                'Câu nói dùng được ngay: chào hỏi, gọi món, hỏi đường… có giọng đọc AI tự nhiên.',
                 'Sentences you can use today: greetings, ordering, directions… with natural AI voices.'
               )}
         </span>

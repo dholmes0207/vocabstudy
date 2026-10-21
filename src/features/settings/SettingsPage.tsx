@@ -318,8 +318,8 @@ export default function SettingsPage() {
           <Row
             label={t('Giọng đọc', 'Voice')}
             hint={t(
-              'Giọng đọc AI (Neural) chuẩn Mỹ, nghe tự nhiên.',
-              'Natural-sounding AI (neural) voices with a US accent.'
+              'Giọng đọc AI (Neural) thu sẵn của người bản xứ, nghe tự nhiên.',
+              'Natural-sounding pre-recorded AI (neural) voices with a native accent.'
             )}
           >
             <div className="flex items-center gap-2">
