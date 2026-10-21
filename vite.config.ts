@@ -6,7 +6,7 @@ import type { Config as TailwindConfig } from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import path from 'node:path'
 import { existsSync, readFileSync } from 'node:fs'
-import { readdir, readFile, writeFile } from 'node:fs/promises'
+import { readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import type { ContentStats, PackStats } from './src/lib/contentStats'
 
 // public/data/*.json stays pretty-printed in the repo (readable diffs for the
@@ -31,6 +31,25 @@ function minifyPacks(): Plugin {
         const file = path.join(dataDir, name)
         await writeFile(file, JSON.stringify(JSON.parse(await readFile(file, 'utf8'))))
       }
+    },
+  }
+}
+
+// With AUDIO_FROM_R2=1 (set on Cloudflare Pages once the bucket is ready, see
+// docs/design/audio-r2.md) the clips are served from R2 by
+// functions/audio/[[path]].ts, so the deploy leaves them out: Pages allows
+// 20,000 files per deploy on the free plan and the clips alone are over 17,000.
+function audioFromR2(): Plugin {
+  let audioDir = ''
+  return {
+    name: 'audio-from-r2',
+    apply: 'build',
+    configResolved(config) {
+      audioDir = path.resolve(config.root, config.build.outDir, 'audio')
+    },
+    async closeBundle() {
+      if (process.env.AUDIO_FROM_R2 !== '1') return
+      await rm(audioDir, { recursive: true, force: true })
     },
   }
 }
@@ -144,7 +163,7 @@ function contentStats(): ContentStats {
 // Cloudflare Pages serves index.html for unknown paths (no top-level 404.html).
 export default defineConfig({
   base: '/',
-  plugins: [react(), minifyPacks()],
+  plugins: [react(), minifyPacks(), audioFromR2()],
   // Which build an error report came from: Cloudflare Pages sets the commit.
   define: {
     __BUILD_ID__: JSON.stringify((process.env.CF_PAGES_COMMIT_SHA ?? 'local').slice(0, 7)),

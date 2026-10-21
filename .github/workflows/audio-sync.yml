@@ -1,0 +1,73 @@
+# Mirrors public/audio to the R2 bucket that serves the clips on the live site
+# (functions/audio/[[path]].ts, docs/design/audio-r2.md). The repository stays
+# the source of truth; the bucket only holds a copy.
+#
+# - On every push to main that touches public/audio: uploads the added or
+#   changed files and deletes the removed ones.
+# - Run by hand (Actions → Sync audio to R2): copies everything missing or
+#   different in size. Use it once to fill an empty bucket.
+#
+# Needs repository secrets R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
+# and, if the bucket is not called vocastudy-audio, a variable R2_AUDIO_BUCKET.
+# Without them the run only warns, so pushes before the bucket exists stay green.
+name: Sync audio to R2
+
+on:
+  push:
+    branches: [main]
+    paths: ['public/audio/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audio-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 does not take the default integrity checksums of recent AWS CLIs.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      BUCKET: ${{ vars.R2_AUDIO_BUCKET || 'vocastudy-audio' }}
+      BEFORE: ${{ github.event.before }}
+      EVENT: ${{ github.event_name }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Upload to R2
+        run: |
+          if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$ACCOUNT_ID" ]; then
+            echo "::warning::R2 secrets are not set yet; nothing uploaded (see docs/design/audio-r2.md)."
+            exit 0
+          fi
+          s3() { aws s3 "$@" --endpoint-url "https://$ACCOUNT_ID.r2.cloudflarestorage.com" --only-show-errors; }
+
+          # Push with a known previous commit: send only what changed.
+          if [ "$EVENT" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+            && git fetch --no-tags --depth=1 origin "$BEFORE"; then
+            git diff --name-only --diff-filter=AMR "$BEFORE" HEAD -- public/audio > changed.txt
+            git diff --name-only --diff-filter=D "$BEFORE" HEAD -- public/audio > removed.txt
+            echo "changed: $(wc -l < changed.txt), removed: $(wc -l < removed.txt)"
+            if [ -s changed.txt ]; then
+              mkdir -p staging
+              while read -r f; do
+                mkdir -p "staging/$(dirname "${f#public/audio/}")"
+                cp "$f" "staging/${f#public/audio/}"
+              done < changed.txt
+              s3 sync staging "s3://$BUCKET"
+            fi
+            while read -r f; do s3 rm "s3://$BUCKET/${f#public/audio/}"; done < removed.txt
+          else
+            s3 sync public/audio "s3://$BUCKET" --size-only
+          fi
+          echo "::notice::public/audio is in sync with r2://$BUCKET."

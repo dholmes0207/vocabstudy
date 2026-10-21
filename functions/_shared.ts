@@ -20,6 +20,8 @@ export interface Env {
   SUPABASE_URL?: string
   SUPABASE_ANON_KEY?: string
   SUPABASE_SERVICE_ROLE_KEY?: string
+  /** R2 bucket with the pronunciation clips (functions/audio/[[path]].ts). */
+  AUDIO_BUCKET?: R2Bucket
 }
 
 export interface Ctx {
