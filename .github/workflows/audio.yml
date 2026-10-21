@@ -1,0 +1,82 @@
+# Pre-records the audio of one language pack with edge-tts (Microsoft neural
+# voices, free, no key): headwords, example sentences and everyday phrases, in
+# every voice listed for the pack in scripts/generate_audio.py. Run it by hand
+# from the Actions tab after adding or rewriting words. The scripts only record
+# missing or changed clips, then src/lib/packAudio.test.ts checks that nothing
+# is missing or stale.
+#
+# The result goes to the branch chore/audio-<pack>, committed under the name of
+# whoever started the run, ready for a pull request. A new run replaces that
+# branch, so open (or update) the pull request before running it again.
+name: Generate audio
+
+on:
+  workflow_dispatch:
+    inputs:
+      pack:
+        description: Language pack
+        required: true
+        type: choice
+        options: [ko, zh, en]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audio-${{ inputs.pack }}
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PACK: ${{ inputs.pack }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install edge-tts
+        run: pip install edge-tts
+
+      - name: Record words and example sentences
+        run: python3 scripts/generate_audio.py --code "$PACK"
+
+      - name: Record everyday phrases
+        run: |
+          if [ -f "public/data/phrases/$PACK.json" ]; then
+            python3 scripts/generate_phrase_audio.py --code "$PACK"
+          else
+            echo "No phrases for $PACK."
+          fi
+
+      - name: Check every clip is there and current
+        run: |
+          npm ci
+          npx vitest run src/lib/packAudio.test.ts
+
+      - name: Push to chore/audio-${{ inputs.pack }}
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          git add public/audio scripts/audio-texts
+          if git diff --cached --quiet; then
+            echo "Nothing new to record."
+            exit 0
+          fi
+          files=$(git diff --cached --name-only -- public/audio | grep -c '\.mp3$' || true)
+          git config user.name "$ACTOR"
+          git config user.email "$ACTOR_ID+$ACTOR@users.noreply.github.com"
+          git commit -q -m "chore(audio): giọng đọc thu sẵn cho gói $PACK" \
+            -m "- $files file mp3, sinh bằng workflow \"Generate audio\" (edge-tts)."
+          git push --force origin "HEAD:refs/heads/chore/audio-$PACK"
+          echo "::notice::Pushed $files clips to chore/audio-$PACK. Open a pull request from that branch."

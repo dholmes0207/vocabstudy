@@ -8,6 +8,8 @@ export interface PackStats {
   grammar: number
   topics: number
   phrases: number
+  /** Has pre-recorded voices (public/audio/<code>/index.json); otherwise the browser reads it. */
+  audio: boolean
 }
 
 export interface ContentStats {
@@ -22,7 +24,7 @@ export interface ContentStats {
 
 export const CONTENT: ContentStats = __CONTENT_STATS__
 
-const NONE: PackStats = { words: 0, stories: 0, grammar: 0, topics: 0, phrases: 0 }
+const NONE: PackStats = { words: 0, stories: 0, grammar: 0, topics: 0, phrases: 0, audio: false }
 
 /** Counts for one pack; all zero for a pack that is not shipped. */
 export function packStats(code: string): PackStats {

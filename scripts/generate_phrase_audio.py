@@ -12,6 +12,7 @@ any clip is missing or stale.
 Usage:
   python3 scripts/generate_phrase_audio.py            # en, all voices
   python3 scripts/generate_phrase_audio.py --code en --voices aria
+  python3 scripts/generate_phrase_audio.py --code ko  # Korean phrases, Korean voices
 Requires: pip install edge-tts
 """
 import argparse
@@ -21,7 +22,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from generate_audio import ROOT, VOICES, synth  # noqa: E402
+from generate_audio import ROOT, speakable, synth, voices_for  # noqa: E402
 
 
 async def main() -> None:
@@ -42,7 +43,7 @@ async def main() -> None:
         with open(texts_path, encoding="utf-8") as f:
             recorded = json.load(f)
 
-    voices = [v for v in VOICES if not args.voices or v["key"] in args.voices]
+    voices = [v for v in voices_for(args.code) if not args.voices or v["key"] in args.voices]
     sem = asyncio.Semaphore(6)
     jobs = []
     for v in voices:
@@ -52,7 +53,7 @@ async def main() -> None:
             path = os.path.join(folder, f"p{p['id']}.mp3")
             fresh = os.path.exists(path) and recorded.get(str(p["id"])) == p["en"]
             if not fresh:
-                jobs.append(synth(p["en"], path, v["voice"], args.rate, sem))
+                jobs.append(synth(speakable(p["en"]), path, v["voice"], args.rate, sem))
 
     print(f"{len(phrases)} phrases × {len(voices)} voices — {len(jobs)} clips to record")
     results = await asyncio.gather(*jobs)

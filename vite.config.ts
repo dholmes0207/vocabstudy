@@ -5,7 +5,7 @@ import tailwindcss from 'tailwindcss'
 import type { Config as TailwindConfig } from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import path from 'node:path'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import type { ContentStats, PackStats } from './src/lib/contentStats'
 
@@ -132,9 +132,10 @@ function contentStats(): ContentStats {
       grammar: length(`grammar/${code}.json`, 'units'),
       topics: length(`topics/${code}.json`, 'topics'),
       phrases: phrases(code),
+      audio: existsSync(path.resolve(__dirname, `public/audio/${code}/index.json`)),
     }
   }
-  const total = (key: keyof PackStats) => Object.values(packs).reduce((n, p) => n + p[key], 0)
+  const total = (key: 'words' | 'stories') => Object.values(packs).reduce((n, p) => n + p[key], 0)
   return { languages: languages.length, words: total('words'), stories: total('stories'), packs }
 }
 

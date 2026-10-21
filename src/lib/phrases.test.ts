@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs'
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import {
   buildPhraseSession,
@@ -26,25 +26,6 @@ describe('phrase pack (public/data/phrases/en.json)', () => {
       expect(t.titleEn).not.toBe('')
       expect(t.phrases.length).toBeGreaterThanOrEqual(8)
     }
-  })
-
-  it('has a recorded clip in every voice, made from the current text', () => {
-    const recorded = JSON.parse(
-      readFileSync('scripts/audio-texts/phrases-en.json', 'utf8')
-    ) as Record<string, string>
-    const voices = (
-      JSON.parse(readFileSync('public/audio/en/index.json', 'utf8')) as {
-        voices: { key: string }[]
-      }
-    ).voices
-    const problems: string[] = []
-    for (const p of all) {
-      if (recorded[p.id] !== p.en) problems.push(`${p.id}: stale text`)
-      for (const v of voices) {
-        if (!existsSync(`public/audio/en/${v.key}/p${p.id}.mp3`)) problems.push(`${p.id}: ${v.key}`)
-      }
-    }
-    expect(problems).toEqual([])
   })
 
   it('refuses a broken pack', () => {

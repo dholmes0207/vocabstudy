@@ -22,12 +22,13 @@ exist, without synthesising anything (one-off bootstrap).
 
 Usage:
   python3 scripts/generate_audio.py                     # all voices, words+examples (en)
+  python3 scripts/generate_audio.py --code ko           # Korean pack, its own voices
   python3 scripts/generate_audio.py --voices aria       # only the "aria" voice
   python3 scripts/generate_audio.py --code en --no-examples
   python3 scripts/generate_audio.py --limit 20          # quick test on first 20
   python3 scripts/generate_audio.py --seed-texts        # bootstrap the sentence record
 
-To add/change voices, edit VOICES below (pick from `edge-tts --list-voices`).
+To add/change voices, edit VOICES_BY_CODE below (pick from `edge-tts --list-voices`).
 Requires: pip install edge-tts
 """
 import argparse
@@ -40,12 +41,36 @@ import edge_tts
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Voices offered to the user. First entry is the default. `key` is the folder
-# name and the value stored in settings; `label` is shown in the UI.
-VOICES = [
-    {"key": "aria", "voice": "en-US-AriaNeural", "label": "Aria — Nữ (Mỹ) 🇺🇸"},
-    {"key": "guy", "voice": "en-US-GuyNeural", "label": "Guy — Nam (Mỹ) 🇺🇸"},
-]
+# Voices offered to the user, per language pack. First entry is the default.
+# `key` is the folder name and the value stored in settings; `label` is shown in
+# the UI. Keys are unique across packs, so a saved choice never points at a
+# voice of another language.
+VOICES_BY_CODE = {
+    "en": [
+        {"key": "aria", "voice": "en-US-AriaNeural", "label": "Aria — Nữ (Mỹ) 🇺🇸"},
+        {"key": "guy", "voice": "en-US-GuyNeural", "label": "Guy — Nam (Mỹ) 🇺🇸"},
+    ],
+    "ko": [
+        {"key": "sunhi", "voice": "ko-KR-SunHiNeural", "label": "SunHi — Nữ (Seoul) 🇰🇷"},
+        {"key": "injoon", "voice": "ko-KR-InJoonNeural", "label": "InJoon — Nam (Seoul) 🇰🇷"},
+    ],
+    "zh": [
+        {"key": "xiaoxiao", "voice": "zh-CN-XiaoxiaoNeural", "label": "Xiaoxiao — Nữ (Phổ thông) 🇨🇳"},
+        {"key": "yunxi", "voice": "zh-CN-YunxiNeural", "label": "Yunxi — Nam (Phổ thông) 🇨🇳"},
+    ],
+}
+
+
+def voices_for(code: str) -> list[dict]:
+    if code not in VOICES_BY_CODE:
+        sys.exit(f"No voices for pack '{code}'. Add them to VOICES_BY_CODE.")
+    return VOICES_BY_CODE[code]
+
+
+def speakable(text: str) -> str:
+    # Chinese examples carry zero-width spaces between words (for tap-to-look-up);
+    # they are not for the voice.
+    return text.replace("\u200b", "")
 
 # Optional per-word pronunciation overrides for the WORD clip (examples always
 # read naturally in context). Map a headword to the exact text to synthesize.
@@ -59,7 +84,7 @@ def word_text(word: str) -> str:
     if word in PRON_OVERRIDES:
         return PRON_OVERRIDES[word]
     # "anybody / anyone" -> "anybody, anyone" so the voice doesn't read a slash.
-    return ", ".join(p.strip() for p in word.split("/") if p.strip())
+    return ", ".join(speakable(p).strip() for p in word.split("/") if p.strip())
 
 
 async def synth(text: str, path: str, voice: str, rate: str, sem: asyncio.Semaphore) -> bool:
@@ -88,10 +113,11 @@ async def main() -> None:
     ap.add_argument("--seed-texts", action="store_true", help="record current sentences for existing clips, synthesise nothing")
     args = ap.parse_args()
 
+    all_voices = voices_for(args.code)
     selected = set(k.strip() for k in args.voices.split(",") if k.strip())
-    voices = [v for v in VOICES if not selected or v["key"] in selected]
+    voices = [v for v in all_voices if not selected or v["key"] in selected]
     if not voices:
-        sys.exit(f"No matching voices. Available keys: {[v['key'] for v in VOICES]}")
+        sys.exit(f"No matching voices. Available keys: {[v['key'] for v in all_voices]}")
 
     pack_path = os.path.join(ROOT, "public", "data", f"{args.code}.json")
     with open(pack_path, encoding="utf-8") as f:
@@ -104,7 +130,7 @@ async def main() -> None:
     os.makedirs(code_dir, exist_ok=True)
 
     # Write/refresh the voice manifest the app reads.
-    manifest = {"default": VOICES[0]["key"], "voices": [{"key": v["key"], "label": v["label"], "voice": v["voice"]} for v in VOICES]}
+    manifest = {"default": all_voices[0]["key"], "voices": [{"key": v["key"], "label": v["label"], "voice": v["voice"]} for v in all_voices]}
     with open(os.path.join(code_dir, "index.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
@@ -125,7 +151,7 @@ async def main() -> None:
     if args.seed_texts:
         seeded = 0
         for w in words:
-            clips = [os.path.join(code_dir, v["key"], f"e{w['id']}.mp3") for v in VOICES]
+            clips = [os.path.join(code_dir, v["key"], f"e{w['id']}.mp3") for v in all_voices]
             if w.get("exampleEn") and all(os.path.exists(c) for c in clips) and str(w["id"]) not in texts:
                 texts[str(w["id"])] = w["exampleEn"]
                 seeded += 1
@@ -150,7 +176,7 @@ async def main() -> None:
                 epath = os.path.join(out_dir, f"e{wid}.mp3")
                 stale = texts.get(str(wid)) != w["exampleEn"]
                 if not os.path.exists(epath) or stale:
-                    task = asyncio.ensure_future(synth(w["exampleEn"], epath, v["voice"], args.rate, sem))
+                    task = asyncio.ensure_future(synth(speakable(w["exampleEn"]), epath, v["voice"], args.rate, sem))
                     example_jobs.setdefault(str(wid), []).append(task)
                     tasks.append(task)
 
@@ -169,7 +195,7 @@ async def main() -> None:
 
     by_id = {str(w["id"]): w for w in words}
     for wid, jobs in example_jobs.items():
-        if all(j.result() for j in jobs) and len(jobs) == len(voices) == len(VOICES):
+        if all(j.result() for j in jobs) and len(jobs) == len(voices) == len(all_voices):
             texts[wid] = by_id[wid]["exampleEn"]
     save_texts()
 

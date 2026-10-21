@@ -1,5 +1,5 @@
 /** @vitest-environment jsdom */
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { createElement } from 'react'
 import { cleanup, render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
@@ -121,6 +121,23 @@ describe('numbers on the landing page', () => {
       `${count.zh.topics} topic decks, ${count.zh.grammar} grammar lessons and ${count.zh.stories} short stories`,
     ])
       expect(page, claim).toContain(claim)
+  })
+
+  it('say who reads Korean and Chinese aloud', () => {
+    const recorded = (code: string) => existsSync(`public/audio/${code}/index.json`)
+    expect(CONTENT.packs.ko.audio).toBe(recorded('ko'))
+    expect(CONTENT.packs.zh.audio).toBe(recorded('zh'))
+    const [vi, en] = [pageText('vi'), pageText('en')]
+    if (recorded('ko') && recorded('zh')) {
+      expect(vi).toContain('Có giọng đọc AI thu sẵn.')
+      expect(en).toContain('With pre-recorded AI voices.')
+    } else if (!recorded('ko') && !recorded('zh')) {
+      expect(vi).toContain('Đọc bằng giọng của trình duyệt.')
+      expect(en).toContain('Read aloud by your browser.')
+    } else {
+      expect(vi).toContain('có giọng đọc AI thu sẵn;')
+      expect(en).toContain('has pre-recorded AI voices;')
+    }
   })
 
   it('are never written into the page by hand', () => {
