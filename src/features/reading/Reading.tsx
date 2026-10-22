@@ -19,7 +19,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useReading } from '@/store/readingStore'
-import { pronounce, stopPronounce, wordAudio } from '@/lib/audio'
+import { pronounce, stopPronounce, textAudio, wordAudio } from '@/lib/audio'
 import {
   buildGlossary,
   glossInLine,
@@ -191,6 +191,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
     setReading({ line, all })
     lineRefs.current[line]?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' })
     pronounce({
+      audioSrc: textAudio(story.sentences[line].en),
       text: story.sentences[line].en,
       lang: pack.meta.ttsLang,
       rate: slow ? rate * SLOW : rate,
@@ -225,6 +226,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
           text: s.en,
           vi: s.vi,
           read: s.read,
+          audioSrc: textAudio(s.en),
         }))}
         caption={`${story.emoji} ${story.title[1]}`}
         onExit={() => setDictate(false)}

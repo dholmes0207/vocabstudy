@@ -14,3 +14,13 @@ export function textHash(text: string): string {
   }
   return (h >>> 0).toString(36)
 }
+
+/**
+ * The file name of a sentence clip recorded straight to R2 (`t/<clipId>.mp3`,
+ * scripts/generate_text_audio.py). Two fingerprints, the second seeded by a
+ * leading \u0001, so ten thousand sentences don't risk sharing a name; the
+ * recording script also refuses to run on a collision.
+ */
+export function clipId(text: string): string {
+  return `${textHash(text)}-${textHash('\u0001' + text)}`
+}

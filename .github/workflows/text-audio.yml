@@ -1,0 +1,89 @@
+# Records the sentences the app reads aloud beyond words, examples and everyday
+# phrases (collocations, grammar examples, story lines) and puts them straight
+# into the R2 bucket as <pack>/<voice>/t/<clipId>.mp3. They are not committed:
+# there are about ten thousand, all derived from public/data, and the name of
+# each clip is a fingerprint of its text (scripts/generate_text_audio.py,
+# docs/design/audio-r2.md).
+#
+# - On every push to main that touches public/data: records only sentences that
+#   are new or rewritten (anything already in the bucket is skipped).
+# - Run by hand to fill the bucket the first time, or to retry failed clips.
+#
+# Records in batches and uploads after each one, so a run that times out keeps
+# what it made and the next run carries on. Needs the same secrets as
+# "Sync audio to R2"; without them it only warns.
+name: Record sentence audio to R2
+
+on:
+  push:
+    branches: [main]
+    paths: ['public/data/**', 'scripts/generate_text_audio.py']
+  workflow_dispatch:
+    inputs:
+      pack:
+        description: Language pack (empty = all)
+        required: false
+        type: choice
+        options: ['', en, ko, zh]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: text-audio
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      BUCKET: ${{ vars.R2_AUDIO_BUCKET || 'vocastudy-audio' }}
+      PACKS: ${{ inputs.pack || 'en ko zh' }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check the clip names match the app
+        run: python3 scripts/generate_text_audio.py --self-check
+
+      - name: Install edge-tts
+        run: pip install edge-tts
+
+      - name: Record and upload
+        run: |
+          if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$ACCOUNT_ID" ]; then
+            echo "::warning::R2 secrets are not set yet; nothing recorded (see docs/design/audio-r2.md)."
+            exit 0
+          fi
+          s3() { aws s3 "$@" --endpoint-url "https://$ACCOUNT_ID.r2.cloudflarestorage.com" --only-show-errors; }
+          total=0
+          for code in $PACKS; do
+            # What the bucket already has, so only new sentences are recorded.
+            aws s3 ls "s3://$BUCKET/$code/" --recursive \
+              --endpoint-url "https://$ACCOUNT_ID.r2.cloudflarestorage.com" \
+              | awk '{print $4}' | grep '/t/' > have.txt || true
+            echo "$code: $(wc -l < have.txt) sentence clips already in the bucket"
+            while true; do
+              rm -rf staging
+              python3 scripts/generate_text_audio.py --code "$code" --have have.txt \
+                --out staging --limit 2000
+              made=$(find staging -name '*.mp3' | wc -l)
+              [ "$made" -eq 0 ] && break
+              s3 sync staging "s3://$BUCKET" --content-type audio/mpeg
+              (cd staging && find . -name '*.mp3' | sed 's#^\./##') >> have.txt
+              total=$((total + made))
+              echo "$code: uploaded $made"
+            done
+          done
+          echo "::notice::Recorded and uploaded $total sentence clips."

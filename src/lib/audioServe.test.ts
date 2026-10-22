@@ -7,6 +7,7 @@ describe('audioKey', () => {
     expect(audioKey('/audio/en/aria/e1.mp3')).toBe('en/aria/e1.mp3')
     expect(audioKey('/audio/ko/injoon/p2001.mp3')).toBe('ko/injoon/p2001.mp3')
     expect(audioKey('/audio/zh/index.json')).toBe('zh/index.json')
+    expect(audioKey('/audio/en/aria/t/1ucfe6k-lk5ak1.mp3')).toBe('en/aria/t/1ucfe6k-lk5ak1.mp3')
   })
 
   it('refuses anything else, so the bucket is never asked for odd keys', () => {
@@ -20,6 +21,9 @@ describe('audioKey', () => {
       '/audio/KO/sunhi/w1.mp3',
       '/data/ko.json',
       '/audio/ko/sunhi/w1.mp3/extra',
+      '/audio/en/aria/t/abc.mp3',
+      '/audio/en/aria/t/../w1.mp3',
+      '/audio/en/aria/t/ABC-def.mp3',
     ])
       expect(audioKey(path), path).toBeNull()
   })

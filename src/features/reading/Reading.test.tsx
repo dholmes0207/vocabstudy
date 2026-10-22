@@ -19,6 +19,7 @@ vi.mock('@/lib/audio', () => ({
   pronounce: (o: { text: string; onEnd?: () => void }) => spoken.push(o),
   stopPronounce: () => {},
   wordAudio: (id: number) => `/audio/en/${id}.mp3`,
+  textAudio: () => '',
 }))
 
 const { default: Reading } = await import('./Reading')

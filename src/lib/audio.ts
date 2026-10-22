@@ -4,7 +4,7 @@
 
 import type { AudioManifest } from '@/types'
 import { speak, stopSpeaking } from './tts'
-import { textHash } from './textHash'
+import { clipId, textHash } from './textHash'
 
 const base = import.meta.env.BASE_URL
 
@@ -63,6 +63,18 @@ export function exampleAudio(id: number, text?: string): string {
   if (!v) return ''
   const url = `${base}audio/${currentCode}/${v}/e${id}.mp3`
   return text ? `${url}?v=${textHash(text)}` : url
+}
+
+/**
+ * URL of a recorded sentence that is not a word's own example: collocations,
+ * grammar examples, story lines ('' when the pack has no recorded voices).
+ * These clips live only in R2, named after the text itself, so a rewritten
+ * sentence simply gets a new clip; until one is recorded the request 404s and
+ * pronounce() reads the text with the browser's voice instead.
+ */
+export function textAudio(text: string): string {
+  const v = effectiveVoice()
+  return v ? `${base}audio/${currentCode}/${v}/t/${clipId(text)}.mp3` : ''
 }
 
 /** URL of the recorded audio for an everyday phrase ('' when none). */

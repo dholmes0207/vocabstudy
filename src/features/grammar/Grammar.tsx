@@ -37,6 +37,7 @@ import BuildTiles from '@/components/BuildTiles'
 import SpeakAloud from './SpeakAloud'
 import { DictationRound } from '@/features/dictation/Dictation'
 import { today } from '@/lib/date'
+import { textAudio } from '@/lib/audio'
 
 // "Ngữ pháp căn bản" (docs/design/grammar.md): twelve short units — the rule in
 // plain Vietnamese, the pattern, examples to listen to, the mistakes Vietnamese
@@ -171,6 +172,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
           text: ex.en,
           vi: ex.vi,
           read: ex.read,
+          audioSrc: textAudio(ex.en),
         }))}
         caption={`${unit.emoji} ${t(...unit.title)}`}
         onExit={() => setDictate(false)}
@@ -241,7 +243,7 @@ function UnitView({ unit }: { unit: GrammarUnit }) {
         <ul className="mt-2 divide-y divide-slate-100 dark:divide-slate-800">
           {unit.examples.map((ex) => (
             <li key={ex.en} className="flex items-start gap-3 py-2.5">
-              <SpeakButton text={ex.en} lang={ttsLang} size="sm" />
+              <SpeakButton text={ex.en} lang={ttsLang} audioSrc={textAudio(ex.en)} size="sm" />
               <span>
                 <span className="block font-semibold">{ex.en}</span>
                 {ex.read && (
@@ -481,7 +483,7 @@ function Practice({
             {q.type === 'choice' && q.explain && <p className="mt-1">💡 {q.explain}</p>}
             {q.type === 'order' && (
               <p className="mt-1 flex items-center gap-2">
-                <SpeakButton text={q.en} lang={ttsLang} size="sm" />
+                <SpeakButton text={q.en} lang={ttsLang} audioSrc={textAudio(q.en)} size="sm" />
                 <b>{q.en}</b>
               </p>
             )}
