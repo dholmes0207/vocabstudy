@@ -15,13 +15,17 @@ export const RELEASES: Release[] = [
   {
     date: '2026-10-22',
     title: [
-      'Tiếng Trung: mẫu câu giao tiếp; tiếng Hàn: giọng đọc thu sẵn',
-      'Chinese: everyday phrases; Korean: pre-recorded voices',
+      'Tiếng Trung: mẫu câu giao tiếp; âm khó cho tiếng Trung và tiếng Hàn; tiếng Hàn: giọng đọc thu sẵn',
+      'Chinese: everyday phrases; tricky sounds for Chinese and Korean; Korean: pre-recorded voices',
     ],
     items: [
       [
         'Gói tiếng Trung có thêm "Mẫu câu giao tiếp": 68 câu cho 8 tình huống như chào hỏi, gọi món, mua sắm, hỏi đường, mỗi câu có pinyin, nghĩa và mẹo dùng (不好意思 hay 对不起, gọi tài xế là 师傅…). Luyện bằng cách nghe chọn nghĩa, chọn câu đúng và xếp từ thành câu.',
         'The Chinese pack now has "Everyday phrases": 68 sentences for 8 situations such as greetings, ordering, shopping and directions, each with pinyin, its meaning and a usage tip (不好意思 or 对不起, calling a driver 师傅…). Practise by hearing and picking the meaning, picking the right sentence and building it from tiles.',
+      ],
+      [
+        'Trang "Âm khó cho người Việt" có thêm tiếng Trung (9 bài: các cặp thanh dễ lẫn như 买 mǎi / 卖 mài, zh – z, j q x, -n – -ng…) và tiếng Hàn (5 bài: âm cuối 발 / 밤 / 방, phụ âm căng 사다 / 싸다, ㅓ – ㅗ…), mỗi bài có trò thử tai.',
+        'The "Tricky sounds" page now covers Chinese (9 lessons: tone pairs such as 买 mǎi / 卖 mài, zh – z, j q x, -n – -ng…) and Korean (5 lessons: finals 발 / 밤 / 방, tense consonants 사다 / 싸다, ㅓ – ㅗ…), each with an ear test.',
       ],
       [
         'Từ, câu ví dụ và mẫu câu tiếng Hàn giờ có giọng đọc AI thu sẵn, hai giọng nữ (SunHi) và nam (InJoon), không còn phụ thuộc máy có giọng tiếng Hàn hay không. Đổi giọng trong Cài đặt → Phát âm.',

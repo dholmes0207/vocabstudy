@@ -168,9 +168,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/sounds',
     icon: '👄',
     title: 'Âm khó cho người Việt',
-    desc: 'th, âm cuối, ship/sheep… cách đặt lưỡi và trò thử tai phân biệt.',
+    desc: 'th, ship/sheep (tiếng Anh); thanh điệu, zh/z (tiếng Trung); âm căng, âm cuối (tiếng Hàn)… cách phát âm và trò thử tai phân biệt.',
     titleEn: 'Tricky sounds for Vietnamese speakers',
-    descEn: 'th, final sounds, ship/sheep… how to shape them, plus an ear test.',
+    descEn:
+      'th, ship/sheep in English; tones, zh/z in Chinese; tense consonants, final sounds in Korean… how to shape them, plus an ear test.',
     tone: 'from-pink-500 to-rose-600',
   },
   {

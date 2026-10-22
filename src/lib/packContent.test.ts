@@ -10,8 +10,8 @@ describe('pack-specific screens', () => {
   })
 
   it('keep English content for English and Hangul for Korean', () => {
-    expect(availableIn('/sounds', 'en')).toBe(true)
-    expect(availableIn('/sounds', 'ko')).toBe(false)
+    // Tricky sounds have lessons for all three packs (lib/sounds.ts).
+    expect(packsFor('/sounds')).toEqual(['en', 'ko', 'zh'])
     // Everyday phrases have an English, a Korean and a Chinese pack.
     expect(packsFor('/phrases')).toEqual(['en', 'ko', 'zh'])
     // Stories, topic decks and grammar exist for both packs (public/data/{reading,topics,grammar}/).
@@ -23,9 +23,10 @@ describe('pack-specific screens', () => {
     expect(availableIn('/hangul', 'ko')).toBe(true)
     expect(availableIn('/hangul', 'en')).toBe(false)
     expect(packsFor('/hangul')).toEqual(['ko'])
-    // Chinese (beta) has words, topics, stories, grammar, phrases and the pinyin page; the rest stays closed.
-    for (const path of ['/hangul', '/sounds']) expect(availableIn(path, 'zh'), path).toBe(false)
+    // Chinese (beta) has words, topics, stories, grammar, phrases, sounds and the pinyin page.
+    expect(availableIn('/hangul', 'zh')).toBe(false)
     expect(availableIn('/phrases', 'zh')).toBe(true)
+    expect(availableIn('/sounds', 'zh')).toBe(true)
     expect(availableIn('/grammar', 'zh')).toBe(true)
     expect(availableIn('/topics', 'zh')).toBe(true)
     expect(availableIn('/reading/x', 'zh')).toBe(true)
