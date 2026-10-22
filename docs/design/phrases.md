@@ -71,3 +71,39 @@ nói 'cho tôi món này' hay 'tính tiền'."
   (`meta.ttsLang` = `ko-KR`), như các phần khác của gói tiếng Hàn.
 - Chưa có cách đọc kiểu Việt cho từng câu. Nếu thêm sau thì phải áp dụng biến âm như
   trên thẻ từ (xem `docs/design/hangul.md`).
+
+## Mẫu câu tiếng Trung
+
+**User** (người học tiếng Trung): "Thuộc pinyin và vài trăm từ HSK rồi, nhưng vào quán vẫn
+không biết gọi món, trả tiền hay nhờ người ta nói chậm lại."
+
+**BA**
+
+- 8 tình huống, 68 câu, cùng bộ tình huống với tiếng Hàn.
+- Câu theo cách người Trung nói hằng ngày, kèm mẹo khi hai câu dễ lẫn:
+  - 对不起 là xin lỗi vì làm sai, còn 不好意思 dùng khi làm phiền hay bắt chuyện;
+  - gọi tài xế, thợ là 师傅;
+  - trả tiền chủ yếu bằng WeChat Pay, Alipay.
+- Mỗi câu có dòng pinyin, hiện:
+  - dưới câu trong danh sách;
+  - dưới từng lựa chọn ở dạng "chọn câu đúng", vì người mới chưa đọc được chữ Hán;
+  - trong phần đáp án sau khi trả lời.
+- Pinyin ghi 一 và 不 theo cách đọc thật (不客气 bú kèqi, 一下 yíxià), giống câu ví dụ trên thẻ
+  từ. Thanh nhẹ để không dấu (谢谢 xièxie).
+- Không dùng chữ có 儿 (这儿, 一点儿): cách đọc gộp âm "-r" làm số âm tiết không khớp số chữ,
+  và người miền Nam Trung Quốc cũng ít dùng. Viết 这里, 一点.
+
+**Dev**
+
+- Dữ liệu dựng bằng `python3 scripts/build_phrases_zh.py`, ra `public/data/phrases/zh.json`.
+- Câu viết với `|` giữa các từ. Script đổi `|` thành khoảng trắng vô hình, để "Xếp câu" chia được
+  thành ô từ mà câu vẫn hiện liền.
+- Pinyin cho từng chữ, kiểm tra tự động:
+  - số âm tiết phải bằng số chữ Hán;
+  - từ có trong gói tiếng Trung phải đọc giống trên thẻ từ (dùng chung `scripts/zh_pinyin.py`
+    với script dựng truyện).
+- Trường `read` của câu là tuỳ chọn (`Phrase.read` trong `src/lib/phrases.ts`). Gói không có
+  thì màn hình không hiện dòng này.
+- Dải id từ 3001 (`PHRASE_ID_BASE.zh`).
+- Audio thu sẵn: chạy lại workflow "Generate audio" cho gói `zh` sau khi dữ liệu này vào
+  `main`, để có file `p3001.mp3`…

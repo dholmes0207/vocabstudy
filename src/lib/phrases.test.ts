@@ -70,6 +70,47 @@ describe('Korean phrase pack (public/data/phrases/ko.json)', () => {
   })
 })
 
+describe('Chinese phrase pack (public/data/phrases/zh.json)', () => {
+  const zh = validatePhrasePack(
+    JSON.parse(readFileSync('public/data/phrases/zh.json', 'utf8')) as unknown
+  )
+  const zhAll = zh.topics.flatMap((t) => t.phrases)
+  const HAN = /\p{Script=Han}/u
+
+  it('has full topics, numbered in its own range so progress never mixes', () => {
+    expect(zh.topics.length).toBeGreaterThanOrEqual(8)
+    for (const t of zh.topics) expect(t.phrases.length).toBeGreaterThanOrEqual(8)
+    expect(zhAll.every((p) => phraseInPack(p.id, 'zh'))).toBe(true)
+    expect(zhAll.some((p) => phraseInPack(p.id, 'ko') || phraseInPack(p.id, 'en'))).toBe(false)
+  })
+
+  it('is written in characters with a pinyin line, and a distinct meaning for every phrase', () => {
+    for (const p of zhAll) {
+      expect(p.en, p.vi).toMatch(HAN)
+      expect(p.read, p.en).toMatch(/^[A-ZĀÁǍÀĒÉĚÈŌÓǑÒ]/u)
+      expect(p.read, p.en).not.toMatch(HAN)
+    }
+    expect(new Set(zhAll.map((p) => p.vi)).size).toBe(zhAll.length)
+    expect(new Set(zhAll.map((p) => p.en)).size).toBe(zhAll.length)
+  })
+
+  it('marks word breaks with invisible spaces, so "Xếp câu" can cut it into words', () => {
+    for (const p of zhAll) expect(p.en, p.vi).not.toMatch(/ /)
+    expect(zhAll.filter(canBuild).length).toBeGreaterThan(zhAll.length / 2)
+  })
+
+  it('shows each option with its pinyin when asked to pick the phrase', () => {
+    const qs = zh.topics.flatMap((t) => buildPhraseSession(t, zhAll, {}, 8, () => 0.3))
+    const picks = qs.filter((q) => q.kind === 'phrase')
+    expect(picks.length).toBeGreaterThan(0)
+    for (const q of picks) {
+      const read = (en: string) => zhAll.find((p) => p.en === en)!.read
+      expect(q.reads).toEqual(q.options.map(read))
+    }
+    for (const q of qs) if (q.kind === 'build') expect(q.tokens.join('\u200b')).toBe(q.phrase.en)
+  })
+})
+
 describe('progress', () => {
   const topic = pack.topics[0]
 

@@ -1,0 +1,506 @@
+{
+  "version": "1.0.0",
+  "topics": [
+    {
+      "id": "greetings",
+      "emoji": "👋",
+      "title": "Chào hỏi & làm quen",
+      "titleEn": "Greetings & introductions",
+      "phrases": [
+        {
+          "id": 3001,
+          "en": "你好！",
+          "read": "Nǐ hǎo!",
+          "vi": "Xin chào!",
+          "note": "Chào người lớn tuổi hay khách hàng thì nói 您好 (nín hǎo) cho lễ phép."
+        },
+        {
+          "id": 3002,
+          "en": "认识​你​很​高兴。",
+          "read": "Rènshi nǐ hěn gāoxìng.",
+          "vi": "Rất vui được làm quen với bạn."
+        },
+        {
+          "id": 3003,
+          "en": "我​叫​阮​兰，​你​叫​什么​名字？",
+          "read": "Wǒ jiào Ruǎn Lán, nǐ jiào shénme míngzi?",
+          "vi": "Mình tên là Nguyễn Lan, bạn tên gì?",
+          "note": "Tên tiếng Việt thường có chữ Hán tương ứng: họ Nguyễn là 阮 (Ruǎn), Lan là 兰 (Lán)."
+        },
+        {
+          "id": 3004,
+          "en": "你​是​哪​国​人？",
+          "read": "Nǐ shì nǎ guó rén?",
+          "vi": "Bạn là người nước nào?",
+          "note": "Đáp: 我是越南人。"
+        },
+        {
+          "id": 3005,
+          "en": "我​是​越南​人。",
+          "read": "Wǒ shì Yuènán rén.",
+          "vi": "Mình là người Việt Nam."
+        },
+        {
+          "id": 3006,
+          "en": "好久​不​见！",
+          "read": "Hǎojiǔ bú jiàn!",
+          "vi": "Lâu lắm không gặp!",
+          "note": "不 đọc thành bú khi đứng trước thanh 4 (见 jiàn)."
+        },
+        {
+          "id": 3007,
+          "en": "最近​怎么样？",
+          "read": "Zuìjìn zěnmeyàng?",
+          "vi": "Dạo này thế nào?",
+          "note": "Hỏi người quen. Đáp: 挺好的 (khá ổn)."
+        },
+        {
+          "id": 3008,
+          "en": "再见！",
+          "read": "Zàijiàn!",
+          "vi": "Tạm biệt!",
+          "note": "Bạn bè hay nói 拜拜 (bái bái)."
+        },
+        {
+          "id": 3009,
+          "en": "明天​见！",
+          "read": "Míngtiān jiàn!",
+          "vi": "Mai gặp lại nhé!"
+        }
+      ]
+    },
+    {
+      "id": "understanding",
+      "emoji": "👂",
+      "title": "Khi chưa nghe rõ",
+      "titleEn": "When you didn't catch it",
+      "phrases": [
+        {
+          "id": 3011,
+          "en": "请​再​说​一​遍。",
+          "read": "Qǐng zài shuō yí biàn.",
+          "vi": "Bạn nói lại lần nữa giúp mình."
+        },
+        {
+          "id": 3012,
+          "en": "请​说​慢​一点。",
+          "read": "Qǐng shuō màn yìdiǎn.",
+          "vi": "Bạn nói chậm một chút giúp mình."
+        },
+        {
+          "id": 3013,
+          "en": "我​听​不​懂。",
+          "read": "Wǒ tīng bu dǒng.",
+          "vi": "Mình nghe không hiểu."
+        },
+        {
+          "id": 3014,
+          "en": "我​会​说​一点​汉语。",
+          "read": "Wǒ huì shuō yìdiǎn Hànyǔ.",
+          "vi": "Mình nói được một chút tiếng Trung.",
+          "note": "汉语 và 中文 đều là tiếng Trung; 中文 hay dùng khi nói về chữ viết."
+        },
+        {
+          "id": 3015,
+          "en": "这个​用​中文​怎么​说？",
+          "read": "Zhège yòng Zhōngwén zěnme shuō?",
+          "vi": "Cái này tiếng Trung nói thế nào?",
+          "note": "Chỉ vào đồ vật rồi hỏi."
+        },
+        {
+          "id": 3016,
+          "en": "这​是​什么​意思？",
+          "read": "Zhè shì shénme yìsi?",
+          "vi": "Cái này nghĩa là gì?"
+        },
+        {
+          "id": 3017,
+          "en": "你​会​说​英语​吗？",
+          "read": "Nǐ huì shuō Yīngyǔ ma?",
+          "vi": "Bạn nói được tiếng Anh không?"
+        },
+        {
+          "id": 3018,
+          "en": "请​写​在​这里。",
+          "read": "Qǐng xiě zài zhèlǐ.",
+          "vi": "Bạn viết vào đây giúp mình.",
+          "note": "Đưa sổ hay điện thoại khi nghe không kịp: đọc chữ Hán thường dễ hơn nghe."
+        }
+      ]
+    },
+    {
+      "id": "polite",
+      "emoji": "🙏",
+      "title": "Lịch sự hằng ngày",
+      "titleEn": "Everyday courtesy",
+      "phrases": [
+        {
+          "id": 3021,
+          "en": "谢谢！",
+          "read": "Xièxie!",
+          "vi": "Cảm ơn!"
+        },
+        {
+          "id": 3022,
+          "en": "不​客气。",
+          "read": "Bú kèqi.",
+          "vi": "Không có gì.",
+          "note": "Đáp lại lời cảm ơn. Cũng nói 不用谢 (bú yòng xiè)."
+        },
+        {
+          "id": 3023,
+          "en": "对不起。",
+          "read": "Duìbuqǐ.",
+          "vi": "Xin lỗi.",
+          "note": "Xin lỗi khi mình làm sai. Muốn nhờ hay hỏi ai thì dùng 不好意思."
+        },
+        {
+          "id": 3024,
+          "en": "没​关系。",
+          "read": "Méi guānxi.",
+          "vi": "Không sao đâu.",
+          "note": "Đáp lại lời xin lỗi."
+        },
+        {
+          "id": 3025,
+          "en": "不​好意思。",
+          "read": "Bù hǎoyìsi.",
+          "vi": "Ngại quá, phiền bạn chút.",
+          "note": "Nhẹ hơn 对不起: khi làm phiền ai, xin đi qua chỗ đông hay bắt đầu hỏi người lạ."
+        },
+        {
+          "id": 3026,
+          "en": "服务员！",
+          "read": "Fúwùyuán!",
+          "vi": "Bạn phục vụ ơi!",
+          "note": "Gọi nhân viên trong quán."
+        },
+        {
+          "id": 3027,
+          "en": "等​一下。",
+          "read": "Děng yíxià.",
+          "vi": "Đợi một chút."
+        },
+        {
+          "id": 3028,
+          "en": "麻烦​你​了。",
+          "read": "Máfan nǐ le.",
+          "vi": "Làm phiền bạn rồi.",
+          "note": "Nói khi nhờ ai giúp, hay để cảm ơn sau khi được giúp."
+        },
+        {
+          "id": 3029,
+          "en": "辛苦​了！",
+          "read": "Xīnkǔ le!",
+          "vi": "Vất vả rồi!",
+          "note": "Nói với người vừa làm việc cho mình, hay với đồng nghiệp lúc tan làm."
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "emoji": "🍜",
+      "title": "Gọi món & đồ uống",
+      "titleEn": "Ordering food & drinks",
+      "phrases": [
+        {
+          "id": 3031,
+          "en": "请​给​我​看看​菜单。",
+          "read": "Qǐng gěi wǒ kànkan càidān.",
+          "vi": "Cho mình xem thực đơn."
+        },
+        {
+          "id": 3032,
+          "en": "我​要​这个。",
+          "read": "Wǒ yào zhège.",
+          "vi": "Cho mình món này.",
+          "note": "Chỉ vào món trên thực đơn. 我要… là \"cho tôi…\", dùng được ở mọi nơi."
+        },
+        {
+          "id": 3033,
+          "en": "请​给​我​一​杯​水。",
+          "read": "Qǐng gěi wǒ yì bēi shuǐ.",
+          "vi": "Cho mình xin một cốc nước.",
+          "note": "Nhiều quán mang nước ấm hay trà; muốn nước đá thì nói 冰水 (bīng shuǐ)."
+        },
+        {
+          "id": 3034,
+          "en": "这个​辣​不​辣？",
+          "read": "Zhège là bu là?",
+          "vi": "Món này có cay không?",
+          "note": "Hỏi kiểu \"cay không cay\": ghép khẳng định với phủ định."
+        },
+        {
+          "id": 3035,
+          "en": "不要​放​辣椒。",
+          "read": "Búyào fàng làjiāo.",
+          "vi": "Đừng cho ớt nhé."
+        },
+        {
+          "id": 3036,
+          "en": "很​好吃！",
+          "read": "Hěn hǎochī!",
+          "vi": "Ngon lắm!"
+        },
+        {
+          "id": 3037,
+          "en": "买单！",
+          "read": "Mǎidān!",
+          "vi": "Tính tiền nhé!",
+          "note": "Gọi ở bàn khi muốn trả tiền. Cũng nói 结账 (jié zhàng)."
+        },
+        {
+          "id": 3038,
+          "en": "请​帮​我​打包。",
+          "read": "Qǐng bāng wǒ dǎbāo.",
+          "vi": "Gói mang về giúp mình."
+        },
+        {
+          "id": 3039,
+          "en": "我​吃​素。",
+          "read": "Wǒ chī sù.",
+          "vi": "Mình ăn chay."
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "emoji": "🛍️",
+      "title": "Mua sắm",
+      "titleEn": "Shopping",
+      "phrases": [
+        {
+          "id": 3041,
+          "en": "这个​多少​钱？",
+          "read": "Zhège duōshao qián?",
+          "vi": "Cái này bao nhiêu tiền?"
+        },
+        {
+          "id": 3042,
+          "en": "太​贵​了！",
+          "read": "Tài guì le!",
+          "vi": "Đắt quá!"
+        },
+        {
+          "id": 3043,
+          "en": "便宜​一点​吧。",
+          "read": "Piányi yìdiǎn ba.",
+          "vi": "Bớt cho mình chút đi.",
+          "note": "Chỉ nên mặc cả ở chợ, không mặc cả ở cửa hàng có giá niêm yết."
+        },
+        {
+          "id": 3044,
+          "en": "有​别的​颜色​吗？",
+          "read": "Yǒu biéde yánsè ma?",
+          "vi": "Có màu khác không?"
+        },
+        {
+          "id": 3045,
+          "en": "可以​试试​吗？",
+          "read": "Kěyǐ shìshi ma?",
+          "vi": "Mình thử được không?",
+          "note": "Thử quần áo cũng nói 试穿 (shì chuān)."
+        },
+        {
+          "id": 3046,
+          "en": "可以​用​微信​付​吗？",
+          "read": "Kěyǐ yòng Wēixìn fù ma?",
+          "vi": "Trả bằng WeChat được không?",
+          "note": "Ở Trung Quốc người ta trả tiền chủ yếu bằng điện thoại: WeChat Pay hay Alipay (支付宝)."
+        },
+        {
+          "id": 3047,
+          "en": "我​只是​看看。",
+          "read": "Wǒ zhǐshì kànkan.",
+          "vi": "Mình chỉ xem thôi.",
+          "note": "Đáp khi nhân viên hỏi bạn cần gì."
+        },
+        {
+          "id": 3048,
+          "en": "就​要​这个​吧。",
+          "read": "Jiù yào zhège ba.",
+          "vi": "Vậy mình lấy cái này."
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "emoji": "🧭",
+      "title": "Hỏi đường",
+      "titleEn": "Asking the way",
+      "phrases": [
+        {
+          "id": 3051,
+          "en": "洗手间​在​哪里？",
+          "read": "Xǐshǒujiān zài nǎlǐ?",
+          "vi": "Nhà vệ sinh ở đâu?"
+        },
+        {
+          "id": 3052,
+          "en": "地铁站​在​哪里？",
+          "read": "Dìtiězhàn zài nǎlǐ?",
+          "vi": "Ga tàu điện ngầm ở đâu?"
+        },
+        {
+          "id": 3053,
+          "en": "离​这里​远​吗？",
+          "read": "Lí zhèlǐ yuǎn ma?",
+          "vi": "Cách đây có xa không?"
+        },
+        {
+          "id": 3054,
+          "en": "走路​能​到​吗？",
+          "read": "Zǒulù néng dào ma?",
+          "vi": "Đi bộ tới được không?"
+        },
+        {
+          "id": 3055,
+          "en": "一直​往​前​走。",
+          "read": "Yìzhí wǎng qián zǒu.",
+          "vi": "Cứ đi thẳng."
+        },
+        {
+          "id": 3056,
+          "en": "往​右​拐。",
+          "read": "Wǎng yòu guǎi.",
+          "vi": "Rẽ phải.",
+          "note": "Rẽ trái là 往左拐 (wǎng zuǒ guǎi)."
+        },
+        {
+          "id": 3057,
+          "en": "我​迷路​了。",
+          "read": "Wǒ mílù le.",
+          "vi": "Mình bị lạc đường."
+        },
+        {
+          "id": 3058,
+          "en": "这​路​车​去​王府井​吗？",
+          "read": "Zhè lù chē qù Wángfǔjǐng ma?",
+          "vi": "Xe buýt tuyến này có đi Vương Phủ Tỉnh không?",
+          "note": "路 ở đây là tuyến xe buýt. Thay 王府井 bằng nơi bạn muốn đến."
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "emoji": "🏨",
+      "title": "Đi lại & khách sạn",
+      "titleEn": "Getting around & hotels",
+      "phrases": [
+        {
+          "id": 3061,
+          "en": "我​预订​了​房间。",
+          "read": "Wǒ yùdìng le fángjiān.",
+          "vi": "Mình đã đặt phòng trước rồi."
+        },
+        {
+          "id": 3062,
+          "en": "我​要​办​入住。",
+          "read": "Wǒ yào bàn rùzhù.",
+          "vi": "Mình muốn làm thủ tục nhận phòng."
+        },
+        {
+          "id": 3063,
+          "en": "WiFi​密码​是​多少？",
+          "read": "WiFi mìmǎ shì duōshao?",
+          "vi": "Mật khẩu wifi là gì?"
+        },
+        {
+          "id": 3064,
+          "en": "可以​寄存​行李​吗？",
+          "read": "Kěyǐ jìcún xíngli ma?",
+          "vi": "Mình gửi hành lý được không?"
+        },
+        {
+          "id": 3065,
+          "en": "师傅，​去​这个​地方。",
+          "read": "Shīfu, qù zhège dìfang.",
+          "vi": "Bác tài ơi, cho mình đến chỗ này.",
+          "note": "师傅 là cách gọi tài xế hay thợ. Đưa địa chỉ trên điện thoại kèm câu này."
+        },
+        {
+          "id": 3066,
+          "en": "到​机场​要​多长​时间？",
+          "read": "Dào jīchǎng yào duōcháng shíjiān?",
+          "vi": "Đến sân bay mất bao lâu?"
+        },
+        {
+          "id": 3067,
+          "en": "我​在​这里​下车。",
+          "read": "Wǒ zài zhèlǐ xiàchē.",
+          "vi": "Mình xuống ở đây."
+        },
+        {
+          "id": 3068,
+          "en": "能​帮​我​拍​张​照​吗？",
+          "read": "Néng bāng wǒ pāi zhāng zhào ma?",
+          "vi": "Chụp giúp mình tấm ảnh được không?"
+        }
+      ]
+    },
+    {
+      "id": "feelings",
+      "emoji": "💭",
+      "title": "Cảm xúc & ý kiến",
+      "titleEn": "Feelings & opinions",
+      "phrases": [
+        {
+          "id": 3071,
+          "en": "好​啊！",
+          "read": "Hǎo a!",
+          "vi": "Được đấy!",
+          "note": "Đồng ý với một lời rủ: \"được, làm vậy đi\"."
+        },
+        {
+          "id": 3072,
+          "en": "太​好​了！",
+          "read": "Tài hǎo le!",
+          "vi": "Tuyệt quá!"
+        },
+        {
+          "id": 3073,
+          "en": "我​累​了。",
+          "read": "Wǒ lèi le.",
+          "vi": "Mình mệt rồi."
+        },
+        {
+          "id": 3074,
+          "en": "我​饿​了。",
+          "read": "Wǒ è le.",
+          "vi": "Mình đói rồi."
+        },
+        {
+          "id": 3075,
+          "en": "真的​吗？",
+          "read": "Zhēnde ma?",
+          "vi": "Thật à?"
+        },
+        {
+          "id": 3076,
+          "en": "我​也​是。",
+          "read": "Wǒ yě shì.",
+          "vi": "Mình cũng vậy."
+        },
+        {
+          "id": 3077,
+          "en": "别​担心。",
+          "read": "Bié dānxīn.",
+          "vi": "Đừng lo."
+        },
+        {
+          "id": 3078,
+          "en": "生日​快乐！",
+          "read": "Shēngrì kuàilè!",
+          "vi": "Chúc mừng sinh nhật!"
+        },
+        {
+          "id": 3079,
+          "en": "恭喜​恭喜！",
+          "read": "Gōngxǐ gōngxǐ!",
+          "vi": "Chúc mừng nhé!",
+          "note": "Chúc mừng chuyện vui: thi đỗ, có việc mới, cưới hỏi."
+        }
+      ]
+    }
+  ]
+}

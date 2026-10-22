@@ -13,6 +13,23 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-22',
+    title: [
+      'Tiếng Trung: mẫu câu giao tiếp; tiếng Hàn: giọng đọc thu sẵn',
+      'Chinese: everyday phrases; Korean: pre-recorded voices',
+    ],
+    items: [
+      [
+        'Gói tiếng Trung có thêm "Mẫu câu giao tiếp": 68 câu cho 8 tình huống như chào hỏi, gọi món, mua sắm, hỏi đường, mỗi câu có pinyin, nghĩa và mẹo dùng (不好意思 hay 对不起, gọi tài xế là 师傅…). Luyện bằng cách nghe chọn nghĩa, chọn câu đúng và xếp từ thành câu.',
+        'The Chinese pack now has "Everyday phrases": 68 sentences for 8 situations such as greetings, ordering, shopping and directions, each with pinyin, its meaning and a usage tip (不好意思 or 对不起, calling a driver 师傅…). Practise by hearing and picking the meaning, picking the right sentence and building it from tiles.',
+      ],
+      [
+        'Từ, câu ví dụ và mẫu câu tiếng Hàn giờ có giọng đọc AI thu sẵn, hai giọng nữ (SunHi) và nam (InJoon), không còn phụ thuộc máy có giọng tiếng Hàn hay không. Đổi giọng trong Cài đặt → Phát âm.',
+        'Korean words, examples and phrases now have pre-recorded AI voices, female (SunHi) and male (InJoon), so they no longer depend on your device having a Korean voice. Switch voices in Settings → Pronunciation.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-20',
     title: [
       'Tiếng Hàn: mẫu câu giao tiếp, nghe số, đơn vị đếm, biến âm, thêm từ, truyện và ngữ pháp; tiếng Trung: 4 bài ngữ pháp mới; ôn ngữ pháp theo lịch',
