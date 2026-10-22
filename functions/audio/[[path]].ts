@@ -48,6 +48,9 @@ async function serve(ctx: AudioCtx, withBody: boolean): Promise<Response> {
   headers.set('ETag', object.httpEtag)
   headers.set('Cache-Control', CACHE_CONTROL)
   headers.set('Accept-Ranges', 'bytes')
+  // How to tell from outside that R2 answered: the edge cache serves ranges and
+  // 304s for static files too, so status codes alone prove nothing.
+  headers.set('X-Audio-Source', 'r2')
   if (!headers.has('Content-Type')) headers.set('Content-Type', audioContentType(key))
 
   // A precondition from the request matched the stored copy: nothing to send.
