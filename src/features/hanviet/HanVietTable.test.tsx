@@ -11,7 +11,12 @@ import { useStudy } from '@/store/studyStore'
 
 // "Chữ Hán qua âm Hán Việt" (docs/design/han-viet-table.md) with the real packs.
 
-vi.mock('@/lib/audio', () => ({ pronounce: () => {}, stopPronounce: () => {} }))
+vi.mock('@/lib/audio', () => ({
+  pronounce: () => {},
+  stopPronounce: () => {},
+  textAudio: () => '',
+  wordAudio: () => '',
+}))
 const { default: HanVietTable } = await import('./HanVietTable')
 const pack = (code: string) =>
   JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as LanguagePack
