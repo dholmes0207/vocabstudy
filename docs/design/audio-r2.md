@@ -40,6 +40,29 @@ ngày (chung cho Workers và Pages Functions). Service worker và header `Cache-
 giúp mỗi người học chỉ tải mỗi file một lần. Nếu sau này vượt mức đó, có thể chuyển sang tên miền
 riêng cho bucket (phải xử lý offline như trên) hoặc lên gói trả phí.
 
+## Câu ngoài gói từ (chỉ có trên R2)
+
+Ngoài từ, câu ví dụ và mẫu câu, app còn đọc khoảng 10.000 câu khác:
+
+- cụm "Hay đi chung với" trên thẻ từ tiếng Anh (khoảng 9.500 cụm);
+- câu ví dụ và đáp án "xếp câu" của bài ngữ pháp;
+- câu trong truyện, kể cả khi nghe – chép theo truyện hay bài ngữ pháp.
+
+Trước đây các câu này đọc bằng giọng của trình duyệt. Firefox và nhiều máy Windows chỉ có giọng
+robot, nghe rất méo.
+
+- Workflow **"Record sentence audio to R2"** (`.github/workflows/text-audio.yml`) thu các câu
+  này bằng cùng giọng edge-tts, rồi tải **thẳng lên bucket**, không commit vào repo: khoảng
+  20.000 file, đều sinh ra từ `public/data`.
+- Tên file là dấu vân tay của chính câu đó: `<gói>/<giọng>/t/<clipId>.mp3` (`clipId` trong
+  `src/lib/textHash.ts`, bản Python trong `scripts/generate_text_audio.py`, test giữ hai bên
+  khớp nhau). Sửa câu thì có file mới, không bao giờ phát nhầm bản ghi cũ.
+- Mỗi lần `main` đổi `public/data`, workflow chỉ thu câu mới hay câu đã sửa. Chạy tay để đổ
+  đầy lần đầu, khoảng 1 giờ. Workflow thu từng đợt 2.000 file và tải lên ngay, nên nếu hết giờ
+  thì lần chạy sau làm tiếp.
+- Câu chưa có file thì Function trả 404, app đọc bằng giọng trình duyệt như trước.
+- `src/lib/textAudio.test.ts` kiểm tra script gom đúng những câu mà màn hình phát.
+
 ## Cài đặt (làm một lần, trên Cloudflare và GitHub)
 
 1. Cloudflare → **R2** → Create bucket, tên `vocastudy-audio`. Không cần bật truy cập công
@@ -53,7 +76,8 @@ riêng cho bucket (phải xử lý offline như trên) hoặc lên gói trả ph
    - `R2_SECRET_ACCESS_KEY`.
    - Nếu đặt tên bucket khác: thêm biến (Variables) `R2_AUDIO_BUCKET`.
 4. GitHub → Actions → **Sync audio to R2** → Run workflow. Lần đầu gửi khoảng 19.000 file,
-   vài phút.
+   vài phút. Sau đó chạy **Record sentence audio to R2** để thu các câu ngoài gói từ (mục
+   trên), khoảng 1 giờ.
 5. Cloudflare → Pages → dự án → Settings → **Bindings** → Add → R2 bucket:
    - tên biến `AUDIO_BUCKET`, chọn `vocastudy-audio`;
    - làm cho cả Production và Preview.

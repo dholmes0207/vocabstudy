@@ -10,7 +10,7 @@ import {
   type RecognitionFailure,
 } from '@/lib/speech'
 import { scoreSentence, type SentenceScore } from '@/lib/sentenceScore'
-import { stopPronounce } from '@/lib/audio'
+import { stopPronounce, textAudio } from '@/lib/audio'
 import { useT } from '@/lib/i18n'
 import SpeakButton from '@/components/SpeakButton'
 
@@ -92,7 +92,7 @@ export default function SpeakAloud({
           return (
             <li key={ex.en} className="space-y-2 py-3">
               <div className="flex items-start gap-3">
-                <SpeakButton text={ex.en} lang={lang} size="sm" />
+                <SpeakButton text={ex.en} lang={lang} audioSrc={textAudio(ex.en)} size="sm" />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">
                     {row.kind === 'scored'

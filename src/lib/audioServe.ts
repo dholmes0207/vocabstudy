@@ -4,13 +4,18 @@
 /**
  * The bucket key for a request path, or null for anything that is not a clip
  * or a voice manifest. Keys mirror public/audio: "/audio/ko/sunhi/w12.mp3" is
- * "ko/sunhi/w12.mp3", "/audio/ko/index.json" is "ko/index.json".
+ * "ko/sunhi/w12.mp3", "/audio/ko/index.json" is "ko/index.json". Sentence clips
+ * that exist only in R2 sit under "t/": "en/aria/t/1x2y3z-4a5b6c.mp3".
  */
 export function audioKey(pathname: string): string | null {
   const prefix = '/audio/'
   if (!pathname.startsWith(prefix)) return null
   const key = pathname.slice(prefix.length)
-  return /^[a-z]{2,3}\/(index\.json|[a-z0-9]+\/[wep]\d+\.mp3)$/.test(key) ? key : null
+  return /^[a-z]{2,3}\/(index\.json|[a-z0-9]+\/([wep]\d+|t\/[0-9a-z]{1,8}-[0-9a-z]{1,8})\.mp3)$/.test(
+    key
+  )
+    ? key
+    : null
 }
 
 export function audioContentType(key: string): string {

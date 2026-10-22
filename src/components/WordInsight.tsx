@@ -3,7 +3,7 @@ import type { Word } from '@/types'
 import SpeakButton from './SpeakButton'
 import PosBadge from './PosBadge'
 import HighlightExample from './HighlightExample'
-import { exampleAudio, wordAudio } from '@/lib/audio'
+import { exampleAudio, textAudio, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import { useMySentence } from '@/store/notesStore'
 import { useT } from '@/lib/i18n'
@@ -124,6 +124,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
                 <SpeakButton
                   text={c.en}
                   lang={ttsLang}
+                  audioSrc={textAudio(c.en)}
                   size="sm"
                   label={t(`Nghe "${c.en}"`, `Hear "${c.en}"`)}
                   className="shrink-0"
