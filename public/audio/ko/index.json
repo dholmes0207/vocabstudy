@@ -1,0 +1,15 @@
+{
+  "default": "sunhi",
+  "voices": [
+    {
+      "key": "sunhi",
+      "label": "SunHi — Nữ (Seoul) 🇰🇷",
+      "voice": "ko-KR-SunHiNeural"
+    },
+    {
+      "key": "injoon",
+      "label": "InJoon — Nam (Seoul) 🇰🇷",
+      "voice": "ko-KR-InJoonNeural"
+    }
+  ]
+}
