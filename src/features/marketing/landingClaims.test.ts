@@ -40,6 +40,7 @@ const count = {
     topics: json('public/data/topics/zh.json').topics.length,
     grammar: json('public/data/grammar/zh.json').units.length,
     stories: json('public/data/reading/zh.json').stories.length,
+    phrases: sumPhrases('zh'),
   },
   languages: codes.length,
   words: codes.reduce((n, c) => n + json(`public/data/${c}.json`).words.length, 0),
@@ -90,7 +91,7 @@ describe('numbers on the landing page', () => {
       `${atLeast(count.words, 'vi')}từ vựng`,
       `${count.stories}truyện ngắn chạm là ra nghĩa`,
       `${count.languages}ngôn ngữ`,
-      `${count.en.phrases} câu tiếng Anh và ${count.ko.phrases} câu tiếng Hàn`,
+      `${count.en.phrases} câu tiếng Anh, ${count.ko.phrases} câu tiếng Hàn và ${count.zh.phrases} câu tiếng Trung`,
       `Tiếng Anh: ${count.en.stories} truyện ngắn`,
       `${count.en.grammar} bài ngữ pháp giải thích`,
       `${count.en.topics} bộ từ theo tình huống`,
@@ -100,6 +101,7 @@ describe('numbers on the landing page', () => {
       // "all of HSK 1 and HSK 2" is checked word by word in lib/chinesePack.test.ts
       // and lib/exams.test.ts.
       `${count.zh.words} từ (đủ từ vựng HSK 1 và HSK 2)`,
+      `bài pinyin & thanh điệu, ${count.zh.phrases} mẫu câu giao tiếp`,
       `${count.zh.topics} bộ chủ đề, ${count.zh.grammar} bài ngữ pháp và ${count.zh.stories} truyện ngắn`,
     ])
       expect(page, claim).toContain(claim)
@@ -110,7 +112,7 @@ describe('numbers on the landing page', () => {
     for (const claim of [
       `${atLeast(count.words, 'en')}words`,
       `${count.stories}short stories, tap for meanings`,
-      `${count.en.phrases} English and ${count.ko.phrases} Korean phrases`,
+      `${count.en.phrases} English, ${count.ko.phrases} Korean and ${count.zh.phrases} Chinese phrases`,
       `English: ${count.en.stories} short stories`,
       `${count.en.grammar} grammar lessons explained`,
       `${count.en.topics} topic decks`,
@@ -118,6 +120,7 @@ describe('numbers on the landing page', () => {
       `${count.ko.phrases} everyday phrases`,
       `${count.ko.topics} topic decks, ${count.ko.grammar} grammar lessons and ${count.ko.stories} short stories`,
       `${count.zh.words} words (all of HSK 1 and HSK 2)`,
+      `a pinyin & tones guide, ${count.zh.phrases} everyday phrases`,
       `${count.zh.topics} topic decks, ${count.zh.grammar} grammar lessons and ${count.zh.stories} short stories`,
     ])
       expect(page, claim).toContain(claim)
@@ -143,7 +146,7 @@ describe('numbers on the landing page', () => {
   it('are never written into the page by hand', () => {
     const source = readFileSync('src/features/marketing/Landing.tsx', 'utf8')
     const handWritten =
-      /\b\d[\d.,]*\+? (truyện|bài ngữ pháp|bộ (từ|chủ đề)|từ sơ cấp|mẫu câu|câu tiếng|short stories|grammar lessons|topic decks|beginner words|everyday phrases|English and)/
+      /\b\d[\d.,]*\+? (truyện|bài ngữ pháp|bộ (từ|chủ đề)|từ sơ cấp|mẫu câu|câu tiếng|short stories|grammar lessons|topic decks|beginner words|everyday phrases|English(,| and))/
     expect(source).not.toMatch(handWritten)
   })
 })

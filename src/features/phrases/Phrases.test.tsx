@@ -14,6 +14,7 @@ import { usePhrases } from '@/store/phrasesStore'
 const packs: Record<string, string> = {
   en: readFileSync('public/data/phrases/en.json', 'utf8'),
   ko: readFileSync('public/data/phrases/ko.json', 'utf8'),
+  zh: readFileSync('public/data/phrases/zh.json', 'utf8'),
 }
 
 beforeEach(() => {
@@ -80,6 +81,16 @@ describe('Everyday phrases', () => {
     at('/phrases/food')
     expect(await screen.findByText('Gọi món & đồ uống')).toBeInTheDocument()
     expect(screen.getByText('이거 주세요.')).toBeInTheDocument()
+    expect(screen.getByText('Cho mình món này.')).toBeInTheDocument()
+  })
+
+  it('has Chinese phrases with their pinyin for the Chinese pack', async () => {
+    useSettings.setState({ uiLang: 'vi', currentLang: 'zh' })
+    at('/phrases/food')
+    expect(await screen.findByText('Gọi món & đồ uống')).toBeInTheDocument()
+    // Word breaks are invisible spaces: 我|要|这个。
+    expect(screen.getByText('我\u200b要\u200b这个。')).toBeInTheDocument()
+    expect(screen.getByText('Wǒ yào zhège.')).toBeInTheDocument()
     expect(screen.getByText('Cho mình món này.')).toBeInTheDocument()
   })
 

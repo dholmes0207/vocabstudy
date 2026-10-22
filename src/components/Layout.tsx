@@ -84,7 +84,7 @@ const NAV: NavItem[] = [
     primary: true,
   },
   // Korean and Chinese take the phrases slot on the phone with their own
-  // sounds page (lib/packContent.ts decides which pack sees which); Korean
+  // sounds page (lib/packContent.ts decides which pack sees which); their
   // phrases then stay in the sidebar and the practice hub.
   {
     to: '/hangul',

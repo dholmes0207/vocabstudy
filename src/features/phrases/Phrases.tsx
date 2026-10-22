@@ -229,6 +229,9 @@ function TopicView({ topic, pack }: { topic: PhraseTopic; pack: PhrasePack }) {
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block text-lg font-semibold leading-snug">{p.en}</span>
+                {p.read && (
+                  <span className="block text-sm text-slate-600 dark:text-slate-300">{p.read}</span>
+                )}
                 <span className="block text-slate-500 dark:text-slate-400">{p.vi}</span>
                 {p.note && (
                   <span className="mt-1.5 flex gap-1.5 text-sm text-slate-500 dark:text-slate-400">
@@ -407,7 +410,14 @@ function PhrasePractice({
             >
               <Volume2 className="h-9 w-9" />
             </button>
-            {answered && <p className="text-center text-xl font-semibold">{q.phrase.en}</p>}
+            {answered && (
+              <div className="text-center">
+                <p className="text-xl font-semibold">{q.phrase.en}</p>
+                {q.phrase.read && (
+                  <p className="text-sm text-slate-600 dark:text-slate-300">{q.phrase.read}</p>
+                )}
+              </div>
+            )}
           </div>
         ) : (
           <p className="text-center text-xl font-semibold">{q.phrase.vi}</p>
@@ -434,6 +444,11 @@ function PhrasePractice({
                   className={`rounded-xl border-2 px-4 py-3 text-left font-medium transition ${tone}`}
                 >
                   {opt}
+                  {q.kind === 'phrase' && q.reads && (
+                    <span className="block text-sm font-normal text-slate-500 dark:text-slate-400">
+                      {q.reads[i]}
+                    </span>
+                  )}
                 </button>
               )
             })}
@@ -458,7 +473,8 @@ function PhrasePractice({
                 size="sm"
               />
               <span>
-                <b>{q.phrase.en}</b> — {q.phrase.vi}
+                <b>{q.phrase.en}</b>
+                {q.phrase.read && ` (${q.phrase.read})`} — {q.phrase.vi}
               </span>
             </p>
             {q.phrase.note && <p className="mt-1 opacity-80">💡 {q.phrase.note}</p>}

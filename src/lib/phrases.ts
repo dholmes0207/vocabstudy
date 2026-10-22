@@ -13,6 +13,8 @@ export interface Phrase {
   vi: string
   /** Optional usage tip, in Vietnamese. */
   note?: string
+  /** How the phrase reads, for packs not written in Latin letters (Chinese pinyin). */
+  read?: string
 }
 
 export interface PhraseTopic {
@@ -51,11 +53,12 @@ export function validatePhrasePack(data: unknown): PhrasePack {
 }
 
 /**
- * Each pack numbers its phrases from its own base (English 1…, Korean 2001…),
+ * Each pack numbers its phrases from its own base (English 1…, Korean 2001…,
+ * Chinese 3001…),
  * because progress is stored by phrase id alone: a Korean phrase must never
  * inherit the record of an English one.
  */
-export const PHRASE_ID_BASE: Record<string, number> = { en: 0, ko: 2000 }
+export const PHRASE_ID_BASE: Record<string, number> = { en: 0, ko: 2000, zh: 3000 }
 
 /** Whether a phrase id belongs to a pack's range. */
 export function phraseInPack(id: number, code: string): boolean {
@@ -122,8 +125,8 @@ export function recordPhrase(
 export type PhraseQuestion =
   /** Hear the phrase, pick its meaning. */
   | { kind: 'meaning'; phrase: Phrase; options: string[]; answer: number }
-  /** Read the meaning, pick the phrase. */
-  | { kind: 'phrase'; phrase: Phrase; options: string[]; answer: number }
+  /** Read the meaning, pick the phrase (with each option's reading, if the pack has them). */
+  | { kind: 'phrase'; phrase: Phrase; options: string[]; reads?: string[]; answer: number }
   /** Put the words of the phrase in order. */
   | { kind: 'build'; phrase: Phrase; tokens: string[] }
 
@@ -166,14 +169,11 @@ function choice(
   wrong: Phrase[],
   rand: () => number
 ): PhraseQuestion {
-  const field = kind === 'meaning' ? 'vi' : 'en'
   const options = shuffle([phrase, ...wrong], rand)
-  return {
-    kind,
-    phrase,
-    options: options.map((p) => p[field]),
-    answer: options.indexOf(phrase),
-  }
+  const answer = options.indexOf(phrase)
+  if (kind === 'meaning') return { kind, phrase, options: options.map((p) => p.vi), answer }
+  const reads = options.every((p) => p.read) ? options.map((p) => p.read!) : undefined
+  return { kind, phrase, options: options.map((p) => p.en), ...(reads && { reads }), answer }
 }
 
 /**
