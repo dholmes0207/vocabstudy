@@ -1,11 +1,12 @@
 # Records the sentences the app reads aloud beyond words, examples and everyday
-# phrases (collocations, grammar examples, story lines) and puts them straight
+# phrases (collocations, grammar examples, story lines, the pack pages listed in
+# scripts/audio-texts/screens.json) and puts them straight
 # into the R2 bucket as <pack>/<voice>/t/<clipId>.mp3. They are not committed:
-# there are about ten thousand, all derived from public/data, and the name of
-# each clip is a fingerprint of its text (scripts/generate_text_audio.py,
+# there are some fifteen thousand, all derived from the repository, and the name
+# of each clip is a fingerprint of its text (scripts/generate_text_audio.py,
 # docs/design/audio-r2.md).
 #
-# - On every push to main that touches public/data: records only sentences that
+# - On every push to main that changes what is read: records only sentences that
 #   are new or rewritten (anything already in the bucket is skipped).
 # - Run by hand to fill the bucket the first time, or to retry failed clips.
 #
@@ -17,7 +18,7 @@ name: Record sentence audio to R2
 on:
   push:
     branches: [main]
-    paths: ['public/data/**', 'scripts/generate_text_audio.py']
+    paths: ['public/data/**', 'scripts/audio-texts/screens.json', 'scripts/generate_text_audio.py']
   workflow_dispatch:
     inputs:
       pack:

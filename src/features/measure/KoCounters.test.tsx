@@ -11,7 +11,11 @@ import { useStudy } from '@/store/studyStore'
 
 // Korean counters on the "Lượng từ" page (docs/design/measure-words.md).
 
-vi.mock('@/lib/audio', () => ({ pronounce: () => {}, stopPronounce: () => {} }))
+vi.mock('@/lib/audio', () => ({
+  pronounce: () => {},
+  stopPronounce: () => {},
+  textAudio: () => '',
+}))
 vi.mock('@/lib/koCounters', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/koCounters')>()
   const book = real.COUNTER_ITEMS.find((i) => i.noun === '책')!

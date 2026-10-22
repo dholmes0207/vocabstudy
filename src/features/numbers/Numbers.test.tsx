@@ -15,6 +15,7 @@ const spoken: string[] = []
 vi.mock('@/lib/audio', () => ({
   pronounce: (o: { text: string }) => spoken.push(o.text),
   stopPronounce: () => {},
+  textAudio: () => '',
 }))
 vi.mock('@/lib/zhNumbers', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/zhNumbers')>()

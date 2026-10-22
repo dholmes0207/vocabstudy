@@ -3,7 +3,7 @@ import { ArrowRight, Check, Volume2, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { pronounce } from '@/lib/audio'
+import { pronounce, textAudio } from '@/lib/audio'
 import { numberPinyin, numberQuiz, numbersXp } from '@/lib/zhNumbers'
 import { koNumberQuiz } from '@/lib/koNumbers'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -138,13 +138,17 @@ function Round({
   const [correct, setCorrect] = useState(0)
   const [xp, setXp] = useState<number | null>(null)
   const q = questions[idx]
-  const say = (text: string) => pronounce({ text, lang: ttsLang, rate })
+  // Every number the round can ask has a recorded clip (scripts/audio-texts/screens.json).
+  const say = (text: string) => pronounce({ audioSrc: textAudio(text), text, lang: ttsLang, rate })
 
   // Each question plays as it appears.
   useEffect(() => {
     const text = questions[idx]?.item.han
     if (!text || xp !== null) return
-    const timer = setTimeout(() => pronounce({ text, lang: ttsLang, rate }), 250)
+    const timer = setTimeout(
+      () => pronounce({ audioSrc: textAudio(text), text, lang: ttsLang, rate }),
+      250
+    )
     return () => clearTimeout(timer)
   }, [idx, questions, ttsLang, rate, xp])
 

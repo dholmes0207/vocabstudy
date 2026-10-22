@@ -2,7 +2,10 @@
 """
 Record the sentences the app reads aloud that are not a word, its example or an
 everyday phrase: collocations ("Hay đi chung với"), grammar examples and
-word-order answers, story lines. Same voices as generate_audio.py.
+word-order answers, story lines, and what the pack pages say (Hangul, Pinyin,
+measure words, numbers, Hán Việt, sayings), listed from the code in
+scripts/audio-texts/screens.json by src/lib/screenTexts.test.ts. Same voices
+as generate_audio.py.
 
 These clips are not committed: there are some ten thousand of them, all derived
 from public/data. They go straight to the R2 bucket (workflow "Record sentence
@@ -26,6 +29,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "public", "data")
+SCREENS = os.path.join(ROOT, "scripts", "audio-texts", "screens.json")
 
 # Must give the same names as clipId() in src/lib/textHash.ts (its test checks these).
 SELF_CHECK = {
@@ -80,6 +84,9 @@ def texts_for(code: str) -> list[str]:
     for story in reading["stories"]:
         for s in story["sentences"]:
             texts.add(s["en"])
+    if os.path.exists(SCREENS):
+        with open(SCREENS, encoding="utf-8") as f:
+            texts.update(json.load(f).get(code, []))
     return sorted(t for t in texts if t.strip())
 
 

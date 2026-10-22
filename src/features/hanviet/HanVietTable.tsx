@@ -7,7 +7,8 @@ import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useStudy } from '@/store/studyStore'
 import GameShell, { GameResult } from '@/features/games/GameShell'
-import { pronounce } from '@/lib/audio'
+import { pronounce, wordAudio } from '@/lib/audio'
+import { usePackSay } from '@/hooks/usePackSay'
 import { useT } from '@/lib/i18n'
 
 // "Chữ Hán qua âm Hán Việt" (docs/design/han-viet-table.md): every character
@@ -20,12 +21,11 @@ export default function HanVietTable() {
   const t = useT()
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
-  const rate = useSettings((s) => s.ttsRate)
   const table = useMemo(() => hanVietTable(pack.words), [pack.words])
   const [query, setQuery] = useState('')
   const shown = useMemo(() => searchHanViet(table, query), [table, query])
   const zh = code === 'zh'
-  const say = (text: string) => pronounce({ text, lang: pack.meta.ttsLang, rate })
+  const say = usePackSay()
   const [round, setRound] = useState<{ n: number; questions: HanVietQuestion[] } | null>(null)
   const start = () =>
     setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: hanVietQuiz(pack.words, GUESS_SIZE) }))
@@ -179,7 +179,7 @@ function GuessRound({ questions, onAgain }: { questions: HanVietQuestion[]; onAg
     const ok = i === q.answer
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
-    pronounce({ text: q.word.word, lang: pack.meta.ttsLang, rate })
+    pronounce({ audioSrc: wordAudio(q.word.id), text: q.word.word, lang: pack.meta.ttsLang, rate })
   }
   const next = () => {
     if (idx + 1 < questions.length) {
