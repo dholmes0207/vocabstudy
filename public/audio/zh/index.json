@@ -1,0 +1,15 @@
+{
+  "default": "xiaoxiao",
+  "voices": [
+    {
+      "key": "xiaoxiao",
+      "label": "Xiaoxiao — Nữ (Phổ thông) 🇨🇳",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    {
+      "key": "yunxi",
+      "label": "Yunxi — Nam (Phổ thông) 🇨🇳",
+      "voice": "zh-CN-YunxiNeural"
+    }
+  ]
+}
