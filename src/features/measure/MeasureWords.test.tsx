@@ -11,7 +11,11 @@ import { useStudy } from '@/store/studyStore'
 
 // "Lượng từ" (docs/design/measure-words.md) with the real Chinese pack.
 
-vi.mock('@/lib/audio', () => ({ pronounce: () => {}, stopPronounce: () => {} }))
+vi.mock('@/lib/audio', () => ({
+  pronounce: () => {},
+  stopPronounce: () => {},
+  textAudio: () => '',
+}))
 vi.mock('@/lib/measureWords', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/measureWords')>()
   const book = real.MEASURE_ITEMS.find((i) => i.noun === '书')!

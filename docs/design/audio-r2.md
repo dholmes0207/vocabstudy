@@ -42,18 +42,28 @@ riêng cho bucket (phải xử lý offline như trên) hoặc lên gói trả ph
 
 ## Câu ngoài gói từ (chỉ có trên R2)
 
-Ngoài từ, câu ví dụ và mẫu câu, app còn đọc khoảng 10.000 câu khác:
+Ngoài từ, câu ví dụ và mẫu câu, app còn đọc khoảng 15.000 câu khác:
 
 - cụm "Hay đi chung với" trên thẻ từ tiếng Anh (khoảng 9.500 cụm);
 - câu ví dụ và đáp án "xếp câu" của bài ngữ pháp;
-- câu trong truyện, kể cả khi nghe – chép theo truyện hay bài ngữ pháp.
+- câu trong truyện, kể cả khi nghe – chép theo truyện hay bài ngữ pháp;
+- những gì các trang riêng của từng gói đọc: chữ mẫu Hangul và âm tiết ở "Tự ghép chữ", thanh
+  điệu và âm Pinyin, lượng từ và đơn vị đếm, mọi câu hỏi của "Nghe số", chữ trong bảng Hán
+  Việt, câu tục ngữ hằng ngày, quà nhãn dán (khoảng 5.000 câu).
+
+Phần cuối viết trong code chứ không nằm trong `public/data`. `src/lib/screenTexts.test.ts`
+liệt kê nó ra `scripts/audio-texts/screens.json` để script thu. Sửa chữ trên các trang đó thì
+ghi lại file bằng `WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts`, nếu không
+test sẽ báo lỗi. Trên các trang này, từ nào có trong gói thì phát luôn file của từ đó
+(`usePackSay`). "Tự ghép chữ" chỉ thu khối không có phụ âm cuối hoặc có một trong 7 âm cuối;
+khối hiếm hơn vẫn đọc bằng giọng trình duyệt.
 
 Trước đây các câu này đọc bằng giọng của trình duyệt. Firefox và nhiều máy Windows chỉ có giọng
 robot, nghe rất méo.
 
 - Workflow **"Record sentence audio to R2"** (`.github/workflows/text-audio.yml`) thu các câu
   này bằng cùng giọng edge-tts, rồi tải **thẳng lên bucket**, không commit vào repo: khoảng
-  20.000 file, đều sinh ra từ `public/data`.
+  30.000 file, sinh ra từ `public/data` và `screens.json`.
 - Tên file là dấu vân tay của chính câu đó: `<gói>/<giọng>/t/<clipId>.mp3` (`clipId` trong
   `src/lib/textHash.ts`, bản Python trong `scripts/generate_text_audio.py`, test giữ hai bên
   khớp nhau). Sửa câu thì có file mới, không bao giờ phát nhầm bản ghi cũ.

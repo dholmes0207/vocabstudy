@@ -4,7 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useImmersive } from '@/store/uiStore'
-import { pronounce } from '@/lib/audio'
+import { usePackSay } from '@/hooks/usePackSay'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import {
@@ -23,13 +23,10 @@ import SessionComplete from '@/components/SessionComplete'
 // "Pinyin & thanh điệu" (docs/design/chinese.md): the tones and sounds a
 // Vietnamese beginner needs before any Chinese word, then a quick check.
 
-const TTS_LANG = 'zh-CN'
 const QUIZ_SIZE = 10
 
-function useSay() {
-  const rate = useSettings((s) => s.ttsRate)
-  return (text: string) => pronounce({ text, lang: TTS_LANG, rate })
-}
+// Tones, sounds and words in the voices recorded for the Chinese pack.
+const useSay = usePackSay
 
 export default function Pinyin() {
   const t = useT()

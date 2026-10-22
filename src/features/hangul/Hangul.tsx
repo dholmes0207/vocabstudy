@@ -4,7 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useImmersive } from '@/store/uiStore'
-import { pronounce } from '@/lib/audio'
+import { usePackSay } from '@/hooks/usePackSay'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import {
@@ -26,13 +26,10 @@ import SessionComplete from '@/components/SessionComplete'
 // "Bảng chữ cái Hangul" (docs/design/hangul.md): the letters a Korean beginner
 // needs before any word — hear each one, build blocks, then a quick check.
 
-const TTS_LANG = 'ko-KR'
 const QUIZ_SIZE = 10
 
-function useSay() {
-  const rate = useSettings((s) => s.ttsRate)
-  return (text: string) => pronounce({ text, lang: TTS_LANG, rate })
-}
+// Letters, blocks and words in the voices recorded for the Korean pack.
+const useSay = usePackSay
 
 export default function Hangul() {
   const t = useT()

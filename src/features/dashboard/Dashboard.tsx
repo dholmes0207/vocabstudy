@@ -10,6 +10,7 @@ import WordOfDay from './WordOfDay'
 import { levelForXp } from '@/lib/xpLevel'
 import InstallPrompt from '@/components/InstallPrompt'
 import SpeakButton from '@/components/SpeakButton'
+import { textAudio } from '@/lib/audio'
 import { proverbOfDay } from '@/lib/proverbs'
 import { DailyGoal, FirstSteps, Journey, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
@@ -68,6 +69,7 @@ export default function Dashboard() {
               <SpeakButton
                 text={proverb.text}
                 lang={pack.meta.ttsLang}
+                audioSrc={textAudio(proverb.text)}
                 size="sm"
                 label={t('Nghe câu này', 'Listen')}
               />

@@ -15,7 +15,7 @@ const read = (path: string) => {
   }
 }
 
-/** What the screens pass to textAudio(): collocations, grammar, stories. */
+/** What the screens pass to textAudio(): collocations, grammar, stories, pack pages. */
 function spoken(code: string): string[] {
   const texts = new Set<string>()
   for (const w of json(`public/data/${code}.json`).words)
@@ -26,6 +26,8 @@ function spoken(code: string): string[] {
   }
   for (const s of read(`public/data/reading/${code}.json`)?.stories ?? [])
     for (const line of s.sentences) texts.add(line.en)
+  // The pack pages, listed from the code by screenTexts.test.ts.
+  for (const t of json('scripts/audio-texts/screens.json')[code] ?? []) texts.add(t)
   return [...texts].filter((t) => t.trim()).sort()
 }
 

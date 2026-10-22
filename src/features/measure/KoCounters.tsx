@@ -15,6 +15,7 @@ import { measureXp } from '@/lib/measureWords'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import SpeakButton from '@/components/SpeakButton'
+import { textAudio } from '@/lib/audio'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
 // Korean counters on the "Lượng từ" page (docs/design/measure-words.md): the
@@ -55,7 +56,12 @@ export default function KoCounters() {
               <p className="font-semibold text-brand-600 dark:text-brand-300">“{c.vi}”</p>
               <p className="text-sm text-slate-500 dark:text-slate-400">{t(...c.use)}</p>
             </div>
-            <SpeakButton text={`한 ${c.ch}`} lang={ttsLang} size="sm" />
+            <SpeakButton
+              text={`한 ${c.ch}`}
+              lang={ttsLang}
+              audioSrc={textAudio(`한 ${c.ch}`)}
+              size="sm"
+            />
           </li>
         ))}
       </ul>
@@ -181,7 +187,12 @@ function Round({ questions, onAgain }: { questions: CounterQuestion[]; onAgain: 
               {picked === q.answer ? t('Đúng rồi!', 'Right!') : t('Chưa đúng.', 'Not quite.')}
             </p>
             <div className="flex items-center gap-3">
-              <SpeakButton text={counterPhrase(q)} lang={pack.meta.ttsLang} size="sm" />
+              <SpeakButton
+                text={counterPhrase(q)}
+                lang={pack.meta.ttsLang}
+                audioSrc={textAudio(counterPhrase(q))}
+                size="sm"
+              />
               <div>
                 <p lang="ko" className="text-lg font-bold">
                   {counterPhrase(q)}

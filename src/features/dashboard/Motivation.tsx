@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Share2, Zap } from 'lucide-react'
 import ProgressRing from '@/components/ProgressRing'
 import SpeakButton from '@/components/SpeakButton'
+import { textAudio } from '@/lib/audio'
 import ReminderSetup from '@/components/ReminderSetup'
 import { skyCelebrate } from '@/lib/skyEvents'
 import { mulberry32 } from '@/lib/sky'
@@ -160,7 +161,13 @@ export function DailyGoal({
               {t('Bộ sưu tập', 'Collection')} {collected(owned ?? {}).size}/{ALL_STICKERS.length} →
             </Link>
           </div>
-          <SpeakButton text={gift.en} lang="en-US" size="sm" />
+          {/* The sticker's name is English; only the English pack has its voices. */}
+          <SpeakButton
+            text={gift.en}
+            lang="en-US"
+            audioSrc={code === 'en' ? textAudio(gift.en) : undefined}
+            size="sm"
+          />
         </div>
       ) : (
         !g.reached && (

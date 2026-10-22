@@ -14,6 +14,7 @@ import {
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import SpeakButton from '@/components/SpeakButton'
+import { textAudio } from '@/lib/audio'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 import KoCounters from './KoCounters'
 
@@ -64,7 +65,12 @@ function ChineseMeasureWords() {
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">{t(...m.use)}</p>
             </div>
-            <SpeakButton text={`一${m.ch}`} lang={ttsLang} size="sm" />
+            <SpeakButton
+              text={`一${m.ch}`}
+              lang={ttsLang}
+              audioSrc={textAudio(`一${m.ch}`)}
+              size="sm"
+            />
           </li>
         ))}
       </ul>
@@ -200,7 +206,12 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
               {picked === q.answer ? t('Đúng rồi!', 'Right!') : t('Chưa đúng.', 'Not quite.')}
             </p>
             <div className="flex items-center gap-3">
-              <SpeakButton text={shown.zh} lang={pack.meta.ttsLang} size="sm" />
+              <SpeakButton
+                text={shown.zh}
+                lang={pack.meta.ttsLang}
+                audioSrc={textAudio(shown.zh)}
+                size="sm"
+              />
               <div>
                 <p lang="zh" className="text-lg font-bold">
                   {shown.zh}
