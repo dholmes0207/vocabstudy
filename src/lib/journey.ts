@@ -49,22 +49,16 @@ export const JOURNEY: Mission[] = [
     descEn: 'Tap once, then just listen.',
     to: '/listen',
   },
+  // Korean and Chinese learners meet their script first (it opens only for
+  // them); English learners, who can read already, get the tricky sounds.
   {
-    emoji: '👄',
-    title: 'Thử tai với "Âm khó"',
-    desc: 'ship hay sheep? Nghe và chọn.',
-    titleEn: 'Train your ear on tricky sounds',
-    descEn: 'ship or sheep? Listen and choose.',
-    to: '/sounds',
+    emoji: '🔤',
+    title: 'Đọc bảng chữ Hangul',
+    desc: 'Nhìn chữ, chọn cách đọc.',
+    titleEn: 'Read the Hangul alphabet',
+    descEn: 'See a letter, pick how it sounds.',
+    to: '/hangul',
     alts: [
-      {
-        emoji: '🔤',
-        title: 'Đọc bảng chữ Hangul',
-        desc: 'Nhìn chữ, chọn cách đọc.',
-        titleEn: 'Read the Hangul alphabet',
-        descEn: 'See a letter, pick how it sounds.',
-        to: '/hangul',
-      },
       {
         emoji: '🎵',
         title: 'Nghe ra 4 thanh tiếng Trung',
@@ -72,6 +66,14 @@ export const JOURNEY: Mission[] = [
         titleEn: 'Hear the four Chinese tones',
         descEn: 'Pinyin, tones and a quick check.',
         to: '/pinyin',
+      },
+      {
+        emoji: '👄',
+        title: 'Thử tai với "Âm khó"',
+        desc: 'ship hay sheep? Nghe và chọn.',
+        titleEn: 'Train your ear on tricky sounds',
+        descEn: 'ship or sheep? Listen and choose.',
+        to: '/sounds',
       },
     ],
   },

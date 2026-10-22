@@ -60,8 +60,13 @@ riêng cho bucket (phải xử lý offline như trên) hoặc lên gói trả ph
 6. Cùng trang Settings → **Variables and Secrets**: thêm `AUDIO_FROM_R2` = `1` cho Production
    và Preview.
 7. Deploy lại (Retry deployment, hoặc merge PR kế tiếp). Kiểm tra:
-   - `https://vocastudy.app/audio/en/aria/w1.mp3` trả `200 audio/mpeg`;
+   - log build trên Pages chỉ tải lên khoảng 130 file;
+   - `https://vocastudy.app/audio/en/aria/w1.mp3` trả `200 audio/mpeg` và có header
+     `X-Audio-Source: r2` (`curl -sI <địa chỉ> | grep -i x-audio-source`);
    - `https://vocastudy.app/audio/en/aria/w99999.mp3` trả `404`.
+
+   Đừng dựa vào mã 206 khi gửi `Range`: bộ nhớ đệm CDN của Cloudflare cũng trả 206 cho file
+   tĩnh, nên mã này không chứng minh audio đến từ R2.
 
 Thứ tự 4 → 5 → 6 quan trọng: bucket phải có file trước khi bản deploy bỏ audio. Nếu làm ngược,
 trong lúc chờ app vẫn chạy, chỉ là đọc bằng giọng trình duyệt.

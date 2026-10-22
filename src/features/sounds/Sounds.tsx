@@ -57,6 +57,7 @@ export default function Sounds() {
   const pack = useData((s) => s.pack)!
   const rate = useSettings((s) => s.ttsRate)
   const t = useT()
+  const lessons = SOUND_LESSONS[pack.meta.code] ?? []
   const byWord = useMemo(
     () => new Map(pack.words.map((w) => [w.word.toLowerCase(), w] as const)),
     [pack.words]
@@ -89,30 +90,11 @@ export default function Sounds() {
         </p>
       </header>
 
-      <section className="card p-5">
-        <h2 className="font-bold">
-          {t('Đọc dòng “cách đọc” thế nào?', 'How to read the Vietnamese respelling')}
-        </h2>
-        <ul className="mt-3 space-y-2 text-sm">
-          {READING_TIPS.map(([k, v]) => (
-            <li key={k[0]} className="flex gap-3">
-              <span className="w-20 shrink-0 font-bold text-brand-600 dark:text-brand-300">
-                {t(k[0], k[1])}
-              </span>
-              <span className="text-slate-600 dark:text-slate-300">{t(v[0], v[1])}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
-          {t(
-            'Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như “bad” và “bed”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.',
-            'The respelling is only an approximation in Vietnamese letters. Some differences cannot be written (like “bad” and “bed”) — your ear is the teacher, so always listen to the model voice.'
-          )}
-        </p>
-      </section>
+      {/* The respelling tips are about the English pack's own "cách đọc" line. */}
+      {pack.meta.code === 'en' && <ReadingTips />}
 
       <div className="stagger space-y-4">
-        {SOUND_LESSONS.map((l) => (
+        {lessons.map((l) => (
           <Lesson key={l.id} lesson={l} play={play} byWord={byWord} />
         ))}
       </div>
@@ -126,6 +108,39 @@ export default function Sounds() {
   )
 }
 
+function ReadingTips() {
+  const t = useT()
+  return (
+    <section className="card p-5">
+      <h2 className="font-bold">
+        {t('Đọc dòng “cách đọc” thế nào?', 'How to read the Vietnamese respelling')}
+      </h2>
+      <ul className="mt-3 space-y-2 text-sm">
+        {READING_TIPS.map(([k, v]) => (
+          <li key={k[0]} className="flex gap-3">
+            <span className="w-20 shrink-0 font-bold text-brand-600 dark:text-brand-300">
+              {t(k[0], k[1])}
+            </span>
+            <span className="text-slate-600 dark:text-slate-300">{t(v[0], v[1])}</span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+        {t(
+          'Cách đọc chỉ là gợi ý gần đúng bằng chữ Việt. Có những khác biệt chữ không ghi được (như “bad” và “bed”) — tai mới là thầy, nên hãy luôn nghe giọng mẫu.',
+          'The respelling is only an approximation in Vietnamese letters. Some differences cannot be written (like “bad” and “bed”) — your ear is the teacher, so always listen to the model voice.'
+        )}
+      </p>
+    </section>
+  )
+}
+
+/** IPA for English; pinyin or the Vietnamese-style reading for the other packs. */
+function readingOf(word: Word | undefined): string | undefined {
+  if (!word) return undefined
+  return word.ipa ? `/${word.ipa}/` : word.viRead || undefined
+}
+
 function WordChip({ text, play, word }: { text: string; play: Play; word?: Word }) {
   return (
     <button
@@ -134,7 +149,9 @@ function WordChip({ text, play, word }: { text: string; play: Play; word?: Word 
     >
       <Volume2 className="h-3.5 w-3.5 text-brand-500" />
       <b>{text}</b>
-      {word && <span className="text-xs text-slate-500 dark:text-slate-400">/{word.ipa}/</span>}
+      {word && (
+        <span className="text-xs text-slate-500 dark:text-slate-400">{readingOf(word)}</span>
+      )}
     </button>
   )
 }
@@ -186,7 +203,7 @@ function Lesson({
               </span>
             ))}
           </div>
-          <EarTest pairs={lesson.pairs} play={play} />
+          <EarTest pairs={lesson.pairs} play={play} byWord={byWord} />
         </>
       )}
     </section>
@@ -194,7 +211,15 @@ function Lesson({
 }
 
 /** Hear one word of a pair, pick which it was. */
-function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
+function EarTest({
+  pairs,
+  play,
+  byWord,
+}: {
+  pairs: [string, string][]
+  play: Play
+  byWord: Map<string, Word>
+}) {
   const soundOn = useSettings((s) => s.soundEnabled)
   const [round, setRound] = useState<EarRound | null>(null)
   const [picked, setPicked] = useState<0 | 1 | null>(null)
@@ -227,6 +252,10 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
   }
 
   const target = round.pair[round.answer]
+  // Characters alone don't show a tone (买 / 卖), so show the readings, but only
+  // when they differ: 사다 / 싸다 are both "xa-đa" and would just confuse.
+  const reads = round.pair.map((w) => byWord.get(w)?.viRead)
+  const showReads = !byWord.get(target)?.ipa && reads[0] !== reads[1]
   return (
     <div className="mt-4 rounded-2xl bg-slate-50 p-4 dark:bg-slate-800/60">
       <div className="flex items-center justify-between gap-2">
@@ -255,6 +284,11 @@ function EarTest({ pairs, play }: { pairs: [string, string][]; play: Play }) {
               className={`rounded-xl border-2 px-3 py-3 text-lg font-bold transition ${tone}`}
             >
               {w}
+              {showReads && reads[i] && (
+                <span className="block text-sm font-normal text-slate-500 dark:text-slate-400">
+                  {reads[i]}
+                </span>
+              )}
             </button>
           )
         })}
