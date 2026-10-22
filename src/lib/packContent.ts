@@ -9,7 +9,7 @@ const ONLY: Record<string, readonly string[]> = {
   '/topics': ['en', 'ko', 'zh'],
   '/reading': ['en', 'ko', 'zh'],
   '/phrases': ['en', 'ko', 'zh'],
-  '/sounds': ['en'],
+  '/sounds': ['en', 'ko', 'zh'],
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
   '/measure-words': ['zh', 'ko'],

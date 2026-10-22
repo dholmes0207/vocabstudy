@@ -1,23 +1,51 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { SOUND_LESSONS, earRound, lessonText, lessonWords } from './sounds'
+import { availableIn } from './packContent'
+
+const packs = Object.entries(SOUND_LESSONS)
+const all = packs.flatMap(([, lessons]) => lessons)
 
 describe('sound lessons', () => {
   it('have unique ids, words to hear, and two different words per pair', () => {
-    const ids = SOUND_LESSONS.map((l) => l.id)
+    const ids = all.map((l) => l.id)
     expect(new Set(ids).size).toBe(ids.length)
-    for (const l of SOUND_LESSONS) {
+    for (const l of all) {
       expect(l.words.length).toBeGreaterThanOrEqual(2)
       for (const [a, b] of l.pairs) expect(a).not.toBe(b)
     }
   })
 
-  it('only use words the English pack has (so both sides play in the same voice)', () => {
-    const pack = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as {
-      words: { word: string }[]
+  it.each(packs)(
+    'only use words the %s pack has (so both sides play in the same voice)',
+    (code, lessons) => {
+      const pack = JSON.parse(readFileSync(`public/data/${code}.json`, 'utf8')) as {
+        words: { word: string }[]
+      }
+      const have = new Set(pack.words.map((w) => w.word.toLowerCase()))
+      expect(lessonWords(lessons).filter((w) => !have.has(w))).toEqual([])
     }
-    const have = new Set(pack.words.map((w) => w.word.toLowerCase()))
-    expect(lessonWords().filter((w) => !have.has(w))).toEqual([])
+  )
+
+  it.each(packs)(
+    'are reachable: the %s pack opens /sounds and has an ear test',
+    (code, lessons) => {
+      expect(availableIn('/sounds', code)).toBe(true)
+      expect(lessons.some((l) => l.pairs.length > 0)).toBe(true)
+    }
+  )
+
+  it('keep each Chinese tone pair to the same syllable, so only the tone tells them apart', () => {
+    const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as {
+      words: { word: string; viRead: string }[]
+    }
+    const read = new Map(zh.words.map((w) => [w.word, w.viRead]))
+    const bare = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '')
+    for (const l of SOUND_LESSONS.zh.filter((x) => x.id.startsWith('zh-tone')))
+      for (const [a, b] of l.pairs) {
+        expect(bare(read.get(a)!), `${a} ${b}`).toBe(bare(read.get(b)!))
+        expect(read.get(a), `${a} ${b}`).not.toBe(read.get(b))
+      }
   })
 })
 
@@ -40,11 +68,12 @@ describe('earRound', () => {
 
 describe('lessonText', () => {
   it('has English wording for every lesson', () => {
-    for (const l of SOUND_LESSONS) {
+    for (const l of all) {
       const en = lessonText(l, 'en')
-      expect(en.title).not.toBe(l.title)
-      expect(en.how.length).toBeGreaterThan(10)
+      // Some titles read the same in both ("j, q, x"); the explanations never do.
+      expect(en.how, l.id).not.toBe(l.how)
+      expect(en.slip, l.id).not.toBe(l.slip)
     }
-    expect(lessonText(SOUND_LESSONS[0], 'vi').title).toBe(SOUND_LESSONS[0].title)
+    expect(lessonText(SOUND_LESSONS.en[0], 'vi').title).toBe(SOUND_LESSONS.en[0].title)
   })
 })

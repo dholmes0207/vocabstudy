@@ -69,10 +69,11 @@ describe('Layout while the word pack is still loading', () => {
 describe('Layout for a Korean learner', () => {
   const ko = { code: 'ko', name: 'Korean', nativeName: 'Tiếng Hàn', flag: '🇰🇷' }
   const en = { code: 'en', name: 'English', nativeName: 'Tiếng Anh', flag: '🇬🇧' }
+  const zh = { code: 'zh', name: 'Chinese', nativeName: 'Tiếng Trung', flag: '🇨🇳' }
   beforeEach(() => {
     useSettings.setState({ uiLang: 'vi', currentLang: 'ko' })
     useData.setState({
-      manifest: { languages: [en, ko] } as never,
+      manifest: { languages: [en, ko, zh] } as never,
       pack: { meta: { ...ko, ttsLang: 'ko-KR' }, words: [] } as never,
       status: 'ready',
       ensureManifest: async () => {},
@@ -86,7 +87,7 @@ describe('Layout for a Korean learner', () => {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/home" element={<p>màn hình chính</p>} />
-            <Route path="/sounds" element={<p>luyện âm tiếng Anh</p>} />
+            <Route path="/pinyin" element={<p>bảng pinyin</p>} />
           </Route>
         </Routes>
       </MemoryRouter>
@@ -106,11 +107,11 @@ describe('Layout for a Korean learner', () => {
     expect(document.title).toBe('VocaStudy · Học tiếng Hàn mỗi ngày')
   })
 
-  it('explains an English-only screen instead of showing it, with a way to switch', () => {
-    renderAt('/sounds')
-    expect(screen.queryByText('luyện âm tiếng Anh')).not.toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /dành cho tiếng Anh/ })).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: /Chuyển sang tiếng Anh/ }))
-    expect(useSettings.getState().currentLang).toBe('en')
+  it('explains a Chinese-only screen instead of showing it, with a way to switch', () => {
+    renderAt('/pinyin')
+    expect(screen.queryByText('bảng pinyin')).not.toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /dành cho tiếng Trung/ })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Chuyển sang tiếng Trung/ }))
+    expect(useSettings.getState().currentLang).toBe('zh')
   })
 })
