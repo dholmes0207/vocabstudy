@@ -53,6 +53,7 @@ npm run lint
 npm run typecheck
 npm test
 npm run build
+npm run e2e          # sau build; lần đầu cần: npx playwright install chromium
 ```
 
 ## 4. Commit message

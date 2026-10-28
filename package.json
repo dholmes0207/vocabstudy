@@ -21,6 +21,7 @@
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "e2e": "playwright test -c e2e",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240925.0",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.56.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.7",
