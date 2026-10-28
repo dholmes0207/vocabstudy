@@ -1,4 +1,4 @@
-# Lộ trình luyện thi HSK 1 / TOPIK I
+# Lộ trình luyện thi HSK, TOPIK I, A2 Key, B1 Preliminary
 
 **User**: "Mình học tiếng Trung, tiếng Hàn để đi thi lấy chứng chỉ. Muốn biết phải học gì, học
 tới đâu rồi, còn thiếu gì."
@@ -115,3 +115,45 @@ theo là HSK 2, và các đợt từ mới đã phủ được phần lớn danh
 - `features/exam/Exam.tsx`: `Exam()` giữ cấp đang chọn và truyền tab vào phần đầu của `Roadmap`
   (chỉ hiện khi gói có hơn một kỳ thi).
 - Test: `lib/exams.test.ts` (mọi từ HSK 2 có trong gói, nhãn theo cấp), `Exam.test.tsx` (đổi tab).
+
+## Tiếng Anh: A2 Key và B1 Preliminary (28/10/2026)
+
+**User** (người học tiếng Anh): "Học xong 1.000 từ rồi thì thi được gì? Mình cần chứng chỉ B1."
+
+Gói tiếng Anh chia sẵn hai phần: 1.000 từ lõi bậc A1–A2 và phần mở rộng bậc B1 (theo Oxford
+3000). Hai kỳ thi Cambridge khớp đúng hai bậc này: **A2 Key** (KET) và **B1 Preliminary** (PET).
+
+**Thông tin kỳ thi**, kiểm tra ngày 28/10/2026 trên trang chính thức của Cambridge (định dạng
+từ 2020; Wikipedia còn ghi định dạng cũ của A2 Key nên không dùng):
+
+- **A2 Key:**
+  - Đọc và Viết: 1 giờ, 7 phần, 32 câu (50%);
+  - Nghe: 30 phút gồm 6 phút chép đáp án, 5 phần, 25 câu (25%);
+  - Nói: 8–10 phút mỗi cặp, 2 phần (25%);
+  - thang Cambridge English: 120–132 hạng C, 133–139 hạng B (đều là A2), 140–150 hạng A (B1),
+    100–119 nhận chứng chỉ A1.
+- **B1 Preliminary:**
+  - Đọc: 45 phút, 6 phần, 32 câu (25%); Viết: 45 phút, 2 phần (25%);
+  - Nghe: 30 phút gồm 6 phút chép đáp án, 4 phần, 25 câu (25%);
+  - Nói: 10–12 phút mỗi cặp, 4 phần (25%);
+  - thang: 140–152 hạng C, 153–159 hạng B (đều là B1), 160–170 hạng A (B2), 120–139 nhận chứng
+    chỉ A2.
+
+**BA**
+
+- Gói tiếng Anh có tab **A2 Key | B1 Preliminary**, mặc định A2 Key.
+- Từ vựng: A2 Key là 1.000 từ lõi, B1 Preliminary là phần mở rộng B1, giống cách HSK 2 chỉ tính
+  phần thêm sau HSK 1.
+- Cambridge có danh sách từ chính thức. App không chép danh sách đó, nên lời nhắc nói rõ từ vựng
+  của app gần nhưng không trùng khớp, và không gắn nhãn kỳ thi lên thẻ từ tiếng Anh.
+- Lời nhắc cũng nói thẳng: app luyện từ vựng, nghe, đọc; chưa có phần Viết; phần Nói tập ở
+  "Luyện nói".
+- Bước 1 là "Âm khó cho người Việt", vì phần nghe cần phân biệt ship / sheep và nghe ra âm cuối.
+
+**Dev**
+
+- `lib/exams.ts`: mục `a2key`, `b1prelim`; trường mới `stage` (lọc từ theo bậc khi không có danh
+  sách), `stageLabel` (tên nhóm từ trên trang), `basics.note` (vì sao bước 1 đứng đầu).
+- `lib/packContent.ts`: `/exam` mở cho cả `en`.
+- Test: `lib/exams.test.ts` (hai kỳ thi chia đúng hai bậc của gói), `Exam.test.tsx` (tab, thông
+  tin đề, số từ).

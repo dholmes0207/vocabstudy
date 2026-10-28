@@ -34,7 +34,19 @@ describe('exam roadmaps', () => {
     expect(examFor('zh', 'nope')?.id).toBe('hsk1')
     expect(examsFor('zh').map((e) => e.id)).toEqual(['hsk1', 'hsk2'])
     expect(examFor('ko')?.id).toBe('topik1')
-    expect(examFor('en')).toBeUndefined()
+    expect(examsFor('en').map((e) => e.id)).toEqual(['a2key', 'b1prelim'])
+    expect(examFor('ja')).toBeUndefined()
+  })
+
+  it("takes the English exams' words from the pack stages: core for A2 Key, B1 extension for B1 Preliminary", () => {
+    const en = pack('en').words
+    const a2 = examWords(examFor('en', 'a2key')!, en)
+    const b1 = examWords(examFor('en', 'b1prelim')!, en)
+    expect(a2).toHaveLength(en.filter((w) => (w.stage ?? 1) === 1).length)
+    expect(b1).toHaveLength(en.filter((w) => w.stage === 2).length)
+    expect(a2.length + b1.length).toBe(en.length)
+    // No official list in the app, so no exam badge on English word cards.
+    expect(examLabelFor('en', en[0])).toBeNull()
   })
 
   it('finds every HSK 1 headword in the Chinese pack', () => {

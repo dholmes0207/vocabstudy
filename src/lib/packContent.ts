@@ -16,8 +16,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/numbers': ['zh', 'ko'],
   // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
   '/han-viet': ['zh', 'ko'],
-  // HSK 1 and TOPIK I (lib/exams.ts).
-  '/exam': ['ko', 'zh'],
+  // HSK 1–2, TOPIK I, Cambridge A2 Key and B1 Preliminary (lib/exams.ts).
+  '/exam': ['en', 'ko', 'zh'],
 }
 
 /** The screen a path belongs to: "/reading/lans-morning" → "/reading". */
