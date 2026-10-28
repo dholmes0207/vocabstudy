@@ -35,7 +35,17 @@ Vì sao không dùng tên miền riêng (`audio.vocastudy.app`) trỏ thẳng v�
 bỏ qua mọi request khác tên miền, nên audio sẽ không còn dùng được khi mất mạng; ngoài ra phải
 cấu hình CORS cho `prefetchAudio`.
 
-Đánh đổi: mỗi lần tải một file audio là một lượt gọi Function. Gói Free cho 100.000 lượt mỗi
+**Cache ở biên Cloudflare.** Cloudflare không tự cache những gì Function trả về, nên trước đây
+lần đầu nghe mỗi file đều phải qua Function rồi đọc R2, mất 0,5–2 giây. Function giờ lưu bản đầy
+đủ của mỗi file vào Cache API của trung tâm dữ liệu:
+
+- khoá cache là cả URL, gồm `?v=`, nên câu ví dụ đã sửa không bị phát bản ghi cũ;
+- `Range` và `If-None-Match` do Cache API trả (206, 304); riêng `bytes=0-` vẫn trả 200 để
+  service worker lưu được;
+- header `X-Audio-Cache: hit` hoặc `miss` cho biết file lấy từ cache hay từ R2;
+- cache chỉ nằm ở từng trung tâm dữ liệu, không đồng bộ giữa các nơi.
+
+Đánh đổi: mỗi lần tải một file audio là một lượt gọi Function, kể cả khi lấy từ cache. Gói Free cho 100.000 lượt mỗi
 ngày (chung cho Workers và Pages Functions). Service worker và header `Cache-Control` một tháng
 giúp mỗi người học chỉ tải mỗi file một lần. Nếu sau này vượt mức đó, có thể chuyển sang tên miền
 riêng cho bucket (phải xử lý offline như trên) hoặc lên gói trả phí.
