@@ -85,10 +85,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/exam',
     icon: '🎯',
     title: 'Lộ trình luyện thi',
-    desc: 'HSK 1 hoặc TOPIK I: học gì, theo thứ tự nào, bạn đã tới đâu — kèm bài kiểm tra từ vựng 20 câu.',
+    desc: 'A2 Key, B1 Preliminary, HSK 1–2 hoặc TOPIK I: học gì, theo thứ tự nào, bạn đã tới đâu — kèm bài kiểm tra từ vựng 20 câu.',
     titleEn: 'Exam roadmap',
     descEn:
-      'HSK 1 or TOPIK I: what to learn, in what order, how far you have got — plus a 20-question vocabulary check.',
+      'A2 Key, B1 Preliminary, HSK 1–2 or TOPIK I: what to learn, in what order, how far you have got — plus a 20-question vocabulary check.',
     tone: 'from-emerald-500 to-teal-600',
   },
   {

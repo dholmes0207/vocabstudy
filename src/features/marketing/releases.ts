@@ -13,6 +13,27 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-28',
+    title: [
+      'Tiếng Anh: lộ trình luyện thi A2 Key và B1 Preliminary; giọng thu sẵn cho mọi câu; audio tải nhanh hơn',
+      'English: A2 Key and B1 Preliminary roadmaps; recorded voices for every sentence; faster audio',
+    ],
+    items: [
+      [
+        'Trang "Lộ trình luyện thi" có thêm tiếng Anh: A2 Key (1.000 từ lõi A1–A2) và B1 Preliminary (phần từ B1), mỗi kỳ có thông tin đề và thang điểm Cambridge, tiến độ từng bước và bài kiểm tra từ vựng 20 câu.',
+        'The "Exam roadmap" page now covers English: A2 Key (the core 1,000 A1–A2 words) and B1 Preliminary (the B1 words), each with the Cambridge format and scores, step-by-step progress and a 20-question vocabulary check.',
+      ],
+      [
+        'Cụm "Hay đi chung với", câu ngữ pháp, câu truyện và các trang Hangul, Pinyin, Lượng từ, Nghe số, bảng Hán Việt giờ đọc bằng giọng AI thu sẵn, không còn giọng máy méo trên Firefox hay Windows.',
+        'Collocations, grammar sentences, story lines and the Hangul, Pinyin, measure word, numbers and Hán Việt pages now use recorded AI voices instead of the robotic browser voice on Firefox or Windows.',
+      ],
+      [
+        'Audio được giữ sẵn ở máy chủ gần bạn, nên bấm loa lần đầu phát nhanh hơn.',
+        'Audio is kept on a server near you, so the first tap on a speaker plays sooner.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-22',
     title: [
       'Tiếng Trung: mẫu câu giao tiếp; âm khó cho tiếng Trung và tiếng Hàn; tiếng Hàn: giọng đọc thu sẵn',
