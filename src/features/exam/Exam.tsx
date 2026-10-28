@@ -87,6 +87,8 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
 
   const words = useMemo(() => examWords(exam, pack.words), [exam, pack.words])
   const stageLabel = exam.stageLabel ?? ['từ sơ cấp', 'beginner words']
+  // "1.000" in Vietnamese, "1,000" in English.
+  const count = words.length.toLocaleString(t('vi-VN', 'en-US'))
   const wordsById = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
   const fresh = words.filter((w) => phaseOf(cards[w.id]) === 'new')
   const mastered = words.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
@@ -213,8 +215,8 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
                   `The ${exam.name} list (${words.length} entries): ${learned} learned, ${mastered} mastered.`
                 )
               : t(
-                  `${words.length} ${stageLabel[0]} trong gói: đã học ${learned}, đã thuộc ${mastered}.`,
-                  `${words.length} ${stageLabel[1]} in the pack: ${learned} learned, ${mastered} mastered.`
+                  `${count} ${stageLabel[0]} trong gói: đã học ${learned}, đã thuộc ${mastered}.`,
+                  `${count} ${stageLabel[1]} in the pack: ${learned} learned, ${mastered} mastered.`
                 )}
           </p>
           {fresh.length > 0 ? (

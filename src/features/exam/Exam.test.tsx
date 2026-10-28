@@ -105,11 +105,11 @@ describe('English roadmaps', () => {
     expect(
       screen.getByText(/Reading and Writing: 1 hour, 7 parts, 32 questions/)
     ).toBeInTheDocument()
-    expect(screen.getByText(/1000 core A1–A2 words in the pack/)).toBeInTheDocument()
+    expect(screen.getByText(/1,000 core A1–A2 words in the pack/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Open/ })).toHaveAttribute('href', '/sounds')
     fireEvent.click(screen.getByRole('tab', { name: 'B1 Preliminary' }))
     expect(screen.getByText(/Reading: 45 minutes, 6 parts, 32 questions/)).toBeInTheDocument()
-    expect(screen.getByText(/3440 B1 words in the pack/)).toBeInTheDocument()
+    expect(screen.getByText(/3,440 B1 words in the pack/)).toBeInTheDocument()
   })
 })
 
