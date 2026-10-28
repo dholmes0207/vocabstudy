@@ -90,9 +90,26 @@ describe('HSK 1 roadmap', () => {
   })
 
   it('renders nothing for a pack without an exam', () => {
-    useSettings.setState({ currentLang: 'en' })
+    useSettings.setState({ currentLang: 'ja' })
     const { container } = renderExam()
     expect(container).toBeEmptyDOMElement()
+  })
+})
+
+describe('English roadmaps', () => {
+  it('offers A2 Key and B1 Preliminary, with Cambridge facts and the pack stage as word list', () => {
+    useSettings.setState({ currentLang: 'en' })
+    useData.setState({ pack: json('public/data/en.json') as LanguagePack, status: 'ready' })
+    renderExam()
+    expect(screen.getByRole('tab', { name: 'A2 Key', selected: true })).toBeInTheDocument()
+    expect(
+      screen.getByText(/Reading and Writing: 1 hour, 7 parts, 32 questions/)
+    ).toBeInTheDocument()
+    expect(screen.getByText(/1,000 core A1–A2 words in the pack/)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Open/ })).toHaveAttribute('href', '/sounds')
+    fireEvent.click(screen.getByRole('tab', { name: 'B1 Preliminary' }))
+    expect(screen.getByText(/Reading: 45 minutes, 6 parts, 32 questions/)).toBeInTheDocument()
+    expect(screen.getByText(/3,440 B1 words in the pack/)).toBeInTheDocument()
   })
 })
 

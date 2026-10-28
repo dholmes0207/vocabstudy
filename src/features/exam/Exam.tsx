@@ -86,6 +86,9 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
   const [mode, setMode] = useState<Mode | null>(null)
 
   const words = useMemo(() => examWords(exam, pack.words), [exam, pack.words])
+  const stageLabel = exam.stageLabel ?? ['từ sơ cấp', 'beginner words']
+  // "1.000" in Vietnamese, "1,000" in English.
+  const count = words.length.toLocaleString(t('vi-VN', 'en-US'))
   const wordsById = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
   const fresh = words.filter((w) => phaseOf(cards[w.id]) === 'new')
   const mastered = words.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
@@ -190,10 +193,12 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
       <ol className="space-y-3">
         <Step n={1} title={t(...exam.basics.title)}>
           <p>
-            {t(
-              'Đọc được chữ và nghe ra âm trước khi học từ.',
-              'Read the script and hear the sounds before learning words.'
-            )}
+            {exam.basics.note
+              ? t(...exam.basics.note)
+              : t(
+                  'Đọc được chữ và nghe ra âm trước khi học từ.',
+                  'Read the script and hear the sounds before learning words.'
+                )}
           </p>
           <StepLink to={exam.basics.to}>{t('Mở bài', 'Open')}</StepLink>
         </Step>
@@ -210,8 +215,8 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
                   `The ${exam.name} list (${words.length} entries): ${learned} learned, ${mastered} mastered.`
                 )
               : t(
-                  `${words.length} từ sơ cấp trong gói: đã học ${learned}, đã thuộc ${mastered}.`,
-                  `${words.length} beginner words in the pack: ${learned} learned, ${mastered} mastered.`
+                  `${count} ${stageLabel[0]} trong gói: đã học ${learned}, đã thuộc ${mastered}.`,
+                  `${count} ${stageLabel[1]} in the pack: ${learned} learned, ${mastered} mastered.`
                 )}
           </p>
           {fresh.length > 0 ? (
@@ -279,8 +284,8 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
                   `20 questions from the ${exam.name} list: 10 listening, 10 reading.`
                 )
               : t(
-                  '20 câu lấy từ các từ sơ cấp trong gói: 10 câu nghe, 10 câu đọc.',
-                  '20 questions from the beginner words in the pack: 10 listening, 10 reading.'
+                  `20 câu lấy từ các ${stageLabel[0]} trong gói: 10 câu nghe, 10 câu đọc.`,
+                  `20 questions from the ${stageLabel[1]} in the pack: 10 listening, 10 reading.`
                 )}{' '}
             {t(
               'Đây là bài kiểm tra từ vựng, không phải đề thi thật, và không đổi lịch ôn.',

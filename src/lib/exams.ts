@@ -1,14 +1,14 @@
 import type { QuizQuestion, Word } from '@/types'
 import { makeQuestion } from '@/lib/quiz'
 
-// "Lộ trình luyện thi" (docs/design/exam-track.md). Exam facts were checked on
-// 2026-10-17 against the sources listed with each exam; the page links them and
+// "Lộ trình luyện thi" (docs/design/exam-track.md). Exam facts were checked
+// against the sources listed with each exam, on the date in `checked`; the page links them and
 // asks learners to confirm on the official site before registering.
 
 type Pair = [vi: string, en: string]
 
 export interface Exam {
-  id: 'hsk1' | 'hsk2' | 'topik1'
+  id: 'hsk1' | 'hsk2' | 'topik1' | 'a2key' | 'b1prelim'
   /** The pack this exam belongs to. */
   lang: string
   name: string
@@ -20,8 +20,14 @@ export interface Exam {
   checked: Pair
   /** Headwords the exam expects; null = the whole pack (no list the pack covers). */
   wordList: readonly string[] | null
-  /** The alphabet / sound step that opens the roadmap. */
-  basics: { to: string; title: Pair }
+  /**
+   * Without a list: the pack's words of this curriculum stage (English: 1 = the
+   * core A1–A2 thousand, 2 = the B1 extension), named by `stageLabel`.
+   */
+  stage?: 1 | 2
+  stageLabel?: Pair
+  /** The alphabet / sound step that opens the roadmap, and why it comes first. */
+  basics: { to: string; title: Pair; note?: Pair }
 }
 
 /**
@@ -137,6 +143,104 @@ export const EXAMS: readonly Exam[] = [
     wordList: null,
     basics: { to: '/hangul', title: ['Bảng chữ Hangul', 'The Hangul alphabet'] },
   },
+  {
+    id: 'a2key',
+    lang: 'en',
+    name: 'A2 Key',
+    facts: [
+      [
+        'Đọc và Viết: 1 giờ, 7 phần, 32 câu (50% số điểm).',
+        'Reading and Writing: 1 hour, 7 parts, 32 questions (50% of the marks).',
+      ],
+      [
+        'Nghe: 30 phút (gồm 6 phút chép đáp án), 5 phần, 25 câu (25%).',
+        "Listening: 30 minutes (including 6 minutes' transfer time), 5 parts, 25 questions (25%).",
+      ],
+      [
+        'Nói: 8–10 phút mỗi cặp thí sinh, 2 phần (25%).',
+        'Speaking: 8–10 minutes per pair of candidates, 2 parts (25%).',
+      ],
+      [
+        'Thang điểm Cambridge English: 120–139 đạt A2 (hạng C từ 120, hạng B từ 133); 140–150 là hạng A, tương đương B1; 100–119 nhận chứng chỉ A1.',
+        'Cambridge English Scale: 120–139 is A2 (grade C from 120, grade B from 133); 140–150 is grade A, at B1; 100–119 gets an A1 certificate.',
+      ],
+    ],
+    caveat: [
+      'Từ vựng ở đây là 1.000 từ lõi bậc A1–A2 của app (theo Oxford 3000), gần với danh sách từ chính thức của Cambridge nhưng không trùng khớp. App luyện từ vựng, nghe và đọc; phần Viết chưa có, phần Nói có thể tập ở "Luyện nói". A2 Key for Schools cùng định dạng đề. Trước khi đăng ký, hãy xem lại trên trang của Cambridge.',
+      "The vocabulary here is the app's core 1,000 A1–A2 words (based on the Oxford 3000): close to Cambridge's official word list, but not the same. The app trains vocabulary, listening and reading; there is no writing practice yet, and speaking can be practised in \"Speaking\". A2 Key for Schools has the same format. Check Cambridge's site before you register.",
+    ],
+    checked: ['28/10/2026', '28 Oct 2026'],
+    sources: [
+      {
+        label: 'Cambridge English — A2 Key exam format',
+        url: 'https://www.cambridgeenglish.org/exams-and-tests/key/exam-format/',
+      },
+      {
+        label: 'Cambridge English — A2 Key results',
+        url: 'https://www.cambridgeenglish.org/exams-and-tests/key/results/',
+      },
+    ],
+    wordList: null,
+    stage: 1,
+    stageLabel: ['từ lõi bậc A1–A2', 'core A1–A2 words'],
+    basics: {
+      to: '/sounds',
+      title: ['Âm khó cho người Việt', 'Tricky sounds for Vietnamese speakers'],
+      note: [
+        'Phần nghe của đề cần phân biệt được ship và sheep, nghe ra âm cuối: tập tai trước khi học từ.',
+        'The listening paper needs you to tell ship from sheep and hear final sounds: train your ear before the words.',
+      ],
+    },
+  },
+  {
+    id: 'b1prelim',
+    lang: 'en',
+    name: 'B1 Preliminary',
+    facts: [
+      [
+        'Đọc: 45 phút, 6 phần, 32 câu (25% số điểm). Viết: 45 phút, 2 phần (25%).',
+        'Reading: 45 minutes, 6 parts, 32 questions (25% of the marks). Writing: 45 minutes, 2 parts (25%).',
+      ],
+      [
+        'Nghe: 30 phút (gồm 6 phút chép đáp án), 4 phần, 25 câu (25%).',
+        "Listening: 30 minutes (including 6 minutes' transfer time), 4 parts, 25 questions (25%).",
+      ],
+      [
+        'Nói: 10–12 phút mỗi cặp thí sinh, 4 phần (25%).',
+        'Speaking: 10–12 minutes per pair of candidates, 4 parts (25%).',
+      ],
+      [
+        'Thang điểm Cambridge English: 140–159 đạt B1 (hạng C từ 140, hạng B từ 153); 160–170 là hạng A, tương đương B2; 120–139 nhận chứng chỉ A2.',
+        'Cambridge English Scale: 140–159 is B1 (grade C from 140, grade B from 153); 160–170 is grade A, at B2; 120–139 gets an A2 certificate.',
+      ],
+    ],
+    caveat: [
+      'Từ vựng ở đây là phần mở rộng bậc B1 của app (theo Oxford 3000), học sau 1.000 từ lõi; gần với danh sách từ chính thức của Cambridge nhưng không trùng khớp. App luyện từ vựng, nghe và đọc; phần Viết chưa có, phần Nói có thể tập ở "Luyện nói". Trước khi đăng ký, hãy xem lại trên trang của Cambridge.',
+      "The vocabulary here is the app's B1 extension (based on the Oxford 3000), learned after the core 1,000: close to Cambridge's official word list, but not the same. The app trains vocabulary, listening and reading; there is no writing practice yet, and speaking can be practised in \"Speaking\". Check Cambridge's site before you register.",
+    ],
+    checked: ['28/10/2026', '28 Oct 2026'],
+    sources: [
+      {
+        label: 'Cambridge English — B1 Preliminary exam format',
+        url: 'https://www.cambridgeenglish.org/exams-and-tests/preliminary/exam-format/',
+      },
+      {
+        label: 'Cambridge English — B1 Preliminary results',
+        url: 'https://www.cambridgeenglish.org/exams-and-tests/preliminary/results/',
+      },
+    ],
+    wordList: null,
+    stage: 2,
+    stageLabel: ['từ bậc B1', 'B1 words'],
+    basics: {
+      to: '/sounds',
+      title: ['Âm khó cho người Việt', 'Tricky sounds for Vietnamese speakers'],
+      note: [
+        'Phần nghe của đề cần phân biệt được ship và sheep, nghe ra âm cuối: tập tai trước khi học từ.',
+        'The listening paper needs you to tell ship from sheep and hear final sounds: train your ear before the words.',
+      ],
+    },
+  },
 ]
 
 /** The exams of a pack, easiest first (HSK 1, HSK 2…). */
@@ -152,6 +256,7 @@ export function examFor(lang: string, id?: string | null): Exam | undefined {
 
 /** The pack's words the exam expects, in the pack's learning order. */
 export function examWords(exam: Exam, words: readonly Word[]): Word[] {
+  if (!exam.wordList && exam.stage) return words.filter((w) => (w.stage ?? 1) === exam.stage)
   if (!exam.wordList) return [...words]
   const wanted = new Set(exam.wordList)
   return words.filter((w) => wanted.has(w.word))
