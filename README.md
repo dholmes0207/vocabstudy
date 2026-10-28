@@ -62,6 +62,8 @@ Mỗi từ và câu ví dụ đều có **file MP3 giọng đọc AI (Neural) ch
 **Tiếng Hàn, tiếng Trung:** cùng cách làm, mỗi gói có hai giọng riêng (SunHi / InJoon, Xiaoxiao / Yunxi), khai báo trong `VOICES_BY_CODE` của `scripts/generate_audio.py`. Sinh bằng workflow **"Generate audio"** trên GitHub (tab Actions → Run workflow → chọn gói): workflow ghi từ, câu ví dụ, mẫu câu, chạy `src/lib/packAudio.test.ts` rồi đẩy lên nhánh `chore/audio-<gói>`. Khi gói chưa có `public/audio/<gói>/index.json`, app đọc bằng giọng của trình duyệt như trước.
 
 **Lưu trữ:** `public/audio/` trong repo là nguồn gốc; bản deploy lấy audio từ bucket Cloudflare R2 (workflow **"Sync audio to R2"** tự đồng bộ khi `main` đổi audio), vì Pages giới hạn 20.000 file mỗi lần deploy. Chi tiết: [`docs/design/audio-r2.md`](docs/design/audio-r2.md).
+
+**Câu ngoài gói từ:** cụm "Hay đi chung với", câu ngữ pháp, câu truyện và những gì các trang Hangul, Pinyin, Lượng từ, Nghe số, Hán Việt đọc (khoảng 15.000 câu) cũng có giọng thu sẵn. Các file này không nằm trong repo: workflow **"Record sentence audio to R2"** thu bằng `scripts/generate_text_audio.py` rồi đưa thẳng lên R2, đặt tên theo dấu vân tay của câu, và chỉ thu câu mới mỗi khi `main` đổi dữ liệu. Câu chưa thu thì app đọc bằng giọng trình duyệt.
 ---
 
 ## 🤖 Trợ lý AI (có Guardrail, chạy server-side)
