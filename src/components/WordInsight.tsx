@@ -8,6 +8,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useMySentence } from '@/store/notesStore'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
+import { useWordDetails } from '@/hooks/useWordDetails'
 import HanViet from './HanViet'
 import HanVietFamily from './HanVietFamily'
 import { examLabelFor } from '@/lib/exams'
@@ -37,6 +38,7 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
   const lang = useSettings((s) => s.currentLang)
   const mine = useMySentence(lang, word.id)
   const t = useT()
+  const { collocations, tip, family } = useWordDetails(word)
   const readLabel = useReadingLabel('đọc gần giống', 'reads like')
   const exam = examLabelFor(lang, word)
   return (
@@ -116,10 +118,10 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
         </div>
       )}
 
-      {deep && word.collocations && word.collocations.length > 0 && (
+      {deep && collocations && collocations.length > 0 && (
         <Section icon={Link2} title={t('Hay đi chung với', 'Common phrases')}>
           <ul className="space-y-1.5">
-            {word.collocations.map((c) => (
+            {collocations.map((c) => (
               <li key={c.en} className="flex items-center gap-2">
                 <SpeakButton
                   text={c.en}
@@ -139,10 +141,10 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
         </Section>
       )}
 
-      {deep && word.family && word.family.length > 0 && (
+      {deep && family && family.length > 0 && (
         <Section icon={Sprout} title={t('Cùng họ với', 'Word family')}>
           <ul className="flex flex-wrap gap-2">
-            {word.family.map((f) => (
+            {family.map((f) => (
               <li
                 key={f.word}
                 className="rounded-lg border border-slate-200 px-2.5 py-1 text-sm dark:border-slate-700"
@@ -166,10 +168,10 @@ export default function WordInsight({ word, ttsLang, variant = 'full', className
         </p>
       )}
 
-      {word.tip && (
+      {tip && (
         <div className="flex gap-2.5 rounded-xl bg-amber-50 p-3.5 text-left text-sm text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">
           <Lightbulb className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-          <p>{word.tip}</p>
+          <p>{tip}</p>
         </div>
       )}
     </div>

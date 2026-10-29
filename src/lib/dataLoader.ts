@@ -1,5 +1,6 @@
 import type { DataManifest, LanguagePack } from '@/types'
 import { tx } from './i18n'
+import type { PackDetails } from './packDetails'
 
 // Loads the manifest and language packs from /public/data. Uses BASE_URL so it
 // works whether the site is hosted at a domain root or a sub-path.
@@ -27,6 +28,22 @@ export async function loadPack(code: string): Promise<LanguagePack> {
   const pack = (await res.json()) as LanguagePack
   validatePack(pack, code)
   return pack
+}
+
+/**
+ * The details split off the pack at build time (lib/packDetails.ts). Empty when
+ * the file is missing — the dev server ships packs whole — or unreachable: the
+ * card then simply shows fewer sections.
+ */
+export async function loadDetails(code: string): Promise<PackDetails> {
+  try {
+    const res = await fetch(`${base}data/${code}.details.json`)
+    if (!res.ok) return {}
+    const details = (await res.json()) as unknown
+    return details && typeof details === 'object' ? (details as PackDetails) : {}
+  } catch {
+    return {}
+  }
 }
 
 function validatePack(pack: LanguagePack, code: string): void {

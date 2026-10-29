@@ -8,10 +8,14 @@ import path from 'node:path'
 import { existsSync, readFileSync } from 'node:fs'
 import { readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import type { ContentStats, PackStats } from './src/lib/contentStats'
+import { splitPack } from './src/lib/packDetails'
 
 // public/data/*.json stays pretty-printed in the repo (readable diffs for the
 // word scripts); the copy we ship is minified. A third smaller to download and,
 // more importantly on phones, to JSON.parse before the app can start.
+// A language pack (<code>.json) also leaves its card details (collocations,
+// tip, family) in <code>.details.json, fetched after the first screen: over
+// half of the English pack (src/lib/packDetails.ts).
 function minifyPacks(): Plugin {
   let dataDir = ''
   return {
@@ -29,7 +33,14 @@ function minifyPacks(): Plugin {
       }
       for (const name of files.filter((f) => f.endsWith('.json'))) {
         const file = path.join(dataDir, name)
-        await writeFile(file, JSON.stringify(JSON.parse(await readFile(file, 'utf8'))))
+        const data = JSON.parse(await readFile(file, 'utf8'))
+        if (/^[a-z]{2,3}\.json$/.test(name) && Array.isArray(data.words)) {
+          const { core, details } = splitPack(data)
+          await writeFile(file, JSON.stringify(core))
+          await writeFile(file.replace(/\.json$/, '.details.json'), JSON.stringify(details))
+        } else {
+          await writeFile(file, JSON.stringify(data))
+        }
       }
     },
   }
