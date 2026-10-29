@@ -54,6 +54,7 @@ export default function SpeakAloud({
     )
     handle.current = listenOnce({
       lang,
+      accept: (heard) => scoreSentence(items[i].en, heard, lang).score === 100,
       onResult: (alts) =>
         setRow(i, { kind: 'scored', result: scoreSentence(items[i].en, alts, lang) }),
       onError: (reason) => setRow(i, { kind: 'error', reason }),

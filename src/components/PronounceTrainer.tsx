@@ -177,6 +177,7 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
     if (canRecognize) {
       listener.current = listenOnce({
         lang: ttsLang,
+        accept: (heard) => scorePronunciation(word.word, heard).score === 100,
         onResult: (alts) => finish(id, alts, null),
         onError: (reason) =>
           finish(id, null, reason === 'no-speech' ? null : recognitionErrorMessage(reason)),
