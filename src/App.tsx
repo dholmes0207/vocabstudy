@@ -9,7 +9,11 @@ import FeedbackDialog from './components/FeedbackDialog'
 import { useAuth } from './store/authStore'
 import { useSettings } from './store/settingsStore'
 
-const Dashboard = lazy(() => import('./features/dashboard/Dashboard'))
+const loadDashboard = () => import('./features/dashboard/Dashboard')
+const Dashboard = lazy(loadDashboard)
+// A returning learner opens /home. Its code would otherwise only be fetched once
+// the language pack is ready; start both together.
+if (typeof location !== 'undefined' && location.pathname === '/home') void loadDashboard()
 const Learn = lazy(() => import('./features/learn/Learn'))
 const Review = lazy(() => import('./features/review/Review'))
 const Quiz = lazy(() => import('./features/quiz/Quiz'))

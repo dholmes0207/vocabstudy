@@ -90,7 +90,9 @@ function assetUrlsFrom(html, baseUrl, origin) {
 /**
  * Language-pack URLs listed by the data manifest. The app cannot render a
  * single card without its pack, so offline-after-one-visit is only true if the
- * pack is warmed at install. Audio is deliberately left out — 57 MB is not
+ * pack is warmed at install. Each pack's details file (collocations, tips,
+ * families, split off at build time) is warmed with it, so an opened card is
+ * complete offline too. Audio is deliberately left out — 57 MB is not
  * something to download behind someone's back.
  *
  * Pure and side-effect free — see swRoute.test.ts.
@@ -106,6 +108,7 @@ function packUrlsFrom(manifest, baseUrl) {
     if (!file && !code) continue
     try {
       urls.push(new URL(`data/${file ?? `${code}.json`}`, baseUrl).href)
+      if (code) urls.push(new URL(`data/${code}.details.json`, baseUrl).href)
     } catch (e) {
       /* skip a malformed entry rather than fail the install */
     }

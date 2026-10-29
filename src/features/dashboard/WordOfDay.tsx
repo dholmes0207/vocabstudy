@@ -10,6 +10,7 @@ import { wordAudio } from '@/lib/audio'
 import SpeakButton from '@/components/SpeakButton'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
+import { useWordDetails } from '@/hooks/useWordDetails'
 
 /**
  * "Từ của ngày": one word worth a second look — something already met but not
@@ -21,7 +22,8 @@ export default function WordOfDay() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards) ?? NO_CARDS
   const w = useMemo(() => wordOfDay(pack.words, cards, today()), [pack.words, cards])
-  const chunk = w.collocations?.[0]
+  const { collocations, tip } = useWordDetails(w)
+  const chunk = collocations?.[0]
   const t = useT()
   const readLabel = useReadingLabel('đọc:', 'reads like:')
 
@@ -57,10 +59,10 @@ export default function WordOfDay() {
           <b>{chunk.en}</b> — {chunk.vi}
         </p>
       )}
-      {w.tip && (
+      {tip && (
         <p className="mt-2 flex gap-2 text-sm text-slate-500 dark:text-slate-400">
           <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" aria-hidden />
-          <span>{w.tip}</span>
+          <span>{tip}</span>
         </p>
       )}
       <Link

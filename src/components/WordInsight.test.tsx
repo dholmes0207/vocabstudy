@@ -1,5 +1,5 @@
 /** @vitest-environment jsdom */
-import { cleanup, render, screen } from '@testing-library/react'
+import { act, cleanup, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import WordInsight from './WordInsight'
@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs'
 import { useSettings } from '@/store/settingsStore'
 import { useData } from '@/store/dataStore'
 import type { LanguagePack, Word } from '@/types'
+import { splitPack } from '@/lib/packDetails'
 
 beforeEach(() => useSettings.setState({ uiLang: 'vi' }))
 afterEach(cleanup)
@@ -67,5 +68,20 @@ describe('Hán Việt on a word card', () => {
     useData.setState({ pack: en })
     render(<WordInsight word={en.words[0]} ttsLang="en-US" />)
     expect(screen.queryByText('Cùng chữ Hán Việt')).toBeNull()
+  })
+})
+
+describe('details shipped apart from the pack', () => {
+  it('shows collocations and the tip once the details file has arrived', () => {
+    const { core, details } = splitPack(pack('en'))
+    const the = core.words.find((w) => w.word === 'the')!
+    useSettings.setState({ currentLang: 'en' })
+    useData.setState({ pack: core, details: null })
+    render(<WordInsight word={the} ttsLang="en-US" />)
+    expect(screen.queryByText('in the morning')).toBeNull()
+
+    act(() => useData.setState({ details }))
+    expect(screen.getByText('in the morning')).toBeInTheDocument()
+    expect(screen.getByText(details[the.id].tip!)).toBeInTheDocument()
   })
 })

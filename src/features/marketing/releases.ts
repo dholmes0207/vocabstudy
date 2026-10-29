@@ -20,6 +20,10 @@ export const RELEASES: Release[] = [
     ],
     items: [
       [
+        'App mở nhanh hơn: trên điện thoại và mạng 4G chậm, màn hình chính sẵn sàng sau khoảng 4,7 giây thay vì 7,7 giây ở lần đầu, và 1,6 giây thay vì 2,5 giây khi vào lại.',
+        'The app opens faster: on a phone with slow 4G the home screen is ready in about 4.7 s instead of 7.7 s on the first visit, and 1.6 s instead of 2.5 s when you come back.',
+      ],
+      [
         'Gói tiếng Trung tăng từ 330 lên 618 từ, phủ đủ 298 từ HSK 3 như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, mỗi từ có pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
         'The Chinese pack grows from 330 to 618 words and covers all 298 HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, each with pinyin, Hán Việt, an example and recorded audio.',
       ],

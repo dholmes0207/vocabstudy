@@ -232,19 +232,25 @@ describe('service worker — which language packs to warm', () => {
     const manifest = { defaultLang: 'en', languages: [{ code: 'en' }, { code: 'fr' }] }
     expect(sw.packUrlsFrom(manifest, BASE)).toEqual([
       'https://vocastudy.app/data/en.json',
+      'https://vocastudy.app/data/en.details.json',
       'https://vocastudy.app/data/fr.json',
+      'https://vocastudy.app/data/fr.details.json',
     ])
   })
 
   it('honours an explicit file name when the manifest gives one', () => {
     const manifest = { languages: [{ code: 'en', file: 'en-v2.json' }] }
-    expect(sw.packUrlsFrom(manifest, BASE)).toEqual(['https://vocastudy.app/data/en-v2.json'])
+    expect(sw.packUrlsFrom(manifest, BASE)).toEqual([
+      'https://vocastudy.app/data/en-v2.json',
+      'https://vocastudy.app/data/en.details.json',
+    ])
   })
 
   it('resolves against the document for sub-path hosting', () => {
     const manifest = { languages: [{ code: 'en' }] }
     expect(sw.packUrlsFrom(manifest, 'https://host/vocab/')).toEqual([
       'https://host/vocab/data/en.json',
+      'https://host/vocab/data/en.details.json',
     ])
   })
 
@@ -254,6 +260,7 @@ describe('service worker — which language packs to warm', () => {
     expect(sw.packUrlsFrom({ languages: 'nope' }, BASE)).toEqual([])
     expect(sw.packUrlsFrom({ languages: [{}, { code: '' }, { code: 'en' }] }, BASE)).toEqual([
       'https://vocastudy.app/data/en.json',
+      'https://vocastudy.app/data/en.details.json',
     ])
   })
 

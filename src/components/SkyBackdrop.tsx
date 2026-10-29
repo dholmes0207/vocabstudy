@@ -17,20 +17,36 @@ export default function SkyBackdrop() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const fxRef = useRef<HTMLCanvasElement>(null)
   const controller = useRef<SkyController | null>(null)
+  const calmRef = useRef(calm)
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas || effects === 'off') return
-    const sky = startSky(canvas, fxRef.current, { effects, snow, trail })
-    controller.current = sky
+    let sky: SkyController | null = null
+    // Once the first screen is up: sizing the sky took ~200 ms of a slow
+    // phone's main thread right while the dashboard was rendering. The CSS
+    // gradient behind it is there from the first paint; the stars fade in.
+    const start = () => {
+      sky = startSky(canvas, fxRef.current, { effects, snow, trail })
+      sky.setCalm(calmRef.current)
+      controller.current = sky
+      canvas.dataset.on = ''
+    }
+    const idle = typeof window.requestIdleCallback === 'function'
+    const handle = idle
+      ? window.requestIdleCallback(start, { timeout: 1500 })
+      : window.setTimeout(start, 300)
     return () => {
-      sky.stop()
+      if (idle) window.cancelIdleCallback(handle)
+      else clearTimeout(handle)
+      sky?.stop()
       controller.current = null
     }
   }, [effects, snow, trail])
 
   // Also re-run after a restart (settings changed) so the new sky starts calm too.
   useEffect(() => {
+    calmRef.current = calm
     controller.current?.setCalm(calm)
   }, [calm, effects, snow, trail])
 
