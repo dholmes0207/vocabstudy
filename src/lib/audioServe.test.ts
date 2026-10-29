@@ -47,6 +47,17 @@ describe('byteSpan', () => {
     expect(byteSpan({ suffix: 5000 }, 1000)).toEqual({ start: 0, end: 999 })
   })
 
+  it('reads an open-ended range whose suffix key holds undefined', () => {
+    // What R2 returned for "bytes=0-": it became "bytes NaN-999/1000", a 206
+    // the player rejects, so a clip's first play fell back to the robot voice.
+    expect(byteSpan({ offset: 0, suffix: undefined }, 1000)).toEqual({ start: 0, end: 999 })
+    expect(byteSpan({ suffix: undefined }, 1000)).toEqual({ start: 0, end: 999 })
+    expect(byteSpan({ offset: 300, length: undefined, suffix: undefined }, 1000)).toEqual({
+      start: 300,
+      end: 999,
+    })
+  })
+
   it('is null without a range', () => {
     expect(byteSpan(undefined, 1000)).toBeNull()
   })

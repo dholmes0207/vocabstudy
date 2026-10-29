@@ -12,6 +12,7 @@ import { useStudy } from '@/store/studyStore'
 // Korean counters on the "Lượng từ" page (docs/design/measure-words.md).
 
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: () => {},
   stopPronounce: () => {},
   textAudio: () => '',

@@ -22,8 +22,15 @@ export function audioContentType(key: string): string {
   return key.endsWith('.json') ? 'application/json' : 'audio/mpeg'
 }
 
-/** The part of an object R2 returned for a Range request (its R2Range). */
-export type ByteRange = { offset?: number; length?: number } | { suffix: number }
+/**
+ * The part of an object R2 returned for a Range request (its R2Range). For an
+ * open-ended range ("bytes=0-", what players send first) R2 hands back an
+ * object that has a `suffix` key holding undefined, so the shape is read from
+ * the values, never from which keys exist.
+ */
+export type ByteRange = { offset?: number; length?: number; suffix?: number }
+
+const count = (n: number | undefined) => (typeof n === 'number' && Number.isFinite(n) ? n : null)
 
 /** First and last byte of a range, for Content-Range; null when there is none. */
 export function byteSpan(
@@ -31,10 +38,10 @@ export function byteSpan(
   size: number
 ): { start: number; end: number } | null {
   if (!range || size <= 0) return null
-  if ('suffix' in range) {
-    return { start: Math.max(0, size - range.suffix), end: size - 1 }
-  }
-  const start = range.offset ?? 0
-  const end = range.length === undefined ? size - 1 : start + range.length - 1
+  const suffix = count(range.suffix)
+  if (suffix !== null) return { start: Math.max(0, size - suffix), end: size - 1 }
+  const start = count(range.offset) ?? 0
+  const length = count(range.length)
+  const end = length === null ? size - 1 : start + length - 1
   return { start, end: Math.min(end, size - 1) }
 }

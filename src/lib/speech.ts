@@ -84,9 +84,19 @@ export interface ListenOptions {
   onStart?: () => void
   /** Fired exactly once when the session is over, whatever the outcome. */
   onEnd?: () => void
+  /**
+   * Grade early: given what has been heard so far, true when it already is a
+   * full match. The recognizer otherwise waits for a stretch of silence before
+   * its final result (most of a second), so a learner who said it right waits
+   * for nothing. Only a perfect match should pass: anything less waits for the
+   * final n-best list, which is more forgiving.
+   */
+  accept?: (heardSoFar: string[]) => boolean
 }
 
 const MAX_ALTERNATIVES = 5
+/** How long an early full match must stand before it is graded (see `accept`). */
+const ACCEPT_AFTER_MS = 300
 
 /**
  * Listen for a single utterance. Returns null when recognition is unavailable
@@ -106,7 +116,7 @@ export function listenOnce(opts: ListenOptions): ListenHandle | null {
   const rec = new Ctor()
   rec.lang = opts.lang
   rec.continuous = false
-  rec.interimResults = false
+  rec.interimResults = !!opts.accept
   // Ask for several guesses: the top one is often not the most charitable
   // reading of a learner's accent, and the scorer checks them all.
   rec.maxAlternatives = MAX_ALTERNATIVES
@@ -120,8 +130,32 @@ export function listenOnce(opts: ListenOptions): ListenHandle | null {
 
   rec.onaudiostart = () => opts.onStart?.()
 
+  // A full match heard early is graded once it has held for a moment: an
+  // interim guess can match while the learner is still mid-word ("cat" on the
+  // way to "category"), and the next result then replaces it.
+  let early: ReturnType<typeof setTimeout> | undefined
+  let matched: string | null = null
   rec.onresult = (e) => {
+    clearTimeout(early)
+    matched = null
     const result = e.results[e.results.length - 1]
+    if (result.isFinal === false) {
+      // An utterance can arrive as several results; the words so far are the
+      // top guess of each.
+      let soFar = ''
+      for (let i = 0; i < e.results.length; i++) soFar += e.results[i][0]?.transcript ?? ''
+      if (!opts.accept?.([soFar])) return
+      matched = soFar
+      early = setTimeout(() => {
+        settle(() => opts.onResult([soFar]))
+        try {
+          rec.stop()
+        } catch {
+          /* already stopped */
+        }
+      }, ACCEPT_AFTER_MS)
+      return
+    }
     const alts: string[] = []
     for (let i = 0; i < result.length; i++) alts.push(result[i].transcript)
     settle(() => opts.onResult(alts))
@@ -141,6 +175,10 @@ export function listenOnce(opts: ListenOptions): ListenHandle | null {
   }
 
   rec.onend = () => {
+    clearTimeout(early)
+    // Ended on a full match still waiting out its moment: that is the answer.
+    const heard = matched
+    if (heard !== null) settle(() => opts.onResult([heard]))
     // The session can end silently — treat that as "heard nothing" rather than
     // leaving the UI stuck on "đang nghe".
     settle(() => opts.onError('no-speech'))
@@ -166,6 +204,7 @@ export function listenOnce(opts: ListenOptions): ListenHandle | null {
     },
     abort: () => {
       settled = true
+      clearTimeout(early)
       try {
         rec.abort()
       } catch {

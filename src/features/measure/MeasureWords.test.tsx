@@ -12,6 +12,7 @@ import { useStudy } from '@/store/studyStore'
 // "Lượng từ" (docs/design/measure-words.md) with the real Chinese pack.
 
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: () => {},
   stopPronounce: () => {},
   textAudio: () => '',

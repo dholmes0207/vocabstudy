@@ -19,7 +19,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useReading } from '@/store/readingStore'
-import { pronounce, stopPronounce, textAudio, wordAudio } from '@/lib/audio'
+import { prefetchAudio, pronounce, stopPronounce, textAudio, wordAudio } from '@/lib/audio'
 import {
   buildGlossary,
   glossInLine,
@@ -216,6 +216,11 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
     },
     []
   )
+
+  // Every sentence's clip as the story opens, and a tapped word's: the first
+  // tap otherwise waits 1–2 s on mobile data.
+  useEffect(() => prefetchAudio(story.sentences.map((s) => textAudio(s.en))), [story])
+  useEffect(() => prefetchAudio([gloss && wordAudio(gloss.id)]), [gloss])
 
   if (quiz) return <StoryQuiz story={story} nextStory={next} onBack={() => setQuiz(false)} />
   if (dictate)

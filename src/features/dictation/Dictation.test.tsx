@@ -12,6 +12,7 @@ import { useNoTypingStore } from '@/store/noTypingStore'
 // the sentence is built from tiles instead of typed.
 
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: () => {},
   stopPronounce: () => {},
   exampleAudio: () => '',

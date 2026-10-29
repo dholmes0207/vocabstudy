@@ -4,7 +4,7 @@ import { Ear, RotateCcw, Volume2 } from 'lucide-react'
 import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { pronounce, wordAudio } from '@/lib/audio'
+import { prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 import { SOUND_LESSONS, earRound, lessonText, type EarRound, type SoundLesson } from '@/lib/sounds'
 import { nudge, praise } from '@/lib/encourage'
 import { buzz } from '@/lib/sound'
@@ -228,6 +228,14 @@ function EarTest({
   const lang = useUiLang()
 
   const next = () => {
+    // The test's first round warms every word it can ask: later rounds play at once.
+    if (!round)
+      prefetchAudio(
+        pairs
+          .flat()
+          .map((w) => byWord.get(w.toLowerCase()))
+          .map((w) => w && wordAudio(w.id))
+      )
     const r = earRound(pairs)
     setRound(r)
     setPicked(null)

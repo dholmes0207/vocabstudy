@@ -88,18 +88,47 @@ export function phraseAudio(id: number, text?: string): string {
 // Clips already pulled into the HTTP cache this session, so a learner tapping
 // back and forth doesn't re-issue requests.
 const prefetched = new Set<string>()
+// Clips the server does not have (yet): played with the browser's voice
+// straight away instead of after a round trip that ends in a 404.
+const missing = new Set<string>()
+// A ready <audio> per prefetched clip. A fresh element still has to load and
+// decode the cached file (110–130 ms on a slow phone); a ready one starts in a
+// couple of milliseconds. Bounded, oldest dropped first.
+const ready = new Map<string, HTMLAudioElement>()
+const READY_MAX = 24
+
+function keepReady(url: string, audio: HTMLAudioElement): void {
+  ready.delete(url)
+  ready.set(url, audio)
+  while (ready.size > READY_MAX) ready.delete(ready.keys().next().value!)
+}
+
+/** The learner asked the browser to save data: don't fetch ahead of a tap. */
+function savingData(): boolean {
+  if (typeof navigator === 'undefined') return false
+  return !!(navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
+}
 
 /**
- * Warm the browser cache for clips that are about to be needed. Without this
- * the first tap on a speaker pays a full round-trip — very visible on iOS
- * Safari over mobile data. Failures are ignored: playback still falls back to
- * Web Speech on its own.
+ * Warm the clips that are about to be needed: into the HTTP cache (iOS Safari
+ * ignores preload) and into a ready <audio> element. Without this the first
+ * tap on a speaker pays a full round trip — 1–2 s on mobile data. Failures are
+ * ignored: playback still falls back to Web Speech on its own.
  */
 export function prefetchAudio(urls: (string | undefined | null)[]): void {
+  if (savingData()) return
   for (const url of urls) {
     if (!url || prefetched.has(url)) continue
     prefetched.add(url)
-    void fetch(url, { cache: 'force-cache' }).catch(() => {})
+    void fetch(url, { cache: 'force-cache' })
+      .then((res) => {
+        if (res.status === 404) return void missing.add(url)
+        if (!res.ok || typeof Audio === 'undefined') return
+        const audio = new Audio(url)
+        audio.preload = 'auto'
+        keepReady(url, audio)
+      })
+      .catch(() => {})
   }
 }
 
@@ -138,32 +167,47 @@ export function pronounce(opts: PronounceOptions): void {
   stopPronounce()
   const { audioSrc, text, lang, rate = 1, onStart, onEnd } = opts
 
-  if (!audioSrc) {
+  if (!audioSrc || missing.has(audioSrc)) {
     speak(text, { lang, rate, onStart, onEnd })
     return
   }
 
-  const audio = new Audio(audioSrc)
+  // A ready element is reused, and handed back once this play is over so a
+  // second tap is just as quick.
+  const warm = ready.get(audioSrc)
+  ready.delete(audioSrc)
+  const audio = warm ?? new Audio(audioSrc)
+  if (warm) audio.currentTime = 0
   audio.playbackRate = clampRate(rate)
   current = audio
 
   let settled = false // guards against double-handling (error + play().catch)
+  const done = () => {
+    audio.removeEventListener('playing', onPlaying)
+    audio.removeEventListener('ended', onEnded)
+    audio.removeEventListener('error', fallback)
+  }
   const fallback = () => {
     if (settled) return
     settled = true
+    done()
     if (current === audio) current = null
     speak(text, { lang, rate, onStart, onEnd })
   }
-
-  audio.addEventListener('playing', () => {
+  const onPlaying = () => {
     if (settled) return
     settled = true
     onStart?.()
-  })
-  audio.addEventListener('ended', () => {
+  }
+  const onEnded = () => {
+    done()
     if (current === audio) current = null
+    keepReady(audioSrc, audio)
     onEnd?.()
-  })
+  }
+
+  audio.addEventListener('playing', onPlaying)
+  audio.addEventListener('ended', onEnded)
   audio.addEventListener('error', fallback)
   audio.play().catch(fallback)
 }
