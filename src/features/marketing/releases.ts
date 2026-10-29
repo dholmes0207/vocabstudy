@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-10-29',
+    title: ['Tiếng Trung: bắt đầu HSK 3', 'Chinese: HSK 3 begins'],
+    items: [
+      [
+        'Gói tiếng Trung tăng từ 330 lên 380 từ: 50 từ HSK 3 dùng nhiều nhất như 把 / 被, 如果, 应该, 一定, 而且, 然后, 决定, 机会…, đủ pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
+        'The Chinese pack grows from 330 to 380 words: the 50 most used HSK 3 words such as 把 / 被, 如果, 应该, 一定, 而且, 然后, 决定, 机会…, each with pinyin, Hán Việt, an example and recorded audio.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-28',
     title: [
       'Tiếng Anh: lộ trình luyện thi A2 Key và B1 Preliminary; giọng thu sẵn cho mọi câu; audio tải nhanh hơn',

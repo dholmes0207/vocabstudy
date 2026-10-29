@@ -353,6 +353,56 @@ ROWS = '''
 准备 | zhǔnbèi | v. | verb | chuẩn bị | 我|在|准备|考试。 | Tôi đang chuẩn bị cho kỳ thi. | 📋
 自行车 | zìxíngchē | n. | noun | xe đạp | 我|骑|自行车|去|学校。 | Tôi đạp xe đến trường. | 🚲
 最 | zuì | adv. | adverb | nhất | 我|最|喜欢|夏天。 | Tôi thích mùa hè nhất. | 🏅
+啊 | a | part. | other | à, quá, nhỉ (trợ từ cảm thán cuối câu) | 今天|天气|真|好|啊！ | Hôm nay trời đẹp quá! | 😮
+把 | bǎ | prep. | preposition | (đưa tân ngữ lên trước động từ: đem, lấy) | 请|把|门|关|上。 | Làm ơn đóng cửa lại. | 🚪
+被 | bèi | prep. | preposition | bị (câu bị động) | 我|的|自行车|被|人|骑|走|了。 | Xe đạp của tôi bị người ta lấy mất rồi. | 🚲
+自己 | zìjǐ | pron. | pronoun | tự mình, bản thân | 我|自己|做|饭。 | Tôi tự nấu cơm. | 🙋
+如果 | rúguǒ | conj. | conjunction | nếu | 如果|明天|下雨，|我|就|不|去|了。 | Nếu mai trời mưa thì tôi không đi nữa. | 🌧️
+又 | yòu | adv. | adverb | lại (lặp lại, đã xảy ra) | 他|今天|又|迟到|了。 | Hôm nay anh ấy lại đến muộn. | 🔁
+更 | gèng | adv. | adverb | càng, hơn nữa | 我|更|喜欢|喝|茶。 | Tôi thích uống trà hơn. | ⬆️
+需要 | xūyào | v. | verb | cần (có), cần đến | 你|需要|帮助|吗？ | Bạn có cần giúp không? | 🆘
+地 | de | part. | other | (trợ từ: nối trạng ngữ với động từ) | 他|高兴|地|笑|了。 | Anh ấy cười vui vẻ. | 🔗
+才 | cái | adv. | adverb | mới (muộn hơn dự kiến) | 他|十|点|才|起床。 | Mười giờ anh ấy mới dậy. | ⏰
+跟 | gēn | prep. | preposition | với, cùng (ai) | 我|跟|妈妈|去|商店。 | Tôi đi cửa hàng với mẹ. | 👩‍👦
+像 | xiàng | v. | verb | giống (như) | 你|很|像|你|妈妈。 | Bạn rất giống mẹ bạn. | 🪞
+还是 | háishi | conj. | conjunction | hay là (câu hỏi lựa chọn) | 你|喝|茶|还是|喝|咖啡？ | Bạn uống trà hay uống cà phê? | 🤔
+认为 | rènwéi | v. | verb | cho rằng | 我|认为|他|说|得|对。 | Tôi cho rằng anh ấy nói đúng. | 💭
+应该 | yīnggāi | v. | verb | nên | 你|应该|多|休息。 | Bạn nên nghỉ ngơi nhiều hơn. | 💡
+位 | wèi | m. | other | vị (lượng từ lịch sự cho người) | 这|位|是|王|老师。 | Vị này là thầy Vương. | 🎩
+种 | zhǒng | m. | other | loại, kiểu | 我|喜欢|这|种|水果。 | Tôi thích loại trái cây này. | 🍇
+发现 | fāxiàn | v. | verb | phát hiện, nhận ra | 我|发现|钱包|不|见|了。 | Tôi phát hiện ví tiền không thấy đâu nữa. | 🔍
+一定 | yídìng | adv. | adverb | nhất định, chắc chắn | 我|明天|一定|来。 | Mai tôi nhất định sẽ đến. | ✅
+一直 | yìzhí | adv. | adverb | suốt, liên tục | 他|一直|在|学习。 | Anh ấy học suốt từ nãy đến giờ. | ➡️
+为了 | wèile | prep. | preposition | để, vì (mục đích) | 为了|学|汉语，|他|去|了|中国。 | Để học tiếng Trung, anh ấy đã sang Trung Quốc. | 🎯
+一样 | yíyàng | adj. | adjective | giống nhau | 我们|的|衣服|一样。 | Quần áo của chúng ta giống nhau. | 👯
+世界 | shìjiè | n. | noun | thế giới | 我|想|去|看看|世界。 | Tôi muốn đi ngắm thế giới. | 🌍
+而且 | érqiě | conj. | conjunction | mà còn, hơn nữa | 她|很|漂亮，|而且|很|聪明。 | Cô ấy rất xinh, mà còn rất thông minh. | ➕
+重要 | zhòngyào | adj. | adjective | quan trọng | 身体|很|重要。 | Sức khỏe rất quan trọng. | ❗
+必须 | bìxū | adv. | adverb | phải, bắt buộc | 你|必须|早|点|睡觉。 | Bạn phải đi ngủ sớm hơn. | ⚠️
+地方 | dìfang | n. | noun | nơi, chỗ | 这|是|什么|地方？ | Đây là nơi nào? | 📍
+老 | lǎo | adj. | adjective | già, cũ | 我|的|爷爷|很|老|了。 | Ông nội tôi già lắm rồi. | 👴
+其他 | qítā | pron. | pronoun | (những người, cái) khác | 其他|人|都|走|了。 | Những người khác đi hết rồi. | 👥
+比赛 | bǐsài | n. | noun | trận đấu, cuộc thi | 今天|有|足球|比赛。 | Hôm nay có trận đấu bóng đá. | 🏆
+然后 | ránhòu | conj. | conjunction | sau đó | 我|先|吃|饭，|然后|看|书。 | Tôi ăn cơm trước, sau đó đọc sách. | 🔜
+担心 | dānxīn | v. | verb | lo lắng | 别|担心，|我|没|事。 | Đừng lo, tôi không sao. | 😟
+放 | fàng | v. | verb | đặt, để (vào đâu) | 把|书|放|在|桌子|上。 | Đặt sách lên bàn. | 📥
+拿 | ná | v. | verb | cầm, lấy | 你|手|里|拿|着|什么？ | Trong tay bạn cầm cái gì vậy? | 🤲
+为什么 | wèishénme | pron. | pronoun | tại sao | 你|为什么|不|高兴？ | Sao bạn không vui? | ❔
+先 | xiān | adv. | adverb | trước (làm trước) | 你|先|走|吧。 | Bạn đi trước đi. | ⏮️
+关系 | guānxi | n. | noun | quan hệ, mối quan hệ | 他们|的|关系|很|好。 | Quan hệ của họ rất tốt. | 🔗
+出现 | chūxiàn | v. | verb | xuất hiện | 太阳|出现|了。 | Mặt trời xuất hiện rồi. | ☀️
+了解 | liǎojiě | v. | verb | hiểu rõ, tìm hiểu | 我|很|了解|他。 | Tôi rất hiểu anh ấy. | 🧐
+过去 | guòqù | n. | noun | quá khứ, trước đây | 过去|的|事|别|想|了。 | Chuyện đã qua đừng nghĩ nữa. | ⏳
+参加 | cānjiā | v. | verb | tham gia | 我|想|参加|足球|比赛。 | Tôi muốn tham gia thi đấu bóng đá. | 🙋‍♀️
+国家 | guójiā | n. | noun | đất nước, quốc gia | 越南|是|一|个|美丽|的|国家。 | Việt Nam là một đất nước xinh đẹp. | 🏳️
+决定 | juédìng | v. | verb | quyết định | 我|决定|学|汉语。 | Tôi quyết định học tiếng Trung. | ✔️
+分 | fēn | m. | other | phút (khi nói giờ); điểm (bài thi) | 现在|三|点|十|分。 | Bây giờ là ba giờ mười phút. | 🕒
+选择 | xuǎnzé | v. | verb | lựa chọn | 你|选择|哪|个？ | Bạn chọn cái nào? | 🗳️
+或者 | huòzhě | conj. | conjunction | hoặc (trong câu kể) | 我|周末|去|游泳|或者|跑步。 | Cuối tuần tôi đi bơi hoặc chạy bộ. | 🔀
+机会 | jīhuì | n. | noun | cơ hội | 这|是|一|个|好|机会。 | Đây là một cơ hội tốt. | 🍀
+别人 | biérén | pron. | pronoun | người khác | 不要|问|别人。 | Đừng hỏi người khác. | 🧑‍🤝‍🧑
+站 | zhàn | v./n. | verb | đứng; bến, ga | 他|站|在|门口。 | Anh ấy đứng ở cửa. | 🧍
+使 | shǐ | v. | verb | khiến, làm cho | 这|件|事|使|我|很|高兴。 | Chuyện này khiến tôi rất vui. | 😊
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -557,6 +607,56 @@ HAN_VIET = {
     '准备': 'chuẩn bị',
     '自行车': 'tự hành xa',
     '最': 'tối',
+    '啊': 'a',
+    '把': 'bả',
+    '被': 'bị',
+    '自己': 'tự kỷ',
+    '如果': 'như quả',
+    '又': 'hựu',
+    '更': 'cánh',
+    '需要': 'nhu yếu',
+    '地': 'địa',
+    '才': 'tài',
+    '跟': 'cân',
+    '像': 'tượng',
+    '还是': 'hoàn thị',
+    '认为': 'nhận vi',
+    '应该': 'ưng cai',
+    '位': 'vị',
+    '种': 'chủng',
+    '发现': 'phát hiện',
+    '一定': 'nhất định',
+    '一直': 'nhất trực',
+    '为了': 'vị liễu',
+    '一样': 'nhất dạng',
+    '世界': 'thế giới',
+    '而且': 'nhi thả',
+    '重要': 'trọng yếu',
+    '必须': 'tất tu',
+    '地方': 'địa phương',
+    '老': 'lão',
+    '其他': 'kỳ tha',
+    '比赛': 'tỷ tái',
+    '然后': 'nhiên hậu',
+    '担心': 'đảm tâm',
+    '放': 'phóng',
+    '拿': 'nã',
+    '为什么': 'vị thập ma',
+    '先': 'tiên',
+    '关系': 'quan hệ',
+    '出现': 'xuất hiện',
+    '了解': 'liễu giải',
+    '过去': 'quá khứ',
+    '参加': 'tham gia',
+    '国家': 'quốc gia',
+    '决定': 'quyết định',
+    '分': 'phân',
+    '选择': 'tuyển trạch',
+    '或者': 'hoặc giả',
+    '机会': 'cơ hội',
+    '别人': 'biệt nhân',
+    '站': 'trạm',
+    '使': 'sử',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -895,6 +995,56 @@ EXAMPLE_PINYIN = {
     '准备': 'wǒ zài zhǔn bèi kǎo shì',
     '自行车': 'wǒ qí zì xíng chē qù xué xiào',
     '最': 'wǒ zuì xǐ huan xià tiān',
+    '啊': 'jīn tiān tiān qì zhēn hǎo a',
+    '把': 'qǐng bǎ mén guān shàng',
+    '被': 'wǒ de zì xíng chē bèi rén qí zǒu le',
+    '自己': 'wǒ zì jǐ zuò fàn',
+    '如果': 'rú guǒ míng tiān xià yǔ wǒ jiù bú qù le',
+    '又': 'tā jīn tiān yòu chí dào le',
+    '更': 'wǒ gèng xǐ huan hē chá',
+    '需要': 'nǐ xū yào bāng zhù ma',
+    '地': 'tā gāo xìng de xiào le',
+    '才': 'tā shí diǎn cái qǐ chuáng',
+    '跟': 'wǒ gēn mā ma qù shāng diàn',
+    '像': 'nǐ hěn xiàng nǐ mā ma',
+    '还是': 'nǐ hē chá hái shi hē kā fēi',
+    '认为': 'wǒ rèn wéi tā shuō de duì',
+    '应该': 'nǐ yīng gāi duō xiū xi',
+    '位': 'zhè wèi shì Wáng lǎo shī',
+    '种': 'wǒ xǐ huan zhè zhǒng shuǐ guǒ',
+    '发现': 'wǒ fā xiàn qián bāo bú jiàn le',
+    '一定': 'wǒ míng tiān yí dìng lái',
+    '一直': 'tā yì zhí zài xué xí',
+    '为了': 'wèi le xué Hàn yǔ tā qù le Zhōng guó',
+    '一样': 'wǒ men de yī fu yí yàng',
+    '世界': 'wǒ xiǎng qù kàn kan shì jiè',
+    '而且': 'tā hěn piào liang ér qiě hěn cōng ming',
+    '重要': 'shēn tǐ hěn zhòng yào',
+    '必须': 'nǐ bì xū zǎo diǎn shuì jiào',
+    '地方': 'zhè shì shén me dì fang',
+    '老': 'wǒ de yé ye hěn lǎo le',
+    '其他': 'qí tā rén dōu zǒu le',
+    '比赛': 'jīn tiān yǒu zú qiú bǐ sài',
+    '然后': 'wǒ xiān chī fàn rán hòu kàn shū',
+    '担心': 'bié dān xīn wǒ méi shì',
+    '放': 'bǎ shū fàng zài zhuō zi shàng',
+    '拿': 'nǐ shǒu lǐ ná zhe shén me',
+    '为什么': 'nǐ wèi shén me bù gāo xìng',
+    '先': 'nǐ xiān zǒu ba',
+    '关系': 'tā men de guān xi hěn hǎo',
+    '出现': 'tài yáng chū xiàn le',
+    '了解': 'wǒ hěn liǎo jiě tā',
+    '过去': 'guò qù de shì bié xiǎng le',
+    '参加': 'wǒ xiǎng cān jiā zú qiú bǐ sài',
+    '国家': 'Yuè nán shì yí gè měi lì de guó jiā',
+    '决定': 'wǒ jué dìng xué Hàn yǔ',
+    '分': 'xiàn zài sān diǎn shí fēn',
+    '选择': 'nǐ xuǎn zé nǎ gè',
+    '或者': 'wǒ zhōu mò qù yóu yǒng huò zhě pǎo bù',
+    '机会': 'zhè shì yí gè hǎo jī huì',
+    '别人': 'bú yào wèn bié rén',
+    '站': 'tā zhàn zài mén kǒu',
+    '使': 'zhè jiàn shì shǐ wǒ hěn gāo xìng',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
