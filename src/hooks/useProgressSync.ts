@@ -57,13 +57,17 @@ export function useProgressSync(): void {
           syncedKey.current = key
           return
         }
-        const { data } = await sb
+        const { data, error } = await sb
           .from('progress')
           .select('data')
           .eq('user_id', userId)
           .eq('lang_code', lang)
           .maybeSingle()
         if (!alive) return
+        // supabase-js resolves a failed request as { data: null, error }, not a
+        // throw. Read as "no row", it pushed this device's cards over the whole
+        // server copy. Stay unsynced: pushes wait for the next successful pull.
+        if (error) return
         const local = useStudy.getState().progress[lang]
         if (data?.data) {
           // MERGE, never overwrite. A blind `setLanguageProgress(remote)` here

@@ -12,7 +12,8 @@ const MAX_BODY = 8192
 export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
   // Reports only come from our own pages; anything else is noise or abuse.
   const origin = ctx.request.headers.get('Origin')
-  if (origin && new URL(origin).host !== new URL(ctx.request.url).host)
+  // Compared as text: browsers can send "Origin: null", and new URL('null') throws.
+  if (origin && origin !== new URL(ctx.request.url).origin)
     return new Response(null, { status: 403 })
 
   const text = await ctx.request.text()

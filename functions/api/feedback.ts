@@ -9,8 +9,8 @@ const MAX_BODY = 4096
 
 export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
   const origin = ctx.request.headers.get('Origin')
-  if (origin && new URL(origin).host !== new URL(ctx.request.url).host)
-    return json({ error: 'forbidden' }, 403)
+  // Compared as text: browsers can send "Origin: null", and new URL('null') throws.
+  if (origin && origin !== new URL(ctx.request.url).origin) return json({ error: 'forbidden' }, 403)
   const text = await ctx.request.text()
   if (text.length > MAX_BODY) return json({ error: 'too_large' }, 413)
   let raw: unknown
