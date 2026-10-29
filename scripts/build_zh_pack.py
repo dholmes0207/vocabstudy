@@ -403,6 +403,56 @@ ROWS = '''
 别人 | biérén | pron. | pronoun | người khác | 不要|问|别人。 | Đừng hỏi người khác. | 🧑‍🤝‍🧑
 站 | zhàn | v./n. | verb | đứng; bến, ga | 他|站|在|门口。 | Anh ấy đứng ở cửa. | 🧍
 使 | shǐ | v. | verb | khiến, làm cho | 这|件|事|使|我|很|高兴。 | Chuyện này khiến tôi rất vui. | 😊
+其实 | qíshí | adv. | adverb | thật ra | 其实|我|不|喜欢|喝|咖啡。 | Thật ra tôi không thích uống cà phê. | 🤫
+以后 | yǐhòu | n. | noun | sau này, về sau | 以后|我|想|当|老师。 | Sau này tôi muốn làm giáo viên. | 🔮
+要求 | yāoqiú | v./n. | verb | yêu cầu | 老师|要求|我们|每天|写|汉字。 | Thầy yêu cầu chúng tôi viết chữ Hán mỗi ngày. | 📋
+信 | xìn | n. | noun | thư, lá thư | 我|给|妈妈|写|了|一|封|信。 | Tôi đã viết cho mẹ một lá thư. | ✉️
+当然 | dāngrán | adv. | adverb | đương nhiên, tất nhiên | 我|当然|记得|你。 | Tất nhiên tôi nhớ bạn. | 👌
+接 | jiē | v. | verb | đón; nghe (điện thoại) | 我|去|机场|接|朋友。 | Tôi ra sân bay đón bạn. | 🤝
+相信 | xiāngxìn | v. | verb | tin, tin tưởng | 我|相信|你。 | Tôi tin bạn. | 🫶
+花 | huā | n./v. | noun | hoa; tiêu (tiền, thời gian) | 这|些|花|真|漂亮！ | Những bông hoa này đẹp thật! | 🌸
+虽然 | suīrán | conj. | conjunction | tuy, mặc dù | 虽然|下雨|了，|但是|他|还是|来|了。 | Tuy trời mưa nhưng anh ấy vẫn đến. | 🌂
+解决 | jiějué | v. | verb | giải quyết | 这|个|问题|很|难|解决。 | Vấn đề này rất khó giải quyết. | 🛠️
+关于 | guānyú | prep. | preposition | về (chủ đề gì) | 这|是|一|本|关于|中国|的|书。 | Đây là một cuốn sách về Trung Quốc. | 📖
+完成 | wánchéng | v. | verb | hoàn thành | 我|完成|作业|了。 | Tôi làm xong bài tập rồi. | 🏁
+结束 | jiéshù | v. | verb | kết thúc | 比赛|结束|了。 | Trận đấu kết thúc rồi. | 🔚
+努力 | nǔlì | adj./v. | adjective | chăm chỉ, cố gắng | 他|学习|很|努力。 | Anh ấy học rất chăm chỉ. | 💪
+以前 | yǐqián | n. | noun | trước kia, ngày trước | 我|以前|住|在|北京。 | Trước kia tôi sống ở Bắc Kinh. | 🕰️
+办法 | bànfǎ | n. | noun | cách, biện pháp | 我|有|一|个|好|办法。 | Tôi có một cách hay. | 🧩
+特别 | tèbié | adv./adj. | adverb | đặc biệt | 今天|特别|冷。 | Hôm nay lạnh đặc biệt. | 🌟
+注意 | zhùyì | v. | verb | chú ý | 过|马路|要|注意|安全。 | Qua đường phải chú ý an toàn. | 🚸
+讲 | jiǎng | v. | verb | kể, giảng | 妈妈|给|我|讲|故事。 | Mẹ kể chuyện cho tôi nghe. | 🗣️
+离开 | líkāi | v. | verb | rời khỏi, rời đi | 他|昨天|离开|了|北京。 | Hôm qua anh ấy đã rời Bắc Kinh. | 🧳
+万 | wàn | num. | other | vạn, mười nghìn | 这|个|手机|一|万|块。 | Cái điện thoại này mười nghìn tệ. | 💴
+以为 | yǐwéi | v. | verb | tưởng (là), cứ ngỡ | 我|以为|你|不|来|了。 | Tôi cứ tưởng bạn không đến nữa. | 😅
+越 | yuè | adv. | adverb | càng (越…越…) | 天气|越|来|越|冷|了。 | Trời càng ngày càng lạnh. | 📈
+城市 | chéngshì | n. | noun | thành phố | 北京|是|一|个|大|城市。 | Bắc Kinh là một thành phố lớn. | 🌆
+影响 | yǐngxiǎng | v./n. | verb | ảnh hưởng | 天气|影响|我|的|心情。 | Thời tiết ảnh hưởng đến tâm trạng của tôi. | 🌊
+游戏 | yóuxì | n. | noun | trò chơi, game | 孩子|们|在|玩|游戏。 | Bọn trẻ đang chơi trò chơi. | 🎮
+马 | mǎ | n. | noun | con ngựa | 他|会|骑|马。 | Anh ấy biết cưỡi ngựa. | 🐎
+比较 | bǐjiào | adv./v. | adverb | khá, tương đối; so sánh | 今天|比较|热。 | Hôm nay khá nóng. | ⚖️
+最近 | zuìjìn | n. | noun | dạo này, gần đây | 你|最近|忙|吗？ | Dạo này bạn có bận không? | 📆
+换 | huàn | v. | verb | đổi, thay | 我|想|换|一|件|衣服。 | Tôi muốn thay một bộ quần áo khác. | 🔄
+终于 | zhōngyú | adv. | adverb | cuối cùng (thì) | 我|终于|找|到|了|我|的|钱包。 | Cuối cùng tôi cũng tìm được ví tiền. | 🎉
+脸 | liǎn | n. | noun | mặt, khuôn mặt | 我|每天|早上|洗|脸。 | Sáng nào tôi cũng rửa mặt. | 🙂
+除了 | chúle | prep. | preposition | ngoài … ra | 除了|汉语，|我|还|学|英语。 | Ngoài tiếng Trung, tôi còn học tiếng Anh. | 🎒
+总是 | zǒngshì | adv. | adverb | lúc nào cũng, luôn luôn | 他|总是|很|忙。 | Anh ấy lúc nào cũng bận. | ♾️
+双 | shuāng | m. | other | đôi (lượng từ) | 我|买|了|一|双|鞋。 | Tôi mua một đôi giày. | 👟
+突然 | tūrán | adj./adv. | adjective | đột nhiên, bất ngờ | 天|突然|黑|了。 | Trời đột nhiên tối sầm. | ⚡
+检查 | jiǎnchá | v. | verb | kiểm tra | 医生|在|检查|我|的|身体。 | Bác sĩ đang khám sức khỏe cho tôi. | 🩺
+米 | mǐ | n./m. | noun | gạo; mét | 我|家|离|学校|五|百|米。 | Nhà tôi cách trường năm trăm mét. | 📏
+容易 | róngyì | adj. | adjective | dễ | 这|个|题|很|容易。 | Câu này rất dễ. | 🍰
+明白 | míngbai | v. | verb | hiểu, hiểu ra | 你|明白|我|的|意思|吗？ | Bạn hiểu ý tôi không? | 💡
+记得 | jìde | v. | verb | nhớ (còn nhớ) | 你|还|记得|我|吗？ | Bạn còn nhớ tôi không? | 🧠
+辆 | liàng | m. | other | chiếc (lượng từ cho xe) | 门口|有|一|辆|车。 | Trước cửa có một chiếc xe. | 🚗
+简单 | jiǎndān | adj. | adjective | đơn giản | 这|个|问题|很|简单。 | Vấn đề này rất đơn giản. | 🟢
+半 | bàn | num. | other | rưỡi, một nửa | 现在|八|点|半。 | Bây giờ là tám giờ rưỡi. | 🌓
+愿意 | yuànyì | v. | verb | bằng lòng, sẵn lòng | 你|愿意|跟|我|一起|去|吗？ | Bạn có muốn đi cùng tôi không? | 🙏
+包 | bāo | n. | noun | túi, cặp | 我|的|包|很|重。 | Túi của tôi nặng lắm. | 👜
+楼 | lóu | n. | noun | tòa nhà; tầng | 我|住|在|三|楼。 | Tôi ở tầng ba. | 🏢
+清楚 | qīngchu | adj. | adjective | rõ ràng, rõ | 我|听|不|清楚。 | Tôi nghe không rõ. | 🔊
+照片 | zhàopiàn | n. | noun | ảnh, tấm ảnh | 这|是|我|家|的|照片。 | Đây là ảnh gia đình tôi. | 📷
+银行 | yínháng | n. | noun | ngân hàng | 我|去|银行|换|钱。 | Tôi đi ngân hàng đổi tiền. | 🏦
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -657,6 +707,55 @@ HAN_VIET = {
     '别人': 'biệt nhân',
     '站': 'trạm',
     '使': 'sử',
+    '其实': 'kỳ thực',
+    '以后': 'dĩ hậu',
+    '要求': 'yêu cầu',
+    '信': 'tín',
+    '当然': 'đương nhiên',
+    '接': 'tiếp',
+    '相信': 'tương tín',
+    '花': 'hoa',
+    '虽然': 'tuy nhiên',
+    '解决': 'giải quyết',
+    '关于': 'quan vu',
+    '完成': 'hoàn thành',
+    '结束': 'kết thúc',
+    '努力': 'nỗ lực',
+    '以前': 'dĩ tiền',
+    '办法': 'biện pháp',
+    '特别': 'đặc biệt',
+    '注意': 'chú ý',
+    '讲': 'giảng',
+    '离开': 'ly khai',
+    '万': 'vạn',
+    '以为': 'dĩ vi',
+    '越': 'việt',
+    '城市': 'thành thị',
+    '影响': 'ảnh hưởng',
+    '游戏': 'du hí',
+    '马': 'mã',
+    '比较': 'tỷ giảo',
+    '最近': 'tối cận',
+    '换': 'hoán',
+    '终于': 'chung vu',
+    '脸': 'kiểm',
+    '总是': 'tổng thị',
+    '双': 'song',
+    '突然': 'đột nhiên',
+    '检查': 'kiểm tra',
+    '米': 'mễ',
+    '容易': 'dung dịch',
+    '明白': 'minh bạch',
+    '记得': 'ký đắc',
+    '辆': 'lượng',
+    '简单': 'giản đơn',
+    '半': 'bán',
+    '愿意': 'nguyện ý',
+    '包': 'bao',
+    '楼': 'lâu',
+    '清楚': 'thanh sở',
+    '照片': 'chiếu phiến',
+    '银行': 'ngân hàng',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -1045,6 +1144,56 @@ EXAMPLE_PINYIN = {
     '别人': 'bú yào wèn bié rén',
     '站': 'tā zhàn zài mén kǒu',
     '使': 'zhè jiàn shì shǐ wǒ hěn gāo xìng',
+    '其实': 'qí shí wǒ bù xǐ huan hē kā fēi',
+    '以后': 'yǐ hòu wǒ xiǎng dāng lǎo shī',
+    '要求': 'lǎo shī yāo qiú wǒ men měi tiān xiě hàn zì',
+    '信': 'wǒ gěi mā ma xiě le yì fēng xìn',
+    '当然': 'wǒ dāng rán jì de nǐ',
+    '接': 'wǒ qù jī chǎng jiē péng you',
+    '相信': 'wǒ xiāng xìn nǐ',
+    '花': 'zhè xiē huā zhēn piào liang',
+    '虽然': 'suī rán xià yǔ le dàn shì tā hái shi lái le',
+    '解决': 'zhè ge wèn tí hěn nán jiě jué',
+    '关于': 'zhè shì yì běn guān yú zhōng guó de shū',
+    '完成': 'wǒ wán chéng zuò yè le',
+    '结束': 'bǐ sài jié shù le',
+    '努力': 'tā xué xí hěn nǔ lì',
+    '以前': 'wǒ yǐ qián zhù zài běi jīng',
+    '办法': 'wǒ yǒu yí ge hǎo bàn fǎ',
+    '特别': 'jīn tiān tè bié lěng',
+    '注意': 'guò mǎ lù yào zhù yì ān quán',
+    '讲': 'mā ma gěi wǒ jiǎng gù shi',
+    '离开': 'tā zuó tiān lí kāi le běi jīng',
+    '万': 'zhè ge shǒu jī yí wàn kuài',
+    '以为': 'wǒ yǐ wéi nǐ bù lái le',
+    '越': 'tiān qì yuè lái yuè lěng le',
+    '城市': 'běi jīng shì yí ge dà chéng shì',
+    '影响': 'tiān qì yǐng xiǎng wǒ de xīn qíng',
+    '游戏': 'hái zi men zài wán yóu xì',
+    '马': 'tā huì qí mǎ',
+    '比较': 'jīn tiān bǐ jiào rè',
+    '最近': 'nǐ zuì jìn máng ma',
+    '换': 'wǒ xiǎng huàn yí jiàn yī fu',
+    '终于': 'wǒ zhōng yú zhǎo dào le wǒ de qián bāo',
+    '脸': 'wǒ měi tiān zǎo shang xǐ liǎn',
+    '除了': 'chú le hàn yǔ wǒ hái xué yīng yǔ',
+    '总是': 'tā zǒng shì hěn máng',
+    '双': 'wǒ mǎi le yì shuāng xié',
+    '突然': 'tiān tū rán hēi le',
+    '检查': 'yī shēng zài jiǎn chá wǒ de shēn tǐ',
+    '米': 'wǒ jiā lí xué xiào wǔ bǎi mǐ',
+    '容易': 'zhè ge tí hěn róng yì',
+    '明白': 'nǐ míng bai wǒ de yì si ma',
+    '记得': 'nǐ hái jì de wǒ ma',
+    '辆': 'mén kǒu yǒu yí liàng chē',
+    '简单': 'zhè ge wèn tí hěn jiǎn dān',
+    '半': 'xiàn zài bā diǎn bàn',
+    '愿意': 'nǐ yuàn yì gēn wǒ yì qǐ qù ma',
+    '包': 'wǒ de bāo hěn zhòng',
+    '楼': 'wǒ zhù zài sān lóu',
+    '清楚': 'wǒ tīng bu qīng chu',
+    '照片': 'zhè shì wǒ jiā de zhào piàn',
+    '银行': 'wǒ qù yín háng huàn qián',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
