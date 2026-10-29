@@ -5,7 +5,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { useImmersive } from '@/store/uiStore'
-import { exampleAudio, pronounce } from '@/lib/audio'
+import { exampleAudio, prefetchAudio, pronounce } from '@/lib/audio'
 import {
   DICTATION_PASS,
   dictationScore,
@@ -177,6 +177,9 @@ export function DictationRound({
       lang: pack.meta.ttsLang,
       rate: slow ? Math.min(rate, 0.7) : rate,
     })
+
+  // The whole round's clips up front: each sentence plays 250 ms after it shows.
+  useEffect(() => prefetchAudio(items.map((it) => it.audioSrc)), [items])
 
   // Each sentence plays as soon as it appears.
   useEffect(() => {

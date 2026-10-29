@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Loader2, Mic, Play, Square, ThumbsDown, ThumbsUp } from 'lucide-react'
 import type { Word } from '@/types'
-import { pronounce, stopPronounce, wordAudio } from '@/lib/audio'
+import { prefetchAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import {
   isRecordingSupported,
@@ -97,6 +97,7 @@ export default function PronounceTrainer({ word, ttsLang, onAttempt, footer }: P
 
   // A new word means a new attempt; also cleans up on unmount.
   useEffect(() => reset, [word.id, reset])
+  useEffect(() => prefetchAudio([wordAudio(word.id)]), [word.id])
 
   const playModel = () =>
     pronounce({ audioSrc: wordAudio(word.id), text: word.word, lang: ttsLang, rate: ttsRate })

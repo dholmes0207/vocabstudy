@@ -3,7 +3,7 @@ import { ArrowRight, Check, Lightbulb, LogOut, RotateCcw, Volume2, VolumeX, X } 
 import type { QuizMode, QuizQuestion, Word } from '@/types'
 import { GAP, buildSkeleton, checkFillAnswer, makeQuestion } from '@/lib/quiz'
 import { MAX_ATTEMPTS, requeue } from '@/lib/practice'
-import { exampleAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
+import { exampleAudio, prefetchAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { buzz, playCorrect, playWrong } from '@/lib/sound'
 import { nudge, praise } from '@/lib/encourage'
 import { skyBurstAt } from '@/lib/skyEvents'
@@ -156,6 +156,17 @@ export default function QuizRunner({
       rate: ttsRate,
     })
   }
+
+  // Listening and spelling questions play their word the moment they show.
+  useEffect(
+    () =>
+      prefetchAudio(
+        queue
+          .filter((i) => i.q.mode === 'listen' || i.q.mode === 'spell')
+          .map((i) => wordAudio(i.q.wordId))
+      ),
+    [queue]
+  )
 
   useEffect(() => {
     if (done || !q) return

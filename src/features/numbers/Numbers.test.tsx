@@ -13,6 +13,7 @@ import { useStudy } from '@/store/studyStore'
 
 const spoken: string[] = []
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: (o: { text: string }) => spoken.push(o.text),
   stopPronounce: () => {},
   textAudio: () => '',

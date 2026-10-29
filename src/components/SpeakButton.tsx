@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
 import { isTTSSupported } from '@/lib/tts'
-import { pronounce } from '@/lib/audio'
+import { prefetchAudio, pronounce } from '@/lib/audio'
 import { useSettings } from '@/store/settingsStore'
 import { useT } from '@/lib/i18n'
 
@@ -14,6 +14,8 @@ interface Props {
   size?: 'sm' | 'md' | 'lg'
   label?: string
   className?: string
+  /** Fetch the clip as soon as the button shows, so the first tap plays at once. Off in long lists. */
+  prefetch?: boolean
 }
 
 const speechSupported = isTTSSupported()
@@ -31,12 +33,16 @@ export default function SpeakButton({
   size = 'md',
   label,
   className = '',
+  prefetch = true,
 }: Props) {
   const rate = useSettings((s) => s.ttsRate)
   const [speaking, setSpeaking] = useState(false)
   const t = useT()
 
   useEffect(() => () => setSpeaking(false), [text])
+  useEffect(() => {
+    if (prefetch) prefetchAudio([audioSrc])
+  }, [prefetch, audioSrc])
 
   // A pre-rendered file can play even when the browser has no speech synthesis.
   const canPlay = speechSupported || !!audioSrc

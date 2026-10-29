@@ -16,6 +16,7 @@ import { useSavedWords } from '@/store/savedWordsStore'
 
 const spoken: { text: string; onEnd?: () => void }[] = []
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: (o: { text: string; onEnd?: () => void }) => spoken.push(o),
   stopPronounce: () => {},
   wordAudio: (id: number) => `/audio/en/${id}.mp3`,

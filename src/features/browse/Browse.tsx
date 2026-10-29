@@ -293,6 +293,7 @@ function WordRow({
           audioSrc={wordAudio(word.id)}
           size="sm"
           className="shrink-0"
+          prefetch={false}
         />
       </div>
       {expanded && (
