@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { dayToDate, epochDay, formatDay, relativeDays } from './date'
+import { dayToDate, epochDay, formatDay } from './date'
 
 describe('epochDay', () => {
   it('gives the same index for any time on the same local calendar day', () => {
@@ -26,17 +26,5 @@ describe('epochDay', () => {
       expect(formatDay(day)).toBe(`${String(d).padStart(2, '0')}/${String(m + 1).padStart(2, '0')}`)
       expect(dayToDate(day).getUTCFullYear()).toBe(y)
     }
-  })
-})
-
-describe('relativeDays', () => {
-  it('labels today and anything overdue as ready to review', () => {
-    expect(relativeDays(100, 100)).toBe('sẵn sàng ôn')
-    expect(relativeDays(100, 97)).toBe('sẵn sàng ôn')
-  })
-
-  it('labels tomorrow and further out', () => {
-    expect(relativeDays(100, 101)).toBe('ngày mai')
-    expect(relativeDays(100, 105)).toBe('trong 5 ngày')
   })
 })

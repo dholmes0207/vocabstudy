@@ -125,14 +125,3 @@ export function getDueCards(cards: SRSCard[], day: number = today()): SRSCard[] 
     .filter((c) => c.box < MASTERED_BOX && c.lastReviewedDay !== null && c.dueDay <= day)
     .sort((a, b) => a.dueDay - b.dueDay || a.box - b.box)
 }
-
-/** Progress of a card toward mastery, 0..1. */
-export function masteryProgress(card: SRSCard | undefined): number {
-  if (!card) return 0
-  return Math.min(card.box / MASTERED_BOX, 1)
-}
-
-/** Days from now until the card's next review (negative/0 = due now). */
-export function daysUntilDue(card: SRSCard, day: number = today()): number {
-  return card.dueDay - day
-}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { PosCategory, Word } from '@/types'
-import { buildSkeleton, checkFillAnswer, gapExample, generateQuiz, makeQuestion } from './quiz'
+import { buildSkeleton, checkFillAnswer, gapSentence, generateQuiz, makeQuestion } from './quiz'
 
 function word(over: Partial<Word> & Pick<Word, 'id' | 'word'>): Word {
   return {
@@ -19,7 +19,9 @@ const pool: Word[] = Array.from({ length: 20 }, (_, i) =>
   word({ id: i + 1, word: `word${i + 1}`, meaning: `nghĩa ${i + 1}` })
 )
 
-describe('gapExample', () => {
+describe('gapSentence', () => {
+  const gapExample = (w: Word) => gapSentence(w)?.gapped ?? null
+
   it('blanks the headword out of its example sentence', () => {
     const w = word({ id: 1, word: 'ability', exampleEn: 'She has the ability to lead.' })
     expect(gapExample(w)).toBe('She has the _____ to lead.')
