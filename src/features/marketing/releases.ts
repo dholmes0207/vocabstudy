@@ -17,8 +17,8 @@ export const RELEASES: Release[] = [
     title: ['Tiếng Trung: bắt đầu HSK 3', 'Chinese: HSK 3 begins'],
     items: [
       [
-        'Gói tiếng Trung tăng từ 330 lên 430 từ: 100 từ HSK 3 dùng nhiều nhất như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于…, đủ pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
-        'The Chinese pack grows from 330 to 430 words: the 100 most used HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于…, each with pinyin, Hán Việt, an example and recorded audio.',
+        'Gói tiếng Trung tăng từ 330 lên 480 từ: 150 từ HSK 3 dùng nhiều nhất như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于, 马上, 经常, 打算…, đủ pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
+        'The Chinese pack grows from 330 to 480 words: the 150 most used HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于, 马上, 经常, 打算…, each with pinyin, Hán Việt, an example and recorded audio.',
       ],
     ],
   },
