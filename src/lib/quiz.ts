@@ -76,11 +76,6 @@ export function gapSentence(word: Word): GappedSentence | null {
   return { gapped: s.slice(0, hit.start) + GAP + s.slice(hit.end), surface: hit.surface }
 }
 
-/** Build a gapped example sentence, hiding the target word. Returns null if not embeddable. */
-export function gapExample(word: Word): string | null {
-  return gapSentence(word)?.gapped ?? null
-}
-
 export interface SkeletonCell {
   ch: string
   isLetter: boolean

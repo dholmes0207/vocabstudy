@@ -30,14 +30,6 @@ export function dayToDate(day: number): Date {
   return new Date(day * MS_PER_DAY)
 }
 
-/** Human-readable difference like "hôm nay", "ngày mai", "trong 5 ngày". */
-export function relativeDays(fromDay: number, toDay: number): string {
-  const diff = toDay - fromDay
-  if (diff <= 0) return 'sẵn sàng ôn'
-  if (diff === 1) return 'ngày mai'
-  return `trong ${diff} ngày`
-}
-
 /** Format a day index as a short date string (dd/mm). Reads in UTC to match `epochDay`. */
 export function formatDay(day: number): string {
   const d = dayToDate(day)

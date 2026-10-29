@@ -128,19 +128,6 @@ export interface AudioManifest {
   voices: AudioVoice[]
 }
 
-/** An AI provider preset the admin configures; students pick one by label. */
-export interface AIProvider {
-  id: string
-  /** Friendly name shown to students, e.g. "GPT o4-mini (lớp)". */
-  label: string
-  /** Model id, e.g. "o4-mini". */
-  model: string
-  /** API key — visible only to admin. */
-  apiKey: string
-  /** API base URL (OpenAI or a proxy). */
-  baseUrl: string
-}
-
 // ============================================================================
 // Spaced-Repetition (SRS) types
 // ============================================================================
