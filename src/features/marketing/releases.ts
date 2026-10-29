@@ -14,11 +14,18 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-10-29',
-    title: ['Tiếng Trung: bắt đầu HSK 3', 'Chinese: HSK 3 begins'],
+    title: [
+      'Tiếng Trung: đủ từ vựng HSK 3 và lộ trình HSK 3',
+      'Chinese: all of HSK 3, and an HSK 3 roadmap',
+    ],
     items: [
       [
-        'Gói tiếng Trung tăng từ 330 lên 530 từ: 200 từ HSK 3 dùng nhiều nhất như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于, 马上, 经常, 打算, 照顾, 方便…, đủ pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
-        'The Chinese pack grows from 330 to 530 words: the 200 most used HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 当然, 终于, 马上, 经常, 打算, 照顾, 方便…, each with pinyin, Hán Việt, an example and recorded audio.',
+        'Gói tiếng Trung tăng từ 330 lên 618 từ, phủ đủ 298 từ HSK 3 như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, mỗi từ có pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
+        'The Chinese pack grows from 330 to 618 words and covers all 298 HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, each with pinyin, Hán Việt, an example and recorded audio.',
+      ],
+      [
+        'Trang "Lộ trình luyện thi" có thêm tab HSK 3: thông tin đề và thang điểm, tiến độ theo danh sách từ và bài kiểm tra từ vựng 20 câu.',
+        'The "Exam roadmap" page gains an HSK 3 tab: the test format and scores, progress through the word list and a 20-question vocabulary check.',
       ],
     ],
   },

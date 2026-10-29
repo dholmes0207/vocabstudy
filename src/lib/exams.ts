@@ -8,7 +8,7 @@ import { makeQuestion } from '@/lib/quiz'
 type Pair = [vi: string, en: string]
 
 export interface Exam {
-  id: 'hsk1' | 'hsk2' | 'topik1' | 'a2key' | 'b1prelim'
+  id: 'hsk1' | 'hsk2' | 'hsk3' | 'topik1' | 'a2key' | 'b1prelim'
   /** The pack this exam belongs to. */
   lang: string
   name: string
@@ -55,6 +55,31 @@ export const HSK2: readonly string[] =
 眼睛 羊肉 药 要 也 一起 已经 意思 因为 阴 游泳 右边 鱼 元 远 运动 再 早上 张 长 丈夫 找 着 真 正在 知道 准备 自行车 走 最 左边`.split(
     /\s+/
   )
+
+/**
+ * The HSK 3 vocabulary added on top of HSK 2 (2012 syllabus), from the same
+ * complete-hsk-vocabulary lists: 298 headwords, about 600 words with HSK 1 and 2.
+ */
+export const HSK3: readonly string[] =
+  `阿姨 啊 矮 爱好 安静 把 班 搬 办法 办公室 半 帮忙 包 饱 北方 被 鼻子
+比较 比赛 必须 变化 表示 表演 别人 宾馆 冰箱 才 菜单 参加 草 层 差 超市
+衬衫 成绩 城市 迟到 出现 除了 厨房 春 词语 聪明 打扫 打算 带 担心 蛋糕
+当然 地 地方 地铁 地图 灯 低 电梯 电子 东 冬 动物 短 段 锻炼 多么 饿
+而且 耳朵 发烧 发现 方便 放 放心 分 附近 复习 敢 感冒 干净 刚才 根据 跟
+更 公园 故事 刮 关 关系 关心 关于 国家 果汁 过去 还是 害怕 河 黑板 护照
+花 花园 画 坏 环境 换 黄 会议 或者 机会 极 几乎 记得 季节 检查 简单 见面
+健康 讲 角 脚 教 接 街道 节目 节日 结婚 结束 解决 借 经常 经过 经理 久
+旧 举行 句子 决定 可爱 渴 刻 客人 空调 口 哭 裤子 筷子 蓝 老 了解 离开
+礼物 历史 脸 练习 辆 邻居 楼 绿 马 马上 满意 帽子 米 面包 面条 明白 拿
+奶奶 南 难 难过 年级 年轻 鸟 努力 爬山 盘子 胖 啤酒 葡萄 普通话 其实 其他
+奇怪 骑 铅笔 清楚 秋 裙子 然后 热情 认为 认真 容易 如果 伞 上网 生气 声音
+使 世界 瘦 叔叔 舒服 树 数学 刷 双 水平 司机 虽然 太阳 糖 特别 疼 提高
+体育 甜 条 同事 同意 头发 突然 图书馆 腿 完成 碗 万 忘记 为了 为什么 位
+文化 习惯 洗手间 洗澡 西 夏 先 相同 相信 香蕉 像 小心 校长 鞋 新闻 新鲜
+信 行李箱 兴趣 熊猫 需要 选择 眼镜 要求 爷爷 一般 一边 一定 一共 一会儿
+一样 一直 以后 以前 以为 音乐 银行 应该 影响 用 游戏 有名 又 遇到 愿意
+月亮 越 云 站 照顾 照片 照相机 着急 只 中间 终于 种 重要 周末 主要 注意
+祝 字典 自己 总是 最近 作业 作用`.split(/\s+/)
 
 export const EXAMS: readonly Exam[] = [
   {
@@ -115,6 +140,40 @@ export const EXAMS: readonly Exam[] = [
       },
     ],
     wordList: HSK2,
+    basics: { to: '/pinyin', title: ['Pinyin & thanh điệu', 'Pinyin & tones'] },
+  },
+  {
+    id: 'hsk3',
+    lang: 'zh',
+    name: 'HSK 3',
+    facts: [
+      [
+        '80 câu: 40 câu nghe (khoảng 35 phút), 30 câu đọc (30 phút), 10 câu viết (15 phút); cả bài khoảng 90 phút.',
+        '80 questions: 40 listening (about 35 minutes), 30 reading (30 minutes), 10 writing (15 minutes); about 90 minutes in all.',
+      ],
+      ['Tổng 300 điểm, đạt từ 180 điểm.', '300 points in total; 180 or more passes.'],
+      [
+        'Cần khoảng 600 từ: các từ HSK 1, HSK 2 cộng thêm từ HSK 3. Danh sách HSK 3 trong app có 298 mục.',
+        'About 600 words: the HSK 1 and HSK 2 words plus the HSK 3 ones. The app’s HSK 3 list has 298 entries.',
+      ],
+      [
+        'Từ cấp này có phần viết: sắp xếp từ thành câu và điền chữ Hán.',
+        'This level adds a writing part: putting words in order and filling in characters.',
+      ],
+    ],
+    caveat: [
+      'Danh sách HSK 3 lấy từ bảng tổng hợp mở complete-hsk-vocabulary; các bản in khác nhau vài mục. HSK cũng đang chuyển sang chuẩn mới (HSK 3.0) — trước khi đăng ký, hãy hỏi nơi tổ chức thi bạn sẽ thi theo chuẩn nào.',
+      'The HSK 3 list comes from the open complete-hsk-vocabulary compilation; printed editions differ by a few words. HSK is also moving to a new standard (HSK 3.0) — before you register, ask your test centre which standard your exam uses.',
+    ],
+    checked: ['29/10/2026', '29 Oct 2026'],
+    sources: [
+      { label: 'Chinese Testing International — HSK 3', url: 'https://www.chinesetest.cn/HSK/3' },
+      {
+        label: 'complete-hsk-vocabulary',
+        url: 'https://github.com/drkameleon/complete-hsk-vocabulary',
+      },
+    ],
+    wordList: HSK3,
     basics: { to: '/pinyin', title: ['Pinyin & thanh điệu', 'Pinyin & tones'] },
   },
   {

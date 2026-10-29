@@ -98,9 +98,9 @@ describe('numbers on the landing page', () => {
       `${count.ko.words} từ sơ cấp`,
       `${count.ko.phrases} mẫu câu giao tiếp`,
       `${count.ko.topics} bộ chủ đề, ${count.ko.grammar} bài ngữ pháp và ${count.ko.stories} truyện ngắn`,
-      // "all of HSK 1 and HSK 2" is checked word by word in lib/chinesePack.test.ts
+      // "all of HSK 1, HSK 2 and HSK 3" is checked word by word in lib/chinesePack.test.ts
       // and lib/exams.test.ts.
-      `${count.zh.words} từ (đủ từ vựng HSK 1 và HSK 2)`,
+      `${count.zh.words} từ (đủ từ vựng HSK 1, HSK 2 và HSK 3)`,
       `bài pinyin & thanh điệu, ${count.zh.phrases} mẫu câu giao tiếp`,
       `${count.zh.topics} bộ chủ đề, ${count.zh.grammar} bài ngữ pháp và ${count.zh.stories} truyện ngắn`,
     ])
@@ -119,7 +119,7 @@ describe('numbers on the landing page', () => {
       `${count.ko.words} beginner words`,
       `${count.ko.phrases} everyday phrases`,
       `${count.ko.topics} topic decks, ${count.ko.grammar} grammar lessons and ${count.ko.stories} short stories`,
-      `${count.zh.words} words (all of HSK 1 and HSK 2)`,
+      `${count.zh.words} words (all of HSK 1, HSK 2 and HSK 3)`,
       `a pinyin & tones guide, ${count.zh.phrases} everyday phrases`,
       `${count.zh.topics} topic decks, ${count.zh.grammar} grammar lessons and ${count.zh.stories} short stories`,
     ])

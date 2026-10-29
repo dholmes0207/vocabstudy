@@ -24,18 +24,20 @@ const pack = (code: string) =>
 beforeEach(() => useSettings.setState({ uiLang: 'vi', currentLang: 'zh' }))
 afterEach(cleanup)
 
+// The zh table lists hundreds of characters: label and text queries keep these
+// tests fast where role queries walk the whole table.
 describe('HanVietTable', () => {
   it('lists shared characters with their reading, and finds one typed without marks', () => {
     useData.setState({ pack: pack('zh'), status: 'ready' })
     render(<HanVietTable />)
-    expect(screen.getByRole('button', { name: 'Nghe 学' })).toBeInTheDocument()
+    expect(screen.getByLabelText('Nghe 学')).toBeInTheDocument()
 
-    fireEvent.change(screen.getByRole('searchbox', { name: 'Tìm chữ' }), {
+    fireEvent.change(screen.getByLabelText('Tìm chữ'), {
       target: { value: 'hoc' },
     })
     expect(screen.getByRole('button', { name: 'Nghe 学' })).toBeInTheDocument()
     expect(screen.getByText('学校')).toBeInTheDocument()
-    expect(screen.queryByRole('button', { name: 'Nghe 生' })).not.toBeInTheDocument()
+    expect(screen.queryByLabelText('Nghe 生')).not.toBeInTheDocument()
   })
 
   it('works for Korean syllable blocks too', () => {
@@ -50,7 +52,7 @@ describe('HanVietTable', () => {
     useData.setState({ pack: pack('zh'), status: 'ready' })
     useStudy.setState({ progress: {} })
     render(<HanVietTable />, { wrapper: MemoryRouter })
-    fireEvent.click(screen.getByRole('button', { name: /Đoán nghĩa nhờ Hán Việt/ }))
+    fireEvent.click(screen.getByText(/Đoán nghĩa nhờ Hán Việt/))
     for (let i = 0; i < 10; i++) {
       expect(screen.getAllByText(/như trong/).length).toBeGreaterThan(0)
       const options = screen

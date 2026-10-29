@@ -116,6 +116,37 @@ theo là HSK 2, và các đợt từ mới đã phủ được phần lớn danh
   (chỉ hiện khi gói có hơn một kỳ thi).
 - Test: `lib/exams.test.ts` (mọi từ HSK 2 có trong gói, nhãn theo cấp), `Exam.test.tsx` (đổi tab).
 
+## HSK 3 (29/10/2026)
+
+Bước tiếp theo sau HSK 2. Gói tiếng Trung được thêm từ theo năm đợt (50, 50, 50, 50 rồi 88 từ),
+lần lượt theo tần suất dùng, đến khi phủ đủ danh sách HSK 3.
+
+**Thông tin kỳ thi**, kiểm tra ngày 29/10/2026 trên trang HSK 3 của Chinese Testing International
+(chinesetest.cn):
+
+- 80 câu: 40 câu nghe (khoảng 35 phút, thêm 5 phút chép đáp án), 30 câu đọc (30 phút), 10 câu
+  viết (15 phút). Cả bài khoảng 90 phút, gồm 5 phút điền thông tin.
+- Tổng 300 điểm, đạt từ 180 điểm.
+- Từ cấp này có phần viết: sắp xếp từ thành câu, điền chữ Hán theo pinyin.
+- Người học cần khoảng 600 từ tính gộp.
+
+**Danh sách từ**: cấp 3 bản "old" của `drkameleon/complete-hsk-vocabulary`, 298 mục, không trùng
+mục nào của HSK 1 và HSK 2 trong app.
+
+**BA**
+
+- Tab đầu trang thành **HSK 1 | HSK 2 | HSK 3**. Điểm cao nhất của bài kiểm tra lưu theo `hsk3`.
+- Gói lên 618 từ. Mỗi từ mới có câu ví dụ, pinyin của câu và giọng đọc thu sẵn. Âm Hán Việt có cho
+  mọi từ trừ 除了, 一会儿 (chữ 了, 儿 để trống như các trợ từ khác) và 啤酒 (từ phiên âm, như 咖啡).
+- Bốn chữ 春 夏 秋 冬 là mục riêng của HSK 3. Câu ví dụ dùng chúng trong từ ghép (春节, 夏天…) như
+  khi nói thật.
+- Nhãn trên thẻ từ: 虽然 là HSK 3.
+
+**Dev**
+
+- `lib/exams.ts`: thêm `HSK3` và mục `hsk3` trong `EXAMS`.
+- Test: `lib/exams.test.ts` (đủ 298 từ trong gói, không trùng cấp dưới, nhãn HSK 3).
+
 ## Tiếng Anh: A2 Key và B1 Preliminary (28/10/2026)
 
 **User** (người học tiếng Anh): "Học xong 1.000 từ rồi thì thi được gì? Mình cần chứng chỉ B1."

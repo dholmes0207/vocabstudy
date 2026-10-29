@@ -553,6 +553,94 @@ ROWS = '''
 新鲜 | xīnxiān | adj. | adjective | tươi | 这|些|水果|很|新鲜。 | Chỗ hoa quả này rất tươi. | 🥬
 难过 | nánguò | adj. | adjective | buồn | 听|到|这|个|消息，|我|很|难过。 | Nghe tin này tôi rất buồn. | 😔
 客人 | kèrén | n. | noun | khách | 今天|家|里|来|了|客人。 | Hôm nay nhà có khách. | 🛎️
+段 | duàn | m. | other | đoạn (lượng từ cho lời, đường, thời gian) | 这|段|话|很|难|懂。 | Đoạn này rất khó hiểu. | 📜
+西 | xī | n. | noun | phía tây | 往|西|走|十|分钟|就|到|了。 | Đi về phía tây mười phút là đến. | ⬅️
+关 | guān | v. | verb | đóng, tắt | 请|关|门。 | Làm ơn đóng cửa. | 🔒
+班 | bān | n. | noun | lớp (học); ca làm | 我们|班|有|三十|个|学生。 | Lớp chúng tôi có ba mươi học sinh. | 🧑‍🎓
+东 | dōng | n. | noun | phía đông | 他|往|东|走|了。 | Anh ấy đi về phía đông. | ➡️
+蓝 | lán | adj. | adjective | xanh lam, xanh da trời | 今天|的|天|很|蓝。 | Hôm nay trời rất xanh. | 🟦
+南 | nán | n. | noun | phía nam | 广州|在|中国|南|部。 | Quảng Châu ở miền nam Trung Quốc. | ⬇️
+黄 | huáng | adj. | adjective | vàng (màu) | 秋天|的|叶子|是|黄|的。 | Lá mùa thu màu vàng. | 🟨
+电子 | diànzǐ | n. | noun | điện tử | 我|给|你|发|电子|邮件。 | Tôi gửi email cho bạn. | 📧
+一会儿 | yíhuìr | n. | noun | một lát, một lúc | 请|等|一会儿。 | Xin đợi một lát. | ⏳
+骑 | qí | v. | verb | cưỡi, đi (xe đạp, xe máy, ngựa) | 我|每天|骑|车|上班。 | Ngày nào tôi cũng đạp xe đi làm. | 🚴
+角 | jiǎo | m./n. | other | hào (1/10 tệ); góc | 一|个|苹果|五|角|钱。 | Một quả táo năm hào. | 🪙
+草 | cǎo | n. | noun | cỏ | 羊|在|吃|草。 | Con dê đang ăn cỏ. | 🌿
+奶奶 | nǎinai | n. | noun | bà nội | 奶奶|今年|八十|岁|了。 | Năm nay bà nội tám mươi tuổi rồi. | 👵
+碗 | wǎn | m./n. | other | bát, chén | 我|吃|了|两|碗|米饭。 | Tôi ăn hai bát cơm. | 🥣
+数学 | shùxué | n. | noun | môn toán | 我|的|数学|不|太|好。 | Môn toán của tôi không tốt lắm. | ➗
+地铁 | dìtiě | n. | noun | tàu điện ngầm | 我|坐|地铁|上班。 | Tôi đi làm bằng tàu điện ngầm. | 🚇
+刷 | shuā | v. | verb | chải, đánh (răng) | 我|每天|刷|两|次|牙。 | Mỗi ngày tôi đánh răng hai lần. | 🪥
+厨房 | chúfáng | n. | noun | nhà bếp | 妈妈|在|厨房|做|饭。 | Mẹ đang nấu cơm trong bếp. | 🍳
+练习 | liànxí | v./n. | verb | luyện tập | 我|每天|练习|说|汉语。 | Ngày nào tôi cũng luyện nói tiếng Trung. | 🔁
+爷爷 | yéye | n. | noun | ông nội | 爷爷|喜欢|喝|茶。 | Ông nội thích uống trà. | 👴
+云 | yún | n. | noun | mây | 天|上|有|很|多|白|云。 | Trên trời có nhiều mây trắng. | ☁️
+邻居 | línjū | n. | noun | hàng xóm | 我|的|邻居|很|热情。 | Hàng xóm của tôi rất nhiệt tình. | 🏘️
+校长 | xiàozhǎng | n. | noun | hiệu trưởng | 他|是|我们|学校|的|校长。 | Ông ấy là hiệu trưởng trường chúng tôi. | 🎓
+花园 | huāyuán | n. | noun | vườn hoa | 我|家|后面|有|一|个|花园。 | Sau nhà tôi có một vườn hoa. | 🌷
+耳朵 | ěrduo | n. | noun | tai | 兔子|的|耳朵|很|长。 | Tai thỏ rất dài. | 👂
+节日 | jiérì | n. | noun | ngày lễ, ngày hội | 春节|是|中国|最|重要|的|节日。 | Tết là ngày lễ quan trọng nhất của Trung Quốc. | 🎊
+鼻子 | bízi | n. | noun | mũi | 他|的|鼻子|很|高。 | Mũi anh ấy rất cao. | 👃
+叔叔 | shūshu | n. | noun | chú | 叔叔|在|银行|工作。 | Chú tôi làm ở ngân hàng. | 👨
+洗澡 | xǐzǎo | v. | verb | tắm | 我|晚上|洗澡。 | Tôi tắm vào buổi tối. | 🛁
+地图 | dìtú | n. | noun | bản đồ | 你|有|北京|的|地图|吗？ | Bạn có bản đồ Bắc Kinh không? | 🧭
+帽子 | màozi | n. | noun | mũ, nón | 外面|很|冷，|戴|上|帽子|吧。 | Ngoài trời lạnh, đội mũ vào đi. | 🧢
+街道 | jiēdào | n. | noun | đường phố | 这|条|街道|很|干净。 | Con phố này rất sạch. | 🛣️
+感冒 | gǎnmào | v./n. | verb | bị cảm; cảm cúm | 我|感冒|了。 | Tôi bị cảm rồi. | 🤧
+迟到 | chídào | v. | verb | đến muộn | 对不起，|我|迟到|了。 | Xin lỗi, tôi đến muộn. | 🐌
+刻 | kè | m. | other | khắc (mười lăm phút) | 现在|八|点|一|刻。 | Bây giờ là tám giờ mười lăm. | 🕣
+锻炼 | duànliàn | v. | verb | rèn luyện (thân thể) | 我|每天|早上|锻炼|身体。 | Sáng nào tôi cũng tập thể dục. | 🤸
+裤子 | kùzi | n. | noun | quần | 这|条|裤子|太|长|了。 | Cái quần này dài quá. | 👖
+夏 | xià | n. | noun | hạ (mùa hè, trong từ ghép) | 今年|夏天|特别|热。 | Mùa hè năm nay nóng lắm. | 🌞
+图书馆 | túshūguǎn | n. | noun | thư viện | 我|在|图书馆|看|书。 | Tôi đọc sách ở thư viện. | 🏫
+电梯 | diàntī | n. | noun | thang máy | 我们|坐|电梯|上|楼|吧。 | Chúng ta đi thang máy lên nhé. | 🛗
+刮 | guā | v. | verb | thổi (gió); cạo | 外面|刮|风|了。 | Ngoài trời nổi gió rồi. | 🌬️
+矮 | ǎi | adj. | adjective | thấp (người, vật) | 我|比|哥哥|矮。 | Tôi thấp hơn anh trai. | 🧒
+眼镜 | yǎnjìng | n. | noun | kính (đeo mắt) | 我|的|眼镜|呢？ | Kính của tôi đâu rồi? | 👓
+上网 | shàngwǎng | v. | verb | lên mạng | 我|晚上|常常|上网。 | Buổi tối tôi hay lên mạng. | 🌐
+春 | chūn | n. | noun | xuân (mùa xuân, trong từ ghép) | 春节|快|到|了。 | Sắp đến Tết rồi. | 🧧
+面包 | miànbāo | n. | noun | bánh mì | 我|早上|吃|面包。 | Buổi sáng tôi ăn bánh mì. | 🍞
+冰箱 | bīngxiāng | n. | noun | tủ lạnh | 牛奶|在|冰箱|里。 | Sữa ở trong tủ lạnh. | 🧊
+阿姨 | āyí | n. | noun | cô, dì | 阿姨，|您|好！ | Cháu chào cô ạ! | 👩
+超市 | chāoshì | n. | noun | siêu thị | 我|去|超市|买|东西。 | Tôi đi siêu thị mua đồ. | 🛒
+着急 | zháojí | adj. | adjective | sốt ruột, cuống | 别|着急，|慢慢|来。 | Đừng sốt ruột, cứ từ từ. | 😰
+季节 | jìjié | n. | noun | mùa (trong năm) | 你|最|喜欢|哪|个|季节？ | Bạn thích mùa nào nhất? | 🍂
+饱 | bǎo | adj. | adjective | no | 我|吃|饱|了。 | Tôi ăn no rồi. | 😋
+空调 | kōngtiáo | n. | noun | điều hoà | 太|热|了，|开|空调|吧。 | Nóng quá, bật điều hoà đi. | ❄️
+一共 | yígòng | adv. | adverb | tổng cộng | 一共|多少|钱？ | Tổng cộng bao nhiêu tiền? | 🧾
+月亮 | yuèliang | n. | noun | mặt trăng | 今天|的|月亮|很|圆。 | Trăng hôm nay rất tròn. | 🌕
+北方 | běifāng | n. | noun | phía bắc, miền bắc | 我|是|北方|人。 | Tôi là người miền bắc. | 🧭
+爱好 | àihào | n. | noun | sở thích | 你|的|爱好|是|什么？ | Sở thích của bạn là gì? | 🎸
+衬衫 | chènshān | n. | noun | áo sơ mi | 这|件|衬衫|很|漂亮。 | Chiếc áo sơ mi này rất đẹp. | 👔
+宾馆 | bīnguǎn | n. | noun | khách sạn | 我们|住|在|宾馆。 | Chúng tôi ở khách sạn. | 🏨
+冬 | dōng | n. | noun | đông (mùa đông, trong từ ghép) | 今年|冬天|不|太|冷。 | Mùa đông năm nay không lạnh lắm. | ⛄
+裙子 | qúnzi | n. | noun | váy | 她|穿|了|一|条|红|裙子。 | Cô ấy mặc một chiếc váy đỏ. | 👗
+香蕉 | xiāngjiāo | n. | noun | chuối | 我|喜欢|吃|香蕉。 | Tôi thích ăn chuối. | 🍌
+秋 | qiū | n. | noun | thu (mùa thu, trong từ ghép) | 秋天|是|北京|最|好|的|季节。 | Mùa thu là mùa đẹp nhất ở Bắc Kinh. | 🍁
+发烧 | fāshāo | v. | verb | sốt, bị sốt | 孩子|发烧|了。 | Đứa bé bị sốt rồi. | 🌡️
+伞 | sǎn | n. | noun | ô, dù | 下雨|了，|带|伞|吧。 | Trời mưa rồi, mang ô đi. | ☂️
+有名 | yǒumíng | adj. | adjective | nổi tiếng | 这|家|饭店|很|有名。 | Nhà hàng này rất nổi tiếng. | ⭐
+打扫 | dǎsǎo | v. | verb | quét dọn | 我|在|打扫|房间。 | Tôi đang dọn phòng. | 🧹
+葡萄 | pútao | n. | noun | nho | 这|些|葡萄|很|甜。 | Chỗ nho này rất ngọt. | 🍇
+复习 | fùxí | v. | verb | ôn tập | 明天|考试，|今天|要|复习。 | Mai thi rồi, hôm nay phải ôn bài. | 📚
+熊猫 | xióngmāo | n. | noun | gấu trúc | 熊猫|很|可爱。 | Gấu trúc rất đáng yêu. | 🐼
+护照 | hùzhào | n. | noun | hộ chiếu | 请|给|我|看|一下|你|的|护照。 | Cho tôi xem hộ chiếu của bạn. | 🛂
+菜单 | càidān | n. | noun | thực đơn | 服务员，|请|给|我|菜单。 | Phục vụ ơi, cho tôi xin thực đơn. | 📃
+年级 | niánjí | n. | noun | lớp (năm học thứ mấy) | 你|上|几|年级？ | Bạn học lớp mấy? | 🔢
+果汁 | guǒzhī | n. | noun | nước ép trái cây | 我|要|一|杯|果汁。 | Cho tôi một cốc nước ép. | 🧃
+盘子 | pánzi | n. | noun | đĩa | 桌子|上|有|一|个|盘子。 | Trên bàn có một cái đĩa. | 🍽️
+铅笔 | qiānbǐ | n. | noun | bút chì | 我|可以|用|你|的|铅笔|吗？ | Tôi dùng bút chì của bạn được không? | ✏️
+渴 | kě | adj. | adjective | khát | 我|渴|了，|想|喝|水。 | Tôi khát rồi, muốn uống nước. | 🥤
+洗手间 | xǐshǒujiān | n. | noun | nhà vệ sinh | 请问，|洗手间|在|哪里？ | Cho hỏi nhà vệ sinh ở đâu? | 🚻
+词语 | cíyǔ | n. | noun | từ ngữ | 这|个|词语|是|什么|意思？ | Từ này nghĩa là gì? | 🔤
+句子 | jùzi | n. | noun | câu | 请|读|这|个|句子。 | Hãy đọc câu này. | 💬
+照相机 | zhàoxiàngjī | n. | noun | máy ảnh | 我|买|了|一|个|新|照相机。 | Tôi mua một chiếc máy ảnh mới. | 📸
+筷子 | kuàizi | n. | noun | đũa | 你|会|用|筷子|吗？ | Bạn biết dùng đũa không? | 🥢
+字典 | zìdiǎn | n. | noun | từ điển | 这|本|字典|很|有用。 | Quyển từ điển này rất hữu ích. | 📕
+普通话 | pǔtōnghuà | n. | noun | tiếng phổ thông (Trung Quốc) | 他|的|普通话|说|得|很|好。 | Anh ấy nói tiếng phổ thông rất giỏi. | 🗨️
+爬山 | páshān | v. | verb | leo núi | 周末|我们|去|爬山|吧。 | Cuối tuần chúng ta đi leo núi nhé. | ⛰️
+黑板 | hēibǎn | n. | noun | bảng đen | 老师|在|黑板|上|写|字。 | Thầy viết chữ lên bảng. | 🖤
+行李箱 | xínglixiāng | n. | noun | va li | 我|的|行李箱|很|重。 | Va li của tôi rất nặng. | 🧳
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -955,6 +1043,93 @@ HAN_VIET = {
     '新鲜': 'tân tiên',
     '难过': 'nan quá',
     '客人': 'khách nhân',
+    '段': 'đoạn',
+    '西': 'tây',
+    '关': 'quan',
+    '班': 'ban',
+    '东': 'đông',
+    '蓝': 'lam',
+    '南': 'nam',
+    '黄': 'hoàng',
+    '电子': 'điện tử',
+    '骑': 'kỵ',
+    '角': 'giác',
+    '草': 'thảo',
+    '奶奶': 'nãi nãi',
+    '碗': 'oản',
+    '数学': 'số học',
+    '地铁': 'địa thiết',
+    '刷': 'loát',
+    '厨房': 'trù phòng',
+    '练习': 'luyện tập',
+    '爷爷': 'gia gia',
+    '云': 'vân',
+    '邻居': 'lân cư',
+    '校长': 'hiệu trưởng',
+    '花园': 'hoa viên',
+    '耳朵': 'nhĩ đoá',
+    '节日': 'tiết nhật',
+    '鼻子': 'tị tử',
+    '叔叔': 'thúc thúc',
+    '洗澡': 'tẩy táo',
+    '地图': 'địa đồ',
+    '帽子': 'mạo tử',
+    '街道': 'nhai đạo',
+    '感冒': 'cảm mạo',
+    '迟到': 'trì đáo',
+    '刻': 'khắc',
+    '锻炼': 'đoán luyện',
+    '裤子': 'khố tử',
+    '夏': 'hạ',
+    '图书馆': 'đồ thư quán',
+    '电梯': 'điện thê',
+    '刮': 'quát',
+    '矮': 'ải',
+    '眼镜': 'nhãn kính',
+    '上网': 'thượng võng',
+    '春': 'xuân',
+    '面包': 'diện bao',
+    '冰箱': 'băng tương',
+    '阿姨': 'a di',
+    '超市': 'siêu thị',
+    '着急': 'trước cấp',
+    '季节': 'quý tiết',
+    '饱': 'bão',
+    '空调': 'không điều',
+    '一共': 'nhất cộng',
+    '月亮': 'nguyệt lượng',
+    '北方': 'bắc phương',
+    '爱好': 'ái hảo',
+    '衬衫': 'sấn sam',
+    '宾馆': 'tân quán',
+    '冬': 'đông',
+    '裙子': 'quần tử',
+    '香蕉': 'hương tiêu',
+    '秋': 'thu',
+    '发烧': 'phát thiêu',
+    '伞': 'tản',
+    '有名': 'hữu danh',
+    '打扫': 'đả tảo',
+    '葡萄': 'bồ đào',
+    '复习': 'phục tập',
+    '熊猫': 'hùng miêu',
+    '护照': 'hộ chiếu',
+    '菜单': 'thái đơn',
+    '年级': 'niên cấp',
+    '果汁': 'quả trấp',
+    '盘子': 'bàn tử',
+    '铅笔': 'duyên bút',
+    '渴': 'khát',
+    '洗手间': 'tẩy thủ gian',
+    '词语': 'từ ngữ',
+    '句子': 'cú tử',
+    '照相机': 'chiếu tướng cơ',
+    '筷子': 'khoái tử',
+    '字典': 'tự điển',
+    '普通话': 'phổ thông thoại',
+    '爬山': 'ba sơn',
+    '黑板': 'hắc bản',
+    '行李箱': 'hành lý tương',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -1493,6 +1668,94 @@ EXAMPLE_PINYIN = {
     '新鲜': 'zhè xiē shuǐ guǒ hěn xīn xiān',
     '难过': 'tīng dào zhè ge xiāo xi wǒ hěn nán guò',
     '客人': 'jīn tiān jiā lǐ lái le kè rén',
+    '段': 'zhè duàn huà hěn nán dǒng',
+    '西': 'wǎng xī zǒu shí fēn zhōng jiù dào le',
+    '关': 'qǐng guān mén',
+    '班': 'wǒ men bān yǒu sān shí ge xué sheng',
+    '东': 'tā wǎng dōng zǒu le',
+    '蓝': 'jīn tiān de tiān hěn lán',
+    '南': 'guǎng zhōu zài zhōng guó nán bù',
+    '黄': 'qiū tiān de yè zi shì huáng de',
+    '电子': 'wǒ gěi nǐ fā diàn zǐ yóu jiàn',
+    '一会儿': 'qǐng děng yí huì r',
+    '骑': 'wǒ měi tiān qí chē shàng bān',
+    '角': 'yí ge píng guǒ wǔ jiǎo qián',
+    '草': 'yáng zài chī cǎo',
+    '奶奶': 'nǎi nai jīn nián bā shí suì le',
+    '碗': 'wǒ chī le liǎng wǎn mǐ fàn',
+    '数学': 'wǒ de shù xué bú tài hǎo',
+    '地铁': 'wǒ zuò dì tiě shàng bān',
+    '刷': 'wǒ měi tiān shuā liǎng cì yá',
+    '厨房': 'mā ma zài chú fáng zuò fàn',
+    '练习': 'wǒ měi tiān liàn xí shuō hàn yǔ',
+    '爷爷': 'yé ye xǐ huan hē chá',
+    '云': 'tiān shang yǒu hěn duō bái yún',
+    '邻居': 'wǒ de lín jū hěn rè qíng',
+    '校长': 'tā shì wǒ men xué xiào de xiào zhǎng',
+    '花园': 'wǒ jiā hòu miàn yǒu yí ge huā yuán',
+    '耳朵': 'tù zi de ěr duo hěn cháng',
+    '节日': 'chūn jié shì zhōng guó zuì zhòng yào de jié rì',
+    '鼻子': 'tā de bí zi hěn gāo',
+    '叔叔': 'shū shu zài yín háng gōng zuò',
+    '洗澡': 'wǒ wǎn shang xǐ zǎo',
+    '地图': 'nǐ yǒu běi jīng de dì tú ma',
+    '帽子': 'wài miàn hěn lěng dài shang mào zi ba',
+    '街道': 'zhè tiáo jiē dào hěn gān jìng',
+    '感冒': 'wǒ gǎn mào le',
+    '迟到': 'duì bu qǐ wǒ chí dào le',
+    '刻': 'xiàn zài bā diǎn yí kè',
+    '锻炼': 'wǒ měi tiān zǎo shang duàn liàn shēn tǐ',
+    '裤子': 'zhè tiáo kù zi tài cháng le',
+    '夏': 'jīn nián xià tiān tè bié rè',
+    '图书馆': 'wǒ zài tú shū guǎn kàn shū',
+    '电梯': 'wǒ men zuò diàn tī shàng lóu ba',
+    '刮': 'wài miàn guā fēng le',
+    '矮': 'wǒ bǐ gē ge ǎi',
+    '眼镜': 'wǒ de yǎn jìng ne',
+    '上网': 'wǒ wǎn shang cháng cháng shàng wǎng',
+    '春': 'chūn jié kuài dào le',
+    '面包': 'wǒ zǎo shang chī miàn bāo',
+    '冰箱': 'niú nǎi zài bīng xiāng lǐ',
+    '阿姨': 'ā yí nín hǎo',
+    '超市': 'wǒ qù chāo shì mǎi dōng xi',
+    '着急': 'bié zháo jí màn man lái',
+    '季节': 'nǐ zuì xǐ huan nǎ ge jì jié',
+    '饱': 'wǒ chī bǎo le',
+    '空调': 'tài rè le kāi kōng tiáo ba',
+    '一共': 'yí gòng duō shao qián',
+    '月亮': 'jīn tiān de yuè liang hěn yuán',
+    '北方': 'wǒ shì běi fāng rén',
+    '爱好': 'nǐ de ài hào shì shén me',
+    '衬衫': 'zhè jiàn chèn shān hěn piào liang',
+    '宾馆': 'wǒ men zhù zài bīn guǎn',
+    '冬': 'jīn nián dōng tiān bú tài lěng',
+    '裙子': 'tā chuān le yì tiáo hóng qún zi',
+    '香蕉': 'wǒ xǐ huan chī xiāng jiāo',
+    '秋': 'qiū tiān shì běi jīng zuì hǎo de jì jié',
+    '发烧': 'hái zi fā shāo le',
+    '伞': 'xià yǔ le dài sǎn ba',
+    '有名': 'zhè jiā fàn diàn hěn yǒu míng',
+    '打扫': 'wǒ zài dǎ sǎo fáng jiān',
+    '葡萄': 'zhè xiē pú tao hěn tián',
+    '复习': 'míng tiān kǎo shì jīn tiān yào fù xí',
+    '熊猫': 'xióng māo hěn kě ài',
+    '护照': 'qǐng gěi wǒ kàn yí xià nǐ de hù zhào',
+    '菜单': 'fú wù yuán qǐng gěi wǒ cài dān',
+    '年级': 'nǐ shàng jǐ nián jí',
+    '果汁': 'wǒ yào yì bēi guǒ zhī',
+    '盘子': 'zhuō zi shang yǒu yí ge pán zi',
+    '铅笔': 'wǒ kě yǐ yòng nǐ de qiān bǐ ma',
+    '渴': 'wǒ kě le xiǎng hē shuǐ',
+    '洗手间': 'qǐng wèn xǐ shǒu jiān zài nǎ lǐ',
+    '词语': 'zhè ge cí yǔ shì shén me yì si',
+    '句子': 'qǐng dú zhè ge jù zi',
+    '照相机': 'wǒ mǎi le yí ge xīn zhào xiàng jī',
+    '筷子': 'nǐ huì yòng kuài zi ma',
+    '字典': 'zhè běn zì diǎn hěn yǒu yòng',
+    '普通话': 'tā de pǔ tōng huà shuō de hěn hǎo',
+    '爬山': 'zhōu mò wǒ men qù pá shān ba',
+    '黑板': 'lǎo shī zài hēi bǎn shang xiě zì',
+    '行李箱': 'wǒ de xíng li xiāng hěn zhòng',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
