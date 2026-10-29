@@ -24,6 +24,14 @@ export const RELEASES: Release[] = [
         'The app opens faster: on a phone with slow 4G the home screen is ready in about 4.7 s instead of 7.7 s on the first visit, and 1.6 s instead of 2.5 s when you come back.',
       ],
       [
+        'Bấm loa là nghe ngay: câu truyện, bài nghe chép, câu hỏi nghe và từ đang luyện phát âm được chuẩn bị sẵn, tiếng bật lên trong khoảng 0,1 giây thay vì 1–2 giây. Đã sửa lỗi khiến nhiều câu, nhất là câu tiếng Trung, đọc bằng giọng máy thay vì giọng thu sẵn.',
+        'Tap the speaker and hear it at once: story lines, dictation, listening questions and the word you are pronouncing are prepared ahead, so the sound starts in about 0.1 s instead of 1–2 s. Fixed a bug that made many sentences, Chinese ones especially, play in the robot voice instead of the recorded one.',
+      ],
+      [
+        'Luyện phát âm chấm điểm ngay khi bạn nói đúng, không phải chờ thêm một nhịp im lặng.',
+        'Pronunciation practice scores you as soon as you say it right, without waiting for a pause.',
+      ],
+      [
         'Gói tiếng Trung tăng từ 330 lên 618 từ, phủ đủ 298 từ HSK 3 như 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, mỗi từ có pinyin, âm Hán Việt, câu ví dụ và giọng đọc thu sẵn.',
         'The Chinese pack grows from 330 to 618 words and covers all 298 HSK 3 words such as 把 / 被, 如果, 虽然, 应该, 一定, 而且, 然后, 决定, 机会, 马上, 经常, 打算, 照顾, 方便…, each with pinyin, Hán Việt, an example and recorded audio.',
       ],
