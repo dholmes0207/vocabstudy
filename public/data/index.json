@@ -35,9 +35,9 @@
       "learnerLang": "vi",
       "learnerLangName": "Tiếng Việt",
       "ttsLang": "zh-CN",
-      "count": 530,
+      "count": 618,
       "file": "zh.json",
-      "description": "Beta: 480 từ tiếng Trung, đủ từ vựng HSK 1 và HSK 2, thêm 200 từ HSK 3 thông dụng nhất, thêm từ đời thường (gia đình, màu sắc, đi lại, mua sắm, sở thích…), có pinyin và âm Hán Việt.",
+      "description": "Beta: 618 từ tiếng Trung, đủ từ vựng HSK 1, HSK 2 và HSK 3, thêm từ đời thường (gia đình, màu sắc, đi lại, mua sắm, sở thích…), có pinyin và âm Hán Việt.",
       "beta": true
     }
   ]

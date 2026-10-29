@@ -5,6 +5,7 @@ import {
   EXAMS,
   HSK1,
   HSK2,
+  HSK3,
   MOCK_SIZE,
   examFor,
   examLabelFor,
@@ -32,7 +33,7 @@ describe('exam roadmaps', () => {
     expect(examFor('zh')?.id).toBe('hsk1')
     expect(examFor('zh', 'hsk2')?.id).toBe('hsk2')
     expect(examFor('zh', 'nope')?.id).toBe('hsk1')
-    expect(examsFor('zh').map((e) => e.id)).toEqual(['hsk1', 'hsk2'])
+    expect(examsFor('zh').map((e) => e.id)).toEqual(['hsk1', 'hsk2', 'hsk3'])
     expect(examFor('ko')?.id).toBe('topik1')
     expect(examsFor('en').map((e) => e.id)).toEqual(['a2key', 'b1prelim'])
     expect(examFor('ja')).toBeUndefined()
@@ -60,9 +61,17 @@ describe('exam roadmaps', () => {
     expect(examWords(examFor('zh', 'hsk2')!, pack('zh').words)).toHaveLength(147)
   })
 
+  it('finds every HSK 3 headword in the Chinese pack, none repeating an easier level', () => {
+    expect(HSK3).toHaveLength(298)
+    expect(new Set(HSK3).size).toBe(298)
+    expect(HSK3.filter((w) => HSK1.includes(w) || HSK2.includes(w))).toEqual([])
+    expect(examWords(examFor('zh', 'hsk3')!, pack('zh').words)).toHaveLength(298)
+  })
+
   it('labels a word with the easiest level whose list has it', () => {
     expect(examLabelFor('zh', { word: '学生' })).toBe('HSK 1')
     expect(examLabelFor('zh', { word: '哥哥' })).toBe('HSK 2')
+    expect(examLabelFor('zh', { word: '虽然' })).toBe('HSK 3')
     expect(examLabelFor('zh', { word: '号' })).toBe('HSK 1')
     expect(examLabelFor('zh', { word: '越南' })).toBeNull()
     expect(examLabelFor('ko', { word: '학생' })).toBeNull()

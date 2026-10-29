@@ -153,3 +153,14 @@ describe('HSK 2 roadmap', () => {
     )
   })
 })
+
+describe('HSK 3 roadmap', () => {
+  it('has its own tab, with the writing part and the 298-word list', () => {
+    renderExam()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
+    expect(screen.getByRole('heading', { name: /HSK 3 roadmap/ })).toBeInTheDocument()
+    expect(screen.getByText(/80 questions: 40 listening/)).toBeInTheDocument()
+    expect(screen.getByText(/adds a writing part/)).toBeInTheDocument()
+    expect(screen.getByText(/The HSK 3 list \(298 entries\)/)).toBeInTheDocument()
+  })
+})
