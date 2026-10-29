@@ -559,3 +559,19 @@ như mọi bài khác.
 - **如果…就** (`zh-ruguo`): 就 đứng sau chủ ngữ; đối chiếu với 因为…所以.
 - Mỗi bài có câu chọn và câu xếp từ. Ở mỗi câu chọn, phương án sai đều chắc chắn sai.
 - Tổng cộng 31 bài ngữ pháp tiếng Trung. Trang chủ tự đếm lại.
+
+## Bước 28: 5 truyện mức HSK 3 (29/10/2026)
+
+11 truyện cũ đều ở mức A1–A2, nên từ HSK 3 hầu như chỉ xuất hiện trên chính thẻ của nó. Thêm 5
+truyện mức **B1**, viết để người học gặp lại nhiều từ HSK 3 và các điểm ngữ pháp ở Bước 27:
+
+- **Tìm ví** (`zh-lost-wallet`): 发现, 着急, 一直, 阿姨, 刚才, 终于, câu 把.
+- **Thành phố mới** (`zh-new-city`): 搬, 城市, 附近, 公园, 图书馆, 环境, 安静, 邻居, 一边…一边, 越来越.
+- **Ôn thi HSK 3** (`zh-hsk-exam`): 打算, 参加, 为了, 提高, 水平, 认真, 复习, 练习, 句子, 愿意, 虽然…但是.
+- **Quà sinh nhật bà** (`zh-birthday-gift`): 奶奶, 特别, 礼物, 花, 蛋糕, 厨房, 满意, 除了, 又…又.
+- **Bị cảm** (`zh-catch-cold`): 突然, 注意, 疼, 发烧, 担心, 检查, 感冒, 饱, 锻炼, 忘记.
+- Tên riêng và vài từ ngoài gói (钱包, 对面, 聊天, 录音, 通过, 感谢) không bấm được. Mỗi truyện vẫn bấm được
+  hơn 70% số từ, như các truyện khác.
+- Riêng 5 truyện này dùng 57/298 từ HSK 3. Tính cả 9 bài ngữ pháp, 77 từ HSK 3 xuất hiện ngoài thẻ
+  của chính nó (trước đây khoảng 29). `reading.test.ts` giữ mức tối thiểu 50 từ.
+- Tổng cộng 16 truyện tiếng Trung. Trang chủ tự đếm lại.

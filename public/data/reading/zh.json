@@ -863,6 +863,436 @@
           "answer": 1
         }
       ]
+    },
+    {
+      "id": "zh-lost-wallet",
+      "emoji": "👛",
+      "level": "B1",
+      "title": [
+        "Tìm ví",
+        "找钱包"
+      ],
+      "sentences": [
+        {
+          "en": "昨天​下午，​我​去​超市​买​东西。",
+          "vi": "Chiều hôm qua, tôi đi siêu thị mua đồ.",
+          "read": "Zuótiān xiàwǔ, wǒ qù chāoshì mǎi dōngxi."
+        },
+        {
+          "en": "买​完​东西​以后，​我​发现​钱包​不​见​了。",
+          "vi": "Mua đồ xong, tôi phát hiện ví không thấy đâu nữa.",
+          "read": "Mǎi wán dōngxi yǐhòu, wǒ fāxiàn qiánbāo bú jiàn le."
+        },
+        {
+          "en": "我​非常​着急，​一直​在​找。",
+          "vi": "Tôi rất sốt ruột, cứ tìm mãi.",
+          "read": "Wǒ fēicháng zháojí, yìzhí zài zhǎo."
+        },
+        {
+          "en": "一​位​阿姨​看见​我，​问：​“你​在​找​什么？”",
+          "vi": "Một cô nhìn thấy tôi, hỏi: “Cháu đang tìm gì thế?”",
+          "read": "Yí wèi āyí kànjiàn wǒ, wèn: “Nǐ zài zhǎo shénme?”"
+        },
+        {
+          "en": "我​说：​“我​的​钱包​不​见​了。”",
+          "vi": "Tôi nói: “Ví của cháu mất rồi.”",
+          "read": "Wǒ shuō: “Wǒ de qiánbāo bú jiàn le.”"
+        },
+        {
+          "en": "阿姨​说：​“别​着急，​你​去​问问​那儿​的​服务员。”",
+          "vi": "Cô nói: “Đừng sốt ruột, cháu ra hỏi nhân viên đằng kia xem.”",
+          "read": "Āyí shuō: “Bié zháojí, nǐ qù wènwen nàr de fúwùyuán.”"
+        },
+        {
+          "en": "服务员​把​一​个​黑色​的​钱包​拿出来​给​我。",
+          "vi": "Nhân viên lấy ra một chiếc ví màu đen đưa cho tôi.",
+          "read": "Fúwùyuán bǎ yí gè hēisè de qiánbāo náchūlai gěi wǒ."
+        },
+        {
+          "en": "“这​是​你​的​吗？​刚才​有​人​把​它​送​来​了。”",
+          "vi": "“Ví của bạn phải không? Vừa nãy có người mang nó tới.”",
+          "read": "“Zhè shì nǐ de ma? Gāngcái yǒu rén bǎ tā sòng lái le.”"
+        },
+        {
+          "en": "我​终于​找到​了​我​的​钱包，​真​高兴！",
+          "vi": "Cuối cùng tôi cũng tìm thấy ví, vui thật!",
+          "read": "Wǒ zhōngyú zhǎodào le wǒ de qiánbāo, zhēn gāoxìng!"
+        },
+        {
+          "en": "我​想​感谢​那​个​人，​但是​不​知道​他​是​谁。",
+          "vi": "Tôi muốn cảm ơn người đó, nhưng không biết người ấy là ai.",
+          "read": "Wǒ xiǎng gǎnxiè nà gè rén, dànshì bù zhīdào tā shì shéi."
+        }
+      ],
+      "questions": [
+        {
+          "q": "“Tôi” mất ví ở đâu?",
+          "options": [
+            "Ở ngân hàng",
+            "Ở siêu thị",
+            "Ở trường học"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Ai đưa ví lại cho “tôi”?",
+          "options": [
+            "Một cô đi mua đồ",
+            "Bạn của “tôi”",
+            "Nhân viên phục vụ"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Vì sao “tôi” không cảm ơn được người nhặt ví?",
+          "options": [
+            "Không biết người đó là ai",
+            "Người đó đã về nhà",
+            "Người đó không nói tiếng Trung"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "zh-new-city",
+      "emoji": "🏙️",
+      "level": "B1",
+      "title": [
+        "Thành phố mới",
+        "新城市"
+      ],
+      "sentences": [
+        {
+          "en": "上​个​月，​我们​家​搬​到​了​一​个​新​城市。",
+          "vi": "Tháng trước, nhà tôi chuyển đến một thành phố mới.",
+          "read": "Shàng gè yuè, wǒmen jiā bān dào le yí gè xīn chéngshì."
+        },
+        {
+          "en": "新​家​附近​有​一​个​很​大​的​公园。",
+          "vi": "Gần nhà mới có một công viên rất lớn.",
+          "read": "Xīn jiā fùjìn yǒu yí gè hěn dà de gōngyuán."
+        },
+        {
+          "en": "公园​旁边​是​图书馆，​对面​是​超市。",
+          "vi": "Cạnh công viên là thư viện, đối diện là siêu thị.",
+          "read": "Gōngyuán pángbiān shì túshūguǎn, duìmiàn shì chāoshì."
+        },
+        {
+          "en": "这里​的​环境​很​好，​也​很​安静。",
+          "vi": "Môi trường ở đây rất tốt, cũng rất yên tĩnh.",
+          "read": "Zhèlǐ de huánjìng hěn hǎo, yě hěn ānjìng."
+        },
+        {
+          "en": "刚​搬​来​的​时候，​我​一个​朋友​也​没有。",
+          "vi": "Lúc mới chuyển đến, tôi chẳng có người bạn nào.",
+          "read": "Gāng bān lái de shíhou, wǒ yíge péngyou yě méiyǒu."
+        },
+        {
+          "en": "后来，​邻居​的​孩子​请​我​去​他​家​玩。",
+          "vi": "Sau đó, cậu bé nhà hàng xóm mời tôi sang nhà chơi.",
+          "read": "Hòulái, línjū de háizi qǐng wǒ qù tā jiā wán."
+        },
+        {
+          "en": "我们​一边​玩​游戏，​一边​聊天。",
+          "vi": "Chúng tôi vừa chơi trò chơi vừa trò chuyện.",
+          "read": "Wǒmen yìbiān wán yóuxì, yìbiān liáotiān."
+        },
+        {
+          "en": "现在​我们​是​好​朋友，​周末​经常​一起​去​公园​踢足球。",
+          "vi": "Bây giờ chúng tôi là bạn thân, cuối tuần thường cùng ra công viên đá bóng.",
+          "read": "Xiànzài wǒmen shì hǎo péngyou, zhōumò jīngcháng yìqǐ qù gōngyuán tī zúqiú."
+        },
+        {
+          "en": "我​越来越​喜欢​这​个​城市​了。",
+          "vi": "Tôi ngày càng thích thành phố này.",
+          "read": "Wǒ yuèláiyuè xǐhuan zhè gè chéngshì le."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Gần nhà mới có gì?",
+          "options": [
+            "Một sân bay",
+            "Một công viên lớn",
+            "Một bệnh viện"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Lúc mới chuyển đến, “tôi” thế nào?",
+          "options": [
+            "Không có bạn nào",
+            "Có rất nhiều bạn",
+            "Rất bận"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Cuối tuần hai bạn hay làm gì?",
+          "options": [
+            "Đọc sách ở thư viện",
+            "Đi siêu thị",
+            "Đá bóng ở công viên"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "zh-hsk-exam",
+      "emoji": "📝",
+      "level": "B1",
+      "title": [
+        "Ôn thi HSK 3",
+        "准备HSK考试"
+      ],
+      "sentences": [
+        {
+          "en": "我​打算​下​个​月​参加​HSK​三​级​考试。",
+          "vi": "Tôi định tháng sau đi thi HSK cấp 3.",
+          "read": "Wǒ dǎsuàn xià gè yuè cānjiā HSK sān jí kǎoshì."
+        },
+        {
+          "en": "为了​提高​汉语​水平，​我​每天​都​认真​复习。",
+          "vi": "Để nâng cao trình độ tiếng Trung, ngày nào tôi cũng ôn bài chăm chỉ.",
+          "read": "Wèile tígāo Hànyǔ shuǐpíng, wǒ měitiān dōu rènzhēn fùxí."
+        },
+        {
+          "en": "早上​我​听​录音，​晚上​做​练习。",
+          "vi": "Buổi sáng tôi nghe băng, buổi tối làm bài luyện.",
+          "read": "Zǎoshang wǒ tīng lùyīn, wǎnshang zuò liànxí."
+        },
+        {
+          "en": "有​的​句子​很​难，​我​经常​听​不​懂。",
+          "vi": "Có những câu rất khó, tôi thường nghe không hiểu.",
+          "read": "Yǒu de jùzi hěn nán, wǒ jīngcháng tīng bu dǒng."
+        },
+        {
+          "en": "我​的​同学​小王​汉语​很​好，​他​愿意​帮助​我。",
+          "vi": "Bạn học của tôi là Tiểu Vương giỏi tiếng Trung, cậu ấy sẵn lòng giúp tôi.",
+          "read": "Wǒ de tóngxué XiǎoWáng Hànyǔ hěn hǎo, tā yuànyì bāngzhù wǒ."
+        },
+        {
+          "en": "虽然​复习​很​累，​但是​我​觉得​很​有意思。",
+          "vi": "Ôn thi tuy mệt nhưng tôi thấy rất thú vị.",
+          "read": "Suīrán fùxí hěn lèi, dànshì wǒ juéde hěn yǒu yìsi."
+        },
+        {
+          "en": "考试​那​天，​我​有点儿​担心。",
+          "vi": "Hôm thi, tôi hơi lo.",
+          "read": "Kǎoshì nà tiān, wǒ yǒudiǎnr dānxīn."
+        },
+        {
+          "en": "但是​题​不​太​难，​我​很​快​就​写完​了。",
+          "vi": "Nhưng đề không khó lắm, tôi làm xong rất nhanh.",
+          "read": "Dànshì tí bú tài nán, wǒ hěn kuài jiù xiěwán le."
+        },
+        {
+          "en": "一​个​月​以后，​我​知道​了​成绩：​我​通过​了！",
+          "vi": "Một tháng sau, tôi biết kết quả: tôi đỗ rồi!",
+          "read": "Yí gè yuè yǐhòu, wǒ zhīdào le chéngjì: wǒ tōngguò le!"
+        }
+      ],
+      "questions": [
+        {
+          "q": "“Tôi” định thi gì?",
+          "options": [
+            "HSK cấp 1",
+            "TOPIK",
+            "HSK cấp 3"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Ai giúp “tôi” ôn thi?",
+          "options": [
+            "Bạn học Tiểu Vương",
+            "Thầy giáo",
+            "Bố"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Kết quả thi thế nào?",
+          "options": [
+            "Trượt",
+            "Đỗ",
+            "Chưa có kết quả"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-birthday-gift",
+      "emoji": "🎂",
+      "level": "B1",
+      "title": [
+        "Quà sinh nhật bà",
+        "奶奶的生日礼物"
+      ],
+      "sentences": [
+        {
+          "en": "下​个​星期​是​奶奶​的​生日。",
+          "vi": "Tuần sau là sinh nhật bà nội.",
+          "read": "Xià gè xīngqī shì nǎinai de shēngrì."
+        },
+        {
+          "en": "我​和​妹妹​想​给​她​一​个​特别​的​礼物。",
+          "vi": "Tôi và em gái muốn tặng bà một món quà đặc biệt.",
+          "read": "Wǒ hé mèimei xiǎng gěi tā yí gè tèbié de lǐwù."
+        },
+        {
+          "en": "妹妹​说：​“奶奶​喜欢​花，​我们​送​她​花​吧。”",
+          "vi": "Em gái nói: “Bà thích hoa, mình tặng bà hoa đi.”",
+          "read": "Mèimei shuō: “Nǎinai xǐhuan huā, wǒmen sòng tā huā ba.”"
+        },
+        {
+          "en": "我​说：​“除了​花，​我们​还​可以​给​她​做​一​个​蛋糕。”",
+          "vi": "Tôi nói: “Ngoài hoa ra, mình còn có thể làm cho bà một cái bánh.”",
+          "read": "Wǒ shuō: “Chúle huā, wǒmen hái kěyǐ gěi tā zuò yí gè dàngāo.”"
+        },
+        {
+          "en": "我们​一起​去​超市​买​了​鸡蛋，​牛奶​和​糖。",
+          "vi": "Chúng tôi cùng đi siêu thị mua trứng, sữa và đường.",
+          "read": "Wǒmen yìqǐ qù chāoshì mǎi le jīdàn, niúnǎi hé táng."
+        },
+        {
+          "en": "在​厨房​里，​妹妹​一边​唱歌，​一边​帮​我。",
+          "vi": "Trong bếp, em gái vừa hát vừa giúp tôi.",
+          "read": "Zài chúfáng lǐ, mèimei yìbiān chànggē, yìbiān bāng wǒ."
+        },
+        {
+          "en": "蛋糕​做好​了，​又​好看​又​好吃。",
+          "vi": "Bánh làm xong, vừa đẹp vừa ngon.",
+          "read": "Dàngāo zuòhǎo le, yòu hǎokàn yòu hǎochī."
+        },
+        {
+          "en": "奶奶​生日​那​天，​我们​把​蛋糕​和​花​送​给​她。",
+          "vi": "Hôm sinh nhật bà, chúng tôi tặng bà bánh và hoa.",
+          "read": "Nǎinai shēngrì nà tiān, wǒmen bǎ dàngāo hé huā sòng gěi tā."
+        },
+        {
+          "en": "奶奶​非常​满意，​笑​着​说：​“你们​真​是​我​的​好​孩子！”",
+          "vi": "Bà rất hài lòng, cười nói: “Các cháu đúng là cháu ngoan của bà!”",
+          "read": "Nǎinai fēicháng mǎnyì, xiào zhe shuō: “Nǐmen zhēn shì wǒ de hǎo háizi!”"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Bà nội thích gì?",
+          "options": [
+            "Sách",
+            "Hoa",
+            "Trà"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Ngoài hoa, hai chị em tặng gì?",
+          "options": [
+            "Một cái bánh tự làm",
+            "Một chiếc váy",
+            "Một bát mì"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Bà thấy thế nào?",
+          "options": [
+            "Hơi buồn",
+            "Không thích",
+            "Rất hài lòng"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "zh-catch-cold",
+      "emoji": "🤧",
+      "level": "B1",
+      "title": [
+        "Bị cảm",
+        "感冒了"
+      ],
+      "sentences": [
+        {
+          "en": "上​个​星期，​天气​突然​变​冷​了。",
+          "vi": "Tuần trước, trời đột nhiên trở lạnh.",
+          "read": "Shàng gè xīngqī, tiānqì tūrán biàn lěng le."
+        },
+        {
+          "en": "我​没​注意，​穿​得​太​少​了。",
+          "vi": "Tôi không để ý, mặc phong phanh quá.",
+          "read": "Wǒ méi zhùyì, chuān de tài shǎo le."
+        },
+        {
+          "en": "第二​天​早上，​我​头​疼，​还​发烧​了。",
+          "vi": "Sáng hôm sau, tôi đau đầu, lại còn sốt.",
+          "read": "Dìèr tiān zǎoshang, wǒ tóu téng, hái fāshāo le."
+        },
+        {
+          "en": "妈妈​很​担心，​带​我​去​医院​检查。",
+          "vi": "Mẹ rất lo, đưa tôi đến bệnh viện khám.",
+          "read": "Māma hěn dānxīn, dài wǒ qù yīyuàn jiǎnchá."
+        },
+        {
+          "en": "医生​说​我​感冒​了，​要​多​喝​水，​好好​休息。",
+          "vi": "Bác sĩ nói tôi bị cảm, phải uống nhiều nước, nghỉ ngơi cho tốt.",
+          "read": "Yīshēng shuō wǒ gǎnmào le, yào duō hē shuǐ, hǎohǎo xiūxi."
+        },
+        {
+          "en": "回​家​以后，​妈妈​给​我​做​了​面条。",
+          "vi": "Về nhà, mẹ nấu mì cho tôi.",
+          "read": "Huí jiā yǐhòu, māma gěi wǒ zuò le miàntiáo."
+        },
+        {
+          "en": "我​吃​饱​了，​就​去​睡觉。",
+          "vi": "Tôi ăn no rồi đi ngủ.",
+          "read": "Wǒ chī bǎo le, jiù qù shuìjiào."
+        },
+        {
+          "en": "三​天​以后，​我​的​感冒​好​了。",
+          "vi": "Ba ngày sau, tôi khỏi cảm.",
+          "read": "Sān tiān yǐhòu, wǒ de gǎnmào hǎo le."
+        },
+        {
+          "en": "现在​我​每天​早上​锻炼​身体，​也​不​会​忘记​多​穿​衣服​了。",
+          "vi": "Bây giờ sáng nào tôi cũng tập thể dục, và không quên mặc thêm áo nữa.",
+          "read": "Xiànzài wǒ měitiān zǎoshang duànliàn shēntǐ, yě bú huì wàngjì duō chuān yīfu le."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Vì sao “tôi” bị cảm?",
+          "options": [
+            "Đi dưới mưa",
+            "Trời lạnh mà mặc quá ít",
+            "Ăn quá nhiều"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Bác sĩ khuyên gì?",
+          "options": [
+            "Uống nhiều nước, nghỉ ngơi",
+            "Chạy bộ mỗi ngày",
+            "Ăn nhiều hoa quả"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Bây giờ mỗi sáng “tôi” làm gì?",
+          "options": [
+            "Ngủ nướng",
+            "Xem TV",
+            "Tập thể dục"
+          ],
+          "answer": 2
+        }
+      ]
     }
   ]
 }
