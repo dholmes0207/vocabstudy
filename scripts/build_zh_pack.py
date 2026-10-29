@@ -503,6 +503,56 @@ ROWS = '''
 借 | jiè | v. | verb | mượn; cho mượn | 我|可以|借|你|的|笔|吗？ | Tôi mượn bút của bạn được không? | 🖊️
 害怕 | hàipà | v. | verb | sợ | 我|害怕|狗。 | Tôi sợ chó. | 😨
 鸟 | niǎo | n. | noun | chim | 树|上|有|一|只|鸟。 | Trên cây có một con chim. | 🐦
+根据 | gēnjù | prep. | preposition | theo, căn cứ vào | 根据|天气|预报，|明天|下雨。 | Theo dự báo thời tiết, mai trời mưa. | 📑
+作用 | zuòyòng | n. | noun | tác dụng | 这|种|药|很|有|作用。 | Loại thuốc này rất có tác dụng. | 💊
+差 | chà | adj. | adjective | kém, tệ; thiếu | 我|的|汉语|很|差。 | Tiếng Trung của tôi rất kém. | 👎
+一边 | yìbiān | adv. | adverb | vừa … vừa … | 他|一边|吃|饭，|一边|看|电视。 | Anh ấy vừa ăn cơm vừa xem TV. | 🍜
+极 | jí | adv. | adverb | cực kỳ (…极了) | 这|个|菜|好吃|极|了！ | Món này ngon cực kỳ! | 🔥
+举行 | jǔxíng | v. | verb | tổ chức (cuộc họp, buổi lễ) | 比赛|在|北京|举行。 | Cuộc thi được tổ chức ở Bắc Kinh. | 🎪
+水平 | shuǐpíng | n. | noun | trình độ | 他|的|汉语|水平|很|高。 | Trình độ tiếng Trung của anh ấy rất cao. | 📶
+照顾 | zhàogù | v. | verb | chăm sóc | 她|在|家|照顾|孩子。 | Cô ấy ở nhà chăm con. | 🤱
+文化 | wénhuà | n. | noun | văn hoá | 我|对|中国|文化|很|感|兴趣。 | Tôi rất hứng thú với văn hoá Trung Quốc. | 🏮
+疼 | téng | adj. | adjective | đau | 我|头|疼。 | Tôi đau đầu. | 🤕
+奇怪 | qíguài | adj. | adjective | lạ, kỳ lạ | 这|件|事|很|奇怪。 | Chuyện này lạ thật. | 🤨
+礼物 | lǐwù | n. | noun | quà, món quà | 这|是|给|你|的|礼物。 | Đây là quà tặng bạn. | 🎁
+提高 | tígāo | v. | verb | nâng cao | 我|想|提高|汉语|水平。 | Tôi muốn nâng cao trình độ tiếng Trung. | 🚀
+满意 | mǎnyì | adj. | adjective | hài lòng | 我|对|这|个|房间|很|满意。 | Tôi rất hài lòng với căn phòng này. | 😌
+旧 | jiù | adj. | adjective | cũ | 这|是|我|的|旧|手机。 | Đây là điện thoại cũ của tôi. | 📼
+司机 | sījī | n. | noun | tài xế | 我|爸爸|是|出租车|司机。 | Bố tôi là tài xế taxi. | 🚕
+经理 | jīnglǐ | n. | noun | giám đốc, quản lý | 王|经理|在|开|会。 | Giám đốc Vương đang họp. | 💼
+兴趣 | xìngqù | n. | noun | hứng thú, sở thích | 我|对|音乐|很|有|兴趣。 | Tôi rất có hứng thú với âm nhạc. | 🎵
+帮忙 | bāngmáng | v. | verb | giúp một tay | 你|能|来|帮忙|吗？ | Bạn đến giúp một tay được không? | 🙌
+见面 | jiànmiàn | v. | verb | gặp mặt | 我们|明天|见面|吧。 | Mai chúng ta gặp nhau nhé. | 🤗
+成绩 | chéngjì | n. | noun | thành tích, điểm số | 他|的|考试|成绩|很|好。 | Kết quả thi của anh ấy rất tốt. | 🅰️
+中间 | zhōngjiān | n. | noun | ở giữa | 我|坐|在|他们|中间。 | Tôi ngồi giữa họ. | ⏺️
+聪明 | cōngming | adj. | adjective | thông minh | 这|个|孩子|很|聪明。 | Đứa trẻ này rất thông minh. | 🦉
+多么 | duōme | adv. | adverb | biết bao, thật là | 今天|的|天气|多么|好|啊！ | Thời tiết hôm nay đẹp biết bao! | 🌈
+灯 | dēng | n. | noun | đèn | 请|开|灯。 | Làm ơn bật đèn lên. | 🪔
+太阳 | tàiyáng | n. | noun | mặt trời | 太阳|出来|了。 | Mặt trời lên rồi. | 🌅
+方便 | fāngbiàn | adj. | adjective | tiện, thuận tiện | 坐|地铁|很|方便。 | Đi tàu điện ngầm rất tiện. | 🚇
+糖 | táng | n. | noun | đường; kẹo | 我|喝|咖啡|不|放|糖。 | Tôi uống cà phê không cho đường. | 🍬
+相同 | xiāngtóng | adj. | adjective | giống hệt, như nhau | 我们|的|想法|相同。 | Suy nghĩ của chúng tôi giống nhau. | 🟰
+生气 | shēngqì | v. | verb | giận, tức giận | 妈妈|生气|了。 | Mẹ giận rồi. | 😠
+公园 | gōngyuán | n. | noun | công viên | 我们|去|公园|走走|吧。 | Chúng ta đi dạo công viên đi. | 🏞️
+热情 | rèqíng | adj. | adjective | nhiệt tình | 他|对|客人|很|热情。 | Anh ấy rất nhiệt tình với khách. | 🤩
+河 | hé | n. | noun | sông | 这|条|河|很|长。 | Con sông này rất dài. | 🛶
+搬 | bān | v. | verb | chuyển, dọn (nhà, đồ) | 我们|下|个|月|搬|家。 | Tháng sau chúng tôi chuyển nhà. | 📦
+同事 | tóngshì | n. | noun | đồng nghiệp | 他|是|我|的|同事。 | Anh ấy là đồng nghiệp của tôi. | 👩‍💼
+舒服 | shūfu | adj. | adjective | dễ chịu, thoải mái | 这|个|椅子|很|舒服。 | Cái ghế này rất thoải mái. | 🛋️
+体育 | tǐyù | n. | noun | thể dục, thể thao | 我|最|喜欢|上|体育|课。 | Tôi thích nhất giờ thể dục. | 🏋️
+胖 | pàng | adj. | adjective | béo, mập | 我|最近|胖|了。 | Dạo này tôi béo lên. | 🐷
+干净 | gānjìng | adj. | adjective | sạch, sạch sẽ | 房间|很|干净。 | Căn phòng rất sạch sẽ. | 🧼
+放心 | fàngxīn | v. | verb | yên tâm | 你|放心|吧，|我|会|小心|的。 | Bạn yên tâm đi, tôi sẽ cẩn thận. | 😮‍💨
+甜 | tián | adj. | adjective | ngọt | 这|个|西瓜|很|甜。 | Quả dưa hấu này rất ngọt. | 🍉
+安静 | ānjìng | adj. | adjective | yên tĩnh | 图书馆|里|很|安静。 | Trong thư viện rất yên tĩnh. | 🔇
+作业 | zuòyè | n. | noun | bài tập về nhà | 今天|的|作业|很|多。 | Hôm nay bài tập nhiều lắm. | 📓
+瘦 | shòu | adj. | adjective | gầy | 他|很|高，|也|很|瘦。 | Anh ấy cao và cũng rất gầy. | 🦴
+绿 | lǜ | adj. | adjective | xanh lá | 春天|的|草|很|绿。 | Cỏ mùa xuân rất xanh. | 🟩
+啤酒 | píjiǔ | n. | noun | bia | 你|喝|啤酒|吗？ | Bạn uống bia không? | 🍺
+蛋糕 | dàngāo | n. | noun | bánh ngọt, bánh kem | 生日|蛋糕|很|好吃。 | Bánh sinh nhật rất ngon. | 🧁
+新鲜 | xīnxiān | adj. | adjective | tươi | 这|些|水果|很|新鲜。 | Chỗ hoa quả này rất tươi. | 🥬
+难过 | nánguò | adj. | adjective | buồn | 听|到|这|个|消息，|我|很|难过。 | Nghe tin này tôi rất buồn. | 😔
+客人 | kèrén | n. | noun | khách | 今天|家|里|来|了|客人。 | Hôm nay nhà có khách. | 🛎️
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -856,6 +906,55 @@ HAN_VIET = {
     '借': 'tá',
     '害怕': 'hại phạ',
     '鸟': 'điểu',
+    '根据': 'căn cứ',
+    '作用': 'tác dụng',
+    '差': 'sai',
+    '一边': 'nhất biên',
+    '极': 'cực',
+    '举行': 'cử hành',
+    '水平': 'thuỷ bình',
+    '照顾': 'chiếu cố',
+    '文化': 'văn hoá',
+    '疼': 'đông',
+    '奇怪': 'kỳ quái',
+    '礼物': 'lễ vật',
+    '提高': 'đề cao',
+    '满意': 'mãn ý',
+    '旧': 'cựu',
+    '司机': 'ty cơ',
+    '经理': 'kinh lý',
+    '兴趣': 'hứng thú',
+    '帮忙': 'bang mang',
+    '见面': 'kiến diện',
+    '成绩': 'thành tích',
+    '中间': 'trung gian',
+    '聪明': 'thông minh',
+    '多么': 'đa ma',
+    '灯': 'đăng',
+    '太阳': 'thái dương',
+    '方便': 'phương tiện',
+    '糖': 'đường',
+    '相同': 'tương đồng',
+    '生气': 'sinh khí',
+    '公园': 'công viên',
+    '热情': 'nhiệt tình',
+    '河': 'hà',
+    '搬': 'ban',
+    '同事': 'đồng sự',
+    '舒服': 'thư phục',
+    '体育': 'thể dục',
+    '胖': 'bàn',
+    '干净': 'can tịnh',
+    '放心': 'phóng tâm',
+    '甜': 'điềm',
+    '安静': 'an tĩnh',
+    '作业': 'tác nghiệp',
+    '瘦': 'sấu',
+    '绿': 'lục',
+    '蛋糕': 'đản cao',
+    '新鲜': 'tân tiên',
+    '难过': 'nan quá',
+    '客人': 'khách nhân',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -1344,6 +1443,56 @@ EXAMPLE_PINYIN = {
     '借': 'wǒ kě yǐ jiè nǐ de bǐ ma',
     '害怕': 'wǒ hài pà gǒu',
     '鸟': 'shù shang yǒu yì zhī niǎo',
+    '根据': 'gēn jù tiān qì yù bào míng tiān xià yǔ',
+    '作用': 'zhè zhǒng yào hěn yǒu zuò yòng',
+    '差': 'wǒ de hàn yǔ hěn chà',
+    '一边': 'tā yì biān chī fàn yì biān kàn diàn shì',
+    '极': 'zhè ge cài hǎo chī jí le',
+    '举行': 'bǐ sài zài běi jīng jǔ xíng',
+    '水平': 'tā de hàn yǔ shuǐ píng hěn gāo',
+    '照顾': 'tā zài jiā zhào gù hái zi',
+    '文化': 'wǒ duì zhōng guó wén huà hěn gǎn xìng qù',
+    '疼': 'wǒ tóu téng',
+    '奇怪': 'zhè jiàn shì hěn qí guài',
+    '礼物': 'zhè shì gěi nǐ de lǐ wù',
+    '提高': 'wǒ xiǎng tí gāo hàn yǔ shuǐ píng',
+    '满意': 'wǒ duì zhè ge fáng jiān hěn mǎn yì',
+    '旧': 'zhè shì wǒ de jiù shǒu jī',
+    '司机': 'wǒ bà ba shì chū zū chē sī jī',
+    '经理': 'wáng jīng lǐ zài kāi huì',
+    '兴趣': 'wǒ duì yīn yuè hěn yǒu xìng qù',
+    '帮忙': 'nǐ néng lái bāng máng ma',
+    '见面': 'wǒ men míng tiān jiàn miàn ba',
+    '成绩': 'tā de kǎo shì chéng jì hěn hǎo',
+    '中间': 'wǒ zuò zài tā men zhōng jiān',
+    '聪明': 'zhè ge hái zi hěn cōng ming',
+    '多么': 'jīn tiān de tiān qì duō me hǎo a',
+    '灯': 'qǐng kāi dēng',
+    '太阳': 'tài yáng chū lai le',
+    '方便': 'zuò dì tiě hěn fāng biàn',
+    '糖': 'wǒ hē kā fēi bú fàng táng',
+    '相同': 'wǒ men de xiǎng fǎ xiāng tóng',
+    '生气': 'mā ma shēng qì le',
+    '公园': 'wǒ men qù gōng yuán zǒu zou ba',
+    '热情': 'tā duì kè rén hěn rè qíng',
+    '河': 'zhè tiáo hé hěn cháng',
+    '搬': 'wǒ men xià ge yuè bān jiā',
+    '同事': 'tā shì wǒ de tóng shì',
+    '舒服': 'zhè ge yǐ zi hěn shū fu',
+    '体育': 'wǒ zuì xǐ huan shàng tǐ yù kè',
+    '胖': 'wǒ zuì jìn pàng le',
+    '干净': 'fáng jiān hěn gān jìng',
+    '放心': 'nǐ fàng xīn ba wǒ huì xiǎo xīn de',
+    '甜': 'zhè ge xī guā hěn tián',
+    '安静': 'tú shū guǎn lǐ hěn ān jìng',
+    '作业': 'jīn tiān de zuò yè hěn duō',
+    '瘦': 'tā hěn gāo yě hěn shòu',
+    '绿': 'chūn tiān de cǎo hěn lǜ',
+    '啤酒': 'nǐ hē pí jiǔ ma',
+    '蛋糕': 'shēng rì dàn gāo hěn hǎo chī',
+    '新鲜': 'zhè xiē shuǐ guǒ hěn xīn xiān',
+    '难过': 'tīng dào zhè ge xiāo xi wǒ hěn nán guò',
+    '客人': 'jīn tiān jiā lǐ lái le kè rén',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
