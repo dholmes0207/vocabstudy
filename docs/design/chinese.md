@@ -519,3 +519,23 @@ Hai điểm ngữ pháp HSK 2. Bài dùng các từ đã có trong gói (到, �
 - Câu chọn chỉ có những câu rủ hay khuyên, kết thúc bằng "！" hoặc "。", nên 吗 chắc chắn sai.
   Không dùng câu hỏi "你是学生___？", vì cả 吧 lẫn 吗 đều đúng ở đó.
 - Tổng cộng 22 bài ngữ pháp tiếng Trung. Trang chủ đã cập nhật.
+
+## Bước 26: chia lại bộ chủ đề (29/10/2026)
+
+Sau khi thêm đủ từ HSK 3 (gói lên 618 từ), các từ mới được dồn vào những bộ sẵn có, nên có bộ
+phình tới 111 từ (Hoạt động hằng ngày), 90 từ (Từ để hỏi & từ ngữ pháp) và 87 từ (Miêu tả). Bộ
+tiếng Anh lớn nhất chỉ có 47 từ. Một bộ quá lớn không còn là "một chủ đề" để học trong vài buổi.
+
+- Chia lại thành 24 bộ, mỗi bộ 16–49 từ. Tám bộ cũ giữ nguyên (Chào hỏi, Con người, Ăn uống, Ở
+  nhà hàng, Đồ vật quanh nhà, Sức khoẻ & màu sắc, Sở thích, Thời tiết & bốn mùa).
+- Bộ tách ra:
+  - Nơi chốn → **Đi lại & du lịch**, **Phương hướng & vị trí**, **Thành phố & nơi công cộng**;
+  - Thời gian → **Giờ giấc & ngày tháng**, **Trước, sau & bao lâu**;
+  - Số đếm & mua sắm → **Số đếm & lượng từ**, **Mua sắm**;
+  - Hoạt động hằng ngày → **Sinh hoạt hằng ngày**, **Dự định & việc phải làm**, **Cảm xúc & suy
+    nghĩ**;
+  - Miêu tả & thời tiết → **Tính chất & miêu tả** (từ thời tiết đã có ở bộ Thời tiết & bốn mùa);
+  - Học tập & công việc → **Trường lớp & học tập**, **Công việc**;
+  - Từ để hỏi & từ ngữ pháp → **Từ để hỏi**, **Từ ngữ pháp cơ bản**, **Liên từ & phó từ**.
+- Một từ có thể nằm ở hai bộ khi hợp cả hai (银行 ở Mua sắm và Thành phố). Tiến độ lưu theo từ,
+  không theo bộ, nên đổi bộ không làm mất gì của người học.
