@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
-import { cleanup, render } from '@testing-library/react'
-import { afterEach, beforeAll, describe, expect, it } from 'vitest'
+import { act, cleanup, render } from '@testing-library/react'
+import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import SkyBackdrop from './SkyBackdrop'
 import { useSettings } from '@/store/settingsStore'
@@ -48,5 +48,28 @@ describe('SkyBackdrop', () => {
     useUi.setState({ immersiveCount: 1 })
     const { container } = render(<SkyBackdrop />)
     expect(container.querySelector('.sky')).toHaveClass('sky--calm')
+  })
+})
+
+describe('SkyBackdrop start-up', () => {
+  it('starts after the first screen, already calm during a session, and fades in', async () => {
+    const setCalm = vi.fn()
+    const sky = await import('@/lib/skyRenderer')
+    const start = vi.spyOn(sky, 'startSky').mockReturnValue({ stop() {}, setCalm } as never)
+    vi.useFakeTimers()
+    try {
+      useUi.setState({ immersiveCount: 1 })
+      const { container } = render(<SkyBackdrop />)
+      expect(start).not.toHaveBeenCalled()
+      act(() => {
+        vi.advanceTimersByTime(2000)
+      })
+      expect(start).toHaveBeenCalledTimes(1)
+      expect(setCalm).toHaveBeenCalledWith(true)
+      expect(container.querySelector('.sky-canvas')).toHaveAttribute('data-on')
+    } finally {
+      vi.useRealTimers()
+      start.mockRestore()
+    }
   })
 })
