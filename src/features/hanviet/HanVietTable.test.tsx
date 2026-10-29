@@ -24,15 +24,16 @@ const pack = (code: string) =>
 beforeEach(() => useSettings.setState({ uiLang: 'vi', currentLang: 'zh' }))
 afterEach(cleanup)
 
-// The zh table lists hundreds of characters: label and text queries keep these
-// tests fast where role queries walk the whole table.
+// The zh table lists hundreds of characters, and every Testing Library query
+// walks the whole page (a label query took 3 s), so the full table is checked
+// with a plain selector and the queries wait until the search has narrowed it.
 describe('HanVietTable', () => {
   it('lists shared characters with their reading, and finds one typed without marks', () => {
     useData.setState({ pack: pack('zh'), status: 'ready' })
-    render(<HanVietTable />)
-    expect(screen.getByLabelText('Nghe 学')).toBeInTheDocument()
+    const { container } = render(<HanVietTable />)
+    expect(container.querySelector('button[aria-label="Nghe 学"]')).not.toBeNull()
 
-    fireEvent.change(screen.getByLabelText('Tìm chữ'), {
+    fireEvent.change(container.querySelector('input[type="search"]')!, {
       target: { value: 'hoc' },
     })
     expect(screen.getByRole('button', { name: 'Nghe 学' })).toBeInTheDocument()
