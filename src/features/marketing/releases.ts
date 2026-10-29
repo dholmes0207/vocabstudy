@@ -27,6 +27,10 @@ export const RELEASES: Release[] = [
         'Trang "Lộ trình luyện thi" có thêm tab HSK 3: thông tin đề và thang điểm, tiến độ theo danh sách từ và bài kiểm tra từ vựng 20 câu.',
         'The "Exam roadmap" page gains an HSK 3 tab: the test format and scores, progress through the word list and a 20-question vocabulary check.',
       ],
+      [
+        'Bộ chủ đề tiếng Trung chia lại thành 24 bộ gọn hơn, mỗi bộ dưới 50 từ: thêm Phương hướng & vị trí, Cảm xúc & suy nghĩ, Dự định & việc phải làm, Liên từ & phó từ…',
+        'The Chinese topic decks are regrouped into 24 smaller decks of under 50 words each, adding Directions & position, Feelings & thoughts, Plans & getting things done, Linking words & adverbs…',
+      ],
     ],
   },
   {
