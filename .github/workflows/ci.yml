@@ -44,3 +44,39 @@ jobs:
       # and fall back to guest mode when Supabase is not configured.
       - name: Build
         run: npm run build
+
+  # The main learning path in a real browser on the production build
+  # (e2e/, docs/design/e2e.md): learn, reload, review days later, offline.
+  e2e:
+    name: E2E (Playwright)
+    # Pinned: Playwright 1.56 cannot install Chromium's system libraries on
+    # newer Ubuntu images. Move together with @playwright/test.
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: End-to-end tests
+        run: npm run e2e
+
+      - name: Keep the trace of a failed run
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-trace
+          path: e2e/test-results/
+          retention-days: 7
