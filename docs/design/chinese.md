@@ -539,3 +539,23 @@ tiếng Anh lớn nhất chỉ có 47 từ. Một bộ quá lớn không còn l�
   - Từ để hỏi & từ ngữ pháp → **Từ để hỏi**, **Từ ngữ pháp cơ bản**, **Liên từ & phó từ**.
 - Một từ có thể nằm ở hai bộ khi hợp cả hai (银行 ở Mua sắm và Thành phố). Tiến độ lưu theo từ,
   không theo bộ, nên đổi bộ không làm mất gì của người học.
+
+## Bước 27: 9 bài ngữ pháp HSK 3 (29/10/2026)
+
+Gói đã có đủ từ HSK 3, nhưng 22 bài ngữ pháp đều ở mức A1–A2. Thêm 9 bài cho các điểm ngữ pháp
+chính của HSK 3, mức **B1**. Ví dụ chỉ dùng từ trong gói, và cách đọc của từ được đối chiếu với gói
+như mọi bài khác.
+
+- **Câu chữ 把** (`zh-ba-sentence`): 把 + tân ngữ + động từ + phần sau; tân ngữ là vật cụ thể; 没 /
+  别 đứng trước 把.
+- **Câu bị động 被** (`zh-bei`): đặt cạnh câu 把 với cùng một việc (弟弟把蛋糕吃完了 / 蛋糕被弟弟吃完了).
+- **越来越, 越…越…** (`zh-yue`): không thêm 很 sau 越.
+- **虽然…但是** (`zh-suiran`): giữ cả hai vế như "tuy… nhưng…"; không ghép 虽然 với 所以.
+- **一边…一边 và 又…又** (`zh-yibian`): tiếng Việt chỉ có "vừa… vừa…", nên bài tách rõ: hành động →
+  一边, tính chất → 又.
+- **除了…(以外)** (`zh-chule`): 还/也 = thêm vào, 都 = trừ ra.
+- **Bổ ngữ kết quả** (`zh-result`): 写完, 找到, 听懂, 看见, 说错, 做好; phủ định bằng 没.
+- **Bổ ngữ xu hướng** (`zh-direction`): 来 về phía người nói, 去 rời xa; nơi chốn đứng trước 来/去.
+- **如果…就** (`zh-ruguo`): 就 đứng sau chủ ngữ; đối chiếu với 因为…所以.
+- Mỗi bài có câu chọn và câu xếp từ. Ở mỗi câu chọn, phương án sai đều chắc chắn sai.
+- Tổng cộng 31 bài ngữ pháp tiếng Trung. Trang chủ tự đếm lại.

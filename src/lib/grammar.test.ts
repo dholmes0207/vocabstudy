@@ -80,6 +80,22 @@ describe('the Chinese grammar pack', () => {
       for (const ex of u.examples) expect(ex.en, u.id).toMatch(/\p{Script=Han}/u)
   })
 
+  it('has the HSK 3 points at level B1: 把, 被, 越, 虽然, complements', () => {
+    expect(zh.units.filter((u) => u.level === 'B1').map((u) => u.id)).toEqual(
+      expect.arrayContaining([
+        'zh-ba-sentence',
+        'zh-bei',
+        'zh-yue',
+        'zh-suiran',
+        'zh-yibian',
+        'zh-chule',
+        'zh-result',
+        'zh-direction',
+        'zh-ruguo',
+      ])
+    )
+  })
+
   it('builds word-order tiles from invisible word breaks, never visible spaces', () => {
     for (const u of zh.units)
       for (const e of u.exercises)

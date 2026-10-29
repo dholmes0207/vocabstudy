@@ -31,6 +31,10 @@ export const RELEASES: Release[] = [
         'Bộ chủ đề tiếng Trung chia lại thành 24 bộ gọn hơn, mỗi bộ dưới 50 từ: thêm Phương hướng & vị trí, Cảm xúc & suy nghĩ, Dự định & việc phải làm, Liên từ & phó từ…',
         'The Chinese topic decks are regrouped into 24 smaller decks of under 50 words each, adding Directions & position, Feelings & thoughts, Plans & getting things done, Linking words & adverbs…',
       ],
+      [
+        '9 bài ngữ pháp tiếng Trung mức HSK 3: câu chữ 把, câu bị động 被, 越来越, 虽然…但是, 一边…一边, 除了, 如果…就, bổ ngữ kết quả (写完, 找到) và bổ ngữ xu hướng (进来, 出去).',
+        '9 Chinese grammar lessons at HSK 3 level: the 把 sentence, the 被 passive, 越来越, 虽然…但是, 一边…一边, 除了, 如果…就, result complements (写完, 找到) and direction complements (进来, 出去).',
+      ],
     ],
   },
   {
