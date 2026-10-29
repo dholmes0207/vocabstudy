@@ -453,6 +453,56 @@ ROWS = '''
 清楚 | qīngchu | adj. | adjective | rõ ràng, rõ | 我|听|不|清楚。 | Tôi nghe không rõ. | 🔊
 照片 | zhàopiàn | n. | noun | ảnh, tấm ảnh | 这|是|我|家|的|照片。 | Đây là ảnh gia đình tôi. | 📷
 银行 | yínháng | n. | noun | ngân hàng | 我|去|银行|换|钱。 | Tôi đi ngân hàng đổi tiền. | 🏦
+故事 | gùshi | n. | noun | câu chuyện, truyện | 这|个|故事|很|有意思。 | Câu chuyện này rất thú vị. | 📚
+一般 | yìbān | adj. | adjective | bình thường; thường thì | 我|一般|七|点|起床。 | Tôi thường dậy lúc bảy giờ. | 📊
+可爱 | kě'ài | adj. | adjective | đáng yêu, dễ thương | 这|只|小|狗|真|可爱！ | Con chó con này đáng yêu thật! | 🐶
+新闻 | xīnwén | n. | noun | tin tức, thời sự | 爸爸|每天|看|新闻。 | Bố xem thời sự mỗi ngày. | 📰
+声音 | shēngyīn | n. | noun | âm thanh, giọng nói | 她|的|声音|很|好听。 | Giọng cô ấy rất hay. | 🎙️
+马上 | mǎshàng | adv. | adverb | ngay, lập tức | 我|马上|来！ | Tôi đến ngay! | ⏱️
+表示 | biǎoshì | v. | verb | bày tỏ, biểu thị | 他|向|我|表示|感谢。 | Anh ấy bày tỏ lời cảm ơn với tôi. | 🙇
+经过 | jīngguò | v./prep. | verb | đi qua; trải qua | 我|每天|经过|这|家|银行。 | Ngày nào tôi cũng đi qua ngân hàng này. | 🚶
+历史 | lìshǐ | n. | noun | lịch sử | 我|喜欢|学|历史。 | Tôi thích học lịch sử. | 🏛️
+哭 | kū | v. | verb | khóc | 孩子|哭|了。 | Đứa bé khóc rồi. | 😢
+敢 | gǎn | v. | verb | dám | 我|不|敢|看。 | Tôi không dám xem. | 🫣
+会议 | huìyì | n. | noun | cuộc họp, hội nghị | 下午|有|一|个|会议。 | Chiều nay có một cuộc họp. | 👔
+经常 | jīngcháng | adv. | adverb | thường xuyên | 我|经常|去|图书馆。 | Tôi thường xuyên đến thư viện. | 📅
+低 | dī | adj. | adjective | thấp | 这|张|桌子|太|低|了。 | Cái bàn này thấp quá. | ⬇️
+节目 | jiémù | n. | noun | chương trình (TV, biểu diễn) | 这|个|电视|节目|很|好看。 | Chương trình TV này rất hay. | 📺
+健康 | jiànkāng | adj./n. | adjective | khoẻ mạnh; sức khoẻ | 祝|你|身体|健康！ | Chúc bạn mạnh khoẻ! | 🍎
+结婚 | jiéhūn | v. | verb | kết hôn, cưới | 他们|明年|结婚。 | Sang năm họ cưới. | 💍
+短 | duǎn | adj. | adjective | ngắn | 她|的|头发|很|短。 | Tóc cô ấy rất ngắn. | ✂️
+同意 | tóngyì | v. | verb | đồng ý | 我|同意|你|的|看法。 | Tôi đồng ý với quan điểm của bạn. | 🙆
+教 | jiāo | v. | verb | dạy | 王|老师|教|我们|汉语。 | Thầy Vương dạy chúng tôi tiếng Trung. | 👩‍🏫
+几乎 | jīhū | adv. | adverb | hầu như, gần như | 他|几乎|每天|都|跑步。 | Anh ấy hầu như ngày nào cũng chạy bộ. | 🌗
+附近 | fùjìn | n. | noun | gần đây, lân cận | 附近|有|超市|吗？ | Gần đây có siêu thị không? | 🗺️
+认真 | rènzhēn | adj. | adjective | nghiêm túc, chăm chú | 他|工作|很|认真。 | Anh ấy làm việc rất nghiêm túc. | 📝
+脚 | jiǎo | n. | noun | bàn chân | 我|的|脚|很|疼。 | Chân tôi đau lắm. | 🦶
+主要 | zhǔyào | adj. | adjective | chủ yếu, chính | 这|是|主要|的|问题。 | Đây là vấn đề chính. | 🥇
+遇到 | yùdào | v. | verb | gặp (tình cờ), gặp phải | 我|在|路|上|遇到|了|老师。 | Tôi tình cờ gặp thầy giáo trên đường. | 🚶‍♀️
+年轻 | niánqīng | adj. | adjective | trẻ | 我|的|妈妈|很|年轻。 | Mẹ tôi rất trẻ. | 🧑
+久 | jiǔ | adj. | adjective | lâu | 好|久|不|见！ | Lâu rồi không gặp! | ⌛
+画 | huà | v./n. | verb | vẽ; bức tranh | 她|在|画|一|只|猫。 | Cô bé đang vẽ một con mèo. | 🎨
+表演 | biǎoyǎn | v./n. | verb | biểu diễn | 孩子|们|在|表演|节目。 | Bọn trẻ đang biểu diễn văn nghệ. | 🎭
+刚才 | gāngcái | n. | noun | vừa nãy, lúc nãy | 刚才|我|很|忙。 | Lúc nãy tôi rất bận. | ⏪
+办公室 | bàngōngshì | n. | noun | văn phòng | 王|老师|在|办公室。 | Thầy Vương đang ở văn phòng. | 🗄️
+环境 | huánjìng | n. | noun | môi trường | 这|里|的|环境|很|好。 | Môi trường ở đây rất tốt. | 🌳
+关心 | guānxīn | v. | verb | quan tâm | 妈妈|很|关心|我。 | Mẹ rất quan tâm đến tôi. | 💗
+祝 | zhù | v. | verb | chúc | 祝|你|生日|快乐！ | Chúc bạn sinh nhật vui vẻ! | 🎂
+层 | céng | m. | other | tầng (lượng từ) | 这|座|楼|有|二十|层。 | Toà nhà này có hai mươi tầng. | 🏗️
+腿 | tuǐ | n. | noun | chân, cẳng chân | 他|的|腿|很|长。 | Chân anh ấy rất dài. | 🦵
+坏 | huài | adj. | adjective | hỏng, xấu | 我|的|手机|坏|了。 | Điện thoại của tôi hỏng rồi. | 💔
+鞋 | xié | n. | noun | giày | 这|双|鞋|多少|钱？ | Đôi giày này bao nhiêu tiền? | 👞
+习惯 | xíguàn | n./v. | noun | thói quen; quen với | 我|习惯|早|睡|早|起。 | Tôi quen ngủ sớm dậy sớm. | 🔂
+变化 | biànhuà | n./v. | noun | sự thay đổi; thay đổi | 这|里|的|变化|很|大。 | Nơi này thay đổi rất nhiều. | 🦋
+周末 | zhōumò | n. | noun | cuối tuần | 周末|你|做|什么？ | Cuối tuần bạn làm gì? | 🏖️
+忘记 | wàngjì | v. | verb | quên | 我|忘记|带|钥匙|了。 | Tôi quên mang chìa khoá rồi. | 🔑
+打算 | dǎsuàn | v./n. | verb | định, dự định | 你|打算|什么|时候|回|家？ | Bạn định bao giờ về nhà? | 🗓️
+小心 | xiǎoxīn | v./adj. | verb | cẩn thận | 小心|车！ | Cẩn thận xe! | 🚧
+动物 | dòngwù | n. | noun | động vật, con vật | 你|喜欢|什么|动物？ | Bạn thích con vật nào? | 🐼
+树 | shù | n. | noun | cây | 门|前|有|一|棵|树。 | Trước cửa có một cái cây. | 🌲
+借 | jiè | v. | verb | mượn; cho mượn | 我|可以|借|你|的|笔|吗？ | Tôi mượn bút của bạn được không? | 🖊️
+害怕 | hàipà | v. | verb | sợ | 我|害怕|狗。 | Tôi sợ chó. | 😨
+鸟 | niǎo | n. | noun | chim | 树|上|有|一|只|鸟。 | Trên cây có một con chim. | 🐦
 '''
 
 # Âm Hán Việt, one syllable per character (docs/design/chinese.md). Left out on
@@ -756,6 +806,56 @@ HAN_VIET = {
     '清楚': 'thanh sở',
     '照片': 'chiếu phiến',
     '银行': 'ngân hàng',
+    '故事': 'cố sự',
+    '一般': 'nhất ban',
+    '可爱': 'khả ái',
+    '新闻': 'tân văn',
+    '声音': 'thanh âm',
+    '马上': 'mã thượng',
+    '表示': 'biểu thị',
+    '经过': 'kinh quá',
+    '历史': 'lịch sử',
+    '哭': 'khốc',
+    '敢': 'cảm',
+    '会议': 'hội nghị',
+    '经常': 'kinh thường',
+    '低': 'đê',
+    '节目': 'tiết mục',
+    '健康': 'kiện khang',
+    '结婚': 'kết hôn',
+    '短': 'đoản',
+    '同意': 'đồng ý',
+    '教': 'giáo',
+    '几乎': 'cơ hồ',
+    '附近': 'phụ cận',
+    '认真': 'nhận chân',
+    '脚': 'cước',
+    '主要': 'chủ yếu',
+    '遇到': 'ngộ đáo',
+    '年轻': 'niên khinh',
+    '久': 'cửu',
+    '画': 'hoạ',
+    '表演': 'biểu diễn',
+    '刚才': 'cương tài',
+    '办公室': 'biện công thất',
+    '环境': 'hoàn cảnh',
+    '关心': 'quan tâm',
+    '祝': 'chúc',
+    '层': 'tầng',
+    '腿': 'thoái',
+    '坏': 'hoại',
+    '鞋': 'hài',
+    '习惯': 'tập quán',
+    '变化': 'biến hoá',
+    '周末': 'chu mạt',
+    '忘记': 'vong ký',
+    '打算': 'đả toán',
+    '小心': 'tiểu tâm',
+    '动物': 'động vật',
+    '树': 'thụ',
+    '借': 'tá',
+    '害怕': 'hại phạ',
+    '鸟': 'điểu',
 }
 
 # Pinyin of each example, one syllable per Chinese character, in order
@@ -1194,6 +1294,56 @@ EXAMPLE_PINYIN = {
     '清楚': 'wǒ tīng bu qīng chu',
     '照片': 'zhè shì wǒ jiā de zhào piàn',
     '银行': 'wǒ qù yín háng huàn qián',
+    '故事': 'zhè ge gù shi hěn yǒu yì si',
+    '一般': 'wǒ yì bān qī diǎn qǐ chuáng',
+    '可爱': 'zhè zhī xiǎo gǒu zhēn kě ài',
+    '新闻': 'bà ba měi tiān kàn xīn wén',
+    '声音': 'tā de shēng yīn hěn hǎo tīng',
+    '马上': 'wǒ mǎ shàng lái',
+    '表示': 'tā xiàng wǒ biǎo shì gǎn xiè',
+    '经过': 'wǒ měi tiān jīng guò zhè jiā yín háng',
+    '历史': 'wǒ xǐ huan xué lì shǐ',
+    '哭': 'hái zi kū le',
+    '敢': 'wǒ bù gǎn kàn',
+    '会议': 'xià wǔ yǒu yí ge huì yì',
+    '经常': 'wǒ jīng cháng qù tú shū guǎn',
+    '低': 'zhè zhāng zhuō zi tài dī le',
+    '节目': 'zhè ge diàn shì jié mù hěn hǎo kàn',
+    '健康': 'zhù nǐ shēn tǐ jiàn kāng',
+    '结婚': 'tā men míng nián jié hūn',
+    '短': 'tā de tóu fa hěn duǎn',
+    '同意': 'wǒ tóng yì nǐ de kàn fǎ',
+    '教': 'wáng lǎo shī jiāo wǒ men hàn yǔ',
+    '几乎': 'tā jī hū měi tiān dōu pǎo bù',
+    '附近': 'fù jìn yǒu chāo shì ma',
+    '认真': 'tā gōng zuò hěn rèn zhēn',
+    '脚': 'wǒ de jiǎo hěn téng',
+    '主要': 'zhè shì zhǔ yào de wèn tí',
+    '遇到': 'wǒ zài lù shang yù dào le lǎo shī',
+    '年轻': 'wǒ de mā ma hěn nián qīng',
+    '久': 'hǎo jiǔ bú jiàn',
+    '画': 'tā zài huà yì zhī māo',
+    '表演': 'hái zi men zài biǎo yǎn jié mù',
+    '刚才': 'gāng cái wǒ hěn máng',
+    '办公室': 'wáng lǎo shī zài bàn gōng shì',
+    '环境': 'zhè lǐ de huán jìng hěn hǎo',
+    '关心': 'mā ma hěn guān xīn wǒ',
+    '祝': 'zhù nǐ shēng rì kuài lè',
+    '层': 'zhè zuò lóu yǒu èr shí céng',
+    '腿': 'tā de tuǐ hěn cháng',
+    '坏': 'wǒ de shǒu jī huài le',
+    '鞋': 'zhè shuāng xié duō shao qián',
+    '习惯': 'wǒ xí guàn zǎo shuì zǎo qǐ',
+    '变化': 'zhè lǐ de biàn huà hěn dà',
+    '周末': 'zhōu mò nǐ zuò shén me',
+    '忘记': 'wǒ wàng jì dài yào shi le',
+    '打算': 'nǐ dǎ suàn shén me shí hou huí jiā',
+    '小心': 'xiǎo xīn chē',
+    '动物': 'nǐ xǐ huan shén me dòng wù',
+    '树': 'mén qián yǒu yì kē shù',
+    '借': 'wǒ kě yǐ jiè nǐ de bǐ ma',
+    '害怕': 'wǒ hài pà gǒu',
+    '鸟': 'shù shang yǒu yì zhī niǎo',
 }
 
 def example_reading(word: str, example: str, pack_reads: dict, errors: list) -> str | None:
