@@ -65,7 +65,12 @@ async function studyAndWait(cards: SRSCard[]) {
   await act(async () => {
     vi.advanceTimersByTime(2000)
   })
+  await settle()
 }
+
+/** Card ids of a written row. */
+const written = (call: unknown[]) =>
+  Object.keys((call[0] as { data: LanguageProgress }).data.cards).sort()
 
 beforeEach(() => {
   vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] })
@@ -109,5 +114,70 @@ describe('useProgressSync', () => {
     upsert.mockClear()
     await studyAndWait([card(1), card(2), card(5), card(6)])
     expect(upsert).toHaveBeenCalledTimes(1)
+  })
+
+  it('keeps what another device saved meanwhile: each push merges the server row first', async () => {
+    pull.mockResolvedValue({ data: { data: progress([card(5)]) }, error: null })
+    renderHook(() => useProgressSync())
+    await settle()
+
+    // The laptop saves card 7 while this phone is open, then the phone studies card 6.
+    pull.mockResolvedValue({ data: { data: progress([card(5), card(7)]) }, error: null })
+    upsert.mockClear()
+    await studyAndWait([card(1), card(2), card(5), card(6)])
+    expect(upsert).toHaveBeenCalledTimes(1)
+    expect(written(upsert.mock.calls[0])).toEqual(['1', '2', '5', '6', '7'])
+    expect(Object.keys(useStudy.getState().progress.en.cards).sort()).toEqual([
+      '1',
+      '2',
+      '5',
+      '6',
+      '7',
+    ])
+
+    // Taking the laptop's card in is not new study: no second write follows.
+    await act(async () => {
+      vi.advanceTimersByTime(2000)
+    })
+    await settle()
+    expect(upsert).toHaveBeenCalledTimes(1)
+  })
+
+  it('keeps study done while the server row is still loading', async () => {
+    pull.mockResolvedValue({ data: { data: progress([card(5)]) }, error: null })
+    renderHook(() => useProgressSync())
+    await settle()
+
+    let answer: (v: unknown) => void = () => {}
+    pull.mockImplementation(() => new Promise((resolve) => (answer = resolve)))
+    await studyAndWait([card(1), card(2), card(5), card(6)])
+    // The push is waiting on the server; the learner answers one more card.
+    act(() =>
+      useStudy.setState({
+        progress: { en: progress([card(1), card(2), card(5), card(6), card(8)]) },
+      })
+    )
+    await act(async () => answer({ data: { data: progress([card(5), card(7)]) }, error: null }))
+    await settle()
+    expect(Object.keys(useStudy.getState().progress.en.cards).sort()).toEqual([
+      '1',
+      '2',
+      '5',
+      '6',
+      '7',
+      '8',
+    ])
+  })
+
+  it('skips a push when the server row cannot be read, and keeps the local study', async () => {
+    pull.mockResolvedValue({ data: { data: progress([card(5)]) }, error: null })
+    renderHook(() => useProgressSync())
+    await settle()
+
+    pull.mockResolvedValue({ data: null, error: { message: 'FetchError: network down' } })
+    upsert.mockClear()
+    await studyAndWait([card(1), card(2), card(5), card(6)])
+    expect(upsert).not.toHaveBeenCalled()
+    expect(useStudy.getState().progress.en.cards[6]).toBeDefined()
   })
 })

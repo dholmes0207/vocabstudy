@@ -104,26 +104,53 @@ export function useProgressSync(): void {
     }
   }, [userId, lang])
 
-  // Push local changes (debounced) once synced.
+  // Push local changes (debounced) once synced. Each push merges the server row
+  // first: a plain upsert let a second open device (phone + laptop) overwrite
+  // what the other had saved meanwhile.
+  // shortcut: read-merge-write is not atomic; two pushes landing in the same
+  // instant can still drop one side until its next push. A server-side merge
+  // (Postgres function) closes that if it ever shows up.
   useEffect(() => {
     if (!userId || !supabase) return
     const sb = supabase
     const key = `${userId}:${lang}`
     let timer: ReturnType<typeof setTimeout> | undefined
+    // Set while adopting the merged copy, so taking in another device's cards
+    // does not count as new study and schedule another push.
+    let adopting = false
+    const push = async () => {
+      if (!useStudy.getState().progress[lang]) return
+      const { data, error } = await sb
+        .from('progress')
+        .select('data')
+        .eq('user_id', userId)
+        .eq('lang_code', lang)
+        .maybeSingle()
+      // Unreadable: skip this push; the next change tries again.
+      if (error || syncedKey.current !== key) return
+      // Read local only now, so study done while the row was loading is kept.
+      const local = useStudy.getState().progress[lang]
+      if (!local) return
+      const remote = data?.data ? normalizeProgress(data.data) : undefined
+      const merged = remote ? mergeProgress(local, remote) : local
+      if (JSON.stringify(merged) !== JSON.stringify(local)) {
+        adopting = true
+        useStudy.getState().setLanguageProgress(lang, merged)
+        adopting = false
+      }
+      if (remote && JSON.stringify(merged) === JSON.stringify(remote)) return
+      await sb.from('progress').upsert({
+        user_id: userId,
+        lang_code: lang,
+        data: merged,
+        updated_at: new Date().toISOString(),
+      })
+    }
     const unsub = useStudy.subscribe((state, prev) => {
-      if (syncedKey.current !== key) return
+      if (adopting || syncedKey.current !== key) return
       if (state.progress[lang] === prev.progress[lang]) return
       clearTimeout(timer)
-      timer = setTimeout(() => {
-        const lp = useStudy.getState().progress[lang]
-        if (lp)
-          void sb.from('progress').upsert({
-            user_id: userId,
-            lang_code: lang,
-            data: lp,
-            updated_at: new Date().toISOString(),
-          })
-      }, 1500)
+      timer = setTimeout(() => void push(), 1500)
     })
     return () => {
       clearTimeout(timer)
