@@ -2617,6 +2617,938 @@
           "vi": "Bạn là người Việt Nam, phải không?"
         }
       ]
+    },
+    {
+      "id": "zh-ba-sentence",
+      "emoji": "🫳",
+      "level": "B1",
+      "title": [
+        "Câu chữ 把: làm gì với một vật",
+        "The 把 sentence: doing something to a thing"
+      ],
+      "summary": [
+        "Chủ ngữ + 把 + tân ngữ + động từ + phần sau (了, 完, 上, 在…). Dùng khi nói mình làm gì với một vật cụ thể và nó ra sao.",
+        "Subject + 把 + object + verb + something after it (了, 完, 上, 在…). Used to say what you do to a specific thing and what becomes of it."
+      ],
+      "explain": [
+        "Câu thường: 我关了门 (tôi đóng cửa). Câu chữ 把: 我把门关上了. Tân ngữ (门) được đưa lên trước động từ, nhấn vào việc cánh cửa bị làm gì.",
+        "Sau động từ phải có thêm phần sau: 了, 上, 好, 完, 在 + nơi chốn, 给 + người… Không nói 我把门关 (thiếu phần sau).",
+        "Tân ngữ là vật cụ thể mà hai người đều biết: 把这本书, 把我的手机. Không dùng 把 với \"một quyển sách\" chung chung.",
+        "没, 别, 要 đứng trước 把: 我没把钱带来, 别把手机忘在家里.",
+        "Động từ không tác động lên vật (喜欢, 是, 有, 知道…) không dùng với 把."
+      ],
+      "patterns": [
+        "Chủ ngữ + 把 + tân ngữ + động từ + 了/完/上…",
+        "Chủ ngữ + 把 + tân ngữ + 放 + 在 + nơi chốn",
+        "Chủ ngữ + 没/别 + 把 + …"
+      ],
+      "examples": [
+        {
+          "en": "请把门关上。",
+          "vi": "Làm ơn đóng cửa lại.",
+          "read": "Qǐng bǎ mén guānshang."
+        },
+        {
+          "en": "我把作业写完了。",
+          "vi": "Tôi làm xong bài tập rồi.",
+          "read": "Wǒ bǎ zuòyè xiěwán le."
+        },
+        {
+          "en": "他把书放在桌子上了。",
+          "vi": "Anh ấy đặt sách lên bàn rồi.",
+          "read": "Tā bǎ shū fàng zài zhuōzi shàng le."
+        },
+        {
+          "en": "别把手机忘在家里。",
+          "vi": "Đừng để quên điện thoại ở nhà.",
+          "read": "Bié bǎ shǒujī wàng zài jiā lǐ."
+        },
+        {
+          "en": "我没把钱带来。",
+          "vi": "Tôi không mang tiền theo.",
+          "read": "Wǒ méi bǎ qián dàilai."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我把门关。",
+          "right": "我把门关上了。",
+          "why": "Sau động từ trong câu 把 phải có phần sau: 上, 了, 完, 在…"
+        },
+        {
+          "wrong": "我把一本书买了。",
+          "right": "我买了一本书。",
+          "why": "Tân ngữ của 把 là vật cụ thể, đã biết. \"Một quyển sách\" chung chung thì dùng câu thường."
+        },
+        {
+          "wrong": "我把钱没带来。",
+          "right": "我没把钱带来。",
+          "why": "没, 别, 要 đứng trước 把."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "请___门关上。",
+          "options": [
+            "把",
+            "被"
+          ],
+          "answer": 0,
+          "explain": "Mình làm gì với cánh cửa → 把."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___作业写完了。",
+          "options": [
+            "把",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "把 + tân ngữ + động từ + 完."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___把钱带来。",
+          "options": [
+            "没",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "没 đứng trước 把: không mang tiền theo."
+        },
+        {
+          "type": "order",
+          "en": "他​把​书​放​在​桌子​上​了。",
+          "vi": "Anh ấy đặt sách lên bàn rồi."
+        },
+        {
+          "type": "order",
+          "en": "请​把​门​关上。",
+          "vi": "Làm ơn đóng cửa lại."
+        }
+      ]
+    },
+    {
+      "id": "zh-bei",
+      "emoji": "😩",
+      "level": "B1",
+      "title": [
+        "Câu bị động với 被",
+        "The passive with 被"
+      ],
+      "summary": [
+        "Vật/người chịu tác động + 被 + (người làm) + động từ + phần sau. Thường nói về việc không may: bị lấy mất, bị làm vỡ.",
+        "Thing affected + 被 + (doer) + verb + something after it. Often for something unwelcome: taken, broken."
+      ],
+      "explain": [
+        "Câu bị động: đưa thứ chịu tác động lên đầu câu, thêm 被 trước người làm: 我的自行车被人骑走了 (xe đạp của tôi bị người ta lấy đi).",
+        "Giống tiếng Việt \"bị\": thường dùng cho việc không mong muốn.",
+        "Có thể bỏ người làm: 我的钱包没被拿走 (ví không bị lấy).",
+        "Như câu 把, sau động từ phải có phần sau: 了, 走, 完, 破…",
+        "没 đứng trước 被: 没被拿走, không nói 被没拿走.",
+        "So sánh: 弟弟把蛋糕吃完了 (em ăn hết bánh) và 蛋糕被弟弟吃完了 (bánh bị em ăn hết). Cùng một việc, chỉ đổi thứ đứng đầu câu."
+      ],
+      "patterns": [
+        "Vật + 被 + người làm + động từ + 了/走/完…",
+        "Vật + 没 + 被 + động từ + …"
+      ],
+      "examples": [
+        {
+          "en": "我的自行车被人骑走了。",
+          "vi": "Xe đạp của tôi bị người ta lấy đi mất rồi.",
+          "read": "Wǒ de zìxíngchē bèi rén qízǒu le."
+        },
+        {
+          "en": "蛋糕被弟弟吃完了。",
+          "vi": "Bánh bị em trai ăn hết rồi.",
+          "read": "Dàngāo bèi dìdi chīwán le."
+        },
+        {
+          "en": "我的手机被妹妹拿走了。",
+          "vi": "Điện thoại của tôi bị em gái lấy mất rồi.",
+          "read": "Wǒ de shǒujī bèi mèimei názǒu le."
+        },
+        {
+          "en": "杯子被他打破了。",
+          "vi": "Cái cốc bị anh ấy làm vỡ rồi.",
+          "read": "Bēizi bèi tā dǎpò le."
+        },
+        {
+          "en": "我的钱包没被拿走。",
+          "vi": "Ví của tôi không bị lấy mất.",
+          "read": "Wǒ de qiánbāo méi bèi názǒu."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我的自行车被骑。",
+          "right": "我的自行车被人骑走了。",
+          "why": "Sau động từ cần phần chỉ kết quả: 走, 了, 完…"
+        },
+        {
+          "wrong": "我的钱包被没拿走。",
+          "right": "我的钱包没被拿走。",
+          "why": "没 đứng trước 被."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我的蛋糕___弟弟吃完了。",
+          "options": [
+            "被",
+            "把"
+          ],
+          "answer": 0,
+          "explain": "Cái bánh chịu tác động (bị ăn) → 被."
+        },
+        {
+          "type": "choice",
+          "prompt": "弟弟___我的蛋糕吃完了。",
+          "options": [
+            "把",
+            "被"
+          ],
+          "answer": 0,
+          "explain": "Em trai làm gì với cái bánh → 把."
+        },
+        {
+          "type": "choice",
+          "prompt": "我的钱包___被拿走。",
+          "options": [
+            "没",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "Không bị lấy → 没 đứng trước 被."
+        },
+        {
+          "type": "order",
+          "en": "我​的​自行车​被​人​骑走​了。",
+          "vi": "Xe đạp của tôi bị người ta lấy đi mất rồi."
+        },
+        {
+          "type": "order",
+          "en": "杯子​被​他​打破​了。",
+          "vi": "Cái cốc bị anh ấy làm vỡ rồi."
+        }
+      ]
+    },
+    {
+      "id": "zh-yue",
+      "emoji": "📈",
+      "level": "B1",
+      "title": [
+        "越来越 và 越…越…: ngày càng, càng… càng…",
+        "越来越 and 越…越…: more and more"
+      ],
+      "summary": [
+        "越来越 + tính từ: ngày càng… (天气越来越冷了). 越 A 越 B: càng A càng B (他越说越快). Không thêm 很 sau 越.",
+        "越来越 + adjective: more and more. 越 A 越 B: the more A, the more B. No 很 after 越."
+      ],
+      "explain": [
+        "越来越 + tính từ (hay động từ chỉ cảm xúc): ngày càng…: 天气越来越冷了, 我越来越喜欢北京了.",
+        "越 A 越 B: A càng tăng thì B càng tăng: 他越说越快 (càng nói càng nhanh), 雨越下越大 (mưa càng lúc càng to).",
+        "Sau 越 dùng tính từ trơn, không thêm 很, 非常: 越来越好, không nói 越来越很好.",
+        "Câu nói về sự thay đổi thường kết thúc bằng 了."
+      ],
+      "patterns": [
+        "Chủ ngữ + 越来越 + tính từ + (了)",
+        "Chủ ngữ + 越 + động từ + 越 + tính từ"
+      ],
+      "examples": [
+        {
+          "en": "天气越来越冷了。",
+          "vi": "Trời ngày càng lạnh.",
+          "read": "Tiānqì yuèláiyuè lěng le."
+        },
+        {
+          "en": "他的汉语越来越好。",
+          "vi": "Tiếng Trung của anh ấy ngày càng tốt.",
+          "read": "Tā de Hànyǔ yuèláiyuè hǎo."
+        },
+        {
+          "en": "雨越下越大。",
+          "vi": "Mưa càng lúc càng to.",
+          "read": "Yǔ yuè xià yuè dà."
+        },
+        {
+          "en": "他越说越快。",
+          "vi": "Anh ấy càng nói càng nhanh.",
+          "read": "Tā yuè shuō yuè kuài."
+        },
+        {
+          "en": "我越来越喜欢北京了。",
+          "vi": "Tôi ngày càng thích Bắc Kinh.",
+          "read": "Wǒ yuèláiyuè xǐhuan Běijīng le."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "天气越来越很冷了。",
+          "right": "天气越来越冷了。",
+          "why": "Sau 越来越 không thêm 很, 非常."
+        },
+        {
+          "wrong": "他说越越快。",
+          "right": "他越说越快。",
+          "why": "Mỗi 越 đứng ngay trước phần nó đi kèm: 越 + 说, 越 + 快."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "天气___冷了。",
+          "options": [
+            "越来越",
+            "越越"
+          ],
+          "answer": 0,
+          "explain": "Ngày càng lạnh → 越来越."
+        },
+        {
+          "type": "choice",
+          "prompt": "他的汉语越来越___。",
+          "options": [
+            "好",
+            "很好"
+          ],
+          "answer": 0,
+          "explain": "Sau 越来越 dùng tính từ trơn, không có 很."
+        },
+        {
+          "type": "choice",
+          "prompt": "雨越下越___。",
+          "options": [
+            "大",
+            "很大"
+          ],
+          "answer": 0,
+          "explain": "越…越… cũng không thêm 很."
+        },
+        {
+          "type": "order",
+          "en": "他​的​汉语​越来越​好。",
+          "vi": "Tiếng Trung của anh ấy ngày càng tốt."
+        },
+        {
+          "type": "order",
+          "en": "他​越​说​越​快。",
+          "vi": "Anh ấy càng nói càng nhanh."
+        }
+      ]
+    },
+    {
+      "id": "zh-suiran",
+      "emoji": "🌂",
+      "level": "B1",
+      "title": [
+        "虽然…但是: tuy… nhưng…",
+        "虽然…但是: although… (but)"
+      ],
+      "summary": [
+        "虽然 A，但是 B = tuy A nhưng B. Tiếng Trung giữ cả hai vế, như tiếng Việt. Vế sau hay có 还是 (vẫn).",
+        "虽然 A，但是 B = although A, B. Chinese keeps both halves; the second often has 还是 (still)."
+      ],
+      "explain": [
+        "虽然 A，但是 B: tuy A nhưng B. Khác tiếng Anh, tiếng Trung giữ cả 虽然 lẫn 但是, giống \"tuy… nhưng…\" của tiếng Việt.",
+        "虽然 có thể đứng trước hoặc sau chủ ngữ: 虽然他很忙… = 他虽然很忙…",
+        "Vế sau hay thêm 还是 (vẫn): 虽然下雨了，但是他还是来了.",
+        "虽然 đi với 但是 (hay 可是); 所以 đi với 因为. Không nói 虽然…所以."
+      ],
+      "patterns": [
+        "虽然 + A，但是 + B",
+        "Chủ ngữ + 虽然 + A，但是 + (还是) + B"
+      ],
+      "examples": [
+        {
+          "en": "虽然下雨了，但是他还是来了。",
+          "vi": "Tuy trời mưa nhưng anh ấy vẫn đến.",
+          "read": "Suīrán xià yǔ le, dànshì tā háishi lái le."
+        },
+        {
+          "en": "虽然汉语很难，但是很有意思。",
+          "vi": "Tiếng Trung tuy khó nhưng rất thú vị.",
+          "read": "Suīrán Hànyǔ hěn nán, dànshì hěn yǒu yìsi."
+        },
+        {
+          "en": "这件衣服虽然很漂亮，但是太贵了。",
+          "vi": "Chiếc áo này tuy đẹp nhưng đắt quá.",
+          "read": "Zhè jiàn yīfu suīrán hěn piàoliang, dànshì tài guì le."
+        },
+        {
+          "en": "他虽然很忙，但是每天都锻炼身体。",
+          "vi": "Anh ấy tuy bận nhưng ngày nào cũng tập thể dục.",
+          "read": "Tā suīrán hěn máng, dànshì měitiān dōu duànliàn shēntǐ."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "虽然很累，所以我不去了。",
+          "right": "虽然很累，但是我还是去了。",
+          "why": "虽然 đi với 但是; 所以 đi với 因为."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "虽然很累，___我还是去了。",
+          "options": [
+            "但是",
+            "所以"
+          ],
+          "answer": 0,
+          "explain": "虽然 … 但是."
+        },
+        {
+          "type": "choice",
+          "prompt": "因为很累，___我不去了。",
+          "options": [
+            "所以",
+            "但是"
+          ],
+          "answer": 0,
+          "explain": "Nói lý do → 因为 … 所以. Đối chiếu với 虽然 … 但是."
+        },
+        {
+          "type": "choice",
+          "prompt": "虽然下雨了，但是他___来了。",
+          "options": [
+            "还是",
+            "或者"
+          ],
+          "answer": 0,
+          "explain": "还是 = vẫn."
+        },
+        {
+          "type": "order",
+          "en": "虽然​汉语​很​难，​但是​很​有意思。",
+          "vi": "Tiếng Trung tuy khó nhưng rất thú vị."
+        },
+        {
+          "type": "order",
+          "en": "他​虽然​很​忙，​但是​每天​都​锻炼​身体。",
+          "vi": "Anh ấy tuy bận nhưng ngày nào cũng tập thể dục."
+        }
+      ]
+    },
+    {
+      "id": "zh-yibian",
+      "emoji": "🍜",
+      "level": "B1",
+      "title": [
+        "一边…一边 và 又…又: vừa… vừa…",
+        "一边…一边 and 又…又: both… and…"
+      ],
+      "summary": [
+        "一边 A，一边 B: vừa làm A vừa làm B (hai hành động cùng lúc). Hai tính chất cùng có thì dùng 又…又….",
+        "一边 A，一边 B: doing A and B at the same time. For two qualities, use 又…又…."
+      ],
+      "explain": [
+        "一边 A，一边 B: vừa A vừa B, hai việc làm cùng lúc: 他一边吃饭，一边看电视.",
+        "A và B là hành động (động từ). Chủ ngữ đứng trước 一边 thứ nhất.",
+        "Muốn nói \"vừa rẻ vừa đẹp\" (hai tính chất) thì dùng 又…又…: 这件衣服又便宜又漂亮.",
+        "Tiếng Việt chỉ có một chữ \"vừa… vừa…\", nên cần để ý: hành động → 一边; tính chất → 又."
+      ],
+      "patterns": [
+        "Chủ ngữ + 一边 + động từ，一边 + động từ",
+        "Chủ ngữ + 又 + tính từ + 又 + tính từ"
+      ],
+      "examples": [
+        {
+          "en": "他一边吃饭，一边看电视。",
+          "vi": "Anh ấy vừa ăn cơm vừa xem TV.",
+          "read": "Tā yìbiān chī fàn, yìbiān kàn diànshì."
+        },
+        {
+          "en": "妈妈一边做饭，一边唱歌。",
+          "vi": "Mẹ vừa nấu cơm vừa hát.",
+          "read": "Māma yìbiān zuò fàn, yìbiān chànggē."
+        },
+        {
+          "en": "我们一边走，一边说。",
+          "vi": "Chúng tôi vừa đi vừa nói chuyện.",
+          "read": "Wǒmen yìbiān zǒu, yìbiān shuō."
+        },
+        {
+          "en": "别一边开车，一边打电话。",
+          "vi": "Đừng vừa lái xe vừa gọi điện thoại.",
+          "read": "Bié yìbiān kāichē, yìbiān dǎ diànhuà."
+        },
+        {
+          "en": "这件衣服又便宜又漂亮。",
+          "vi": "Chiếc áo này vừa rẻ vừa đẹp.",
+          "read": "Zhè jiàn yīfu yòu piányi yòu piàoliang."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "这件衣服一边便宜，一边漂亮。",
+          "right": "这件衣服又便宜又漂亮。",
+          "why": "一边…一边 chỉ dùng cho hai hành động. Hai tính chất dùng 又…又…."
+        },
+        {
+          "wrong": "一边他吃饭，一边看电视。",
+          "right": "他一边吃饭，一边看电视。",
+          "why": "Chủ ngữ đứng trước 一边."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "他___吃饭，一边看电视。",
+          "options": [
+            "一边",
+            "又"
+          ],
+          "answer": 0,
+          "explain": "Hai việc cùng lúc → 一边…一边."
+        },
+        {
+          "type": "choice",
+          "prompt": "这个苹果___大又甜。",
+          "options": [
+            "又",
+            "一边"
+          ],
+          "answer": 0,
+          "explain": "Hai tính chất → 又…又."
+        },
+        {
+          "type": "choice",
+          "prompt": "别一边开车，一边___。",
+          "options": [
+            "打电话",
+            "漂亮"
+          ],
+          "answer": 0,
+          "explain": "一边 đi với hành động."
+        },
+        {
+          "type": "order",
+          "en": "妈妈​一边​做​饭，​一边​唱歌。",
+          "vi": "Mẹ vừa nấu cơm vừa hát."
+        },
+        {
+          "type": "order",
+          "en": "我们​一边​走，​一边​说。",
+          "vi": "Chúng tôi vừa đi vừa nói chuyện."
+        }
+      ]
+    },
+    {
+      "id": "zh-chule",
+      "emoji": "🎒",
+      "level": "B1",
+      "title": [
+        "除了…(以外): ngoài… ra / trừ… ra",
+        "除了…(以外): besides / except"
+      ],
+      "summary": [
+        "除了 A，还/也 B: ngoài A ra còn B (thêm vào). 除了 A，都 B: trừ A ra đều B (loại A ra).",
+        "除了 A，还/也 B: besides A, also B. 除了 A，都 B: everyone/everything except A."
+      ],
+      "explain": [
+        "除了 A，还 B (hay 也 B): ngoài A ra còn B. A vẫn tính vào: 除了汉语，我还学英语 (học cả hai thứ tiếng).",
+        "除了 A，都 B: trừ A ra thì đều B. A bị loại ra: 除了我，大家都去了 (tôi không đi).",
+        "Nhìn chữ ở vế sau để hiểu: 还/也 = thêm vào; 都 = trừ ra.",
+        "以外 sau A có thể có hoặc bỏ: 除了苹果以外 = 除了苹果."
+      ],
+      "patterns": [
+        "除了 + A + (以外)，Chủ ngữ + 还/也 + B",
+        "除了 + A + (以外)，Chủ ngữ + 都 + B"
+      ],
+      "examples": [
+        {
+          "en": "除了汉语，我还学英语。",
+          "vi": "Ngoài tiếng Trung, tôi còn học tiếng Anh.",
+          "read": "Chúle Hànyǔ, wǒ hái xué Yīngyǔ."
+        },
+        {
+          "en": "除了我，大家都去了。",
+          "vi": "Trừ tôi ra, mọi người đều đi rồi.",
+          "read": "Chúle wǒ, dàjiā dōu qù le."
+        },
+        {
+          "en": "除了星期天，他每天都工作。",
+          "vi": "Trừ Chủ nhật, ngày nào anh ấy cũng làm việc.",
+          "read": "Chúle xīngqītiān, tā měitiān dōu gōngzuò."
+        },
+        {
+          "en": "除了苹果以外，我也喜欢吃香蕉。",
+          "vi": "Ngoài táo ra, tôi cũng thích ăn chuối.",
+          "read": "Chúle píngguǒ yǐwài, wǒ yě xǐhuan chī xiāngjiāo."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "除了汉语，我都学英语。",
+          "right": "除了汉语，我还学英语。",
+          "why": "Học thêm tiếng Anh → 还 (thêm vào). 都 là \"trừ ra\"."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "除了汉语，我___学英语。",
+          "options": [
+            "还",
+            "都"
+          ],
+          "answer": 0,
+          "explain": "Học thêm → 还."
+        },
+        {
+          "type": "choice",
+          "prompt": "除了我，大家___去了。",
+          "options": [
+            "都",
+            "还"
+          ],
+          "answer": 0,
+          "explain": "Trừ tôi ra, mọi người đều đi → 都."
+        },
+        {
+          "type": "choice",
+          "prompt": "除了苹果___，我也喜欢吃香蕉。",
+          "options": [
+            "以外",
+            "以后"
+          ],
+          "answer": 0,
+          "explain": "除了 … 以外."
+        },
+        {
+          "type": "order",
+          "en": "除了​我，​大家​都​去​了。",
+          "vi": "Trừ tôi ra, mọi người đều đi rồi."
+        },
+        {
+          "type": "order",
+          "en": "除了​汉语，​我​还​学​英语。",
+          "vi": "Ngoài tiếng Trung, tôi còn học tiếng Anh."
+        }
+      ]
+    },
+    {
+      "id": "zh-result",
+      "emoji": "🎯",
+      "level": "B1",
+      "title": [
+        "Bổ ngữ kết quả: 写完, 找到, 听懂…",
+        "Result complements: 写完, 找到, 听懂…"
+      ],
+      "summary": [
+        "Động từ + từ chỉ kết quả: 写完 (viết xong), 找到 (tìm thấy), 听懂 (nghe hiểu), 说错 (nói sai). Phủ định dùng 没.",
+        "Verb + result: 写完 (finish writing), 找到 (find), 听懂 (understand by listening), 说错 (say wrongly). Negate with 没."
+      ],
+      "explain": [
+        "Động từ chỉ việc làm, chữ đứng sau chỉ kết quả: 写完 (viết xong), 找到 (tìm thấy), 听懂 (nghe hiểu), 看见 (nhìn thấy), 说错 (nói sai), 做好 (làm xong, làm tốt).",
+        "Tiếng Việt cũng ghép như vậy: \"tìm thấy\", \"nghe hiểu\", \"nói sai\".",
+        "找 chỉ là \"tìm\", chưa chắc thấy. Muốn nói \"tìm thấy\" phải có 到: 我找到我的钱包了.",
+        "Phủ định dùng 没, không dùng 不: 我没找到 (không tìm thấy), 我没看见他."
+      ],
+      "patterns": [
+        "Động từ + 完/到/懂/见/错/好 + (tân ngữ) + 了",
+        "Chủ ngữ + 没 + động từ + kết quả"
+      ],
+      "examples": [
+        {
+          "en": "我写完作业了。",
+          "vi": "Tôi làm xong bài tập rồi.",
+          "read": "Wǒ xiěwán zuòyè le."
+        },
+        {
+          "en": "我找到我的钱包了。",
+          "vi": "Tôi tìm thấy ví rồi.",
+          "read": "Wǒ zhǎodào wǒ de qiánbāo le."
+        },
+        {
+          "en": "你听懂了吗？",
+          "vi": "Bạn nghe có hiểu không?",
+          "read": "Nǐ tīngdǒng le ma?"
+        },
+        {
+          "en": "我没看见他。",
+          "vi": "Tôi không nhìn thấy anh ấy.",
+          "read": "Wǒ méi kànjiàn tā."
+        },
+        {
+          "en": "对不起，我说错了。",
+          "vi": "Xin lỗi, tôi nói sai rồi.",
+          "read": "Duìbuqǐ, wǒ shuōcuò le."
+        },
+        {
+          "en": "饭做好了。",
+          "vi": "Cơm nấu xong rồi.",
+          "read": "Fàn zuòhǎo le."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我不找到我的钱包。",
+          "right": "我没找到我的钱包。",
+          "why": "Kết quả không xảy ra → 没 + động từ + kết quả."
+        },
+        {
+          "wrong": "我找我的钱包了。",
+          "right": "我找到我的钱包了。",
+          "why": "找 là \"tìm\"; \"tìm thấy\" phải có 到."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我找___我的钱包了！",
+          "options": [
+            "到",
+            "完"
+          ],
+          "answer": 0,
+          "explain": "Tìm thấy → 找到."
+        },
+        {
+          "type": "choice",
+          "prompt": "我写___作业了，可以去玩了吗？",
+          "options": [
+            "完",
+            "错"
+          ],
+          "answer": 0,
+          "explain": "Làm xong bài mới đi chơi → 写完."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___找到我的钱包。",
+          "options": [
+            "没",
+            "不"
+          ],
+          "answer": 0,
+          "explain": "Phủ định bổ ngữ kết quả → 没."
+        },
+        {
+          "type": "choice",
+          "prompt": "对不起，我说___了。",
+          "options": [
+            "错",
+            "懂"
+          ],
+          "answer": 0,
+          "explain": "Nói sai → 说错."
+        },
+        {
+          "type": "order",
+          "en": "我​找到​我​的​钱包​了。",
+          "vi": "Tôi tìm thấy ví rồi."
+        },
+        {
+          "type": "order",
+          "en": "我​没​看见​他。",
+          "vi": "Tôi không nhìn thấy anh ấy."
+        }
+      ]
+    },
+    {
+      "id": "zh-direction",
+      "emoji": "🚪",
+      "level": "B1",
+      "title": [
+        "Bổ ngữ xu hướng: 进来, 出去, 回来…",
+        "Direction complements: 进来, 出去, 回来…"
+      ],
+      "summary": [
+        "Động từ + 来: hướng về phía người nói. Động từ + 去: rời xa người nói. 进来 (vào đây), 出去 (ra ngoài), 回来 (về đây).",
+        "Verb + 来: towards the speaker. Verb + 去: away from the speaker. 进来 (come in), 出去 (go out), 回来 (come back)."
+      ],
+      "explain": [
+        "来 = về phía người nói, 去 = rời xa người nói. Ghép sau 进, 出, 上, 下, 回, 过: 进来, 出去, 上来, 回来…",
+        "Bạn ở trong phòng, gọi người ngoài cửa: 请进来. Mẹ đã rời nhà (rời chỗ mình): 她出去了.",
+        "来/去 ở đây đọc nhẹ (thanh nhẹ): jìnlai, chūqu, huílai.",
+        "Ghép thêm động từ phía trước: 拿出来 (lấy ra), 走进来 (đi vào).",
+        "Có nơi chốn thì nơi chốn đứng trước 来/去: 回家去, không nói 回去家."
+      ],
+      "patterns": [
+        "Động từ + 来 (về phía người nói)",
+        "Động từ + 去 (rời xa người nói)",
+        "Động từ + 出/进/上/下… + 来/去"
+      ],
+      "examples": [
+        {
+          "en": "请进来。",
+          "vi": "Mời vào.",
+          "read": "Qǐng jìnlai."
+        },
+        {
+          "en": "他出去了。",
+          "vi": "Anh ấy ra ngoài rồi.",
+          "read": "Tā chūqu le."
+        },
+        {
+          "en": "妈妈回来了。",
+          "vi": "Mẹ về rồi.",
+          "read": "Māma huílai le."
+        },
+        {
+          "en": "你上来吧！",
+          "vi": "Bạn lên đây đi!",
+          "read": "Nǐ shànglai ba!"
+        },
+        {
+          "en": "他拿出来一本书。",
+          "vi": "Anh ấy lấy ra một quyển sách.",
+          "read": "Tā náchūlai yì běn shū."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "他回去家了。",
+          "right": "他回家去了。",
+          "why": "Nơi chốn đứng giữa động từ và 来/去."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我在家，你快回___吧！",
+          "options": [
+            "来",
+            "去"
+          ],
+          "answer": 0,
+          "explain": "Người nói ở nhà, gọi bạn về chỗ mình → 来."
+        },
+        {
+          "type": "choice",
+          "prompt": "妈妈不在家，她出___了。",
+          "options": [
+            "去",
+            "来"
+          ],
+          "answer": 0,
+          "explain": "Mẹ đã rời nhà, rời xa chỗ người nói → 出去."
+        },
+        {
+          "type": "choice",
+          "prompt": "他从包里拿___一本书。",
+          "options": [
+            "出来",
+            "进来"
+          ],
+          "answer": 0,
+          "explain": "Lấy ra khỏi túi → 拿出来."
+        },
+        {
+          "type": "order",
+          "en": "他​拿出来​一​本​书。",
+          "vi": "Anh ấy lấy ra một quyển sách."
+        },
+        {
+          "type": "order",
+          "en": "妈妈​回来​了。",
+          "vi": "Mẹ về rồi."
+        }
+      ]
+    },
+    {
+      "id": "zh-ruguo",
+      "emoji": "🌦️",
+      "level": "B1",
+      "title": [
+        "如果…就: nếu… thì…",
+        "如果…就: if… then…"
+      ],
+      "summary": [
+        "如果 A，(chủ ngữ) 就 B = nếu A thì B. 就 đứng sau chủ ngữ, ngay trước động từ.",
+        "如果 A，(subject) 就 B = if A, then B. 就 goes after the subject, right before the verb."
+      ],
+      "explain": [
+        "如果 A，就 B: nếu A thì B: 如果明天下雨，我就不去了.",
+        "就 đứng sau chủ ngữ của vế sau, ngay trước động từ: 我就不去了, không nói 就我不去了.",
+        "Vế sau có thể bỏ chủ ngữ: 如果你有时间，就来我家玩吧.",
+        "如果 nói điều giả định (chưa biết có xảy ra không). 因为…所以 nói lý do có thật."
+      ],
+      "patterns": [
+        "如果 + A，Chủ ngữ + 就 + B",
+        "如果 + A，就 + B"
+      ],
+      "examples": [
+        {
+          "en": "如果明天下雨，我就不去了。",
+          "vi": "Nếu mai trời mưa thì tôi không đi nữa.",
+          "read": "Rúguǒ míngtiān xià yǔ, wǒ jiù bú qù le."
+        },
+        {
+          "en": "如果你有时间，就来我家玩吧。",
+          "vi": "Nếu bạn có thời gian thì đến nhà tôi chơi nhé.",
+          "read": "Rúguǒ nǐ yǒu shíjiān, jiù lái wǒ jiā wán ba."
+        },
+        {
+          "en": "如果你累了，就休息一下。",
+          "vi": "Nếu bạn mệt thì nghỉ một chút đi.",
+          "read": "Rúguǒ nǐ lèi le, jiù xiūxi yíxià."
+        },
+        {
+          "en": "如果不懂，你就问老师。",
+          "vi": "Nếu không hiểu thì bạn hỏi thầy.",
+          "read": "Rúguǒ bù dǒng, nǐ jiù wèn lǎoshī."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "如果明天下雨，就我不去了。",
+          "right": "如果明天下雨，我就不去了。",
+          "why": "就 đứng sau chủ ngữ, trước động từ."
+        },
+        {
+          "wrong": "如果下雨，所以我不去。",
+          "right": "如果下雨，我就不去了。",
+          "why": "如果 đi với 就; 所以 đi với 因为."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "如果明天下雨，我___不去了。",
+          "options": [
+            "就",
+            "所以"
+          ],
+          "answer": 0,
+          "explain": "如果 … 就."
+        },
+        {
+          "type": "choice",
+          "prompt": "___今天下雨了，所以我没去。",
+          "options": [
+            "因为",
+            "如果"
+          ],
+          "answer": 0,
+          "explain": "Trời đã mưa thật (lý do) → 因为 … 所以."
+        },
+        {
+          "type": "choice",
+          "prompt": "___你有时间，就来我家玩吧。",
+          "options": [
+            "如果",
+            "虽然"
+          ],
+          "answer": 0,
+          "explain": "Nếu … thì → 如果 … 就."
+        },
+        {
+          "type": "order",
+          "en": "如果​你​累​了，​就​休息​一下。",
+          "vi": "Nếu bạn mệt thì nghỉ một chút đi."
+        },
+        {
+          "type": "order",
+          "en": "如果​明天​下雨，​我​就​不​去​了。",
+          "vi": "Nếu mai trời mưa thì tôi không đi nữa."
+        }
+      ]
     }
   ]
 }
