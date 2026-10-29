@@ -36,6 +36,16 @@ export default tseslint.config(
     },
   },
 
+  // End-to-end tests (Playwright): run in Node, drive a real browser.
+  {
+    files: ['e2e/**/*.ts'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: { ...globals.node, ...globals.browser },
+    },
+  },
+
   // Cloudflare Pages Functions: Workers runtime, not the browser.
   {
     files: ['functions/**/*.ts'],

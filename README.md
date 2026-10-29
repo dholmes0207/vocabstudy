@@ -104,6 +104,7 @@ npm run lint           # ESLint (0 error, 0 warning)
 npm run typecheck      # tsc -b --noEmit
 npm test               # Vitest — unit test cho src/lib
 npm run build          # Vite production build
+npm run e2e            # Playwright — luồng học chính trên bản build
 ```
 
 `npm run format` và `npm run lint:fix` để tự sửa; `npm run test:watch` khi đang viết logic.
