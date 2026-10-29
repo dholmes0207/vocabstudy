@@ -35,6 +35,10 @@ export const RELEASES: Release[] = [
         '9 bài ngữ pháp tiếng Trung mức HSK 3: câu chữ 把, câu bị động 被, 越来越, 虽然…但是, 一边…一边, 除了, 如果…就, bổ ngữ kết quả (写完, 找到) và bổ ngữ xu hướng (进来, 出去).',
         '9 Chinese grammar lessons at HSK 3 level: the 把 sentence, the 被 passive, 越来越, 虽然…但是, 一边…一边, 除了, 如果…就, result complements (写完, 找到) and direction complements (进来, 出去).',
       ],
+      [
+        '5 truyện ngắn tiếng Trung mức HSK 3 (Tìm ví, Thành phố mới, Ôn thi HSK 3, Quà sinh nhật bà, Bị cảm), dùng lại nhiều từ HSK 3 và các điểm ngữ pháp mới.',
+        '5 short Chinese stories at HSK 3 level (Finding a wallet, A new city, Studying for HSK 3, Grandma’s birthday present, Catching a cold) that bring back many HSK 3 words and the new grammar points.',
+      ],
     ],
   },
   {

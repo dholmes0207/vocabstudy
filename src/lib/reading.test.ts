@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { Word } from '@/types'
 import { tokenize } from './games'
+import { HSK3 } from './exams'
 import {
   bareWord,
   buildGlossary,
@@ -143,6 +144,17 @@ describe('the Chinese stories', () => {
     }
     const line = zh.stories[0].sentences[2]
     expect(glossInLine('米饭。', line, glossary, byId)?.meaning).toBe('cơm')
+  })
+
+  it('have HSK 3 (B1) stories that bring back many HSK 3 words', () => {
+    const b1 = zh.stories.filter((s) => s.level === 'B1')
+    expect(b1.length).toBeGreaterThanOrEqual(5)
+    const seen = new Set(
+      b1
+        .flatMap((s) => s.sentences.flatMap((l) => tokenize(l.en)))
+        .map((t) => t.replace(/[^\p{Script=Han}]/gu, ''))
+    )
+    expect(HSK3.filter((w) => seen.has(w)).length).toBeGreaterThanOrEqual(50)
   })
 
   it('give every sentence a pinyin line that reads each tappable word as the pack does', () => {
