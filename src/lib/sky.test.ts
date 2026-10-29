@@ -8,7 +8,6 @@ import {
   makeStars,
   mulberry32,
   nextMeteorIn,
-  parallaxShift,
   pointsNear,
   resolveQuality,
   sparkleAlpha,
@@ -121,14 +120,6 @@ describe('stars', () => {
     expect(Math.min(...values)).toBeGreaterThanOrEqual(0.1 - 1e-9)
     expect(Math.max(...values)).toBeLessThanOrEqual(1 + 1e-9)
     expect(Math.max(...values) - Math.min(...values)).toBeGreaterThan(0.5)
-  })
-
-  it('near layers drift further than far ones, against the pointer', () => {
-    const near = parallaxShift(1, { x: 1, y: 0 }, 20)
-    const far = parallaxShift(0.2, { x: 1, y: 0 }, 20)
-    expect(near.dx).toBeLessThan(far.dx)
-    expect(near.dx).toBeCloseTo(-20)
-    expect(parallaxShift(1, { x: 0, y: 0 }, 20)).toEqual({ dx: -0, dy: -0 })
   })
 })
 

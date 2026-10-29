@@ -173,19 +173,6 @@ export function twinkle(star: Star, t: number): number {
 }
 
 /**
- * How far a layer at `depth` shifts for a pointer at `p` (each axis −1…1,
- * 0 = centre). Layers move against the pointer, near ones more — the cheap
- * trick that makes a flat canvas read as deep space.
- */
-export function parallaxShift(
-  depth: number,
-  p: { x: number; y: number },
-  max: number
-): { dx: number; dy: number } {
-  return { dx: -p.x * max * depth, dy: -p.y * max * depth }
-}
-
-/**
  * Where the parallax "looks" when nobody is moving a mouse (phones, idle
  * desktops): a slow figure-eight so the sky never feels frozen.
  */

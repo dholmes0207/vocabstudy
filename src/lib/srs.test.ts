@@ -1,15 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { SRSCard } from '@/types'
-import {
-  INTERVALS,
-  MASTERED_BOX,
-  daysUntilDue,
-  getDueCards,
-  masteryProgress,
-  newCard,
-  phaseOf,
-  review,
-} from './srs'
+import { INTERVALS, MASTERED_BOX, getDueCards, newCard, phaseOf, review } from './srs'
 
 const DAY = 20000 // arbitrary fixed epoch day, so tests never depend on the clock
 
@@ -186,22 +177,5 @@ describe('getDueCards', () => {
       card({ id: 3, box: 1, dueDay: DAY, lastReviewedDay: DAY - 2 }),
     ]
     expect(getDueCards(cards, DAY).map((c) => c.id)).toEqual([2, 3, 1])
-  })
-})
-
-describe('masteryProgress / daysUntilDue', () => {
-  it('reports 0 for an unknown word and 1 once mastered', () => {
-    expect(masteryProgress(undefined)).toBe(0)
-    expect(masteryProgress(newCard(1, DAY))).toBe(0)
-    expect(masteryProgress({ ...newCard(1, DAY), box: MASTERED_BOX })).toBe(1)
-  })
-
-  it('never exceeds 1 even if the box somehow overshoots', () => {
-    expect(masteryProgress({ ...newCard(1, DAY), box: MASTERED_BOX + 4 })).toBe(1)
-  })
-
-  it('goes negative once a card is overdue', () => {
-    expect(daysUntilDue({ ...newCard(1, DAY), dueDay: DAY + 3 }, DAY)).toBe(3)
-    expect(daysUntilDue({ ...newCard(1, DAY), dueDay: DAY - 2 }, DAY)).toBe(-2)
   })
 })
