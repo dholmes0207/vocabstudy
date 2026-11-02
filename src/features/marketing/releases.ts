@@ -13,6 +13,20 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-02',
+    title: ['Đọc theo truyện', 'Read stories aloud'],
+    items: [
+      [
+        'Nút "Đọc theo" trong mỗi truyện: nghe từng câu, bấm micro đọc lại, xem câu nào máy đã nghe rõ và chỗ nào cần đọc lại. Truyện tiếng Trung chấm theo từng chữ và hiện kèm pinyin.',
+        'A "Read aloud" button in every story: hear each sentence, tap the mic and say it back, and see which parts came through. Chinese stories are scored character by character, with pinyin shown.',
+      ],
+      [
+        'Bảng Pinyin, bảng Hán Việt và bảng chữ Hangul phát âm ngay khi chạm.',
+        'The Pinyin, Sino-Vietnamese and Hangul pages sound the moment you tap.',
+      ],
+    ],
+  },
+  {
     date: '2026-10-29',
     title: [
       'Tiếng Trung: đủ từ vựng HSK 3 và lộ trình HSK 3',

@@ -129,3 +129,19 @@ và nút "bài tiếp theo" trong khoá học.
 - Chỉ dùng từ đã có trong gói tiếng Hàn trên `main`. Mỗi câu ghi tay bảng ghép từ đã chia đuôi
   với từ gốc (친절해요 → 친절하다), như các truyện tiếng Hàn trước.
 - Tổng cộng 10 truyện tiếng Hàn, 35 truyện cho cả app. Trang chủ đã cập nhật.
+
+## Đọc theo (02/11/2026)
+
+**User**: "Cải thiện khi người dùng học nói, phát âm, đọc, nghe ấy, và ngoài tiếng Anh, sẽ ưu tiên
+tiếng Trung nữa."
+
+Truyện đã có nghe cả bài, nghe từng câu và nghe – chép, nhưng chưa có chỗ để nói. Nút **"Đọc theo"**
+mở từng câu của truyện: nghe mẫu, bấm micro, đọc to. Máy chấm từng câu và tô đỏ chỗ chưa nghe rõ,
+như phần "Nói thành tiếng" của bài ngữ pháp.
+
+- Dùng lại `components/SpeakAloud.tsx` (chuyển từ `features/grammar/`), thêm `count` để hiện đủ mọi
+  câu thay vì 3 câu đầu như bài ngữ pháp.
+- Tiếng Trung chấm theo từng chữ Hán. Dấu ngắt từ vô hình trong truyện (U+200B) không bị tính là
+  chữ bị bỏ sót (`sentenceScore.test.ts`).
+- Câu tiếng Trung hiện kèm pinyin, để người mới vẫn đọc theo được.
+- Đọc đúng trọn câu thì được chấm ngay (`accept` của `listenOnce`, xem `practice-latency.md`).
