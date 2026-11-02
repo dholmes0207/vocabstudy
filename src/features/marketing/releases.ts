@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-03',
+    title: ['Bộ thủ chữ Hán', 'Chinese radicals'],
+    items: [
+      [
+        'Trang "Bộ thủ" cho tiếng Trung: 41 bộ hay gặp kèm tên Hán Việt (亻 nhân đứng, 氵 ba chấm thuỷ, 扌 tài gảy…) và các chữ trong gói chứa bộ đó, kèm bài "Đoán bộ thủ" 10 câu.',
+        'A "Radicals" page for Chinese: 41 common radicals with their Sino-Vietnamese names (亻, 氵, 扌…) and the characters of the pack that contain them, plus a 10-question "Spot the radical" round.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-02',
     title: ['Đọc theo truyện', 'Read stories aloud'],
     items: [

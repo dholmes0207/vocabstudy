@@ -54,6 +54,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-red-600 to-rose-500',
   },
   {
+    to: '/radicals',
+    icon: '🧩',
+    title: 'Bộ thủ',
+    desc: 'Những bộ phận ghép nên chữ Hán, kèm tên Hán Việt: 氵 thuỷ (nước) có trong 洗, 河, 游, 酒. Kèm bài đoán bộ 10 câu.',
+    titleEn: 'Radicals',
+    descEn:
+      'The parts Chinese characters are built from, with their Sino-Vietnamese names: 氵 "water" is in 洗, 河, 游, 酒. With a 10-question round.',
+    tone: 'from-rose-500 to-amber-500',
+  },
+  {
     to: '/hangul',
     icon: '🔤',
     title: 'Bảng chữ cái Hangul',
