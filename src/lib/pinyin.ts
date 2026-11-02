@@ -323,8 +323,11 @@ export interface ZhWord {
 export type PinyinQuestion =
   | { kind: 'tone'; prompt: string; reading: string; answer: 1 | 2 | 3 | 4 | 5; note: string }
   | { kind: 'word'; prompt: string; options: string[]; answer: number; note: string }
-  /** Hear the word, pick its tones: the options differ only in tone marks. */
-  | { kind: 'ear'; prompt: string; options: string[]; answer: number; note: string }
+  /**
+   * Hear the word, pick its tones: the options differ only in tone marks.
+   * `pair` names its tones ("3-5" for xǐhuan), to tell which pairs get mixed up.
+   */
+  | { kind: 'ear'; prompt: string; options: string[]; answer: number; note: string; pair: string }
 
 function shuffle<T>(arr: T[], rand: () => number): T[] {
   const a = [...arr]
@@ -433,7 +436,63 @@ export function hasThirdToneRun(reading: string): boolean {
   return tones.some((t, i) => t === 3 && tones[i + 1] === 3)
 }
 
-/** A listening round on two-character words: hear it, pick the tones. */
+/**
+ * The tones of a two-syllable reading, 5 for a neutral second syllable
+ * ("lǎoshī" → [3, 1], "xǐhuan" → [3, 5]); null when it does not read as two.
+ */
+export function tonePair(reading: string): [number, number] | null {
+  const tones = [...reading.normalize('NFC')].flatMap((c) =>
+    MARK_OF.has(c) ? [MARK_OF.get(c)!.tone] : []
+  )
+  if (tones.length === 2) return [tones[0], tones[1]]
+  if (tones.length === 1) return [tones[0], 5]
+  return null
+}
+
+/** "3-5": the key of a tone pair. */
+export const pairKey = (pair: readonly number[]) => pair.join('-')
+
+/** The 20 pairs a two-syllable word can carry: tones 1–4, then 1–4 or neutral. */
+export const TONE_PAIRS: [number, number][] = [1, 2, 3, 4].flatMap((a) =>
+  [1, 2, 3, 4, 5].map((b): [number, number] => [a, b])
+)
+
+/**
+ * Two characters read as two syllables, no proper name (a capital in the
+ * reading): the words tone pairs are drilled on. 哪儿 nǎr is one syllable
+ * (the 儿 only curls the tongue); 女儿 nǚ'ér is two, and pinyin then always
+ * sets the ér apart with an apostrophe.
+ */
+function isPairWord(w: ZhWord): boolean {
+  return (
+    [...w.word].length === 2 &&
+    HAN_ONLY.test(w.word) &&
+    !/[A-ZĀÁǍÀĒÉĚÈŌÓǑÒ]/.test(w.viRead) &&
+    !(w.word.endsWith('儿') && !/['’ ][eēéěè]r$/.test(w.viRead)) &&
+    tonePair(w.viRead) !== null
+  )
+}
+
+/** Up to `per` words of the pack for each of the 20 tone pairs, in pack order. */
+export function tonePairTable(
+  words: ZhWord[],
+  per = 2
+): { pair: [number, number]; words: ZhWord[] }[] {
+  const byPair = new Map<string, ZhWord[]>()
+  for (const w of words) {
+    if (!isPairWord(w)) continue
+    const key = pairKey(tonePair(w.viRead)!)
+    const list = byPair.get(key) ?? []
+    if (list.length < per) byPair.set(key, [...list, w])
+  }
+  return TONE_PAIRS.map((pair) => ({ pair, words: byPair.get(pairKey(pair)) ?? [] }))
+}
+
+/**
+ * A listening round on two-character words: hear it, pick the tones. The words
+ * are spread over as many tone pairs as the round has questions, so the end of
+ * a round can say which pairs the learner mixes up.
+ */
 export function earQuiz(
   words: ZhWord[],
   count = 10,
@@ -441,22 +500,43 @@ export function earQuiz(
 ): PinyinQuestion[] {
   const pool = words.filter(
     (w) =>
-      [...w.word].length === 2 &&
-      HAN_ONLY.test(w.word) &&
-      !/[A-ZĀÁǍÀĒÉĚÈŌÓǑÒ]/.test(w.viRead) &&
-      !hasThirdToneRun(w.viRead) &&
-      toneVariants(w.viRead, 3, rand).length === 3
+      isPairWord(w) && !hasThirdToneRun(w.viRead) && toneVariants(w.viRead, 3, rand).length === 3
   )
-  return shuffle(pool, rand)
-    .slice(0, count)
-    .map((w) => {
-      const options = shuffle([w.viRead, ...toneVariants(w.viRead, 3, rand)], rand)
-      return {
-        kind: 'ear' as const,
-        prompt: w.word,
-        options,
-        answer: options.indexOf(w.viRead),
-        note: w.meaning,
-      }
-    })
+  const groups = new Map<string, ZhWord[]>()
+  for (const w of shuffle(pool, rand)) {
+    const key = pairKey(tonePair(w.viRead)!)
+    groups.set(key, [...(groups.get(key) ?? []), w])
+  }
+  const queues = shuffle([...groups.values()], rand)
+  const picked: ZhWord[] = []
+  while (picked.length < count && queues.some((q) => q.length)) {
+    for (const q of queues) if (q.length && picked.length < count) picked.push(q.shift()!)
+  }
+  return shuffle(picked, rand).map((w) => {
+    const options = shuffle([w.viRead, ...toneVariants(w.viRead, 3, rand)], rand)
+    return {
+      kind: 'ear' as const,
+      prompt: w.word,
+      options,
+      answer: options.indexOf(w.viRead),
+      note: w.meaning,
+      pair: pairKey(tonePair(w.viRead)!),
+    }
+  })
+}
+
+/**
+ * The tone pairs a round got wrong, worst first: [pair, wrong, asked].
+ * Pairs answered right every time are left out.
+ */
+export function missedPairs(results: { pair: string; ok: boolean }[]): [string, number, number][] {
+  const tally = new Map<string, [number, number]>()
+  for (const r of results) {
+    const [wrong, asked] = tally.get(r.pair) ?? [0, 0]
+    tally.set(r.pair, [wrong + (r.ok ? 0 : 1), asked + 1])
+  }
+  return [...tally]
+    .filter(([, [wrong]]) => wrong > 0)
+    .map(([pair, [wrong, asked]]): [string, number, number] => [pair, wrong, asked])
+    .sort((a, b) => b[1] / b[2] - a[1] / a[2] || b[1] - a[1])
 }

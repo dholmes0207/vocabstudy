@@ -5,8 +5,12 @@ import {
   SANDHI,
   TONES,
   TRICKY_FINALS,
+  TONE_PAIRS,
   earQuiz,
   hasThirdToneRun,
+  missedPairs,
+  tonePair,
+  tonePairTable,
   pinyinQuiz,
   pinyinXp,
   toneOf,
@@ -119,5 +123,53 @@ describe('earQuiz: hear a word, pick its tones', () => {
       expect(q.options[q.answer]).toBe(w.viRead)
       expect(hasThirdToneRun(w.viRead)).toBe(false)
     }
+  })
+})
+
+describe('tone pairs', () => {
+  const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as { words: ZhWord[] }
+
+  it('reads the two tones of a word, 5 for a neutral second syllable', () => {
+    expect(tonePair('lǎoshī')).toEqual([3, 1])
+    expect(tonePair('xǐhuan')).toEqual([3, 5])
+    expect(tonePair("nǚ'ér")).toEqual([3, 2])
+    expect(tonePair('ma')).toBeNull()
+    expect(TONE_PAIRS).toHaveLength(20)
+  })
+
+  it('finds pack words for every pair, never a one-syllable 儿 word', () => {
+    const table = tonePairTable(zh.words)
+    expect(table.filter((r) => r.words.length === 0).map((r) => r.pair)).toEqual([])
+    const words = table.flatMap((r) => r.words.map((w) => w.word))
+    expect(words).not.toContain('哪儿')
+    expect(words).not.toContain('这儿')
+    expect(tonePairTable([{ word: '女儿', viRead: "nǚ'ér", meaning: '' }])[11].words).toHaveLength(
+      1
+    )
+  })
+
+  it('spreads a listening round over ten different pairs', () => {
+    const qs = earQuiz(zh.words, 10)
+    const pairs = qs.map((q) => (q.kind === 'ear' ? q.pair : ''))
+    expect(new Set(pairs).size).toBe(10)
+    for (const q of qs) {
+      if (q.kind !== 'ear') throw new Error('kind')
+      expect(q.pair).toBe(tonePair(q.options[q.answer])!.join('-'))
+    }
+  })
+
+  it('lists the pairs a round got wrong, worst first', () => {
+    expect(
+      missedPairs([
+        { pair: '2-3', ok: false },
+        { pair: '1-4', ok: true },
+        { pair: '3-2', ok: false },
+        { pair: '3-2', ok: true },
+        { pair: '2-3', ok: false },
+      ])
+    ).toEqual([
+      ['2-3', 2, 2],
+      ['3-2', 1, 2],
+    ])
   })
 })

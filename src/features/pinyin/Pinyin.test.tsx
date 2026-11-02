@@ -5,6 +5,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import Pinyin from './Pinyin'
+import { earQuiz } from '@/lib/pinyin'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
@@ -69,5 +70,29 @@ describe('Pinyin', () => {
     expect(options).toHaveLength(4)
     fireEvent.click(options[0])
     expect(within(card).getByText(/^\p{Script=Han}{2}$/u)).toBeInTheDocument()
+  })
+
+  it('lays out the 20 tone pairs, with a pack word in each', () => {
+    renderPage()
+    const table = screen.getByRole('table')
+    expect(within(table).getAllByRole('button')).toHaveLength(20)
+    expect(within(table).getByRole('button', { name: /thanh 3 \+ 3/ })).toHaveTextContent(
+      'đọc 2 + 3'
+    )
+  })
+
+  it('names the tone pairs heard wrong at the end of a listening round', () => {
+    // A fixed Math.random makes the page's round the same as this one.
+    vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    const round = earQuiz(pack.words, 10)
+    renderPage()
+    fireEvent.click(screen.getByRole('button', { name: /Nghe chọn thanh/ }))
+    for (const q of round) {
+      if (q.kind !== 'ear') throw new Error('kind')
+      const card = screen.getByText('Nghe rồi chọn thanh đúng').parentElement!
+      fireEvent.click(within(card).getByRole('button', { name: q.options[(q.answer + 1) % 4] }))
+      fireEvent.click(screen.getByRole('button', { name: /Câu tiếp|Xem kết quả|Tiếp/ }))
+    }
+    expect(screen.getByText(/Cặp thanh cần nghe lại: .*\(sai 1\/1\)/)).toBeInTheDocument()
   })
 })

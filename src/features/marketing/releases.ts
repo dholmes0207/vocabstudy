@@ -14,8 +14,12 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-03',
-    title: ['Bộ thủ chữ Hán', 'Chinese radicals'],
+    title: ['Bộ thủ và cặp thanh tiếng Trung', 'Chinese radicals and tone pairs'],
     items: [
+      [
+        'Trang Pinyin có bảng 20 cặp thanh, mỗi ô một từ để nghe. Bài "Nghe chọn thanh" giờ rải đều các cặp và cuối lượt cho biết bạn hay nhầm cặp nào, ví dụ 2 + 3 với 3 + 2.',
+        'The Pinyin page has a table of the 20 tone pairs, a word to hear in each. "Hear the tones" now spreads its questions over the pairs and tells you at the end which ones you mix up, such as 2 + 3 and 3 + 2.',
+      ],
       [
         'Trang "Bộ thủ" cho tiếng Trung: 41 bộ hay gặp kèm tên Hán Việt (亻 nhân đứng, 氵 ba chấm thuỷ, 扌 tài gảy…) và các chữ trong gói chứa bộ đó, kèm bài "Đoán bộ thủ" 10 câu.',
         'A "Radicals" page for Chinese: 41 common radicals with their Sino-Vietnamese names (亻, 氵, 扌…) and the characters of the pack that contain them, plus a 10-question "Spot the radical" round.',
