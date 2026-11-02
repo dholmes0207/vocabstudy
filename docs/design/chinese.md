@@ -575,3 +575,24 @@ truyện mức **B1**, viết để người học gặp lại nhiều từ HSK 
 - Riêng 5 truyện này dùng 57/298 từ HSK 3. Tính cả 9 bài ngữ pháp, 77 từ HSK 3 xuất hiện ngoài thẻ
   của chính nó (trước đây khoảng 29). `reading.test.ts` giữ mức tối thiểu 50 từ.
 - Tổng cộng 16 truyện tiếng Trung. Trang chủ tự đếm lại.
+
+## Bước 29: đọc theo truyện, và các ý tưởng tiếp theo (02/11/2026)
+
+**User**: "Thêm vài ý tưởng cho tiếng Trung."
+
+Đã làm: **Đọc theo** cho 16 truyện tiếng Trung (chi tiết ở `reading.md`). Người học nghe từng câu,
+đọc lại, được chấm theo từng chữ Hán.
+
+Các ý tưởng tiếp theo, xếp theo lợi ích cho người Việt:
+
+1. **Báo sai thanh khi luyện phát âm.** Máy nhận dạng hay trả về một chữ khác cùng âm, khác thanh
+   (nói 买 mǎi thành 卖 mài). Hiện máy chỉ chấm "sai". Nếu tra được pinyin của chữ nghe được thì báo
+   "đúng âm, sai thanh: thanh 3 → thanh 4". Cần một bảng chữ → pinyin rộng hơn gói (khoảng 3.500 chữ
+   thông dụng).
+2. **Bộ thủ.** Khoảng 40 bộ thủ hay gặp, mỗi bộ có tên Hán Việt (亻 nhân, 氵 thuỷ, 口 khẩu, 木 mộc…)
+   và các chữ trong gói chứa bộ đó. Người Việt nhớ chữ qua bộ thủ và âm Hán Việt rất nhanh. Dữ liệu
+   bộ thủ ghi tay, kiểm tra bằng test như pinyin.
+3. **Luyện cặp thanh.** Mở rộng "Nghe chọn thanh": 20 tổ hợp hai thanh (1-1, 1-2… 4-4), mỗi tổ hợp
+   vài từ quen. Người học biết mình hay nhầm cặp nào (2-3, 3-2 là khó nhất).
+4. **Thứ tự nét viết.** Hiện nét viết từng chữ và cho tập viết theo. Cần dữ liệu nét (Make Me a
+   Hanzi; phải đọc kỹ giấy phép trước khi dùng) và khoảng 1 MB cho 600 chữ, nên chỉ tải khi mở.

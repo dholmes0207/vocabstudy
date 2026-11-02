@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import type { LanguagePack } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -170,5 +170,22 @@ describe('dictation of a whole story', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /Next/ }))
     expect(screen.getByText(`2/${lan.sentences.length}`)).toBeInTheDocument()
+  })
+})
+
+describe('reading a story aloud after the model', () => {
+  it('offers every sentence to say, and goes back to the story', async () => {
+    const w = window as { webkitSpeechRecognition?: unknown }
+    w.webkitSpeechRecognition = class {}
+    onTestFinished(() => {
+      delete w.webkitSpeechRecognition
+    })
+    renderStory()
+    fireEvent.click(await screen.findByRole('button', { name: 'Read aloud' }))
+    expect(screen.getAllByRole('button', { name: 'Say this one' })).toHaveLength(
+      lan.sentences.length
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Back to the story' }))
+    expect(await screen.findByRole('button', { name: 'Listen' })).toBeInTheDocument()
   })
 })

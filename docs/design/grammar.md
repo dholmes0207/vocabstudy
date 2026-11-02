@@ -124,7 +124,7 @@ thành: hiểu → nói → luyện.
     - số tiếng Anh từ 0–99 (twenty = 20);
     - số viết bằng chữ số trong tiếng Trung (3 → 三, 25 → 二十五).
   - Chưa xử lý số trong tiếng Hàn. Hàn có hai hệ số đếm, "3" có thể là 셋 hoặc 삼.
-- `features/grammar/SpeakAloud.tsx`:
+- `components/SpeakAloud.tsx`:
   - dùng `listenOnce` của `lib/speech.ts` với `ttsLang` của gói;
   - nhận dạng giọng nói thật không chạy được trong test, nên test thay nó bằng bản giả.
 - **Chưa kiểm tra bằng giọng nói thật.** Khung trình duyệt dùng để kiểm tra chặn micro. Cần

@@ -9,6 +9,7 @@ import {
   Square,
   Baseline,
   Languages,
+  Mic,
   Snail,
   PenLine,
   Volume2,
@@ -36,6 +37,7 @@ import { CenterSpinner } from '@/components/DataGate'
 import SessionComplete from '@/components/SessionComplete'
 import SaveWordButton from '@/components/SaveWordButton'
 import { DictationRound } from '@/features/dictation/Dictation'
+import SpeakAloud from '@/components/SpeakAloud'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import { tokenize } from '@/lib/games'
 
@@ -172,6 +174,8 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
   const [slow, setSlow] = useState(false)
   // "Nghe – chép" the whole story, sentence by sentence (Daily Dictation's way).
   const [dictate, setDictate] = useState(false)
+  // "Đọc theo": say each sentence after the model, scored line by line.
+  const [speak, setSpeak] = useState(false)
   // Chinese stories carry a pinyin line per sentence; other packs read as written.
   const hasRead = story.sentences.some((s) => s.read)
   const readName = useReadingLabel('cách đọc', 'reading')
@@ -237,6 +241,27 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
         onExit={() => setDictate(false)}
       />
     )
+  if (speak)
+    return (
+      <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
+        <button
+          type="button"
+          onClick={() => setSpeak(false)}
+          className="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600"
+        >
+          <ArrowLeft className="h-4 w-4" /> {t('Về truyện', 'Back to the story')}
+        </button>
+        <h1 className="text-2xl font-extrabold tracking-tight">
+          {story.emoji} {story.title[1]}
+        </h1>
+        <SpeakAloud
+          key={story.id}
+          examples={story.sentences}
+          count={story.sentences.length}
+          lang={pack.meta.ttsLang}
+        />
+      </article>
+    )
 
   return (
     <article className="mx-auto max-w-2xl space-y-5 animate-fade-in">
@@ -298,6 +323,15 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
             }}
           >
             <PenLine className="h-4 w-4" /> {t('Nghe – chép', 'Dictation')}
+          </button>
+          <button
+            className="btn-secondary"
+            onClick={() => {
+              stop()
+              setSpeak(true)
+            }}
+          >
+            <Mic className="h-4 w-4" /> {t('Đọc theo', 'Read aloud')}
           </button>
         </div>
       </header>

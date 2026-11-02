@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { readFileSync } from 'node:fs'
 import { scoreSentence, speechUnits, unitFor } from './sentenceScore'
 
 const missedText = (r: ReturnType<typeof scoreSentence>) =>
@@ -78,5 +79,16 @@ describe('Chinese sentences', () => {
   it('marks a missing character', () => {
     const r = scoreSentence('她不是医生。', ['她是医生'], 'zh-CN')
     expect(missedText(r)).toEqual(['不'])
+  })
+})
+
+describe('a Chinese story line', () => {
+  it('ignores the invisible word breaks the stories carry', () => {
+    const zh = JSON.parse(readFileSync('public/data/reading/zh.json', 'utf8'))
+    const line: string = zh.stories[0].sentences[0].en
+    expect(line).toContain('\u200b')
+    const r = scoreSentence(line, [line.replace(/[\u200b，。！？]/g, '')], 'zh-CN')
+    expect(r.score).toBe(100)
+    expect(r.pieces.some((p) => p.missed)).toBe(false)
   })
 })

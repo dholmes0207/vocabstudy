@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mic, Square } from 'lucide-react'
-import type { GrammarExample } from '@/lib/grammar'
 import {
   isRecognitionSupported,
   listenOnce,
@@ -14,12 +13,21 @@ import { stopPronounce, textAudio } from '@/lib/audio'
 import { useT } from '@/lib/i18n'
 import SpeakButton from '@/components/SpeakButton'
 
-// "Nói thành tiếng" (docs/design/grammar.md): after reading how a pattern works,
-// say a few of its examples out loud and see which words came through. Uses
-// the browser's speech recognition, like the Speaking page; nothing is stored.
+// "Nói thành tiếng": say sentences out loud and see which words came through —
+// a grammar lesson's first examples (docs/design/grammar.md), or every line of
+// a story ("Đọc theo", docs/design/reading.md). Uses the browser's speech
+// recognition, like the Speaking page; nothing is stored.
 
-/** Examples to say per lesson. */
+/** Examples to say per grammar lesson. */
 export const SPEAK_COUNT = 3
+
+/** A sentence to say: a grammar example or a story line. */
+export interface SpeakLine {
+  en: string
+  vi: string
+  /** How it reads, for scripts a beginner cannot read yet (Chinese pinyin). */
+  read?: string
+}
 
 type Row =
   | { kind: 'idle' }
@@ -30,13 +38,16 @@ type Row =
 export default function SpeakAloud({
   examples,
   lang,
+  count = SPEAK_COUNT,
 }: {
-  examples: GrammarExample[]
+  examples: SpeakLine[]
   lang: string
+  /** How many of the examples to offer, from the first. */
+  count?: number
 }) {
   const t = useT()
   const [supported] = useState(isRecognitionSupported)
-  const items = examples.slice(0, SPEAK_COUNT)
+  const items = examples.slice(0, count)
   const [rows, setRows] = useState<Row[]>(() => items.map(() => ({ kind: 'idle' })))
   const handle = useRef<ListenHandle | null>(null)
   useEffect(() => () => handle.current?.abort(), [])
