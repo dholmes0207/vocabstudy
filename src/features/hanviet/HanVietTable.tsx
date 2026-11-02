@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, Check, Search, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
@@ -7,8 +7,8 @@ import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useStudy } from '@/store/studyStore'
 import GameShell, { GameResult } from '@/features/games/GameShell'
-import { pronounce, wordAudio } from '@/lib/audio'
-import { usePackSay } from '@/hooks/usePackSay'
+import { prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
+import { usePackSay, usePrefetchPackSay } from '@/hooks/usePackSay'
 import { useT } from '@/lib/i18n'
 
 // "Chữ Hán qua âm Hán Việt" (docs/design/han-viet-table.md): every character
@@ -16,6 +16,8 @@ import { useT } from '@/lib/i18n'
 // same Sino-Vietnamese way — one key that opens several words at once.
 
 const GUESS_SIZE = 10
+/** Cards whose sounds are warmed ahead: about what a phone shows before scrolling. */
+const PREFETCH_CARDS = 8
 
 export default function HanVietTable() {
   const t = useT()
@@ -26,6 +28,10 @@ export default function HanVietTable() {
   const shown = useMemo(() => searchHanViet(table, query), [table, query])
   const zh = code === 'zh'
   const say = usePackSay()
+  // The first cards on screen; the rest load as the learner gets to them.
+  usePrefetchPackSay(
+    shown.slice(0, PREFETCH_CARDS).flatMap((e) => [e.char, ...e.words.map((w) => w.word)])
+  )
   const [round, setRound] = useState<{ n: number; questions: HanVietQuestion[] } | null>(null)
   const start = () =>
     setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: hanVietQuiz(pack.words, GUESS_SIZE) }))
@@ -153,6 +159,7 @@ function GuessRound({ questions, onAgain }: { questions: HanVietQuestion[]; onAg
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
   const [xp, setXp] = useState<number | null>(null)
+  useEffect(() => prefetchAudio(questions.map((qn) => wordAudio(qn.word.id))), [questions])
   const title = t('Đoán nghĩa nhờ Hán Việt', 'Guess by Sino-Vietnamese')
 
   if (xp !== null || questions.length === 0)

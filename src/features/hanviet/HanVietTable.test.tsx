@@ -12,6 +12,7 @@ import { useStudy } from '@/store/studyStore'
 // "Chữ Hán qua âm Hán Việt" (docs/design/han-viet-table.md) with the real packs.
 
 vi.mock('@/lib/audio', () => ({
+  prefetchAudio: () => {},
   pronounce: () => {},
   stopPronounce: () => {},
   textAudio: () => '',

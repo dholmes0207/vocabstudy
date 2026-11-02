@@ -35,6 +35,8 @@ Cloudflare thật. Trang đọc truyện `/reading/lans-morning` (tiếng Anh) v
   - Gọi ở: mọi `SpeakButton` (trừ danh sách duyệt từ, 24 dòng một trang), các câu của truyện đang
     đọc và từ đang tra, nghe chép, câu quiz nghe/đánh vần, luyện số, luyện phát âm, vòng đầu bài
     nghe phân biệt âm.
+  - Trang tham khảo của gói (`usePrefetchPackSay`): thanh điệu, biến điệu, bảng thanh mẫu/vận mẫu
+    và quiz của Pinyin; 8 thẻ đầu và vòng đoán nghĩa của bảng Hán Việt; các phần của Hangul.
 - **Sửa `byteSpan`** (`src/lib/audioServe.ts`): đọc range theo giá trị chứ không theo khoá có mặt.
   `bytes=0-` lại thành một 200 trọn vẹn, service worker lưu được.
 - **Chấm sớm khi đã khớp trọn** (`accept` của `listenOnce`): bật kết quả tạm. Khi điều đã nghe
