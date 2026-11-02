@@ -4,7 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useImmersive } from '@/store/uiStore'
-import { usePackSay } from '@/hooks/usePackSay'
+import { usePackSay, usePrefetchPackSay } from '@/hooks/usePackSay'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import {
@@ -115,6 +115,7 @@ function BlockIntro() {
     { syl: '한', parts: ['ㅎ', 'ㅏ', 'ㄴ'] },
     { syl: '국', parts: ['ㄱ', 'ㅜ', 'ㄱ'] },
   ]
+  usePrefetchPackSay(blocks.map((b) => b.syl))
   return (
     <section className="card p-5">
       <h2 className="font-bold">{t('Mỗi chữ là một khối', 'Every syllable is a block')}</h2>
@@ -149,6 +150,7 @@ function BlockIntro() {
 function LetterGroup({ title, note, letters }: { title: string; note: string; letters: Jamo[] }) {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(letters.map((j) => j.sample))
   const words = useData((s) => s.pack?.words)
   const meaningOf = useMemo(() => new Map((words ?? []).map((w) => [w.word, w.meaning])), [words])
   const [picked, setPicked] = useState<Jamo | null>(null)
@@ -299,6 +301,7 @@ function Builder() {
 function FinalSounds() {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(FINAL_SOUNDS.map((f) => f.word))
   return (
     <section>
       <h2 className="font-bold">{t('Phụ âm cuối (받침)', 'Final consonants (받침)')}</h2>
@@ -338,6 +341,7 @@ function FinalSounds() {
 function SoundChanges() {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(SOUND_CHANGES.flatMap((c) => c.examples.map((ex) => ex.word)))
   return (
     <section>
       <h2 className="font-bold">{t('Biến âm khi đọc liền', 'Sound changes in a word')}</h2>
@@ -399,6 +403,7 @@ function Quiz({
   const [correct, setCorrect] = useState(0)
   const [finished, setFinished] = useState<{ xp: number } | null>(null)
   const q = questions[idx]
+  usePrefetchPackSay(questions.map((qn) => qn.say))
 
   const choose = (i: number) => {
     if (picked !== null) return

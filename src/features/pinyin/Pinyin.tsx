@@ -4,7 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useImmersive } from '@/store/uiStore'
-import { usePackSay } from '@/hooks/usePackSay'
+import { usePackSay, usePrefetchPackSay } from '@/hooks/usePackSay'
 import { buzz } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import {
@@ -100,6 +100,7 @@ export default function Pinyin() {
 function Tones() {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(TONES.map((tone) => tone.char))
   return (
     <section className="card p-5">
       <h2 className="font-bold">
@@ -141,6 +142,7 @@ function Tones() {
 function Sandhi() {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(SANDHI.map((r) => r.example))
   return (
     <section className="card p-5">
       <h2 className="font-bold">{t('Biến điệu khi nói liền', 'Tone changes in speech')}</h2>
@@ -172,6 +174,7 @@ function Sandhi() {
 function SoundGroup({ title, note, sounds }: { title: string; note: string; sounds: Sound[] }) {
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(sounds.map((s) => s.char))
   const words = useData((s) => s.pack?.words)
   const meaningOf = useMemo(() => new Map((words ?? []).map((w) => [w.word, w.meaning])), [words])
   const [picked, setPicked] = useState<Sound | null>(null)
@@ -246,6 +249,7 @@ function Quiz({
   useImmersive()
   const t = useT()
   const say = useSay()
+  usePrefetchPackSay(questions.map((qn) => qn.prompt))
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
