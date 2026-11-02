@@ -601,3 +601,26 @@ Các ý tưởng tiếp theo, xếp theo lợi ích cho người Việt:
 
 Làm ý tưởng 2 ở Bước 29: màn **"Bộ thủ"** (`/radicals`) với 41 bộ hay gặp, tên Hán Việt, các chữ
 trong gói chứa bộ đó và bài "Đoán bộ thủ". Chi tiết ở `radicals.md`.
+
+## Bước 31: cặp thanh (03/11/2026)
+
+Làm ý tưởng 3 ở Bước 29. Bài "Nghe chọn thanh" (Bước 12) hỏi ngẫu nhiên, nên người học không biết
+mình hay nhầm cặp thanh nào.
+
+**BA**
+
+- Trang Pinyin có thêm bảng **"Cặp thanh"**: 4 hàng (thanh chữ đầu) × 5 cột (thanh chữ sau, kể cả
+  thanh nhẹ), mỗi ô một từ trong gói kèm pinyin, chạm để nghe. Ô 3 + 3 ghi "đọc 2 + 3".
+- "Nghe chọn thanh" rải 10 câu qua 10 cặp thanh khác nhau thay vì bốc ngẫu nhiên.
+- Hết lượt, màn kết quả ghi các cặp nghe sai, cặp sai nhiều nhất trước: "Cặp thanh cần nghe lại:
+  2 + 3 (sai 1/1), 3 + 2 (sai 1/1)".
+- Từ có 儿 đọc cuộn lưỡi (哪儿 nǎr, 这儿 zhèr) chỉ là một âm tiết nên không tính là cặp. 女儿 nǚ'ér
+  vẫn là hai âm tiết: khi 儿 đứng riêng, pinyin luôn có dấu nháy trước ér.
+
+**Dev**
+
+- `lib/pinyin.ts`: `tonePair`, `pairKey`, `TONE_PAIRS`, `tonePairTable`, `missedPairs`; câu hỏi
+  `ear` có thêm `pair`; `earQuiz` chia từ theo cặp rồi lấy lần lượt từng cặp.
+- `features/pinyin/Pinyin.tsx`: `TonePairs`, `MissedPairs`.
+- Test: `lib/pinyin.test.ts` (20 cặp đều có từ trong gói, một lượt phủ 10 cặp khác nhau),
+  `features/pinyin/Pinyin.test.tsx`.

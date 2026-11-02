@@ -13,8 +13,10 @@ import {
   TONES,
   TRICKY_FINALS,
   earQuiz,
+  missedPairs,
   pinyinQuiz,
   pinyinXp,
+  tonePairTable,
   type PinyinQuestion,
   type Sound,
 } from '@/lib/pinyin'
@@ -77,6 +79,7 @@ export default function Pinyin() {
 
       <Tones />
       <Sandhi />
+      <TonePairs />
       <SoundGroup
         title={t('Thanh mẫu (phụ âm đầu)', 'Initials')}
         note={t(
@@ -171,6 +174,114 @@ function Sandhi() {
   )
 }
 
+/** "Thanh 2 + thanh 3": a tone pair key ("2-3", "3-5") in words. */
+function usePairName(): (key: string) => string {
+  const t = useT()
+  return (key) =>
+    key
+      .split('-')
+      .map((n) => (n === '5' ? t('nhẹ', 'neutral') : n))
+      .join(' + ')
+}
+
+/**
+ * Cặp thanh (docs/design/chinese.md, bước 31): a two-syllable word carries one
+ * of 20 tone pairs. A word of the pack for each, to hear the pairs side by side.
+ */
+function TonePairs() {
+  const t = useT()
+  const say = useSay()
+  const words = useData((s) => s.pack?.words)
+  const table = useMemo(() => tonePairTable(words ?? [], 1), [words])
+  usePrefetchPackSay(table.flatMap((r) => r.words.map((w) => w.word)))
+  const cols = [1, 2, 3, 4, 5]
+  return (
+    <section className="card p-5">
+      <h2 className="font-bold">{t('Cặp thanh', 'Tone pairs')}</h2>
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        {t(
+          'Từ hai chữ mang một trong 20 cặp thanh. Hàng là thanh của chữ đầu, cột là thanh của chữ sau. Chạm để nghe, rồi so các ô cạnh nhau: 2 + 3 và 3 + 2 là hai cặp người Việt hay nhầm nhất.',
+          'A two-character word carries one of 20 tone pairs. Rows are the first tone, columns the second. Tap to hear, then compare neighbours: 2 + 3 and 3 + 2 are the pairs Vietnamese speakers mix up most.'
+        )}
+      </p>
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full table-fixed border-separate border-spacing-1 text-center">
+          <thead>
+            <tr>
+              <th className="w-7" />
+              {cols.map((b) => (
+                <th key={b} scope="col" className="text-xs font-semibold text-slate-500">
+                  {b === 5 ? t('nhẹ', 'neutral') : b}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {[1, 2, 3, 4].map((a) => (
+              <tr key={a}>
+                <th scope="row" className="text-xs font-semibold text-slate-500">
+                  {a}
+                </th>
+                {cols.map((b) => {
+                  const w = table.find((r) => r.pair[0] === a && r.pair[1] === b)?.words[0]
+                  return (
+                    <td key={b}>
+                      {w ? (
+                        <button
+                          type="button"
+                          onClick={() => say(w.word)}
+                          aria-label={t(
+                            `Nghe ${w.word}, thanh ${a} + ${b === 5 ? 'nhẹ' : b}`,
+                            `Hear ${w.word}, tones ${a} + ${b === 5 ? 'neutral' : b}`
+                          )}
+                          className="flex w-full flex-col items-center rounded-lg bg-slate-50 px-0.5 py-1.5 transition hover:bg-brand-50 dark:bg-slate-800/60 dark:hover:bg-brand-950"
+                        >
+                          <span className="text-base font-bold leading-tight">{w.word}</span>
+                          <span className="max-w-full truncate text-[11px] text-slate-500 dark:text-slate-400">
+                            {w.viRead}
+                          </span>
+                          {a === 3 && b === 3 && (
+                            <span className="text-[10px] font-semibold text-amber-600 dark:text-amber-300">
+                              {t('đọc 2 + 3', 'said 2 + 3')}
+                            </span>
+                          )}
+                        </button>
+                      ) : (
+                        <span className="text-slate-500">—</span>
+                      )}
+                    </td>
+                  )
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )
+}
+
+/** After a listening round: the tone pairs heard wrong, worst first. */
+function MissedPairs({ heard }: { heard: { pair: string; ok: boolean }[] }) {
+  const t = useT()
+  const pairName = usePairName()
+  if (!heard.length) return null
+  const missed = missedPairs(heard)
+  return (
+    <p className="w-full text-sm text-slate-600 dark:text-slate-300">
+      {missed.length
+        ? t('Cặp thanh cần nghe lại: ', 'Tone pairs to hear again: ') +
+          missed
+            .map(
+              ([pair, wrong, asked]) =>
+                `${pairName(pair)} (${t('sai', 'missed')} ${wrong}/${asked})`
+            )
+            .join(', ')
+        : t('Bạn nghe đúng mọi cặp thanh trong lượt này.', 'You heard every tone pair right.')}
+    </p>
+  )
+}
+
 function SoundGroup({ title, note, sounds }: { title: string; note: string; sounds: Sound[] }) {
   const t = useT()
   const say = useSay()
@@ -257,6 +368,8 @@ function Quiz({
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
   const [finished, setFinished] = useState<{ xp: number } | null>(null)
+  // Each listening answer by tone pair, for the pairs worth another listen.
+  const [heard, setHeard] = useState<{ pair: string; ok: boolean }[]>([])
   const q = questions[idx]
   const hidden = q?.kind === 'ear' && picked === null
 
@@ -285,6 +398,7 @@ function Quiz({
     setPicked(i)
     const ok = i === rightIndex
     if (ok) setCorrect((c) => c + 1)
+    if (q.kind === 'ear') setHeard((h) => [...h, { pair: q.pair, ok }])
     if (soundOn) buzz(ok)
     say(q.prompt)
   }
@@ -311,6 +425,7 @@ function Quiz({
         <p className="w-full text-sm font-semibold text-brand-600 dark:text-brand-300">
           +{finished?.xp ?? 0} XP ⭐
         </p>
+        <MissedPairs heard={heard} />
         <button className="btn-primary" onClick={onAgain}>
           {t('Làm lượt mới', 'Another round')}
         </button>
