@@ -596,3 +596,8 @@ Các ý tưởng tiếp theo, xếp theo lợi ích cho người Việt:
    vài từ quen. Người học biết mình hay nhầm cặp nào (2-3, 3-2 là khó nhất).
 4. **Thứ tự nét viết.** Hiện nét viết từng chữ và cho tập viết theo. Cần dữ liệu nét (Make Me a
    Hanzi; phải đọc kỹ giấy phép trước khi dùng) và khoảng 1 MB cho 600 chữ, nên chỉ tải khi mở.
+
+## Bước 30: bộ thủ (03/11/2026)
+
+Làm ý tưởng 2 ở Bước 29: màn **"Bộ thủ"** (`/radicals`) với 41 bộ hay gặp, tên Hán Việt, các chữ
+trong gói chứa bộ đó và bài "Đoán bộ thủ". Chi tiết ở `radicals.md`.
