@@ -35,7 +35,7 @@ describe('exam roadmaps', () => {
     expect(examFor('zh', 'nope')?.id).toBe('hsk1')
     expect(examsFor('zh').map((e) => e.id)).toEqual(['hsk1', 'hsk2', 'hsk3'])
     expect(examFor('ko')?.id).toBe('topik1')
-    expect(examsFor('en').map((e) => e.id)).toEqual(['a2key', 'b1prelim'])
+    expect(examsFor('en').map((e) => e.id)).toEqual(['a2key', 'b1prelim', 'toeic'])
     expect(examFor('ja')).toBeUndefined()
   })
 

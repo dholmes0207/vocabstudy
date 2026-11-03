@@ -7,7 +7,7 @@
     "learnerLang": "vi",
     "learnerLangName": "Tiếng Việt",
     "ttsLang": "en-US",
-    "count": 4440,
+    "count": 4515,
     "source": "Tài liệu Tổng hợp 1000 Từ vựng Tiếng Anh Thông dụng nhất (Chuẩn Oxford & Cambridge)",
     "version": "1.2.0"
   },
@@ -125131,6 +125131,2208 @@
       ],
       "tip": "Số nhiều: millennia. Hai l, hai n.",
       "emoji": "🏯",
+      "stage": 2
+    },
+    {
+      "id": 4441,
+      "word": "acquisition",
+      "ipa": "ˌækwəˈzɪʃən",
+      "viRead": "ek-wơ-DI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự mua lại (công ty); sự thu được",
+      "exampleEn": "The acquisition of the small company was announced today.",
+      "exampleVi": "Việc mua lại công ty nhỏ đó đã được công bố hôm nay.",
+      "collocations": [
+        {
+          "en": "company acquisition",
+          "vi": "mua lại công ty"
+        },
+        {
+          "en": "mergers and acquisitions",
+          "vi": "sáp nhập và mua lại (M&A)"
+        }
+      ],
+      "family": [
+        {
+          "word": "acquire",
+          "vi": "mua lại; đạt được"
+        }
+      ],
+      "tip": "M&A = mergers and acquisitions: sáp nhập và mua lại doanh nghiệp. Động từ: acquire.",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 4442,
+      "word": "applicant",
+      "ipa": "ˈæplɪkənt",
+      "viRead": "EP-li-kơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người nộp đơn, ứng viên",
+      "exampleEn": "Each applicant must send a CV and a cover letter.",
+      "exampleVi": "Mỗi người nộp đơn phải gửi CV và thư xin việc.",
+      "collocations": [
+        {
+          "en": "job applicant",
+          "vi": "người xin việc"
+        },
+        {
+          "en": "successful applicant",
+          "vi": "ứng viên trúng tuyển"
+        }
+      ],
+      "family": [
+        {
+          "word": "apply",
+          "vi": "nộp đơn"
+        }
+      ],
+      "tip": "apply (nộp đơn) → application (lá đơn) → applicant (người nộp đơn). Đuôi -ant chỉ người.",
+      "emoji": "🧑‍💼",
+      "stage": 2
+    },
+    {
+      "id": 4443,
+      "word": "assemble",
+      "ipa": "əˈsɛmbəl",
+      "viRead": "ơ-SEM-bơl",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "lắp ráp; tập hợp",
+      "exampleEn": "Workers assemble the chairs in the factory.",
+      "exampleVi": "Công nhân lắp ráp ghế trong nhà máy.",
+      "collocations": [
+        {
+          "en": "assemble furniture",
+          "vi": "lắp đồ nội thất"
+        },
+        {
+          "en": "assemble in the lobby",
+          "vi": "tập trung ở sảnh"
+        }
+      ],
+      "family": [
+        {
+          "word": "assembly",
+          "vi": "sự lắp ráp; cuộc họp"
+        }
+      ],
+      "tip": "Hai nghĩa: lắp các bộ phận lại với nhau, hoặc người tập hợp lại một chỗ.",
+      "emoji": "🔩",
+      "stage": 2
+    },
+    {
+      "id": 4444,
+      "word": "assembly",
+      "ipa": "əˈsɛmbli",
+      "viRead": "ơ-SEM-bli",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự lắp ráp; cuộc họp, hội đồng",
+      "exampleEn": "The new assembly line makes 500 cars a day.",
+      "exampleVi": "Dây chuyền lắp ráp mới sản xuất 500 xe mỗi ngày.",
+      "collocations": [
+        {
+          "en": "assembly line",
+          "vi": "dây chuyền lắp ráp"
+        },
+        {
+          "en": "assembly instructions",
+          "vi": "hướng dẫn lắp ráp"
+        }
+      ],
+      "family": [
+        {
+          "word": "assemble",
+          "vi": "lắp ráp"
+        }
+      ],
+      "tip": "assembly line = dây chuyền lắp ráp, rất hay gặp trong bài về nhà máy.",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 4445,
+      "word": "attendee",
+      "ipa": "əˌtɛnˈdi",
+      "viRead": "ơ-ten-ĐI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người tham dự",
+      "exampleEn": "Every attendee will receive a name badge at the door.",
+      "exampleVi": "Mỗi người tham dự sẽ nhận thẻ tên ở cửa.",
+      "collocations": [
+        {
+          "en": "conference attendee",
+          "vi": "người dự hội nghị"
+        },
+        {
+          "en": "register attendees",
+          "vi": "đăng ký người tham dự"
+        }
+      ],
+      "family": [
+        {
+          "word": "attend",
+          "vi": "tham dự"
+        }
+      ],
+      "tip": "Đuôi -ee chỉ người được nhận việc gì đó: attendee (người dự), employee (nhân viên), trainee (học viên).",
+      "emoji": "🎫",
+      "stage": 2
+    },
+    {
+      "id": 4446,
+      "word": "banquet",
+      "ipa": "ˈbæŋkwət",
+      "viRead": "BENG-kwơt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiệc lớn, yến tiệc",
+      "exampleEn": "The company holds an awards banquet every December.",
+      "exampleVi": "Công ty tổ chức tiệc trao giải vào mỗi tháng 12.",
+      "collocations": [
+        {
+          "en": "awards banquet",
+          "vi": "tiệc trao giải"
+        },
+        {
+          "en": "banquet hall",
+          "vi": "sảnh tiệc"
+        }
+      ],
+      "tip": "banquet là bữa tiệc trang trọng, đông người, thường ở khách sạn.",
+      "emoji": "🍽️",
+      "stage": 2
+    },
+    {
+      "id": 4447,
+      "word": "beverage",
+      "ipa": "ˈbɛvərɪʤ",
+      "viRead": "BE-vơ-rij",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đồ uống",
+      "exampleEn": "Hot beverages are served in the lobby.",
+      "exampleVi": "Đồ uống nóng được phục vụ ở sảnh.",
+      "collocations": [
+        {
+          "en": "hot beverage",
+          "vi": "đồ uống nóng"
+        },
+        {
+          "en": "food and beverage",
+          "vi": "đồ ăn thức uống (F&B)"
+        }
+      ],
+      "tip": "beverage là cách nói trang trọng của drink, hay thấy trên thực đơn và thông báo.",
+      "emoji": "🥤",
+      "stage": 2
+    },
+    {
+      "id": 4448,
+      "word": "building",
+      "ipa": "ˈbɪldɪŋ",
+      "viRead": "BIL-đing",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "toà nhà",
+      "exampleEn": "Our office is on the fifth floor of this building.",
+      "exampleVi": "Văn phòng của chúng tôi ở tầng 5 của toà nhà này.",
+      "collocations": [
+        {
+          "en": "office building",
+          "vi": "toà nhà văn phòng"
+        },
+        {
+          "en": "building manager",
+          "vi": "quản lý toà nhà"
+        }
+      ],
+      "family": [
+        {
+          "word": "build",
+          "vi": "xây"
+        }
+      ],
+      "tip": "build (xây) + -ing = building (toà nhà). Ban quản lý toà nhà = building management.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 4449,
+      "word": "cancellation",
+      "ipa": "ˌkænsəˈleɪʃən",
+      "viRead": "ken-sơ-LÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự huỷ",
+      "exampleEn": "Please call us 24 hours before for any cancellation.",
+      "exampleVi": "Vui lòng gọi trước 24 giờ nếu muốn huỷ.",
+      "collocations": [
+        {
+          "en": "cancellation fee",
+          "vi": "phí huỷ"
+        },
+        {
+          "en": "flight cancellation",
+          "vi": "huỷ chuyến bay"
+        }
+      ],
+      "family": [
+        {
+          "word": "cancel",
+          "vi": "huỷ"
+        }
+      ],
+      "tip": "cancel (huỷ) → cancellation (sự huỷ). Chú ý viết hai chữ l.",
+      "emoji": "❌",
+      "stage": 2
+    },
+    {
+      "id": 4450,
+      "word": "cargo",
+      "ipa": "ˈkɑrgoʊ",
+      "viRead": "KAR-gâu",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hàng hoá (chở trên tàu, máy bay)",
+      "exampleEn": "The ship carries cargo from Asia to Europe.",
+      "exampleVi": "Con tàu chở hàng hoá từ châu Á sang châu Âu.",
+      "collocations": [
+        {
+          "en": "cargo ship",
+          "vi": "tàu chở hàng"
+        },
+        {
+          "en": "air cargo",
+          "vi": "hàng không vận"
+        }
+      ],
+      "family": [
+        {
+          "word": "freight",
+          "vi": "hàng hoá vận chuyển"
+        }
+      ],
+      "tip": "cargo dùng cho hàng trên tàu thuỷ, máy bay; số nhiều là cargoes.",
+      "emoji": "🚢",
+      "stage": 2
+    },
+    {
+      "id": 4451,
+      "word": "catalog",
+      "ipa": "ˈkætəˌlɔg",
+      "viRead": "KE-tơ-log",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "danh mục sản phẩm, ca-ta-lô",
+      "exampleEn": "You can order anything from our online catalog.",
+      "exampleVi": "Bạn có thể đặt bất kỳ món nào trong danh mục trực tuyến của chúng tôi.",
+      "collocations": [
+        {
+          "en": "product catalog",
+          "vi": "danh mục sản phẩm"
+        },
+        {
+          "en": "online catalog",
+          "vi": "danh mục trực tuyến"
+        }
+      ],
+      "tip": "Anh Mỹ viết catalog, Anh Anh viết catalogue: cùng một từ.",
+      "emoji": "📒",
+      "stage": 2
+    },
+    {
+      "id": 4452,
+      "word": "catering",
+      "ipa": "ˈkeɪtərɪŋ",
+      "viRead": "KÂY-tơ-ring",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "dịch vụ cung cấp đồ ăn (cho sự kiện)",
+      "exampleEn": "A local company will provide the catering for the party.",
+      "exampleVi": "Một công ty địa phương sẽ lo phần đồ ăn cho bữa tiệc.",
+      "collocations": [
+        {
+          "en": "catering service",
+          "vi": "dịch vụ đặt tiệc"
+        },
+        {
+          "en": "catering company",
+          "vi": "công ty cung cấp suất ăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "cater",
+          "vi": "cung cấp đồ ăn"
+        }
+      ],
+      "tip": "catering là đặt đồ ăn mang đến cho hội nghị, tiệc, văn phòng.",
+      "emoji": "🍱",
+      "stage": 2
+    },
+    {
+      "id": 4453,
+      "word": "commute",
+      "ipa": "kəˈmjut",
+      "viRead": "kơ-MIUT",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đi làm (quãng đường hằng ngày)",
+      "exampleEn": "I commute to work by train every day.",
+      "exampleVi": "Hằng ngày tôi đi làm bằng tàu.",
+      "collocations": [
+        {
+          "en": "daily commute",
+          "vi": "quãng đường đi làm hằng ngày"
+        },
+        {
+          "en": "commute to work",
+          "vi": "đi làm"
+        }
+      ],
+      "family": [
+        {
+          "word": "commuter",
+          "vi": "người đi làm xa"
+        }
+      ],
+      "tip": "commute là đi lại giữa nhà và chỗ làm hằng ngày; vừa là động từ vừa là danh từ.",
+      "emoji": "🚆",
+      "stage": 2
+    },
+    {
+      "id": 4454,
+      "word": "commuter",
+      "ipa": "kəˈmjutər",
+      "viRead": "kơ-MIU-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người đi làm hằng ngày (bằng xe, tàu)",
+      "exampleEn": "Every commuter on this road knows the traffic is bad at eight.",
+      "exampleVi": "Ai đi làm trên con đường này cũng biết lúc tám giờ kẹt xe.",
+      "collocations": [
+        {
+          "en": "commuter train",
+          "vi": "tàu cho người đi làm"
+        },
+        {
+          "en": "daily commuter",
+          "vi": "người đi làm hằng ngày"
+        }
+      ],
+      "family": [
+        {
+          "word": "commute",
+          "vi": "đi làm"
+        }
+      ],
+      "tip": "commuter = người ngày nào cũng đi làm xa nhà, thường bằng tàu, xe buýt.",
+      "emoji": "🚌",
+      "stage": 2
+    },
+    {
+      "id": 4455,
+      "word": "competitor",
+      "ipa": "kəmˈpɛtɪtər",
+      "viRead": "kơm-PE-ti-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "đối thủ cạnh tranh",
+      "exampleEn": "Our main competitor lowered its prices last month.",
+      "exampleVi": "Đối thủ chính của chúng tôi đã giảm giá tháng trước.",
+      "collocations": [
+        {
+          "en": "main competitor",
+          "vi": "đối thủ chính"
+        },
+        {
+          "en": "competitor's product",
+          "vi": "sản phẩm của đối thủ"
+        }
+      ],
+      "family": [
+        {
+          "word": "compete",
+          "vi": "cạnh tranh"
+        }
+      ],
+      "tip": "compete (cạnh tranh) → competition (cuộc cạnh tranh) → competitor (đối thủ) → competitive (có sức cạnh tranh).",
+      "emoji": "🥊",
+      "stage": 2
+    },
+    {
+      "id": 4456,
+      "word": "complimentary",
+      "ipa": "ˌkɑmpləˈmɛntəri",
+      "viRead": "kam-plơ-MEN-tơ-ri",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "miễn phí (tặng kèm)",
+      "exampleEn": "Guests enjoy a complimentary breakfast every morning.",
+      "exampleVi": "Khách được dùng bữa sáng miễn phí mỗi sáng.",
+      "collocations": [
+        {
+          "en": "complimentary breakfast",
+          "vi": "bữa sáng miễn phí"
+        },
+        {
+          "en": "complimentary drinks",
+          "vi": "đồ uống miễn phí"
+        }
+      ],
+      "family": [
+        {
+          "word": "free",
+          "vi": "miễn phí"
+        }
+      ],
+      "tip": "Ở khách sạn, nhà hàng: complimentary = free (miễn phí). Đừng nhầm với complementary (bổ sung cho nhau).",
+      "emoji": "🎁",
+      "stage": 2
+    },
+    {
+      "id": 4457,
+      "word": "confirmation",
+      "ipa": "ˌkɑnfərˈmeɪʃən",
+      "viRead": "kan-phơ-MÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự xác nhận",
+      "exampleEn": "You will get a confirmation email after you book.",
+      "exampleVi": "Bạn sẽ nhận email xác nhận sau khi đặt.",
+      "collocations": [
+        {
+          "en": "confirmation email",
+          "vi": "email xác nhận"
+        },
+        {
+          "en": "booking confirmation",
+          "vi": "xác nhận đặt chỗ"
+        }
+      ],
+      "family": [
+        {
+          "word": "confirm",
+          "vi": "xác nhận"
+        }
+      ],
+      "tip": "confirm (xác nhận) → confirmation. Mã xác nhận = confirmation number.",
+      "emoji": "✅",
+      "stage": 2
+    },
+    {
+      "id": 4458,
+      "word": "container",
+      "ipa": "kənˈteɪnər",
+      "viRead": "kơn-TÂY-nơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "thùng chứa; công-ten-nơ",
+      "exampleEn": "Put the leftover food in a plastic container.",
+      "exampleVi": "Cho đồ ăn thừa vào hộp nhựa.",
+      "collocations": [
+        {
+          "en": "plastic container",
+          "vi": "hộp nhựa"
+        },
+        {
+          "en": "shipping container",
+          "vi": "công-ten-nơ"
+        }
+      ],
+      "family": [
+        {
+          "word": "contain",
+          "vi": "chứa"
+        }
+      ],
+      "tip": "contain (chứa) → container (vật chứa): từ cái hộp nhỏ đến công-ten-nơ trên tàu.",
+      "emoji": "🫙",
+      "stage": 2
+    },
+    {
+      "id": 4459,
+      "word": "cuisine",
+      "ipa": "kwɪˈzin",
+      "viRead": "kwi-DIN",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "ẩm thực, cách nấu",
+      "exampleEn": "The restaurant serves traditional Vietnamese cuisine.",
+      "exampleVi": "Nhà hàng phục vụ ẩm thực Việt Nam truyền thống.",
+      "collocations": [
+        {
+          "en": "local cuisine",
+          "vi": "ẩm thực địa phương"
+        },
+        {
+          "en": "Italian cuisine",
+          "vi": "ẩm thực Ý"
+        }
+      ],
+      "tip": "cuisine đọc là kwi-DIN, nói về cách nấu của một vùng, không phải nhà bếp (kitchen).",
+      "emoji": "🍜",
+      "stage": 2
+    },
+    {
+      "id": 4460,
+      "word": "defect",
+      "ipa": "ˈdifɛkt",
+      "viRead": "ĐI-phekt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lỗi, khuyết tật (của sản phẩm)",
+      "exampleEn": "The phone was returned because of a defect in the screen.",
+      "exampleVi": "Chiếc điện thoại bị trả lại vì màn hình có lỗi.",
+      "collocations": [
+        {
+          "en": "product defect",
+          "vi": "lỗi sản phẩm"
+        },
+        {
+          "en": "minor defect",
+          "vi": "lỗi nhỏ"
+        }
+      ],
+      "family": [
+        {
+          "word": "defective",
+          "vi": "bị lỗi"
+        }
+      ],
+      "tip": "defective product = sản phẩm bị lỗi, thường được đổi hoặc hoàn tiền.",
+      "emoji": "🔍",
+      "stage": 2
+    },
+    {
+      "id": 4461,
+      "word": "delivery",
+      "ipa": "dɪˈlɪvəri",
+      "viRead": "đi-LI-vơ-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự giao hàng",
+      "exampleEn": "Delivery is free for orders over 500,000 dong.",
+      "exampleVi": "Giao hàng miễn phí cho đơn trên 500.000 đồng.",
+      "collocations": [
+        {
+          "en": "free delivery",
+          "vi": "giao hàng miễn phí"
+        },
+        {
+          "en": "delivery date",
+          "vi": "ngày giao hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "deliver",
+          "vi": "giao"
+        }
+      ],
+      "tip": "deliver (giao) → delivery (việc giao). Giao trong ngày = same-day delivery.",
+      "emoji": "🚚",
+      "stage": 2
+    },
+    {
+      "id": 4462,
+      "word": "dispatch",
+      "ipa": "dɪˈspæʧ",
+      "viRead": "đi-SPECH",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "gửi đi, điều đi",
+      "exampleEn": "We dispatch all orders within two working days.",
+      "exampleVi": "Chúng tôi gửi mọi đơn hàng đi trong vòng hai ngày làm việc.",
+      "collocations": [
+        {
+          "en": "dispatch an order",
+          "vi": "gửi đơn hàng đi"
+        },
+        {
+          "en": "dispatch a technician",
+          "vi": "cử kỹ thuật viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "send",
+          "vi": "gửi"
+        }
+      ],
+      "tip": "dispatch = gửi đi nhanh: gửi hàng, hoặc cử người đi ngay.",
+      "emoji": "📤",
+      "stage": 2
+    },
+    {
+      "id": 4463,
+      "word": "distribution",
+      "ipa": "ˌdɪstrəˈbjuʃən",
+      "viRead": "đis-trơ-BIU-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự phân phối",
+      "exampleEn": "The distribution center is next to the highway.",
+      "exampleVi": "Trung tâm phân phối nằm cạnh đường cao tốc.",
+      "collocations": [
+        {
+          "en": "distribution center",
+          "vi": "trung tâm phân phối"
+        },
+        {
+          "en": "distribution network",
+          "vi": "mạng lưới phân phối"
+        }
+      ],
+      "family": [
+        {
+          "word": "distribute",
+          "vi": "phân phối"
+        }
+      ],
+      "tip": "distribute (phân phối) → distributor (nhà phân phối) → distribution (sự phân phối).",
+      "emoji": "🚛",
+      "stage": 2
+    },
+    {
+      "id": 4464,
+      "word": "division",
+      "ipa": "dɪˈvɪʒən",
+      "viRead": "đi-VI-giơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khối, bộ phận (trong công ty); phép chia",
+      "exampleEn": "She was moved to the sales division last year.",
+      "exampleVi": "Năm ngoái cô ấy được chuyển sang khối kinh doanh.",
+      "collocations": [
+        {
+          "en": "sales division",
+          "vi": "khối kinh doanh"
+        },
+        {
+          "en": "division manager",
+          "vi": "trưởng bộ phận"
+        }
+      ],
+      "family": [
+        {
+          "word": "divide",
+          "vi": "chia"
+        }
+      ],
+      "tip": "Trong công ty, division thường lớn hơn department. Trong toán là phép chia.",
+      "emoji": "🗂️",
+      "stage": 2
+    },
+    {
+      "id": 4465,
+      "word": "enclose",
+      "ipa": "ɪnˈkloʊz",
+      "viRead": "in-KLÂUD",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "gửi kèm (trong thư)",
+      "exampleEn": "Please enclose a copy of your receipt.",
+      "exampleVi": "Vui lòng gửi kèm một bản sao hoá đơn.",
+      "collocations": [
+        {
+          "en": "enclose a check",
+          "vi": "gửi kèm séc"
+        },
+        {
+          "en": "please find enclosed",
+          "vi": "xin gửi kèm theo đây"
+        }
+      ],
+      "family": [
+        {
+          "word": "attach",
+          "vi": "đính kèm"
+        }
+      ],
+      "tip": "Thư giấy dùng enclose (gửi kèm); email dùng attach (đính kèm).",
+      "emoji": "✉️",
+      "stage": 2
+    },
+    {
+      "id": 4466,
+      "word": "evaluation",
+      "ipa": "ɪˌvæljuˈeɪʃən",
+      "viRead": "i-ve-liu-ÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự đánh giá",
+      "exampleEn": "Staff receive a performance evaluation once a year.",
+      "exampleVi": "Nhân viên được đánh giá hiệu quả công việc mỗi năm một lần.",
+      "collocations": [
+        {
+          "en": "performance evaluation",
+          "vi": "đánh giá hiệu quả công việc"
+        },
+        {
+          "en": "evaluation form",
+          "vi": "phiếu đánh giá"
+        }
+      ],
+      "family": [
+        {
+          "word": "evaluate",
+          "vi": "đánh giá"
+        }
+      ],
+      "tip": "evaluate (đánh giá) → evaluation. Gần nghĩa: review, assessment.",
+      "emoji": "📋",
+      "stage": 2
+    },
+    {
+      "id": 4467,
+      "word": "extension",
+      "ipa": "ɪkˈstɛnʃən",
+      "viRead": "ik-STEN-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "số máy lẻ; sự gia hạn",
+      "exampleEn": "You can reach me at extension 204.",
+      "exampleVi": "Anh có thể gọi tôi ở số máy lẻ 204.",
+      "collocations": [
+        {
+          "en": "phone extension",
+          "vi": "số máy lẻ"
+        },
+        {
+          "en": "deadline extension",
+          "vi": "gia hạn thời hạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "extend",
+          "vi": "kéo dài"
+        }
+      ],
+      "tip": "Hai nghĩa hay gặp: số máy lẻ điện thoại (ext. 204) và việc gia hạn thời gian.",
+      "emoji": "☎️",
+      "stage": 2
+    },
+    {
+      "id": 4468,
+      "word": "financial",
+      "ipa": "faɪˈnænʃəl",
+      "viRead": "phai-NEN-shơl",
+      "pos": "adj.",
+      "posCategory": "adjective",
+      "meaning": "(thuộc) tài chính",
+      "exampleEn": "The financial report shows a strong year.",
+      "exampleVi": "Báo cáo tài chính cho thấy một năm làm ăn tốt.",
+      "collocations": [
+        {
+          "en": "financial report",
+          "vi": "báo cáo tài chính"
+        },
+        {
+          "en": "financial advisor",
+          "vi": "cố vấn tài chính"
+        }
+      ],
+      "family": [
+        {
+          "word": "finance",
+          "vi": "tài chính"
+        }
+      ],
+      "tip": "finance (tài chính) → financial (thuộc tài chính) → financially (về mặt tài chính).",
+      "emoji": "💹",
+      "stage": 2
+    },
+    {
+      "id": 4469,
+      "word": "freight",
+      "ipa": "freɪt",
+      "viRead": "PHRÂYT",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hàng hoá chuyên chở; cước vận chuyển",
+      "exampleEn": "The freight will arrive by truck on Monday.",
+      "exampleVi": "Hàng sẽ đến bằng xe tải vào thứ Hai.",
+      "collocations": [
+        {
+          "en": "freight charges",
+          "vi": "cước vận chuyển"
+        },
+        {
+          "en": "freight train",
+          "vi": "tàu chở hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "cargo",
+          "vi": "hàng hoá"
+        }
+      ],
+      "tip": "freight đọc như \"phrây-t\": chữ gh không đọc.",
+      "emoji": "🚛",
+      "stage": 2
+    },
+    {
+      "id": 4470,
+      "word": "handout",
+      "ipa": "ˈhændˌaʊt",
+      "viRead": "HEN-đaot",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tài liệu phát tay",
+      "exampleEn": "The speaker gave everyone a handout with the main points.",
+      "exampleVi": "Diễn giả phát cho mọi người tài liệu ghi các ý chính.",
+      "collocations": [
+        {
+          "en": "meeting handout",
+          "vi": "tài liệu phát trong buổi họp"
+        },
+        {
+          "en": "prepare a handout",
+          "vi": "chuẩn bị tài liệu phát"
+        }
+      ],
+      "family": [
+        {
+          "word": "hand out",
+          "vi": "phát"
+        }
+      ],
+      "tip": "hand out (phát ra) → handout (tờ tài liệu được phát).",
+      "emoji": "📄",
+      "stage": 2
+    },
+    {
+      "id": 4471,
+      "word": "hotel",
+      "ipa": "hoʊˈtɛl",
+      "viRead": "hâu-TEL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khách sạn",
+      "exampleEn": "We booked a hotel near the convention center.",
+      "exampleVi": "Chúng tôi đặt khách sạn gần trung tâm hội nghị.",
+      "collocations": [
+        {
+          "en": "hotel room",
+          "vi": "phòng khách sạn"
+        },
+        {
+          "en": "check in to a hotel",
+          "vi": "nhận phòng khách sạn"
+        }
+      ],
+      "family": [
+        {
+          "word": "accommodation",
+          "vi": "chỗ ở"
+        }
+      ],
+      "tip": "Nhấn âm sau: hâu-TEL. Lễ tân khách sạn = front desk / reception.",
+      "emoji": "🏨",
+      "stage": 2
+    },
+    {
+      "id": 4472,
+      "word": "inspection",
+      "ipa": "ɪnˈspɛkʃən",
+      "viRead": "in-SPEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự kiểm tra, thanh tra",
+      "exampleEn": "The factory passed the safety inspection.",
+      "exampleVi": "Nhà máy đã qua đợt kiểm tra an toàn.",
+      "collocations": [
+        {
+          "en": "safety inspection",
+          "vi": "kiểm tra an toàn"
+        },
+        {
+          "en": "quality inspection",
+          "vi": "kiểm tra chất lượng"
+        }
+      ],
+      "family": [
+        {
+          "word": "inspect",
+          "vi": "kiểm tra"
+        }
+      ],
+      "tip": "inspect (kiểm tra kỹ) → inspector (thanh tra viên) → inspection (sự kiểm tra).",
+      "emoji": "🔎",
+      "stage": 2
+    },
+    {
+      "id": 4473,
+      "word": "internet",
+      "ipa": "ˈɪntərˌnɛt",
+      "viRead": "IN-tơ-net",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "mạng internet",
+      "exampleEn": "The hotel offers free internet in every room.",
+      "exampleVi": "Khách sạn có internet miễn phí ở mọi phòng.",
+      "collocations": [
+        {
+          "en": "internet connection",
+          "vi": "kết nối internet"
+        },
+        {
+          "en": "high-speed internet",
+          "vi": "internet tốc độ cao"
+        }
+      ],
+      "family": [
+        {
+          "word": "online",
+          "vi": "trực tuyến"
+        }
+      ],
+      "tip": "Nói on the internet (trên mạng); Wi-Fi là cách kết nối không dây.",
+      "emoji": "🌐",
+      "stage": 2
+    },
+    {
+      "id": 4474,
+      "word": "inventory",
+      "ipa": "ˈɪnvənˌtɔri",
+      "viRead": "IN-vơn-to-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hàng tồn kho; việc kiểm kê",
+      "exampleEn": "The store checks its inventory every Friday.",
+      "exampleVi": "Cửa hàng kiểm kê hàng tồn mỗi thứ Sáu.",
+      "collocations": [
+        {
+          "en": "take inventory",
+          "vi": "kiểm kê"
+        },
+        {
+          "en": "inventory level",
+          "vi": "lượng hàng tồn"
+        }
+      ],
+      "family": [
+        {
+          "word": "stock",
+          "vi": "hàng trong kho"
+        }
+      ],
+      "tip": "in stock = còn hàng; out of stock = hết hàng; inventory = toàn bộ hàng đang có.",
+      "emoji": "📊",
+      "stage": 2
+    },
+    {
+      "id": 4475,
+      "word": "keynote",
+      "ipa": "ˈkiˌnoʊt",
+      "viRead": "KI-nâut",
+      "pos": "n./adj.",
+      "posCategory": "noun",
+      "meaning": "(bài phát biểu) chính",
+      "exampleEn": "The CEO will give the keynote speech at nine.",
+      "exampleVi": "Tổng giám đốc sẽ có bài phát biểu chính lúc chín giờ.",
+      "collocations": [
+        {
+          "en": "keynote speech",
+          "vi": "bài phát biểu chính"
+        },
+        {
+          "en": "keynote speaker",
+          "vi": "diễn giả chính"
+        }
+      ],
+      "tip": "keynote speaker là diễn giả quan trọng nhất của hội nghị, thường nói phần mở đầu.",
+      "emoji": "🎤",
+      "stage": 2
+    },
+    {
+      "id": 4476,
+      "word": "lease",
+      "ipa": "lis",
+      "viRead": "LIS",
+      "pos": "n./v.",
+      "posCategory": "noun",
+      "meaning": "hợp đồng thuê; cho thuê, thuê",
+      "exampleEn": "We signed a two-year lease for the new office.",
+      "exampleVi": "Chúng tôi đã ký hợp đồng thuê văn phòng mới hai năm.",
+      "collocations": [
+        {
+          "en": "sign a lease",
+          "vi": "ký hợp đồng thuê"
+        },
+        {
+          "en": "lease agreement",
+          "vi": "hợp đồng thuê"
+        }
+      ],
+      "family": [
+        {
+          "word": "rent",
+          "vi": "thuê"
+        }
+      ],
+      "tip": "lease thường dài hạn và có hợp đồng (nhà, xe, văn phòng); rent dùng chung hơn.",
+      "emoji": "📝",
+      "stage": 2
+    },
+    {
+      "id": 4477,
+      "word": "logistics",
+      "ipa": "loʊˈʤɪstɪks",
+      "viRead": "lâu-GIS-tiks",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hậu cần, logistics",
+      "exampleEn": "She manages the logistics of the trade fair.",
+      "exampleVi": "Cô ấy lo khâu hậu cần cho hội chợ.",
+      "collocations": [
+        {
+          "en": "logistics company",
+          "vi": "công ty logistics"
+        },
+        {
+          "en": "event logistics",
+          "vi": "hậu cần sự kiện"
+        }
+      ],
+      "tip": "logistics là việc vận chuyển, lưu kho, sắp xếp để hàng hoặc sự kiện đúng chỗ, đúng lúc.",
+      "emoji": "🧭",
+      "stage": 2
+    },
+    {
+      "id": 4478,
+      "word": "manufacturer",
+      "ipa": "ˌmænjəˈfækʧərər",
+      "viRead": "me-niơ-PHEK-chơ-rơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà sản xuất",
+      "exampleEn": "Contact the manufacturer if the machine breaks.",
+      "exampleVi": "Hãy liên hệ nhà sản xuất nếu máy bị hỏng.",
+      "collocations": [
+        {
+          "en": "car manufacturer",
+          "vi": "hãng sản xuất ô tô"
+        },
+        {
+          "en": "leading manufacturer",
+          "vi": "nhà sản xuất hàng đầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "manufacture",
+          "vi": "sản xuất"
+        }
+      ],
+      "tip": "manufacture (sản xuất) → manufacturer (nhà sản xuất) → manufacturing (ngành sản xuất).",
+      "emoji": "🏭",
+      "stage": 2
+    },
+    {
+      "id": 4479,
+      "word": "marketing",
+      "ipa": "ˈmɑrkətɪŋ",
+      "viRead": "MAR-kơ-ting",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "tiếp thị, marketing",
+      "exampleEn": "He works in the marketing department.",
+      "exampleVi": "Anh ấy làm ở phòng tiếp thị.",
+      "collocations": [
+        {
+          "en": "marketing campaign",
+          "vi": "chiến dịch tiếp thị"
+        },
+        {
+          "en": "marketing department",
+          "vi": "phòng marketing"
+        }
+      ],
+      "family": [
+        {
+          "word": "market",
+          "vi": "thị trường"
+        }
+      ],
+      "tip": "market (thị trường) → marketing (hoạt động tiếp thị).",
+      "emoji": "📈",
+      "stage": 2
+    },
+    {
+      "id": 4480,
+      "word": "merger",
+      "ipa": "ˈmɜrʤər",
+      "viRead": "MƠ-giơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự sáp nhập",
+      "exampleEn": "The merger of the two banks will create jobs.",
+      "exampleVi": "Việc sáp nhập hai ngân hàng sẽ tạo thêm việc làm.",
+      "collocations": [
+        {
+          "en": "company merger",
+          "vi": "sáp nhập công ty"
+        },
+        {
+          "en": "announce a merger",
+          "vi": "công bố sáp nhập"
+        }
+      ],
+      "family": [
+        {
+          "word": "merge",
+          "vi": "sáp nhập"
+        }
+      ],
+      "tip": "merge (hợp nhất) → merger. Hay đi cùng acquisition (mua lại).",
+      "emoji": "🔗",
+      "stage": 2
+    },
+    {
+      "id": 4481,
+      "word": "notify",
+      "ipa": "ˈnoʊtəˌfaɪ",
+      "viRead": "NÂU-tơ-phai",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "thông báo",
+      "exampleEn": "Please notify the front desk if you need anything.",
+      "exampleVi": "Vui lòng báo lễ tân nếu bạn cần gì.",
+      "collocations": [
+        {
+          "en": "notify customers",
+          "vi": "thông báo cho khách hàng"
+        },
+        {
+          "en": "notify someone of something",
+          "vi": "thông báo cho ai về việc gì"
+        }
+      ],
+      "family": [
+        {
+          "word": "notification",
+          "vi": "thông báo"
+        }
+      ],
+      "tip": "notify + người + of + việc: notify staff of the change.",
+      "emoji": "🔔",
+      "stage": 2
+    },
+    {
+      "id": 4482,
+      "word": "operator",
+      "ipa": "ˈɑpəˌreɪtər",
+      "viRead": "A-pơ-rây-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "người vận hành; tổng đài viên",
+      "exampleEn": "The machine operator stopped the line for safety reasons.",
+      "exampleVi": "Người vận hành máy dừng dây chuyền vì lý do an toàn.",
+      "collocations": [
+        {
+          "en": "machine operator",
+          "vi": "người vận hành máy"
+        },
+        {
+          "en": "tour operator",
+          "vi": "công ty tổ chức tour"
+        }
+      ],
+      "family": [
+        {
+          "word": "operate",
+          "vi": "vận hành"
+        }
+      ],
+      "tip": "operate (vận hành) → operator. tour operator = công ty lữ hành.",
+      "emoji": "👷",
+      "stage": 2
+    },
+    {
+      "id": 4483,
+      "word": "payment",
+      "ipa": "ˈpeɪmənt",
+      "viRead": "PÂY-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự thanh toán, khoản tiền trả",
+      "exampleEn": "Payment is due within 30 days.",
+      "exampleVi": "Phải thanh toán trong vòng 30 ngày.",
+      "collocations": [
+        {
+          "en": "make a payment",
+          "vi": "thanh toán"
+        },
+        {
+          "en": "payment method",
+          "vi": "phương thức thanh toán"
+        }
+      ],
+      "family": [
+        {
+          "word": "pay",
+          "vi": "trả tiền"
+        }
+      ],
+      "tip": "pay (trả) → payment. Hạn thanh toán = payment due date.",
+      "emoji": "💳",
+      "stage": 2
+    },
+    {
+      "id": 4484,
+      "word": "personnel",
+      "ipa": "ˌpɜrsəˈnɛl",
+      "viRead": "pơ-sơ-NEL",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhân sự, toàn bộ nhân viên",
+      "exampleEn": "Only authorized personnel may enter this room.",
+      "exampleVi": "Chỉ nhân viên có thẩm quyền mới được vào phòng này.",
+      "collocations": [
+        {
+          "en": "personnel department",
+          "vi": "phòng nhân sự"
+        },
+        {
+          "en": "authorized personnel",
+          "vi": "nhân viên được phép"
+        }
+      ],
+      "family": [
+        {
+          "word": "staff",
+          "vi": "nhân viên"
+        }
+      ],
+      "tip": "Đừng nhầm personnel (nhân sự, nhấn âm cuối) với personal (cá nhân, nhấn âm đầu).",
+      "emoji": "👥",
+      "stage": 2
+    },
+    {
+      "id": 4485,
+      "word": "premises",
+      "ipa": "ˈprɛməsəz",
+      "viRead": "PRE-mơ-sơd",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khuôn viên, cơ sở (toà nhà và đất)",
+      "exampleEn": "Smoking is not allowed on the premises.",
+      "exampleVi": "Không được hút thuốc trong khuôn viên.",
+      "collocations": [
+        {
+          "en": "on the premises",
+          "vi": "trong khuôn viên"
+        },
+        {
+          "en": "business premises",
+          "vi": "cơ sở kinh doanh"
+        }
+      ],
+      "tip": "Khi nói về toà nhà, khuôn viên, premises luôn ở dạng số nhiều.",
+      "emoji": "🚭",
+      "stage": 2
+    },
+    {
+      "id": 4486,
+      "word": "procurement",
+      "ipa": "proʊˈkjʊrmənt",
+      "viRead": "prâu-KIUR-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "việc mua sắm (cho công ty)",
+      "exampleEn": "The procurement team buys all our office supplies.",
+      "exampleVi": "Bộ phận mua hàng mua toàn bộ văn phòng phẩm.",
+      "collocations": [
+        {
+          "en": "procurement process",
+          "vi": "quy trình mua sắm"
+        },
+        {
+          "en": "procurement manager",
+          "vi": "trưởng bộ phận mua hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "purchase",
+          "vi": "mua"
+        }
+      ],
+      "tip": "procurement = purchasing trong công ty: tìm nhà cung cấp, đặt hàng, theo dõi đơn.",
+      "emoji": "🛒",
+      "stage": 2
+    },
+    {
+      "id": 4487,
+      "word": "production",
+      "ipa": "prəˈdəkʃən",
+      "viRead": "prơ-ĐƠK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự sản xuất; sản lượng",
+      "exampleEn": "Production will increase next quarter.",
+      "exampleVi": "Sản lượng sẽ tăng vào quý tới.",
+      "collocations": [
+        {
+          "en": "production line",
+          "vi": "dây chuyền sản xuất"
+        },
+        {
+          "en": "increase production",
+          "vi": "tăng sản xuất"
+        }
+      ],
+      "family": [
+        {
+          "word": "produce",
+          "vi": "sản xuất"
+        }
+      ],
+      "tip": "produce (sản xuất) → product (sản phẩm) → production (việc sản xuất) → productive (năng suất).",
+      "emoji": "⚙️",
+      "stage": 2
+    },
+    {
+      "id": 4488,
+      "word": "projector",
+      "ipa": "prəˈʤɛktər",
+      "viRead": "prơ-GIEK-tơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy chiếu",
+      "exampleEn": "The projector in meeting room B is not working.",
+      "exampleVi": "Máy chiếu ở phòng họp B không hoạt động.",
+      "collocations": [
+        {
+          "en": "set up a projector",
+          "vi": "lắp máy chiếu"
+        },
+        {
+          "en": "projector screen",
+          "vi": "màn chiếu"
+        }
+      ],
+      "family": [
+        {
+          "word": "project",
+          "vi": "chiếu"
+        }
+      ],
+      "tip": "project (chiếu) → projector (máy chiếu).",
+      "emoji": "📽️",
+      "stage": 2
+    },
+    {
+      "id": 4489,
+      "word": "qualification",
+      "ipa": "ˌkwɑləfəˈkeɪʃən",
+      "viRead": "kwa-lơ-phơ-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bằng cấp, trình độ chuyên môn",
+      "exampleEn": "A degree in accounting is the main qualification for the job.",
+      "exampleVi": "Bằng kế toán là yêu cầu chính của công việc.",
+      "collocations": [
+        {
+          "en": "job qualifications",
+          "vi": "yêu cầu công việc"
+        },
+        {
+          "en": "meet the qualifications",
+          "vi": "đáp ứng yêu cầu"
+        }
+      ],
+      "family": [
+        {
+          "word": "qualified",
+          "vi": "đủ tiêu chuẩn"
+        }
+      ],
+      "tip": "qualified (đủ điều kiện) → qualification (bằng cấp, điều kiện). Hay gặp trong tin tuyển dụng.",
+      "emoji": "🎓",
+      "stage": 2
+    },
+    {
+      "id": 4490,
+      "word": "quarterly",
+      "ipa": "ˈkwɔrtərli",
+      "viRead": "KWO-tơ-li",
+      "pos": "adj./adv.",
+      "posCategory": "adjective",
+      "meaning": "hằng quý",
+      "exampleEn": "The quarterly report is due next week.",
+      "exampleVi": "Báo cáo hằng quý phải nộp vào tuần tới.",
+      "collocations": [
+        {
+          "en": "quarterly report",
+          "vi": "báo cáo quý"
+        },
+        {
+          "en": "quarterly meeting",
+          "vi": "họp hằng quý"
+        }
+      ],
+      "family": [
+        {
+          "word": "quarter",
+          "vi": "quý (3 tháng)"
+        }
+      ],
+      "tip": "quarter là một phần tư; trong kinh doanh là một quý (3 tháng).",
+      "emoji": "🗓️",
+      "stage": 2
+    },
+    {
+      "id": 4491,
+      "word": "register",
+      "ipa": "ˈrɛʤɪstər",
+      "viRead": "RE-gis-tơ",
+      "pos": "v./n.",
+      "posCategory": "verb",
+      "meaning": "đăng ký",
+      "exampleEn": "You must register for the workshop by Friday.",
+      "exampleVi": "Bạn phải đăng ký hội thảo trước thứ Sáu.",
+      "collocations": [
+        {
+          "en": "register for a course",
+          "vi": "đăng ký khoá học"
+        },
+        {
+          "en": "register online",
+          "vi": "đăng ký trực tuyến"
+        }
+      ],
+      "family": [
+        {
+          "word": "registration",
+          "vi": "sự đăng ký"
+        }
+      ],
+      "tip": "register for + sự kiện. Danh từ: registration (sự đăng ký). cash register = máy tính tiền.",
+      "emoji": "🖊️",
+      "stage": 2
+    },
+    {
+      "id": 4492,
+      "word": "reimburse",
+      "ipa": "ˌriɪmˈbɜrs",
+      "viRead": "ri-im-BƠS",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "hoàn trả (chi phí)",
+      "exampleEn": "The company will reimburse your travel costs.",
+      "exampleVi": "Công ty sẽ hoàn trả chi phí đi lại cho bạn.",
+      "collocations": [
+        {
+          "en": "reimburse expenses",
+          "vi": "hoàn trả chi phí"
+        },
+        {
+          "en": "be reimbursed for",
+          "vi": "được hoàn tiền cho"
+        }
+      ],
+      "family": [
+        {
+          "word": "reimbursement",
+          "vi": "sự hoàn trả"
+        }
+      ],
+      "tip": "reimburse = trả lại khoản tiền mình đã ứng trước cho công việc (đi công tác, mua đồ).",
+      "emoji": "💵",
+      "stage": 2
+    },
+    {
+      "id": 4493,
+      "word": "reimbursement",
+      "ipa": "ˌriɪmˈbɜrsmənt",
+      "viRead": "ri-im-BƠS-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự hoàn trả chi phí",
+      "exampleEn": "Submit your receipts to get a reimbursement.",
+      "exampleVi": "Nộp hoá đơn để được hoàn tiền.",
+      "collocations": [
+        {
+          "en": "expense reimbursement",
+          "vi": "hoàn trả chi phí"
+        },
+        {
+          "en": "reimbursement form",
+          "vi": "mẫu đề nghị hoàn ứng"
+        }
+      ],
+      "family": [
+        {
+          "word": "reimburse",
+          "vi": "hoàn trả"
+        }
+      ],
+      "tip": "Giữ hoá đơn (receipt) để làm thủ tục reimbursement.",
+      "emoji": "💰",
+      "stage": 2
+    },
+    {
+      "id": 4494,
+      "word": "relocate",
+      "ipa": "riˈloʊˌkeɪt",
+      "viRead": "ri-LÂU-kây",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "chuyển (đến nơi khác)",
+      "exampleEn": "The firm will relocate its headquarters to Da Nang.",
+      "exampleVi": "Công ty sẽ chuyển trụ sở chính ra Đà Nẵng.",
+      "collocations": [
+        {
+          "en": "relocate to",
+          "vi": "chuyển đến"
+        },
+        {
+          "en": "relocate staff",
+          "vi": "điều chuyển nhân viên"
+        }
+      ],
+      "family": [
+        {
+          "word": "relocation",
+          "vi": "sự di dời"
+        }
+      ],
+      "tip": "re (lại) + locate (đặt vị trí): chuyển văn phòng, nhà máy, nhân viên đến chỗ mới.",
+      "emoji": "📍",
+      "stage": 2
+    },
+    {
+      "id": 4495,
+      "word": "relocation",
+      "ipa": "ˌriloʊˈkeɪʃən",
+      "viRead": "ri-lâu-KÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự di dời",
+      "exampleEn": "The relocation of the office will take two weeks.",
+      "exampleVi": "Việc chuyển văn phòng sẽ mất hai tuần.",
+      "collocations": [
+        {
+          "en": "office relocation",
+          "vi": "chuyển văn phòng"
+        },
+        {
+          "en": "relocation package",
+          "vi": "gói hỗ trợ chuyển nơi làm việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "relocate",
+          "vi": "di dời"
+        }
+      ],
+      "tip": "relocation package = khoản công ty hỗ trợ khi nhân viên chuyển đến thành phố khác.",
+      "emoji": "🧳",
+      "stage": 2
+    },
+    {
+      "id": 4496,
+      "word": "renovate",
+      "ipa": "ˈrɛnəˌveɪt",
+      "viRead": "RE-nơ-vây",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "cải tạo, sửa sang",
+      "exampleEn": "They plan to renovate the lobby this summer.",
+      "exampleVi": "Họ định cải tạo sảnh vào mùa hè này.",
+      "collocations": [
+        {
+          "en": "renovate a building",
+          "vi": "cải tạo toà nhà"
+        },
+        {
+          "en": "newly renovated",
+          "vi": "mới được sửa sang"
+        }
+      ],
+      "family": [
+        {
+          "word": "renovation",
+          "vi": "sự cải tạo"
+        }
+      ],
+      "tip": "re (lại) + nov (mới): làm cho mới lại. Newly renovated rooms = phòng mới sửa.",
+      "emoji": "🛠️",
+      "stage": 2
+    },
+    {
+      "id": 4497,
+      "word": "renovation",
+      "ipa": "ˌrɛnəˈveɪʃən",
+      "viRead": "re-nơ-VÂY-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự cải tạo",
+      "exampleEn": "The pool is closed for renovation.",
+      "exampleVi": "Hồ bơi đóng cửa để cải tạo.",
+      "collocations": [
+        {
+          "en": "under renovation",
+          "vi": "đang cải tạo"
+        },
+        {
+          "en": "renovation work",
+          "vi": "công việc cải tạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "renovate",
+          "vi": "cải tạo"
+        }
+      ],
+      "tip": "closed for renovation = đóng cửa để sửa sang, câu rất hay gặp trong thông báo.",
+      "emoji": "🚧",
+      "stage": 2
+    },
+    {
+      "id": 4498,
+      "word": "reschedule",
+      "ipa": "riˈskɛʤʊl",
+      "viRead": "ri-SKE-giul",
+      "pos": "v.",
+      "posCategory": "verb",
+      "meaning": "đổi lịch",
+      "exampleEn": "Can we reschedule the meeting to Thursday?",
+      "exampleVi": "Chúng ta dời cuộc họp sang thứ Năm được không?",
+      "collocations": [
+        {
+          "en": "reschedule a meeting",
+          "vi": "đổi lịch họp"
+        },
+        {
+          "en": "reschedule an appointment",
+          "vi": "đổi lịch hẹn"
+        }
+      ],
+      "family": [
+        {
+          "word": "schedule",
+          "vi": "lịch"
+        }
+      ],
+      "tip": "re (lại) + schedule (xếp lịch) = xếp lịch lại. Gần nghĩa: postpone (hoãn).",
+      "emoji": "🔁",
+      "stage": 2
+    },
+    {
+      "id": 4499,
+      "word": "retailer",
+      "ipa": "ˈriˌteɪlər",
+      "viRead": "RI-tây-lơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà bán lẻ",
+      "exampleEn": "The retailer sells shoes in over 40 stores.",
+      "exampleVi": "Nhà bán lẻ đó bán giày ở hơn 40 cửa hàng.",
+      "collocations": [
+        {
+          "en": "online retailer",
+          "vi": "nhà bán lẻ trực tuyến"
+        },
+        {
+          "en": "major retailer",
+          "vi": "nhà bán lẻ lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "retail",
+          "vi": "bán lẻ"
+        }
+      ],
+      "tip": "retail (bán lẻ) ↔ wholesale (bán buôn). retailer bán cho người tiêu dùng.",
+      "emoji": "🏬",
+      "stage": 2
+    },
+    {
+      "id": 4500,
+      "word": "safety",
+      "ipa": "ˈseɪfti",
+      "viRead": "SÂYF-ti",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "sự an toàn",
+      "exampleEn": "Wear a helmet for your safety.",
+      "exampleVi": "Hãy đội mũ bảo hiểm để đảm bảo an toàn.",
+      "collocations": [
+        {
+          "en": "safety rules",
+          "vi": "quy tắc an toàn"
+        },
+        {
+          "en": "safety equipment",
+          "vi": "thiết bị bảo hộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "safe",
+          "vi": "an toàn"
+        }
+      ],
+      "tip": "safe (tính từ) → safety (danh từ) → safely (trạng từ). Part 5 hay hỏi đúng chỗ này.",
+      "emoji": "🦺",
+      "stage": 2
+    },
+    {
+      "id": 4501,
+      "word": "seminar",
+      "ipa": "ˈsɛməˌnɑr",
+      "viRead": "SE-mơ-nar",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "hội thảo chuyên đề",
+      "exampleEn": "The bank holds a free seminar on saving money.",
+      "exampleVi": "Ngân hàng tổ chức hội thảo miễn phí về tiết kiệm tiền.",
+      "collocations": [
+        {
+          "en": "attend a seminar",
+          "vi": "dự hội thảo"
+        },
+        {
+          "en": "training seminar",
+          "vi": "hội thảo đào tạo"
+        }
+      ],
+      "family": [
+        {
+          "word": "workshop",
+          "vi": "buổi hội thảo thực hành"
+        }
+      ],
+      "tip": "seminar thường là nghe trình bày và thảo luận; workshop có nhiều thực hành hơn.",
+      "emoji": "🧑‍🏫",
+      "stage": 2
+    },
+    {
+      "id": 4502,
+      "word": "server",
+      "ipa": "ˈsɜrvər",
+      "viRead": "SƠ-vơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "máy chủ; người phục vụ bàn",
+      "exampleEn": "The website was down because the server failed.",
+      "exampleVi": "Trang web bị sập vì máy chủ gặp sự cố.",
+      "collocations": [
+        {
+          "en": "web server",
+          "vi": "máy chủ web"
+        },
+        {
+          "en": "restaurant server",
+          "vi": "người phục vụ nhà hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "serve",
+          "vi": "phục vụ"
+        }
+      ],
+      "tip": "Hai nghĩa: máy chủ (máy tính) và người phục vụ bàn trong nhà hàng (= waiter).",
+      "emoji": "🖥️",
+      "stage": 2
+    },
+    {
+      "id": 4503,
+      "word": "shareholder",
+      "ipa": "ˈʃɛrˌhoʊldər",
+      "viRead": "SHER-hâul-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "cổ đông",
+      "exampleEn": "Every shareholder will receive the annual report.",
+      "exampleVi": "Mỗi cổ đông sẽ nhận báo cáo thường niên.",
+      "collocations": [
+        {
+          "en": "shareholder meeting",
+          "vi": "đại hội cổ đông"
+        },
+        {
+          "en": "major shareholder",
+          "vi": "cổ đông lớn"
+        }
+      ],
+      "family": [
+        {
+          "word": "share",
+          "vi": "cổ phần"
+        }
+      ],
+      "tip": "share (cổ phần) + holder (người giữ). Gần nghĩa: stockholder.",
+      "emoji": "🏦",
+      "stage": 2
+    },
+    {
+      "id": 4504,
+      "word": "shipment",
+      "ipa": "ˈʃɪpmənt",
+      "viRead": "SHIP-mơnt",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "lô hàng; việc gửi hàng",
+      "exampleEn": "The shipment was delayed by bad weather.",
+      "exampleVi": "Lô hàng bị chậm vì thời tiết xấu.",
+      "collocations": [
+        {
+          "en": "track a shipment",
+          "vi": "theo dõi lô hàng"
+        },
+        {
+          "en": "shipment date",
+          "vi": "ngày gửi hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "ship",
+          "vi": "gửi hàng"
+        }
+      ],
+      "tip": "ship (gửi hàng, không chỉ bằng tàu) → shipment (lô hàng) → shipping (việc vận chuyển).",
+      "emoji": "📦",
+      "stage": 2
+    },
+    {
+      "id": 4505,
+      "word": "stakeholder",
+      "ipa": "ˈsteɪkˌhoʊldər",
+      "viRead": "STÂYK-hâul-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "bên liên quan",
+      "exampleEn": "We invited every stakeholder to discuss the plan.",
+      "exampleVi": "Chúng tôi mời tất cả các bên liên quan đến bàn về kế hoạch.",
+      "collocations": [
+        {
+          "en": "key stakeholder",
+          "vi": "bên liên quan chính"
+        },
+        {
+          "en": "stakeholder meeting",
+          "vi": "họp các bên liên quan"
+        }
+      ],
+      "family": [
+        {
+          "word": "shareholder",
+          "vi": "cổ đông"
+        }
+      ],
+      "tip": "stakeholder rộng hơn shareholder: gồm cả nhân viên, khách hàng, nhà cung cấp…",
+      "emoji": "🤝",
+      "stage": 2
+    },
+    {
+      "id": 4506,
+      "word": "subsidiary",
+      "ipa": "səbˈsɪdiˌɛri",
+      "viRead": "sơb-SI-đi-e-ri",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "công ty con",
+      "exampleEn": "The bank opened a subsidiary in Singapore.",
+      "exampleVi": "Ngân hàng mở một công ty con ở Singapore.",
+      "collocations": [
+        {
+          "en": "foreign subsidiary",
+          "vi": "công ty con ở nước ngoài"
+        },
+        {
+          "en": "wholly owned subsidiary",
+          "vi": "công ty con sở hữu toàn bộ"
+        }
+      ],
+      "family": [
+        {
+          "word": "branch",
+          "vi": "chi nhánh"
+        }
+      ],
+      "tip": "subsidiary là một công ty riêng do công ty mẹ sở hữu; branch (chi nhánh) là một phần của chính công ty đó.",
+      "emoji": "🏢",
+      "stage": 2
+    },
+    {
+      "id": 4507,
+      "word": "symptom",
+      "ipa": "ˈsɪmptəm",
+      "viRead": "SIMP-tơm",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "triệu chứng",
+      "exampleEn": "A high fever is a common symptom of the flu.",
+      "exampleVi": "Sốt cao là triệu chứng thường gặp của cúm.",
+      "collocations": [
+        {
+          "en": "common symptom",
+          "vi": "triệu chứng thường gặp"
+        },
+        {
+          "en": "show symptoms",
+          "vi": "có triệu chứng"
+        }
+      ],
+      "family": [
+        {
+          "word": "sign",
+          "vi": "dấu hiệu"
+        }
+      ],
+      "tip": "Bác sĩ hỏi: What are your symptoms? (Anh có triệu chứng gì?)",
+      "emoji": "🤒",
+      "stage": 2
+    },
+    {
+      "id": 4508,
+      "word": "technician",
+      "ipa": "tɛkˈnɪʃən",
+      "viRead": "tek-NI-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "kỹ thuật viên",
+      "exampleEn": "A technician will come to fix the printer.",
+      "exampleVi": "Một kỹ thuật viên sẽ đến sửa máy in.",
+      "collocations": [
+        {
+          "en": "IT technician",
+          "vi": "kỹ thuật viên IT"
+        },
+        {
+          "en": "send a technician",
+          "vi": "cử thợ kỹ thuật"
+        }
+      ],
+      "family": [
+        {
+          "word": "technical",
+          "vi": "kỹ thuật"
+        }
+      ],
+      "tip": "Đuôi -ician chỉ người làm nghề: technician, electrician, musician.",
+      "emoji": "🧑‍🔧",
+      "stage": 2
+    },
+    {
+      "id": 4509,
+      "word": "tracking",
+      "ipa": "ˈtrækɪŋ",
+      "viRead": "TRE-king",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "việc theo dõi (đơn hàng)",
+      "exampleEn": "Use the tracking number to see where your package is.",
+      "exampleVi": "Dùng mã vận đơn để xem gói hàng của bạn đang ở đâu.",
+      "collocations": [
+        {
+          "en": "tracking number",
+          "vi": "mã vận đơn"
+        },
+        {
+          "en": "order tracking",
+          "vi": "theo dõi đơn hàng"
+        }
+      ],
+      "family": [
+        {
+          "word": "track",
+          "vi": "theo dõi"
+        }
+      ],
+      "tip": "track (theo dõi) → tracking number (mã theo dõi đơn hàng).",
+      "emoji": "🛰️",
+      "stage": 2
+    },
+    {
+      "id": 4510,
+      "word": "trainee",
+      "ipa": "treɪˈni",
+      "viRead": "trây-NI",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "học viên, thực tập sinh",
+      "exampleEn": "Each trainee works with an experienced mentor.",
+      "exampleVi": "Mỗi học viên làm việc cùng một người hướng dẫn giàu kinh nghiệm.",
+      "collocations": [
+        {
+          "en": "management trainee",
+          "vi": "quản trị viên tập sự"
+        },
+        {
+          "en": "new trainee",
+          "vi": "học viên mới"
+        }
+      ],
+      "family": [
+        {
+          "word": "trainer",
+          "vi": "người huấn luyện"
+        }
+      ],
+      "tip": "trainer (người dạy) ↔ trainee (người được dạy): đuôi -ee là người nhận.",
+      "emoji": "🧑‍🎓",
+      "stage": 2
+    },
+    {
+      "id": 4511,
+      "word": "transaction",
+      "ipa": "trænˈzækʃən",
+      "viRead": "tren-DEK-shơn",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "giao dịch",
+      "exampleEn": "Each transaction appears on your bank statement.",
+      "exampleVi": "Mỗi giao dịch đều hiện trên sao kê ngân hàng.",
+      "collocations": [
+        {
+          "en": "online transaction",
+          "vi": "giao dịch trực tuyến"
+        },
+        {
+          "en": "transaction fee",
+          "vi": "phí giao dịch"
+        }
+      ],
+      "tip": "Hay dùng cho thanh toán, chuyển khoản. Sao kê ngân hàng = bank statement.",
+      "emoji": "🏧",
+      "stage": 2
+    },
+    {
+      "id": 4512,
+      "word": "vendor",
+      "ipa": "ˈvɛndər",
+      "viRead": "VEN-đơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "nhà cung cấp; người bán hàng",
+      "exampleEn": "We chose a new vendor for our office supplies.",
+      "exampleVi": "Chúng tôi đã chọn nhà cung cấp mới cho văn phòng phẩm.",
+      "collocations": [
+        {
+          "en": "street vendor",
+          "vi": "người bán hàng rong"
+        },
+        {
+          "en": "approved vendor",
+          "vi": "nhà cung cấp được duyệt"
+        }
+      ],
+      "family": [
+        {
+          "word": "supplier",
+          "vi": "nhà cung cấp"
+        }
+      ],
+      "tip": "vendor = người bán, nhà cung cấp; street vendor là người bán hàng rong.",
+      "emoji": "🛍️",
+      "stage": 2
+    },
+    {
+      "id": 4513,
+      "word": "voucher",
+      "ipa": "ˈvaʊʧər",
+      "viRead": "VAO-chơ",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "phiếu (giảm giá, đổi quà), voucher",
+      "exampleEn": "You can use this voucher at any of our stores.",
+      "exampleVi": "Bạn có thể dùng phiếu này ở bất kỳ cửa hàng nào của chúng tôi.",
+      "collocations": [
+        {
+          "en": "gift voucher",
+          "vi": "phiếu quà tặng"
+        },
+        {
+          "en": "meal voucher",
+          "vi": "phiếu ăn"
+        }
+      ],
+      "family": [
+        {
+          "word": "coupon",
+          "vi": "phiếu giảm giá"
+        }
+      ],
+      "tip": "voucher là phiếu có giá trị đổi lấy hàng hoặc dịch vụ; coupon thường là phiếu giảm giá.",
+      "emoji": "🎟️",
+      "stage": 2
+    },
+    {
+      "id": 4514,
+      "word": "wholesale",
+      "ipa": "ˈhoʊlˌseɪl",
+      "viRead": "HÂUL-sâyl",
+      "pos": "adj./n.",
+      "posCategory": "adjective",
+      "meaning": "bán buôn, bán sỉ",
+      "exampleEn": "Wholesale prices are lower than retail prices.",
+      "exampleVi": "Giá bán buôn thấp hơn giá bán lẻ.",
+      "collocations": [
+        {
+          "en": "wholesale price",
+          "vi": "giá sỉ"
+        },
+        {
+          "en": "wholesale market",
+          "vi": "chợ đầu mối"
+        }
+      ],
+      "family": [
+        {
+          "word": "retail",
+          "vi": "bán lẻ"
+        }
+      ],
+      "tip": "wholesale (bán sỉ, số lượng lớn) ↔ retail (bán lẻ).",
+      "emoji": "🏪",
+      "stage": 2
+    },
+    {
+      "id": 4515,
+      "word": "workload",
+      "ipa": "ˈwɜrkˌloʊd",
+      "viRead": "WƠK-lâud",
+      "pos": "n.",
+      "posCategory": "noun",
+      "meaning": "khối lượng công việc",
+      "exampleEn": "My workload is heavy at the end of the month.",
+      "exampleVi": "Cuối tháng khối lượng công việc của tôi rất nặng.",
+      "collocations": [
+        {
+          "en": "heavy workload",
+          "vi": "nhiều việc"
+        },
+        {
+          "en": "reduce the workload",
+          "vi": "giảm khối lượng công việc"
+        }
+      ],
+      "family": [
+        {
+          "word": "work",
+          "vi": "công việc"
+        }
+      ],
+      "tip": "work + load (tải): heavy workload = nhiều việc.",
+      "emoji": "🗃️",
       "stage": 2
     }
   ]

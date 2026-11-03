@@ -14,6 +14,20 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-03',
+    title: ['Lộ trình luyện thi TOEIC', 'A TOEIC roadmap'],
+    items: [
+      [
+        'Tab TOEIC trong "Lộ trình luyện thi": cấu trúc đề Listening & Reading (7 Part, 200 câu), thang điểm 10–990, mốc B1 và B2 theo ETS, tiến độ theo danh sách 318 từ công sở và bài kiểm tra từ vựng 20 câu.',
+        'A TOEIC tab in "Exam roadmap": the Listening & Reading format (7 parts, 200 questions), the 10–990 scale, the B1 and B2 marks from ETS, progress through a 318-word workplace list and a 20-question vocabulary check.',
+      ],
+      [
+        'Thêm 75 từ công sở hay gặp trong TOEIC như hotel, payment, delivery, shipment, inventory, applicant, reimburse, complimentary, mỗi từ có phiên âm, ví dụ, cụm đi kèm, mẹo nhớ và giọng đọc thu sẵn.',
+        'Adds 75 workplace words common in TOEIC such as hotel, payment, delivery, shipment, inventory, applicant, reimburse and complimentary, each with pronunciation, an example, collocations, a memory tip and recorded audio.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-03',
     title: ['Bộ thủ và cặp thanh tiếng Trung', 'Chinese radicals and tone pairs'],
     items: [
       [

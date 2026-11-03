@@ -109,7 +109,20 @@ describe('English roadmaps', () => {
     expect(screen.getByRole('link', { name: /Open/ })).toHaveAttribute('href', '/sounds')
     fireEvent.click(screen.getByRole('tab', { name: 'B1 Preliminary' }))
     expect(screen.getByText(/Reading: 45 minutes, 6 parts, 32 questions/)).toBeInTheDocument()
-    expect(screen.getByText(/3,440 B1 words in the pack/)).toBeInTheDocument()
+    const b1 = (json('public/data/en.json') as LanguagePack).words.filter((w) => w.stage === 2)
+    expect(
+      screen.getByText(new RegExp(`${b1.length.toLocaleString('en-US')} B1 words in the pack`))
+    ).toBeInTheDocument()
+  })
+
+  it('offers TOEIC with its seven parts and a workplace word list', () => {
+    useSettings.setState({ currentLang: 'en' })
+    useData.setState({ pack: json('public/data/en.json') as LanguagePack, status: 'ready' })
+    renderExam()
+    fireEvent.click(screen.getByRole('tab', { name: 'TOEIC' }))
+    expect(screen.getByText(/200 multiple-choice questions/)).toBeInTheDocument()
+    expect(screen.getByText(/B2 from 400 in Listening and 385 in Reading/)).toBeInTheDocument()
+    expect(screen.getByText(/ETS publishes no TOEIC word list/)).toBeInTheDocument()
   })
 })
 
