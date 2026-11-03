@@ -188,3 +188,14 @@ từ 2020; Wikipedia còn ghi định dạng cũ của A2 Key nên không dùng)
 - `lib/packContent.ts`: `/exam` mở cho cả `en`.
 - Test: `lib/exams.test.ts` (hai kỳ thi chia đúng hai bậc của gói), `Exam.test.tsx` (tab, thông
   tin đề, số từ).
+
+## TOEIC (03/11/2026)
+
+Kế hoạch đầy đủ ở `toeic.md`. Bước đầu:
+
+- Tab **TOEIC** cho gói tiếng Anh: cấu trúc đề Listening & Reading, thang điểm, mốc CEFR theo ETS,
+  nguồn IIBC và ETS.
+- Danh sách từ là `TOEIC_WORDS` (`lib/toeic.ts`): 318 từ công sở chia 13 chủ đề, mỗi từ một chủ đề.
+  ETS không công bố danh sách từ, trang ghi rõ điều đó.
+- Gói tiếng Anh thêm 75 từ (id 4441–4515, chặng 2) mà các chủ đề cần nhưng gói chưa có (hotel,
+  payment, delivery…). Thẻ từ của các từ trong danh sách hiện nhãn "TOEIC".

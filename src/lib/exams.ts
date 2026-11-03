@@ -1,5 +1,6 @@
 import type { QuizQuestion, Word } from '@/types'
 import { makeQuestion } from '@/lib/quiz'
+import { TOEIC_THEMES, TOEIC_WORDS } from '@/lib/toeic'
 
 // "Lộ trình luyện thi" (docs/design/exam-track.md). Exam facts were checked
 // against the sources listed with each exam, on the date in `checked`; the page links them and
@@ -8,7 +9,7 @@ import { makeQuestion } from '@/lib/quiz'
 type Pair = [vi: string, en: string]
 
 export interface Exam {
-  id: 'hsk1' | 'hsk2' | 'hsk3' | 'topik1' | 'a2key' | 'b1prelim'
+  id: 'hsk1' | 'hsk2' | 'hsk3' | 'topik1' | 'a2key' | 'b1prelim' | 'toeic'
   /** The pack this exam belongs to. */
   lang: string
   name: string
@@ -297,6 +298,61 @@ export const EXAMS: readonly Exam[] = [
       note: [
         'Phần nghe của đề cần phân biệt được ship và sheep, nghe ra âm cuối: tập tai trước khi học từ.',
         'The listening paper needs you to tell ship from sheep and hear final sounds: train your ear before the words.',
+      ],
+    },
+  },
+  {
+    id: 'toeic',
+    lang: 'en',
+    name: 'TOEIC',
+    facts: [
+      [
+        'Bài thi Nghe và Đọc (Listening & Reading): 200 câu trắc nghiệm, khoảng 2 giờ.',
+        'The Listening & Reading test: 200 multiple-choice questions, about 2 hours.',
+      ],
+      [
+        'Nghe: khoảng 45 phút, 100 câu, 4 Part: mô tả tranh (6), hỏi – đáp (25), hội thoại (39), bài nói ngắn (30).',
+        'Listening: about 45 minutes, 100 questions in 4 parts: photographs (6), question–response (25), conversations (39), talks (30).',
+      ],
+      [
+        'Đọc: 75 phút, 100 câu, 3 Part: điền câu (30), điền đoạn văn (16), đọc hiểu (54: 29 câu một đoạn, 25 câu nhiều đoạn).',
+        'Reading: 75 minutes, 100 questions in 3 parts: incomplete sentences (30), text completion (16), reading comprehension (54: 29 single-passage, 25 multiple-passage).',
+      ],
+      [
+        'Mỗi phần 5–495 điểm, bước 5 điểm, tổng 10–990. Không có đỗ hay trượt: mức điểm cần đạt do trường hoặc công ty đặt ra.',
+        'Each section scores 5–495 in steps of 5, 10–990 in total. There is no pass or fail: the score you need is set by your school or employer.',
+      ],
+      [
+        'Mốc CEFR theo ETS: B1 từ 275 điểm Nghe và 275 điểm Đọc; B2 từ 400 điểm Nghe và 385 điểm Đọc.',
+        "ETS's CEFR cut scores: B1 from 275 in Listening and 275 in Reading; B2 from 400 in Listening and 385 in Reading.",
+      ],
+    ],
+    caveat: [
+      `ETS không công bố danh sách từ TOEIC. Danh sách ở đây gồm ${TOEIC_WORDS.length} từ công sở app chọn theo ${TOEIC_THEMES.length} chủ đề hay gặp trong đề (văn phòng, tuyển dụng, đặt hàng, đi công tác…). App luyện từ vựng, nghe và đọc của bài Listening & Reading; bài Speaking & Writing là bài thi riêng. Trước khi đăng ký, hãy xem lại trên trang của IIG Việt Nam hoặc ETS.`,
+      `ETS publishes no TOEIC word list. This one holds ${TOEIC_WORDS.length} workplace words the app picked across ${TOEIC_THEMES.length} themes the test keeps coming back to (the office, hiring, orders, business travel…). The app trains the vocabulary, listening and reading of the Listening & Reading test; Speaking & Writing is a separate test. Check IIG Vietnam's or ETS's site before you register.`,
+    ],
+    checked: ['03/11/2026', '3 Nov 2026'],
+    sources: [
+      {
+        label: 'IIBC — TOEIC Listening & Reading test format',
+        url: 'https://www.iibc-global.org/english/toeic/test/lr/about/format.html',
+      },
+      {
+        label: 'IIBC — TOEIC Listening & Reading test results',
+        url: 'https://www.iibc-global.org/english/toeic/test/lr/guide05.html',
+      },
+      {
+        label: 'ETS — Mapping the TOEIC tests on the CEFR',
+        url: 'https://www.ets.org/content/dam/ets-org/tr/pdfs/toeic/toeic-mapping-cefr-reference.pdf',
+      },
+    ],
+    wordList: TOEIC_WORDS,
+    basics: {
+      to: '/sounds',
+      title: ['Âm khó cho người Việt', 'Tricky sounds for Vietnamese speakers'],
+      note: [
+        'Part 2 hay gài từ phát âm gần giống từ trong câu hỏi (copy / coffee, contract / contact): tập tai trước khi học từ.',
+        'Part 2 likes options that sound like a word in the question (copy / coffee, contract / contact): train your ear before the words.',
       ],
     },
   },
