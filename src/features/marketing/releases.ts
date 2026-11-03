@@ -14,6 +14,20 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-03',
+    title: ['Luyện thi HSK', 'HSK practice'],
+    items: [
+      [
+        'Trang "Luyện thi HSK" cho HSK 1, 2, 3: nghe hiểu bằng giọng thu sẵn, chọn từ điền chỗ trống có pinyin, sắp xếp câu như phần Viết của HSK 3. Câu hỏi làm từ chính từ vựng của từng cấp.',
+        'An "HSK practice" page for HSK 1, 2 and 3: listening with recorded audio, fill-the-gap with pinyin, and sentence building like the HSK 3 writing part, all made from each level\'s own words.',
+      ],
+      [
+        'Bài thi nhỏ HSK theo cấp, có điểm ước lượng trên thang 200 hoặc 300 và so với mức đạt.',
+        'An HSK mini test for each level, with an estimated score on the 200 or 300-point scale against the pass mark.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-03',
     title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
       [

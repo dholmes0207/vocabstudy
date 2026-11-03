@@ -14,6 +14,16 @@ export interface PracticeEntry {
 // lib/packContent.ts; the hub hides them for every other pack.
 export const PRACTICE: PracticeEntry[] = [
   {
+    to: '/hsk',
+    icon: '🀄',
+    title: 'Luyện thi HSK',
+    desc: 'Đúng các dạng câu của đề HSK 1–3: nghe hiểu, chọn từ điền chỗ trống, sắp xếp câu, và bài thi nhỏ có điểm ước lượng.',
+    titleEn: 'HSK practice',
+    descEn:
+      'The question types of HSK 1–3: listening, fill the gap, build the sentence, and a mini test with an estimated score.',
+    tone: 'from-red-600 to-amber-500',
+  },
+  {
     to: '/toeic',
     icon: '💼',
     title: 'Luyện thi TOEIC',

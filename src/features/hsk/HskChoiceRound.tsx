@@ -1,0 +1,228 @@
+import { useEffect, useState } from 'react'
+import { ArrowRight, Check, RotateCcw, X } from 'lucide-react'
+import { useData } from '@/store/dataStore'
+import { useSettings } from '@/store/settingsStore'
+import { useStudy } from '@/store/studyStore'
+import type { HskChoice } from '@/lib/hskPractice'
+import { exampleAudio, prefetchAudio, pronounce, stopPronounce } from '@/lib/audio'
+import { pinyinXp } from '@/lib/pinyin'
+import { playCorrect, playWrong } from '@/lib/sound'
+import { useT } from '@/lib/i18n'
+import GameShell, { GameResult } from '@/features/games/GameShell'
+
+// HSK practice, listening (听力) and gap-fill (选词填空) questions
+// (lib/hskPractice.ts). A listening question plays its recorded example as it
+// appears; a gap-fill shows its options with pinyin, as HSK 1–2 print it.
+
+export default function HskChoiceRound({
+  title,
+  questions,
+  onAgain,
+  onExit,
+  onDone,
+}: {
+  title: string
+  questions: HskChoice[]
+  onAgain: () => void
+  onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
+}) {
+  const t = useT()
+  const lang = useData((s) => s.pack?.meta.ttsLang ?? 'zh-CN')
+  const rate = useSettings((s) => s.ttsRate)
+  const code = useSettings((s) => s.currentLang)
+  const soundOn = useSettings((s) => s.soundEnabled)
+  const addPlayXp = useStudy((s) => s.addPlayXp)
+  const [idx, setIdx] = useState(0)
+  const [picked, setPicked] = useState<number | null>(null)
+  const [correct, setCorrect] = useState(0)
+  const [xp, setXp] = useState<number | null>(null)
+  const q = questions[idx]
+
+  const play = (qn: HskChoice) =>
+    pronounce({
+      audioSrc: exampleAudio(qn.word.id, qn.word.exampleEn),
+      text: qn.word.exampleEn,
+      lang,
+      rate,
+    })
+
+  useEffect(
+    () =>
+      prefetchAudio(
+        questions
+          .filter((qn) => qn.kind === 'listen')
+          .map((qn) => exampleAudio(qn.word.id, qn.word.exampleEn))
+      ),
+    [questions]
+  )
+  useEffect(() => {
+    if (q?.kind !== 'listen') return
+    const timer = window.setTimeout(() => play(q), 300)
+    return () => window.clearTimeout(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once per question
+  }, [idx])
+  useEffect(() => () => stopPronounce(), [])
+
+  if (xp !== null || !q)
+    return (
+      <GameShell title={title} stats={null} onExit={onExit}>
+        <GameResult
+          emoji="🀄"
+          title={t('Xong một lượt!', 'Round complete!')}
+          lines={[
+            t(`Đúng ${correct}/${questions.length} câu`, `${correct} of ${questions.length} right`),
+          ]}
+          xp={xp ?? 0}
+          record={false}
+          onAgain={onAgain}
+        />
+      </GameShell>
+    )
+
+  const answered = picked !== null
+  const pick = (i: number) => {
+    if (answered) return
+    setPicked(i)
+    const ok = i === q.answer
+    if (ok) setCorrect((c) => c + 1)
+    if (soundOn) (ok ? playCorrect : playWrong)()
+    // A gap-fill reads the whole sentence once it is answered.
+    if (q.kind === 'fill') play(q)
+  }
+  const next = () => {
+    stopPronounce()
+    if (idx + 1 < questions.length) {
+      setIdx(idx + 1)
+      setPicked(null)
+      return
+    }
+    if (onDone) return onDone(correct, questions.length)
+    const earned = pinyinXp(correct, questions.length)
+    addPlayXp(code, earned)
+    setXp(earned)
+  }
+
+  const [before, after] = (q.sentence ?? '').split('___')
+
+  return (
+    <GameShell
+      title={title}
+      onExit={onExit}
+      stats={
+        <span>
+          {idx + 1}/{questions.length}
+        </span>
+      }
+    >
+      <div className="card space-y-4 p-6">
+        {q.kind === 'listen' ? (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t('Nghe câu, rồi chọn nghĩa đúng.', 'Hear the sentence, then pick what it means.')}
+            </p>
+            <button type="button" className="btn-secondary h-10 text-sm" onClick={() => play(q)}>
+              <RotateCcw className="h-4 w-4" /> {t('Nghe lại', 'Play again')}
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t('Chọn từ điền vào chỗ trống.', 'Pick the word for the gap.')}
+            </p>
+            <p lang="zh" className="text-2xl font-bold leading-relaxed">
+              {before}
+              <span className="mx-1 inline-block min-w-12 border-b-2 border-brand-500 text-center text-brand-700 dark:text-brand-300">
+                {answered ? q.options[q.answer] : '\u00a0'}
+              </span>
+              {after}
+            </p>
+            {/* The meaning is always shown: another word of the same kind can fit the
+                Chinese alone (我的___不太好: 数学 or 周末), never the Vietnamese. */}
+            {!answered && (
+              <p className="text-sm text-slate-500 dark:text-slate-400">💬 {q.word.exampleVi}</p>
+            )}
+          </>
+        )}
+
+        <div className={q.kind === 'fill' ? 'grid grid-cols-2 gap-2' : 'grid gap-2'}>
+          {q.options.map((o, i) => {
+            const state = !answered
+              ? 'idle'
+              : i === q.answer
+                ? 'right'
+                : i === picked
+                  ? 'wrong'
+                  : 'idle'
+            return (
+              <button
+                key={o}
+                type="button"
+                onClick={() => pick(i)}
+                disabled={answered}
+                className={`flex items-center justify-center gap-2 rounded-xl border-2 px-3 py-3 font-medium transition ${
+                  q.kind === 'listen' ? 'justify-start text-left' : ''
+                } ${
+                  state === 'right'
+                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
+                    : state === 'wrong'
+                      ? 'border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-200'
+                      : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                }`}
+              >
+                {q.kind === 'fill' ? (
+                  <span className="flex flex-col items-center">
+                    <span lang="zh" className="text-xl font-bold">
+                      {o}
+                    </span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                      {q.readings?.[i]}
+                    </span>
+                  </span>
+                ) : (
+                  <span className="flex-1">{o}</span>
+                )}
+                {state === 'right' && <Check className="h-5 w-5 shrink-0" aria-hidden="true" />}
+                {state === 'wrong' && <X className="h-5 w-5 shrink-0" aria-hidden="true" />}
+              </button>
+            )
+          })}
+        </div>
+
+        {answered && (
+          <div
+            className="space-y-1 rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60"
+            aria-live="polite"
+          >
+            <p
+              className={`font-semibold ${picked === q.answer ? 'text-emerald-600 dark:text-emerald-300' : 'text-rose-600 dark:text-rose-300'}`}
+            >
+              {picked === q.answer ? t('Đúng rồi!', 'Right!') : t('Chưa đúng.', 'Not quite.')}
+            </p>
+            <p lang="zh" className="text-lg font-bold">
+              {q.word.exampleEn.replace(/\u200b/g, '')}
+            </p>
+            {q.word.exampleRead && (
+              <p className="text-slate-600 dark:text-slate-300">{q.word.exampleRead}</p>
+            )}
+            <p className="text-slate-500 dark:text-slate-400">{q.word.exampleVi}</p>
+            <p className="text-slate-500 dark:text-slate-400">
+              <b lang="zh">{q.word.word}</b> {q.word.viRead} — {q.word.meaning}
+            </p>
+          </div>
+        )}
+      </div>
+      {answered && (
+        <div className="session-actions mt-4">
+          <button className="btn-primary h-12 w-full" onClick={next} autoFocus>
+            {idx + 1 < questions.length
+              ? t('Câu tiếp theo', 'Next')
+              : t('Xem kết quả', 'See results')}{' '}
+            <ArrowRight className="h-5 w-5" />
+          </button>
+        </div>
+      )}
+    </GameShell>
+  )
+}

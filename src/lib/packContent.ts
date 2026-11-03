@@ -22,6 +22,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/exam': ['en', 'ko', 'zh'],
   // Workplace English for the TOEIC Listening & Reading test (lib/toeic.ts).
   '/toeic': ['en'],
+  // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).
+  '/hsk': ['zh'],
 }
 
 /** The screen a path belongs to: "/reading/lans-morning" → "/reading". */
