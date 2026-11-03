@@ -81,3 +81,38 @@ Mỗi bước là một PR, xanh thì merge. Thứ tự theo mức người họ
 - TOEIC Speaking & Writing: đề khác, chấm bằng người. Có thể làm sau.
 - Đề thi thật hoặc câu hỏi chép từ sách luyện thi: mọi câu trong app đều tự viết.
 - Ảnh thật cho Part 1: app không có kho ảnh, dùng cảnh emoji kèm mô tả.
+
+## Đã làm
+
+### Bước A1: lộ trình và từ vựng (03/11/2026)
+
+Tab TOEIC trong "Lộ trình luyện thi", 318 từ theo 13 chủ đề (`lib/toeic.ts`), thêm 75 từ vào gói
+tiếng Anh. Chi tiết ở `exam-track.md`.
+
+### Bước A2: trang Luyện TOEIC (03/11/2026)
+
+- `/toeic` (chỉ gói tiếng Anh, mục đầu trong trang Luyện tập):
+  - thẻ tiến độ: số từ TOEIC đã thành thạo, mốc B1/B2, liên kết sang tab TOEIC của lộ trình
+    (`/exam?exam=toeic`);
+  - 13 chủ đề, mỗi chủ đề có "Học" (10 từ chưa thành thạo) và "Ôn";
+  - 7 Part: số câu, Part đó hỏi gì, một mẹo làm bài (`TOEIC_PARTS`).
+- Phần học và ôn theo bộ từ tách ra `components/DeckBoard.tsx`, dùng chung với `/topics`. Phiên học
+  chiếm cả trang như trước (có test).
+
+### Bước A3: Part 5 (03/11/2026)
+
+- Nút **"Luyện Part 5 (10 câu)"** trên thẻ Part 5 của `/toeic`.
+- Mỗi lượt có 7 câu ngữ pháp và 3 câu từ vựng:
+  - **Câu ngữ pháp** (`PART5_BANK` trong `lib/toeicPart5.ts`): 43 câu tự viết, chia 6 dạng: từ
+    loại (16), giới từ (7), thì và dạng động từ (7), liên từ (5), đại từ (4), nghĩa từ (4). Mỗi câu
+    có giải thích bằng tiếng Việt, ví dụ "Sau mạo từ a và tính từ final cần một danh từ: decision".
+  - **Câu từ vựng** (`vocabQuestions`): cắt từ câu ví dụ của từ TOEIC (khoảng 280 câu).
+    - Phương án nhiễu là từ TOEIC cùng từ loại nhưng **khác chủ đề**: từ cùng chủ đề (hotel /
+      accommodation) quá dễ cũng hợp câu.
+    - Câu hiện kèm nghĩa tiếng Việt, nên chỉ một phương án đúng nghĩa.
+    - Bỏ câu có từ đứng đầu câu (chỗ trống viết hoa, phương án viết thường) và câu dùng dạng biến
+      đổi của từ.
+- Đáp án được xáo, ghi (A)–(D) như đề thật. Trả lời xong hiện đáp án đúng trong câu và lời giải
+  thích.
+- Cuối lượt: số câu đúng, kết quả theo từng dạng (dạng yếu nhất trước), cộng XP như các bài luyện
+  nhanh. Nút Thoát quay về `/toeic` (`GameShell` có thêm `onExit`).

@@ -64,5 +64,7 @@ describe('Topics', () => {
     // Three questions: one per word met, none from the rest of the deck. (Which
     // word shows on screen depends on the random question type, so not checked.)
     expect(await screen.findByText('1/3')).toBeInTheDocument()
+    // The review takes the whole page: no deck grid or page header around it.
+    expect(screen.queryByRole('heading', { name: /Learn by topic/ })).not.toBeInTheDocument()
   })
 })

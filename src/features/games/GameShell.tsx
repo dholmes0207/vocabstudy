@@ -8,23 +8,37 @@ export default function GameShell({
   title,
   stats,
   children,
+  onExit,
 }: {
   title: string
   stats: React.ReactNode
   children: React.ReactNode
+  /** Leave to the page that started the game; without it, Exit goes to /practice. */
+  onExit?: () => void
 }) {
   useImmersive()
   const t = useT()
   return (
     <div className="mx-auto max-w-xl animate-fade-in">
       <div className="mb-4 flex items-center gap-3">
-        <Link
-          to="/practice"
-          className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
-          aria-label={t('Thoát trò chơi', 'Leave the game')}
-        >
-          <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
-        </Link>
+        {onExit ? (
+          <button
+            type="button"
+            onClick={onExit}
+            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
+            aria-label={t('Thoát trò chơi', 'Leave the game')}
+          >
+            <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
+          </button>
+        ) : (
+          <Link
+            to="/practice"
+            className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
+            aria-label={t('Thoát trò chơi', 'Leave the game')}
+          >
+            <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}
+          </Link>
+        )}
         <h1 className="flex-1 truncate text-lg font-extrabold">{title}</h1>
         <div className="flex shrink-0 items-center gap-3 text-sm font-semibold tabular-nums text-slate-500 dark:text-slate-400">
           {stats}

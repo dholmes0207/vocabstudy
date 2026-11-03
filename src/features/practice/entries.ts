@@ -14,6 +14,16 @@ export interface PracticeEntry {
 // lib/packContent.ts; the hub hides them for every other pack.
 export const PRACTICE: PracticeEntry[] = [
   {
+    to: '/toeic',
+    icon: '💼',
+    title: 'Luyện thi TOEIC',
+    desc: '318 từ công sở theo 13 chủ đề (văn phòng, tuyển dụng, đặt hàng, đi công tác…) và 7 Part của đề Listening & Reading.',
+    titleEn: 'TOEIC practice',
+    descEn:
+      '318 workplace words in 13 themes (the office, hiring, orders, business travel…) and the 7 parts of the Listening & Reading test.',
+    tone: 'from-sky-600 to-indigo-600',
+  },
+  {
     to: '/pinyin',
     icon: '🎵',
     title: 'Pinyin & thanh điệu',
