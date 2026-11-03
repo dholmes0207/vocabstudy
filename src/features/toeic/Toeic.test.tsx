@@ -67,7 +67,7 @@ describe('TOEIC page', () => {
       expect(options).toHaveLength(4)
       fireEvent.click(options[0])
       expect(screen.getByText(/^(Right!|Not quite\.)/)).toBeInTheDocument()
-      fireEvent.click(screen.getByRole('button', { name: /Next|See results/ }))
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
     }
     expect(screen.getByText('Part 5 round done!')).toBeInTheDocument()
     expect(screen.getByText(/of 10 right/)).toBeInTheDocument()
