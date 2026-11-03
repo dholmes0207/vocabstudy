@@ -13,15 +13,22 @@ import { part5Round, type Part5Question } from '@/lib/toeicPart5'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
 import Part2Round from './Part2Round'
+import { part1Round, type Part1Question } from '@/lib/toeicPart1'
 import { pickSet, shuffleSet, type ReadingSet, type ShuffledQuestion } from '@/lib/toeicReading'
 import ReadingRound from './ReadingRound'
+import { pickTalk, type TalkSet } from '@/lib/toeicTalks'
+import TalkRound from './TalkRound'
+import MiniTest from './MiniTest'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
 
 /** The parts that can be practised here, with their button. */
 const PRACTICE_LABEL: Partial<Record<number, [string, string]>> = {
+  1: ['Luyện Part 1 (6 câu)', 'Practise Part 1 (6 questions)'],
   2: ['Luyện Part 2 (10 câu)', 'Practise Part 2 (10 questions)'],
+  3: ['Luyện Part 3 (một đoạn hội thoại)', 'Practise Part 3 (one conversation)'],
+  4: ['Luyện Part 4 (một bài nói)', 'Practise Part 4 (one talk)'],
   5: ['Luyện Part 5 (10 câu)', 'Practise Part 5 (10 questions)'],
   6: ['Luyện Part 6 (một đoạn văn)', 'Practise Part 6 (one text)'],
   7: ['Luyện Part 7 (một bài đọc)', 'Practise Part 7 (one set)'],
@@ -33,19 +40,24 @@ export default function Toeic() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   // The part being practised; n remounts the round on "play again".
+  const [mini, setMini] = useState(false)
   const [round, setRound] = useState<
+    | { part: 1; n: number; questions: Part1Question[] }
     | { part: 2; n: number; questions: Part2Question[] }
     | { part: 5; n: number; questions: Part5Question[] }
+    | { part: 3 | 4; n: number; set: TalkSet; questions: ShuffledQuestion[] }
     | { part: 6 | 7; n: number; set: ReadingSet; questions: ShuffledQuestion[] }
     | null
   >(null)
-  const start = (part: 2 | 5 | 6 | 7) =>
+  const start = (part: 1 | 2 | 3 | 4 | 5 | 6 | 7) =>
     setRound((r) => {
       const n = (r?.n ?? 0) + 1
+      if (part === 1) return { part, n, questions: part1Round() }
       if (part === 2) return { part, n, questions: part2Round() }
       if (part === 5) return { part, n, questions: part5Round(pack.words) }
       // Another text than the one just done.
       const last = r && 'set' in r ? r.set.id : undefined
+      if (part === 3 || part === 4) return { part, n, ...shuffleSet(pickTalk(part, last)) }
       return { part, n, ...shuffleSet(pickSet(part, last)) }
     })
 
@@ -63,12 +75,23 @@ export default function Toeic() {
   const learned = all.filter((w) => cards[w.id]).length
   const mastered = all.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
 
-  if (round?.part === 2)
+  if (round?.part === 1 || round?.part === 2)
     return (
       <Part2Round
         key={round.n}
         questions={round.questions}
-        onAgain={() => start(2)}
+        onAgain={() => start(round.part)}
+        onExit={() => setRound(null)}
+      />
+    )
+  if (mini) return <MiniTest words={pack.words} onExit={() => setMini(false)} />
+  if (round?.part === 3 || round?.part === 4)
+    return (
+      <TalkRound
+        key={round.n}
+        set={round.set}
+        questions={round.questions}
+        onAgain={() => start(round.part)}
         onExit={() => setRound(null)}
       />
     )
@@ -144,45 +167,68 @@ export default function Toeic() {
         </>
       }
       after={
-        <section aria-labelledby="toeic-parts" className="space-y-3">
-          <h2 id="toeic-parts" className="text-lg font-bold">
-            {t('7 Part của đề', 'The seven parts')}
-          </h2>
-          <ol className="grid gap-3 sm:grid-cols-2">
-            {TOEIC_PARTS.map((part) => (
-              <li key={part.n} className="card space-y-2 p-4">
-                <p className="flex items-center gap-2 font-bold">
-                  {part.section === 'listening' ? (
-                    <Headphones
-                      className="h-4 w-4 text-sky-600 dark:text-sky-300"
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <BookOpenText
-                      className="h-4 w-4 text-emerald-600 dark:text-emerald-300"
-                      aria-hidden="true"
-                    />
-                  )}
-                  Part {part.n} · {t(...part.name)}
-                  <span className="ml-auto text-xs font-semibold text-slate-500 dark:text-slate-400">
-                    {t(`${part.questions} câu`, `${part.questions} questions`)}
-                  </span>
-                </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
-                {PRACTICE_LABEL[part.n] && (
-                  <button
-                    type="button"
-                    className="btn-primary h-10 w-full text-sm"
-                    onClick={() => start(part.n as 2 | 5 | 6 | 7)}
-                  >
-                    {t(...PRACTICE_LABEL[part.n]!)}
-                  </button>
+        <>
+          <section className="card flex flex-wrap items-center gap-3 p-5">
+            <span className="text-3xl" aria-hidden="true">
+              ⏱️
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="font-bold">{t('Bài thi nhỏ', 'Mini test')}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                {t(
+                  '26 câu, khoảng 20 phút, đủ 7 Part theo tỉ lệ đề thật. Cuối bài có khoảng điểm ước lượng cho Nghe và Đọc.',
+                  '26 questions, about 20 minutes, all 7 parts in the proportions of the real test, with an estimated range for Listening and Reading.'
                 )}
-              </li>
-            ))}
-          </ol>
-        </section>
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn-primary h-10 w-full text-sm sm:w-auto"
+              onClick={() => setMini(true)}
+            >
+              {t('Làm bài thi nhỏ', 'Take the mini test')}
+            </button>
+          </section>
+          <section aria-labelledby="toeic-parts" className="space-y-3">
+            <h2 id="toeic-parts" className="text-lg font-bold">
+              {t('7 Part của đề', 'The seven parts')}
+            </h2>
+            <ol className="grid gap-3 sm:grid-cols-2">
+              {TOEIC_PARTS.map((part) => (
+                <li key={part.n} className="card space-y-2 p-4">
+                  <p className="flex items-center gap-2 font-bold">
+                    {part.section === 'listening' ? (
+                      <Headphones
+                        className="h-4 w-4 text-sky-600 dark:text-sky-300"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <BookOpenText
+                        className="h-4 w-4 text-emerald-600 dark:text-emerald-300"
+                        aria-hidden="true"
+                      />
+                    )}
+                    Part {part.n} · {t(...part.name)}
+                    <span className="ml-auto text-xs font-semibold text-slate-500 dark:text-slate-400">
+                      {t(`${part.questions} câu`, `${part.questions} questions`)}
+                    </span>
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
+                  {PRACTICE_LABEL[part.n] && (
+                    <button
+                      type="button"
+                      className="btn-primary h-10 w-full text-sm"
+                      onClick={() => start(part.n)}
+                    >
+                      {t(...PRACTICE_LABEL[part.n]!)}
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </section>
+        </>
       }
     />
   )

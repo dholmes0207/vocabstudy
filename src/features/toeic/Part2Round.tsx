@@ -4,6 +4,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import type { Part2Question } from '@/lib/toeicPart2'
+import type { Part1Question } from '@/lib/toeicPart1'
 import { prefetchAudio, pronounce, stopPronounce, textAudio } from '@/lib/audio'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -14,18 +15,25 @@ import GameShell, { GameResult } from '@/features/games/GameShell'
 // (A), (B), (C) are read one after another and none is printed, as in the
 // test. After the answer, everything shows with why the traps are traps.
 
-const LETTERS = ['A', 'B', 'C'] as const
+const LETTERS = ['A', 'B', 'C', 'D'] as const
 /** Pause between two clips, as on the test recording. */
 const GAP_MS = 600
 
+/**
+ * Part 2, and Part 1 too: a Part 1 item has a scene in place of the question
+ * and four statements, heard (A)–(D) the same way.
+ */
 export default function Part2Round({
   questions,
   onAgain,
   onExit,
+  onDone,
 }: {
-  questions: Part2Question[]
+  questions: (Part2Question | Part1Question)[]
   onAgain: () => void
   onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'en-US')
@@ -41,7 +49,10 @@ export default function Part2Round({
   const [reading, setReading] = useState<number | null>(null)
   const run = useRef(0)
   const timer = useRef<number | undefined>(undefined)
-  const title = t('Part 2 · Hỏi – đáp', 'Part 2 · Question–response')
+  const photos = questions.some((qn) => 'scene' in qn)
+  const title = photos
+    ? t('Part 1 · Mô tả tranh', 'Part 1 · Photographs')
+    : t('Part 2 · Hỏi – đáp', 'Part 2 · Question–response')
   const q = questions[idx]
 
   const stop = () => {
@@ -52,14 +63,16 @@ export default function Part2Round({
   }
 
   /** The question, then each response, a short pause between them. */
-  const play = (qn: Part2Question) => {
+  const play = (qn: Part2Question | Part1Question) => {
     stop()
     const id = run.current
-    const clips = [qn.prompt, ...qn.options]
+    // A Part 1 item has no question to read: its clips are the statements only.
+    const lead = qn.prompt ? 1 : 0
+    const clips = qn.prompt ? [qn.prompt, ...qn.options] : qn.options
     const step = (i: number) => {
       if (id !== run.current) return
       if (i >= clips.length) return setReading(null)
-      setReading(i - 1)
+      setReading(i - lead)
       pronounce({
         audioSrc: textAudio(clips[i]),
         text: clips[i],
@@ -75,7 +88,10 @@ export default function Part2Round({
   }
 
   useEffect(
-    () => prefetchAudio(questions.flatMap((qn) => [qn.prompt, ...qn.options].map(textAudio))),
+    () =>
+      prefetchAudio(
+        questions.flatMap((qn) => [qn.prompt, ...qn.options].filter(Boolean).map(textAudio))
+      ),
     [questions]
   )
   // Each item plays as it appears; leaving the round stops the voice.
@@ -93,7 +109,11 @@ export default function Part2Round({
       <GameShell title={title} stats={null} onExit={onExit}>
         <GameResult
           emoji="🎧"
-          title={t('Xong một lượt Part 2!', 'Part 2 round done!')}
+          title={
+            photos
+              ? t('Xong một lượt Part 1!', 'Part 1 round done!')
+              : t('Xong một lượt Part 2!', 'Part 2 round done!')
+          }
           lines={[
             t(`Đúng ${correct}/${questions.length} câu`, `${correct} of ${questions.length} right`),
           ]}
@@ -120,6 +140,7 @@ export default function Part2Round({
       setPicked(null)
       return
     }
+    if (onDone) return onDone(correct, questions.length)
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
     setXp(earned)
@@ -136,19 +157,38 @@ export default function Part2Round({
       }
     >
       <div className="card space-y-4 p-6">
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          {answered
-            ? t('Câu hỏi:', 'The question:')
-            : t(
-                'Nghe câu hỏi và 3 câu đáp, rồi chọn câu đáp phù hợp.',
-                'Hear the question and three responses, then pick the one that fits.'
+        {'scene' in q ? (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                'Nhìn cảnh, nghe 4 câu mô tả, rồi chọn câu đúng nhất.',
+                'Look at the scene, hear four statements, then pick the one that fits best.'
               )}
-        </p>
-        <p
-          className={`text-lg font-semibold ${reading === -1 ? 'text-brand-600 dark:text-brand-300' : ''}`}
-        >
-          {answered ? q.prompt : reading === -1 ? '🔊 …' : '🎧'}
-        </p>
+            </p>
+            <div className="rounded-xl bg-slate-50 p-4 text-center dark:bg-slate-800/60">
+              <p className="text-5xl" aria-hidden="true">
+                {q.emoji}
+              </p>
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{q.scene}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {answered
+                ? t('Câu hỏi:', 'The question:')
+                : t(
+                    'Nghe câu hỏi và 3 câu đáp, rồi chọn câu đáp phù hợp.',
+                    'Hear the question and three responses, then pick the one that fits.'
+                  )}
+            </p>
+            <p
+              className={`text-lg font-semibold ${reading === -1 ? 'text-brand-600 dark:text-brand-300' : ''}`}
+            >
+              {answered ? q.prompt : reading === -1 ? '🔊 …' : '🎧'}
+            </p>
+          </>
+        )}
         <button
           type="button"
           onClick={() => play(q)}

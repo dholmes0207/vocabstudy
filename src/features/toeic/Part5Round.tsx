@@ -16,10 +16,13 @@ export default function Part5Round({
   questions,
   onAgain,
   onExit,
+  onDone,
 }: {
   questions: Part5Question[]
   onAgain: () => void
   onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
 }) {
   const t = useT()
   const code = useSettings((s) => s.currentLang)
@@ -71,6 +74,7 @@ export default function Part5Round({
       setPicked(null)
       return
     }
+    if (onDone) return onDone(correct, questions.length)
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
     setXp(earned)

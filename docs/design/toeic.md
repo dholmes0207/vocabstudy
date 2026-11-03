@@ -151,3 +151,52 @@ tiếng Anh. Chi tiết ở `exam-track.md`.
 - Màn làm bài hiện đoạn văn ở trên, câu hỏi ở dưới. Trả lời câu nào hiện giải thích câu đó ngay.
   Ở Part 6, chỗ trống trong đoạn được điền đáp án khi trả lời xong. Trả lời hết thì xem kết quả và
   nhận XP.
+
+### Bước A6: Part 1, Part 3, Part 4 (03/11/2026)
+
+Giờ cả 7 Part đều có nút "Luyện".
+
+- **Part 1** (`lib/toeicPart1.ts`):
+  - 12 cảnh, mỗi lượt 6 câu như đề thật. App không có kho ảnh nên "bức tranh" là một dãy emoji kèm
+    mô tả bằng tiếng Việt.
+  - 4 câu mô tả chỉ được đọc, (A)–(D), luyện tai với các mẫu câu Part 1 hay dùng: is being loaded,
+    is leaning against, are stacked, is pointing at.
+  - Giải thích chỉ ra bẫy hay gặp: đúng đồ vật nhưng sai hành động; câu bị động đang làm (being
+    - V3) khác trạng thái (are stacked).
+  - Dùng chung màn với Part 2 (`Part2Round`): câu có `scene` thì hiện cảnh thay cho câu hỏi.
+- **Part 3 và Part 4** (`lib/toeicTalks.ts`):
+  - 4 đoạn hội thoại hai người và 4 bài nói một người (tin nhắn thoại, thông báo sân bay, giới
+    thiệu đồng nghiệp, quảng cáo), mỗi bài 3 câu hỏi.
+  - Như đề thật, câu hỏi và phương án hiện chữ, lời thoại chỉ được đọc: "Nghe" đọc từng lượt
+    lời, nút hiện ai đang nói (Người nữ, Người nam) và lượt thứ mấy.
+  - Trả lời hết 3 câu thì hiện toàn bộ lời thoại để đối chiếu.
+  - Giải thích chỉ ra cách đáp án diễn đạt lại lời thoại (heavy rain → bad weather, offer a
+    discount → lowering the price), và vì sao câu hỏi "next" có đáp án ở cuối bài.
+- Phần câu hỏi dùng chung giữa đọc và nghe: `QuestionList` (`ReadingRound.tsx`); `shuffleSet` nhận
+  được cả bài đọc lẫn bài nghe.
+
+### Bước A7: bài thi nhỏ (03/11/2026)
+
+- Thẻ **"Bài thi nhỏ"** trên `/toeic`: 26 câu, khoảng 20 phút, theo tỉ lệ đề thật
+  (`lib/toeicMiniTest.ts`):
+  - Nghe 13 câu: Part 1 (2), Part 2 (5), Part 3 (một hội thoại, 3), Part 4 (một bài nói, 3);
+  - Đọc 13 câu: Part 5 (6), Part 6 (một đoạn, 4), Part 7 (một bài, 3).
+- Các Part nối tiếp nhau bằng chính các màn luyện. Mỗi màn có thêm `onDone`: khi có `onDone`, màn
+  trả điểm về thay vì hiện kết quả riêng.
+- Kết quả cho từng phần:
+  - số câu đúng và điểm từng Part;
+  - **khoảng điểm ước lượng** trên thang 5–495 (`lib/toeicScore.ts`): tỉ lệ câu đúng quy ra thang
+    điểm, rồi nới ra ±60 điểm, làm tròn bước 5. Không bao giờ hiện một con số như điểm thật;
+  - **bậc CEFR** ứng với giữa khoảng đó, theo mốc của ETS (Nghe B1 275, B2 400; Đọc B1 275, B2
+    385).
+- Trang ghi rõ đây là ước lượng thô từ 26 câu: đề thật 200 câu, ETS quy đổi bằng phương pháp riêng
+  (equating).
+- Lần tốt nhất lưu trong `examStore` với mã `toeic-mini`, hiện ở màn bắt đầu. Cộng XP một lần cho
+  cả bài.
+
+## Tiếp theo
+
+Giai đoạn A đã đủ 7 Part và bài thi nhỏ. Có thể làm thêm sau: tăng số câu cho mỗi Part; ghi âm sẵn
+các câu Part 1–4 bằng giọng thu (hiện đọc bằng giọng trình duyệt nếu clip chưa có).
+
+Giai đoạn B (HSK) bắt đầu từ đây.
