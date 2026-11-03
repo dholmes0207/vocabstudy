@@ -14,8 +14,12 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-03',
-    title: ['Lộ trình luyện thi TOEIC', 'A TOEIC roadmap'],
+    title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
+      [
+        'Trang "Luyện thi TOEIC" trong Luyện tập: học và ôn 13 chủ đề từ vựng công sở (văn phòng, tuyển dụng, đặt hàng, đi công tác…), xem mình đã thuộc bao nhiêu, và đọc 7 Part của đề hỏi gì, mẹo làm từng Part.',
+        'A "TOEIC practice" page in Practice: learn and review 13 themes of workplace words (the office, hiring, orders, business travel…), see how many you know, and read what each of the 7 parts asks with a tip for each.',
+      ],
       [
         'Tab TOEIC trong "Lộ trình luyện thi": cấu trúc đề Listening & Reading (7 Part, 200 câu), thang điểm 10–990, mốc B1 và B2 theo ETS, tiến độ theo danh sách 318 từ công sở và bài kiểm tra từ vựng 20 câu.',
         'A TOEIC tab in "Exam roadmap": the Listening & Reading format (7 parts, 200 questions), the 10–990 scale, the B1 and B2 marks from ETS, progress through a 318-word workplace list and a 20-question vocabulary check.',

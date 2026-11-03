@@ -120,3 +120,119 @@ export function themeWords(theme: ToeicTheme, words: readonly Word[]): Word[] {
     return w ? [w] : []
   })
 }
+
+export interface ToeicPart {
+  n: 1 | 2 | 3 | 4 | 5 | 6 | 7
+  section: 'listening' | 'reading'
+  name: Pair
+  /** Questions in the real test. */
+  questions: number
+  /** What the part asks, in one or two sentences. */
+  asks: Pair
+  tip: Pair
+}
+
+/**
+ * The seven parts of the Listening & Reading test, as IIBC publishes the
+ * format (checked 03/11/2026, see lib/exams.ts). The tips are the app's own.
+ */
+export const TOEIC_PARTS: readonly ToeicPart[] = [
+  {
+    n: 1,
+    section: 'listening',
+    name: ['Mô tả tranh', 'Photographs'],
+    questions: 6,
+    asks: [
+      'Nhìn một bức ảnh, nghe 4 câu mô tả (không in trong đề), chọn câu đúng nhất.',
+      'Look at a photo, hear four statements (not printed), pick the one that describes it best.',
+    ],
+    tip: [
+      'Trước khi nghe, nhìn tranh: ai, đang làm gì, ở đâu. Cẩn thận câu có đúng đồ vật trong tranh nhưng sai hành động.',
+      'Before the audio, study the photo: who, doing what, where. Watch for statements that name the right object but the wrong action.',
+    ],
+  },
+  {
+    n: 2,
+    section: 'listening',
+    name: ['Hỏi – đáp', 'Question–response'],
+    questions: 25,
+    asks: [
+      'Nghe một câu hỏi hoặc câu nói, rồi 3 câu đáp (không in trong đề), chọn câu đáp phù hợp.',
+      'Hear a question or statement, then three responses (not printed), pick the one that fits.',
+    ],
+    tip: [
+      'Nghe thật kỹ từ để hỏi ở đầu câu (Who, When, Where…). Câu đáp lặp lại từ trong câu hỏi, hoặc có từ phát âm gần giống, thường là bẫy.',
+      'Catch the question word at the start (Who, When, Where…). A response that repeats a word from the question, or one that sounds like it, is usually a trap.',
+    ],
+  },
+  {
+    n: 3,
+    section: 'listening',
+    name: ['Hội thoại', 'Conversations'],
+    questions: 39,
+    asks: [
+      '13 đoạn hội thoại giữa 2 hoặc 3 người, mỗi đoạn 3 câu hỏi; vài câu đi kèm bảng hoặc hình.',
+      '13 conversations between two or three people, three questions each; some come with a table or graphic.',
+    ],
+    tip: [
+      'Dùng lúc chờ để đọc trước 3 câu hỏi, biết mình cần nghe tên người, thời gian hay lý do.',
+      'Use the pause to read the three questions first, so you know whether to listen for a name, a time or a reason.',
+    ],
+  },
+  {
+    n: 4,
+    section: 'listening',
+    name: ['Bài nói ngắn', 'Talks'],
+    questions: 30,
+    asks: [
+      '10 bài nói của một người (thông báo, tin nhắn thoại, quảng cáo, giới thiệu), mỗi bài 3 câu hỏi.',
+      'Ten talks by one speaker (announcements, voicemails, ads, introductions), three questions each.',
+    ],
+    tip: [
+      'Câu đầu thường nói mục đích của bài. Các câu hỏi thường đi theo thứ tự của bài nói.',
+      'The first sentence usually gives the purpose. The questions tend to follow the order of the talk.',
+    ],
+  },
+  {
+    n: 5,
+    section: 'reading',
+    name: ['Điền câu', 'Incomplete sentences'],
+    questions: 30,
+    asks: [
+      'Một câu có chỗ trống, chọn từ hoặc cụm đúng trong 4 phương án.',
+      'A sentence with a gap: pick the right word or phrase from four options.',
+    ],
+    tip: [
+      'Nhìn 4 phương án trước. Cùng gốc khác đuôi (decide, decision, decisive…) là câu từ loại: chỉ cần xem vị trí chỗ trống. Khác nghĩa thì mới cần đọc cả câu.',
+      'Look at the options first. One root with different endings (decide, decision, decisive…) is a word-form question: the position of the gap is enough. Different meanings need the whole sentence.',
+    ],
+  },
+  {
+    n: 6,
+    section: 'reading',
+    name: ['Điền đoạn văn', 'Text completion'],
+    questions: 16,
+    asks: [
+      '4 đoạn văn (email, thông báo, thư), mỗi đoạn 4 chỗ trống; một chỗ phải chọn cả một câu.',
+      'Four texts (emails, notices, letters), four gaps each; one gap takes a whole sentence.',
+    ],
+    tip: [
+      'Đọc cả đoạn, đừng chỉ đọc câu có chỗ trống: thì của động từ và câu cần điền phụ thuộc vào câu trước và câu sau.',
+      'Read the whole text, not just the line with the gap: the verb tense and the missing sentence depend on what comes before and after.',
+    ],
+  },
+  {
+    n: 7,
+    section: 'reading',
+    name: ['Đọc hiểu', 'Reading comprehension'],
+    questions: 54,
+    asks: [
+      'Email, quảng cáo, bài báo, tin nhắn, biểu mẫu; một đoạn (29 câu) hoặc 2–3 đoạn liên quan (25 câu).',
+      'Emails, ads, articles, chats and forms; single passages (29 questions) or two or three linked ones (25 questions).',
+    ],
+    tip: [
+      'Đọc câu hỏi trước rồi mới tìm thông tin. Câu hỏi nhiều đoạn thường cần ghép một chi tiết ở đoạn này với một chi tiết ở đoạn kia.',
+      'Read the question first, then look for the answer. Multiple-passage questions often need a detail from one text joined with one from another.',
+    ],
+  },
+]

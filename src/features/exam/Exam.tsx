@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { ArrowRight, BookmarkPlus, ExternalLink, Info } from 'lucide-react'
 import type { QuizQuestion, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -30,7 +30,9 @@ type Mode = { kind: 'learn'; words: Word[] } | { kind: 'mock'; questions: QuizQu
 
 export default function Exam() {
   const code = useSettings((s) => s.currentLang)
-  const [picked, setPicked] = useState<string | null>(null)
+  // ?exam=toeic opens that tab (the TOEIC page links here).
+  const [params] = useSearchParams()
+  const [picked, setPicked] = useState<string | null>(() => params.get('exam'))
   const all = examsFor(code)
   const exam = examFor(code, picked)
   // Layout shows the "switch language" note for packs without an exam.

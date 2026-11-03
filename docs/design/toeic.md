@@ -81,3 +81,20 @@ Mỗi bước là một PR, xanh thì merge. Thứ tự theo mức người họ
 - TOEIC Speaking & Writing: đề khác, chấm bằng người. Có thể làm sau.
 - Đề thi thật hoặc câu hỏi chép từ sách luyện thi: mọi câu trong app đều tự viết.
 - Ảnh thật cho Part 1: app không có kho ảnh, dùng cảnh emoji kèm mô tả.
+
+## Đã làm
+
+### Bước A1: lộ trình và từ vựng (03/11/2026)
+
+Tab TOEIC trong "Lộ trình luyện thi", 318 từ theo 13 chủ đề (`lib/toeic.ts`), thêm 75 từ vào gói
+tiếng Anh. Chi tiết ở `exam-track.md`.
+
+### Bước A2: trang Luyện TOEIC (03/11/2026)
+
+- `/toeic` (chỉ gói tiếng Anh, mục đầu trong trang Luyện tập):
+  - thẻ tiến độ: số từ TOEIC đã thành thạo, mốc B1/B2, liên kết sang tab TOEIC của lộ trình
+    (`/exam?exam=toeic`);
+  - 13 chủ đề, mỗi chủ đề có "Học" (10 từ chưa thành thạo) và "Ôn";
+  - 7 Part: số câu, Part đó hỏi gì, một mẹo làm bài (`TOEIC_PARTS`).
+- Phần học và ôn theo bộ từ tách ra `components/DeckBoard.tsx`, dùng chung với `/topics`. Phiên học
+  chiếm cả trang như trước (có test).

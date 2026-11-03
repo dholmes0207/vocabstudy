@@ -1,0 +1,201 @@
+import { useMemo, useState } from 'react'
+import { BookOpen, RotateCcw } from 'lucide-react'
+import type { QuizQuestion, Word } from '@/types'
+import { useData } from '@/store/dataStore'
+import { useSettings } from '@/store/settingsStore'
+import { NO_CARDS, useStudy } from '@/store/studyStore'
+import { phaseOf } from '@/lib/srs'
+import { generateQuiz } from '@/lib/quiz'
+import { useT } from '@/lib/i18n'
+import LearnSession from '@/features/learn/LearnSession'
+import QuizRunner from '@/components/QuizRunner'
+import SessionComplete from '@/components/SessionComplete'
+import ProgressRing from '@/components/ProgressRing'
+
+// A grid of word decks, each with "Learn" (up to 10 words not yet mastered)
+// and "Review" (a quick quiz on the words already met): the topic decks
+// (docs/design/topics.md) and the TOEIC themes (docs/design/toeic.md). The
+// words are the pack's own, so progress is shared with the rest of the app.
+
+type Pair = [vi: string, en: string]
+
+export interface Deck {
+  id: string
+  emoji: string
+  title: Pair
+  words: Word[]
+}
+
+/**
+ * The whole page around the decks: `before` and `after` frame the grid, and a
+ * started lesson or review takes the page over until it ends.
+ */
+export default function DeckBoard({
+  decks,
+  backLabel,
+  before,
+  after,
+}: {
+  decks: Deck[]
+  /** The button that ends a session, e.g. "Pick another topic". */
+  backLabel: Pair
+  before?: React.ReactNode
+  after?: React.ReactNode
+}) {
+  const pack = useData((s) => s.pack)!
+  const code = useSettings((s) => s.currentLang)
+  const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
+  const recordAnswer = useStudy((s) => s.recordAnswer)
+  const markKnown = useStudy((s) => s.markKnown)
+  const t = useT()
+  const [session, setSession] = useState<
+    | { kind: 'learn'; deck: Deck; words: Word[] }
+    | { kind: 'review'; deck: Deck; questions: QuizQuestion[] }
+    | null
+  >(null)
+
+  const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
+  const rows = useMemo(
+    () =>
+      decks.map((deck) => ({
+        deck,
+        mastered: deck.words.filter((w) => phaseOf(cards[w.id]) === 'mastered').length,
+        learned: deck.words.filter((w) => cards[w.id]).length,
+      })),
+    [decks, cards]
+  )
+
+  if (session?.kind === 'review') {
+    const { deck } = session
+    return (
+      <QuizRunner
+        questions={session.questions}
+        wordsById={byId}
+        ttsLang={pack.meta.ttsLang}
+        onAnswer={(id, correct) => recordAnswer(code, id, correct)}
+        onExit={() => setSession(null)}
+        renderComplete={(correct, total) => (
+          <SessionComplete
+            emoji={deck.emoji}
+            title={t(`Ôn xong "${deck.title[0]}"`, `"${deck.title[1]}" reviewed`)}
+            correct={correct}
+            total={total}
+          >
+            {correct < total && (
+              <p className="w-full text-sm text-slate-500 dark:text-slate-400">
+                {t(
+                  'Những từ bạn quên đã được đưa vào lịch ôn để hỏi lại sớm.',
+                  'The words you missed are back in your reviews and will come up again soon.'
+                )}
+              </p>
+            )}
+            <button className="btn-primary" onClick={() => setSession(null)}>
+              {t(...backLabel)}
+            </button>
+          </SessionComplete>
+        )}
+      />
+    )
+  }
+
+  if (session) {
+    return (
+      <LearnSession
+        words={session.words}
+        pool={pack.words}
+        ttsLang={pack.meta.ttsLang}
+        onAnswer={(w, correct) => recordAnswer(code, w.id, correct)}
+        onKnown={(w) => markKnown(code, w.id)}
+        onExit={() => setSession(null)}
+        renderComplete={(total) => (
+          <SessionComplete
+            emoji={session.deck.emoji}
+            title={t('Xong một chặng!', 'Nice work!')}
+            correct={total}
+            total={total}
+            showScore={false}
+            note={t(
+              `Bạn vừa học ${total} từ chủ đề "${session.deck.title[0]}". Ngày mai app sẽ hỏi lại để bạn nhớ lâu.`,
+              `You just learned ${total} words about "${session.deck.title[1]}". Tomorrow the app will ask again so they stick.`
+            )}
+          >
+            <button className="btn-primary" onClick={() => setSession(null)}>
+              {t(...backLabel)}
+            </button>
+          </SessionComplete>
+        )}
+      />
+    )
+  }
+
+  const start = (deck: Deck) => {
+    // The deck's not-yet-mastered words, a handful at a time.
+    const list = deck.words.filter((w) => phaseOf(cards[w.id]) !== 'mastered').slice(0, 10)
+    if (list.length) setSession({ kind: 'learn', deck, words: list })
+  }
+
+  const review = (deck: Deck) => {
+    // A quick recall check on the deck's words you have already met.
+    const met = deck.words.filter((w) => cards[w.id])
+    const questions = generateQuiz({ words: met, pool: pack.words, limit: 10 })
+    if (questions.length) setSession({ kind: 'review', deck, questions })
+  }
+
+  return (
+    <div className="space-y-6 animate-fade-in">
+      {before}
+      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {rows.map(({ deck, mastered, learned }) => {
+          const { words } = deck
+          const done = words.length > 0 && mastered === words.length
+          return (
+            <li key={deck.id} className="card flex min-w-0 flex-col gap-3 p-4">
+              <div className="flex items-center gap-4">
+                <ProgressRing value={words.length ? mastered / words.length : 0} size={56}>
+                  <span className="text-2xl" aria-hidden="true">
+                    {deck.emoji}
+                  </span>
+                </ProgressRing>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-bold">{t(...deck.title)}</span>
+                  <span className="text-sm text-slate-500 dark:text-slate-400">
+                    {done
+                      ? t('Đã thành thạo cả bộ 🎉', 'All mastered 🎉')
+                      : t(
+                          `${mastered}/${words.length} thành thạo`,
+                          `${mastered}/${words.length} mastered`
+                        )}
+                  </span>
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => start(deck)}
+                  disabled={done}
+                  className="btn-primary h-10 text-sm disabled:opacity-50"
+                >
+                  <BookOpen className="h-4 w-4" /> {t('Học', 'Learn')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => review(deck)}
+                  disabled={learned === 0}
+                  title={
+                    learned === 0
+                      ? t('Học vài từ của bộ này trước đã', 'Learn a few words of this deck first')
+                      : undefined
+                  }
+                  className="btn-secondary h-10 text-sm disabled:opacity-50"
+                >
+                  <RotateCcw className="h-4 w-4" /> {t(`Ôn (${learned})`, `Review (${learned})`)}
+                </button>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+      {after}
+    </div>
+  )
+}

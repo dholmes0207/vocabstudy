@@ -33,6 +33,7 @@ const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
 const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Radicals = lazy(() => import('./features/radicals/Radicals'))
+const Toeic = lazy(() => import('./features/toeic/Toeic'))
 const Numbers = lazy(() => import('./features/numbers/Numbers'))
 const Placement = lazy(() => import('./features/placement/Placement'))
 const Exam = lazy(() => import('./features/exam/Exam'))
@@ -103,6 +104,7 @@ export default function App() {
               <Route path="/phrases" element={<Phrases />} />
               <Route path="/topics" element={<Topics />} />
               <Route path="/exam" element={<Exam />} />
+              <Route path="/toeic" element={<Toeic />} />
               <Route path="/grammar" element={<Grammar />} />
               <Route path="/dictation" element={<Dictation />} />
               <Route path="/reading" element={<Reading />} />
