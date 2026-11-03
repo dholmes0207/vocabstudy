@@ -6,6 +6,7 @@ import '@testing-library/jest-dom/vitest'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { part2Round } from '@/lib/toeicPart2'
+import { part1Round } from '@/lib/toeicPart1'
 
 // Part 2 as on the test: the question and responses are heard, not read, until
 // the learner answers. The voice is mocked so the test says when a clip ends.
@@ -84,5 +85,25 @@ describe('Part 2 round', () => {
     }
     expect(screen.getByText('10 of 10 right')).toBeInTheDocument()
     expect(useStudy.getState().progress.en?.stats.xp).toBeGreaterThanOrEqual(25)
+  })
+
+  it('shows a Part 1 scene and reads its four statements, with no question', () => {
+    const questions = part1Round()
+    const q = questions[0]
+    render(
+      <MemoryRouter>
+        <Part2Round questions={questions} onAgain={() => {}} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('Part 1 · Photographs')).toBeInTheDocument()
+    expect(screen.getByText(q.scene)).toBeInTheDocument()
+    act(() => void vi.advanceTimersByTime(300))
+    for (let i = 1; i < 4; i++) {
+      act(() => spoken[spoken.length - 1].onEnd?.())
+      act(() => void vi.advanceTimersByTime(600))
+    }
+    expect(spoken.map((s) => s.text)).toEqual(q.options)
+    fireEvent.click(screen.getByRole('button', { name: `(${'ABCD'[q.answer]})` }))
+    expect(screen.getByText(q.why)).toBeInTheDocument()
   })
 })

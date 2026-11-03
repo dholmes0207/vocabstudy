@@ -13,15 +13,21 @@ import { part5Round, type Part5Question } from '@/lib/toeicPart5'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
 import Part2Round from './Part2Round'
+import { part1Round, type Part1Question } from '@/lib/toeicPart1'
 import { pickSet, shuffleSet, type ReadingSet, type ShuffledQuestion } from '@/lib/toeicReading'
 import ReadingRound from './ReadingRound'
+import { pickTalk, type TalkSet } from '@/lib/toeicTalks'
+import TalkRound from './TalkRound'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
 
 /** The parts that can be practised here, with their button. */
 const PRACTICE_LABEL: Partial<Record<number, [string, string]>> = {
+  1: ['Luyện Part 1 (6 câu)', 'Practise Part 1 (6 questions)'],
   2: ['Luyện Part 2 (10 câu)', 'Practise Part 2 (10 questions)'],
+  3: ['Luyện Part 3 (một đoạn hội thoại)', 'Practise Part 3 (one conversation)'],
+  4: ['Luyện Part 4 (một bài nói)', 'Practise Part 4 (one talk)'],
   5: ['Luyện Part 5 (10 câu)', 'Practise Part 5 (10 questions)'],
   6: ['Luyện Part 6 (một đoạn văn)', 'Practise Part 6 (one text)'],
   7: ['Luyện Part 7 (một bài đọc)', 'Practise Part 7 (one set)'],
@@ -34,18 +40,22 @@ export default function Toeic() {
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   // The part being practised; n remounts the round on "play again".
   const [round, setRound] = useState<
+    | { part: 1; n: number; questions: Part1Question[] }
     | { part: 2; n: number; questions: Part2Question[] }
     | { part: 5; n: number; questions: Part5Question[] }
+    | { part: 3 | 4; n: number; set: TalkSet; questions: ShuffledQuestion[] }
     | { part: 6 | 7; n: number; set: ReadingSet; questions: ShuffledQuestion[] }
     | null
   >(null)
-  const start = (part: 2 | 5 | 6 | 7) =>
+  const start = (part: 1 | 2 | 3 | 4 | 5 | 6 | 7) =>
     setRound((r) => {
       const n = (r?.n ?? 0) + 1
+      if (part === 1) return { part, n, questions: part1Round() }
       if (part === 2) return { part, n, questions: part2Round() }
       if (part === 5) return { part, n, questions: part5Round(pack.words) }
       // Another text than the one just done.
       const last = r && 'set' in r ? r.set.id : undefined
+      if (part === 3 || part === 4) return { part, n, ...shuffleSet(pickTalk(part, last)) }
       return { part, n, ...shuffleSet(pickSet(part, last)) }
     })
 
@@ -63,12 +73,22 @@ export default function Toeic() {
   const learned = all.filter((w) => cards[w.id]).length
   const mastered = all.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
 
-  if (round?.part === 2)
+  if (round?.part === 1 || round?.part === 2)
     return (
       <Part2Round
         key={round.n}
         questions={round.questions}
-        onAgain={() => start(2)}
+        onAgain={() => start(round.part)}
+        onExit={() => setRound(null)}
+      />
+    )
+  if (round?.part === 3 || round?.part === 4)
+    return (
+      <TalkRound
+        key={round.n}
+        set={round.set}
+        questions={round.questions}
+        onAgain={() => start(round.part)}
         onExit={() => setRound(null)}
       />
     )
@@ -174,7 +194,7 @@ export default function Toeic() {
                   <button
                     type="button"
                     className="btn-primary h-10 w-full text-sm"
-                    onClick={() => start(part.n as 2 | 5 | 6 | 7)}
+                    onClick={() => start(part.n)}
                   >
                     {t(...PRACTICE_LABEL[part.n]!)}
                   </button>

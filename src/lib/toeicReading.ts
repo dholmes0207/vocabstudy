@@ -533,10 +533,10 @@ export interface ShuffledQuestion extends ReadingQuestion {
 }
 
 /** A set with each question's options shuffled; `answer` points at the right one. */
-export function shuffleSet(
-  set: ReadingSet,
+export function shuffleSet<S extends { questions: readonly ReadingQuestion[] }>(
+  set: S,
   rand: () => number = Math.random
-): { set: ReadingSet; questions: ShuffledQuestion[] } {
+): { set: S; questions: ShuffledQuestion[] } {
   const shuffle = <T>(arr: readonly T[]): T[] => {
     const a = [...arr]
     for (let i = a.length - 1; i > 0; i--) {

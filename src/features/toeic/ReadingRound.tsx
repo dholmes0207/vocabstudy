@@ -105,68 +105,7 @@ export default function ReadingRound({
           </article>
         ))}
 
-        <ol className="space-y-3">
-          {questions.map((qn, qi) => {
-            const answered = picked[qi] !== null
-            return (
-              <li key={qi} className="card space-y-3 p-4">
-                <p lang="en" className="font-semibold">
-                  {qi + 1}. {qn.q || t(`Chỗ trống (${qi + 1})`, `Gap (${qi + 1})`)}
-                </p>
-                <div className="grid gap-2">
-                  {qn.options.map((o, i) => {
-                    const state = !answered
-                      ? 'idle'
-                      : i === qn.answer
-                        ? 'right'
-                        : i === picked[qi]
-                          ? 'wrong'
-                          : 'idle'
-                    return (
-                      <button
-                        key={o}
-                        type="button"
-                        lang="en"
-                        onClick={() => pick(qi, i)}
-                        disabled={answered}
-                        className={`flex items-start gap-2 rounded-xl border-2 px-3 py-2 text-left text-sm font-medium transition ${
-                          state === 'right'
-                            ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
-                            : state === 'wrong'
-                              ? 'border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-200'
-                              : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
-                        }`}
-                      >
-                        <span className="font-mono text-xs text-slate-500">({LETTERS[i]})</span>
-                        <span className="flex-1">{o}</span>
-                        {state === 'right' && (
-                          <Check className="h-4 w-4 shrink-0" aria-hidden="true" />
-                        )}
-                        {state === 'wrong' && <X className="h-4 w-4 shrink-0" aria-hidden="true" />}
-                      </button>
-                    )
-                  })}
-                </div>
-                {answered && (
-                  <p className="rounded-xl bg-slate-50 p-3 text-sm text-slate-600 dark:bg-slate-800/60 dark:text-slate-300">
-                    <b
-                      className={
-                        picked[qi] === qn.answer
-                          ? 'text-emerald-600 dark:text-emerald-300'
-                          : 'text-rose-600 dark:text-rose-300'
-                      }
-                    >
-                      {picked[qi] === qn.answer
-                        ? t('Đúng rồi! ', 'Right! ')
-                        : t('Chưa đúng. ', 'Not quite. ')}
-                    </b>
-                    {qn.why}
-                  </p>
-                )}
-              </li>
-            )
-          })}
-        </ol>
+        <QuestionList questions={questions} picked={picked} onPick={pick} />
 
         {done && (
           <div className="session-actions">
@@ -177,5 +116,80 @@ export default function ReadingRound({
         )}
       </div>
     </GameShell>
+  )
+}
+
+/** The questions of a set, each with its options and, once answered, why. */
+export function QuestionList({
+  questions,
+  picked,
+  onPick,
+}: {
+  questions: ShuffledQuestion[]
+  picked: (number | null)[]
+  onPick: (question: number, option: number) => void
+}) {
+  const t = useT()
+  return (
+    <ol className="space-y-3">
+      {questions.map((qn, qi) => {
+        const answered = picked[qi] !== null
+        return (
+          <li key={qi} className="card space-y-3 p-4">
+            <p lang="en" className="font-semibold">
+              {qi + 1}. {qn.q || t(`Chỗ trống (${qi + 1})`, `Gap (${qi + 1})`)}
+            </p>
+            <div className="grid gap-2">
+              {qn.options.map((o, i) => {
+                const state = !answered
+                  ? 'idle'
+                  : i === qn.answer
+                    ? 'right'
+                    : i === picked[qi]
+                      ? 'wrong'
+                      : 'idle'
+                return (
+                  <button
+                    key={o}
+                    type="button"
+                    lang="en"
+                    onClick={() => onPick(qi, i)}
+                    disabled={answered}
+                    className={`flex items-start gap-2 rounded-xl border-2 px-3 py-2 text-left text-sm font-medium transition ${
+                      state === 'right'
+                        ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
+                        : state === 'wrong'
+                          ? 'border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-200'
+                          : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    <span className="font-mono text-xs text-slate-500">({LETTERS[i]})</span>
+                    <span className="flex-1">{o}</span>
+                    {state === 'right' && <Check className="h-4 w-4 shrink-0" aria-hidden="true" />}
+                    {state === 'wrong' && <X className="h-4 w-4 shrink-0" aria-hidden="true" />}
+                  </button>
+                )
+              })}
+            </div>
+            {answered && (
+              <p className="rounded-xl bg-slate-50 p-3 text-sm text-slate-600 dark:bg-slate-800/60 dark:text-slate-300">
+                <b
+                  className={
+                    picked[qi] === qn.answer
+                      ? 'text-emerald-600 dark:text-emerald-300'
+                      : 'text-rose-600 dark:text-rose-300'
+                  }
+                >
+                  {picked[qi] === qn.answer
+                    ? t('Đúng rồi! ', 'Right! ')
+                    : t('Chưa đúng. ', 'Not quite. ')}
+                </b>
+                {qn.why}
+              </p>
+            )}
+          </li>
+        )
+      })}
+    </ol>
   )
 }

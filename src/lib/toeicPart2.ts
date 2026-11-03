@@ -232,8 +232,8 @@ export const PART2_BANK: readonly Part2Item[] = [
 export const PART2_ROUND = 10
 
 export interface Part2Question extends Part2Item {
-  /** The responses as heard: (A), (B), (C). */
-  options: [string, string, string]
+  /** The responses as heard: (A), (B), (C) — and (D) for a Part 1 statement. */
+  options: string[]
   answer: number
 }
 
@@ -249,7 +249,7 @@ export function part2Round(rand: () => number = Math.random): Part2Question[] {
   return shuffle(PART2_BANK)
     .slice(0, PART2_ROUND)
     .map((it) => {
-      const options = shuffle(it.responses) as [string, string, string]
+      const options = shuffle(it.responses)
       return { ...it, options, answer: options.indexOf(it.responses[0]) }
     })
 }

@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
       [
+        'Luyện đủ 7 Part của TOEIC: thêm Part 1 (nghe câu mô tả cảnh), Part 3 (hội thoại hai người) và Part 4 (tin nhắn thoại, thông báo, quảng cáo). Câu hỏi hiện chữ, lời thoại chỉ được đọc như đề thật; làm xong xem lại toàn bộ lời thoại.',
+        'All 7 TOEIC parts to practise: Part 1 (hear statements about a scene), Part 3 (two-person conversations) and Part 4 (voicemails, announcements, ads) join the others. Questions are printed and the audio is only heard, as on the test; the transcript shows when you are done.',
+      ],
+      [
         'Luyện Part 6 và Part 7 của TOEIC: email, thông báo, quảng cáo, tin nhắn, hoá đơn, cả bài hai đoạn phải ghép thông tin, mỗi câu có giải thích bằng tiếng Việt.',
         'TOEIC Part 6 and Part 7 practice: emails, notices, ads, text messages, invoices, and two-text sets where you have to join the details, every answer explained in Vietnamese.',
       ],
