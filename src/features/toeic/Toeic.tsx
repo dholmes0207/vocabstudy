@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Headphones, BookOpenText } from 'lucide-react'
 import { useData } from '@/store/dataStore'
@@ -9,6 +9,8 @@ import { TOEIC_PARTS, TOEIC_THEMES, themeWords } from '@/lib/toeic'
 import { useT } from '@/lib/i18n'
 import DeckBoard, { type Deck } from '@/components/DeckBoard'
 import ProgressRing from '@/components/ProgressRing'
+import { part5Round, type Part5Question } from '@/lib/toeicPart5'
+import Part5Round from './Part5Round'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -18,6 +20,9 @@ export default function Toeic() {
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
+  const [round, setRound] = useState<{ n: number; questions: Part5Question[] } | null>(null)
+  const startPart5 = () =>
+    setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: part5Round(pack.words) }))
 
   const decks = useMemo<Deck[]>(
     () =>
@@ -32,6 +37,16 @@ export default function Toeic() {
   const all = decks.flatMap((d) => d.words)
   const learned = all.filter((w) => cards[w.id]).length
   const mastered = all.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
+
+  if (round)
+    return (
+      <Part5Round
+        key={round.n}
+        questions={round.questions}
+        onAgain={startPart5}
+        onExit={() => setRound(null)}
+      />
+    )
 
   return (
     <DeckBoard
@@ -111,6 +126,15 @@ export default function Toeic() {
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
                 <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
+                {part.n === 5 && (
+                  <button
+                    type="button"
+                    className="btn-primary h-10 w-full text-sm"
+                    onClick={startPart5}
+                  >
+                    {t('Luyện Part 5 (10 câu)', 'Practise Part 5 (10 questions)')}
+                  </button>
+                )}
               </li>
             ))}
           </ol>

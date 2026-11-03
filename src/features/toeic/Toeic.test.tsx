@@ -56,4 +56,23 @@ describe('TOEIC page', () => {
     fireEvent.click(screen.getByRole('link', { name: /Roadmap & vocabulary check/ }))
     expect(screen.getByRole('tab', { name: 'TOEIC', selected: true })).toBeInTheDocument()
   })
+
+  it('runs a Part 5 round with an explanation after each answer, then the kinds that went wrong', () => {
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: /Practise Part 5/ }))
+    for (let i = 0; i < 10; i++) {
+      const options = screen
+        .getAllByRole('button')
+        .filter((b) => /^\([ABCD]\)/.test(b.textContent ?? ''))
+      expect(options).toHaveLength(4)
+      fireEvent.click(options[0])
+      expect(screen.getByText(/^(Right!|Not quite\.)/)).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: /Next|See results/ }))
+    }
+    expect(screen.getByText('Part 5 round done!')).toBeInTheDocument()
+    expect(screen.getByText(/of 10 right/)).toBeInTheDocument()
+    expect(useStudy.getState().progress.en?.stats.xp).toBeGreaterThanOrEqual(5)
+    fireEvent.click(screen.getByRole('button', { name: 'Leave the game' }))
+    expect(screen.getByRole('heading', { name: 'The seven parts' })).toBeInTheDocument()
+  })
 })

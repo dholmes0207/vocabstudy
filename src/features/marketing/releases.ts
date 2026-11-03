@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
       [
+        'Luyện Part 5 của TOEIC: mỗi lượt 10 câu điền chỗ trống về từ loại, giới từ, thì, liên từ, đại từ và nghĩa của từ. Câu nào cũng có giải thích bằng tiếng Việt, cuối lượt biết mình yếu dạng nào.',
+        'TOEIC Part 5 practice: 10 gap-fill questions a round on word forms, prepositions, tenses, conjunctions, pronouns and word meaning. Every answer is explained in Vietnamese, and the end of the round shows which kind you are weakest at.',
+      ],
+      [
         'Trang "Luyện thi TOEIC" trong Luyện tập: học và ôn 13 chủ đề từ vựng công sở (văn phòng, tuyển dụng, đặt hàng, đi công tác…), xem mình đã thuộc bao nhiêu, và đọc 7 Part của đề hỏi gì, mẹo làm từng Part.',
         'A "TOEIC practice" page in Practice: learn and review 13 themes of workplace words (the office, hiring, orders, business travel…), see how many you know, and read what each of the 7 parts asks with a tip for each.',
       ],
