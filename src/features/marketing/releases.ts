@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
       [
+        'Bài thi nhỏ TOEIC: 26 câu, khoảng 20 phút, đủ 7 Part theo tỉ lệ đề thật. Cuối bài có khoảng điểm ước lượng cho Nghe và Đọc, bậc CEFR tương ứng và điểm từng Part để biết nên luyện thêm phần nào.',
+        'A TOEIC mini test: 26 questions, about 20 minutes, all 7 parts in the proportions of the real test. It ends with an estimated range for Listening and Reading, the matching CEFR level and a score per part, so you know what to practise next.',
+      ],
+      [
         'Luyện đủ 7 Part của TOEIC: thêm Part 1 (nghe câu mô tả cảnh), Part 3 (hội thoại hai người) và Part 4 (tin nhắn thoại, thông báo, quảng cáo). Câu hỏi hiện chữ, lời thoại chỉ được đọc như đề thật; làm xong xem lại toàn bộ lời thoại.',
         'All 7 TOEIC parts to practise: Part 1 (hear statements about a scene), Part 3 (two-person conversations) and Part 4 (voicemails, announcements, ads) join the others. Questions are printed and the audio is only heard, as on the test; the transcript shows when you are done.',
       ],

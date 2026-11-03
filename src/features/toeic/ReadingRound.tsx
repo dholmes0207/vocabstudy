@@ -19,11 +19,14 @@ export default function ReadingRound({
   questions,
   onAgain,
   onExit,
+  onDone,
 }: {
   set: ReadingSet
   questions: ShuffledQuestion[]
   onAgain: () => void
   onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
 }) {
   const t = useT()
   const code = useSettings((s) => s.currentLang)
@@ -60,6 +63,7 @@ export default function ReadingRound({
     if (soundOn) (i === questions[qi].answer ? playCorrect : playWrong)()
   }
   const finish = () => {
+    if (onDone) return onDone(correct, questions.length)
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
     setXp(earned)

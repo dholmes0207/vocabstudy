@@ -174,3 +174,29 @@ Giờ cả 7 Part đều có nút "Luyện".
     discount → lowering the price), và vì sao câu hỏi "next" có đáp án ở cuối bài.
 - Phần câu hỏi dùng chung giữa đọc và nghe: `QuestionList` (`ReadingRound.tsx`); `shuffleSet` nhận
   được cả bài đọc lẫn bài nghe.
+
+### Bước A7: bài thi nhỏ (03/11/2026)
+
+- Thẻ **"Bài thi nhỏ"** trên `/toeic`: 26 câu, khoảng 20 phút, theo tỉ lệ đề thật
+  (`lib/toeicMiniTest.ts`):
+  - Nghe 13 câu: Part 1 (2), Part 2 (5), Part 3 (một hội thoại, 3), Part 4 (một bài nói, 3);
+  - Đọc 13 câu: Part 5 (6), Part 6 (một đoạn, 4), Part 7 (một bài, 3).
+- Các Part nối tiếp nhau bằng chính các màn luyện. Mỗi màn có thêm `onDone`: khi có `onDone`, màn
+  trả điểm về thay vì hiện kết quả riêng.
+- Kết quả cho từng phần:
+  - số câu đúng và điểm từng Part;
+  - **khoảng điểm ước lượng** trên thang 5–495 (`lib/toeicScore.ts`): tỉ lệ câu đúng quy ra thang
+    điểm, rồi nới ra ±60 điểm, làm tròn bước 5. Không bao giờ hiện một con số như điểm thật;
+  - **bậc CEFR** ứng với giữa khoảng đó, theo mốc của ETS (Nghe B1 275, B2 400; Đọc B1 275, B2
+    385).
+- Trang ghi rõ đây là ước lượng thô từ 26 câu: đề thật 200 câu, ETS quy đổi bằng phương pháp riêng
+  (equating).
+- Lần tốt nhất lưu trong `examStore` với mã `toeic-mini`, hiện ở màn bắt đầu. Cộng XP một lần cho
+  cả bài.
+
+## Tiếp theo
+
+Giai đoạn A đã đủ 7 Part và bài thi nhỏ. Có thể làm thêm sau: tăng số câu cho mỗi Part; ghi âm sẵn
+các câu Part 1–4 bằng giọng thu (hiện đọc bằng giọng trình duyệt nếu clip chưa có).
+
+Giai đoạn B (HSK) bắt đầu từ đây.

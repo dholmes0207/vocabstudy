@@ -23,11 +23,14 @@ export default function TalkRound({
   questions,
   onAgain,
   onExit,
+  onDone,
 }: {
   set: TalkSet
   questions: ShuffledQuestion[]
   onAgain: () => void
   onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'en-US')
@@ -106,6 +109,7 @@ export default function TalkRound({
   }
   const finish = () => {
     stop()
+    if (onDone) return onDone(correct, questions.length)
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
     setXp(earned)

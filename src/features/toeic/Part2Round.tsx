@@ -27,10 +27,13 @@ export default function Part2Round({
   questions,
   onAgain,
   onExit,
+  onDone,
 }: {
   questions: (Part2Question | Part1Question)[]
   onAgain: () => void
   onExit: () => void
+  /** Hand the score back (the mini test) instead of showing the round's result. */
+  onDone?: (correct: number, total: number) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'en-US')
@@ -137,6 +140,7 @@ export default function Part2Round({
       setPicked(null)
       return
     }
+    if (onDone) return onDone(correct, questions.length)
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
     setXp(earned)

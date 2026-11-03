@@ -18,6 +18,7 @@ import { pickSet, shuffleSet, type ReadingSet, type ShuffledQuestion } from '@/l
 import ReadingRound from './ReadingRound'
 import { pickTalk, type TalkSet } from '@/lib/toeicTalks'
 import TalkRound from './TalkRound'
+import MiniTest from './MiniTest'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -39,6 +40,7 @@ export default function Toeic() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   // The part being practised; n remounts the round on "play again".
+  const [mini, setMini] = useState(false)
   const [round, setRound] = useState<
     | { part: 1; n: number; questions: Part1Question[] }
     | { part: 2; n: number; questions: Part2Question[] }
@@ -82,6 +84,7 @@ export default function Toeic() {
         onExit={() => setRound(null)}
       />
     )
+  if (mini) return <MiniTest words={pack.words} onExit={() => setMini(false)} />
   if (round?.part === 3 || round?.part === 4)
     return (
       <TalkRound
@@ -164,45 +167,68 @@ export default function Toeic() {
         </>
       }
       after={
-        <section aria-labelledby="toeic-parts" className="space-y-3">
-          <h2 id="toeic-parts" className="text-lg font-bold">
-            {t('7 Part của đề', 'The seven parts')}
-          </h2>
-          <ol className="grid gap-3 sm:grid-cols-2">
-            {TOEIC_PARTS.map((part) => (
-              <li key={part.n} className="card space-y-2 p-4">
-                <p className="flex items-center gap-2 font-bold">
-                  {part.section === 'listening' ? (
-                    <Headphones
-                      className="h-4 w-4 text-sky-600 dark:text-sky-300"
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <BookOpenText
-                      className="h-4 w-4 text-emerald-600 dark:text-emerald-300"
-                      aria-hidden="true"
-                    />
-                  )}
-                  Part {part.n} · {t(...part.name)}
-                  <span className="ml-auto text-xs font-semibold text-slate-500 dark:text-slate-400">
-                    {t(`${part.questions} câu`, `${part.questions} questions`)}
-                  </span>
-                </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
-                {PRACTICE_LABEL[part.n] && (
-                  <button
-                    type="button"
-                    className="btn-primary h-10 w-full text-sm"
-                    onClick={() => start(part.n)}
-                  >
-                    {t(...PRACTICE_LABEL[part.n]!)}
-                  </button>
+        <>
+          <section className="card flex flex-wrap items-center gap-3 p-5">
+            <span className="text-3xl" aria-hidden="true">
+              ⏱️
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="font-bold">{t('Bài thi nhỏ', 'Mini test')}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                {t(
+                  '26 câu, khoảng 20 phút, đủ 7 Part theo tỉ lệ đề thật. Cuối bài có khoảng điểm ước lượng cho Nghe và Đọc.',
+                  '26 questions, about 20 minutes, all 7 parts in the proportions of the real test, with an estimated range for Listening and Reading.'
                 )}
-              </li>
-            ))}
-          </ol>
-        </section>
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn-primary h-10 w-full text-sm sm:w-auto"
+              onClick={() => setMini(true)}
+            >
+              {t('Làm bài thi nhỏ', 'Take the mini test')}
+            </button>
+          </section>
+          <section aria-labelledby="toeic-parts" className="space-y-3">
+            <h2 id="toeic-parts" className="text-lg font-bold">
+              {t('7 Part của đề', 'The seven parts')}
+            </h2>
+            <ol className="grid gap-3 sm:grid-cols-2">
+              {TOEIC_PARTS.map((part) => (
+                <li key={part.n} className="card space-y-2 p-4">
+                  <p className="flex items-center gap-2 font-bold">
+                    {part.section === 'listening' ? (
+                      <Headphones
+                        className="h-4 w-4 text-sky-600 dark:text-sky-300"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <BookOpenText
+                        className="h-4 w-4 text-emerald-600 dark:text-emerald-300"
+                        aria-hidden="true"
+                      />
+                    )}
+                    Part {part.n} · {t(...part.name)}
+                    <span className="ml-auto text-xs font-semibold text-slate-500 dark:text-slate-400">
+                      {t(`${part.questions} câu`, `${part.questions} questions`)}
+                    </span>
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
+                  {PRACTICE_LABEL[part.n] && (
+                    <button
+                      type="button"
+                      className="btn-primary h-10 w-full text-sm"
+                      onClick={() => start(part.n)}
+                    >
+                      {t(...PRACTICE_LABEL[part.n]!)}
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </section>
+        </>
       }
     />
   )
