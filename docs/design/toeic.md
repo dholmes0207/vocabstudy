@@ -223,3 +223,16 @@ Giai đoạn B (HSK) bắt đầu từ đây.
   - Ước lượng mỗi phần trên 100 điểm như đề thật, cộng lại so với mức đạt (120/200 cho HSK 1–2,
     180/300 cho HSK 3).
   - Trang ghi rõ chỉ là ước lượng; lần tốt nhất lưu trong `examStore` (`hsk1-mini`…).
+
+### Học từ vựng hấp dẫn hơn: Thử thách hôm nay (03/11/2026)
+
+- Thẻ **"Thử thách hôm nay"** trên Trang chủ, mọi ngôn ngữ, trang `/challenge`:
+  - 5 câu một ngày, **mọi người học cùng ngôn ngữ có cùng một đề trong ngày**: 5 từ chọn bằng bộ
+    sinh ngẫu nhiên có hạt giống là ngày và mã gói (`lib/dailyChallenge.ts`, dùng `mulberry32`);
+  - dạng câu xen kẽ: đọc chọn nghĩa, nghe chọn từ, nhìn nghĩa chọn từ;
+  - câu trả lời được ghi vào lịch ôn như mọi bài quiz.
+- **Chuỗi thử thách**: số ngày liên tiếp làm thử thách.
+  - Bỏ một ngày là chuỗi về 0; làm lại trong ngày giữ điểm cao hơn, không cộng chuỗi.
+  - Thẻ Trang chủ hiện "Đã xong: đúng 4/5. Chuỗi 3 ngày 🔥" hoặc nhắc giữ chuỗi.
+  - Lưu theo từng ngôn ngữ trong `challengeStore` (`vocab.challenge.v1`, chỉ trên thiết bị, có
+    trong bản sao lưu).
