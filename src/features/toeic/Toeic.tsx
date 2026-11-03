@@ -13,9 +13,19 @@ import { part5Round, type Part5Question } from '@/lib/toeicPart5'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
 import Part2Round from './Part2Round'
+import { pickSet, shuffleSet, type ReadingSet, type ShuffledQuestion } from '@/lib/toeicReading'
+import ReadingRound from './ReadingRound'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
+
+/** The parts that can be practised here, with their button. */
+const PRACTICE_LABEL: Partial<Record<number, [string, string]>> = {
+  2: ['Luyện Part 2 (10 câu)', 'Practise Part 2 (10 questions)'],
+  5: ['Luyện Part 5 (10 câu)', 'Practise Part 5 (10 questions)'],
+  6: ['Luyện Part 6 (một đoạn văn)', 'Practise Part 6 (one text)'],
+  7: ['Luyện Part 7 (một bài đọc)', 'Practise Part 7 (one set)'],
+}
 
 export default function Toeic() {
   const t = useT()
@@ -26,14 +36,17 @@ export default function Toeic() {
   const [round, setRound] = useState<
     | { part: 2; n: number; questions: Part2Question[] }
     | { part: 5; n: number; questions: Part5Question[] }
+    | { part: 6 | 7; n: number; set: ReadingSet; questions: ShuffledQuestion[] }
     | null
   >(null)
-  const start = (part: 2 | 5) =>
+  const start = (part: 2 | 5 | 6 | 7) =>
     setRound((r) => {
       const n = (r?.n ?? 0) + 1
-      return part === 2
-        ? { part, n, questions: part2Round() }
-        : { part, n, questions: part5Round(pack.words) }
+      if (part === 2) return { part, n, questions: part2Round() }
+      if (part === 5) return { part, n, questions: part5Round(pack.words) }
+      // Another text than the one just done.
+      const last = r && 'set' in r ? r.set.id : undefined
+      return { part, n, ...shuffleSet(pickSet(part, last)) }
     })
 
   const decks = useMemo<Deck[]>(
@@ -56,6 +69,16 @@ export default function Toeic() {
         key={round.n}
         questions={round.questions}
         onAgain={() => start(2)}
+        onExit={() => setRound(null)}
+      />
+    )
+  if (round?.part === 6 || round?.part === 7)
+    return (
+      <ReadingRound
+        key={round.n}
+        set={round.set}
+        questions={round.questions}
+        onAgain={() => start(round.part)}
         onExit={() => setRound(null)}
       />
     )
@@ -147,13 +170,13 @@ export default function Toeic() {
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
                 <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
-                {(part.n === 2 || part.n === 5) && (
+                {PRACTICE_LABEL[part.n] && (
                   <button
                     type="button"
                     className="btn-primary h-10 w-full text-sm"
-                    onClick={() => start(part.n as 2 | 5)}
+                    onClick={() => start(part.n as 2 | 5 | 6 | 7)}
                   >
-                    {t(`Luyện Part ${part.n} (10 câu)`, `Practise Part ${part.n} (10 questions)`)}
+                    {t(...PRACTICE_LABEL[part.n]!)}
                   </button>
                 )}
               </li>

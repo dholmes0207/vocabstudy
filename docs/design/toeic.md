@@ -134,3 +134,20 @@ tiếng Anh. Chi tiết ở `exam-track.md`.
   - trả lời xong mới hiện chữ, đáp án đúng và giải thích.
 - Âm thanh lấy clip câu (`textAudio`) nếu đã thu, chưa có thì đọc bằng giọng trình duyệt. Các câu
   được tải trước khi lượt bắt đầu.
+
+### Bước A5: Part 6 và Part 7 (03/11/2026)
+
+- Nút **"Luyện Part 6"** và **"Luyện Part 7"**: mỗi lần một bài, "Làm bài khác" không lặp lại bài
+  vừa làm.
+- `READING_SETS` (`lib/toeicReading.ts`), tất cả tự viết:
+  - **Part 6:** 4 đoạn (email bãi xe, quảng cáo nhà hàng, thư báo hết hàng, tin tuyển dụng), mỗi
+    đoạn 4 chỗ trống [1]–[4] như đề thật: từ loại, giới từ, thì, và một chỗ phải chọn cả câu.
+  - **Part 7:** 5 bài một đoạn (thông báo, email, quảng cáo, chuỗi tin nhắn, hoá đơn) và 2 bài hai
+    đoạn (lịch đặt phòng + email, quảng cáo + email), mỗi bài 3 câu.
+    - Có các dạng câu hỏi Part 7 hay ra: mục đích, chi tiết, suy luận ("suggested"), ý của một câu
+      ngắn trong tin nhắn ("Will do").
+    - Bài hai đoạn có câu buộc phải ghép thông tin của cả hai: phòng nào còn trống đủ ghế, tiền
+      tập tính sai bao nhiêu.
+- Màn làm bài hiện đoạn văn ở trên, câu hỏi ở dưới. Trả lời câu nào hiện giải thích câu đó ngay.
+  Ở Part 6, chỗ trống trong đoạn được điền đáp án khi trả lời xong. Trả lời hết thì xem kết quả và
+  nhận XP.
