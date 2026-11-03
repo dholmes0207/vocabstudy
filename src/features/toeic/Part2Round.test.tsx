@@ -80,7 +80,7 @@ describe('Part 2 round', () => {
     )
     for (const q of questions) {
       fireEvent.click(screen.getByRole('button', { name: `(${'ABC'[q.answer]})` }))
-      fireEvent.click(screen.getByRole('button', { name: /Next|See results/ }))
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
     }
     expect(screen.getByText('10 of 10 right')).toBeInTheDocument()
     expect(useStudy.getState().progress.en?.stats.xp).toBeGreaterThanOrEqual(25)
