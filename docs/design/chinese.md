@@ -624,3 +624,8 @@ mình hay nhầm cặp thanh nào.
 - `features/pinyin/Pinyin.tsx`: `TonePairs`, `MissedPairs`.
 - Test: `lib/pinyin.test.ts` (20 cặp đều có từ trong gói, một lượt phủ 10 cặp khác nhau),
   `features/pinyin/Pinyin.test.tsx`.
+
+## Bước 32: Luyện thi HSK (03/11/2026)
+
+Trang `/hsk` luyện đúng các dạng câu của đề HSK 1–3 (nghe hiểu, chọn từ điền chỗ trống, sắp xếp câu)
+và có bài thi nhỏ theo cấp. Chi tiết ở `toeic.md`, bước B1.

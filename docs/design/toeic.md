@@ -200,3 +200,26 @@ Giai đoạn A đã đủ 7 Part và bài thi nhỏ. Có thể làm thêm sau: t
 các câu Part 1–4 bằng giọng thu (hiện đọc bằng giọng trình duyệt nếu clip chưa có).
 
 Giai đoạn B (HSK) bắt đầu từ đây.
+
+### Bước B1: trang Luyện thi HSK (03/11/2026)
+
+- `/hsk` (chỉ gói tiếng Trung, mục đầu tiên trong trang Luyện tập), có tab HSK 1 · HSK 2 · HSK 3.
+  - Thẻ tiến độ: số từ của cấp đã thành thạo, thông tin đề lấy từ `exams.ts`, liên kết sang lộ
+    trình (`/exam?exam=hsk1`).
+- Ba dạng câu, sinh từ câu ví dụ của chính các từ trong cấp (`lib/hskPractice.ts`). Câu ví dụ đã
+  tách từ, có pinyin, bản dịch và giọng thu sẵn.
+  - **Nghe hiểu (听力):** câu tự phát bằng giọng thu (`exampleAudio`), chọn nghĩa đúng trong 3 bản
+    dịch của cùng cấp.
+  - **Chọn từ điền chỗ trống (选词填空):**
+    - lấy một từ ra khỏi câu ví dụ (chỉ khi từ đứng thành một từ riêng trong câu);
+    - 4 phương án là từ cùng cấp, ưu tiên cùng từ loại, có pinyin như đề HSK 1–2.
+    - Nghĩa tiếng Việt của câu **luôn hiện**: một từ cùng loại có thể hợp câu chữ Hán (我的___不太好:
+      数学 hay 周末 đều được) nhưng không hợp nghĩa.
+  - **Sắp xếp câu (完成句子):** như phần Viết thứ nhất của HSK 3.
+    - Chỉ lấy câu 3–7 từ, không có dấu phẩy hay ngoặc kép ở giữa, không có hai mảnh giống nhau,
+      để chỉ có một thứ tự đúng.
+    - Xếp xong không sai lần nào mới tính là đúng.
+- **Bài thi nhỏ** theo cấp: 10 câu nghe và 10 câu đọc, HSK 3 thêm 5 câu viết.
+  - Ước lượng mỗi phần trên 100 điểm như đề thật, cộng lại so với mức đạt (120/200 cho HSK 1–2,
+    180/300 cho HSK 3).
+  - Trang ghi rõ chỉ là ước lượng; lần tốt nhất lưu trong `examStore` (`hsk1-mini`…).
