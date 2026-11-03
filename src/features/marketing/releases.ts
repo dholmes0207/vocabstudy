@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Luyện thi TOEIC', 'TOEIC practice'],
     items: [
       [
+        'Luyện Part 2 của TOEIC: nghe câu hỏi và 3 câu đáp như đề thật (không hiện chữ), chọn câu đúng, rồi xem vì sao các câu kia là bẫy: lặp từ, từ nghe giống, trả lời Yes/No cho câu hỏi Wh-.',
+        'TOEIC Part 2 practice: hear a question and three responses as on the test (nothing printed), pick one, then see why the others are traps: repeated words, words that sound alike, Yes/No to a Wh- question.',
+      ],
+      [
         'Luyện Part 5 của TOEIC: mỗi lượt 10 câu điền chỗ trống về từ loại, giới từ, thì, liên từ, đại từ và nghĩa của từ. Câu nào cũng có giải thích bằng tiếng Việt, cuối lượt biết mình yếu dạng nào.',
         'TOEIC Part 5 practice: 10 gap-fill questions a round on word forms, prepositions, tenses, conjunctions, pronouns and word meaning. Every answer is explained in Vietnamese, and the end of the round shows which kind you are weakest at.',
       ],

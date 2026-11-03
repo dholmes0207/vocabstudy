@@ -11,6 +11,8 @@ import DeckBoard, { type Deck } from '@/components/DeckBoard'
 import ProgressRing from '@/components/ProgressRing'
 import { part5Round, type Part5Question } from '@/lib/toeicPart5'
 import Part5Round from './Part5Round'
+import { part2Round, type Part2Question } from '@/lib/toeicPart2'
+import Part2Round from './Part2Round'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -20,9 +22,19 @@ export default function Toeic() {
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
-  const [round, setRound] = useState<{ n: number; questions: Part5Question[] } | null>(null)
-  const startPart5 = () =>
-    setRound((r) => ({ n: (r?.n ?? 0) + 1, questions: part5Round(pack.words) }))
+  // The part being practised; n remounts the round on "play again".
+  const [round, setRound] = useState<
+    | { part: 2; n: number; questions: Part2Question[] }
+    | { part: 5; n: number; questions: Part5Question[] }
+    | null
+  >(null)
+  const start = (part: 2 | 5) =>
+    setRound((r) => {
+      const n = (r?.n ?? 0) + 1
+      return part === 2
+        ? { part, n, questions: part2Round() }
+        : { part, n, questions: part5Round(pack.words) }
+    })
 
   const decks = useMemo<Deck[]>(
     () =>
@@ -38,12 +50,21 @@ export default function Toeic() {
   const learned = all.filter((w) => cards[w.id]).length
   const mastered = all.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
 
-  if (round)
+  if (round?.part === 2)
+    return (
+      <Part2Round
+        key={round.n}
+        questions={round.questions}
+        onAgain={() => start(2)}
+        onExit={() => setRound(null)}
+      />
+    )
+  if (round?.part === 5)
     return (
       <Part5Round
         key={round.n}
         questions={round.questions}
-        onAgain={startPart5}
+        onAgain={() => start(5)}
         onExit={() => setRound(null)}
       />
     )
@@ -126,13 +147,13 @@ export default function Toeic() {
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
                 <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
-                {part.n === 5 && (
+                {(part.n === 2 || part.n === 5) && (
                   <button
                     type="button"
                     className="btn-primary h-10 w-full text-sm"
-                    onClick={startPart5}
+                    onClick={() => start(part.n as 2 | 5)}
                   >
-                    {t('Luyện Part 5 (10 câu)', 'Practise Part 5 (10 questions)')}
+                    {t(`Luyện Part ${part.n} (10 câu)`, `Practise Part ${part.n} (10 questions)`)}
                   </button>
                 )}
               </li>
