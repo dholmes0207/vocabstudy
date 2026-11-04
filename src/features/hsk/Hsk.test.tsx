@@ -74,6 +74,8 @@ describe('HSK practice page', () => {
     // HSK 2 also has its picture dialogues.
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
     expect(screen.getAllByRole('button', { name: 'Practise 5 questions' })).toHaveLength(2)
+    // …and its sentence matching, the same drill as the HSK 1 questions and answers.
+    expect(screen.getByText(/Question and answer/)).toBeInTheDocument()
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
