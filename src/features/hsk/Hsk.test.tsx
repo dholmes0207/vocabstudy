@@ -17,6 +17,7 @@ vi.mock('@/lib/audio', () => ({
   stopPronounce: () => {},
   exampleAudio: () => '',
   wordAudio: () => '',
+  textAudio: () => '',
 }))
 
 const { default: Hsk } = await import('./Hsk')
@@ -66,6 +67,10 @@ describe('HSK practice page', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
     expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(8)
+    // HSK 3 adds its dialogues, five a round.
+    expect(screen.getByRole('button', { name: 'Practise 5 questions' })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 1' }))
+    expect(screen.queryByRole('button', { name: 'Practise 5 questions' })).not.toBeInTheDocument()
   })
 
   it('plays the recorded example of a listening question as it appears', () => {

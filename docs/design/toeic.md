@@ -208,8 +208,7 @@ Tình hình (04/11/2026):
 Có thể làm thêm sau:
 
 - tăng số bài cho từng Part;
-- HSK 2 phần 2 (ghép hội thoại với tranh) và HSK 3 phần nghe hội thoại: gói chưa có hội thoại thu
-  sẵn, cần viết và thu riêng;
+- HSK 2 phần 2 (ghép hội thoại với tranh) và thêm hội thoại cho HSK 2;
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -444,3 +443,17 @@ không có trường này vẫn đọc được: bắt đầu lưu từ lần l�
   gần nhất và mức tăng giảm so với lần trước; rê chuột vào cột thấy điểm lần đó; có bảng ẩn cho trình
   đọc màn hình. Chỉ hiện khi đã làm từ 2 lần.
 - Hiện trên thẻ bài thi nhỏ TOEIC và HSK (theo từng cấp).
+
+### Bước B7: HSK 3 nghe hội thoại (听对话) (04/11/2026)
+
+Các phần nghe hội thoại của HSK 3: một người nữ và một người nam nói mỗi người một câu, rồi một giọng
+khác hỏi (问：…), chọn trong 3 đáp án in sẵn (`lib/hskDialogues.ts`, `HskDialogueRound`).
+
+- 10 hội thoại viết tay. Test giữ mọi chữ Hán (lời thoại, câu hỏi, đáp án) nằm trong chữ của từ vựng
+  HSK 1–3 và câu ví dụ của chúng; lần đầu test bắt được 改 và 辣 (HSK 4), đã viết lại.
+- Người nữ giọng nữ, người nam giọng nam (`textAudio(text, gender)`), câu hỏi bằng giọng người học
+  chọn. Lời thoại và câu hỏi đã vào `screens.json` để workflow thu âm tự thu.
+- Phương án nhiễu lấy từ chính hội thoại: giờ cũ (本来是九点), việc của ngày khác (星期六去机场).
+- Trả lời xong thì hiện lời thoại, bản dịch tiếng Việt, câu hỏi và giải thích.
+- Chỉ hiện ở cấp HSK 3, 5 câu một lượt. Bài thi nhỏ HSK 3: phần Nghe gồm 5 câu hội thoại và 5 câu
+  nghe hiểu.
