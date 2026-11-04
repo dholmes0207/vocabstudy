@@ -7,14 +7,25 @@ import { expect, test, type Page } from '@playwright/test'
 interface PackWord {
   word: string
   meaning: string
+  exampleEn: string
 }
 
 const DAY = 24 * 60 * 60 * 1000
 
-/** headword → meaning, from the pack the app itself loads. */
-async function meanings(page: Page): Promise<Map<string, string>> {
+/** headword → its word, from the pack the app itself loads. */
+async function meanings(page: Page): Promise<Map<string, PackWord>> {
   const pack = (await (await page.request.get('/data/en.json')).json()) as { words: PackWord[] }
-  return new Map(pack.words.map((w) => [w.word, w.meaning]))
+  return new Map(pack.words.map((w) => [w.word, w]))
+}
+
+/** Whether the card shows this word's example, with a gap where the word goes. */
+function gapFor(card: string, w: PackWord | undefined): boolean {
+  if (!w) return false
+  const pieces = w.exampleEn
+    .split(new RegExp(`\\b${w.word.split('/')[0].trim()}\\w*`, 'i'))
+    .map((p) => p.trim())
+    .filter(Boolean)
+  return pieces.length > 0 && pieces.every((p) => card.includes(p))
 }
 
 /** Pick English on the landing page, as a first-time visitor does. */
@@ -47,7 +58,7 @@ async function meetFiveWords(page: Page): Promise<string[]> {
 async function answerUntil(
   page: Page,
   words: string[],
-  meaning: Map<string, string>,
+  meaning: Map<string, PackWord>,
   done: RegExp
 ) {
   for (let turn = 0; turn < 60; turn++) {
@@ -60,11 +71,17 @@ async function answerUntil(
     const options = page.locator('main .grid button')
     if (await options.count()) {
       const labels = (await options.allInnerTexts()).map((l) => l.trim())
-      let pick = labels.findIndex((l) => words.includes(l))
-      if (pick < 0) pick = labels.indexOf(meaning.get(shown) ?? '')
+      // Another lesson word can be among the options, so pick the one the card
+      // asks for: its example has the gap, else its meaning is shown.
+      const lesson = (l: string) => words.includes(l)
+      let pick = labels.findIndex((l) => lesson(l) && gapFor(card, meaning.get(l)))
+      if (pick < 0)
+        pick = labels.findIndex((l) => lesson(l) && card.includes(meaning.get(l)?.meaning ?? '\0'))
+      if (pick < 0) pick = labels.findIndex(lesson)
+      if (pick < 0) pick = labels.indexOf(meaning.get(shown)?.meaning ?? '')
       // A listening question shows no word: the right option is the one that
       // means one of the lesson's words.
-      if (pick < 0) pick = labels.findIndex((l) => words.some((w) => meaning.get(w) === l))
+      if (pick < 0) pick = labels.findIndex((l) => words.some((w) => meaning.get(w)?.meaning === l))
       expect(pick, `no right answer among ${labels.join(' / ')}`).toBeGreaterThanOrEqual(0)
       await options.nth(pick).click()
     } else {
