@@ -75,4 +75,16 @@ describe('TOEIC page', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Leave the game' }))
     expect(screen.getByRole('heading', { name: 'The seven parts' })).toBeInTheDocument()
   })
+
+  it('runs the word-ending drill: a word, four parts of speech, then the rule', () => {
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: /Ending tip/ }))
+    for (let i = 0; i < 10; i++) {
+      expect(screen.getByText('What part of speech is this word?')).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: 'Noun' }))
+      expect(screen.getByText(/The ending -\w+ usually marks/)).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
+    }
+    expect(screen.getByText(/of 10 right/)).toBeInTheDocument()
+  })
 })

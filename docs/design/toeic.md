@@ -253,3 +253,18 @@ Mỗi Part có thêm bài để luyện nhiều lượt không bị lặp:
   bản tin giao thông.
 
 Test giữ số bài tối thiểu theo các con số trên.
+
+### Mẹo đuôi từ: đoán từ loại (04/11/2026)
+
+- Nút **"Mẹo đuôi từ: đoán từ loại (10 câu)"** trên thẻ Part 5.
+  - Hiện một từ, chọn Danh từ / Động từ / Tính từ / Trạng từ.
+  - Trả lời xong: phần đuôi được gạch chân, đọc từ lên, nêu quy tắc ("Đuôi -tion thường là danh
+    từ") và nghĩa của từ.
+- Đây là cách nhanh nhất để làm câu từ loại của Part 5 (khoảng một phần ba Part 5).
+- `lib/wordFormDrill.ts`:
+  - 20 đuôi có từ loại ổn định: -tion, -ment, -ness, -ity, -ance… (danh từ); -ive, -ful, -able,
+    -ous, -ic… (tính từ); -ly (trạng từ); -ize, -ify (động từ).
+  - Chỉ dùng từ trong gói có **một** từ loại và **đúng** với quy tắc đuôi của nó. friendly (-ly
+    nhưng là tính từ) và increase (vừa danh từ vừa động từ) bị loại, để quy tắc không bao giờ sai
+    trên chính từ dùng để dạy nó.
+  - Mỗi lượt lấy lần lượt từ mỗi loại, để không ra cả 10 câu danh từ.
