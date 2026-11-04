@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Nghe hội thoại HSK có thêm 5 đoạn cho HSK 3 (quên ô, thang máy hỏng, đeo kính, quà sinh nhật, lỡ xe buýt) và 4 đoạn cho HSK 2, có câu phải tính tuổi từ lời nói.',
+        'HSK dialogues add five for HSK 3 (a forgotten umbrella, a broken lift, glasses, a birthday present, a missed bus) and four for HSK 2, one of them asking you to work out an age.',
+      ],
+      [
         'TOEIC Part 3 và Part 4 lên 12 bài mỗi Part: thêm hội thoại hỏng máy chiếu, giao hàng trễ, thông báo ở bảo tàng, hướng dẫn đặt phòng họp trực tuyến.',
         'TOEIC Parts 3 and 4 now have 12 sets each: a broken projector, a late delivery, a museum announcement and a new room-booking system.',
       ],

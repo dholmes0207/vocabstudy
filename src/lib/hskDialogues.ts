@@ -168,6 +168,78 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['还书', '买书', '借书'],
     why: '"下个星期一定还给你": tuần sau trả sách. 还 ở đây đọc huán, nghĩa là trả lại.',
   },
+  {
+    id: 'umbrella',
+    level: 'hsk3',
+    lines: [
+      w('外面在下雨，你带伞了吗？', 'Bên ngoài đang mưa, anh mang ô chưa?'),
+      m('忘了。不过没关系，我的车就在楼下。', 'Quên mất. Nhưng không sao, xe tôi ở ngay dưới nhà.'),
+    ],
+    q: '男的为什么说没关系？',
+    qVi: 'Vì sao người nam nói không sao?',
+    options: ['他的车就在楼下', '雨已经不下了', '他有两把伞'],
+    why: '"我的车就在楼下": xe ở ngay dưới, nên không cần ô. 不过 = nhưng.',
+  },
+  {
+    id: 'elevator',
+    level: 'hsk3',
+    lines: [
+      m('电梯坏了，我们只能走上去了。', 'Thang máy hỏng rồi, chúng ta chỉ có thể đi bộ lên thôi.'),
+      w('还好办公室在三楼，不太高。', 'May mà văn phòng ở tầng ba, không cao lắm.'),
+    ],
+    q: '他们的办公室在几楼？',
+    qVi: 'Văn phòng của họ ở tầng mấy?',
+    options: ['三楼', '一楼', '十楼'],
+    why: '"办公室在三楼": tầng ba. 还好 = may mà.',
+  },
+  {
+    id: 'glasses',
+    level: 'hsk3',
+    lines: [
+      w('你最近怎么总是戴眼镜？', 'Dạo này sao anh lúc nào cũng đeo kính?'),
+      m(
+        '我每天用电脑工作十个小时，眼睛越来越不好了。',
+        'Ngày nào tôi cũng làm việc với máy tính mười tiếng, mắt ngày càng kém.'
+      ),
+    ],
+    q: '男的眼睛为什么不好了？',
+    qVi: 'Vì sao mắt người nam kém đi?',
+    options: ['用电脑的时间太长', '晚上看书太多', '身体生病了'],
+    why: '"每天用电脑工作十个小时": dùng máy tính quá lâu. 越来越 = ngày càng.',
+  },
+  {
+    id: 'gift',
+    level: 'hsk3',
+    lines: [
+      m(
+        '下个月是我妈妈的生日，你觉得我送她什么礼物好？',
+        'Tháng sau là sinh nhật mẹ tôi, chị thấy tôi nên tặng mẹ quà gì?'
+      ),
+      w(
+        '她不是喜欢花吗？你可以送她一些花，再带她去饭馆吃饭。',
+        'Bác chẳng phải thích hoa sao? Anh có thể tặng ít hoa, rồi đưa bác đi ăn nhà hàng.'
+      ),
+    ],
+    q: '女的让男的做什么？',
+    qVi: 'Người nữ khuyên người nam làm gì?',
+    options: ['送花，再去吃饭', '买一本书', '去旅游'],
+    why: '"送她一些花，再带她去饭馆吃饭". 不是…吗? là câu hỏi tu từ: "chẳng phải… sao?", ý là bác thích hoa.',
+  },
+  {
+    id: 'bus-late',
+    level: 'hsk3',
+    lines: [
+      w('你今天怎么迟到了？', 'Sao hôm nay anh đi muộn?'),
+      m(
+        '公共汽车等了半个小时也没来，最后我只好坐出租车。',
+        'Đợi xe buýt nửa tiếng mà không thấy, cuối cùng tôi đành đi taxi.'
+      ),
+    ],
+    q: '男的最后是怎么来的？',
+    qVi: 'Cuối cùng người nam đến bằng gì?',
+    options: ['坐出租车', '坐公共汽车', '骑自行车'],
+    why: '"最后我只好坐出租车": cuối cùng đành đi taxi. Bẫy: 公共汽车 được nhắc trước nhưng không đến.',
+  },
   // ---------------------------------------------------------------- HSK 2
   {
     id: 'taxi',
@@ -267,6 +339,57 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     qVi: 'Ngày mai sau mấy giờ người nam đến nhà người nữ?',
     options: ['五点', '四点', '六点'],
     why: '"我下午五点以后去你家": sau năm giờ chiều.',
+  },
+  {
+    id: 'cold',
+    level: 'hsk2',
+    lines: [
+      w('今天很冷，你多穿点儿衣服。', 'Hôm nay lạnh lắm, anh mặc thêm áo vào.'),
+      m('好的，我再穿一件。', 'Được, tôi mặc thêm một cái.'),
+    ],
+    q: '今天天气怎么样？',
+    qVi: 'Thời tiết hôm nay thế nào?',
+    options: ['很冷', '很热', '下雨了'],
+    why: '"今天很冷": hôm nay lạnh.',
+  },
+  {
+    id: 'brother-age',
+    level: 'hsk2',
+    lines: [
+      m('你哥哥比你大几岁？', 'Anh trai chị hơn chị mấy tuổi?'),
+      w('他比我大三岁，今年二十五岁。', 'Anh ấy hơn tôi ba tuổi, năm nay hai mươi lăm tuổi.'),
+    ],
+    q: '女的今年多大？',
+    qVi: 'Năm nay người nữ bao nhiêu tuổi?',
+    options: ['二十二岁', '二十五岁', '三岁'],
+    why: 'Anh trai 25 tuổi, hơn cô ấy 3 tuổi, nên cô ấy 22 tuổi. Phải tính, không có số này trong lời nói.',
+  },
+  {
+    id: 'library',
+    level: 'hsk2',
+    lines: [
+      w(
+        '你下午去哪儿了？我给你打电话，你没回。',
+        'Chiều nay anh đi đâu? Tôi gọi điện mà anh không gọi lại.'
+      ),
+      m('我在学校看书，手机没开。', 'Tôi ở trường đọc sách, không bật điện thoại.'),
+    ],
+    q: '男的下午在做什么？',
+    qVi: 'Chiều nay người nam làm gì?',
+    options: ['看书', '打电话', '睡觉'],
+    why: '"我在学校看书": đọc sách ở trường. Người nữ mới là người gọi điện.',
+  },
+  {
+    id: 'fruit',
+    level: 'hsk2',
+    lines: [
+      m('你想吃什么水果？', 'Chị muốn ăn hoa quả gì?'),
+      w('西瓜太大了，我们买几个苹果吧。', 'Dưa hấu to quá, mình mua mấy quả táo đi.'),
+    ],
+    q: '他们要买什么？',
+    qVi: 'Họ sẽ mua gì?',
+    options: ['苹果', '西瓜', '鸡蛋'],
+    why: '"我们买几个苹果吧". Dưa hấu bị loại vì to quá.',
   },
 ]
 
