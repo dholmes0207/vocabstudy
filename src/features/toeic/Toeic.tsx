@@ -12,7 +12,8 @@ import { useT } from '@/lib/i18n'
 import DeckBoard, { type Deck } from '@/components/DeckBoard'
 import ProgressRing from '@/components/ProgressRing'
 import AttemptTrail from '@/components/AttemptTrail'
-import { part5Round, type Part5Question } from '@/lib/toeicPart5'
+import { part5Round, retryRound, type Part5Question } from '@/lib/toeicPart5'
+import { useRetry } from '@/store/retryStore'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
 import Part2Round from './Part2Round'
@@ -47,6 +48,7 @@ export default function Toeic() {
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   const best = useExam((s) => s.records[MINI_TEST_ID])
+  const missedPart5 = useRetry((s) => s.part5.length)
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
@@ -73,6 +75,14 @@ export default function Toeic() {
       if (part === 3 || part === 4) return { part, n, ...shuffleSet(pickTalk(part, last)) }
       return { part, n, ...shuffleSet(pickSet(part, last)) }
     })
+
+  /** The Part 5 questions missed before, as a round of their own. */
+  const startRetry = () =>
+    setRound((r) => ({
+      part: 5,
+      n: (r?.n ?? 0) + 1,
+      questions: retryRound(useRetry.getState().part5),
+    }))
 
   const decks = useMemo<Deck[]>(
     () =>
@@ -259,6 +269,18 @@ export default function Toeic() {
                       onClick={() => start(part.n)}
                     >
                       {t(...PRACTICE_LABEL[part.n]!)}
+                    </button>
+                  )}
+                  {part.n === 5 && missedPart5 > 0 && (
+                    <button
+                      type="button"
+                      className="btn-secondary h-10 w-full text-sm"
+                      onClick={startRetry}
+                    >
+                      {t(
+                        `Làm lại ${missedPart5} câu đã sai`,
+                        `Try again: ${missedPart5} missed question${missedPart5 > 1 ? 's' : ''}`
+                      )}
                     </button>
                   )}
                   {part.n === 5 && (

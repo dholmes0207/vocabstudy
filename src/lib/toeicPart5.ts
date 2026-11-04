@@ -623,6 +623,32 @@ export function part5Round(
   })
 }
 
+/**
+ * A round of the bank's questions the learner missed before (keyed by their
+ * sentence), up to a full round, options shuffled as in part5Round.
+ */
+export function retryRound(
+  missed: readonly string[],
+  rand: () => number = Math.random
+): Part5Question[] {
+  const shuffle = <T>(arr: readonly T[]): T[] => {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+  const keep = new Set(missed)
+  return shuffle(PART5_BANK.filter((qn) => keep.has(qn.sentence)))
+    .slice(0, PART5_ROUND)
+    .map((qn) => {
+      const right = qn.options[qn.answer]
+      const options = shuffle(qn.options)
+      return { ...qn, options, answer: options.indexOf(right) }
+    })
+}
+
 /** Right answers per kind in a finished round: [kind, right, asked], weakest first. */
 export function part5Summary(
   results: { kind: Part5Kind; ok: boolean }[]

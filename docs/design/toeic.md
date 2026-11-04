@@ -483,3 +483,14 @@ Nghe xong chọn tranh trong 5 tranh; 4 tranh còn lại là từ HSK 1–2 mà 
   vì 钱 có tranh), và chữ Hán trong phạm vi HSK 1–2 (bắt được 甜, 比较, 自己, 舒服).
 - Chỉ hiện ở HSK 2. Bài thi nhỏ HSK 2: phần Nghe gồm 3 câu đúng sai, 2 câu hội thoại – tranh, 3 câu
   hội thoại – câu hỏi, 2 câu nghe hiểu.
+
+### Làm lại các câu Part 5 đã sai (04/11/2026)
+
+`store/retryStore.ts` (`vocab.retry.v1`, chỉ trên máy, có trong bản sao lưu) giữ câu của ngân hàng Part 5
+làm sai, theo câu, tối đa 50 câu gần nhất. Trả lời đúng một câu trong danh sách thì câu đó được bỏ ra.
+
+- Thẻ Part 5 có nút "Làm lại N câu đã sai" khi danh sách có câu; một lượt tối đa 10 câu
+  (`retryRound`), phương án xáo lại.
+- Chỉ câu ngữ pháp viết tay mới vào danh sách. Câu nghĩa từ được sinh từ từ vựng của gói, nên câu sai
+  đã đi vào lịch ôn từ (useMissedWord).
+- Câu làm trong bài thi nhỏ cũng được ghi.
