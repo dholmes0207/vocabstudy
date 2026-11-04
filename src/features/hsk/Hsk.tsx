@@ -16,6 +16,7 @@ import {
   levelWords,
   lookQuestions,
   pictureQuestions,
+  seeQuestions,
   listenQuestions,
   orderQuestions,
   type HskChoice,
@@ -35,7 +36,7 @@ import HskOrderRound from './HskOrderRound'
 
 const ROUND = 10
 
-type Drill = 'judge' | 'pick' | 'listen' | 'look' | 'fill' | 'order' | 'char'
+type Drill = 'judge' | 'pick' | 'listen' | 'look' | 'see' | 'fill' | 'order' | 'char'
 
 type Run =
   | { kind: 'choice'; drill: Exclude<Drill, 'order'>; n: number; questions: HskChoice[] }
@@ -108,6 +109,15 @@ export default function Hsk() {
       ],
     },
     {
+      id: 'see',
+      icon: '📖',
+      title: ['Đọc – chọn tranh', 'Read and pick the picture'],
+      desc: [
+        'Đọc một câu có pinyin, chọn đúng tranh trong 3 tranh: phần thứ hai bài Đọc của HSK 1.',
+        'Read a sentence with its pinyin and pick its picture among three: the second reading part of HSK 1.',
+      ],
+    },
+    {
       id: 'fill',
       icon: '✍️',
       title: ['Chọn từ điền chỗ trống (选词填空)', 'Fill the gap (选词填空)'],
@@ -144,6 +154,7 @@ export default function Hsk() {
       judge: judgeQuestions,
       look: lookQuestions,
       pick: pictureQuestions,
+      see: seeQuestions,
       listen: listenQuestions,
       char: charQuestions,
       fill: fillQuestions,
@@ -197,10 +208,16 @@ export default function Hsk() {
     const read: MiniStep[] =
       HSK_SCALE[level].sections === 3
         ? [{ section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, ROUND) }]
-        : [
-            { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 5) },
-            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 5) },
-          ]
+        : level === 'hsk1'
+          ? [
+              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
+              { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 3) },
+              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
+            ]
+          : [
+              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 5) },
+              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 5) },
+            ]
     const steps: MiniStep[] = [...listen, ...read]
     // HSK 3 writing: five sentences to build, five characters to write.
     if (HSK_SCALE[level].sections === 3)
@@ -280,11 +297,13 @@ export default function Hsk() {
               ? t('Đúng hay sai', 'Right or wrong')
               : run.drill === 'pick'
                 ? t('Chọn tranh', 'Pick the picture')
-                : run.drill === 'look'
-                  ? t('Nhìn tranh', 'Read and look')
-                  : run.drill === 'char'
-                    ? t('Viết chữ Hán', 'Write the character')
-                    : t('Điền từ', 'Fill the gap')
+                : run.drill === 'see'
+                  ? t('Đọc – chọn tranh', 'Read and pick')
+                  : run.drill === 'look'
+                    ? t('Nhìn tranh', 'Read and look')
+                    : run.drill === 'char'
+                      ? t('Viết chữ Hán', 'Write the character')
+                      : t('Điền từ', 'Fill the gap')
         }`}
         questions={run.questions}
         onAgain={() => startDrill(run.drill)}

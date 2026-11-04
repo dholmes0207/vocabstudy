@@ -122,7 +122,21 @@ export default function HskChoiceRound({
       }
     >
       <div className="card space-y-4 p-6">
-        {q.kind === 'look' ? (
+        {q.kind === 'see' ? (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t('Đọc câu, rồi chọn tranh đúng.', 'Read the sentence, then pick its picture.')}
+            </p>
+            <p lang="zh" className="text-center text-2xl font-bold">
+              {q.word.exampleEn.replace(/\u200b/g, '')}
+            </p>
+            {q.word.exampleRead && (
+              <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+                {q.word.exampleRead}
+              </p>
+            )}
+          </>
+        ) : q.kind === 'look' ? (
           <>
             <p className="text-sm text-slate-500 dark:text-slate-400">
               {t('Tranh có đúng là từ này không?', 'Is the picture this word?')}
@@ -199,7 +213,7 @@ export default function HskChoiceRound({
           className={
             q.kind === 'listen'
               ? 'grid gap-2'
-              : q.kind === 'pick'
+              : q.kind === 'pick' || q.kind === 'see'
                 ? 'grid grid-cols-3 gap-2'
                 : 'grid grid-cols-2 gap-2'
           }
@@ -228,7 +242,7 @@ export default function HskChoiceRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {q.kind === 'pick' ? (
+                {q.kind === 'pick' || q.kind === 'see' ? (
                   <span
                     className="text-5xl"
                     role="img"

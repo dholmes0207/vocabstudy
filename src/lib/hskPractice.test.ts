@@ -12,6 +12,7 @@ import {
   orderQuestions,
   pictureQuestions,
   PICTURE_WORDS,
+  seeQuestions,
 } from './hskPractice'
 import { mulberry32 } from './sky'
 
@@ -132,4 +133,15 @@ describe('HSK listening, pick the picture (听句子选图片)', () => {
       }
     }
   )
+})
+
+describe('HSK reading, pick the picture', () => {
+  it('asks the same picture questions with the sentence to read', () => {
+    const heard = pictureQuestions('hsk1', zh.words, 10, mulberry32(5))
+    const read = seeQuestions('hsk1', zh.words, 10, mulberry32(5))
+    expect(read.map((q) => q.kind)).toEqual(Array(10).fill('see'))
+    expect(read.map((q) => [q.word.word, q.options, q.answer])).toEqual(
+      heard.map((q) => [q.word.word, q.options, q.answer])
+    )
+  })
 })
