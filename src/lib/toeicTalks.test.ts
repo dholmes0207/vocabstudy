@@ -13,8 +13,8 @@ describe('Part 3 and 4 sets', () => {
         expect(q.why.trim(), `${s.id}: ${q.q}`).not.toBe('')
       }
     }
-    expect(TALK_SETS.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(8)
-    expect(TALK_SETS.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(8)
+    expect(TALK_SETS.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(12)
+    expect(TALK_SETS.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(12)
     expect(new Set(TALK_SETS.map((s) => s.id)).size).toBe(TALK_SETS.length)
   })
 

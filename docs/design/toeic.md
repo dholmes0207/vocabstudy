@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 10 bài (2 bài có hình), Part 5 71
+  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 12 bài (2 bài có hình), Part 5 71
     câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 16 bài (5 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -529,3 +529,10 @@ nhật, thể thao, ôn thi, mượn điện thoại, hẹn gặp), dùng chung 
 `weakestKind` chọn dạng có tỉ lệ đúng thấp nhất trong các dạng đã hỏi từ 5 câu, khi tổng đã đủ 10
 câu; dạng nào đúng hết thì không bị chỉ ra. Thẻ Part 5 ghi "Dạng bạn hay sai nhất: Giới từ (đúng 2/6
 câu)". Chỉ trên máy, có trong bản sao lưu; bản ghi cũ không có `kinds` thì bắt đầu đếm từ lượt sau.
+
+### Thêm bài Part 3 và Part 4 (04/11/2026)
+
+Mỗi Part từ 10 lên 12 bài (test giữ mức này): hội thoại máy chiếu hỏng phải đổi phòng, cửa hàng giao
+cốc trễ trước ngày mở chi nhánh; thông báo ở bảo tàng, hướng dẫn hệ thống đặt phòng họp mới. Câu hỏi
+theo các dạng hay gặp: vấn đề là gì, người nói đề nghị gì, việc làm tiếp theo, điều bị cấm (bẫy: chụp
+ảnh vẫn được, chỉ cấm đèn flash). Lời thoại đã vào `screens.json` để thu âm.
