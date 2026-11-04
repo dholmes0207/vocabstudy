@@ -205,7 +205,7 @@ Tình hình (04/11/2026, cuối ngày):
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
   - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh, đọc hỏi – đáp;
-  - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi;
+  - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
@@ -214,7 +214,6 @@ Có thể làm thêm sau:
 
 - tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
   qua `screens.json`);
-- HSK 2 phần đọc ghép câu;
 - thống kê điểm yếu theo dạng câu qua nhiều lần làm (hiện chỉ có ở cuối mỗi lượt Part 5).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
@@ -514,3 +513,12 @@ tiết, giá, đi đâu, đi bằng gì, cảm ơn, xin lỗi). Test giữ chữ
   `screens.json` để thu âm.
 - Chỉ hiện ở HSK 1. Bài thi nhỏ HSK 1: phần Đọc gồm 4 câu nhìn tranh, 2 câu chọn tranh, 2 câu hỏi –
   đáp, 2 câu điền từ.
+
+### HSK 2 phần đọc ghép câu (04/11/2026)
+
+`HSK2_PAIRS`: 10 cặp câu – câu đáp ở mức HSK 2 (đến muộn, nghề nghiệp, mệt, trời mưa, đường xa, sinh
+nhật, thể thao, ôn thi, mượn điện thoại, hẹn gặp), dùng chung `answerRound(level)` và
+`HskAnswerRound` với HSK 1. Test giữ chữ Hán trong phạm vi HSK 1–2 (bắt được 才, 啊, 带, 伞, 复).
+
+- Thẻ "Đọc – ghép câu hỏi và trả lời" hiện ở HSK 1 và HSK 2, mỗi cấp lấy cặp câu của mình.
+- Bài thi nhỏ HSK 2: phần Đọc gồm 4 câu nhìn tranh, 3 câu ghép câu, 3 câu điền từ.

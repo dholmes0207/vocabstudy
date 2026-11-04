@@ -174,10 +174,10 @@ export default function Hsk() {
       icon: '💬',
       title: ['Đọc – ghép câu hỏi và trả lời', 'Question and answer'],
       desc: [
-        'Đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu: phần thứ ba bài Đọc của HSK 1.',
-        'Read a question and pick its answer among four: the third reading part of HSK 1.',
+        'Đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu: phần thứ ba bài Đọc của HSK 1, phần ghép câu của HSK 2.',
+        'Read a question and pick its answer among four: the third reading part of HSK 1 and the matching part of HSK 2.',
       ],
-      levels: ['hsk1'],
+      levels: ['hsk1', 'hsk2'],
     },
     {
       id: 'see',
@@ -223,7 +223,11 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
-    if (drill === 'answer') return setRun({ kind: 'answer', n, questions: answerRound(ROUND) })
+    if (drill === 'answer') {
+      // Shown for HSK 1 and 2 only (ALL_DRILLS levels).
+      if (level !== 'hsk3') setRun({ kind: 'answer', n, questions: answerRound(level, ROUND) })
+      return
+    }
     if (drill === 'match')
       return setRun({ kind: 'talk', drill, n, dialogues: pictureDialogueRound(lowWords, 5) })
     if (drill === 'talk') {
@@ -292,12 +296,13 @@ export default function Hsk() {
           ? [
               { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
               { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 2) },
-              { section: 'read', kind: 'answer', questions: answerRound(2) },
+              { section: 'read', kind: 'answer', questions: answerRound('hsk1', 2) },
               { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 2) },
             ]
           : [
-              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 5) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 5) },
+              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
+              { section: 'read', kind: 'answer', questions: answerRound('hsk2', 3) },
+              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
             ]
     const steps: MiniStep[] = [...listen, ...read]
     // HSK 3 writing: five sentences to build, five characters to write.
