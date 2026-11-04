@@ -230,6 +230,29 @@ export default function Dashboard() {
           {t('Chơi mà học', 'Learn through play')}
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
+          {/* The exam practice of the pack, when it has one (lib/packContent.ts). */}
+          {availableIn('/toeic', code) && (
+            <QuickLink
+              to="/toeic"
+              emoji="💼"
+              title={t('Luyện thi TOEIC', 'TOEIC practice')}
+              desc={t(
+                'Từ công sở theo chủ đề, đủ 7 Part và bài thi nhỏ.',
+                'Workplace words by theme, all 7 parts and a mini test.'
+              )}
+            />
+          )}
+          {availableIn('/hsk', code) && (
+            <QuickLink
+              to="/hsk"
+              emoji="🀄"
+              title={t('Luyện thi HSK', 'HSK practice')}
+              desc={t(
+                'Nghe, điền từ, sắp xếp câu theo cấp HSK 1–3.',
+                'Listening, gap-fill and sentence building for HSK 1–3.'
+              )}
+            />
+          )}
           <QuickLink
             to="/games/match"
             emoji="🧩"
