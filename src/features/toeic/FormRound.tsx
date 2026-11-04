@@ -3,6 +3,7 @@ import { ArrowRight, Check, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useMissedWord } from '@/hooks/useMissedWord'
 import { FORM_NAMES, type FormCategory, type FormQuestion } from '@/lib/wordFormDrill'
 import { pronounce, wordAudio } from '@/lib/audio'
 import { pinyinXp } from '@/lib/pinyin'
@@ -31,6 +32,7 @@ export default function FormRound({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const missed = useMissedWord()
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<FormCategory | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -61,6 +63,7 @@ export default function FormRound({
     const ok = c === q.answer
     if (ok) setCorrect((n) => n + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
+    if (!ok) missed(q.word.id)
     pronounce({ audioSrc: wordAudio(q.word.id), text: q.word.word, lang, rate })
   }
   const next = () => {

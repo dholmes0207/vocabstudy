@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useMissedWord } from '@/hooks/useMissedWord'
 import type { HskOrder } from '@/lib/hskPractice'
 import { placeToken, shuffledOrder, startOrder, type OrderState } from '@/lib/games'
 import { exampleAudio, pronounce, stopPronounce } from '@/lib/audio'
@@ -37,6 +38,7 @@ export default function HskOrderRound({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const missed = useMissedWord()
   const [idx, setIdx] = useState(0)
   const [order, setOrder] = useState<OrderState | null>(() => fresh(questions[0]))
   const [correct, setCorrect] = useState(0)
@@ -69,6 +71,7 @@ export default function HskOrderRound({
     if (!ok && soundOn) buzz(false)
     if (state.done) {
       if (state.mistakes === 0) setCorrect((c) => c + 1)
+      else missed(q.word.id)
       pronounce({
         audioSrc: exampleAudio(q.word.id, q.word.exampleEn),
         text: q.word.exampleEn,
