@@ -71,8 +71,9 @@ describe('HSK practice page', () => {
     expect(screen.getByRole('button', { name: 'Practise 5 questions' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 1' }))
     expect(screen.queryByRole('button', { name: 'Practise 5 questions' })).not.toBeInTheDocument()
+    // HSK 2 also has its picture dialogues.
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
-    expect(screen.getByRole('button', { name: 'Practise 5 questions' })).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: 'Practise 5 questions' })).toHaveLength(2)
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
@@ -130,6 +131,27 @@ describe('HSK practice page', () => {
     fireEvent.click(pictures[0])
     const word = zh.words.find((w) => w.exampleEn === spoken[0])!
     expect(word.emoji).toBeTruthy()
+  })
+
+  it('plays an HSK 2 dialogue, offers five pictures, then shows its transcript', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 5 questions' })[0])
+    expect(screen.getByText('Hear the dialogue, then pick its picture.')).toBeInTheDocument()
+    const pictures = screen.getAllByRole('img', { name: /^Picture [A-E]$/ })
+    expect(pictures).toHaveLength(5)
+    fireEvent.click(pictures[0])
+    expect(screen.getByText(/^(Right!|Not quite\.)$/)).toBeInTheDocument()
+    expect(screen.getAllByText(/^(Woman|Man):$/).length).toBeGreaterThanOrEqual(2)
+  })
+
+  it('runs the HSK 2 mini test: 10 listening with both kinds of dialogue, 10 reading', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
+    answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
+    expect(screen.getByText(/^Listening: \d+\/10/)).toBeInTheDocument()
+    expect(useExam.getState().records['hsk2-mini']?.total).toBe(20)
   })
 
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {

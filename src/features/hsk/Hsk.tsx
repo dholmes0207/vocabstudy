@@ -31,7 +31,7 @@ import AttemptTrail from '@/components/AttemptTrail'
 import HskChoiceRound from './HskChoiceRound'
 import HskOrderRound from './HskOrderRound'
 import HskDialogueRound from './HskDialogueRound'
-import { dialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
+import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
 
 // "Luyện thi HSK" (docs/design/toeic.md, giai đoạn B): for HSK 1–3, the
 // question types of the test cut from the level's own words, and a mini test
@@ -39,12 +39,18 @@ import { dialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
 
 const ROUND = 10
 
-type Drill = 'judge' | 'pick' | 'talk' | 'listen' | 'look' | 'see' | 'fill' | 'order' | 'char'
+type Drill =
+  'judge' | 'pick' | 'match' | 'talk' | 'listen' | 'look' | 'see' | 'fill' | 'order' | 'char'
 
 type Run =
-  | { kind: 'choice'; drill: Exclude<Drill, 'order' | 'talk'>; n: number; questions: HskChoice[] }
+  | {
+      kind: 'choice'
+      drill: Exclude<Drill, 'order' | 'talk' | 'match'>
+      n: number
+      questions: HskChoice[]
+    }
   | { kind: 'order'; n: number; questions: HskOrder[] }
-  | { kind: 'talk'; n: number; dialogues: ShuffledDialogue[] }
+  | { kind: 'talk'; drill: 'talk' | 'match'; n: number; dialogues: ShuffledDialogue[] }
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
@@ -73,6 +79,11 @@ export default function Hsk() {
   const best = useExam((s) => s.records[`${level}-mini`])
 
   const words = useMemo(() => levelWords(level, pack.words), [level, pack.words])
+  /** HSK 1–2 words: the pictures of the HSK 2 picture dialogues. */
+  const lowWords = useMemo(
+    () => [...levelWords('hsk1', pack.words), ...levelWords('hsk2', pack.words)],
+    [pack.words]
+  )
   const mastered = words.filter((w) => phaseOf(cards[w.id]) === 'mastered').length
   const name = exam.name
 
@@ -86,6 +97,17 @@ export default function Hsk() {
     /** Questions in a round, when not ROUND. */
     count?: number
   }[] = [
+    {
+      id: 'match',
+      icon: '🧩',
+      title: ['Nghe hội thoại – chọn tranh', 'Dialogue and picture'],
+      desc: [
+        'Nghe một đoạn hội thoại ngắn, chọn tranh đúng trong 5 tranh: phần thứ hai bài Nghe của HSK 2.',
+        'Hear a short dialogue and pick its picture among five: the second listening part of HSK 2.',
+      ],
+      levels: ['hsk2'],
+      count: 5,
+    },
     {
       id: 'talk',
       icon: '🗣️',
@@ -177,9 +199,11 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
+    if (drill === 'match')
+      return setRun({ kind: 'talk', drill, n, dialogues: pictureDialogueRound(lowWords, 5) })
     if (drill === 'talk') {
       // Shown for HSK 2 and 3 only (ALL_DRILLS levels).
-      if (level !== 'hsk1') setRun({ kind: 'talk', n, dialogues: dialogueRound(level, 5) })
+      if (level !== 'hsk1') setRun({ kind: 'talk', drill, n, dialogues: dialogueRound(level, 5) })
       return
     }
     const make = {
@@ -225,13 +249,14 @@ export default function Hsk() {
               {
                 section: 'listen',
                 kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 4),
+                questions: judgeQuestions(level, pack.words, 3),
               },
+              { section: 'listen', kind: 'talk', dialogues: pictureDialogueRound(lowWords, 2) },
               { section: 'listen', kind: 'talk', dialogues: dialogueRound('hsk2', 3) },
               {
                 section: 'listen',
                 kind: 'choice',
-                questions: listenQuestions(level, pack.words, 3),
+                questions: listenQuestions(level, pack.words, 2),
               },
             ]
     // Reading too: HSK 1–2 open with pictures, HSK 3 has none.
@@ -321,9 +346,13 @@ export default function Hsk() {
     return (
       <HskDialogueRound
         key={run.n}
-        title={`${name} · ${t('Nghe hội thoại', 'Dialogues')}`}
+        title={`${name} · ${
+          run.drill === 'match'
+            ? t('Hội thoại – tranh', 'Dialogue and picture')
+            : t('Nghe hội thoại', 'Dialogues')
+        }`}
         dialogues={run.dialogues}
-        onAgain={() => startDrill('talk')}
+        onAgain={() => startDrill(run.drill)}
         onExit={exit}
       />
     )

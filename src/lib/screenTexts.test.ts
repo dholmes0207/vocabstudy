@@ -23,7 +23,7 @@ import { PART1_BANK } from './toeicPart1'
 import { PART2_BANK } from './toeicPart2'
 import { TALK_SETS } from './toeicTalks'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
-import { HSK_DIALOGUES } from './hskDialogues'
+import { HSK_DIALOGUES, PICTURE_DIALOGUES } from './hskDialogues'
 import { hanVietTable } from './hanVietFamily'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -120,6 +120,7 @@ function chinese(): string[] {
     ...numbers,
     ...hanVietTable(words('zh')).map((e) => e.char),
     ...HSK_DIALOGUES.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
+    ...PICTURE_DIALOGUES.flatMap((d) => d.lines.map((l) => l.zh)),
   ]
 }
 
