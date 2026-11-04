@@ -380,3 +380,14 @@ và bài thi nhỏ HSK) giờ báo cho lịch ôn khi người học làm sai (`
 
 Thẻ Bài thi nhỏ trên `/toeic` ghi "Lần tốt nhất: x/26 câu" khi đã làm ít nhất một lần, như thẻ bài thi
 nhỏ HSK (đọc từ `examStore`, khoá `toeic-mini`).
+
+### Thêm bài Part 7 (04/11/2026)
+
+Part 7 từ 11 lên 16 bài: 11 bài một đoạn, 5 bài hai đoạn (test giữ mức này).
+
+- Bài mới: thông báo nội bộ về máy in, bài báo quán cà phê mở chi nhánh, đánh giá khách sạn, quảng
+  cáo giảm giá kèm email khiếu nại hoá đơn, thông báo dọn công viên kèm phiếu đăng ký.
+- Thêm các dạng câu hỏi hay gặp mà trước đây chưa có: "What is NOT true…", "The word … is closest in
+  meaning to", "What is suggested…" (suy ra từ hai đoạn), thông tin mâu thuẫn trong phiếu.
+- Bài thật có từ 2 đến 5 câu hỏi; vài bài mới có 4 câu. Bài thi nhỏ chỉ lấy 3 câu đầu của bài Part
+  7 để giữ đúng 13 + 13 câu (`toeicMiniTest.test.ts` kiểm tra với nhiều lần chọn bài).

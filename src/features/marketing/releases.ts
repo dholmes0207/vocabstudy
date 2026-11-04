@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'TOEIC Part 7 có thêm 5 bài đọc (thông báo nội bộ, bài báo, đánh giá khách sạn, quảng cáo kèm email khiếu nại, thông báo kèm phiếu đăng ký) và các dạng câu hỏi hay gặp: điều nào KHÔNG đúng, từ gần nghĩa nhất, điều suy ra được.',
+        'TOEIC Part 7 adds five reading sets (a memo, a news article, a hotel review, an ad with a complaint email, a notice with a sign-up form) and the question types the test loves: what is NOT true, the closest meaning, what is suggested.',
+      ],
+      [
         'Làm sai một từ đang trong lịch ôn ở các bài luyện TOEIC và HSK thì từ đó được đưa lại vào ôn sớm. Từ chưa học không tự được thêm vào lịch ôn.',
         'Missing a word you are already reviewing in TOEIC or HSK practice brings it back to your reviews soon. Words you have not studied are not added on their own.',
       ],

@@ -23,6 +23,8 @@ export const sectionOf = (part: number): Section => (part <= 4 ? 'listening' : '
 
 /** 13 listening and 13 reading questions, split across the parts like the real test. */
 export function miniTestPlan(words: readonly Word[]): MiniStep[] {
+  // A Part 7 set has three to four questions, as on the test; three keep the total at 26.
+  const p7 = shuffleSet(pickSet(7))
   return [
     { part: 1, questions: part1Round().slice(0, 2) },
     { part: 2, questions: part2Round().slice(0, 5) },
@@ -30,7 +32,7 @@ export function miniTestPlan(words: readonly Word[]): MiniStep[] {
     { part: 4, ...shuffleSet(pickTalk(4)) },
     { part: 5, questions: part5Round(words).slice(0, 6) },
     { part: 6, ...shuffleSet(pickSet(6)) },
-    { part: 7, ...shuffleSet(pickSet(7)) },
+    { part: 7, set: p7.set, questions: p7.questions.slice(0, 3) },
   ]
 }
 
