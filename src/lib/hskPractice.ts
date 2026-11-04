@@ -13,7 +13,8 @@ import { RADICALS } from './radicals'
 //   order:  put the words back in order (HSK 3 writing, 完成句子);
 //   char:   a character missing, its pinyin given (HSK 3 writing, 写汉字).
 //   judge:  hear a word, see a picture, right or wrong (HSK 1–2 listening, 判断对错);
-//   look:   the same with the word written, pinyin above (HSK 1–2 reading, part one).
+//   look:   the same with the word written, pinyin above (HSK 1–2 reading, part one);
+//   pick:   hear a sentence, pick its picture among three (HSK 1 listening, part two).
 
 export type HskLevel = 'hsk1' | 'hsk2' | 'hsk3'
 export const HSK_LEVELS: readonly HskLevel[] = ['hsk1', 'hsk2', 'hsk3']
@@ -29,7 +30,7 @@ export function levelWords(level: HskLevel, words: readonly Word[]): Word[] {
 }
 
 export interface HskChoice {
-  kind: 'listen' | 'fill' | 'char' | 'judge' | 'look'
+  kind: 'listen' | 'fill' | 'char' | 'judge' | 'look' | 'pick'
   word: Word
   /** judge, look: the picture shown (an emoji), and the word it is when not the one asked. */
   picture?: string
@@ -242,6 +243,33 @@ export function lookQuestions(
   rand: () => number = Math.random
 ): HskChoice[] {
   return judgeQuestions(level, words, count, rand).map((q) => ({ ...q, kind: 'look' as const }))
+}
+
+/**
+ * HSK 1 listening, part two (听句子选图片): hear a word's example, pick its
+ * picture among three. The other pictures are of words the sentence does not
+ * say, so only one picture fits what is heard.
+ */
+export function pictureQuestions(
+  level: HskLevel,
+  words: readonly Word[],
+  count: number,
+  rand: () => number = Math.random
+): HskChoice[] {
+  const shuffle = shuffler(rand)
+  const pictured = new Set(PICTURE_WORDS)
+  const pool = levelWords(level, words).filter(
+    (w) => w.emoji && pictured.has(w.word) && w.exampleEn.includes(w.word)
+  )
+  return shuffle(pool)
+    .slice(0, count)
+    .map((w) => {
+      const others = shuffle(
+        pool.filter((o) => o.emoji !== w.emoji && !w.exampleEn.includes(o.word))
+      )
+      const options = shuffle([w.emoji!, ...others.slice(0, 2).map((o) => o.emoji!)])
+      return { kind: 'pick' as const, word: w, options, answer: options.indexOf(w.emoji!) }
+    })
 }
 
 /** Examples short and plain enough to have one right order: 3–7 words, no inner punctuation. */

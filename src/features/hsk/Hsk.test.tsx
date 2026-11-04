@@ -65,12 +65,12 @@ describe('HSK practice page', () => {
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(6)
+    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(7)
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
     renderPage()
-    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[1])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[2])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(1)
     expect(zh.words.some((w) => w.exampleEn === spoken[0])).toBe(true)
@@ -91,13 +91,25 @@ describe('HSK practice page', () => {
 
   it('shows a word with its pinyin and a picture to read, and says the word once answered', () => {
     renderPage()
-    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[2])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[3])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(0)
     expect(screen.getByText('Is the picture this word?')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: '✗ Wrong' }))
     const word = zh.words.find((w) => w.word === spoken[0])!
     expect(screen.getByText(/^The word/)).toHaveTextContent(word.meaning)
+  })
+
+  it('plays a sentence and offers three pictures, one of the word it is about', () => {
+    renderPage()
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[1])
+    vi.advanceTimersByTime(300)
+    const word = zh.words.find((w) => w.exampleEn === spoken[0])!
+    expect(screen.getByText('Hear the sentence, then pick its picture.')).toBeInTheDocument()
+    const pictures = screen.getAllByRole('img', { name: /^Picture \d$/ })
+    expect(pictures).toHaveLength(3)
+    fireEvent.click(pictures.find((p) => p.textContent === word.emoji)!)
+    expect(screen.getByText('Right!')).toBeInTheDocument()
   })
 
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {

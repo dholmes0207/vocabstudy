@@ -406,3 +406,13 @@ hình cùng lúc. `TalkSet.graphic` là một bảng nhỏ (`title`, `rows`, dò
 - Test giữ: bài có hình thì có đúng một câu "Look at the graphic.", bài không có hình thì không có;
   mọi dòng của bảng cùng số cột; đáp án đúng có trong bảng. Câu nói của 4 bài được thêm vào danh sách
   thu âm (`screens.json`).
+
+### Bước B5: nghe – chọn tranh (听句子选图片) (04/11/2026)
+
+Phần 2 bài Nghe của HSK 1: nghe một câu, chọn tranh đúng trong 3 tranh (`pictureQuestions`).
+
+- Câu là câu ví dụ có giọng thu của một từ trong `PICTURE_WORDS`, và câu phải chứa đúng từ đó.
+- Hai tranh còn lại là của từ cùng cấp mà câu không nhắc tới, nên chỉ một tranh khớp với điều nghe được
+  (test kiểm tra ở cả 3 cấp).
+- Bài thi nhỏ HSK 1: phần Nghe gồm 4 câu đúng sai, 3 câu chọn tranh, 3 câu nghe hiểu. HSK 2 giữ 5 câu
+  đúng sai và 5 câu nghe hiểu (phần 2 của HSK 2 là dạng khác).

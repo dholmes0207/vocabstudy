@@ -15,6 +15,7 @@ import {
   judgeQuestions,
   levelWords,
   lookQuestions,
+  pictureQuestions,
   listenQuestions,
   orderQuestions,
   type HskChoice,
@@ -34,7 +35,7 @@ import HskOrderRound from './HskOrderRound'
 
 const ROUND = 10
 
-type Drill = 'judge' | 'listen' | 'look' | 'fill' | 'order' | 'char'
+type Drill = 'judge' | 'pick' | 'listen' | 'look' | 'fill' | 'order' | 'char'
 
 type Run =
   | { kind: 'choice'; drill: Exclude<Drill, 'order'>; n: number; questions: HskChoice[] }
@@ -77,6 +78,15 @@ export default function Hsk() {
       desc: [
         'Nghe một từ, nhìn tranh, chọn đúng hay sai: phần đầu bài Nghe của HSK 1 và HSK 2.',
         'Hear a word, look at the picture, say right or wrong: the first listening part of HSK 1 and HSK 2.',
+      ],
+    },
+    {
+      id: 'pick',
+      icon: '🧩',
+      title: ['Nghe – chọn tranh (听句子选图片)', 'Pick the picture (听句子选图片)'],
+      desc: [
+        'Nghe một câu bằng giọng thu sẵn, chọn đúng tranh trong 3 tranh: phần thứ hai bài Nghe của HSK 1.',
+        'Hear a recorded sentence and pick its picture among three: the second listening part of HSK 1.',
       ],
     },
     {
@@ -133,6 +143,7 @@ export default function Hsk() {
     const make = {
       judge: judgeQuestions,
       look: lookQuestions,
+      pick: pictureQuestions,
       listen: listenQuestions,
       char: charQuestions,
       fill: fillQuestions,
@@ -152,10 +163,36 @@ export default function Hsk() {
               questions: listenQuestions(level, pack.words, ROUND),
             },
           ]
-        : [
-            { section: 'listen', kind: 'choice', questions: judgeQuestions(level, pack.words, 5) },
-            { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, 5) },
-          ]
+        : level === 'hsk1'
+          ? [
+              {
+                section: 'listen',
+                kind: 'choice',
+                questions: judgeQuestions(level, pack.words, 4),
+              },
+              {
+                section: 'listen',
+                kind: 'choice',
+                questions: pictureQuestions(level, pack.words, 3),
+              },
+              {
+                section: 'listen',
+                kind: 'choice',
+                questions: listenQuestions(level, pack.words, 3),
+              },
+            ]
+          : [
+              {
+                section: 'listen',
+                kind: 'choice',
+                questions: judgeQuestions(level, pack.words, 5),
+              },
+              {
+                section: 'listen',
+                kind: 'choice',
+                questions: listenQuestions(level, pack.words, 5),
+              },
+            ]
     // Reading too: HSK 1–2 open with pictures, HSK 3 has none.
     const read: MiniStep[] =
       HSK_SCALE[level].sections === 3
@@ -241,11 +278,13 @@ export default function Hsk() {
             ? t('Nghe hiểu', 'Listening')
             : run.drill === 'judge'
               ? t('Đúng hay sai', 'Right or wrong')
-              : run.drill === 'look'
-                ? t('Nhìn tranh', 'Read and look')
-                : run.drill === 'char'
-                  ? t('Viết chữ Hán', 'Write the character')
-                  : t('Điền từ', 'Fill the gap')
+              : run.drill === 'pick'
+                ? t('Chọn tranh', 'Pick the picture')
+                : run.drill === 'look'
+                  ? t('Nhìn tranh', 'Read and look')
+                  : run.drill === 'char'
+                    ? t('Viết chữ Hán', 'Write the character')
+                    : t('Điền từ', 'Fill the gap')
         }`}
         questions={run.questions}
         onAgain={() => startDrill(run.drill)}
@@ -358,8 +397,8 @@ export default function Hsk() {
                 '10 listening, 10 reading and 10 writing questions (5 sentences to build, 5 characters), like the three parts of HSK 3.'
               )
             : t(
-                `10 câu nghe (5 câu đúng sai theo tranh, 5 câu nghe hiểu) và 10 câu đọc (5 câu nhìn tranh, 5 câu điền từ), như hai phần của đề ${name}.`,
-                `10 listening (5 right-or-wrong pictures, 5 sentences) and 10 reading questions (5 pictures, 5 gaps), like the two parts of ${name}.`
+                `10 câu nghe và 10 câu đọc, mỗi phần mở đầu bằng các câu theo tranh, như hai phần của đề ${name}.`,
+                `10 listening and 10 reading questions, each part opening with pictures, like the two parts of ${name}.`
               )}
           {best &&
             t(
