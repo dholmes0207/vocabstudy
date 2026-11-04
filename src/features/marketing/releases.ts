@@ -37,6 +37,10 @@ export const RELEASES: Release[] = [
         'TOEIC Parts 3 and 4 add "Look at the graphic" questions: listen while reading a price list, a train timetable, a room plan or a weather forecast, as on the test.',
       ],
       [
+        'TOEIC Part 6 lên 12 đoạn văn: thêm thông báo phần mềm mới, giờ mở cửa siêu thị, thư cảm ơn diễn giả, tin tuyển quản lý lễ tân.',
+        'TOEIC Part 6 now has 12 texts: a new-software memo, store opening hours, a thank-you letter to a speaker and a front desk job ad.',
+      ],
+      [
         'TOEIC Part 7 có thêm 5 bài đọc (thông báo nội bộ, bài báo, đánh giá khách sạn, quảng cáo kèm email khiếu nại, thông báo kèm phiếu đăng ký) và các dạng câu hỏi hay gặp: điều nào KHÔNG đúng, từ gần nghĩa nhất, điều suy ra được.',
         'TOEIC Part 7 adds five reading sets (a memo, a news article, a hotel review, an ad with a complaint email, a notice with a sign-up form) and the question types the test loves: what is NOT true, the closest meaning, what is suggested.',
       ],
