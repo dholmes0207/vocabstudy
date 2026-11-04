@@ -196,18 +196,26 @@ Giờ cả 7 Part đều có nút "Luyện".
 
 ## Tiếp theo
 
-Tình hình (04/11/2026):
+Tình hình (04/11/2026, cuối ngày):
 
-- **Giai đoạn A (TOEIC):** đủ 7 Part, bài thi nhỏ, từ vựng 13 chủ đề, Mẹo đuôi từ, Ghép họ từ. Part
-  1–4 có giọng thu (Part 3 giọng nam nữ), Part 3–4 có dạng "Look at the graphic", Part 7 có câu NOT,
-  gần nghĩa, suy ra.
-- **Giai đoạn B (HSK):** 8 dạng câu cho HSK 1–3 (nghe đúng sai, nghe chọn tranh, nghe hiểu, đọc nhìn
-  tranh, đọc chọn tranh, điền từ, sắp xếp câu, viết chữ) và bài thi nhỏ theo tỉ lệ từng cấp.
+- **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
+  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 10 bài (2 bài có hình), Part 5 71
+    câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 16 bài (5 bài hai đoạn).
+  - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
+  - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
+- **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
+  - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh;
+  - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi;
+  - HSK 3: nghe hội thoại – câu hỏi, sắp xếp câu, viết chữ;
+  - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
 
 Có thể làm thêm sau:
 
-- tăng số bài cho từng Part;
+- tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
+  qua `screens.json`);
+- HSK 1 phần 3 (ghép câu hỏi với câu trả lời) và HSK 2 phần đọc ghép câu;
+- thống kê điểm yếu theo dạng câu qua nhiều lần làm (hiện chỉ có ở cuối mỗi lượt Part 5).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
