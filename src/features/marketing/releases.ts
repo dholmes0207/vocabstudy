@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Mẹo đuôi từ cho Part 5: nhìn một từ, đoán danh từ, động từ, tính từ hay trạng từ, rồi xem quy tắc đuôi (-tion, -ive, -ly, -ize…) để làm nhanh câu hỏi từ loại.',
+        'An ending tip for Part 5: see a word, tell noun, verb, adjective or adverb, then the ending rule (-tion, -ive, -ly, -ize…) that makes word-form questions quick.',
+      ],
+      [
         'Gấp đôi số bài của TOEIC Part 3, 4, 6 và thêm 4 bài Part 7: hội thoại đặt bàn, thuê xe, hẹn phỏng vấn; thông báo giảm giá, bản tin giao thông; thư xin lỗi khách, tin thăng chức, quy định công tác phí…',
         'Twice as many TOEIC Part 3, 4 and 6 sets and four more for Part 7: booking a table, renting a car, an interview call; a store sale, a traffic report; an apology letter, a promotion notice, a travel policy…',
       ],
