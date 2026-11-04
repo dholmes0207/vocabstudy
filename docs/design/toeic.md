@@ -375,3 +375,8 @@ và bài thi nhỏ HSK) giờ báo cho lịch ôn khi người học làm sai (`
   không được thêm: bài luyện không phải bài học từ mới.
 - Ghép họ từ và Part 1–4, 6, 7 dùng câu viết tay, không gắn với từ nào của gói, nên không đổi.
 - Sắp xếp câu HSK: xếp xong mà có lần chạm sai thì tính là làm sai từ của câu đó.
+
+### Kết quả tốt nhất của bài thi nhỏ TOEIC (04/11/2026)
+
+Thẻ Bài thi nhỏ trên `/toeic` ghi "Lần tốt nhất: x/26 câu" khi đã làm ít nhất một lần, như thẻ bài thi
+nhỏ HSK (đọc từ `examStore`, khoá `toeic-mini`).
