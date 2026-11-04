@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { RETRY_MAX, useRetry } from './retryStore'
 
-beforeEach(() => useRetry.setState({ part5: [] }))
+beforeEach(() => useRetry.setState({ part5: [], kinds: {} }))
 
 describe('retry store', () => {
   it('keeps a missed question once, and lets it go when answered right', () => {
@@ -19,5 +19,13 @@ describe('retry store', () => {
     const list = useRetry.getState().part5
     expect(list).toHaveLength(RETRY_MAX)
     expect(list[0]).toBe('S5 ___.')
+  })
+
+  it('counts Part 5 answers by kind across rounds', () => {
+    const { tally } = useRetry.getState()
+    tally('prep', true)
+    tally('prep', false)
+    tally('form', true)
+    expect(useRetry.getState().kinds).toEqual({ prep: [1, 2], form: [1, 1] })
   })
 })
