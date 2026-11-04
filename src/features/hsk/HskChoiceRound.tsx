@@ -11,15 +11,18 @@ import { useT } from '@/lib/i18n'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
 // HSK practice, listening (听力, 判断对错), gap-fill (选词填空) and character
-// (写汉字) questions (lib/hskPractice.ts). A listening question plays its
-// recording as it appears: the example sentence, or for right-or-wrong the word
-// alone; a gap-fill shows its options with pinyin, as HSK 1–2 print it.
+// (写汉字) questions, and pictures to judge, heard or read (lib/hskPractice.ts).
+// A listening question plays its recording as it appears: the example sentence,
+// or for right-or-wrong the word alone; a read question plays it once answered.
+// A gap-fill shows its options with pinyin, as HSK 1–2 print it.
 
 /** A question that is heard rather than read. */
 const heard = (qn: HskChoice) => qn.kind === 'listen' || qn.kind === 'judge'
-/** Its recording: the word alone for right-or-wrong, else the example. */
+/** A right-or-wrong picture question, heard (judge) or read (look). */
+const pictured = (qn: HskChoice) => qn.kind === 'judge' || qn.kind === 'look'
+/** Its recording: the word alone for a picture question, else the example. */
 const clip = (qn: HskChoice) =>
-  qn.kind === 'judge' ? wordAudio(qn.word.id) : exampleAudio(qn.word.id, qn.word.exampleEn)
+  pictured(qn) ? wordAudio(qn.word.id) : exampleAudio(qn.word.id, qn.word.exampleEn)
 
 export default function HskChoiceRound({
   title,
@@ -50,7 +53,7 @@ export default function HskChoiceRound({
   const play = (qn: HskChoice) =>
     pronounce({
       audioSrc: clip(qn),
-      text: qn.kind === 'judge' ? qn.word.word : qn.word.exampleEn,
+      text: pictured(qn) ? qn.word.word : qn.word.exampleEn,
       lang,
       rate,
     })
@@ -87,7 +90,7 @@ export default function HskChoiceRound({
     const ok = i === q.answer
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
-    // A gap-fill reads the whole sentence once it is answered.
+    // A read question is heard once answered: a gap-fill's sentence, a picture's word.
     if (!heard(q)) play(q)
   }
   const next = () => {
@@ -116,7 +119,22 @@ export default function HskChoiceRound({
       }
     >
       <div className="card space-y-4 p-6">
-        {heard(q) ? (
+        {q.kind === 'look' ? (
+          <>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {t('Tranh có đúng là từ này không?', 'Is the picture this word?')}
+            </p>
+            <p className="flex flex-col items-center">
+              <span className="text-sm text-brand-600 dark:text-brand-300">{q.word.viRead}</span>
+              <span lang="zh" className="text-3xl font-bold">
+                {q.word.word}
+              </span>
+            </p>
+            <p className="py-2 text-center text-7xl" role="img" aria-label={t('Tranh', 'Picture')}>
+              {q.picture}
+            </p>
+          </>
+        ) : heard(q) ? (
           <>
             <p className="text-sm text-slate-500 dark:text-slate-400">
               {q.kind === 'judge'
@@ -197,7 +215,7 @@ export default function HskChoiceRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {q.kind === 'judge' ? (
+                {pictured(q) ? (
                   <span>{i === 0 ? t('✓ Đúng', '✓ Right') : t('✗ Sai', '✗ Wrong')}</span>
                 ) : q.kind !== 'listen' ? (
                   <span className="flex flex-col items-center">
@@ -230,10 +248,10 @@ export default function HskChoiceRound({
             >
               {picked === q.answer ? t('Đúng rồi!', 'Right!') : t('Chưa đúng.', 'Not quite.')}
             </p>
-            {q.kind === 'judge' ? (
+            {pictured(q) ? (
               <>
                 <p className="text-slate-600 dark:text-slate-300">
-                  {t('Từ nghe được', 'You heard')}:{' '}
+                  {q.kind === 'judge' ? t('Từ nghe được', 'You heard') : t('Từ', 'The word')}:{' '}
                   <b lang="zh" className="text-lg">
                     {q.word.word}
                   </b>{' '}
