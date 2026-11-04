@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'TOEIC Part 3 và Part 4 có dạng "Look at the graphic": vừa nghe vừa xem bảng giá, lịch tàu, sơ đồ phòng, dự báo thời tiết để trả lời, như đề thật.',
+        'TOEIC Parts 3 and 4 add "Look at the graphic" questions: listen while reading a price list, a train timetable, a room plan or a weather forecast, as on the test.',
+      ],
+      [
         'TOEIC Part 7 có thêm 5 bài đọc (thông báo nội bộ, bài báo, đánh giá khách sạn, quảng cáo kèm email khiếu nại, thông báo kèm phiếu đăng ký) và các dạng câu hỏi hay gặp: điều nào KHÔNG đúng, từ gần nghĩa nhất, điều suy ra được.',
         'TOEIC Part 7 adds five reading sets (a memo, a news article, a hotel review, an ad with a complaint email, a notice with a sign-up form) and the question types the test loves: what is NOT true, the closest meaning, what is suggested.',
       ],
