@@ -12,6 +12,7 @@ import {
   HSK_SCALE,
   charQuestions,
   fillQuestions,
+  judgeQuestions,
   levelWords,
   listenQuestions,
   orderQuestions,
@@ -32,10 +33,10 @@ import HskOrderRound from './HskOrderRound'
 
 const ROUND = 10
 
-type Drill = 'listen' | 'fill' | 'order' | 'char'
+type Drill = 'judge' | 'listen' | 'fill' | 'order' | 'char'
 
 type Run =
-  | { kind: 'choice'; drill: 'listen' | 'fill' | 'char'; n: number; questions: HskChoice[] }
+  | { kind: 'choice'; drill: Exclude<Drill, 'order'>; n: number; questions: HskChoice[] }
   | { kind: 'order'; n: number; questions: HskOrder[] }
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
@@ -68,6 +69,15 @@ export default function Hsk() {
   const name = exam.name
 
   const DRILLS: { id: Drill; icon: string; title: [string, string]; desc: [string, string] }[] = [
+    {
+      id: 'judge',
+      icon: '🖼️',
+      title: ['Nghe – đúng hay sai (判断对错)', 'Right or wrong (判断对错)'],
+      desc: [
+        'Nghe một từ, nhìn tranh, chọn đúng hay sai: phần đầu bài Nghe của HSK 1 và HSK 2.',
+        'Hear a word, look at the picture, say right or wrong: the first listening part of HSK 1 and HSK 2.',
+      ],
+    },
     {
       id: 'listen',
       icon: '🎧',
@@ -110,15 +120,33 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
-    const make =
-      drill === 'listen' ? listenQuestions : drill === 'char' ? charQuestions : fillQuestions
+    const make = {
+      judge: judgeQuestions,
+      listen: listenQuestions,
+      char: charQuestions,
+      fill: fillQuestions,
+    }[drill]
     setRun({ kind: 'choice', drill, n, questions: make(level, pack.words, ROUND) })
   }
 
   const startMini = () => {
     setResult(null)
+    // HSK 1–2 listening opens with right-or-wrong pictures; HSK 3 has none.
+    const listen: MiniStep[] =
+      HSK_SCALE[level].sections === 3
+        ? [
+            {
+              section: 'listen',
+              kind: 'choice',
+              questions: listenQuestions(level, pack.words, ROUND),
+            },
+          ]
+        : [
+            { section: 'listen', kind: 'choice', questions: judgeQuestions(level, pack.words, 5) },
+            { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, 5) },
+          ]
     const steps: MiniStep[] = [
-      { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, ROUND) },
+      ...listen,
       { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, ROUND) },
     ]
     // HSK 3 writing: five sentences to build, five characters to write.
@@ -195,9 +223,11 @@ export default function Hsk() {
         title={`${name} · ${
           run.drill === 'listen'
             ? t('Nghe hiểu', 'Listening')
-            : run.drill === 'char'
-              ? t('Viết chữ Hán', 'Write the character')
-              : t('Điền từ', 'Fill the gap')
+            : run.drill === 'judge'
+              ? t('Đúng hay sai', 'Right or wrong')
+              : run.drill === 'char'
+                ? t('Viết chữ Hán', 'Write the character')
+                : t('Điền từ', 'Fill the gap')
         }`}
         questions={run.questions}
         onAgain={() => startDrill(run.drill)}
@@ -310,8 +340,8 @@ export default function Hsk() {
                 '10 listening, 10 reading and 10 writing questions (5 sentences to build, 5 characters), like the three parts of HSK 3.'
               )
             : t(
-                `10 câu nghe và 10 câu đọc, như hai phần của đề ${name}.`,
-                `10 listening and 10 reading questions, like the two parts of ${name}.`
+                `10 câu nghe (5 câu đúng sai theo tranh, 5 câu nghe hiểu) và 10 câu đọc, như hai phần của đề ${name}.`,
+                `10 listening (5 right-or-wrong pictures, 5 sentences) and 10 reading questions, like the two parts of ${name}.`
               )}
           {best &&
             t(

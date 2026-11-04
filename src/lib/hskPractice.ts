@@ -12,6 +12,7 @@ import { RADICALS } from './radicals'
 //   fill:   a word taken out (选词填空), pick it among four of the same level;
 //   order:  put the words back in order (HSK 3 writing, 完成句子);
 //   char:   a character missing, its pinyin given (HSK 3 writing, 写汉字).
+//   judge:  hear a word, see a picture, right or wrong (HSK 1–2 listening, 判断对错).
 
 export type HskLevel = 'hsk1' | 'hsk2' | 'hsk3'
 export const HSK_LEVELS: readonly HskLevel[] = ['hsk1', 'hsk2', 'hsk3']
@@ -27,8 +28,11 @@ export function levelWords(level: HskLevel, words: readonly Word[]): Word[] {
 }
 
 export interface HskChoice {
-  kind: 'listen' | 'fill' | 'char'
+  kind: 'listen' | 'fill' | 'char' | 'judge'
   word: Word
+  /** judge: the picture shown (an emoji), and the word it is when not the one heard. */
+  picture?: string
+  pictureOf?: Word
   /** fill: the sentence with "___" for the word. */
   sentence?: string
   options: string[]
@@ -175,6 +179,55 @@ export function charQuestions(
       ]
     })
     .slice(0, count)
+}
+
+/**
+ * Words with a picture that shows them and nothing else: things, food,
+ * animals, places, people. The test's part 1 pictures are photos of exactly
+ * these; an emoji for 是 (🟰) or 时候 (⏳) would be a riddle, not a picture.
+ * Each picture is a different emoji (lib/hskPractice.test.ts).
+ */
+export const PICTURE_WORDS: readonly string[] = [
+  ...['老师', '医生', '米饭', '茶', '水', '苹果', '家', '学校', '医院', '商店', '书', '钱'],
+  ...['衣服', '电脑', '电视', '椅子', '飞机', '出租车', '猫', '狗', '电影', '咖啡', '孩子'],
+  ...['眼睛', '药', '鸡蛋', '牛奶', '鱼', '西瓜', '生日', '手机', '手表', '公共汽车', '机场'],
+  ...['雪', '门', '报纸', '船', '票', '自行车', '面条', '头发', '信', '花', '马', '包'],
+  ...['照片', '银行', '脚', '腿', '鞋', '树', '鸟', '礼物', '灯', '糖', '公园', '啤酒'],
+  ...['蛋糕', '草', '奶奶', '地铁', '厨房', '爷爷', '云', '耳朵', '鼻子', '帽子', '裤子'],
+  ...['电梯', '眼镜', '面包', '冰箱', '超市', '月亮', '裙子', '香蕉', '伞', '葡萄', '护照'],
+  ...['果汁', '盘子', '铅笔', '筷子', '行李箱'],
+]
+
+/**
+ * HSK 1–2 listening, part one (判断对错): a word is heard and a picture shown;
+ * about half the time the picture is of another word of the level.
+ */
+export function judgeQuestions(
+  level: HskLevel,
+  words: readonly Word[],
+  count: number,
+  rand: () => number = Math.random
+): HskChoice[] {
+  const shuffle = shuffler(rand)
+  const pictured = new Set(PICTURE_WORDS)
+  const pool = levelWords(level, words).filter((w) => w.emoji && pictured.has(w.word))
+  const round = shuffle(pool)
+    .slice(0, count)
+    .map((w, i) => {
+      // Every other picture is of another word, then the round is shuffled:
+      // never all right or all wrong.
+      const other = i % 2 ? shuffle(pool.filter((o) => o.emoji !== w.emoji))[0] : undefined
+      return {
+        kind: 'judge' as const,
+        word: w,
+        picture: (other ?? w).emoji,
+        pictureOf: other,
+        // Option 0 is "right", option 1 "wrong"; the round labels them.
+        options: ['✓', '✗'],
+        answer: other ? 1 : 0,
+      }
+    })
+  return shuffle(round)
 }
 
 /** Examples short and plain enough to have one right order: 3–7 words, no inner punctuation. */

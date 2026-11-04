@@ -16,6 +16,7 @@ vi.mock('@/lib/audio', () => ({
   pronounce: (o: { text: string }) => spoken.push(o.text),
   stopPronounce: () => {},
   exampleAudio: () => '',
+  wordAudio: () => '',
 }))
 
 const { default: Hsk } = await import('./Hsk')
@@ -59,20 +60,42 @@ function answerAll(until: () => boolean) {
 }
 
 describe('HSK practice page', () => {
-  it('switches level and offers the three question types', () => {
+  it('switches level and offers every question type', () => {
     renderPage()
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(4)
+    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(5)
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
     renderPage()
-    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[1])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(1)
     expect(zh.words.some((w) => w.exampleEn === spoken[0])).toBe(true)
+  })
+
+  it('says a word for right-or-wrong, shows a picture, then what the picture was', () => {
+    renderPage()
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[0])
+    vi.advanceTimersByTime(300)
+    const word = zh.words.find((w) => w.word === spoken[0])!
+    expect(word.emoji).toBeTruthy()
+    const picture = screen.getByRole('img', { name: 'Picture' }).textContent
+    fireEvent.click(screen.getByRole('button', { name: '✓ Right' }))
+    expect(screen.getByText(picture === word.emoji ? 'Right!' : 'Not quite.')).toBeInTheDocument()
+    expect(screen.getByText(/^You heard/)).toHaveTextContent(word.meaning)
+    if (picture !== word.emoji) expect(screen.getByText(/^The picture is/)).toBeInTheDocument()
+  })
+
+  it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
+    expect(screen.getByRole('img', { name: 'Picture' })).toBeInTheDocument()
+    answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
+    expect(screen.getByText(/^Listening: \d+\/10/)).toBeInTheDocument()
+    expect(useExam.getState().records['hsk1-mini']?.total).toBe(20)
   })
 
   it('runs the HSK 3 mini test through its three parts and gives a score out of 300', () => {

@@ -343,3 +343,17 @@ thoại, bài nói) và các dạng của Ghép họ từ được đưa vào `s
   giữ giọng người học chọn nếu đúng giới, không thì lấy giọng còn lại. Giới của giọng ghi trong
   `public/audio/<gói>/index.json` (`gender`, do `generate_audio.py` viết). Bài nói Part 4 (N) dùng
   giọng người học chọn.
+
+### Bước B3: nghe – đúng hay sai (判断对错) (04/11/2026)
+
+Phần 1 bài Nghe của HSK 1 và HSK 2: nghe một từ, nhìn một tranh, chọn đúng (✓) hay sai (✗).
+Thẻ luyện đầu tiên trên `/hsk` (`judgeQuestions`, `HskChoiceRound`).
+
+- Tranh là emoji của từ. Chỉ dùng 85 từ vẽ được rõ ràng (đồ vật, đồ ăn, con vật, nơi chốn, người:
+  `PICTURE_WORDS`); emoji của 是 (🟰) hay 时候 (⏳) là câu đố chứ không phải tranh. Test giữ mỗi từ
+  một emoji riêng, để tranh "sai" không bao giờ trùng tranh "đúng".
+- Mỗi lượt một nửa tranh đúng, một nửa là tranh của từ khác cùng cấp, rồi xáo thứ tự.
+- Phát giọng thu của từ (không phải câu ví dụ). Trả lời xong thì hiện từ vừa nghe, pinyin, nghĩa,
+  và tranh vốn là từ nào.
+- Bài thi nhỏ HSK 1–2: phần Nghe gồm 5 câu đúng sai và 5 câu nghe hiểu, cộng chung một điểm Nghe.
+  HSK 3 không có dạng này nên giữ 10 câu nghe hiểu.

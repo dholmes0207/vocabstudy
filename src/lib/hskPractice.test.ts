@@ -5,10 +5,13 @@ import {
   HSK_LEVELS,
   charQuestions,
   fillQuestions,
+  judgeQuestions,
   levelWords,
   listenQuestions,
   orderQuestions,
+  PICTURE_WORDS,
 } from './hskPractice'
+import { mulberry32 } from './sky'
 
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
 const plain = (s: string) => s.replace(/\u200b/g, '')
@@ -64,4 +67,37 @@ describe('HSK writing, characters (写汉字)', () => {
       }
     }
   })
+})
+
+describe('HSK listening, right or wrong (判断对错)', () => {
+  it('pictures only words of the pack, each with its own emoji', () => {
+    const byWord = new Map(zh.words.map((w) => [w.word, w]))
+    const emojis = PICTURE_WORDS.map((p) => byWord.get(p)?.emoji)
+    expect(emojis.every(Boolean), 'every picture word is in the pack with an emoji').toBe(true)
+    expect(new Set(emojis).size).toBe(PICTURE_WORDS.length)
+  })
+
+  it.each(HSK_LEVELS)(
+    '%s: a word heard, its picture or another, both kinds in a round',
+    (level) => {
+      const own = new Set(levelWords(level, zh.words).map((w) => w.word))
+      for (let seed = 1; seed <= 5; seed++) {
+        const qs = judgeQuestions(level, zh.words, 10, mulberry32(seed))
+        expect(qs).toHaveLength(10)
+        expect(new Set(qs.map((q) => q.word.word)).size).toBe(10)
+        for (const q of qs) {
+          expect(own.has(q.word.word)).toBe(true)
+          if (q.answer === 0) {
+            expect(q.picture).toBe(q.word.emoji)
+            expect(q.pictureOf).toBeUndefined()
+          } else {
+            expect(own.has(q.pictureOf!.word)).toBe(true)
+            expect(q.picture).toBe(q.pictureOf!.emoji)
+            expect(q.picture).not.toBe(q.word.emoji)
+          }
+        }
+        expect(qs.filter((q) => q.answer === 0)).toHaveLength(5)
+      }
+    }
+  )
 })
