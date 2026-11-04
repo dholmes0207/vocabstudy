@@ -236,3 +236,20 @@ Giai đoạn B (HSK) bắt đầu từ đây.
   - Thẻ Trang chủ hiện "Đã xong: đúng 4/5. Chuỗi 3 ngày 🔥" hoặc nhắc giữ chuỗi.
   - Lưu theo từng ngôn ngữ trong `challengeStore` (`vocab.challenge.v1`, chỉ trên thiết bị, có
     trong bản sao lưu).
+
+### Thêm bài TOEIC (04/11/2026)
+
+Mỗi Part có thêm bài để luyện nhiều lượt không bị lặp:
+
+- **Part 6:** từ 4 lên 8 đoạn: thông báo đào tạo phần mềm, thư xin lỗi vì hàng hỏng, tin thăng chức,
+  thông báo bảo trì thang máy.
+- **Part 7:** từ 7 lên 11 bài. Có thêm:
+  - tin tuyển dụng, với câu hỏi dạng NOT (thứ không được nhắc tới);
+  - quy định công tác phí, với "unless";
+  - chuỗi tin nhắn với khách, với câu hỏi ý của "That's great";
+  - một bài hai đoạn (lịch hội thảo + email xin đổi giờ), phải ghép giờ của hai phiên.
+- **Part 3:** từ 4 lên 8 hội thoại: đặt bàn tiếp khách, thuê xe, dự án website, hẹn phỏng vấn.
+- **Part 4:** từ 4 lên 8 bài nói: thông báo giảm giá, hướng dẫn viên, tin nhắn về làm việc ở nhà,
+  bản tin giao thông.
+
+Test giữ số bài tối thiểu theo các con số trên.

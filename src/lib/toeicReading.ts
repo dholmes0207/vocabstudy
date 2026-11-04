@@ -189,6 +189,160 @@ Applicants should have at least two years of experience in a similar position. T
     ],
   },
 
+  {
+    id: 'p6-training',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `MEMO
+To: Sales staff
+From: Paul Nguyen, IT Department
+
+Our new customer database will be [1] on Monday, May 15. To help everyone get used to the system, we will hold two training sessions next week. [2] Each session lasts about an hour and takes place in Meeting Room 4.
+
+Please complete the [3] form on the company intranet by Friday. Staff who cannot attend either session should contact me [4] so that we can arrange another time.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['launched', 'launch', 'launching', 'launches'],
+        'will be + quá khứ phân từ là bị động: will be launched (sẽ được đưa vào dùng).'
+      ),
+      gap(
+        [
+          'The first is on Tuesday at 10 a.m., and the second is on Thursday at 2 p.m.',
+          'The old database has worked well for many years.',
+          'Please bring your laptop to the holiday party.',
+          'Sales increased by 10 percent last quarter.',
+        ],
+        'Câu trước nói có hai buổi đào tạo; câu nêu giờ của hai buổi nối tiếp tự nhiên nhất.'
+      ),
+      gap(
+        ['registration', 'register', 'registered', 'registering'],
+        'Danh từ ghép: registration form (phiếu đăng ký). Sau the và trước form cần danh từ bổ nghĩa.'
+      ),
+      gap(
+        ['directly', 'direct', 'direction', 'directed'],
+        'Bổ nghĩa cho động từ contact: trạng từ directly (liên hệ trực tiếp).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-broken-handle',
+    part: 6,
+    passages: [
+      {
+        kind: LETTER,
+        text: `Dear Ms. Patel,
+
+Thank you for [1] us about the problem with your recent order. We are sorry that the coffee maker arrived with a broken handle. [2]
+
+A replacement has already been sent and should reach you [3] three business days. Please keep the damaged item; there is no need to return it. We value your business and hope you will [4] to shop with us.
+
+Sincerely,
+Brian Ortiz, Customer Care`,
+      },
+    ],
+    questions: [
+      gap(
+        ['contacting', 'contact', 'contacted', 'contacts'],
+        'Thank you for + V-ing: cảm ơn vì đã liên hệ.'
+      ),
+      gap(
+        [
+          'We have confirmed that the item was damaged during shipping.',
+          'Our store will close early on Friday.',
+          'We are pleased that you enjoyed the product.',
+          'Please send us your payment as soon as possible.',
+        ],
+        'Sau lời xin lỗi về món hàng hỏng, câu xác nhận nguyên nhân là hợp. "Enjoyed the product" mâu thuẫn với việc hàng bị hỏng.'
+      ),
+      gap(
+        ['within', 'since', 'among', 'until'],
+        'within three business days: trong vòng ba ngày làm việc.'
+      ),
+      gap(
+        ['continue', 'continued', 'continuing', 'continuation'],
+        'Sau will là động từ nguyên mẫu: continue to shop (tiếp tục mua sắm).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-promotion',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Hanson Electronics is pleased to announce that Maria Gomez has been [1] to Director of Marketing. Ms. Gomez joined the company eight years ago as a sales assistant. [2]
+
+Under her leadership, the marketing team launched three successful products and [3] the company's online sales. Ms. Gomez will begin her new role on July 1. Please join us in [4] her on this well-deserved promotion.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['promoted', 'promoting', 'promotion', 'promote'],
+        'has been + quá khứ phân từ: has been promoted (đã được thăng chức).'
+      ),
+      gap(
+        [
+          'Since then, she has held several positions in sales and marketing.',
+          'She plans to retire from the company next month.',
+          'The company is now accepting applications for her position.',
+          'The new store will open downtown in the spring.',
+        ],
+        'Câu trước kể cô ấy vào công ty từ vị trí trợ lý; câu kể các vị trí sau đó nối mạch. "Retire next month" mâu thuẫn với việc nhận vị trí mới.'
+      ),
+      gap(
+        ['doubled', 'double', 'doubling', 'doubles'],
+        'Song song với launched (quá khứ): launched … and doubled (tăng gấp đôi).'
+      ),
+      gap(
+        ['congratulating', 'congratulate', 'congratulated', 'congratulations'],
+        'join us in + V-ing: cùng chúng tôi chúc mừng cô ấy.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-elevators',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `NOTICE TO ALL TENANTS
+
+The elevators in Building B will be [1] from 8 a.m. to 6 p.m. on Saturday, October 7, for regular maintenance. During this time, tenants must use the stairs. [2]
+
+We understand that this may be [3] for some of you, especially those on the upper floors. If you need help moving heavy items that day, please [4] the building manager in advance.
+
+Kingsley Property Management`,
+      },
+    ],
+    questions: [
+      gap(
+        ['unavailable', 'available', 'availability', 'unavailably'],
+        'Sau will be cần tính từ; thang máy đang bảo trì nên không dùng được: unavailable.'
+      ),
+      gap(
+        [
+          'The elevators in Building A will operate as usual.',
+          'The building will be painted next year.',
+          'Rent is due on the first day of each month.',
+          'The stairs will also be closed for cleaning.',
+        ],
+        'Câu về thang máy toà A vẫn chạy bình thường hợp với thông báo. "Stairs will also be closed" mâu thuẫn với câu trước (phải đi thang bộ).'
+      ),
+      gap(
+        ['inconvenient', 'inconvenience', 'inconveniently', 'convenience'],
+        'be + tính từ: may be inconvenient (có thể bất tiện).'
+      ),
+      gap(
+        ['notify', 'notification', 'notified', 'notifying'],
+        'please + động từ nguyên mẫu: please notify the building manager (hãy báo cho quản lý toà nhà).'
+      ),
+    ],
+  },
+
   // ------------------------------------------------------- Part 7, single
   {
     id: 'p7-kitchen',
@@ -523,6 +677,191 @@ Leo Martin`,
           'They take place in the pool',
         ],
         why: '"All members can … take free yoga classes on weekends." $25 là giá một buổi tập riêng.',
+      },
+    ],
+  },
+  {
+    id: 'p7-hotel-job',
+    part: 7,
+    passages: [
+      {
+        kind: JOB,
+        text: `Coastline Hotel is hiring!
+
+Position: Front desk clerk (full-time)
+Requirements: at least one year of experience in a hotel or similar business; good English; computer skills
+Duties: checking guests in and out, answering phone calls, handling reservations
+Benefits: free meals during shifts, paid holidays, a staff discount at all Coastline hotels
+
+To apply, send your CV to hr@coastlinehotel.com by June 30. Interviews will be held in the first week of July.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What position is being advertised?',
+        options: ['Front desk clerk', 'Hotel chef', 'Hotel manager', 'Bus driver'],
+        why: '"Position: Front desk clerk": nhân viên lễ tân.',
+      },
+      {
+        q: 'What is NOT mentioned as a benefit?',
+        options: ['Free parking', 'Free meals', 'Paid holidays', 'A staff discount'],
+        why: 'Câu hỏi NOT: tìm thứ không có trong bài. Bài nêu bữa ăn miễn phí, nghỉ có lương, giảm giá; không nói gì về chỗ đậu xe.',
+      },
+      {
+        q: 'When will the interviews take place?',
+        options: ['In early July', 'By June 30', 'In late July', 'Next week'],
+        why: '"Interviews will be held in the first week of July." June 30 là hạn nộp hồ sơ.',
+      },
+    ],
+  },
+  {
+    id: 'p7-travel-policy',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `MEMO
+To: All employees
+From: Human Resources
+Subject: New travel expense policy
+
+Starting September 1, employees traveling for work must book flights and hotels through our travel agency, Skyway Travel. Bookings made in other ways will not be reimbursed unless a manager approves them in advance.
+
+Meal expenses of up to $50 per day will be reimbursed when receipts are provided. Please contact Human Resources if you have any questions.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the memo mainly about?',
+        options: [
+          'A change in travel rules',
+          'The opening of a travel agency',
+          'A company trip',
+          'The holiday schedule',
+        ],
+        why: 'Tiêu đề "New travel expense policy": quy định mới về chi phí công tác.',
+      },
+      {
+        q: 'What must employees do to be reimbursed for meals?',
+        options: [
+          'Provide receipts',
+          'Book through Skyway Travel',
+          'Get a manager’s approval',
+          'Spend more than $50',
+        ],
+        why: '"Meal expenses … will be reimbursed when receipts are provided." Phê duyệt của quản lý chỉ dành cho đặt vé ngoài Skyway.',
+      },
+      {
+        q: 'What is indicated about bookings not made through Skyway Travel?',
+        options: [
+          'They need a manager’s approval in advance to be reimbursed.',
+          'They are usually cheaper.',
+          'They are not allowed under any condition.',
+          'They must be made before September 1.',
+        ],
+        why: '"…will not be reimbursed unless a manager approves them in advance." unless = trừ khi.',
+      },
+    ],
+  },
+  {
+    id: 'p7-lamp-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Kim Lee (2:05 P.M.): Hello, I ordered a desk lamp from your website last week, order number 58213. It still hasn't arrived.
+Omar, Customer Service (2:06 P.M.): I'm sorry to hear that. Let me check. Your order was sent to an old address on Lake Road.
+Kim Lee (2:08 P.M.): Oh no, I moved last month. I thought I had updated my account.
+Omar, Customer Service (2:09 P.M.): No problem. I'll send a new lamp to your current address today at no extra cost.
+Kim Lee (2:10 P.M.): That's great, thanks!`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Ms. Lee contact the company?',
+        options: [
+          'Her order has not arrived.',
+          'She received the wrong color.',
+          'She wants to cancel an order.',
+          'She wants to change her payment method.',
+        ],
+        why: '"It still hasn\'t arrived." Lý do liên hệ thường nằm ở tin nhắn đầu.',
+      },
+      {
+        q: 'What caused the problem?',
+        options: [
+          'The order was sent to an old address.',
+          'The lamp was out of stock.',
+          'The lamp was damaged.',
+          'The order number was wrong.',
+        ],
+        why: '"Your order was sent to an old address on Lake Road" và cô ấy đã chuyển nhà.',
+      },
+      {
+        q: 'At 2:10 P.M., what does Ms. Lee most likely mean when she writes, "That\'s great"?',
+        options: [
+          'She is happy with the solution.',
+          'She likes the design of the lamp.',
+          'She has just received the lamp.',
+          'She wants a discount.',
+        ],
+        why: '"That\'s great" đáp lại lời hứa gửi đèn mới miễn phí: cô ấy hài lòng với cách giải quyết.',
+      },
+    ],
+  },
+  {
+    id: 'p7-forum',
+    part: 7,
+    passages: [
+      {
+        kind: SCHEDULE,
+        text: `Green Business Forum — Saturday, March 9
+
+9:00   Welcome speech — Linda Moore, Forum Director
+9:30   Green packaging for online stores — Sara Blake
+11:00  Coffee break
+11:30  Saving energy in the office — Dr. Ken Ito
+1:00   Lunch (included with registration)`,
+      },
+      {
+        kind: EMAIL,
+        text: `From: Sara Blake
+To: Linda Moore
+Subject: Saturday
+
+Hi Linda,
+
+I'm sorry, but my train arrives in the city at 10:00 on Saturday, so I will miss the start of my talk. Would it be possible to switch my session with Dr. Ito's? If not, I could speak after lunch instead.
+
+Best,
+Sara`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Ms. Blake write the email?',
+        options: [
+          'To ask to change the time of her talk',
+          'To cancel her registration',
+          'To book a train ticket',
+          'To invite Ms. Moore to lunch',
+        ],
+        why: '"Would it be possible to switch my session with Dr. Ito\'s?" Cô ấy muốn đổi giờ nói.',
+      },
+      {
+        q: 'If Ms. Blake’s request is accepted, when will she speak?',
+        options: ['At 11:30', 'At 9:30', 'At 1:00', 'At 10:00'],
+        why: 'Ghép hai đoạn: đổi với phiên của Dr. Ito thì cô ấy nói vào giờ của ông ấy, 11:30. 9:30 là giờ cũ của cô ấy.',
+      },
+      {
+        q: 'What is indicated about lunch?',
+        options: [
+          'It is included with registration.',
+          'It starts at 11:00.',
+          'Ms. Moore will give a speech during it.',
+          'It is not served on Saturday.',
+        ],
+        why: 'Lịch ghi "Lunch (included with registration)". 11:00 là giờ nghỉ uống cà phê.',
       },
     ],
   },

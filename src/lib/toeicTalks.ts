@@ -187,6 +187,163 @@ export const TALK_SETS: readonly TalkSet[] = [
     ],
   },
 
+  {
+    id: 'p3-client-lunch',
+    part: 3,
+    lines: [
+      m(
+        'Hi, I’d like to reserve a table for six people this Friday at noon. It’s a business lunch with some clients.'
+      ),
+      w('Certainly. We have a private room available at that time. Would you like that?'),
+      m(
+        'Yes, that would be perfect. Also, one of my clients doesn’t eat meat. Do you have vegetarian dishes?'
+      ),
+      w(
+        'Yes, we have several. I’ll note it on your reservation, and the chef can suggest a special dish.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Why is the man calling?',
+        options: [
+          'To book a table',
+          'To complain about a meal',
+          'To order food for delivery',
+          'To apply for a job',
+        ],
+        why: '"I’d like to reserve a table for six people": đặt bàn.',
+      },
+      {
+        q: 'What does the woman offer?',
+        options: ['A private room', 'A discount', 'A free dessert', 'A later time'],
+        why: '"We have a private room available at that time. Would you like that?"',
+      },
+      {
+        q: 'What does the man say about one of his clients?',
+        options: [
+          'The client does not eat meat.',
+          'The client will be late.',
+          'The client is a chef.',
+          'The client wants to change the date.',
+        ],
+        why: '"One of my clients doesn’t eat meat": khách ăn chay.',
+      },
+    ],
+  },
+  {
+    id: 'p3-rental-car',
+    part: 3,
+    lines: [
+      w('Hello, I booked a rental car for this morning. My name is Ana Silva.'),
+      m(
+        'Welcome, Ms. Silva. Here is your key. The car is in space fourteen in the parking garage.'
+      ),
+      w('Thanks. I’ll be driving to a meeting in Riverside. Is there a map in the car?'),
+      m(
+        'The car has a navigation system. And please remember to return it with a full tank of gas, or there will be an extra charge.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Where most likely are the speakers?',
+        options: ['At a car rental office', 'At a gas station', 'At a hotel', 'At a train station'],
+        why: 'Có "rental car", chìa khoá xe, chỗ đậu: quầy cho thuê xe. Câu "most likely" cần suy ra từ các chi tiết.',
+      },
+      {
+        q: 'Why is the woman traveling?',
+        options: ['To attend a meeting', 'To go on vacation', 'To visit a friend', 'To buy a car'],
+        why: '"I’ll be driving to a meeting in Riverside."',
+      },
+      {
+        q: 'What does the man remind the woman to do?',
+        options: [
+          'Fill up the gas tank before returning the car',
+          'Park in space fourteen',
+          'Return the map',
+          'Pay the extra charge now',
+        ],
+        why: '"Please remember to return it with a full tank of gas." Số 14 là chỗ xe đang đậu.',
+      },
+    ],
+  },
+  {
+    id: 'p3-website',
+    part: 3,
+    lines: [
+      m('Jenny, how is the website redesign going? The client wants to see it on Monday.'),
+      w('It’s mostly finished, but we’re still waiting for the photos from the photographer.'),
+      m('Hmm. Could we use some photos from our own library for now?'),
+      w('Good idea. I’ll pick a few this afternoon and replace them when the new ones arrive.'),
+    ],
+    questions: [
+      {
+        q: 'What are the speakers discussing?',
+        options: ['A website redesign', 'A photo exhibition', 'An office move', 'A product launch'],
+        why: '"How is the website redesign going?"',
+      },
+      {
+        q: 'What problem does the woman mention?',
+        options: [
+          'Some photos have not arrived.',
+          'The client has canceled.',
+          'The budget is too small.',
+          'A team member is sick.',
+        ],
+        why: '"We’re still waiting for the photos from the photographer."',
+      },
+      {
+        q: 'What will the woman do this afternoon?',
+        options: [
+          'Choose some photos',
+          'Call the client',
+          'Meet the photographer',
+          'Finish a report',
+        ],
+        why: '"I’ll pick a few this afternoon": pick = choose.',
+      },
+    ],
+  },
+  {
+    id: 'p3-interview',
+    part: 3,
+    lines: [
+      w(
+        'Hello, this is Karen from Bright Solutions. I’m calling about your application for the accountant position.'
+      ),
+      m('Oh, thank you for calling.'),
+      w('We’d like to invite you for an interview. Are you available next Tuesday at ten?'),
+      m('I’m afraid I have a class on Tuesday mornings. Would Tuesday afternoon work?'),
+      w('Sure. How about two o’clock? Please bring copies of your certificates.'),
+    ],
+    questions: [
+      {
+        q: 'Why is the woman calling?',
+        options: [
+          'To arrange an interview',
+          'To offer a job',
+          'To cancel a meeting',
+          'To ask for a payment',
+        ],
+        why: '"We’d like to invite you for an interview." Chưa phải là nhận việc.',
+      },
+      {
+        q: 'Why can’t the man come on Tuesday morning?',
+        options: [
+          'He has a class.',
+          'He is traveling.',
+          'He is working.',
+          'He has a doctor’s appointment.',
+        ],
+        why: '"I have a class on Tuesday mornings."',
+      },
+      {
+        q: 'What should the man bring?',
+        options: ['Copies of his certificates', 'A photo', 'His laptop', 'A reference letter'],
+        why: '"Please bring copies of your certificates."',
+      },
+    ],
+  },
+
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -326,6 +483,147 @@ export const TALK_SETS: readonly TalkSet[] = [
           'By inviting a friend',
         ],
         why: '"Download the app this month and get a twenty-dollar bonus."',
+      },
+    ],
+  },
+  {
+    id: 'p4-store-sale',
+    part: 4,
+    lines: [
+      n(
+        'Attention, shoppers. For the next two hours, all winter jackets on the second floor are forty percent off.'
+      ),
+      n(
+        'And today only, customers who spend more than one hundred dollars will receive a free scarf. Our store closes at nine p.m. tonight. Thank you for shopping at Westfield Department Store.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Where is the announcement being made?',
+        options: ['In a department store', 'At an airport', 'In a restaurant', 'In a museum'],
+        why: '"Attention, shoppers" và "Westfield Department Store".',
+      },
+      {
+        q: 'What is on sale?',
+        options: ['Winter jackets', 'Scarves', 'Shoes', 'Furniture'],
+        why: '"All winter jackets … are forty percent off." Khăn là quà tặng, không phải hàng giảm giá.',
+      },
+      {
+        q: 'How can customers get a free scarf?',
+        options: [
+          'By spending more than $100',
+          'By buying a jacket',
+          'By signing up for a card',
+          'By shopping before 9 p.m.',
+        ],
+        why: '"Customers who spend more than one hundred dollars will receive a free scarf."',
+      },
+    ],
+  },
+  {
+    id: 'p4-walking-tour',
+    part: 4,
+    lines: [
+      n(
+        'Welcome to the Old Town walking tour. I’m Mark, and I’ll be your guide today. The tour lasts about two hours.'
+      ),
+      n(
+        'We’ll start at the city museum, then visit the old market and finish at the river, where you can take a boat ride if you like. The boat ride is not included in the tour price, so please buy tickets at the pier.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who is the speaker?',
+        options: ['A tour guide', 'A museum guard', 'A boat driver', 'A shop owner'],
+        why: '"I’ll be your guide today."',
+      },
+      {
+        q: 'Where will the tour end?',
+        options: ['At the river', 'At the city museum', 'At the old market', 'At a hotel'],
+        why: '"…and finish at the river." Bảo tàng là nơi bắt đầu.',
+      },
+      {
+        q: 'What does the speaker say about the boat ride?',
+        options: [
+          'It costs extra.',
+          'It is free.',
+          'It has been canceled.',
+          'It starts at the museum.',
+        ],
+        why: '"The boat ride is not included in the tour price": phải trả thêm.',
+      },
+    ],
+  },
+  {
+    id: 'p4-friday-home',
+    part: 4,
+    lines: [
+      n(
+        'Hi team, this is Greg. I just wanted to let you know that starting next week, our department will try a new schedule. Every Friday, you can choose to work from home.'
+      ),
+      n(
+        'Please tell your supervisor by Wednesday if you plan to do so, and make sure your laptop has the latest security update. Thanks, and have a good weekend.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is the message mainly about?',
+        options: [
+          'A new work schedule',
+          'A sale on laptops',
+          'A weekend party',
+          'A new supervisor',
+        ],
+        why: '"Our department will try a new schedule."',
+      },
+      {
+        q: 'What can employees do on Fridays?',
+        options: ['Work from home', 'Leave early', 'Wear casual clothes', 'Attend training'],
+        why: '"Every Friday, you can choose to work from home."',
+      },
+      {
+        q: 'What must employees do by Wednesday?',
+        options: [
+          'Tell their supervisor',
+          'Return their laptops',
+          'Sign a contract',
+          'Choose a new desk',
+        ],
+        why: '"Please tell your supervisor by Wednesday if you plan to do so."',
+      },
+    ],
+  },
+  {
+    id: 'p4-traffic',
+    part: 4,
+    lines: [
+      n(
+        'Good morning, this is the eight o’clock traffic report. Highway 9 is very busy this morning because of road repairs near the city bridge. Drivers should take Park Avenue instead.'
+      ),
+      n(
+        'Also, heavy rain is expected this afternoon, so please drive carefully. Our next report will be at eight thirty, right after the business news.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is causing the traffic on Highway 9?',
+        options: ['Road repairs', 'An accident', 'Heavy rain', 'A sports event'],
+        why: '"…because of road repairs near the city bridge." Mưa là dự báo cho buổi chiều.',
+      },
+      {
+        q: 'What does the speaker suggest?',
+        options: [
+          'Using a different road',
+          'Taking the train',
+          'Leaving work later',
+          'Staying at home',
+        ],
+        why: '"Drivers should take Park Avenue instead": đi đường khác.',
+      },
+      {
+        q: 'What will be broadcast just before the next traffic report?',
+        options: ['The business news', 'The weather forecast', 'Some music', 'An interview'],
+        why: '"Our next report will be at eight thirty, right after the business news."',
       },
     ],
   },
