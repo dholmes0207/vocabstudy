@@ -21,6 +21,8 @@ import TalkRound from './TalkRound'
 import MiniTest from './MiniTest'
 import FormRound from './FormRound'
 import { formRound, type FormQuestion } from '@/lib/wordFormDrill'
+import FamilyRound from './FamilyRound'
+import { familyRound, type WordFamily } from '@/lib/wordFamilies'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -46,6 +48,8 @@ export default function Toeic() {
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
   const startForms = () =>
     setForms((f) => ({ n: (f?.n ?? 0) + 1, questions: formRound(pack.words) }))
+  const [families, setFamilies] = useState<{ n: number; families: WordFamily[] } | null>(null)
+  const startFamilies = () => setFamilies((f) => ({ n: (f?.n ?? 0) + 1, families: familyRound() }))
   const [round, setRound] = useState<
     | { part: 1; n: number; questions: Part1Question[] }
     | { part: 2; n: number; questions: Part2Question[] }
@@ -97,6 +101,15 @@ export default function Toeic() {
         questions={forms.questions}
         onAgain={startForms}
         onExit={() => setForms(null)}
+      />
+    )
+  if (families)
+    return (
+      <FamilyRound
+        key={families.n}
+        families={families.families}
+        onAgain={startFamilies}
+        onExit={() => setFamilies(null)}
       />
     )
   if (round?.part === 3 || round?.part === 4)
@@ -247,6 +260,18 @@ export default function Toeic() {
                       {t(
                         'Mẹo đuôi từ: đoán từ loại (10 câu)',
                         'Ending tip: spot the part of speech (10)'
+                      )}
+                    </button>
+                  )}
+                  {part.n === 5 && (
+                    <button
+                      type="button"
+                      className="btn-secondary h-10 w-full text-sm"
+                      onClick={startFamilies}
+                    >
+                      {t(
+                        'Ghép họ từ: decide → decision → decisive (6 họ)',
+                        'Word families: decide → decision → decisive (6)'
                       )}
                     </button>
                   )}

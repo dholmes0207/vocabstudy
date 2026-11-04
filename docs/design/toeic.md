@@ -300,3 +300,18 @@ Test giữ số bài tối thiểu theo các con số trên.
   (quyển sách / đặt), store (cửa hàng / cất), take.
 - **Part 1:** từ 12 lên 20 cảnh. Có thêm câu chỉ trạng thái (are parked in a row, have been
   placed, is docked) để phân biệt với câu đang làm (is being installed).
+
+### Ghép họ từ (04/11/2026)
+
+Mục "Họ từ" của phần Xuyên suốt. Nút thứ ba trên thẻ Part 5: **Ghép họ từ** (`lib/wordFamilies.ts`,
+`features/toeic/FamilyRound.tsx`).
+
+- 52 họ từ viết tay, mỗi họ 3–4 dạng (decision / decide / decisive / decisively). Họ từ có sẵn trong
+  gói tiếng Anh không ghi từ loại, nên không dùng được cho trò này.
+- Một lượt 6 họ. Các dạng bị xáo, người học chạm lần lượt vào ô danh từ, động từ, tính từ, trạng từ.
+  Họ nào xếp xong không sai lần nào thì tính là đúng.
+- Danh từ và động từ viết giống nhau (benefit, profit, care) thì chỉ giữ một ô, để mỗi ô chỉ có một
+  từ hợp.
+- Xếp xong thì hiện nghĩa từng dạng, nghe được từng từ, và gạch chân đuôi từ như trong Mẹo đuôi từ.
+  Test giữ cho mọi dạng không trái quy tắc đuôi (vì thế bỏ họ apply: apply đuôi -ly nhưng là động
+  từ).

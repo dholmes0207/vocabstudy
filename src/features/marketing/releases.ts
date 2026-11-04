@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Ghép họ từ cho TOEIC Part 5: xếp decide, decision, decisive, decisively vào đúng ô danh từ, động từ, tính từ, trạng từ. Có 52 họ từ hay gặp trong đề, mỗi từ kèm nghĩa và đuôi từ được gạch chân.',
+        'Word families for TOEIC Part 5: put decide, decision, decisive, decisively into the noun, verb, adjective and adverb slots. Fifty-two families common in the test, each form with its meaning and its ending underlined.',
+      ],
+      [
         'Part 2 có 60 câu hỏi – đáp (thêm câu hỏi đuôi, câu hỏi gián tiếp, lời mời, lời đề nghị giúp) và Part 1 có 20 cảnh.',
         'Part 2 has 60 question–response items (adding tag and indirect questions, invitations and offers) and Part 1 has 20 scenes.',
       ],
