@@ -226,6 +226,116 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['It’s much brighter than the old one.', 'I think it’s at ten.', 'Across from the bank.'],
     'What did you think of…? hỏi nhận xét. (Bẫy) think lặp lại với nghĩa khác; câu cuối trả lời Where.'
   ),
+
+  // More prompts (04/11/2026): tag and indirect questions, offers, problems.
+  item(
+    'You’ve met our new director, haven’t you?',
+    [
+      'Yes, at the meeting last week.',
+      'The director’s office is upstairs.',
+      'No, I haven’t read it yet.',
+    ],
+    'Câu hỏi đuôi (…, haven’t you?) được trả lời như câu hỏi Yes/No. (Bẫy) câu giữa lặp director; "read it" không hợp với gặp người.'
+  ),
+  item(
+    'Could you tell me where the conference room is?',
+    ['It’s at the end of the hall.', 'Yes, I’ll tell him.', 'The conference starts at nine.'],
+    'Câu hỏi gián tiếp Could you tell me where…? hỏi nơi chốn. (Bẫy) "tell him" lặp tell; câu cuối lặp conference nhưng trả lời giờ.'
+  ),
+  item(
+    'Would you like me to print the agenda?',
+    ['That would be helpful, thanks.', 'The printer is new.', 'Yes, I like it.'],
+    'Would you like me to…? là lời đề nghị giúp: đáp nhận hoặc từ chối. (Bẫy) printer lặp âm print; "I like it" lặp like với nghĩa khác.'
+  ),
+  item(
+    'The air conditioner in my office isn’t working.',
+    [
+      'I’ll call maintenance right away.',
+      'It’s working hours now.',
+      'Yes, the office is very big.',
+    ],
+    'Câu báo vấn đề: đáp bằng cách xử lý. (Bẫy) "working hours" lặp working với nghĩa khác.'
+  ),
+  item(
+    'When is the report due?',
+    ['By Thursday afternoon.', 'About twenty pages.', 'I already read it.'],
+    'When hỏi thời hạn. (Bẫy) "twenty pages" trả lời How long (dài bao nhiêu).'
+  ),
+  item(
+    'Who will lead the training session?',
+    ['Someone from the IT department.', 'In Room 5.', 'It lasts two hours.'],
+    'Who hỏi người; câu đáp có thể chỉ nói chung chung (someone from…). Hai câu kia trả lời Where và How long.'
+  ),
+  item(
+    'Why did the sales numbers go down?',
+    ['A competitor lowered its prices.', 'They’re on page three.', 'No, they went up.'],
+    'Why hỏi lý do, đáp không cần Because. (Bẫy) "No" không trả lời được câu hỏi Wh-.'
+  ),
+  item(
+    'Where can I park my car?',
+    ['There’s a lot behind the building.', 'Yes, I can.', 'It’s a new car.'],
+    'Where hỏi nơi chốn. (Bẫy) "Yes, I can" lặp can; câu cuối lặp car.'
+  ),
+  item(
+    'How about meeting for lunch tomorrow?',
+    ['Sure, what time works for you?', 'I had a big lunch.', 'About an hour ago.'],
+    'How about…? là lời rủ: đáp đồng ý hoặc từ chối. (Bẫy) lặp lunch; "an hour ago" trả lời When ở quá khứ.'
+  ),
+  item(
+    'Is this seat taken?',
+    ['No, please go ahead.', 'It takes about ten minutes.', 'I’ll take the train.'],
+    'Hỏi ghế có người ngồi chưa: "No, please go ahead" (chưa, mời ngồi). (Bẫy) takes và take lặp từ với nghĩa khác.'
+  ),
+  item(
+    'Which supplier did we choose?',
+    ['The one with the lowest price.', 'We chose it last month.', 'Yes, they supply paper.'],
+    'Which hỏi cái nào. (Bẫy) "last month" trả lời When; supply lặp âm supplier.'
+  ),
+  item(
+    'Do you want me to book a taxi for you?',
+    ['No thanks, I’ll take the subway.', 'The book is on my desk.', 'Yes, it was a long trip.'],
+    'Lời đề nghị giúp: đáp nhận hoặc từ chối kèm lý do. (Bẫy) book (quyển sách) cùng chữ với book (đặt).'
+  ),
+  item(
+    'How long have you worked at this company?',
+    ['For about five years.', 'It’s a long way.', 'At the main office.'],
+    'How long have you…? hỏi khoảng thời gian: For about five years. (Bẫy) "a long way" lặp long.'
+  ),
+  item(
+    'Has the shipment arrived yet?',
+    ['It’s expected this afternoon.', 'Yes, I shipped it.', 'At the front gate.'],
+    'Hỏi hàng đến chưa: câu đáp gián tiếp "dự kiến chiều nay đến" vẫn đúng. (Bẫy) shipped lặp âm shipment.'
+  ),
+  item(
+    'Why don’t you ask Maria for help?',
+    ['That’s a good idea.', 'Because she was late.', 'She asked me yesterday.'],
+    'Why don’t you…? là lời gợi ý, không hỏi lý do. (Bẫy) câu Because trả lời lý do; asked lặp ask.'
+  ),
+  item(
+    'What’s the price of this printer?',
+    ['It’s on sale for 200 dollars.', 'It prints very fast.', 'Next to the window.'],
+    'Hỏi giá. (Bẫy) prints lặp âm printer; câu cuối trả lời Where.'
+  ),
+  item(
+    'I can’t find my security badge.',
+    ['You can get a new one at reception.', 'Yes, it’s very secure.', 'I found the report.'],
+    'Câu báo vấn đề: đáp bằng cách giải quyết. (Bẫy) secure lặp âm security; found là quá khứ của find.'
+  ),
+  item(
+    'Will the store be open on Sunday?',
+    ['Only in the morning.', 'It opened last year.', 'I’ll store them in the closet.'],
+    'Câu hỏi Yes/No có thể đáp bằng thông tin cụ thể: "Only in the morning". (Bẫy) store (cửa hàng / cất giữ), opened lặp open.'
+  ),
+  item(
+    'Who should I send the invoice to?',
+    ['The accounting department.', 'I sent it yesterday.', 'Two hundred dollars.'],
+    'Hỏi gửi cho ai: đáp bằng bộ phận. (Bẫy) sent là quá khứ của send; câu cuối nói số tiền.'
+  ),
+  item(
+    'Let’s take a short break.',
+    ['Good idea, I need some coffee.', 'The window is broken.', 'It’s a short movie.'],
+    'Lời rủ: đáp đồng ý. (Bẫy) broken nghe gần break; short lặp lại với nghĩa khác.'
+  ),
 ]
 
 /** Items in one round. */
