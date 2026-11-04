@@ -364,3 +364,14 @@ Phần 1 bài Đọc của HSK 1 và HSK 2: cùng tranh như phần Nghe, nhưng
 như đề HSK 1–2 in) thay vì đọc lên (`lookQuestions`). Trả lời xong thì phát giọng thu của từ.
 
 - Bài thi nhỏ HSK 1–2: phần Đọc gồm 5 câu nhìn tranh và 5 câu điền từ. HSK 3 giữ 10 câu điền từ.
+
+### Từ làm sai quay lại lịch ôn (04/11/2026)
+
+Các bài luyện hỏi về chính từ của gói (Part 5 câu nghĩa từ, Mẹo đuôi từ, mọi dạng của Luyện thi HSK
+và bài thi nhỏ HSK) giờ báo cho lịch ôn khi người học làm sai (`hooks/useMissedWord.ts`).
+
+- Chỉ ghi câu sai, và chỉ với từ đã có trong lịch ôn: từ đó lùi hộp và được hỏi lại sớm.
+- Câu đúng không ghi: trả lời đúng ngoài lịch sẽ đẩy thẻ đi xa hơn số lần ôn thật. Từ chưa học cũng
+  không được thêm: bài luyện không phải bài học từ mới.
+- Ghép họ từ và Part 1–4, 6, 7 dùng câu viết tay, không gắn với từ nào của gói, nên không đổi.
+- Sắp xếp câu HSK: xếp xong mà có lần chạm sai thì tính là làm sai từ của câu đó.

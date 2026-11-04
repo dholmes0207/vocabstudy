@@ -7,9 +7,10 @@ import '@testing-library/jest-dom/vitest'
 import type { LanguagePack } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { useStudy } from '@/store/studyStore'
+import { statsOf, useStudy } from '@/store/studyStore'
 import { TOEIC_THEMES } from '@/lib/toeic'
 import { familySlots, WORD_FAMILIES } from '@/lib/wordFamilies'
+import { newCard } from '@/lib/srs'
 import Toeic from './Toeic'
 import Exam from '@/features/exam/Exam'
 
@@ -114,5 +115,22 @@ describe('TOEIC page', () => {
       fireEvent.click(screen.getByRole('button', { name: /^(Next family|See results)$/ }))
     }
     expect(screen.getByText('5 of 6 families without a slip')).toBeInTheDocument()
+  })
+
+  it('sends a word of the schedule missed in the endings drill back for an early review', () => {
+    // Every word started, two boxes in; nothing else changes the cards here.
+    const cards = Object.fromEntries(
+      en.words.map((w) => [w.id, { ...newCard(w.id), box: 2, lastReviewedDay: 0, dueDay: 99999 }])
+    )
+    useStudy.setState({ progress: { en: { cards, stats: statsOf({}, 'en') } as never } })
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: /Ending tip/ }))
+    for (let i = 0; i < 10; i++) {
+      fireEvent.click(screen.getByRole('button', { name: 'Noun' }))
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
+    }
+    const right = Number(/(\d+) of 10 right/.exec(document.body.textContent!)![1])
+    const after = Object.values(useStudy.getState().progress.en!.cards)
+    expect(after.filter((c) => c.box < 2)).toHaveLength(10 - right)
   })
 })

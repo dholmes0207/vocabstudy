@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Làm sai một từ đang trong lịch ôn ở các bài luyện TOEIC và HSK thì từ đó được đưa lại vào ôn sớm. Từ chưa học không tự được thêm vào lịch ôn.',
+        'Missing a word you are already reviewing in TOEIC or HSK practice brings it back to your reviews soon. Words you have not studied are not added on their own.',
+      ],
+      [
         'Luyện thi HSK có thêm "Đọc – nhìn tranh (看图判断)": đọc một từ có pinyin, nhìn tranh, chọn đúng hay sai, như phần đầu bài Đọc của HSK 1 và HSK 2. Phần Đọc của bài thi nhỏ HSK 1–2 có 5 câu dạng này.',
         'HSK practice adds "Read and look (看图判断)": read a word with its pinyin, look at the picture, say right or wrong, like the first reading part of HSK 1 and HSK 2. The reading part of the HSK 1–2 mini tests now has five of them.',
       ],

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowRight, Check, X } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useMissedWord } from '@/hooks/useMissedWord'
 import { PART5_KINDS, part5Summary, type Part5Kind, type Part5Question } from '@/lib/toeicPart5'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -28,6 +29,7 @@ export default function Part5Round({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const missed = useMissedWord()
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [results, setResults] = useState<{ kind: Part5Kind; ok: boolean }[]>([])
@@ -67,6 +69,7 @@ export default function Part5Round({
     const ok = i === q.answer
     setResults((r) => [...r, { kind: q.kind, ok }])
     if (soundOn) (ok ? playCorrect : playWrong)()
+    if (!ok) missed(q.wordId)
   }
   const next = () => {
     if (idx + 1 < questions.length) {
