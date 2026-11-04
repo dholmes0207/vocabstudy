@@ -9,6 +9,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { TOEIC_THEMES } from '@/lib/toeic'
+import { familySlots, WORD_FAMILIES } from '@/lib/wordFamilies'
 import Toeic from './Toeic'
 import Exam from '@/features/exam/Exam'
 
@@ -86,5 +87,32 @@ describe('TOEIC page', () => {
       fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
     }
     expect(screen.getByText(/of 10 right/)).toBeInTheDocument()
+  })
+
+  it('runs word families: each form into its slot, one slip marks the family', () => {
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: /Word families/ }))
+    const card = () => screen.getByText(/^(Pick the|The whole family)/).parentElement!
+    for (let i = 0; i < 6; i++) {
+      const tiles = () =>
+        within(card())
+          .queryAllByRole('button')
+          .filter((b) => b.getAttribute('lang') === 'en' && !b.hasAttribute('disabled'))
+      const forms = tiles().map((b) => b.textContent)
+      const slots = familySlots(
+        WORD_FAMILIES.find((f) => familySlots(f).every((s) => forms.includes(s.en)))!
+      )
+      for (let k = 0; k < slots.length; k++) {
+        // One wrong tap on the first family.
+        if (i === 0 && k === 0) fireEvent.click(tiles().find((b) => b.textContent !== slots[0].en)!)
+        fireEvent.click(tiles().find((b) => b.textContent === slots[k].en)!)
+      }
+      expect(
+        screen.getByText(i === 0 ? 'Done, with 1 slip.' : 'Right first time!')
+      ).toBeInTheDocument()
+      expect(screen.getAllByText(slots[0].vi).length).toBeGreaterThan(0)
+      fireEvent.click(screen.getByRole('button', { name: /^(Next family|See results)$/ }))
+    }
+    expect(screen.getByText('5 of 6 families without a slip')).toBeInTheDocument()
   })
 })

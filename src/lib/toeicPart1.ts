@@ -154,6 +154,96 @@ export const PART1_BANK: readonly Part1Item[] = [
     ],
     'choosing some fruit = đang chọn hoa quả. Quầy đang có người mua nên không thể "closed".'
   ),
+
+  // More scenes (04/11/2026).
+  item(
+    '🧑‍💼📞🗂️',
+    'Một người đàn ông đang nói điện thoại ở bàn làm việc.',
+    [
+      'A man is talking on the phone.',
+      'A man is filing some papers.',
+      'A man is leaving the office.',
+      'A phone is being repaired.',
+    ],
+    'talking on the phone = đang nói điện thoại. "filing some papers" có đồ vật trong tranh nhưng sai hành động.'
+  ),
+  item(
+    '🪟🧽🏢',
+    'Một người công nhân đang lau cửa kính toà nhà.',
+    [
+      'A worker is cleaning a window.',
+      'A window is being installed.',
+      'A worker is opening a door.',
+      'The building is being painted.',
+    ],
+    'cleaning a window = lau cửa sổ. "being installed" (đang được lắp) đúng đồ vật nhưng sai việc.'
+  ),
+  item(
+    '🚗🚗🚗🅿️',
+    'Nhiều ô tô đậu thành hàng trong bãi xe, không có ai.',
+    [
+      'Some cars are parked in a row.',
+      'A man is driving out of a parking lot.',
+      'Some cars are being washed.',
+      'Traffic is moving on a highway.',
+    ],
+    'are parked in a row = đậu thành hàng (trạng thái). Tranh không có người nên câu có người lái xe đều sai.'
+  ),
+  item(
+    '☕🫖🍪',
+    'Tách cà phê và đĩa bánh được đặt trên bàn.',
+    [
+      'Some cups have been placed on a table.',
+      'A woman is pouring tea.',
+      'Some cookies are being baked.',
+      'The table is being cleared.',
+    ],
+    'have been placed = đã được đặt (trạng thái). Các câu kia nói về hành động đang diễn ra mà tranh không có.'
+  ),
+  item(
+    '👷‍♀️🪜🧱',
+    'Một công nhân đang leo thang.',
+    [
+      'A worker is climbing a ladder.',
+      'A ladder is lying on the ground.',
+      'A worker is building a wall.',
+      'Some bricks are being delivered.',
+    ],
+    'climbing a ladder = leo thang. "lying on the ground" sai vì thang đang được dùng.'
+  ),
+  item(
+    '🧑‍🏫👩‍🎓👨‍🎓📝',
+    'Học viên đang ghi chép trong lúc một người thuyết trình.',
+    [
+      'Some people are taking notes.',
+      'Some people are leaving the room.',
+      'A woman is handing out papers.',
+      'The seats are all empty.',
+    ],
+    'taking notes = ghi chép. "The seats are all empty" mâu thuẫn với cảnh có người ngồi nghe.'
+  ),
+  item(
+    '🛳️⚓🌊',
+    'Một con tàu đang neo ở cảng.',
+    [
+      'A ship is docked at a port.',
+      'Some passengers are swimming.',
+      'A ship is sailing in a storm.',
+      'Some boxes are being unloaded from a truck.',
+    ],
+    'is docked at a port = đang neo ở cảng. Tranh không có bão hay người bơi.'
+  ),
+  item(
+    '🧑‍🍳🥗🍽️',
+    'Một người phục vụ đang dọn món ăn ra bàn.',
+    [
+      'A server is bringing food to a table.',
+      'A customer is paying the bill.',
+      'Some dishes are being washed.',
+      'A chef is cutting vegetables.',
+    ],
+    'bringing food to a table = mang món ăn ra bàn. Các câu kia có người hoặc việc không có trong tranh.'
+  ),
 ]
 
 /** Items in one round, as many as Part 1 has on the test. */
