@@ -14,7 +14,8 @@ import { RADICALS } from './radicals'
 //   char:   a character missing, its pinyin given (HSK 3 writing, 写汉字).
 //   judge:  hear a word, see a picture, right or wrong (HSK 1–2 listening, 判断对错);
 //   look:   the same with the word written, pinyin above (HSK 1–2 reading, part one);
-//   pick:   hear a sentence, pick its picture among three (HSK 1 listening, part two).
+//   pick:   hear a sentence, pick its picture among three (HSK 1 listening, part two);
+//   see:    the same with the sentence written, pinyin under it (HSK 1 reading, part two).
 
 export type HskLevel = 'hsk1' | 'hsk2' | 'hsk3'
 export const HSK_LEVELS: readonly HskLevel[] = ['hsk1', 'hsk2', 'hsk3']
@@ -30,7 +31,7 @@ export function levelWords(level: HskLevel, words: readonly Word[]): Word[] {
 }
 
 export interface HskChoice {
-  kind: 'listen' | 'fill' | 'char' | 'judge' | 'look' | 'pick'
+  kind: 'listen' | 'fill' | 'char' | 'judge' | 'look' | 'pick' | 'see'
   word: Word
   /** judge, look: the picture shown (an emoji), and the word it is when not the one asked. */
   picture?: string
@@ -270,6 +271,16 @@ export function pictureQuestions(
       const options = shuffle([w.emoji!, ...others.slice(0, 2).map((o) => o.emoji!)])
       return { kind: 'pick' as const, word: w, options, answer: options.indexOf(w.emoji!) }
     })
+}
+
+/** HSK 1 reading, part two: the same pictures for a sentence to read instead of hear. */
+export function seeQuestions(
+  level: HskLevel,
+  words: readonly Word[],
+  count: number,
+  rand: () => number = Math.random
+): HskChoice[] {
+  return pictureQuestions(level, words, count, rand).map((q) => ({ ...q, kind: 'see' as const }))
 }
 
 /** Examples short and plain enough to have one right order: 3–7 words, no inner punctuation. */

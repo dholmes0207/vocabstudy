@@ -196,10 +196,23 @@ Giờ cả 7 Part đều có nút "Luyện".
 
 ## Tiếp theo
 
-Giai đoạn A đã đủ 7 Part và bài thi nhỏ. Có thể làm thêm sau: tăng số câu cho mỗi Part; ghi âm sẵn
-các câu Part 1–4 bằng giọng thu (hiện đọc bằng giọng trình duyệt nếu clip chưa có).
+Tình hình (04/11/2026):
 
-Giai đoạn B (HSK) bắt đầu từ đây.
+- **Giai đoạn A (TOEIC):** đủ 7 Part, bài thi nhỏ, từ vựng 13 chủ đề, Mẹo đuôi từ, Ghép họ từ. Part
+  1–4 có giọng thu (Part 3 giọng nam nữ), Part 3–4 có dạng "Look at the graphic", Part 7 có câu NOT,
+  gần nghĩa, suy ra.
+- **Giai đoạn B (HSK):** 8 dạng câu cho HSK 1–3 (nghe đúng sai, nghe chọn tranh, nghe hiểu, đọc nhìn
+  tranh, đọc chọn tranh, điền từ, sắp xếp câu, viết chữ) và bài thi nhỏ theo tỉ lệ từng cấp.
+- **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
+
+Có thể làm thêm sau:
+
+- tăng số bài cho từng Part;
+- HSK 2 phần 2 (ghép hội thoại với tranh) và HSK 3 phần nghe hội thoại: gói chưa có hội thoại thu
+  sẵn, cần viết và thu riêng;
+- biểu đồ điểm bài thi nhỏ qua các lần làm (hiện chỉ lưu lần tốt nhất).
+
+Các bước dưới đây ghi theo thứ tự đã làm.
 
 ### Bước B1: trang Luyện thi HSK (03/11/2026)
 
@@ -416,3 +429,9 @@ Phần 2 bài Nghe của HSK 1: nghe một câu, chọn tranh đúng trong 3 tra
   (test kiểm tra ở cả 3 cấp).
 - Bài thi nhỏ HSK 1: phần Nghe gồm 4 câu đúng sai, 3 câu chọn tranh, 3 câu nghe hiểu. HSK 2 giữ 5 câu
   đúng sai và 5 câu nghe hiểu (phần 2 của HSK 2 là dạng khác).
+
+### Bước B6: đọc – chọn tranh (04/11/2026)
+
+Phần 2 bài Đọc của HSK 1: cùng câu và tranh như Nghe – chọn tranh, nhưng câu được viết ra kèm pinyin
+(`seeQuestions`). Trả lời xong thì phát giọng thu của câu. Bài thi nhỏ HSK 1: phần Đọc gồm 4 câu nhìn
+tranh, 3 câu chọn tranh, 3 câu điền từ.
