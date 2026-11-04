@@ -536,3 +536,10 @@ Mỗi Part từ 10 lên 12 bài (test giữ mức này): hội thoại máy chi�
 cốc trễ trước ngày mở chi nhánh; thông báo ở bảo tàng, hướng dẫn hệ thống đặt phòng họp mới. Câu hỏi
 theo các dạng hay gặp: vấn đề là gì, người nói đề nghị gì, việc làm tiếp theo, điều bị cấm (bẫy: chụp
 ảnh vẫn được, chỉ cấm đèn flash). Lời thoại đã vào `screens.json` để thu âm.
+
+### Thêm hội thoại HSK (04/11/2026)
+
+HSK 3 từ 10 lên 15 hội thoại, HSK 2 từ 8 lên 12 (test giữ mức này). Có thêm câu phải suy ra chứ không
+nghe thẳng: tuổi của người nữ tính từ tuổi anh trai (25 − 3), cách đi cuối cùng khi xe buýt không đến
+(bẫy: 公共汽车 được nhắc trước). Kiểm tra chữ lần này bắt được 停, 建议 (HSK 4) và 接, 图书馆 (HSK 3
+trong hội thoại HSK 2), đã viết lại.
