@@ -4,6 +4,8 @@ import { ArrowRight, Headphones, BookOpenText } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
+import { useExam } from '@/store/examStore'
+import { MINI_TEST_ID } from '@/lib/toeicMiniTest'
 import { phaseOf } from '@/lib/srs'
 import { TOEIC_PARTS, TOEIC_THEMES, themeWords } from '@/lib/toeic'
 import { useT } from '@/lib/i18n'
@@ -43,6 +45,7 @@ export default function Toeic() {
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
+  const best = useExam((s) => s.records[MINI_TEST_ID])
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
@@ -206,6 +209,11 @@ export default function Toeic() {
                   '26 câu, khoảng 20 phút, đủ 7 Part theo tỉ lệ đề thật. Cuối bài có khoảng điểm ước lượng cho Nghe và Đọc.',
                   '26 questions, about 20 minutes, all 7 parts in the proportions of the real test, with an estimated range for Listening and Reading.'
                 )}
+                {best &&
+                  t(
+                    ` Lần tốt nhất: ${best.best}/${best.total} câu.`,
+                    ` Your best: ${best.best}/${best.total}.`
+                  )}
               </p>
             </div>
             <button

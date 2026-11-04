@@ -8,6 +8,7 @@ import type { LanguagePack } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { statsOf, useStudy } from '@/store/studyStore'
+import { useExam } from '@/store/examStore'
 import { TOEIC_THEMES } from '@/lib/toeic'
 import { familySlots, WORD_FAMILIES } from '@/lib/wordFamilies'
 import { newCard } from '@/lib/srs'
@@ -132,5 +133,15 @@ describe('TOEIC page', () => {
     const right = Number(/(\d+) of 10 right/.exec(document.body.textContent!)![1])
     const after = Object.values(useStudy.getState().progress.en!.cards)
     expect(after.filter((c) => c.box < 2)).toHaveLength(10 - right)
+  })
+
+  it('shows the best mini test result once there is one', () => {
+    useExam.setState({ records: {} })
+    renderAt('/toeic')
+    expect(screen.queryByText(/Your best/)).not.toBeInTheDocument()
+    cleanup()
+    useExam.setState({ records: { 'toeic-mini': { best: 19, total: 26, day: 1, tries: 2 } } })
+    renderAt('/toeic')
+    expect(screen.getByText(/Your best: 19\/26\./)).toBeInTheDocument()
   })
 })
