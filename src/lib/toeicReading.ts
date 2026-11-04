@@ -30,6 +30,10 @@ const INVOICE: Pair = ['Hoá đơn', 'Invoice']
 const SCHEDULE: Pair = ['Lịch đặt phòng', 'Room schedule']
 const JOB: Pair = ['Tin tuyển dụng', 'Job advertisement']
 const LETTER: Pair = ['Thư', 'Letter']
+const MEMO: Pair = ['Thông báo nội bộ', 'Memo']
+const ARTICLE: Pair = ['Bài báo', 'Article']
+const REVIEW: Pair = ['Đánh giá của khách', 'Customer review']
+const FORM: Pair = ['Phiếu', 'Form']
 
 const gap = (options: [string, string, string, string], why: string): ReadingQuestion => ({
   q: '',
@@ -862,6 +866,286 @@ Sara`,
           'It is not served on Saturday.',
         ],
         why: 'Lịch ghi "Lunch (included with registration)". 11:00 là giờ nghỉ uống cà phê.',
+      },
+    ],
+  },
+  {
+    id: 'p7-printer-memo',
+    part: 7,
+    passages: [
+      {
+        kind: MEMO,
+        text: `MEMO
+To: All employees
+From: Facilities Department
+Date: April 2
+Subject: New printers
+
+New printers will be installed on every floor this Thursday, April 4. Installation will begin at 8:00 A.M. and should be finished by noon. During this time, the printers on the second and third floors will not be available, so please print any important documents on Wednesday.
+
+To use the new printers, you will need your employee ID card. Simply hold your card near the reader on the front of the printer. Staff who have lost their card should request a new one from the front desk before Thursday.
+
+Instructions will be posted next to each printer. Questions may be sent to Ray Chen at extension 214.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the memo?',
+        options: [
+          'To announce the installation of new equipment',
+          'To ask staff to print fewer documents',
+          'To introduce a new employee',
+          'To explain a change in office hours',
+        ],
+        why: 'Tiêu đề "New printers" và câu đầu: máy in mới sẽ được lắp ở mọi tầng. Câu hỏi mục đích thường trả lời ở đầu bài.',
+      },
+      {
+        q: 'What are employees advised to do on Wednesday?',
+        options: [
+          'Print important documents',
+          'Collect their new ID cards',
+          'Attend a training session',
+          'Call Mr. Chen',
+        ],
+        why: '"please print any important documents on Wednesday", vì sáng thứ Năm máy in tầng 2 và 3 không dùng được.',
+      },
+      {
+        q: 'What will employees need in order to use the new printers?',
+        options: ['An ID card', 'A password', 'A form signed by a manager', 'A printing code'],
+        why: '"you will need your employee ID card": chạm thẻ vào đầu đọc trên máy in.',
+      },
+    ],
+  },
+  {
+    id: 'p7-cafe-article',
+    part: 7,
+    passages: [
+      {
+        kind: ARTICLE,
+        text: `RIVERSIDE (May 10) — Bean & Leaf, the popular café on Market Street, will open a second location next month. The new café will be in the Riverside Shopping Center, next to the movie theater.
+
+Owner Maria Santos started the business six years ago with just four tables. "Many of our customers live on the other side of the river," she said. "Now they won't have to travel so far for their morning coffee."
+
+The new location will be larger than the original one and will seat about 60 people. Unlike the Market Street café, it will stay open until 10:00 P.M. to serve moviegoers. Ms. Santos is currently hiring 12 staff members for the new café. Interested applicants can apply on the café's website.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the article mainly about?',
+        options: [
+          'The opening of a new business location',
+          'The history of a shopping center',
+          'A new movie theater',
+          'A change of owner at a café',
+        ],
+        why: 'Câu đầu: Bean & Leaf "will open a second location next month". Phần còn lại nói thêm về chi nhánh mới.',
+      },
+      {
+        q: 'Why did Ms. Santos choose the new location?',
+        options: [
+          'Many customers live near it.',
+          'The rent is lower there.',
+          'The Market Street café is closing.',
+          'The movie theater asked her to open there.',
+        ],
+        why: '"Many of our customers live on the other side of the river… they won\'t have to travel so far."',
+      },
+      {
+        q: 'What is NOT true about the new café?',
+        options: [
+          'It will be smaller than the original café.',
+          'It will be next to a movie theater.',
+          'It will be open until 10:00 P.M.',
+          'It will have about 60 seats.',
+        ],
+        why: 'Câu hỏi NOT: tìm điều trái với bài. Bài nói quán mới "larger than the original one", không phải nhỏ hơn. Ba ý còn lại đều có trong bài.',
+      },
+      {
+        q: 'The word "serve" in paragraph 3, line 2, is closest in meaning to',
+        options: ['provide for', 'work as', 'deliver', 'play'],
+        why: '"to serve moviegoers": phục vụ khách xem phim, tức là đáp ứng nhu cầu của họ (provide for). Câu hỏi gần nghĩa phải đọc theo ngữ cảnh, không theo nghĩa thường gặp nhất.',
+      },
+    ],
+  },
+  {
+    id: 'p7-hotel-review',
+    part: 7,
+    passages: [
+      {
+        kind: REVIEW,
+        text: `★★★★☆  Great location, slow check-in
+Posted by Daniel Park, October 3
+
+I stayed at the Harbor View Hotel for three nights during a business trip. The hotel is only a five-minute walk from the convention center, which was perfect for me. My room was clean and quiet, and the free breakfast had plenty of choices.
+
+The only problem was check-in. I arrived at 3:00 P.M. and had to wait almost 40 minutes because only one person was working at the front desk. The manager apologized and gave me a voucher for a free dinner at the hotel restaurant, which I appreciated.
+
+I would definitely stay here again on my next trip.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Mr. Park stay at the hotel?',
+        options: [
+          'He was on a business trip.',
+          'He was on vacation with his family.',
+          'He was attending a wedding.',
+          'He was moving to the city.',
+        ],
+        why: '"I stayed at the Harbor View Hotel for three nights during a business trip."',
+      },
+      {
+        q: 'What did Mr. Park like about the hotel?',
+        options: [
+          'It was close to the convention center.',
+          'Check-in was quick.',
+          'The rooms had a harbor view.',
+          'Dinner was included in the price.',
+        ],
+        why: '"only a five-minute walk from the convention center, which was perfect for me". Tên khách sạn có "Harbor View" nhưng bài không nói phòng nhìn ra cảng: bẫy lặp từ.',
+      },
+      {
+        q: 'What did the manager give Mr. Park?',
+        options: [
+          'A voucher for a meal',
+          'A room upgrade',
+          'A refund for one night',
+          'A free breakfast',
+        ],
+        why: '"gave me a voucher for a free dinner at the hotel restaurant". Bữa sáng vốn đã miễn phí cho mọi khách.',
+      },
+    ],
+  },
+  {
+    id: 'p7-sale-order',
+    part: 7,
+    passages: [
+      {
+        kind: AD,
+        text: `OFFICE PLUS — Spring Sale!
+April 15–30 only
+
+• 20% off all office chairs
+• Buy two boxes of copy paper, get one free
+• Free delivery on orders over $150
+
+Order online at www.officeplus.com or call 555-0182.
+Business customers with an Office Plus account receive an extra 5% off.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: orders@officeplus.com
+From: Helen Wu, Lane Design Studio
+Date: April 18
+Subject: Order 7731
+
+Hello,
+
+Yesterday I ordered six office chairs and four boxes of copy paper for our studio. The total came to $640, so I expected free delivery, but a $25 delivery charge was added to my bill. Also, I only received four boxes of paper, although the sale says I should get two free ones.
+
+Could you please correct my bill? We have had an Office Plus business account for three years.
+
+Thank you,
+Helen Wu`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the email?',
+        options: [
+          'To report problems with an order',
+          'To open a business account',
+          'To ask about the dates of a sale',
+          'To cancel an order',
+        ],
+        why: 'Cô ấy nêu hai lỗi (phí giao hàng, thiếu giấy) và hỏi "Could you please correct my bill?"',
+      },
+      {
+        q: 'Why should Ms. Wu not have paid for delivery?',
+        options: [
+          'Her order was over $150.',
+          'She picked the order up herself.',
+          'She ordered before April 15.',
+          'Delivery is always free for business customers.',
+        ],
+        why: 'Ghép hai đoạn: quảng cáo hứa "Free delivery on orders over $150", đơn của cô ấy $640.',
+      },
+      {
+        q: 'How many boxes of paper should Ms. Wu have received in total?',
+        options: ['Six', 'Four', 'Two', 'Eight'],
+        why: '"Buy two, get one free": mua 4 hộp thì được tặng 2, tổng cộng 6. Cô ấy chỉ nhận 4.',
+      },
+      {
+        q: 'What is suggested about Lane Design Studio?',
+        options: [
+          'It should receive an extra discount.',
+          'It placed the order by phone.',
+          'It is a new customer of Office Plus.',
+          'It ordered chairs that were not on sale.',
+        ],
+        why: 'Ghép hai đoạn: studio có tài khoản doanh nghiệp ba năm nay, mà quảng cáo nói khách có tài khoản được giảm thêm 5%. "suggested" là hỏi điều suy ra được.',
+      },
+    ],
+  },
+  {
+    id: 'p7-volunteer-form',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `City Park Clean-Up Day — Saturday, June 8, 9:00 A.M. to 1:00 P.M.
+
+Volunteers are needed to help clean Lakeside Park. Gloves, bags, and drinks will be provided. Lunch will be served at 1:00 P.M. for all volunteers.
+
+Volunteers under 16 must come with an adult. Please register by June 3 so that we know how much lunch to order. Groups of five or more should register through our office by phone at 555-0147.`,
+      },
+      {
+        kind: FORM,
+        text: `Clean-Up Day — Volunteer Registration
+
+Name: Paul Grant
+Number of people: 3 (myself and my two children, ages 12 and 14)
+Arrival time: 10:00 A.M.
+Staying for lunch: Yes
+Comments: We can only stay until noon, but my children would really like to help. Could you tell me which entrance is closest to the parking lot?
+Date submitted: June 5`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is NOT mentioned as something volunteers will receive?',
+        options: ['T-shirts', 'Gloves', 'Drinks', 'Lunch'],
+        why: 'Câu hỏi NOT: thông báo nêu găng tay, túi, đồ uống và bữa trưa, không có áo phông.',
+      },
+      {
+        q: 'Why are Mr. Grant’s children allowed to take part?',
+        options: [
+          'They will come with an adult.',
+          'They are over 16.',
+          'They registered as a group.',
+          'They live near the park.',
+        ],
+        why: 'Ghép hai đoạn: dưới 16 tuổi phải đi cùng người lớn; hai con 12 và 14 tuổi đi cùng ông Grant.',
+      },
+      {
+        q: 'What problem is there with Mr. Grant’s form?',
+        options: [
+          'He submitted it after the deadline.',
+          'He should have registered by phone.',
+          'He did not give his children’s ages.',
+          'He chose an arrival time after the event ends.',
+        ],
+        why: 'Hạn đăng ký là June 3, phiếu nộp June 5. Nhóm 3 người nên không cần gọi điện (từ 5 người trở lên).',
+      },
+      {
+        q: 'What information is inconsistent on the form?',
+        options: [
+          'He says he will stay for lunch but leave at noon.',
+          'He gives two different arrival times.',
+          'He lists four people but names three.',
+          'He asks for the parking lot but says he will walk.',
+        ],
+        why: 'Bữa trưa phục vụ lúc 1:00 P.M., nhưng ông ấy chỉ ở được tới trưa (noon) mà vẫn đánh dấu "Staying for lunch: Yes".',
       },
     ],
   },
