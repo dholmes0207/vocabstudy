@@ -445,6 +445,96 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-projector',
+    part: 3,
+    lines: [
+      m('Excuse me, I’m giving a presentation in Room 4 at ten, but the projector won’t turn on.'),
+      w(
+        'Oh, that room has had problems all week. You can use Room 6 instead. It has a new projector.'
+      ),
+      m('Great. Could you let the people attending know about the change?'),
+      w('Sure. I’ll send everyone an e-mail right now and put a sign on the door of Room 4.'),
+    ],
+    questions: [
+      {
+        q: 'What problem does the man have?',
+        options: [
+          'A projector is not working.',
+          'His presentation was canceled.',
+          'He cannot find Room 4.',
+          'He is late for a meeting.',
+        ],
+        why: '"the projector won’t turn on": máy chiếu không bật được.',
+      },
+      {
+        q: 'What does the woman suggest?',
+        options: [
+          'Using a different room',
+          'Calling a technician',
+          'Postponing the talk',
+          'Buying a new projector',
+        ],
+        why: '"You can use Room 6 instead." instead = thay vào đó, tức là đổi phòng.',
+      },
+      {
+        q: 'What will the woman do next?',
+        options: [
+          'Send an e-mail to the attendees',
+          'Repair the projector',
+          'Give the presentation',
+          'Move the chairs to Room 6',
+        ],
+        why: '"I’ll send everyone an e-mail right now". Câu hỏi "do next" thường trả lời ở lượt nói cuối.',
+      },
+    ],
+  },
+  {
+    id: 'p3-delivery-date',
+    part: 3,
+    lines: [
+      w(
+        'Hello, this is Maria from Lotus Café. I’m calling about the coffee cups we ordered last week.'
+      ),
+      m(
+        'Yes, Ms. Lopez. I’m afraid our supplier is out of the blue cups, so the order will be a few days late.'
+      ),
+      w('Hmm, we’re opening our new branch on Friday. Do you have any other color in stock?'),
+      m('We have white ones. If you’d like those, I can deliver them tomorrow morning.'),
+    ],
+    questions: [
+      {
+        q: 'Why is the woman calling?',
+        options: [
+          'To ask about an order',
+          'To book a table',
+          'To apply for a job',
+          'To complain about a bill',
+        ],
+        why: '"I’m calling about the coffee cups we ordered": hỏi về đơn hàng.',
+      },
+      {
+        q: 'Why is the woman worried about the delay?',
+        options: [
+          'A new branch is opening soon.',
+          'The café is closing.',
+          'She has already paid twice.',
+          'Her supplier has gone out of business.',
+        ],
+        why: '"we’re opening our new branch on Friday": chi nhánh mới sắp mở nên không chờ được.',
+      },
+      {
+        q: 'What does the man offer to do?',
+        options: [
+          'Deliver cups in a different color',
+          'Give a discount on the order',
+          'Cancel the order',
+          'Call the supplier again',
+        ],
+        why: '"We have white ones… I can deliver them tomorrow morning": giao cốc màu trắng thay cho màu xanh.',
+      },
+    ],
+  },
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -822,6 +912,98 @@ export const TALK_SETS: readonly TalkSet[] = [
           'Bring a tent',
         ],
         why: '"If you signed up to bring a dish, please let me know by Monday whether you can still come."',
+      },
+    ],
+  },
+  {
+    id: 'p4-museum',
+    part: 4,
+    lines: [
+      n(
+        'Welcome to the City History Museum. Before you begin, please note that the second floor is closed today while we set up a new exhibition on old trains.'
+      ),
+      n('The exhibition opens next Monday, and visitors who show today’s ticket will get in free.'),
+      n(
+        'Guided tours of the first floor start every hour at the information desk. Photos are welcome, but please do not use a flash.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Why is the second floor closed?',
+        options: [
+          'A new exhibition is being set up.',
+          'It is being cleaned.',
+          'There is a private event.',
+          'The elevator is broken.',
+        ],
+        why: '"closed today while we set up a new exhibition": đang dựng triển lãm mới.',
+      },
+      {
+        q: 'What will visitors receive if they keep today’s ticket?',
+        options: [
+          'Free entry to the new exhibition',
+          'A discount at the gift shop',
+          'A free guided tour',
+          'A museum map',
+        ],
+        why: '"visitors who show today’s ticket will get in free" khi triển lãm mở cửa thứ Hai tới.',
+      },
+      {
+        q: 'What are visitors asked not to do?',
+        options: [
+          'Use a flash when taking photos',
+          'Take photos',
+          'Join a tour',
+          'Visit the first floor',
+        ],
+        why: '"Photos are welcome, but please do not use a flash." Bẫy: chụp ảnh vẫn được, chỉ cấm đèn flash.',
+      },
+    ],
+  },
+  {
+    id: 'p4-new-system',
+    part: 4,
+    lines: [
+      n(
+        'Good morning, everyone. As you know, we’re moving to a new online system for booking meeting rooms.'
+      ),
+      n(
+        'Starting next week, the paper sign-up sheets outside each room will be removed. To book a room, just log in to the company website with your employee number.'
+      ),
+      n(
+        'If you have any trouble, Kevin from the IT team will be at the front desk all day on Monday to help.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is the talk mainly about?',
+        options: [
+          'A new way to book meeting rooms',
+          'The opening of a new office',
+          'A change in working hours',
+          'A training course for new staff',
+        ],
+        why: '"we’re moving to a new online system for booking meeting rooms". Ý chính thường nằm ở câu đầu.',
+      },
+      {
+        q: 'What will be removed next week?',
+        options: [
+          'Paper sign-up sheets',
+          'Some meeting rooms',
+          'The front desk',
+          'Employee numbers',
+        ],
+        why: '"the paper sign-up sheets outside each room will be removed".',
+      },
+      {
+        q: 'According to the speaker, what will Kevin do on Monday?',
+        options: [
+          'Help staff who have problems',
+          'Give a presentation',
+          'Collect the sign-up sheets',
+          'Change everyone’s password',
+        ],
+        why: '"Kevin… will be at the front desk all day on Monday to help" những ai gặp khó khăn.',
       },
     ],
   },

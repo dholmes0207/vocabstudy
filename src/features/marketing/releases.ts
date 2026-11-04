@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'TOEIC Part 3 và Part 4 lên 12 bài mỗi Part: thêm hội thoại hỏng máy chiếu, giao hàng trễ, thông báo ở bảo tàng, hướng dẫn đặt phòng họp trực tuyến.',
+        'TOEIC Parts 3 and 4 now have 12 sets each: a broken projector, a late delivery, a museum announcement and a new room-booking system.',
+      ],
+      [
         'Thẻ TOEIC Part 5 cho biết dạng câu bạn hay sai nhất qua mọi lượt đã làm (từ loại, giới từ, liên từ…), để biết nên ôn gì trước.',
         'The TOEIC Part 5 card shows the kind of question you miss most across all your rounds (word form, prepositions, conjunctions…), so you know what to work on first.',
       ],
