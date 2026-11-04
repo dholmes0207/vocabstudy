@@ -357,3 +357,10 @@ Thẻ luyện đầu tiên trên `/hsk` (`judgeQuestions`, `HskChoiceRound`).
   và tranh vốn là từ nào.
 - Bài thi nhỏ HSK 1–2: phần Nghe gồm 5 câu đúng sai và 5 câu nghe hiểu, cộng chung một điểm Nghe.
   HSK 3 không có dạng này nên giữ 10 câu nghe hiểu.
+
+### Bước B4: đọc – nhìn tranh (看图判断) (04/11/2026)
+
+Phần 1 bài Đọc của HSK 1 và HSK 2: cùng tranh như phần Nghe, nhưng từ được viết ra (pinyin ở trên,
+như đề HSK 1–2 in) thay vì đọc lên (`lookQuestions`). Trả lời xong thì phát giọng thu của từ.
+
+- Bài thi nhỏ HSK 1–2: phần Đọc gồm 5 câu nhìn tranh và 5 câu điền từ. HSK 3 giữ 10 câu điền từ.

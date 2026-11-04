@@ -8,6 +8,7 @@ import {
   judgeQuestions,
   levelWords,
   listenQuestions,
+  lookQuestions,
   orderQuestions,
   PICTURE_WORDS,
 } from './hskPractice'
@@ -100,4 +101,15 @@ describe('HSK listening, right or wrong (判断对错)', () => {
       }
     }
   )
+})
+
+describe('HSK reading, pictures (看图判断)', () => {
+  it('asks the same picture questions with the word to read', () => {
+    const heard = judgeQuestions('hsk2', zh.words, 10, mulberry32(7))
+    const read = lookQuestions('hsk2', zh.words, 10, mulberry32(7))
+    expect(read.map((q) => q.kind)).toEqual(Array(10).fill('look'))
+    expect(read.map(({ word, picture, answer }) => [word.word, picture, answer])).toEqual(
+      heard.map(({ word, picture, answer }) => [word.word, picture, answer])
+    )
+  })
 })

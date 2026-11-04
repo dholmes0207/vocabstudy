@@ -65,7 +65,7 @@ describe('HSK practice page', () => {
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(5)
+    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(6)
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
@@ -89,12 +89,24 @@ describe('HSK practice page', () => {
     if (picture !== word.emoji) expect(screen.getByText(/^The picture is/)).toBeInTheDocument()
   })
 
+  it('shows a word with its pinyin and a picture to read, and says the word once answered', () => {
+    renderPage()
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[2])
+    vi.advanceTimersByTime(300)
+    expect(spoken).toHaveLength(0)
+    expect(screen.getByText('Is the picture this word?')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: '✗ Wrong' }))
+    const word = zh.words.find((w) => w.word === spoken[0])!
+    expect(screen.getByText(/^The word/)).toHaveTextContent(word.meaning)
+  })
+
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {
     renderPage()
     fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
     expect(screen.getByRole('img', { name: 'Picture' })).toBeInTheDocument()
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
     expect(screen.getByText(/^Listening: \d+\/10/)).toBeInTheDocument()
+    expect(screen.getByText(/^Reading: \d+\/10/)).toBeInTheDocument()
     expect(useExam.getState().records['hsk1-mini']?.total).toBe(20)
   })
 
