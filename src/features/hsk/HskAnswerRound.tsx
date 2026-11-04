@@ -20,12 +20,15 @@ export default function HskAnswerRound({
   onAgain,
   onExit,
   onDone,
+  onAnswer,
 }: {
   title: string
   questions: AnswerQuestion[]
   onAgain: () => void
   onExit: () => void
   onDone?: (correct: number, total: number) => void
+  /** Each answer as it is given, for the weak-spot count. */
+  onAnswer?: (correct: boolean) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'zh-CN')
@@ -78,6 +81,7 @@ export default function HskAnswerRound({
     setPicked(i)
     const ok = i === q.answer
     if (ok) setCorrect((c) => c + 1)
+    onAnswer?.(ok)
     if (soundOn) (ok ? playCorrect : playWrong)()
     say()
   }

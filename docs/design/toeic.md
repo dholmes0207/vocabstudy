@@ -214,7 +214,7 @@ Có thể làm thêm sau:
 
 - tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
   qua `screens.json`);
-- thống kê dạng câu hay sai cho các Part khác và cho HSK (Part 5 đã có).
+- thống kê dạng câu hay sai cho các Part TOEIC khác (Part 5 và HSK đã có).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -543,3 +543,11 @@ HSK 3 từ 10 lên 15 hội thoại, HSK 2 từ 8 lên 12 (test giữ mức này
 nghe thẳng: tuổi của người nữ tính từ tuổi anh trai (25 − 3), cách đi cuối cùng khi xe buýt không đến
 (bẫy: 公共汽车 được nhắc trước). Kiểm tra chữ lần này bắt được 停, 建议 (HSK 4) và 接, 图书馆 (HSK 3
 trong hội thoại HSK 2), đã viết lại.
+
+### Dạng câu HSK hay sai nhất (04/11/2026)
+
+`retryStore.hsk` cộng dồn [đúng, đã hỏi] theo cấp và dạng câu (khoá `hsk1:judge`), qua mọi lượt luyện
+và bài thi nhỏ. Mỗi màn chơi HSK có `onAnswer`; trang HSK đếm theo cấp đang chọn. `weakestKind` (dùng
+chung với Part 5, giờ nhận khoá bất kỳ) chọn dạng yếu nhất khi đủ 10 câu, dạng đã hỏi từ 5 câu. Trang
+ghi "Dạng bạn hay sai nhất ở HSK 1: Chọn từ điền chỗ trống (đúng 2/6 câu)" ngay dưới tiêu đề các dạng
+luyện. Sắp xếp câu tính là đúng khi xếp xong không chạm sai lần nào.

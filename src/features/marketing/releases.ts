@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Trang Luyện thi HSK cho biết dạng câu bạn hay sai nhất ở từng cấp, tính qua mọi lượt luyện và bài thi nhỏ.',
+        'The HSK practice page shows the kind of question you miss most at each level, across all your rounds and mini tests.',
+      ],
+      [
         'Nghe hội thoại HSK có thêm 5 đoạn cho HSK 3 (quên ô, thang máy hỏng, đeo kính, quà sinh nhật, lỡ xe buýt) và 4 đoạn cho HSK 2, có câu phải tính tuổi từ lời nói.',
         'HSK dialogues add five for HSK 3 (a forgotten umbrella, a broken lift, glasses, a birthday present, a missed bus) and four for HSK 2, one of them asking you to work out an age.',
       ],

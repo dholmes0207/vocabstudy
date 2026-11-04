@@ -31,12 +31,15 @@ export default function HskDialogueRound({
   onAgain,
   onExit,
   onDone,
+  onAnswer,
 }: {
   title: string
   dialogues: ShuffledDialogue[]
   onAgain: () => void
   onExit: () => void
   onDone?: (correct: number, total: number) => void
+  /** Each answer as it is given, for the weak-spot count. */
+  onAnswer?: (correct: boolean) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'zh-CN')
@@ -117,6 +120,7 @@ export default function HskDialogueRound({
     stop()
     setPicked(i)
     const ok = i === d.answer
+    onAnswer?.(ok)
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
   }
