@@ -1,6 +1,7 @@
 import type { Word } from '@/types'
 import { examFor, examWords } from './exams'
 import { tokenize } from './games'
+import { RADICALS } from './radicals'
 
 // "Luyện thi HSK" (docs/design/toeic.md, giai đoạn B): the question types of
 // HSK 1–3, cut from the example sentences of each level's words. The examples
@@ -9,7 +10,8 @@ import { tokenize } from './games'
 //
 //   listen: hear the sentence (听力), pick its meaning among three;
 //   fill:   a word taken out (选词填空), pick it among four of the same level;
-//   order:  put the words back in order (HSK 3 writing, 完成句子).
+//   order:  put the words back in order (HSK 3 writing, 完成句子);
+//   char:   a character missing, its pinyin given (HSK 3 writing, 写汉字).
 
 export type HskLevel = 'hsk1' | 'hsk2' | 'hsk3'
 export const HSK_LEVELS: readonly HskLevel[] = ['hsk1', 'hsk2', 'hsk3']
@@ -25,12 +27,12 @@ export function levelWords(level: HskLevel, words: readonly Word[]): Word[] {
 }
 
 export interface HskChoice {
-  kind: 'listen' | 'fill'
+  kind: 'listen' | 'fill' | 'char'
   word: Word
   /** fill: the sentence with "___" for the word. */
   sentence?: string
   options: string[]
-  /** Pinyin of each option, for a fill question (HSK 1–2 print pinyin too). */
+  /** Pinyin of each option, for a fill question (HSK 1–2 print pinyin too); none for char. */
   readings?: string[]
   answer: number
 }
@@ -116,6 +118,63 @@ export function fillQuestions(
         answer: picked.indexOf(w),
       }
     })
+}
+
+/** Pinyin without tone marks, for "same sound, other tone". */
+const toneless = (p: string) =>
+  p
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+
+/**
+ * HSK 3 writing, part two (写汉字): a one-character word taken out of its
+ * example, its pinyin shown, four characters to choose from. The others sound
+ * alike in another tone or share a radical, so the shape has to be known; one
+ * read exactly the same (他 / 她 / 它, all tā) never appears, since the pinyin
+ * could not tell them apart.
+ */
+export function charQuestions(
+  level: HskLevel,
+  words: readonly Word[],
+  count: number,
+  rand: () => number = Math.random
+): HskChoice[] {
+  const shuffle = shuffler(rand)
+  const singles = levelWords(level, words).filter((w) => [...w.word].length === 1)
+  const radicalsOf = (ch: string) => RADICALS.filter((r) => r.chars.includes(ch))
+  return shuffle(singles)
+    .flatMap((w) => {
+      const hit = tokenAt(w)
+      if (!hit) return []
+      const read = w.viRead.toLowerCase()
+      const others = singles.filter(
+        (o) => o.word !== w.word && o.viRead.toLowerCase() !== read && !w.exampleEn.includes(o.word)
+      )
+      const sound = others.filter((o) => toneless(o.viRead) === toneless(read))
+      const mine = radicalsOf(w.word)
+      const shape = others.filter((o) => radicalsOf(o.word).some((r) => mine.includes(r)))
+      const wrong = [...shuffle(sound), ...shuffle(shape), ...shuffle(others)]
+        // One option per reading: two distractors read alike (角 / 脚) waste a place.
+        .filter(
+          (o, i, a) => a.findIndex((x) => x.viRead.toLowerCase() === o.viRead.toLowerCase()) === i
+        )
+        .slice(0, 3)
+      if (wrong.length < 3) return []
+      const { tokens, at } = hit
+      const tail = tokens[at].slice(w.word.length)
+      const picked = shuffle([w, ...wrong])
+      return [
+        {
+          kind: 'char' as const,
+          word: w,
+          sentence: [...tokens.slice(0, at), '___' + tail, ...tokens.slice(at + 1)].join(''),
+          options: picked.map((o) => o.word),
+          answer: picked.indexOf(w),
+        },
+      ]
+    })
+    .slice(0, count)
 }
 
 /** Examples short and plain enough to have one right order: 3–7 words, no inner punctuation. */

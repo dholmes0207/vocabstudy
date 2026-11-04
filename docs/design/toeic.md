@@ -268,3 +268,26 @@ Test giữ số bài tối thiểu theo các con số trên.
     nhưng là tính từ) và increase (vừa danh từ vừa động từ) bị loại, để quy tắc không bao giờ sai
     trên chính từ dùng để dạy nó.
   - Mỗi lượt lấy lần lượt từ mỗi loại, để không ra cả 10 câu danh từ.
+
+### Bước B2: viết chữ Hán (写汉字) (04/11/2026)
+
+- Thẻ luyện thứ tư trên `/hsk`: **"Viết chữ Hán (写汉字)"**, phần Viết thứ hai của HSK 3
+  (`charQuestions` trong `lib/hskPractice.ts`).
+  - Câu ví dụ của một từ một chữ, chữ đó bị bỏ trống, pinyin hiện ngay trên chỗ trống.
+  - Chọn đúng chữ trong 4 chữ. Phương án nhiễu ưu tiên chữ cùng âm khác thanh (那 nà cho 哪 nǎ),
+    rồi chữ cùng bộ thủ (喝, 喂 cùng bộ khẩu với 哪), cuối cùng là chữ khác cùng cấp.
+  - Không bao giờ có hai chữ đọc y hệt nhau (他 / 她 / 它 đều là tā), vì chỉ có pinyin để phân biệt.
+  - App chưa cho viết tay, nên đây là chọn chữ. Nó vẫn bắt người học nhận ra đúng mặt chữ, là điều
+    phần thi này kiểm tra.
+- Bài thi nhỏ HSK 3: phần Viết thành 10 câu như đề thật (5 sắp xếp câu + 5 viết chữ). Điểm các phần
+  được cộng theo từng phần thi, nên hai phần Viết gộp thành một điểm Viết trên 100.
+
+### Thêm câu Part 5 (04/11/2026)
+
+`PART5_BANK` từ 43 lên 71 câu, mỗi dạng ít nhất 8 câu (test giữ mức này): từ loại 16, thì và dạng
+động từ 14, giới từ 11, liên từ 11, nghĩa từ 11, đại từ 8.
+
+- Thêm các điểm hay ra: quá khứ hoàn thành (by the time), bị động sau must, suggest + V-ing,
+  be pleased to, each of + số ít, despite / although, so that, neither … nor.
+- Thêm các cặp từ dễ nhầm: complete / compete, receipt / recipe / recipient, postpone / promote,
+  launch / lunch.

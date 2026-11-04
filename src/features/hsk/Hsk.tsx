@@ -10,6 +10,7 @@ import { examFor } from '@/lib/exams'
 import {
   HSK_LEVELS,
   HSK_SCALE,
+  charQuestions,
   fillQuestions,
   levelWords,
   listenQuestions,
@@ -31,17 +32,23 @@ import HskOrderRound from './HskOrderRound'
 
 const ROUND = 10
 
-type Drill = 'listen' | 'fill' | 'order'
+type Drill = 'listen' | 'fill' | 'order' | 'char'
 
 type Run =
-  | { kind: 'choice'; drill: 'listen' | 'fill'; n: number; questions: HskChoice[] }
+  | { kind: 'choice'; drill: 'listen' | 'fill' | 'char'; n: number; questions: HskChoice[] }
   | { kind: 'order'; n: number; questions: HskOrder[] }
-  | { kind: 'mini'; step: number; steps: MiniStep[]; scores: number[][] }
+  | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
+type Section = 'listen' | 'read' | 'write'
+
+/** A part of the mini test; HSK 3 writing has two (完成句子, then 写汉字). */
 type MiniStep =
-  | { section: 'listen' | 'read'; questions: HskChoice[] }
-  | { section: 'write'; questions: HskOrder[] }
+  | { section: Section; kind: 'choice'; questions: HskChoice[] }
+  | { section: 'write'; kind: 'order'; questions: HskOrder[] }
+
+/** Right answers per section, in the order of the test. */
+type SectionScore = { section: Section; correct: number; total: number }
 
 export default function Hsk() {
   const t = useT()
@@ -52,7 +59,7 @@ export default function Hsk() {
   const record = useExam((s) => s.record)
   const [level, setLevel] = useState<HskLevel>('hsk1')
   const [run, setRun] = useState<Run>(null)
-  const [result, setResult] = useState<{ scores: number[][]; xp: number } | null>(null)
+  const [result, setResult] = useState<{ scores: SectionScore[]; xp: number } | null>(null)
   const exam = examFor('zh', level)!
   const best = useExam((s) => s.records[`${level}-mini`])
 
@@ -88,29 +95,43 @@ export default function Hsk() {
         'Put the words in order: the first writing part of HSK 3, and good grammar practice at any level.',
       ],
     },
+    {
+      id: 'char',
+      icon: '🖌️',
+      title: ['Viết chữ Hán (写汉字)', 'Write the character (写汉字)'],
+      desc: [
+        'Câu thiếu một chữ, có pinyin: chọn đúng chữ trong 4 chữ cùng âm hoặc cùng bộ thủ. Phần Viết thứ hai của HSK 3.',
+        'A sentence missing one character, with its pinyin: pick it among four that sound alike or share a radical. The second writing part of HSK 3.',
+      ],
+    },
   ]
 
   const startDrill = (drill: Drill) => {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
-    const make = drill === 'listen' ? listenQuestions : fillQuestions
+    const make =
+      drill === 'listen' ? listenQuestions : drill === 'char' ? charQuestions : fillQuestions
     setRun({ kind: 'choice', drill, n, questions: make(level, pack.words, ROUND) })
   }
 
   const startMini = () => {
     setResult(null)
     const steps: MiniStep[] = [
-      { section: 'listen', questions: listenQuestions(level, pack.words, ROUND) },
-      { section: 'read', questions: fillQuestions(level, pack.words, ROUND) },
+      { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, ROUND) },
+      { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, ROUND) },
     ]
+    // HSK 3 writing: five sentences to build, five characters to write.
     if (HSK_SCALE[level].sections === 3)
-      steps.push({ section: 'write', questions: orderQuestions(level, pack.words, 5) })
+      steps.push(
+        { section: 'write', kind: 'order', questions: orderQuestions(level, pack.words, 5) },
+        { section: 'write', kind: 'choice', questions: charQuestions(level, pack.words, 5) }
+      )
     setRun({ kind: 'mini', step: 0, steps, scores: [] })
   }
 
   const exit = () => setRun(null)
-  const sectionName = (s: MiniStep['section']) =>
+  const sectionName = (s: Section) =>
     s === 'listen'
       ? t('Nghe', 'Listening')
       : s === 'read'
@@ -120,10 +141,16 @@ export default function Hsk() {
   if (run?.kind === 'mini') {
     const s = run.steps[run.step]
     const done = (correct: number, total: number) => {
-      const scores = [...run.scores, [correct, total]]
+      // Parts of one section add up: the two writing parts make one writing score.
+      const prev = run.scores.find((x) => x.section === s.section)
+      const scores = prev
+        ? run.scores.map((x) =>
+            x === prev ? { ...x, correct: x.correct + correct, total: x.total + total } : x
+          )
+        : [...run.scores, { section: s.section, correct, total }]
       if (run.step + 1 < run.steps.length) return setRun({ ...run, step: run.step + 1, scores })
-      const right = scores.reduce((n, [c]) => n + c, 0)
-      const all = scores.reduce((n, [, tot]) => n + tot, 0)
+      const right = scores.reduce((n, x) => n + x.correct, 0)
+      const all = scores.reduce((n, x) => n + x.total, 0)
       const xp = pinyinXp(right, all)
       addPlayXp(code, xp)
       record(`${level}-mini`, right, all, today())
@@ -131,7 +158,7 @@ export default function Hsk() {
       setRun(null)
     }
     const title = `${name} · ${sectionName(s.section)}`
-    return s.section === 'write' ? (
+    return s.kind === 'order' ? (
       <HskOrderRound
         key={run.step}
         title={title}
@@ -165,7 +192,13 @@ export default function Hsk() {
     return (
       <HskChoiceRound
         key={run.n}
-        title={`${name} · ${run.drill === 'listen' ? t('Nghe hiểu', 'Listening') : t('Điền từ', 'Fill the gap')}`}
+        title={`${name} · ${
+          run.drill === 'listen'
+            ? t('Nghe hiểu', 'Listening')
+            : run.drill === 'char'
+              ? t('Viết chữ Hán', 'Write the character')
+              : t('Điền từ', 'Fill the gap')
+        }`}
         questions={run.questions}
         onAgain={() => startDrill(run.drill)}
         onExit={exit}
@@ -173,7 +206,7 @@ export default function Hsk() {
     )
 
   // Each section is out of 100 on the real test; a short round can only give a rough range.
-  const estimate = result?.scores.map(([c, tot]) => Math.round((100 * c) / tot))
+  const estimate = result?.scores.map((x) => Math.round((100 * x.correct) / x.total))
   const total = estimate?.reduce((a, b) => a + b, 0) ?? 0
   const scale = HSK_SCALE[level]
 
@@ -273,8 +306,8 @@ export default function Hsk() {
         <p className="text-sm text-slate-500 dark:text-slate-400">
           {scale.sections === 3
             ? t(
-                '10 câu nghe, 10 câu đọc và 5 câu viết, như ba phần của đề HSK 3.',
-                '10 listening, 10 reading and 5 writing questions, like the three parts of HSK 3.'
+                '10 câu nghe, 10 câu đọc và 10 câu viết (5 câu sắp xếp, 5 câu viết chữ), như ba phần của đề HSK 3.',
+                '10 listening, 10 reading and 10 writing questions (5 sentences to build, 5 characters), like the three parts of HSK 3.'
               )
             : t(
                 `10 câu nghe và 10 câu đọc, như hai phần của đề ${name}.`,
@@ -291,9 +324,9 @@ export default function Hsk() {
             className="space-y-1 rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60"
             aria-live="polite"
           >
-            {result.scores.map(([c, tot], i) => (
-              <p key={i}>
-                {sectionName(i === 0 ? 'listen' : i === 1 ? 'read' : 'write')}: {c}/{tot} →{' '}
+            {result.scores.map((x, i) => (
+              <p key={x.section}>
+                {sectionName(x.section)}: {x.correct}/{x.total} →{' '}
                 {t(`khoảng ${estimate[i]}/100`, `about ${estimate[i]}/100`)}
               </p>
             ))}

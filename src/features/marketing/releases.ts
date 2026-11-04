@@ -17,6 +17,14 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'TOEIC Part 5 có 71 câu ngữ pháp kèm giải thích (trước đây 43), thêm các điểm hay ra như quá khứ hoàn thành, bị động, suggest + V-ing và các cặp từ dễ nhầm (receipt / recipe, complete / compete).',
+        'TOEIC Part 5 now has 71 explained grammar questions (up from 43), adding favourites such as the past perfect, the passive, suggest + -ing and look-alike words (receipt / recipe, complete / compete).',
+      ],
+      [
+        'Luyện thi HSK có thêm "Viết chữ Hán (写汉字)": câu thiếu một chữ, có pinyin, chọn đúng chữ trong các chữ cùng âm hoặc cùng bộ thủ. Bài thi nhỏ HSK 3 có đủ 10 câu viết như đề thật.',
+        'HSK practice adds "Write the character (写汉字)": a sentence missing one character, with its pinyin; pick it among characters that sound alike or share a radical. The HSK 3 mini test now has all 10 writing questions.',
+      ],
+      [
         'Mẹo đuôi từ cho Part 5: nhìn một từ, đoán danh từ, động từ, tính từ hay trạng từ, rồi xem quy tắc đuôi (-tion, -ive, -ly, -ize…) để làm nhanh câu hỏi từ loại.',
         'An ending tip for Part 5: see a word, tell noun, verb, adjective or adverb, then the ending rule (-tion, -ive, -ly, -ize…) that makes word-form questions quick.',
       ],

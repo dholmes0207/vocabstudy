@@ -64,7 +64,7 @@ describe('HSK practice page', () => {
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(3)
+    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(4)
   })
 
   it('plays the recorded example of a listening question as it appears', () => {
@@ -81,7 +81,7 @@ describe('HSK practice page', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/300/))
     expect(screen.getByText(/^Estimate: about \d+\/300 \(pass from 180\)/)).toBeInTheDocument()
-    expect(screen.getByText(/^Writing: \d\/5/)).toBeInTheDocument()
-    expect(useExam.getState().records['hsk3-mini']?.total).toBe(25)
+    expect(screen.getByText(/^Writing: \d+\/10/)).toBeInTheDocument()
+    expect(useExam.getState().records['hsk3-mini']?.total).toBe(30)
   })
 })

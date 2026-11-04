@@ -361,6 +361,204 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'available = còn trống, dùng được. possible dùng cho sự việc, không dùng cho phòng.'
   ),
+
+  // More of each kind (04/11/2026), so a round rarely repeats.
+  q(
+    'prep',
+    'The training session will take place ___ the second floor.',
+    ['on', 'in', 'at', 'to'],
+    0,
+    'on + tầng (on the second floor).'
+  ),
+  q(
+    'prep',
+    'Ms. Ito has been responsible ___ the budget since March.',
+    ['for', 'of', 'with', 'to'],
+    0,
+    'be responsible for: chịu trách nhiệm về.'
+  ),
+  q(
+    'prep',
+    'All employees are required to arrive ___ 9 a.m.',
+    ['by', 'until', 'during', 'since'],
+    0,
+    'by + giờ = chậm nhất là lúc đó. until đi với việc kéo dài đến mốc đó.'
+  ),
+  q(
+    'prep',
+    'The package was delivered ___ mistake to our old office.',
+    ['by', 'for', 'with', 'on'],
+    0,
+    'by mistake: do nhầm lẫn.'
+  ),
+  q(
+    'link',
+    'Please contact Mr. Lee ___ you have any questions about the event.',
+    ['if', 'unless', 'despite', 'during'],
+    0,
+    'if: nếu. unless = trừ khi, làm câu mang nghĩa ngược lại; despite và during cần danh từ.'
+  ),
+  q(
+    'verb',
+    'The new office ___ next month, if everything goes as planned.',
+    ['will open', 'opened', 'has opened', 'was opening'],
+    0,
+    'next month là tương lai: will open.'
+  ),
+  q(
+    'verb',
+    'By the time the manager arrived, the meeting ___ already.',
+    ['had started', 'starts', 'will start', 'is starting'],
+    0,
+    'Việc xảy ra trước một mốc trong quá khứ: quá khứ hoàn thành had started.'
+  ),
+  q(
+    'verb',
+    'The report must ___ by the end of the day.',
+    ['be finished', 'finish', 'finishing', 'finished'],
+    0,
+    'Bản báo cáo không tự hoàn thành: bị động sau must là must be + V3.'
+  ),
+  q(
+    'verb',
+    'Ms. Chen suggested ___ the meeting to Friday.',
+    ['moving', 'move', 'to move', 'moved'],
+    0,
+    'suggest + V-ing: gợi ý làm gì.'
+  ),
+  q(
+    'verb',
+    'We are pleased ___ you that your application has been accepted.',
+    ['to inform', 'informing', 'inform', 'informed'],
+    0,
+    'be pleased + to V: vui mừng (được) làm gì.'
+  ),
+  q(
+    'verb',
+    'The company ___ in this building for more than twenty years.',
+    ['has been', 'is', 'will be', 'be'],
+    0,
+    'for more than twenty years tính đến nay: hiện tại hoàn thành has been.'
+  ),
+  q(
+    'link',
+    'The price is reasonable, ___ the quality is excellent.',
+    ['and', 'but', 'or', 'so'],
+    0,
+    'Hai ý cùng chiều (giá hợp lý, chất lượng tốt): and. but dùng cho hai ý trái ngược.'
+  ),
+  q(
+    'link',
+    'The store was closed, ___ we went to another one.',
+    ['so', 'because', 'although', 'unless'],
+    0,
+    'Vế sau là kết quả của vế trước: so (vì vậy).'
+  ),
+  q(
+    'link',
+    '___ the bad weather, the flight left on time.',
+    ['Despite', 'Although', 'Because', 'Even if'],
+    0,
+    'Theo sau là danh từ (the bad weather), nên dùng Despite. Although cần một mệnh đề.'
+  ),
+  q(
+    'link',
+    'Please send the documents ___ we can review them before the meeting.',
+    ['so that', 'even though', 'unless', 'whether'],
+    0,
+    'so that: để (chỉ mục đích).'
+  ),
+  q(
+    'link',
+    'Neither the manager ___ his assistant was at the meeting.',
+    ['nor', 'or', 'and', 'but'],
+    0,
+    'neither … nor …: không … cũng không ….'
+  ),
+  q(
+    'pronoun',
+    'The staff thanked the manager for ___ support during the project.',
+    ['her', 'she', 'hers', 'herself'],
+    0,
+    'Trước danh từ support cần tính từ sở hữu: her support.'
+  ),
+  q(
+    'pronoun',
+    'The documents ___ you requested are on your desk.',
+    ['that', 'who', 'whom', 'whose'],
+    0,
+    'Thay cho vật (the documents): that hoặc which. who và whom dùng cho người.'
+  ),
+  q(
+    'verb',
+    'Each of the employees ___ a parking space.',
+    ['has', 'have', 'having', 'to have'],
+    0,
+    'Each of + danh từ số nhiều vẫn đi với động từ số ít: has.'
+  ),
+  q(
+    'pronoun',
+    'If you need help, please ask ___ of our staff at the front desk.',
+    ['one', 'ones', 'anyone', 'it'],
+    0,
+    'one of our staff: một trong số nhân viên của chúng tôi.'
+  ),
+  q(
+    'meaning',
+    'Please ___ the form and return it to the front desk.',
+    ['complete', 'compete', 'compare', 'compose'],
+    0,
+    'complete a form = điền đầy đủ một mẫu đơn. Bốn từ chỉ khác vài chữ, đó chính là cái bẫy.'
+  ),
+  q(
+    'meaning',
+    'The hotel is located within walking ___ of the station.',
+    ['distance', 'length', 'range', 'space'],
+    0,
+    'within walking distance of: có thể đi bộ tới. Đây là cụm cố định.'
+  ),
+  q(
+    'meaning',
+    'Our customer service team is ___ 24 hours a day.',
+    ['available', 'possible', 'convenient', 'necessary'],
+    0,
+    'available = có mặt, sẵn sàng phục vụ.'
+  ),
+  q(
+    'meaning',
+    'The company will ___ a new product line next spring.',
+    ['launch', 'lunch', 'lift', 'lead'],
+    0,
+    'launch a product = tung ra sản phẩm.'
+  ),
+  q(
+    'meaning',
+    'Ms. Kim was ___ to manager after five years with the company.',
+    ['promoted', 'produced', 'proposed', 'provided'],
+    0,
+    'be promoted to manager = được thăng chức lên quản lý.'
+  ),
+  q(
+    'meaning',
+    'Please keep your ___ as proof of purchase.',
+    ['receipt', 'recipe', 'reception', 'recipient'],
+    0,
+    'receipt = biên lai, hoá đơn. recipe là công thức nấu ăn, recipient là người nhận.'
+  ),
+  q(
+    'meaning',
+    'The meeting was ___ because the manager was sick.',
+    ['postponed', 'promoted', 'prevented', 'presented'],
+    0,
+    'postpone = hoãn lại. Cuộc họp bị hoãn vì quản lý bị ốm.'
+  ),
+  q(
+    'pronoun',
+    'Mr. Davis and ___ will attend the conference in Seoul.',
+    ['I', 'me', 'my', 'mine'],
+    0,
+    'Đứng cùng Mr. Davis làm chủ ngữ của will attend: đại từ chủ ngữ I.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */
