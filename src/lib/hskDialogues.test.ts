@@ -2,7 +2,13 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import { HSK_LEVELS, levelWords } from './hskPractice'
-import { dialogueRound, HSK_DIALOGUES } from './hskDialogues'
+import {
+  dialogueRound,
+  HSK_DIALOGUES,
+  PICTURE_DIALOGUES,
+  pictureDialogueRound,
+} from './hskDialogues'
+import { PICTURE_WORDS } from './hskPractice'
 import { mulberry32 } from './sky'
 
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
@@ -47,6 +53,44 @@ describe('HSK dialogues', () => {
     for (const d of round) {
       const original = HSK_DIALOGUES.find((x) => x.id === d.id)!
       expect(d.options[d.answer]).toBe(original.options[0])
+    }
+  })
+})
+
+describe('HSK 2 picture dialogues', () => {
+  const low = [...levelWords('hsk1', zh.words), ...levelWords('hsk2', zh.words)]
+
+  it('name exactly one word with a picture, theirs, in HSK 1–2 characters', () => {
+    const ok = known('hsk2')
+    expect(PICTURE_DIALOGUES.length).toBeGreaterThanOrEqual(10)
+    for (const d of PICTURE_DIALOGUES) {
+      const said = d.lines.map((l) => l.zh).join('')
+      expect(
+        PICTURE_WORDS.filter((p) => said.includes(p)),
+        d.id
+      ).toEqual([d.picture])
+      expect(
+        han(said).filter((c) => !ok.has(c)),
+        d.id
+      ).toEqual([])
+      expect(new Set(d.lines.map((l) => l.speaker)), d.id).toEqual(new Set(['W', 'M']))
+    }
+  })
+
+  it('offer five different pictures, only one of them said', () => {
+    // Picture → its word, among the words with pictures (other words can share an emoji).
+    const emoji = new Map(
+      low.filter((w) => w.emoji && PICTURE_WORDS.includes(w.word)).map((w) => [w.emoji!, w.word])
+    )
+    for (let seed = 1; seed <= 5; seed++) {
+      const round = pictureDialogueRound(low, 10, mulberry32(seed))
+      expect(round).toHaveLength(10)
+      for (const d of round) {
+        expect(new Set(d.options).size).toBe(5)
+        const said = d.lines.map((l) => l.zh).join('')
+        const named = d.options.filter((o) => said.includes(emoji.get(o)!))
+        expect(named, d.id).toEqual([d.options[d.answer]])
+      }
     }
   })
 })

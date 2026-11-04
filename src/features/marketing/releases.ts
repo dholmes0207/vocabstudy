@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Luyện thi HSK 2 có thêm "Nghe hội thoại – chọn tranh": nghe một đoạn hội thoại ngắn, chọn tranh đúng trong 5 tranh, như phần thứ hai bài Nghe của HSK 2.',
+        'HSK 2 practice adds "Dialogue and picture": hear a short dialogue and pick its picture among five, like the second listening part of HSK 2.',
+      ],
+      [
         'Luyện thi HSK 2 và HSK 3 có thêm "Nghe hội thoại (听对话)": 8 đoạn cho HSK 2 và 10 đoạn cho HSK 3, hội thoại ngắn giữa một người nữ và một người nam, mỗi người một giọng, kèm câu hỏi như đề thật. Trả lời xong thì xem lời thoại và bản dịch. Phần Nghe của bài thi nhỏ HSK 2 có 3 câu, HSK 3 có 5 câu dạng này.',
         'HSK 2 and HSK 3 practice add "Dialogues (听对话)": eight and ten short exchanges between a woman and a man, each in their own voice, with a question as on the test, then the transcript and its translation. The HSK 2 and HSK 3 mini tests now have three and five of them.',
       ],

@@ -208,7 +208,6 @@ Tình hình (04/11/2026):
 Có thể làm thêm sau:
 
 - tăng số bài cho từng Part;
-- HSK 2 phần 2 (ghép hội thoại với tranh);
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -473,3 +472,14 @@ Part 6 từ 8 lên 12 đoạn văn (test giữ mức này): thông báo phần m
 cửa, thư cảm ơn diễn giả, tin tuyển quản lý lễ tân. Mỗi đoạn vẫn 4 chỗ trống, một chỗ điền cả câu;
 các chỗ còn lại hỏi từ loại (easier, popular, candidate), giới từ (before, by, to), dạng động từ (have
 attached, those selected).
+
+### HSK 2 phần 2: hội thoại – chọn tranh (04/11/2026)
+
+`PICTURE_DIALOGUES`: 10 hội thoại nữ – nam ngắn, mỗi đoạn nhắc đúng một từ có tranh (`PICTURE_WORDS`).
+Nghe xong chọn tranh trong 5 tranh; 4 tranh còn lại là từ HSK 1–2 mà đoạn hội thoại không nhắc tới
+(`pictureDialogueRound`, hiện bằng `HskDialogueRound` ở dạng tranh, không có câu hỏi).
+
+- Test giữ: mỗi đoạn chỉ chứa đúng một từ có tranh, là đáp án (bắt được 你家 vì 家 cũng có tranh, 多少钱
+  vì 钱 có tranh), và chữ Hán trong phạm vi HSK 1–2 (bắt được 甜, 比较, 自己, 舒服).
+- Chỉ hiện ở HSK 2. Bài thi nhỏ HSK 2: phần Nghe gồm 3 câu đúng sai, 2 câu hội thoại – tranh, 3 câu
+  hội thoại – câu hỏi, 2 câu nghe hiểu.

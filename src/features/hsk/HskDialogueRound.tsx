@@ -11,18 +11,18 @@ import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
-// HSK 3 listening, the dialogues (lib/hskDialogues.ts): the woman and the man
-// each say a line in a woman's and a man's voice, then the question is read;
-// three options are printed. The transcript, with its Vietnamese, shows once
+// HSK 2–3 listening, the dialogues (lib/hskDialogues.ts): the woman and the
+// man each say a line in a woman's and a man's voice, then the question is
+// read and three options are printed; or, for HSK 2 part two, five pictures. The transcript, with its Vietnamese, shows once
 // the question is answered.
 
 const GAP_MS = 500
 const VOICE: Record<DialogueSpeaker, VoiceGender> = { W: 'female', M: 'male' }
 
-/** What is heard, in order: each line, then the question in the learner's voice. */
+/** What is heard, in order: each line, then the question (if any) in the learner's voice. */
 const clips = (d: ShuffledDialogue) => [
   ...d.lines.map((l) => ({ text: l.zh, gender: VOICE[l.speaker] as VoiceGender | undefined })),
-  { text: d.q, gender: undefined },
+  ...(d.q ? [{ text: d.q, gender: undefined }] : []),
 ]
 
 export default function HskDialogueRound({
@@ -145,10 +145,15 @@ export default function HskDialogueRound({
     >
       <div className="card space-y-4 p-6">
         <p className="text-sm text-slate-500 dark:text-slate-400">
-          {t(
-            'Nghe đoạn hội thoại và câu hỏi, rồi chọn câu trả lời.',
-            'Hear the dialogue and the question, then pick the answer.'
-          )}
+          {d.pictures
+            ? t(
+                'Nghe đoạn hội thoại, rồi chọn tranh đúng.',
+                'Hear the dialogue, then pick its picture.'
+              )
+            : t(
+                'Nghe đoạn hội thoại và câu hỏi, rồi chọn câu trả lời.',
+                'Hear the dialogue and the question, then pick the answer.'
+              )}
         </p>
         {playing ? (
           <button type="button" className="btn-secondary h-10 w-full text-sm" onClick={stop}>
@@ -163,7 +168,7 @@ export default function HskDialogueRound({
             <Play className="h-4 w-4" /> {t('Nghe', 'Listen')}
           </button>
         )}
-        <div className="grid gap-2">
+        <div className={d.pictures ? 'grid grid-cols-5 gap-1.5' : 'grid gap-2'}>
           {d.options.map((o, i) => {
             const state = !answered
               ? 'idle'
@@ -179,7 +184,9 @@ export default function HskDialogueRound({
                 lang="zh"
                 onClick={() => pick(i)}
                 disabled={answered}
-                className={`flex items-center gap-2 rounded-xl border-2 px-3 py-3 text-left text-lg font-medium transition ${
+                className={`flex items-center rounded-xl border-2 py-3 font-medium transition ${
+                  d.pictures ? 'justify-center px-1' : 'gap-2 px-3 text-left text-lg'
+                } ${
                   state === 'right'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
                     : state === 'wrong'
@@ -187,10 +194,26 @@ export default function HskDialogueRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                <span className="text-sm font-bold text-slate-400">{'ABC'[i]}</span>
-                <span className="flex-1">{o}</span>
-                {state === 'right' && <Check className="h-5 w-5 shrink-0" aria-hidden="true" />}
-                {state === 'wrong' && <X className="h-5 w-5 shrink-0" aria-hidden="true" />}
+                {d.pictures ? (
+                  <span
+                    className="text-3xl"
+                    role="img"
+                    aria-label={t(`Tranh ${'ABCDE'[i]}`, `Picture ${'ABCDE'[i]}`)}
+                  >
+                    {o}
+                  </span>
+                ) : (
+                  <>
+                    <span className="text-sm font-bold text-slate-400">{'ABC'[i]}</span>
+                    <span className="flex-1">{o}</span>
+                  </>
+                )}
+                {!d.pictures && state === 'right' && (
+                  <Check className="h-5 w-5 shrink-0" aria-hidden="true" />
+                )}
+                {!d.pictures && state === 'wrong' && (
+                  <X className="h-5 w-5 shrink-0" aria-hidden="true" />
+                )}
               </button>
             )
           })}
@@ -212,12 +235,14 @@ export default function HskDialogueRound({
                 <span className="block text-slate-500 dark:text-slate-400">{l.vi}</span>
               </p>
             ))}
-            <p>
-              <b className="text-slate-500 dark:text-slate-400">{t('Hỏi', 'Question')}:</b>{' '}
-              <span lang="zh">{d.q}</span>
-              <span className="block text-slate-500 dark:text-slate-400">{d.qVi}</span>
-            </p>
-            <p className="text-slate-600 dark:text-slate-300">💡 {d.why}</p>
+            {d.q && (
+              <p>
+                <b className="text-slate-500 dark:text-slate-400">{t('Hỏi', 'Question')}:</b>{' '}
+                <span lang="zh">{d.q}</span>
+                <span className="block text-slate-500 dark:text-slate-400">{d.qVi}</span>
+              </p>
+            )}
+            {d.why && <p className="text-slate-600 dark:text-slate-300">💡 {d.why}</p>}
           </div>
         )}
       </div>

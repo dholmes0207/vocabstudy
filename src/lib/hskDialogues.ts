@@ -1,3 +1,5 @@
+import { PICTURE_WORDS } from './hskPractice'
+
 // HSK 2 and 3 listening, the dialogue parts (docs/design/toeic.md): a woman
 // and a man say a line each, a third voice asks about it (问：…), and the
 // answer is one of three printed options. Hand-written with the words of the
@@ -268,9 +270,149 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
   },
 ]
 
-export interface ShuffledDialogue extends HskDialogue {
+export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
+  options: string[]
   /** Index of the right option after shuffling. */
   answer: number
+  /** The options are pictures (emoji), and no question is read. */
+  pictures?: boolean
+}
+
+/**
+ * HSK 2 listening, part two: a short dialogue, then pick the picture that goes
+ * with it. Each dialogue names exactly one word with a picture (PICTURE_WORDS),
+ * so only one picture fits (lib/hskDialogues.test.ts).
+ */
+export interface PictureDialogue {
+  id: string
+  /** The word whose picture is the answer. */
+  picture: string
+  lines: HskDialogue['lines']
+}
+
+export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
+  {
+    id: 'cat',
+    picture: '猫',
+    lines: [
+      w('你的小猫叫什么名字？', 'Con mèo nhỏ của anh tên là gì?'),
+      m('它叫白白，因为它是白色的。', 'Nó tên là Bạch Bạch, vì nó màu trắng.'),
+    ],
+  },
+  {
+    id: 'apples',
+    picture: '苹果',
+    lines: [
+      m('这些苹果怎么卖？', 'Những quả táo này bán thế nào?'),
+      w('三块一个，都很好吃。', 'Ba tệ một quả, quả nào cũng ngon.'),
+    ],
+  },
+  {
+    id: 'taxi-station',
+    picture: '出租车',
+    lines: [
+      w('时间不多了，我们怎么去？', 'Không còn nhiều thời gian, chúng ta đi bằng gì?'),
+      m('坐出租车吧，快一点儿。', 'Đi taxi đi, nhanh hơn một chút.'),
+    ],
+  },
+  {
+    id: 'phone',
+    picture: '手机',
+    lines: [
+      m('你看见我的手机了吗？', 'Chị có thấy điện thoại của tôi không?'),
+      w('在桌子上，你去看看。', 'Ở trên bàn, anh ra xem đi.'),
+    ],
+  },
+  {
+    id: 'coffee',
+    picture: '咖啡',
+    lines: [
+      w('你想喝点儿什么？', 'Anh muốn uống gì?'),
+      m('我想喝一杯咖啡，谢谢。', 'Tôi muốn uống một cốc cà phê, cảm ơn.'),
+    ],
+  },
+  {
+    id: 'hospital',
+    picture: '医院',
+    lines: [
+      m('你怎么了？', 'Chị sao vậy?'),
+      w('我身体不好，想去医院看看。', 'Tôi thấy không khoẻ, muốn đi bệnh viện khám.'),
+    ],
+  },
+  {
+    id: 'eggs',
+    picture: '鸡蛋',
+    lines: [
+      w('早上你吃了什么？', 'Sáng nay anh ăn gì?'),
+      m('我吃了两个鸡蛋。', 'Tôi ăn hai quả trứng.'),
+    ],
+  },
+  {
+    id: 'computer',
+    picture: '电脑',
+    lines: [
+      m('你在做什么呢？', 'Chị đang làm gì thế?'),
+      w('我在用电脑工作，有很多事。', 'Tôi đang làm việc trên máy tính, nhiều việc lắm.'),
+    ],
+  },
+  {
+    id: 'bus',
+    picture: '公共汽车',
+    lines: [
+      w('你每天怎么上班？', 'Hằng ngày anh đi làm bằng gì?'),
+      m('我坐公共汽车，二十分钟就到了。', 'Tôi đi xe buýt, hai mươi phút là đến.'),
+    ],
+  },
+  {
+    id: 'watermelon',
+    picture: '西瓜',
+    lines: [
+      m('今天太热了，我们吃点儿西瓜吧。', 'Hôm nay nóng quá, chúng ta ăn chút dưa hấu đi.'),
+      w('好的，我去买。', 'Được, tôi đi mua.'),
+    ],
+  },
+]
+
+/**
+ * A round of picture dialogues: each answer's picture among five, the others
+ * pictures of words the dialogue does not say, from the pack's HSK 1–2 words.
+ */
+export function pictureDialogueRound(
+  words: readonly { word: string; emoji?: string }[],
+  count = 5,
+  rand: () => number = Math.random
+): ShuffledDialogue[] {
+  const shuffle = <T>(arr: readonly T[]): T[] => {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+  const emoji = new Map(words.filter((w) => w.emoji).map((w) => [w.word, w.emoji!]))
+  const pictured = PICTURE_WORDS.filter((p) => emoji.has(p))
+  return shuffle(PICTURE_DIALOGUES)
+    .filter((d) => emoji.has(d.picture))
+    .slice(0, count)
+    .map((d) => {
+      const said = d.lines.map((l) => l.zh).join('')
+      const others = shuffle(pictured.filter((p) => p !== d.picture && !said.includes(p)))
+        .slice(0, 4)
+        .map((p) => emoji.get(p)!)
+      const options = shuffle([emoji.get(d.picture)!, ...others])
+      return {
+        id: d.id,
+        level: 'hsk2' as const,
+        lines: d.lines,
+        q: '',
+        qVi: '',
+        why: '',
+        options,
+        answer: options.indexOf(emoji.get(d.picture)!),
+        pictures: true,
+      }
+    })
 }
 
 /** A round of dialogues in random order, the options of each shuffled. */
