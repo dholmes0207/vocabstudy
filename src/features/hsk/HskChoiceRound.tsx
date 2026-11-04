@@ -4,15 +4,22 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import type { HskChoice } from '@/lib/hskPractice'
-import { exampleAudio, prefetchAudio, pronounce, stopPronounce } from '@/lib/audio'
+import { exampleAudio, prefetchAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useT } from '@/lib/i18n'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
-// HSK practice, listening (听力) and gap-fill (选词填空) questions
-// (lib/hskPractice.ts). A listening question plays its recorded example as it
-// appears; a gap-fill shows its options with pinyin, as HSK 1–2 print it.
+// HSK practice, listening (听力, 判断对错), gap-fill (选词填空) and character
+// (写汉字) questions (lib/hskPractice.ts). A listening question plays its
+// recording as it appears: the example sentence, or for right-or-wrong the word
+// alone; a gap-fill shows its options with pinyin, as HSK 1–2 print it.
+
+/** A question that is heard rather than read. */
+const heard = (qn: HskChoice) => qn.kind === 'listen' || qn.kind === 'judge'
+/** Its recording: the word alone for right-or-wrong, else the example. */
+const clip = (qn: HskChoice) =>
+  qn.kind === 'judge' ? wordAudio(qn.word.id) : exampleAudio(qn.word.id, qn.word.exampleEn)
 
 export default function HskChoiceRound({
   title,
@@ -42,23 +49,15 @@ export default function HskChoiceRound({
 
   const play = (qn: HskChoice) =>
     pronounce({
-      audioSrc: exampleAudio(qn.word.id, qn.word.exampleEn),
-      text: qn.word.exampleEn,
+      audioSrc: clip(qn),
+      text: qn.kind === 'judge' ? qn.word.word : qn.word.exampleEn,
       lang,
       rate,
     })
 
-  useEffect(
-    () =>
-      prefetchAudio(
-        questions
-          .filter((qn) => qn.kind === 'listen')
-          .map((qn) => exampleAudio(qn.word.id, qn.word.exampleEn))
-      ),
-    [questions]
-  )
+  useEffect(() => prefetchAudio(questions.filter(heard).map(clip)), [questions])
   useEffect(() => {
-    if (q?.kind !== 'listen') return
+    if (!q || !heard(q)) return
     const timer = window.setTimeout(() => play(q), 300)
     return () => window.clearTimeout(timer)
     // eslint-disable-next-line react-hooks/exhaustive-deps -- once per question
@@ -89,7 +88,7 @@ export default function HskChoiceRound({
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
     // A gap-fill reads the whole sentence once it is answered.
-    if (q.kind !== 'listen') play(q)
+    if (!heard(q)) play(q)
   }
   const next = () => {
     stopPronounce()
@@ -117,14 +116,31 @@ export default function HskChoiceRound({
       }
     >
       <div className="card space-y-4 p-6">
-        {q.kind === 'listen' ? (
+        {heard(q) ? (
           <>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t('Nghe câu, rồi chọn nghĩa đúng.', 'Hear the sentence, then pick what it means.')}
+              {q.kind === 'judge'
+                ? t(
+                    'Nghe một từ, rồi xem tranh: tranh có đúng là từ đó không?',
+                    'Hear a word, then look: is the picture that word?'
+                  )
+                : t(
+                    'Nghe câu, rồi chọn nghĩa đúng.',
+                    'Hear the sentence, then pick what it means.'
+                  )}
             </p>
             <button type="button" className="btn-secondary h-10 text-sm" onClick={() => play(q)}>
               <RotateCcw className="h-4 w-4" /> {t('Nghe lại', 'Play again')}
             </button>
+            {q.kind === 'judge' && (
+              <p
+                className="py-2 text-center text-7xl"
+                role="img"
+                aria-label={t('Tranh', 'Picture')}
+              >
+                {q.picture}
+              </p>
+            )}
           </>
         ) : (
           <>
@@ -181,7 +197,9 @@ export default function HskChoiceRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {q.kind !== 'listen' ? (
+                {q.kind === 'judge' ? (
+                  <span>{i === 0 ? t('✓ Đúng', '✓ Right') : t('✗ Sai', '✗ Wrong')}</span>
+                ) : q.kind !== 'listen' ? (
                   <span className="flex flex-col items-center">
                     <span lang="zh" className="text-xl font-bold">
                       {o}
@@ -212,16 +230,36 @@ export default function HskChoiceRound({
             >
               {picked === q.answer ? t('Đúng rồi!', 'Right!') : t('Chưa đúng.', 'Not quite.')}
             </p>
-            <p lang="zh" className="text-lg font-bold">
-              {q.word.exampleEn.replace(/\u200b/g, '')}
-            </p>
-            {q.word.exampleRead && (
-              <p className="text-slate-600 dark:text-slate-300">{q.word.exampleRead}</p>
+            {q.kind === 'judge' ? (
+              <>
+                <p className="text-slate-600 dark:text-slate-300">
+                  {t('Từ nghe được', 'You heard')}:{' '}
+                  <b lang="zh" className="text-lg">
+                    {q.word.word}
+                  </b>{' '}
+                  {q.word.viRead} — {q.word.meaning} {q.word.emoji}
+                </p>
+                {q.pictureOf && (
+                  <p className="text-slate-500 dark:text-slate-400">
+                    {t('Tranh là', 'The picture is')}: {q.pictureOf.emoji}{' '}
+                    <b lang="zh">{q.pictureOf.word}</b> {q.pictureOf.viRead} — {q.pictureOf.meaning}
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                <p lang="zh" className="text-lg font-bold">
+                  {q.word.exampleEn.replace(/\u200b/g, '')}
+                </p>
+                {q.word.exampleRead && (
+                  <p className="text-slate-600 dark:text-slate-300">{q.word.exampleRead}</p>
+                )}
+                <p className="text-slate-500 dark:text-slate-400">{q.word.exampleVi}</p>
+                <p className="text-slate-500 dark:text-slate-400">
+                  <b lang="zh">{q.word.word}</b> {q.word.viRead} — {q.word.meaning}
+                </p>
+              </>
             )}
-            <p className="text-slate-500 dark:text-slate-400">{q.word.exampleVi}</p>
-            <p className="text-slate-500 dark:text-slate-400">
-              <b lang="zh">{q.word.word}</b> {q.word.viRead} — {q.word.meaning}
-            </p>
           </div>
         )}
       </div>
