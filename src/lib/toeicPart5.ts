@@ -654,12 +654,12 @@ export function retryRound(
  * once enough answers are in: null before `total` answers, or when every kind
  * is perfect.
  */
-export function weakestKind(
-  kinds: Partial<Record<Part5Kind, [number, number]>>,
+export function weakestKind<K extends string = Part5Kind>(
+  kinds: Partial<Record<K, [number, number]>>,
   min = 5,
   total = 10
-): [Part5Kind, number, number] | null {
-  const rows = Object.entries(kinds) as [Part5Kind, [number, number]][]
+): [K, number, number] | null {
+  const rows = Object.entries(kinds) as [K, [number, number]][]
   if (rows.reduce((n, [, [, asked]]) => n + asked, 0) < total) return null
   const worst = rows
     .filter(([, [right, asked]]) => asked >= min && right < asked)

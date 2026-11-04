@@ -9,6 +9,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useExam } from '@/store/examStore'
+import { useRetry } from '@/store/retryStore'
 
 const spoken: string[] = []
 vi.mock('@/lib/audio', () => ({
@@ -30,6 +31,7 @@ beforeEach(() => {
   useData.setState({ pack: zh, status: 'ready' })
   useStudy.setState({ progress: {} })
   useExam.setState({ records: {} })
+  useRetry.setState({ hsk: {} })
 })
 afterEach(() => {
   cleanup()
@@ -166,6 +168,25 @@ describe('HSK practice page', () => {
     fireEvent.click(options[0])
     expect(screen.getByText(/^(Right!|Not quite\.)$/)).toBeInTheDocument()
     expect(spoken).toHaveLength(1)
+  })
+
+  it('counts answers by kind and names the weakest kind of the level', () => {
+    renderPage()
+    expect(screen.queryByText(/Your weakest kind/)).not.toBeInTheDocument()
+    cleanup()
+    useRetry.setState({ hsk: { 'hsk1:judge': [9, 10], 'hsk1:fill': [2, 6], 'hsk2:fill': [0, 9] } })
+    renderPage()
+    expect(screen.getByText(/^Your weakest kind in HSK 1: Fill the gap/)).toHaveTextContent(
+      '(2 of 6 right)'
+    )
+    // A round's answers are counted under its level and kind.
+    useRetry.setState({ hsk: {} })
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[0])
+    const option = screen
+      .getAllByRole('button')
+      .find((b) => /Right|Wrong/.test(b.textContent ?? ''))!
+    fireEvent.click(option)
+    expect(useRetry.getState().hsk['hsk1:judge']?.[1]).toBe(1)
   })
 
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {

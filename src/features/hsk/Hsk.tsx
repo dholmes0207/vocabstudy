@@ -5,6 +5,8 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { useExam } from '@/store/examStore'
+import { useRetry } from '@/store/retryStore'
+import { weakestKind } from '@/lib/toeicPart5'
 import { phaseOf } from '@/lib/srs'
 import { examFor } from '@/lib/exams'
 import {
@@ -219,6 +221,20 @@ export default function Hsk() {
 
   const DRILLS = ALL_DRILLS.filter((d) => !d.levels || d.levels.includes(level))
 
+  // Every answer, counted by level and kind, for the weakest kind across rounds.
+  const tallyHsk = useRetry((st) => st.tallyHsk)
+  const tally = (kind: string) => (ok: boolean) => tallyHsk(level, kind, ok)
+  const tallyKind = (kind: string, ok: boolean) => tallyHsk(level, kind, ok)
+  const counts = useRetry((st) => st.hsk)
+  const weakest = weakestKind(
+    Object.fromEntries(
+      Object.entries(counts)
+        .filter(([key]) => key.startsWith(`${level}:`))
+        .map(([key, v]) => [key.slice(level.length + 1), v])
+    )
+  )
+  const weakestDrill = weakest && ALL_DRILLS.find((d) => d.id === weakest[0])
+
   const startDrill = (drill: Drill) => {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
@@ -351,6 +367,7 @@ export default function Hsk() {
           onAgain={() => {}}
           onExit={exit}
           onDone={done}
+          onAnswer={tally('answer')}
         />
       )
     if (s.kind === 'talk')
@@ -362,6 +379,7 @@ export default function Hsk() {
           onAgain={() => {}}
           onExit={exit}
           onDone={done}
+          onAnswer={tally(s.dialogues[0]?.pictures ? 'match' : 'talk')}
         />
       )
     return s.kind === 'order' ? (
@@ -372,6 +390,7 @@ export default function Hsk() {
         onAgain={() => {}}
         onExit={exit}
         onDone={done}
+        onAnswer={tally('order')}
       />
     ) : (
       <HskChoiceRound
@@ -381,6 +400,7 @@ export default function Hsk() {
         onAgain={() => {}}
         onExit={exit}
         onDone={done}
+        onAnswer={tallyKind}
       />
     )
   }
@@ -392,6 +412,7 @@ export default function Hsk() {
         questions={run.questions}
         onAgain={() => startDrill('answer')}
         onExit={exit}
+        onAnswer={tally('answer')}
       />
     )
   if (run?.kind === 'talk')
@@ -406,6 +427,7 @@ export default function Hsk() {
         dialogues={run.dialogues}
         onAgain={() => startDrill(run.drill)}
         onExit={exit}
+        onAnswer={tally(run.drill)}
       />
     )
   if (run?.kind === 'order')
@@ -416,6 +438,7 @@ export default function Hsk() {
         questions={run.questions}
         onAgain={() => startDrill('order')}
         onExit={exit}
+        onAnswer={tally('order')}
       />
     )
   if (run?.kind === 'choice')
@@ -440,6 +463,7 @@ export default function Hsk() {
         questions={run.questions}
         onAgain={() => startDrill(run.drill)}
         onExit={exit}
+        onAnswer={tallyKind}
       />
     )
 
@@ -518,6 +542,14 @@ export default function Hsk() {
         <h2 id="hsk-drills" className="text-lg font-bold">
           {t('Luyện theo dạng câu', 'Practise by question type')}
         </h2>
+        {weakest && weakestDrill && (
+          <p className="text-sm text-amber-700 dark:text-amber-300">
+            {t(
+              `Dạng bạn hay sai nhất ở ${name}: ${weakestDrill.title[0]} (đúng ${weakest[1]}/${weakest[2]} câu).`,
+              `Your weakest kind in ${name}: ${weakestDrill.title[1]} (${weakest[1]} of ${weakest[2]} right).`
+            )}
+          </p>
+        )}
         <ul className="grid gap-3 sm:grid-cols-3">
           {DRILLS.map((d) => (
             <li key={d.id} className="card flex flex-col gap-2 p-4">

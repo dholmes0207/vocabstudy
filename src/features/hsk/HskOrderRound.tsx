@@ -25,12 +25,15 @@ export default function HskOrderRound({
   onAgain,
   onExit,
   onDone,
+  onAnswer,
 }: {
   title: string
   questions: HskOrder[]
   onAgain: () => void
   onExit: () => void
   onDone?: (correct: number, total: number) => void
+  /** Each answer as it is given, for the weak-spot count. */
+  onAnswer?: (correct: boolean) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'zh-CN')
@@ -70,6 +73,7 @@ export default function HskOrderRound({
     setOrder(state)
     if (!ok && soundOn) buzz(false)
     if (state.done) {
+      onAnswer?.(state.mistakes === 0)
       if (state.mistakes === 0) setCorrect((c) => c + 1)
       else missed(q.word.id)
       pronounce({

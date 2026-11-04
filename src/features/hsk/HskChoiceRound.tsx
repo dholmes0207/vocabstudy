@@ -31,6 +31,7 @@ export default function HskChoiceRound({
   onAgain,
   onExit,
   onDone,
+  onAnswer,
 }: {
   title: string
   questions: HskChoice[]
@@ -38,6 +39,8 @@ export default function HskChoiceRound({
   onExit: () => void
   /** Hand the score back (the mini test) instead of showing the round's result. */
   onDone?: (correct: number, total: number) => void
+  /** Each answer as it is given, for the weak-spot count. */
+  onAnswer?: (kind: string, correct: boolean) => void
 }) {
   const t = useT()
   const lang = useData((s) => s.pack?.meta.ttsLang ?? 'zh-CN')
@@ -93,6 +96,7 @@ export default function HskChoiceRound({
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
     if (!ok) missed(q.word.id)
+    onAnswer?.(q.kind, ok)
     // A read question is heard once answered: a gap-fill's sentence, a picture's word.
     if (!heard(q)) play(q)
   }
