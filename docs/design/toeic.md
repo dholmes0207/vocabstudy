@@ -208,7 +208,7 @@ Tình hình (04/11/2026):
 Có thể làm thêm sau:
 
 - tăng số bài cho từng Part;
-- HSK 2 phần 2 (ghép hội thoại với tranh) và thêm hội thoại cho HSK 2;
+- HSK 2 phần 2 (ghép hội thoại với tranh);
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -457,3 +457,12 @@ khác hỏi (问：…), chọn trong 3 đáp án in sẵn (`lib/hskDialogues.ts
 - Trả lời xong thì hiện lời thoại, bản dịch tiếng Việt, câu hỏi và giải thích.
 - Chỉ hiện ở cấp HSK 3, 5 câu một lượt. Bài thi nhỏ HSK 3: phần Nghe gồm 5 câu hội thoại và 5 câu
   nghe hiểu.
+
+### Hội thoại cho HSK 2 (04/11/2026)
+
+`HskDialogue.level`: thêm 8 hội thoại HSK 2 (đi taxi, giá quần áo, nghề của anh trai, đi bơi, điện
+thoại được tặng, khỏi ốm, gọi đồ uống, sinh nhật). Test giữ chữ Hán của mỗi hội thoại trong chữ của
+cấp đó trở xuống; lần này bắt được 当然 và 啊, đã đổi thành 好的.
+
+- Thẻ Nghe hội thoại hiện ở HSK 2 và HSK 3, mỗi cấp lấy hội thoại của cấp mình.
+- Bài thi nhỏ HSK 2: phần Nghe gồm 4 câu đúng sai, 3 câu hội thoại, 3 câu nghe hiểu.
