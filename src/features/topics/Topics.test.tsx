@@ -9,7 +9,7 @@ import type { LanguagePack } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { newCard } from '@/lib/srs'
+import { MASTERED_BOX, newCard } from '@/lib/srs'
 
 // "Học theo chủ đề" (docs/design/topics.md) with the real pack and decks:
 // every deck can be learned, and reviewed once some of its words are known.
@@ -66,5 +66,23 @@ describe('Topics', () => {
     expect(await screen.findByText('1/3')).toBeInTheDocument()
     // The review takes the whole page: no deck grid or page header around it.
     expect(screen.queryByRole('heading', { name: /Learn by topic/ })).not.toBeInTheDocument()
+  })
+
+  it('shows the medal a deck has earned and what the next one needs', async () => {
+    const ids = work.wordIds as number[]
+    // Every word started, one mastered: bronze, with silver next.
+    const cards = Object.fromEntries(
+      ids.map((id, i) => [
+        id,
+        { ...newCard(id), box: i === 0 ? MASTERED_BOX : 1, lastReviewedDay: 0 },
+      ])
+    )
+    useStudy.setState({ progress: { en: { cards } as never } })
+    renderTopics()
+    const card = (await screen.findByText('At work')).closest('li')!
+    expect(within(card).getByTitle('Bronze medal')).toHaveTextContent('🥉')
+    expect(within(card).getByText(`🥈 ${ids.length - 1} more`)).toBeInTheDocument()
+    expect(screen.getByText(/Medals/)).toHaveTextContent('🥉 1 Bronze')
+    expect(screen.getByText(/Medals/)).toHaveTextContent('🥈 0 Silver')
   })
 })

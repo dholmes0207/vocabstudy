@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Huy hiệu cho từng chủ đề (cả chủ đề TOEIC): Đồng khi đã học mọi từ, Bạc khi mọi từ đã qua vài lần ôn, Vàng khi thành thạo cả bộ. Mỗi chủ đề ghi còn bao nhiêu từ tới huy hiệu tiếp theo, và báo ngay khi vừa nhận huy hiệu mới.',
+        'Medals for every topic, TOEIC themes included: bronze once every word is started, silver once every word has had a few reviews, gold when the whole deck is mastered. Each deck shows how many words the next medal needs, and a new medal is announced as soon as it is earned.',
+      ],
+      [
         'Ghép họ từ cho TOEIC Part 5: xếp decide, decision, decisive, decisively vào đúng ô danh từ, động từ, tính từ, trạng từ. Có 52 họ từ hay gặp trong đề, mỗi từ kèm nghĩa và đuôi từ được gạch chân.',
         'Word families for TOEIC Part 5: put decide, decision, decisive, decisively into the noun, verb, adjective and adverb slots. Fifty-two families common in the test, each form with its meaning and its ending underlined.',
       ],

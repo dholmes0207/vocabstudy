@@ -5,6 +5,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { phaseOf } from '@/lib/srs'
+import { deckTier, isUpgrade, nextTier, TIER_INFO, TIERS, type BadgeTier } from '@/lib/deckBadges'
 import { generateQuiz } from '@/lib/quiz'
 import { useT } from '@/lib/i18n'
 import LearnSession from '@/features/learn/LearnSession'
@@ -49,8 +50,8 @@ export default function DeckBoard({
   const markKnown = useStudy((s) => s.markKnown)
   const t = useT()
   const [session, setSession] = useState<
-    | { kind: 'learn'; deck: Deck; words: Word[] }
-    | { kind: 'review'; deck: Deck; questions: QuizQuestion[] }
+    | { kind: 'learn'; deck: Deck; tier: BadgeTier | null; words: Word[] }
+    | { kind: 'review'; deck: Deck; tier: BadgeTier | null; questions: QuizQuestion[] }
     | null
   >(null)
 
@@ -61,9 +62,27 @@ export default function DeckBoard({
         deck,
         mastered: deck.words.filter((w) => phaseOf(cards[w.id]) === 'mastered').length,
         learned: deck.words.filter((w) => cards[w.id]).length,
+        tier: deckTier(deck.words, cards),
+        next: nextTier(deck.words, cards),
       })),
     [decks, cards]
   )
+
+  /** "Bronze medal: Hiring!" when the session just ended earned the deck a new medal. */
+  const medalNote = (deck: Deck, before: BadgeTier | null) => {
+    const now = deckTier(deck.words, cards)
+    if (!now || !isUpgrade(before, now)) return null
+    const info = TIER_INFO[now]
+    return (
+      <p className="w-full rounded-xl bg-amber-50 p-3 font-semibold text-amber-800 animate-pop dark:bg-amber-950/50 dark:text-amber-200">
+        {info.medal}{' '}
+        {t(
+          `Huy hiệu ${info.name[0]}: "${deck.title[0]}"!`,
+          `${info.name[1]} medal: "${deck.title[1]}"!`
+        )}
+      </p>
+    )
+  }
 
   if (session?.kind === 'review') {
     const { deck } = session
@@ -81,6 +100,7 @@ export default function DeckBoard({
             correct={correct}
             total={total}
           >
+            {medalNote(deck, session.tier)}
             {correct < total && (
               <p className="w-full text-sm text-slate-500 dark:text-slate-400">
                 {t(
@@ -119,6 +139,7 @@ export default function DeckBoard({
               `You just learned ${total} words about "${session.deck.title[1]}". Tomorrow the app will ask again so they stick.`
             )}
           >
+            {medalNote(session.deck, session.tier)}
             <button className="btn-primary" onClick={() => setSession(null)}>
               {t(...backLabel)}
             </button>
@@ -131,21 +152,47 @@ export default function DeckBoard({
   const start = (deck: Deck) => {
     // The deck's not-yet-mastered words, a handful at a time.
     const list = deck.words.filter((w) => phaseOf(cards[w.id]) !== 'mastered').slice(0, 10)
-    if (list.length) setSession({ kind: 'learn', deck, words: list })
+    if (list.length)
+      setSession({ kind: 'learn', deck, tier: deckTier(deck.words, cards), words: list })
   }
 
   const review = (deck: Deck) => {
     // A quick recall check on the deck's words you have already met.
     const met = deck.words.filter((w) => cards[w.id])
     const questions = generateQuiz({ words: met, pool: pack.words, limit: 10 })
-    if (questions.length) setSession({ kind: 'review', deck, questions })
+    if (questions.length)
+      setSession({ kind: 'review', deck, tier: deckTier(deck.words, cards), questions })
   }
+
+  const earned = TIERS.map((tier) => ({
+    tier,
+    count: rows.filter((r) => r.tier && TIERS.indexOf(r.tier) >= TIERS.indexOf(tier)).length,
+  }))
 
   return (
     <div className="space-y-6 animate-fade-in">
       {before}
+      <details className="card p-4 text-sm">
+        <summary className="cursor-pointer font-semibold">
+          {t('Huy hiệu', 'Medals')}:{' '}
+          {earned.map(({ tier, count }) => (
+            <span key={tier} className="ml-2 whitespace-nowrap">
+              <span aria-hidden="true">{TIER_INFO[tier].medal}</span>{' '}
+              {t(`${count} ${TIER_INFO[tier].name[0]}`, `${count} ${TIER_INFO[tier].name[1]}`)}
+            </span>
+          ))}
+        </summary>
+        <div className="mt-2 space-y-1 text-slate-600 dark:text-slate-300">
+          {TIERS.map((tier) => (
+            <p key={tier}>
+              <span aria-hidden="true">{TIER_INFO[tier].medal}</span>{' '}
+              <b>{t(...TIER_INFO[tier].name)}</b>: {t(...TIER_INFO[tier].rule)}
+            </p>
+          ))}
+        </div>
+      </details>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {rows.map(({ deck, mastered, learned }) => {
+        {rows.map(({ deck, mastered, learned, tier, next }) => {
           const { words } = deck
           const done = words.length > 0 && mastered === words.length
           return (
@@ -157,7 +204,20 @@ export default function DeckBoard({
                   </span>
                 </ProgressRing>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-bold">{t(...deck.title)}</span>
+                  <span className="block font-bold">
+                    {t(...deck.title)}
+                    {tier && (
+                      <span
+                        className="ml-1"
+                        title={t(
+                          `Huy hiệu ${TIER_INFO[tier].name[0]}`,
+                          `${TIER_INFO[tier].name[1]} medal`
+                        )}
+                      >
+                        {TIER_INFO[tier].medal}
+                      </span>
+                    )}
+                  </span>
                   <span className="text-sm text-slate-500 dark:text-slate-400">
                     {done
                       ? t('Đã thành thạo cả bộ 🎉', 'All mastered 🎉')
@@ -166,6 +226,14 @@ export default function DeckBoard({
                           `${mastered}/${words.length} mastered`
                         )}
                   </span>
+                  {next && (
+                    <span className="block text-xs text-slate-500 dark:text-slate-400">
+                      {t(
+                        `${TIER_INFO[next.tier].medal} còn ${next.left} từ`,
+                        `${TIER_INFO[next.tier].medal} ${next.left} more`
+                      )}
+                    </span>
+                  )}
                 </span>
               </div>
               <div className="grid grid-cols-2 gap-2">
