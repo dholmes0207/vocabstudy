@@ -5,7 +5,7 @@ describe('Part 6 texts', () => {
   const p6 = READING_SETS.filter((s) => s.part === 6)
 
   it('have gaps [1]–[4], each once, one question per gap and one whole-sentence gap', () => {
-    expect(p6.length).toBeGreaterThanOrEqual(4)
+    expect(p6.length).toBeGreaterThanOrEqual(8)
     for (const s of p6) {
       const text = s.passages.map((p) => p.text).join('\n')
       for (const n of [1, 2, 3, 4]) expect(text.split(`[${n}]`), `${s.id} [${n}]`).toHaveLength(2)
@@ -23,8 +23,8 @@ describe('Part 7 sets', () => {
   const p7 = READING_SETS.filter((s) => s.part === 7)
 
   it('include single and double passages, every question asked in words', () => {
-    expect(p7.filter((s) => s.passages.length === 1).length).toBeGreaterThanOrEqual(5)
-    expect(p7.filter((s) => s.passages.length === 2).length).toBeGreaterThanOrEqual(2)
+    expect(p7.filter((s) => s.passages.length === 1).length).toBeGreaterThanOrEqual(8)
+    expect(p7.filter((s) => s.passages.length === 2).length).toBeGreaterThanOrEqual(3)
     for (const s of p7) for (const q of s.questions) expect(q.q.trim(), s.id).not.toBe('')
   })
 })

@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-04',
+    title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
+    items: [
+      [
+        'Gấp đôi số bài của TOEIC Part 3, 4, 6 và thêm 4 bài Part 7: hội thoại đặt bàn, thuê xe, hẹn phỏng vấn; thông báo giảm giá, bản tin giao thông; thư xin lỗi khách, tin thăng chức, quy định công tác phí…',
+        'Twice as many TOEIC Part 3, 4 and 6 sets and four more for Part 7: booking a table, renting a car, an interview call; a store sale, a traffic report; an apology letter, a promotion notice, a travel policy…',
+      ],
+    ],
+  },
+  {
     date: '2026-11-03',
     title: ['Luyện thi HSK', 'HSK practice'],
     items: [
