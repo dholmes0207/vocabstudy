@@ -214,7 +214,7 @@ Có thể làm thêm sau:
 
 - tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
   qua `screens.json`);
-- thống kê điểm yếu theo dạng câu qua nhiều lần làm (hiện chỉ có ở cuối mỗi lượt Part 5).
+- thống kê dạng câu hay sai cho các Part khác và cho HSK (Part 5 đã có).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -522,3 +522,10 @@ nhật, thể thao, ôn thi, mượn điện thoại, hẹn gặp), dùng chung 
 
 - Thẻ "Đọc – ghép câu hỏi và trả lời" hiện ở HSK 1 và HSK 2, mỗi cấp lấy cặp câu của mình.
 - Bài thi nhỏ HSK 2: phần Đọc gồm 4 câu nhìn tranh, 3 câu ghép câu, 3 câu điền từ.
+
+### Dạng câu Part 5 hay sai nhất (04/11/2026)
+
+`retryStore.kinds` cộng dồn [đúng, đã hỏi] cho từng dạng câu Part 5 qua mọi lượt (cả bài thi nhỏ).
+`weakestKind` chọn dạng có tỉ lệ đúng thấp nhất trong các dạng đã hỏi từ 5 câu, khi tổng đã đủ 10
+câu; dạng nào đúng hết thì không bị chỉ ra. Thẻ Part 5 ghi "Dạng bạn hay sai nhất: Giới từ (đúng 2/6
+câu)". Chỉ trên máy, có trong bản sao lưu; bản ghi cũ không có `kinds` thì bắt đầu đếm từ lượt sau.

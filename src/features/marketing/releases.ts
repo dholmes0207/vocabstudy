@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Thẻ TOEIC Part 5 cho biết dạng câu bạn hay sai nhất qua mọi lượt đã làm (từ loại, giới từ, liên từ…), để biết nên ôn gì trước.',
+        'The TOEIC Part 5 card shows the kind of question you miss most across all your rounds (word form, prepositions, conjunctions…), so you know what to work on first.',
+      ],
+      [
         'Dạng ghép câu hỏi và trả lời có thêm 10 cặp câu cho HSK 2, như phần ghép câu bài Đọc của HSK 2. Bài thi nhỏ HSK 2 có 3 câu dạng này.',
         'Question and answer now has ten HSK 2 pairs too, like the matching part of HSK 2 reading; the HSK 2 mini test has three of them.',
       ],

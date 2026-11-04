@@ -12,7 +12,13 @@ import { useT } from '@/lib/i18n'
 import DeckBoard, { type Deck } from '@/components/DeckBoard'
 import ProgressRing from '@/components/ProgressRing'
 import AttemptTrail from '@/components/AttemptTrail'
-import { part5Round, retryRound, type Part5Question } from '@/lib/toeicPart5'
+import {
+  PART5_KINDS,
+  part5Round,
+  retryRound,
+  weakestKind,
+  type Part5Question,
+} from '@/lib/toeicPart5'
 import { useRetry } from '@/store/retryStore'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
@@ -49,6 +55,7 @@ export default function Toeic() {
   const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
   const best = useExam((s) => s.records[MINI_TEST_ID])
   const missedPart5 = useRetry((s) => s.part5.length)
+  const weakest = weakestKind(useRetry((s) => s.kinds))
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
@@ -270,6 +277,14 @@ export default function Toeic() {
                     >
                       {t(...PRACTICE_LABEL[part.n]!)}
                     </button>
+                  )}
+                  {part.n === 5 && weakest && (
+                    <p className="text-sm text-amber-700 dark:text-amber-300">
+                      {t(
+                        `Dạng bạn hay sai nhất: ${PART5_KINDS[weakest[0]][0]} (đúng ${weakest[1]}/${weakest[2]} câu).`,
+                        `Your weakest kind: ${PART5_KINDS[weakest[0]][1]} (${weakest[1]} of ${weakest[2]} right).`
+                      )}
+                    </p>
                   )}
                   {part.n === 5 && missedPart5 > 0 && (
                     <button

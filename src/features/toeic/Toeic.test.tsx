@@ -25,7 +25,7 @@ beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useData.setState({ pack: en, status: 'ready' })
   useStudy.setState({ progress: {} })
-  useRetry.setState({ part5: [] })
+  useRetry.setState({ part5: [], kinds: {} })
 })
 afterEach(cleanup)
 
@@ -168,5 +168,11 @@ describe('TOEIC page', () => {
       fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
     }
     expect(useRetry.getState().part5).toEqual([])
+  })
+
+  it('names the weakest kind of Part 5 question once enough answers are in', () => {
+    useRetry.setState({ part5: [], kinds: { prep: [2, 6], form: [6, 7] } })
+    renderAt('/toeic')
+    expect(screen.getByText('Your weakest kind: Prepositions (2 of 6 right).')).toBeInTheDocument()
   })
 })

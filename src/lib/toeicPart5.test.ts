@@ -10,6 +10,7 @@ import {
   vocabQuestions,
   type Part5Kind,
   retryRound,
+  weakestKind,
 } from './toeicPart5'
 
 const en = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
@@ -99,5 +100,16 @@ describe('Part 5 retry', () => {
       expect([...q.options].sort()).toEqual([...original.options].sort())
     }
     expect(retryRound(PART5_BANK.map((q) => q.sentence))).toHaveLength(10)
+  })
+})
+
+describe('Part 5 weakest kind', () => {
+  it('waits for enough answers, then names the kind answered worst', () => {
+    expect(weakestKind({ prep: [1, 4] })).toBeNull()
+    expect(weakestKind({ prep: [3, 6], form: [5, 6] })).toEqual(['prep', 3, 6])
+    // A kind asked too few times is not judged yet.
+    expect(weakestKind({ prep: [0, 2], form: [4, 6], verb: [6, 6] })).toEqual(['form', 4, 6])
+    // All right: nothing to point at.
+    expect(weakestKind({ form: [10, 10] })).toBeNull()
   })
 })

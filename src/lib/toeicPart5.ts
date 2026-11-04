@@ -649,6 +649,24 @@ export function retryRound(
     })
 }
 
+/**
+ * The kind of question answered worst, among those asked at least `min` times,
+ * once enough answers are in: null before `total` answers, or when every kind
+ * is perfect.
+ */
+export function weakestKind(
+  kinds: Partial<Record<Part5Kind, [number, number]>>,
+  min = 5,
+  total = 10
+): [Part5Kind, number, number] | null {
+  const rows = Object.entries(kinds) as [Part5Kind, [number, number]][]
+  if (rows.reduce((n, [, [, asked]]) => n + asked, 0) < total) return null
+  const worst = rows
+    .filter(([, [right, asked]]) => asked >= min && right < asked)
+    .sort(([, [ra, aa]], [, [rb, ab]]) => ra / aa - rb / ab)[0]
+  return worst ? [worst[0], worst[1][0], worst[1][1]] : null
+}
+
 /** Right answers per kind in a finished round: [kind, right, asked], weakest first. */
 export function part5Summary(
   results: { kind: Part5Kind; ok: boolean }[]
