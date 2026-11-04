@@ -89,7 +89,7 @@ export default function HskChoiceRound({
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
     // A gap-fill reads the whole sentence once it is answered.
-    if (q.kind === 'fill') play(q)
+    if (q.kind !== 'listen') play(q)
   }
   const next = () => {
     stopPronounce()
@@ -129,12 +129,22 @@ export default function HskChoiceRound({
         ) : (
           <>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t('Chọn từ điền vào chỗ trống.', 'Pick the word for the gap.')}
+              {q.kind === 'char'
+                ? t('Chọn chữ Hán đúng với pinyin.', 'Pick the character that matches the pinyin.')
+                : t('Chọn từ điền vào chỗ trống.', 'Pick the word for the gap.')}
             </p>
             <p lang="zh" className="text-2xl font-bold leading-relaxed">
               {before}
-              <span className="mx-1 inline-block min-w-12 border-b-2 border-brand-500 text-center text-brand-700 dark:text-brand-300">
-                {answered ? q.options[q.answer] : '\u00a0'}
+              <span className="mx-1 inline-flex min-w-12 flex-col items-center align-bottom">
+                {/* 写汉字 gives the pinyin of the missing character above the gap. */}
+                {q.kind === 'char' && (
+                  <span className="text-sm font-normal text-brand-600 dark:text-brand-300">
+                    {q.word.viRead}
+                  </span>
+                )}
+                <span className="w-full border-b-2 border-brand-500 text-center text-brand-700 dark:text-brand-300">
+                  {answered ? q.options[q.answer] : '\u00a0'}
+                </span>
               </span>
               {after}
             </p>
@@ -146,7 +156,7 @@ export default function HskChoiceRound({
           </>
         )}
 
-        <div className={q.kind === 'fill' ? 'grid grid-cols-2 gap-2' : 'grid gap-2'}>
+        <div className={q.kind === 'listen' ? 'grid gap-2' : 'grid grid-cols-2 gap-2'}>
           {q.options.map((o, i) => {
             const state = !answered
               ? 'idle'
@@ -171,14 +181,16 @@ export default function HskChoiceRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {q.kind === 'fill' ? (
+                {q.kind !== 'listen' ? (
                   <span className="flex flex-col items-center">
                     <span lang="zh" className="text-xl font-bold">
                       {o}
                     </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400">
-                      {q.readings?.[i]}
-                    </span>
+                    {q.readings && (
+                      <span className="text-xs text-slate-500 dark:text-slate-400">
+                        {q.readings[i]}
+                      </span>
+                    )}
                   </span>
                 ) : (
                   <span className="flex-1">{o}</span>

@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import {
   HSK_LEVELS,
+  charQuestions,
   fillQuestions,
   levelWords,
   listenQuestions,
@@ -44,6 +45,23 @@ describe.each(HSK_LEVELS)('%s practice', (level) => {
       expect(q.tokens.join('') + q.end).toBe(plain(q.word.exampleEn.trim()))
       expect(new Set(q.tokens).size).toBe(q.tokens.length)
       expect(q.tokens.length).toBeGreaterThanOrEqual(3)
+    }
+  })
+})
+
+describe('HSK writing, characters (写汉字)', () => {
+  it('takes a one-character word out of its example, never with a same-reading distractor', () => {
+    for (const level of HSK_LEVELS) {
+      const qs = charQuestions(level, zh.words, 10)
+      expect(qs.length, level).toBeGreaterThanOrEqual(5)
+      for (const q of qs) {
+        expect([...q.word.word]).toHaveLength(1)
+        expect(plain(q.sentence!.replace('___', q.word.word))).toBe(plain(q.word.exampleEn))
+        expect(new Set(q.options).size).toBe(4)
+        expect(q.options[q.answer]).toBe(q.word.word)
+        const reads = q.options.map((o) => zh.words.find((w) => w.word === o)!.viRead.toLowerCase())
+        expect(new Set(reads).size, q.options.join('')).toBe(4)
+      }
     }
   })
 })
