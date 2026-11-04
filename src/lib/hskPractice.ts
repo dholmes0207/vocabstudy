@@ -155,7 +155,10 @@ export function charQuestions(
       const mine = radicalsOf(w.word)
       const shape = others.filter((o) => radicalsOf(o.word).some((r) => mine.includes(r)))
       const wrong = [...shuffle(sound), ...shuffle(shape), ...shuffle(others)]
-        .filter((o, i, a) => a.indexOf(o) === i)
+        // One option per reading: two distractors read alike (角 / 脚) waste a place.
+        .filter(
+          (o, i, a) => a.findIndex((x) => x.viRead.toLowerCase() === o.viRead.toLowerCase()) === i
+        )
         .slice(0, 3)
       if (wrong.length < 3) return []
       const { tokens, at } = hit
