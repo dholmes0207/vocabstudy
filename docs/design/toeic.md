@@ -315,3 +315,16 @@ Mục "Họ từ" của phần Xuyên suốt. Nút thứ ba trên thẻ Part 5: 
 - Xếp xong thì hiện nghĩa từng dạng, nghe được từng từ, và gạch chân đuôi từ như trong Mẹo đuôi từ.
   Test giữ cho mọi dạng không trái quy tắc đuôi (vì thế bỏ họ apply: apply đuôi -ly nhưng là động
   từ).
+
+### Huy hiệu chủ đề (04/11/2026)
+
+Mục "Huy hiệu chủ đề" của phần Xuyên suốt, làm chung cho mọi bộ từ của `DeckBoard` (Học theo chủ đề
+và chủ đề TOEIC), tính từ thẻ ôn tập nên không lưu thêm gì (`lib/deckBadges.ts`).
+
+- Ba bậc, để luôn có một huy hiệu gần trước mặt:
+  - 🥉 Đồng: mọi từ của bộ đã bắt đầu học;
+  - 🥈 Bạc: mọi từ đã qua vài lần ôn (giai đoạn "ôn tập" trở lên);
+  - 🥇 Vàng: mọi từ đã thành thạo.
+- Mỗi thẻ chủ đề hiện huy hiệu đã có và "còn N từ" tới bậc tiếp theo. Trên lưới có dòng tổng số
+  huy hiệu, mở ra xem cách nhận.
+- Học hoặc ôn xong một bộ mà bộ đó lên bậc thì màn kết thúc báo huy hiệu mới.
