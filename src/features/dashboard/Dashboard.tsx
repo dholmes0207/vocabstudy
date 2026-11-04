@@ -7,6 +7,7 @@ import { summarize } from '@/lib/summary'
 import { useProvideContext } from '@/store/contextStore'
 import ProgressRing from '@/components/ProgressRing'
 import WordOfDay from './WordOfDay'
+import DailyChallenge from './DailyChallenge'
 import { levelForXp } from '@/lib/xpLevel'
 import InstallPrompt from '@/components/InstallPrompt'
 import SpeakButton from '@/components/SpeakButton'
@@ -218,6 +219,8 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
+
+      <DailyChallenge />
 
       <WordOfDay />
 

@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Luyện thi HSK', 'HSK practice'],
     items: [
       [
+        'Thử thách hôm nay trên Trang chủ: 5 câu mỗi ngày, mọi người học cùng ngôn ngữ có cùng một đề, kèm chuỗi ngày liên tiếp để giữ nhịp học.',
+        "Today's challenge on the home page: five questions a day, the same for everyone learning the language, with a streak of days in a row to keep you going.",
+      ],
+      [
         'Trang "Luyện thi HSK" cho HSK 1, 2, 3: nghe hiểu bằng giọng thu sẵn, chọn từ điền chỗ trống có pinyin, sắp xếp câu như phần Viết của HSK 3. Câu hỏi làm từ chính từ vựng của từng cấp.',
         'An "HSK practice" page for HSK 1, 2 and 3: listening with recorded audio, fill-the-gap with pinyin, and sentence building like the HSK 3 writing part, all made from each level\'s own words.',
       ],

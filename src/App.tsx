@@ -35,6 +35,7 @@ const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Radicals = lazy(() => import('./features/radicals/Radicals'))
 const Toeic = lazy(() => import('./features/toeic/Toeic'))
 const Hsk = lazy(() => import('./features/hsk/Hsk'))
+const Challenge = lazy(() => import('./features/challenge/Challenge'))
 const Numbers = lazy(() => import('./features/numbers/Numbers'))
 const Placement = lazy(() => import('./features/placement/Placement'))
 const Exam = lazy(() => import('./features/exam/Exam'))
@@ -107,6 +108,7 @@ export default function App() {
               <Route path="/exam" element={<Exam />} />
               <Route path="/toeic" element={<Toeic />} />
               <Route path="/hsk" element={<Hsk />} />
+              <Route path="/challenge" element={<Challenge />} />
               <Route path="/grammar" element={<Grammar />} />
               <Route path="/dictation" element={<Dictation />} />
               <Route path="/reading" element={<Reading />} />
