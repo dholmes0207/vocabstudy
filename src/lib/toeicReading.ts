@@ -347,6 +347,161 @@ Kingsley Property Management`,
     ],
   },
 
+  {
+    id: 'p6-software',
+    part: 6,
+    passages: [
+      {
+        kind: MEMO,
+        text: `To: All employees
+From: IT Department
+Subject: New accounting software
+
+On Monday, March 3, the accounting department will begin using new software to process invoices. The system will make it [1] for staff to track payments. [2]
+
+All employees who submit expense reports must attend a short training session [3] the end of February. Sessions will be held every Tuesday and Thursday at 3:00 P.M. in Room 210. Please register with Ms. Green, who will send you the [4] materials before your session.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['easier', 'easily', 'ease', 'easiest'],
+        'make it + tính từ + for…: làm cho việc gì dễ hơn. Phần mềm mới so với cũ nên dùng so sánh hơn easier.'
+      ),
+      gap(
+        [
+          'It will also reduce the time needed to approve expenses.',
+          'The old software will be used until next year.',
+          'Invoices should be sent by mail from now on.',
+          'The accounting department is located on the fifth floor.',
+        ],
+        'Câu chèn tiếp ý "phần mềm giúp theo dõi thanh toán dễ hơn" bằng một lợi ích nữa (also). Phần mềm cũ dùng đến năm sau trái với ngày bắt đầu 3/3.'
+      ),
+      gap(
+        ['before', 'since', 'during', 'among'],
+        'before the end of February: trước cuối tháng Hai, đúng với phần mềm bắt đầu dùng ngày 3/3.'
+      ),
+      gap(
+        ['training', 'trained', 'trainer', 'trains'],
+        'training materials: tài liệu đào tạo, danh từ ghép. trained là quá khứ phân từ, không hợp ở đây.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-store-hours',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Dear Customers,
+
+Beginning June 1, Parkside Market will [1] its opening hours. The store will open at 7:00 A.M. instead of 8:00 A.M., so that shoppers can stop by on their way to work. [2]
+
+In addition, our bakery section will offer fresh bread every morning. We [3] you for your continued support and look forward to serving you. If you have any questions, please speak to [4] of our staff members at the customer service desk.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['extend', 'extent', 'extensive', 'extension'],
+        'Sau will cần động từ nguyên mẫu: will extend its opening hours (kéo dài giờ mở cửa). Mở cửa sớm hơn một tiếng là kéo dài.'
+      ),
+      gap(
+        [
+          'Closing time will remain 10:00 P.M.',
+          'The store will be closed on weekends.',
+          'Shoppers must show a membership card.',
+          'The bakery will no longer sell bread.',
+        ],
+        'Đoạn đang nói giờ mở cửa; câu chèn hợp lý là giờ đóng cửa giữ nguyên. Câu về tiệm bánh trái với câu sau ("fresh bread every morning").'
+      ),
+      gap(
+        ['thank', 'thanks', 'thanking', 'thanked'],
+        'We thank you for…: chúng tôi cảm ơn quý khách vì… Chủ ngữ We ở hiện tại đi với động từ nguyên mẫu thank.'
+      ),
+      gap(
+        ['any', 'every', 'much', 'other'],
+        'any of our staff members: bất kỳ nhân viên nào. every và other không đi với of; much dùng cho danh từ không đếm được.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-conference-thanks',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: Dr. Helen Ward
+From: Tom Reyes, Event Coordinator
+Subject: Thank you
+
+Dear Dr. Ward,
+
+Thank you for speaking at the Regional Business Conference last Friday. Your talk on online marketing was one of the most [1] sessions of the day. [2] Many of them asked whether you would return next year.
+
+As promised, we have [3] a copy of the photos from your session to this email. Your speaker fee will be paid [4] the end of the month.
+
+Best regards,
+Tom Reyes`,
+      },
+    ],
+    questions: [
+      gap(
+        ['popular', 'popularity', 'popularly', 'populate'],
+        'one of the most + tính từ + danh từ số nhiều: one of the most popular sessions. Sau most cần tính từ.'
+      ),
+      gap(
+        [
+          'Several attendees told us how useful they found it.',
+          'Unfortunately, the room was too small for the audience.',
+          'The conference will not be held again.',
+          'Please send us your talk by next Friday.',
+        ],
+        'Câu sau có "Many of them", cần một câu trước nhắc tới người nghe: attendees. Câu "conference will not be held again" trái với "return next year".'
+      ),
+      gap(
+        ['attached', 'attach', 'attaching', 'attachment'],
+        'Thì hiện tại hoàn thành: have + quá khứ phân từ, we have attached (đã đính kèm).'
+      ),
+      gap(
+        ['by', 'until', 'since', 'for'],
+        'by the end of the month: chậm nhất là cuối tháng, hạn chót cho một việc xảy ra một lần. until dùng cho việc kéo dài.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-hiring',
+    part: 6,
+    passages: [
+      {
+        kind: JOB,
+        text: `Blue River Hotels is looking for an experienced front desk manager for our new hotel in Lakeside. The successful [1] will lead a team of ten staff members and handle guest complaints.
+
+Applicants should have at least three years of experience in the hotel industry. [2] The ability to speak a second language is a plus.
+
+To apply, please send your résumé and a cover letter [3] hr@blueriverhotels.com. Applications must be received no later than April 15. Only those [4] for an interview will be contacted.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['candidate', 'candidates', 'candidacy', 'candid'],
+        'The successful candidate: ứng viên được chọn. Sau The + tính từ cần danh từ, và động từ will lead cho thấy là một người, số ít.'
+      ),
+      gap(
+        [
+          'Strong communication skills are also required.',
+          'The hotel will close in April.',
+          'No experience is necessary for this position.',
+          'Guests are asked to check out by noon.',
+        ],
+        'Đoạn đang liệt kê yêu cầu với ứng viên; câu chèn là một yêu cầu nữa (also required). "No experience is necessary" trái với câu trước.'
+      ),
+      gap(['to', 'at', 'from', 'in'], 'send something to + địa chỉ: gửi tới hr@…'),
+      gap(
+        ['selected', 'selecting', 'selection', 'select'],
+        'Only those (who are) selected for an interview: chỉ những người được chọn. Rút gọn mệnh đề bị động dùng quá khứ phân từ.'
+      ),
+    ],
+  },
+
   // ------------------------------------------------------- Part 7, single
   {
     id: 'p7-kitchen',

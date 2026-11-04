@@ -466,3 +466,10 @@ cấp đó trở xuống; lần này bắt được 当然 và 啊, đã đổi 
 
 - Thẻ Nghe hội thoại hiện ở HSK 2 và HSK 3, mỗi cấp lấy hội thoại của cấp mình.
 - Bài thi nhỏ HSK 2: phần Nghe gồm 4 câu đúng sai, 3 câu hội thoại, 3 câu nghe hiểu.
+
+### Thêm bài Part 6 (04/11/2026)
+
+Part 6 từ 8 lên 12 đoạn văn (test giữ mức này): thông báo phần mềm kế toán mới, siêu thị đổi giờ mở
+cửa, thư cảm ơn diễn giả, tin tuyển quản lý lễ tân. Mỗi đoạn vẫn 4 chỗ trống, một chỗ điền cả câu;
+các chỗ còn lại hỏi từ loại (easier, popular, candidate), giới từ (before, by, to), dạng động từ (have
+attached, those selected).
