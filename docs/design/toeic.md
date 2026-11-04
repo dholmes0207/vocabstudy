@@ -291,3 +291,12 @@ Test giữ số bài tối thiểu theo các con số trên.
   be pleased to, each of + số ít, despite / although, so that, neither … nor.
 - Thêm các cặp từ dễ nhầm: complete / compete, receipt / recipe / recipient, postpone / promote,
   launch / lunch.
+
+### Thêm câu Part 1 và Part 2 (04/11/2026)
+
+- **Part 2:** từ 40 lên 60 câu. Có thêm câu hỏi đuôi (…, haven't you?), câu hỏi gián tiếp (Could
+  you tell me where…?), lời đề nghị giúp (Would you like me to…?, Do you want me to…?), lời rủ
+  (How about…?, Let's…) và câu trần thuật báo vấn đề. Có thêm bẫy từ cùng chữ khác nghĩa: book
+  (quyển sách / đặt), store (cửa hàng / cất), take.
+- **Part 1:** từ 12 lên 20 cảnh. Có thêm câu chỉ trạng thái (are parked in a row, have been
+  placed, is docked) để phân biệt với câu đang làm (is being installed).

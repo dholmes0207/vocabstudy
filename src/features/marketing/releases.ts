@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Part 2 có 60 câu hỏi – đáp (thêm câu hỏi đuôi, câu hỏi gián tiếp, lời mời, lời đề nghị giúp) và Part 1 có 20 cảnh.',
+        'Part 2 has 60 question–response items (adding tag and indirect questions, invitations and offers) and Part 1 has 20 scenes.',
+      ],
+      [
         'TOEIC Part 5 có 71 câu ngữ pháp kèm giải thích (trước đây 43), thêm các điểm hay ra như quá khứ hoàn thành, bị động, suggest + V-ing và các cặp từ dễ nhầm (receipt / recipe, complete / compete).',
         'TOEIC Part 5 now has 71 explained grammar questions (up from 43), adding favourites such as the past perfect, the passive, suggest + -ing and look-alike words (receipt / recipe, complete / compete).',
       ],
