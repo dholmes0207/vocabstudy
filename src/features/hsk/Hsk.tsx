@@ -91,10 +91,10 @@ export default function Hsk() {
       icon: '🗣️',
       title: ['Nghe hội thoại (听对话)', 'Dialogues (听对话)'],
       desc: [
-        'Nghe một người nữ và một người nam nói, rồi trả lời câu hỏi: các phần nghe hội thoại của HSK 3. Hai người nói bằng hai giọng khác nhau.',
-        'Hear a woman and a man, then answer the question: the dialogue parts of HSK 3 listening, in two different voices.',
+        'Nghe một người nữ và một người nam nói, rồi trả lời câu hỏi: các phần nghe hội thoại của HSK 2 và HSK 3. Hai người nói bằng hai giọng khác nhau.',
+        'Hear a woman and a man, then answer the question: the dialogue parts of HSK 2 and HSK 3 listening, in two different voices.',
       ],
-      levels: ['hsk3'],
+      levels: ['hsk2', 'hsk3'],
       count: 5,
     },
     {
@@ -177,7 +177,11 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
-    if (drill === 'talk') return setRun({ kind: 'talk', n, dialogues: dialogueRound(5) })
+    if (drill === 'talk') {
+      // Shown for HSK 2 and 3 only (ALL_DRILLS levels).
+      if (level !== 'hsk1') setRun({ kind: 'talk', n, dialogues: dialogueRound(level, 5) })
+      return
+    }
     const make = {
       judge: judgeQuestions,
       look: lookQuestions,
@@ -196,7 +200,7 @@ export default function Hsk() {
     const listen: MiniStep[] =
       HSK_SCALE[level].sections === 3
         ? [
-            { section: 'listen', kind: 'talk', dialogues: dialogueRound(5) },
+            { section: 'listen', kind: 'talk', dialogues: dialogueRound('hsk3', 5) },
             { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, 5) },
           ]
         : level === 'hsk1'
@@ -221,12 +225,13 @@ export default function Hsk() {
               {
                 section: 'listen',
                 kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 5),
+                questions: judgeQuestions(level, pack.words, 4),
               },
+              { section: 'listen', kind: 'talk', dialogues: dialogueRound('hsk2', 3) },
               {
                 section: 'listen',
                 kind: 'choice',
-                questions: listenQuestions(level, pack.words, 5),
+                questions: listenQuestions(level, pack.words, 3),
               },
             ]
     // Reading too: HSK 1–2 open with pictures, HSK 3 has none.

@@ -32,7 +32,7 @@ afterEach(() => {
 
 describe('HSK dialogue round', () => {
   it('reads each line in its speaker’s voice, then the question, and shows the transcript once answered', () => {
-    const dialogues = dialogueRound(2, mulberry32(4))
+    const dialogues = dialogueRound('hsk3', 2, mulberry32(4))
     render(
       <MemoryRouter>
         <HskDialogueRound
