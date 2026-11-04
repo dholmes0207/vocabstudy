@@ -2,7 +2,7 @@
 // scripts/generate_audio.py via edge-tts), and transparently fall back to the
 // browser's Web Speech API when a file is missing or can't play.
 
-import type { AudioManifest } from '@/types'
+import type { AudioManifest, VoiceGender } from '@/types'
 import { speak, stopSpeaking } from './tts'
 import { clipId, textHash } from './textHash'
 
@@ -15,14 +15,20 @@ let currentCode = 'en'
 let availableVoiceKeys: string[] = []
 let defaultVoiceKey: string | null = null
 let selectedVoiceKey: string | null = null
+let voiceGenders: Record<string, VoiceGender> = {}
 
 export function setAudioLang(code: string): void {
   currentCode = code
 }
 
-export function setAudioVoices(voiceKeys: string[], defaultKey: string | null): void {
+export function setAudioVoices(
+  voiceKeys: string[],
+  defaultKey: string | null,
+  genders: Record<string, VoiceGender> = {}
+): void {
   availableVoiceKeys = voiceKeys
   defaultVoiceKey = defaultKey
+  voiceGenders = genders
 }
 
 export function setAudioVoiceKey(key: string | null): void {
@@ -70,10 +76,15 @@ export function exampleAudio(id: number, text?: string): string {
  * grammar examples, story lines ('' when the pack has no recorded voices).
  * These clips live only in R2, named after the text itself, so a rewritten
  * sentence simply gets a new clip; until one is recorded the request 404s and
- * pronounce() reads the text with the browser's voice instead.
+ * pronounce() reads the text with the browser's voice instead. With a gender,
+ * the clip is in a voice of that gender when the pack has one.
  */
-export function textAudio(text: string): string {
-  const v = effectiveVoice()
+export function textAudio(text: string, gender?: VoiceGender): string {
+  let v = effectiveVoice()
+  // A speaker of a conversation: the learner's voice when it matches, else the
+  // pack's first voice that does (every voice records every sentence).
+  if (v && gender && voiceGenders[v] !== gender)
+    v = availableVoiceKeys.find((k) => voiceGenders[k] === gender) ?? v
   return v ? `${base}audio/${currentCode}/${v}/t/${clipId(text)}.mp3` : ''
 }
 

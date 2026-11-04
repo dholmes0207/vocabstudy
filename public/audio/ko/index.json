@@ -4,12 +4,14 @@
     {
       "key": "sunhi",
       "label": "SunHi — Nữ (Seoul) 🇰🇷",
-      "voice": "ko-KR-SunHiNeural"
+      "voice": "ko-KR-SunHiNeural",
+      "gender": "female"
     },
     {
       "key": "injoon",
       "label": "InJoon — Nam (Seoul) 🇰🇷",
-      "voice": "ko-KR-InJoonNeural"
+      "voice": "ko-KR-InJoonNeural",
+      "gender": "male"
     }
   ]
 }

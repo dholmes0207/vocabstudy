@@ -4,12 +4,14 @@
     {
       "key": "aria",
       "label": "Aria — Nữ (Mỹ) 🇺🇸",
-      "voice": "en-US-AriaNeural"
+      "voice": "en-US-AriaNeural",
+      "gender": "female"
     },
     {
       "key": "guy",
       "label": "Guy — Nam (Mỹ) 🇺🇸",
-      "voice": "en-US-GuyNeural"
+      "voice": "en-US-GuyNeural",
+      "gender": "male"
     }
   ]
 }

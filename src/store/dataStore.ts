@@ -49,7 +49,8 @@ export const useData = create<DataState>((set, get) => ({
       const voices = audio?.voices ?? []
       setAudioVoices(
         voices.map((v) => v.key),
-        audio?.default ?? null
+        audio?.default ?? null,
+        Object.fromEntries(voices.flatMap((v) => (v.gender ? [[v.key, v.gender]] : [])))
       )
       set({ pack, audioVoices: voices, status: 'ready' })
       // After the first screen, not before it: only an opened card shows these.

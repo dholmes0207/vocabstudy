@@ -91,3 +91,21 @@ describe('prefetchAudio + pronounce', () => {
     expect(fetch).not.toHaveBeenCalled()
   })
 })
+
+describe('textAudio with a speaker', () => {
+  it('keeps the chosen voice when it matches, else takes one of that gender', async () => {
+    const audio = await import('./audio')
+    audio.setAudioVoices(['aria', 'guy'], 'aria', { aria: 'female', guy: 'male' })
+    expect(audio.textAudio('Hello.', 'female')).toContain('/aria/t/')
+    expect(audio.textAudio('Hello.', 'male')).toContain('/guy/t/')
+    expect(audio.textAudio('Hello.')).toContain('/aria/t/')
+    audio.setAudioVoiceKey('guy')
+    expect(audio.textAudio('Hello.', 'male')).toContain('/guy/t/')
+    expect(audio.textAudio('Hello.', 'female')).toContain('/aria/t/')
+    // A pack whose voices say nothing about gender: the learner's voice.
+    audio.setAudioVoices(['aria', 'guy'], 'aria')
+    expect(audio.textAudio('Hello.', 'male')).toContain('/guy/t/')
+    audio.setAudioVoiceKey(null)
+    expect(audio.textAudio('Hello.', 'male')).toContain('/aria/t/')
+  })
+})

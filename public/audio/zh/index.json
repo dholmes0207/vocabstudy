@@ -4,12 +4,14 @@
     {
       "key": "xiaoxiao",
       "label": "Xiaoxiao — Nữ (Phổ thông) 🇨🇳",
-      "voice": "zh-CN-XiaoxiaoNeural"
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "gender": "female"
     },
     {
       "key": "yunxi",
       "label": "Yunxi — Nam (Phổ thông) 🇨🇳",
-      "voice": "zh-CN-YunxiNeural"
+      "voice": "zh-CN-YunxiNeural",
+      "gender": "male"
     }
   ]
 }
