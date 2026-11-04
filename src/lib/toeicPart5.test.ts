@@ -9,6 +9,7 @@ import {
   part5Summary,
   vocabQuestions,
   type Part5Kind,
+  retryRound,
 } from './toeicPart5'
 
 const en = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
@@ -84,5 +85,19 @@ describe('a round', () => {
       ['prep', 0, 2],
       ['form', 1, 2],
     ])
+  })
+})
+
+describe('Part 5 retry', () => {
+  it('asks only the missed questions of the bank, each with its right answer', () => {
+    const missed = PART5_BANK.slice(0, 3).map((q) => q.sentence)
+    const round = retryRound([...missed, 'Not a question ___.'])
+    expect(round.map((q) => q.sentence).sort()).toEqual([...missed].sort())
+    for (const q of round) {
+      const original = PART5_BANK.find((b) => b.sentence === q.sentence)!
+      expect(q.options[q.answer]).toBe(original.options[original.answer])
+      expect([...q.options].sort()).toEqual([...original.options].sort())
+    }
+    expect(retryRound(PART5_BANK.map((q) => q.sentence))).toHaveLength(10)
   })
 })

@@ -9,6 +9,8 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { statsOf, useStudy } from '@/store/studyStore'
 import { useExam } from '@/store/examStore'
+import { useRetry } from '@/store/retryStore'
+import { PART5_BANK } from '@/lib/toeicPart5'
 import { TOEIC_THEMES } from '@/lib/toeic'
 import { familySlots, WORD_FAMILIES } from '@/lib/wordFamilies'
 import { newCard } from '@/lib/srs'
@@ -23,6 +25,7 @@ beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useData.setState({ pack: en, status: 'ready' })
   useStudy.setState({ progress: {} })
+  useRetry.setState({ part5: [] })
 })
 afterEach(cleanup)
 
@@ -143,5 +146,27 @@ describe('TOEIC page', () => {
     useExam.setState({ records: { 'toeic-mini': { best: 19, total: 26, day: 1, tries: 2 } } })
     renderAt('/toeic')
     expect(screen.getByText(/Your best: 19\/26\./)).toBeInTheDocument()
+  })
+
+  it('keeps the Part 5 questions missed, offers them again, and lets go of those answered right', () => {
+    const missed = PART5_BANK.slice(0, 2)
+    useRetry.setState({ part5: missed.map((q) => q.sentence) })
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: 'Try again: 2 missed questions' }))
+    for (let i = 0; i < 2; i++) {
+      // The question on screen: the one whose sentence pieces around the gap are shown.
+      const body = document.body.textContent!
+      const q = missed.find((m) => m.sentence.split('___').every((piece) => body.includes(piece)))!
+      const right = q.options[q.answer]
+      const option = screen
+        .getAllByRole('button')
+        .find(
+          (b) => /^\([ABCD]\)/.test(b.textContent ?? '') && b.textContent!.slice(3).trim() === right
+        )!
+      fireEvent.click(option)
+      expect(screen.getByText(/^Right!/)).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)$/ }))
+    }
+    expect(useRetry.getState().part5).toEqual([])
   })
 })

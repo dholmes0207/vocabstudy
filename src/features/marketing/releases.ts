@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'TOEIC Part 5 nhớ các câu ngữ pháp bạn làm sai; thẻ Part 5 có nút "Làm lại các câu đã sai", câu nào làm lại đúng thì được bỏ khỏi danh sách.',
+        'TOEIC Part 5 remembers the grammar questions you missed; the Part 5 card offers them again, and each one answered right leaves the list.',
+      ],
+      [
         'Luyện thi HSK 2 có thêm "Nghe hội thoại – chọn tranh": nghe một đoạn hội thoại ngắn, chọn tranh đúng trong 5 tranh, như phần thứ hai bài Nghe của HSK 2.',
         'HSK 2 practice adds "Dialogue and picture": hear a short dialogue and pick its picture among five, like the second listening part of HSK 2.',
       ],
