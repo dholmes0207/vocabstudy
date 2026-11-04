@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Luyện thi HSK 1 có thêm "Đọc – ghép câu hỏi và trả lời": đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu, như phần thứ ba bài Đọc của HSK 1. Trả lời xong thì nghe cả hai câu và xem bản dịch.',
+        'HSK 1 practice adds "Question and answer": read a question and pick its answer among four, like the third reading part of HSK 1, then hear both and see the translation.',
+      ],
+      [
         'TOEIC Part 5 nhớ các câu ngữ pháp bạn làm sai; thẻ Part 5 có nút "Làm lại các câu đã sai", câu nào làm lại đúng thì được bỏ khỏi danh sách.',
         'TOEIC Part 5 remembers the grammar questions you missed; the Part 5 card offers them again, and each one answered right leaves the list.',
       ],
