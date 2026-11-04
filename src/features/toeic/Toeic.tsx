@@ -11,6 +11,7 @@ import { TOEIC_PARTS, TOEIC_THEMES, themeWords } from '@/lib/toeic'
 import { useT } from '@/lib/i18n'
 import DeckBoard, { type Deck } from '@/components/DeckBoard'
 import ProgressRing from '@/components/ProgressRing'
+import AttemptTrail from '@/components/AttemptTrail'
 import { part5Round, type Part5Question } from '@/lib/toeicPart5'
 import Part5Round from './Part5Round'
 import { part2Round, type Part2Question } from '@/lib/toeicPart2'
@@ -215,6 +216,7 @@ export default function Toeic() {
                     ` Your best: ${best.best}/${best.total}.`
                   )}
               </p>
+              {best?.recent && <AttemptTrail attempts={best.recent} />}
             </div>
             <button
               type="button"

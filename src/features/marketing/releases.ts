@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Thẻ bài thi nhỏ TOEIC và HSK có thêm dãy cột điểm của 8 lần làm gần nhất, kèm điểm lần gần nhất và mức tăng giảm so với lần trước.',
+        'The TOEIC and HSK mini test cards show the scores of your last eight attempts as a row of bars, with the latest score and the change since last time.',
+      ],
+      [
         'Luyện thi HSK có thêm "Đọc – chọn tranh": đọc một câu có pinyin, chọn đúng tranh trong 3 tranh, như phần thứ hai bài Đọc của HSK 1.',
         'HSK practice adds "Read and pick the picture": read a sentence with its pinyin and pick its picture among three, like the second reading part of HSK 1.',
       ],

@@ -210,7 +210,6 @@ Có thể làm thêm sau:
 - tăng số bài cho từng Part;
 - HSK 2 phần 2 (ghép hội thoại với tranh) và HSK 3 phần nghe hội thoại: gói chưa có hội thoại thu
   sẵn, cần viết và thu riêng;
-- biểu đồ điểm bài thi nhỏ qua các lần làm (hiện chỉ lưu lần tốt nhất).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -435,3 +434,13 @@ Phần 2 bài Nghe của HSK 1: nghe một câu, chọn tranh đúng trong 3 tra
 Phần 2 bài Đọc của HSK 1: cùng câu và tranh như Nghe – chọn tranh, nhưng câu được viết ra kèm pinyin
 (`seeQuestions`). Trả lời xong thì phát giọng thu của câu. Bài thi nhỏ HSK 1: phần Đọc gồm 4 câu nhìn
 tranh, 3 câu chọn tranh, 3 câu điền từ.
+
+### Điểm bài thi nhỏ qua các lần làm (04/11/2026)
+
+`examStore` giữ thêm 8 lần làm gần nhất của mỗi bài (`recent`, cũ trước mới sau). Bản ghi lưu trước đó
+không có trường này vẫn đọc được: bắt đầu lưu từ lần làm kế tiếp.
+
+- `components/AttemptTrail.tsx`: một dãy cột mảnh, một màu (lần gần nhất đậm hơn), chỉ ghi nhãn lần
+  gần nhất và mức tăng giảm so với lần trước; rê chuột vào cột thấy điểm lần đó; có bảng ẩn cho trình
+  đọc màn hình. Chỉ hiện khi đã làm từ 2 lần.
+- Hiện trên thẻ bài thi nhỏ TOEIC và HSK (theo từng cấp).
