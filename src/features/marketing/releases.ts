@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [
       [
+        'Các bài nghe TOEIC (Part 1–4) đọc bằng giọng thu sẵn thay cho giọng trình duyệt, và trong hội thoại Part 3 người nữ nói giọng nữ, người nam nói giọng nam như đề thật.',
+        "The TOEIC listening parts (1–4) play recorded voices instead of the browser voice, and in Part 3 conversations the woman and the man speak in a woman's and a man's voice, as on the test.",
+      ],
+      [
         'Huy hiệu cho từng chủ đề (cả chủ đề TOEIC): Đồng khi đã học mọi từ, Bạc khi mọi từ đã qua vài lần ôn, Vàng khi thành thạo cả bộ. Mỗi chủ đề ghi còn bao nhiêu từ tới huy hiệu tiếp theo, và báo ngay khi vừa nhận huy hiệu mới.',
         'Medals for every topic, TOEIC themes included: bronze once every word is started, silver once every word has had a few reviews, gold when the whole deck is mastered. Each deck shows how many words the next medal needs, and a new medal is announced as soon as it is earned.',
       ],

@@ -328,3 +328,18 @@ và chủ đề TOEIC), tính từ thẻ ôn tập nên không lưu thêm gì (`
 - Mỗi thẻ chủ đề hiện huy hiệu đã có và "còn N từ" tới bậc tiếp theo. Trên lưới có dòng tổng số
   huy hiệu, mở ra xem cách nhận.
 - Học hoặc ôn xong một bộ mà bộ đó lên bậc thì màn kết thúc báo huy hiệu mới.
+
+### Giọng thu cho Part 1–4 (04/11/2026)
+
+Các câu Part 1 (4 câu mô tả mỗi cảnh), Part 2 (câu hỏi và 3 câu đáp), Part 3–4 (từng câu của hội
+thoại, bài nói) và các dạng của Ghép họ từ được đưa vào `scripts/audio-texts/screens.json`. Khi lên
+`main`, workflow "Record sentence audio to R2" tự thu những câu mới. Các màn TOEIC vốn đã gọi
+`textAudio()`, nên có clip là phát giọng thu, chưa có thì vẫn đọc bằng giọng trình duyệt.
+
+- `screenTexts.test.ts` so danh sách với ngân hàng câu: sửa hay thêm câu TOEIC mà chưa chạy lại
+  `WRITE_SCREEN_TEXTS=1` thì test báo, nên câu mới không bị quên thu.
+- Hội thoại Part 3: người nữ (W) nói bằng giọng nữ, người nam (M) bằng giọng nam. Mỗi câu vốn được
+  thu bằng cả hai giọng của gói, nên chỉ cần chọn đúng thư mục giọng: `textAudio(text, gender)`
+  giữ giọng người học chọn nếu đúng giới, không thì lấy giọng còn lại. Giới của giọng ghi trong
+  `public/audio/<gói>/index.json` (`gender`, do `generate_audio.py` viết). Bài nói Part 4 (N) dùng
+  giọng người học chọn.

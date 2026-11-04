@@ -120,7 +120,11 @@ export interface AudioVoice {
   label: string
   /** The underlying edge-tts voice id, e.g. "en-US-AriaNeural". */
   voice: string
+  /** Lets a conversation give each speaker a matching voice (TOEIC Part 3). */
+  gender?: VoiceGender
 }
+
+export type VoiceGender = 'female' | 'male'
 
 /** The audio manifest at /public/audio/<code>/index.json. */
 export interface AudioManifest {

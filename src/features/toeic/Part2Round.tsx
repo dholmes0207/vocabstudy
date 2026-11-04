@@ -90,7 +90,9 @@ export default function Part2Round({
   useEffect(
     () =>
       prefetchAudio(
-        questions.flatMap((qn) => [qn.prompt, ...qn.options].filter(Boolean).map(textAudio))
+        questions.flatMap((qn) =>
+          [qn.prompt, ...qn.options].filter(Boolean).map((text) => textAudio(text))
+        )
       ),
     [questions]
   )

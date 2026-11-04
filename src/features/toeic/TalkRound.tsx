@@ -5,6 +5,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import type { Speaker, TalkSet } from '@/lib/toeicTalks'
 import type { ShuffledQuestion } from '@/lib/toeicReading'
+import type { VoiceGender } from '@/types'
 import { prefetchAudio, pronounce, stopPronounce, textAudio } from '@/lib/audio'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -17,6 +18,9 @@ import { QuestionList } from './ReadingRound'
 // the test. The transcript shows once every question is answered.
 
 const GAP_MS = 500
+
+/** The woman and the man of a conversation speak in a woman's and a man's voice. */
+const VOICE: Record<Speaker, VoiceGender | undefined> = { W: 'female', M: 'male', N: undefined }
 
 export default function TalkRound({
   set,
@@ -68,9 +72,9 @@ export default function TalkRound({
       if (id !== run.current) return
       if (i >= set.lines.length) return setLine(null)
       setLine(i)
-      const { text } = set.lines[i]
+      const { text, speaker } = set.lines[i]
       pronounce({
-        audioSrc: textAudio(text),
+        audioSrc: textAudio(text, VOICE[speaker]),
         text,
         lang,
         rate,
@@ -83,7 +87,7 @@ export default function TalkRound({
     step(0)
   }
 
-  useEffect(() => prefetchAudio(set.lines.map((l) => textAudio(l.text))), [set])
+  useEffect(() => prefetchAudio(set.lines.map((l) => textAudio(l.text, VOICE[l.speaker]))), [set])
   useEffect(() => stop, [])
 
   if (xp !== null)

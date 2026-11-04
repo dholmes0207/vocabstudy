@@ -47,16 +47,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # voice of another language.
 VOICES_BY_CODE = {
     "en": [
-        {"key": "aria", "voice": "en-US-AriaNeural", "label": "Aria — Nữ (Mỹ) 🇺🇸"},
-        {"key": "guy", "voice": "en-US-GuyNeural", "label": "Guy — Nam (Mỹ) 🇺🇸"},
+        {"key": "aria", "voice": "en-US-AriaNeural", "label": "Aria — Nữ (Mỹ) 🇺🇸", "gender": "female"},
+        {"key": "guy", "voice": "en-US-GuyNeural", "label": "Guy — Nam (Mỹ) 🇺🇸", "gender": "male"},
     ],
     "ko": [
-        {"key": "sunhi", "voice": "ko-KR-SunHiNeural", "label": "SunHi — Nữ (Seoul) 🇰🇷"},
-        {"key": "injoon", "voice": "ko-KR-InJoonNeural", "label": "InJoon — Nam (Seoul) 🇰🇷"},
+        {"key": "sunhi", "voice": "ko-KR-SunHiNeural", "label": "SunHi — Nữ (Seoul) 🇰🇷", "gender": "female"},
+        {"key": "injoon", "voice": "ko-KR-InJoonNeural", "label": "InJoon — Nam (Seoul) 🇰🇷", "gender": "male"},
     ],
     "zh": [
-        {"key": "xiaoxiao", "voice": "zh-CN-XiaoxiaoNeural", "label": "Xiaoxiao — Nữ (Phổ thông) 🇨🇳"},
-        {"key": "yunxi", "voice": "zh-CN-YunxiNeural", "label": "Yunxi — Nam (Phổ thông) 🇨🇳"},
+        {"key": "xiaoxiao", "voice": "zh-CN-XiaoxiaoNeural", "label": "Xiaoxiao — Nữ (Phổ thông) 🇨🇳", "gender": "female"},
+        {"key": "yunxi", "voice": "zh-CN-YunxiNeural", "label": "Yunxi — Nam (Phổ thông) 🇨🇳", "gender": "male"},
     ],
 }
 
@@ -130,7 +130,7 @@ async def main() -> None:
     os.makedirs(code_dir, exist_ok=True)
 
     # Write/refresh the voice manifest the app reads.
-    manifest = {"default": all_voices[0]["key"], "voices": [{"key": v["key"], "label": v["label"], "voice": v["voice"]} for v in all_voices]}
+    manifest = {"default": all_voices[0]["key"], "voices": [{"key": v["key"], "label": v["label"], "voice": v["voice"], "gender": v["gender"]} for v in all_voices]}
     with open(os.path.join(code_dir, "index.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
