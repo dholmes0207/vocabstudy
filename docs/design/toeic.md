@@ -204,7 +204,7 @@ Tình hình (04/11/2026, cuối ngày):
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
-  - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh;
+  - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh, đọc hỏi – đáp;
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi;
   - HSK 3: nghe hội thoại – câu hỏi, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
@@ -214,7 +214,7 @@ Có thể làm thêm sau:
 
 - tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
   qua `screens.json`);
-- HSK 1 phần 3 (ghép câu hỏi với câu trả lời) và HSK 2 phần đọc ghép câu;
+- HSK 2 phần đọc ghép câu;
 - thống kê điểm yếu theo dạng câu qua nhiều lần làm (hiện chỉ có ở cuối mỗi lượt Part 5).
 
 Các bước dưới đây ghi theo thứ tự đã làm.
@@ -502,3 +502,15 @@ làm sai, theo câu, tối đa 50 câu gần nhất. Trả lời đúng một c�
 - Chỉ câu ngữ pháp viết tay mới vào danh sách. Câu nghĩa từ được sinh từ từ vựng của gói, nên câu sai
   đã đi vào lịch ôn từ (useMissedWord).
 - Câu làm trong bài thi nhỏ cũng được ghi.
+
+### HSK 1 phần đọc 3: hỏi – đáp (问答匹配) (04/11/2026)
+
+`lib/hskAnswers.ts`: 12 cặp câu hỏi – trả lời viết tay (tên, quốc tịch, tuổi, giờ, đồ uống, thời
+tiết, giá, đi đâu, đi bằng gì, cảm ơn, xin lỗi). Test giữ chữ Hán trong phạm vi HSK 1 (bắt được 两).
+
+- Đọc câu hỏi, chọn câu trả lời trong 4; ba câu còn lại là câu trả lời của các cặp khác
+  (`answerRound`, `HskAnswerRound`). Các cặp viết sao cho mỗi câu hỏi chỉ có một câu trả lời hợp.
+- Trả lời xong thì đọc câu hỏi bằng giọng nữ, câu trả lời bằng giọng nam, kèm bản dịch. Câu đã vào
+  `screens.json` để thu âm.
+- Chỉ hiện ở HSK 1. Bài thi nhỏ HSK 1: phần Đọc gồm 4 câu nhìn tranh, 2 câu chọn tranh, 2 câu hỏi –
+  đáp, 2 câu điền từ.

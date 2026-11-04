@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -122,7 +122,7 @@ describe('HSK practice page', () => {
 
   it('shows a sentence with its pinyin to read, three pictures, and says it once answered', () => {
     renderPage()
-    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[4])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[5])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(0)
     expect(screen.getByText('Read the sentence, then pick its picture.')).toBeInTheDocument()
@@ -152,6 +152,18 @@ describe('HSK practice page', () => {
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
     expect(screen.getByText(/^Listening: \d+\/10/)).toBeInTheDocument()
     expect(useExam.getState().records['hsk2-mini']?.total).toBe(20)
+  })
+
+  it('asks an HSK 1 question with four answers, then reads both and shows their Vietnamese', () => {
+    renderPage()
+    const card = screen.getByText(/Question and answer/).closest('li')!
+    fireEvent.click(within(card).getByRole('button'))
+    expect(screen.getByText('Read the question and pick its answer.')).toBeInTheDocument()
+    const options = screen.getAllByRole('button').filter((b) => b.getAttribute('lang') === 'zh')
+    expect(options).toHaveLength(4)
+    fireEvent.click(options[0])
+    expect(screen.getByText(/^(Right!|Not quite\.)$/)).toBeInTheDocument()
+    expect(spoken).toHaveLength(1)
   })
 
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {

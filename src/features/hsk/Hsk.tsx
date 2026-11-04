@@ -31,6 +31,8 @@ import AttemptTrail from '@/components/AttemptTrail'
 import HskChoiceRound from './HskChoiceRound'
 import HskOrderRound from './HskOrderRound'
 import HskDialogueRound from './HskDialogueRound'
+import HskAnswerRound from './HskAnswerRound'
+import { answerRound, type AnswerQuestion } from '@/lib/hskAnswers'
 import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
 
 // "Luyện thi HSK" (docs/design/toeic.md, giai đoạn B): for HSK 1–3, the
@@ -40,17 +42,28 @@ import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/li
 const ROUND = 10
 
 type Drill =
-  'judge' | 'pick' | 'match' | 'talk' | 'listen' | 'look' | 'see' | 'fill' | 'order' | 'char'
+  | 'judge'
+  | 'pick'
+  | 'match'
+  | 'talk'
+  | 'listen'
+  | 'look'
+  | 'see'
+  | 'answer'
+  | 'fill'
+  | 'order'
+  | 'char'
 
 type Run =
   | {
       kind: 'choice'
-      drill: Exclude<Drill, 'order' | 'talk' | 'match'>
+      drill: Exclude<Drill, 'order' | 'talk' | 'match' | 'answer'>
       n: number
       questions: HskChoice[]
     }
   | { kind: 'order'; n: number; questions: HskOrder[] }
   | { kind: 'talk'; drill: 'talk' | 'match'; n: number; dialogues: ShuffledDialogue[] }
+  | { kind: 'answer'; n: number; questions: AnswerQuestion[] }
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
@@ -61,6 +74,7 @@ type MiniStep =
   | { section: Section; kind: 'choice'; questions: HskChoice[] }
   | { section: 'write'; kind: 'order'; questions: HskOrder[] }
   | { section: 'listen'; kind: 'talk'; dialogues: ShuffledDialogue[] }
+  | { section: 'read'; kind: 'answer'; questions: AnswerQuestion[] }
 
 /** Right answers per section, in the order of the test. */
 type SectionScore = { section: Section; correct: number; total: number }
@@ -156,6 +170,16 @@ export default function Hsk() {
       ],
     },
     {
+      id: 'answer',
+      icon: '💬',
+      title: ['Đọc – ghép câu hỏi và trả lời', 'Question and answer'],
+      desc: [
+        'Đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu: phần thứ ba bài Đọc của HSK 1.',
+        'Read a question and pick its answer among four: the third reading part of HSK 1.',
+      ],
+      levels: ['hsk1'],
+    },
+    {
       id: 'see',
       icon: '📖',
       title: ['Đọc – chọn tranh', 'Read and pick the picture'],
@@ -199,6 +223,7 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
+    if (drill === 'answer') return setRun({ kind: 'answer', n, questions: answerRound(ROUND) })
     if (drill === 'match')
       return setRun({ kind: 'talk', drill, n, dialogues: pictureDialogueRound(lowWords, 5) })
     if (drill === 'talk') {
@@ -266,8 +291,9 @@ export default function Hsk() {
         : level === 'hsk1'
           ? [
               { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
-              { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 3) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
+              { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 2) },
+              { section: 'read', kind: 'answer', questions: answerRound(2) },
+              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 2) },
             ]
           : [
               { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 5) },
@@ -311,6 +337,17 @@ export default function Hsk() {
       setRun(null)
     }
     const title = `${name} · ${sectionName(s.section)}`
+    if (s.kind === 'answer')
+      return (
+        <HskAnswerRound
+          key={run.step}
+          title={title}
+          questions={s.questions}
+          onAgain={() => {}}
+          onExit={exit}
+          onDone={done}
+        />
+      )
     if (s.kind === 'talk')
       return (
         <HskDialogueRound
@@ -342,6 +379,16 @@ export default function Hsk() {
       />
     )
   }
+  if (run?.kind === 'answer')
+    return (
+      <HskAnswerRound
+        key={run.n}
+        title={`${name} · ${t('Hỏi – đáp', 'Question and answer')}`}
+        questions={run.questions}
+        onAgain={() => startDrill('answer')}
+        onExit={exit}
+      />
+    )
   if (run?.kind === 'talk')
     return (
       <HskDialogueRound
