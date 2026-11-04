@@ -281,3 +281,13 @@ Test giữ số bài tối thiểu theo các con số trên.
     phần thi này kiểm tra.
 - Bài thi nhỏ HSK 3: phần Viết thành 10 câu như đề thật (5 sắp xếp câu + 5 viết chữ). Điểm các phần
   được cộng theo từng phần thi, nên hai phần Viết gộp thành một điểm Viết trên 100.
+
+### Thêm câu Part 5 (04/11/2026)
+
+`PART5_BANK` từ 43 lên 71 câu, mỗi dạng ít nhất 8 câu (test giữ mức này): từ loại 16, thì và dạng
+động từ 14, giới từ 11, liên từ 11, nghĩa từ 11, đại từ 8.
+
+- Thêm các điểm hay ra: quá khứ hoàn thành (by the time), bị động sau must, suggest + V-ing,
+  be pleased to, each of + số ít, despite / although, so that, neither … nor.
+- Thêm các cặp từ dễ nhầm: complete / compete, receipt / recipe / recipient, postpone / promote,
+  launch / lunch.
