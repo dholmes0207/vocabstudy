@@ -1,7 +1,8 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-// Best score in each exam's vocabulary check (docs/design/exam-track.md).
+// Best score in each exam's vocabulary check (docs/design/exam-track.md), and
+// the last few attempts of each, so a mini test can show the trend.
 // Device-only like readingStore; the "vocab." prefix puts it in backups.
 
 export interface ExamRecord {
@@ -10,7 +11,18 @@ export interface ExamRecord {
   /** Epoch day of the latest attempt. */
   day: number
   tries: number
+  /** The latest attempts, oldest first (none on records saved before this was kept). */
+  recent?: Attempt[]
 }
+
+export interface Attempt {
+  day: number
+  correct: number
+  total: number
+}
+
+/** How many attempts a record keeps. */
+export const RECENT_ATTEMPTS = 8
 
 interface ExamState {
   records: Record<string, ExamRecord>
@@ -32,6 +44,7 @@ export const useExam = create<ExamState>()(
                 total,
                 day,
                 tries: (prev?.tries ?? 0) + 1,
+                recent: [...(prev?.recent ?? []), { day, correct, total }].slice(-RECENT_ATTEMPTS),
               },
             },
           }

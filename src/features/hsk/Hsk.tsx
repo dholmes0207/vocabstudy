@@ -27,6 +27,7 @@ import { pinyinXp } from '@/lib/pinyin'
 import { today } from '@/lib/date'
 import { useT } from '@/lib/i18n'
 import ProgressRing from '@/components/ProgressRing'
+import AttemptTrail from '@/components/AttemptTrail'
 import HskChoiceRound from './HskChoiceRound'
 import HskOrderRound from './HskOrderRound'
 
@@ -425,6 +426,7 @@ export default function Hsk() {
               ` Your best: ${best.best}/${best.total}.`
             )}
         </p>
+        {best?.recent && <AttemptTrail attempts={best.recent} />}
         {result && estimate && (
           <div
             className="space-y-1 rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60"
