@@ -18,7 +18,7 @@ import GameShell, { GameResult } from '@/features/games/GameShell'
 // A gap-fill shows its options with pinyin, as HSK 1–2 print it.
 
 /** A question that is heard rather than read. */
-const heard = (qn: HskChoice) => qn.kind === 'listen' || qn.kind === 'judge'
+const heard = (qn: HskChoice) => qn.kind === 'listen' || qn.kind === 'judge' || qn.kind === 'pick'
 /** A right-or-wrong picture question, heard (judge) or read (look). */
 const pictured = (qn: HskChoice) => qn.kind === 'judge' || qn.kind === 'look'
 /** Its recording: the word alone for a picture question, else the example. */
@@ -145,10 +145,12 @@ export default function HskChoiceRound({
                     'Nghe một từ, rồi xem tranh: tranh có đúng là từ đó không?',
                     'Hear a word, then look: is the picture that word?'
                   )
-                : t(
-                    'Nghe câu, rồi chọn nghĩa đúng.',
-                    'Hear the sentence, then pick what it means.'
-                  )}
+                : q.kind === 'pick'
+                  ? t('Nghe câu, rồi chọn tranh đúng.', 'Hear the sentence, then pick its picture.')
+                  : t(
+                      'Nghe câu, rồi chọn nghĩa đúng.',
+                      'Hear the sentence, then pick what it means.'
+                    )}
             </p>
             <button type="button" className="btn-secondary h-10 text-sm" onClick={() => play(q)}>
               <RotateCcw className="h-4 w-4" /> {t('Nghe lại', 'Play again')}
@@ -193,7 +195,15 @@ export default function HskChoiceRound({
           </>
         )}
 
-        <div className={q.kind === 'listen' ? 'grid gap-2' : 'grid grid-cols-2 gap-2'}>
+        <div
+          className={
+            q.kind === 'listen'
+              ? 'grid gap-2'
+              : q.kind === 'pick'
+                ? 'grid grid-cols-3 gap-2'
+                : 'grid grid-cols-2 gap-2'
+          }
+        >
           {q.options.map((o, i) => {
             const state = !answered
               ? 'idle'
@@ -218,7 +228,15 @@ export default function HskChoiceRound({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {pictured(q) ? (
+                {q.kind === 'pick' ? (
+                  <span
+                    className="text-5xl"
+                    role="img"
+                    aria-label={t(`Tranh ${i + 1}`, `Picture ${i + 1}`)}
+                  >
+                    {o}
+                  </span>
+                ) : pictured(q) ? (
                   <span>{i === 0 ? t('✓ Đúng', '✓ Right') : t('✗ Sai', '✗ Wrong')}</span>
                 ) : q.kind !== 'listen' ? (
                   <span className="flex flex-col items-center">

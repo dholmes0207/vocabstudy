@@ -10,6 +10,7 @@ import {
   listenQuestions,
   lookQuestions,
   orderQuestions,
+  pictureQuestions,
   PICTURE_WORDS,
 } from './hskPractice'
 import { mulberry32 } from './sky'
@@ -112,4 +113,23 @@ describe('HSK reading, pictures (看图判断)', () => {
       heard.map(({ word, picture, answer }) => [word.word, picture, answer])
     )
   })
+})
+
+describe('HSK listening, pick the picture (听句子选图片)', () => {
+  it.each(HSK_LEVELS)(
+    '%s: three different pictures, only one of a word the sentence says',
+    (level) => {
+      const qs = pictureQuestions(level, zh.words, 10, mulberry32(11))
+      expect(qs.length).toBeGreaterThanOrEqual(10)
+      const byEmoji = new Map(zh.words.filter((w) => w.emoji).map((w) => [w.emoji!, w]))
+      for (const q of qs) {
+        expect(q.options).toHaveLength(3)
+        expect(new Set(q.options).size).toBe(3)
+        expect(q.options[q.answer]).toBe(q.word.emoji)
+        expect(q.word.exampleEn).toContain(q.word.word)
+        for (const [i, o] of q.options.entries())
+          if (i !== q.answer) expect(q.word.exampleEn.includes(byEmoji.get(o)!.word)).toBe(false)
+      }
+    }
+  )
 })
