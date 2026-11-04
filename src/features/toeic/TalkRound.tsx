@@ -166,6 +166,37 @@ export default function TalkRound({
           )}
         </section>
 
+        {set.graphic && (
+          <figure className="card overflow-x-auto p-4" lang="en">
+            <figcaption className="mb-2 text-sm font-bold">{set.graphic.title}</figcaption>
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  {set.graphic.rows[0].map((h) => (
+                    <th key={h} scope="col" className="py-1.5 pr-3 font-semibold">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {set.graphic.rows.slice(1).map((r) => (
+                  <tr
+                    key={r[0]}
+                    className="border-b border-slate-100 last:border-0 dark:border-slate-800"
+                  >
+                    {r.map((c, i) => (
+                      <td key={i} className="py-1.5 pr-3">
+                        {c}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </figure>
+        )}
+
         <QuestionList questions={questions} picked={picked} onPick={pick} />
 
         {done && (

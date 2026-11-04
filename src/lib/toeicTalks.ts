@@ -5,6 +5,8 @@ import type { ReadingQuestion } from './toeicReading'
 // voicemail, an announcement, an introduction, an ad — each with three
 // questions. As on the test, the questions and options are printed and the
 // talk is only heard; the transcript shows once every question is answered.
+// Some sets come with a graphic (a price list, a timetable…) printed beside the
+// questions, and one question needs both: "Look at the graphic.".
 
 /** W and M take turns in a conversation; N is the one speaker of a talk. */
 export type Speaker = 'W' | 'M' | 'N'
@@ -13,6 +15,8 @@ export interface TalkSet {
   id: string
   part: 3 | 4
   lines: { speaker: Speaker; text: string }[]
+  /** A small table printed with the questions; its first row is the header. */
+  graphic?: { title: string; rows: string[][] }
   questions: ReadingQuestion[]
 }
 
@@ -344,6 +348,103 @@ export const TALK_SETS: readonly TalkSet[] = [
     ],
   },
 
+  {
+    id: 'p3-catering-graphic',
+    part: 3,
+    graphic: {
+      title: 'Lunch Box Catering — Price List',
+      rows: [
+        ['Item', 'Serves', 'Price'],
+        ['Sandwich platter', '10', '$40'],
+        ['Salad bowl', '8', '$25'],
+        ['Fruit tray', '12', '$30'],
+        ['Dessert box', '12', '$35'],
+      ],
+    },
+    lines: [
+      w(
+        'Hi, Mark. I’m ordering lunch for Friday’s training session. We already have sandwiches. What else should we get?'
+      ),
+      m('How about a fruit tray? It’s healthy, and it serves twelve people.'),
+      w(
+        'Good idea, but Ken from accounting is allergic to some fruits. Maybe we should get something sweet instead.'
+      ),
+      m('Sure, that works. Can you place the order today? They need two days’ notice.'),
+    ],
+    questions: [
+      {
+        q: 'What event are the speakers preparing for?',
+        options: ['A training session', 'A retirement party', 'A client visit', 'A job interview'],
+        why: '"I’m ordering lunch for Friday’s training session."',
+      },
+      {
+        q: 'Look at the graphic. How much will the woman most likely pay for the extra item?',
+        options: ['$35', '$30', '$25', '$40'],
+        why: 'Ghép lời nói với bảng: bỏ khay trái cây vì Ken dị ứng, chọn "something sweet" là Dessert box, giá $35. Câu hỏi graphic không bao giờ nhắc thẳng tên món: phải đổi từ "sweet" sang "Dessert".',
+      },
+      {
+        q: 'Why does the man ask the woman to order today?',
+        options: [
+          'The company needs two days’ notice.',
+          'Prices will go up tomorrow.',
+          'He will be away on Friday.',
+          'The training was moved earlier.',
+        ],
+        why: '"They need two days’ notice." They ở đây là công ty suất ăn.',
+      },
+    ],
+  },
+  {
+    id: 'p3-train-graphic',
+    part: 3,
+    graphic: {
+      title: 'Trains to Riverton',
+      rows: [
+        ['Departs', 'Type', 'Arrives'],
+        ['9:10', 'Express', '10:30'],
+        ['9:40', 'Local', '11:20'],
+        ['10:05', 'Express', '11:25'],
+        ['10:30', 'Local', '12:10'],
+      ],
+    },
+    lines: [
+      m(
+        'Anna, our meeting with the client in Riverton starts at eleven thirty. Shall we take the nine ten train?'
+      ),
+      w(
+        'I just checked online, and it’s sold out. But the station is right next to their office, so we only need to arrive before the meeting starts.'
+      ),
+      m('Then let’s take the express after that. It’s faster than the local trains.'),
+      w('Great. I’ll buy the tickets now and send them to your phone.'),
+    ],
+    questions: [
+      {
+        q: 'Why are the speakers going to Riverton?',
+        options: [
+          'To meet a client',
+          'To visit a factory',
+          'To attend a conference',
+          'To look at an office',
+        ],
+        why: '"our meeting with the client in Riverton starts at eleven thirty."',
+      },
+      {
+        q: 'Look at the graphic. What time will the speakers’ train leave?',
+        options: ['10:05', '9:10', '9:40', '10:30'],
+        why: 'Chuyến 9:10 hết vé; "the express after that" là chuyến Express kế tiếp, 10:05, tới 11:25, kịp trước 11:30. Chuyến 9:40 là tàu Local.',
+      },
+      {
+        q: 'What will the woman do next?',
+        options: [
+          'Buy the tickets',
+          'Call the client',
+          'Print a timetable',
+          'Change the meeting time',
+        ],
+        why: '"I’ll buy the tickets now and send them to your phone." Câu hỏi "do next" thường trả lời ở câu cuối.',
+      },
+    ],
+  },
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -624,6 +725,103 @@ export const TALK_SETS: readonly TalkSet[] = [
         q: 'What will be broadcast just before the next traffic report?',
         options: ['The business news', 'The weather forecast', 'Some music', 'An interview'],
         why: '"Our next report will be at eight thirty, right after the business news."',
+      },
+    ],
+  },
+  {
+    id: 'p4-rooms-graphic',
+    part: 4,
+    graphic: {
+      title: 'Hamilton Conference Center',
+      rows: [
+        ['Room', 'Location'],
+        ['101', 'Next to the cafeteria'],
+        ['102', 'By the elevators'],
+        ['201', 'Second floor, east side'],
+        ['202', 'Second floor, west side'],
+      ],
+    },
+    lines: [
+      n(
+        'Good morning, everyone, and welcome to the regional sales conference. Before we begin, I have a quick change to announce.'
+      ),
+      n(
+        'The finance workshop was planned for the room by the elevators, but the projector there isn’t working. So the workshop will now be held in the room next to the cafeteria.'
+      ),
+      n(
+        'Also, lunch will be served at twelve thirty instead of twelve. Please remember to wear your name badge at all times.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who most likely are the listeners?',
+        options: ['Conference attendees', 'Hotel guests', 'New employees', 'Cafeteria staff'],
+        why: '"welcome to the regional sales conference." Người nghe là người dự hội nghị.',
+      },
+      {
+        q: 'Look at the graphic. Where will the finance workshop be held?',
+        options: ['Room 101', 'Room 102', 'Room 201', 'Room 202'],
+        why: 'Hội thảo chuyển tới "the room next to the cafeteria", trong bảng là phòng 101. Phòng 102 (by the elevators) là phòng cũ: bẫy nghe thấy trước.',
+      },
+      {
+        q: 'What change is made to lunch?',
+        options: [
+          'It will start later.',
+          'It will be served in Room 202.',
+          'It will be free for speakers.',
+          'It has been canceled.',
+        ],
+        why: '"lunch will be served at twelve thirty instead of twelve": muộn hơn nửa tiếng.',
+      },
+    ],
+  },
+  {
+    id: 'p4-picnic-graphic',
+    part: 4,
+    graphic: {
+      title: 'Weather Forecast',
+      rows: [
+        ['Day', 'Weather'],
+        ['Monday', 'Sunny'],
+        ['Tuesday', 'Rain'],
+        ['Wednesday', 'Sunny, strong wind'],
+        ['Thursday', 'Cloudy, light wind'],
+      ],
+    },
+    lines: [
+      n('Hi, this is Julia from the events team with an update about the company picnic.'),
+      n(
+        'As you know, the picnic was planned for Tuesday, but rain is expected all day. We’ve decided to move it to the first day after that with no rain and only light wind, since we’ll be setting up tents.'
+      ),
+      n(
+        'The start time stays the same, eleven A.M. If you signed up to bring a dish, please let me know by Monday whether you can still come.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the message?',
+        options: [
+          'To announce a change of date',
+          'To invite people to sign up',
+          'To ask for help with tents',
+          'To cancel an event',
+        ],
+        why: 'Buổi picnic được dời ngày vì mưa. Mục đích là báo thay đổi, không phải huỷ.',
+      },
+      {
+        q: 'Look at the graphic. On which day will the picnic be held?',
+        options: ['Thursday', 'Wednesday', 'Tuesday', 'Monday'],
+        why: 'Sau thứ Ba, ngày đầu tiên không mưa và chỉ gió nhẹ là thứ Năm. Thứ Tư nắng nhưng gió mạnh, không dựng lều được.',
+      },
+      {
+        q: 'What are some listeners asked to do by Monday?',
+        options: [
+          'Say whether they can still come',
+          'Pay for their tickets',
+          'Choose a new start time',
+          'Bring a tent',
+        ],
+        why: '"If you signed up to bring a dish, please let me know by Monday whether you can still come."',
       },
     ],
   },

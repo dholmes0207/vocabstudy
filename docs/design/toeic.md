@@ -391,3 +391,18 @@ Part 7 từ 11 lên 16 bài: 11 bài một đoạn, 5 bài hai đoạn (test gi�
   meaning to", "What is suggested…" (suy ra từ hai đoạn), thông tin mâu thuẫn trong phiếu.
 - Bài thật có từ 2 đến 5 câu hỏi; vài bài mới có 4 câu. Bài thi nhỏ chỉ lấy 3 câu đầu của bài Part
   7 để giữ đúng 13 + 13 câu (`toeicMiniTest.test.ts` kiểm tra với nhiều lần chọn bài).
+
+### Part 3–4: "Look at the graphic" (04/11/2026)
+
+Đề thật có vài câu Part 3–4 kèm một hình (bảng giá, lịch, sơ đồ) in cạnh câu hỏi; phải nghe và đọc
+hình cùng lúc. `TalkSet.graphic` là một bảng nhỏ (`title`, `rows`, dòng đầu là tiêu đề cột),
+`TalkRound` in nó ngay trên các câu hỏi từ đầu bài.
+
+- 4 bài mới: đặt suất ăn (bảng giá), chọn chuyến tàu (lịch tàu), đổi phòng hội thảo (sơ đồ phòng),
+  dời ngày picnic (dự báo thời tiết).
+- Đáp án không bao giờ được nói thẳng: người nói nhắc "something sweet", "the express after that",
+  "the room next to the cafeteria", người học phải đổi sang dòng tương ứng trong bảng. Phương án nhiễu
+  là dòng vừa được nhắc tới trước đó (phòng cũ, chuyến hết vé).
+- Test giữ: bài có hình thì có đúng một câu "Look at the graphic.", bài không có hình thì không có;
+  mọi dòng của bảng cùng số cột; đáp án đúng có trong bảng. Câu nói của 4 bài được thêm vào danh sách
+  thu âm (`screens.json`).

@@ -58,4 +58,18 @@ describe('Part 3 round', () => {
     fireEvent.click(screen.getByRole('button', { name: 'See results' }))
     expect(screen.getByText('3 of 3 right')).toBeInTheDocument()
   })
+
+  it('prints the graphic of a set with one, as a table beside the questions', () => {
+    const talk = TALK_SETS.find((s) => s.id === 'p3-train-graphic')!
+    const { set, questions } = shuffleSet(talk)
+    render(
+      <MemoryRouter>
+        <TalkRound set={set} questions={questions} onAgain={() => {}} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    const table = screen.getByRole('table')
+    expect(screen.getByText('Trains to Riverton')).toBeInTheDocument()
+    expect(table.querySelectorAll('tbody tr')).toHaveLength(4)
+    expect(screen.getByRole('columnheader', { name: 'Departs' })).toBeInTheDocument()
+  })
 })
