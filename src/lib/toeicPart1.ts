@@ -398,6 +398,72 @@ export const PART1_BANK: readonly Part1Item[] = [
     ],
     'signing a document = ký giấy tờ. "printing a document" đúng đồ vật nhưng sai hành động.'
   ),
+  item(
+    '🚴‍♀️🛣️',
+    'Một người phụ nữ đang đạp xe trên đường.',
+    [
+      'She’s riding a bicycle along a road.',
+      'She’s repairing a bicycle.',
+      'A bicycle is leaning against a fence.',
+      'She’s crossing the street on foot.',
+    ],
+    'riding a bicycle = đang đạp xe. "leaning against a fence" là xe dựng một chỗ, không có người; hai câu kia sai hành động.'
+  ),
+  item(
+    '🧑‍🍳🍞🔥',
+    'Một người thợ làm bánh đang cho bánh mì vào lò.',
+    [
+      'A baker is putting bread into an oven.',
+      'Some bread is being sliced.',
+      'A baker is washing his hands.',
+      'Some loaves are displayed in a window.',
+    ],
+    'putting … into an oven = cho vào lò. "is being sliced" đúng đồ vật (bánh mì) nhưng sai hành động.'
+  ),
+  item(
+    '🧑‍💼🧳🚕',
+    'Một người đàn ông đang đặt va li vào cốp xe taxi.',
+    [
+      'A man is putting a suitcase into a car.',
+      'A man is unpacking his suitcase.',
+      'A taxi is parked in a garage.',
+      'A man is getting out of a car.',
+    ],
+    'putting a suitcase into a car = đặt va li vào xe. unpacking là lấy đồ ra khỏi va li; câu cuối là xuống xe.'
+  ),
+  item(
+    '🌳🪑🪑🌳',
+    'Mấy chiếc ghế dài trong công viên, không có ai ngồi.',
+    [
+      'Some benches are unoccupied.',
+      'Some people are sitting on the benches.',
+      'Some trees are being cut down.',
+      'Some benches are being painted.',
+    ],
+    'unoccupied = không có người ngồi. Tranh không có người, nên mọi câu "is being + V3" (cần người làm) đều sai.'
+  ),
+  item(
+    '👩‍⚕️🩺🧒',
+    'Một bác sĩ đang khám cho một em bé.',
+    [
+      'A doctor is examining a child.',
+      'A child is taking some medicine.',
+      'A doctor is writing a prescription.',
+      'A child is drawing a picture.',
+    ],
+    'examining = đang khám. Uống thuốc, viết đơn thuốc là việc liên quan nhưng không có trong tranh.'
+  ),
+  item(
+    '📄📌🗒️',
+    'Mấy tờ thông báo đã được ghim lên bảng tin, không có ai.',
+    [
+      'Some notices have been posted on a board.',
+      'Some papers are being thrown away.',
+      'A woman is writing on a board.',
+      'A board is being installed.',
+    ],
+    'have been posted = đã được dán sẵn (trạng thái). Tranh không có người nên các câu "is being + V3" và "A woman is writing" đều sai.'
+  ),
 ]
 
 /** Items in one round, as many as Part 1 has on the test. */

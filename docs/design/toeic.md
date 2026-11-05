@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
+  - Nội dung: Part 1 40 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
     câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 36 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -867,3 +867,9 @@ thuật báo vấn đề (thang máy hỏng). Bẫy âm mới: approved / prove,
 Part 6 từ 24 lên 26 đoạn (test giữ mức này): email dời buổi đào tạo sản phẩm (bị động has been moved, need
 it for, another + danh từ số ít, câu chèn nói về nội dung buổi học), thông báo giờ mở cửa hồ bơi (from … to …,
 However, look forward to + V-ing, câu chèn kết ý đổi giờ).
+
+### Thêm cảnh Part 1 (05/11/2026, đợt bốn)
+
+`PART1_BANK` từ 34 lên 40 cảnh (test giữ mức này): đạp xe trên đường, thợ làm bánh cho bánh vào lò, đặt va li
+vào cốp taxi, ghế dài công viên không người (unoccupied), bác sĩ khám cho em bé, thông báo đã ghim lên bảng tin
+(have been posted). Hai cảnh không có người luyện bẫy "is being + V3" (cần người làm).
