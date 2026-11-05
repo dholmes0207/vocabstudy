@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 35 bài; hội thoại – chọn tranh 24 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 35 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
     18 cặp mỗi cấp; đoạn văn ngắn HSK 3 30 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -837,3 +837,8 @@ although / despite, before, but (liên từ), by herself, ours, where (đại t�
 Part 7 bài một đoạn từ 22 lên 25 (test giữ mức này), tổng 36 bài: thông báo sửa thang máy (bẫy ngày: sửa
 đến thứ Tư 10/5, giao hàng lớn từ thứ Năm là 11/5), email xác nhận đăng ký hội nghị (đổi hội thảo nhỏ, mang
 mã đăng ký để nhận thẻ tên), bài báo tiệm bánh mở cửa hàng thứ hai (phân biệt điều nói về quán cũ và quán mới).
+
+### Thêm hội thoại chọn tranh HSK 2 (05/11/2026, đợt bốn)
+
+`PICTURE_DIALOGUES` từ 24 lên 32 bài (test giữ mức này): tuyết, xe đạp, thuyền, phim, sân bay, cơm, sinh nhật,
+mắt. Lời thoại tránh các từ có tranh khác (衣服, 鱼, 飞机, 面条, 手机, 票) để chỉ một tranh được nhắc tới.
