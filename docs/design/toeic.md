@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
+  - Nội dung: Part 1 34 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
     câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 28 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -722,3 +722,10 @@ tranh khác (咖啡 khi nói về buổi sáng, 公共汽车 khi nói lúc đi �
 Part 7 từ 25 lên 28 bài: 19 bài một đoạn, 9 bài hai đoạn (test giữ mức này). Thông báo phòng tập mới
 (bẫy: tủ đồ có sẵn nên không cần mang khoá), đánh giá nhà hàng (lời khen trước, phàn nàn sau "The only
 problem"), tin nhắn nhận hộ gói hàng (câu ý nghĩa "The door isn’t locked").
+
+### Thêm cảnh Part 1 (05/11/2026, đợt hai)
+
+`PART1_BANK` từ 28 lên 34 cảnh (test giữ mức này): removing papers from a copier, are lined up, standing
+on a ladder, have been stacked, eating outdoors, signing a document. Bẫy vẫn là câu dùng đúng đồ vật
+trong tranh nhưng sai hành động, và câu bị động tiếp diễn (are being installed) khi tranh chỉ có trạng
+thái.

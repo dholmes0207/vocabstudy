@@ -332,6 +332,72 @@ export const PART1_BANK: readonly Part1Item[] = [
     ],
     'overlook = nhìn ra (cảnh), từ hay gặp trong Part 1 khi tả nhà, cửa sổ. Tranh không có người và nhà đã xây xong.'
   ),
+  item(
+    '👩‍💼📋🖨️',
+    'Một người phụ nữ đang lấy giấy ra khỏi máy photo.',
+    [
+      'She’s removing some papers from a copier.',
+      'She’s fixing a copier.',
+      'She’s handing out some documents.',
+      'She’s throwing papers into a bin.',
+    ],
+    'removing papers from a copier = lấy giấy ra khỏi máy photo. "fixing" đúng đồ vật nhưng sai hành động.'
+  ),
+  item(
+    '🛒🛒🛒🏪',
+    'Mấy chiếc xe đẩy được xếp thành hàng trước cửa siêu thị, không có ai.',
+    [
+      'Some shopping carts are lined up outside a store.',
+      'A woman is pushing a shopping cart.',
+      'Some carts are being filled with groceries.',
+      'The store is closed for repairs.',
+    ],
+    'are lined up = được xếp thành hàng. Tranh không có người nên câu có người đẩy xe và "being filled" đều sai.'
+  ),
+  item(
+    '🧑‍🔧🪜💡',
+    'Một người đàn ông đứng trên thang để thay bóng đèn.',
+    [
+      'He’s standing on a ladder.',
+      'He’s carrying a ladder outside.',
+      'He’s turning off the lights.',
+      'He’s painting the ceiling.',
+    ],
+    'standing on a ladder = đứng trên thang. "carrying a ladder" dùng đúng từ ladder nhưng sai hành động.'
+  ),
+  item(
+    '📦🗄️🏭',
+    'Thùng hàng được xếp chồng cao trên kệ trong nhà kho.',
+    [
+      'Boxes have been stacked on shelves.',
+      'A worker is opening a box.',
+      'Some shelves are being installed.',
+      'A truck is parked in the warehouse.',
+    ],
+    'have been stacked = đã được xếp chồng (trạng thái). "are being installed" là việc đang làm, mà tranh chỉ có kệ đã có sẵn.'
+  ),
+  item(
+    '👨‍👩‍👧🍽️🌳',
+    'Một gia đình đang ăn ngoài trời dưới gốc cây.',
+    [
+      'They’re eating outdoors.',
+      'They’re cooking in a kitchen.',
+      'They’re planting a tree.',
+      'They’re waiting in line at a restaurant.',
+    ],
+    'eating outdoors = ăn ngoài trời. "planting a tree" dùng đúng từ tree nhưng sai hành động; "in a kitchen" sai nơi chốn.'
+  ),
+  item(
+    '🧑‍💼🖊️📄',
+    'Một người đàn ông đang ký tên vào giấy tờ.',
+    [
+      'He’s signing a document.',
+      'He’s reading a newspaper.',
+      'He’s printing a document.',
+      'He’s mailing a letter.',
+    ],
+    'signing a document = ký giấy tờ. "printing a document" đúng đồ vật nhưng sai hành động.'
+  ),
 ]
 
 /** Items in one round, as many as Part 1 has on the test. */

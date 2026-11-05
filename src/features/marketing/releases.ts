@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 1 lên 34 cảnh: thêm lấy giấy ở máy photo, xe đẩy xếp hàng, đứng trên thang, thùng hàng trên kệ, ăn ngoài trời, ký giấy tờ.',
+        'TOEIC Part 1 now has 34 scenes: papers from a copier, carts lined up, a man on a ladder, boxes on shelves, eating outdoors and signing a document.',
+      ],
+      [
         'TOEIC Part 7 lên 28 bài (19 bài một đoạn): thêm thông báo phòng tập mới, đánh giá nhà hàng, tin nhắn nhận hộ gói hàng.',
         'TOEIC Part 7 now has 28 sets (19 single): a new fitness room memo, a restaurant review and a chat about a package.',
       ],
