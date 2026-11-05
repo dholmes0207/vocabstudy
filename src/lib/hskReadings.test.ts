@@ -13,7 +13,7 @@ const han = (s: string) => [...s].filter((c) => /\p{Script=Han}/u.test(c))
 
 describe('HSK 3 reading passages', () => {
   it('use only HSK 1–3 characters, with three options and an explanation', () => {
-    expect(HSK3_READINGS.length).toBeGreaterThanOrEqual(30)
+    expect(HSK3_READINGS.length).toBeGreaterThanOrEqual(35)
     expect(new Set(HSK3_READINGS.map((r) => r.id)).size).toBe(HSK3_READINGS.length)
     for (const r of HSK3_READINGS) {
       expect(
