@@ -831,6 +831,175 @@ To get your new card, simply bring your old card and a photo ID. The process tak
       ),
     ],
   },
+  {
+    id: 'p6-holiday-hours',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Holiday Hours
+
+Please note that all Cityline Pharmacy stores will have [1] hours during the holiday week. From December 24 to December 26, stores will open at 10 a.m. and close at 4 p.m.
+
+[2] Our online store, however, will remain open as usual, and orders placed before noon will still be delivered the same day.
+
+If you need a prescription filled during this period, we recommend that you order it [3]. We thank all our customers for their [4] and wish everyone a happy holiday.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['shorter', 'short', 'shortly', 'shortest'],
+        'Đứng trước danh từ hours, so với giờ thường (mở 10 giờ, đóng 4 giờ): shorter hours (giờ mở cửa ngắn hơn).'
+      ),
+      gap(
+        [
+          'All stores will be closed on January 1.',
+          'Our stores will now open earlier every day.',
+          'Prescriptions can no longer be ordered online.',
+          'The pharmacy has hired new staff.',
+        ],
+        'Đoạn đang nói giờ mở cửa dịp lễ; câu chèn thêm một ngày đóng cửa là hợp mạch. "Open earlier" trái với câu trước; "no longer online" trái với câu sau.'
+      ),
+      gap(
+        ['in advance', 'in time', 'in case', 'in fact'],
+        'order it in advance: đặt trước. in case là "phòng khi", in fact là "thật ra".'
+      ),
+      gap(
+        ['understanding', 'understand', 'understood', 'understandable'],
+        'Sau tính từ sở hữu their cần danh từ: their understanding (sự thông cảm).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-feedback-request',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: Ms. Laura Chen
+From: Customer Care, Brightline Internet
+Subject: How did we do?
+
+Dear Ms. Chen,
+
+Thank you for contacting our support team last week about your Internet connection. We hope the problem has been [1] solved.
+
+To help us improve our service, we would be [2] if you could answer a short survey. It will take no more than three minutes. [3]
+
+Simply click the link below to begin. All answers will be kept [4].
+
+Sincerely,
+Brightline Customer Care`,
+      },
+    ],
+    questions: [
+      gap(
+        ['completely', 'complete', 'completion', 'completed'],
+        'Giữa has been và quá khứ phân từ solved cần trạng từ: completely solved (được giải quyết hoàn toàn).'
+      ),
+      gap(
+        ['grateful', 'gratitude', 'gratefully', 'grate'],
+        'Sau would be cần tính từ: we would be grateful if… (chúng tôi rất biết ơn nếu…), câu lịch sự quen thuộc.'
+      ),
+      gap(
+        [
+          'As a thank-you, you will receive a $5 discount on your next bill.',
+          'Your Internet service will be stopped next week.',
+          'The survey must be completed by mail.',
+          'Our support team is closed on weekdays.',
+        ],
+        'Sau lời nhờ làm khảo sát, câu chèn nói phần thưởng cảm ơn là hợp mạch. "Completed by mail" trái với câu sau (bấm vào đường link).'
+      ),
+      gap(
+        ['private', 'privacy', 'privately', 'privatize'],
+        'keep + tân ngữ + tính từ: answers will be kept private (câu trả lời được giữ kín).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-new-cafeteria',
+    part: 6,
+    passages: [
+      {
+        kind: MEMO,
+        text: `To: All employees
+From: Facilities Team
+Re: Cafeteria reopening
+
+We are happy to announce that the staff cafeteria will reopen on Monday after two months of renovation. The new cafeteria is [1] than before and can now seat up to 150 people.
+
+In addition to hot meals, there will be a salad bar and a coffee corner. [2] Employees can pay with cash, a credit card, or their staff ID card.
+
+To celebrate the reopening, all hot meals will be half price [3] the first week. We hope you enjoy the new space and look forward to [4] your comments.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['larger', 'large', 'largely', 'largest'],
+        'Có than ngay sau nên cần so sánh hơn: larger than before (rộng hơn trước).'
+      ),
+      gap(
+        [
+          'The coffee corner will open at 7:30 a.m., before most offices start work.',
+          'The cafeteria will be closed for another two months.',
+          'Only cash will be accepted at the cafeteria.',
+          'Hot meals will no longer be served.',
+        ],
+        'Câu trước vừa nhắc góc cà phê; câu chèn nói giờ mở của góc cà phê là hợp mạch. "Only cash" trái với câu sau (trả bằng thẻ được).'
+      ),
+      gap(
+        ['during', 'while', 'among', 'between'],
+        'Trước cụm danh từ the first week cần giới từ: during the first week (trong tuần đầu). while đi với mệnh đề.'
+      ),
+      gap(
+        ['receiving', 'receive', 'received', 'receives'],
+        'look forward to + V-ing: look forward to receiving your comments.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-volunteer-thanks',
+    part: 6,
+    passages: [
+      {
+        kind: LETTER,
+        text: `Dear Mr. Tanaka,
+
+On behalf of the Green Valley Food Bank, I would like to thank you for volunteering at our winter food drive last Saturday. [1] your help, we were able to collect more than two tons of food for local families.
+
+Many of our volunteers said that the event was very well [2]. This is thanks in large part to the time you spent planning it with our staff. [3]
+
+We hope you will join us [4] for our spring event in April. We will send more details next month.
+
+With warm regards,
+Helen Brooks
+Volunteer Coordinator`,
+      },
+    ],
+    questions: [
+      gap(
+        ['Thanks to', 'Instead of', 'In spite of', 'According to'],
+        'Thanks to + danh từ: nhờ có. Nhờ sự giúp đỡ mà quyên được hơn hai tấn thực phẩm. In spite of mang nghĩa trái ngược.'
+      ),
+      gap(
+        ['organized', 'organize', 'organizer', 'organizing'],
+        'be well + quá khứ phân từ: the event was very well organized (được tổ chức rất tốt).'
+      ),
+      gap(
+        [
+          'We could not have done it without you.',
+          'Unfortunately, the event had to be canceled.',
+          'Next year, we plan to stop the food drive.',
+          'Very few people came to help.',
+        ],
+        'Đoạn đang cảm ơn và khen; câu chèn "không có anh thì không làm được" hợp mạch. Ba câu kia trái với việc sự kiện thành công.'
+      ),
+      gap(
+        ['again', 'ever', 'yet', 'still'],
+        'join us again: tham gia cùng chúng tôi lần nữa, cho sự kiện mùa xuân.'
+      ),
+    ],
+  },
 
   // ------------------------------------------------------- Part 7, single
   {

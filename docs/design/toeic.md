@@ -200,7 +200,7 @@ Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 101
-    câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 30 bài (11 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 24 đoạn, Part 7 30 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -788,3 +788,9 @@ Part 3 và Part 4 từ 18 lên 20 bài mỗi Part (test giữ mức này): mư�
 cuộc gọi), nhà cung cấp giao giấy trễ (chọn nhà cung cấp đắt hơn để kịp hạn); thông báo diễn tập phòng
 cháy (câu "not to do" tìm Do not), mở đầu chương trình phỏng vấn (đáp án viết lại "people who run their
 own companies" thành "business owners").
+
+### Thêm đoạn Part 6 (05/11/2026, đợt ba)
+
+Part 6 từ 20 lên 24 đoạn (test giữ mức này): giờ mở cửa dịp lễ, email mời làm khảo sát, căng tin mở lại,
+thư cảm ơn tình nguyện viên. Câu từ loại thêm so sánh hơn (shorter, larger than), would be grateful,
+keep + tân ngữ + tính từ, in advance, thanks to, be well organized.
