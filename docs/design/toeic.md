@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 24 bài, HSK 3 30 bài; hội thoại – chọn tranh 20 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 24 bài, HSK 3 30 bài; hội thoại – chọn tranh 24 bài; hỏi – đáp
     18 cặp mỗi cấp; đoạn văn ngắn HSK 3 25 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -794,3 +794,8 @@ own companies" thành "business owners").
 Part 6 từ 20 lên 24 đoạn (test giữ mức này): giờ mở cửa dịp lễ, email mời làm khảo sát, căng tin mở lại,
 thư cảm ơn tình nguyện viên. Câu từ loại thêm so sánh hơn (shorter, larger than), would be grateful,
 keep + tân ngữ + tính từ, in advance, thanks to, be well organized.
+
+### Thêm hội thoại chọn tranh HSK 2 (05/11/2026, đợt ba)
+
+`PICTURE_DIALOGUES` từ 20 lên 24 bài (test giữ mức này): trà nóng, vé, sách mới, quần áo mới. Bỏ bài về
+hoa vì 花 không nằm trong từ HSK 1–2 (test chữ Hán bắt được), thay bằng vé.

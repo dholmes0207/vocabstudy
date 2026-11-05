@@ -970,6 +970,38 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('旁边的房间里有，我去找两个。', 'Phòng bên cạnh có, tôi đi tìm hai cái.'),
     ],
   },
+  {
+    id: 'tea',
+    picture: '茶',
+    lines: [
+      w('你想喝什么？', 'Anh muốn uống gì?'),
+      m('来一杯热茶吧，今天有点儿冷。', 'Cho một cốc trà nóng nhé, hôm nay hơi lạnh.'),
+    ],
+  },
+  {
+    id: 'ticket',
+    picture: '票',
+    lines: [
+      m('明天去北京的票你买好了吗？', 'Vé đi Bắc Kinh ngày mai em mua xong chưa?'),
+      w('买好了，是早上八点的。', 'Mua xong rồi, chuyến tám giờ sáng.'),
+    ],
+  },
+  {
+    id: 'new-book',
+    picture: '书',
+    lines: [
+      w('你在看什么？', 'Anh đang đọc gì vậy?'),
+      m('一本新书，是我朋友写的，很好看。', 'Một quyển sách mới, bạn tôi viết, hay lắm.'),
+    ],
+  },
+  {
+    id: 'clothes',
+    picture: '衣服',
+    lines: [
+      m('你今天买什么了？', 'Hôm nay chị mua gì?'),
+      w('买了一件衣服，是白色的，不太贵。', 'Mua một bộ quần áo, màu trắng, không đắt lắm.'),
+    ],
+  },
 ]
 
 /**
