@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 24 bài, HSK 3 35 bài; hội thoại – chọn tranh 24 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 35 bài; hội thoại – chọn tranh 24 bài; hỏi – đáp
     18 cặp mỗi cấp; đoạn văn ngắn HSK 3 25 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -811,3 +811,9 @@ lý do thứ nhất), tin nhắn hẹn ăn trưa (phải ghép câu hỏi của 
 `HSK_DIALOGUES` HSK 3 từ 30 lên 35 bài (test giữ mức này): quà sinh nhật, thư viện đóng cửa sớm (bẫy giờ
 hiện tại và giờ đóng cửa), chuyển nhà gần công ty (bẫy 地铁), xuống lầu lấy đồ (只是 nêu việc nhỏ), kết quả
 thi (只是 nêu điểm chưa tốt).
+
+### Thêm hội thoại HSK 2 (05/11/2026, đợt bốn)
+
+`HSK_DIALOGUES` HSK 2 từ 24 lên 28 bài (test giữ mức này): thầy giáo ở đâu (sáng và chiều), giá dưa hấu
+(mua hai quả được giảm, bẫy giá một quả và phép nhân), hẹn đi ăn hôm sau, học tiếng Trung bao lâu (bẫy
+一个小时 là thời gian đọc mỗi tối). Test chữ Hán bắt được 刚, 才, 零, đã viết lại bài số phòng.
