@@ -13,15 +13,15 @@ describe('Part 3 and 4 sets', () => {
         expect(q.why.trim(), `${s.id}: ${q.q}`).not.toBe('')
       }
     }
-    expect(TALK_SETS.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(12)
-    expect(TALK_SETS.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(12)
+    expect(TALK_SETS.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(16)
+    expect(TALK_SETS.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(16)
     expect(new Set(TALK_SETS.map((s) => s.id)).size).toBe(TALK_SETS.length)
   })
 
   it('asks "Look at the graphic" exactly when a set has one, and keeps its table square', () => {
     const graphic = TALK_SETS.filter((s) => s.graphic)
-    expect(graphic.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(2)
-    expect(graphic.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(2)
+    expect(graphic.filter((s) => s.part === 3).length).toBeGreaterThanOrEqual(3)
+    expect(graphic.filter((s) => s.part === 4).length).toBeGreaterThanOrEqual(3)
     for (const s of TALK_SETS) {
       const asks = s.questions.filter((q) => q.q.startsWith('Look at the graphic.'))
       expect(asks.length, s.id).toBe(s.graphic ? 1 : 0)
