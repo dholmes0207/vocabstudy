@@ -291,6 +291,41 @@ export const HSK3_PAIRS: readonly AnswerPair[] = [
     qVi: 'Bên ngoài hình như sắp mưa.',
     aVi: 'Vậy bạn mang ô của tôi đi.',
   },
+  {
+    id: 'noise',
+    q: '你怎么还没睡觉？已经十二点了。',
+    a: '明天有个重要的会议，我还在准备。',
+    qVi: 'Sao bạn còn chưa ngủ? Mười hai giờ rồi.',
+    aVi: 'Mai có cuộc họp quan trọng, tôi vẫn đang chuẩn bị.',
+  },
+  {
+    id: 'why-chinese',
+    q: '你为什么学习汉语？',
+    a: '因为我想去中国工作。',
+    qVi: 'Vì sao bạn học tiếng Trung?',
+    aVi: 'Vì tôi muốn sang Trung Quốc làm việc.',
+  },
+  {
+    id: 'shoes',
+    q: '这双鞋你穿着怎么样？',
+    a: '有点儿小，有没有大一点儿的？',
+    qVi: 'Đôi giày này bạn đi thấy thế nào?',
+    aVi: 'Hơi chật, có đôi to hơn chút không?',
+  },
+  {
+    id: 'fridge',
+    q: '冰箱里还有牛奶吗？',
+    a: '没有了，我下班的时候去超市买。',
+    qVi: 'Trong tủ lạnh còn sữa không?',
+    aVi: 'Hết rồi, lúc tan làm tôi ghé siêu thị mua.',
+  },
+  {
+    id: 'piano',
+    q: '你女儿学了多长时间的音乐了？',
+    a: '快两年了，她每个周末都去上课。',
+    qVi: 'Con gái bạn học nhạc bao lâu rồi?',
+    aVi: 'Gần hai năm rồi, cuối tuần nào nó cũng đi học.',
+  },
 ]
 
 /** The pairs of a level. */
