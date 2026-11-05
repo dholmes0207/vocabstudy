@@ -200,7 +200,7 @@ Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
-    câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 25 bài (9 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 25 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -705,3 +705,9 @@ Part 3 và Part 4 từ 16 lên 18 bài mỗi Part; Part 3 có 4 bài có bảng 
   chỉ thay xích vì "Everything else looks fine", nên không chọn Full tune-up).
 - Part 4: hướng dẫn viên trên xe du lịch (lý do nằm sau because), quảng cáo quán cà phê (đáp án viết lại:
   open until midnight thành stays open late).
+
+### Thêm đoạn Part 6 (05/11/2026, đợt hai)
+
+Part 6 từ 16 lên 20 đoạn (test giữ mức này): thông báo tình nguyện dọn công viên, thư báo tăng phí giao
+hàng, email chào nhân viên mới, thông báo thẻ thư viện mới. Câu từ loại thêm even + so sánh hơn,
+disappointing / disappointed, look forward to + V-ing, danh từ tập hợp staff.
