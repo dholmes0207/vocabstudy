@@ -719,6 +719,88 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-budget',
+    part: 3,
+    lines: [
+      w('Daniel, have you finished the budget for the spring advertising campaign?'),
+      m(
+        'Almost. But the TV ads cost much more than we expected, so we’re about fifteen percent over the limit.'
+      ),
+      w(
+        'Hmm. What if we moved part of the money to online ads? They’re cheaper and reach younger customers.'
+      ),
+      m(
+        'That could work. I’ll prepare two versions of the budget and show them to the director tomorrow.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What are the speakers mainly discussing?',
+        options: ['An advertising budget', 'A job opening', 'A new product design', 'A sales trip'],
+        why: 'Câu đầu hỏi về "the budget for the spring advertising campaign". Chủ đề thường nằm ở lượt đầu.',
+      },
+      {
+        q: 'What problem does the man mention?',
+        options: [
+          'The costs are higher than planned.',
+          'The director is not available.',
+          'An ad contains a mistake.',
+          'A deadline was missed.',
+        ],
+        why: '"we’re about fifteen percent over the limit": vượt ngân sách 15%, viết lại thành "costs are higher than planned".',
+      },
+      {
+        q: 'What will the man do tomorrow?',
+        options: [
+          'Present two budget options',
+          'Film a TV advertisement',
+          'Meet some young customers',
+          'Cancel the campaign',
+        ],
+        why: '"I’ll prepare two versions of the budget and show them to the director tomorrow."',
+      },
+    ],
+  },
+  {
+    id: 'p3-repair-graphic',
+    part: 3,
+    graphic: {
+      title: 'City Bike Repair — Service Prices',
+      rows: [
+        ['Service', 'Time', 'Price'],
+        ['Tire change', '30 min', '$15'],
+        ['Brake check', '20 min', '$10'],
+        ['Full tune-up', '2 hours', '$45'],
+        ['Chain replacement', '40 min', '$25'],
+      ],
+    },
+    lines: [
+      w('Hi, my bike makes a strange noise when I ride, and the chain keeps coming off.'),
+      m(
+        'Let me take a look… Yes, the chain is badly worn. You need a new one. Everything else looks fine.'
+      ),
+      w('OK, please go ahead. Can I wait here? I have to be at work in an hour.'),
+      m('Sure. There’s free coffee by the window while you wait.'),
+    ],
+    questions: [
+      {
+        q: 'Where most likely are the speakers?',
+        options: ['At a repair shop', 'At a bicycle factory', 'At a café', 'At a sports club'],
+        why: 'Người nữ mang xe đạp tới nhờ xem, người nam kiểm tra và nói cần thay xích: cửa hàng sửa xe.',
+      },
+      {
+        q: 'Look at the graphic. How much will the woman pay?',
+        options: ['$25', '$15', '$45', '$10'],
+        why: 'Người nam nói xích mòn và "You need a new one", các phần khác ổn. Trên bảng, Chain replacement giá $25.',
+      },
+      {
+        q: 'What does the man offer the woman?',
+        options: ['A free drink', 'A discount', 'A ride to work', 'A new bicycle'],
+        why: '"There’s free coffee by the window while you wait": cà phê miễn phí, viết lại thành "a free drink".',
+      },
+    ],
+  },
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -1364,6 +1446,90 @@ export const TALK_SETS: readonly TalkSet[] = [
           'The guests will vote.',
         ],
         why: '"after the award, dessert will be served in the garden". Bẫy: Angela được mời lên sân khấu, nhưng không ai nói cô ấy sẽ phát biểu.',
+      },
+    ],
+  },
+  {
+    id: 'p4-tour-bus',
+    part: 4,
+    lines: [
+      n(
+        'Good morning, everyone, and welcome aboard. My name is Lisa, and I’ll be your guide on today’s tour of the old town.'
+      ),
+      n(
+        'Our first stop will be the City History Museum, where we’ll spend about an hour. After that, we’ll have lunch at a traditional restaurant by the river.'
+      ),
+      n(
+        'Please remember that photos are not allowed inside the museum. Also, be back on the bus by two o’clock, because we have to be at the castle before it closes.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who most likely is the speaker?',
+        options: ['A tour guide', 'A museum director', 'A bus driver', 'A restaurant owner'],
+        why: '"I’ll be your guide on today’s tour of the old town."',
+      },
+      {
+        q: 'What are listeners asked not to do?',
+        options: [
+          'Take photos in the museum',
+          'Eat on the bus',
+          'Leave the group',
+          'Visit the castle alone',
+        ],
+        why: '"photos are not allowed inside the museum".',
+      },
+      {
+        q: 'Why must listeners return to the bus by two o’clock?',
+        options: [
+          'To reach the castle before it closes',
+          'To have lunch by the river',
+          'To catch a train',
+          'To meet another guide',
+        ],
+        why: '"be back on the bus by two o’clock, because we have to be at the castle before it closes". Lý do nằm sau because.',
+      },
+    ],
+  },
+  {
+    id: 'p4-cafe-ad',
+    part: 4,
+    lines: [
+      n(
+        'Are you looking for a quiet place to work or study? Come to Green Bean Café on Market Street, now open until midnight every day.'
+      ),
+      n(
+        'We offer fast free Internet, plenty of power outlets, and a quiet room upstairs for small meetings.'
+      ),
+      n(
+        'And this month only, bring your student or company ID card and get a free cake with any large drink.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is being advertised?',
+        options: ['A café', 'A library', 'An office building', 'A bakery school'],
+        why: '"Come to Green Bean Café on Market Street".',
+      },
+      {
+        q: 'What is mentioned about the business?',
+        options: [
+          'It stays open late.',
+          'It recently moved.',
+          'It offers cooking classes.',
+          'It is closed on weekends.',
+        ],
+        why: '"now open until midnight every day": mở đến nửa đêm, viết lại thành "stays open late".',
+      },
+      {
+        q: 'How can listeners get a free cake?',
+        options: [
+          'By showing an ID card',
+          'By booking the meeting room',
+          'By ordering online',
+          'By visiting before noon',
+        ],
+        why: '"bring your student or company ID card and get a free cake with any large drink".',
       },
     ],
   },

@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 91
+  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
     câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 25 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -696,3 +696,12 @@ tiết nghe trước rồi bị đổi (giờ bay cũ, phòng học cũ, giá v�
 `HSK3_READINGS` từ 15 lên 20 đoạn (test giữ mức này): họp đổi giờ (本来… / 换到…), con trai thích vận
 động (以前… / 自从…), siêu thị đóng cửa sớm (就是… nêu điểm chưa tốt), tìm chìa khoá (越来越…), chọn xe
 buýt dù chậm hơn (但是…所以…). Test chữ Hán bắt được 改 và 队.
+
+### Thêm bài Part 3 và Part 4 (05/11/2026, đợt hai)
+
+Part 3 và Part 4 từ 16 lên 18 bài mỗi Part; Part 3 có 4 bài có bảng (test giữ các mức này).
+
+- Part 3: ngân sách quảng cáo vượt 15% (gợi ý chuyển sang quảng cáo trực tuyến), sửa xe đạp (bảng giá:
+  chỉ thay xích vì "Everything else looks fine", nên không chọn Full tune-up).
+- Part 4: hướng dẫn viên trên xe du lịch (lý do nằm sau because), quảng cáo quán cà phê (đáp án viết lại:
+  open until midnight thành stays open late).
