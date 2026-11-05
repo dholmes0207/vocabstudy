@@ -8,7 +8,7 @@ describe('the Part 2 bank', () => {
       expect(it.why.trim(), it.prompt).not.toBe('')
     }
     expect(new Set(PART2_BANK.map((it) => it.prompt)).size).toBe(PART2_BANK.length)
-    expect(PART2_BANK.length).toBeGreaterThanOrEqual(84)
+    expect(PART2_BANK.length).toBeGreaterThanOrEqual(96)
   })
 
   it('puts the right response anywhere in a round', () => {

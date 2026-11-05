@@ -472,6 +472,66 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['The store hasn’t told us yet.', 'Yes, they’re very comfortable.', 'Twelve chairs.'],
     'Câu trả lời "chưa biết" vẫn đúng cho câu When. (Bẫy) Yes/No cho câu Wh-; câu cuối lặp chairs, trả lời số lượng.'
   ),
+  item(
+    'What’s the best way to get to the airport?',
+    ['Take the express train.', 'About two hours ago.', 'The air is very clean today.'],
+    'What’s the best way hỏi cách đi: đi tàu tốc hành. (Bẫy) "air" nghe giống đầu từ airport; "two hours ago" trả lời thời gian.'
+  ),
+  item(
+    'How much will it cost to repair the roof?',
+    ['Around three thousand dollars.', 'It’s on the top floor.', 'He’ll be here at noon.'],
+    'How much hỏi giá tiền. (Bẫy) "top floor" liên quan đến mái nhà nhưng trả lời nơi chốn; câu cuối trả lời thời gian.'
+  ),
+  item(
+    'Where are the extra pens kept?',
+    ['In the supply cabinet.', 'Yes, please keep them.', 'Ten for a dollar.'],
+    'Where hỏi nơi chốn: trong tủ đồ dùng. (Bẫy) Yes/No cho câu Wh-, lặp từ keep; câu cuối trả lời giá.'
+  ),
+  item(
+    'When are you leaving for Singapore?',
+    ['Next Thursday morning.', 'Two suitcases.', 'I left it on your desk.'],
+    'When hỏi thời gian. (Bẫy) "left" cùng gốc với leaving nhưng nghĩa là để quên; "Two suitcases" trả lời số lượng.'
+  ),
+  item(
+    'Why hasn’t the package been sent yet?',
+    ['We’re still waiting for the payment.', 'It’s a large package.', 'Yes, I sent it.'],
+    'Why hỏi lý do: còn chờ thanh toán. (Bẫy) câu giữa lặp package; Yes/No không trả lời câu Why.'
+  ),
+  item(
+    'Who approved the new budget?',
+    ['The finance director did.', 'I can prove it.', 'About ten percent more.'],
+    'Who hỏi người. (Bẫy) "prove" nghe giống approved; câu cuối nói về con số ngân sách.'
+  ),
+  item(
+    'Would you rather meet in the morning or the afternoon?',
+    ['The afternoon works better for me.', 'Good morning, everyone.', 'Yes, we met last week.'],
+    'Câu hỏi lựa chọn (A or B): chọn một trong hai. (Bẫy) lặp morning; Yes/No không trả lời câu lựa chọn.'
+  ),
+  item(
+    'Can I pay with a credit card?',
+    ['Sorry, we only accept cash.', 'Please pay attention.', 'What a beautiful card!'],
+    'Câu hỏi Yes/No có thể đáp gián tiếp: chỉ nhận tiền mặt, tức là không. (Bẫy) lặp pay và card với nghĩa khác.'
+  ),
+  item(
+    'The elevator is out of order today.',
+    ['Then let’s take the stairs.', 'I’d like to order a pizza.', 'On the fifth floor.'],
+    'Câu trần thuật báo vấn đề, đáp bằng cách xử lý: đi cầu thang bộ. (Bẫy) "order" lặp với nghĩa gọi món; câu cuối trả lời nơi chốn.'
+  ),
+  item(
+    'Aren’t you coming to the staff dinner?',
+    ['I have to work late, unfortunately.', 'The dinner was delicious.', 'Twelve staff members.'],
+    'Câu hỏi phủ định, đáp bằng lý do không đi được. (Bẫy) "was delicious" nói về bữa tối đã qua; câu cuối lặp staff, trả lời số lượng.'
+  ),
+  item(
+    'How far is the hotel from the station?',
+    ['Just a five-minute walk.', 'It’s a four-star hotel.', 'The station opens at six.'],
+    'How far hỏi khoảng cách. (Bẫy) "four" nghe gần giống far, lặp hotel; câu cuối lặp station, trả lời thời gian.'
+  ),
+  item(
+    'Do you know who’s organizing the year-end party?',
+    ['I think it’s Ms. Park.', 'Yes, it was a great party.', 'At the end of December.'],
+    'Câu hỏi gián tiếp hỏi người (who), nên đáp bằng tên người. (Bẫy) Yes nhưng nói về bữa tiệc đã qua; câu cuối trả lời thời gian.'
+  ),
 ]
 
 /** Items in one round. */
