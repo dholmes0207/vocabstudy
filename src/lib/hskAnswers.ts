@@ -154,6 +154,27 @@ export const HSK1_PAIRS: readonly AnswerPair[] = [
     qVi: 'Bạn của bạn làm việc ở đâu?',
     aVi: 'Anh ấy làm việc ở bệnh viện.',
   },
+  {
+    id: 'cup-whose',
+    q: '这是谁的杯子？',
+    a: '是我妈妈的。',
+    qVi: 'Đây là cốc của ai?',
+    aVi: 'Là của mẹ tôi.',
+  },
+  {
+    id: 'book-where',
+    q: '我的书在哪儿？',
+    a: '在桌子上。',
+    qVi: 'Sách của tôi ở đâu?',
+    aVi: 'Ở trên bàn.',
+  },
+  {
+    id: 'read-what',
+    q: '你喜欢看什么书？',
+    a: '我喜欢看汉语书。',
+    qVi: 'Bạn thích đọc sách gì?',
+    aVi: 'Tôi thích đọc sách tiếng Trung.',
+  },
 ]
 
 /**
@@ -315,6 +336,27 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
     qVi: 'Sao hôm nay anh trai bạn không đi làm?',
     aVi: 'Anh ấy bị ốm, đang nghỉ ở nhà.',
   },
+  {
+    id: 'swim-often',
+    q: '你常常去游泳吗？',
+    a: '每个星期去两次。',
+    qVi: 'Bạn có hay đi bơi không?',
+    aVi: 'Mỗi tuần đi hai lần.',
+  },
+  {
+    id: 'train-price',
+    q: '去北京的票多少钱？',
+    a: '三百五十块一张。',
+    qVi: 'Vé đi Bắc Kinh bao nhiêu tiền?',
+    aVi: 'Ba trăm năm mươi tệ một vé.',
+  },
+  {
+    id: 'breakfast',
+    q: '你早上吃早饭了吗？',
+    a: '吃了，我喝了一杯牛奶。',
+    qVi: 'Sáng nay bạn ăn sáng chưa?',
+    aVi: 'Ăn rồi, tôi uống một cốc sữa.',
+  },
 ]
 
 /** HSK 3 reading, part one: a sentence and the one that answers or follows it. */
@@ -472,6 +514,27 @@ export const HSK3_PAIRS: readonly AnswerPair[] = [
     a: '我妈妈明天要来，我打扫了一下午。',
     qVi: 'Sao phòng bạn sạch thế?',
     aVi: 'Ngày mai mẹ tôi đến, tôi đã dọn cả buổi chiều.',
+  },
+  {
+    id: 'missed-call',
+    q: '你昨天怎么没接我的电话？',
+    a: '对不起，我的手机没电了。',
+    qVi: 'Sao hôm qua bạn không nghe máy của tôi?',
+    aVi: 'Xin lỗi, điện thoại tôi hết pin.',
+  },
+  {
+    id: 'homework',
+    q: '你的作业写完了吗？',
+    a: '还没有，还差一点儿就写完了。',
+    qVi: 'Bạn làm xong bài tập chưa?',
+    aVi: 'Chưa, còn một chút nữa là xong.',
+  },
+  {
+    id: 'new-year',
+    q: '春节你回老家吗？',
+    a: '回，我已经买好票了。',
+    qVi: 'Tết bạn có về quê không?',
+    aVi: 'Có, tôi đã mua vé rồi.',
   },
 ]
 

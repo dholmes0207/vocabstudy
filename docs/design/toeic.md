@@ -209,7 +209,7 @@ Tình hình (05/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 32 bài, HSK 3 40 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
-    22 cặp mỗi cấp; đoạn văn ngắn HSK 3 35 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    25 cặp mỗi cấp; đoạn văn ngắn HSK 3 35 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -922,3 +922,10 @@ cover the cost (nghĩa từ).
 (by the window or near the door), câu hỏi phủ định (Haven't you…?), lời đề nghị giúp (Would you like me to…?), lời
 rủ (How about…?), câu hỏi gián tiếp (Could you tell me when…?). Bẫy âm mới: files / filed, projector / project,
 review / viewed, accounting / counted.
+
+### Thêm cặp hỏi – đáp HSK (05/11/2026, đợt bốn)
+
+Mỗi cấp từ 22 lên 25 cặp (test giữ mức này). HSK 1: cốc của ai, sách ở đâu, thích đọc sách gì. HSK 2: hay đi bơi
+không, giá vé đi Bắc Kinh, ăn sáng chưa. HSK 3: không nghe máy (手机没电了), bài tập xong chưa (还差一点儿), Tết về
+quê. Đã bỏ các câu đáp hợp cả câu hỏi cũ: "下午四点" (hợp 现在几点), "她是老师" (hợp 你妻子做什么工作), câu chỉ đường
+(hợp câu hỏi tìm quán ăn gần đây). Kiểm tra chữ Hán bắt được 文, 海, 火, 假, đã viết lại câu.
