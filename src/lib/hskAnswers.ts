@@ -163,8 +163,82 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
   },
 ]
 
+/** HSK 3 reading, part one: a sentence and the one that answers or follows it. */
+export const HSK3_PAIRS: readonly AnswerPair[] = [
+  {
+    id: 'computer',
+    q: '我的电脑突然不能用了。',
+    a: '别着急，我帮你检查一下。',
+    qVi: 'Máy tính của tôi bỗng không dùng được nữa.',
+    aVi: 'Đừng lo, để tôi kiểm tra giúp.',
+  },
+  {
+    id: 'travel',
+    q: '这个周末你打算去哪儿旅游？',
+    a: '我想去南方，那儿冬天也不冷。',
+    qVi: 'Cuối tuần này bạn định đi du lịch đâu?',
+    aVi: 'Tôi muốn đi miền Nam, ở đó mùa đông cũng không lạnh.',
+  },
+  {
+    id: 'weight',
+    q: '你最近好像瘦了。',
+    a: '是啊，我每天下班以后都去锻炼。',
+    qVi: 'Dạo này trông bạn gầy đi.',
+    aVi: 'Đúng vậy, ngày nào tan làm tôi cũng đi tập.',
+  },
+  {
+    id: 'meeting',
+    q: '会议几点结束？',
+    a: '应该是十一点半，你还要等一会儿。',
+    qVi: 'Mấy giờ cuộc họp kết thúc?',
+    aVi: 'Chắc là mười một giờ rưỡi, anh còn phải đợi một lát.',
+  },
+  {
+    id: 'glasses',
+    q: '你看见我的眼镜了吗？',
+    a: '在你的包里，我刚才看见了。',
+    qVi: 'Bạn có thấy kính của tôi không?',
+    aVi: 'Ở trong túi của bạn, tôi vừa thấy.',
+  },
+  {
+    id: 'cold',
+    q: '你感冒了吗？声音怎么变了？',
+    a: '有点儿，昨天晚上忘了关空调。',
+    qVi: 'Bạn bị cảm à? Sao giọng khác thế?',
+    aVi: 'Hơi hơi, tối qua tôi quên tắt điều hoà.',
+  },
+  {
+    id: 'help',
+    q: '这个箱子太重了，我一个人搬不动。',
+    a: '没关系，我来帮你。',
+    qVi: 'Cái thùng này nặng quá, một mình tôi không bê nổi.',
+    aVi: 'Không sao, để tôi giúp.',
+  },
+  {
+    id: 'hungry',
+    q: '我有点儿饿了，附近有饭馆吗？',
+    a: '有，前面那个银行的旁边就有一个。',
+    qVi: 'Tôi hơi đói, gần đây có quán ăn không?',
+    aVi: 'Có, ngay cạnh ngân hàng phía trước có một quán.',
+  },
+  {
+    id: 'exam',
+    q: '这次考试你考得怎么样？',
+    a: '比上次好多了，老师也说我有进步。',
+    qVi: 'Lần thi này bạn làm bài thế nào?',
+    aVi: 'Tốt hơn lần trước nhiều, thầy cũng nói tôi tiến bộ.',
+  },
+  {
+    id: 'umbrella',
+    q: '外面好像要下雨了。',
+    a: '那你带上我的伞吧。',
+    qVi: 'Bên ngoài hình như sắp mưa.',
+    aVi: 'Vậy bạn mang ô của tôi đi.',
+  },
+]
+
 /** The pairs of a level. */
-export const PAIRS = { hsk1: HSK1_PAIRS, hsk2: HSK2_PAIRS } as const
+export const PAIRS = { hsk1: HSK1_PAIRS, hsk2: HSK2_PAIRS, hsk3: HSK3_PAIRS } as const
 
 export interface AnswerQuestion {
   pair: AnswerPair

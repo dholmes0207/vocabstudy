@@ -68,9 +68,10 @@ describe('HSK practice page', () => {
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
-    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(8)
-    // HSK 2 and 3 add their dialogues, five a round.
-    // Its dialogues and its short passages.
+    // Its sentence matching too, the same drill as the HSK 1 questions and answers.
+    expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(9)
+    expect(screen.getByText(/Question and answer/)).toBeInTheDocument()
+    // Its dialogues and its short passages, five a round.
     expect(screen.getAllByRole('button', { name: 'Practise 5 questions' })).toHaveLength(2)
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 1' }))
     expect(screen.queryByRole('button', { name: 'Practise 5 questions' })).not.toBeInTheDocument()
