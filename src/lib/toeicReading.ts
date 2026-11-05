@@ -1729,6 +1729,152 @@ Olivia Grant (11:11): No problem. I'll order for you if you tell me what you'd l
       },
     ],
   },
+  {
+    id: 'p7-elevator-notice',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `To all tenants of the Harbor Tower building
+
+The east elevator will be closed for repairs from Monday, May 8, to Wednesday, May 10. During this time, please use the west elevator or the stairs. The west elevator will stop at every floor, so waiting times may be longer than usual.
+
+Large deliveries should be scheduled for Thursday or later. If you need help moving heavy items before then, please call the building office at 555-0187 at least one day in advance.
+
+We are sorry for any trouble this may cause.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the notice?',
+        options: [
+          'To announce that an elevator will be out of service',
+          'To introduce a new building office',
+          'To ask tenants to move to another floor',
+          'To explain a change in delivery companies',
+        ],
+        why: '"The east elevator will be closed for repairs": thông báo thang máy phía đông ngừng hoạt động để sửa.',
+      },
+      {
+        q: 'When should tenants plan large deliveries?',
+        options: ['On May 11 or later', 'On May 8', 'On May 9', 'On May 10'],
+        why: 'Sửa từ thứ Hai 8/5 đến thứ Tư 10/5; "Large deliveries should be scheduled for Thursday or later": thứ Năm là 11/5.',
+      },
+      {
+        q: 'What should tenants do if they need help with heavy items?',
+        options: [
+          'Contact the building office a day before',
+          'Use the east elevator',
+          'Wait until the repairs are finished',
+          'Ask the delivery company to call',
+        ],
+        why: '"please call the building office at 555-0187 at least one day in advance": gọi văn phòng toà nhà trước ít nhất một ngày.',
+      },
+    ],
+  },
+  {
+    id: 'p7-conference-email',
+    part: 7,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: Kevin Moore
+From: Registration Team, Global Retail Forum
+Subject: Your registration
+
+Dear Mr. Moore,
+
+Thank you for registering for the Global Retail Forum in Singapore. We have received your payment of $450 for the two-day pass.
+
+As you requested, we have changed your workshop choice from "Online Marketing" to "Store Design," which takes place on the second day at 2 P.M. in Room B.
+
+Please bring this e-mail or your registration number, GRF-2281, to the front desk to receive your name badge. The desk opens at 8 A.M. on both days.
+
+Best regards,
+Registration Team`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why was the e-mail sent?',
+        options: [
+          'To confirm details of a registration',
+          'To ask for a late payment',
+          'To announce a new conference',
+          'To cancel a workshop',
+        ],
+        why: 'Email xác nhận đã nhận tiền và đã đổi hội thảo nhỏ theo yêu cầu: xác nhận thông tin đăng ký.',
+      },
+      {
+        q: 'What did Mr. Moore ask to do?',
+        options: [
+          'Attend a different workshop',
+          'Pay for only one day',
+          'Change his registration number',
+          'Give a talk in Room B',
+        ],
+        why: '"As you requested, we have changed your workshop choice… to Store Design": ông Moore xin đổi hội thảo. Ông mua vé hai ngày.',
+      },
+      {
+        q: 'What should Mr. Moore bring to the front desk?',
+        options: [
+          'His registration number',
+          'His payment of $450',
+          'A name badge',
+          'A store design',
+        ],
+        why: '"Please bring this e-mail or your registration number": mang email hoặc mã đăng ký để nhận thẻ tên.',
+      },
+    ],
+  },
+  {
+    id: 'p7-bakery-article',
+    part: 7,
+    passages: [
+      {
+        kind: ARTICLE,
+        text: `Local Bakery to Open Second Shop
+
+GREENVILLE — Sunrise Bakery, known for its fresh bread and fruit pies, will open a second shop on Oak Street next month. The bakery's first shop, on River Road, opened eight years ago and is often so busy that customers have to wait outside.
+
+Owner Maria Santos said the new shop will be larger and will have tables, so customers can enjoy coffee with their pies. "Many people asked for a place to sit down," she said. The new shop will also sell sandwiches at lunchtime.
+
+Ms. Santos plans to hire twelve new employees. Interested people can apply at the River Road shop.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the article mainly about?',
+        options: [
+          'A business opening a new location',
+          'A bakery moving to River Road',
+          'A new coffee company in Greenville',
+          'A cooking class for fruit pies',
+        ],
+        why: 'Tiêu đề "Local Bakery to Open Second Shop": tiệm bánh mở thêm cửa hàng thứ hai.',
+      },
+      {
+        q: 'What is mentioned about the River Road shop?',
+        options: [
+          'It is often crowded.',
+          'It has tables for customers.',
+          'It will close next month.',
+          'It sells sandwiches at lunch.',
+        ],
+        why: '"is often so busy that customers have to wait outside": quán cũ hay đông. Bàn ghế và bánh mì kẹp là của quán mới.',
+      },
+      {
+        q: 'How can people apply for a job?',
+        options: [
+          'By visiting the River Road shop',
+          'By calling Ms. Santos',
+          'By going to Oak Street next month',
+          'By sending an e-mail to the bakery',
+        ],
+        why: '"Interested people can apply at the River Road shop."',
+      },
+    ],
+  },
 
   // -------------------------------------------------------- Part 7, double
   {
