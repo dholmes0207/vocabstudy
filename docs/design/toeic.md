@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 12 bài (2 bài có hình), Part 5 81
+  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
     câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 20 bài (7 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -605,3 +605,14 @@ HSK 1–3 (bắt được 假).
 - HSK 2: giờ chuyến bay (ba phương án cùng tám giờ, khác buổi), nghề của chị gái, thời gian chạy bộ
   (bẫy 六点 là giờ dậy), giờ hiện tại (bẫy 九点 là giờ mở cửa).
 - Test chữ Hán bắt được 火 (火车站, đổi thành 银行) và 半 ở HSK 2 (đổi sang 八点五十).
+
+### Thêm bài Part 3 và Part 4 (05/11/2026)
+
+Part 3 và Part 4 từ 12 lên 16 bài mỗi Part, mỗi Part 3 bài có bảng (test giữ các mức này).
+
+- Part 3: đơn văn phòng phẩm (bảng: từ "folders" suy ra phòng ban), bãi đỗ xe đóng cửa sửa chữa, nhờ
+  hướng dẫn nhân viên mới (câu hỏi ý nghĩa "He trained the last two new people"), khách dời giờ họp
+  (suy ra phòng họp tầng 5).
+- Part 4: tin nhắn thoại của cửa hàng nội thất (hết hàng, viết lại thành "not available"), bản tin thời
+  tiết, lịch hội thảo đổi giờ (bảng: phải đổi chỗ hai buổi rồi mới đọc giờ, bẫy 1:00 là giờ cũ), lễ
+  trao giải (bẫy: được mời lên sân khấu không có nghĩa là sẽ phát biểu).

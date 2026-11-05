@@ -535,6 +535,190 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-supplies-graphic',
+    part: 3,
+    graphic: {
+      title: 'Office Supplies Order — Week of May 6',
+      rows: [
+        ['Item', 'Quantity', 'Department'],
+        ['Printer paper', '20 boxes', 'Sales'],
+        ['Ink cartridges', '6', 'Marketing'],
+        ['Notebooks', '50', 'Human Resources'],
+        ['Folders', '100', 'Accounting'],
+      ],
+    },
+    lines: [
+      m(
+        'Linda, I’m checking this week’s supplies order before I send it. Did your team ask for anything?'
+      ),
+      w(
+        'Yes, we need more folders. We’re starting the yearly audit, so we’ll be filing a lot of documents.'
+      ),
+      m('They’re already on the list. But the supplier says folders won’t arrive until Thursday.'),
+      w('That’s fine. The auditors don’t come until next Monday.'),
+    ],
+    questions: [
+      {
+        q: 'What is the man doing?',
+        options: [
+          'Checking an order',
+          'Planning an audit',
+          'Repairing a printer',
+          'Interviewing a supplier',
+        ],
+        why: '"I’m checking this week’s supplies order before I send it."',
+      },
+      {
+        q: 'Look at the graphic. Which department does the woman most likely work in?',
+        options: ['Accounting', 'Sales', 'Marketing', 'Human Resources'],
+        why: 'Cô ấy cần thêm folders cho đợt kiểm toán (audit). Trên bảng, Folders ghi cho phòng Accounting. Câu hỏi graphic bắt ghép một chi tiết nghe được (folders) với cột khác của bảng.',
+      },
+      {
+        q: 'When will the auditors arrive?',
+        options: ['Next Monday', 'On Thursday', 'This afternoon', 'At the end of the month'],
+        why: '"The auditors don’t come until next Monday." Bẫy: Thursday là ngày folders về.',
+      },
+    ],
+  },
+  {
+    id: 'p3-parking',
+    part: 3,
+    lines: [
+      w('Did you get the e-mail about the parking garage? It’s closing for repairs next month.'),
+      m('Really? Where are we supposed to park? I drive in every day.'),
+      w(
+        'The company has rented spaces in the lot across the street. You just need to pick up a new pass from the security office.'
+      ),
+      m('I’ll go there at lunch. Do you know if the passes are free?'),
+      w('Yes, for the first three months. After that, it’s ten dollars a month.'),
+    ],
+    questions: [
+      {
+        q: 'What will happen next month?',
+        options: [
+          'A parking garage will close.',
+          'A new office will open.',
+          'Parking fees will go down.',
+          'The security office will move.',
+        ],
+        why: '"It’s closing for repairs next month." It là parking garage ở câu trước.',
+      },
+      {
+        q: 'What does the man plan to do at lunch?',
+        options: [
+          'Get a parking pass',
+          'Move his car',
+          'Write an e-mail',
+          'Meet a client across the street',
+        ],
+        why: 'Phụ nữ bảo lấy "a new pass from the security office", người nam đáp "I’ll go there at lunch."',
+      },
+      {
+        q: 'What does the woman say about the passes?',
+        options: [
+          'They are free for three months.',
+          'They cost three dollars a day.',
+          'They must be renewed every week.',
+          'They are only for managers.',
+        ],
+        why: '"Yes, for the first three months. After that, it’s ten dollars a month." Câu trả lời nằm ở lượt cuối.',
+      },
+    ],
+  },
+  {
+    id: 'p3-new-trainee',
+    part: 3,
+    lines: [
+      m(
+        'Sarah, a new sales assistant is starting on Monday. Could you show him around the store on his first day?'
+      ),
+      w(
+        'I’d like to, but I’m at the trade show in Chicago until Tuesday. What about Ben? He trained the last two new people.'
+      ),
+      m('Good point. I’ll ask him this afternoon.'),
+      w(
+        'And make sure the new assistant gets his uniform before Monday. The last one waited a week.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What does the man ask the woman to do?',
+        options: [
+          'Show a new employee around',
+          'Go to a trade show',
+          'Order new uniforms',
+          'Interview a job applicant',
+        ],
+        why: '"Could you show him around the store on his first day?"',
+      },
+      {
+        q: 'What does the woman mean when she says, "He trained the last two new people"?',
+        options: [
+          'Ben could do the task.',
+          'Ben is too busy.',
+          'The store needs more staff.',
+          'The training was not successful.',
+        ],
+        why: 'Câu hỏi ý nghĩa (implied meaning): cô ấy không rảnh nên gợi ý Ben làm thay vì Ben đã có kinh nghiệm. Người nam đáp "Good point. I’ll ask him".',
+      },
+      {
+        q: 'What problem does the woman mention?',
+        options: [
+          'A uniform arrived late before.',
+          'A trade show was canceled.',
+          'The store is closing early.',
+          'Ben is on vacation.',
+        ],
+        why: '"The last one waited a week" cho đồng phục. Vấn đề trong quá khứ được nêu để tránh lặp lại.',
+      },
+    ],
+  },
+  {
+    id: 'p3-client-call',
+    part: 3,
+    lines: [
+      w('Hi, Raj. Ms. Chen from Brightway just called. She wants to move tomorrow’s meeting.'),
+      m('Oh no. I booked the big conference room for ten o’clock. What time does she want?'),
+      w('She asked for three in the afternoon. Her flight lands later than she thought.'),
+      m(
+        'Let me check the booking system. The big room is taken at three, but the small one on the fifth floor is free.'
+      ),
+      w('That’s OK. It’s only four people. I’ll e-mail her the room number.'),
+    ],
+    questions: [
+      {
+        q: 'Why does Ms. Chen want to change the meeting time?',
+        options: [
+          'Her flight arrives late.',
+          'She has another meeting.',
+          'The room is too small.',
+          'She is feeling sick.',
+        ],
+        why: '"Her flight lands later than she thought." Lands = máy bay hạ cánh, đáp án viết lại thành arrives.',
+      },
+      {
+        q: 'Where will the meeting most likely take place?',
+        options: [
+          'In a room on the fifth floor',
+          'In the big conference room',
+          'At Ms. Chen’s office',
+          'At the airport',
+        ],
+        why: 'Phòng lớn đã có người lúc 3 giờ, phòng nhỏ tầng 5 còn trống và chỉ có 4 người, nên họp ở tầng 5.',
+      },
+      {
+        q: 'What will the woman do next?',
+        options: [
+          'Send an e-mail',
+          'Book a flight',
+          'Call the front desk',
+          'Prepare a presentation',
+        ],
+        why: '"I’ll e-mail her the room number." Câu hỏi "do next" thường trả lời ở lượt cuối.',
+      },
+    ],
+  },
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -1004,6 +1188,182 @@ export const TALK_SETS: readonly TalkSet[] = [
           'Change everyone’s password',
         ],
         why: '"Kevin… will be at the front desk all day on Monday to help" những ai gặp khó khăn.',
+      },
+    ],
+  },
+  {
+    id: 'p4-order-voicemail',
+    part: 4,
+    lines: [
+      n(
+        'Hello, this message is for Mr. Daniel Park. This is Maria from Green Leaf Furniture, calling about the desk you ordered last week.'
+      ),
+      n(
+        'I’m sorry to tell you that the desk in white is out of stock until the end of the month. We do have the same desk in light brown, and we could deliver it this Saturday.'
+      ),
+      n(
+        'Please call me back at 555-0187 and let me know which you would prefer. If you choose the brown one, delivery will be free.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who most likely is the speaker?',
+        options: [
+          'A store employee',
+          'A delivery driver',
+          'An office manager',
+          'A furniture designer',
+        ],
+        why: '"This is Maria from Green Leaf Furniture, calling about the desk you ordered": nhân viên cửa hàng gọi cho khách.',
+      },
+      {
+        q: 'What problem does the speaker mention?',
+        options: [
+          'An item is not available.',
+          'A delivery was late.',
+          'A desk was damaged.',
+          'A payment did not go through.',
+        ],
+        why: '"the desk in white is out of stock": hết hàng, đáp án viết lại thành "not available".',
+      },
+      {
+        q: 'What does the speaker offer?',
+        options: ['Free delivery', 'A full refund', 'A larger desk', 'A discount on chairs'],
+        why: '"If you choose the brown one, delivery will be free."',
+      },
+    ],
+  },
+  {
+    id: 'p4-radio-weather',
+    part: 4,
+    lines: [
+      n('You’re listening to City Radio 98.5, and here’s your morning weather report.'),
+      n(
+        'It will be cloudy this morning, with heavy rain expected after two o’clock. Drivers should leave a little earlier this evening, as the rain may slow traffic on the main highway.'
+      ),
+      n(
+        'The good news is that the weekend looks sunny and warm, perfect for the city’s spring festival in Riverside Park. Stay with us for the sports news after this short break.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What will happen this afternoon?',
+        options: [
+          'It will rain heavily.',
+          'A festival will start.',
+          'A highway will close.',
+          'It will become sunny.',
+        ],
+        why: '"heavy rain expected after two o’clock": sau 2 giờ chiều mưa to.',
+      },
+      {
+        q: 'What does the speaker advise drivers to do?',
+        options: [
+          'Leave earlier than usual',
+          'Use a different highway',
+          'Take the train instead',
+          'Drive to Riverside Park',
+        ],
+        why: '"Drivers should leave a little earlier this evening". Should là dấu hiệu của lời khuyên.',
+      },
+      {
+        q: 'What will listeners hear next?',
+        options: ['Sports news', 'A weather update', 'An interview', 'Some music'],
+        why: '"Stay with us for the sports news after this short break." Câu hỏi "hear next" thường trả lời ở câu cuối.',
+      },
+    ],
+  },
+  {
+    id: 'p4-workshop-graphic',
+    part: 4,
+    graphic: {
+      title: 'Marketing Workshop — Saturday',
+      rows: [
+        ['Time', 'Session', 'Room'],
+        ['9:00', 'Social media basics', 'A'],
+        ['10:30', 'Writing for the web', 'B'],
+        ['1:00', 'Customer surveys', 'A'],
+        ['2:30', 'Video advertising', 'C'],
+      ],
+    },
+    lines: [
+      n(
+        'Good morning, and welcome to our marketing workshop. Before we begin, I have two changes.'
+      ),
+      n(
+        'First, our speaker on customer surveys is stuck in traffic, so her session will now be the last one of the day. The video advertising session will take its place after lunch.'
+      ),
+      n(
+        'Second, lunch is in the cafeteria on the ground floor. Please wear your name tag, because only workshop guests will be served.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Why has a session been moved?',
+        options: [
+          'A speaker is delayed.',
+          'A room is not ready.',
+          'Too many people signed up.',
+          'The lunch break is longer.',
+        ],
+        why: '"our speaker on customer surveys is stuck in traffic": diễn giả bị kẹt xe, tức là đến muộn (delayed).',
+      },
+      {
+        q: 'Look at the graphic. What time will the customer surveys session now begin?',
+        options: ['2:30', '1:00', '10:30', '9:00'],
+        why: 'Buổi khảo sát khách hàng chuyển thành buổi cuối ngày, đổi chỗ với video advertising. Trên bảng, buổi cuối bắt đầu lúc 2:30. Bẫy: 1:00 là giờ cũ của nó.',
+      },
+      {
+        q: 'What are listeners asked to do at lunch?',
+        options: ['Wear a name tag', 'Pay at the cafeteria', 'Go to Room C', 'Fill out a survey'],
+        why: '"Please wear your name tag, because only workshop guests will be served."',
+      },
+    ],
+  },
+  {
+    id: 'p4-award',
+    part: 4,
+    lines: [
+      n(
+        'Thank you all for coming to our annual awards dinner. Tonight, the Employee of the Year award goes to Angela Ruiz from our customer service team.'
+      ),
+      n(
+        'This year, Angela started a new online help service that answers customer questions in under five minutes. Since then, customer complaints have fallen by almost half.'
+      ),
+      n(
+        'Angela, please come up to the stage. And everyone, after the award, dessert will be served in the garden.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Where is the talk taking place?',
+        options: [
+          'At an awards dinner',
+          'At a job fair',
+          'At a training class',
+          'At a sales meeting',
+        ],
+        why: '"Thank you all for coming to our annual awards dinner."',
+      },
+      {
+        q: 'What did Angela Ruiz do this year?',
+        options: [
+          'Started a new help service',
+          'Opened a new store',
+          'Hired five new employees',
+          'Designed a company website',
+        ],
+        why: '"Angela started a new online help service". Câu sau nói kết quả: phàn nàn giảm gần một nửa.',
+      },
+      {
+        q: 'What will happen after the award?',
+        options: [
+          'Dessert will be served.',
+          'A video will be shown.',
+          'Angela will give a speech.',
+          'The guests will vote.',
+        ],
+        why: '"after the award, dessert will be served in the garden". Bẫy: Angela được mời lên sân khấu, nhưng không ai nói cô ấy sẽ phát biểu.',
       },
     ],
   },

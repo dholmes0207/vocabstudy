@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 3 và Part 4 lên 16 bài mỗi Part, mỗi Part 3 bài có bảng: thêm đơn văn phòng phẩm (có bảng), bãi đỗ xe đóng cửa, nhân viên mới, khách dời giờ họp; tin nhắn cửa hàng nội thất, bản tin thời tiết, lịch hội thảo đổi giờ (có bảng), lễ trao giải.',
+        'TOEIC Parts 3 and 4 now have 16 sets each, three of them with a graphic: a supplies order (with a graphic), a closing car park, a new trainee, a client moving a meeting; a furniture store voicemail, a weather report, a workshop schedule change (with a graphic) and an awards dinner.',
+      ],
+      [
         'Nghe hội thoại – câu hỏi có thêm 9 bài: HSK 3 lên 20 bài (mượn xe đạp, tủ lạnh trống, hỏi đường, tìm mũ, đổi lịch vì tuyết), HSK 2 lên 16 bài (vé máy bay, nghề của chị gái, chạy bộ, giờ mở cửa).',
         "The dialogue questions add nine sets: HSK 3 now has 20 (a lent bike, an empty fridge, asking the way, a lost hat, a trip moved for snow), HSK 2 has 16 (a plane ticket, a sister's job, morning runs, opening hours).",
       ],
