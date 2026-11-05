@@ -2246,6 +2246,127 @@ Paula Green`,
       },
     ],
   },
+  {
+    id: 'p7-hotel-booking',
+    part: 7,
+    passages: [
+      {
+        kind: AD,
+        text: `Seaside Inn — Spring Offer
+
+Standard room: $90 per night
+Sea-view room: $130 per night
+
+Stay three nights or more and get 15% off your total bill.
+Free breakfast for all guests. Parking: $10 per day.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: bookings@seasideinn.com
+From: Paul Rivera
+Subject: Reservation
+
+Hello,
+
+I would like to book a sea-view room for my wife and me from April 12 to April 14 (two nights). We will arrive by train, so we will not need a parking space.
+
+Could you also tell me if there is a restaurant near the hotel that is open late? Our train arrives at 9:30 p.m.
+
+Thank you,
+Paul Rivera`,
+      },
+    ],
+    questions: [
+      {
+        q: 'How much will Mr. Rivera most likely pay for his room?',
+        options: ['$260', '$221', '$180', '$270'],
+        why: 'Ghép hai đoạn: phòng nhìn ra biển $130 một đêm, ở hai đêm là $260. Chỉ ở từ ba đêm mới được giảm 15%, nên $221 là bẫy.',
+      },
+      {
+        q: 'Why will Mr. Rivera not pay for parking?',
+        options: [
+          'He will travel by train.',
+          'Parking is free for guests.',
+          'He booked a sea-view room.',
+          'He is staying three nights.',
+        ],
+        why: '"We will arrive by train, so we will not need a parking space." Quảng cáo ghi đỗ xe $10 một ngày, không miễn phí.',
+      },
+      {
+        q: 'What does Mr. Rivera ask about?',
+        options: [
+          'A place to eat late in the evening',
+          'A discount for long stays',
+          'The time breakfast is served',
+          'A train schedule',
+        ],
+        why: '"is there a restaurant near the hotel that is open late?" vì tàu đến lúc 9:30 tối.',
+      },
+    ],
+  },
+  {
+    id: 'p7-job-schedule',
+    part: 7,
+    passages: [
+      {
+        kind: JOB,
+        text: `Part-Time Sales Assistant — Lakeview Bookstore
+
+We are looking for a friendly sales assistant to work 20 hours a week, mainly on weekends. Duties include helping customers, arranging books on shelves, and using the cash register.
+
+Experience in retail is helpful but not required. Applicants must be available on Saturdays and Sundays.
+
+Please send your résumé to Ms. Ito at jobs@lakeviewbooks.com.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: jobs@lakeviewbooks.com
+From: Sam Wilson
+Subject: Sales assistant position
+
+Dear Ms. Ito,
+
+I am writing to apply for the part-time sales assistant position. I am a university student studying literature, and I worked at a café for two years, so I am used to serving customers.
+
+I have classes on weekday mornings, but I am free every weekend and on weekday evenings after 5 p.m. My résumé is attached.
+
+Best regards,
+Sam Wilson`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is NOT mentioned as a duty of the job?',
+        options: [
+          'Ordering new books',
+          'Helping customers',
+          'Arranging books',
+          'Using the cash register',
+        ],
+        why: 'Câu NOT: tin tuyển dụng liệt kê giúp khách, xếp sách, dùng máy tính tiền. Đặt sách mới không được nhắc.',
+      },
+      {
+        q: 'Why does Mr. Wilson mention the café?',
+        options: [
+          'To show he has experience with customers',
+          'To explain why he cannot work on weekends',
+          'To ask for a higher salary',
+          'To suggest a place to meet',
+        ],
+        why: '"I worked at a café for two years, so I am used to serving customers": nêu kinh nghiệm phục vụ khách.',
+      },
+      {
+        q: 'What requirement of the job does Mr. Wilson meet?',
+        options: [
+          'He is free on weekends.',
+          'He has worked in a bookstore.',
+          'He can work weekday mornings.',
+          'He has studied business.',
+        ],
+        why: 'Ghép hai đoạn: tin tuyển dụng bắt buộc rảnh thứ Bảy và Chủ nhật; Sam viết "I am free every weekend". Sáng các ngày thường anh ấy có lớp.',
+      },
+    ],
+  },
 ]
 
 export interface ShuffledQuestion extends ReadingQuestion {
