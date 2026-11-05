@@ -1592,6 +1592,144 @@ Mark Ellis (2:18): No problem. It’s a bit heavy, so I’ll ask Tom to help me.
     ],
   },
 
+  {
+    id: 'p7-bike-share',
+    part: 7,
+    passages: [
+      {
+        kind: ARTICLE,
+        text: `City Bike Share Expands
+
+The city's bike share program will add 40 new stations next month, bringing the total to 120. Most of the new stations will be near train stations and universities, where demand has grown the fastest.
+
+Since the program began two years ago, riders have taken more than one million trips. "Many people now ride a bike for the last part of their trip to work," said program manager Ana Silva.
+
+A single ride still costs $2, but a new monthly pass for $20 will be offered starting in June.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the article mainly about?',
+        options: [
+          'The growth of a bike share program',
+          'A new train line',
+          'The opening of a university',
+          'A rise in bus fares',
+        ],
+        why: 'Tiêu đề và câu đầu: chương trình xe đạp công cộng thêm 40 trạm mới.',
+      },
+      {
+        q: 'Where will most of the new stations be?',
+        options: [
+          'Near train stations and universities',
+          'In shopping centers',
+          'Next to parks',
+          'Outside the city',
+        ],
+        why: '"Most of the new stations will be near train stations and universities".',
+      },
+      {
+        q: 'What will change in June?',
+        options: [
+          'A monthly pass will be available.',
+          'A single ride will cost more.',
+          'The program will stop.',
+          'Forty stations will close.',
+        ],
+        why: '"a new monthly pass for $20 will be offered starting in June". Giá một lượt "still costs $2", không đổi.',
+      },
+    ],
+  },
+  {
+    id: 'p7-printer-notice',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Important: Printing Changes
+
+From Monday, all printers on the 3rd and 4th floors will require an employee ID card. Simply hold your card near the printer to release your document.
+
+This change will help reduce paper waste, since documents that are never collected will be deleted after 24 hours. It will also keep private documents more secure.
+
+If your card does not work with the printers, please visit the IT help desk in Room 105.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What will employees need to print documents?',
+        options: ['An ID card', 'A password', 'A new computer', 'Permission from a manager'],
+        why: '"all printers… will require an employee ID card".',
+      },
+      {
+        q: 'What is one reason for the change?',
+        options: [
+          'To reduce paper waste',
+          'To save electricity',
+          'To speed up printing',
+          'To replace old printers',
+        ],
+        why: '"This change will help reduce paper waste". Lý do thứ hai là giữ tài liệu riêng an toàn hơn.',
+      },
+      {
+        q: 'What happens to documents that are not collected?',
+        options: [
+          'They are deleted after a day.',
+          'They are sent to the IT desk.',
+          'They are printed on the 4th floor.',
+          'They are kept for a week.',
+        ],
+        why: '"documents that are never collected will be deleted after 24 hours": sau một ngày.',
+      },
+    ],
+  },
+  {
+    id: 'p7-team-lunch-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Olivia Grant (11:05): Hi all, the team lunch on Friday is confirmed for 12:30 at Rosa's Kitchen.
+Daniel Wu (11:07): Great. Is it the one on Pine Street or the new one by the station?
+Olivia Grant (11:08): The new one. It's bigger, and they have a private room for groups.
+Mia Torres (11:10): I have a client call until 12:45. I'll come right after.
+Olivia Grant (11:11): No problem. I'll order for you if you tell me what you'd like.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Where will the team have lunch?',
+        options: [
+          'At a restaurant near the station',
+          'At a restaurant on Pine Street',
+          'In the office',
+          'At a client’s office',
+        ],
+        why: 'Daniel hỏi quán ở Pine Street hay quán mới cạnh nhà ga; Olivia đáp "The new one", tức là quán cạnh nhà ga.',
+      },
+      {
+        q: 'Why will Ms. Torres be late?',
+        options: [
+          'She has a call with a client.',
+          'She is driving from the station.',
+          'She has to order food.',
+          'She forgot about the lunch.',
+        ],
+        why: '"I have a client call until 12:45."',
+      },
+      {
+        q: 'At 11:11, what does Ms. Grant offer to do?',
+        options: [
+          'Order food for Ms. Torres',
+          'Change the time of the lunch',
+          'Book a bigger room',
+          'Call the client',
+        ],
+        why: '"I\'ll order for you if you tell me what you\'d like": gọi món giúp Mia.',
+      },
+    ],
+  },
+
   // -------------------------------------------------------- Part 7, double
   {
     id: 'p7-rooms',

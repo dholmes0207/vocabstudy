@@ -200,7 +200,7 @@ Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 101
-    câu ngữ pháp và câu nghĩa từ, Part 6 24 đoạn, Part 7 30 bài (11 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 24 đoạn, Part 7 33 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -799,3 +799,9 @@ keep + tân ngữ + tính từ, in advance, thanks to, be well organized.
 
 `PICTURE_DIALOGUES` từ 20 lên 24 bài (test giữ mức này): trà nóng, vé, sách mới, quần áo mới. Bỏ bài về
 hoa vì 花 không nằm trong từ HSK 1–2 (test chữ Hán bắt được), thay bằng vé.
+
+### Thêm bài Part 7 (05/11/2026, đợt bốn)
+
+Part 7 từ 30 lên 33 bài: 22 bài một đoạn, 11 bài hai đoạn (test giữ mức này). Bài báo xe đạp công cộng
+(bẫy: giá một lượt "still costs $2", không đổi), thông báo in bằng thẻ nhân viên (hai lý do, câu hỏi lấy
+lý do thứ nhất), tin nhắn hẹn ăn trưa (phải ghép câu hỏi của Daniel với câu đáp "The new one").
