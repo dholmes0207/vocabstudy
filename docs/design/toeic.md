@@ -200,7 +200,7 @@ Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
-    câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 25 bài (9 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 28 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -716,3 +716,9 @@ disappointing / disappointed, look forward to + V-ing, danh từ tập hợp sta
 
 `PICTURE_DIALOGUES` từ 16 lên 20 bài (test giữ mức này): thuốc, báo, mì, ghế. Lời thoại tránh các từ có
 tranh khác (咖啡 khi nói về buổi sáng, 公共汽车 khi nói lúc đi đường). Test chữ Hán bắt được 拿 và 把.
+
+### Thêm bài Part 7 (05/11/2026, đợt ba)
+
+Part 7 từ 25 lên 28 bài: 19 bài một đoạn, 9 bài hai đoạn (test giữ mức này). Thông báo phòng tập mới
+(bẫy: tủ đồ có sẵn nên không cần mang khoá), đánh giá nhà hàng (lời khen trước, phàn nàn sau "The only
+problem"), tin nhắn nhận hộ gói hàng (câu ý nghĩa "The door isn’t locked").

@@ -1292,6 +1292,137 @@ Nina Ross (10:09): Perfect. I’ll ask Ken to help you carry them.`,
     ],
   },
 
+  {
+    id: 'p7-gym-memo',
+    part: 7,
+    passages: [
+      {
+        kind: MEMO,
+        text: `To: All employees
+From: Facilities Department
+Date: October 2
+Subject: New fitness room
+
+We are pleased to announce that the new fitness room on the second floor will open on Monday, October 9. The room has treadmills, bicycles, and a small area for stretching.
+
+The room will be open from 7 a.m. to 9 p.m. on weekdays. To use it, employees must first attend a 15-minute safety talk, held every Monday and Thursday at noon in Room 204.
+
+Showers and lockers are available next to the room. Please bring your own towel.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the memo?',
+        options: [
+          'To announce a new facility',
+          'To change working hours',
+          'To invite staff to a sports event',
+          'To ask for volunteers',
+        ],
+        why: '"the new fitness room on the second floor will open": thông báo phòng tập mới, viết lại thành "a new facility".',
+      },
+      {
+        q: 'What must employees do before using the room?',
+        options: [
+          'Attend a short safety talk',
+          'Pay a monthly fee',
+          'Book a time online',
+          'Get a doctor’s note',
+        ],
+        why: '"employees must first attend a 15-minute safety talk". must là dấu hiệu của điều bắt buộc.',
+      },
+      {
+        q: 'What are employees asked to bring?',
+        options: ['A towel', 'A lock', 'Their ID card', 'A water bottle'],
+        why: '"Please bring your own towel." Tủ đồ (lockers) đã có sẵn nên A lock là bẫy.',
+      },
+    ],
+  },
+  {
+    id: 'p7-review-cafe',
+    part: 7,
+    passages: [
+      {
+        kind: REVIEW,
+        text: `★★★★☆ Great place for a business lunch
+
+I took two clients to Marino’s Kitchen last Tuesday. The pasta was excellent, and the staff were friendly and helpful. They even found us a quiet table at the back so we could talk about our project.
+
+The only problem was the wait. Our main dishes took almost 40 minutes to arrive, although the restaurant was not very busy. I would still recommend Marino’s, but I suggest calling ahead to order if you are short on time.
+
+— Laura Kim`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Ms. Kim go to the restaurant?',
+        options: [
+          'To have a meeting with clients',
+          'To celebrate a birthday',
+          'To interview a chef',
+          'To try a new pasta dish',
+        ],
+        why: '"I took two clients to Marino’s Kitchen… so we could talk about our project": bữa trưa công việc với khách.',
+      },
+      {
+        q: 'What does Ms. Kim complain about?',
+        options: ['Slow service', 'High prices', 'Noisy tables', 'Unfriendly staff'],
+        why: '"The only problem was the wait… almost 40 minutes": món lên chậm. Nhân viên được khen thân thiện, bàn yên tĩnh.',
+      },
+      {
+        q: 'What does Ms. Kim suggest?',
+        options: [
+          'Ordering in advance by phone',
+          'Going on a busy day',
+          'Sitting at the front',
+          'Choosing a different restaurant',
+        ],
+        why: '"I suggest calling ahead to order": gọi điện đặt món trước, viết lại thành "Ordering in advance by phone".',
+      },
+    ],
+  },
+  {
+    id: 'p7-package-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Mark Ellis (2:14): Hi Jenny, a courier just left a large package for you at the front desk.
+Jenny Park (2:15): Thanks! That must be the samples from our supplier. Can you keep it there until 4?
+Mark Ellis (2:16): I’m leaving at 3 today. Shall I put it in your office instead?
+Jenny Park (2:17): That would be great. The door isn’t locked.
+Mark Ellis (2:18): No problem. It’s a bit heavy, so I’ll ask Tom to help me.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is most likely in the package?',
+        options: ['Product samples', 'Office furniture', 'Printed reports', 'Company uniforms'],
+        why: '"That must be the samples from our supplier": hàng mẫu từ nhà cung cấp.',
+      },
+      {
+        q: 'At 2:17, what does Ms. Park mean when she writes, "The door isn’t locked"?',
+        options: [
+          'Mr. Ellis can enter her office.',
+          'She forgot to lock her office.',
+          'The front desk is open.',
+          'Someone broke the lock.',
+        ],
+        why: 'Câu ý nghĩa: Mark hỏi có nên để gói hàng vào văn phòng của cô không, cô đồng ý và cho biết cửa không khoá, tức là anh vào được.',
+      },
+      {
+        q: 'Why will Mr. Ellis ask Tom for help?',
+        options: [
+          'The package is heavy.',
+          'He does not know the way.',
+          'He has to leave at 2.',
+          'Tom has the office key.',
+        ],
+        why: '"It’s a bit heavy, so I’ll ask Tom to help me." Lý do đứng trước so.',
+      },
+    ],
+  },
+
   // -------------------------------------------------------- Part 7, double
   {
     id: 'p7-rooms',
