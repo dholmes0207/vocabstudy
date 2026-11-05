@@ -244,6 +244,94 @@ export const PART1_BANK: readonly Part1Item[] = [
     ],
     'bringing food to a table = mang món ăn ra bàn. Các câu kia có người hoặc việc không có trong tranh.'
   ),
+  item(
+    '🧍📚🔝',
+    'Một người đàn ông đang với tay lấy sách trên kệ cao.',
+    [
+      'He’s reaching for a book on a shelf.',
+      'He’s reading a book at a desk.',
+      'He’s putting books into a box.',
+      'Some books are lying on the floor.',
+    ],
+    'reaching for = với tay lấy. "reading at a desk" sai vì anh ấy đang đứng ở kệ, không ngồi đọc.'
+  ),
+  item(
+    '🪑🪑🪑🪑🎤',
+    'Hàng ghế xếp thẳng hàng trước một sân khấu, chưa có ai ngồi.',
+    [
+      'Chairs have been arranged in rows.',
+      'People are sitting in the audience.',
+      'A man is speaking on a stage.',
+      'Some chairs are being folded.',
+    ],
+    'have been arranged = đã được xếp (xong rồi). Tranh không có người nên câu về khán giả và người nói đều sai.'
+  ),
+  item(
+    '🧑‍🔧💻🛠️',
+    'Một kỹ thuật viên đang sửa máy tính xách tay.',
+    [
+      'A laptop is being repaired.',
+      'A laptop is being packed into a bag.',
+      'A technician is talking on the phone.',
+      'Some laptops are on display in a store.',
+    ],
+    'is being repaired = đang được sửa. "being packed" đúng đồ vật nhưng sai hành động, kiểu bẫy hay gặp.'
+  ),
+  item(
+    '👫🚶🌳',
+    'Hai người đang đi bộ dọc theo con đường trong công viên.',
+    [
+      'They’re walking along a path.',
+      'They’re sitting on a bench.',
+      'They’re planting some trees.',
+      'They’re crossing a busy street.',
+    ],
+    'walking along a path = đi dọc theo lối đi. "planting trees" dùng đúng từ trees trong tranh nhưng sai hành động.'
+  ),
+  item(
+    '🧑‍💼🤝🧑‍💼',
+    'Hai người mặc vest đang bắt tay nhau.',
+    [
+      'They’re shaking hands.',
+      'They’re signing a contract.',
+      'They’re waving goodbye.',
+      'They’re exchanging business cards.',
+    ],
+    'shaking hands = bắt tay. Ba câu kia đều là việc hay đi kèm cuộc gặp nhưng không có trong tranh.'
+  ),
+  item(
+    '🍽️🍷🕯️',
+    'Một bàn ăn đã được bày sẵn đĩa, ly và nến, chưa có khách.',
+    [
+      'A table has been set for a meal.',
+      'Some diners are eating dinner.',
+      'A waiter is clearing the table.',
+      'Some candles are being lit.',
+    ],
+    'has been set = đã được bày sẵn. "clearing the table" (dọn bàn) là việc ngược lại, và tranh không có người.'
+  ),
+  item(
+    '🧑‍🔬🔬',
+    'Một nhà khoa học đang nhìn vào kính hiển vi.',
+    [
+      'She’s looking into a microscope.',
+      'She’s cleaning a microscope.',
+      'She’s writing in a notebook.',
+      'She’s putting on a lab coat.',
+    ],
+    'looking into a microscope = nhìn vào kính hiển vi. "cleaning a microscope" đúng đồ vật, sai hành động.'
+  ),
+  item(
+    '🏠🌊⛵',
+    'Một ngôi nhà nằm bên bờ nước, có thuyền buồm ở xa.',
+    [
+      'A house overlooks the water.',
+      'A boat is being pulled onto the shore.',
+      'Some people are swimming near a boat.',
+      'A house is under construction.',
+    ],
+    'overlook = nhìn ra (cảnh), từ hay gặp trong Part 1 khi tả nhà, cửa sổ. Tranh không có người và nhà đã xây xong.'
+  ),
 ]
 
 /** Items in one round, as many as Part 1 has on the test. */
