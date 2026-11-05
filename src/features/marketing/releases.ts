@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK 3 đọc đoạn văn ngắn lên 15 đoạn: thêm thời tiết nhiều gió, thang máy hỏng, ôn thi, giúp hàng xóm, quán ăn phải đợi lâu.',
+        'HSK 3 short passages now number 15: windy winters, a broken lift, exam night, helping a neighbour and a slow restaurant.',
+      ],
+      [
         'TOEIC Part 6 lên 16 đoạn: thêm thông báo nộp chi phí công tác trực tuyến, email chuyển văn phòng, thông báo bảo trì ngân hàng trực tuyến, thư nhắc gia hạn tạp chí.',
         'TOEIC Part 6 now has 16 texts: an online expense report memo, an office move e-mail, an online banking maintenance notice and a subscription renewal letter.',
       ],
