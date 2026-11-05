@@ -787,6 +787,81 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['坐公共汽车', '骑自行车', '走路'],
     why: '"不了，我坐公共汽车去": không đạp xe nữa, đi xe buýt. Bẫy: 自行车 nghe thấy trong câu hỏi.',
   },
+  {
+    id: 'birthday-cake',
+    level: 'hsk3',
+    lines: [
+      w('明天是小李的生日，我们送他什么？', 'Mai là sinh nhật Tiểu Lý, mình tặng cậu ấy gì?'),
+      m(
+        '他最喜欢吃甜的，我们去买个蛋糕吧，再写几句祝他生日快乐的话。',
+        'Cậu ấy thích ăn đồ ngọt nhất, mình đi mua một cái bánh kem đi, viết thêm mấy câu chúc sinh nhật.'
+      ),
+    ],
+    q: '他们打算送小李什么？',
+    qVi: 'Họ định tặng Tiểu Lý gì?',
+    options: ['蛋糕', '书', '花'],
+    why: '"我们去买个蛋糕吧": mua bánh kem, vì cậu ấy thích đồ ngọt.',
+  },
+  {
+    id: 'library-close',
+    level: 'hsk3',
+    lines: [
+      m('现在几点了？我想去还书。', 'Giờ mấy giờ rồi? Tôi muốn đi trả sách.'),
+      w(
+        '快五点了，可是今天是星期六，下午四点就关门了，你明天再去吧。',
+        'Gần năm giờ rồi, nhưng hôm nay thứ Bảy, bốn giờ chiều đã đóng cửa, mai anh hãy đi.'
+      ),
+    ],
+    q: '男的今天为什么不能去还书？',
+    qVi: 'Vì sao hôm nay người nam không thể đi trả sách?',
+    options: ['已经关门了', '书找不到了', '他太忙了'],
+    why: 'Thứ Bảy bốn giờ đã đóng cửa, mà bây giờ gần năm giờ. Bẫy: 五点 là giờ hiện tại, không phải giờ đóng cửa.',
+  },
+  {
+    id: 'move-house',
+    level: 'hsk3',
+    lines: [
+      w('听说你要搬家了？', 'Nghe nói anh sắp chuyển nhà à?'),
+      m(
+        '对，新家离公司很近，走路只要十分钟，以后不用每天早上坐地铁了。',
+        'Đúng, nhà mới gần công ty, đi bộ chỉ mười phút, sau này không phải sáng nào cũng đi tàu điện ngầm nữa.'
+      ),
+    ],
+    q: '男的为什么要搬家？',
+    qVi: 'Vì sao người nam chuyển nhà?',
+    options: ['离公司近', '房子更大', '地铁站很近'],
+    why: '"新家离公司很近": nhà mới gần công ty. Sau này không cần đi tàu điện ngầm nữa, nên "地铁站很近" là bẫy.',
+  },
+  {
+    id: 'cold-weather',
+    level: 'hsk3',
+    lines: [
+      m('外面刮大风，你就穿这么少？', 'Ngoài trời gió to, chị mặc ít thế à?'),
+      w(
+        '我只是去楼下拿个东西，马上就回来，不会感冒的。',
+        'Tôi chỉ xuống dưới lầu lấy đồ, về ngay thôi, không bị cảm đâu.'
+      ),
+    ],
+    q: '女的要去做什么？',
+    qVi: 'Người nữ định đi làm gì?',
+    options: ['去楼下拿东西', '去看医生', '去公园跑步'],
+    why: '"我只是去楼下拿个东西": chỉ xuống lầu lấy đồ. 只是 cho thấy việc nhỏ, nhanh.',
+  },
+  {
+    id: 'exam-result',
+    level: 'hsk3',
+    lines: [
+      w('你的考试成绩出来了吗？', 'Kết quả thi của anh có chưa?'),
+      m(
+        '出来了，比我想的好，数学考了九十分，只是英语差了一点儿。',
+        'Có rồi, tốt hơn tôi nghĩ, toán được chín mươi điểm, chỉ là tiếng Anh kém một chút.'
+      ),
+    ],
+    q: '男的哪门课考得不太好？',
+    qVi: 'Môn nào người nam thi không tốt lắm?',
+    options: ['英语', '数学', '历史'],
+    why: '"只是英语差了一点儿": chỉ có tiếng Anh kém một chút. 只是 ở đây nêu điểm chưa tốt.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
