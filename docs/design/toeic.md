@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 40 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
+  - Nội dung: Part 1 40 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 119
     câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 36 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -878,3 +878,13 @@ vào cốp taxi, ghế dài công viên không người (unoccupied), bác sĩ k
 
 `HSK_DIALOGUES` HSK 2 từ 28 lên 32 bài (test giữ mức này): mấy giờ ăn tối (bẫy giờ tan làm), mua sữa và trứng,
 phòng của chị gái (下个月 và 下个星期), chạy bộ buổi sáng. Test chữ Hán bắt được 然 (然后), đã viết lại câu.
+
+### Thêm bài Part 3 và Part 4 (05/11/2026, đợt năm)
+
+Mỗi Part từ 20 lên 22 bài (test giữ mức này), Part 3 có 5 bài kèm bảng.
+
+- **Part 3:** đặt phòng họp cho buổi thuyết trình (có bảng phòng: số ghế, máy chiếu; loại phòng quá nhỏ và quá
+  lớn để ra phòng B), quên thẻ ra vào ở nhà (thẻ khách tạm, mất thẻ thì mang ảnh để làm thẻ mới).
+- **Part 4:** lời nhắn thư viện đóng cửa sửa sang (trả sách ở hộp cạnh cửa hông, tuần này không tính phí trả
+  muộn), giới thiệu tham quan nhà máy nước ép (đeo kính bảo hộ, cấm chụp ảnh phòng đóng chai, cuối buổi thử vị
+  mới).
