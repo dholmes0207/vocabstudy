@@ -21,6 +21,10 @@ export const RELEASES: Release[] = [
         'TOEIC Part 7 now has 28 sets (19 single): a new fitness room memo, a restaurant review and a chat about a package.',
       ],
       [
+        'HSK 2 nghe hội thoại – chọn tranh lên 20 bài: thêm thuốc, báo, mì, ghế.',
+        'HSK 2 picture dialogues now have 20 sets: medicine, a newspaper, noodles and chairs.',
+      ],
+      [
         'TOEIC Part 6 lên 20 đoạn: thêm thông báo tình nguyện dọn công viên, thư báo tăng phí giao hàng, email chào nhân viên mới, thông báo thẻ thư viện mới.',
         'TOEIC Part 6 now has 20 texts: a park clean-up notice, a delivery fee letter, a welcome e-mail for a new employee and a new library card notice.',
       ],
