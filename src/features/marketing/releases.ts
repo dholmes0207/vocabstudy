@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Nghe hội thoại – câu hỏi thêm 9 bài nữa: HSK 3 lên 25 bài (máy tính mất mạng, học nấu ăn từ bà, chuyến bay đổi giờ, lớp đổi phòng, chọn quà cho bố), HSK 2 lên 20 bài (nghỉ ở nhà thứ Bảy, giá vé trẻ em, cà phê buổi tối, nhà mới gần công ty).',
+        "The dialogue questions add nine more sets: HSK 3 now has 25 (no internet, cooking learnt from grandma, a changed flight, a new classroom, a gift for dad), HSK 2 has 20 (a Saturday at home, a child's ticket, coffee at night, a new home near work).",
+      ],
+      [
         'TOEIC Part 5 lên 91 câu ngữ pháp: thêm liên từ (because, unless, while, not only… but also), nghĩa của từ (experience, follow, delivered, offers) và dạng động từ (hiện tại tiếp diễn, bị động quá khứ). Mỗi dạng có ít nhất 13 câu.',
         'TOEIC Part 5 now has 91 grammar questions, adding conjunctions (because, unless, while, not only… but also), word meanings (experience, follow, delivered, offers) and verb forms (present continuous, past passive). Every kind has at least 13.',
       ],

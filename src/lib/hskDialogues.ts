@@ -517,6 +517,141 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['八点五十', '九点', '九点十分'],
     why: '"现在是八点五十": bây giờ là tám giờ năm mươi. Bẫy: 九点 là giờ mở cửa.',
   },
+  {
+    id: 'computer-broken',
+    level: 'hsk3',
+    lines: [
+      w('你的电脑怎么了？一直在看它。', 'Máy tính của anh sao thế? Cứ nhìn nó mãi.'),
+      m(
+        '它突然不能上网了，我下午还要给经理发邮件呢。',
+        'Nó bỗng không vào mạng được, chiều nay tôi còn phải gửi email cho giám đốc.'
+      ),
+    ],
+    q: '男的的电脑有什么问题？',
+    qVi: 'Máy tính của người nam có vấn đề gì?',
+    options: ['不能上网', '太旧了', '不能打字'],
+    why: '"突然不能上网了": bỗng không vào mạng được. Gửi email là việc anh ấy cần làm, không phải vấn đề.',
+  },
+  {
+    id: 'kitchen',
+    level: 'hsk3',
+    lines: [
+      m('你做的菜真好吃，是跟谁学的？', 'Món chị nấu ngon thật, chị học ai vậy?'),
+      w(
+        '我奶奶。我小时候经常在厨房看她做饭。',
+        'Bà tôi. Hồi nhỏ tôi hay ở trong bếp xem bà nấu ăn.'
+      ),
+    ],
+    q: '女的做饭是跟谁学的？',
+    qVi: 'Người nữ học nấu ăn từ ai?',
+    options: ['奶奶', '妈妈', '老师'],
+    why: '"我奶奶": bà. Câu sau kể chuyện hồi nhỏ xem bà nấu ăn ở bếp.',
+  },
+  {
+    id: 'flight-change',
+    level: 'hsk3',
+    lines: [
+      w(
+        '你不是明天早上的飞机吗？怎么今天就去机场了？',
+        'Không phải anh bay sáng mai sao? Sao hôm nay đã ra sân bay rồi?'
+      ),
+      m(
+        '明天有大雪，飞机的时间变了，我只好今天晚上走。',
+        'Mai có tuyết lớn, giờ bay đã đổi, tôi đành đi tối nay.'
+      ),
+    ],
+    q: '男的什么时候走？',
+    qVi: 'Người nam đi khi nào?',
+    options: ['今天晚上', '明天早上', '明天晚上'],
+    why: '"我只好今天晚上走": đành đi tối nay. Bẫy: 明天早上 là giờ bay cũ.',
+  },
+  {
+    id: 'class-room',
+    level: 'hsk3',
+    lines: [
+      m('请问，汉语课还在三号教室吗？', 'Xin hỏi, lớp tiếng Trung vẫn ở phòng số 3 à?'),
+      w(
+        '不在了，从这个星期开始换到二楼的八号教室了。',
+        'Không còn nữa, từ tuần này đổi sang phòng số 8 ở tầng hai rồi.'
+      ),
+    ],
+    q: '汉语课现在在哪个教室？',
+    qVi: 'Lớp tiếng Trung giờ ở phòng nào?',
+    options: ['八号教室', '三号教室', '二号教室'],
+    why: '"换到二楼的八号教室了": đổi sang phòng số 8. 三号 là phòng cũ; 二 là số tầng, không phải số phòng.',
+  },
+  {
+    id: 'gift-choice',
+    level: 'hsk3',
+    lines: [
+      w(
+        '下个星期是爸爸的生日，送他什么好呢？',
+        'Tuần sau là sinh nhật bố, tặng bố gì thì hay nhỉ?'
+      ),
+      m(
+        '他最近总说眼睛不舒服，我们给他买一个新的电脑吧，大一点儿的。',
+        'Dạo này bố hay kêu mỏi mắt, mình mua cho bố cái máy tính mới đi, loại to hơn chút.'
+      ),
+    ],
+    q: '他们可能给爸爸买什么？',
+    qVi: 'Họ có thể mua gì cho bố?',
+    options: ['电脑', '眼镜', '手表'],
+    why: '"给他买一个新的电脑吧": mua máy tính mới. Bẫy: nghe 眼睛 dễ chọn 眼镜.',
+  },
+  {
+    id: 'weekend-plan',
+    level: 'hsk2',
+    lines: [
+      m('这个星期六你想做什么？', 'Thứ Bảy này chị muốn làm gì?'),
+      w('我想在家休息，上个星期太累了。', 'Tôi muốn ở nhà nghỉ, tuần trước mệt quá.'),
+    ],
+    q: '女的这个星期六想做什么？',
+    qVi: 'Thứ Bảy này người nữ muốn làm gì?',
+    options: ['在家休息', '去旅游', '去朋友家'],
+    why: '"我想在家休息": muốn ở nhà nghỉ. Tuần trước mệt là lý do.',
+  },
+  {
+    id: 'train-ticket',
+    level: 'hsk2',
+    lines: [
+      w('去北京的票多少钱一张？', 'Vé đi Bắc Kinh bao nhiêu tiền một vé?'),
+      m('一百五十块，孩子的票是七十五块。', 'Một trăm năm mươi tệ, vé trẻ em là bảy mươi lăm tệ.'),
+    ],
+    q: '一张孩子的票多少钱？',
+    qVi: 'Một vé trẻ em bao nhiêu tiền?',
+    options: ['七十五块', '一百五十块', '一百块'],
+    why: '"孩子的票是七十五块". Bẫy: 一百五十块 là giá vé người lớn, nghe trước.',
+  },
+  {
+    id: 'coffee-sleep',
+    level: 'hsk2',
+    lines: [
+      m('你要不要喝杯咖啡？', 'Chị có muốn uống cốc cà phê không?'),
+      w(
+        '不了，现在已经晚上了，喝咖啡我会睡不着。',
+        'Thôi, giờ đã tối rồi, uống cà phê tôi sẽ không ngủ được.'
+      ),
+    ],
+    q: '女的为什么不喝咖啡？',
+    qVi: 'Vì sao người nữ không uống cà phê?',
+    options: ['会睡不着', '不喜欢咖啡', '已经喝了'],
+    why: '"喝咖啡我会睡不着": uống cà phê sẽ không ngủ được. Không ai nói cô ấy không thích.',
+  },
+  {
+    id: 'new-house',
+    level: 'hsk2',
+    lines: [
+      w('你的新家离公司远吗？', 'Nhà mới của anh có xa công ty không?'),
+      m(
+        '不远，坐公共汽车二十分钟就到，比以前近多了。',
+        'Không xa, đi xe buýt hai mươi phút là tới, gần hơn trước nhiều.'
+      ),
+    ],
+    q: '男的怎么去公司？',
+    qVi: 'Người nam đến công ty bằng gì?',
+    options: ['坐公共汽车', '开车', '走路'],
+    why: '"坐公共汽车二十分钟就到": đi xe buýt. 二十分钟 là thời gian, không phải cách đi.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {

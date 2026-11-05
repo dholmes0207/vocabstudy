@@ -681,3 +681,9 @@ Part 7 từ 20 lên 25 bài: 16 bài một đoạn, 9 bài hai đoạn (test gi�
 lên 15, thì và dạng động từ từ 14 lên 16. Test giữ mỗi dạng ít nhất 13 câu. Câu nghĩa của từ dùng bốn
 từ trông giống nhau (experience, experiment, expert, expense) hoặc cùng chủ đề nhưng sai kết hợp (attend
 the rules, arrived to).
+
+### Thêm hội thoại HSK (05/11/2026, đợt hai)
+
+`HSK_DIALOGUES` thêm 9 bài: HSK 3 từ 20 lên 25, HSK 2 từ 16 lên 20 (test giữ mức mới). Bẫy dựa vào chi
+tiết nghe trước rồi bị đổi (giờ bay cũ, phòng học cũ, giá vé người lớn) và từ nghe gần giống (眼睛 và
+眼镜). Test chữ Hán bắt được 航, 零, 屏, 幕, 怕, và 周末 ở HSK 2 (đổi thành 星期六).
