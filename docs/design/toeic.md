@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 101
+  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 101
     câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 30 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -781,3 +781,10 @@ Part 7 từ 28 lên 30 bài: 19 bài một đoạn, 11 bài hai đoạn (test gi
 `HSK3_READINGS` từ 20 lên 25 đoạn (test giữ mức này): vườn hoa nhà bà, máy bay trễ vì tuyết (因为…), lớp
 tiếng Anh tối thứ Ba và thứ Năm (đếm số buổi), mua áo trên mạng (so sánh giá rồi 所以…), quên chìa khoá
 (只好). Test chữ Hán bắt được 聊 và 火 (火车, đổi thành 飞机).
+
+### Thêm bài Part 3 và Part 4 (05/11/2026, đợt ba)
+
+Part 3 và Part 4 từ 18 lên 20 bài mỗi Part (test giữ mức này): mượn phòng họp (màn hình hỏng nhưng chỉ là
+cuộc gọi), nhà cung cấp giao giấy trễ (chọn nhà cung cấp đắt hơn để kịp hạn); thông báo diễn tập phòng
+cháy (câu "not to do" tìm Do not), mở đầu chương trình phỏng vấn (đáp án viết lại "people who run their
+own companies" thành "business owners").
