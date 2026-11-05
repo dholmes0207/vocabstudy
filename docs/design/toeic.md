@@ -632,3 +632,9 @@ chuyển văn phòng, thông báo bảo trì ngân hàng trực tuyến, thư nh
   bản giấy, tự chuyển máy khi đội IT sẽ chuyển).
 - Câu từ loại: through + hệ thống, quá khứ phân từ rút gọn (boxes provided), will be + V-ing, until +
   mệnh đề, please + động từ nguyên mẫu (please disregard).
+
+### Thêm đoạn văn HSK 3 (05/11/2026)
+
+`HSK3_READINGS` từ 10 lên 15 đoạn (test giữ mức này): mùa đông nhiều gió (虽然…但是…), thang máy hỏng
+(累得…, bổ ngữ mức độ), đêm trước kỳ thi (看来…才…), giúp hàng xóm, quán ăn phải đợi lâu (câu khen
+món ngon là bẫy). Test chữ Hán bắt được 陪 và 聊 (陪他聊聊天, đổi thành 和他一起看电视).
