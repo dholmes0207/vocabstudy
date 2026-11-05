@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 40 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 32 bài, HSK 3 40 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
     22 cặp mỗi cấp; đoạn văn ngắn HSK 3 30 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -873,3 +873,8 @@ However, look forward to + V-ing, câu chèn kết ý đổi giờ).
 `PART1_BANK` từ 34 lên 40 cảnh (test giữ mức này): đạp xe trên đường, thợ làm bánh cho bánh vào lò, đặt va li
 vào cốp taxi, ghế dài công viên không người (unoccupied), bác sĩ khám cho em bé, thông báo đã ghim lên bảng tin
 (have been posted). Hai cảnh không có người luyện bẫy "is being + V3" (cần người làm).
+
+### Thêm hội thoại HSK 2 (05/11/2026, đợt năm)
+
+`HSK_DIALOGUES` HSK 2 từ 28 lên 32 bài (test giữ mức này): mấy giờ ăn tối (bẫy giờ tan làm), mua sữa và trứng,
+phòng của chị gái (下个月 và 下个星期), chạy bộ buổi sáng. Test chữ Hán bắt được 然 (然后), đã viết lại câu.

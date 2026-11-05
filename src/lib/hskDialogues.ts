@@ -994,6 +994,60 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['公园', '家里', '医院'],
     why: '"我妈妈带它去公园了": mẹ dắt nó đi công viên. Lát nữa mới về nhà.',
   },
+  {
+    id: 'dinner-time',
+    level: 'hsk2',
+    lines: [
+      w('我们几点吃晚饭？', 'Mấy giờ chúng ta ăn tối?'),
+      m(
+        '七点吧，我六点下班，回家要一个小时。',
+        'Bảy giờ nhé, sáu giờ anh tan làm, về nhà mất một tiếng.'
+      ),
+    ],
+    q: '他们几点吃晚饭？',
+    qVi: 'Mấy giờ họ ăn tối?',
+    options: ['七点', '六点', '八点'],
+    why: '"七点吧": bảy giờ. Bẫy: 六点 là giờ tan làm, cộng thêm một tiếng về nhà mới là bảy giờ.',
+  },
+  {
+    id: 'buy-milk',
+    level: 'hsk2',
+    lines: [
+      m('你去商店买什么？', 'Em đi cửa hàng mua gì thế?'),
+      w('买牛奶和鸡蛋，家里没有了。', 'Mua sữa với trứng, ở nhà hết rồi.'),
+    ],
+    q: '女的去商店买什么？',
+    qVi: 'Người nữ đi cửa hàng mua gì?',
+    options: ['牛奶和鸡蛋', '苹果和西瓜', '米饭和茶'],
+    why: '"买牛奶和鸡蛋": mua sữa và trứng, vì ở nhà hết rồi.',
+  },
+  {
+    id: 'sister-room',
+    level: 'hsk2',
+    lines: [
+      w('这是谁的房间？', 'Đây là phòng của ai?'),
+      m(
+        '是我姐姐的，她去北京了，下个月回来。',
+        'Của chị gái tôi, chị ấy đi Bắc Kinh rồi, tháng sau mới về.'
+      ),
+    ],
+    q: '姐姐什么时候回来？',
+    qVi: 'Khi nào chị gái về?',
+    options: ['下个月', '明天', '下个星期'],
+    why: '"下个月回来": tháng sau về. Chú ý phân biệt 下个月 (tháng sau) với 下个星期 (tuần sau).',
+  },
+  {
+    id: 'morning-run',
+    level: 'hsk2',
+    lines: [
+      m('你每天早上做什么运动？', 'Sáng nào chị cũng tập môn gì?'),
+      w('我去跑步，每天跑四十分钟。', 'Tôi đi chạy bộ, mỗi ngày chạy bốn mươi phút.'),
+    ],
+    q: '女的每天早上做什么？',
+    qVi: 'Sáng nào người nữ cũng làm gì?',
+    options: ['跑步', '游泳', '打篮球'],
+    why: '"我去跑步": đi chạy bộ. 四十分钟 là thời gian chạy mỗi ngày.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
