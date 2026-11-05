@@ -862,6 +862,66 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['英语', '数学', '历史'],
     why: '"只是英语差了一点儿": chỉ có tiếng Anh kém một chút. 只是 ở đây nêu điểm chưa tốt.',
   },
+  {
+    id: 'teacher-where',
+    level: 'hsk2',
+    lines: [
+      m(
+        '王老师下午在哪儿？我想问他一个问题。',
+        'Chiều nay thầy Vương ở đâu? Tôi muốn hỏi thầy một câu.'
+      ),
+      w('他上午在家，下午去学校上课。', 'Buổi sáng thầy ở nhà, buổi chiều đến trường dạy.'),
+    ],
+    q: '王老师下午在哪儿？',
+    qVi: 'Chiều nay thầy Vương ở đâu?',
+    options: ['学校', '家里', '医院'],
+    why: '"下午去学校上课": chiều đến trường dạy. 在家 là buổi sáng.',
+  },
+  {
+    id: 'fruit-price',
+    level: 'hsk2',
+    lines: [
+      w('这个西瓜多少钱？', 'Quả dưa hấu này bao nhiêu tiền?'),
+      m(
+        '十块，你买两个的话，我只要十八块。',
+        'Mười tệ, nếu chị mua hai quả, tôi chỉ lấy mười tám tệ.'
+      ),
+    ],
+    q: '买两个西瓜要多少钱？',
+    qVi: 'Mua hai quả dưa hấu hết bao nhiêu tiền?',
+    options: ['十八块', '十块', '二十块'],
+    why: '"你买两个的话，我只要十八块": mua hai quả chỉ mười tám tệ. Bẫy: 十块 là giá một quả; 二十块 là phép nhân không có giảm giá.',
+  },
+  {
+    id: 'go-out',
+    level: 'hsk2',
+    lines: [
+      m('晚上我们出去吃饭吧？', 'Tối nay mình ra ngoài ăn nhé?'),
+      w(
+        '今天太累了，我想在家休息，我们明天去吧。',
+        'Hôm nay mệt quá, em muốn ở nhà nghỉ, mai mình đi nhé.'
+      ),
+    ],
+    q: '他们什么时候出去吃饭？',
+    qVi: 'Khi nào họ ra ngoài ăn?',
+    options: ['明天', '今天晚上', '下个星期'],
+    why: '"我们明天去吧": mai đi. Tối nay người nữ muốn ở nhà nghỉ.',
+  },
+  {
+    id: 'learn-chinese',
+    level: 'hsk2',
+    lines: [
+      w('你学汉语多长时间了？', 'Anh học tiếng Trung bao lâu rồi?'),
+      m(
+        '两年了，我每天晚上都看一个小时的汉语书。',
+        'Hai năm rồi, tối nào tôi cũng đọc sách tiếng Trung một tiếng.'
+      ),
+    ],
+    q: '男的学汉语多长时间了？',
+    qVi: 'Người nam học tiếng Trung bao lâu rồi?',
+    options: ['两年', '一个小时', '一年'],
+    why: '"两年了": hai năm rồi. 一个小时 là thời gian đọc sách mỗi tối, không phải thời gian đã học.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
