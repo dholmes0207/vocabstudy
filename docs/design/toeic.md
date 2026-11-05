@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 35 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 40 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
     22 cặp mỗi cấp; đoạn văn ngắn HSK 3 30 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -855,3 +855,9 @@ làm ở đâu. HSK 2: xe buýt ra sân bay, hát, cà phê hay trà (还是), a
 `PART2_BANK` từ 84 lên 96 câu (test giữ mức này). Thêm What's the best way, How much, How far, câu hỏi lựa chọn
 (would you rather … or …), câu hỏi phủ định (Aren't you…?), câu hỏi gián tiếp (Do you know who…?), câu trần
 thuật báo vấn đề (thang máy hỏng). Bẫy âm mới: approved / prove, far / four, airport / air, leaving / left.
+
+### Thêm hội thoại HSK 3 (05/11/2026, đợt năm)
+
+`HSK_DIALOGUES` HSK 3 từ 35 lên 40 bài (test giữ mức này): phòng họp đổi tầng (bẫy tầng cũ), đến muộn vì tàu
+điện ngầm hỏng (只好, bẫy xe buýt là cách đi sau đó), đôi giày hơi đắt (ý chính sau 但是), du lịch tháng mười
+(本来… / 只好…, bẫy kế hoạch ban đầu), chó con đi công viên.

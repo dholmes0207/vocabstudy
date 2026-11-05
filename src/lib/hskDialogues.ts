@@ -922,6 +922,78 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['两年', '一个小时', '一年'],
     why: '"两年了": hai năm rồi. 一个小时 là thời gian đọc sách mỗi tối, không phải thời gian đã học.',
   },
+  {
+    id: 'meeting-floor',
+    level: 'hsk3',
+    lines: [
+      w('下午的会议还在三楼吗？', 'Cuộc họp chiều nay vẫn ở tầng ba à?'),
+      m(
+        '不在了，三楼的会议室有人用，我们换到了五楼。',
+        'Không còn nữa, phòng họp tầng ba có người dùng, chúng ta đổi lên tầng năm rồi.'
+      ),
+    ],
+    q: '下午的会议在几楼？',
+    qVi: 'Cuộc họp chiều nay ở tầng mấy?',
+    options: ['五楼', '三楼', '四楼'],
+    why: '"我们换到了五楼": đã đổi lên tầng năm. Bẫy: 三楼 là chỗ cũ, người nữ nhắc tới đầu tiên.',
+  },
+  {
+    id: 'subway-late',
+    level: 'hsk3',
+    lines: [
+      m('你怎么才到？我等了你半个小时。', 'Sao giờ chị mới đến? Tôi đợi chị nửa tiếng rồi.'),
+      w(
+        '对不起，地铁坏了，我只好换了公共汽车。',
+        'Xin lỗi, tàu điện ngầm hỏng, tôi đành phải đổi sang xe buýt.'
+      ),
+    ],
+    q: '女的为什么来晚了？',
+    qVi: 'Vì sao người nữ đến muộn?',
+    options: ['地铁坏了', '她起床晚了', '公共汽车太慢'],
+    why: '"地铁坏了，我只好换了公共汽车": tàu điện ngầm hỏng nên đến muộn. Xe buýt là cách cô ấy đi sau đó, không phải lý do.',
+  },
+  {
+    id: 'shoes-price',
+    level: 'hsk3',
+    lines: [
+      w('这双鞋你觉得怎么样？', 'Anh thấy đôi giày này thế nào?'),
+      m(
+        '颜色不错，但是有点儿贵，我们再去别的商店看看吧。',
+        'Màu đẹp, nhưng hơi đắt, chúng ta đi cửa hàng khác xem thêm đi.'
+      ),
+    ],
+    q: '男的觉得这双鞋怎么样？',
+    qVi: 'Người nam thấy đôi giày này thế nào?',
+    options: ['有点儿贵', '颜色不好', '太小了'],
+    why: '"颜色不错，但是有点儿贵": màu đẹp nhưng hơi đắt. Sau 但是 là ý chính.',
+  },
+  {
+    id: 'travel-october',
+    level: 'hsk3',
+    lines: [
+      m('你打算什么时候去旅游？', 'Chị định khi nào đi du lịch?'),
+      w(
+        '本来想下个月去，但是公司太忙了，只好等到十月了。',
+        'Vốn định tháng sau đi, nhưng công ty bận quá, đành đợi đến tháng mười.'
+      ),
+    ],
+    q: '女的什么时候去旅游？',
+    qVi: 'Khi nào người nữ đi du lịch?',
+    options: ['十月', '下个月', '这个周末'],
+    why: '"只好等到十月了": đành đợi đến tháng mười. Bẫy: 下个月 là kế hoạch ban đầu (本来), đã thay đổi.',
+  },
+  {
+    id: 'dog-park',
+    level: 'hsk3',
+    lines: [
+      w('你家的小狗怎么不见了？', 'Con chó nhỏ nhà anh đâu mất rồi?'),
+      m('我妈妈带它去公园了，一会儿就回来。', 'Mẹ tôi dắt nó đi công viên rồi, lát nữa sẽ về.'),
+    ],
+    q: '小狗现在在哪儿？',
+    qVi: 'Con chó nhỏ bây giờ ở đâu?',
+    options: ['公园', '家里', '医院'],
+    why: '"我妈妈带它去公园了": mẹ dắt nó đi công viên. Lát nữa mới về nhà.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
