@@ -3,7 +3,7 @@ import { PART1_BANK, PART1_ROUND, part1Round } from './toeicPart1'
 
 describe('Part 1 scenes', () => {
   it('have four different statements, a scene and an explanation', () => {
-    expect(PART1_BANK.length).toBeGreaterThanOrEqual(28)
+    expect(PART1_BANK.length).toBeGreaterThanOrEqual(34)
     for (const it of PART1_BANK) {
       expect(new Set(it.statements).size, it.scene).toBe(4)
       expect(it.scene.trim() && it.emoji.trim() && it.why.trim(), it.scene).toBeTruthy()
