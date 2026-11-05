@@ -62,7 +62,7 @@ describe('HSK 2 picture dialogues', () => {
 
   it('name exactly one word with a picture, theirs, in HSK 1–2 characters', () => {
     const ok = known('hsk2')
-    expect(PICTURE_DIALOGUES.length).toBeGreaterThanOrEqual(32)
+    expect(PICTURE_DIALOGUES.length).toBeGreaterThanOrEqual(38)
     for (const d of PICTURE_DIALOGUES) {
       const said = d.lines.map((l) => l.zh).join('')
       expect(
