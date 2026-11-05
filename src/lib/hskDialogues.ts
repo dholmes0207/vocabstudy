@@ -1330,6 +1330,54 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('昨天晚上睡得太晚了，有点儿累。', 'Tối qua tôi ngủ muộn quá, hơi mệt.'),
     ],
   },
+  {
+    id: 'teacher-name',
+    picture: '老师',
+    lines: [
+      w('前面那个人是谁？', 'Người phía trước kia là ai?'),
+      m('是我们的汉语老师，她姓王。', 'Là cô giáo tiếng Trung của chúng tôi, cô ấy họ Vương.'),
+    ],
+  },
+  {
+    id: 'see-doctor',
+    picture: '医生',
+    lines: [
+      m('你身体怎么样？', 'Sức khỏe của chị thế nào?'),
+      w('不太好，下午我要去看医生。', 'Không khỏe lắm, chiều nay tôi phải đi khám bác sĩ.'),
+    ],
+  },
+  {
+    id: 'school-near',
+    picture: '学校',
+    lines: [
+      w('你儿子在哪儿上学？', 'Con trai anh học ở đâu?'),
+      m('在前面那个学校，走路五分钟就到。', 'Ở ngôi trường phía trước kia, đi bộ năm phút là đến.'),
+    ],
+  },
+  {
+    id: 'go-shop',
+    picture: '商店',
+    lines: [
+      m('你去哪儿？', 'Chị đi đâu thế?'),
+      w('去商店买点儿东西，你要什么吗？', 'Đi cửa hàng mua ít đồ, anh có cần gì không?'),
+    ],
+  },
+  {
+    id: 'have-money',
+    picture: '钱',
+    lines: [
+      w('你身上有钱吗？我想买点儿吃的。', 'Anh có mang tiền không? Tôi muốn mua chút đồ ăn.'),
+      m('有，给你一百块。', 'Có, đưa chị một trăm tệ.'),
+    ],
+  },
+  {
+    id: 'child-age',
+    picture: '孩子',
+    lines: [
+      m('你的孩子几岁了？', 'Con chị mấy tuổi rồi?'),
+      w('她今年六岁，明年上小学。', 'Con bé năm nay sáu tuổi, sang năm vào tiểu học.'),
+    ],
+  },
 ]
 
 /**
