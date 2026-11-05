@@ -803,6 +803,38 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('吃完饭以后，我喜欢看一会儿电视。', 'Ăn cơm xong, tôi thích xem ti vi một lúc.'),
     ],
   },
+  {
+    id: 'medicine',
+    picture: '药',
+    lines: [
+      w('你身体怎么样了？', 'Sức khoẻ của anh thế nào rồi?'),
+      m('还有点儿累，我每天吃三次药。', 'Vẫn hơi mệt, ngày nào tôi cũng uống thuốc ba lần.'),
+    ],
+  },
+  {
+    id: 'newspaper',
+    picture: '报纸',
+    lines: [
+      m('你每天早上做什么？', 'Sáng nào chị cũng làm gì?'),
+      w('我吃完早饭以后看一会儿报纸。', 'Ăn sáng xong tôi đọc báo một lúc.'),
+    ],
+  },
+  {
+    id: 'noodles',
+    picture: '面条',
+    lines: [
+      w('中午你想吃什么？', 'Trưa nay anh muốn ăn gì?'),
+      m('天气这么冷，我们去吃面条吧。', 'Trời lạnh thế này, mình đi ăn mì đi.'),
+    ],
+  },
+  {
+    id: 'chair',
+    picture: '椅子',
+    lines: [
+      m('这个房间里怎么没有椅子？我们坐哪儿？', 'Sao phòng này không có ghế? Chúng ta ngồi đâu?'),
+      w('旁边的房间里有，我去找两个。', 'Phòng bên cạnh có, tôi đi tìm hai cái.'),
+    ],
+  },
 ]
 
 /**

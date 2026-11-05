@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 20 bài, HSK 3 25 bài; hội thoại – chọn tranh 16 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 20 bài, HSK 3 25 bài; hội thoại – chọn tranh 20 bài; hỏi – đáp
     15 cặp mỗi cấp; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -711,3 +711,8 @@ Part 3 và Part 4 từ 16 lên 18 bài mỗi Part; Part 3 có 4 bài có bảng 
 Part 6 từ 16 lên 20 đoạn (test giữ mức này): thông báo tình nguyện dọn công viên, thư báo tăng phí giao
 hàng, email chào nhân viên mới, thông báo thẻ thư viện mới. Câu từ loại thêm even + so sánh hơn,
 disappointing / disappointed, look forward to + V-ing, danh từ tập hợp staff.
+
+### Thêm hội thoại chọn tranh HSK 2 (05/11/2026, đợt hai)
+
+`PICTURE_DIALOGUES` từ 16 lên 20 bài (test giữ mức này): thuốc, báo, mì, ghế. Lời thoại tránh các từ có
+tranh khác (咖啡 khi nói về buổi sáng, 公共汽车 khi nói lúc đi đường). Test chữ Hán bắt được 拿 và 把.
