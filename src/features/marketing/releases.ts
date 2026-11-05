@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK hỏi – đáp lên 22 cặp mỗi cấp: thêm số điện thoại, cà phê hay trà, thang máy hỏng, quà tặng mẹ và nhiều câu khác.',
+        'HSK question and answer now has 22 pairs per level: a phone number, coffee or tea, a broken lift, a gift for Mum and more.',
+      ],
+      [
         'HSK 2 hội thoại chọn tranh lên 32 bài: thêm tuyết, xe đạp, thuyền, phim, sân bay, cơm, sinh nhật và mắt.',
         'HSK 2 picture dialogues now number 32: snow, a bike, a boat, a film, the airport, rice, a birthday and tired eyes.',
       ],

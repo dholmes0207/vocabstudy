@@ -21,7 +21,7 @@ describe('HSK question and answer pairs', () => {
     '%s: use only characters of the level and below, each with its Vietnamese',
     (level) => {
       const pairs = PAIRS[level]
-      expect(pairs.length).toBeGreaterThanOrEqual(18)
+      expect(pairs.length).toBeGreaterThanOrEqual(22)
       expect(new Set(pairs.map((p) => p.id)).size).toBe(pairs.length)
       const ok = known(level)
       for (const p of pairs) {

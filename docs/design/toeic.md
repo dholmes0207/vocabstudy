@@ -209,7 +209,7 @@ Tình hình (05/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 28 bài, HSK 3 35 bài; hội thoại – chọn tranh 32 bài; hỏi – đáp
-    18 cặp mỗi cấp; đoạn văn ngắn HSK 3 30 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    22 cặp mỗi cấp; đoạn văn ngắn HSK 3 30 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -842,3 +842,10 @@ mã đăng ký để nhận thẻ tên), bài báo tiệm bánh mở cửa hàng
 
 `PICTURE_DIALOGUES` từ 24 lên 32 bài (test giữ mức này): tuyết, xe đạp, thuyền, phim, sân bay, cơm, sinh nhật,
 mắt. Lời thoại tránh các từ có tranh khác (衣服, 鱼, 飞机, 面条, 手机, 票) để chỉ một tranh được nhắc tới.
+
+### Thêm cặp hỏi – đáp HSK (05/11/2026, đợt ba)
+
+Mỗi cấp từ 18 lên 22 cặp (test giữ mức này). HSK 1: số điện thoại, hôm qua làm gì, nấu món Trung Quốc, bạn
+làm ở đâu. HSK 2: xe buýt ra sân bay, hát, cà phê hay trà (还是), anh trai bị ốm. HSK 3: xe buýt mãi chưa đến
+(比平时), quà tặng mẹ, thang máy hỏng (只好), dọn phòng. Câu đáp mới không hợp với câu hỏi cũ nào; bỏ câu hỏi
+đường đến bệnh viện vì 往 chưa có ở HSK 2 và câu đáp dễ hợp với câu hỏi đường xa.
