@@ -34,6 +34,8 @@ import HskChoiceRound from './HskChoiceRound'
 import HskOrderRound from './HskOrderRound'
 import HskDialogueRound from './HskDialogueRound'
 import HskAnswerRound from './HskAnswerRound'
+import HskReadingRound from './HskReadingRound'
+import { readingRound, type ShuffledReading } from '@/lib/hskReadings'
 import { answerRound, type AnswerQuestion } from '@/lib/hskAnswers'
 import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
 
@@ -52,6 +54,7 @@ type Drill =
   | 'look'
   | 'see'
   | 'answer'
+  | 'read'
   | 'fill'
   | 'order'
   | 'char'
@@ -59,13 +62,14 @@ type Drill =
 type Run =
   | {
       kind: 'choice'
-      drill: Exclude<Drill, 'order' | 'talk' | 'match' | 'answer'>
+      drill: Exclude<Drill, 'order' | 'talk' | 'match' | 'answer' | 'read'>
       n: number
       questions: HskChoice[]
     }
   | { kind: 'order'; n: number; questions: HskOrder[] }
   | { kind: 'talk'; drill: 'talk' | 'match'; n: number; dialogues: ShuffledDialogue[] }
   | { kind: 'answer'; n: number; questions: AnswerQuestion[] }
+  | { kind: 'read'; n: number; questions: ShuffledReading[] }
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
@@ -77,6 +81,7 @@ type MiniStep =
   | { section: 'write'; kind: 'order'; questions: HskOrder[] }
   | { section: 'listen'; kind: 'talk'; dialogues: ShuffledDialogue[] }
   | { section: 'read'; kind: 'answer'; questions: AnswerQuestion[] }
+  | { section: 'read'; kind: 'read'; questions: ShuffledReading[] }
 
 /** Right answers per section, in the order of the test. */
 type SectionScore = { section: Section; correct: number; total: number }
@@ -182,6 +187,17 @@ export default function Hsk() {
       levels: ['hsk1', 'hsk2'],
     },
     {
+      id: 'read',
+      icon: '📄',
+      title: ['Đọc đoạn văn ngắn', 'Short passages'],
+      desc: [
+        'Đọc một đoạn văn ngắn, trả lời câu hỏi ★ trong 3 phương án: phần thứ ba bài Đọc của HSK 3.',
+        'Read a short passage and answer its ★ question among three: the third reading part of HSK 3.',
+      ],
+      levels: ['hsk3'],
+      count: 5,
+    },
+    {
       id: 'see',
       icon: '📖',
       title: ['Đọc – chọn tranh', 'Read and pick the picture'],
@@ -239,6 +255,7 @@ export default function Hsk() {
     const n = (run && 'n' in run ? run.n : 0) + 1
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
+    if (drill === 'read') return setRun({ kind: 'read', n, questions: readingRound(5) })
     if (drill === 'answer') {
       // Shown for HSK 1 and 2 only (ALL_DRILLS levels).
       if (level !== 'hsk3') setRun({ kind: 'answer', n, questions: answerRound(level, ROUND) })
@@ -307,7 +324,10 @@ export default function Hsk() {
     // Reading too: HSK 1–2 open with pictures, HSK 3 has none.
     const read: MiniStep[] =
       HSK_SCALE[level].sections === 3
-        ? [{ section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, ROUND) }]
+        ? [
+            { section: 'read', kind: 'read', questions: readingRound(5) },
+            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 5) },
+          ]
         : level === 'hsk1'
           ? [
               { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
@@ -358,6 +378,18 @@ export default function Hsk() {
       setRun(null)
     }
     const title = `${name} · ${sectionName(s.section)}`
+    if (s.kind === 'read')
+      return (
+        <HskReadingRound
+          key={run.step}
+          title={title}
+          questions={s.questions}
+          onAgain={() => {}}
+          onExit={exit}
+          onDone={done}
+          onAnswer={tally('read')}
+        />
+      )
     if (s.kind === 'answer')
       return (
         <HskAnswerRound
@@ -404,6 +436,17 @@ export default function Hsk() {
       />
     )
   }
+  if (run?.kind === 'read')
+    return (
+      <HskReadingRound
+        key={run.n}
+        title={`${name} · ${t('Đọc đoạn văn', 'Short passages')}`}
+        questions={run.questions}
+        onAgain={() => startDrill('read')}
+        onExit={exit}
+        onAnswer={tally('read')}
+      />
+    )
   if (run?.kind === 'answer')
     return (
       <HskAnswerRound

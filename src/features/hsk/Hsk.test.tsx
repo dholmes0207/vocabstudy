@@ -70,7 +70,8 @@ describe('HSK practice page', () => {
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
     expect(screen.getAllByRole('button', { name: 'Practise 10 questions' })).toHaveLength(8)
     // HSK 2 and 3 add their dialogues, five a round.
-    expect(screen.getByRole('button', { name: 'Practise 5 questions' })).toBeInTheDocument()
+    // Its dialogues and its short passages.
+    expect(screen.getAllByRole('button', { name: 'Practise 5 questions' })).toHaveLength(2)
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 1' }))
     expect(screen.queryByRole('button', { name: 'Practise 5 questions' })).not.toBeInTheDocument()
     // HSK 2 also has its picture dialogues.
@@ -187,6 +188,19 @@ describe('HSK practice page', () => {
       .find((b) => /Right|Wrong/.test(b.textContent ?? ''))!
     fireEvent.click(option)
     expect(useRetry.getState().hsk['hsk1:judge']?.[1]).toBe(1)
+  })
+
+  it('shows an HSK 3 passage with its question, then its translation and the reason', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
+    const card = screen.getByText(/^Short passages$/).closest('li')!
+    fireEvent.click(within(card).getByRole('button'))
+    expect(screen.getByText('Read the passage, then answer the question.')).toBeInTheDocument()
+    const options = screen.getAllByRole('button').filter((b) => b.getAttribute('lang') === 'zh')
+    expect(options).toHaveLength(3)
+    fireEvent.click(options[0])
+    expect(screen.getByText(/^💡/)).toBeInTheDocument()
+    expect(spoken).toHaveLength(1)
   })
 
   it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {
