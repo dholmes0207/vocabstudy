@@ -336,6 +336,78 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['Good idea, I need some coffee.', 'The window is broken.', 'It’s a short movie.'],
     'Lời rủ: đáp đồng ý. (Bẫy) broken nghe gần break; short lặp lại với nghĩa khác.'
   ),
+  item(
+    'Which bus goes to the convention center?',
+    ['The number 12, I think.', 'The convention was very useful.', 'About twenty minutes.'],
+    'Which hỏi chọn cái nào: số xe buýt. (Bẫy) câu thứ hai lặp convention; "twenty minutes" trả lời How long.'
+  ),
+  item(
+    'Who should I give these receipts to?',
+    [
+      'Leave them with Mr. Chen in accounting.',
+      'Yes, I received them.',
+      'They’re on sale this week.',
+    ],
+    'Who hỏi người: Mr. Chen. (Bẫy) "received" nghe gần receipts; Yes/No không trả lời câu Wh-.'
+  ),
+  item(
+    'When will the new printer be installed?',
+    ['I haven’t heard yet.', 'On the second floor.', 'Yes, it prints quickly.'],
+    'Câu trả lời gián tiếp "chưa nghe tin" vẫn đúng, kiểu đáp án rất hay gặp. (Bẫy) nơi chốn cho câu When; prints lặp âm printer.'
+  ),
+  item(
+    'Didn’t you finish the budget report?',
+    [
+      'I’m still waiting for the sales numbers.',
+      'The budget is very tight.',
+      'At the end of the report.',
+    ],
+    'Câu hỏi phủ định: đáp bằng lý do chưa xong cũng là trả lời. (Bẫy) lặp budget và report.'
+  ),
+  item(
+    'Let’s take a short break before the next session.',
+    [
+      'Good idea, I need some coffee.',
+      'The session was cancelled last week.',
+      'It broke yesterday.',
+    ],
+    'Let’s… là lời đề nghị, đáp bằng đồng ý. (Bẫy) "broke" nghe gần break; câu thứ hai lặp session.'
+  ),
+  item(
+    'How long will the repairs take?',
+    ['About two days.', 'Twice a year.', 'The repair shop on Pine Street.'],
+    'How long hỏi khoảng thời gian: two days. (Bẫy) "Twice a year" trả lời How often; câu cuối lặp repair, trả lời nơi chốn.'
+  ),
+  item(
+    'Is the training session on Monday or Tuesday?',
+    ['It was moved to Wednesday.', 'Yes, it is.', 'I trained for a marathon.'],
+    'Câu hỏi lựa chọn có thể đáp bằng phương án thứ ba: dời sang thứ Tư. (Bẫy) Yes không chọn được; trained lặp âm training.'
+  ),
+  item(
+    'Could you show me how to use the scanner?',
+    ['Sure, it’s quite simple.', 'The show starts at eight.', 'I used it to scan my passport.'],
+    'Lời nhờ Could you…? đáp bằng đồng ý. (Bẫy) "show" lặp từ với nghĩa khác (buổi diễn); câu cuối lặp use và scan.'
+  ),
+  item(
+    'The client wants to change the delivery date.',
+    ['To which day?', 'Our clients are very happy.', 'It was delivered by truck.'],
+    'Câu trần thuật: đáp bằng câu hỏi tiếp theo hợp lý (đổi sang ngày nào?). (Bẫy) lặp client và delivered.'
+  ),
+  item(
+    'Why don’t we hire a temporary assistant?',
+    ['That would really help.', 'Because it was too high.', 'She’s been here for a year.'],
+    'Why don’t we… là lời gợi ý, không hỏi lý do, nên Because… sai. Đáp bằng đồng ý: "That would really help."'
+  ),
+  item(
+    'Where can I find the latest price list?',
+    ['It’s on the shared drive.', 'Prices went up last month.', 'At the latest, by Friday.'],
+    'Where hỏi chỗ tìm: trên ổ chung. (Bẫy) "at the latest" lặp latest với nghĩa khác (muộn nhất); câu giữa lặp price.'
+  ),
+  item(
+    'Whose turn is it to clean the break room?',
+    ['I think it’s Maria’s.', 'Turn left at the corner.', 'The room is very clean.'],
+    'Whose hỏi của ai: lượt của Maria. (Bẫy) "Turn left" lặp turn với nghĩa khác (rẽ); câu cuối lặp room và clean.'
+  ),
 ]
 
 /** Items in one round. */
