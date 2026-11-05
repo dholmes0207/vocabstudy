@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Nghe hội thoại – câu hỏi có thêm 9 bài: HSK 3 lên 20 bài (mượn xe đạp, tủ lạnh trống, hỏi đường, tìm mũ, đổi lịch vì tuyết), HSK 2 lên 16 bài (vé máy bay, nghề của chị gái, chạy bộ, giờ mở cửa).',
+        "The dialogue questions add nine sets: HSK 3 now has 20 (a lent bike, an empty fridge, asking the way, a lost hat, a trip moved for snow), HSK 2 has 16 (a plane ticket, a sister's job, morning runs, opening hours).",
+      ],
+      [
         'Luyện thi HSK 3 có thêm "Đọc – ghép câu hỏi và trả lời": 10 cặp câu như phần ghép câu bài Đọc của HSK 3. Phần Đọc của bài thi nhỏ HSK 3 có 3 câu dạng này, 3 câu điền từ và 4 đoạn văn ngắn.',
         'HSK 3 practice adds "Question and answer": ten pairs like the sentence matching in HSK 3 reading. The HSK 3 mini test reading now has three of them, three gap fills and four short passages.',
       ],

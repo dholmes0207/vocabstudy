@@ -391,6 +391,132 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['苹果', '西瓜', '鸡蛋'],
     why: '"我们买几个苹果吧". Dưa hấu bị loại vì to quá.',
   },
+  {
+    id: 'bike',
+    level: 'hsk3',
+    lines: [
+      w('你的自行车呢？今天怎么走路来了？', 'Xe đạp của anh đâu? Sao hôm nay đi bộ đến?'),
+      m(
+        '我把自行车借给弟弟了，他今天要用。',
+        'Tôi cho em trai mượn xe đạp rồi, hôm nay nó cần dùng.'
+      ),
+    ],
+    q: '男的为什么走路来？',
+    qVi: 'Vì sao người nam đi bộ đến?',
+    options: ['自行车借给弟弟了', '自行车坏了', '想锻炼身体'],
+    why: '"我把自行车借给弟弟了": cho em trai mượn xe. Không ai nói xe hỏng hay muốn tập thể dục.',
+  },
+  {
+    id: 'fridge',
+    level: 'hsk3',
+    lines: [
+      m('今天晚上我们在家做饭吧？', 'Tối nay mình nấu cơm ở nhà nhé?'),
+      w(
+        '冰箱里什么都没有了，我们还是去外面吃吧。',
+        'Tủ lạnh chẳng còn gì cả, mình ra ngoài ăn đi.'
+      ),
+    ],
+    q: '他们晚上可能在哪儿吃饭？',
+    qVi: 'Tối nay có lẽ họ ăn cơm ở đâu?',
+    options: ['饭馆', '家里', '朋友家'],
+    why: '还是…吧 ("hay là… đi") nêu lựa chọn cuối cùng: tủ lạnh trống nên họ ra ngoài ăn, tức là ăn ở quán.',
+  },
+  {
+    id: 'bank',
+    level: 'hsk3',
+    lines: [
+      w('请问，去银行怎么走？', 'Xin hỏi, đến ngân hàng đi thế nào?'),
+      m(
+        '一直往前走，到第二个路口往左走，就能看到了。',
+        'Cứ đi thẳng, đến ngã tư thứ hai thì rẽ trái là thấy.'
+      ),
+    ],
+    q: '银行在哪儿？',
+    qVi: 'Ngân hàng ở đâu?',
+    options: ['第二个路口左边', '第一个路口左边', '第二个路口右边'],
+    why: '"第二个路口往左走": ngã tư thứ hai, rẽ trái. Hai phương án kia đổi một chi tiết, phải nghe đủ cả hai.',
+  },
+  {
+    id: 'hat',
+    level: 'hsk3',
+    lines: [
+      m('你看见我的帽子了吗？我找了半天了。', 'Em có thấy mũ của anh không? Anh tìm mãi rồi.'),
+      w('在门后面，昨天你回来的时候放在那儿了。', 'Ở sau cửa, hôm qua lúc anh về đã để ở đó.'),
+    ],
+    q: '帽子在哪儿？',
+    qVi: 'Cái mũ ở đâu?',
+    options: ['门后面', '桌子上', '包里'],
+    why: '"在门后面": ở sau cửa. Câu sau chỉ giải thích vì sao nó ở đó.',
+  },
+  {
+    id: 'snow',
+    level: 'hsk3',
+    lines: [
+      w('听说明天要下雪，我们还去爬山吗？', 'Nghe nói mai có tuyết, mình còn đi leo núi không?'),
+      m(
+        '如果下雪，我们就换个时间，下个星期再去。',
+        'Nếu có tuyết thì mình đổi thời gian, tuần sau hãy đi.'
+      ),
+    ],
+    q: '如果明天下雪，他们会怎么做？',
+    qVi: 'Nếu mai có tuyết, họ sẽ làm gì?',
+    options: ['下个星期再去', '还去爬山', '在家看电视'],
+    why: '如果…就…: "nếu… thì…". Có tuyết thì đổi sang tuần sau, nên 还去爬山 là sai.',
+  },
+  {
+    id: 'ticket',
+    level: 'hsk2',
+    lines: [
+      m('你买到机票了吗？', 'Chị mua được vé máy bay chưa?'),
+      w('买到了，是明天上午八点的。', 'Mua được rồi, chuyến tám giờ sáng mai.'),
+    ],
+    q: '女的买的是几点的机票？',
+    qVi: 'Người nữ mua vé máy bay mấy giờ?',
+    options: ['上午八点', '下午八点', '晚上八点'],
+    why: '"明天上午八点": tám giờ sáng mai. Ba phương án cùng là tám giờ, chỉ khác buổi.',
+  },
+  {
+    id: 'sister-job',
+    level: 'hsk2',
+    lines: [
+      w('你姐姐在哪儿工作？', 'Chị gái anh làm việc ở đâu?'),
+      m('她在医院工作，是医生。', 'Chị ấy làm ở bệnh viện, là bác sĩ.'),
+    ],
+    q: '男的的姐姐做什么工作？',
+    qVi: 'Chị gái người nam làm nghề gì?',
+    options: ['医生', '老师', '服务员'],
+    why: '"是医生": là bác sĩ. 医院 (bệnh viện) cũng gợi ý đáp án.',
+  },
+  {
+    id: 'running',
+    level: 'hsk2',
+    lines: [
+      m('你每天早上都去跑步吗？', 'Sáng nào chị cũng đi chạy à?'),
+      w(
+        '是的，我每天六点起床，跑一个小时。',
+        'Đúng vậy, ngày nào tôi cũng dậy lúc sáu giờ, chạy một tiếng.'
+      ),
+    ],
+    q: '女的每天跑多长时间？',
+    qVi: 'Mỗi ngày người nữ chạy bao lâu?',
+    options: ['一个小时', '两个小时', '六个小时'],
+    why: '"跑一个小时": chạy một tiếng. 六点 là giờ dậy, nên 六个小时 là bẫy.',
+  },
+  {
+    id: 'shop-open',
+    level: 'hsk2',
+    lines: [
+      m('这个商店几点开门？', 'Cửa hàng này mấy giờ mở cửa?'),
+      w(
+        '早上九点开门，现在是八点五十，我们等一会儿吧。',
+        'Chín giờ sáng mở cửa, bây giờ là tám giờ năm mươi, mình đợi một lát nhé.'
+      ),
+    ],
+    q: '现在几点？',
+    qVi: 'Bây giờ là mấy giờ?',
+    options: ['八点五十', '九点', '九点十分'],
+    why: '"现在是八点五十": bây giờ là tám giờ năm mươi. Bẫy: 九点 là giờ mở cửa.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
