@@ -200,7 +200,7 @@ Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 40 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 119
-    câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 36 bài (11 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 38 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -894,3 +894,12 @@ Mỗi Part từ 20 lên 22 bài (test giữ mức này), Part 3 có 5 bài kèm 
 `HSK3_READINGS` từ 30 lên 35 đoạn (test giữ mức này): con gái học vẽ (对…感兴趣), đổi sang đi xe buýt khi trời
 lạnh (以前… / 最近…), khách sạn bữa sáng không ngon (只是), chị gái bác sĩ cuối tuần ở nhà, mưa to bất ngờ (没想到,
 只好). Test chữ Hán bắt được 火 và 停, đã viết lại câu.
+
+### Thêm bài Part 7 hai đoạn (05/11/2026, đợt sáu)
+
+Part 7 bài hai đoạn từ 11 lên 13 (test giữ mức này), tổng 38 bài. Cả hai bài đều có một câu phải ghép hai đoạn:
+
+- Tin tuyển dụng lễ tân khách sạn + email ứng tuyển: ca Chủ nhật bắt đầu 8 giờ, nhưng Chủ nhật người ứng tuyển
+  học đến 11 giờ.
+- Lịch xe đưa đón + email ngày đầu đi làm: tàu đến 8:10, "take the next shuttle" là chuyến 8:30 (bẫy chuyến
+  8:00 đã chạy).
