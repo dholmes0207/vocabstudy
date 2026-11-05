@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
+  - Nội dung: Part 1 34 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
     câu ngữ pháp và câu nghĩa từ, Part 6 24 đoạn, Part 7 36 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -849,3 +849,9 @@ Mỗi cấp từ 18 lên 22 cặp (test giữ mức này). HSK 1: số điện t
 làm ở đâu. HSK 2: xe buýt ra sân bay, hát, cà phê hay trà (还是), anh trai bị ốm. HSK 3: xe buýt mãi chưa đến
 (比平时), quà tặng mẹ, thang máy hỏng (只好), dọn phòng. Câu đáp mới không hợp với câu hỏi cũ nào; bỏ câu hỏi
 đường đến bệnh viện vì 往 chưa có ở HSK 2 và câu đáp dễ hợp với câu hỏi đường xa.
+
+### Thêm câu Part 2 (05/11/2026, đợt năm)
+
+`PART2_BANK` từ 84 lên 96 câu (test giữ mức này). Thêm What's the best way, How much, How far, câu hỏi lựa chọn
+(would you rather … or …), câu hỏi phủ định (Aren't you…?), câu hỏi gián tiếp (Do you know who…?), câu trần
+thuật báo vấn đề (thang máy hỏng). Bẫy âm mới: approved / prove, far / four, airport / air, leaving / left.
