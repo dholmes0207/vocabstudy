@@ -5,7 +5,7 @@ describe('Part 6 texts', () => {
   const p6 = READING_SETS.filter((s) => s.part === 6)
 
   it('have gaps [1]–[4], each once, one question per gap and one whole-sentence gap', () => {
-    expect(p6.length).toBeGreaterThanOrEqual(12)
+    expect(p6.length).toBeGreaterThanOrEqual(16)
     for (const s of p6) {
       const text = s.passages.map((p) => p.text).join('\n')
       for (const n of [1, 2, 3, 4]) expect(text.split(`[${n}]`), `${s.id} [${n}]`).toHaveLength(2)

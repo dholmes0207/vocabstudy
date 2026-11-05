@@ -200,7 +200,7 @@ Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
-    câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 20 bài (7 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 20 bài (7 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -622,3 +622,13 @@ Part 3 và Part 4 từ 12 lên 16 bài mỗi Part, mỗi Part 3 bài có bảng 
 `PICTURE_DIALOGUES` từ 10 lên 16 bài (test giữ mức này): chó con, cá, sữa, đồng hồ, máy bay, ti vi.
 Mỗi bài chỉ nói đúng một từ có tranh, nên phải tránh cả những từ có tranh nằm trong lời thoại (家 trong
 "在家", 生日 và 礼物 khi nói về quà). Test chữ Hán bắt được 般 (一般, đổi thành 常常).
+
+### Thêm đoạn Part 6 (05/11/2026)
+
+Part 6 từ 12 lên 16 đoạn (test giữ mức này): thông báo nộp chi phí công tác qua hệ thống mới, email
+chuyển văn phòng, thông báo bảo trì ngân hàng trực tuyến, thư nhắc gia hạn tạp chí.
+
+- Câu chèn dựa vào mạch đoạn: câu sai thường trái với câu ngay trước hoặc ngay sau (in ba bản khi đã bỏ
+  bản giấy, tự chuyển máy khi đội IT sẽ chuyển).
+- Câu từ loại: through + hệ thống, quá khứ phân từ rút gọn (boxes provided), will be + V-ing, until +
+  mệnh đề, please + động từ nguyên mẫu (please disregard).

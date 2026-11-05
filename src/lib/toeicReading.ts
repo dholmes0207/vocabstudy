@@ -501,6 +501,168 @@ To apply, please send your résumé and a cover letter [3] hr@blueriverhotels.co
       ),
     ],
   },
+  {
+    id: 'p6-expenses',
+    part: 6,
+    passages: [
+      {
+        kind: MEMO,
+        text: `To: All sales staff
+From: Robert Kim, Finance Department
+Re: Travel expense reports
+
+From July 1, all travel expense reports must be submitted [1] our new online system. Paper forms will no longer be accepted. [2]
+
+When you enter an expense, please attach a photo of the receipt. Reports without receipts will be returned for [3]. Most reports are approved within five working days, and payments are [4] added to your monthly salary.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['through', 'across', 'among', 'beside'],
+        'submit through a system: nộp qua một hệ thống. through chỉ phương tiện, kênh.'
+      ),
+      gap(
+        [
+          'A short training video is available on the company website.',
+          'The sales team met its targets last quarter.',
+          'Please print three copies of each form.',
+          'Our office will be closed on July 1.',
+        ],
+        'Đổi sang hệ thống mới thì hợp nhất là câu nói có video hướng dẫn. "Print three copies of each form" trái với câu trước (không nhận bản giấy nữa).'
+      ),
+      gap(
+        ['correction', 'correct', 'corrected', 'correctly'],
+        'Sau giới từ for cần danh từ: returned for correction (trả lại để sửa).'
+      ),
+      gap(
+        ['automatically', 'automatic', 'automate', 'automation'],
+        'Giữa are và quá khứ phân từ added cần trạng từ: are automatically added (được tự động cộng vào lương).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-office-move',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: All employees
+From: Maria Lopez, Facilities Manager
+Subject: Office move
+
+As you know, our team will move to the fifth floor next month. To make the move as smooth as possible, please pack your personal items in the boxes [1] at the reception desk. Label each box clearly with your name and new desk number.
+
+The moving company will come on Friday, March 8, after 6 p.m. [2] Computers and phones will be moved by the IT team, so please do not pack them yourself.
+
+If you have any questions, feel free to contact me [3]. Thank you for your [4].`,
+      },
+    ],
+    questions: [
+      gap(
+        ['provided', 'provide', 'providing', 'provider'],
+        'the boxes (which are) provided at the reception desk: thùng được phát ở quầy lễ tân. Rút gọn mệnh đề bị động dùng quá khứ phân từ.'
+      ),
+      gap(
+        [
+          'All boxes should be ready by 5 p.m. that day.',
+          'The fifth floor has a new coffee machine.',
+          'Please move your own computer to the new floor.',
+          'The reception desk will be closed next year.',
+        ],
+        'Công ty chuyển nhà đến sau 6 giờ, nên thùng phải xong trước 5 giờ là hợp mạch. "Move your own computer" trái với câu sau (đội IT sẽ chuyển máy).'
+      ),
+      gap(
+        ['directly', 'direct', 'direction', 'directed'],
+        'Sau động từ contact me cần trạng từ: contact me directly (liên hệ thẳng với tôi).'
+      ),
+      gap(
+        ['cooperation', 'cooperate', 'cooperative', 'cooperatively'],
+        'Sau tính từ sở hữu your cần danh từ: your cooperation (sự hợp tác của bạn).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-system-maintenance',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Notice to all customers
+
+Our online banking service will be unavailable on Sunday, October 12, from 1 a.m. to 5 a.m. During this time, we will be [1] important updates to improve the security of your accounts.
+
+You will still be able to withdraw cash at any of our machines. [2] However, transfers and bill payments made online will not be possible [3] the update is complete.
+
+We are sorry for the inconvenience and thank you for choosing Harbor Bank. For more information, please [4] our customer service center at 555-0110.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['making', 'make', 'made', 'makes'],
+        'will be + V-ing là tương lai tiếp diễn: will be making updates (sẽ đang tiến hành cập nhật) trong khoảng 1–5 giờ sáng.'
+      ),
+      gap(
+        [
+          'Card payments in stores will also work as usual.',
+          'Our branches will be closed for a month.',
+          'Online banking is available 24 hours as usual.',
+          'You can open a new account online that night.',
+        ],
+        'Câu trước nói những gì vẫn làm được (rút tiền); câu chèn thêm một việc vẫn làm được (thanh toán thẻ), trước khi However chuyển sang việc không làm được. Hai câu "online" trái với nội dung.'
+      ),
+      gap(
+        ['until', 'by', 'during', 'within'],
+        'not possible until the update is complete: không làm được cho tới khi cập nhật xong. until + mệnh đề chỉ mốc kết thúc của việc kéo dài.'
+      ),
+      gap(
+        ['contact', 'contacting', 'contacts', 'contacted'],
+        'Sau please dùng động từ nguyên mẫu (câu mệnh lệnh): please contact.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-subscription',
+    part: 6,
+    passages: [
+      {
+        kind: LETTER,
+        text: `Dear Ms. Tanaka,
+
+Thank you for being a reader of Business Week Monthly. Your subscription will [1] on November 30. To keep receiving the magazine without a break, please renew before that date.
+
+If you renew for two years, you will save 25 percent off the regular price. [2] Simply fill out the enclosed form and return it in the envelope provided. No stamp is [3].
+
+We look forward to continuing to bring you the latest business news. If you have already renewed, please [4] this letter.
+
+Sincerely,
+Daniel Brooks
+Customer Service`,
+      },
+    ],
+    questions: [
+      gap(
+        ['expire', 'expired', 'expiring', 'expiration'],
+        'Sau will cần động từ nguyên mẫu: will expire (sẽ hết hạn).'
+      ),
+      gap(
+        [
+          'You will also receive a free copy of our annual guide.',
+          'The magazine will stop printing next year.',
+          'Prices for two-year subscriptions are higher.',
+          'We have sent your magazine to the wrong address.',
+        ],
+        'Câu trước nêu ưu đãi khi gia hạn 2 năm; câu chèn thêm một ưu đãi nữa (also, free copy). "Prices… are higher" trái với việc được giảm 25%.'
+      ),
+      gap(
+        ['necessary', 'necessarily', 'necessity', 'need'],
+        'Sau is cần tính từ: No stamp is necessary (không cần dán tem).'
+      ),
+      gap(
+        ['disregard', 'disregarding', 'disregarded', 'disregards'],
+        'Sau please dùng động từ nguyên mẫu: please disregard this letter (xin bỏ qua thư này), câu quen thuộc khi khách đã gia hạn.'
+      ),
+    ],
+  },
 
   // ------------------------------------------------------- Part 7, single
   {
