@@ -559,6 +559,77 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'Đứng cùng Mr. Davis làm chủ ngữ của will attend: đại từ chủ ngữ I.'
   ),
+  // More pronouns and prepositions (05/11/2026).
+  q(
+    'pronoun',
+    'Mr. Lee asked his assistant to send the report to ___ before noon.',
+    ['him', 'he', 'his', 'himself'],
+    0,
+    'Sau giới từ to cần đại từ tân ngữ: him. himself chỉ dùng khi chủ ngữ và tân ngữ là một người.'
+  ),
+  q(
+    'pronoun',
+    'The designers presented ___ own ideas for the new store.',
+    ['their', 'they', 'them', 'theirs'],
+    0,
+    'Trước own + danh từ cần tính từ sở hữu: their own ideas.'
+  ),
+  q(
+    'pronoun',
+    'Ms. Park prepared the slides ___ because her assistant was sick.',
+    ['herself', 'her', 'she', 'hers'],
+    0,
+    'Đại từ phản thân herself nhấn mạnh cô ấy tự làm, không ai giúp.'
+  ),
+  q(
+    'pronoun',
+    'Applicants ___ résumés arrive after Friday will not be considered.',
+    ['whose', 'who', 'which', 'whom'],
+    0,
+    'Cần đại từ quan hệ chỉ sở hữu trước danh từ résumés: whose (hồ sơ của những người đó).'
+  ),
+  q(
+    'pronoun',
+    'Of the two printers, the new one is faster, but ___ uses more ink.',
+    ['it', 'they', 'its', 'them'],
+    0,
+    'Chủ ngữ số ít thay cho the new one: it. its là tính từ sở hữu, không làm chủ ngữ.'
+  ),
+  q(
+    'prep',
+    'The museum is open every day ___ Monday.',
+    ['except', 'besides', 'beside', 'despite'],
+    0,
+    'except: trừ, ngoại trừ. Mở cửa mọi ngày trừ thứ Hai. besides là "ngoài ra còn", beside là "bên cạnh".'
+  ),
+  q(
+    'prep',
+    'Please submit the form ___ the end of the month.',
+    ['by', 'until', 'since', 'for'],
+    0,
+    'by + thời điểm: hạn chót, chậm nhất là cuối tháng. until dùng cho việc kéo dài đến lúc đó.'
+  ),
+  q(
+    'prep',
+    'Our office is located ___ the bank and the post office.',
+    ['between', 'among', 'through', 'along'],
+    0,
+    'between A and B: ở giữa hai nơi. among dùng cho từ ba thứ trở lên, không đi với and.'
+  ),
+  q(
+    'prep',
+    'The new policy will take effect ___ January 1.',
+    ['on', 'in', 'at', 'for'],
+    0,
+    'on + ngày cụ thể: on January 1. in dùng cho tháng hoặc năm.'
+  ),
+  q(
+    'prep',
+    '___ the heavy rain, the outdoor concert went ahead as planned.',
+    ['Despite', 'Although', 'Because', 'Unless'],
+    0,
+    'Sau chỗ trống là cụm danh từ (the heavy rain), nên cần giới từ Despite. Although cần cả một mệnh đề.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */

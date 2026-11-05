@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 12 bài (2 bài có hình), Part 5 71
+  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 12 bài (2 bài có hình), Part 5 81
     câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 16 bài (5 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -559,3 +559,10 @@ màn chơi TOEIC ghi câu của Part mình). Trang TOEIC:
 - mỗi thẻ Part ghi "Bạn đã làm N câu, đúng M";
 - trên danh sách 7 Part ghi Part hay sai nhất (`weakestKind`, đủ 10 câu, Part đã hỏi từ 5 câu), kèm lời
   khuyên luyện Part đó trước.
+
+### Thêm câu Part 5 (05/11/2026)
+
+`PART5_BANK` từ 71 lên 81 câu, thêm cho hai dạng ít câu nhất: đại từ từ 8 lên 13 (tân ngữ him sau giới
+từ, their own, phản thân herself, quan hệ sở hữu whose, it thay cho danh từ số ít), giới từ từ 11 lên
+16 (by + hạn chót, between A and B, on + ngày, except, despite + cụm danh từ). Test giữ mỗi dạng ít
+nhất 11 câu và không câu nào trùng nhau (bắt được một câu trùng với câu sẵn có, đã thay).
