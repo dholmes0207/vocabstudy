@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK 3 nghe hội thoại – câu hỏi lên 30 bài: thêm điện thoại hết pin, hỏi xe buýt, vé hoà nhạc, thứ Bảy được nghỉ, chọn áo đi họp.',
+        'HSK 3 dialogue questions now number 30: a dead phone, which bus to take, concert tickets, a Saturday off and a shirt for a meeting.',
+      ],
+      [
         'TOEIC Part 5 lên 101 câu ngữ pháp: thêm hai câu mỗi dạng (từ loại, đại từ, thì, liên từ, nghĩa của từ), như since + hiện tại hoàn thành, as long as, raise / rise, reserve / deserve. Mỗi dạng có ít nhất 15 câu.',
         'TOEIC Part 5 now has 101 grammar questions, two more of each kind (word form, pronouns, tense, conjunctions, word meaning), such as since with the present perfect, as long as, raise / rise and reserve / deserve. Every kind has at least 15.',
       ],

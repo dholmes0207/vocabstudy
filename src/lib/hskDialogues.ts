@@ -652,6 +652,87 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['坐公共汽车', '开车', '走路'],
     why: '"坐公共汽车二十分钟就到": đi xe buýt. 二十分钟 là thời gian, không phải cách đi.',
   },
+  {
+    id: 'phone-battery',
+    level: 'hsk3',
+    lines: [
+      w('我给你打了好几次电话，你怎么不接？', 'Tôi gọi cho anh mấy lần, sao anh không nghe?'),
+      m(
+        '对不起，我的手机没电了，我刚回到家才发现。',
+        'Xin lỗi, điện thoại tôi hết pin, tôi vừa về đến nhà mới phát hiện.'
+      ),
+    ],
+    q: '男的为什么没接电话？',
+    qVi: 'Vì sao người nam không nghe điện thoại?',
+    options: ['手机没电了', '他在开会', '他睡觉了'],
+    why: '"我的手机没电了": điện thoại hết pin. 才 nhấn mạnh việc phát hiện muộn.',
+  },
+  {
+    id: 'bus-stop',
+    level: 'hsk3',
+    lines: [
+      m('请问，去图书馆坐几路车？', 'Xin hỏi, đến thư viện đi xe tuyến số mấy?'),
+      w(
+        '你可以坐十二路，不过现在路上车多，走路过去可能更快。',
+        'Anh có thể đi tuyến 12, nhưng giờ đường đông xe, đi bộ có lẽ nhanh hơn.'
+      ),
+    ],
+    q: '女的觉得怎么去更快？',
+    qVi: 'Người nữ thấy đi cách nào nhanh hơn?',
+    options: ['走路', '坐十二路车', '坐出租车'],
+    why: 'Sau 不过 là ý chính: "走路过去可能更快". 十二路 chỉ là cách thứ nhất cô ấy nhắc tới.',
+  },
+  {
+    id: 'concert-ticket',
+    level: 'hsk3',
+    lines: [
+      w(
+        '这个周末的音乐会你去吗？我多了一张票。',
+        'Buổi hoà nhạc cuối tuần này anh có đi không? Tôi thừa một vé.'
+      ),
+      m(
+        '太好了！我一直想去，可是票早就卖完了。',
+        'Tốt quá! Tôi luôn muốn đi, nhưng vé bán hết từ lâu rồi.'
+      ),
+    ],
+    q: '男的为什么没有票？',
+    qVi: 'Vì sao người nam không có vé?',
+    options: ['票卖完了', '票太贵了', '他忘了买'],
+    why: '"票早就卖完了": vé đã bán hết từ lâu. 早就 là "từ lâu đã".',
+  },
+  {
+    id: 'weekend-work',
+    level: 'hsk3',
+    lines: [
+      m('你这个星期六还要上班吗？', 'Thứ Bảy này chị vẫn phải đi làm à?'),
+      w(
+        '本来要去的，但是经理说工作已经做完了，大家可以休息。',
+        'Lúc đầu phải đi, nhưng giám đốc nói việc đã làm xong rồi, mọi người được nghỉ.'
+      ),
+    ],
+    q: '女的星期六会做什么？',
+    qVi: 'Thứ Bảy người nữ sẽ làm gì?',
+    options: ['休息', '上班', '见经理'],
+    why: '本来… (lúc đầu) là kế hoạch cũ, sau 但是 là điều thực tế: được nghỉ.',
+  },
+  {
+    id: 'blue-shirt',
+    level: 'hsk3',
+    lines: [
+      w(
+        '你觉得我穿这件蓝色的好看，还是那件白色的？',
+        'Anh thấy tôi mặc chiếc màu xanh đẹp, hay chiếc màu trắng?'
+      ),
+      m(
+        '蓝色的更好看，而且明天的会议很重要，白色的有点儿太简单了。',
+        'Màu xanh đẹp hơn, hơn nữa cuộc họp mai rất quan trọng, màu trắng hơi đơn giản quá.'
+      ),
+    ],
+    q: '男的觉得女的应该穿哪件？',
+    qVi: 'Người nam thấy người nữ nên mặc chiếc nào?',
+    options: ['蓝色的', '白色的', '黑色的'],
+    why: '"蓝色的更好看": màu xanh đẹp hơn, còn màu trắng bị chê đơn giản. 还是 trong câu hỏi lựa chọn là "hay là".',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
