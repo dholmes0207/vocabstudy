@@ -1137,6 +1137,73 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('买了一件衣服，是白色的，不太贵。', 'Mua một bộ quần áo, màu trắng, không đắt lắm.'),
     ],
   },
+  {
+    id: 'snow-out',
+    picture: '雪',
+    lines: [
+      w('外面下雪了，你看见了吗？', 'Bên ngoài tuyết rơi rồi, anh thấy chưa?'),
+      m(
+        '看见了，今天太冷了，我们别出去了。',
+        'Thấy rồi, hôm nay lạnh quá, chúng ta đừng ra ngoài nữa.'
+      ),
+    ],
+  },
+  {
+    id: 'bike-work',
+    picture: '自行车',
+    lines: [
+      m('你每天怎么去公司？', 'Hằng ngày chị đến công ty bằng gì?'),
+      w('我骑自行车去，二十分钟就到了。', 'Tôi đi xe đạp, hai mươi phút là đến.'),
+    ],
+  },
+  {
+    id: 'boat-trip',
+    picture: '船',
+    lines: [
+      w('我们坐什么去那里？', 'Chúng ta đi đến đó bằng gì?'),
+      m('坐船去吧，路上很漂亮。', 'Đi thuyền đi, dọc đường rất đẹp.'),
+    ],
+  },
+  {
+    id: 'movie-night',
+    picture: '电影',
+    lines: [
+      m('晚上你想做什么？', 'Tối nay chị muốn làm gì?'),
+      w('我们去看电影吧，七点开始。', 'Chúng ta đi xem phim đi, bảy giờ bắt đầu.'),
+    ],
+  },
+  {
+    id: 'airport-time',
+    picture: '机场',
+    lines: [
+      w('你明天几点去机场？', 'Ngày mai mấy giờ anh ra sân bay?'),
+      m('早上七点，我要去北京。', 'Bảy giờ sáng, tôi phải đi Bắc Kinh.'),
+    ],
+  },
+  {
+    id: 'rice-lunch',
+    picture: '米饭',
+    lines: [
+      m('中午你想吃什么？', 'Trưa nay chị muốn ăn gì?'),
+      w('我想吃米饭和羊肉。', 'Tôi muốn ăn cơm với thịt dê.'),
+    ],
+  },
+  {
+    id: 'birthday-treat',
+    picture: '生日',
+    lines: [
+      w('今天是我的生日。', 'Hôm nay là sinh nhật của tôi.'),
+      m('生日快乐！晚上我请你吃饭。', 'Chúc mừng sinh nhật! Tối nay tôi mời chị ăn cơm.'),
+    ],
+  },
+  {
+    id: 'tired-eyes',
+    picture: '眼睛',
+    lines: [
+      m('你的眼睛怎么了？', 'Mắt chị sao thế?'),
+      w('昨天晚上睡得太晚了，有点儿累。', 'Tối qua tôi ngủ muộn quá, hơi mệt.'),
+    ],
+  },
 ]
 
 /**
