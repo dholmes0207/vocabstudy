@@ -701,6 +701,77 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'Tài liệu được kiểm tra (bị động), trong quá khứ (were sent): were checked. by Ms. Lee là dấu hiệu của câu bị động.'
   ),
+  // Third batch: two more of each kind but prepositions.
+  q(
+    'form',
+    'The new design is much more ___ than the old one.',
+    ['attractive', 'attract', 'attraction', 'attractively'],
+    0,
+    'Sau more (so sánh hơn) và trước than, bổ nghĩa cho danh từ design qua động từ is, cần tính từ: attractive.'
+  ),
+  q(
+    'form',
+    'Please read the instructions ___ before using the machine.',
+    ['carefully', 'careful', 'care', 'carefulness'],
+    0,
+    'Bổ nghĩa cho động từ read (đứng sau tân ngữ the instructions) cần trạng từ: carefully.'
+  ),
+  q(
+    'pronoun',
+    'Mr. Lee and ___ will attend the conference in Seoul.',
+    ['I', 'me', 'my', 'mine'],
+    0,
+    'Chỗ trống là một phần chủ ngữ (Mr. Lee and ___ will attend), nên dùng đại từ chủ ngữ I.'
+  ),
+  q(
+    'pronoun',
+    'The manager thanked everyone ___ helped with the event.',
+    ['who', 'which', 'whose', 'whom'],
+    0,
+    'Mệnh đề quan hệ bổ nghĩa cho người (everyone) và làm chủ ngữ cho helped: who. which dùng cho vật.'
+  ),
+  q(
+    'verb',
+    'The hotel ___ completely renovated last year.',
+    ['was', 'is', 'has', 'were'],
+    0,
+    'last year là quá khứ, khách sạn được cải tạo (bị động), chủ ngữ số ít: was renovated.'
+  ),
+  q(
+    'verb',
+    'Ms. Brown ___ for the company since 2015.',
+    ['has worked', 'works', 'worked', 'is working'],
+    0,
+    'since + mốc thời gian dùng hiện tại hoàn thành: has worked (đã làm từ 2015 đến nay).'
+  ),
+  q(
+    'link',
+    'The store will offer free delivery ___ the order is over $50.',
+    ['as long as', 'even though', 'so that', 'in spite of'],
+    0,
+    'as long as = miễn là (điều kiện): giao miễn phí miễn là đơn trên $50. in spite of đi với cụm danh từ.'
+  ),
+  q(
+    'link',
+    'The meeting was short, ___ we discussed every item on the list.',
+    ['but', 'so', 'because', 'or'],
+    0,
+    'Hai vế trái ý nhau (ngắn nhưng vẫn bàn đủ mọi mục): but.'
+  ),
+  q(
+    'meaning',
+    'Please ___ the meeting room for Thursday afternoon.',
+    ['reserve', 'deserve', 'preserve', 'observe'],
+    0,
+    'reserve a room: đặt trước phòng. deserve là xứng đáng, preserve là bảo tồn, observe là quan sát: bốn từ trông giống nhau.'
+  ),
+  q(
+    'meaning',
+    'The company had to ___ its prices because of rising costs.',
+    ['raise', 'rise', 'arise', 'grow'],
+    0,
+    'raise (ngoại động từ, cần tân ngữ its prices): tăng giá. rise và arise là nội động từ, không đi với tân ngữ.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */

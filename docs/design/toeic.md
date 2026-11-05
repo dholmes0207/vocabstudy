@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
+  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 101
     câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 28 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -747,3 +747,10 @@ phải chắc chắn sai: bỏ "Third time this week" vì nó cũng là một c�
 
 `HSK3_PAIRS` từ 15 lên 18 (test giữ mức 18 cho cả ba cấp): tóc ngắn đi, hỏi giá chuối, công việc mới. Không
 thêm câu nhờ chở ra sân bay vì câu trả lời "没关系，我来帮你" sẵn có cũng tạm hợp.
+
+### Thêm câu Part 5 (05/11/2026, đợt ba)
+
+`PART5_BANK` từ 91 lên 101 câu, thêm hai câu cho mỗi dạng trừ giới từ (test giữ mỗi dạng ít nhất 15
+câu): more + tính từ + than, trạng từ sau tân ngữ, đại từ chủ ngữ trong chủ ngữ ghép (Mr. Lee and I),
+who cho người, bị động quá khứ, since + hiện tại hoàn thành, as long as, but, reserve / deserve,
+raise / rise (ngoại động từ và nội động từ).
