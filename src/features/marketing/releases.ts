@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 2 lên 84 câu: thêm How did … go, Would you mind…?, Have you … yet?, câu hỏi phủ định, câu trần thuật về sự cố, và nhiều câu trả lời gián tiếp ("The store hasn’t told us yet").',
+        'TOEIC Part 2 now has 84 items, adding How did … go, Would you mind…?, Have you … yet?, negative questions, statements about a problem and more indirect answers ("The store hasn’t told us yet").',
+      ],
+      [
         'Đọc – ghép câu hỏi và trả lời: HSK 1 và HSK 2 lên 18 cặp mỗi cấp (thêm ngày tháng, nơi ở, biết tiếng Trung không; học bao lâu, sách của ai, vì sao vui).',
         'Question and answer: HSK 1 and HSK 2 now have 18 pairs each (adding the date, where you live, speaking Chinese; how long you have studied, whose book, why so happy).',
       ],

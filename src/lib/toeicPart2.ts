@@ -408,6 +408,70 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['I think it’s Maria’s.', 'Turn left at the corner.', 'The room is very clean.'],
     'Whose hỏi của ai: lượt của Maria. (Bẫy) "Turn left" lặp turn với nghĩa khác (rẽ); câu cuối lặp room và clean.'
   ),
+  item(
+    'What time does the bank open on Saturdays?',
+    ['Not until ten.', 'At the bank on Oak Street.', 'Yes, it’s open today.'],
+    'What time hỏi giờ: "Not until ten" (mãi đến 10 giờ). (Bẫy) câu giữa lặp bank, trả lời nơi chốn; Yes/No không trả lời câu Wh-.'
+  ),
+  item(
+    'Who’s giving the presentation tomorrow?',
+    ['I believe it’s Mr. Patel.', 'It’s a nice present.', 'At ten in the morning.'],
+    'Who hỏi người. (Bẫy) "present" nghe gần presentation; "At ten" trả lời thời gian.'
+  ),
+  item(
+    'Where can I get a parking permit?',
+    ['From the security office downstairs.', 'Parking is free on weekends.', 'For about a month.'],
+    'Where hỏi nơi lấy giấy phép. (Bẫy) câu giữa lặp parking; "For about a month" trả lời How long.'
+  ),
+  item(
+    'Why is the copier making that noise?',
+    [
+      'The technician is coming to check it.',
+      'Please make two copies.',
+      'It’s very noisy outside.',
+    ],
+    'Câu trả lời không nói thẳng lý do nhưng đúng ý: thợ sắp đến kiểm tra. (Bẫy) "copies" nghe gần copier; "noisy" lặp âm noise.'
+  ),
+  item(
+    'How did the client meeting go?',
+    ['Better than we expected.', 'By taxi.', 'At the client’s office.'],
+    'How did … go hỏi kết quả (diễn ra thế nào). (Bẫy) "By taxi" trả lời đi bằng gì; câu cuối lặp client, trả lời nơi chốn.'
+  ),
+  item(
+    'Have you met our new manager yet?',
+    ['Only briefly, at lunch.', 'The meeting is at two.', 'Yes, it’s a new menu.'],
+    'Câu hỏi Yes/No có thể đáp gián tiếp: "chỉ gặp qua lúc ăn trưa" nghĩa là đã gặp. (Bẫy) meeting lặp âm met; "new menu" nghe gần new manager.'
+  ),
+  item(
+    'Should we order lunch now or wait for Sam?',
+    ['Let’s wait a few more minutes.', 'I ordered it online.', 'Yes, lunch was delicious.'],
+    'Câu lựa chọn: chọn đợi Sam. (Bẫy) "ordered" lặp order ở thì quá khứ; Yes không chọn được.'
+  ),
+  item(
+    'Would you mind closing the window?',
+    ['Not at all.', 'It’s closed on Sundays.', 'I mind the store.'],
+    'Would you mind…? hỏi có phiền không: "Not at all" (không phiền đâu) là đồng ý. (Bẫy) "closed" lặp close; "mind" lặp từ với nghĩa khác (trông coi).'
+  ),
+  item(
+    'Isn’t the report due today?',
+    ['No, the deadline was moved to Friday.', 'He reported it yesterday.', 'Two hundred pages.'],
+    'Câu hỏi phủ định: đáp No và nêu hạn mới. (Bẫy) "reported" lặp report; số trang không trả lời câu hỏi.'
+  ),
+  item(
+    'The printer on the third floor is out of paper again.',
+    ['I’ll bring some up right away.', 'I read the paper this morning.', 'It printed in color.'],
+    'Câu trần thuật về vấn đề: đáp bằng lời đề nghị giải quyết. (Bẫy) "paper" lặp từ với nghĩa khác (tờ báo); "printed" lặp âm printer.'
+  ),
+  item(
+    'How many people signed up for the workshop?',
+    ['Around thirty so far.', 'Sign here, please.', 'In the main hall.'],
+    'How many hỏi số lượng. (Bẫy) "Sign" lặp âm signed; câu cuối trả lời nơi chốn.'
+  ),
+  item(
+    'When will the new chairs be delivered?',
+    ['The store hasn’t told us yet.', 'Yes, they’re very comfortable.', 'Twelve chairs.'],
+    'Câu trả lời "chưa biết" vẫn đúng cho câu When. (Bẫy) Yes/No cho câu Wh-; câu cuối lặp chairs, trả lời số lượng.'
+  ),
 ]
 
 /** Items in one round. */
