@@ -368,6 +368,27 @@ export const HSK3_PAIRS: readonly AnswerPair[] = [
     qVi: 'Con gái bạn học nhạc bao lâu rồi?',
     aVi: 'Gần hai năm rồi, cuối tuần nào nó cũng đi học.',
   },
+  {
+    id: 'hair',
+    q: '你的头发怎么短了这么多？',
+    a: '天气太热了，短一点儿舒服。',
+    qVi: 'Sao tóc bạn ngắn đi nhiều thế?',
+    aVi: 'Trời nóng quá, ngắn một chút cho dễ chịu.',
+  },
+  {
+    id: 'bananas',
+    q: '这些香蕉怎么卖？',
+    a: '五块钱一斤，都很新鲜。',
+    qVi: 'Chỗ chuối này bán thế nào?',
+    aVi: 'Năm tệ một cân, đều rất tươi.',
+  },
+  {
+    id: 'new-job',
+    q: '你的新工作怎么样？',
+    a: '同事们都很热情，我很满意。',
+    qVi: 'Công việc mới của bạn thế nào?',
+    aVi: 'Đồng nghiệp đều rất nhiệt tình, tôi rất hài lòng.',
+  },
 ]
 
 /** The pairs of a level. */

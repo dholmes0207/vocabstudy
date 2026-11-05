@@ -209,7 +209,7 @@ Tình hình (05/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 20 bài, HSK 3 25 bài; hội thoại – chọn tranh 20 bài; hỏi – đáp
-    18 cặp ở HSK 1–2, 15 cặp ở HSK 3; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    18 cặp mỗi cấp; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -742,3 +742,8 @@ học bao lâu, sách của ai, vì sao vui. Câu hỏi mới không chung ý v�
 sẵn có, đã thay). Thêm How did … go (hỏi kết quả, không hỏi cách đi), Would you mind…? (đáp "Not at all"
 là đồng ý), Have you … yet? đáp gián tiếp, câu trần thuật về sự cố đáp bằng lời đề nghị. Phương án sai
 phải chắc chắn sai: bỏ "Third time this week" vì nó cũng là một câu đáp tự nhiên.
+
+### Thêm cặp câu hỏi – trả lời HSK 3 (05/11/2026, đợt hai)
+
+`HSK3_PAIRS` từ 15 lên 18 (test giữ mức 18 cho cả ba cấp): tóc ngắn đi, hỏi giá chuối, công việc mới. Không
+thêm câu nhờ chở ra sân bay vì câu trả lời "没关系，我来帮你" sẵn có cũng tạm hợp.
