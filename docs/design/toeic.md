@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
+  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 18 bài (3–4 bài có bảng), Part 5 91
     câu ngữ pháp và câu nghĩa từ, Part 6 20 đoạn, Part 7 28 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -735,3 +735,10 @@ thái.
 `HSK1_PAIRS` và `HSK2_PAIRS` từ 15 lên 18 (test giữ mức này): ngày tháng, nơi ở, biết tiếng Trung không;
 học bao lâu, sách của ai, vì sao vui. Câu hỏi mới không chung ý với câu sẵn có (你住在哪儿 khác 你去哪儿,
 你今天怎么这么高兴 khác 考试准备得怎么样了), nên mỗi câu vẫn chỉ hợp một câu trả lời.
+
+### Thêm câu Part 2 (05/11/2026, đợt hai)
+
+`PART2_BANK` từ 72 lên 84 câu (test giữ mức này và không câu hỏi nào trùng; bắt được hai câu trùng với câu
+sẵn có, đã thay). Thêm How did … go (hỏi kết quả, không hỏi cách đi), Would you mind…? (đáp "Not at all"
+là đồng ý), Have you … yet? đáp gián tiếp, câu trần thuật về sự cố đáp bằng lời đề nghị. Phương án sai
+phải chắc chắn sai: bỏ "Third time this week" vì nó cũng là một câu đáp tự nhiên.
