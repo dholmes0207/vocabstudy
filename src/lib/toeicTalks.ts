@@ -801,6 +801,96 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-conference-room',
+    part: 3,
+    lines: [
+      m(
+        'Excuse me, Ms. Diaz. Is the conference room free this afternoon? I need it for a client call.'
+      ),
+      w(
+        'The sales team booked it until three. After that it’s free, but the video screen isn’t working right now.'
+      ),
+      m('That’s fine. It’s only a phone call. I’ll take it from three thirty.'),
+      w('OK, I’ll put your name on the schedule.'),
+    ],
+    questions: [
+      {
+        q: 'Why does the man need the conference room?',
+        options: [
+          'To make a call to a client',
+          'To hold a training session',
+          'To interview a candidate',
+          'To watch a video',
+        ],
+        why: '"I need it for a client call."',
+      },
+      {
+        q: 'What problem does the woman mention?',
+        options: [
+          'A screen is not working.',
+          'The room is too small.',
+          'The phone line is broken.',
+          'The schedule was lost.',
+        ],
+        why: '"the video screen isn’t working right now". Câu trả lời viết lại video screen thành "a screen".',
+      },
+      {
+        q: 'What will the woman most likely do next?',
+        options: [
+          'Add the man’s name to a schedule',
+          'Call the sales team',
+          'Repair the screen',
+          'Move the client call',
+        ],
+        why: '"I’ll put your name on the schedule." Câu hỏi "do next" thường trả lời ở lượt cuối.',
+      },
+    ],
+  },
+  {
+    id: 'p3-supplier-delay',
+    part: 3,
+    lines: [
+      w('Raj, the paper supplier just called. Our order won’t arrive until next Wednesday.'),
+      m('That’s a problem. We need the paper to print the new catalogs this Friday.'),
+      w(
+        'I know. I checked with another supplier, and they can deliver tomorrow, but it costs about ten percent more.'
+      ),
+      m('Let’s go with them this time. The catalogs can’t be late.'),
+    ],
+    questions: [
+      {
+        q: 'What problem are the speakers discussing?',
+        options: [
+          'A late delivery',
+          'A printing mistake',
+          'A broken printer',
+          'A wrong price on a catalog',
+        ],
+        why: '"Our order won’t arrive until next Wednesday": hàng giao trễ.',
+      },
+      {
+        q: 'What is mentioned about the other supplier?',
+        options: [
+          'It charges more.',
+          'It is closed on Fridays.',
+          'It does not sell paper.',
+          'It needs a week to deliver.',
+        ],
+        why: '"it costs about ten percent more": đắt hơn khoảng 10%. Họ giao được ngay ngày mai.',
+      },
+      {
+        q: 'What does the man decide to do?',
+        options: [
+          'Order from the other supplier',
+          'Wait until next Wednesday',
+          'Print fewer catalogs',
+          'Ask for a discount',
+        ],
+        why: '"Let’s go with them this time": chọn nhà cung cấp kia, vì catalog không được trễ.',
+      },
+    ],
+  },
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -1530,6 +1620,95 @@ export const TALK_SETS: readonly TalkSet[] = [
           'By visiting before noon',
         ],
         why: '"bring your student or company ID card and get a free cake with any large drink".',
+      },
+    ],
+  },
+  {
+    id: 'p4-safety-drill',
+    part: 4,
+    lines: [
+      n(
+        'Attention, all staff. This is a reminder that we will have a fire drill tomorrow morning at ten o’clock.'
+      ),
+      n(
+        'When the alarm sounds, please stop what you are doing and leave the building by the nearest stairway. Do not use the elevators.'
+      ),
+      n(
+        'Everyone should meet in the parking lot behind the building, where your team leader will check that you are there. The drill should take about fifteen minutes.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is the announcement mainly about?',
+        options: ['A fire drill', 'A new parking area', 'A building repair', 'A team meeting'],
+        why: '"we will have a fire drill tomorrow morning". Ý chính ở câu đầu.',
+      },
+      {
+        q: 'What are listeners told not to do?',
+        options: [
+          'Use the elevators',
+          'Use the stairs',
+          'Leave the building',
+          'Talk to team leaders',
+        ],
+        why: '"Do not use the elevators." Câu hỏi "not to do" thường tìm câu có Do not.',
+      },
+      {
+        q: 'Where should listeners go during the drill?',
+        options: [
+          'To the parking lot behind the building',
+          'To the main entrance',
+          'To their team leader’s office',
+          'To the nearest elevator',
+        ],
+        why: '"Everyone should meet in the parking lot behind the building".',
+      },
+    ],
+  },
+  {
+    id: 'p4-podcast-intro',
+    part: 4,
+    lines: [
+      n(
+        'Welcome to Small Business Today, the weekly show for people who run their own companies. I’m your host, Diane Clark.'
+      ),
+      n(
+        'My guest today is Tom Reyes, who opened a small bakery five years ago and now has shops in four cities. He’ll tell us how he found his first customers with almost no money for advertising.'
+      ),
+      n(
+        'If you have a question for Tom, send it to us online during the show, and we’ll answer some of them at the end.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who is the program mainly for?',
+        options: [
+          'Business owners',
+          'Professional bakers',
+          'University students',
+          'Advertising agencies',
+        ],
+        why: '"the weekly show for people who run their own companies": người tự điều hành công ty, viết lại thành "business owners".',
+      },
+      {
+        q: 'What will Mr. Reyes talk about?',
+        options: [
+          'How he found customers on a small budget',
+          'How to bake bread at home',
+          'Why he closed a shop',
+          'How to hire new staff',
+        ],
+        why: '"how he found his first customers with almost no money for advertising": tìm khách khi gần như không có tiền quảng cáo.',
+      },
+      {
+        q: 'What are listeners invited to do?',
+        options: [
+          'Send questions online',
+          'Visit the bakery',
+          'Call the radio station',
+          'Buy a book',
+        ],
+        why: '"send it to us online during the show".',
       },
     ],
   },
