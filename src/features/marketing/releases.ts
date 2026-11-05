@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 5 lên 81 câu ngữ pháp: thêm câu về đại từ (him, their own, herself, whose, it) và giới từ (by, between, on, except, despite).',
+        'TOEIC Part 5 now has 81 grammar questions, adding pronouns (him, their own, herself, whose, it) and prepositions (by, between, on, except, despite).',
+      ],
+      [
         'Trang Luyện thi TOEIC ghi số câu bạn đã làm và đã đúng ở từng Part, và chỉ ra Part bạn hay sai nhất để luyện trước.',
         'The TOEIC page shows how many questions you have answered and got right in each part, and points out your weakest part to practise first.',
       ],
