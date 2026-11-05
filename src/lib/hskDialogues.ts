@@ -620,6 +620,54 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('好的，我去买。', 'Được, tôi đi mua.'),
     ],
   },
+  {
+    id: 'dog',
+    picture: '狗',
+    lines: [
+      w('那只小狗是你的吗？', 'Con chó nhỏ kia là của anh à?'),
+      m('是的，它每天都和我一起跑步。', 'Đúng vậy, ngày nào nó cũng chạy bộ cùng tôi.'),
+    ],
+  },
+  {
+    id: 'fish',
+    picture: '鱼',
+    lines: [
+      m('晚上你想吃什么？', 'Tối nay chị muốn ăn gì?'),
+      w('我们做鱼吧，我昨天买了一条。', 'Mình nấu cá đi, hôm qua tôi mua một con rồi.'),
+    ],
+  },
+  {
+    id: 'milk',
+    picture: '牛奶',
+    lines: [
+      w('早上你喝什么？', 'Buổi sáng anh uống gì?'),
+      m('我每天早上喝一杯牛奶。', 'Sáng nào tôi cũng uống một cốc sữa.'),
+    ],
+  },
+  {
+    id: 'watch',
+    picture: '手表',
+    lines: [
+      m('这块手表是新买的吗？', 'Chiếc đồng hồ này mới mua à?'),
+      w('对，是我丈夫上个星期送给我的。', 'Đúng, chồng tôi tặng tôi tuần trước.'),
+    ],
+  },
+  {
+    id: 'plane',
+    picture: '飞机',
+    lines: [
+      w('你明天怎么去北京？', 'Mai anh đi Bắc Kinh bằng gì?'),
+      m('坐飞机，两个小时就到了。', 'Đi máy bay, hai tiếng là tới.'),
+    ],
+  },
+  {
+    id: 'tv',
+    picture: '电视',
+    lines: [
+      m('你晚上常常做什么？', 'Buổi tối chị hay làm gì?'),
+      w('吃完饭以后，我喜欢看一会儿电视。', 'Ăn cơm xong, tôi thích xem ti vi một lúc.'),
+    ],
+  },
 ]
 
 /**

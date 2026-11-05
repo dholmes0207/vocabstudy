@@ -616,3 +616,9 @@ Part 3 và Part 4 từ 12 lên 16 bài mỗi Part, mỗi Part 3 bài có bảng 
 - Part 4: tin nhắn thoại của cửa hàng nội thất (hết hàng, viết lại thành "not available"), bản tin thời
   tiết, lịch hội thảo đổi giờ (bảng: phải đổi chỗ hai buổi rồi mới đọc giờ, bẫy 1:00 là giờ cũ), lễ
   trao giải (bẫy: được mời lên sân khấu không có nghĩa là sẽ phát biểu).
+
+### Thêm hội thoại chọn tranh HSK 2 (05/11/2026)
+
+`PICTURE_DIALOGUES` từ 10 lên 16 bài (test giữ mức này): chó con, cá, sữa, đồng hồ, máy bay, ti vi.
+Mỗi bài chỉ nói đúng một từ có tranh, nên phải tránh cả những từ có tranh nằm trong lời thoại (家 trong
+"在家", 生日 và 礼物 khi nói về quà). Test chữ Hán bắt được 般 (一般, đổi thành 常常).
