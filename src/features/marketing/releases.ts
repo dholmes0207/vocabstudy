@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Đọc – ghép câu hỏi và trả lời: HSK 1 và HSK 2 lên 18 cặp mỗi cấp (thêm ngày tháng, nơi ở, biết tiếng Trung không; học bao lâu, sách của ai, vì sao vui).',
+        'Question and answer: HSK 1 and HSK 2 now have 18 pairs each (adding the date, where you live, speaking Chinese; how long you have studied, whose book, why so happy).',
+      ],
+      [
         'TOEIC Part 1 lên 34 cảnh: thêm lấy giấy ở máy photo, xe đẩy xếp hàng, đứng trên thang, thùng hàng trên kệ, ăn ngoài trời, ký giấy tờ.',
         'TOEIC Part 1 now has 34 scenes: papers from a copier, carts lined up, a man on a ladder, boxes on shelves, eating outdoors and signing a document.',
       ],
