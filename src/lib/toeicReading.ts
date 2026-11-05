@@ -2909,6 +2909,125 @@ Sam Wilson`,
       },
     ],
   },
+  {
+    id: 'p7-hotel-desk-job',
+    part: 7,
+    passages: [
+      {
+        kind: JOB,
+        text: `Harbor Hotel — Front Desk Assistant (part-time)
+
+Shifts: Saturdays and Sundays, 8 A.M. to 5 P.M.
+
+Requirements:
+- At least one year of customer service experience
+- Good English and one other language
+
+Send your résumé to jobs@harborhotel.com by May 20.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: jobs@harborhotel.com
+From: Minho Park
+Date: May 16
+Subject: Front Desk Assistant
+
+Dear Hiring Manager,
+
+I am writing to apply for the front desk position. For the past two years, I have worked at the counter of a busy café near the harbor, so I am used to helping customers. I speak English and Korean.
+
+I am free all day on Saturdays. On Sundays, I take a class until 11 A.M., but I could come in after that.
+
+My résumé is attached.
+
+Sincerely,
+Minho Park`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is indicated about the position?',
+        options: [
+          'It is for weekends only.',
+          'It is a full-time job.',
+          'It requires hotel experience.',
+          'It starts on May 20.',
+        ],
+        why: 'Tin tuyển dụng: part-time, ca thứ Bảy và Chủ nhật. May 20 là hạn nộp hồ sơ, không phải ngày bắt đầu.',
+      },
+      {
+        q: 'What problem might Mr. Park have with the job?',
+        options: [
+          'He cannot start at 8 A.M. on Sundays.',
+          'He does not speak a second language.',
+          'He has less than one year of experience.',
+          'He sent his résumé too late.',
+        ],
+        why: 'Ghép hai đoạn: ca Chủ nhật bắt đầu 8 giờ (tin tuyển dụng), nhưng Chủ nhật anh ấy học đến 11 giờ (email). Anh ấy có hai năm kinh nghiệm, nói tiếng Hàn, gửi ngày 16/5 trước hạn.',
+      },
+      {
+        q: 'Where does Mr. Park work now?',
+        options: ['At a café', 'At a hotel', 'At a language school', 'At a travel agency'],
+        why: '"I have worked at the counter of a busy café near the harbor": làm ở quầy một quán cà phê.',
+      },
+    ],
+  },
+  {
+    id: 'p7-shuttle-first-day',
+    part: 7,
+    passages: [
+      {
+        kind: SCHEDULE,
+        text: `Office Park Shuttle — Central Station to Office Park
+(Monday to Friday, about 25 minutes)
+
+Departs Central Station
+7:30 A.M.
+8:00 A.M.
+8:30 A.M.
+9:15 A.M.
+
+No service on weekends or public holidays.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: Sara Rossi
+From: Tom Becker
+Subject: Your first day
+
+Hi Sara,
+
+We're looking forward to seeing you on Monday! You said your train gets to Central Station at 8:10, so just take the next shuttle from there. You'll arrive in plenty of time for the orientation at 9:00 in the lobby of Building C.
+
+Please bring a photo ID so that we can make your security badge.
+
+See you soon,
+Tom`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why was the e-mail sent?',
+        options: [
+          'To give information about a first day at work',
+          'To change the time of an interview',
+          'To announce a new shuttle service',
+          'To ask Ms. Rossi to buy a train ticket',
+        ],
+        why: '"We\'re looking forward to seeing you on Monday!… Your first day": hướng dẫn cho ngày đi làm đầu tiên.',
+      },
+      {
+        q: 'Which shuttle will Ms. Rossi most likely take?',
+        options: ['The 8:30 shuttle', 'The 8:00 shuttle', 'The 9:15 shuttle', 'The 7:30 shuttle'],
+        why: 'Ghép hai đoạn: tàu đến 8:10, "take the next shuttle" là chuyến 8:30 (chuyến 8:00 đã chạy). Đi 25 phút, đến 8:55, kịp buổi 9:00.',
+      },
+      {
+        q: 'What is Ms. Rossi asked to bring?',
+        options: ['A photo ID', 'A shuttle ticket', 'A security badge', 'Her train schedule'],
+        why: '"Please bring a photo ID so that we can make your security badge." Thẻ ra vào là thứ công ty sẽ làm cho cô ấy.',
+      },
+    ],
+  },
 ]
 
 export interface ShuffledQuestion extends ReadingQuestion {
