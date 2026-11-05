@@ -35,7 +35,7 @@ describe('HSK dialogues', () => {
 
   it('have a woman and a man, a question, three options and an explanation', () => {
     expect(HSK_DIALOGUES.filter((d) => d.level === 'hsk3').length).toBeGreaterThanOrEqual(30)
-    expect(HSK_DIALOGUES.filter((d) => d.level === 'hsk2').length).toBeGreaterThanOrEqual(20)
+    expect(HSK_DIALOGUES.filter((d) => d.level === 'hsk2').length).toBeGreaterThanOrEqual(24)
     expect(new Set(HSK_DIALOGUES.map((d) => d.id)).size).toBe(HSK_DIALOGUES.length)
     for (const d of HSK_DIALOGUES) {
       expect(new Set(d.lines.map((l) => l.speaker)), d.id).toEqual(new Set(['W', 'M']))
