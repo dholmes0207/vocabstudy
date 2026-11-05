@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Đọc – ghép câu hỏi và trả lời HSK 3 lên 15 cặp: thêm thức khuya chuẩn bị họp, vì sao học tiếng Trung, thử giày, tủ lạnh hết sữa, con gái học nhạc.',
+        "HSK 3 question and answer now has 15 pairs: up late before a meeting, why learn Chinese, trying on shoes, out of milk and a daughter's music lessons.",
+      ],
+      [
         'Đọc – ghép câu hỏi và trả lời: HSK 1 và HSK 2 lên 15 cặp mỗi cấp (thêm số người trong nhà, hỏi ai, muốn ăn gì; số phòng, đợi ai, hỏi thăm sức khoẻ, màu yêu thích, hôm qua mua gì).',
         "Question and answer: HSK 1 and HSK 2 now have 15 pairs each (adding family size, who someone is, what to eat; a room number, who you wait for, feeling better, a favourite colour, yesterday's shopping).",
       ],

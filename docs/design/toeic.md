@@ -651,3 +651,8 @@ và câu có người khi tranh không có ai.
 `HSK1_PAIRS` từ 12 lên 15, `HSK2_PAIRS` từ 10 lên 15 (test giữ mức 15 cho HSK 1–2, 10 cho HSK 3). Cặp mới
 tránh trùng ý với cặp sẵn có, để mỗi câu hỏi chỉ hợp một câu trả lời trong 4 phương án: 你想吃什么 đi cùng
 你想喝什么 nhưng câu trả lời khác động từ; không thêm câu hỏi về thời gian đi đường vì đã có 你家离公司远吗.
+
+### Thêm cặp câu hỏi – trả lời HSK 3 (05/11/2026)
+
+`HSK3_PAIRS` từ 10 lên 15 (test giữ mức 15 cho cả ba cấp). Không thêm câu hỏi đường: câu trả lời kiểu
+"一直往前走，过了路口就能看到" cũng hợp câu hỏi tìm quán ăn sẵn có, nên một câu hỏi sẽ có hai đáp án.
