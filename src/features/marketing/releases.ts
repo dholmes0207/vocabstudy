@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK 2 nghe hội thoại – chọn tranh lên 20 bài: thêm thuốc, báo, mì, ghế.',
+        'HSK 2 picture dialogues now have 20 sets: medicine, a newspaper, noodles and chairs.',
+      ],
+      [
         'TOEIC Part 6 lên 20 đoạn: thêm thông báo tình nguyện dọn công viên, thư báo tăng phí giao hàng, email chào nhân viên mới, thông báo thẻ thư viện mới.',
         'TOEIC Part 6 now has 20 texts: a park clean-up notice, a delivery fee letter, a welcome e-mail for a new employee and a new library card notice.',
       ],
