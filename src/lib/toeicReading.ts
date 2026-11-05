@@ -989,6 +989,141 @@ The building management thanks you for helping to keep Maple Tower clean. Questi
       },
     ],
   },
+  {
+    id: 'p7-library-notice',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Oakville Public Library — Temporary Closure
+
+The main library on Elm Street will be closed from June 3 to June 28 while new lighting and heating systems are installed.
+
+During this time, the Westside branch on 5th Avenue will stay open longer, from 9 a.m. to 8 p.m., Monday through Saturday. Books borrowed from the main library may be returned there.
+
+No late fees will be charged for items due during the closure. Online services, including e-books and room booking, will not be affected.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why will the main library close?',
+        options: [
+          'To install new equipment',
+          'To move to a new building',
+          'To reduce costs',
+          'To train new staff',
+        ],
+        why: '"while new lighting and heating systems are installed": lắp hệ thống đèn và sưởi mới, viết lại thành "install new equipment".',
+      },
+      {
+        q: 'What is indicated about the Westside branch?',
+        options: [
+          'It will have longer opening hours.',
+          'It will close on June 28.',
+          'It does not accept returned books.',
+          'It is open on Sundays.',
+        ],
+        why: '"will stay open longer, from 9 a.m. to 8 p.m.". Thông báo nói chỉ thứ Hai đến thứ Bảy, và chi nhánh này nhận trả sách.',
+      },
+      {
+        q: 'What is NOT affected by the closure?',
+        options: [
+          'Online services',
+          'Late fees',
+          'Book returns at Elm Street',
+          'Heating at the main library',
+        ],
+        why: 'Câu hỏi NOT: tìm điều thông báo nói là không đổi. "Online services… will not be affected." Phí trễ hạn được miễn, tức là có thay đổi.',
+      },
+    ],
+  },
+  {
+    id: 'p7-internship',
+    part: 7,
+    passages: [
+      {
+        kind: JOB,
+        text: `Summer Internship — Marketing Department
+
+Harper & Cole, a leading furniture maker, is offering a ten-week paid internship for university students.
+
+Interns will help plan social media campaigns, write short product descriptions, and attend weekly team meetings. Some travel to our showroom in Denver may be required.
+
+Applicants must be in their third or fourth year of study. Experience with photo-editing software is preferred but not required.
+
+Send your résumé and a writing sample to jobs@harpercole.com by April 20. Interviews will take place in early May.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the advertisement?',
+        options: [
+          'To find students for a short-term position',
+          'To announce a new furniture line',
+          'To hire a marketing manager',
+          'To invite customers to a showroom',
+        ],
+        why: '"a ten-week paid internship for university students": tuyển thực tập sinh 10 tuần, tức là vị trí ngắn hạn.',
+      },
+      {
+        q: 'What is a requirement for applicants?',
+        options: [
+          'Being in the third or fourth year of university',
+          'Experience with photo-editing software',
+          'Living in Denver',
+          'Having worked at a furniture company',
+        ],
+        why: '"must be in their third or fourth year". Phần mềm chỉnh ảnh là "preferred but not required" (ưu tiên, không bắt buộc), bẫy thường gặp.',
+      },
+      {
+        q: 'What should applicants send with their résumé?',
+        options: ['A writing sample', 'A photo', 'A reference letter', 'A product description'],
+        why: '"Send your résumé and a writing sample". Product description là việc thực tập sinh sẽ làm, không phải hồ sơ.',
+      },
+    ],
+  },
+  {
+    id: 'p7-delivery-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Nina Ross (10:02): Hi Sam, the chairs for the training room were supposed to arrive this morning. Have you seen them?
+Sam Lee (10:05): Not yet. I just called the store. The truck had a flat tire, so delivery is now after lunch.
+Nina Ross (10:06): The training starts at 1:30. That’s cutting it close.
+Sam Lee (10:08): I know. I can borrow twelve chairs from the third-floor meeting room for now.
+Nina Ross (10:09): Perfect. I’ll ask Ken to help you carry them.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why are the chairs late?',
+        options: [
+          'A delivery truck had a problem.',
+          'The store sent the wrong chairs.',
+          'The order was never placed.',
+          'The driver went to the wrong address.',
+        ],
+        why: '"The truck had a flat tire": xe tải bị xịt lốp, viết lại thành "had a problem".',
+      },
+      {
+        q: 'At 10:06, what does Ms. Ross mean when she writes, "That’s cutting it close"?',
+        options: [
+          'There may not be enough time.',
+          'The chairs are too small.',
+          'The training room is too far.',
+          'The price is too high.',
+        ],
+        why: '"cutting it close" là sát giờ: hàng đến sau trưa mà 1:30 đã bắt đầu, có thể không kịp. Câu sau Sam đề nghị mượn ghế cũng cho thấy điều đó.',
+      },
+      {
+        q: 'What will Ken most likely do?',
+        options: ['Help move some chairs', 'Call the store', 'Lead the training', 'Fix the truck'],
+        why: '"I’ll ask Ken to help you carry them": them là mười hai chiếc ghế mượn từ tầng ba.',
+      },
+    ],
+  },
+
   // -------------------------------------------------------- Part 7, double
   {
     id: 'p7-rooms',
@@ -1684,6 +1819,131 @@ Leo Watts (June 3, 6:46 P.M.): That works. Thanks!`,
           'Wednesday morning',
         ],
         why: 'Chiều thứ Năm đã kín lịch, còn 9:00 sáng thứ Năm và ông Watts trả lời "That works".',
+      },
+    ],
+  },
+  {
+    id: 'p7-print-invoice',
+    part: 7,
+    passages: [
+      {
+        kind: INVOICE,
+        text: `QuickPrint Services — Invoice #4471
+Customer: Bayview Dental Clinic
+Date: September 9
+
+500 business cards ........ $60
+200 appointment cards ..... $45
+100 posters (A3) .......... $120
+Delivery .................. $15
+
+Total ..................... $240
+
+Payment due within 30 days.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: QuickPrint Services
+From: Grace Lim, Bayview Dental Clinic
+Subject: Invoice #4471
+
+Hello,
+
+Thank you for the quick delivery. Everything looks great, but I noticed that we were charged for 100 posters. We ordered only 50, and that is what we received. Could you please send a corrected invoice?
+
+Also, we would like to order the same appointment cards again next month.
+
+Best regards,
+Grace Lim`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Ms. Lim write the e-mail?',
+        options: [
+          'To point out a billing error',
+          'To complain about a late delivery',
+          'To cancel an order',
+          'To ask for a new design',
+        ],
+        why: 'Cô ấy cảm ơn vì giao nhanh, rồi nêu vấn đề chính: bị tính 100 tờ áp phích trong khi chỉ đặt 50.',
+      },
+      {
+        q: 'How much should the posters most likely cost on the corrected invoice?',
+        options: ['$60', '$120', '$45', '$240'],
+        why: 'Ghép hai đoạn: 100 tờ giá $120 (hoá đơn), nên 50 tờ là $60. Bẫy: $60 cũng là giá danh thiếp, nhưng ở đây là phép tính.',
+      },
+      {
+        q: 'What does Ms. Lim plan to do next month?',
+        options: [
+          'Order appointment cards',
+          'Order more posters',
+          'Pay the full invoice',
+          'Visit the print shop',
+        ],
+        why: '"we would like to order the same appointment cards again next month".',
+      },
+    ],
+  },
+  {
+    id: 'p7-training-schedule',
+    part: 7,
+    passages: [
+      {
+        kind: SCHEDULE,
+        text: `New Employee Training — Week of March 10
+
+Monday     9:00–12:00   Company policies        Room 201
+Tuesday    9:00–12:00   Computer systems        Room 305
+Wednesday  1:00–4:00    Customer service        Room 201
+Thursday   1:00–4:00    Safety training         Warehouse
+Friday     9:00–11:00   Meeting with managers   Room 410`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: New employees
+From: Paula Green, Human Resources
+Subject: Change to training schedule
+
+Dear all,
+
+Because of a fire inspection, the warehouse will be closed on Thursday. The session planned there will move to Friday afternoon from 1:00 to 4:00, in the same place. The other sessions will not change.
+
+Please wear closed shoes for this session.
+
+Paula Green`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why was the schedule changed?',
+        options: [
+          'A building will be inspected.',
+          'A manager is on vacation.',
+          'A room is too small.',
+          'A trainer is sick.',
+        ],
+        why: '"Because of a fire inspection, the warehouse will be closed": kiểm tra phòng cháy, viết lại thành "inspected".',
+      },
+      {
+        q: 'Which session will now take place on Friday afternoon?',
+        options: [
+          'Safety training',
+          'Customer service',
+          'Computer systems',
+          'Meeting with managers',
+        ],
+        why: 'Ghép hai đoạn: buổi ở nhà kho (Warehouse) dời sang chiều thứ Sáu, và theo lịch buổi ở nhà kho là Safety training.',
+      },
+      {
+        q: 'What are employees asked to do?',
+        options: [
+          'Wear suitable shoes',
+          'Bring their computers',
+          'Go to Room 410 on Thursday',
+          'Sign up for a new session',
+        ],
+        why: '"Please wear closed shoes for this session": đi giày kín mũi, viết lại thành "suitable shoes".',
       },
     ],
   },
