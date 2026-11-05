@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
+  - Nội dung: Part 1 28 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
     câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 20 bài (7 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -638,3 +638,10 @@ chuyển văn phòng, thông báo bảo trì ngân hàng trực tuyến, thư nh
 `HSK3_READINGS` từ 10 lên 15 đoạn (test giữ mức này): mùa đông nhiều gió (虽然…但是…), thang máy hỏng
 (累得…, bổ ngữ mức độ), đêm trước kỳ thi (看来…才…), giúp hàng xóm, quán ăn phải đợi lâu (câu khen
 món ngon là bẫy). Test chữ Hán bắt được 陪 và 聊 (陪他聊聊天, đổi thành 和他一起看电视).
+
+### Thêm cảnh Part 1 (05/11/2026)
+
+`PART1_BANK` từ 20 lên 28 cảnh (test giữ mức này). Thêm các cấu trúc hay gặp: reaching for, have been
+arranged in rows, is being repaired, walking along, has been set (bàn ăn), overlooks (nhà nhìn ra mặt
+nước). Bẫy chính vẫn là câu đúng đồ vật nhưng sai hành động ("being packed" thay cho "being repaired")
+và câu có người khi tranh không có ai.
