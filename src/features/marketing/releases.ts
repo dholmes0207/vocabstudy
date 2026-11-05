@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 5 lên 91 câu ngữ pháp: thêm liên từ (because, unless, while, not only… but also), nghĩa của từ (experience, follow, delivered, offers) và dạng động từ (hiện tại tiếp diễn, bị động quá khứ). Mỗi dạng có ít nhất 13 câu.',
+        'TOEIC Part 5 now has 91 grammar questions, adding conjunctions (because, unless, while, not only… but also), word meanings (experience, follow, delivered, offers) and verb forms (present continuous, past passive). Every kind has at least 13.',
+      ],
+      [
         'TOEIC Part 2 lên 72 câu: thêm câu hỏi Which, Whose, How long, câu hỏi phủ định, lời gợi ý Let’s… và Why don’t we…, câu trả lời gián tiếp ("I haven’t heard yet"), câu lựa chọn đáp bằng phương án thứ ba.',
         'TOEIC Part 2 now has 72 items, adding Which, Whose and How long questions, negative questions, Let’s… and Why don’t we… suggestions, indirect answers ("I haven’t heard yet") and choice questions answered with a third option.',
       ],

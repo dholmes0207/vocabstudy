@@ -630,6 +630,77 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'Sau chỗ trống là cụm danh từ (the heavy rain), nên cần giới từ Despite. Although cần cả một mệnh đề.'
   ),
+  // More conjunctions, word meanings and verb forms.
+  q(
+    'link',
+    'The seminar was cancelled ___ not enough people signed up.',
+    ['because', 'although', 'unless', 'so'],
+    0,
+    'Vế sau là lý do hội thảo bị huỷ (không đủ người đăng ký): because + mệnh đề.'
+  ),
+  q(
+    'link',
+    'You will not receive a refund ___ you return the item within 30 days.',
+    ['unless', 'because', 'so', 'although'],
+    0,
+    'unless = if not: sẽ không được hoàn tiền nếu không trả hàng trong 30 ngày.'
+  ),
+  q(
+    'link',
+    'Ms. Park will lead the meeting ___ Mr. Davis is away.',
+    ['while', 'during', 'despite', 'unless'],
+    0,
+    'Sau chỗ trống là mệnh đề (Mr. Davis is away), nên cần liên từ while. during và despite đi với cụm danh từ.'
+  ),
+  q(
+    'link',
+    'The software is not only fast ___ easy to use.',
+    ['but also', 'and also', 'or else', 'as well'],
+    0,
+    'Cặp liên từ cố định: not only … but also … (không những… mà còn…).'
+  ),
+  q(
+    'meaning',
+    'The new manager has a lot of ___ in the hotel industry.',
+    ['experience', 'experiment', 'expert', 'expense'],
+    0,
+    'experience: kinh nghiệm. experiment là thí nghiệm, expert là chuyên gia, expense là chi phí: bốn từ trông giống nhau.'
+  ),
+  q(
+    'meaning',
+    'All employees must ___ the safety rules in the factory.',
+    ['follow', 'attend', 'join', 'reach'],
+    0,
+    'follow the rules: tuân theo quy định. attend đi với cuộc họp, lớp học; join đi với nhóm.'
+  ),
+  q(
+    'meaning',
+    'The package will be ___ to your home within three days.',
+    ['delivered', 'arrived', 'reached', 'received'],
+    0,
+    'be delivered to: được giao đến. arrive là nội động từ, không dùng bị động; reach không đi với to.'
+  ),
+  q(
+    'meaning',
+    'The hotel ___ a 10 percent discount to members.',
+    ['offers', 'spends', 'borrows', 'earns'],
+    0,
+    'offer a discount: đưa ra mức giảm giá. Ba động từ kia đều nói về tiền nhưng không hợp nghĩa.'
+  ),
+  q(
+    'verb',
+    'The new employees ___ training at the moment.',
+    ['are receiving', 'receive', 'received', 'have received'],
+    0,
+    'at the moment: lúc này, dùng hiện tại tiếp diễn are receiving.'
+  ),
+  q(
+    'verb',
+    'The documents ___ by Ms. Lee before they were sent.',
+    ['were checked', 'checked', 'are checking', 'check'],
+    0,
+    'Tài liệu được kiểm tra (bị động), trong quá khứ (were sent): were checked. by Ms. Lee là dấu hiệu của câu bị động.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */

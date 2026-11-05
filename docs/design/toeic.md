@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
+  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 91
     câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 25 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -674,3 +674,10 @@ Part 7 từ 20 lên 25 bài: 16 bài một đoạn, 9 bài hai đoạn (test gi�
 - câu hỏi lựa chọn đáp bằng phương án thứ ba ("It was moved to Wednesday");
 - Why don’t we… là lời gợi ý, nên câu bắt đầu bằng Because là bẫy;
 - từ lặp với nghĩa khác: show (buổi diễn), at the latest, turn left.
+
+### Thêm câu Part 5 (05/11/2026, đợt hai)
+
+`PART5_BANK` từ 81 lên 91 câu, thêm cho các dạng ít câu nhất: liên từ từ 11 lên 15, nghĩa của từ từ 11
+lên 15, thì và dạng động từ từ 14 lên 16. Test giữ mỗi dạng ít nhất 13 câu. Câu nghĩa của từ dùng bốn
+từ trông giống nhau (experience, experiment, expert, expense) hoặc cùng chủ đề nhưng sai kết hợp (attend
+the rules, arrived to).
