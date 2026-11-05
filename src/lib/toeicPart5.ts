@@ -899,6 +899,91 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'Hành khách lên máy bay phải trình hộ chiếu (passport) còn hạn. receipt là biên lai, invoice là hoá đơn.'
   ),
+  // Fifth batch: two more of each kind.
+  q(
+    'form',
+    'The hotel staff were very ___ when we arrived late at night.',
+    ['helpful', 'help', 'helpfully', 'helpfulness'],
+    0,
+    'Sau were very cần một tính từ: helpful (hay giúp đỡ).'
+  ),
+  q(
+    'form',
+    'Mr. Grant gave a clear ___ of the new safety rules.',
+    ['explanation', 'explain', 'explained', 'explanatory'],
+    0,
+    'Sau mạo từ a và tính từ clear cần một danh từ: explanation (lời giải thích).'
+  ),
+  q(
+    'prep',
+    'The new shopping center is ___ walking distance of our office.',
+    ['within', 'among', 'along', 'onto'],
+    0,
+    'Cụm cố định within walking distance of: trong khoảng cách đi bộ được.'
+  ),
+  q(
+    'prep',
+    'Please send your comments to Ms. Choi ___ e-mail.',
+    ['by', 'with', 'in', 'from'],
+    0,
+    'by e-mail / by phone / by mail: gửi bằng phương tiện gì.'
+  ),
+  q(
+    'verb',
+    'Before joining our company, Ms. Diaz ___ as a teacher for five years.',
+    ['had worked', 'has worked', 'works', 'will work'],
+    0,
+    'Việc xảy ra trước một việc khác trong quá khứ (trước khi vào công ty): quá khứ hoàn thành had worked.'
+  ),
+  q(
+    'verb',
+    'All of the rooms ___ every morning by the cleaning staff.',
+    ['are cleaned', 'clean', 'are cleaning', 'cleaned'],
+    0,
+    'Phòng được dọn (bị động), việc lặp lại mỗi sáng (hiện tại đơn), có by the cleaning staff: are cleaned.'
+  ),
+  q(
+    'link',
+    'You can return the item ___ you keep the receipt.',
+    ['as long as', 'even if', 'unless', 'whereas'],
+    0,
+    'as long as = miễn là: được trả hàng miễn là giữ hoá đơn. unless (trừ khi) làm câu ngược nghĩa.'
+  ),
+  q(
+    'link',
+    'Ms. Lee will be out of the office next week, ___ please contact Mr. Shaw instead.',
+    ['so', 'because', 'although', 'unless'],
+    0,
+    'Vế sau là kết quả của vế trước (vắng mặt nên liên hệ người khác): so.'
+  ),
+  q(
+    'pronoun',
+    'Mr. Novak asked ___ assistant to book a table for six.',
+    ['his', 'him', 'he', 'himself'],
+    0,
+    'Trước danh từ assistant cần tính từ sở hữu: his assistant.'
+  ),
+  q(
+    'pronoun',
+    'Some of the printers are new, but ___ are more than ten years old.',
+    ['others', 'another', 'the other', 'each other'],
+    0,
+    'Some … others: một số … những cái khác. others đứng một mình làm chủ ngữ số nhiều (are). another và the other đi với số ít.'
+  ),
+  q(
+    'meaning',
+    'Please ___ the red button to stop the machine.',
+    ['press', 'pull', 'raise', 'carry'],
+    0,
+    'press the button: nhấn nút. pull là kéo, raise là nâng lên, carry là mang.'
+  ),
+  q(
+    'meaning',
+    'The company will ___ the cost of the hotel for all speakers.',
+    ['cover', 'spend', 'charge', 'save'],
+    0,
+    'cover the cost: chi trả chi phí. charge là tính phí (cho người khác), spend cần on, save là tiết kiệm.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */
