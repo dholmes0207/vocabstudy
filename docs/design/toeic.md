@@ -595,3 +595,13 @@ HSK 1–3 (bắt được 假).
 
 - Thẻ "Đọc – ghép câu hỏi và trả lời" hiện ở cả ba cấp, mỗi cấp lấy cặp câu của mình.
 - Bài thi nhỏ HSK 3: phần Đọc gồm 3 câu ghép câu, 3 câu điền từ, 4 câu đoạn văn, theo thứ tự đề thật.
+
+### Thêm hội thoại HSK (05/11/2026)
+
+`HSK_DIALOGUES` thêm 9 bài, test giữ mức mới: HSK 3 từ 15 lên 20, HSK 2 từ 12 lên 16.
+
+- HSK 3: 把…借给 (vì sao đi bộ), 还是…吧 (suy ra ăn ở quán), hỏi đường (hai phương án chỉ đổi một chi
+  tiết), tìm mũ, 如果…就… (đổi lịch vì tuyết).
+- HSK 2: giờ chuyến bay (ba phương án cùng tám giờ, khác buổi), nghề của chị gái, thời gian chạy bộ
+  (bẫy 六点 là giờ dậy), giờ hiện tại (bẫy 九点 là giờ mở cửa).
+- Test chữ Hán bắt được 火 (火车站, đổi thành 银行) và 半 ở HSK 2 (đổi sang 八点五十).
