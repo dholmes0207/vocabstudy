@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK 3 đọc đoạn văn ngắn lên 20 đoạn: thêm họp đổi giờ, con trai thích vận động, siêu thị đóng cửa sớm, tìm chìa khoá, chọn xe buýt.',
+        'HSK 3 short passages now number 20: a moved meeting, a son who took up sport, a supermarket that closes early, a lost key and choosing the bus.',
+      ],
+      [
         'Nghe hội thoại – câu hỏi thêm 9 bài nữa: HSK 3 lên 25 bài (máy tính mất mạng, học nấu ăn từ bà, chuyến bay đổi giờ, lớp đổi phòng, chọn quà cho bố), HSK 2 lên 20 bài (nghỉ ở nhà thứ Bảy, giá vé trẻ em, cà phê buổi tối, nhà mới gần công ty).',
         "The dialogue questions add nine more sets: HSK 3 now has 25 (no internet, cooking learnt from grandma, a changed flight, a new classroom, a gift for dad), HSK 2 has 20 (a Saturday at home, a child's ticket, coffee at night, a new home near work).",
       ],

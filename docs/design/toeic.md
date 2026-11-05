@@ -196,7 +196,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 
 ## Tiếp theo
 
-Tình hình (04/11/2026, cuối ngày):
+Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 91
@@ -208,12 +208,15 @@ Tình hình (04/11/2026, cuối ngày):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-- **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
+  - Nội dung: hội thoại – câu hỏi HSK 2 20 bài, HSK 3 25 bài; hội thoại – chọn tranh 16 bài; hỏi – đáp
+    15 cặp mỗi cấp; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+- **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
+  trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
 Có thể làm thêm sau:
 
-- tăng số bài cho từng Part, nhất là Part 3–4 và hội thoại HSK (mỗi bài mới cần thu giọng, đã tự động
-  qua `screens.json`);
+- tiếp tục tăng số bài cho từng Part và từng dạng HSK (mỗi bài mới cần thu giọng, đã tự động qua
+  `screens.json`);
 
 Các bước dưới đây ghi theo thứ tự đã làm.
 
@@ -687,3 +690,9 @@ the rules, arrived to).
 `HSK_DIALOGUES` thêm 9 bài: HSK 3 từ 20 lên 25, HSK 2 từ 16 lên 20 (test giữ mức mới). Bẫy dựa vào chi
 tiết nghe trước rồi bị đổi (giờ bay cũ, phòng học cũ, giá vé người lớn) và từ nghe gần giống (眼睛 và
 眼镜). Test chữ Hán bắt được 航, 零, 屏, 幕, 怕, và 周末 ở HSK 2 (đổi thành 星期六).
+
+### Thêm đoạn văn HSK 3 (05/11/2026, đợt hai)
+
+`HSK3_READINGS` từ 15 lên 20 đoạn (test giữ mức này): họp đổi giờ (本来… / 换到…), con trai thích vận
+động (以前… / 自从…), siêu thị đóng cửa sớm (就是… nêu điểm chưa tốt), tìm chìa khoá (越来越…), chọn xe
+buýt dù chậm hơn (但是…所以…). Test chữ Hán bắt được 改 và 队.
