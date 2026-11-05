@@ -663,6 +663,174 @@ Customer Service`,
       ),
     ],
   },
+  {
+    id: 'p6-volunteer',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `Volunteers Wanted — Riverside Clean-Up Day
+
+On Saturday, April 22, the Riverside Business Association will hold its yearly clean-up of the park along the river. We are looking for volunteers to help [1] litter and plant new flowers.
+
+The event will start at 8 a.m. and finish around noon. [2] Gloves, bags, and drinks will be provided, so you only need to bring a hat and comfortable shoes.
+
+To sign up, please e-mail events@riversidebiz.org [3] April 15. Last year, more than 200 people took part, and we hope to make this year's event even [4].`,
+      },
+    ],
+    questions: [
+      gap(
+        ['collect', 'collection', 'collected', 'collector'],
+        'help + động từ nguyên mẫu: help (to) collect litter (giúp nhặt rác).'
+      ),
+      gap(
+        [
+          'Lunch will be served to all volunteers afterward.',
+          'The park will be closed for the whole month.',
+          'Please bring your own gloves and bags.',
+          'The event was cancelled because of rain.',
+        ],
+        'Câu trước nói giờ kết thúc khoảng trưa, câu chèn nói bữa trưa sau đó là hợp mạch. "Bring your own gloves" trái với câu sau (găng tay được phát sẵn).'
+      ),
+      gap(
+        ['by', 'until', 'during', 'since'],
+        'by + ngày: hạn chót đăng ký, chậm nhất là ngày 15 tháng 4.'
+      ),
+      gap(
+        ['bigger', 'big', 'biggest', 'bigness'],
+        'even + so sánh hơn: even bigger (còn lớn hơn nữa), so với năm ngoái hơn 200 người.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-price-change',
+    part: 6,
+    passages: [
+      {
+        kind: LETTER,
+        text: `Dear Valued Customer,
+
+We are writing to let you know about a change to our delivery service. Starting March 1, the delivery fee for orders under $50 will [1] from $5 to $7.
+
+This change is necessary because of rising fuel costs. [2] Orders of $50 or more will continue to be delivered free of charge.
+
+We understand that this may be [3] news, and we thank you for your continued support. If you have any questions, our customer service team will be happy to [4] you.
+
+Sincerely,
+FreshMart Online`,
+      },
+    ],
+    questions: [
+      gap(
+        ['increase', 'increasing', 'increased', 'increases'],
+        'Sau will cần động từ nguyên mẫu: will increase (sẽ tăng) từ $5 lên $7.'
+      ),
+      gap(
+        [
+          'We have tried to keep the increase as small as possible.',
+          'All delivery fees will be removed next month.',
+          'Our store has opened a new branch downtown.',
+          'Fuel prices have fallen sharply this year.',
+        ],
+        'Câu trước giải thích lý do (giá nhiên liệu tăng), câu chèn nói đã cố giữ mức tăng thấp nhất. "Fuel prices have fallen" trái với câu trước; "fees will be removed" trái với cả đoạn.'
+      ),
+      gap(
+        ['disappointing', 'disappointed', 'disappoint', 'disappointment'],
+        'Đứng trước danh từ news, chỉ tính chất của tin: disappointing (gây thất vọng). disappointed dùng cho người cảm thấy thất vọng.'
+      ),
+      gap(
+        ['assist', 'assistant', 'assistance', 'assisted'],
+        'be happy to + động từ nguyên mẫu: happy to assist you (sẵn lòng hỗ trợ bạn).'
+      ),
+    ],
+  },
+  {
+    id: 'p6-welcome-email',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: Kevin Ortiz
+From: Amy Chen, Human Resources
+Subject: Welcome to Norton Design
+
+Dear Kevin,
+
+We are very happy that you will be joining our team as a graphic designer. Your first day will be Monday, June 3. Please [1] at the reception desk on the ground floor at 9 a.m.
+
+On your first morning, you will meet your manager, Ms. Patel, and receive your laptop and ID card. [2] In the afternoon, you will attend a short training session on our design software.
+
+Please bring a copy of your passport and your bank details so that we can set up your salary [3]. If you have any questions before you start, do not hesitate to contact me.
+
+We look forward to [4] with you.
+
+Best regards,
+Amy Chen`,
+      },
+    ],
+    questions: [
+      gap(
+        ['report', 'reported', 'reporting', 'reporter'],
+        'Sau please dùng động từ nguyên mẫu: please report at the reception desk (có mặt ở quầy lễ tân).'
+      ),
+      gap(
+        [
+          'She will also give you a tour of the office.',
+          'Your contract will end next month.',
+          'The training will take place on Friday.',
+          'Please bring your own laptop.',
+        ],
+        'Đoạn đang kể buổi sáng đầu tiên với Ms. Patel; câu chèn thêm việc dẫn đi xem văn phòng là hợp mạch. "Bring your own laptop" trái với câu trước (sẽ được phát laptop); training là vào buổi chiều.'
+      ),
+      gap(
+        ['payments', 'pays', 'paid', 'payable'],
+        'salary payments là danh từ ghép (việc trả lương), làm tân ngữ của set up. Sau danh từ salary chỉ có thể là một danh từ nữa.'
+      ),
+      gap(
+        ['working', 'work', 'worked', 'works'],
+        'look forward to + V-ing: look forward to working with you. to ở đây là giới từ, không phải dấu hiệu động từ nguyên mẫu.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-library-card',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `New Library Cards Now Available
+
+Greenville Public Library is introducing new library cards with a built-in chip. The new cards will allow members to borrow books [1] at our self-service machines.
+
+All current members can exchange their old cards for free at the front desk. [2] Old cards will stop working on September 30.
+
+To get your new card, simply bring your old card and a photo ID. The process takes [3] five minutes. For more details, please visit our website or speak to a member of our [4].`,
+      },
+    ],
+    questions: [
+      gap(
+        ['quickly', 'quick', 'quicker', 'quickness'],
+        'Bổ nghĩa cho động từ borrow cần trạng từ: borrow books quickly (mượn sách nhanh).'
+      ),
+      gap(
+        [
+          'There is no need to make an appointment.',
+          'The library will be closed until next year.',
+          'New members must pay a fee of $20.',
+          'Old cards can still be used after September.',
+        ],
+        'Câu trước nói đổi thẻ miễn phí ở quầy; câu chèn nói không cần hẹn trước là hợp mạch. "Old cards can still be used after September" trái với câu sau (thẻ cũ ngừng dùng ngày 30/9).'
+      ),
+      gap(
+        ['only', 'once', 'alone', 'single'],
+        'only + con số: chỉ mất năm phút. alone đứng sau danh từ, once là "một lần", single là tính từ "đơn lẻ".'
+      ),
+      gap(
+        ['staff', 'staffs', 'staffing', 'staffed'],
+        'a member of our staff: một nhân viên. staff là danh từ tập hợp, không thêm s trong cụm này.'
+      ),
+    ],
+  },
 
   // ------------------------------------------------------- Part 7, single
   {
