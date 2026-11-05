@@ -126,6 +126,34 @@ export const HSK1_PAIRS: readonly AnswerPair[] = [
     qVi: 'Bạn biết nói tiếng Trung không?',
     aVi: 'Biết một chút.',
   },
+  {
+    id: 'phone-number',
+    q: '你的电话是多少？',
+    a: '是八六三五二一。',
+    qVi: 'Số điện thoại của bạn là bao nhiêu?',
+    aVi: 'Là 863521.',
+  },
+  {
+    id: 'yesterday',
+    q: '你昨天做什么了？',
+    a: '我在家看书。',
+    qVi: 'Hôm qua bạn làm gì?',
+    aVi: 'Tôi ở nhà đọc sách.',
+  },
+  {
+    id: 'cook',
+    q: '你会做中国菜吗？',
+    a: '会，我做的菜很好吃。',
+    qVi: 'Bạn biết nấu món Trung Quốc không?',
+    aVi: 'Biết, món tôi nấu rất ngon.',
+  },
+  {
+    id: 'friend-work',
+    q: '你的朋友在哪儿工作？',
+    a: '他在医院工作。',
+    qVi: 'Bạn của bạn làm việc ở đâu?',
+    aVi: 'Anh ấy làm việc ở bệnh viện.',
+  },
 ]
 
 /**
@@ -259,6 +287,34 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
     qVi: 'Sao hôm nay bạn vui thế?',
     aVi: 'Vì tôi thi rất tốt.',
   },
+  {
+    id: 'bus',
+    q: '去机场坐几路车？',
+    a: '坐八路车，就在前面。',
+    qVi: 'Ra sân bay đi xe buýt số mấy?',
+    aVi: 'Đi xe số 8, ở ngay phía trước.',
+  },
+  {
+    id: 'sing',
+    q: '你唱歌唱得怎么样？',
+    a: '不太好，但是我很喜欢唱。',
+    qVi: 'Bạn hát thế nào?',
+    aVi: 'Không hay lắm, nhưng tôi rất thích hát.',
+  },
+  {
+    id: 'coffee',
+    q: '你要咖啡还是茶？',
+    a: '咖啡吧，我有点儿累。',
+    qVi: 'Bạn muốn cà phê hay trà?',
+    aVi: 'Cà phê đi, tôi hơi mệt.',
+  },
+  {
+    id: 'sick',
+    q: '你哥哥今天为什么没来上班？',
+    a: '他生病了，在家休息。',
+    qVi: 'Sao hôm nay anh trai bạn không đi làm?',
+    aVi: 'Anh ấy bị ốm, đang nghỉ ở nhà.',
+  },
 ]
 
 /** HSK 3 reading, part one: a sentence and the one that answers or follows it. */
@@ -388,6 +444,34 @@ export const HSK3_PAIRS: readonly AnswerPair[] = [
     a: '同事们都很热情，我很满意。',
     qVi: 'Công việc mới của bạn thế nào?',
     aVi: 'Đồng nghiệp đều rất nhiệt tình, tôi rất hài lòng.',
+  },
+  {
+    id: 'bus-slow',
+    q: '公共汽车怎么还不来？',
+    a: '今天是周末，车比平时少。',
+    qVi: 'Sao xe buýt mãi chưa đến?',
+    aVi: 'Hôm nay là cuối tuần, xe ít hơn ngày thường.',
+  },
+  {
+    id: 'gift',
+    q: '你送给妈妈什么礼物了？',
+    a: '我给她买了一条裙子。',
+    qVi: 'Bạn tặng mẹ quà gì?',
+    aVi: 'Tôi mua cho mẹ một chiếc váy.',
+  },
+  {
+    id: 'elevator',
+    q: '电梯坏了吗？',
+    a: '是的，我们只好走上去了。',
+    qVi: 'Thang máy hỏng rồi à?',
+    aVi: 'Đúng vậy, chúng ta đành phải đi bộ lên thôi.',
+  },
+  {
+    id: 'clean',
+    q: '你的房间怎么这么干净？',
+    a: '我妈妈明天要来，我打扫了一下午。',
+    qVi: 'Sao phòng bạn sạch thế?',
+    aVi: 'Ngày mai mẹ tôi đến, tôi đã dọn cả buổi chiều.',
   },
 ]
 
