@@ -891,6 +891,102 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-meeting-room-graphic',
+    part: 3,
+    lines: [
+      w(
+        'Hi, Daniel. I need to book a room for the client presentation on Thursday. About eight people are coming.'
+      ),
+      m(
+        'Room A only has six seats, so that one’s too small. And you’ll need a projector for your slides.'
+      ),
+      w('Right. Room C is much too big for us, so let’s take the other one.'),
+      m(
+        'OK, I’ll book it now. I can also send the invitation to the clients this afternoon if you like.'
+      ),
+    ],
+    graphic: {
+      title: 'Meeting Rooms',
+      rows: [
+        ['Room', 'Seats', 'Projector'],
+        ['Room A', '6', 'No'],
+        ['Room B', '10', 'Yes'],
+        ['Room C', '20', 'Yes'],
+      ],
+    },
+    questions: [
+      {
+        q: 'What is the woman preparing for?',
+        options: [
+          'A presentation for clients',
+          'A training session',
+          'A job interview',
+          'A team lunch',
+        ],
+        why: '"I need to book a room for the client presentation on Thursday."',
+      },
+      {
+        q: 'Look at the graphic. Which room will the speakers use?',
+        options: ['Room B', 'Room A', 'Room C', 'Room D'],
+        why: 'Cần chỗ cho tám người và có máy chiếu: phòng A chỉ sáu ghế, phòng C quá lớn, nên chọn phòng B (10 ghế, có máy chiếu).',
+      },
+      {
+        q: 'What does the man offer to do?',
+        options: [
+          'Send an invitation',
+          'Set up the projector',
+          'Print the slides',
+          'Call the clients on Thursday',
+        ],
+        why: '"I can also send the invitation to the clients this afternoon if you like."',
+      },
+    ],
+  },
+  {
+    id: 'p3-lost-badge',
+    part: 3,
+    lines: [
+      m(
+        'Good morning. I think I left my security badge at home, and I can’t get through the gate.'
+      ),
+      w(
+        'No problem. I can give you a visitor badge for today. Could you write your name and department here?'
+      ),
+      m('Sure. Will I need to do this again tomorrow?'),
+      w(
+        'Only if you forget it again. But if you’ve lost it, come back to this desk with a photo, and we’ll make you a new one.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What problem does the man have?',
+        options: [
+          'He does not have his badge.',
+          'He is late for a meeting.',
+          'He cannot find the visitor desk.',
+          'His photo is missing from a form.',
+        ],
+        why: '"I think I left my security badge at home": anh ấy để quên thẻ ở nhà nên không qua cổng được.',
+      },
+      {
+        q: 'What does the woman ask the man to do?',
+        options: [
+          'Write down some information',
+          'Go back home',
+          'Call his manager',
+          'Wait at the gate',
+        ],
+        why: '"Could you write your name and department here?": viết tên và phòng ban.',
+      },
+      {
+        q: 'What should the man bring if his badge is lost?',
+        options: ['A photo', 'A visitor badge', 'A letter from his manager', 'His ID card'],
+        why: '"come back to this desk with a photo, and we’ll make you a new one."',
+      },
+    ],
+  },
+
   // ---------------------------------------------------------------- Part 4
   {
     id: 'p4-dentist',
@@ -1709,6 +1805,94 @@ export const TALK_SETS: readonly TalkSet[] = [
           'Buy a book',
         ],
         why: '"send it to us online during the show".',
+      },
+    ],
+  },
+  {
+    id: 'p4-library-closed',
+    part: 4,
+    lines: [
+      n(
+        'Thank you for calling the Westfield Public Library. The library is closed this week while we replace the carpets and paint the reading rooms. We will open again on Monday, June twelfth, at nine A.M.'
+      ),
+      n(
+        'If you need to return books before then, please use the drop box next to the side entrance. No late fees will be charged this week. You can also borrow e-books at any time on our website.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Why is the library closed?',
+        options: [
+          'Work is being done on the building.',
+          'It is a national holiday.',
+          'The staff are in training.',
+          'It is moving to a new address.',
+        ],
+        why: '"closed this week while we replace the carpets and paint the reading rooms": đang sửa sang (thay thảm, sơn phòng).',
+      },
+      {
+        q: 'Where can people return books this week?',
+        options: [
+          'In a box by the side entrance',
+          'At the front desk',
+          'At another library',
+          'On the website',
+        ],
+        why: '"please use the drop box next to the side entrance." Website là chỗ mượn sách điện tử.',
+      },
+      {
+        q: 'What does the speaker say about late fees?',
+        options: [
+          'They will not be charged this week.',
+          'They have gone up.',
+          'They can be paid online.',
+          'They must be paid on Monday.',
+        ],
+        why: '"No late fees will be charged this week": tuần này không tính phí trả muộn.',
+      },
+    ],
+  },
+  {
+    id: 'p4-factory-tour',
+    part: 4,
+    lines: [
+      n(
+        'Good morning, everyone, and welcome to the Sunny Juice factory. My name is Carla, and I’ll be your guide today. Before we start, please put on the safety glasses in the basket by the door.'
+      ),
+      n(
+        'The tour takes about forty-five minutes. You’ll see how we wash, press and bottle the fruit. Please don’t take photos inside the bottling room. At the end, we’ll stop at our shop, where you can try three new flavors for free.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Who most likely is the speaker?',
+        options: [
+          'A tour guide',
+          'A factory worker on a break',
+          'A store manager',
+          'A fruit farmer',
+        ],
+        why: '"My name is Carla, and I’ll be your guide today": hướng dẫn viên.',
+      },
+      {
+        q: 'What are the listeners asked to do first?',
+        options: [
+          'Put on safety glasses',
+          'Buy a ticket',
+          'Take a group photo',
+          'Wash their hands',
+        ],
+        why: '"Before we start, please put on the safety glasses": việc đầu tiên là đeo kính bảo hộ.',
+      },
+      {
+        q: 'What will the listeners be able to do at the end of the tour?',
+        options: [
+          'Try some drinks',
+          'Take photos of the bottling room',
+          'Meet the factory owner',
+          'Pick some fruit',
+        ],
+        why: '"we’ll stop at our shop, where you can try three new flavors for free": thử ba vị nước ép mới. Chụp ảnh phòng đóng chai bị cấm.',
       },
     ],
   },
