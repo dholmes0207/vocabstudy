@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 2 lên 72 câu: thêm câu hỏi Which, Whose, How long, câu hỏi phủ định, lời gợi ý Let’s… và Why don’t we…, câu trả lời gián tiếp ("I haven’t heard yet"), câu lựa chọn đáp bằng phương án thứ ba.',
+        'TOEIC Part 2 now has 72 items, adding Which, Whose and How long questions, negative questions, Let’s… and Why don’t we… suggestions, indirect answers ("I haven’t heard yet") and choice questions answered with a third option.',
+      ],
+      [
         'TOEIC Part 7 lên 25 bài (16 bài một đoạn, 9 bài hai đoạn): thêm thông báo thư viện đóng cửa, tin tuyển thực tập, tin nhắn ghế giao trễ; hoá đơn in ấn kèm email báo tính sai, lịch đào tạo kèm email đổi buổi.',
         'TOEIC Part 7 now has 25 sets (16 single, 9 double): a library closure notice, an internship ad, a chat about late chairs; a print invoice with an e-mail about a billing error, and a training schedule with a change e-mail.',
       ],

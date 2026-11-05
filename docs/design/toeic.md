@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 28 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
+  - Nội dung: Part 1 28 cảnh, Part 2 72 câu, Part 3 và 4 mỗi Part 16 bài (3 bài có bảng), Part 5 81
     câu ngữ pháp và câu nghĩa từ, Part 6 16 đoạn, Part 7 25 bài (9 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -665,3 +665,12 @@ Part 7 từ 20 lên 25 bài: 16 bài một đoạn, 9 bài hai đoạn (test gi�
   required"), tin nhắn ghế giao trễ (câu ý nghĩa "That’s cutting it close").
 - Hai đoạn: hoá đơn in ấn kèm email báo tính sai (tính lại giá 50 tờ áp phích từ giá 100 tờ), lịch đào
   tạo kèm email dời buổi ở nhà kho (đọc lịch để biết buổi nào bị dời).
+
+### Thêm câu Part 2 (05/11/2026)
+
+`PART2_BANK` từ 60 lên 72 câu (test giữ mức này). Thêm các dạng đề thật hay dùng để bẫy:
+
+- câu trả lời gián tiếp ("I haven’t heard yet", "I’m still waiting for the sales numbers") vẫn là đáp án;
+- câu hỏi lựa chọn đáp bằng phương án thứ ba ("It was moved to Wednesday");
+- Why don’t we… là lời gợi ý, nên câu bắt đầu bằng Because là bẫy;
+- từ lặp với nghĩa khác: show (buổi diễn), at the latest, turn left.
