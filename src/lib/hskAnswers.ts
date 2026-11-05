@@ -84,6 +84,27 @@ export const HSK1_PAIRS: readonly AnswerPair[] = [
   },
   { id: 'thanks', q: '谢谢你！', a: '不客气。', qVi: 'Cảm ơn bạn!', aVi: 'Không có gì.' },
   { id: 'sorry', q: '对不起！', a: '没关系。', qVi: 'Xin lỗi!', aVi: 'Không sao.' },
+  {
+    id: 'family',
+    q: '你家有几口人？',
+    a: '我家有四口人。',
+    qVi: 'Nhà bạn có mấy người?',
+    aVi: 'Nhà tôi có bốn người.',
+  },
+  {
+    id: 'who',
+    q: '他是谁？',
+    a: '他是我的朋友。',
+    qVi: 'Anh ấy là ai?',
+    aVi: 'Anh ấy là bạn của tôi.',
+  },
+  {
+    id: 'eat',
+    q: '你想吃什么？',
+    a: '我想吃米饭。',
+    qVi: 'Bạn muốn ăn gì?',
+    aVi: 'Tôi muốn ăn cơm.',
+  },
 ]
 
 /**
@@ -160,6 +181,41 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
     a: '下午两点，在学校门口。',
     qVi: 'Mấy giờ chúng ta gặp nhau ở đâu?',
     aVi: 'Hai giờ chiều, ở cổng trường.',
+  },
+  {
+    id: 'room',
+    q: '你的房间号是多少？',
+    a: '是三一五。',
+    qVi: 'Số phòng của bạn là bao nhiêu?',
+    aVi: 'Là ba một năm.',
+  },
+  {
+    id: 'wait',
+    q: '你在等谁？',
+    a: '我在等我妹妹，她马上就到。',
+    qVi: 'Bạn đang đợi ai?',
+    aVi: 'Tôi đang đợi em gái, nó sắp đến rồi.',
+  },
+  {
+    id: 'better',
+    q: '你身体怎么样了？',
+    a: '好多了，明天可以去上班了。',
+    qVi: 'Sức khoẻ của bạn thế nào rồi?',
+    aVi: 'Đỡ nhiều rồi, mai có thể đi làm được.',
+  },
+  {
+    id: 'color',
+    q: '你喜欢什么颜色？',
+    a: '我喜欢红色。',
+    qVi: 'Bạn thích màu gì?',
+    aVi: 'Tôi thích màu đỏ.',
+  },
+  {
+    id: 'bought',
+    q: '你昨天买了什么？',
+    a: '我买了一件新衣服。',
+    qVi: 'Hôm qua bạn đã mua gì?',
+    aVi: 'Tôi đã mua một bộ quần áo mới.',
   },
 ]
 

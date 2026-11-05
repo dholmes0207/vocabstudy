@@ -645,3 +645,9 @@ món ngon là bẫy). Test chữ Hán bắt được 陪 và 聊 (陪他聊聊�
 arranged in rows, is being repaired, walking along, has been set (bàn ăn), overlooks (nhà nhìn ra mặt
 nước). Bẫy chính vẫn là câu đúng đồ vật nhưng sai hành động ("being packed" thay cho "being repaired")
 và câu có người khi tranh không có ai.
+
+### Thêm cặp câu hỏi – trả lời HSK 1–2 (05/11/2026)
+
+`HSK1_PAIRS` từ 12 lên 15, `HSK2_PAIRS` từ 10 lên 15 (test giữ mức 15 cho HSK 1–2, 10 cho HSK 3). Cặp mới
+tránh trùng ý với cặp sẵn có, để mỗi câu hỏi chỉ hợp một câu trả lời trong 4 phương án: 你想吃什么 đi cùng
+你想喝什么 nhưng câu trả lời khác động từ; không thêm câu hỏi về thời gian đi đường vì đã có 你家离公司远吗.
