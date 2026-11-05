@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 5 lên 119 câu: thêm ba câu mỗi dạng, như quá khứ tiếp diễn bị cắt ngang, interested in, by herself, hire và rent.',
+        'TOEIC Part 5 now has 119 questions: three more of each kind, such as an interrupted past continuous, interested in, by herself, hire and rent.',
+      ],
+      [
         'HSK 3 đọc đoạn văn ngắn lên 30 đoạn: thêm chợ cuối tuần, đồng nghiệp mới, trời mưa ở nhà xem phim, ngủ sớm dậy sớm, cửa hàng quà tặng.',
         'HSK 3 short passages now number 30: a weekend market, a new colleague, a rainy day indoors, early to bed and a gift shop.',
       ],

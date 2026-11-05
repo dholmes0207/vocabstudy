@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 101
+  - Nội dung: Part 1 34 cảnh, Part 2 84 câu, Part 3 và 4 mỗi Part 20 bài (3–4 bài có bảng), Part 5 119
     câu ngữ pháp và câu nghĩa từ, Part 6 24 đoạn, Part 7 33 bài (11 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -823,3 +823,11 @@ thi (只是 nêu điểm chưa tốt).
 `HSK3_READINGS` từ 25 lên 30 đoạn (test giữ mức này): chợ cuối tuần (而且), đồng nghiệp mới (过 chỉ trải
 nghiệm), trời mưa ở nhà xem phim (本来… / 只好…), ngủ sớm dậy sớm (bẫy giờ ngủ và giờ dậy), cửa hàng quà
 tặng (虽然…但是…). Test chữ Hán bắt được 改, 精, 神.
+
+### Thêm câu Part 5 (05/11/2026, đợt bốn)
+
+`PART5_BANK` từ 101 lên 119 câu, mỗi dạng ít nhất 18 câu (test giữ mức này). Thêm ba câu mỗi dạng:
+qualified / construction / significantly (từ loại), for + khoảng thời gian, interested in, on the corner
+of (giới từ), quá khứ tiếp diễn bị cắt ngang, want + tân ngữ + V3, tương lai với next Monday (động từ),
+although / despite, before, but (liên từ), by herself, ours, where (đại từ), purchase, hire / rent, passport
+(nghĩa từ).

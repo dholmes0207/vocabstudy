@@ -772,6 +772,133 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'raise (ngoại động từ, cần tân ngữ its prices): tăng giá. rise và arise là nội động từ, không đi với tân ngữ.'
   ),
+  // Fourth batch: three more of each kind.
+  q(
+    'form',
+    'The company is looking for a ___ engineer with ten years of experience.',
+    ['qualified', 'qualify', 'qualification', 'qualifying'],
+    0,
+    'Giữa mạo từ a và danh từ engineer cần một tính từ: qualified (đủ trình độ). qualification là danh từ.'
+  ),
+  q(
+    'form',
+    'The ___ of the new factory will take about two years.',
+    ['construction', 'construct', 'constructive', 'constructed'],
+    0,
+    'Sau mạo từ The và trước of cần một danh từ làm chủ ngữ: construction (việc xây dựng).'
+  ),
+  q(
+    'form',
+    'Sales have increased ___ since the new advertisement was released.',
+    ['significantly', 'significant', 'significance', 'signify'],
+    0,
+    'Bổ nghĩa cho động từ have increased cần trạng từ: significantly (đáng kể).'
+  ),
+  q(
+    'prep',
+    'Ms. Yamada will be on vacation ___ two weeks.',
+    ['for', 'since', 'at', 'until'],
+    0,
+    'for + một khoảng thời gian (two weeks): trong hai tuần. since đi với mốc thời gian, until đi với thời điểm kết thúc.'
+  ),
+  q(
+    'prep',
+    'Mr. Cho has been interested ___ marketing since he was a student.',
+    ['in', 'on', 'at', 'for'],
+    0,
+    'Cụm cố định be interested in: quan tâm, có hứng thú với.'
+  ),
+  q(
+    'prep',
+    'The new restaurant is located ___ the corner of Main Street and Park Avenue.',
+    ['on', 'in', 'to', 'by'],
+    0,
+    'on the corner of + hai con đường: ở góc giao nhau của hai con đường.'
+  ),
+  q(
+    'verb',
+    'Mr. Hill ___ his presentation when the power went out.',
+    ['was giving', 'gives', 'has given', 'will give'],
+    0,
+    'Một việc đang diễn ra (quá khứ tiếp diễn) thì một việc khác xen vào (went out): was giving.'
+  ),
+  q(
+    'verb',
+    'The manager wants all reports ___ in English.',
+    ['written', 'write', 'writing', 'to writing'],
+    0,
+    'want + tân ngữ + quá khứ phân từ: muốn cái gì được làm. Báo cáo được viết (bị động): written.'
+  ),
+  q(
+    'verb',
+    'The new parking rules ___ effective next Monday.',
+    ['will become', 'became', 'have become', 'becoming'],
+    0,
+    'next Monday chỉ tương lai: will become. becoming thiếu trợ động từ nên không làm được động từ chính.'
+  ),
+  q(
+    'link',
+    '___ the train was late, Ms. Lopez arrived at the meeting on time.',
+    ['Although', 'Because', 'Despite', 'Unless'],
+    0,
+    'Hai vế trái ý nhau (tàu trễ nhưng vẫn đến đúng giờ), sau chỗ trống là mệnh đề: Although. Despite đi với cụm danh từ.'
+  ),
+  q(
+    'link',
+    'Please turn off the lights ___ you leave the office.',
+    ['before', 'during', 'despite', 'unless'],
+    0,
+    'Tắt đèn trước khi rời văn phòng: before + mệnh đề. during đi với danh từ.'
+  ),
+  q(
+    'link',
+    'The hotel has a pool, ___ it does not have a gym.',
+    ['but', 'and', 'so', 'because'],
+    0,
+    'Hai vế trái ý nhau (có hồ bơi nhưng không có phòng tập): but.'
+  ),
+  q(
+    'pronoun',
+    'Ms. Ruiz wrote the whole report by ___ because her team was busy.',
+    ['herself', 'her', 'she', 'hers'],
+    0,
+    'by + đại từ phản thân: tự mình làm, không có ai giúp: by herself.'
+  ),
+  q(
+    'pronoun',
+    'Our competitors lowered their prices, so we lowered ___ too.',
+    ['ours', 'our', 'us', 'we'],
+    0,
+    'Chỗ trống thay cho our prices và làm tân ngữ của lowered: đại từ sở hữu ours.'
+  ),
+  q(
+    'pronoun',
+    'The city ___ the conference will be held is famous for its beaches.',
+    ['where', 'which', 'who', 'whose'],
+    0,
+    'Mệnh đề quan hệ chỉ nơi chốn, sau chỗ trống là một mệnh đề đầy đủ (the conference will be held): where.'
+  ),
+  q(
+    'meaning',
+    'Please ___ the tickets at least two days before the event.',
+    ['purchase', 'promise', 'propose', 'produce'],
+    0,
+    'purchase the tickets: mua vé. promise là hứa, propose là đề xuất, produce là sản xuất.'
+  ),
+  q(
+    'meaning',
+    'The factory will ___ 200 new workers next year.',
+    ['hire', 'rent', 'borrow', 'lend'],
+    0,
+    'hire workers: thuê người làm. rent dùng cho nhà, xe; borrow và lend là mượn và cho mượn.'
+  ),
+  q(
+    'meaning',
+    'All passengers must show a valid ___ before getting on the plane.',
+    ['passport', 'receipt', 'invoice', 'menu'],
+    0,
+    'Hành khách lên máy bay phải trình hộ chiếu (passport) còn hạn. receipt là biên lai, invoice là hoá đơn.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */

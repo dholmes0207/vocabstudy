@@ -35,7 +35,7 @@ describe('the Part 5 bank', () => {
 
   it('covers every kind of question with a few each', () => {
     for (const kind of Object.keys(PART5_KINDS) as Part5Kind[])
-      expect(PART5_BANK.filter((qn) => qn.kind === kind).length, kind).toBeGreaterThanOrEqual(15)
+      expect(PART5_BANK.filter((qn) => qn.kind === kind).length, kind).toBeGreaterThanOrEqual(18)
   })
 })
 
