@@ -181,10 +181,9 @@ export default function Hsk() {
       icon: '💬',
       title: ['Đọc – ghép câu hỏi và trả lời', 'Question and answer'],
       desc: [
-        'Đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu: phần thứ ba bài Đọc của HSK 1, phần ghép câu của HSK 2.',
-        'Read a question and pick its answer among four: the third reading part of HSK 1 and the matching part of HSK 2.',
+        'Đọc một câu hỏi, chọn câu trả lời phù hợp trong 4 câu: phần thứ ba bài Đọc của HSK 1, phần ghép câu của HSK 2 và HSK 3.',
+        'Read a question and pick its answer among four: the third reading part of HSK 1 and the matching parts of HSK 2 and HSK 3.',
       ],
-      levels: ['hsk1', 'hsk2'],
     },
     {
       id: 'read',
@@ -256,11 +255,8 @@ export default function Hsk() {
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
     if (drill === 'read') return setRun({ kind: 'read', n, questions: readingRound(5) })
-    if (drill === 'answer') {
-      // Shown for HSK 1 and 2 only (ALL_DRILLS levels).
-      if (level !== 'hsk3') setRun({ kind: 'answer', n, questions: answerRound(level, ROUND) })
-      return
-    }
+    if (drill === 'answer')
+      return setRun({ kind: 'answer', n, questions: answerRound(level, ROUND) })
     if (drill === 'match')
       return setRun({ kind: 'talk', drill, n, dialogues: pictureDialogueRound(lowWords, 5) })
     if (drill === 'talk') {
@@ -325,8 +321,9 @@ export default function Hsk() {
     const read: MiniStep[] =
       HSK_SCALE[level].sections === 3
         ? [
-            { section: 'read', kind: 'read', questions: readingRound(5) },
-            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 5) },
+            { section: 'read', kind: 'answer', questions: answerRound('hsk3', 3) },
+            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
+            { section: 'read', kind: 'read', questions: readingRound(4) },
           ]
         : level === 'hsk1'
           ? [

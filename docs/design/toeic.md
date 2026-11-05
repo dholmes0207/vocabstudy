@@ -206,7 +206,7 @@ Tình hình (04/11/2026, cuối ngày):
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
   - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh, đọc hỏi – đáp;
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
-  - HSK 3: nghe hội thoại – câu hỏi, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
+  - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
 
@@ -585,3 +585,13 @@ Phần 3 bài Đọc của HSK 3: một đoạn văn một đến hai câu, rồ
 
 - Trả lời xong thì phát giọng thu đoạn văn (đã vào `screens.json`), hiện bản dịch và giải thích.
 - Chỉ hiện ở HSK 3, 5 câu một lượt. Bài thi nhỏ HSK 3: phần Đọc gồm 5 câu đoạn văn, 5 câu điền từ.
+
+### Bước B9: HSK 3 đọc ghép câu (05/11/2026)
+
+Phần 1 bài Đọc của HSK 3 ghép câu với câu đáp hợp nghĩa, giống phần ghép câu của HSK 2. `HSK3_PAIRS`
+trong `lib/hskAnswers.ts`: 10 cặp viết tay (máy tính hỏng, đi du lịch cuối tuần, gầy đi, giờ họp, tìm
+kính, bị cảm, bê thùng nặng, tìm quán ăn, kết quả thi, mang ô). Test giữ mọi chữ Hán trong phạm vi
+HSK 1–3 (bắt được 假).
+
+- Thẻ "Đọc – ghép câu hỏi và trả lời" hiện ở cả ba cấp, mỗi cấp lấy cặp câu của mình.
+- Bài thi nhỏ HSK 3: phần Đọc gồm 3 câu ghép câu, 3 câu điền từ, 4 câu đoạn văn, theo thứ tự đề thật.

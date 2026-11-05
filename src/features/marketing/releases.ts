@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Luyện thi HSK 3 có thêm "Đọc – ghép câu hỏi và trả lời": 10 cặp câu như phần ghép câu bài Đọc của HSK 3. Phần Đọc của bài thi nhỏ HSK 3 có 3 câu dạng này, 3 câu điền từ và 4 đoạn văn ngắn.',
+        'HSK 3 practice adds "Question and answer": ten pairs like the sentence matching in HSK 3 reading. The HSK 3 mini test reading now has three of them, three gap fills and four short passages.',
+      ],
+      [
         'Luyện thi HSK 3 có thêm "Đọc đoạn văn ngắn": 10 đoạn văn ngắn, mỗi đoạn một câu hỏi ★ và 3 phương án như phần thứ ba bài Đọc của HSK 3. Phần Đọc của bài thi nhỏ HSK 3 có 5 câu dạng này.',
         'HSK 3 practice adds "Short passages": ten short texts, each with a ★ question and three options like the third reading part of HSK 3. The HSK 3 mini test reading now has five of them.',
       ],

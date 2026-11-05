@@ -24,7 +24,7 @@ import { PART2_BANK } from './toeicPart2'
 import { TALK_SETS } from './toeicTalks'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
 import { HSK_DIALOGUES, PICTURE_DIALOGUES } from './hskDialogues'
-import { HSK1_PAIRS, HSK2_PAIRS } from './hskAnswers'
+import { HSK1_PAIRS, HSK2_PAIRS, HSK3_PAIRS } from './hskAnswers'
 import { HSK3_READINGS } from './hskReadings'
 import { hanVietTable } from './hanVietFamily'
 
@@ -123,7 +123,7 @@ function chinese(): string[] {
     ...hanVietTable(words('zh')).map((e) => e.char),
     ...HSK_DIALOGUES.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
     ...PICTURE_DIALOGUES.flatMap((d) => d.lines.map((l) => l.zh)),
-    ...[...HSK1_PAIRS, ...HSK2_PAIRS].flatMap((p) => [p.q, p.a]),
+    ...[...HSK1_PAIRS, ...HSK2_PAIRS, ...HSK3_PAIRS].flatMap((p) => [p.q, p.a]),
     ...HSK3_READINGS.map((r) => r.text),
   ]
 }
