@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Check, X } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useRetry } from '@/store/retryStore'
 import type { ReadingSet, ShuffledQuestion } from '@/lib/toeicReading'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -32,6 +33,7 @@ export default function ReadingRound({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const tallyPart = useRetry((s) => s.tallyPart)
   const [picked, setPicked] = useState<(number | null)[]>(() => questions.map(() => null))
   const [xp, setXp] = useState<number | null>(null)
   const title =
@@ -61,6 +63,7 @@ export default function ReadingRound({
     if (picked[qi] !== null) return
     setPicked((p) => p.map((v, j) => (j === qi ? i : v)))
     if (soundOn) (i === questions[qi].answer ? playCorrect : playWrong)()
+    tallyPart(set.part, i === questions[qi].answer)
   }
   const finish = () => {
     if (onDone) return onDone(correct, questions.length)

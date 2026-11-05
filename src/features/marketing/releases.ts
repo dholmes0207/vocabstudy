@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-05',
+    title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
+    items: [
+      [
+        'Trang Luyện thi TOEIC ghi số câu bạn đã làm và đã đúng ở từng Part, và chỉ ra Part bạn hay sai nhất để luyện trước.',
+        'The TOEIC page shows how many questions you have answered and got right in each part, and points out your weakest part to practise first.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-04',
     title: ['Thêm bài luyện TOEIC', 'More TOEIC practice'],
     items: [

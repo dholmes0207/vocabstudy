@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { RETRY_MAX, useRetry } from './retryStore'
 
-beforeEach(() => useRetry.setState({ part5: [], kinds: {}, hsk: {} }))
+beforeEach(() => useRetry.setState({ part5: [], kinds: {}, hsk: {}, parts: {} }))
 
 describe('retry store', () => {
   it('keeps a missed question once, and lets it go when answered right', () => {
@@ -35,5 +35,13 @@ describe('retry store', () => {
     tallyHsk('hsk1', 'judge', false)
     tallyHsk('hsk2', 'judge', true)
     expect(useRetry.getState().hsk).toEqual({ 'hsk1:judge': [1, 2], 'hsk2:judge': [1, 1] })
+  })
+
+  it('counts TOEIC answers by part', () => {
+    const { tallyPart } = useRetry.getState()
+    tallyPart(3, true)
+    tallyPart(3, false)
+    tallyPart(7, false)
+    expect(useRetry.getState().parts).toEqual({ 3: [1, 2], 7: [0, 1] })
   })
 })

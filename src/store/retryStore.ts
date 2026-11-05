@@ -4,7 +4,7 @@ import type { Part5Kind } from '@/lib/toeicPart5'
 
 // TOEIC Part 5 questions of the bank missed in practice, by sentence, so they
 // can be done again (lib/toeicPart5.ts retryRound). A question answered right
-// leaves the list. Also every Part 5 answer, and every HSK practice answer,
+// leaves the list. Also every TOEIC answer by Part, every Part 5 answer, and every HSK practice answer,
 // counted by kind of question, so the weakest kind shows across rounds
 // (weakestKind). Device-only like examStore; the "vocab." prefix puts it in
 // backups.
@@ -22,6 +22,10 @@ interface RetryState {
   hsk: Record<string, [number, number]>
   /** Count one HSK practice answer of a kind at a level. */
   tallyHsk: (level: string, kind: string, correct: boolean) => void
+  /** [right, asked] per TOEIC Part ("1"…"7"), all rounds together. */
+  parts: Record<string, [number, number]>
+  /** Count one TOEIC answer of a Part. */
+  tallyPart: (part: number, correct: boolean) => void
   /** Record an answer to a bank question: a miss joins the list, a right answer leaves it. */
   answer: (sentence: string, correct: boolean) => void
 }
@@ -32,6 +36,12 @@ export const useRetry = create<RetryState>()(
       part5: [],
       kinds: {},
       hsk: {},
+      parts: {},
+      tallyPart: (part, correct) =>
+        set((s) => {
+          const [right, asked] = s.parts[part] ?? [0, 0]
+          return { parts: { ...s.parts, [part]: [right + (correct ? 1 : 0), asked + 1] } }
+        }),
       tallyHsk: (level, kind, correct) =>
         set((s) => {
           const key = `${level}:${kind}`
