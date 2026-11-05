@@ -200,7 +200,7 @@ Tình hình (04/11/2026, cuối ngày):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 20 cảnh, Part 2 60 câu, Part 3 và 4 mỗi Part 12 bài (2 bài có hình), Part 5 81
-    câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 16 bài (5 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 12 đoạn, Part 7 20 bài (7 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -566,3 +566,12 @@ màn chơi TOEIC ghi câu của Part mình). Trang TOEIC:
 từ, their own, phản thân herself, quan hệ sở hữu whose, it thay cho danh từ số ít), giới từ từ 11 lên
 16 (by + hạn chót, between A and B, on + ngày, except, despite + cụm danh từ). Test giữ mỗi dạng ít
 nhất 11 câu và không câu nào trùng nhau (bắt được một câu trùng với câu sẵn có, đã thay).
+
+### Thêm bài Part 7 (05/11/2026)
+
+Part 7 từ 16 lên 20 bài: 13 bài một đoạn, 7 bài hai đoạn (test giữ mức này).
+
+- Một đoạn: tin nhắn dời giờ gặp khách (câu hỏi ý của "Sure thing"), thông báo phân loại rác (câu NOT).
+- Hai đoạn: quảng cáo hội thảo kèm email đăng ký muộn (giá theo nhóm từ 4 người, bẫy $500 là tổng
+  tiền), thư hẹn sửa máy kèm tin nhắn đổi lịch (suy ra việc đổi lịch vẫn đúng hạn một ngày).
+- Hai bài hai đoạn mới có 4 câu; bài thi nhỏ vẫn chỉ lấy 3 câu đầu của bài Part 7.

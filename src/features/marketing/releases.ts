@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 7 lên 20 bài: thêm tin nhắn dời giờ gặp khách, thông báo phân loại rác, quảng cáo hội thảo kèm email đăng ký muộn, thư hẹn sửa máy kèm tin nhắn đổi lịch.',
+        'TOEIC Part 7 now has 20 sets: a chat about a late client, a recycling notice, a workshop ad with a late registration e-mail, and a repair letter with a chat to reschedule.',
+      ],
+      [
         'TOEIC Part 5 lên 81 câu ngữ pháp: thêm câu về đại từ (him, their own, herself, whose, it) và giới từ (by, between, on, except, despite).',
         'TOEIC Part 5 now has 81 grammar questions, adding pronouns (him, their own, herself, whose, it) and prepositions (by, between, on, except, despite).',
       ],

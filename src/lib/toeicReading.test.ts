@@ -23,8 +23,8 @@ describe('Part 7 sets', () => {
   const p7 = READING_SETS.filter((s) => s.part === 7)
 
   it('include single and double passages, every question asked in words', () => {
-    expect(p7.filter((s) => s.passages.length === 1).length).toBeGreaterThanOrEqual(11)
-    expect(p7.filter((s) => s.passages.length === 2).length).toBeGreaterThanOrEqual(5)
+    expect(p7.filter((s) => s.passages.length === 1).length).toBeGreaterThanOrEqual(13)
+    expect(p7.filter((s) => s.passages.length === 2).length).toBeGreaterThanOrEqual(7)
     for (const s of p7) for (const q of s.questions) expect(q.q.trim(), s.id).not.toBe('')
   })
 })

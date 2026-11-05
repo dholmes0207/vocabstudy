@@ -733,6 +733,100 @@ Payment is due within 30 days. Thank you for your business!`,
     ],
   },
 
+  {
+    id: 'p7-client-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Nina Ross (9:12 A.M.): Hi Paul, are we still meeting the client from Brightway at 11?
+Paul Kim (9:14 A.M.): Yes, but they just called. Their flight was delayed, so they'll be here at 1 instead.
+Nina Ross (9:15 A.M.): OK. Then I'll move our lunch reservation to tomorrow.
+Paul Kim (9:16 A.M.): Good idea. Could you also tell Mr. Diaz? He wanted to join us.
+Nina Ross (9:17 A.M.): Sure thing.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why will the client arrive later than planned?',
+        options: [
+          'Their flight was delayed.',
+          'They forgot the meeting.',
+          'They are stuck in traffic.',
+          'They have another meeting first.',
+        ],
+        why: '"Their flight was delayed, so they\'ll be here at 1 instead."',
+      },
+      {
+        q: 'What will Ms. Ross do about lunch?',
+        options: [
+          'Change the reservation to another day',
+          'Cancel it completely',
+          'Order food to the office',
+          'Invite the client to join',
+        ],
+        why: '"I\'ll move our lunch reservation to tomorrow": dời sang ngày mai, không huỷ.',
+      },
+      {
+        q: 'At 9:17 A.M., what does Ms. Ross mean when she writes, "Sure thing"?',
+        options: [
+          'She will contact Mr. Diaz.',
+          'She is sure the client will come.',
+          'She agrees to meet at 11.',
+          'She has already called the client.',
+        ],
+        why: '"Sure thing" đáp lại lời nhờ ngay trước đó: "Could you also tell Mr. Diaz?" Cô ấy sẽ báo cho ông Diaz.',
+      },
+    ],
+  },
+  {
+    id: 'p7-recycling-notice',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `To all tenants of Maple Tower
+
+Starting March 1, the building will begin a new recycling program. Blue bins for paper and green bins for plastic and glass will be placed on every floor next to the elevators.
+
+Large boxes should be flattened and left in the basement storage room. Please do not leave them in the hallways.
+
+The building management thanks you for helping to keep Maple Tower clean. Questions may be directed to the management office on the first floor.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the notice?',
+        options: [
+          'To introduce a recycling program',
+          'To announce new tenants',
+          'To explain a rent increase',
+          'To close the basement',
+        ],
+        why: 'Câu đầu: "the building will begin a new recycling program".',
+      },
+      {
+        q: 'Where should tenants put large boxes?',
+        options: [
+          'In the basement storage room',
+          'Next to the elevators',
+          'In the hallways',
+          'In the blue bins',
+        ],
+        why: '"Large boxes should be flattened and left in the basement storage room." Thùng xanh dương là cho giấy thường.',
+      },
+      {
+        q: 'What is NOT mentioned in the notice?',
+        options: [
+          'The cost of the program',
+          'The start date',
+          'Where the bins will be placed',
+          'Where to ask questions',
+        ],
+        why: 'Câu hỏi NOT: thông báo có ngày bắt đầu (March 1), chỗ đặt thùng (next to the elevators), nơi hỏi (management office), nhưng không nói chi phí.',
+      },
+    ],
+  },
   // -------------------------------------------------------- Part 7, double
   {
     id: 'p7-rooms',
@@ -1301,6 +1395,133 @@ Date submitted: June 5`,
           'He asks for the parking lot but says he will walk.',
         ],
         why: 'Bữa trưa phục vụ lúc 1:00 P.M., nhưng ông ấy chỉ ở được tới trưa (noon) mà vẫn đánh dấu "Staying for lunch: Yes".',
+      },
+    ],
+  },
+  {
+    id: 'p7-training-invoice',
+    part: 7,
+    passages: [
+      {
+        kind: AD,
+        text: `Speak with Confidence — One-Day Workshop
+Saturday, May 18, 9:00 A.M. – 4:00 P.M., Lakeside Hotel
+
+Learn how to give clear and powerful presentations at work.
+Fee: $120 per person, lunch included.
+Groups of four or more from the same company: $100 per person.
+Register by May 10 at www.speakconfidence.com.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: info@speakconfidence.com
+From: Rita Chan, Green Leaf Foods
+Date: May 12
+Subject: Registration
+
+Hello,
+
+I would like to register five people from our sales team for the workshop on May 18. I know the deadline has passed, but I hope there is still room. Could you also tell me whether vegetarian meals are available? Two of my colleagues do not eat meat.
+
+Thank you,
+Rita Chan`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the workshop about?',
+        options: [
+          'Giving presentations',
+          'Selling food products',
+          'Planning business trips',
+          'Using new software',
+        ],
+        why: '"Learn how to give clear and powerful presentations at work."',
+      },
+      {
+        q: 'How much will Green Leaf Foods most likely pay per person?',
+        options: ['$100', '$120', '$90', '$500'],
+        why: 'Ghép hai đoạn: nhóm từ bốn người cùng công ty được $100 một người; bà Chan đăng ký năm người. $500 là tổng cho cả năm người, không phải giá một người.',
+      },
+      {
+        q: 'What problem does Ms. Chan mention?',
+        options: [
+          'She is registering after the deadline.',
+          'The workshop is too expensive.',
+          'The hotel is too far away.',
+          'Her team cannot attend on Saturday.',
+        ],
+        why: 'Hạn đăng ký là May 10, email gửi May 12: "I know the deadline has passed".',
+      },
+      {
+        q: 'What does Ms. Chan ask about?',
+        options: ['Meals without meat', 'Hotel rooms', 'A refund', 'Parking'],
+        why: '"Could you also tell me whether vegetarian meals are available?" Hai đồng nghiệp không ăn thịt.',
+      },
+    ],
+  },
+  {
+    id: 'p7-repair-letter',
+    part: 7,
+    passages: [
+      {
+        kind: LETTER,
+        text: `Dear Mr. Watts,
+
+Thank you for choosing HomeFix for the repair of your washing machine. Our technician, Ken Ono, will visit your home on Tuesday, June 4, between 2:00 and 4:00 P.M.
+
+Please make sure someone over 18 is at home during the visit. If you need to change the appointment, call us at least one day in advance at 555-0190.
+
+Sincerely,
+HomeFix Customer Service`,
+      },
+      {
+        kind: CHAT,
+        text: `Leo Watts (June 3, 6:40 P.M.): Hi, this is Leo Watts. I have a repair visit tomorrow afternoon, but I have to stay late at work. Is Thursday possible?
+HomeFix (June 3, 6:45 P.M.): Hello Mr. Watts. Thursday afternoon is fully booked, but we have an opening on Thursday at 9:00 A.M.
+Leo Watts (June 3, 6:46 P.M.): That works. Thanks!`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is the purpose of the letter?',
+        options: [
+          'To confirm a repair appointment',
+          'To advertise a new washing machine',
+          'To ask for a payment',
+          'To introduce a new technician',
+        ],
+        why: 'Thư báo ngày giờ kỹ thuật viên đến sửa máy giặt: xác nhận lịch hẹn.',
+      },
+      {
+        q: 'Why does Mr. Watts want to change the appointment?',
+        options: [
+          'He has to work late.',
+          'His washing machine is working again.',
+          'He will be on vacation.',
+          'He wants a different technician.',
+        ],
+        why: '"I have to stay late at work."',
+      },
+      {
+        q: 'What is suggested about Mr. Watts’s request?',
+        options: [
+          'It was made at least one day before the visit.',
+          'It was made too late to change anything.',
+          'It was sent by e-mail.',
+          'It was rejected.',
+        ],
+        why: 'Ghép hai đoạn: thư yêu cầu đổi lịch trước ít nhất một ngày; ông Watts nhắn ngày 3/6 cho lịch hẹn ngày 4/6, vẫn đúng hạn. "suggested" là hỏi điều suy ra được.',
+      },
+      {
+        q: 'When will the technician most likely visit?',
+        options: [
+          'Thursday morning',
+          'Thursday afternoon',
+          'Tuesday afternoon',
+          'Wednesday morning',
+        ],
+        why: 'Chiều thứ Năm đã kín lịch, còn 9:00 sáng thứ Năm và ông Watts trả lời "That works".',
       },
     ],
   },
