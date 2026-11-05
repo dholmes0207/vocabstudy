@@ -3,6 +3,7 @@ import { Play, Square } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useRetry } from '@/store/retryStore'
 import type { Speaker, TalkSet } from '@/lib/toeicTalks'
 import type { ShuffledQuestion } from '@/lib/toeicReading'
 import type { VoiceGender } from '@/types'
@@ -42,6 +43,7 @@ export default function TalkRound({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const tallyPart = useRetry((s) => s.tallyPart)
   const [picked, setPicked] = useState<(number | null)[]>(() => questions.map(() => null))
   const [xp, setXp] = useState<number | null>(null)
   const [line, setLine] = useState<number | null>(null)
@@ -110,6 +112,7 @@ export default function TalkRound({
     if (picked[qi] !== null) return
     setPicked((p) => p.map((v, j) => (j === qi ? i : v)))
     if (soundOn) (i === questions[qi].answer ? playCorrect : playWrong)()
+    tallyPart(set.part, i === questions[qi].answer)
   }
   const finish = () => {
     stop()

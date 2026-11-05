@@ -3,6 +3,7 @@ import { ArrowRight, Check, RotateCcw, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useRetry } from '@/store/retryStore'
 import type { Part2Question } from '@/lib/toeicPart2'
 import type { Part1Question } from '@/lib/toeicPart1'
 import { prefetchAudio, pronounce, stopPronounce, textAudio } from '@/lib/audio'
@@ -41,6 +42,7 @@ export default function Part2Round({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const tallyPart = useRetry((s) => s.tallyPart)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -134,6 +136,7 @@ export default function Part2Round({
     const ok = i === q.answer
     if (ok) setCorrect((c) => c + 1)
     if (soundOn) (ok ? playCorrect : playWrong)()
+    tallyPart('scene' in q ? 1 : 2, ok)
   }
   const next = () => {
     stop()

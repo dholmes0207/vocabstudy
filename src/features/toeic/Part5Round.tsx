@@ -33,6 +33,7 @@ export default function Part5Round({
   const missed = useMissedWord()
   const retry = useRetry((s) => s.answer)
   const tally = useRetry((s) => s.tally)
+  const tallyPart = useRetry((s) => s.tallyPart)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [results, setResults] = useState<{ kind: Part5Kind; ok: boolean }[]>([])
@@ -76,6 +77,7 @@ export default function Part5Round({
     // A question of the bank (no pack word) joins or leaves the list to do again.
     if (q.wordId === undefined) retry(q.sentence, ok)
     tally(q.kind, ok)
+    tallyPart(5, ok)
   }
   const next = () => {
     if (idx + 1 < questions.length) {

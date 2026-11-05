@@ -25,7 +25,7 @@ beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useData.setState({ pack: en, status: 'ready' })
   useStudy.setState({ progress: {} })
-  useRetry.setState({ part5: [], kinds: {} })
+  useRetry.setState({ part5: [], kinds: {}, parts: {} })
 })
 afterEach(cleanup)
 
@@ -174,5 +174,20 @@ describe('TOEIC page', () => {
     useRetry.setState({ part5: [], kinds: { prep: [2, 6], form: [6, 7] } })
     renderAt('/toeic')
     expect(screen.getByText('Your weakest kind: Prepositions (2 of 6 right).')).toBeInTheDocument()
+  })
+
+  it('counts answers by part, shows them on each part, and names the weakest part', () => {
+    renderAt('/toeic')
+    fireEvent.click(screen.getByRole('button', { name: /Practise Part 5/ }))
+    const options = screen
+      .getAllByRole('button')
+      .filter((b) => /^\([ABCD]\)/.test(b.textContent ?? ''))
+    fireEvent.click(options[0])
+    expect(useRetry.getState().parts[5]?.[1]).toBe(1)
+    cleanup()
+    useRetry.setState({ parts: { 3: [2, 9], 5: [8, 10] } })
+    renderAt('/toeic')
+    expect(screen.getByText(/^Your weakest part: Part 3 \(2 of 9 right\)/)).toBeInTheDocument()
+    expect(screen.getByText('You have answered 10, 8 right.')).toBeInTheDocument()
   })
 })

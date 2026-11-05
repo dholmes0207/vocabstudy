@@ -56,6 +56,8 @@ export default function Toeic() {
   const best = useExam((s) => s.records[MINI_TEST_ID])
   const missedPart5 = useRetry((s) => s.part5.length)
   const weakest = weakestKind(useRetry((s) => s.kinds))
+  const parts = useRetry((s) => s.parts)
+  const weakestPart = weakestKind(parts)
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
@@ -247,6 +249,14 @@ export default function Toeic() {
             <h2 id="toeic-parts" className="text-lg font-bold">
               {t('7 Part của đề', 'The seven parts')}
             </h2>
+            {weakestPart && (
+              <p className="text-sm text-amber-700 dark:text-amber-300">
+                {t(
+                  `Part bạn hay sai nhất: Part ${weakestPart[0]} (đúng ${weakestPart[1]}/${weakestPart[2]} câu). Luyện thêm Part này trước.`,
+                  `Your weakest part: Part ${weakestPart[0]} (${weakestPart[1]} of ${weakestPart[2]} right). Practise it first.`
+                )}
+              </p>
+            )}
             <ol className="grid gap-3 sm:grid-cols-2">
               {TOEIC_PARTS.map((part) => (
                 <li key={part.n} className="card space-y-2 p-4">
@@ -269,6 +279,14 @@ export default function Toeic() {
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">{t(...part.asks)}</p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">💡 {t(...part.tip)}</p>
+                  {parts[part.n] && (
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                      {t(
+                        `Bạn đã làm ${parts[part.n][1]} câu, đúng ${parts[part.n][0]}.`,
+                        `You have answered ${parts[part.n][1]}, ${parts[part.n][0]} right.`
+                      )}
+                    </p>
+                  )}
                   {PRACTICE_LABEL[part.n] && (
                     <button
                       type="button"
