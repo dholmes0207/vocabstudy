@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'Luyện thi HSK 3 có thêm "Đọc đoạn văn ngắn": 10 đoạn văn ngắn, mỗi đoạn một câu hỏi ★ và 3 phương án như phần thứ ba bài Đọc của HSK 3. Phần Đọc của bài thi nhỏ HSK 3 có 5 câu dạng này.',
+        'HSK 3 practice adds "Short passages": ten short texts, each with a ★ question and three options like the third reading part of HSK 3. The HSK 3 mini test reading now has five of them.',
+      ],
+      [
         'TOEIC Part 7 lên 20 bài: thêm tin nhắn dời giờ gặp khách, thông báo phân loại rác, quảng cáo hội thảo kèm email đăng ký muộn, thư hẹn sửa máy kèm tin nhắn đổi lịch.',
         'TOEIC Part 7 now has 20 sets: a chat about a late client, a recycling notice, a workshop ad with a late registration e-mail, and a repair letter with a chat to reschedule.',
       ],

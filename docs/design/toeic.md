@@ -206,7 +206,7 @@ Tình hình (04/11/2026, cuối ngày):
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
   - HSK 1: nghe đúng sai, nghe chọn tranh, đọc nhìn tranh, đọc chọn tranh, đọc hỏi – đáp;
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
-  - HSK 3: nghe hội thoại – câu hỏi, sắp xếp câu, viết chữ;
+  - HSK 3: nghe hội thoại – câu hỏi, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn.
 
@@ -575,3 +575,13 @@ Part 7 từ 16 lên 20 bài: 13 bài một đoạn, 7 bài hai đoạn (test gi�
 - Hai đoạn: quảng cáo hội thảo kèm email đăng ký muộn (giá theo nhóm từ 4 người, bẫy $500 là tổng
   tiền), thư hẹn sửa máy kèm tin nhắn đổi lịch (suy ra việc đổi lịch vẫn đúng hạn một ngày).
 - Hai bài hai đoạn mới có 4 câu; bài thi nhỏ vẫn chỉ lấy 3 câu đầu của bài Part 7.
+
+### Bước B8: HSK 3 đọc đoạn văn ngắn (05/11/2026)
+
+Phần 3 bài Đọc của HSK 3: một đoạn văn một đến hai câu, rồi câu hỏi ★ với 3 phương án
+(`lib/hskReadings.ts`, `HskReadingRound`). 10 đoạn viết tay; test giữ mọi chữ Hán trong phạm vi HSK 1–3
+(bắt được 停, 丢). Câu hỏi dựa vào các cấu trúc hay gặp trong đề: 先…然后…, 又…又…, 只好, 只有…才…, 就是…
+(nêu điểm chưa tốt), và một câu có bẫy giờ (thư viện đóng cửa 10 giờ, nhưng mượn sách trước 9 rưỡi).
+
+- Trả lời xong thì phát giọng thu đoạn văn (đã vào `screens.json`), hiện bản dịch và giải thích.
+- Chỉ hiện ở HSK 3, 5 câu một lượt. Bài thi nhỏ HSK 3: phần Đọc gồm 5 câu đoạn văn, 5 câu điền từ.
