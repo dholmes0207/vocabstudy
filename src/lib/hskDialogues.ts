@@ -733,6 +733,60 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['蓝色的', '白色的', '黑色的'],
     why: '"蓝色的更好看": màu xanh đẹp hơn, còn màu trắng bị chê đơn giản. 还是 trong câu hỏi lựa chọn là "hay là".',
   },
+  {
+    id: 'lunch-time',
+    level: 'hsk2',
+    lines: [
+      w('我们几点去吃午饭？', 'Mấy giờ mình đi ăn trưa?'),
+      m(
+        '十二点吧，我还有一点儿工作没做完。',
+        'Mười hai giờ nhé, tôi còn một ít việc chưa làm xong.'
+      ),
+    ],
+    q: '他们几点去吃午饭？',
+    qVi: 'Mấy giờ họ đi ăn trưa?',
+    options: ['十二点', '十一点', '一点'],
+    why: '"十二点吧": mười hai giờ. 吧 ở cuối câu là lời đề nghị.',
+  },
+  {
+    id: 'doctor-visit',
+    level: 'hsk2',
+    lines: [
+      m('你怎么了？要不要去医院？', 'Chị sao thế? Có cần đi bệnh viện không?'),
+      w('我只是有点儿累，休息一下就好了。', 'Tôi chỉ hơi mệt thôi, nghỉ một chút là khỏe.'),
+    ],
+    q: '女的怎么了？',
+    qVi: 'Người nữ bị làm sao?',
+    options: ['有点儿累', '生病了', '想去医院'],
+    why: '"我只是有点儿累": chỉ hơi mệt. 只是 cho thấy không nghiêm trọng: không ốm, không cần đi bệnh viện.',
+  },
+  {
+    id: 'new-phone',
+    level: 'hsk2',
+    lines: [
+      w('你的手机是新的吗？很漂亮。', 'Điện thoại của anh mới à? Đẹp quá.'),
+      m(
+        '是我哥哥送给我的，他上个月去北京的时候买的。',
+        'Anh trai tôi tặng, anh ấy mua tháng trước khi đi Bắc Kinh.'
+      ),
+    ],
+    q: '手机是谁买的？',
+    qVi: 'Điện thoại là ai mua?',
+    options: ['男的的哥哥', '男的', '女的'],
+    why: '"是我哥哥送给我的…他…买的": anh trai mua rồi tặng. Người nam chỉ là người nhận.',
+  },
+  {
+    id: 'rain-bike',
+    level: 'hsk2',
+    lines: [
+      m('下雨了，你今天还骑自行车去学校吗？', 'Trời mưa rồi, hôm nay em vẫn đạp xe đến trường à?'),
+      w('不了，我坐公共汽车去。', 'Thôi, em đi xe buýt.'),
+    ],
+    q: '女的今天怎么去学校？',
+    qVi: 'Hôm nay người nữ đến trường bằng gì?',
+    options: ['坐公共汽车', '骑自行车', '走路'],
+    why: '"不了，我坐公共汽车去": không đạp xe nữa, đi xe buýt. Bẫy: 自行车 nghe thấy trong câu hỏi.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {

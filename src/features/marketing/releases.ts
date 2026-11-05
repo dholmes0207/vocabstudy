@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'HSK 2 nghe hội thoại – câu hỏi lên 24 bài: thêm giờ ăn trưa, chỉ hơi mệt, điện thoại anh trai tặng, trời mưa đi xe buýt.',
+        'HSK 2 dialogue questions now number 24: lunch time, just a little tired, a phone from a brother and taking the bus in the rain.',
+      ],
+      [
         'HSK 3 nghe hội thoại – câu hỏi lên 30 bài: thêm điện thoại hết pin, hỏi xe buýt, vé hoà nhạc, thứ Bảy được nghỉ, chọn áo đi họp.',
         'HSK 3 dialogue questions now number 30: a dead phone, which bus to take, concert tickets, a Saturday off and a shirt for a meeting.',
       ],
