@@ -209,7 +209,7 @@ Tình hình (05/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 20 bài, HSK 3 25 bài; hội thoại – chọn tranh 20 bài; hỏi – đáp
-    15 cặp mỗi cấp; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    18 cặp ở HSK 1–2, 15 cặp ở HSK 3; đoạn văn ngắn HSK 3 20 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -729,3 +729,9 @@ problem"), tin nhắn nhận hộ gói hàng (câu ý nghĩa "The door isn’t l
 on a ladder, have been stacked, eating outdoors, signing a document. Bẫy vẫn là câu dùng đúng đồ vật
 trong tranh nhưng sai hành động, và câu bị động tiếp diễn (are being installed) khi tranh chỉ có trạng
 thái.
+
+### Thêm cặp câu hỏi – trả lời HSK 1–2 (05/11/2026, đợt hai)
+
+`HSK1_PAIRS` và `HSK2_PAIRS` từ 15 lên 18 (test giữ mức này): ngày tháng, nơi ở, biết tiếng Trung không;
+học bao lâu, sách của ai, vì sao vui. Câu hỏi mới không chung ý với câu sẵn có (你住在哪儿 khác 你去哪儿,
+你今天怎么这么高兴 khác 考试准备得怎么样了), nên mỗi câu vẫn chỉ hợp một câu trả lời.

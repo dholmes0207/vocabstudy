@@ -105,6 +105,27 @@ export const HSK1_PAIRS: readonly AnswerPair[] = [
     qVi: 'Bạn muốn ăn gì?',
     aVi: 'Tôi muốn ăn cơm.',
   },
+  {
+    id: 'date',
+    q: '今天几月几号？',
+    a: '今天十月八号。',
+    qVi: 'Hôm nay là ngày mấy tháng mấy?',
+    aVi: 'Hôm nay là ngày mùng tám tháng mười.',
+  },
+  {
+    id: 'live',
+    q: '你住在哪儿？',
+    a: '我住在北京。',
+    qVi: 'Bạn sống ở đâu?',
+    aVi: 'Tôi sống ở Bắc Kinh.',
+  },
+  {
+    id: 'speak',
+    q: '你会说汉语吗？',
+    a: '会一点儿。',
+    qVi: 'Bạn biết nói tiếng Trung không?',
+    aVi: 'Biết một chút.',
+  },
 ]
 
 /**
@@ -216,6 +237,27 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
     a: '我买了一件新衣服。',
     qVi: 'Hôm qua bạn đã mua gì?',
     aVi: 'Tôi đã mua một bộ quần áo mới.',
+  },
+  {
+    id: 'how-long',
+    q: '你学汉语多长时间了？',
+    a: '快一年了。',
+    qVi: 'Bạn học tiếng Trung bao lâu rồi?',
+    aVi: 'Gần một năm rồi.',
+  },
+  {
+    id: 'whose',
+    q: '这是谁的书？',
+    a: '是我妹妹的。',
+    qVi: 'Đây là sách của ai?',
+    aVi: 'Là của em gái tôi.',
+  },
+  {
+    id: 'happy',
+    q: '你今天怎么这么高兴？',
+    a: '因为我考试考得很好。',
+    qVi: 'Sao hôm nay bạn vui thế?',
+    aVi: 'Vì tôi thi rất tốt.',
   },
 ]
 
