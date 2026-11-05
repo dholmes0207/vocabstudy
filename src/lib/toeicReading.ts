@@ -1000,6 +1000,95 @@ Volunteer Coordinator`,
       ),
     ],
   },
+  {
+    id: 'p6-training-move',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: All sales staff
+From: Paul Rivera
+Subject: Product training
+
+Dear team,
+
+The product training planned for Wednesday morning has been [1] to Thursday at 10 A.M. The trainer from our main office is not able to arrive until Wednesday night.
+
+The session will take place in Meeting Room 2 and will last about three hours. [2] Lunch will be provided afterward.
+
+Please bring your laptop, as you will need it [3] the practice exercises. If you cannot attend, let me know by Tuesday so that I can arrange [4] session for you.
+
+Thank you,
+Paul`,
+      },
+    ],
+    questions: [
+      gap(
+        ['moved', 'move', 'moving', 'mover'],
+        'has been + quá khứ phân từ (bị động, hiện tại hoàn thành): buổi đào tạo đã được dời sang thứ Năm: moved.'
+      ),
+      gap(
+        [
+          'It will cover all of our new products.',
+          'The trainer has already left the company.',
+          'The meeting room is closed on Thursdays.',
+          'Lunch is not allowed in the building.',
+        ],
+        'Câu chèn nói thêm về nội dung buổi học, nối với câu trước (thời lượng) và câu sau (bữa trưa). Ba câu kia mâu thuẫn với email: phòng họp vẫn dùng thứ Năm, bữa trưa có phục vụ.'
+      ),
+      gap(
+        ['for', 'at', 'by', 'of'],
+        'need it for + danh từ: cần máy tính cho phần bài tập thực hành.'
+      ),
+      gap(
+        ['another', 'other', 'others', 'each other'],
+        'another + danh từ số ít: sắp xếp một buổi khác (another session). other đi với danh từ số nhiều hoặc có the.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-pool-hours',
+    part: 6,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `To all members,
+
+Starting on March 1, the Riverside Fitness Center pool will be open [1] 6 A.M. to 10 P.M. every day. We are making this change because many members have asked us to stay open later in the evening.
+
+The sauna will also follow the new hours. [2], swimming lessons will continue to end at 6 P.M.
+
+[3] To celebrate the change, members may bring a guest to the pool for free during the first week of March.
+
+We look forward to [4] you more often.
+
+Riverside Fitness Center`,
+      },
+    ],
+    questions: [
+      gap(
+        ['from', 'since', 'during', 'between'],
+        'Cấu trúc from … to …: mở cửa từ 6 giờ sáng đến 10 giờ tối. between đi với and.'
+      ),
+      gap(
+        ['However', 'Therefore', 'For example', 'In addition'],
+        'Câu sau trái ý câu trước (phòng xông hơi theo giờ mới, nhưng lớp bơi vẫn kết thúc lúc 6 giờ): However.'
+      ),
+      gap(
+        [
+          'We hope the new hours will make it easier for you to swim.',
+          'The pool will be closed for the whole month of March.',
+          'Guests will no longer be allowed in the pool.',
+          'Members asked us to open later in the morning.',
+        ],
+        'Câu chèn kết lại ý đổi giờ, trước phần ưu đãi. Ba câu kia trái với thông báo: hồ bơi vẫn mở, khách được vào miễn phí, hội viên xin mở muộn hơn buổi tối chứ không phải buổi sáng.'
+      ),
+      gap(
+        ['seeing', 'see', 'seen', 'to see'],
+        'look forward to + V-ing (to ở đây là giới từ): look forward to seeing you.'
+      ),
+    ],
+  },
 
   // ------------------------------------------------------- Part 7, single
   {
