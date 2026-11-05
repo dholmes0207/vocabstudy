@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (05/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 40 cảnh, Part 2 96 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 131
+  - Nội dung: Part 1 40 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 131
     câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 38 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -915,3 +915,10 @@ trẻ. Lời thoại tránh các từ có tranh khác: viết 在前面那个学
 explanation (từ loại), within walking distance, by e-mail (giới từ), quá khứ hoàn thành trước một mốc quá khứ, bị
 động hiện tại đơn (động từ), as long as, so (liên từ), his + danh từ, some … others (đại từ), press the button,
 cover the cost (nghĩa từ).
+
+### Thêm câu Part 2 (05/11/2026, đợt sáu)
+
+`PART2_BANK` từ 96 lên 108 câu (test giữ mức này). Thêm Who's responsible, Which floor, How long, câu hỏi lựa chọn
+(by the window or near the door), câu hỏi phủ định (Haven't you…?), lời đề nghị giúp (Would you like me to…?), lời
+rủ (How about…?), câu hỏi gián tiếp (Could you tell me when…?). Bẫy âm mới: files / filed, projector / project,
+review / viewed, accounting / counted.

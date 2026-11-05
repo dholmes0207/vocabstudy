@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [
       [
+        'TOEIC Part 2 lên 108 câu: thêm lời đề nghị giúp, lời rủ, câu hỏi gián tiếp và bẫy âm như projector / project, accounting / counted.',
+        'TOEIC Part 2 now has 108 questions: more offers, suggestions, indirect questions and sound traps such as projector / project and accounting / counted.',
+      ],
+      [
         'TOEIC Part 5 lên 131 câu: thêm hai câu mỗi dạng, như within walking distance, some … others và cover the cost.',
         'TOEIC Part 5 now has 131 questions: two more of each kind, such as within walking distance, some … others and cover the cost.',
       ],

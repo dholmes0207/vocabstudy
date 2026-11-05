@@ -532,6 +532,70 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['I think it’s Ms. Park.', 'Yes, it was a great party.', 'At the end of December.'],
     'Câu hỏi gián tiếp hỏi người (who), nên đáp bằng tên người. (Bẫy) Yes nhưng nói về bữa tiệc đã qua; câu cuối trả lời thời gian.'
   ),
+  item(
+    'Who’s responsible for ordering office supplies?',
+    ['Kevin in the front office.', 'Yes, we need more paper.', 'By the end of the week.'],
+    'Who hỏi người: Kevin ở văn phòng trước. (Bẫy) Yes/No cho câu Wh-; câu cuối trả lời thời gian.'
+  ),
+  item(
+    'When does the next train to Osaka leave?',
+    ['In about twenty minutes.', 'From platform three.', 'I’ll take a taxi.'],
+    'When hỏi thời gian. (Bẫy) "From platform three" trả lời nơi chốn; câu cuối nói cách đi khác, không trả lời.'
+  ),
+  item(
+    'Where did you put the client files?',
+    ['They’re in the top drawer.', 'I filed a complaint.', 'Yes, I put them away.'],
+    'Where hỏi nơi chốn: ngăn kéo trên cùng. (Bẫy) "filed" nghe giống files; Yes/No cho câu Wh-.'
+  ),
+  item(
+    'Why was the meeting moved to Friday?',
+    ['The director is traveling on Thursday.', 'In Meeting Room B.', 'It moved very quickly.'],
+    'Why hỏi lý do: giám đốc đi công tác thứ Năm. (Bẫy) câu giữa trả lời nơi chốn; câu cuối lặp moved với nghĩa khác.'
+  ),
+  item(
+    'How long does it take to get to the convention center?',
+    ['About fifteen minutes by car.', 'It’s a very long hall.', 'Since last year.'],
+    'How long hỏi khoảng thời gian: khoảng 15 phút đi xe. (Bẫy) "long hall" lặp long với nghĩa dài; "Since last year" trả lời từ khi nào.'
+  ),
+  item(
+    'Do you want to sit by the window or near the door?',
+    ['By the window, please.', 'The door is locked.', 'Yes, I’d like to.'],
+    'Câu hỏi lựa chọn (A or B): chọn một. (Bẫy) lặp door; Yes/No không trả lời câu lựa chọn.'
+  ),
+  item(
+    'Haven’t you sent the invitations yet?',
+    ['I’ll do it this afternoon.', 'Thanks for inviting me.', 'Fifty guests.'],
+    'Câu hỏi phủ định, đáp là chưa và sẽ làm chiều nay. (Bẫy) "inviting" cùng gốc invitations; câu cuối trả lời số lượng.'
+  ),
+  item(
+    'I think the projector needs a new bulb.',
+    [
+      'I’ll call maintenance right away.',
+      'The project is almost done.',
+      'It’s on the second floor.',
+    ],
+    'Câu trần thuật báo vấn đề, đáp bằng cách xử lý: gọi bộ phận bảo trì. (Bẫy) "project" nghe giống projector; câu cuối trả lời nơi chốn.'
+  ),
+  item(
+    'Would you like me to review your report?',
+    ['That would be very helpful.', 'I viewed it yesterday.', 'Yes, it’s a good report.'],
+    'Lời đề nghị giúp (Would you like me to…?): nhận lời. (Bẫy) "viewed" nghe giống review; câu cuối khen báo cáo chứ không nhận lời đề nghị.'
+  ),
+  item(
+    'Which floor is the accounting department on?',
+    ['The fourth floor.', 'I counted them twice.', 'It opens at nine.'],
+    'Which floor hỏi tầng. (Bẫy) "counted" nghe giống accounting; câu cuối trả lời thời gian.'
+  ),
+  item(
+    'How about ordering pizza for the team?',
+    ['Good idea, let’s do that.', 'I paid for the order.', 'There are eight people on the team.'],
+    'Lời rủ (How about…?): đồng ý. (Bẫy) lặp order dạng danh từ; câu cuối lặp team, trả lời số lượng.'
+  ),
+  item(
+    'Could you tell me when the store opens?',
+    ['At ten on weekdays.', 'It’s next to the bank.', 'Yes, I told her.'],
+    'Câu hỏi gián tiếp hỏi thời gian (when). (Bẫy) câu giữa trả lời nơi chốn; "told" lặp gốc tell, Yes không trả lời được.'
+  ),
 ]
 
 /** Items in one round. */
