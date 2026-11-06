@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
     items: [
       [
+        'TOEIC Part 7 lên 41 bài: thêm tin tuyển nhân viên quán cà phê, thông báo sửa đường và tin nhắn đổi phòng họp (có câu hỏi ý người viết).',
+        'TOEIC Part 7 now has 41 sets: a café job ad, a road work notice and a chat about a moved meeting (with a writer’s-meaning question).',
+      ],
+      [
         'HSK 3 đọc đoạn văn ngắn lên 40 đoạn: thêm cơm mẹ nấu cuối tuần, điện thoại cũ, thư viện yên tĩnh, cuộc họp dời sang chiều và học bơi.',
         'HSK 3 short passages now number 40: Mum’s weekend cooking, an old phone, a quiet library, a meeting moved to the afternoon and learning to swim.',
       ],
