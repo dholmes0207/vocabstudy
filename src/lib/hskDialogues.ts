@@ -1117,6 +1117,57 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['自行车坏了', '想锻炼身体', '公共汽车太慢'],
     why: '"我的自行车坏了": xe đạp hỏng. 才 ở đây là phải đến mai mới lấy lại được.',
   },
+  {
+    id: 'new-clothes',
+    level: 'hsk2',
+    lines: [
+      m('你的新衣服是在哪儿买的？', 'Bộ quần áo mới của chị mua ở đâu thế?'),
+      w('在学校旁边的商店，只要一百块。', 'Ở cửa hàng cạnh trường, chỉ có một trăm tệ.'),
+    ],
+    q: '女的的新衣服多少钱？',
+    qVi: 'Quần áo mới của người nữ bao nhiêu tiền?',
+    options: ['一百块', '两百块', '五十块'],
+    why: '"只要一百块": chỉ một trăm tệ. 只要 nhấn mạnh là rẻ.',
+  },
+  {
+    id: 'wait-bus',
+    level: 'hsk2',
+    lines: [
+      w('你在这儿等谁？', 'Anh đang đợi ai ở đây thế?'),
+      m('我在等我妻子，她说五分钟以后到。', 'Tôi đang đợi vợ tôi, cô ấy nói năm phút nữa sẽ đến.'),
+    ],
+    q: '男的在等谁？',
+    qVi: 'Người nam đang đợi ai?',
+    options: ['妻子', '妹妹', '朋友'],
+    why: '"我在等我妻子": đang đợi vợ. 在 + động từ chỉ việc đang diễn ra.',
+  },
+  {
+    id: 'rain-tomorrow',
+    level: 'hsk2',
+    lines: [
+      w('明天会下雨吗？', 'Ngày mai có mưa không?'),
+      m('会，所以我们后天再去买东西吧。', 'Có, nên ngày kia chúng ta hãy đi mua đồ.'),
+    ],
+    q: '他们什么时候去买东西？',
+    qVi: 'Khi nào họ đi mua đồ?',
+    options: ['后天', '明天', '今天'],
+    why: '"我们后天再去买东西吧": ngày kia mới đi. Bẫy: 明天 là ngày có mưa.',
+  },
+  {
+    id: 'watch-tv',
+    level: 'hsk2',
+    lines: [
+      m('晚上你常常做什么？', 'Buổi tối chị thường làm gì?'),
+      w(
+        '我喜欢在家看电视，有时候也看书。',
+        'Tôi thích ở nhà xem ti vi, thỉnh thoảng cũng đọc sách.'
+      ),
+    ],
+    q: '女的晚上常常做什么？',
+    qVi: 'Buổi tối người nữ thường làm gì?',
+    options: ['看电视', '去跑步', '学汉语'],
+    why: '"我喜欢在家看电视": thích ở nhà xem ti vi. 有时候 (thỉnh thoảng) mới đọc sách.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
