@@ -209,7 +209,7 @@ Tình hình (06/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
-    25 cặp mỗi cấp; đoạn văn ngắn HSK 3 40 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    28 cặp mỗi cấp; đoạn văn ngắn HSK 3 40 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -987,3 +987,10 @@ từ). Test bắt được một câu trùng với câu cũ (heavy rain), đã v
 `PART2_BANK` từ 108 lên 120 câu (test giữ mức này). Thêm Where, Who, When, Why, How many, Which, câu hỏi lựa chọn (morning
 or afternoon), câu hỏi phủ định (Didn't you…?), câu trần thuật báo thay đổi, lời nhờ (Could you help me…?), lời đề nghị
 (Why don't we…?), câu hỏi gián tiếp (Do you know if…?). Bẫy âm mới: copies / coffee, planned / planted.
+
+### Thêm cặp hỏi – đáp HSK (06/11/2026, đợt năm)
+
+Mỗi cấp từ 25 lên 28 cặp (test giữ mức này). HSK 1: có bao nhiêu sách, thích uống trà không, hôm nay thứ mấy. HSK 2:
+thích quả gì nhất, em gái bao nhiêu tuổi, mai có bận không. HSK 3: tìm ví (刚才), thời tiết cuối tuần (听说), mệt vì
+tăng ca. Kiểm tra chữ Hán bắt được 它 và 白 ở HSK 1, đã đổi câu; bỏ các câu hỏi có câu đáp cũ hợp cả (quán ăn gần đây,
+điểm thi).

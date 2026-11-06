@@ -175,6 +175,27 @@ export const HSK1_PAIRS: readonly AnswerPair[] = [
     qVi: 'Bạn thích đọc sách gì?',
     aVi: 'Tôi thích đọc sách tiếng Trung.',
   },
+  {
+    id: 'many-books',
+    q: '你有多少本书？',
+    a: '我有三十本书。',
+    qVi: 'Bạn có bao nhiêu quyển sách?',
+    aVi: 'Tôi có ba mươi quyển sách.',
+  },
+  {
+    id: 'like-tea',
+    q: '你喜欢喝茶吗？',
+    a: '喜欢，我每天都喝。',
+    qVi: 'Bạn có thích uống trà không?',
+    aVi: 'Thích, ngày nào tôi cũng uống.',
+  },
+  {
+    id: 'weekday',
+    q: '今天星期几？',
+    a: '今天星期三。',
+    qVi: 'Hôm nay thứ mấy?',
+    aVi: 'Hôm nay thứ Tư.',
+  },
 ]
 
 /**
@@ -357,6 +378,27 @@ export const HSK2_PAIRS: readonly AnswerPair[] = [
     qVi: 'Sáng nay bạn ăn sáng chưa?',
     aVi: 'Ăn rồi, tôi uống một cốc sữa.',
   },
+  {
+    id: 'favorite-fruit',
+    q: '你最喜欢吃什么水果？',
+    a: '西瓜，夏天吃最好。',
+    qVi: 'Bạn thích ăn quả gì nhất?',
+    aVi: 'Dưa hấu, ăn vào mùa hè là tuyệt nhất.',
+  },
+  {
+    id: 'sister-age',
+    q: '你妹妹今年多大？',
+    a: '她十八岁了。',
+    qVi: 'Em gái bạn năm nay bao nhiêu tuổi?',
+    aVi: 'Em ấy mười tám tuổi rồi.',
+  },
+  {
+    id: 'busy-tomorrow',
+    q: '明天你忙吗？',
+    a: '不忙，我们一起去看电影吧。',
+    qVi: 'Ngày mai bạn có bận không?',
+    aVi: 'Không bận, chúng ta cùng đi xem phim nhé.',
+  },
 ]
 
 /** HSK 3 reading, part one: a sentence and the one that answers or follows it. */
@@ -535,6 +577,27 @@ export const HSK3_PAIRS: readonly AnswerPair[] = [
     a: '回，我已经买好票了。',
     qVi: 'Tết bạn có về quê không?',
     aVi: 'Có, tôi đã mua vé rồi.',
+  },
+  {
+    id: 'lost-wallet',
+    q: '你在找什么？',
+    a: '我的钱包，刚才还在桌子上。',
+    qVi: 'Bạn đang tìm gì thế?',
+    aVi: 'Ví của tôi, vừa nãy còn ở trên bàn.',
+  },
+  {
+    id: 'snow-weekend',
+    q: '周末天气怎么样？',
+    a: '听说会下雪，记得多穿点儿衣服。',
+    qVi: 'Cuối tuần thời tiết thế nào?',
+    aVi: 'Nghe nói sẽ có tuyết, nhớ mặc thêm áo nhé.',
+  },
+  {
+    id: 'tired-why',
+    q: '你今天怎么这么累？',
+    a: '昨天晚上加班到十二点。',
+    qVi: 'Sao hôm nay bạn mệt thế?',
+    aVi: 'Tối qua tôi tăng ca đến mười hai giờ.',
   },
 ]
 
