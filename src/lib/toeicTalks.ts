@@ -986,6 +986,85 @@ export const TALK_SETS: readonly TalkSet[] = [
       },
     ],
   },
+  {
+    id: 'p3-shipping-graphic',
+    part: 3,
+    lines: [
+      w(
+        'Hello. I’d like to send this package to our office in Chicago. It needs to get there by Friday.'
+      ),
+      m(
+        'Today is Wednesday, so overnight would work, but it’s quite expensive. Let me show you the options.'
+      ),
+      w('Hmm. If the two-day service gets there on Friday, I’ll take that one.'),
+      m('It will. Could you write the address on this form, please?'),
+    ],
+    graphic: {
+      title: 'Shipping Options',
+      rows: [
+        ['Service', 'Delivery time', 'Price'],
+        ['Standard', '5 days', '$8'],
+        ['Express', '2 days', '$20'],
+        ['Overnight', '1 day', '$35'],
+      ],
+    },
+    questions: [
+      {
+        q: 'Where most likely are the speakers?',
+        options: ['At a shipping counter', 'At a bank', 'At a travel agency', 'At a printing shop'],
+        why: 'Người nữ muốn gửi gói hàng, người nam giới thiệu các dịch vụ gửi: quầy gửi hàng.',
+      },
+      {
+        q: 'Look at the graphic. Which service will the woman choose?',
+        options: ['Express', 'Standard', 'Overnight', 'Same-day'],
+        why: '"If the two-day service gets there on Friday, I’ll take that one": dịch vụ hai ngày là Express ($20). Overnight được nhắc nhưng quá đắt.',
+      },
+      {
+        q: 'What does the man ask the woman to do?',
+        options: ['Fill out a form', 'Pay in cash', 'Come back on Friday', 'Weigh the package'],
+        why: '"Could you write the address on this form, please?": điền địa chỉ vào phiếu.',
+      },
+    ],
+  },
+  {
+    id: 'p3-software-training',
+    part: 3,
+    lines: [
+      m('Lisa, are you going to the training on the new sales software tomorrow?'),
+      w('Yes, it starts at ten in Room 4. Aren’t you coming?'),
+      m('I’d like to, but I’m meeting a client at the same time.'),
+      w(
+        'Don’t worry. The trainer is recording the session. You can watch the video later this week.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'What is the training about?',
+        options: ['New sales software', 'Customer service', 'Office safety', 'A new client'],
+        why: '"the training on the new sales software": buổi đào tạo phần mềm bán hàng mới.',
+      },
+      {
+        q: 'Why can’t the man attend the training?',
+        options: [
+          'He has a meeting with a client.',
+          'He is going on vacation.',
+          'He does not know where Room 4 is.',
+          'He already took the training.',
+        ],
+        why: '"I’m meeting a client at the same time": trùng giờ gặp khách.',
+      },
+      {
+        q: 'What does the woman say about the training?',
+        options: [
+          'It will be recorded.',
+          'It has been canceled.',
+          'It will start at noon.',
+          'It is only for managers.',
+        ],
+        why: '"The trainer is recording the session. You can watch the video later": buổi học được ghi hình. Bắt đầu lúc 10 giờ, không phải buổi trưa.',
+      },
+    ],
+  },
 
   // ---------------------------------------------------------------- Part 4
   {
@@ -1893,6 +1972,94 @@ export const TALK_SETS: readonly TalkSet[] = [
           'Pick some fruit',
         ],
         why: '"we’ll stop at our shop, where you can try three new flavors for free": thử ba vị nước ép mới. Chụp ảnh phòng đóng chai bị cấm.',
+      },
+    ],
+  },
+  {
+    id: 'p4-store-closing',
+    part: 4,
+    lines: [
+      n(
+        'Attention, shoppers. Greenleaf Market will be closing in fifteen minutes. Please bring your items to the checkout. Checkouts one to four are open, and the self-checkout area is next to the main entrance.'
+      ),
+      n(
+        'Before you go, don’t forget to visit our bakery. For the rest of the evening, all bread and cakes are half price. Thank you for shopping with us, and see you tomorrow.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Where is the announcement being made?',
+        options: [
+          'In a supermarket',
+          'At a train station',
+          'In a restaurant',
+          'At a bakery school',
+        ],
+        why: '"Attention, shoppers. Greenleaf Market…": thông báo trong siêu thị.',
+      },
+      {
+        q: 'What are the listeners asked to do?',
+        options: [
+          'Go to a checkout',
+          'Leave by the side door',
+          'Return their carts',
+          'Order a cake',
+        ],
+        why: '"Please bring your items to the checkout": mang hàng ra quầy thanh toán vì sắp đóng cửa.',
+      },
+      {
+        q: 'What is mentioned about the bakery?',
+        options: [
+          'Its products are on sale.',
+          'It is closed for the evening.',
+          'It has new cakes.',
+          'It is next to the entrance.',
+        ],
+        why: '"all bread and cakes are half price": bánh giảm nửa giá. Cạnh lối vào là khu tự thanh toán, không phải tiệm bánh.',
+      },
+    ],
+  },
+  {
+    id: 'p4-boat-tour-canceled',
+    part: 4,
+    lines: [
+      n(
+        'Hello, this is Ken from Blue Bay Travel, calling for Ms. Silva. I’m sorry to say that tomorrow’s boat tour has been canceled because of strong winds.'
+      ),
+      n(
+        'We can move you to the city bus tour at the same time, or we can give you a full refund. Please call me back by five o’clock today and let me know which you prefer. My number is 555-0142.'
+      ),
+    ],
+    questions: [
+      {
+        q: 'Why was the boat tour canceled?',
+        options: [
+          'Because of the weather',
+          'Because the boat needs repairs',
+          'Because too few people signed up',
+          'Because the guide is sick',
+        ],
+        why: '"canceled because of strong winds": vì gió mạnh, tức là vì thời tiết.',
+      },
+      {
+        q: 'What does the speaker offer?',
+        options: [
+          'A different tour or a refund',
+          'A free dinner',
+          'A boat tour next week',
+          'A hotel room',
+        ],
+        why: '"We can move you to the city bus tour… or we can give you a full refund": đổi sang tour xe buýt hoặc hoàn tiền.',
+      },
+      {
+        q: 'What is Ms. Silva asked to do?',
+        options: [
+          'Call back by five o’clock',
+          'Come to the office tomorrow',
+          'Send an e-mail',
+          'Pay for the bus tour',
+        ],
+        why: '"Please call me back by five o’clock today": gọi lại trước 5 giờ chiều nay.',
       },
     ],
   },
