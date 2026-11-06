@@ -196,7 +196,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 
 ## Tiếp theo
 
-Tình hình (05/11/2026):
+Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 40 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 131
@@ -208,7 +208,7 @@ Tình hình (05/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 32 bài, HSK 3 40 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 32 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
     25 cặp mỗi cấp; đoạn văn ngắn HSK 3 35 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -929,3 +929,9 @@ Mỗi cấp từ 22 lên 25 cặp (test giữ mức này). HSK 1: cốc của ai
 không, giá vé đi Bắc Kinh, ăn sáng chưa. HSK 3: không nghe máy (手机没电了), bài tập xong chưa (还差一点儿), Tết về
 quê. Đã bỏ các câu đáp hợp cả câu hỏi cũ: "下午四点" (hợp 现在几点), "她是老师" (hợp 你妻子做什么工作), câu chỉ đường
 (hợp câu hỏi tìm quán ăn gần đây). Kiểm tra chữ Hán bắt được 文, 海, 火, 假, đã viết lại câu.
+
+### Thêm hội thoại HSK 3 (06/11/2026, đợt sáu)
+
+`HSK_DIALOGUES` HSK 3 từ 40 lên 45 bài (test giữ mức này): làm việc muộn vì sáng mai cần báo cáo, quên ô ở văn
+phòng (把…忘在…), quán ăn quá đông nên sang quán bên cạnh, vé xem phim ngày mai bán hết (bẫy 明天), xe đạp hỏng
+(才). Kiểm tra chữ Hán bắt được 交, 及, 修, đã viết lại câu.
