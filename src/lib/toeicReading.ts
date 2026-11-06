@@ -1089,6 +1089,93 @@ Riverside Fitness Center`,
       ),
     ],
   },
+  {
+    id: 'p6-printer-cards',
+    part: 6,
+    passages: [
+      {
+        kind: MEMO,
+        text: `To: All staff
+From: Office Services
+Re: New printers
+
+New printers will be [1] on every floor this Friday. From Monday, you will need to tap your staff card on the printer before your documents come out. This keeps private papers from being left in the tray. [2]
+
+If your card does not work, please bring it to the front desk, and we will update it [3] a few minutes.
+
+Thank you for your [4] while we make this change.`,
+      },
+    ],
+    questions: [
+      gap(
+        ['installed', 'install', 'installing', 'installation'],
+        'will be + quá khứ phân từ (bị động tương lai): máy in sẽ được lắp đặt: installed.'
+      ),
+      gap(
+        [
+          'It will also help us save paper.',
+          'The old printers will be used until next year.',
+          'Staff cards are no longer needed in the building.',
+          'Printing will stop on all floors next week.',
+        ],
+        'Câu chèn nêu thêm một lợi ích (also), nối tiếp câu "giữ giấy tờ riêng không bị bỏ quên". Ba câu kia trái với thông báo: máy cũ được thay ngay, vẫn cần thẻ, vẫn in được.'
+      ),
+      gap(
+        ['within', 'until', 'since', 'during'],
+        'within + khoảng thời gian: trong vòng vài phút.'
+      ),
+      gap(
+        ['patience', 'patient', 'patiently', 'patients'],
+        'Sau tính từ sở hữu your cần danh từ: patience (sự kiên nhẫn). patients là bệnh nhân.'
+      ),
+    ],
+  },
+  {
+    id: 'p6-hotel-survey',
+    part: 6,
+    passages: [
+      {
+        kind: EMAIL,
+        text: `To: Ana Costa
+From: Seaview Hotel
+Subject: Thank you for staying with us
+
+Dear Ms. Costa,
+
+Thank you for choosing the Seaview Hotel for your recent trip. We hope you [1] your stay.
+
+We are always looking for ways to improve. [2] you have a few minutes, please tell us about your visit by completing a short online survey. [3]
+
+As a thank-you, every guest who completes the survey will receive 10 percent off [4] next booking with us.
+
+Best regards,
+The Seaview Hotel team`,
+      },
+    ],
+    questions: [
+      gap(
+        ['enjoyed', 'enjoy', 'enjoying', 'will enjoy'],
+        'Kỳ nghỉ đã kết thúc (recent trip), nên dùng quá khứ: We hope you enjoyed your stay.'
+      ),
+      gap(
+        ['If', 'Unless', 'Although', 'Because of'],
+        'If you have a few minutes: nếu quý khách có vài phút. Because of đi với danh từ, không đi với mệnh đề.'
+      ),
+      gap(
+        [
+          'It should take no more than five minutes.',
+          'Our hotel will be closed for the winter.',
+          'Please pay the bill at the front desk.',
+          'We are sorry that your room was not ready.',
+        ],
+        'Câu chèn nói thêm về bản khảo sát vừa nhắc tới (mất không quá năm phút). Ba câu kia không liên quan hoặc nêu vấn đề email không hề nhắc.'
+      ),
+      gap(
+        ['your', 'you', 'yours', 'yourself'],
+        'Trước cụm danh từ next booking cần tính từ sở hữu: your next booking.'
+      ),
+    ],
+  },
 
   // ------------------------------------------------------- Part 7, single
   {

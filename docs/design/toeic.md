@@ -200,7 +200,7 @@ Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 40 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 131
-    câu ngữ pháp và câu nghĩa từ, Part 6 26 đoạn, Part 7 38 bài (13 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 38 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -935,3 +935,9 @@ quê. Đã bỏ các câu đáp hợp cả câu hỏi cũ: "下午四点" (hợp
 `HSK_DIALOGUES` HSK 3 từ 40 lên 45 bài (test giữ mức này): làm việc muộn vì sáng mai cần báo cáo, quên ô ở văn
 phòng (把…忘在…), quán ăn quá đông nên sang quán bên cạnh, vé xem phim ngày mai bán hết (bẫy 明天), xe đạp hỏng
 (才). Kiểm tra chữ Hán bắt được 交, 及, 修, đã viết lại câu.
+
+### Thêm đoạn Part 6 (06/11/2026, đợt sáu)
+
+Part 6 từ 26 lên 28 đoạn (test giữ mức này): thông báo nội bộ về máy in mới dùng thẻ nhân viên (will be installed,
+within + khoảng thời gian, your patience / patients, câu chèn nêu thêm lợi ích với also), email cảm ơn và khảo sát
+của khách sạn (hope you enjoyed, If + mệnh đề, your next booking, câu chèn nói về thời gian làm khảo sát).
