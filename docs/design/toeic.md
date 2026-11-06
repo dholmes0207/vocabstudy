@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 143
+  - Nội dung: Part 1 46 cảnh, Part 2 120 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 143
     câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 41 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -981,3 +981,9 @@ mở), tin nhắn đổi phòng họp (câu hỏi ý người viết "No need": 
 tính từ, can + V (từ loại), at noon, for more than a decade (giới từ), câu điều kiện loại 2, be used to + V-ing (động
 từ), despite + cụm danh từ, so that (liên từ), each other, hers (đại từ), leave the room, the warranty covers (nghĩa
 từ). Test bắt được một câu trùng với câu cũ (heavy rain), đã viết lại.
+
+### Thêm câu Part 2 (06/11/2026, đợt bảy)
+
+`PART2_BANK` từ 108 lên 120 câu (test giữ mức này). Thêm Where, Who, When, Why, How many, Which, câu hỏi lựa chọn (morning
+or afternoon), câu hỏi phủ định (Didn't you…?), câu trần thuật báo thay đổi, lời nhờ (Could you help me…?), lời đề nghị
+(Why don't we…?), câu hỏi gián tiếp (Do you know if…?). Bẫy âm mới: copies / coffee, planned / planted.

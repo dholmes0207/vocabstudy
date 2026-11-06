@@ -596,6 +596,66 @@ export const PART2_BANK: readonly Part2Item[] = [
     ['At ten on weekdays.', 'It’s next to the bank.', 'Yes, I told her.'],
     'Câu hỏi gián tiếp hỏi thời gian (when). (Bẫy) câu giữa trả lời nơi chốn; "told" lặp gốc tell, Yes không trả lời được.'
   ),
+  item(
+    'Where’s the closest pharmacy?',
+    ['There’s one across from the bank.', 'I’ll take some medicine.', 'It closes at eight.'],
+    'Where hỏi nơi chốn: đối diện ngân hàng. (Bẫy) "medicine" liên quan đến pharmacy; câu cuối trả lời thời gian.'
+  ),
+  item(
+    'Who’s going to lead the morning session?',
+    ['Dr. Patel is.', 'It’s at nine thirty.', 'Yes, I’ll be there.'],
+    'Who hỏi người. (Bẫy) câu giữa trả lời thời gian; Yes/No không trả lời câu Wh-.'
+  ),
+  item(
+    'When will the new manager start?',
+    ['At the beginning of next month.', 'She has a lot of experience.', 'In the main office.'],
+    'When hỏi thời gian. (Bẫy) câu giữa nói về người quản lý; câu cuối trả lời nơi chốn.'
+  ),
+  item(
+    'Why is the store closed today?',
+    ['It’s a national holiday.', 'I closed the window.', 'Until six o’clock.'],
+    'Why hỏi lý do: ngày lễ. (Bẫy) "closed" lặp từ với nghĩa đóng cửa sổ; câu cuối trả lời thời gian.'
+  ),
+  item(
+    'How many copies of the handout do you need?',
+    ['Thirty should be enough.', 'I made a coffee.', 'It’s on the front desk.'],
+    'How many hỏi số lượng: ba mươi bản. (Bẫy) "coffee" nghe giống copies; câu cuối trả lời nơi chốn.'
+  ),
+  item(
+    'Would you prefer a morning or an afternoon flight?',
+    ['An afternoon flight would be better.', 'The flight was on time.', 'Yes, I prefer it.'],
+    'Câu hỏi lựa chọn: chọn chuyến chiều. (Bẫy) lặp flight; Yes/No không trả lời câu lựa chọn.'
+  ),
+  item(
+    'Didn’t you order more paper last week?',
+    ['Yes, but it hasn’t arrived yet.', 'The paper is very thin.', 'A week ago.'],
+    'Câu hỏi phủ định, đáp Yes kèm thông tin: đã đặt nhưng chưa đến. (Bẫy) lặp paper; "A week ago" lặp ý week mà không trả lời.'
+  ),
+  item(
+    'The client wants to meet earlier than planned.',
+    ['Then I’ll move our meeting to ten.', 'She planted some trees.', 'We met last year.'],
+    'Câu trần thuật báo thay đổi, đáp bằng cách xử lý. (Bẫy) "planted" nghe giống planned; "met" lặp gốc meet.'
+  ),
+  item(
+    'Could you help me carry these boxes?',
+    ['Sure, where do they go?', 'They’re very good boxes.', 'I carried the bag yesterday.'],
+    'Lời nhờ (Could you…?): nhận lời và hỏi thêm. (Bẫy) lặp boxes; "carried" lặp gốc carry.'
+  ),
+  item(
+    'Which of these designs do you like best?',
+    ['The blue one on the left.', 'I designed the website.', 'Yes, I like them.'],
+    'Which hỏi lựa chọn: cái màu xanh bên trái. (Bẫy) "designed" lặp gốc design; Yes/No không trả lời câu Which.'
+  ),
+  item(
+    'Why don’t we hold the party outside?',
+    ['That sounds like a great idea.', 'It was held last year.', 'Outside the building.'],
+    'Lời đề nghị (Why don’t we…?): đồng ý. (Bẫy) "held" lặp gốc hold; câu cuối lặp outside.'
+  ),
+  item(
+    'Do you know if the printer has been fixed?',
+    ['The technician is working on it now.', 'I printed it twice.', 'Yes, it’s a printer.'],
+    'Câu hỏi gián tiếp (Do you know if…?): trả lời gián tiếp là đang sửa. (Bẫy) "printed" lặp gốc print; Yes nhưng không trả lời.'
+  ),
 ]
 
 /** Items in one round. */
