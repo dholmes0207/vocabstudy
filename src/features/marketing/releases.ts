@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-06',
+    title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
+    items: [
+      [
+        'HSK 3 hội thoại – câu hỏi lên 45 bài: thêm làm việc muộn, quên ô ở văn phòng, quán ăn quá đông, vé xem phim bán hết và xe đạp hỏng.',
+        'HSK 3 dialogue questions now number 45: working late, an umbrella left at the office, a full restaurant, sold-out film tickets and a broken bike.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-05',
     title: ['Theo dõi điểm yếu khi luyện thi', 'Weak spots in exam practice'],
     items: [

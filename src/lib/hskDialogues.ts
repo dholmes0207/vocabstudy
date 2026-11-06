@@ -1048,6 +1048,75 @@ export const HSK_DIALOGUES: readonly HskDialogue[] = [
     options: ['跑步', '游泳', '打篮球'],
     why: '"我去跑步": đi chạy bộ. 四十分钟 là thời gian chạy mỗi ngày.',
   },
+  {
+    id: 'work-late',
+    level: 'hsk3',
+    lines: [
+      w(
+        '医生说你要多休息，你怎么还在工作？',
+        'Bác sĩ bảo anh phải nghỉ ngơi nhiều, sao anh vẫn còn làm việc?'
+      ),
+      m(
+        '这个报告明天上午就要用，写完我就去睡觉。',
+        'Bản báo cáo này sáng mai phải dùng rồi, viết xong tôi đi ngủ ngay.'
+      ),
+    ],
+    q: '男的为什么还在工作？',
+    qVi: 'Vì sao người nam vẫn còn làm việc?',
+    options: ['报告明天要用', '他不累', '医生让他工作'],
+    why: '"这个报告明天上午就要用": sáng mai phải dùng báo cáo. Bác sĩ bảo nghỉ ngơi, không phải bảo làm việc.',
+  },
+  {
+    id: 'umbrella-office',
+    level: 'hsk3',
+    lines: [
+      m('外面阴天了，你带伞了吗？', 'Bên ngoài trời âm u rồi, chị mang ô chưa?'),
+      w('带了，可是我把它忘在办公室了。', 'Mang rồi, nhưng tôi để quên nó ở văn phòng.'),
+    ],
+    q: '女的的伞在哪儿？',
+    qVi: 'Ô của người nữ ở đâu?',
+    options: ['办公室', '包里', '家里'],
+    why: '"我把它忘在办公室了": để quên ở văn phòng. 把 + vật + 忘在 + nơi: để quên vật ở đâu.',
+  },
+  {
+    id: 'restaurant-full',
+    level: 'hsk3',
+    lines: [
+      w('这家饭馆人太多了，要等一个小时。', 'Quán này đông quá, phải đợi một tiếng.'),
+      m(
+        '那我们去旁边那家吧，那儿的菜也很好吃。',
+        'Vậy chúng ta sang quán bên cạnh đi, món ở đó cũng rất ngon.'
+      ),
+    ],
+    q: '他们最后可能去哪儿吃饭？',
+    qVi: 'Cuối cùng họ có thể đi ăn ở đâu?',
+    options: ['旁边的饭馆', '这家饭馆', '家里'],
+    why: '"那我们去旁边那家吧": sang quán bên cạnh, vì quán này phải đợi một tiếng.',
+  },
+  {
+    id: 'movie-sold-out',
+    level: 'hsk3',
+    lines: [
+      m('你买到明天的电影票了吗？', 'Chị mua được vé xem phim ngày mai chưa?'),
+      w('没有，都卖完了，我买了后天的。', 'Chưa, bán hết rồi, tôi mua vé ngày kia.'),
+    ],
+    q: '女的买了哪天的票？',
+    qVi: 'Người nữ mua vé ngày nào?',
+    options: ['后天', '明天', '今天'],
+    why: '"我买了后天的": mua vé ngày kia. Bẫy: 明天 là ngày muốn mua nhưng đã hết vé.',
+  },
+  {
+    id: 'bike-broken',
+    level: 'hsk3',
+    lines: [
+      w('你今天怎么走路来上班？', 'Hôm nay sao anh đi bộ đi làm?'),
+      m('我的自行车坏了，明天才能拿回来。', 'Xe đạp của tôi hỏng rồi, mai mới lấy về được.'),
+    ],
+    q: '男的今天为什么走路来？',
+    qVi: 'Vì sao hôm nay người nam đi bộ đến?',
+    options: ['自行车坏了', '想锻炼身体', '公共汽车太慢'],
+    why: '"我的自行车坏了": xe đạp hỏng. 才 ở đây là phải đến mai mới lấy lại được.',
+  },
 ]
 
 export interface ShuffledDialogue extends Omit<HskDialogue, 'options'> {
