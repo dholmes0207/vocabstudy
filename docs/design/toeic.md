@@ -209,7 +209,7 @@ Tình hình (06/11/2026):
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
   - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
-    25 cặp mỗi cấp; đoạn văn ngắn HSK 3 35 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
+    25 cặp mỗi cấp; đoạn văn ngắn HSK 3 40 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
 
@@ -962,3 +962,9 @@ Mỗi Part từ 22 lên 24 bài (test giữ mức này), Part 3 có 6 bài kèm 
   nhắc nhưng đắt), buổi đào tạo phần mềm bán hàng (trùng giờ gặp khách, buổi học được ghi hình).
 - **Part 4:** thông báo siêu thị sắp đóng cửa (mang hàng ra quầy, bánh giảm nửa giá, bẫy khu tự thanh toán cạnh lối
   vào), lời nhắn tour thuyền bị huỷ vì gió (đổi tour xe buýt hoặc hoàn tiền, gọi lại trước 5 giờ).
+
+### Thêm đoạn văn HSK 3 (06/11/2026, đợt sáu)
+
+`HSK3_READINGS` từ 35 lên 40 đoạn (test giữ mức này): cuối tuần về nhà ăn cơm mẹ nấu (有时候), điện thoại cũ vẫn dùng
+tốt (虽然…但是…), thư viện yên tĩnh (又…又…), cuộc họp dời sang chiều vì máy bay muộn (本来…), học bơi (小时候 và 现在).
+Kiểm tra chữ Hán bắt được 改, đã viết lại câu.
