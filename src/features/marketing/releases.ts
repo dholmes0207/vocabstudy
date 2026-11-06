@@ -17,6 +17,10 @@ export const RELEASES: Release[] = [
     title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
     items: [
       [
+        'TOEIC Part 5 lên 143 câu: thêm hai câu mỗi dạng, như câu điều kiện loại 2, be used to + V-ing, each other và the warranty covers.',
+        'TOEIC Part 5 now has 143 questions: two more of each kind, such as the second conditional, be used to + -ing, each other and the warranty covers.',
+      ],
+      [
         'TOEIC Part 7 lên 41 bài: thêm tin tuyển nhân viên quán cà phê, thông báo sửa đường và tin nhắn đổi phòng họp (có câu hỏi ý người viết).',
         'TOEIC Part 7 now has 41 sets: a café job ad, a road work notice and a chat about a moved meeting (with a writer’s-meaning question).',
       ],
