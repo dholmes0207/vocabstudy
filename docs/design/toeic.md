@@ -208,7 +208,7 @@ Tình hình (06/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 32 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
     25 cặp mỗi cấp; đoạn văn ngắn HSK 3 35 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -947,3 +947,9 @@ của khách sạn (hope you enjoyed, If + mệnh đề, your next booking, câu
 `PART1_BANK` từ 40 lên 46 cảnh (test giữ mức này): sơn tường, nói trước một nhóm người, giỏ hoa quả không người (has
 been placed), máy bay cất cánh (taking off), đầu bếp thái rau, mở khoá cửa (unlocking). Ba cảnh có bẫy "đúng đồ vật
 nhưng sai hành động" (being built, being planted, being repaired).
+
+### Thêm hội thoại HSK 2 (06/11/2026, đợt sáu)
+
+`HSK_DIALOGUES` HSK 2 từ 32 lên 36 bài (test giữ mức này): giá quần áo mới (只要), đợi vợ (在 + động từ), đổi ngày
+đi mua đồ vì mai mưa (bẫy 明天), xem ti vi buổi tối (有时候). Kiểm tra chữ Hán bắt được 园 (公园) và 般 (一般), đã
+viết lại câu.
