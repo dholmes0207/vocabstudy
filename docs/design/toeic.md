@@ -200,7 +200,7 @@ Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 131
-    câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 38 bài (13 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 41 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -968,3 +968,9 @@ Mỗi Part từ 22 lên 24 bài (test giữ mức này), Part 3 có 6 bài kèm 
 `HSK3_READINGS` từ 35 lên 40 đoạn (test giữ mức này): cuối tuần về nhà ăn cơm mẹ nấu (有时候), điện thoại cũ vẫn dùng
 tốt (虽然…但是…), thư viện yên tĩnh (又…又…), cuộc họp dời sang chiều vì máy bay muộn (本来…), học bơi (小时候 và 现在).
 Kiểm tra chữ Hán bắt được 改, đã viết lại câu.
+
+### Thêm bài Part 7 (06/11/2026, đợt bảy)
+
+Part 7 bài một đoạn từ 25 lên 28 (test giữ mức này), tổng 41 bài: tin tuyển nhân viên pha chế (đào tạo có lương,
+bẫy quán nơi làm việc và quán nơi nộp hồ sơ), thông báo sửa đường Park Avenue (xe buýt đi đường khác, cửa hàng vẫn
+mở), tin nhắn đổi phòng họp (câu hỏi ý người viết "No need": không cần in báo cáo).

@@ -2051,6 +2051,145 @@ Ms. Santos plans to hire twelve new employees. Interested people can apply at th
       },
     ],
   },
+  {
+    id: 'p7-cafe-hiring-ad',
+    part: 7,
+    passages: [
+      {
+        kind: AD,
+        text: `Corner Café is hiring!
+
+We are looking for a friendly barista to join our team at our new Hill Street location, which opens on July 1.
+
+- Part-time, 20 hours a week
+- Weekday mornings, 6 A.M. to 10 A.M.
+- No experience needed: we provide two weeks of paid training
+
+Interested? Drop by our Main Street café any afternoon and ask for Paolo, or call 555-0193.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'What is being advertised?',
+        options: ['A job at a café', 'A new coffee drink', 'A cooking class', 'A café for sale'],
+        why: '"Corner Café is hiring!… a friendly barista": tuyển nhân viên pha chế.',
+      },
+      {
+        q: 'What is mentioned about the position?',
+        options: [
+          'Training will be paid.',
+          'It requires two years of experience.',
+          'It is on weekends only.',
+          'It is a full-time job.',
+        ],
+        why: '"we provide two weeks of paid training": được đào tạo có lương. Không cần kinh nghiệm, làm sáng các ngày trong tuần, bán thời gian.',
+      },
+      {
+        q: 'Where should interested people go to apply?',
+        options: [
+          'The Main Street café',
+          'The Hill Street café',
+          'A job website',
+          'The company office',
+        ],
+        why: '"Drop by our Main Street café any afternoon and ask for Paolo." Quán Hill Street là chỗ làm việc, đến 1/7 mới mở.',
+      },
+    ],
+  },
+  {
+    id: 'p7-road-work-notice',
+    part: 7,
+    passages: [
+      {
+        kind: NOTICE,
+        text: `ROAD WORK ON PARK AVENUE
+
+From August 3 to August 14, Park Avenue between 5th and 8th Streets will be closed to cars while the city replaces water pipes. Work will take place from 7 A.M. to 6 P.M., Monday to Friday.
+
+Buses 12 and 15 will use Lake Road during this time. The bus stop in front of City Library will be moved one block north.
+
+Shops on Park Avenue will stay open, and people on foot can still use the sidewalks.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why will Park Avenue be closed?',
+        options: [
+          'Pipes are being replaced.',
+          'A festival is taking place.',
+          'A new library is being built.',
+          'The road is being painted.',
+        ],
+        why: '"while the city replaces water pipes": thay ống nước.',
+      },
+      {
+        q: 'What will happen to buses 12 and 15?',
+        options: [
+          'They will take a different road.',
+          'They will stop running.',
+          'They will run only on weekends.',
+          'They will stop in front of the library.',
+        ],
+        why: '"Buses 12 and 15 will use Lake Road": đi đường khác. Trạm trước thư viện bị dời đi một dãy nhà.',
+      },
+      {
+        q: 'What is indicated about the shops on Park Avenue?',
+        options: [
+          'They will remain open.',
+          'They will close at 6 P.M.',
+          'They will move to Lake Road.',
+          'They will be closed on weekdays.',
+        ],
+        why: '"Shops on Park Avenue will stay open": các cửa hàng vẫn mở. 6 giờ chiều là giờ kết thúc thi công.',
+      },
+    ],
+  },
+  {
+    id: 'p7-meeting-chat',
+    part: 7,
+    passages: [
+      {
+        kind: CHAT,
+        text: `Sam Lee (2:14 P.M.): Hi Rachel, is the budget meeting still at 3:00?
+Rachel Diaz (2:15 P.M.): It is, but we've moved it to Room 6. Room 2 is being used for interviews.
+Sam Lee (2:16 P.M.): Got it. Should I bring printed copies of the report?
+Rachel Diaz (2:17 P.M.): No need. I'll show it on the screen.
+Sam Lee (2:18 P.M.): Great. I might be five minutes late, though. I'm on a call with a supplier.`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why was the meeting moved?',
+        options: [
+          'Another room is being used.',
+          'The screen in Room 2 is broken.',
+          'More people will attend.',
+          'The meeting time changed.',
+        ],
+        why: '"Room 2 is being used for interviews": phòng 2 đang dùng để phỏng vấn. Giờ họp vẫn là 3:00.',
+      },
+      {
+        q: 'At 2:17 P.M., what does Ms. Diaz mean when she writes, "No need"?',
+        options: [
+          'Mr. Lee does not have to print the report.',
+          'Mr. Lee does not have to attend.',
+          'The report is not finished.',
+          'The meeting has been canceled.',
+        ],
+        why: 'Trả lời câu hỏi có cần in báo cáo không: "No need. I\'ll show it on the screen": không cần in, sẽ chiếu lên màn hình.',
+      },
+      {
+        q: 'Why might Mr. Lee be late?',
+        options: [
+          'He is talking with a supplier.',
+          'He is printing the report.',
+          'He is in an interview.',
+          'He cannot find Room 6.',
+        ],
+        why: '"I\'m on a call with a supplier": đang gọi điện với nhà cung cấp.',
+      },
+    ],
+  },
 
   // -------------------------------------------------------- Part 7, double
   {
