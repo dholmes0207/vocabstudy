@@ -3254,6 +3254,126 @@ Tom`,
       },
     ],
   },
+  {
+    id: 'p7-sale-overcharge',
+    part: 7,
+    passages: [
+      {
+        kind: AD,
+        text: `Homeline Furniture — Summer Sale
+June 10 to June 20
+
+Office chairs ............ $90 (usually $120)
+Desk lamps ............... $25 (usually $35)
+Bookshelves .............. $150 (usually $200)
+
+Sale prices apply in all stores and online. Free delivery on orders over $300.`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: customerservice@homeline.com
+From: Daniel Okafor
+Date: June 22
+Subject: Order #5530
+
+Hello,
+
+On June 15, I bought two office chairs on your Web site. When I checked my credit card statement today, I saw that I was charged the usual price for both chairs, not the sale price.
+
+Could you please refund the difference? The chairs themselves are excellent, and they arrived quickly.
+
+Thank you,
+Daniel Okafor`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why did Mr. Okafor write the e-mail?',
+        options: [
+          'He was charged too much.',
+          'His chairs arrived damaged.',
+          'His order was late.',
+          'He wants to return a lamp.',
+        ],
+        why: 'Anh ấy bị tính giá thường thay vì giá giảm, nên xin hoàn lại phần chênh lệch. Ghế tốt và giao nhanh.',
+      },
+      {
+        q: 'How much money should Mr. Okafor most likely get back?',
+        options: ['$60', '$30', '$90', '$120'],
+        why: 'Ghép hai đoạn: mỗi ghế giá thường $120, giá giảm $90, chênh $30; mua hai ghế nên được hoàn $60. Bẫy: $30 là chênh lệch của một ghế.',
+      },
+      {
+        q: 'What is indicated about Mr. Okafor’s purchase?',
+        options: [
+          'It was made during the sale.',
+          'It was made in a store.',
+          'It included free delivery.',
+          'It was paid for in cash.',
+        ],
+        why: 'Mua ngày 15/6, trong đợt giảm giá 10–20/6. Mua trên web, trả bằng thẻ; hai ghế dù tính giá nào ($180 hay $240) cũng chưa tới $300 nên không được giao miễn phí.',
+      },
+    ],
+  },
+  {
+    id: 'p7-workshop-switch',
+    part: 7,
+    passages: [
+      {
+        kind: SCHEDULE,
+        text: `Regional Sales Conference — Afternoon Workshops (May 9)
+
+1:00–2:30   Social Media for Small Shops      Room A
+1:00–2:30   Writing Better Sales E-mails      Room B
+3:00–4:30   Pricing Strategies                Room A
+3:00–4:30   Customer Service Basics           Room C`,
+      },
+      {
+        kind: EMAIL,
+        text: `To: Conference Office
+From: Priya Nair
+Subject: Workshop change
+
+Hello,
+
+I signed up for Social Media for Small Shops, but my manager has asked me to call a client at 1:00 on May 9. Could I switch to the other workshop that takes place in Room A? I will still attend the morning sessions as planned.
+
+Thank you,
+Priya Nair`,
+      },
+    ],
+    questions: [
+      {
+        q: 'Why does Ms. Nair want to change workshops?',
+        options: [
+          'She has to make a phone call.',
+          'The room is too small.',
+          'Her manager is leading a workshop.',
+          'She already took the workshop.',
+        ],
+        why: '"my manager has asked me to call a client at 1:00": phải gọi điện cho khách lúc 1 giờ, trùng giờ hội thảo.',
+      },
+      {
+        q: 'Which workshop does Ms. Nair want to attend?',
+        options: [
+          'Pricing Strategies',
+          'Writing Better Sales E-mails',
+          'Customer Service Basics',
+          'Social Media for Small Shops',
+        ],
+        why: 'Ghép hai đoạn: "the other workshop that takes place in Room A" là Pricing Strategies (3:00, phòng A). Bẫy: Writing Better Sales E-mails cũng lúc 1:00, trùng cuộc gọi.',
+      },
+      {
+        q: 'What does Ms. Nair say about the morning sessions?',
+        options: [
+          'She will attend them.',
+          'She will miss them.',
+          'They have been canceled.',
+          'They start at 1:00.',
+        ],
+        why: '"I will still attend the morning sessions as planned": vẫn dự các buổi sáng như kế hoạch.',
+      },
+    ],
+  },
 ]
 
 export interface ShuffledQuestion extends ReadingQuestion {
