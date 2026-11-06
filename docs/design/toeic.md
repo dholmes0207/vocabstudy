@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 131
+  - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 143
     câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 41 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -974,3 +974,10 @@ Kiểm tra chữ Hán bắt được 改, đã viết lại câu.
 Part 7 bài một đoạn từ 25 lên 28 (test giữ mức này), tổng 41 bài: tin tuyển nhân viên pha chế (đào tạo có lương,
 bẫy quán nơi làm việc và quán nơi nộp hồ sơ), thông báo sửa đường Park Avenue (xe buýt đi đường khác, cửa hàng vẫn
 mở), tin nhắn đổi phòng họp (câu hỏi ý người viết "No need": không cần in báo cáo).
+
+### Thêm câu Part 5 (06/11/2026, đợt sáu)
+
+`PART5_BANK` từ 131 lên 143 câu, mỗi dạng ít nhất 22 câu (test giữ mức này). Thêm hai câu mỗi dạng: make + tân ngữ +
+tính từ, can + V (từ loại), at noon, for more than a decade (giới từ), câu điều kiện loại 2, be used to + V-ing (động
+từ), despite + cụm danh từ, so that (liên từ), each other, hers (đại từ), leave the room, the warranty covers (nghĩa
+từ). Test bắt được một câu trùng với câu cũ (heavy rain), đã viết lại.

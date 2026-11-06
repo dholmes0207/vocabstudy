@@ -984,6 +984,91 @@ export const PART5_BANK: readonly Part5Question[] = [
     0,
     'cover the cost: chi trả chi phí. charge là tính phí (cho người khác), spend cần on, save là tiết kiệm.'
   ),
+  // Sixth batch: two more of each kind.
+  q(
+    'form',
+    'The new rules will make the hiring process more ___.',
+    ['efficient', 'efficiency', 'efficiently', 'efficiencies'],
+    0,
+    'make + tân ngữ + tính từ: làm cho cái gì trở nên thế nào. Sau more cần tính từ: efficient (hiệu quả).'
+  ),
+  q(
+    'form',
+    'Customers can ___ their orders online at any time.',
+    ['track', 'tracking', 'tracked', 'tracker'],
+    0,
+    'Sau động từ khuyết thiếu can cần động từ nguyên mẫu: track (theo dõi).'
+  ),
+  q(
+    'prep',
+    'The keynote speech will begin ___ noon.',
+    ['at', 'on', 'in', 'by the'],
+    0,
+    'at + giờ cụ thể: at noon, at 3 P.M. on đi với ngày, in đi với tháng / năm.'
+  ),
+  q(
+    'prep',
+    'Mr. Hassan has been with the company ___ more than a decade.',
+    ['for', 'since', 'during', 'within'],
+    0,
+    'for + khoảng thời gian (more than a decade): đã ở công ty hơn mười năm. since đi với mốc thời gian.'
+  ),
+  q(
+    'verb',
+    'If we had more staff, we ___ open the store on Sundays.',
+    ['could', 'can', 'will', 'are able'],
+    0,
+    'Câu điều kiện loại 2 (If + quá khứ had): vế chính dùng could / would + V. Giả định trái hiện tại.'
+  ),
+  q(
+    'verb',
+    'Ms. Rossi is used to ___ long hours during the busy season.',
+    ['working', 'work', 'worked', 'works'],
+    0,
+    'be used to + V-ing: quen với việc gì. to ở đây là giới từ nên sau nó là V-ing.'
+  ),
+  q(
+    'link',
+    '___ the long delay, most passengers stayed calm and patient.',
+    ['Despite', 'Although', 'Because', 'Unless'],
+    0,
+    'Sau chỗ trống là cụm danh từ (the long delay), ý trái ngược (chậm lâu nhưng vẫn bình tĩnh): Despite. Although và Because cần mệnh đề.'
+  ),
+  q(
+    'link',
+    'Please arrive early ___ we can start the training on time.',
+    ['so that', 'even though', 'unless', 'whether'],
+    0,
+    'so that + mệnh đề: để mà. Đến sớm để bắt đầu đúng giờ.'
+  ),
+  q(
+    'pronoun',
+    'The two managers spoke to ___ before making the final decision.',
+    ['each other', 'themselves', 'theirs', 'them'],
+    0,
+    'each other: lẫn nhau, hai người nói chuyện với nhau. themselves là tự họ.'
+  ),
+  q(
+    'pronoun',
+    'Is this laptop yours or ___?',
+    ['hers', 'her', 'she', 'herself'],
+    0,
+    'Đứng một mình thay cho her laptop, song song với yours: đại từ sở hữu hers.'
+  ),
+  q(
+    'meaning',
+    'Please ___ the meeting room before 6 P.M. so it can be cleaned.',
+    ['leave', 'remain', 'stay', 'enter'],
+    0,
+    'leave the room: rời khỏi phòng (để dọn dẹp). remain và stay là ở lại, enter là đi vào.'
+  ),
+  q(
+    'meaning',
+    'The warranty ___ all repairs for the first two years.',
+    ['covers', 'charges', 'spends', 'fixes'],
+    0,
+    'The warranty covers repairs: bảo hành chi trả việc sửa chữa. fixes là sửa (người thợ làm), không phải bảo hành.'
+  ),
 ]
 
 /** Vocabulary questions cut from the examples of the TOEIC words. */
