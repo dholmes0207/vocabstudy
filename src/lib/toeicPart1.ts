@@ -464,6 +464,72 @@ export const PART1_BANK: readonly Part1Item[] = [
     ],
     'have been posted = đã được dán sẵn (trạng thái). Tranh không có người nên các câu "is being + V3" và "A woman is writing" đều sai.'
   ),
+  item(
+    '🧑‍🎨🖌️🧱',
+    'Một người thợ đang sơn tường.',
+    [
+      'A man is painting a wall.',
+      'A man is hanging a picture.',
+      'A wall is being built.',
+      'Some paint cans are on a shelf.',
+    ],
+    'painting a wall = sơn tường. "being built" đúng đồ vật (bức tường) nhưng sai hành động; tranh không có kệ đựng sơn.'
+  ),
+  item(
+    '👩‍💼🗣️👥📊',
+    'Một người phụ nữ đang nói trước một nhóm người.',
+    [
+      'A woman is speaking to a group.',
+      'A woman is sitting at a desk alone.',
+      'The audience is leaving the room.',
+      'A chart is being printed.',
+    ],
+    'speaking to a group = nói trước một nhóm người. Người nghe vẫn ở đó, không có ai ngồi một mình.'
+  ),
+  item(
+    '🍎🍊🍌🧺',
+    'Hoa quả được bày trong giỏ, không có ai.',
+    [
+      'Some fruit has been placed in a basket.',
+      'A woman is peeling an orange.',
+      'Some fruit is being cut.',
+      'A basket is being carried.',
+    ],
+    'has been placed = đã được đặt sẵn (trạng thái). Tranh không có người nên các câu "is being + V3" và "A woman is peeling" đều sai.'
+  ),
+  item(
+    '🧑‍✈️🛫',
+    'Một máy bay đang cất cánh.',
+    [
+      'A plane is taking off.',
+      'A plane is being repaired.',
+      'Passengers are boarding a bus.',
+      'A pilot is reading a map.',
+    ],
+    'taking off = cất cánh. Sửa máy bay, lên xe buýt là những việc không có trong tranh.'
+  ),
+  item(
+    '👨‍🍳🔪🥕',
+    'Một đầu bếp đang thái rau.',
+    [
+      'A chef is cutting some vegetables.',
+      'A chef is washing a pan.',
+      'Some vegetables are being planted.',
+      'A waiter is serving soup.',
+    ],
+    'cutting some vegetables = thái rau. "being planted" đúng đồ vật (rau) nhưng sai hành động.'
+  ),
+  item(
+    '🚪🔑🧍',
+    'Một người đàn ông đang mở cửa bằng chìa khoá.',
+    [
+      'He’s unlocking a door.',
+      'He’s knocking on a window.',
+      'He’s painting a door.',
+      'He’s putting keys in a drawer.',
+    ],
+    'unlocking a door = mở khoá cửa. Gõ cửa sổ, sơn cửa, cất chìa vào ngăn kéo đều là hành động khác.'
+  ),
 ]
 
 /** Items in one round, as many as Part 1 has on the test. */
