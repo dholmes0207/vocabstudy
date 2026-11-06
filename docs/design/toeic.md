@@ -199,7 +199,7 @@ Giờ cả 7 Part đều có nút "Luyện".
 Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
-  - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 22 bài (3–5 bài có bảng), Part 5 131
+  - Nội dung: Part 1 46 cảnh, Part 2 108 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 131
     câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 38 bài (13 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
@@ -953,3 +953,12 @@ nhưng sai hành động" (being built, being planted, being repaired).
 `HSK_DIALOGUES` HSK 2 từ 32 lên 36 bài (test giữ mức này): giá quần áo mới (只要), đợi vợ (在 + động từ), đổi ngày
 đi mua đồ vì mai mưa (bẫy 明天), xem ti vi buổi tối (有时候). Kiểm tra chữ Hán bắt được 园 (公园) và 般 (一般), đã
 viết lại câu.
+
+### Thêm bài Part 3 và Part 4 (06/11/2026, đợt sáu)
+
+Mỗi Part từ 22 lên 24 bài (test giữ mức này), Part 3 có 6 bài kèm bảng.
+
+- **Part 3:** chọn dịch vụ gửi hàng (có bảng: thời gian giao và giá; "two-day service" là Express, bẫy Overnight được
+  nhắc nhưng đắt), buổi đào tạo phần mềm bán hàng (trùng giờ gặp khách, buổi học được ghi hình).
+- **Part 4:** thông báo siêu thị sắp đóng cửa (mang hàng ra quầy, bánh giảm nửa giá, bẫy khu tự thanh toán cạnh lối
+  vào), lời nhắn tour thuyền bị huỷ vì gió (đổi tour xe buýt hoặc hoàn tiền, gọi lại trước 5 giờ).
