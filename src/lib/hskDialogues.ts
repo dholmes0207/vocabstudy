@@ -1498,6 +1498,54 @@ export const PICTURE_DIALOGUES: readonly PictureDialogue[] = [
       w('她今年六岁，明年上小学。', 'Con bé năm nay sáu tuổi, sang năm vào tiểu học.'),
     ],
   },
+  {
+    id: 'want-water',
+    picture: '水',
+    lines: [
+      w('我很累，有水吗？', 'Tôi mệt quá, có nước không?'),
+      m('有，桌子上有一杯，你喝吧。', 'Có, trên bàn có một cốc, chị uống đi.'),
+    ],
+  },
+  {
+    id: 'close-door',
+    picture: '门',
+    lines: [
+      m('外面很冷，请你关一下门。', 'Bên ngoài lạnh lắm, chị đóng cửa giúp nhé.'),
+      w('好的，我现在就关。', 'Được, tôi đóng ngay đây.'),
+    ],
+  },
+  {
+    id: 'go-home',
+    picture: '家',
+    lines: [
+      w('你几点回家？', 'Mấy giờ anh về nhà?'),
+      m('六点，我下班以后就回去。', 'Sáu giờ, tan làm là tôi về.'),
+    ],
+  },
+  {
+    id: 'apples-tasty',
+    picture: '苹果',
+    lines: [
+      m('这些苹果好吃吗？', 'Những quả táo này có ngon không?'),
+      w('很好吃，你买几个吧。', 'Rất ngon, anh mua vài quả đi.'),
+    ],
+  },
+  {
+    id: 'dog-walk',
+    picture: '狗',
+    lines: [
+      w('你每天早上做什么？', 'Sáng nào anh cũng làm gì?'),
+      m('我和我的小狗出去走一走。', 'Tôi cùng con chó nhỏ của tôi ra ngoài đi dạo.'),
+    ],
+  },
+  {
+    id: 'coffee-morning',
+    picture: '咖啡',
+    lines: [
+      m('你早上喝什么？', 'Buổi sáng chị uống gì?'),
+      w('我每天早上喝一杯咖啡。', 'Sáng nào tôi cũng uống một cốc cà phê.'),
+    ],
+  },
 ]
 
 /**

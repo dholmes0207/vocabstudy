@@ -208,7 +208,7 @@ Tình hình (06/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 44 bài; hỏi – đáp
     28 cặp mỗi cấp; đoạn văn ngắn HSK 3 40 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -1002,3 +1002,9 @@ Part 7 bài hai đoạn từ 13 lên 15 (test giữ mức này), tổng 43 bài.
 - Quảng cáo giảm giá đồ nội thất + email bị tính giá thường: mua hai ghế, mỗi ghế chênh $30, hoàn $60 (bẫy $30).
 - Lịch hội thảo buổi chiều + email xin đổi buổi: "the other workshop that takes place in Room A" là Pricing
   Strategies lúc 3:00 (bẫy Writing Better Sales E-mails cũng lúc 1:00).
+
+### Thêm hội thoại chọn tranh HSK 2 (06/11/2026, đợt sáu)
+
+`PICTURE_DIALOGUES` từ 38 lên 44 bài (test giữ mức này): nước, cửa, nhà (ba tranh cuối cùng của HSK 1–2 chưa có bài),
+táo, chó đi dạo, cà phê buổi sáng. Lời thoại tránh 水果, 大家, 门口 (chứa từ có tranh) và 马上 (马 là từ có tranh). Kiểm tra
+chữ Hán bắt được 鲜, 刚, 带, đã viết lại câu.
