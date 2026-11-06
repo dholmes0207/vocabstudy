@@ -200,7 +200,7 @@ Tình hình (06/11/2026):
 
 - **Giai đoạn A (TOEIC):** đủ 7 Part và bài thi nhỏ 26 câu (có dãy điểm các lần làm).
   - Nội dung: Part 1 46 cảnh, Part 2 120 câu, Part 3 và 4 mỗi Part 24 bài (3–6 bài có bảng), Part 5 143
-    câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 41 bài (13 bài hai đoạn).
+    câu ngữ pháp và câu nghĩa từ, Part 6 28 đoạn, Part 7 43 bài (15 bài hai đoạn).
   - Từ vựng 13 chủ đề có huy hiệu, Mẹo đuôi từ, Ghép họ từ, làm lại câu Part 5 đã sai.
   - Part 1–4 có giọng thu; Part 3 người nữ giọng nữ, người nam giọng nam.
 - **Giai đoạn B (HSK):** bài Nghe và Đọc của HSK 1–3 có đủ dạng câu chính:
@@ -994,3 +994,11 @@ Mỗi cấp từ 25 lên 28 cặp (test giữ mức này). HSK 1: có bao nhiêu
 thích quả gì nhất, em gái bao nhiêu tuổi, mai có bận không. HSK 3: tìm ví (刚才), thời tiết cuối tuần (听说), mệt vì
 tăng ca. Kiểm tra chữ Hán bắt được 它 và 白 ở HSK 1, đã đổi câu; bỏ các câu hỏi có câu đáp cũ hợp cả (quán ăn gần đây,
 điểm thi).
+
+### Thêm bài Part 7 hai đoạn (06/11/2026, đợt tám)
+
+Part 7 bài hai đoạn từ 13 lên 15 (test giữ mức này), tổng 43 bài. Cả hai bài có một câu phải ghép hai đoạn:
+
+- Quảng cáo giảm giá đồ nội thất + email bị tính giá thường: mua hai ghế, mỗi ghế chênh $30, hoàn $60 (bẫy $30).
+- Lịch hội thảo buổi chiều + email xin đổi buổi: "the other workshop that takes place in Room A" là Pricing
+  Strategies lúc 3:00 (bẫy Writing Better Sales E-mails cũng lúc 1:00).
