@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "reading": [
     {
       "id": "city-farms",
@@ -39,7 +39,26 @@
           "answer": "F",
           "why": "Đoạn 3: phần lớn trồng rau thơm, xà lách \"rather than rice or potatoes\" — không trồng lúa."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "The high cost of farming on roofs",
+          "Why city children should learn to farm",
+          "Food grown nearer to the people who eat it",
+          "Which crops grow fastest on rooftops",
+          "A natural way to keep buildings cool"
+        ],
+        "answers": [
+          2,
+          4,
+          0
+        ],
+        "why": [
+          "Đoạn 1 nói trồng rau gần nơi người ở giúp rau đi quãng đường ngắn hơn, tươi hơn → \"nearer to the people who eat it\".",
+          "Đoạn 2: đất và cây hấp thụ nhiệt, tầng dưới cần ít điều hoà → \"keep buildings cool\".",
+          "Đoạn 3 mở bằng \"not cheap\": gia cố mái, bơm nước → \"high cost\". Câu về rau thơm chỉ là hệ quả, không phải ý chính nên tiêu đề \"crops grow fastest\" là bẫy."
+        ]
+      }
     },
     {
       "id": "sleep-memory",
@@ -79,7 +98,26 @@
           "answer": "F",
           "why": "Đoạn 3: \"sleep cannot replace practice\" — vẫn phải ôn lại."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "How sleep helps the brain store information",
+          "Why people need less sleep as they age",
+          "The limits of short naps",
+          "An experiment comparing sleepers and non-sleepers",
+          "Dreams and their meaning"
+        ],
+        "answers": [
+          3,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1 mô tả thí nghiệm: một nửa ngủ, một nửa thức → \"an experiment comparing\".",
+          "Đoạn 2 giải thích vì sao người ngủ nhớ hơn: não \"replays\" và chuyển vào trí nhớ dài hạn.",
+          "Đoạn 3: ngủ trưa chỉ giúp khi đủ dài, 10 phút gần như không giúp trí nhớ → \"limits of short naps\". Câu cuối về ôn tập chỉ là ý phụ."
+        ]
+      }
     },
     {
       "id": "coral-reefs",
@@ -119,7 +157,26 @@
           "answer": "F",
           "why": "Đoạn 3: \"Bleached coral is not dead\" — chỉ chết nếu nóng kéo dài nhiều tuần."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "Reefs as a home for sea life",
+          "How divers damage reefs",
+          "What happens when corals lose their colour",
+          "The benefits reefs bring to people",
+          "Where the largest reefs are found"
+        ],
+        "answers": [
+          0,
+          3,
+          2
+        ],
+        "why": [
+          "Đoạn 1: một phần tư loài sinh vật biển sống ở rạn, cá tìm thức ăn và chỗ trú → \"home for sea life\".",
+          "Đoạn 2 bắt đầu \"also valuable to people\": chắn sóng, thu hút du khách. Có nhắc thợ lặn nhưng không nói họ làm hại → tiêu đề \"divers damage\" là bẫy.",
+          "Đoạn 3 nói về hiện tượng tẩy trắng (bleaching): san hô đẩy tảo ra và mất màu."
+        ]
+      }
     },
     {
       "id": "remote-work",
@@ -159,7 +216,26 @@
           "answer": "F",
           "why": "Đoạn 3: thường là quản lý chọn ngày lên văn phòng (\"Managers often choose\")."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "Employers' different opinions",
+          "The rise in house prices outside cities",
+          "A popular compromise",
+          "Workers who save time and money at home",
+          "Technology that makes meetings easier"
+        ],
+        "answers": [
+          3,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1: người làm ở nhà nói tiết kiệm thời gian và tiền vì không phải đi làm.",
+          "Đoạn 2 mở bằng \"Companies have mixed views\": có công ty hài lòng, có công ty lo → \"different opinions\".",
+          "Đoạn 3: mô hình \"hybrid\", vài ngày ở văn phòng, vài ngày ở nhà → \"compromise\" (giải pháp dung hoà)."
+        ]
+      }
     },
     {
       "id": "history-of-tea",
@@ -199,7 +275,26 @@
           "answer": "T",
           "why": "Đoạn 3: \"second only to water by most estimates\"."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "A drink for the rich",
+          "How tea is grown",
+          "From medicine to daily drink",
+          "Tea and good health today",
+          "A global drink, made in many ways"
+        ],
+        "answers": [
+          2,
+          0,
+          4
+        ],
+        "why": [
+          "Đoạn 1: ban đầu trà được coi là thuốc, sau mới thành đồ uống hằng ngày.",
+          "Đoạn 2: trà đắt, chỉ nhà giàu mới mua nổi → \"a drink for the rich\".",
+          "Đoạn 3: trà phổ biến khắp thế giới, chỉ sau nước, mỗi nơi pha một kiểu. Tiêu đề \"good health today\" là bẫy: đoạn 3 không nói về sức khoẻ."
+        ]
+      }
     },
     {
       "id": "plastic-recycling",
@@ -239,7 +334,26 @@
           "answer": "NG",
           "why": "Bài chỉ nói \"several countries\", không nói về châu Á."
         }
-      ]
+      ],
+      "headings": {
+        "options": [
+          "The problem of dirty containers",
+          "Paying people to bring bottles back",
+          "Why plastic is useful",
+          "Too many kinds of plastic",
+          "Banning plastic bags"
+        ],
+        "answers": [
+          3,
+          0,
+          1
+        ],
+        "why": [
+          "Đoạn 1: có nhiều loại nhựa, không nấu chảy chung được, phân loại tay chậm và tốn → \"too many kinds\".",
+          "Đoạn 2: hộp sữa chua chưa rửa làm hỏng cả mẻ, trung tâm từ chối hộp bẩn → \"dirty containers\".",
+          "Đoạn 3: đặt cọc chai, trả lại tiền khi mang chai về → \"paying people to bring bottles back\"."
+        ]
+      }
     }
   ],
   "speaking": {

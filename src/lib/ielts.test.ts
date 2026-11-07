@@ -5,6 +5,7 @@ import {
   blankRight,
   clock,
   drillRound,
+  headingsRight,
   informalBits,
   linkersUsed,
   paragraphCount,
@@ -39,6 +40,47 @@ describe('the IELTS bank', () => {
     expect(broken((b) => (b.reading[0].questions[0].answer = 'YES'))).toThrow(/bad answer/)
     expect(broken((b) => (b.reading[0].questions[0].why = ''))).toThrow(/no explanation/)
     expect(broken((b) => (b.reading[0].passage = []))).toThrow(/no text/)
+  })
+})
+
+describe('matching headings', () => {
+  const bank = validateIeltsBank(raw())
+
+  it('gives every passage spare headings, and puts the right ones out of order', () => {
+    for (const p of bank.reading) {
+      const h = p.headings
+      expect(h.options.length, p.id).toBeGreaterThanOrEqual(p.passage.length + 2)
+      expect(new Set(h.options).size, p.id).toBe(h.options.length)
+      // Not simply i, ii, iii in paragraph order.
+      expect(h.answers, p.id).not.toEqual(h.answers.map((_, i) => i))
+    }
+  })
+
+  it('scores the paragraphs given their own heading', () => {
+    const h = bank.reading[0].headings
+    expect(headingsRight(h, h.answers)).toBe(h.answers.length)
+    expect(headingsRight(h, [h.answers[0], null, null])).toBe(1)
+    expect(
+      headingsRight(
+        h,
+        h.answers.map(() => null)
+      )
+    ).toBe(0)
+  })
+
+  it('turns down headings that cannot be matched', () => {
+    const broken = (edit: (b: ReturnType<typeof raw>) => void) => {
+      const b = raw()
+      edit(b)
+      return () => validateIeltsBank(b)
+    }
+    const h = (b: ReturnType<typeof raw>) => b.reading[0].headings
+    expect(broken((b) => (h(b).options = h(b).options.slice(0, 3)))).toThrow(
+      /more headings than paragraphs/
+    )
+    expect(broken((b) => (h(b).answers = [0, 0, 1]))).toThrow(/one different heading/)
+    expect(broken((b) => (h(b).answers = [0, 1, 9]))).toThrow(/one different heading/)
+    expect(broken((b) => h(b).why.pop())).toThrow(/a reason per heading/)
   })
 })
 
