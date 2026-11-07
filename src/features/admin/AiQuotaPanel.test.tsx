@@ -12,7 +12,7 @@ vi.mock('@/lib/api', async () => {
   return { ...actual, api: { ...actual.api, adminAiUsage: () => adminAiUsage() } }
 })
 
-const { AiQuotaPanel } = await import('./AdminPage')
+const { AiQuotaPanel } = await import('./AiQuotaPanel')
 const { useSettings } = await import('@/store/settingsStore')
 
 beforeEach(() => useSettings.setState({ uiLang: 'vi' }))
