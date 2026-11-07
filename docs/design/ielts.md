@@ -64,6 +64,14 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 6: Nghe trắc nghiệm** (Part 2 và 3). 2 bài một người nói (giới thiệu bảo tàng, thư viện mới)
+  và 2 bài hai sinh viên bàn bạc (chọn đề tài thuyết trình, bàn kết quả khảo sát), mỗi bài 4 câu A/B/C.
+  Bài nghe cố ý nhắc cả đáp án bẫy (số cũ, ý bị bác, điều đã đoán) như đề thật; test kiểm tra ít nhất
+  nửa số câu có bẫy được nói ra. Đọc trước câu hỏi, nghe (nghe lại thoải mái), chọn đủ rồi kiểm tra:
+  lý do từng câu chỉ rõ chữ nào cho đáp án và bẫy nằm ở đâu, lời thoại (Part 3 ghi ai nói), mẹo. +2 XP
+  mỗi câu đúng, ghi `ielts-listening`. Phần phát lời thoại dùng chung với Part 1 (`hooks/useLinesPlayer.ts`,
+  `PlayLinesButton.tsx`); lời thoại có trong `screens.json` để thu giọng nam/nữ.
+
 - **Bước 5: Đọc, nối tiêu đề (Matching headings).** Dùng lại 6 bài đọc: mỗi bài 5 tiêu đề (i–v) cho 3
   đoạn (A–C), 2 tiêu đề thừa làm bẫy (lặp một chữ trong đoạn nhưng chỉ nói một chi tiết, hoặc nói điều
   bài không có). Mỗi đoạn có hàng nút i–v như phiếu trả lời; một tiêu đề chỉ gắn được một đoạn, chọn lại
@@ -84,4 +92,4 @@ hoặc trong vòng 7 ngày.
 ## 5. Tiếp theo
 
 1. Thêm dạng đọc: điền vào tóm tắt (summary completion).
-2. Nghe Part 2–4: chọn đáp án, nối thông tin, bài giảng ngắn.
+2. Nghe Part 4 (bài giảng ngắn, điền ghi chú) và dạng nối thông tin (matching) ở Part 2–3.

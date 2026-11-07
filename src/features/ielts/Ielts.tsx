@@ -11,6 +11,7 @@ import {
   pickPassage,
   readingRound,
   type EssayPrompt,
+  type ListeningChoiceSet,
   type ListeningSet,
   type ReadingPassage,
   type WritingDrill,
@@ -22,6 +23,7 @@ import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
 import EssayPractice from './EssayPractice'
 import ListeningRound from './ListeningRound'
+import ListeningChoiceRound from './ListeningChoiceRound'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
@@ -56,6 +58,12 @@ export default function Ielts() {
         set: pickOther(bank.listening, r?.set.id),
       }))
   }
+  const [choice, setChoice] = useState<{ n: number; set: ListeningChoiceSet } | null>(null)
+  const listenChoice = (part: 2 | 3) => {
+    if (!bank) return
+    const pool = bank.listeningChoice.filter((c) => c.part === part)
+    setChoice((r) => ({ n: (r?.n ?? 0) + 1, set: pickOther(pool, r?.set.id) }))
+  }
   const speak = (part: 1 | 2) => {
     if (!bank) return
     setSpeaking((r) => {
@@ -78,6 +86,15 @@ export default function Ielts() {
     }))
   }
 
+  if (choice)
+    return (
+      <ListeningChoiceRound
+        key={choice.n}
+        set={choice.set}
+        onAgain={() => listenChoice(choice.set.part)}
+        onExit={() => setChoice(null)}
+      />
+    )
   if (listening)
     return (
       <ListeningRound
@@ -390,7 +407,7 @@ export default function Ielts() {
       <section aria-labelledby="ielts-listening" className="card space-y-4 p-5">
         <h2 id="ielts-listening" className="flex items-center gap-2 text-lg font-bold">
           <Headphones className="h-5 w-5 text-sky-600 dark:text-sky-300" aria-hidden="true" />
-          {t('Nghe: điền thông tin vào phiếu', 'Listening: form completion')}
+          {t('Nghe: Part 1, 2 và 3', 'Listening: Parts 1, 2 and 3')}
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300">
           {t(
@@ -404,8 +421,48 @@ export default function Ielts() {
           disabled={!bank}
           onClick={listen}
         >
-          {t('Nghe một cuộc gọi', 'Hear a call')} <ArrowRight className="h-4 w-4" />
+          {t('Part 1: nghe một cuộc gọi', 'Part 1: hear a call')} <ArrowRight className="h-4 w-4" />
         </button>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {(
+            [
+              [
+                2,
+                '🎙️',
+                ['Part 2: một người nói', 'Part 2: one speaker'],
+                [
+                  'Giới thiệu bảo tàng, thư viện… Chọn A, B hay C.',
+                  'A museum or library talk. Choose A, B or C.',
+                ],
+              ],
+              [
+                3,
+                '🗣️',
+                ['Part 3: hai bạn bàn bạc', 'Part 3: a discussion'],
+                [
+                  'Hai sinh viên bàn bài tập: ý bị bác là bẫy.',
+                  'Two students plan their work: ideas they drop are traps.',
+                ],
+              ],
+            ] as const
+          ).map(([part, icon, title, desc]) => (
+            <button
+              key={part}
+              type="button"
+              disabled={!bank}
+              onClick={() => listenChoice(part)}
+              className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-sky-400 disabled:opacity-60 dark:border-slate-700"
+            >
+              <span className="block text-2xl" aria-hidden="true">
+                {icon}
+              </span>
+              <span className="mt-1 block font-bold">{t(title[0], title[1])}</span>
+              <span className="block text-sm text-slate-500 dark:text-slate-400">
+                {t(desc[0], desc[1])}
+              </span>
+            </button>
+          ))}
+        </div>
       </section>
     </div>
   )

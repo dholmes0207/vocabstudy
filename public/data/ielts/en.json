@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "reading": [
     {
       "id": "city-farms",
@@ -1262,6 +1262,316 @@
         ]
       },
       "tip": "Câu hỏi đi theo thứ tự lời nói; nghe thấy đáp án rồi thì chuyển ngay sang ô tiếp theo."
+    }
+  ],
+  "listeningChoice": [
+    {
+      "id": "museum-tour",
+      "emoji": "🏛️",
+      "part": 2,
+      "title": [
+        "Giới thiệu bảo tàng",
+        "A museum welcome talk"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good morning, everyone, and welcome to the Riverside Museum. My name is Tom, and I'll be telling you a little about the building before you start exploring."
+        },
+        {
+          "speaker": "M",
+          "text": "The museum first opened in 1925 as a small library. The collection grew so quickly that it moved into this building in 1960, and it has been a museum ever since."
+        },
+        {
+          "speaker": "M",
+          "text": "Most visitors head straight for the dinosaur hall on the ground floor. But I'd suggest you start on the top floor, with our ship models. It's much quieter in the morning, and you'll get a wonderful view of the river."
+        },
+        {
+          "speaker": "M",
+          "text": "Photography is allowed everywhere, but please don't use a flash in the painting gallery, because strong light can damage the colours."
+        },
+        {
+          "speaker": "M",
+          "text": "The café on the first floor closes at four, half an hour before the museum itself. And if you need a break, the garden behind the shop is free to everyone."
+        }
+      ],
+      "questions": [
+        {
+          "q": "When did the museum move into its present building?",
+          "options": [
+            "In 1925",
+            "In 1960",
+            "In 1990"
+          ],
+          "answer": 1,
+          "why": "1925 là năm mở cửa (khi còn là thư viện), bẫy đầu tiên. Câu sau mới nói \"moved into this building in 1960\"."
+        },
+        {
+          "q": "Where does the speaker suggest starting the visit?",
+          "options": [
+            "The dinosaur hall",
+            "The painting gallery",
+            "The top floor"
+          ],
+          "answer": 2,
+          "why": "Khu khủng long được nhắc nhưng là nơi \"most visitors\" đến. Người nói khuyên \"start on the top floor\" vì vắng và có view sông."
+        },
+        {
+          "q": "What are visitors asked not to do in the painting gallery?",
+          "options": [
+            "Take photos with a flash",
+            "Touch the paintings",
+            "Bring food"
+          ],
+          "answer": 0,
+          "why": "Chụp ảnh được ở mọi nơi, chỉ \"don't use a flash in the painting gallery\" vì ánh sáng mạnh làm hỏng màu."
+        },
+        {
+          "q": "What time does the café close?",
+          "options": [
+            "3.30",
+            "4.00",
+            "4.30"
+          ],
+          "answer": 1,
+          "why": "Café đóng lúc 4 giờ; 4.30 là giờ bảo tàng đóng (\"half an hour before the museum\"). Bẫy là phép cộng/trừ thời gian."
+        }
+      ],
+      "tip": "Part 2 hay nhắc nhiều con số và địa điểm, nhưng chỉ một cái trả lời đúng câu hỏi. Nghe kỹ các chữ đổi ý như \"but\", \"I'd suggest\", \"before\"."
+    },
+    {
+      "id": "campus-library",
+      "emoji": "📚",
+      "part": 2,
+      "title": [
+        "Thư viện mới ở trường",
+        "The new campus library"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Hello, and thanks for coming to this short talk about the new library, which opened last month."
+        },
+        {
+          "speaker": "W",
+          "text": "The biggest change is the opening hours. The old library closed at nine in the evening; the new one stays open until midnight from Monday to Friday, though at weekends it still closes at six."
+        },
+        {
+          "speaker": "W",
+          "text": "Students can now borrow up to twelve books at a time. That's double the old limit of six. Laptops can also be borrowed, but only for use inside the building."
+        },
+        {
+          "speaker": "W",
+          "text": "The silent study rooms are on the third floor. If you want to work in a group, please book one of the meeting rooms on the second floor online; they can't be booked at the front desk."
+        },
+        {
+          "speaker": "W",
+          "text": "Finally, a lot of you have asked about printing. It is no longer free, but it costs just five pence a page, and you can pay with your student card."
+        }
+      ],
+      "questions": [
+        {
+          "q": "On weekdays, the new library closes at",
+          "options": [
+            "6 pm",
+            "9 pm",
+            "midnight"
+          ],
+          "answer": 2,
+          "why": "9 giờ tối là giờ đóng của thư viện cũ, 6 giờ là cuối tuần. Ngày thường thư viện mới mở \"until midnight\"."
+        },
+        {
+          "q": "How many books can students borrow at one time now?",
+          "options": [
+            "Six",
+            "Ten",
+            "Twelve"
+          ],
+          "answer": 2,
+          "why": "\"up to twelve books… double the old limit of six\": sáu là giới hạn cũ."
+        },
+        {
+          "q": "How can students book a group meeting room?",
+          "options": [
+            "At the front desk",
+            "Online",
+            "On the third floor"
+          ],
+          "answer": 1,
+          "why": "\"please book… online; they can't be booked at the front desk\". Tầng 3 là phòng học im lặng."
+        },
+        {
+          "q": "What does the speaker say about printing?",
+          "options": [
+            "It is free for students",
+            "It costs five pence a page",
+            "It must be paid in cash"
+          ],
+          "answer": 1,
+          "why": "\"It is no longer free, but it costs just five pence a page\", trả bằng thẻ sinh viên chứ không phải tiền mặt."
+        }
+      ],
+      "tip": "Khi bài so sánh cái cũ với cái mới, đáp án thường là cái mới; số của cái cũ là bẫy. Đọc trước câu hỏi để biết cần nghe \"now\" hay \"before\"."
+    },
+    {
+      "id": "presentation-plan",
+      "emoji": "🗂️",
+      "part": 3,
+      "title": [
+        "Chuẩn bị bài thuyết trình",
+        "Planning a presentation"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "So, Jack, we need to decide on a topic for our presentation. I was thinking about electric cars."
+        },
+        {
+          "speaker": "M",
+          "text": "Hmm, I think three other groups have already chosen that. What about city bicycles? There's lots of local data."
+        },
+        {
+          "speaker": "W",
+          "text": "Good point. Let's go with bicycles, then. How should we collect information?"
+        },
+        {
+          "speaker": "M",
+          "text": "We could do an online survey, but people often ignore those. Interviews at the bike stations would give us better answers."
+        },
+        {
+          "speaker": "W",
+          "text": "Agreed, although they'll take longer. When's the presentation, again? I thought it was on the fourteenth."
+        },
+        {
+          "speaker": "M",
+          "text": "It was, but the tutor moved it to the twenty-first, so we've got an extra week."
+        },
+        {
+          "speaker": "W",
+          "text": "Great. Then I'll do the interviews and you can make the slides, since you're better with charts."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why do they decide not to choose electric cars?",
+          "options": [
+            "There is not enough data",
+            "Other groups have chosen it",
+            "The tutor does not like it"
+          ],
+          "answer": 1,
+          "why": "Jack nói \"three other groups have already chosen that\". Số liệu (data) được nhắc khi nói về xe đạp, không phải lý do bỏ xe điện."
+        },
+        {
+          "q": "How will they collect information?",
+          "options": [
+            "An online survey",
+            "Interviews",
+            "Library books"
+          ],
+          "answer": 1,
+          "why": "Khảo sát online được nêu rồi bị loại (\"people often ignore those\"); cả hai đồng ý phỏng vấn ở trạm xe đạp."
+        },
+        {
+          "q": "When is the presentation now?",
+          "options": [
+            "On the 7th",
+            "On the 14th",
+            "On the 21st"
+          ],
+          "answer": 2,
+          "why": "Ngày 14 là lịch cũ; giảng viên đã dời sang ngày 21 (\"moved it to the twenty-first\")."
+        },
+        {
+          "q": "What will the man do?",
+          "options": [
+            "Make the slides",
+            "Do the interviews",
+            "Write the report"
+          ],
+          "answer": 0,
+          "why": "Người nữ nhận phỏng vấn, \"you can make the slides, since you're better with charts\"."
+        }
+      ],
+      "tip": "Part 3 là hai người bàn bạc: một ý được nêu ra rồi bị bác là bẫy quen thuộc. Chờ tới khi cả hai đồng ý (\"Agreed\", \"Let's go with…\")."
+    },
+    {
+      "id": "survey-results",
+      "emoji": "📊",
+      "part": 3,
+      "title": [
+        "Bàn về kết quả khảo sát",
+        "Discussing survey results"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Have you looked at the results of our survey on student breakfasts?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes. I was surprised that only about a third of students eat breakfast every day. I expected it to be at least half."
+        },
+        {
+          "speaker": "M",
+          "text": "Me too. And the main reason they gave for skipping it wasn't money, as we'd guessed. It was not having enough time in the morning."
+        },
+        {
+          "speaker": "W",
+          "text": "Right. Mind you, our sample was quite small, only sixty students, and most of them were in their first year. So we should mention that as a weakness."
+        },
+        {
+          "speaker": "M",
+          "text": "Definitely. For the next step, should we survey more students?"
+        },
+        {
+          "speaker": "W",
+          "text": "I'd rather compare our results with a national study first. If they're similar, we can be more confident about them."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What proportion of students eat breakfast every day?",
+          "options": [
+            "About a third",
+            "About half",
+            "Most of them"
+          ],
+          "answer": 0,
+          "why": "\"only about a third\". \"At least half\" là điều cô ấy đã đoán, không phải kết quả."
+        },
+        {
+          "q": "What was the main reason for skipping breakfast?",
+          "options": [
+            "Cost",
+            "Lack of time",
+            "Not feeling hungry"
+          ],
+          "answer": 1,
+          "why": "\"wasn't money, as we'd guessed. It was not having enough time\"."
+        },
+        {
+          "q": "What weakness of the survey do they mention?",
+          "options": [
+            "The questions were unclear",
+            "The sample was small",
+            "It was done too late"
+          ],
+          "answer": 1,
+          "why": "\"our sample was quite small, only sixty students\", và phần lớn là sinh viên năm nhất."
+        },
+        {
+          "q": "What does the woman want to do next?",
+          "options": [
+            "Survey more students",
+            "Interview first-year students",
+            "Compare with a national study"
+          ],
+          "answer": 2,
+          "why": "Khảo sát thêm do người nam đề xuất; cô ấy muốn \"compare our results with a national study first\"."
+        }
+      ],
+      "tip": "Câu hỏi về \"ý kiến\" hay \"việc tiếp theo\" cần nghe ai là người nói. Chữ \"I'd rather\", \"I'd prefer\" báo hiệu lựa chọn thật của người đó."
     }
   ]
 }

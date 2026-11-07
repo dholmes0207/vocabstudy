@@ -1,21 +1,19 @@
-import { useEffect, useRef, useState } from 'react'
-import { Check, Pause, Play, X } from 'lucide-react'
-import type { VoiceGender } from '@/types'
+import { useState } from 'react'
+import { Check, X } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
-import { prefetchAudio, pronounce, stopPronounce, textAudio } from '@/lib/audio'
+import { useLinesPlayer } from '@/hooks/useLinesPlayer'
 import { blankRight, type ListeningSet } from '@/lib/ielts'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
+import PlayLinesButton from './PlayLinesButton'
 
 // IELTS Listening Part 1, form completion: read the form first, hear the call
 // (a woman's and a man's voice), fill the blanks as it goes, then check. The
 // transcript shows once checked, so the learner sees where each answer was.
 
-const GAP_MS = 500
-const VOICE: Record<'W' | 'M', VoiceGender> = { W: 'female', M: 'male' }
 const XP_PER_RIGHT = 2
 
 export default function ListeningRound({
@@ -30,53 +28,11 @@ export default function ListeningRound({
   useImmersive()
   const t = useT()
   const code = useSettings((s) => s.currentLang)
-  const rate = useSettings((s) => s.ttsRate)
   const addPlayXp = useStudy((s) => s.addPlayXp)
   const log = useActivity((s) => s.log)
   const [values, setValues] = useState<string[]>(() => set.form.fields.map(() => ''))
   const [checked, setChecked] = useState(false)
-  const [line, setLine] = useState<number | null>(null)
-  const [plays, setPlays] = useState(0)
-  const run = useRef(0)
-  const timer = useRef<number | undefined>(undefined)
-
-  const stop = () => {
-    run.current++
-    window.clearTimeout(timer.current)
-    stopPronounce()
-    setLine(null)
-  }
-  const play = () => {
-    stop()
-    setPlays((n) => n + 1)
-    const id = run.current
-    const step = (i: number) => {
-      if (id !== run.current) return
-      if (i >= set.lines.length) return setLine(null)
-      setLine(i)
-      const { text, speaker } = set.lines[i]
-      pronounce({
-        audioSrc: textAudio(text, VOICE[speaker]),
-        text,
-        lang: 'en-US',
-        rate,
-        onEnd: () => {
-          if (id !== run.current) return
-          timer.current = window.setTimeout(() => step(i + 1), GAP_MS)
-        },
-      })
-    }
-    step(0)
-  }
-  useEffect(() => prefetchAudio(set.lines.map((l) => textAudio(l.text, VOICE[l.speaker]))), [set])
-  useEffect(
-    () => () => {
-      run.current++
-      window.clearTimeout(timer.current)
-      stopPronounce()
-    },
-    []
-  )
+  const { line, plays, play, stop } = useLinesPlayer(set.lines)
 
   const right = set.form.fields.filter((f, i) => blankRight(values[i], f)).length
   const check = () => {
@@ -116,26 +72,13 @@ export default function ListeningRound({
                   'In the exam you hear it once. Here, replay as often as you like.'
                 )}
           </p>
-          <button
-            type="button"
-            onClick={line === null ? play : stop}
-            className="btn-primary h-12 w-full"
-          >
-            {line === null ? (
-              <>
-                <Play className="h-4 w-4" />{' '}
-                {plays ? t('Nghe lại', 'Play again') : t('Nghe', 'Play')}
-              </>
-            ) : (
-              <>
-                <Pause className="h-4 w-4" />
-                {t(
-                  `Đang nghe ${line + 1}/${set.lines.length}`,
-                  `Playing ${line + 1}/${set.lines.length}`
-                )}
-              </>
-            )}
-          </button>
+          <PlayLinesButton
+            line={line}
+            plays={plays}
+            total={set.lines.length}
+            play={play}
+            stop={stop}
+          />
         </section>
       )}
 

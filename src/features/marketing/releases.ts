@@ -24,6 +24,16 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
+    title: ['IELTS Listening Part 2 và 3', 'IELTS listening Parts 2 and 3'],
+    items: [
+      [
+        'Nghe trắc nghiệm A/B/C: bài giới thiệu một người nói (Part 2) và hai sinh viên bàn bạc (Part 3). Bài nghe có bẫy như đề thật; kiểm tra xong mỗi câu chỉ rõ chữ nào cho đáp án và bẫy nằm ở đâu.',
+        'Multiple choice listening: a talk by one speaker (Part 2) and two students planning their work (Part 3). The recordings set traps like the real test; after checking, each question shows which words give the answer and where the trap was.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['IELTS Reading: nối tiêu đề', 'IELTS Reading: matching headings'],
     items: [
       [

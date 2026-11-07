@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -18,8 +18,9 @@ vi.mock('@/lib/audio', () => ({
 }))
 vi.mock('@/lib/confetti', () => ({ celebrate: () => {} }))
 const { default: ListeningRound } = await import('./ListeningRound')
+const { default: ListeningChoiceRound } = await import('./ListeningChoiceRound')
 
-const { listening } = validateIeltsBank(
+const { listening, listeningChoice } = validateIeltsBank(
   JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
 )
 
@@ -55,6 +56,35 @@ describe('IELTS listening', () => {
     const n = set.form.fields.length
     expect(screen.getByRole('status')).toHaveTextContent(`${n - 1} of ${n} right`)
     expect(screen.getByText(`Answer: ${set.form.fields[n - 1].answer}`)).toBeInTheDocument()
+    expect(screen.getByText(set.lines[0].text)).toBeInTheDocument()
+    expect(useActivity.getState().counts.en?.['ielts-listening']).toBe(1)
+  })
+
+  it('runs a Part 3 discussion: plays it, takes A/B/C answers, explains each and shows who said what', () => {
+    const set = listeningChoice.find((c) => c.part === 3)!
+    render(
+      <MemoryRouter>
+        <ListeningChoiceRound set={set} onAgain={() => {}} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Play' }))
+    expect(heard[0].text).toBe(set.lines[0].text)
+    // Each line follows the one before when it ends.
+    heard[0].onEnd?.()
+    expect(screen.getByRole('button', { name: /Answer all/ })).toBeDisabled()
+
+    // Right on all but the first question.
+    set.questions.forEach((q, i) => {
+      const group = screen.getByRole('group', { name: `${i + 1}. ${q.q}` })
+      const pick = i === 0 ? (q.answer + 1) % q.options.length : q.answer
+      fireEvent.click(within(group).getByRole('button', { name: new RegExp(q.options[pick]) }))
+    })
+    fireEvent.click(screen.getByRole('button', { name: /^Check/ }))
+    const n = set.questions.length
+    expect(screen.getByRole('status')).toHaveTextContent(
+      `${n - 1} of ${n} right · +${(n - 1) * 2} XP`
+    )
+    expect(screen.getByText(set.questions[0].why)).toBeInTheDocument()
     expect(screen.getByText(set.lines[0].text)).toBeInTheDocument()
     expect(useActivity.getState().counts.en?.['ielts-listening']).toBe(1)
   })
