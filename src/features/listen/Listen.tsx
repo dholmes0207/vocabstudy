@@ -5,6 +5,7 @@ import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
+import { useLogActivity } from '@/hooks/useLogActivity'
 import { exampleAudio, prefetchAudio, pronounce, stopPronounce, wordAudio } from '@/lib/audio'
 import { isTTSSupported, listVoices, speak } from '@/lib/tts'
 import { skyBurstAt } from '@/lib/skyEvents'
@@ -254,6 +255,7 @@ function Player({
   const [playing, setPlaying] = useState(true)
   const [step, setStep] = useState<ListenStep['kind'] | null>(null)
   const [done, setDone] = useState(false)
+  useLogActivity('listen', done)
   const wordRef = useRef<HTMLParagraphElement>(null)
   const word = words[index]
 
