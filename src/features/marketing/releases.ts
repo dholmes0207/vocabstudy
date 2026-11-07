@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Luyện nghe IELTS', 'IELTS listening practice'],
+    items: [
+      [
+        'Nghe điền phiếu như Part 1 của đề IELTS: nghe cuộc gọi đặt phòng, đăng ký, thuê đồ (giọng nam và nữ) rồi điền tên, số điện thoại, ngày giờ; kiểm tra xong có lời thoại và mẹo làm bài. Cấp 6 của lộ trình giờ đủ 4 kỹ năng.',
+        'Form completion like Part 1 of IELTS listening: hear a call to book, sign up or hire (a man’s and a woman’s voice), then fill in names, phone numbers, dates and times, with the transcript and a tip afterwards. Level 6 of the path now covers all four skills.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Lộ trình theo cấp cho tiếng Trung', 'A level path for Chinese'],
     items: [
       [

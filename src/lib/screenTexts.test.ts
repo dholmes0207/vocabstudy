@@ -65,14 +65,15 @@ function toeic(): string[] {
   ]
 }
 
-/** "Luyện IELTS": what the examiner reads aloud in the speaking practice. */
+/** "Luyện IELTS": the examiner's questions and the listening calls. */
 function ielts(): string[] {
-  const { speaking } = validateIeltsBank(
+  const { speaking, listening } = validateIeltsBank(
     JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
   )
   return [
     ...speaking.part1.flatMap((tp) => tp.questions),
     ...speaking.part2.flatMap((c) => c.part3),
+    ...listening.flatMap((l) => l.lines.map((x) => x.text)),
   ]
 }
 

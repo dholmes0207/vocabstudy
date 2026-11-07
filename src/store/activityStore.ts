@@ -15,6 +15,7 @@ export type ActivityKind =
   | 'ielts-reading'
   | 'ielts-speaking'
   | 'ielts-writing'
+  | 'ielts-listening'
   | 'pinyin'
   | 'radicals'
   | 'measure'

@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import {
   TASK2_WORDS,
+  blankRight,
   clock,
   drillRound,
   informalBits,
@@ -139,5 +140,33 @@ describe('writing practice', () => {
     const c = raw()
     c.writing.prompts[0].type = 'poem'
     expect(() => validateIeltsBank(c)).toThrow(/no known type/)
+  })
+})
+
+describe('listening practice', () => {
+  const { listening } = validateIeltsBank(raw())
+
+  it('has calls with two speakers and a form of answers the call says', () => {
+    expect(listening.length).toBeGreaterThanOrEqual(4)
+    for (const l of listening) {
+      expect(new Set(l.lines.map((x) => x.speaker)), l.id).toEqual(new Set(['W', 'M']))
+      const said = l.lines.map((x) => x.text.toLowerCase()).join(' ')
+      // Every word answer is heard (numbers may be said in words).
+      for (const f of l.form.fields)
+        if (!/\d/.test(f.answer))
+          expect(said, `${l.id}: ${f.label}`).toContain(f.answer.toLowerCase())
+    }
+  })
+
+  it('marks a blank right whatever the case, punctuation or spaces in a number', () => {
+    const phone = { answer: '0796 328 514', accept: ['0796328514'] }
+    expect(blankRight('0796328514', phone)).toBe(true)
+    expect(blankRight(' 0796 328 514 ', phone)).toBe(true)
+    expect(blankRight('0796 328 541', phone)).toBe(false)
+    const street = { answer: 'Garden Road' }
+    expect(blankRight('garden road.', street)).toBe(true)
+    expect(blankRight('Garden', street)).toBe(false)
+    expect(blankRight('', street)).toBe(false)
+    expect(blankRight('forty-five', { answer: '45', accept: ['forty-five'] })).toBe(true)
   })
 })

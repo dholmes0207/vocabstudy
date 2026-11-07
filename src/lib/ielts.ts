@@ -92,8 +92,20 @@ export interface EssayPrompt {
   text: string
 }
 
+/** Listening Part 1: a call, and the form the learner fills from it. */
+export interface ListeningSet {
+  id: string
+  emoji: string
+  title: Pair
+  lines: { speaker: 'W' | 'M'; text: string }[]
+  form: { title: string; fields: { label: string; answer: string; accept?: string[] }[] }
+  /** A test-taking tip for this kind of form, in Vietnamese. */
+  tip: string
+}
+
 export interface IeltsBank {
   version: string
+  listening: readonly ListeningSet[]
   reading: readonly ReadingPassage[]
   speaking: { part1: readonly Part1Topic[]; part2: readonly CueCard[] }
   writing: {
@@ -179,8 +191,27 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
   }
   for (const pr of writing!.prompts)
     check(text(pr?.text) && typeIds.has(pr.type), `essay prompt "${pr?.id}" has no known type`)
+  const listening = bank!.listening
+  check(Array.isArray(listening) && listening.length > 0, '"listening" is missing')
+  for (const l of listening!) {
+    check(text(l?.id) && strings(l.title, 2) && text(l.tip), `listening "${l?.id}" is incomplete`)
+    check(
+      Array.isArray(l.lines) &&
+        l.lines.length > 0 &&
+        l.lines.every((x) => (x?.speaker === 'W' || x?.speaker === 'M') && text(x.text)),
+      `listening "${l.id}" has a bad line`
+    )
+    check(
+      text(l.form?.title) &&
+        Array.isArray(l.form.fields) &&
+        l.form.fields.length >= 3 &&
+        l.form.fields.every((f) => text(f?.label) && text(f.answer)),
+      `listening "${l.id}" needs a form of three fields`
+    )
+  }
   return {
     version: bank!.version ?? '0',
+    listening: listening!,
     reading: bank!.reading!,
     speaking: speaking!,
     writing: writing!,
@@ -341,3 +372,25 @@ export function informalBits(essay: string): string[] {
 
 /** The minimum length of a Task 2 essay. */
 export const TASK2_WORDS = 250
+
+/** How an answer is compared: case, punctuation and extra spaces don't count. */
+const normal = (s: string): string =>
+  s
+    .toLowerCase()
+    .replace(/[.,!?'’"]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+/**
+ * Whether a typed blank is right: the answer or one of its accepted forms,
+ * ignoring case and punctuation; a number (a price, a phone) also with its
+ * spaces left out.
+ */
+export function blankRight(input: string, field: { answer: string; accept?: string[] }): boolean {
+  const typed = normal(input)
+  if (!typed) return false
+  return [field.answer, ...(field.accept ?? [])].some((a) => {
+    const want = normal(a)
+    return typed === want || typed.replace(/ /g, '') === want.replace(/ /g, '')
+  })
+}

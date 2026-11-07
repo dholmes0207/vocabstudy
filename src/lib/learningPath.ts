@@ -377,12 +377,11 @@ export const EN_PATH: PathLevel[] = [
     icon: '🎓',
     title: ['Hướng tới IELTS', 'Towards IELTS'],
     tagline: [
-      'Vốn từ học thuật, đọc, nói và viết kiểu IELTS. Bài luyện Nghe của IELTS đang được viết.',
-      'Academic words and IELTS-style reading, speaking and writing. IELTS listening practice is being written.',
+      'Vốn từ học thuật và đủ 4 kỹ năng IELTS: nghe điền phiếu, đọc True/False/Not Given, nói 3 phần, viết Task 2.',
+      'Academic words and all four IELTS skills: form completion, True/False/Not Given, the three speaking parts, Task 2.',
     ],
     cefr: 'B1–B2',
     tone: 'from-rose-500 to-fuchsia-600',
-    soon: true,
     steps: [
       words(1600, 2500, 'en6-words'),
       sessions(
@@ -407,6 +406,18 @@ export const EN_PATH: PathLevel[] = [
         [
           'Trả lời câu hỏi của giám khảo, nói 2 phút theo thẻ chủ đề, ghi âm và nghe lại.',
           'Answer the examiner, talk for two minutes on a task card, record and listen back.',
+        ]
+      ),
+      sessions(
+        'en6-ielts-listening',
+        'ielts-listening',
+        3,
+        '🎧',
+        '/ielts',
+        ['Nghe IELTS: điền phiếu', 'IELTS listening: form completion'],
+        [
+          'Nghe cuộc gọi đặt phòng, đăng ký, thuê đồ rồi điền tên, số, ngày giờ.',
+          'Hear a call to book, sign up or hire, then fill in names, numbers, dates and times.',
         ]
       ),
       sessions(
