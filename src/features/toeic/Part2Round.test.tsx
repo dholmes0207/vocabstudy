@@ -1,4 +1,5 @@
 /** @vitest-environment jsdom */
+import { readFileSync } from 'node:fs'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -7,6 +8,9 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { part2Round } from '@/lib/toeicPart2'
 import { part1Round } from '@/lib/toeicPart1'
+import { validateToeicBank } from '@/lib/toeicBank'
+
+const bank = validateToeicBank(JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8')))
 
 // Part 2 as on the test: the question and responses are heard, not read, until
 // the learner answers. The voice is mocked so the test says when a clip ends.
@@ -34,7 +38,7 @@ afterEach(() => {
 
 describe('Part 2 round', () => {
   it('reads the question then (A), (B), (C), and shows them only after the answer', () => {
-    const questions = part2Round()
+    const questions = part2Round(bank.part2)
     const q = questions[0]
     render(
       <MemoryRouter>
@@ -57,7 +61,7 @@ describe('Part 2 round', () => {
   })
 
   it('stops the old chain when the learner plays again', () => {
-    const questions = part2Round()
+    const questions = part2Round(bank.part2)
     render(
       <MemoryRouter>
         <Part2Round questions={questions} onAgain={() => {}} onExit={() => {}} />
@@ -73,7 +77,7 @@ describe('Part 2 round', () => {
   })
 
   it('ends with the score and XP', () => {
-    const questions = part2Round()
+    const questions = part2Round(bank.part2)
     render(
       <MemoryRouter>
         <Part2Round questions={questions} onAgain={() => {}} onExit={() => {}} />
@@ -88,7 +92,7 @@ describe('Part 2 round', () => {
   })
 
   it('shows a Part 1 scene and reads its four statements, with no question', () => {
-    const questions = part1Round()
+    const questions = part1Round(bank.part1)
     const q = questions[0]
     render(
       <MemoryRouter>

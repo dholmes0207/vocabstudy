@@ -1,12 +1,18 @@
 /** @vitest-environment jsdom */
+import { readFileSync } from 'node:fs'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { READING_SETS, shuffleSet } from '@/lib/toeicReading'
+import { shuffleSet } from '@/lib/toeicReading'
+import { validateToeicBank } from '@/lib/toeicBank'
 import ReadingRound from './ReadingRound'
+
+const READING_SETS = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).reading
 
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })

@@ -2,7 +2,6 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import {
-  PART5_BANK,
   PART5_KINDS,
   PART5_ROUND,
   part5Round,
@@ -12,8 +11,12 @@ import {
   retryRound,
   weakestKind,
 } from './toeicPart5'
+import { validateToeicBank } from './toeicBank'
 
 const en = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
+const PART5_BANK = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).part5
 
 function seeded(seed: number) {
   return () => {
@@ -61,7 +64,7 @@ describe('vocabulary questions', () => {
 
 describe('a round', () => {
   it('asks ten different questions, each with the right answer among four', () => {
-    const round = part5Round(en.words, seeded(3))
+    const round = part5Round(PART5_BANK, en.words, seeded(3))
     expect(round).toHaveLength(PART5_ROUND)
     expect(new Set(round.map((qn) => qn.sentence)).size).toBe(PART5_ROUND)
     for (const qn of round) {
@@ -92,14 +95,19 @@ describe('a round', () => {
 describe('Part 5 retry', () => {
   it('asks only the missed questions of the bank, each with its right answer', () => {
     const missed = PART5_BANK.slice(0, 3).map((q) => q.sentence)
-    const round = retryRound([...missed, 'Not a question ___.'])
+    const round = retryRound(PART5_BANK, [...missed, 'Not a question ___.'])
     expect(round.map((q) => q.sentence).sort()).toEqual([...missed].sort())
     for (const q of round) {
       const original = PART5_BANK.find((b) => b.sentence === q.sentence)!
       expect(q.options[q.answer]).toBe(original.options[original.answer])
       expect([...q.options].sort()).toEqual([...original.options].sort())
     }
-    expect(retryRound(PART5_BANK.map((q) => q.sentence))).toHaveLength(10)
+    expect(
+      retryRound(
+        PART5_BANK,
+        PART5_BANK.map((q) => q.sentence)
+      )
+    ).toHaveLength(10)
   })
 })
 

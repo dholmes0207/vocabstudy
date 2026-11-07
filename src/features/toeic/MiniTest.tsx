@@ -6,6 +6,7 @@ import { useStudy } from '@/store/studyStore'
 import { useExam } from '@/store/examStore'
 import { cefrFor, estimateSection, type Section } from '@/lib/toeicScore'
 import { MINI_TEST_ID, miniTestPlan, sectionOf, type MiniStep } from '@/lib/toeicMiniTest'
+import type { ToeicBank } from '@/lib/toeicBank'
 import { pinyinXp } from '@/lib/pinyin'
 import { today } from '@/lib/date'
 import { useT } from '@/lib/i18n'
@@ -19,9 +20,11 @@ import TalkRound from './TalkRound'
 // 5–495 scale and the CEFR level it would reach.
 
 export default function MiniTest({
+  bank,
   words,
   onExit,
 }: {
+  bank: ToeicBank
   words: readonly Word[]
   onExit: () => void
 }) {
@@ -36,7 +39,7 @@ export default function MiniTest({
   const [xp, setXp] = useState(0)
 
   const begin = () => {
-    setPlan(miniTestPlan(words))
+    setPlan(miniTestPlan(bank, words))
     setStep(0)
     setScores([])
   }
