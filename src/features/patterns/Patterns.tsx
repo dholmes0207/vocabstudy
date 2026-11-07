@@ -3,7 +3,15 @@ import { ArrowRight } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { usePracticeBank } from '@/hooks/usePracticeBank'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
-import { ROLES, loadPatterns, patternRound, type PatternItem } from '@/lib/patterns'
+import {
+  PATTERN_PACKS,
+  ROLES,
+  isPatternPack,
+  patternRound,
+  rolesUsed,
+  type PatternItem,
+  type PatternPack,
+} from '@/lib/patterns'
 import { useT } from '@/lib/i18n'
 import PackOnly from '@/components/PackOnly'
 import PatternRound from './PatternRound'
@@ -14,14 +22,14 @@ import PatternRound from './PatternRound'
 
 export default function Patterns() {
   const code = useSettings((s) => s.currentLang)
-  if (code !== 'en') return <PackOnly packs={['en']} />
-  return <PatternsView />
+  if (!isPatternPack(code)) return <PackOnly packs={['en', 'zh']} />
+  return <PatternsView key={code} code={code} />
 }
 
-function PatternsView() {
+function PatternsView({ code }: { code: PatternPack }) {
   const t = useT()
   useDocumentTitle(`${t('Cấu trúc câu', 'Sentence patterns')} · VocaStudy`)
-  const { bank, error, retry } = usePracticeBank(loadPatterns)
+  const { bank, error, retry } = usePracticeBank(PATTERN_PACKS[code].load)
   const [round, setRound] = useState<{ n: number; only?: string; items: PatternItem[] } | null>(
     null
   )
@@ -35,6 +43,7 @@ function PatternsView() {
       <PatternRound
         key={round.n}
         items={round.items}
+        pack={code}
         onAgain={() => start(round.only)}
         onExit={() => setRound(null)}
       />
@@ -48,20 +57,25 @@ function PatternsView() {
           <span aria-hidden="true">🧱</span>
         </h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(
-            'Câu tiếng Anh được lắp từ các khối: chủ ngữ, động từ, tân ngữ, nơi chốn, thời gian… Học khung của từng kiểu câu rồi tự xếp khối, nhìn màu là nhớ trật tự.',
-            'English sentences are built from blocks: subject, verb, object, place, time… Learn the frame of each kind of sentence, then build it yourself; the colours make the order stick.'
-          )}
+          {code === 'zh'
+            ? t(
+                'Câu tiếng Trung cũng lắp từ các khối, nhưng trật tự khác tiếng Việt: thời gian và nơi chốn đứng TRƯỚC động từ, từ để hỏi giữ nguyên chỗ, 把 đưa tân ngữ lên trước. Học khung rồi tự xếp khối, nhìn màu là nhớ.',
+                'Chinese sentences are built from blocks too, in a different order from Vietnamese: time and place come BEFORE the verb, question words stay put, 把 moves the object forward. Learn each frame, then build it; the colours make the order stick.'
+              )
+            : t(
+                'Câu tiếng Anh được lắp từ các khối: chủ ngữ, động từ, tân ngữ, nơi chốn, thời gian… Học khung của từng kiểu câu rồi tự xếp khối, nhìn màu là nhớ trật tự.',
+                'English sentences are built from blocks: subject, verb, object, place, time… Learn the frame of each kind of sentence, then build it yourself; the colours make the order stick.'
+              )}
         </p>
       </header>
 
       <ul className="flex flex-wrap gap-2" aria-label={t('Các khối', 'The blocks')}>
-        {Object.values(ROLES).map((r) => (
+        {(bank ? rolesUsed(bank.patterns) : []).map((r) => (
           <li
-            key={r.name[1]}
-            className={`rounded-lg px-2 py-1 text-xs font-bold text-white ${r.tone}`}
+            key={r}
+            className={`rounded-lg px-2 py-1 text-xs font-bold text-white ${ROLES[r].tone}`}
           >
-            {t(...r.name)}
+            {t(...ROLES[r].name)}
           </li>
         ))}
       </ul>

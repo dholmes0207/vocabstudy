@@ -24,6 +24,16 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
+    title: ['Cấu trúc câu tiếng Trung', 'Chinese sentence patterns'],
+    items: [
+      [
+        'Trang Cấu trúc câu giờ có cả tiếng Trung: 7 khung câu HSK (thời gian và 在 trước động từ, 比, 把, từ để hỏi giữ chỗ…) dạng khối màu. Xếp xong câu được đọc lên kèm pinyin. Lộ trình tiếng Trung cấp 3 có thêm bước này.',
+        'Sentence patterns now cover Chinese: seven HSK frames (time and 在 before the verb, 比, 把, question words in place…) as coloured blocks. Each sentence is read aloud with its pinyin once built. Level 3 of the Chinese path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['IELTS Listening Part 2 và 3', 'IELTS listening Parts 2 and 3'],
     items: [
       [

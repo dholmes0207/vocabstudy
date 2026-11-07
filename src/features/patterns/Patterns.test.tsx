@@ -29,7 +29,7 @@ function build(item: PatternItem, slip: boolean) {
   const pool = () =>
     screen
       .getAllByRole('button')
-      .filter((b) => !b.hasAttribute('disabled') && b.getAttribute('lang') === 'en')
+      .filter((b) => !b.hasAttribute('disabled') && ['en', 'zh'].includes(b.getAttribute('lang')!))
   if (slip) {
     const wrong = item.sentence.chunks[item.sentence.chunks.length - 1][0]
     fireEvent.click(pool().find((b) => b.textContent === wrong)!)
@@ -46,7 +46,7 @@ describe('building sentence patterns', () => {
     ]
     render(
       <MemoryRouter>
-        <PatternRound items={items} onAgain={() => {}} onExit={() => {}} />
+        <PatternRound items={items} pack="en" onAgain={() => {}} onExit={() => {}} />
       </MemoryRouter>
     )
     const frame = screen.getByRole('list', { name: 'Sentence frame' })
@@ -60,5 +60,28 @@ describe('building sentence patterns', () => {
     expect(screen.getByText('1 of 2 built without a slip')).toBeInTheDocument()
     expect(useActivity.getState().counts.en?.patterns).toBe(1)
     expect(useStudy.getState().progress.en?.stats.xp).toBe(3)
+  })
+
+  it('builds a Chinese sentence with no spaces and shows its pinyin', () => {
+    const zh = validatePatterns(
+      JSON.parse(readFileSync('public/data/patterns/zh.json', 'utf8'))
+    ).patterns
+    const ba = zh.find((p) => p.id === 'ba')!
+    const item = { pattern: ba, sentence: ba.sentences[0] }
+    useSettings.setState({ currentLang: 'zh' })
+    render(
+      <MemoryRouter>
+        <PatternRound items={[item]} pack="zh" onAgain={() => {}} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    expect(
+      within(screen.getByRole('list', { name: 'Sentence frame' })).getByText('Preposition phrase')
+    ).toBeInTheDocument()
+    build(item, false)
+    const status = screen.getByRole('status')
+    expect(status).toHaveTextContent('我把作业做完了')
+    expect(status).toHaveTextContent(item.sentence.py!)
+    fireEvent.click(screen.getByRole('button', { name: /^See results/ }))
+    expect(useActivity.getState().counts.zh?.patterns).toBe(1)
   })
 })
