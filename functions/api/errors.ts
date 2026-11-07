@@ -1,13 +1,21 @@
 import { sanitizeReport, signature } from '../../src/lib/errorReport'
+import { WindowLimiter } from '../../src/lib/rateLimit'
 import { type Ctx, adminRest } from '../_shared'
 
 // POST /api/errors — a scrubbed error report from a learner's browser
 // (docs/design/error-reports.md). Always logged to the Pages Functions log;
 // also grouped into public.client_errors for the Admin page once that table
 // exists (supabase/schema.sql). Answers 204 either way: a report must never
-// turn into a second error on the page.
+// turn into a second error on the page. The browser never reads the answer, so
+// a 429 for a flooding address changes nothing for a real learner.
 
 const MAX_BODY = 8192
+
+// A page sends at most 5 reports per load (lib/reportError.ts), so 30 a minute
+// from one address leaves room for a school or office behind a shared IP while
+// stopping a script that hammers the endpoint. Per isolate; the database also
+// refuses a flood of new errors (report_client_error, supabase/schema.sql).
+const perAddress = new WindowLimiter(30, 60_000)
 
 export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
   // Reports only come from our own pages; anything else is noise or abuse.
@@ -15,6 +23,8 @@ export const onRequestPost = async (ctx: Ctx): Promise<Response> => {
   // Compared as text: browsers can send "Origin: null", and new URL('null') throws.
   if (origin && origin !== new URL(ctx.request.url).origin)
     return new Response(null, { status: 403 })
+  const ip = ctx.request.headers.get('CF-Connecting-IP') ?? 'unknown'
+  if (!perAddress.allow(ip, Date.now())) return new Response(null, { status: 429 })
 
   const text = await ctx.request.text()
   if (text.length > MAX_BODY) return new Response(null, { status: 413 })
