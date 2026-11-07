@@ -49,8 +49,6 @@ dẫn khi học, phong cách tránh nhàm chán."
 
 1. Bài kiểm tra vượt cấp ("trùm cuối") mỗi cấp: trộn từ vựng và ngữ pháp của cấp; đạt thì mở cấp sau,
    làm được ở cấp chưa mở để nhảy cấp.
-2. Ngữ pháp B1 cho cấp 3–4: hiện tại hoàn thành, quá khứ tiếp diễn, bị động, câu điều kiện, mệnh đề
-   quan hệ, câu tường thuật.
-3. Luyện IELTS cho cấp 6: Reading True/False/Not Given, Listening điền thông tin, Speaking Part 1–3 có
+2. Luyện IELTS cho cấp 6: Reading True/False/Not Given, Listening điền thông tin, Speaking Part 1–3 có
    ghi âm, khung bài Writing Task 1/2.
-4. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.
+3. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.

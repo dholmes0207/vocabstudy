@@ -197,3 +197,15 @@ Hai điểm người mới gặp ngay ở trình độ TOPIK I, bổ sung vào 1
 
 **Dev**: thêm vào `UNITS` trong `scripts/build_grammar_ko.py`, chạy lại script để ghi
 `public/data/grammar/ko.json`.
+
+## Ngữ pháp tiếng Anh B1 (08/11/2026)
+
+Lộ trình theo cấp (`docs/design/learning-path.md`) cần ngữ pháp sau A2 cho cấp 3–4. Thêm 6 bài vào
+`public/data/grammar/en.json`, cùng khuôn với các bài cũ (giải thích tiếng Việt, mẫu câu, 5 ví dụ, 3
+lỗi hay gặp, 6 câu chọn + 3 câu xếp):
+
+- A2: `present-perfect` (phân biệt với quá khứ đơn, for / since), `past-continuous` (việc dài bị việc
+  ngắn xen vào, while).
+- B1: `passive` (bị động ở các thì và với must, rất hay gặp trong TOEIC, IELTS), `conditionals` (loại
+  0, 1, 2 và unless), `relative-clauses` (who, which, that, where, whose), `reported-speech` (lùi thì,
+  say / tell, câu hỏi tường thuật).

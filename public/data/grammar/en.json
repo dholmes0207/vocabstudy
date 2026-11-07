@@ -1,5 +1,5 @@
 {
- "version": "1.0.0",
+ "version": "1.1.0",
  "units": [
   {
    "id": "to-be",
@@ -1744,6 +1744,890 @@
      "type": "order",
      "en": "How old is your sister?",
      "vi": "Em gái bạn mấy tuổi?"
+    }
+   ]
+  },
+  {
+   "id": "present-perfect",
+   "emoji": "✅",
+   "level": "A2",
+   "title": [
+    "Thì hiện tại hoàn thành",
+    "Present perfect"
+   ],
+   "summary": [
+    "Việc đã xảy ra, còn liên quan tới bây giờ.",
+    "Past actions that still matter now."
+   ],
+   "explain": [
+    "Dùng khi việc đã xảy ra nhưng không nói rõ lúc nào, hoặc kết quả còn tới bây giờ: I have lost my key (giờ vẫn chưa có chìa).",
+    "Cấu trúc: have / has + quá khứ phân từ (V3). He, she, it đi với has; các ngôi còn lại đi với have.",
+    "Hay đi với ever, never, already, yet, just, for (trong khoảng), since (từ mốc).",
+    "Khác quá khứ đơn: có mốc thời gian đã xong (yesterday, last year, in 2020) thì dùng quá khứ đơn, không dùng hiện tại hoàn thành.",
+    "V3 của động từ có quy tắc giống dạng -ed; bất quy tắc phải học: go → gone, see → seen, eat → eaten, do → done."
+   ],
+   "patterns": [
+    "(+) I have finished / She has gone",
+    "(−) I haven't finished / She hasn't gone",
+    "(?) Have you finished? / Has she gone?"
+   ],
+   "examples": [
+    {
+     "en": "I have lived here for five years.",
+     "vi": "Tôi đã sống ở đây được năm năm."
+    },
+    {
+     "en": "She has already done her homework.",
+     "vi": "Cô ấy đã làm xong bài tập rồi."
+    },
+    {
+     "en": "Have you ever eaten durian?",
+     "vi": "Bạn đã bao giờ ăn sầu riêng chưa?"
+    },
+    {
+     "en": "We haven't seen that film yet.",
+     "vi": "Chúng tôi chưa xem bộ phim đó."
+    },
+    {
+     "en": "He has worked here since 2020.",
+     "vi": "Anh ấy làm ở đây từ năm 2020."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I have seen him yesterday.",
+     "right": "I saw him yesterday.",
+     "why": "Có yesterday (mốc đã xong) → dùng quá khứ đơn."
+    },
+    {
+     "wrong": "She have finished.",
+     "right": "She has finished.",
+     "why": "She đi với has."
+    },
+    {
+     "wrong": "I live here since 2019.",
+     "right": "I have lived here since 2019.",
+     "why": "Since + mốc, việc kéo dài tới giờ → hiện tại hoàn thành."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "I ___ my keys. I can't open the door.",
+     "options": [
+      "have lost",
+      "lose",
+      "has lost"
+     ],
+     "answer": 0,
+     "explain": "Mất rồi và giờ vẫn chưa mở được cửa → have lost."
+    },
+    {
+     "type": "choice",
+     "prompt": "She ___ in Hanoi since 2018.",
+     "options": [
+      "lives",
+      "has lived",
+      "lived"
+     ],
+     "answer": 1,
+     "explain": "Since + mốc, tới giờ vẫn sống ở đó → has lived."
+    },
+    {
+     "type": "choice",
+     "prompt": "Have you ever ___ to Japan?",
+     "options": [
+      "went",
+      "go",
+      "been"
+     ],
+     "answer": 2,
+     "explain": "Have + V3: be → been. \"Been to\" = đã từng đến."
+    },
+    {
+     "type": "choice",
+     "prompt": "We ___ the report yet.",
+     "options": [
+      "haven't finished",
+      "didn't finished",
+      "hasn't finished"
+     ],
+     "answer": 0,
+     "explain": "Yet trong câu phủ định → haven't + V3; we đi với have."
+    },
+    {
+     "type": "choice",
+     "prompt": "I ___ him last week.",
+     "options": [
+      "have met",
+      "met",
+      "has met"
+     ],
+     "answer": 1,
+     "explain": "Last week là mốc đã xong → quá khứ đơn: met."
+    },
+    {
+     "type": "choice",
+     "prompt": "He has worked here ___ three years.",
+     "options": [
+      "since",
+      "for",
+      "ago"
+     ],
+     "answer": 1,
+     "explain": "For + khoảng thời gian (three years); since + mốc (2020)."
+    },
+    {
+     "type": "order",
+     "en": "I have never seen snow.",
+     "vi": "Tôi chưa bao giờ thấy tuyết."
+    },
+    {
+     "type": "order",
+     "en": "Have you finished your lunch?",
+     "vi": "Bạn đã ăn trưa xong chưa?"
+    },
+    {
+     "type": "order",
+     "en": "She has just left the office.",
+     "vi": "Cô ấy vừa rời văn phòng."
+    }
+   ]
+  },
+  {
+   "id": "past-continuous",
+   "emoji": "🎞️",
+   "level": "A2",
+   "title": [
+    "Thì quá khứ tiếp diễn",
+    "Past continuous"
+   ],
+   "summary": [
+    "Việc đang diễn ra tại một lúc trong quá khứ.",
+    "Actions in progress at a past moment."
+   ],
+   "explain": [
+    "Dùng cho việc đang diễn ra tại một thời điểm trong quá khứ: At 8 p.m. yesterday, I was watching TV.",
+    "Cấu trúc: was / were + V-ing. I, he, she, it đi với was; you, we, they đi với were.",
+    "Hay đi cùng quá khứ đơn: việc dài đang diễn ra (quá khứ tiếp diễn) thì việc ngắn xen vào (quá khứ đơn): I was cooking when the phone rang.",
+    "While + quá khứ tiếp diễn: hai việc cùng diễn ra song song.",
+    "Động từ chỉ trạng thái như know, like, want thường không chia tiếp diễn."
+   ],
+   "patterns": [
+    "(+) I was working / They were working",
+    "(−) I wasn't working / They weren't working",
+    "(?) Were you working? / Was she working?"
+   ],
+   "examples": [
+    {
+     "en": "I was sleeping when you called.",
+     "vi": "Lúc bạn gọi thì tôi đang ngủ."
+    },
+    {
+     "en": "They were playing football at five o'clock.",
+     "vi": "Lúc năm giờ họ đang đá bóng."
+    },
+    {
+     "en": "While she was cooking, he was cleaning.",
+     "vi": "Trong khi cô ấy nấu ăn thì anh ấy dọn dẹp."
+    },
+    {
+     "en": "It was raining all morning.",
+     "vi": "Trời mưa suốt cả buổi sáng."
+    },
+    {
+     "en": "What were you doing last night?",
+     "vi": "Tối qua bạn đang làm gì?"
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "I was cook when he came.",
+     "right": "I was cooking when he came.",
+     "why": "Sau was / were cần V-ing."
+    },
+    {
+     "wrong": "They was waiting.",
+     "right": "They were waiting.",
+     "why": "They đi với were."
+    },
+    {
+     "wrong": "When I was walking, I was seeing an accident.",
+     "right": "When I was walking, I saw an accident.",
+     "why": "Việc ngắn xen vào dùng quá khứ đơn."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "I ___ dinner when the lights went out.",
+     "options": [
+      "was cooking",
+      "cooked",
+      "were cooking"
+     ],
+     "answer": 0,
+     "explain": "Việc đang diễn ra thì có việc khác xen vào → was cooking."
+    },
+    {
+     "type": "choice",
+     "prompt": "We ___ TV at 9 p.m. yesterday.",
+     "options": [
+      "was watching",
+      "were watching",
+      "watch"
+     ],
+     "answer": 1,
+     "explain": "We đi với were; một lúc cụ thể trong quá khứ → were watching."
+    },
+    {
+     "type": "choice",
+     "prompt": "She was reading when the phone ___.",
+     "options": [
+      "was ringing",
+      "rang",
+      "rings"
+     ],
+     "answer": 1,
+     "explain": "Việc ngắn xen vào → quá khứ đơn: rang."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ you sleeping at midnight?",
+     "options": [
+      "Was",
+      "Did",
+      "Were"
+     ],
+     "answer": 2,
+     "explain": "You đi với were: Were you sleeping?"
+    },
+    {
+     "type": "choice",
+     "prompt": "___ I was driving, it started to rain.",
+     "options": [
+      "While",
+      "During",
+      "For"
+     ],
+     "answer": 0,
+     "explain": "While + mệnh đề (I was driving); during + danh từ (during the trip)."
+    },
+    {
+     "type": "choice",
+     "prompt": "He ___ to music, so he didn't hear me.",
+     "options": [
+      "wasn't listening",
+      "was listening",
+      "listened"
+     ],
+     "answer": 1,
+     "explain": "Đang nghe nhạc (việc đang diễn ra) nên không nghe thấy tôi."
+    },
+    {
+     "type": "order",
+     "en": "I was walking to school.",
+     "vi": "Tôi đang đi bộ tới trường."
+    },
+    {
+     "type": "order",
+     "en": "What were you doing yesterday?",
+     "vi": "Hôm qua bạn đang làm gì?"
+    },
+    {
+     "type": "order",
+     "en": "It was raining when we left.",
+     "vi": "Lúc chúng tôi đi thì trời đang mưa."
+    }
+   ]
+  },
+  {
+   "id": "passive",
+   "emoji": "🔁",
+   "level": "B1",
+   "title": [
+    "Câu bị động",
+    "The passive"
+   ],
+   "summary": [
+    "Nói việc được làm, không cần nói ai làm.",
+    "What is done, not who does it."
+   ],
+   "explain": [
+    "Dùng khi việc quan trọng hơn người làm, hoặc không biết ai làm: English is spoken here. My bike was stolen.",
+    "Cấu trúc: be + quá khứ phân từ (V3). Thì nằm ở động từ be: is made (hiện tại), was made (quá khứ), will be made (tương lai), has been made (hoàn thành).",
+    "Muốn nói người làm thì thêm by: The book was written by Nam Cao.",
+    "Câu chủ động: They build houses. → Bị động: Houses are built. Tân ngữ (houses) lên làm chủ ngữ.",
+    "Rất hay gặp trong đề TOEIC và bài đọc IELTS: is located, was founded, will be held, must be completed."
+   ],
+   "patterns": [
+    "Present: It is made in Vietnam.",
+    "Past: It was built in 1990.",
+    "Future: It will be finished tomorrow.",
+    "Modal: It must be done today."
+   ],
+   "examples": [
+    {
+     "en": "Rice is grown in the Mekong Delta.",
+     "vi": "Lúa được trồng ở đồng bằng sông Cửu Long."
+    },
+    {
+     "en": "This bridge was built in 1990.",
+     "vi": "Cây cầu này được xây năm 1990."
+    },
+    {
+     "en": "The meeting will be held on Monday.",
+     "vi": "Cuộc họp sẽ được tổ chức vào thứ Hai."
+    },
+    {
+     "en": "My phone was stolen yesterday.",
+     "vi": "Hôm qua điện thoại của tôi bị lấy trộm."
+    },
+    {
+     "en": "The report must be finished by Friday.",
+     "vi": "Báo cáo phải được hoàn thành trước thứ Sáu."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "The house was build in 2010.",
+     "right": "The house was built in 2010.",
+     "why": "Sau be cần V3: build → built."
+    },
+    {
+     "wrong": "The letters sent yesterday.",
+     "right": "The letters were sent yesterday.",
+     "why": "Bị động cần động từ be: were sent."
+    },
+    {
+     "wrong": "English is speak in many countries.",
+     "right": "English is spoken in many countries.",
+     "why": "Speak → spoken (V3)."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "These shoes ___ in Vietnam.",
+     "options": [
+      "are made",
+      "make",
+      "are making"
+     ],
+     "answer": 0,
+     "explain": "Giày được làm ra (không nói ai làm) → are made."
+    },
+    {
+     "type": "choice",
+     "prompt": "The museum ___ in 1995.",
+     "options": [
+      "opened by",
+      "was opened",
+      "is opening"
+     ],
+     "answer": 1,
+     "explain": "Năm 1995 → quá khứ; bảo tàng được mở → was opened."
+    },
+    {
+     "type": "choice",
+     "prompt": "The results will ___ next week.",
+     "options": [
+      "announce",
+      "be announced",
+      "announced"
+     ],
+     "answer": 1,
+     "explain": "Will + be + V3 → will be announced."
+    },
+    {
+     "type": "choice",
+     "prompt": "All forms must be ___ before Friday.",
+     "options": [
+      "submitted",
+      "submit",
+      "submitting"
+     ],
+     "answer": 0,
+     "explain": "Must be + V3 → must be submitted."
+    },
+    {
+     "type": "choice",
+     "prompt": "The novel was written ___ a young teacher.",
+     "options": [
+      "from",
+      "with",
+      "by"
+     ],
+     "answer": 2,
+     "explain": "Người làm đi sau by."
+    },
+    {
+     "type": "choice",
+     "prompt": "My car ___ at the moment, so I'm taking the bus.",
+     "options": [
+      "is repaired",
+      "is being repaired",
+      "repairs"
+     ],
+     "answer": 1,
+     "explain": "Đang được sửa ngay lúc này → is being repaired (bị động tiếp diễn)."
+    },
+    {
+     "type": "order",
+     "en": "This cake was made by my mother.",
+     "vi": "Chiếc bánh này do mẹ tôi làm."
+    },
+    {
+     "type": "order",
+     "en": "The office is cleaned every day.",
+     "vi": "Văn phòng được dọn mỗi ngày."
+    },
+    {
+     "type": "order",
+     "en": "The package will be delivered tomorrow.",
+     "vi": "Gói hàng sẽ được giao vào ngày mai."
+    }
+   ]
+  },
+  {
+   "id": "conditionals",
+   "emoji": "🔀",
+   "level": "B1",
+   "title": [
+    "Câu điều kiện",
+    "Conditionals"
+   ],
+   "summary": [
+    "Nếu… thì…: điều có thật và điều tưởng tượng.",
+    "If…: real and imagined situations."
+   ],
+   "explain": [
+    "Loại 0, sự thật luôn đúng: If + hiện tại đơn, hiện tại đơn. If you heat ice, it melts.",
+    "Loại 1, có thể xảy ra trong tương lai: If + hiện tại đơn, will + V. If it rains, I will stay home.",
+    "Loại 2, tưởng tượng, không có thật ở hiện tại: If + quá khứ đơn, would + V. If I had money, I would travel. Với be, thường dùng were cho mọi ngôi: If I were you…",
+    "Mệnh đề if đứng trước thì có dấu phẩy; đứng sau thì không cần: I will call you if I have time.",
+    "Unless = if… not: Unless you hurry, you will miss the bus."
+   ],
+   "patterns": [
+    "Type 0: If + present, present",
+    "Type 1: If + present, will + verb",
+    "Type 2: If + past, would + verb"
+   ],
+   "examples": [
+    {
+     "en": "If you mix red and blue, you get purple.",
+     "vi": "Nếu trộn đỏ với xanh dương thì được màu tím."
+    },
+    {
+     "en": "If it rains tomorrow, we will stay at home.",
+     "vi": "Nếu mai trời mưa, chúng tôi sẽ ở nhà."
+    },
+    {
+     "en": "If I had more time, I would learn Chinese.",
+     "vi": "Nếu có thêm thời gian, tôi sẽ học tiếng Trung."
+    },
+    {
+     "en": "If I were you, I would take the job.",
+     "vi": "Nếu tôi là bạn, tôi sẽ nhận công việc đó."
+    },
+    {
+     "en": "Unless you hurry, you will be late.",
+     "vi": "Nếu không nhanh lên, bạn sẽ bị muộn."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "If it will rain, I will stay home.",
+     "right": "If it rains, I will stay home.",
+     "why": "Mệnh đề if loại 1 dùng hiện tại đơn, không dùng will."
+    },
+    {
+     "wrong": "If I have a car, I would drive to work.",
+     "right": "If I had a car, I would drive to work.",
+     "why": "Đi với would → loại 2 → if + quá khứ: had."
+    },
+    {
+     "wrong": "If I was you, I would go.",
+     "right": "If I were you, I would go.",
+     "why": "Lời khuyên \"nếu tôi là bạn\" dùng were."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "If you study hard, you ___ the test.",
+     "options": [
+      "pass",
+      "will pass",
+      "would pass"
+     ],
+     "answer": 1,
+     "explain": "Có thể xảy ra → loại 1: will pass."
+    },
+    {
+     "type": "choice",
+     "prompt": "If I ___ rich, I would buy a big house.",
+     "options": [
+      "am",
+      "will be",
+      "were"
+     ],
+     "answer": 2,
+     "explain": "Tưởng tượng → loại 2: if I were."
+    },
+    {
+     "type": "choice",
+     "prompt": "If you heat water to 100°C, it ___.",
+     "options": [
+      "boils",
+      "would boil",
+      "boiled"
+     ],
+     "answer": 0,
+     "explain": "Sự thật luôn đúng → loại 0: boils."
+    },
+    {
+     "type": "choice",
+     "prompt": "I will call you if I ___ any news.",
+     "options": [
+      "will get",
+      "get",
+      "got"
+     ],
+     "answer": 1,
+     "explain": "Mệnh đề if loại 1 dùng hiện tại đơn: get."
+    },
+    {
+     "type": "choice",
+     "prompt": "___ you leave now, you will miss the train.",
+     "options": [
+      "If",
+      "Unless",
+      "When"
+     ],
+     "answer": 1,
+     "explain": "Nếu không đi ngay thì lỡ tàu → unless (= if… not)."
+    },
+    {
+     "type": "choice",
+     "prompt": "If she had a car, she ___ us to the airport.",
+     "options": [
+      "will drive",
+      "drives",
+      "would drive"
+     ],
+     "answer": 2,
+     "explain": "If + quá khứ (had) → loại 2: would drive."
+    },
+    {
+     "type": "order",
+     "en": "If it rains, we will stay home.",
+     "vi": "Nếu trời mưa, chúng tôi sẽ ở nhà."
+    },
+    {
+     "type": "order",
+     "en": "If I were you, I would rest.",
+     "vi": "Nếu tôi là bạn, tôi sẽ nghỉ ngơi."
+    },
+    {
+     "type": "order",
+     "en": "What would you do if you won?",
+     "vi": "Bạn sẽ làm gì nếu bạn thắng?"
+    }
+   ]
+  },
+  {
+   "id": "relative-clauses",
+   "emoji": "🔗",
+   "level": "B1",
+   "title": [
+    "Mệnh đề quan hệ",
+    "Relative clauses"
+   ],
+   "summary": [
+    "Nối hai câu bằng who, which, that, where.",
+    "Join ideas with who, which, that, where."
+   ],
+   "explain": [
+    "Mệnh đề quan hệ nói rõ người hoặc vật đang được nói tới, đứng ngay sau danh từ đó.",
+    "Who cho người: The woman who lives next door is a doctor.",
+    "Which cho vật, con vật: The phone which I bought is very fast.",
+    "That thay được cho who và which trong phần lớn câu: The book that I read was great.",
+    "Where cho nơi chốn: This is the café where we first met. Whose chỉ sở hữu: The boy whose bike was stolen."
+   ],
+   "patterns": [
+    "person + who + verb",
+    "thing + which / that + verb",
+    "place + where + subject + verb",
+    "person + whose + noun"
+   ],
+   "examples": [
+    {
+     "en": "The teacher who helped me is very kind.",
+     "vi": "Thầy giáo đã giúp tôi rất tốt bụng."
+    },
+    {
+     "en": "This is the laptop which I bought last week.",
+     "vi": "Đây là chiếc máy tính tôi mua tuần trước."
+    },
+    {
+     "en": "Hue is the city where I was born.",
+     "vi": "Huế là thành phố nơi tôi sinh ra."
+    },
+    {
+     "en": "I have a friend whose father is a pilot.",
+     "vi": "Tôi có một người bạn có bố là phi công."
+    },
+    {
+     "en": "The film that we watched was boring.",
+     "vi": "Bộ phim chúng tôi xem chán lắm."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "The man which called you is my boss.",
+     "right": "The man who called you is my boss.",
+     "why": "Chỉ người → who (hoặc that), không dùng which."
+    },
+    {
+     "wrong": "This is the house where I live in.",
+     "right": "This is the house where I live.",
+     "why": "Where đã mang nghĩa \"ở đó\", không thêm in."
+    },
+    {
+     "wrong": "The girl who she sings is my sister.",
+     "right": "The girl who sings is my sister.",
+     "why": "Who đã làm chủ ngữ, không thêm she."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "The doctor ___ treated me was very friendly.",
+     "options": [
+      "which",
+      "who",
+      "where"
+     ],
+     "answer": 1,
+     "explain": "Bác sĩ là người → who."
+    },
+    {
+     "type": "choice",
+     "prompt": "I lost the watch ___ my father gave me.",
+     "options": [
+      "which",
+      "who",
+      "whose"
+     ],
+     "answer": 0,
+     "explain": "Chiếc đồng hồ là vật → which (hoặc that)."
+    },
+    {
+     "type": "choice",
+     "prompt": "This is the restaurant ___ we had dinner.",
+     "options": [
+      "which",
+      "where",
+      "who"
+     ],
+     "answer": 1,
+     "explain": "Nơi chốn, sau đó là chủ ngữ + động từ → where."
+    },
+    {
+     "type": "choice",
+     "prompt": "She is the student ___ essay won the prize.",
+     "options": [
+      "who",
+      "whose",
+      "which"
+     ],
+     "answer": 1,
+     "explain": "Bài luận của cô ấy → whose (sở hữu)."
+    },
+    {
+     "type": "choice",
+     "prompt": "The bus ___ goes to the airport leaves every hour.",
+     "options": [
+      "that",
+      "who",
+      "where"
+     ],
+     "answer": 0,
+     "explain": "Xe buýt là vật → that (hoặc which)."
+    },
+    {
+     "type": "choice",
+     "prompt": "Do you know the man ___ is talking to Lan?",
+     "options": [
+      "which",
+      "whose",
+      "who"
+     ],
+     "answer": 2,
+     "explain": "Người đàn ông đang nói chuyện → who."
+    },
+    {
+     "type": "order",
+     "en": "The girl who sings is my sister.",
+     "vi": "Cô gái đang hát là em gái tôi."
+    },
+    {
+     "type": "order",
+     "en": "This is the book that I bought.",
+     "vi": "Đây là quyển sách tôi đã mua."
+    },
+    {
+     "type": "order",
+     "en": "That is the park where we play.",
+     "vi": "Đó là công viên nơi chúng tôi chơi."
+    }
+   ]
+  },
+  {
+   "id": "reported-speech",
+   "emoji": "💬",
+   "level": "B1",
+   "title": [
+    "Câu tường thuật",
+    "Reported speech"
+   ],
+   "summary": [
+    "Kể lại lời người khác đã nói.",
+    "Saying what someone else said."
+   ],
+   "explain": [
+    "Khi kể lại lời ai đó với said, động từ thường lùi một thì: \"I am tired\" → She said (that) she was tired.",
+    "Lùi thì: hiện tại đơn → quá khứ đơn; hiện tại tiếp diễn → quá khứ tiếp diễn; will → would; can → could; quá khứ đơn → quá khứ hoàn thành (had + V3).",
+    "Đổi đại từ và từ chỉ thời gian theo người kể: I → he / she, today → that day, tomorrow → the next day, here → there.",
+    "Say không cần tân ngữ (She said that…); tell cần người nghe (She told me that…).",
+    "Câu hỏi tường thuật dùng trật tự câu kể: \"Where do you live?\" → He asked where I lived. Câu hỏi Yes/No dùng if: He asked if I was hungry."
+   ],
+   "patterns": [
+    "She said (that) + clause",
+    "He told me (that) + clause",
+    "They asked + wh- / if + subject + verb"
+   ],
+   "examples": [
+    {
+     "en": "She said that she was busy.",
+     "vi": "Cô ấy nói rằng cô ấy bận."
+    },
+    {
+     "en": "He told me he would come later.",
+     "vi": "Anh ấy bảo tôi là anh ấy sẽ đến sau."
+    },
+    {
+     "en": "They said they could help us.",
+     "vi": "Họ nói họ có thể giúp chúng tôi."
+    },
+    {
+     "en": "My mom asked where I was going.",
+     "vi": "Mẹ hỏi tôi đang đi đâu."
+    },
+    {
+     "en": "The teacher asked if we had finished.",
+     "vi": "Cô giáo hỏi chúng tôi đã làm xong chưa."
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "She said me that she was tired.",
+     "right": "She told me that she was tired.",
+     "why": "Có người nghe (me) → dùng tell, không dùng say."
+    },
+    {
+     "wrong": "He asked where did I live.",
+     "right": "He asked where I lived.",
+     "why": "Câu hỏi tường thuật dùng trật tự câu kể, không dùng did."
+    },
+    {
+     "wrong": "She said she will call me.",
+     "right": "She said she would call me.",
+     "why": "Tường thuật lùi thì: will → would."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "\"I am hungry.\" → He said that he ___ hungry.",
+     "options": [
+      "is",
+      "was",
+      "were"
+     ],
+     "answer": 1,
+     "explain": "Lùi thì: am → was."
+    },
+    {
+     "type": "choice",
+     "prompt": "\"I will help you.\" → She said she ___ help me.",
+     "options": [
+      "will",
+      "would",
+      "can"
+     ],
+     "answer": 1,
+     "explain": "Lùi thì: will → would."
+    },
+    {
+     "type": "choice",
+     "prompt": "My boss ___ me that the meeting was cancelled.",
+     "options": [
+      "said",
+      "told",
+      "asked"
+     ],
+     "answer": 1,
+     "explain": "Có người nghe (me) → told."
+    },
+    {
+     "type": "choice",
+     "prompt": "\"Where do you work?\" → She asked me where I ___.",
+     "options": [
+      "worked",
+      "do work",
+      "did work"
+     ],
+     "answer": 0,
+     "explain": "Trật tự câu kể và lùi thì: where I worked."
+    },
+    {
+     "type": "choice",
+     "prompt": "\"Are you ready?\" → He asked ___ I was ready.",
+     "options": [
+      "that",
+      "what",
+      "if"
+     ],
+     "answer": 2,
+     "explain": "Câu hỏi Yes/No tường thuật dùng if (hoặc whether)."
+    },
+    {
+     "type": "choice",
+     "prompt": "\"I can swim.\" → Lan said she ___ swim.",
+     "options": [
+      "can",
+      "could",
+      "would"
+     ],
+     "answer": 1,
+     "explain": "Lùi thì: can → could."
+    },
+    {
+     "type": "order",
+     "en": "She said that she was tired.",
+     "vi": "Cô ấy nói rằng cô ấy mệt."
+    },
+    {
+     "type": "order",
+     "en": "He told me he would call.",
+     "vi": "Anh ấy bảo tôi là anh ấy sẽ gọi."
+    },
+    {
+     "type": "order",
+     "en": "They asked where we lived.",
+     "vi": "Họ hỏi chúng tôi sống ở đâu."
     }
    ]
   }

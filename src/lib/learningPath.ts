@@ -212,6 +212,15 @@ export const EN_PATH: PathLevel[] = [
           'Four units for longer, more precise sentences. Score 80% in each.',
         ]
       ),
+      grammar(
+        'en3-tenses',
+        ['present-perfect', 'past-continuous'],
+        ['Hiện tại hoàn thành, quá khứ tiếp diễn', 'Present perfect, past continuous'],
+        [
+          'Hai thì để kể chuyện: đã từng làm gì, và đang làm gì thì việc khác xen vào.',
+          'Two tenses for telling stories: what you have done, and what was happening when something else did.',
+        ]
+      ),
       sessions(
         'en3-order',
         'order',
@@ -250,6 +259,15 @@ export const EN_PATH: PathLevel[] = [
     tone: 'from-amber-400 to-orange-500',
     steps: [
       words(1000, 1600, 'en4-words'),
+      grammar(
+        'en4-grammar',
+        ['passive', 'conditionals', 'relative-clauses', 'reported-speech'],
+        ['Ngữ pháp B1', 'B1 grammar'],
+        [
+          'Bị động, câu điều kiện, mệnh đề quan hệ, câu tường thuật: nền cho phần đọc của TOEIC và IELTS.',
+          'The passive, conditionals, relative clauses, reported speech: the base for TOEIC and IELTS reading.',
+        ]
+      ),
       sessions(
         'en4-listen',
         'listen',

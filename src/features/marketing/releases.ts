@@ -28,6 +28,10 @@ export const RELEASES: Release[] = [
         'Đã làm bài xếp lớp thì các cấp tương ứng mở sẵn, không phải học lại từ đầu.',
         'If you took the placement check, the matching levels are already open, so you don’t start from zero.',
       ],
+      [
+        'Ngữ pháp tiếng Anh thêm 6 bài A2–B1: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
+        'Six new English grammar units, A2–B1: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
+      ],
     ],
   },
   {
