@@ -1,0 +1,709 @@
+{
+  "version": "1.0.0",
+  "patterns": [
+    {
+      "id": "time-first",
+      "emoji": "⏰",
+      "title": [
+        "Thời gian đứng trước động từ",
+        "Time before the verb"
+      ],
+      "formula": [
+        "S",
+        "T",
+        "V",
+        "O"
+      ],
+      "explain": [
+        "Tiếng Trung nói thời gian TRƯỚC động từ (ngay sau hoặc trước chủ ngữ), khác tiếng Việt hay để cuối câu.",
+        "Sai thường gặp: 我去北京明天. Đúng: 我明天去北京 (Tôi ngày mai đi Bắc Kinh)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "明天",
+              "T"
+            ],
+            [
+              "去",
+              "V"
+            ],
+            [
+              "北京",
+              "O"
+            ]
+          ],
+          "py": "Wǒ míngtiān qù Běijīng.",
+          "vi": "Ngày mai tôi đi Bắc Kinh."
+        },
+        {
+          "chunks": [
+            [
+              "他",
+              "S"
+            ],
+            [
+              "每天",
+              "T"
+            ],
+            [
+              "喝",
+              "V"
+            ],
+            [
+              "咖啡",
+              "O"
+            ]
+          ],
+          "py": "Tā měitiān hē kāfēi.",
+          "vi": "Anh ấy uống cà phê mỗi ngày."
+        },
+        {
+          "chunks": [
+            [
+              "我们",
+              "S"
+            ],
+            [
+              "晚上",
+              "T"
+            ],
+            [
+              "看",
+              "V"
+            ],
+            [
+              "电影",
+              "O"
+            ]
+          ],
+          "py": "Wǒmen wǎnshang kàn diànyǐng.",
+          "vi": "Buổi tối chúng tôi xem phim."
+        },
+        {
+          "chunks": [
+            [
+              "妈妈",
+              "S"
+            ],
+            [
+              "昨天",
+              "T"
+            ],
+            [
+              "买了",
+              "V"
+            ],
+            [
+              "水果",
+              "O"
+            ]
+          ],
+          "py": "Māma zuótiān mǎi le shuǐguǒ.",
+          "vi": "Hôm qua mẹ đã mua hoa quả."
+        }
+      ]
+    },
+    {
+      "id": "zai-place",
+      "emoji": "📍",
+      "title": [
+        "在 + nơi chốn trước động từ",
+        "在 + place before the verb"
+      ],
+      "formula": [
+        "S",
+        "K",
+        "V"
+      ],
+      "explain": [
+        "Làm việc gì ở đâu: 在 + nơi chốn đặt TRƯỚC động từ. Tiếng Việt nói \"học ở trường\", tiếng Trung nói \"在学校学习\".",
+        "Nếu có cả thời gian: thời gian trước, nơi chốn sau: 我明天在家休息."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "在学校",
+              "K"
+            ],
+            [
+              "学习",
+              "V"
+            ],
+            [
+              "汉语",
+              "O"
+            ]
+          ],
+          "py": "Wǒ zài xuéxiào xuéxí Hànyǔ.",
+          "vi": "Tôi học tiếng Trung ở trường."
+        },
+        {
+          "chunks": [
+            [
+              "他",
+              "S"
+            ],
+            [
+              "在医院",
+              "K"
+            ],
+            [
+              "工作",
+              "V"
+            ]
+          ],
+          "py": "Tā zài yīyuàn gōngzuò.",
+          "vi": "Anh ấy làm việc ở bệnh viện."
+        },
+        {
+          "chunks": [
+            [
+              "我们",
+              "S"
+            ],
+            [
+              "在饭店",
+              "K"
+            ],
+            [
+              "吃",
+              "V"
+            ],
+            [
+              "晚饭",
+              "O"
+            ]
+          ],
+          "py": "Wǒmen zài fàndiàn chī wǎnfàn.",
+          "vi": "Chúng tôi ăn tối ở nhà hàng."
+        },
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "明天",
+              "T"
+            ],
+            [
+              "在家",
+              "K"
+            ],
+            [
+              "休息",
+              "V"
+            ]
+          ],
+          "py": "Wǒ míngtiān zài jiā xiūxi.",
+          "vi": "Ngày mai tôi nghỉ ở nhà."
+        }
+      ]
+    },
+    {
+      "id": "no-shi-adj",
+      "emoji": "🌡️",
+      "title": [
+        "Tính từ làm vị ngữ, không dùng 是",
+        "Adjectives without 是"
+      ],
+      "formula": [
+        "S",
+        "D",
+        "C"
+      ],
+      "explain": [
+        "Nói \"trời rất lạnh\" thì dùng 很 + tính từ, KHÔNG thêm 是: 天气很冷 (không nói 天气是冷).",
+        "很 ở đây thường chỉ để nối, nghĩa \"rất\" nhẹ. Muốn nhấn mạnh dùng 太…了, 非常."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "今天",
+              "S"
+            ],
+            [
+              "很",
+              "D"
+            ],
+            [
+              "冷",
+              "C"
+            ]
+          ],
+          "py": "Jīntiān hěn lěng.",
+          "vi": "Hôm nay lạnh."
+        },
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "非常",
+              "D"
+            ],
+            [
+              "忙",
+              "C"
+            ]
+          ],
+          "py": "Wǒ fēicháng máng.",
+          "vi": "Tôi rất bận."
+        },
+        {
+          "chunks": [
+            [
+              "这个菜",
+              "S"
+            ],
+            [
+              "太",
+              "D"
+            ],
+            [
+              "辣了",
+              "C"
+            ]
+          ],
+          "py": "Zhège cài tài là le.",
+          "vi": "Món này cay quá."
+        },
+        {
+          "chunks": [
+            [
+              "她的汉语",
+              "S"
+            ],
+            [
+              "很",
+              "D"
+            ],
+            [
+              "好",
+              "C"
+            ]
+          ],
+          "py": "Tā de Hànyǔ hěn hǎo.",
+          "vi": "Tiếng Trung của cô ấy rất tốt."
+        }
+      ]
+    },
+    {
+      "id": "qword-in-place",
+      "emoji": "❓",
+      "title": [
+        "Từ để hỏi đứng đúng chỗ câu trả lời",
+        "Question words stay in place"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "Q"
+      ],
+      "explain": [
+        "Khác tiếng Anh, từ để hỏi (什么, 哪儿, 谁, 几) không chuyển lên đầu câu: nó đứng đúng chỗ của câu trả lời.",
+        "你去哪儿？→ 我去学校。Thay 哪儿 bằng 学校 là có câu trả lời. Câu có từ để hỏi thì không thêm 吗."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "你",
+              "S"
+            ],
+            [
+              "去",
+              "V"
+            ],
+            [
+              "哪儿",
+              "Q"
+            ]
+          ],
+          "py": "Nǐ qù nǎr?",
+          "vi": "Bạn đi đâu?"
+        },
+        {
+          "chunks": [
+            [
+              "你",
+              "S"
+            ],
+            [
+              "喜欢",
+              "V"
+            ],
+            [
+              "什么",
+              "Q"
+            ]
+          ],
+          "py": "Nǐ xǐhuan shénme?",
+          "vi": "Bạn thích gì?"
+        },
+        {
+          "chunks": [
+            [
+              "他",
+              "S"
+            ],
+            [
+              "是",
+              "V"
+            ],
+            [
+              "谁",
+              "Q"
+            ]
+          ],
+          "py": "Tā shì shéi?",
+          "vi": "Anh ấy là ai?"
+        },
+        {
+          "chunks": [
+            [
+              "这",
+              "S"
+            ],
+            [
+              "是",
+              "V"
+            ],
+            [
+              "什么",
+              "Q"
+            ]
+          ],
+          "py": "Zhè shì shénme?",
+          "vi": "Đây là cái gì?"
+        }
+      ]
+    },
+    {
+      "id": "modal",
+      "emoji": "💭",
+      "title": [
+        "想 / 会 / 能 + động từ",
+        "想 / 会 / 能 + verb"
+      ],
+      "formula": [
+        "S",
+        "A",
+        "V",
+        "O"
+      ],
+      "explain": [
+        "Động từ năng nguyện đứng ngay trước động từ chính: 想 (muốn), 会 (biết, sẽ), 能 (có thể), 要 (cần, sắp).",
+        "Phủ định thêm 不 trước động từ năng nguyện: 我不会说日语."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "想",
+              "A"
+            ],
+            [
+              "喝",
+              "V"
+            ],
+            [
+              "茶",
+              "O"
+            ]
+          ],
+          "py": "Wǒ xiǎng hē chá.",
+          "vi": "Tôi muốn uống trà."
+        },
+        {
+          "chunks": [
+            [
+              "她",
+              "S"
+            ],
+            [
+              "会",
+              "A"
+            ],
+            [
+              "说",
+              "V"
+            ],
+            [
+              "汉语",
+              "O"
+            ]
+          ],
+          "py": "Tā huì shuō Hànyǔ.",
+          "vi": "Cô ấy biết nói tiếng Trung."
+        },
+        {
+          "chunks": [
+            [
+              "你",
+              "S"
+            ],
+            [
+              "能",
+              "A"
+            ],
+            [
+              "帮",
+              "V"
+            ],
+            [
+              "我",
+              "O"
+            ],
+            [
+              "吗",
+              "Q"
+            ]
+          ],
+          "py": "Nǐ néng bāng wǒ ma?",
+          "vi": "Bạn có thể giúp tôi không?"
+        },
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "不会",
+              "A"
+            ],
+            [
+              "开",
+              "V"
+            ],
+            [
+              "车",
+              "O"
+            ]
+          ],
+          "py": "Wǒ bú huì kāi chē.",
+          "vi": "Tôi không biết lái xe."
+        }
+      ]
+    },
+    {
+      "id": "bi-compare",
+      "emoji": "⚖️",
+      "title": [
+        "So sánh với 比",
+        "Comparing with 比"
+      ],
+      "formula": [
+        "S",
+        "K",
+        "C"
+      ],
+      "explain": [
+        "A 比 B + tính từ: A hơn B. Không thêm 很 hay 非常 trước tính từ: 他比我高 (không nói 他比我很高).",
+        "Muốn nói hơn bao nhiêu thì thêm sau tính từ: 他比我高一点儿, 哥哥比我大三岁."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "他",
+              "S"
+            ],
+            [
+              "比我",
+              "K"
+            ],
+            [
+              "高",
+              "C"
+            ]
+          ],
+          "py": "Tā bǐ wǒ gāo.",
+          "vi": "Anh ấy cao hơn tôi."
+        },
+        {
+          "chunks": [
+            [
+              "今天",
+              "S"
+            ],
+            [
+              "比昨天",
+              "K"
+            ],
+            [
+              "冷",
+              "C"
+            ]
+          ],
+          "py": "Jīntiān bǐ zuótiān lěng.",
+          "vi": "Hôm nay lạnh hơn hôm qua."
+        },
+        {
+          "chunks": [
+            [
+              "哥哥",
+              "S"
+            ],
+            [
+              "比我",
+              "K"
+            ],
+            [
+              "大三岁",
+              "C"
+            ]
+          ],
+          "py": "Gēge bǐ wǒ dà sān suì.",
+          "vi": "Anh trai lớn hơn tôi ba tuổi."
+        },
+        {
+          "chunks": [
+            [
+              "坐飞机",
+              "S"
+            ],
+            [
+              "比坐火车",
+              "K"
+            ],
+            [
+              "快多了",
+              "C"
+            ]
+          ],
+          "py": "Zuò fēijī bǐ zuò huǒchē kuài duō le.",
+          "vi": "Đi máy bay nhanh hơn đi tàu nhiều."
+        }
+      ]
+    },
+    {
+      "id": "ba",
+      "emoji": "🫳",
+      "title": [
+        "Câu chữ 把",
+        "The 把 sentence"
+      ],
+      "formula": [
+        "S",
+        "K",
+        "V",
+        "C"
+      ],
+      "explain": [
+        "把 đưa tân ngữ lên trước động từ để nói đã làm gì VỚI nó và kết quả ra sao: 我把作业做完了 (Tôi làm xong bài tập rồi).",
+        "Sau động từ phải có thêm phần kết quả, nơi chốn (完, 好, 在桌子上…). Không nói trống 我把作业做."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "我",
+              "S"
+            ],
+            [
+              "把作业",
+              "K"
+            ],
+            [
+              "做",
+              "V"
+            ],
+            [
+              "完了",
+              "C"
+            ]
+          ],
+          "py": "Wǒ bǎ zuòyè zuò wán le.",
+          "vi": "Tôi làm xong bài tập rồi."
+        },
+        {
+          "chunks": [
+            [
+              "你",
+              "S"
+            ],
+            [
+              "把门",
+              "K"
+            ],
+            [
+              "关",
+              "V"
+            ],
+            [
+              "上",
+              "C"
+            ]
+          ],
+          "py": "Nǐ bǎ mén guān shang.",
+          "vi": "Bạn đóng cửa lại."
+        },
+        {
+          "chunks": [
+            [
+              "他",
+              "S"
+            ],
+            [
+              "把书",
+              "K"
+            ],
+            [
+              "放",
+              "V"
+            ],
+            [
+              "在桌子上",
+              "C"
+            ]
+          ],
+          "py": "Tā bǎ shū fàng zài zhuōzi shang.",
+          "vi": "Anh ấy đặt sách lên bàn."
+        },
+        {
+          "chunks": [
+            [
+              "妹妹",
+              "S"
+            ],
+            [
+              "把蛋糕",
+              "K"
+            ],
+            [
+              "吃",
+              "V"
+            ],
+            [
+              "完了",
+              "C"
+            ]
+          ],
+          "py": "Mèimei bǎ dàngāo chī wán le.",
+          "vi": "Em gái ăn hết bánh rồi."
+        }
+      ]
+    }
+  ]
+}

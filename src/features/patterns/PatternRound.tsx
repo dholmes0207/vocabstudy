@@ -5,7 +5,13 @@ import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
 import { placeToken, shuffledOrder, startOrder, type OrderState } from '@/lib/games'
-import { ROLES, sentenceText, type PatternItem } from '@/lib/patterns'
+import {
+  PATTERN_PACKS,
+  ROLES,
+  sentenceText,
+  type PatternItem,
+  type PatternPack,
+} from '@/lib/patterns'
 import { pronounce, textAudio } from '@/lib/audio'
 import { buzz } from '@/lib/sound'
 import { celebrate } from '@/lib/confetti'
@@ -25,10 +31,12 @@ function fresh(item: PatternItem): OrderState {
 
 export default function PatternRound({
   items,
+  pack,
   onAgain,
   onExit,
 }: {
   items: PatternItem[]
+  pack: PatternPack
   onAgain: () => void
   onExit: () => void
 }) {
@@ -44,6 +52,9 @@ export default function PatternRound({
   const [clean, setClean] = useState(0)
   const [done, setDone] = useState(false)
   const item = items[idx]
+  const { speech, joiner } = PATTERN_PACKS[pack]
+  const lang = pack
+  const said = sentenceText(item.sentence, joiner)
   const roles = item.sentence.chunks.map(([, r]) => r)
 
   const tap = (pos: number) => {
@@ -58,8 +69,7 @@ export default function PatternRound({
     if (state.done) {
       if (state.mistakes === 0) setClean((c) => c + 1)
       if (soundOn) buzz(true)
-      const sentence = sentenceText(item.sentence)
-      pronounce({ text: sentence, audioSrc: textAudio(sentence), lang: 'en-US' })
+      pronounce({ text: said, audioSrc: textAudio(said), lang: speech })
     }
   }
   const next = () => {
@@ -88,8 +98,8 @@ export default function PatternRound({
         </h1>
         <p className="text-slate-600 dark:text-slate-300">
           {t(
-            `+${clean * XP_PER_CLEAN} XP. Nhìn màu là thấy khung câu: chủ ngữ, động từ, rồi tới các phần khác.`,
-            `+${clean * XP_PER_CLEAN} XP. The colours show the frame: subject, verb, then the rest.`
+            `+${clean * XP_PER_CLEAN} XP. Nhìn màu là thấy khung câu: mỗi phần một chỗ, một màu.`,
+            `+${clean * XP_PER_CLEAN} XP. The colours show the frame: each part has its place and its colour.`
           )}
         </p>
         <div className="flex gap-3">
@@ -143,7 +153,7 @@ export default function PatternRound({
                       ? `${ROLES[role].tone} text-white animate-pop`
                       : 'border-2 border-dashed border-slate-300 text-transparent dark:border-slate-600'
                   }`}
-                  lang="en"
+                  lang={lang}
                 >
                   {filled ? order.tokens[i] : '·'}
                 </span>
@@ -165,7 +175,7 @@ export default function PatternRound({
                   type="button"
                   disabled={used}
                   onClick={() => tap(pos)}
-                  lang="en"
+                  lang={lang}
                   className={`min-h-[2.75rem] rounded-xl border-2 px-3 py-2 font-semibold transition active:scale-95 ${
                     used
                       ? 'border-transparent bg-slate-100 text-transparent dark:bg-slate-800'
@@ -187,7 +197,12 @@ export default function PatternRound({
                 ? t('Chuẩn ngay lần đầu! ⭐', 'Right first time! ⭐')
                 : t('Xong!', 'Done!')}
             </b>{' '}
-            <span lang="en">{sentenceText(item.sentence)}</span>
+            <span lang={lang}>{said}</span>
+            {item.sentence.py && (
+              <span className="mt-1 block text-emerald-800 dark:text-emerald-200">
+                {item.sentence.py}
+              </span>
+            )}
           </p>
         )}
       </section>

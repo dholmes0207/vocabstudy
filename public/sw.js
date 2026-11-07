@@ -31,6 +31,7 @@ const EXTRA_DATA = [
   'data/hsk/zh.json',
   'data/ielts/en.json',
   'data/patterns/en.json',
+  'data/patterns/zh.json',
 ]
 
 // Bump to invalidate every cache at once (e.g. after regenerating audio).
