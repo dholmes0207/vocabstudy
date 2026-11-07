@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-08',
+    title: ['Ngữ pháp tiếng Anh lên B1', 'English grammar up to B1'],
+    items: [
+      [
+        'Thêm 6 bài: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
+        'Six new units: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-06',
     title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
     items: [
