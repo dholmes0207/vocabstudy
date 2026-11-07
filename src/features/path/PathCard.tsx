@@ -1,17 +1,8 @@
-import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
-import { usePlacement } from '@/store/placementStore'
-import { usePathContext } from '@/hooks/usePathContext'
-import {
-  currentLevel,
-  levelForPlacement,
-  nextStep,
-  pathFor,
-  pathState,
-  type PathLevel,
-} from '@/lib/learningPath'
+import { usePathStates } from '@/hooks/usePathContext'
+import { currentLevel, nextStep, pathFor, type PathLevel } from '@/lib/learningPath'
 import { useT } from '@/lib/i18n'
 
 /** The home screen's way into the level path: where you are and what comes next. */
@@ -23,12 +14,7 @@ export default function PathCard() {
 
 function Card({ code, levels }: { code: string; levels: PathLevel[] }) {
   const t = useT()
-  const ctx = usePathContext(code)
-  const placedAt = usePlacement((s) => s.results[code]?.start ?? 0)
-  const current = useMemo(
-    () => currentLevel(pathState(levels, ctx, levelForPlacement(levels, placedAt))),
-    [levels, ctx, placedAt]
-  )
+  const current = currentLevel(usePathStates(code, levels))
   if (!current) return null
   const step = nextStep(current)
   const pct = Math.round(current.ratio * 100)

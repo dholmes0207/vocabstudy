@@ -32,7 +32,20 @@ dẫn khi học, phong cách tránh nhàm chán."
   pháo giấy, dòng "Lên cấp!" và +30 XP (mỗi cấp một lần); thẻ lộ trình ở trang chủ.
 - Ghi chú: "Cấp" ở đây là cấp của lộ trình, khác "Cấp" XP ở đầu trang chủ.
 
-## 3. Dev
+## 3. Thi vượt cấp
+
+- Mỗi cấp đang mở có nút "Thi vượt cấp": 12 câu, 3 tim, sai lần thứ 3 là thua.
+  - Tối đa 5 câu ngữ pháp lấy từ câu chọn của các bài ngữ pháp trong cấp.
+  - Còn lại là câu từ vựng trong khoảng từ của cấp, hỏi xoay vòng 3 kiểu: nghĩa của từ (có nút nghe
+    phát âm), từ của nghĩa, từ điền vào câu. Cấp TOEIC hỏi từ TOEIC.
+- Thắng: mở cấp sau, +20 XP, pháo giấy, huy hiệu 🏆 "Đã vượt" trên cấp đó. Thua: nói đúng mấy câu và
+  gợi ý làm thêm vài bước của cấp. Làm lại bao nhiêu lần cũng được, không mất gì.
+- Vì thế người đã có nền leo được vài cấp trong vài phút, còn người mới vẫn đi từng bước.
+- Dev: `lib/levelTest.ts` (dựng câu hỏi, luật thắng, có test), `features/path/LevelTest.tsx`;
+  `store/pathStore.ts` lưu các cấp đã thắng; `usePathStates` mở cấp theo kết quả xếp lớp hoặc cấp cao
+  nhất đã thắng.
+
+## 4. Dev
 
 - `lib/learningPath.ts` (thuần, có test): `EN_PATH`, `pathState` (tiến độ, mở khoá), `currentLevel`,
   `nextStep`, `levelForPlacement`. Mỗi bước có `measure(ctx)` đọc `PathContext`.
@@ -45,10 +58,8 @@ dẫn khi học, phong cách tránh nhàm chán."
 - Trang `/path` (`features/path/LearningPath.tsx`), thẻ ở trang chủ (`PathCard.tsx`), mục menu
   "Lộ trình theo cấp". Hiện chỉ có cho gói tiếng Anh (`lib/packContent.ts`).
 
-## 4. Tiếp theo
+## 5. Tiếp theo
 
-1. Bài kiểm tra vượt cấp ("trùm cuối") mỗi cấp: trộn từ vựng và ngữ pháp của cấp; đạt thì mở cấp sau,
-   làm được ở cấp chưa mở để nhảy cấp.
-2. Luyện IELTS cho cấp 6: Reading True/False/Not Given, Listening điền thông tin, Speaking Part 1–3 có
+1. Luyện IELTS cho cấp 6: Reading True/False/Not Given, Listening điền thông tin, Speaking Part 1–3 có
    ghi âm, khung bài Writing Task 1/2.
-3. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.
+2. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.

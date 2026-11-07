@@ -7,8 +7,15 @@ import { NO_ACTIVITY, useActivity } from '@/store/activityStore'
 import { useRetry } from '@/store/retryStore'
 import { useExam } from '@/store/examStore'
 import { usePlacement } from '@/store/placementStore'
+import { NO_PASSED, openedByTests, usePath } from '@/store/pathStore'
 import { isPassed } from '@/lib/grammar'
-import type { PathContext } from '@/lib/learningPath'
+import {
+  levelForPlacement,
+  pathState,
+  type LevelState,
+  type PathContext,
+  type PathLevel,
+} from '@/lib/learningPath'
 
 /**
  * What the learning path reads (lib/learningPath.ts), for one pack, from the
@@ -46,4 +53,18 @@ export function usePathContext(code: string): PathContext {
       },
     }
   }, [words, cards, grammar, reading, activity, parts, exams, placedAt])
+}
+
+/**
+ * Every level of a path with its progress, opened as far as the placement
+ * result or a won level test allows (whichever reaches higher).
+ */
+export function usePathStates(code: string, levels: readonly PathLevel[]): LevelState[] {
+  const ctx = usePathContext(code)
+  const placedAt = usePlacement((s) => s.results[code]?.start ?? 0)
+  const passed = usePath((s) => s.passed[code] ?? NO_PASSED)
+  return useMemo(() => {
+    const openTo = Math.max(levelForPlacement(levels, placedAt), openedByTests(passed))
+    return pathState(levels, ctx, openTo)
+  }, [levels, ctx, placedAt, passed])
 }

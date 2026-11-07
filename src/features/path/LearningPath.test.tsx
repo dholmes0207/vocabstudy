@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -15,14 +15,27 @@ import { usePath } from '@/store/pathStore'
 import { usePlacement } from '@/store/placementStore'
 import { newCard } from '@/lib/srs'
 import { LEVEL_XP } from '@/lib/learningPath'
+import { TEST_XP, type LevelQuestion } from '@/lib/levelTest'
 
 const confetti = vi.fn()
 vi.mock('@/lib/confetti', () => ({ celebrate: (p: number) => confetti(p) }))
+
+// The questions of the last level test built, so a test knows the right answers.
+let built: LevelQuestion[] = []
+vi.mock('@/lib/levelTest', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@/lib/levelTest')>()
+  return {
+    ...actual,
+    buildLevelTest: (...args: Parameters<typeof actual.buildLevelTest>) =>
+      (built = actual.buildLevelTest(...args)),
+  }
+})
 
 const { default: LearningPath } = await import('./LearningPath')
 const { default: PathCard } = await import('./PathCard')
 
 const en = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
+const grammarPack = JSON.parse(readFileSync('public/data/grammar/en.json', 'utf8'))
 
 beforeEach(() => {
   confetti.mockClear()
@@ -32,10 +45,33 @@ beforeEach(() => {
   useGrammar.setState({ progress: {} })
   useReading.setState({ progress: {} })
   useActivity.setState({ counts: {} })
-  usePath.setState({ celebrated: {} })
+  usePath.setState({ celebrated: {}, passed: {} })
   usePlacement.setState({ results: {} })
 })
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.unstubAllGlobals()
+})
+
+/** Plays the level challenge on screen, answering wrong `misses` times first. */
+async function playChallenge(misses: number) {
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async () => ({ ok: true, json: async () => grammarPack }))
+  )
+  fireEvent.click(screen.getByRole('button', { name: /Level challenge: 12 questions/ }))
+  fireEvent.click(await screen.findByRole('button', { name: /^Start/ }))
+  for (let i = 0; i < built.length; i++) {
+    const q = built[i]
+    const card = screen.getByText(q.prompt).closest('.card') as HTMLElement
+    const pick = i < misses ? (q.answer + 1) % q.options.length : q.answer
+    fireEvent.click(within(card).getByRole('button', { name: q.options[pick] }))
+    const next = screen.getByRole('button', { name: /^(Next|See the result)/ })
+    const last = /See the result/.test(next.textContent ?? '')
+    fireEvent.click(next)
+    if (last) return
+  }
+}
 
 const renderPage = () =>
   render(
@@ -145,6 +181,26 @@ describe('Level path', () => {
     expect(screen.queryByText('Dictation')).not.toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /Level 2: Basic tenses/ }))
     expect(screen.getByText('Dictation')).toBeInTheDocument()
+  })
+
+  it('opens the next level after a won challenge, with a trophy and its XP', async () => {
+    renderPage()
+    await playChallenge(2)
+    expect(await screen.findByText('You beat level 1!')).toBeInTheDocument()
+    expect(usePath.getState().passed.en).toEqual([1])
+    expect(useStudy.getState().progress.en?.stats.xp).toBe(TEST_XP)
+    fireEvent.click(screen.getByRole('button', { name: 'Back to the path' }))
+    expect(screen.getByText(/Beaten/)).toBeInTheDocument()
+    expect(screen.getAllByText(/^Opens when level/)).toHaveLength(4)
+  })
+
+  it('ends the challenge at the third mistake, opening nothing', async () => {
+    renderPage()
+    await playChallenge(3)
+    expect(await screen.findByText('Out of hearts!')).toBeInTheDocument()
+    expect(usePath.getState().passed.en ?? []).toEqual([])
+    fireEvent.click(screen.getByRole('button', { name: 'Back to the path' }))
+    expect(screen.getAllByText(/^Opens when level/)).toHaveLength(5)
   })
 
   it('has a way in from the home screen, for English only', () => {
