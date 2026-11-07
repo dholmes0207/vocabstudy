@@ -24,6 +24,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/exam': ['en', 'ko', 'zh'],
   // Workplace English for the TOEIC Listening & Reading test (lib/toeic.ts).
   '/toeic': ['en'],
+  // Academic reading and the other IELTS skills (lib/ielts.ts).
+  '/ielts': ['en'],
   // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).
   '/hsk': ['zh'],
 }

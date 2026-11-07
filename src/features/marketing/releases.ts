@@ -33,6 +33,10 @@ export const RELEASES: Release[] = [
         'Level challenges: 12 questions on the level’s words and grammar, 3 hearts. Win to open the next level and earn +20 XP, so learners with a base climb fast without redoing every step.',
       ],
       [
+        'Trang Luyện IELTS: đề gồm những gì, và 6 bài đọc học thuật ngắn dạng True / False / Not Given, giải thích từng câu bằng tiếng Việt.',
+        'IELTS practice: what the test is made of, and six short academic passages for True / False / Not Given, every answer explained in Vietnamese.',
+      ],
+      [
         'Ngữ pháp tiếng Anh thêm 6 bài A2–B1: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
         'Six new English grammar units, A2–B1: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
       ],

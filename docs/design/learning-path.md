@@ -23,7 +23,7 @@ dẫn khi học, phong cách tránh nhàm chán."
   | 3   | Cấu trúc câu    | A2    | Từ 501–1000; đếm được, giới từ, so sánh, can/must; 3 lượt xếp câu; 3 lượt luyện nói     |
   | 4   | Nghe & nói      | A2–B1 | Từ 1001–1600; 5 lượt nghe thụ động; tổng 8 lượt nghe – chép, 8 lượt nói; 4 truyện A2–B1 |
   | 5   | Luyện thi TOEIC | B1    | 200 từ TOEIC; ≥ 10 câu ở mỗi Part; bài thi nhỏ đạt 60%                                  |
-  | 6   | Hướng tới IELTS | B1–B2 | Từ 1601–2500; đọc hết kho truyện (bài luyện IELTS riêng đang viết)                      |
+  | 6   | Hướng tới IELTS | B1–B2 | Từ 1601–2500; 4 lượt đọc IELTS True/False/Not Given; đọc hết kho truyện                 |
 - **Mở cấp**: qua 80% một cấp thì mở cấp sau, để một bước khó không chặn cả lộ trình. Cấp đầu tiên
   chưa xong vẫn là cấp "Làm tiếp".
 - **Không bắt học lại**: kết quả bài xếp lớp (`/placement`) mở sẵn các cấp có phần từ vựng bắt đầu
@@ -60,6 +60,6 @@ dẫn khi học, phong cách tránh nhàm chán."
 
 ## 5. Tiếp theo
 
-1. Luyện IELTS cho cấp 6: Reading True/False/Not Given, Listening điền thông tin, Speaking Part 1–3 có
-   ghi âm, khung bài Writing Task 1/2.
+1. Luyện IELTS tiếp (`docs/design/ielts.md`): Nói Part 1–3 có ghi âm, khung bài Writing Task 1/2, Nghe
+   điền thông tin.
 2. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.
