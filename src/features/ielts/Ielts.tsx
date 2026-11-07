@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight, BookOpenText, Mic, PenLine } from 'lucide-react'
+import { ArrowRight, BookOpenText, Headphones, Mic, PenLine } from 'lucide-react'
 import { useIelts } from '@/store/ieltsStore'
 import { usePracticeBank } from '@/hooks/usePracticeBank'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
@@ -11,6 +11,7 @@ import {
   pickPassage,
   readingRound,
   type EssayPrompt,
+  type ListeningSet,
   type ReadingPassage,
   type WritingDrill,
 } from '@/lib/ielts'
@@ -19,6 +20,7 @@ import TfngRound from './TfngRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
 import EssayPractice from './EssayPractice'
+import ListeningRound from './ListeningRound'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
@@ -36,6 +38,14 @@ export default function Ielts() {
     if (bank) setDrills((r) => ({ n: (r?.n ?? 0) + 1, list: drillRound(bank.writing.drills) }))
   }
   const [essay, setEssay] = useState<EssayPrompt | null>(null)
+  const [listening, setListening] = useState<{ n: number; set: ListeningSet } | null>(null)
+  const listen = () => {
+    if (bank)
+      setListening((r) => ({
+        n: (r?.n ?? 0) + 1,
+        set: pickOther(bank.listening, r?.set.id),
+      }))
+  }
   const speak = (part: 1 | 2) => {
     if (!bank) return
     setSpeaking((r) => {
@@ -58,6 +68,15 @@ export default function Ielts() {
     }))
   }
 
+  if (listening)
+    return (
+      <ListeningRound
+        key={listening.n}
+        set={listening.set}
+        onAgain={listen}
+        onExit={() => setListening(null)}
+      />
+    )
   if (drills)
     return (
       <WritingDrillRound
@@ -331,14 +350,25 @@ export default function Ielts() {
         </div>
       </section>
 
-      <section className="card p-5 text-sm text-slate-600 dark:text-slate-300">
-        <p className="font-bold">{t('Đang viết tiếp', 'Coming next')}</p>
-        <p className="mt-1">
+      <section aria-labelledby="ielts-listening" className="card space-y-4 p-5">
+        <h2 id="ielts-listening" className="flex items-center gap-2 text-lg font-bold">
+          <Headphones className="h-5 w-5 text-sky-600 dark:text-sky-300" aria-hidden="true" />
+          {t('Nghe: điền thông tin vào phiếu', 'Listening: form completion')}
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300">
           {t(
-            'Nghe điền thông tin, thêm dạng đọc nối tiêu đề.',
-            'Listening form completion, and matching headings in reading.'
+            'Như Part 1 của đề: nghe một cuộc gọi đặt phòng, đăng ký, thuê đồ rồi điền tên, số, ngày giờ. Tên riêng được đánh vần, số điện thoại đọc từng số.',
+            'Like Part 1 of the test: a call to book, sign up or hire something, then names, numbers, dates and times. Names are spelled out; phone numbers read digit by digit.'
           )}
         </p>
+        <button
+          type="button"
+          className="btn-primary h-11 w-full sm:w-auto"
+          disabled={!bank}
+          onClick={listen}
+        >
+          {t('Nghe một cuộc gọi', 'Hear a call')} <ArrowRight className="h-4 w-4" />
+        </button>
       </section>
     </div>
   )
