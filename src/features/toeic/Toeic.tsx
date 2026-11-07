@@ -33,6 +33,7 @@ import FormRound from './FormRound'
 import { formRound, type FormQuestion } from '@/lib/wordFormDrill'
 import FamilyRound from './FamilyRound'
 import { familyRound, type WordFamily } from '@/lib/wordFamilies'
+import { useToeicBank } from '@/hooks/useToeicBank'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -58,6 +59,8 @@ export default function Toeic() {
   const weakest = weakestKind(useRetry((s) => s.kinds))
   const parts = useRetry((s) => s.parts)
   const weakestPart = weakestKind(parts)
+  // The practice questions (public/data/toeic/en.json); the themes need only the pack.
+  const { bank, error: bankError, retry: retryBank } = useToeicBank()
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)
@@ -73,25 +76,30 @@ export default function Toeic() {
     | { part: 6 | 7; n: number; set: ReadingSet; questions: ShuffledQuestion[] }
     | null
   >(null)
-  const start = (part: 1 | 2 | 3 | 4 | 5 | 6 | 7) =>
+  const start = (part: 1 | 2 | 3 | 4 | 5 | 6 | 7) => {
+    if (!bank) return
     setRound((r) => {
       const n = (r?.n ?? 0) + 1
-      if (part === 1) return { part, n, questions: part1Round() }
-      if (part === 2) return { part, n, questions: part2Round() }
-      if (part === 5) return { part, n, questions: part5Round(pack.words) }
+      if (part === 1) return { part, n, questions: part1Round(bank.part1) }
+      if (part === 2) return { part, n, questions: part2Round(bank.part2) }
+      if (part === 5) return { part, n, questions: part5Round(bank.part5, pack.words) }
       // Another text than the one just done.
       const last = r && 'set' in r ? r.set.id : undefined
-      if (part === 3 || part === 4) return { part, n, ...shuffleSet(pickTalk(part, last)) }
-      return { part, n, ...shuffleSet(pickSet(part, last)) }
+      if (part === 3 || part === 4)
+        return { part, n, ...shuffleSet(pickTalk(bank.talks, part, last)) }
+      return { part, n, ...shuffleSet(pickSet(bank.reading, part, last)) }
     })
+  }
 
   /** The Part 5 questions missed before, as a round of their own. */
-  const startRetry = () =>
+  const startRetry = () => {
+    if (!bank) return
     setRound((r) => ({
       part: 5,
       n: (r?.n ?? 0) + 1,
-      questions: retryRound(useRetry.getState().part5),
+      questions: retryRound(bank.part5, useRetry.getState().part5),
     }))
+  }
 
   const decks = useMemo<Deck[]>(
     () =>
@@ -116,7 +124,7 @@ export default function Toeic() {
         onExit={() => setRound(null)}
       />
     )
-  if (mini) return <MiniTest words={pack.words} onExit={() => setMini(false)} />
+  if (mini && bank) return <MiniTest bank={bank} words={pack.words} onExit={() => setMini(false)} />
   if (forms)
     return (
       <FormRound
@@ -240,6 +248,7 @@ export default function Toeic() {
             <button
               type="button"
               className="btn-primary h-10 w-full text-sm sm:w-auto"
+              disabled={!bank}
               onClick={() => setMini(true)}
             >
               {t('Làm bài thi nhỏ', 'Take the mini test')}
@@ -249,6 +258,17 @@ export default function Toeic() {
             <h2 id="toeic-parts" className="text-lg font-bold">
               {t('7 Part của đề', 'The seven parts')}
             </h2>
+            {bankError && (
+              <p role="alert" className="card flex flex-wrap items-center gap-3 p-4 text-sm">
+                {t(
+                  'Chưa tải được bài luyện các Part. Kiểm tra mạng rồi thử lại.',
+                  "Couldn't load the practice questions. Check your connection and try again."
+                )}
+                <button type="button" className="btn-secondary h-9 text-sm" onClick={retryBank}>
+                  {t('Thử lại', 'Try again')}
+                </button>
+              </p>
+            )}
             {weakestPart && (
               <p className="text-sm text-amber-700 dark:text-amber-300">
                 {t(
@@ -291,6 +311,7 @@ export default function Toeic() {
                     <button
                       type="button"
                       className="btn-primary h-10 w-full text-sm"
+                      disabled={!bank}
                       onClick={() => start(part.n)}
                     >
                       {t(...PRACTICE_LABEL[part.n]!)}
@@ -308,6 +329,7 @@ export default function Toeic() {
                     <button
                       type="button"
                       className="btn-secondary h-10 w-full text-sm"
+                      disabled={!bank}
                       onClick={startRetry}
                     >
                       {t(

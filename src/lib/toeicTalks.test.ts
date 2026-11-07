@@ -1,5 +1,11 @@
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { TALK_SETS, pickTalk } from './toeicTalks'
+import { pickTalk } from './toeicTalks'
+import { validateToeicBank } from './toeicBank'
+
+const TALK_SETS = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).talks
 
 describe('Part 3 and 4 sets', () => {
   it('pair two speakers in a conversation and one in a talk, with three questions each', () => {
@@ -35,6 +41,7 @@ describe('Part 3 and 4 sets', () => {
   })
 
   it('offers another set than the one just done', () => {
-    for (let i = 0; i < 20; i++) expect(pickTalk(3, 'p3-printer').id).not.toBe('p3-printer')
+    for (let i = 0; i < 20; i++)
+      expect(pickTalk(TALK_SETS, 3, 'p3-printer').id).not.toBe('p3-printer')
   })
 })

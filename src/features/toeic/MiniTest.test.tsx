@@ -9,6 +9,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useExam } from '@/store/examStore'
 import { miniTestPlan, MINI_TEST_ID } from '@/lib/toeicMiniTest'
+import { validateToeicBank } from '@/lib/toeicBank'
 
 vi.mock('@/lib/audio', () => ({
   prefetchAudio: () => {},
@@ -19,6 +20,7 @@ vi.mock('@/lib/audio', () => ({
 
 const { default: MiniTest } = await import('./MiniTest')
 const en = JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack
+const bank = validateToeicBank(JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8')))
 
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
@@ -29,7 +31,7 @@ afterEach(cleanup)
 
 describe('TOEIC mini test', () => {
   it('splits 26 questions 13/13 across the seven parts', () => {
-    const plan = miniTestPlan(en.words)
+    const plan = miniTestPlan(bank, en.words)
     expect(plan.map((s) => s.part)).toEqual([1, 2, 3, 4, 5, 6, 7])
     const count = (parts: number[]) =>
       plan.filter((s) => parts.includes(s.part)).reduce((n, s) => n + s.questions.length, 0)
@@ -40,7 +42,7 @@ describe('TOEIC mini test', () => {
   it('runs every part in turn, then shows a range for each section and records the score', () => {
     render(
       <MemoryRouter>
-        <MiniTest words={en.words} onExit={() => {}} />
+        <MiniTest bank={bank} words={en.words} onExit={() => {}} />
       </MemoryRouter>
     )
     fireEvent.click(screen.getByRole('button', { name: 'Start' }))

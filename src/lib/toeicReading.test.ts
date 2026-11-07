@@ -1,5 +1,11 @@
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { READING_SETS, pickSet, shuffleSet } from './toeicReading'
+import { pickSet, shuffleSet } from './toeicReading'
+import { validateToeicBank } from './toeicBank'
+
+const READING_SETS = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).reading
 
 describe('Part 6 texts', () => {
   const p6 = READING_SETS.filter((s) => s.part === 6)
@@ -44,6 +50,7 @@ describe('every set', () => {
       const { questions } = shuffleSet(s)
       questions.forEach((q, i) => expect(q.options[q.answer]).toBe(s.questions[i].options[0]))
     }
-    for (let i = 0; i < 20; i++) expect(pickSet(6, 'p6-parking').id).not.toBe('p6-parking')
+    for (let i = 0; i < 20; i++)
+      expect(pickSet(READING_SETS, 6, 'p6-parking').id).not.toBe('p6-parking')
   })
 })

@@ -10,7 +10,7 @@ import { readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import type { ContentStats, PackStats } from './src/lib/contentStats'
 import { splitPack } from './src/lib/packDetails'
 
-// public/data/*.json stays pretty-printed in the repo (readable diffs for the
+// public/data/**/*.json stays pretty-printed in the repo (readable diffs for the
 // word scripts); the copy we ship is minified. A third smaller to download and,
 // more importantly on phones, to JSON.parse before the app can start.
 // A language pack (<code>.json) also leaves its card details (collocations,
@@ -27,7 +27,7 @@ function minifyPacks(): Plugin {
     async closeBundle() {
       let files: string[]
       try {
-        files = await readdir(dataDir)
+        files = await readdir(dataDir, { recursive: true })
       } catch {
         return
       }

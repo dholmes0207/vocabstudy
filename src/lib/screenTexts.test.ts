@@ -19,9 +19,7 @@ import { MEASURES, MEASURE_ITEMS, phrase } from './measureWords'
 import { COUNTERS, COUNTER_ITEMS, counterPhrase } from './koCounters'
 import { itemFor as koNumber } from './koNumbers'
 import { itemFor as zhNumber } from './zhNumbers'
-import { PART1_BANK } from './toeicPart1'
-import { PART2_BANK } from './toeicPart2'
-import { TALK_SETS } from './toeicTalks'
+import { validateToeicBank } from './toeicBank'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
 import { HSK_DIALOGUES, PICTURE_DIALOGUES } from './hskDialogues'
 import { HSK1_PAIRS, HSK2_PAIRS, HSK3_PAIRS } from './hskAnswers'
@@ -31,7 +29,8 @@ import { hanVietTable } from './hanVietFamily'
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
 // table, the saying of the day, the day's sticker, the TOEIC listening parts
-// and word families. All of it is written in code, so this test lists it into
+// (public/data/toeic/en.json) and word families. The script that records the
+// clips does not read any of these, so this test lists them into
 // scripts/audio-texts/screens.json, which scripts/generate_text_audio.py
 // records. After changing any of it, rewrite the file with:  WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts
 
@@ -56,10 +55,11 @@ const calendar = () => range(1, 12).flatMap((mo) => range(1, 28).map((d) => [mo,
 
 /** "Luyện thi TOEIC": the listening parts and the word-family forms. */
 function toeic(): string[] {
+  const bank = validateToeicBank(JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8')))
   return [
-    ...PART1_BANK.flatMap((it) => it.statements),
-    ...PART2_BANK.flatMap((it) => [it.prompt, ...it.responses]),
-    ...TALK_SETS.flatMap((set) => set.lines.map((l) => l.text)),
+    ...bank.part1.flatMap((it) => it.statements),
+    ...bank.part2.flatMap((it) => [it.prompt, ...it.responses]),
+    ...bank.talks.flatMap((set) => set.lines.map((l) => l.text)),
     ...WORD_FAMILIES.flatMap((fam) => familySlots(fam).map((s) => s.en)),
   ]
 }

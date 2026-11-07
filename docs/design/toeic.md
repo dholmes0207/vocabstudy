@@ -1002,3 +1002,22 @@ Part 7 bài hai đoạn từ 13 lên 15 (test giữ mức này), tổng 43 bài.
 - Quảng cáo giảm giá đồ nội thất + email bị tính giá thường: mua hai ghế, mỗi ghế chênh $30, hoàn $60 (bẫy $30).
 - Lịch hội thảo buổi chiều + email xin đổi buổi: "the other workshop that takes place in Room A" là Pricing
   Strategies lúc 3:00 (bẫy Writing Better Sales E-mails cũng lúc 1:00).
+
+### Dữ liệu bài luyện chuyển sang JSON (07/11/2026)
+
+Câu hỏi Part 1–7 viết tay không còn nằm trong code mà ở `public/data/toeic/en.json` (khoá `part1`, `part2`,
+`part5`, `reading` cho Part 6–7, `talks` cho Part 3–4). Trước đây chúng nằm trong gói JS của trang và làm gói lớn thêm
+sau mỗi đợt: gói trang TOEIC giảm từ 252 kB (79 kB gzip) xuống 49 kB (14 kB gzip); file dữ liệu 258 kB (76 kB gzip) sau
+khi thu gọn.
+
+- `lib/toeicPart*.ts`, `toeicReading.ts`, `toeicTalks.ts` chỉ còn kiểu dữ liệu và logic tạo lượt; các hàm nhận ngân hàng
+  câu làm tham số (`part1Round(bank.part1)`, `pickSet(bank.reading, 6)`…).
+- `lib/toeicBank.ts` tải file một lần mỗi lần mở app và kiểm tra cấu trúc (đủ 4 phương án, không trùng, có giải thích,
+  đáp án hợp lệ, id không trùng…). File JSON không còn được TypeScript kiểm tra, nên sửa sai sẽ báo lỗi ngay ở test
+  thay vì hiện câu hỏi hỏng.
+- Trang Luyện TOEIC hiện phần từ vựng ngay; nút luyện Part và bài thi nhỏ chờ dữ liệu tải xong, lỗi mạng thì có nút
+  "Thử lại".
+- Service worker tải sẵn file này khi cài, nên bài luyện vẫn dùng được offline ngay từ lần đầu như khi còn nằm trong code.
+- Bản build thu gọn mọi file JSON trong `public/data/`, kể cả thư mục con (trước đây chỉ thu gọn file ở cấp đầu).
+- Thêm bài mới: sửa `public/data/toeic/en.json`; câu Part 1–4 mới cần chạy lại
+  `WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts` để có giọng thu như trước.

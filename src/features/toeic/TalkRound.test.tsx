@@ -1,12 +1,17 @@
 /** @vitest-environment jsdom */
+import { readFileSync } from 'node:fs'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { TALK_SETS } from '@/lib/toeicTalks'
 import { shuffleSet } from '@/lib/toeicReading'
+import { validateToeicBank } from '@/lib/toeicBank'
+
+const TALK_SETS = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).talks
 
 const spoken: { text: string; onEnd?: () => void }[] = []
 vi.mock('@/lib/audio', () => ({

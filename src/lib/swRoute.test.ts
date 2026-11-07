@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 
@@ -12,6 +12,7 @@ const source = readFileSync(fileURLToPath(new URL('../../public/sw.js', import.m
 
 interface SwInternals {
   VERSION: string
+  EXTRA_DATA: string[]
   CACHES: string[]
   strategyFor: (url: string, method: string, origin: string) => string
   assetUrlsFrom: (html: string, baseUrl: string, origin: string) => string[]
@@ -267,6 +268,18 @@ describe('service worker — which language packs to warm', () => {
   it('never pulls audio into the install step', () => {
     const manifest = { languages: [{ code: 'en' }] }
     expect(sw.packUrlsFrom(manifest, BASE).some((u) => u.includes('/audio/'))).toBe(false)
+  })
+})
+
+// Practice kept out of the code (the TOEIC questions) is warmed with the packs,
+// so it still works offline right after install, as it did inside a chunk.
+describe('service worker — practice data warmed at install', () => {
+  it('lists only files that ship, under data/, never audio', () => {
+    expect(sw.EXTRA_DATA).toContain('data/toeic/en.json')
+    for (const path of sw.EXTRA_DATA) {
+      expect(path).toMatch(/^data\/[^/].*\.json$/)
+      expect(existsSync(`public/${path}`), path).toBe(true)
+    }
   })
 })
 
