@@ -22,6 +22,12 @@ bắt được lỗi chỉ hiện ra khi các phần ghép với nhau trên trì
    (đủ 20 câu) tới dòng điểm ước lượng.
 3. Đã vào app một lần thì ngắt mạng vẫn luyện được Part 7 TOEIC.
 
+`e2e/learning-path.spec.ts`, lộ trình theo cấp:
+
+1. Người mới vào lộ trình từ thẻ ở trang chủ, thấy cấp 1 với nút "Làm tiếp" mở bài từ đầu tiên, 5 cấp còn
+   khoá; chơi thử thách cấp 1 tới màn kết quả rồi quay về lộ trình.
+2. Gói tiếng Trung có lộ trình riêng, bắt đầu bằng Pinyin & thanh điệu, tới cấp HSK 3.
+
 Hai test bài thi nhỏ không kiểm tra đáp án (test đơn vị đã làm), chỉ kiểm tra mọi phần ghép lại chạy
 được trên trình duyệt thật và đủ số câu.
 
