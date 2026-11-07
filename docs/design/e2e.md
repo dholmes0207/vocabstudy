@@ -15,6 +15,16 @@ bắt được lỗi chỉ hiện ra khi các phần ghép với nhau trên trì
 2. Đã vào app một lần thì ngắt mạng vẫn mở được trang chủ và bắt đầu bài học.
 3. Chuyển sang tiếng Hàn thì có trang Bảng chữ Hangul.
 
+`e2e/exam-practice.spec.ts`, phần luyện thi:
+
+1. Bài thi nhỏ TOEIC chạy hết 7 Part (đủ 26 câu) tới trang kết quả có khoảng điểm Nghe và Đọc.
+2. Mở trang Luyện thi HSK khi đang học tiếng Anh, bấm "Switch to Chinese", làm bài thi nhỏ HSK 1
+   (đủ 20 câu) tới dòng điểm ước lượng.
+3. Đã vào app một lần thì ngắt mạng vẫn luyện được Part 7 TOEIC.
+
+Hai test bài thi nhỏ không kiểm tra đáp án (test đơn vị đã làm), chỉ kiểm tra mọi phần ghép lại chạy
+được trên trình duyệt thật và đủ số câu.
+
 Test tự đọc đáp án từ `/data/en.json` mà app tải, nên không phụ thuộc vào từ cụ thể nào. Đồng hồ
 được tua bằng `context.clock` của Playwright, không phải chờ thật.
 

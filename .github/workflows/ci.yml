@@ -49,9 +49,10 @@ jobs:
   # (e2e/, docs/design/e2e.md): learn, reload, review days later, offline.
   e2e:
     name: E2E (Playwright)
-    # Pinned: Playwright 1.56 cannot install Chromium's system libraries on
-    # newer Ubuntu images. Move together with @playwright/test.
-    runs-on: ubuntu-24.04
+    # `playwright install --with-deps` must know the image's system libraries:
+    # @playwright/test 1.65 covers Ubuntu 24.04 and 26.04. If a new
+    # ubuntu-latest breaks that step, upgrade @playwright/test first.
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v5
