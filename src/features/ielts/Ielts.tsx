@@ -17,6 +17,7 @@ import {
 } from '@/lib/ielts'
 import { useT } from '@/lib/i18n'
 import TfngRound from './TfngRound'
+import HeadingsRound from './HeadingsRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
 import EssayPractice from './EssayPractice'
@@ -24,13 +25,22 @@ import ListeningRound from './ListeningRound'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
-// learners trip on most: True / False / Not Given.
+// learners trip on most: True / False / Not Given, then Matching headings.
 
 export default function Ielts() {
   const t = useT()
   useDocumentTitle(`${t('Luyện IELTS', 'IELTS practice')} · VocaStudy`)
   const { bank, error, retry } = usePracticeBank(loadIeltsBank)
   const done = useIelts((s) => s.reading)
+  const headingsDone = useIelts((s) => s.headings)
+  const [match, setMatch] = useState<{ n: number; passage: ReadingPassage } | null>(null)
+  const startMatch = () => {
+    if (bank)
+      setMatch((r) => ({
+        n: (r?.n ?? 0) + 1,
+        passage: pickPassage(bank.reading, (id) => !!headingsDone[id], r?.passage.id),
+      }))
+  }
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
   const [speaking, setSpeaking] = useState<{ n: number; task: SpeakingTask } | null>(null)
   const [drills, setDrills] = useState<{ n: number; list: WritingDrill[] } | null>(null)
@@ -96,6 +106,15 @@ export default function Ielts() {
         task={speaking.task}
         onAgain={() => speak(speaking.task.part)}
         onExit={() => setSpeaking(null)}
+      />
+    )
+  if (match)
+    return (
+      <HeadingsRound
+        key={match.n}
+        passage={match.passage}
+        onAgain={startMatch}
+        onExit={() => setMatch(null)}
       />
     )
   if (round)
@@ -184,14 +203,24 @@ export default function Ielts() {
           </p>
         ) : (
           <>
-            <button
-              type="button"
-              className="btn-primary h-11 w-full sm:w-auto"
-              disabled={!bank}
-              onClick={() => start()}
-            >
-              {t('Làm một bài đọc', 'Read a passage')} <ArrowRight className="h-4 w-4" />
-            </button>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                className="btn-primary h-11 w-full sm:w-auto"
+                disabled={!bank}
+                onClick={() => start()}
+              >
+                {t('Làm một bài đọc', 'Read a passage')} <ArrowRight className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                className="btn-secondary h-11 w-full sm:w-auto"
+                disabled={!bank}
+                onClick={startMatch}
+              >
+                🧩 {t('Nối tiêu đề (Matching headings)', 'Matching headings')}
+              </button>
+            </div>
             {bank && (
               <ul className="grid gap-2 sm:grid-cols-2">
                 {bank.reading.map((p) => {
@@ -210,6 +239,14 @@ export default function Ielts() {
                         {rec && (
                           <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300">
                             ✓ {rec.best}/{rec.total}
+                          </span>
+                        )}
+                        {headingsDone[p.id] && (
+                          <span
+                            className="text-xs font-bold text-sky-700 dark:text-sky-300"
+                            title={t('Nối tiêu đề', 'Matching headings')}
+                          >
+                            🧩 {headingsDone[p.id].best}/{headingsDone[p.id].total}
                           </span>
                         )}
                       </button>

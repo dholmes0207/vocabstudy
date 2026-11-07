@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -18,7 +18,7 @@ const bank = JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8')) as Ie
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useStudy.setState({ progress: {} })
-  useIelts.setState({ reading: {} })
+  useIelts.setState({ reading: {}, headings: {} })
   useActivity.setState({ counts: {} })
   vi.stubGlobal(
     'fetch',
@@ -65,5 +65,40 @@ describe('IELTS practice', () => {
     expect(useIelts.getState().reading['city-farms']).toEqual({ best: 5, total: 5 })
     expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
     expect(useStudy.getState().progress.en?.stats.xp).toBe(15)
+  })
+
+  it('matches a heading to each paragraph, frees a heading taken twice, and explains', async () => {
+    render(
+      <MemoryRouter>
+        <Ielts />
+      </MemoryRouter>
+    )
+    fireEvent.click(await screen.findByRole('button', { name: /Matching headings/ }))
+    const id = screen.getByText(/Matching headings ·/).textContent!
+    const p = bank.reading.find((r) => id.includes(r.title[1]))!
+    const group = (i: number) =>
+      screen.getByRole('group', { name: `Heading for paragraph ${String.fromCharCode(65 + i)}` })
+    const roman = ['i', 'ii', 'iii', 'iv', 'v']
+    const check = screen.getByRole('button', { name: /Pick a heading for all 3 paragraphs/ })
+    expect(check).toBeDisabled()
+
+    // Paragraph A takes B's heading: B is left empty again.
+    const [a, b, c] = p.headings.answers
+    fireEvent.click(within(group(1)).getByRole('button', { name: roman[b] }))
+    fireEvent.click(within(group(0)).getByRole('button', { name: roman[b] }))
+    expect(within(group(1)).getByRole('button', { name: roman[b] })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    )
+    // Now A right, B and C right too.
+    fireEvent.click(within(group(0)).getByRole('button', { name: roman[a] }))
+    fireEvent.click(within(group(1)).getByRole('button', { name: roman[b] }))
+    fireEvent.click(within(group(2)).getByRole('button', { name: roman[c] }))
+    fireEvent.click(screen.getByRole('button', { name: /^Check/ }))
+    expect(screen.getByRole('status')).toHaveTextContent('3 of 3 right · +9 XP')
+    expect(screen.getByText(p.headings.why[0])).toBeInTheDocument()
+    expect(useIelts.getState().headings[p.id]).toEqual({ best: 3, total: 3 })
+    expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
+    expect(useStudy.getState().progress.en.stats.xp).toBe(9)
   })
 })

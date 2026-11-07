@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['IELTS Reading: nối tiêu đề', 'IELTS Reading: matching headings'],
+    items: [
+      [
+        'Dạng bài nối tiêu đề với đoạn văn: 5 tiêu đề cho 3 đoạn, có tiêu đề bẫy. Kiểm tra xong mỗi đoạn có lý do vì sao tiêu đề đó đúng, kèm mẹo tìm ý chính.',
+        'Match headings to paragraphs: five headings for three paragraphs, traps included. After checking, each paragraph says why its heading fits, with a tip for finding the main idea.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Cấu trúc câu dạng khối màu', 'Sentence patterns as coloured blocks'],
     items: [
       [

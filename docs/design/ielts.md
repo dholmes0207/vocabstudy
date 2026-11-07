@@ -64,16 +64,24 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 5: Đọc, nối tiêu đề (Matching headings).** Dùng lại 6 bài đọc: mỗi bài 5 tiêu đề (i–v) cho 3
+  đoạn (A–C), 2 tiêu đề thừa làm bẫy (lặp một chữ trong đoạn nhưng chỉ nói một chi tiết, hoặc nói điều
+  bài không có). Mỗi đoạn có hàng nút i–v như phiếu trả lời; một tiêu đề chỉ gắn được một đoạn, chọn lại
+  ở đoạn khác thì đoạn cũ được trả về trống. Kiểm tra khi đủ 3 đoạn: viền xanh/đỏ, đáp án và lý do bằng
+  tiếng Việt cho từng đoạn, mẹo đọc câu đầu – câu cuối. +3 XP mỗi đoạn đúng, ghi `ielts-reading` (tính
+  vào bước "Đọc IELTS" của cấp 6), điểm cao nhất riêng (`ieltsStore.headings`, hiện 🧩 trên danh sách bài).
+
 ## 4. Dev
 
 - `public/data/ielts/en.json`, kiểm tra khi tải bằng `validateIeltsBank` (`lib/ielts.ts`, dùng
   `bankLoader` chung với TOEIC, HSK). Service worker tải sẵn file khi cài.
-- `store/ieltsStore.ts` (`vocab.ielts.v1`): điểm cao nhất từng bài. Mỗi lượt xong ghi
+- `store/ieltsStore.ts` (`vocab.ielts.v1`): điểm cao nhất từng bài (True/False/Not Given và nối tiêu
+  đề, `HeadingsRound.tsx`). Mỗi lượt xong ghi
   `ielts-reading` vào `activityStore` cho lộ trình.
 - Trang `/ielts` (`features/ielts/Ielts.tsx`), lượt đọc `TfngRound.tsx`, lượt nói `SpeakingRound.tsx` với
   `AnswerRecorder.tsx` (ghi âm qua `lib/recorder.ts`); mục trong trang Luyện tập.
 
 ## 5. Tiếp theo
 
-1. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.
+1. Thêm dạng đọc: điền vào tóm tắt (summary completion).
 2. Nghe Part 2–4: chọn đáp án, nối thông tin, bài giảng ngắn.

@@ -22,13 +22,28 @@ export interface TfngQuestion {
   why: string
 }
 
+/**
+ * Matching headings: more headings than paragraphs, one right per paragraph,
+ * the rest there to tempt. `answers[i]` is the heading of paragraph i.
+ */
+export interface HeadingsTask {
+  options: string[]
+  answers: number[]
+  /** Why each paragraph gets its heading, in Vietnamese. */
+  why: string[]
+}
+
 export interface ReadingPassage {
   id: string
   emoji: string
   title: Pair
   passage: string[]
   questions: TfngQuestion[]
+  headings: HeadingsTask
 }
+
+/** Headings are listed i, ii, iii… as on the paper. */
+export const ROMAN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii']
 
 /** Speaking Part 1: a familiar topic and the examiner's short questions on it. */
 export interface Part1Topic {
@@ -139,6 +154,27 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       check(q.answer in TFNG_LABEL, `"${r.id}": "${q.statement}" has a bad answer`)
       check(text(q.why), `"${r.id}": "${q.statement}" has no explanation`)
     }
+    const h = r.headings
+    const n = r.passage.length
+    check(
+      !!h &&
+        Array.isArray(h.options) &&
+        h.options.length > n &&
+        h.options.length <= ROMAN.length &&
+        h.options.every(text),
+      `"${r.id}" needs more headings than paragraphs`
+    )
+    check(
+      Array.isArray(h.answers) &&
+        h.answers.length === n &&
+        new Set(h.answers).size === n &&
+        h.answers.every((a) => Number.isInteger(a) && a >= 0 && a < h.options.length),
+      `"${r.id}" needs one different heading per paragraph`
+    )
+    check(
+      Array.isArray(h.why) && h.why.length === n && h.why.every(text),
+      `"${r.id}" needs a reason per heading`
+    )
   }
   const speaking = bank!.speaking
   check(
@@ -229,6 +265,10 @@ export function readingRound(p: ReadingPassage, rand: () => number = Math.random
   }
   return { ...p, questions: qs }
 }
+
+/** How many paragraphs got their right heading. */
+export const headingsRight = (h: HeadingsTask, picks: readonly (number | null)[]): number =>
+  h.answers.filter((a, i) => picks[i] === a).length
 
 /** A passage to read: one not done yet when there is one, else any but the last. */
 export function pickPassage(
