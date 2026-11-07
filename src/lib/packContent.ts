@@ -13,6 +13,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/hangul': ['ko'],
   '/pinyin': ['zh'],
   '/measure-words': ['zh', 'ko'],
+  // Chinese characters that sound or look alike (lib/confusables.ts).
+  '/confusables': ['zh'],
   '/numbers': ['zh', 'ko'],
   // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
   '/han-viet': ['zh', 'ko'],

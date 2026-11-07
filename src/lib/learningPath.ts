@@ -701,6 +701,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh4-confusables',
+        'confusables',
+        3,
+        '🔍',
+        '/confusables',
+        ['Chữ dễ nhầm', 'Look-alike characters'],
+        [
+          'Phân biệt 在/再, 的/得/地, 他/她/它, 做/坐, 买/卖… trong câu.',
+          'Tell 在/再, 的/得/地, 他/她/它, 做/坐, 买/卖… apart in sentences.',
+        ]
+      ),
+      sessions(
         'zh4-hanviet',
         'hanviet',
         2,

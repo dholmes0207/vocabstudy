@@ -25,6 +25,7 @@ import { validateHskBank } from './hskBank'
 import { validateIeltsBank } from './ielts'
 import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
+import { CONFUSABLES, filled } from './confusables'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
@@ -157,6 +158,8 @@ function chinese(): string[] {
     ...[...hsk.pairs.hsk1, ...hsk.pairs.hsk2, ...hsk.pairs.hsk3].flatMap((p) => [p.q, p.a]),
     ...hsk.readings.map((r) => r.text),
     ...patterns('zh'),
+    // "Chữ dễ nhầm": each sentence is read with its gap filled.
+    ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
   ]
 }
 
