@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Languages,
   AudioWaveform,
+  Map as MapIcon,
 } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
@@ -61,6 +62,7 @@ interface NavItem {
 // and the header menu.
 const NAV: NavItem[] = [
   { to: '/home', label: ['Trang chủ', 'Home'], icon: Sparkles, primary: true },
+  { to: '/path', label: ['Lộ trình theo cấp', 'Level path'], icon: MapIcon },
   {
     to: '/learn',
     label: ['Học mới', 'Learn'],

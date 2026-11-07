@@ -14,11 +14,23 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
-    title: ['Ngữ pháp tiếng Anh lên B1', 'English grammar up to B1'],
+    title: ['Lộ trình theo cấp', 'A level path to climb'],
     items: [
       [
-        'Thêm 6 bài: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
-        'Six new units: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
+        'Trang Lộ trình theo cấp: 6 cấp từ những từ đầu tiên, các thì, cấu trúc câu, nghe – nói tới luyện thi TOEIC và hướng tới IELTS, nút "Làm tiếp" luôn chỉ đúng bước kế.',
+        'The Level path: six levels from the first words, tenses, sentence building, listening and speaking up to TOEIC and towards IELTS, with "Continue" always pointing at the next step.',
+      ],
+      [
+        'Mọi bài đã làm ở bất cứ đâu trong app đều được tính; qua 80% một cấp thì mở cấp sau, có pháo giấy và +30 XP.',
+        'Everything you do anywhere in the app counts; reach 80% of a level to open the next, with confetti and +30 XP.',
+      ],
+      [
+        'Đã làm bài xếp lớp thì các cấp tương ứng mở sẵn, không phải học lại từ đầu.',
+        'If you took the placement check, the matching levels are already open, so you don’t start from zero.',
+      ],
+      [
+        'Ngữ pháp tiếng Anh thêm 6 bài A2–B1: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
+        'Six new English grammar units, A2–B1: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
       ],
     ],
   },

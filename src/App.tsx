@@ -39,6 +39,7 @@ const Challenge = lazy(() => import('./features/challenge/Challenge'))
 const Numbers = lazy(() => import('./features/numbers/Numbers'))
 const Placement = lazy(() => import('./features/placement/Placement'))
 const Exam = lazy(() => import('./features/exam/Exam'))
+const LearningPath = lazy(() => import('./features/path/LearningPath'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
@@ -93,6 +94,7 @@ export default function App() {
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route element={<Layout />}>
               <Route path="/home" element={<Dashboard />} />
+              <Route path="/path" element={<LearningPath />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/placement" element={<Placement />} />
               <Route path="/review" element={<Review />} />
