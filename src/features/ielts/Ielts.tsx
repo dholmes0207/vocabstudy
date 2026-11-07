@@ -1,17 +1,19 @@
 import { useState } from 'react'
-import { ArrowRight, BookOpenText } from 'lucide-react'
+import { ArrowRight, BookOpenText, Mic } from 'lucide-react'
 import { useIelts } from '@/store/ieltsStore'
 import { usePracticeBank } from '@/hooks/usePracticeBank'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
   IELTS_FORMAT,
   loadIeltsBank,
+  pickOther,
   pickPassage,
   readingRound,
   type ReadingPassage,
 } from '@/lib/ielts'
 import { useT } from '@/lib/i18n'
 import TfngRound from './TfngRound'
+import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
@@ -23,6 +25,18 @@ export default function Ielts() {
   const { bank, error, retry } = usePracticeBank(loadIeltsBank)
   const done = useIelts((s) => s.reading)
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
+  const [speaking, setSpeaking] = useState<{ n: number; task: SpeakingTask } | null>(null)
+  const speak = (part: 1 | 2) => {
+    if (!bank) return
+    setSpeaking((r) => {
+      const last = r?.task.part === 1 ? r.task.topic.id : r?.task.card.id
+      const task: SpeakingTask =
+        part === 1
+          ? { part, topic: pickOther(bank.speaking.part1, last) }
+          : { part, card: pickOther(bank.speaking.part2, last) }
+      return { n: (r?.n ?? 0) + 1, task }
+    })
+  }
 
   const start = (passage?: ReadingPassage) => {
     if (!bank) return
@@ -34,6 +48,15 @@ export default function Ielts() {
     }))
   }
 
+  if (speaking)
+    return (
+      <SpeakingRound
+        key={speaking.n}
+        task={speaking.task}
+        onAgain={() => speak(speaking.task.part)}
+        onExit={() => setSpeaking(null)}
+      />
+    )
   if (round)
     return (
       <TfngRound
@@ -158,12 +181,65 @@ export default function Ielts() {
         )}
       </section>
 
+      <section aria-labelledby="ielts-speaking" className="card space-y-4 p-5">
+        <h2 id="ielts-speaking" className="flex items-center gap-2 text-lg font-bold">
+          <Mic className="h-5 w-5 text-rose-600 dark:text-rose-300" aria-hidden="true" />
+          {t('Nói: Part 1, 2 và 3', 'Speaking: Parts 1, 2 and 3')}
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300">
+          {t(
+            'Giám khảo đọc câu hỏi, bạn ghi âm câu trả lời rồi nghe lại. Không ai chấm, chỉ có bạn và micro: cứ nói thoải mái.',
+            'The examiner reads each question; you record your answer and listen back. Nobody grades it, just you and the mic: speak freely.'
+          )}
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <button
+            type="button"
+            disabled={!bank}
+            onClick={() => speak(1)}
+            className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-rose-400 disabled:opacity-60 dark:border-slate-700"
+          >
+            <span className="block text-2xl" aria-hidden="true">
+              💬
+            </span>
+            <span className="mt-1 block font-bold">
+              {t('Part 1: hỏi nhanh', 'Part 1: quick questions')}
+            </span>
+            <span className="block text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                '4 câu về một chủ đề quen thuộc: quê hương, sở thích, công nghệ…',
+                '4 questions on a familiar topic: hometown, hobbies, technology…'
+              )}
+            </span>
+          </button>
+          <button
+            type="button"
+            disabled={!bank}
+            onClick={() => speak(2)}
+            className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-fuchsia-400 disabled:opacity-60 dark:border-slate-700"
+          >
+            <span className="block text-2xl" aria-hidden="true">
+              🎯
+            </span>
+            <span className="mt-1 block font-bold">
+              {t('Part 2 & 3: nói 2 phút', 'Parts 2 & 3: the long turn')}
+            </span>
+            <span className="block text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                'Thẻ chủ đề, 1 phút chuẩn bị có gợi ý bố cục, 2 phút nói, rồi 3 câu thảo luận.',
+                'A task card, a minute to prepare with a plan, two minutes to talk, then three discussion questions.'
+              )}
+            </span>
+          </button>
+        </div>
+      </section>
+
       <section className="card p-5 text-sm text-slate-600 dark:text-slate-300">
         <p className="font-bold">{t('Đang viết tiếp', 'Coming next')}</p>
         <p className="mt-1">
           {t(
-            'Nói Part 1–3 có ghi âm và đồng hồ chuẩn bị, khung bài Writing Task 1 và Task 2, nghe điền thông tin.',
-            'Speaking Parts 1–3 with recording and a prep timer, Writing Task 1 and Task 2 frames, and listening form completion.'
+            'Khung bài Writing Task 1 và Task 2, nghe điền thông tin.',
+            'Writing Task 1 and Task 2 frames, and listening form completion.'
           )}
         </p>
       </section>

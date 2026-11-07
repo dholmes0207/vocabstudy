@@ -36,18 +36,29 @@ hoặc trong vòng 7 ngày.
   chưa đọc; đúng hết thì pháo giấy; mỗi câu đúng +3 XP.
 - Lộ trình: cấp 6 thêm bước "Đọc IELTS" (4 lượt).
 
+- **Bước 2: Nói.**
+  - Part 1: 6 chủ đề quen thuộc, mỗi chủ đề 4 câu hỏi. Giám khảo đọc từng câu (giọng thu sẵn khi đã có,
+    không thì giọng trình duyệt), người học ghi âm rồi nghe lại; nhắc cách trả lời 2–3 câu: trả lời
+    thẳng, lý do, ví dụ.
+  - Part 2 & 3: 6 thẻ "Describe…", mỗi thẻ 4 ý "You should say". 1 phút chuẩn bị đếm ngược, có ô ghi
+    chú và gợi ý bố cục, cụm từ mở – nối – kết; hết giờ tự sang 2 phút nói, tự ghi âm và tự dừng ở 2
+    phút. Sau đó 3 câu Part 3 hỏi ý kiến chung.
+  - Không chấm điểm: mục tiêu là nói thành tiếng và tự nghe lại. Xong một phần được +10 XP, ghi
+    `ielts-speaking` cho lộ trình (cấp 6 thêm bước "Nói IELTS", 4 lượt).
+  - Câu hỏi Part 1 và Part 3 được đưa vào `scripts/audio-texts/screens.json` để workflow thu giọng.
+
 ## 4. Dev
 
 - `public/data/ielts/en.json`, kiểm tra khi tải bằng `validateIeltsBank` (`lib/ielts.ts`, dùng
   `bankLoader` chung với TOEIC, HSK). Service worker tải sẵn file khi cài.
 - `store/ieltsStore.ts` (`vocab.ielts.v1`): điểm cao nhất từng bài. Mỗi lượt xong ghi
   `ielts-reading` vào `activityStore` cho lộ trình.
-- Trang `/ielts` (`features/ielts/Ielts.tsx`), lượt đọc `TfngRound.tsx`; mục trong trang Luyện tập.
+- Trang `/ielts` (`features/ielts/Ielts.tsx`), lượt đọc `TfngRound.tsx`, lượt nói `SpeakingRound.tsx` với
+  `AnswerRecorder.tsx` (ghi âm qua `lib/recorder.ts`); mục trong trang Luyện tập.
 
 ## 5. Tiếp theo
 
-1. Nói Part 1–3: câu hỏi theo chủ đề, thẻ Part 2 có đồng hồ chuẩn bị, ghi âm và nghe lại, cụm từ hay.
-2. Viết: khung bài Task 2 (đồng ý / phản đối, thảo luận hai phía, vấn đề – giải pháp) và từ tả xu hướng
+1. Viết: khung bài Task 2 (đồng ý / phản đối, thảo luận hai phía, vấn đề – giải pháp) và từ tả xu hướng
    cho Task 1, có bài luyện điền từ nối.
-3. Nghe: điền thông tin vào phiếu (form completion) với giọng thu sẵn.
-4. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.
+2. Nghe: điền thông tin vào phiếu (form completion) với giọng thu sẵn.
+3. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.

@@ -30,9 +30,34 @@ export interface ReadingPassage {
   questions: TfngQuestion[]
 }
 
+/** Speaking Part 1: a familiar topic and the examiner's short questions on it. */
+export interface Part1Topic {
+  id: string
+  emoji: string
+  title: Pair
+  questions: string[]
+}
+
+/** Speaking Part 2: a task card for the long turn, and Part 3 questions that follow it. */
+export interface CueCard {
+  id: string
+  emoji: string
+  /** "Describe a…" */
+  cue: string
+  /** "You should say:" — the points on the card. */
+  points: string[]
+  /** A plan for the minute of preparation, in Vietnamese. */
+  plan: string[]
+  /** Phrases to open, link and close the talk. */
+  phrases: string[]
+  /** The discussion that follows (Part 3). */
+  part3: string[]
+}
+
 export interface IeltsBank {
   version: string
   reading: readonly ReadingPassage[]
+  speaking: { part1: readonly Part1Topic[]; part2: readonly CueCard[] }
 }
 
 const check = checker('IELTS bank')
@@ -60,7 +85,27 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       check(text(q.why), `"${r.id}": "${q.statement}" has no explanation`)
     }
   }
-  return { version: bank!.version ?? '0', reading: bank!.reading! }
+  const speaking = bank!.speaking
+  check(
+    !!speaking && Array.isArray(speaking.part1) && Array.isArray(speaking.part2),
+    '"speaking" is missing'
+  )
+  const strings = (v: unknown, min: number) => Array.isArray(v) && v.length >= min && v.every(text)
+  for (const tp of speaking!.part1) {
+    check(text(tp?.id) && text(tp.emoji), 'a Part 1 topic has no id')
+    check(strings(tp.title, 2), `Part 1 "${tp.id}" has no title`)
+    check(strings(tp.questions, 3), `Part 1 "${tp.id}" needs three questions`)
+  }
+  for (const c of speaking!.part2) {
+    check(text(c?.id) && text(c.cue), 'a cue card has no task')
+    check(strings(c.points, 3), `cue card "${c.id}" needs three points`)
+    check(
+      strings(c.plan, 2) && strings(c.phrases, 2),
+      `cue card "${c.id}" needs a plan and phrases`
+    )
+    check(strings(c.part3, 2), `cue card "${c.id}" needs Part 3 questions`)
+  }
+  return { version: bank!.version ?? '0', reading: bank!.reading!, speaking: speaking! }
 }
 
 export const loadIeltsBank = bankLoader('data/ielts/en.json', validateIeltsBank)
@@ -130,3 +175,21 @@ export const IELTS_FORMAT: { icon: string; skill: Pair; time: Pair; what: Pair }
     ],
   },
 ]
+
+/** Seconds to prepare the long turn, and to speak, as on the test card. */
+export const PART2_PREP = 60
+export const PART2_TALK = 120
+
+/** One item of a list, not the one just used when there is another. */
+export function pickOther<T extends { id: string }>(
+  items: readonly T[],
+  lastId?: string,
+  rand: () => number = Math.random
+): T {
+  const pool = items.length > 1 ? items.filter((i) => i.id !== lastId) : items
+  return pool[Math.floor(rand() * pool.length)]
+}
+
+/** "1:05" for 65 seconds. */
+export const clock = (seconds: number): string =>
+  `${Math.floor(seconds / 60)}:${String(Math.max(0, seconds) % 60).padStart(2, '0')}`
