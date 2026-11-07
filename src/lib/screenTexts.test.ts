@@ -21,15 +21,14 @@ import { itemFor as koNumber } from './koNumbers'
 import { itemFor as zhNumber } from './zhNumbers'
 import { validateToeicBank } from './toeicBank'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
-import { HSK_DIALOGUES, PICTURE_DIALOGUES } from './hskDialogues'
-import { HSK1_PAIRS, HSK2_PAIRS, HSK3_PAIRS } from './hskAnswers'
-import { HSK3_READINGS } from './hskReadings'
+import { validateHskBank } from './hskBank'
 import { hanVietTable } from './hanVietFamily'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
 // table, the saying of the day, the day's sticker, the TOEIC listening parts
-// (public/data/toeic/en.json) and word families. The script that records the
+// (public/data/toeic/en.json), the HSK dialogues, pairs and passages
+// (public/data/hsk/zh.json) and word families. The script that records the
 // clips does not read any of these, so this test lists them into
 // scripts/audio-texts/screens.json, which scripts/generate_text_audio.py
 // records. After changing any of it, rewrite the file with:  WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts
@@ -101,6 +100,7 @@ function korean(): string[] {
 }
 
 function chinese(): string[] {
+  const hsk = validateHskBank(JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8')))
   const sounds = [...PINYIN_INITIALS, ...TRICKY_FINALS].flatMap((s) =>
     s.word ? [s.char, s.word] : [s.char]
   )
@@ -121,10 +121,10 @@ function chinese(): string[] {
     ...MEASURE_ITEMS.map((item) => phrase(item, '').zh),
     ...numbers,
     ...hanVietTable(words('zh')).map((e) => e.char),
-    ...HSK_DIALOGUES.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
-    ...PICTURE_DIALOGUES.flatMap((d) => d.lines.map((l) => l.zh)),
-    ...[...HSK1_PAIRS, ...HSK2_PAIRS, ...HSK3_PAIRS].flatMap((p) => [p.q, p.a]),
-    ...HSK3_READINGS.map((r) => r.text),
+    ...hsk.dialogues.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
+    ...hsk.pictureDialogues.flatMap((d) => d.lines.map((l) => l.zh)),
+    ...[...hsk.pairs.hsk1, ...hsk.pairs.hsk2, ...hsk.pairs.hsk3].flatMap((p) => [p.q, p.a]),
+    ...hsk.readings.map((r) => r.text),
   ]
 }
 

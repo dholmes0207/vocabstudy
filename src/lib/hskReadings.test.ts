@@ -2,10 +2,14 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import { HSK_LEVELS, levelWords } from './hskPractice'
-import { HSK3_READINGS, readingRound } from './hskReadings'
+import { readingRound } from './hskReadings'
+import { validateHskBank } from './hskBank'
 import { mulberry32 } from './sky'
 
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
+const HSK3_READINGS = validateHskBank(
+  JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8'))
+).readings
 const known = new Set(
   HSK_LEVELS.flatMap((l) => levelWords(l, zh.words)).flatMap((w) => [...w.word, ...w.exampleEn])
 )
@@ -26,7 +30,7 @@ describe('HSK 3 reading passages', () => {
   })
 
   it('keeps the right option after shuffling', () => {
-    const round = readingRound(5, mulberry32(9))
+    const round = readingRound(HSK3_READINGS, 5, mulberry32(9))
     expect(round).toHaveLength(5)
     for (const r of round) {
       const original = HSK3_READINGS.find((x) => x.id === r.id)!

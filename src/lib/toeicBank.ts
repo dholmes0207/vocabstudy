@@ -3,14 +3,15 @@ import type { Part2Item } from './toeicPart2'
 import { PART5_KINDS, type Part5Question } from './toeicPart5'
 import type { ReadingQuestion, ReadingSet } from './toeicReading'
 import type { TalkSet } from './toeicTalks'
+import { bankLoader, checker, text, texts } from './practiceBank'
 
 // The hand-written TOEIC practice (docs/design/toeic.md) lives in
 // public/data/toeic/en.json, fetched when the TOEIC page opens, not in the code:
 // it grows every week and has no business in the JavaScript every learner
 // downloads. The lib/toeic*.ts files keep the types and the logic of a round.
-// The file is not type-checked any more, so it is checked here when it loads
-// (and by the tests against the real file): a broken edit fails loudly instead
-// of showing a question with three options or no answer.
+// The file is checked here when it loads (and by the tests against the real
+// file): a broken edit fails loudly instead of showing a question with three
+// options or no answer.
 
 export interface ToeicBank {
   version: string
@@ -24,13 +25,7 @@ export interface ToeicBank {
   talks: readonly TalkSet[]
 }
 
-const text = (v: unknown): v is string => typeof v === 'string' && v.trim() !== ''
-const texts = (v: unknown, n: number): boolean =>
-  Array.isArray(v) && v.length === n && v.every(text)
-
-function check(ok: boolean, what: string): void {
-  if (!ok) throw new Error(`TOEIC bank: ${what}`)
-}
+const check = checker('TOEIC bank')
 
 function checkQuestions(questions: readonly ReadingQuestion[] | undefined, id: string): void {
   check(Array.isArray(questions) && questions.length > 0, `"${id}" has no questions`)
@@ -105,20 +100,5 @@ export function validateToeicBank(raw: unknown): ToeicBank {
   return { ...b, version: typeof b.version === 'string' ? b.version : '0' }
 }
 
-let cached: Promise<ToeicBank> | null = null
-
 /** The bank, fetched once per page load; a failed fetch is tried again on the next call. */
-export function loadToeicBank(): Promise<ToeicBank> {
-  if (!cached) {
-    cached = fetch(`${import.meta.env.BASE_URL}data/toeic/en.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error(`TOEIC bank (${res.status})`)
-        return res.json()
-      })
-      .then(validateToeicBank)
-    cached.catch(() => {
-      cached = null
-    })
-  }
-  return cached
-}
+export const loadToeicBank = bankLoader('data/toeic/en.json', validateToeicBank)

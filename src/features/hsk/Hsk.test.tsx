@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -23,6 +23,7 @@ vi.mock('@/lib/audio', () => ({
 
 const { default: Hsk } = await import('./Hsk')
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
+const hsk = JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8'))
 
 beforeEach(() => {
   vi.useFakeTimers({ shouldAdvanceTime: true })
@@ -32,18 +33,28 @@ beforeEach(() => {
   useStudy.setState({ progress: {} })
   useExam.setState({ records: {} })
   useRetry.setState({ hsk: {} })
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async () => ({ ok: true, json: async () => hsk }))
+  )
 })
 afterEach(() => {
   cleanup()
   vi.useRealTimers()
+  vi.unstubAllGlobals()
 })
 
-const renderPage = () =>
+/** Renders the page, then waits for the dialogues and passages so every drill works. */
+async function renderPage() {
   render(
     <MemoryRouter>
       <Hsk />
     </MemoryRouter>
   )
+  await waitFor(() =>
+    expect(screen.getByRole('button', { name: 'Take the mini test' })).toBeEnabled()
+  )
+}
 
 /** Answer whatever is on screen: an option, or the first tile that fits, then go on. */
 function answerAll(until: () => boolean) {
@@ -63,8 +74,8 @@ function answerAll(until: () => boolean) {
 }
 
 describe('HSK practice page', () => {
-  it('switches level and offers every question type', () => {
-    renderPage()
+  it('switches level and offers every question type', async () => {
+    await renderPage()
     expect(screen.getByRole('tab', { name: 'HSK 1', selected: true })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     expect(screen.getByText(/HSK 3 words mastered/)).toBeInTheDocument()
@@ -82,16 +93,16 @@ describe('HSK practice page', () => {
     expect(screen.getByText(/Question and answer/)).toBeInTheDocument()
   })
 
-  it('plays the recorded example of a listening question as it appears', () => {
-    renderPage()
+  it('plays the recorded example of a listening question as it appears', async () => {
+    await renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[2])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(1)
     expect(zh.words.some((w) => w.exampleEn === spoken[0])).toBe(true)
   })
 
-  it('says a word for right-or-wrong, shows a picture, then what the picture was', () => {
-    renderPage()
+  it('says a word for right-or-wrong, shows a picture, then what the picture was', async () => {
+    await renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[0])
     vi.advanceTimersByTime(300)
     const word = zh.words.find((w) => w.word === spoken[0])!
@@ -103,8 +114,8 @@ describe('HSK practice page', () => {
     if (picture !== word.emoji) expect(screen.getByText(/^The picture is/)).toBeInTheDocument()
   })
 
-  it('shows a word with its pinyin and a picture to read, and says the word once answered', () => {
-    renderPage()
+  it('shows a word with its pinyin and a picture to read, and says the word once answered', async () => {
+    await renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[3])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(0)
@@ -114,8 +125,8 @@ describe('HSK practice page', () => {
     expect(screen.getByText(/^The word/)).toHaveTextContent(word.meaning)
   })
 
-  it('plays a sentence and offers three pictures, one of the word it is about', () => {
-    renderPage()
+  it('plays a sentence and offers three pictures, one of the word it is about', async () => {
+    await renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[1])
     vi.advanceTimersByTime(300)
     const word = zh.words.find((w) => w.exampleEn === spoken[0])!
@@ -126,8 +137,8 @@ describe('HSK practice page', () => {
     expect(screen.getByText('Right!')).toBeInTheDocument()
   })
 
-  it('shows a sentence with its pinyin to read, three pictures, and says it once answered', () => {
-    renderPage()
+  it('shows a sentence with its pinyin to read, three pictures, and says it once answered', async () => {
+    await renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 10 questions' })[5])
     vi.advanceTimersByTime(300)
     expect(spoken).toHaveLength(0)
@@ -139,8 +150,8 @@ describe('HSK practice page', () => {
     expect(word.emoji).toBeTruthy()
   })
 
-  it('plays an HSK 2 dialogue, offers five pictures, then shows its transcript', () => {
-    renderPage()
+  it('plays an HSK 2 dialogue, offers five pictures, then shows its transcript', async () => {
+    await renderPage()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
     fireEvent.click(screen.getAllByRole('button', { name: 'Practise 5 questions' })[0])
     expect(screen.getByText('Hear the dialogue, then pick its picture.')).toBeInTheDocument()
@@ -151,8 +162,8 @@ describe('HSK practice page', () => {
     expect(screen.getAllByText(/^(Woman|Man):$/).length).toBeGreaterThanOrEqual(2)
   })
 
-  it('runs the HSK 2 mini test: 10 listening with both kinds of dialogue, 10 reading', () => {
-    renderPage()
+  it('runs the HSK 2 mini test: 10 listening with both kinds of dialogue, 10 reading', async () => {
+    await renderPage()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 2' }))
     fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
@@ -160,8 +171,8 @@ describe('HSK practice page', () => {
     expect(useExam.getState().records['hsk2-mini']?.total).toBe(20)
   })
 
-  it('asks an HSK 1 question with four answers, then reads both and shows their Vietnamese', () => {
-    renderPage()
+  it('asks an HSK 1 question with four answers, then reads both and shows their Vietnamese', async () => {
+    await renderPage()
     const card = screen.getByText(/Question and answer/).closest('li')!
     fireEvent.click(within(card).getByRole('button'))
     expect(screen.getByText('Read the question and pick its answer.')).toBeInTheDocument()
@@ -172,12 +183,12 @@ describe('HSK practice page', () => {
     expect(spoken).toHaveLength(1)
   })
 
-  it('counts answers by kind and names the weakest kind of the level', () => {
-    renderPage()
+  it('counts answers by kind and names the weakest kind of the level', async () => {
+    await renderPage()
     expect(screen.queryByText(/Your weakest kind/)).not.toBeInTheDocument()
     cleanup()
     useRetry.setState({ hsk: { 'hsk1:judge': [9, 10], 'hsk1:fill': [2, 6], 'hsk2:fill': [0, 9] } })
-    renderPage()
+    await renderPage()
     expect(screen.getByText(/^Your weakest kind in HSK 1: Fill the gap/)).toHaveTextContent(
       '(2 of 6 right)'
     )
@@ -191,8 +202,8 @@ describe('HSK practice page', () => {
     expect(useRetry.getState().hsk['hsk1:judge']?.[1]).toBe(1)
   })
 
-  it('shows an HSK 3 passage with its question, then its translation and the reason', () => {
-    renderPage()
+  it('shows an HSK 3 passage with its question, then its translation and the reason', async () => {
+    await renderPage()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     const card = screen.getByText(/^Short passages$/).closest('li')!
     fireEvent.click(within(card).getByRole('button'))
@@ -204,8 +215,8 @@ describe('HSK practice page', () => {
     expect(spoken).toHaveLength(1)
   })
 
-  it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', () => {
-    renderPage()
+  it('opens the HSK 1 mini test with right-or-wrong pictures: 10 listening, 10 reading', async () => {
+    await renderPage()
     fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
     expect(screen.getByRole('img', { name: 'Picture' })).toBeInTheDocument()
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/200/))
@@ -214,8 +225,8 @@ describe('HSK practice page', () => {
     expect(useExam.getState().records['hsk1-mini']?.total).toBe(20)
   })
 
-  it('runs the HSK 3 mini test through its three parts and gives a score out of 300', () => {
-    renderPage()
+  it('runs the HSK 3 mini test through its three parts and gives a score out of 300', async () => {
+    await renderPage()
     fireEvent.click(screen.getByRole('tab', { name: 'HSK 3' }))
     fireEvent.click(screen.getByRole('button', { name: 'Take the mini test' }))
     answerAll(() => !!screen.queryByText(/^Estimate: about \d+\/300/))
