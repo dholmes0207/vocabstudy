@@ -278,6 +278,7 @@ describe('service worker — practice data warmed at install', () => {
     expect(sw.EXTRA_DATA).toContain('data/toeic/en.json')
     expect(sw.EXTRA_DATA).toContain('data/hsk/zh.json')
     expect(sw.EXTRA_DATA).toContain('data/ielts/en.json')
+    expect(sw.EXTRA_DATA).toContain('data/patterns/en.json')
     for (const path of sw.EXTRA_DATA) {
       expect(path).toMatch(/^data\/[^/].*\.json$/)
       expect(existsSync(`public/${path}`), path).toBe(true)

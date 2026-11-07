@@ -16,14 +16,14 @@ dẫn khi học, phong cách tránh nhàm chán."
 ## 2. Cách làm
 
 - **6 cấp tiếng Anh**, mỗi cấp 2–5 bước. Mỗi bước nối tới một trang đã có và đếm một thứ app đã ghi:
-  | Cấp | Tên             | CEFR  | Bước                                                                                    |
-  | --- | --------------- | ----- | --------------------------------------------------------------------------------------- |
-  | 1   | Khởi động       | A1    | Từ 1–150; to be, hiện tại đơn, đại từ, mạo từ; 2 truyện đầu                             |
-  | 2   | Các thì cơ bản  | A1–A2 | Từ 151–500; tiếp diễn, quá khứ, tương lai, câu hỏi; 3 lượt nghe – chép; 3 truyện A2     |
-  | 3   | Cấu trúc câu    | A2    | Từ 501–1000; đếm được, giới từ, so sánh, can/must; 3 lượt xếp câu; 3 lượt luyện nói     |
-  | 4   | Nghe & nói      | A2–B1 | Từ 1001–1600; 5 lượt nghe thụ động; tổng 8 lượt nghe – chép, 8 lượt nói; 4 truyện A2–B1 |
-  | 5   | Luyện thi TOEIC | B1    | 200 từ TOEIC; ≥ 10 câu ở mỗi Part; bài thi nhỏ đạt 60%                                  |
-  | 6   | Hướng tới IELTS | B1–B2 | Từ 1601–2500; 4 lượt đọc IELTS True/False/Not Given; đọc hết kho truyện                 |
+  | Cấp | Tên             | CEFR  | Bước                                                                                                                                                    |
+  | --- | --------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | 1   | Khởi động       | A1    | Từ 1–150; to be, hiện tại đơn, đại từ, mạo từ; 2 truyện đầu                                                                                             |
+  | 2   | Các thì cơ bản  | A1–A2 | Từ 151–500; tiếp diễn, quá khứ, tương lai, câu hỏi; 3 lượt nghe – chép; 3 truyện A2                                                                     |
+  | 3   | Cấu trúc câu    | A2    | Từ 501–1000; đếm được, giới từ, so sánh, can/must; hiện tại hoàn thành, quá khứ tiếp diễn; 3 lượt Cấu trúc câu; 3 lượt xếp câu; 3 lượt luyện nói        |
+  | 4   | Nghe & nói      | A2–B1 | Từ 1001–1600; ngữ pháp B1 (bị động, điều kiện, mệnh đề quan hệ, tường thuật); 5 lượt nghe thụ động; tổng 8 lượt nghe – chép, 8 lượt nói; 4 truyện A2–B1 |
+  | 5   | Luyện thi TOEIC | B1    | 200 từ TOEIC; ≥ 10 câu ở mỗi Part; bài thi nhỏ đạt 60%                                                                                                  |
+  | 6   | Hướng tới IELTS | B1–B2 | Từ 1601–2500; 4 lượt đọc IELTS True/False/Not Given; đọc hết kho truyện                                                                                 |
 - **Mở cấp**: qua 80% một cấp thì mở cấp sau, để một bước khó không chặn cả lộ trình. Cấp đầu tiên
   chưa xong vẫn là cấp "Làm tiếp".
 - **Không bắt học lại**: kết quả bài xếp lớp (`/placement`) mở sẵn các cấp có phần từ vựng bắt đầu

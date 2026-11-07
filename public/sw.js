@@ -26,7 +26,12 @@ const DISABLED = false
 // the worker is installed, like the code it used to be compiled into (the TOEIC
 // and HSK questions, src/lib/toeicBank.ts and hskBank.ts, and the IELTS
 // passages, src/lib/ielts.ts). Small: a few hundred kB before compression.
-const EXTRA_DATA = ['data/toeic/en.json', 'data/hsk/zh.json', 'data/ielts/en.json']
+const EXTRA_DATA = [
+  'data/toeic/en.json',
+  'data/hsk/zh.json',
+  'data/ielts/en.json',
+  'data/patterns/en.json',
+]
 
 // Bump to invalidate every cache at once (e.g. after regenerating audio).
 // v2: the pack moved to stale-while-revalidate; flushing v1 hands every learner
