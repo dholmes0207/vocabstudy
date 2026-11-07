@@ -174,3 +174,61 @@ export function wordOfDay(words: Word[], cards: Record<number, SRSCard>, day: nu
   const index = Math.imul(day, 2654435761) >>> 0
   return pool[index % pool.length]
 }
+
+// ---------------------------------------------------------------------------
+// "Đúng hay sai?" — 60 seconds of word + meaning cards: right pair or not?
+// A run of right answers raises the multiplier; a wrong one resets it and
+// costs a few seconds, so guessing at random does not pay.
+// ---------------------------------------------------------------------------
+
+export const BLITZ_SECONDS = 60
+/** Seconds a wrong answer takes off the clock. */
+export const BLITZ_PENALTY = 3
+
+export interface BlitzCard {
+  id: number
+  word: string
+  /** IPA, or the pack's own reading (pinyin, romanization) when there is none. */
+  reading: string
+  /** The meaning shown: the word's own, or another word's. */
+  meaning: string
+  truth: boolean
+}
+
+/**
+ * A deck for one round: about half the cards show the word's own meaning,
+ * the rest a different word's (never one that reads the same).
+ */
+export function pickBlitzDeck(
+  words: Word[],
+  cards: Record<number, SRSCard>,
+  size = 80,
+  rand: () => number = Math.random
+): BlitzCard[] {
+  const seen = new Set<string>()
+  const pool: { w: Word; meaning: string }[] = []
+  for (const w of candidates(words, cards)) {
+    if (pool.length >= size) break
+    const meaning = shortMeaning(w.meaning)
+    if (!meaning || seen.has(meaning.toLowerCase())) continue
+    seen.add(meaning.toLowerCase())
+    pool.push({ w, meaning })
+  }
+  if (pool.length < 2) return []
+  return pool.map(({ w, meaning }, i) => {
+    const truth = rand() < 0.5
+    let shown = meaning
+    if (!truth) {
+      // Another card's meaning, picked at random among the rest.
+      const j = (i + 1 + Math.floor(rand() * (pool.length - 1))) % pool.length
+      shown = pool[j].meaning
+    }
+    return { id: w.id, word: w.word.trim(), reading: w.ipa || w.viRead, meaning: shown, truth }
+  })
+}
+
+/** Points multiplier for a run of right answers: ×1, then ×2 after 5, up to ×4. */
+export const blitzMultiplier = (combo: number): number => Math.min(4, 1 + Math.floor(combo / 5))
+
+/** XP for a finished round. */
+export const blitzXp = (score: number): number => Math.max(2, Math.round(score / 30))
