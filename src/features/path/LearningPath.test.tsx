@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { readFileSync } from 'node:fs'
-import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
+import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import '@testing-library/jest-dom/vitest'
@@ -16,6 +16,7 @@ import { usePlacement } from '@/store/placementStore'
 import { newCard } from '@/lib/srs'
 import { LEVEL_XP } from '@/lib/learningPath'
 import { TEST_XP, type LevelQuestion } from '@/lib/levelTest'
+import { QUEST_XP } from '@/lib/pathQuest'
 
 const confetti = vi.fn()
 vi.mock('@/lib/confetti', () => ({ celebrate: (p: number) => confetti(p) }))
@@ -45,7 +46,7 @@ beforeEach(() => {
   useGrammar.setState({ progress: {} })
   useReading.setState({ progress: {} })
   useActivity.setState({ counts: {} })
-  usePath.setState({ celebrated: {}, passed: {} })
+  usePath.setState({ celebrated: {}, passed: {}, quests: {} })
   usePlacement.setState({ results: {} })
 })
 afterEach(() => {
@@ -221,5 +222,33 @@ describe('Level path', () => {
       </MemoryRouter>
     )
     expect(container).toBeEmptyDOMElement()
+  })
+
+  it('sets a daily quest on the step in progress and pays it once that step moves', () => {
+    renderPage()
+    const quest = screen.getByRole('region', { name: 'Today’s quest' })
+    expect(quest).toHaveTextContent('Words 1–150')
+    expect(quest).toHaveTextContent(`+${QUEST_XP} XP`)
+    expect(usePath.getState().quests.en).toMatchObject({ base: 0, claimed: false })
+    expect(within(quest).queryByRole('button', { name: /Claim/ })).toBeNull()
+
+    act(() => learnFirst(3))
+    fireEvent.click(within(quest).getByRole('button', { name: /Claim/ }))
+    expect(useStudy.getState().progress.en.stats.xp).toBe(QUEST_XP)
+    expect(confetti).toHaveBeenCalledWith(1)
+    expect(quest).toHaveTextContent('Reward claimed')
+    expect(within(quest).queryByRole('button', { name: /Claim/ })).toBeNull()
+    expect(usePath.getState().quests.en.claimed).toBe(true)
+  })
+
+  it('tells the home card about the quest', () => {
+    render(
+      <MemoryRouter>
+        <PathCard />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('🎯 Today’s quest is waiting')).toBeInTheDocument()
+    act(() => learnFirst(3))
+    expect(screen.getByText('🎁 Quest done, claim it')).toBeInTheDocument()
   })
 })
