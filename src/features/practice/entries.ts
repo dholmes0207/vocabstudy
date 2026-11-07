@@ -34,6 +34,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-600 to-indigo-600',
   },
   {
+    to: '/patterns',
+    icon: '🧱',
+    title: 'Cấu trúc câu',
+    desc: '8 khung câu tiếng Anh (chủ ngữ + động từ + tân ngữ, there is, câu hỏi Wh-, nơi chốn trước thời gian…) dạng khối màu, rồi tự xếp câu.',
+    titleEn: 'Sentence patterns',
+    descEn:
+      'Eight English sentence frames (subject + verb + object, there is, Wh- questions, place before time…) as coloured blocks, then build sentences yourself.',
+    tone: 'from-sky-500 to-rose-500',
+  },
+  {
     to: '/ielts',
     icon: '🎓',
     title: 'Luyện IELTS',

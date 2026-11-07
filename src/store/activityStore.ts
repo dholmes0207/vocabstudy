@@ -20,6 +20,7 @@ export type ActivityKind =
   | 'measure'
   | 'numbers'
   | 'hanviet'
+  | 'patterns'
 
 export type ActivityCounts = Partial<Record<ActivityKind, number>>
 

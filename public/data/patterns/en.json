@@ -1,0 +1,835 @@
+{
+  "version": "1.0.0",
+  "patterns": [
+    {
+      "id": "svo",
+      "emoji": "🧱",
+      "title": [
+        "Chủ ngữ + động từ + tân ngữ",
+        "Subject + verb + object"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "O"
+      ],
+      "explain": [
+        "Câu tiếng Anh cơ bản nhất: ai, làm gì, cái gì. Giống tiếng Việt: Tôi uống cà phê.",
+        "Tân ngữ (O) đứng ngay sau động từ, không chen trạng từ vào giữa: I drink coffee every day (không nói I drink every day coffee)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "I",
+              "S"
+            ],
+            [
+              "drink",
+              "V"
+            ],
+            [
+              "coffee",
+              "O"
+            ],
+            [
+              "every morning",
+              "T"
+            ]
+          ],
+          "vi": "Tôi uống cà phê mỗi sáng."
+        },
+        {
+          "chunks": [
+            [
+              "Lan",
+              "S"
+            ],
+            [
+              "studies",
+              "V"
+            ],
+            [
+              "English",
+              "O"
+            ]
+          ],
+          "vi": "Lan học tiếng Anh."
+        },
+        {
+          "chunks": [
+            [
+              "They",
+              "S"
+            ],
+            [
+              "watched",
+              "V"
+            ],
+            [
+              "a film",
+              "O"
+            ],
+            [
+              "last night",
+              "T"
+            ]
+          ],
+          "vi": "Họ xem một bộ phim tối qua."
+        },
+        {
+          "chunks": [
+            [
+              "My mother",
+              "S"
+            ],
+            [
+              "cooks",
+              "V"
+            ],
+            [
+              "dinner",
+              "O"
+            ]
+          ],
+          "vi": "Mẹ tôi nấu bữa tối."
+        }
+      ]
+    },
+    {
+      "id": "be-complement",
+      "emoji": "🪞",
+      "title": [
+        "Chủ ngữ + be + bổ ngữ",
+        "Subject + be + complement"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "C"
+      ],
+      "explain": [
+        "Muốn nói ai là gì, như thế nào, tiếng Anh phải có động từ be (am / is / are), dù tiếng Việt không cần chữ \"thì, là\".",
+        "\"Căn phòng sạch\" → The room is clean (không nói The room clean)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "My sister",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "a nurse",
+              "C"
+            ]
+          ],
+          "vi": "Chị tôi là y tá."
+        },
+        {
+          "chunks": [
+            [
+              "The room",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "very clean",
+              "C"
+            ]
+          ],
+          "vi": "Căn phòng rất sạch."
+        },
+        {
+          "chunks": [
+            [
+              "We",
+              "S"
+            ],
+            [
+              "were",
+              "V"
+            ],
+            [
+              "tired",
+              "C"
+            ],
+            [
+              "yesterday",
+              "T"
+            ]
+          ],
+          "vi": "Chúng tôi đã mệt hôm qua."
+        },
+        {
+          "chunks": [
+            [
+              "This dish",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "delicious",
+              "C"
+            ]
+          ],
+          "vi": "Món ăn này ngon."
+        }
+      ]
+    },
+    {
+      "id": "there-is",
+      "emoji": "📍",
+      "title": [
+        "There is / There are + danh từ + nơi chốn",
+        "There is / are + noun + place"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "O",
+        "P"
+      ],
+      "explain": [
+        "Nói \"ở đâu đó có cái gì\": There is + số ít, There are + số nhiều, nơi chốn đặt cuối câu.",
+        "\"Trên bàn có một con mèo\" → There is a cat on the table (không nói On the table has a cat)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "There",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "a cat",
+              "O"
+            ],
+            [
+              "under the table",
+              "P"
+            ]
+          ],
+          "vi": "Dưới gầm bàn có một con mèo."
+        },
+        {
+          "chunks": [
+            [
+              "There",
+              "S"
+            ],
+            [
+              "are",
+              "V"
+            ],
+            [
+              "twenty students",
+              "O"
+            ],
+            [
+              "in the class",
+              "P"
+            ]
+          ],
+          "vi": "Trong lớp có hai mươi học sinh."
+        },
+        {
+          "chunks": [
+            [
+              "There",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "a park",
+              "O"
+            ],
+            [
+              "near my house",
+              "P"
+            ]
+          ],
+          "vi": "Gần nhà tôi có một công viên."
+        },
+        {
+          "chunks": [
+            [
+              "There",
+              "S"
+            ],
+            [
+              "is",
+              "V"
+            ],
+            [
+              "no milk",
+              "O"
+            ],
+            [
+              "in the fridge",
+              "P"
+            ]
+          ],
+          "vi": "Trong tủ lạnh không còn sữa."
+        }
+      ]
+    },
+    {
+      "id": "frequency",
+      "emoji": "🔁",
+      "title": [
+        "Trạng từ tần suất đứng trước động từ",
+        "Frequency adverbs before the verb"
+      ],
+      "formula": [
+        "S",
+        "M",
+        "V"
+      ],
+      "explain": [
+        "always, usually, often, sometimes, never đứng trước động từ thường: He always walks to work.",
+        "Nhưng đứng sau be: She is always late."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "He",
+              "S"
+            ],
+            [
+              "always",
+              "M"
+            ],
+            [
+              "walks",
+              "V"
+            ],
+            [
+              "to work",
+              "P"
+            ]
+          ],
+          "vi": "Anh ấy luôn đi bộ đi làm."
+        },
+        {
+          "chunks": [
+            [
+              "I",
+              "S"
+            ],
+            [
+              "sometimes",
+              "M"
+            ],
+            [
+              "drink",
+              "V"
+            ],
+            [
+              "tea",
+              "O"
+            ]
+          ],
+          "vi": "Tôi thỉnh thoảng uống trà."
+        },
+        {
+          "chunks": [
+            [
+              "They",
+              "S"
+            ],
+            [
+              "never",
+              "M"
+            ],
+            [
+              "eat",
+              "V"
+            ],
+            [
+              "meat",
+              "O"
+            ]
+          ],
+          "vi": "Họ không bao giờ ăn thịt."
+        },
+        {
+          "chunks": [
+            [
+              "We",
+              "S"
+            ],
+            [
+              "often",
+              "M"
+            ],
+            [
+              "play",
+              "V"
+            ],
+            [
+              "football",
+              "O"
+            ]
+          ],
+          "vi": "Chúng tôi thường chơi bóng đá."
+        }
+      ]
+    },
+    {
+      "id": "wh-question",
+      "emoji": "❓",
+      "title": [
+        "Câu hỏi Wh-: từ hỏi + trợ động từ + chủ ngữ + động từ",
+        "Wh- questions"
+      ],
+      "formula": [
+        "Q",
+        "A",
+        "S",
+        "V"
+      ],
+      "explain": [
+        "Từ hỏi đứng đầu câu, rồi tới trợ động từ (do / does / did / can…), rồi chủ ngữ, rồi động từ nguyên mẫu.",
+        "\"Bạn sống ở đâu?\" → Where do you live? (không nói Where you live?)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "Where",
+              "Q"
+            ],
+            [
+              "do",
+              "A"
+            ],
+            [
+              "you",
+              "S"
+            ],
+            [
+              "live?",
+              "V"
+            ]
+          ],
+          "vi": "Bạn sống ở đâu?"
+        },
+        {
+          "chunks": [
+            [
+              "What time",
+              "Q"
+            ],
+            [
+              "does",
+              "A"
+            ],
+            [
+              "the train",
+              "S"
+            ],
+            [
+              "leave?",
+              "V"
+            ]
+          ],
+          "vi": "Tàu chạy lúc mấy giờ?"
+        },
+        {
+          "chunks": [
+            [
+              "What",
+              "Q"
+            ],
+            [
+              "did",
+              "A"
+            ],
+            [
+              "you",
+              "S"
+            ],
+            [
+              "buy",
+              "V"
+            ],
+            [
+              "yesterday?",
+              "T"
+            ]
+          ],
+          "vi": "Hôm qua bạn đã mua gì?"
+        },
+        {
+          "chunks": [
+            [
+              "Why",
+              "Q"
+            ],
+            [
+              "is",
+              "A"
+            ],
+            [
+              "she",
+              "S"
+            ],
+            [
+              "crying?",
+              "V"
+            ]
+          ],
+          "vi": "Sao cô ấy lại khóc?"
+        }
+      ]
+    },
+    {
+      "id": "linking",
+      "emoji": "🔗",
+      "title": [
+        "Hai mệnh đề nối bằng and / but / because",
+        "Two clauses with and / but / because"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "J",
+        "S",
+        "V"
+      ],
+      "explain": [
+        "Nối hai ý thành một câu: and (và), but (nhưng), because (vì), so (nên).",
+        "Mỗi mệnh đề vẫn cần đủ chủ ngữ và động từ: I was tired, but I finished my work."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "I",
+              "S"
+            ],
+            [
+              "was tired,",
+              "V"
+            ],
+            [
+              "but",
+              "J"
+            ],
+            [
+              "I",
+              "S"
+            ],
+            [
+              "finished my work",
+              "V"
+            ]
+          ],
+          "vi": "Tôi mệt nhưng tôi đã làm xong việc."
+        },
+        {
+          "chunks": [
+            [
+              "She",
+              "S"
+            ],
+            [
+              "stayed at home",
+              "V"
+            ],
+            [
+              "because",
+              "J"
+            ],
+            [
+              "it",
+              "S"
+            ],
+            [
+              "was raining",
+              "V"
+            ]
+          ],
+          "vi": "Cô ấy ở nhà vì trời mưa."
+        },
+        {
+          "chunks": [
+            [
+              "He",
+              "S"
+            ],
+            [
+              "cooks",
+              "V"
+            ],
+            [
+              "and",
+              "J"
+            ],
+            [
+              "I",
+              "S"
+            ],
+            [
+              "wash the dishes",
+              "V"
+            ]
+          ],
+          "vi": "Anh ấy nấu ăn và tôi rửa bát."
+        },
+        {
+          "chunks": [
+            [
+              "It",
+              "S"
+            ],
+            [
+              "was cold,",
+              "V"
+            ],
+            [
+              "so",
+              "J"
+            ],
+            [
+              "we",
+              "S"
+            ],
+            [
+              "wore coats",
+              "V"
+            ]
+          ],
+          "vi": "Trời lạnh nên chúng tôi mặc áo khoác."
+        }
+      ]
+    },
+    {
+      "id": "place-time",
+      "emoji": "🗺️",
+      "title": [
+        "Nơi chốn trước, thời gian sau",
+        "Place before time"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "O",
+        "P",
+        "T"
+      ],
+      "explain": [
+        "Khi câu có cả nơi chốn và thời gian, tiếng Anh thường đặt nơi chốn trước, thời gian cuối câu.",
+        "We had lunch at a café yesterday (không nói yesterday at a café)."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "We",
+              "S"
+            ],
+            [
+              "had",
+              "V"
+            ],
+            [
+              "lunch",
+              "O"
+            ],
+            [
+              "at a small café",
+              "P"
+            ],
+            [
+              "yesterday",
+              "T"
+            ]
+          ],
+          "vi": "Hôm qua chúng tôi ăn trưa ở một quán nhỏ."
+        },
+        {
+          "chunks": [
+            [
+              "I",
+              "S"
+            ],
+            [
+              "met",
+              "V"
+            ],
+            [
+              "her",
+              "O"
+            ],
+            [
+              "at the library",
+              "P"
+            ],
+            [
+              "this morning",
+              "T"
+            ]
+          ],
+          "vi": "Tôi gặp cô ấy ở thư viện sáng nay."
+        },
+        {
+          "chunks": [
+            [
+              "They",
+              "S"
+            ],
+            [
+              "will play",
+              "V"
+            ],
+            [
+              "tennis",
+              "O"
+            ],
+            [
+              "in the park",
+              "P"
+            ],
+            [
+              "on Saturday",
+              "T"
+            ]
+          ],
+          "vi": "Họ sẽ chơi tennis ở công viên vào thứ Bảy."
+        },
+        {
+          "chunks": [
+            [
+              "He",
+              "S"
+            ],
+            [
+              "bought",
+              "V"
+            ],
+            [
+              "bread",
+              "O"
+            ],
+            [
+              "at the supermarket",
+              "P"
+            ],
+            [
+              "last night",
+              "T"
+            ]
+          ],
+          "vi": "Anh ấy mua bánh mì ở siêu thị tối qua."
+        }
+      ]
+    },
+    {
+      "id": "adjective-noun",
+      "emoji": "🎨",
+      "title": [
+        "Tính từ đứng trước danh từ",
+        "Adjectives before nouns"
+      ],
+      "formula": [
+        "S",
+        "V",
+        "O"
+      ],
+      "explain": [
+        "Ngược tiếng Việt: \"chiếc xe đỏ\" là a red car, tính từ đứng trước danh từ.",
+        "Nhiều tính từ: ý kiến → kích cỡ → màu: a nice big red car."
+      ],
+      "sentences": [
+        {
+          "chunks": [
+            [
+              "I",
+              "S"
+            ],
+            [
+              "have",
+              "V"
+            ],
+            [
+              "a red car",
+              "O"
+            ]
+          ],
+          "vi": "Tôi có một chiếc xe đỏ."
+        },
+        {
+          "chunks": [
+            [
+              "She",
+              "S"
+            ],
+            [
+              "has",
+              "V"
+            ],
+            [
+              "a small house",
+              "O"
+            ]
+          ],
+          "vi": "Cô ấy có một ngôi nhà nhỏ."
+        },
+        {
+          "chunks": [
+            [
+              "We",
+              "S"
+            ],
+            [
+              "watched",
+              "V"
+            ],
+            [
+              "a good film",
+              "O"
+            ]
+          ],
+          "vi": "Chúng tôi đã xem một bộ phim hay."
+        },
+        {
+          "chunks": [
+            [
+              "He",
+              "S"
+            ],
+            [
+              "is wearing",
+              "V"
+            ],
+            [
+              "a new white shirt",
+              "O"
+            ]
+          ],
+          "vi": "Anh ấy mặc một chiếc áo sơ mi trắng mới."
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,7 @@ import { validateToeicBank } from './toeicBank'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
 import { validateHskBank } from './hskBank'
 import { validateIeltsBank } from './ielts'
+import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -76,8 +77,22 @@ function ielts(): string[] {
   ]
 }
 
+/** "Cấu trúc câu": each sentence is read once it is built. */
+function patterns(): string[] {
+  const { patterns } = validatePatterns(
+    JSON.parse(readFileSync('public/data/patterns/en.json', 'utf8'))
+  )
+  return patterns.flatMap((p) => p.sentences.map(sentenceText))
+}
+
 function english(): string[] {
-  return [...proverbs('en'), ...ALL_STICKERS.map((s) => s.en), ...toeic(), ...ielts()]
+  return [
+    ...proverbs('en'),
+    ...ALL_STICKERS.map((s) => s.en),
+    ...toeic(),
+    ...ielts(),
+    ...patterns(),
+  ]
 }
 
 function korean(): string[] {

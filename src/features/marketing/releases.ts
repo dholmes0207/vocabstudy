@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Cấu trúc câu dạng khối màu', 'Sentence patterns as coloured blocks'],
+    items: [
+      [
+        'Trang Cấu trúc câu: 8 khung câu tiếng Anh (there is, câu hỏi Wh-, nơi chốn trước thời gian, tính từ trước danh từ…), mỗi phần của câu một màu. Xếp khối vào đúng vai để thành câu, xong câu được đọc lên.',
+        'Sentence patterns: eight English frames (there is, Wh- questions, place before time, adjectives before nouns…), each part of the sentence in its own colour. Snap the blocks into their roles to build the sentence, then hear it read.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Lộ trình theo cấp cho tiếng Trung', 'A level path for Chinese'],
     items: [
       [

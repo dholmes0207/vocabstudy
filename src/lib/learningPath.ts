@@ -230,6 +230,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en3-patterns',
+        'patterns',
+        3,
+        '🧱',
+        '/patterns',
+        ['Cấu trúc câu', 'Sentence patterns'],
+        [
+          'Học 8 khung câu dạng khối màu (chủ ngữ, động từ, tân ngữ, nơi chốn…) rồi tự xếp câu.',
+          'Eight sentence frames as coloured blocks (subject, verb, object, place…), then build them.',
+        ]
+      ),
+      sessions(
         'en3-order',
         'order',
         3,
