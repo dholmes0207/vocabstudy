@@ -374,8 +374,8 @@ export const EN_PATH: PathLevel[] = [
     icon: '🎓',
     title: ['Hướng tới IELTS', 'Towards IELTS'],
     tagline: [
-      'Vốn từ học thuật, đọc và nói kiểu IELTS. Bài luyện Viết và Nghe của IELTS đang được viết.',
-      'Academic words, IELTS-style reading and speaking. IELTS writing and listening practice is being written.',
+      'Vốn từ học thuật, đọc, nói và viết kiểu IELTS. Bài luyện Nghe của IELTS đang được viết.',
+      'Academic words and IELTS-style reading, speaking and writing. IELTS listening practice is being written.',
     ],
     cefr: 'B1–B2',
     tone: 'from-rose-500 to-fuchsia-600',
@@ -404,6 +404,18 @@ export const EN_PATH: PathLevel[] = [
         [
           'Trả lời câu hỏi của giám khảo, nói 2 phút theo thẻ chủ đề, ghi âm và nghe lại.',
           'Answer the examiner, talk for two minutes on a task card, record and listen back.',
+        ]
+      ),
+      sessions(
+        'en6-ielts-writing',
+        'ielts-writing',
+        2,
+        '✍️',
+        '/ielts',
+        ['Viết IELTS: 2 bài Task 2', 'IELTS writing: two Task 2 essays'],
+        [
+          'Viết đủ 250 từ theo khung 4 đoạn, dùng từ nối và văn phong học thuật.',
+          'Write 250 words in four paragraphs, with linking words and an academic style.',
         ]
       ),
       stories(

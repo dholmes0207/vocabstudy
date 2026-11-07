@@ -47,6 +47,16 @@ hoặc trong vòng 7 ngày.
     `ielts-speaking` cho lộ trình (cấp 6 thêm bước "Nói IELTS", 4 lượt).
   - Câu hỏi Part 1 và Part 3 được đưa vào `scripts/audio-texts/screens.json` để workflow thu giọng.
 
+- **Bước 3: Viết.**
+  - Khung 4 dạng bài Task 2 (nêu quan điểm, thảo luận hai phía, vấn đề – giải pháp, lợi ích – bất lợi):
+    cách nhận ra dạng bài từ câu hỏi, bố cục 4 đoạn bằng tiếng Việt, câu mở đầu mẫu.
+  - 10 câu luyện ngẫu nhiên từ 14 câu: từ nối (however, moreover, as a result…), từ tả xu hướng cho
+    Task 1 (rose / raised, slight, peaked…), văn phong học thuật (không gotta, lots of, kids).
+  - Viết thử Task 2: 6 đề, thanh đếm từ tới 250, danh sách tự đánh dấu (đủ 250 từ, 4 đoạn, ít nhất 4 từ
+    nối khác nhau, không viết tắt hay văn nói), chỉ ra từ cần thay. Bản nháp lưu trên máy
+    (`vocab.ielts.draft.<id>`). Nộp khi đủ 250 từ: +15 XP, ghi `ielts-writing` (cấp 6 thêm bước "Viết
+    IELTS", 2 bài). Không chấm band: danh sách chỉ kiểm hình thức, không thay được giám khảo.
+
 ## 4. Dev
 
 - `public/data/ielts/en.json`, kiểm tra khi tải bằng `validateIeltsBank` (`lib/ielts.ts`, dùng
@@ -58,7 +68,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Viết: khung bài Task 2 (đồng ý / phản đối, thảo luận hai phía, vấn đề – giải pháp) và từ tả xu hướng
-   cho Task 1, có bài luyện điền từ nối.
-2. Nghe: điền thông tin vào phiếu (form completion) với giọng thu sẵn.
-3. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.
+1. Nghe: điền thông tin vào phiếu (form completion) với giọng thu sẵn.
+2. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.

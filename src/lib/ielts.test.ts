@@ -1,6 +1,18 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { clock, pickOther, pickPassage, readingRound, validateIeltsBank } from './ielts'
+import {
+  TASK2_WORDS,
+  clock,
+  drillRound,
+  informalBits,
+  linkersUsed,
+  paragraphCount,
+  pickOther,
+  pickPassage,
+  readingRound,
+  validateIeltsBank,
+  wordCount,
+} from './ielts'
 import { mulberry32 } from './sky'
 
 const raw = () => JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
@@ -81,5 +93,51 @@ describe('speaking practice', () => {
       expect(pickOther(speaking.part1, 'food', mulberry32(seed)).id).not.toBe('food')
     expect(clock(65)).toBe('1:05')
     expect(clock(120)).toBe('2:00')
+  })
+})
+
+describe('writing practice', () => {
+  const { writing } = validateIeltsBank(raw())
+
+  it('has the four kinds of Task 2 essay, each with prompts to try', () => {
+    expect(writing.types.map((w) => w.id).sort()).toEqual(
+      ['advantages', 'discussion', 'opinion', 'problem-solution'].sort()
+    )
+    for (const w of writing.types)
+      expect(
+        writing.prompts.some((p) => p.type === w.id),
+        w.id
+      ).toBe(true)
+  })
+
+  it('shuffles drill options but keeps the right answer', () => {
+    const round = drillRound(writing.drills, 10, mulberry32(5))
+    expect(round).toHaveLength(10)
+    for (const d of round) {
+      const original = writing.drills.find((x) => x.prompt === d.prompt)!
+      expect(d.options[d.answer]).toBe(original.options[original.answer])
+    }
+  })
+
+  it('counts words and paragraphs, and spots linking words and spoken forms', () => {
+    const essay =
+      "Firstly, I don't think kids should study a lot of hours. However, it's well-known.\n\nIn conclusion, on the other hand ok 2020."
+    expect(wordCount(essay)).toBe(22)
+    expect(paragraphCount(essay)).toBe(2)
+    expect(linkersUsed(essay).sort()).toEqual(
+      ['firstly', 'however', 'in conclusion', 'on the other hand'].sort()
+    )
+    expect(informalBits(essay).sort()).toEqual(['a lot of', "don't", "it's", 'kids'].sort())
+    expect(informalBits('Governments should take action. It is clear.')).toEqual([])
+    expect(TASK2_WORDS).toBe(250)
+  })
+
+  it('turns down a drill whose answer is out of range', () => {
+    const b = raw()
+    b.writing.drills[0].answer = 9
+    expect(() => validateIeltsBank(b)).toThrow(/bad answer/)
+    const c = raw()
+    c.writing.prompts[0].type = 'poem'
+    expect(() => validateIeltsBank(c)).toThrow(/no known type/)
   })
 })
