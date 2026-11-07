@@ -3,6 +3,7 @@ import { ArrowRight, Check, Volume2, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import { prefetchAudio, pronounce, textAudio } from '@/lib/audio'
 import { numberPinyin, numberQuiz, numbersXp } from '@/lib/zhNumbers'
 import { koNumberQuiz } from '@/lib/koNumbers'
@@ -133,6 +134,7 @@ function Round({
   const rate = useSettings((s) => s.ttsRate)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -187,6 +189,7 @@ function Round({
     }
     const earned = numbersXp(correct, questions.length)
     addPlayXp(code, earned)
+    logActivity(code, 'numbers')
     setXp(earned)
   }
 

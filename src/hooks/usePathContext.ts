@@ -29,6 +29,7 @@ export function usePathContext(code: string): PathContext {
   const reading = useReading((s) => s.progress)
   const activity = useActivity((s) => s.counts[code] ?? NO_ACTIVITY)
   const parts = useRetry((s) => s.parts)
+  const hsk = useRetry((s) => s.hsk)
   const exams = useExam((s) => s.records)
   const placedAt = usePlacement((s) => s.results[code]?.start ?? 0)
 
@@ -51,8 +52,12 @@ export function usePathContext(code: string): PathContext {
         const rec = exams[id]
         return rec && rec.total ? rec.best / rec.total : 0
       },
+      hskAnswered: (level) =>
+        Object.entries(hsk)
+          .filter(([key]) => key.startsWith(`${level}:`))
+          .reduce((n, [, [, asked]]) => n + asked, 0),
     }
-  }, [words, cards, grammar, reading, activity, parts, exams, placedAt])
+  }, [words, cards, grammar, reading, activity, parts, exams, placedAt, hsk])
 }
 
 /**

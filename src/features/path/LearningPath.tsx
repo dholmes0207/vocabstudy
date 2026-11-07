@@ -29,7 +29,7 @@ const pct = (r: number) => Math.round(r * 100)
 export default function LearningPath() {
   const code = useSettings((s) => s.currentLang)
   const levels = pathFor(code)
-  if (!levels) return <PackOnly packs={['en']} />
+  if (!levels) return <PackOnly packs={['en', 'zh']} />
   return <PathView code={code} levels={levels} />
 }
 
@@ -82,10 +82,15 @@ function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
           <span aria-hidden="true">🗺️</span>
         </h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(
-            'Từng cấp một: từ vựng, rồi các thì, cấu trúc câu, nghe – nói, tới luyện thi TOEIC và IELTS. Mọi bài bạn đã làm ở bất cứ đâu trong app đều được tính.',
-            'One level at a time: words, then tenses, sentence building, listening and speaking, up to TOEIC and IELTS. Everything you do anywhere in the app counts.'
-          )}
+          {code === 'zh'
+            ? t(
+                'Từng cấp một: pinyin và thanh điệu, rồi từ vựng, ngữ pháp, truyện của HSK 1, 2, 3, kết thúc mỗi cấp bằng bài thi nhỏ. Mọi bài bạn đã làm ở bất cứ đâu trong app đều được tính.',
+                'One level at a time: pinyin and tones, then the words, grammar and stories of HSK 1, 2 and 3, each ending with a mini test. Everything you do anywhere in the app counts.'
+              )
+            : t(
+                'Từng cấp một: từ vựng, rồi các thì, cấu trúc câu, nghe – nói, tới luyện thi TOEIC và IELTS. Mọi bài bạn đã làm ở bất cứ đâu trong app đều được tính.',
+                'One level at a time: words, then tenses, sentence building, listening and speaking, up to TOEIC and IELTS. Everything you do anywhere in the app counts.'
+              )}
         </p>
       </header>
 

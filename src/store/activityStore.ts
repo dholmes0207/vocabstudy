@@ -2,7 +2,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 // Finished sessions of the skills that keep no record of their own (listening,
-// dictation, speaking, sentence building), per language pack. The learning
+// dictation, speaking, sentence building, IELTS practice, the Chinese and Korean
+// sound and character pages), per language pack. The learning
 // path (lib/learningPath.ts) counts them; device-only like grammar progress,
 // and part of the backup file through the vocab. prefix.
 
@@ -14,6 +15,11 @@ export type ActivityKind =
   | 'ielts-reading'
   | 'ielts-speaking'
   | 'ielts-writing'
+  | 'pinyin'
+  | 'radicals'
+  | 'measure'
+  | 'numbers'
+  | 'hanviet'
 
 export type ActivityCounts = Partial<Record<ActivityKind, number>>
 

@@ -1,5 +1,6 @@
 import type { ActivityKind } from '@/store/activityStore'
 import { TOEIC_WORDS } from './toeic'
+import { HSK1, HSK2, HSK3 } from './exams'
 
 // "Lộ trình theo cấp" (docs/design/learning-path.md): the pieces the app already
 // has (words, grammar, stories, listening, speaking, exam practice) in the order
@@ -26,6 +27,8 @@ export interface PathContext {
   toeicPart: (part: number) => [number, number]
   /** Best score of an exam record, as a share of its questions. */
   examBest: (examId: string) => number
+  /** Questions answered in the HSK drills of one level ("hsk1"…). */
+  hskAnswered: (level: string) => number
 }
 
 export interface PathStep {
@@ -433,9 +436,285 @@ export const EN_PATH: PathLevel[] = [
   },
 ]
 
+const hskWords = (id: string, list: readonly string[], goal: number, title: Pair): PathStep => ({
+  id,
+  icon: '🀄',
+  title,
+  desc: [
+    `Học ${goal} từ trong danh sách này, mỗi lần 5 từ, có pinyin và âm Hán Việt.`,
+    `Learn ${goal} words from this list, five at a time, with pinyin and Sino-Vietnamese readings.`,
+  ],
+  to: '/learn',
+  goal,
+  measure: (ctx) => ctx.learnedWords(list),
+  unit: ['từ', 'words'],
+})
+
+const hskDrills = (level: string, name: string): PathStep => ({
+  id: `zh-${level}-drills`,
+  icon: '📝',
+  title: [`Dạng câu ${name}`, `${name} question types`],
+  desc: [
+    `Làm 40 câu theo đúng các dạng của đề ${name}: nghe, nhìn tranh, điền từ, sắp xếp câu.`,
+    `Answer 40 questions in the ${name} formats: listening, pictures, fill the gap, word order.`,
+  ],
+  to: '/hsk',
+  goal: 40,
+  measure: (ctx) => ctx.hskAnswered(level),
+  unit: ['câu', 'questions'],
+})
+
+const hskMini = (level: string, name: string): PathStep => ({
+  id: `zh-${level}-mini`,
+  icon: '⏱️',
+  title: [`Bài thi nhỏ ${name} đạt 60%`, `${name} mini test at 60%`],
+  desc: [
+    `Bài thi ngắn theo tỉ lệ đề thật, đúng từ 60% trở lên.`,
+    `The short test in the real paper's proportions, 60% or more right.`,
+  ],
+  to: '/hsk',
+  goal: 1,
+  measure: (ctx) => (ctx.examBest(`${level}-mini`) >= 0.6 ? 1 : 0),
+  unit: ['lần', 'pass'],
+})
+
+/** The Chinese path: from pinyin and tones to HSK 3. */
+export const ZH_PATH: PathLevel[] = [
+  {
+    n: 1,
+    icon: '🎵',
+    title: ['Làm quen: pinyin & thanh điệu', 'First steps: pinyin & tones'],
+    tagline: [
+      'Nghe ra 4 thanh, đọc được pinyin, những từ và câu đầu tiên: 是, 不, 吗, 很.',
+      'Hear the four tones, read pinyin, the first words and sentences: 是, 不, 吗, 很.',
+    ],
+    cefr: 'HSK 1',
+    tone: 'from-red-400 to-amber-500',
+    testWords: HSK1,
+    steps: [
+      sessions(
+        'zh1-pinyin',
+        'pinyin',
+        3,
+        '🎵',
+        '/pinyin',
+        ['Pinyin & thanh điệu', 'Pinyin & tones'],
+        [
+          'Chạm để nghe 4 thanh, phụ âm đầu và vần khó, rồi làm bài nghe chọn thanh.',
+          'Tap to hear the four tones, initials and tricky finals, then a listen-and-pick check.',
+        ]
+      ),
+      hskWords('zh1-words', HSK1, 60, ['60 từ HSK 1 đầu tiên', 'Your first 60 HSK 1 words']),
+      grammar(
+        'zh1-grammar',
+        ['zh-shi', 'zh-bu-mei', 'zh-questions', 'zh-hen'],
+        ['Câu đầu tiên: 是, 不/没, 吗, 很', 'First sentences: 是, 不/没, 吗, 很'],
+        [
+          'Bốn bài: câu với 是, phủ định 不 và 没, câu hỏi 吗, tính từ với 很. Đạt 80% mỗi bài.',
+          'Four units: 是 sentences, 不 and 没, 吗 questions, adjectives with 很. Score 80% in each.',
+        ]
+      ),
+      stories(
+        'zh1-stories',
+        ['zh-my-day', 'zh-shopping'],
+        ['Hai truyện đầu tiên', 'Your first two stories']
+      ),
+    ],
+  },
+  {
+    n: 2,
+    icon: '🏮',
+    title: ['HSK 1', 'HSK 1'],
+    tagline: [
+      'Đủ 150 từ và các mẫu câu của HSK 1, đếm số và lượng từ, sẵn sàng thi HSK 1.',
+      'The 150 words and sentence patterns of HSK 1, numbers and measure words: ready for HSK 1.',
+    ],
+    cefr: 'HSK 1',
+    tone: 'from-rose-500 to-red-600',
+    testWords: HSK1,
+    steps: [
+      hskWords('zh2-words', HSK1, 140, ['Trọn bộ từ HSK 1', 'The whole HSK 1 list']),
+      grammar(
+        'zh2-grammar',
+        [
+          'zh-de',
+          'zh-measure',
+          'zh-zai',
+          'zh-word-order',
+          'zh-le',
+          'zh-ji-duoshao',
+          'zh-ye-dou',
+          'zh-xiang-yao',
+        ],
+        ['Ngữ pháp HSK 1', 'HSK 1 grammar'],
+        [
+          'Tám bài: 的, lượng từ, 在, trật tự câu, 了, 几 và 多少, 也 và 都, 想 và 要.',
+          'Eight units: 的, measure words, 在, word order, 了, 几 and 多少, 也 and 都, 想 and 要.',
+        ]
+      ),
+      sessions(
+        'zh2-measure',
+        'measure',
+        2,
+        '🧮',
+        '/measure-words',
+        ['Lượng từ', 'Measure words'],
+        [
+          '个, 本, 杯… đặt cạnh "cái, quyển, cốc" của tiếng Việt.',
+          '个, 本, 杯… next to their Vietnamese counterparts.',
+        ]
+      ),
+      sessions(
+        'zh2-numbers',
+        'numbers',
+        2,
+        '🔢',
+        '/numbers',
+        ['Nghe số', 'Numbers by ear'],
+        [
+          'Nghe giá tiền, giờ, ngày tháng rồi chọn đúng, như phần nghe của đề HSK.',
+          'Hear prices, times and dates and pick the right one, as in HSK listening.',
+        ]
+      ),
+      hskDrills('hsk1', 'HSK 1'),
+      hskMini('hsk1', 'HSK 1'),
+    ],
+  },
+  {
+    n: 3,
+    icon: '🐉',
+    title: ['HSK 2', 'HSK 2'],
+    tagline: [
+      'Thêm 150 từ, so sánh với 比, kinh nghiệm với 过, đọc truyện dài hơn và nhận mặt bộ thủ.',
+      'Another 150 words, comparisons with 比, experience with 过, longer stories and the radicals.',
+    ],
+    cefr: 'HSK 2',
+    tone: 'from-amber-400 to-orange-600',
+    testWords: HSK2,
+    steps: [
+      hskWords('zh3-words', HSK2, 130, ['Từ vựng HSK 2', 'HSK 2 words']),
+      grammar(
+        'zh3-grammar',
+        [
+          'zh-can',
+          'zh-because',
+          'zh-de-degree',
+          'zh-bi',
+          'zh-guo',
+          'zh-yao-le',
+          'zh-youdianr',
+          'zh-he',
+          'zh-ba',
+        ],
+        ['Ngữ pháp HSK 2', 'HSK 2 grammar'],
+        [
+          'Chín bài: 会/能/可以, 因为…所以, bổ ngữ 得, so sánh 比, 过, 要…了, 有点儿, 和, 吧.',
+          'Nine units: 会/能/可以, 因为…所以, 得 complements, 比, 过, 要…了, 有点儿, 和, 吧.',
+        ]
+      ),
+      sessions(
+        'zh3-radicals',
+        'radicals',
+        2,
+        '🧩',
+        '/radicals',
+        ['Bộ thủ', 'Radicals'],
+        [
+          'Nhận mặt các bộ thủ hay gặp qua tên Hán Việt: đoán nghĩa chữ mới dễ hơn.',
+          'The common radicals by their Sino-Vietnamese names: new characters get easier to guess.',
+        ]
+      ),
+      stories(
+        'zh3-stories',
+        ['zh-rainy-day', 'zh-my-family', 'zh-sick-day', 'zh-beijing-trip', 'zh-restaurant'],
+        ['Truyện A1–A2', 'A1–A2 stories']
+      ),
+      hskDrills('hsk2', 'HSK 2'),
+      hskMini('hsk2', 'HSK 2'),
+    ],
+  },
+  {
+    n: 4,
+    icon: '🏯',
+    title: ['HSK 3', 'HSK 3'],
+    tagline: [
+      'Câu 把 và 被, bổ ngữ kết quả và xu hướng, nghe – chép, đọc truyện B1 và bài thi HSK 3 có phần viết.',
+      '把 and 被, result and direction complements, dictation, B1 stories and the HSK 3 test with writing.',
+    ],
+    cefr: 'HSK 3',
+    tone: 'from-fuchsia-500 to-purple-700',
+    testWords: HSK3,
+    steps: [
+      hskWords('zh4-words', HSK3, 270, ['Từ vựng HSK 3', 'HSK 3 words']),
+      grammar(
+        'zh4-grammar',
+        [
+          'zh-ba-sentence',
+          'zh-bei',
+          'zh-yue',
+          'zh-suiran',
+          'zh-yibian',
+          'zh-chule',
+          'zh-result',
+          'zh-direction',
+          'zh-ruguo',
+        ],
+        ['Ngữ pháp HSK 3', 'HSK 3 grammar'],
+        [
+          'Chín bài B1: câu 把, câu 被, 越…越, 虽然…但是, 一边…一边, 除了, bổ ngữ kết quả và xu hướng, 如果.',
+          'Nine B1 units: 把, 被, 越…越, 虽然…但是, 一边…一边, 除了, result and direction complements, 如果.',
+        ]
+      ),
+      sessions(
+        'zh4-hanviet',
+        'hanviet',
+        2,
+        '🈶',
+        '/han-viet',
+        ['Âm Hán Việt', 'Sino-Vietnamese readings'],
+        [
+          'Bảng chữ theo âm Hán Việt: lợi thế riêng của người Việt khi nhớ chữ Hán.',
+          'Characters by their Sino-Vietnamese reading: a head start only Vietnamese learners have.',
+        ]
+      ),
+      sessions(
+        'zh4-dictation',
+        'dictation',
+        5,
+        '✍️',
+        '/dictation',
+        ['Nghe – chép', 'Dictation'],
+        [
+          'Nghe câu rồi xếp hoặc gõ pinyin, luyện tai cho phần nghe HSK 3.',
+          'Hear a sentence and build it, training your ear for HSK 3 listening.',
+        ]
+      ),
+      stories(
+        'zh4-stories',
+        [
+          'zh-first-time',
+          'zh-weekend',
+          'zh-new-phone',
+          'zh-fruit-shopping',
+          'zh-lost-wallet',
+          'zh-new-city',
+          'zh-hsk-exam',
+          'zh-birthday-gift',
+          'zh-catch-cold',
+        ],
+        ['Truyện A2–B1', 'A2–B1 stories']
+      ),
+      hskDrills('hsk3', 'HSK 3'),
+      hskMini('hsk3', 'HSK 3'),
+    ],
+  },
+]
+
 /** The path of a language pack; null when it has none yet. */
 export function pathFor(code: string): PathLevel[] | null {
-  return code === 'en' ? EN_PATH : null
+  if (code === 'en') return EN_PATH
+  if (code === 'zh') return ZH_PATH
+  return null
 }
 
 export interface StepState {

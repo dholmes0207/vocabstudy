@@ -3,6 +3,7 @@ import { ArrowRight, Check, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import { radicalQuiz, radicalTable, type Radical, type RadicalQuestion } from '@/lib/radicals'
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
@@ -116,6 +117,7 @@ function QuizRound({ questions, onAgain }: { questions: RadicalQuestion[]; onAga
   const rate = useSettings((s) => s.ttsRate)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -158,6 +160,7 @@ function QuizRound({ questions, onAgain }: { questions: RadicalQuestion[]; onAga
     }
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
+    logActivity(code, 'radicals')
     setXp(earned)
   }
 
