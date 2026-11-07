@@ -24,6 +24,20 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
+    title: ['Nhiệm vụ hôm nay và huy chương lộ trình', 'Daily quests and path medals'],
+    items: [
+      [
+        'Mỗi ngày lộ trình giao một nhiệm vụ nhỏ: tiến thêm ở bước đang dở của cấp. Làm xong bấm nhận +15 XP kèm pháo giấy.',
+        'Each day the path sets one small quest: move the step you are on a little further. Finish it and claim +15 XP with confetti.',
+      ],
+      [
+        'Trang Thống kê có huy chương cho từng cấp của lộ trình, sáng lên khi qua cấp, có cúp khi thắng thử thách.',
+        'The stats page shows a medal for each level of the path, lit when you clear it, with a cup when you win its challenge.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Cấu trúc câu dạng khối màu', 'Sentence patterns as coloured blocks'],
     items: [
       [

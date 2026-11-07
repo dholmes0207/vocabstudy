@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, ChevronDown, Lock, Sparkles, Swords } from 'lucide-react'
+import { ArrowRight, Check, ChevronDown, Gift, Lock, Sparkles, Swords } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { NO_PASSED, usePath } from '@/store/pathStore'
 import { usePathStates } from '@/hooks/usePathContext'
+import { useDailyQuest } from '@/hooks/useDailyQuest'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
   CLEAR_AT,
@@ -15,6 +16,7 @@ import {
   type LevelState,
   type PathLevel,
 } from '@/lib/learningPath'
+import { QUEST_XP } from '@/lib/pathQuest'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 import PackOnly from '@/components/PackOnly'
@@ -107,6 +109,8 @@ function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
         </p>
       )}
 
+      <QuestCard code={code} states={states} />
+
       {current && (
         <section
           aria-label={t('Bước tiếp theo', 'Next step')}
@@ -177,6 +181,62 @@ function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
         ))}
       </ol>
     </div>
+  )
+}
+
+/** "Nhiệm vụ hôm nay": one step to move forward today, +XP when it moves. */
+function QuestCard({ code, states }: { code: string; states: readonly LevelState[] }) {
+  const t = useT()
+  const daily = useDailyQuest(code, states)
+  if (!daily) return null
+  const { quest, step, done, claim } = daily
+  return (
+    <section
+      aria-label={t('Nhiệm vụ hôm nay', 'Today’s quest')}
+      className={`card flex items-center gap-3 border-2 p-4 ${
+        done
+          ? 'border-emerald-300 bg-emerald-50 dark:border-emerald-500/50 dark:bg-emerald-950/40'
+          : 'border-dashed border-sky-300 dark:border-sky-500/50'
+      }`}
+    >
+      <span
+        className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-sky-100 text-2xl dark:bg-sky-950"
+        aria-hidden="true"
+      >
+        {quest.claimed ? '🎉' : done ? '🎁' : step.icon}
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300">
+          {t('Nhiệm vụ hôm nay', 'Today’s quest')} · +{QUEST_XP} XP
+        </p>
+        <p className="font-bold">{t(...step.title)}</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          {quest.claimed
+            ? t('Đã nhận thưởng. Mai có nhiệm vụ mới!', 'Reward claimed. A new quest tomorrow!')
+            : done
+              ? t('Xong rồi! Mở quà nào.', 'Done! Open your reward.')
+              : t(
+                  'Tiến thêm một chút ở bước này hôm nay là xong.',
+                  'Move this step forward a little today and it’s done.'
+                )}
+        </p>
+      </div>
+      {done && !quest.claimed ? (
+        <button type="button" onClick={claim} className="btn-primary h-11 shrink-0 px-4">
+          <Gift className="h-4 w-4" aria-hidden="true" /> {t('Nhận', 'Claim')}
+        </button>
+      ) : (
+        !done && (
+          <Link
+            to={step.to}
+            className="btn-secondary h-11 shrink-0 px-4"
+            aria-label={t(`Làm: ${step.title[0]}`, `Go: ${step.title[1]}`)}
+          >
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        )
+      )}
+    </section>
   )
 }
 
