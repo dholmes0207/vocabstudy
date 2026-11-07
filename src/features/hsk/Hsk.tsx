@@ -39,6 +39,7 @@ import { readingRound, type ShuffledReading } from '@/lib/hskReadings'
 import { answerRound, type AnswerQuestion } from '@/lib/hskAnswers'
 import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
 import { loadHskBank } from '@/lib/hskBank'
+import { hskMiniPlan, type HskMiniStep, type HskSection } from '@/lib/hskMiniTest'
 import { usePracticeBank } from '@/hooks/usePracticeBank'
 
 // "Luyện thi HSK" (docs/design/toeic.md, giai đoạn B): for HSK 1–3, the
@@ -80,15 +81,8 @@ type Run =
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
-type Section = 'listen' | 'read' | 'write'
-
-/** A part of the mini test; HSK 3 writing has two (完成句子, then 写汉字). */
-type MiniStep =
-  | { section: Section; kind: 'choice'; questions: HskChoice[] }
-  | { section: 'write'; kind: 'order'; questions: HskOrder[] }
-  | { section: 'listen'; kind: 'talk'; dialogues: ShuffledDialogue[] }
-  | { section: 'read'; kind: 'answer'; questions: AnswerQuestion[] }
-  | { section: 'read'; kind: 'read'; questions: ShuffledReading[] }
+type Section = HskSection
+type MiniStep = HskMiniStep
 
 /** Right answers per section, in the order of the test. */
 type SectionScore = { section: Section; correct: number; total: number }
@@ -295,85 +289,7 @@ export default function Hsk() {
   const startMini = () => {
     if (!bank) return
     setResult(null)
-    // HSK 1–2 listening opens with right-or-wrong pictures; HSK 3 has none.
-    const listen: MiniStep[] =
-      HSK_SCALE[level].sections === 3
-        ? [
-            {
-              section: 'listen',
-              kind: 'talk',
-              dialogues: dialogueRound(bank.dialogues, 'hsk3', 5),
-            },
-            { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, 5) },
-          ]
-        : level === 'hsk1'
-          ? [
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 4),
-              },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: pictureQuestions(level, pack.words, 3),
-              },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: listenQuestions(level, pack.words, 3),
-              },
-            ]
-          : [
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 3),
-              },
-              {
-                section: 'listen',
-                kind: 'talk',
-                dialogues: pictureDialogueRound(bank.pictureDialogues, lowWords, 2),
-              },
-              {
-                section: 'listen',
-                kind: 'talk',
-                dialogues: dialogueRound(bank.dialogues, 'hsk2', 3),
-              },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: listenQuestions(level, pack.words, 2),
-              },
-            ]
-    // Reading too: HSK 1–2 open with pictures, HSK 3 has none.
-    const read: MiniStep[] =
-      HSK_SCALE[level].sections === 3
-        ? [
-            { section: 'read', kind: 'answer', questions: answerRound(bank.pairs, 'hsk3', 3) },
-            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
-            { section: 'read', kind: 'read', questions: readingRound(bank.readings, 4) },
-          ]
-        : level === 'hsk1'
-          ? [
-              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
-              { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 2) },
-              { section: 'read', kind: 'answer', questions: answerRound(bank.pairs, 'hsk1', 2) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 2) },
-            ]
-          : [
-              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
-              { section: 'read', kind: 'answer', questions: answerRound(bank.pairs, 'hsk2', 3) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
-            ]
-    const steps: MiniStep[] = [...listen, ...read]
-    // HSK 3 writing: five sentences to build, five characters to write.
-    if (HSK_SCALE[level].sections === 3)
-      steps.push(
-        { section: 'write', kind: 'order', questions: orderQuestions(level, pack.words, 5) },
-        { section: 'write', kind: 'choice', questions: charQuestions(level, pack.words, 5) }
-      )
-    setRun({ kind: 'mini', step: 0, steps, scores: [] })
+    setRun({ kind: 'mini', step: 0, steps: hskMiniPlan(level, pack.words, bank), scores: [] })
   }
 
   const exit = () => setRun(null)
