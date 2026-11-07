@@ -62,6 +62,17 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 - Số câu dạng đề HSK đọc từ `retryStore.hsk` (đếm theo cấp), điểm bài thi nhỏ từ `examStore`
   (`hsk1-mini`…).
 
+## 3c. Nhiệm vụ hôm nay và huy chương (08/11/2026)
+
+- Mỗi ngày, lần đầu mở lộ trình (hay trang chủ), app lấy bước đang dở của cấp hiện tại làm
+  **nhiệm vụ hôm nay** và ghi lại số đếm lúc đó. Bước ấy tiến thêm (dù làm ở trang nào) là xong;
+  bấm "Nhận" được +15 XP và pháo giấy. Một ngày một nhiệm vụ, nhận một lần.
+- Thẻ lộ trình ở trang chủ nhắc "Có nhiệm vụ hôm nay" hoặc "Nhiệm vụ xong, vào nhận quà".
+- Trang Thống kê có **Huy chương lộ trình**: mỗi cấp một huy chương, sáng lên khi qua cấp, thêm
+  cúp 🏆 khi thắng thử thách của cấp.
+- Code: `lib/pathQuest.ts` (thuần, có test), `hooks/useDailyQuest.ts`, `pathStore.quests`,
+  `features/stats/PathBadges.tsx`.
+
 ## 4. Dev
 
 - `lib/learningPath.ts` (thuần, có test): `EN_PATH`, `pathState` (tiến độ, mở khoá), `currentLevel`,
