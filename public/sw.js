@@ -24,8 +24,9 @@ const DISABLED = false
 
 // Practice that is not part of a language pack but must work offline as soon as
 // the worker is installed, like the code it used to be compiled into (the TOEIC
-// questions, src/lib/toeicBank.ts). Small: a few hundred kB before compression.
-const EXTRA_DATA = ['data/toeic/en.json']
+// and HSK questions, src/lib/toeicBank.ts and hskBank.ts). Small: a few hundred
+// kB before compression.
+const EXTRA_DATA = ['data/toeic/en.json', 'data/hsk/zh.json']
 
 // Bump to invalidate every cache at once (e.g. after regenerating audio).
 // v2: the pack moved to stale-while-revalidate; flushing v1 hands every learner

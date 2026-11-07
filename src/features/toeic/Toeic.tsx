@@ -33,7 +33,8 @@ import FormRound from './FormRound'
 import { formRound, type FormQuestion } from '@/lib/wordFormDrill'
 import FamilyRound from './FamilyRound'
 import { familyRound, type WordFamily } from '@/lib/wordFamilies'
-import { useToeicBank } from '@/hooks/useToeicBank'
+import { usePracticeBank } from '@/hooks/usePracticeBank'
+import { loadToeicBank } from '@/lib/toeicBank'
 
 // "Luyện thi TOEIC" (docs/design/toeic.md): the workplace vocabulary by theme,
 // and what each of the seven parts of the Listening & Reading test asks.
@@ -60,7 +61,7 @@ export default function Toeic() {
   const parts = useRetry((s) => s.parts)
   const weakestPart = weakestKind(parts)
   // The practice questions (public/data/toeic/en.json); the themes need only the pack.
-  const { bank, error: bankError, retry: retryBank } = useToeicBank()
+  const { bank, error: bankError, retry: retryBank } = usePracticeBank(loadToeicBank)
   // The part being practised; n remounts the round on "play again".
   const [mini, setMini] = useState(false)
   const [forms, setForms] = useState<{ n: number; questions: FormQuestion[] } | null>(null)

@@ -271,11 +271,12 @@ describe('service worker — which language packs to warm', () => {
   })
 })
 
-// Practice kept out of the code (the TOEIC questions) is warmed with the packs,
+// Practice kept out of the code (TOEIC, HSK questions) is warmed with the packs,
 // so it still works offline right after install, as it did inside a chunk.
 describe('service worker — practice data warmed at install', () => {
   it('lists only files that ship, under data/, never audio', () => {
     expect(sw.EXTRA_DATA).toContain('data/toeic/en.json')
+    expect(sw.EXTRA_DATA).toContain('data/hsk/zh.json')
     for (const path of sw.EXTRA_DATA) {
       expect(path).toMatch(/^data\/[^/].*\.json$/)
       expect(existsSync(`public/${path}`), path).toBe(true)
