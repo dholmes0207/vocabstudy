@@ -180,6 +180,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-teal-500 to-emerald-600',
   },
   {
+    to: '/games/blitz',
+    icon: '⚡',
+    title: 'Đúng hay sai?',
+    desc: '60 giây, từ và nghĩa có khớp không? Đúng liền tay để nhân điểm, sai bị trừ giờ. Phá kỷ lục!',
+    titleEn: 'True or false?',
+    descEn:
+      '60 seconds: does the word match the meaning? Answer right in a row to multiply your points; a miss costs time. Beat your record!',
+    tone: 'from-orange-500 to-rose-500',
+  },
+  {
     to: '/games/match',
     icon: '🧩',
     title: 'Ghép cặp',

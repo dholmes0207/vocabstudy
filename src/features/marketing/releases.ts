@@ -24,6 +24,16 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
+    title: ['Trò chơi "Đúng hay sai?"', 'New game: True or false?'],
+    items: [
+      [
+        '60 giây: từ và nghĩa có khớp không? Đúng liền tay để nhân điểm tới ×4, sai bị trừ 3 giây. Có kỷ lục để phá, chơi được với mọi ngôn ngữ.',
+        '60 seconds: does the word match the meaning? Answer right in a row to multiply your points up to ×4; a miss costs 3 seconds. There is a record to beat, in every language.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['IELTS Reading: điền tóm tắt', 'IELTS Reading: summary completion'],
     items: [
       [

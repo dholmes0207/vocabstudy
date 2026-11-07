@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import type { PosCategory, SRSCard, Word } from '@/types'
 import {
+  BLITZ_SECONDS,
+  blitzMultiplier,
+  blitzXp,
   matchXp,
+  pickBlitzDeck,
   orderXp,
   pickMatchRound,
   pickOrderRound,
@@ -192,5 +196,43 @@ describe('xp for play', () => {
     expect(matchXp(6, 50, 999)).toBeGreaterThan(0)
     expect(orderXp(5, 0)).toBeGreaterThan(orderXp(5, 4))
     expect(orderXp(5, 99)).toBeGreaterThan(0)
+  })
+})
+
+describe('true or false (blitz)', () => {
+  const words = Array.from({ length: 30 }, (_, i) => word(i + 1))
+  let seed = 1
+  const rand = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646
+
+  it('deals true and false cards, a false one always showing another word’s meaning', () => {
+    const deck = pickBlitzDeck(words, {}, 30, rand)
+    expect(deck).toHaveLength(30)
+    const truths = deck.filter((c) => c.truth).length
+    expect(truths).toBeGreaterThan(5)
+    expect(truths).toBeLessThan(25)
+    for (const c of deck) {
+      const own = shortMeaning(words.find((w) => w.id === c.id)!.meaning)
+      if (c.truth) expect(c.meaning).toBe(own)
+      else expect(c.meaning).not.toBe(own)
+    }
+  })
+
+  it('shows IPA, or the reading a pack has instead (pinyin)', () => {
+    const zh = [word(1, { ipa: '', viRead: 'nǐ hǎo' }), word(2, { ipa: 'həˈloʊ' })]
+    const deck = pickBlitzDeck(zh, {}, 10, rand)
+    expect(deck.find((c) => c.id === 1)?.reading).toBe('nǐ hǎo')
+    expect(deck.find((c) => c.id === 2)?.reading).toBe('həˈloʊ')
+  })
+
+  it('skips repeated meanings and needs two words to play', () => {
+    const same = [word(1, { meaning: 'nhà' }), word(2, { meaning: 'nhà' })]
+    expect(pickBlitzDeck(same, {}, 10, rand)).toEqual([])
+  })
+
+  it('multiplies points for a run of right answers, up to ×4, and turns a score into XP', () => {
+    expect([0, 4, 5, 9, 10, 15, 40].map(blitzMultiplier)).toEqual([1, 1, 2, 2, 3, 4, 4])
+    expect(blitzXp(0)).toBe(2)
+    expect(blitzXp(300)).toBe(10)
+    expect(BLITZ_SECONDS).toBe(60)
   })
 })
