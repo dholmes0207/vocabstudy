@@ -18,6 +18,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/han-viet': ['zh', 'ko'],
   // Components of Chinese characters, by their Sino-Vietnamese names (lib/radicals.ts).
   '/radicals': ['zh'],
+  // The levels to climb, words to certificates (lib/learningPath.ts).
+  '/path': ['en'],
   // HSK 1–2, TOPIK I, Cambridge A2 Key and B1 Preliminary (lib/exams.ts).
   '/exam': ['en', 'ko', 'zh'],
   // Workplace English for the TOEIC Listening & Reading test (lib/toeic.ts).

@@ -13,6 +13,24 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-08',
+    title: ['Lộ trình theo cấp', 'A level path to climb'],
+    items: [
+      [
+        'Trang Lộ trình theo cấp: 6 cấp từ những từ đầu tiên, các thì, cấu trúc câu, nghe – nói tới luyện thi TOEIC và hướng tới IELTS, nút "Làm tiếp" luôn chỉ đúng bước kế.',
+        'The Level path: six levels from the first words, tenses, sentence building, listening and speaking up to TOEIC and towards IELTS, with "Continue" always pointing at the next step.',
+      ],
+      [
+        'Mọi bài đã làm ở bất cứ đâu trong app đều được tính; qua 80% một cấp thì mở cấp sau, có pháo giấy và +30 XP.',
+        'Everything you do anywhere in the app counts; reach 80% of a level to open the next, with confetti and +30 XP.',
+      ],
+      [
+        'Đã làm bài xếp lớp thì các cấp tương ứng mở sẵn, không phải học lại từ đầu.',
+        'If you took the placement check, the matching levels are already open, so you don’t start from zero.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-06',
     title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
     items: [

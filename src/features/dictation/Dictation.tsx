@@ -4,6 +4,7 @@ import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
 import { exampleAudio, prefetchAudio, pronounce } from '@/lib/audio'
 import {
@@ -146,6 +147,7 @@ export function DictationRound({
   const rate = useSettings((s) => s.ttsRate)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [typed, setTyped] = useState('')
   const [result, setResult] = useState<{
@@ -240,6 +242,7 @@ export function DictationRound({
     }
     const xp = dictationXp(caught, items.length)
     addPlayXp(code, xp)
+    logActivity(code, 'dictation')
     setFinished({ xp })
   }
 
