@@ -64,6 +64,13 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 7: Đọc, điền tóm tắt (Summary completion).** Mỗi bài đọc thêm một đoạn tóm tắt viết lại
+  bằng từ khác, 4 chỗ trống, hộp 6 từ (2 từ bẫy: trái nghĩa, hoặc có trong bài nhưng sai ý). Chạm từ để
+  điền vào ô đang mở (ô trống đầu tiên, hoặc ô vừa chạm), chạm ô đã điền để lấy từ ra. Kiểm tra khi đủ ô:
+  đáp án và đoạn nào nói điều đó cho từng ô, mẹo đoán loại từ trước. +3 XP mỗi ô đúng, ghi
+  `ielts-reading`, điểm cao nhất riêng (`ieltsStore.summary`, hiện 📝 trên danh sách bài). Chỗ trống viết
+  `{0}`, `{1}`… trong `summary.text`; `validateIeltsBank` kiểm tra đủ và đúng thứ tự.
+
 - **Bước 6: Nghe trắc nghiệm** (Part 2 và 3). 2 bài một người nói (giới thiệu bảo tàng, thư viện mới)
   và 2 bài hai sinh viên bàn bạc (chọn đề tài thuyết trình, bàn kết quả khảo sát), mỗi bài 4 câu A/B/C.
   Bài nghe cố ý nhắc cả đáp án bẫy (số cũ, ý bị bác, điều đã đoán) như đề thật; test kiểm tra ít nhất
@@ -91,5 +98,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Thêm dạng đọc: điền vào tóm tắt (summary completion).
+1. Thêm dạng đọc: nối thông tin với đoạn (matching information), điền câu (sentence completion).
 2. Nghe Part 4 (bài giảng ngắn, điền ghi chú) và dạng nối thông tin (matching) ở Part 2–3.

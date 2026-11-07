@@ -33,6 +33,18 @@ export interface HeadingsTask {
   why: string[]
 }
 
+/**
+ * Summary completion: a summary of the passage with gaps written {0}, {1}…,
+ * and a box of words, some spare. `answers[i]` is the box word for gap i.
+ */
+export interface SummaryTask {
+  text: string
+  box: string[]
+  answers: number[]
+  /** Where the passage gives each gap, in Vietnamese. */
+  why: string[]
+}
+
 export interface ReadingPassage {
   id: string
   emoji: string
@@ -40,6 +52,7 @@ export interface ReadingPassage {
   passage: string[]
   questions: TfngQuestion[]
   headings: HeadingsTask
+  summary: SummaryTask
 }
 
 /** Headings are listed i, ii, iii… as on the paper. */
@@ -187,6 +200,28 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       Array.isArray(h.why) && h.why.length === n && h.why.every(text),
       `"${r.id}" needs a reason per heading`
     )
+    const sm = r.summary
+    const gaps =
+      sm && text(sm.text) ? summaryParts(sm.text).filter((x) => typeof x === 'number') : []
+    check(
+      gaps.length >= 3 && gaps.every((g, i) => g === i),
+      `"${r.id}" needs a summary with gaps {0}, {1}, {2}… in order`
+    )
+    check(
+      Array.isArray(sm.box) &&
+        sm.box.length > gaps.length &&
+        sm.box.every(text) &&
+        new Set(sm.box).size === sm.box.length &&
+        Array.isArray(sm.answers) &&
+        sm.answers.length === gaps.length &&
+        new Set(sm.answers).size === gaps.length &&
+        sm.answers.every((a) => Number.isInteger(a) && a >= 0 && a < sm.box.length),
+      `"${r.id}" needs a word box with spare words and one word per gap`
+    )
+    check(
+      Array.isArray(sm.why) && sm.why.length === gaps.length && sm.why.every(text),
+      `"${r.id}" needs a reason per gap`
+    )
   }
   const speaking = bank!.speaking
   check(
@@ -303,6 +338,14 @@ export function readingRound(p: ReadingPassage, rand: () => number = Math.random
     ;[qs[i], qs[j]] = [qs[j], qs[i]]
   }
   return { ...p, questions: qs }
+}
+
+/** A summary split into text and gap numbers: "a {0} b" → ['a ', 0, ' b']. */
+export function summaryParts(summary: string): (string | number)[] {
+  return summary
+    .split(/\{(\d+)\}/)
+    .map((part, i) => (i % 2 ? Number(part) : part))
+    .filter((part) => part !== '')
 }
 
 /** How many paragraphs got their right heading. */

@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "reading": [
     {
       "id": "city-farms",
@@ -57,6 +57,29 @@
           "Đoạn 1 nói trồng rau gần nơi người ở giúp rau đi quãng đường ngắn hơn, tươi hơn → \"nearer to the people who eat it\".",
           "Đoạn 2: đất và cây hấp thụ nhiệt, tầng dưới cần ít điều hoà → \"keep buildings cool\".",
           "Đoạn 3 mở bằng \"not cheap\": gia cố mái, bơm nước → \"high cost\". Câu về rau thơm chỉ là hệ quả, không phải ý chính nên tiêu đề \"crops grow fastest\" là bẫy."
+        ]
+      },
+      "summary": {
+        "text": "Growing vegetables on city rooftops shortens the {0} that food travels. The soil and plants also take in {1}, so the floors below need less air conditioning. However, roofs often have to be {2} first, which is why most rooftop farmers choose {3} crops.",
+        "box": [
+          "water",
+          "distance",
+          "cheap",
+          "valuable",
+          "heat",
+          "strengthened"
+        ],
+        "answers": [
+          1,
+          4,
+          5,
+          3
+        ],
+        "why": [
+          "Đoạn 1: \"reduces the distance that vegetables travel\".",
+          "Đoạn 2: \"absorbs heat\" = take in heat. \"water\" là bẫy: nước được bơm lên ở đoạn 3, không liên quan điều hoà.",
+          "Đoạn 3: \"need to be strengthened\".",
+          "Đoạn 3: \"high-value crops\" = valuable. \"cheap\" là bẫy vì bài nói \"not cheap\" về chi phí làm nông trại."
         ]
       }
     },
@@ -117,6 +140,29 @@
           "Đoạn 2 giải thích vì sao người ngủ nhớ hơn: não \"replays\" và chuyển vào trí nhớ dài hạn.",
           "Đoạn 3: ngủ trưa chỉ giúp khi đủ dài, 10 phút gần như không giúp trí nhớ → \"limits of short naps\". Câu cuối về ôn tập chỉ là ý phụ."
         ]
+      },
+      "summary": {
+        "text": "In the experiment, volunteers who {0} after learning a list of words usually remembered more of them. During {1} sleep, the brain seems to move important information into long-term memory. A ten-minute nap may make people more {2}, but it does little for memory, and sleep can never replace {3}.",
+        "box": [
+          "alert",
+          "practice",
+          "deep",
+          "light",
+          "tired",
+          "slept"
+        ],
+        "answers": [
+          5,
+          2,
+          0,
+          1
+        ],
+        "why": [
+          "Đoạn 2: \"those who slept usually remember more words\".",
+          "Đoạn 2: \"during deep sleep\". \"light\" không có trong bài.",
+          "Đoạn 3: \"feel more alert\".",
+          "Đoạn 3: \"sleep cannot replace practice\"."
+        ]
       }
     },
     {
@@ -175,6 +221,29 @@
           "Đoạn 1: một phần tư loài sinh vật biển sống ở rạn, cá tìm thức ăn và chỗ trú → \"home for sea life\".",
           "Đoạn 2 bắt đầu \"also valuable to people\": chắn sóng, thu hút du khách. Có nhắc thợ lặn nhưng không nói họ làm hại → tiêu đề \"divers damage\" là bẫy.",
           "Đoạn 3 nói về hiện tượng tẩy trắng (bleaching): san hô đẩy tảo ra và mất màu."
+        ]
+      },
+      "summary": {
+        "text": "Although reefs cover less than one percent of the ocean floor, about a {0} of all marine species live on them. Reefs also protect {1} by breaking up large waves. When the water becomes too {2}, corals push out their algae and turn white, and if this lasts for {3}, they may die.",
+        "box": [
+          "warm",
+          "cold",
+          "weeks",
+          "quarter",
+          "coastlines",
+          "half"
+        ],
+        "answers": [
+          3,
+          4,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1: \"about a quarter of all marine species\".",
+          "Đoạn 2: \"They protect coastlines\".",
+          "Đoạn 3: \"too warm\". \"cold\" là bẫy trái nghĩa.",
+          "Đoạn 3: \"if high temperatures continue for weeks\"."
         ]
       }
     },
@@ -235,6 +304,29 @@
           "Đoạn 2 mở bằng \"Companies have mixed views\": có công ty hài lòng, có công ty lo → \"different opinions\".",
           "Đoạn 3: mô hình \"hybrid\", vài ngày ở văn phòng, vài ngày ở nhà → \"compromise\" (giải pháp dung hoà)."
         ]
+      },
+      "summary": {
+        "text": "Many people who work from home say they save time and {0} because they no longer travel every day. Some companies can now rent {1} offices, while others worry that new employees learn more {2}. A common solution is the {3} model, with two or three office days a week.",
+        "box": [
+          "slowly",
+          "quickly",
+          "larger",
+          "smaller",
+          "money",
+          "hybrid"
+        ],
+        "answers": [
+          4,
+          3,
+          0,
+          5
+        ],
+        "why": [
+          "Đoạn 1: \"save time and money\".",
+          "Đoạn 2: \"rent smaller offices\".",
+          "Đoạn 2: \"learn more slowly\". \"quickly\" là bẫy trái nghĩa.",
+          "Đoạn 3: \"the 'hybrid' model\"."
+        ]
       }
     },
     {
@@ -294,6 +386,29 @@
           "Đoạn 2: trà đắt, chỉ nhà giàu mới mua nổi → \"a drink for the rich\".",
           "Đoạn 3: trà phổ biến khắp thế giới, chỉ sau nước, mỗi nơi pha một kiểu. Tiêu đề \"good health today\" là bẫy: đoạn 3 không nói về sức khoẻ."
         ]
+      },
+      "summary": {
+        "text": "In China, tea was valued at first as a {0} and only later became an everyday drink. Traders carried it to Europe by {1}, and because it was rare it was so {2} that only wealthy families could buy it. Today, by most estimates, only {3} is drunk more widely.",
+        "box": [
+          "sea",
+          "expensive",
+          "water",
+          "cheap",
+          "milk",
+          "medicine"
+        ],
+        "answers": [
+          5,
+          0,
+          1,
+          2
+        ],
+        "why": [
+          "Đoạn 1: \"valued mainly as a medicine\".",
+          "Đoạn 2: \"brought tea to Europe by sea\".",
+          "Đoạn 2: \"it was expensive\".",
+          "Đoạn 3: \"second only to water\". \"milk\" là bẫy: sữa chỉ là thứ người ta pha thêm vào trà."
+        ]
       }
     },
     {
@@ -352,6 +467,29 @@
           "Đoạn 1: có nhiều loại nhựa, không nấu chảy chung được, phân loại tay chậm và tốn → \"too many kinds\".",
           "Đoạn 2: hộp sữa chua chưa rửa làm hỏng cả mẻ, trung tâm từ chối hộp bẩn → \"dirty containers\".",
           "Đoạn 3: đặt cọc chai, trả lại tiền khi mang chai về → \"paying people to bring bottles back\"."
+        ]
+      },
+      "summary": {
+        "text": "Only a small share of plastic is recycled, partly because different types cannot be {0} together and sorting them by hand is {1}. Containers that still have food in them are often {2} by recycling centres. Where people pay a {3} on bottles and get it back on return, many more bottles come back.",
+        "box": [
+          "slow",
+          "rejected",
+          "melted",
+          "deposit",
+          "tax",
+          "washed"
+        ],
+        "answers": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "why": [
+          "Đoạn 1: \"cannot be melted down together\".",
+          "Đoạn 1: \"Sorting them by hand is slow and costly\".",
+          "Đoạn 2: \"recycling centres often reject dirty containers\". \"washed\" là bẫy: bài nói hộp CHƯA rửa.",
+          "Đoạn 3: \"charge a small deposit… which is returned\". \"tax\" không được trả lại."
         ]
       }
     }

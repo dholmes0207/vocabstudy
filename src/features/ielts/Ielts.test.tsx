@@ -18,7 +18,7 @@ const bank = JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8')) as Ie
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useStudy.setState({ progress: {} })
-  useIelts.setState({ reading: {}, headings: {} })
+  useIelts.setState({ reading: {}, headings: {}, summary: {} })
   useActivity.setState({ counts: {} })
   vi.stubGlobal(
     'fetch',
@@ -100,5 +100,33 @@ describe('IELTS practice', () => {
     expect(useIelts.getState().headings[p.id]).toEqual({ best: 3, total: 3 })
     expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
     expect(useStudy.getState().progress.en.stats.xp).toBe(9)
+  })
+
+  it('fills a summary from the word box, lets a gap be emptied, and explains each gap', async () => {
+    render(
+      <MemoryRouter>
+        <Ielts />
+      </MemoryRouter>
+    )
+    fireEvent.click(await screen.findByRole('button', { name: /Summary completion/ }))
+    const id = screen.getByText(/Summary completion ·/).textContent!
+    const p = bank.reading.find((r) => id.includes(r.title[1]))!
+    const sm = p.summary
+    const box = screen.getByRole('list', { name: 'Word box' })
+    const word = (i: number) => within(box).getByRole('button', { name: sm.box[i] })
+
+    // A wrong word in gap 1, then tap the gap to empty it and put the right one.
+    const wrong = sm.box.findIndex((_, i) => !sm.answers.includes(i))
+    fireEvent.click(word(wrong))
+    expect(screen.getByRole('button', { name: `Gap 1: ${sm.box[wrong]}` })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: `Gap 1: ${sm.box[wrong]}` }))
+    expect(screen.getByRole('button', { name: 'Gap 1: empty' })).toBeInTheDocument()
+    sm.answers.forEach((a) => fireEvent.click(word(a)))
+    fireEvent.click(screen.getByRole('button', { name: /^Check/ }))
+    const n = sm.answers.length
+    expect(screen.getByRole('status')).toHaveTextContent(`${n} of ${n} right · +${n * 3} XP`)
+    expect(screen.getByText(sm.why[0])).toBeInTheDocument()
+    expect(useIelts.getState().summary[p.id]).toEqual({ best: n, total: n })
+    expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
   })
 })
