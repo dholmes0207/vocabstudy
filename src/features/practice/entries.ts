@@ -34,6 +34,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-600 to-indigo-600',
   },
   {
+    to: '/ielts',
+    icon: '🎓',
+    title: 'Luyện IELTS',
+    desc: 'Đề gồm những gì, và luyện từng dạng câu: bắt đầu với bài đọc True / False / Not Given có giải thích từng câu.',
+    titleEn: 'IELTS practice',
+    descEn:
+      'What the test is made of, and practice one question type at a time, starting with True / False / Not Given reading with every answer explained.',
+    tone: 'from-rose-500 to-fuchsia-600',
+  },
+  {
     to: '/pinyin',
     icon: '🎵',
     title: 'Pinyin & thanh điệu',

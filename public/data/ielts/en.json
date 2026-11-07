@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "reading": [
+    {
+      "id": "city-farms",
+      "emoji": "🌿",
+      "title": ["Nông trại trên mái nhà", "Farms on city rooftops"],
+      "passage": [
+        "In many large cities, empty rooftops are being turned into small farms. Supporters argue that growing food close to where people live reduces the distance that vegetables travel, which can lower transport costs and keep produce fresher.",
+        "Rooftop farms also help to cool buildings. A layer of soil and plants absorbs heat during the day, so the floors below need less air conditioning in summer. Some studies have found that this effect is strongest on low buildings with flat roofs.",
+        "However, rooftop farming is not cheap. Roofs often need to be strengthened before they can carry the weight of wet soil, and water must be pumped up from the ground. For this reason, most rooftop farms grow high-value crops such as herbs and salad leaves rather than rice or potatoes."
+      ],
+      "questions": [
+        {"statement": "Rooftop farms can reduce how far vegetables are transported.", "answer": "T", "why": "Đoạn 1: \"reduces the distance that vegetables travel\" — rút ngắn quãng đường rau được chở đi."},
+        {"statement": "Rooftop farms make buildings warmer in summer.", "answer": "F", "why": "Đoạn 2 nói ngược lại: đất và cây hấp thụ nhiệt nên tầng dưới mát hơn, cần ít điều hoà hơn."},
+        {"statement": "Most rooftop farms are owned by restaurants.", "answer": "NG", "why": "Bài không nhắc ai là chủ các nông trại trên mái. Không có thông tin → Not Given."},
+        {"statement": "Roofs sometimes have to be made stronger before farming begins.", "answer": "T", "why": "Đoạn 3: \"Roofs often need to be strengthened\" — thường phải gia cố mái."},
+        {"statement": "Rice is one of the most common crops on rooftop farms.", "answer": "F", "why": "Đoạn 3: phần lớn trồng rau thơm, xà lách \"rather than rice or potatoes\" — không trồng lúa."}
+      ]
+    },
+    {
+      "id": "sleep-memory",
+      "emoji": "😴",
+      "title": ["Giấc ngủ và trí nhớ", "Sleep and memory"],
+      "passage": [
+        "Scientists have long suspected that sleep plays a role in learning. In one well-known type of experiment, volunteers learn a list of new words in the evening. Half of them then sleep normally, while the other half stay awake all night.",
+        "When both groups are tested the next day, those who slept usually remember more words. Researchers believe that during deep sleep, the brain replays the day's experiences and moves important information into long-term memory.",
+        "Naps can help too, but only if they are long enough to include deep sleep. A short nap of ten minutes may make people feel more alert, yet it seems to do little for memory. Even so, experts warn that sleep cannot replace practice: students still need to review what they have learned."
+      ],
+      "questions": [
+        {"statement": "In the experiments, all volunteers stayed awake for one night.", "answer": "F", "why": "Đoạn 1: chỉ một nửa thức trắng, nửa còn lại ngủ bình thường."},
+        {"statement": "Volunteers who slept generally remembered more words.", "answer": "T", "why": "Đoạn 2: \"those who slept usually remember more words\"."},
+        {"statement": "The volunteers were all university students.", "answer": "NG", "why": "Bài chỉ nói \"volunteers\", không nói họ là ai. → Not Given."},
+        {"statement": "A ten-minute nap greatly improves memory.", "answer": "F", "why": "Đoạn 3: ngủ trưa 10 phút giúp tỉnh táo nhưng \"does little for memory\"."},
+        {"statement": "According to experts, sleeping well means students do not need to review.", "answer": "F", "why": "Đoạn 3: \"sleep cannot replace practice\" — vẫn phải ôn lại."}
+      ]
+    },
+    {
+      "id": "coral-reefs",
+      "emoji": "🪸",
+      "title": ["Rạn san hô", "Coral reefs"],
+      "passage": [
+        "Coral reefs cover less than one percent of the ocean floor, but they are home to about a quarter of all marine species. Fish use reefs for food and shelter, and many young fish grow up among the corals before moving to the open sea.",
+        "Reefs are also valuable to people. They protect coastlines by breaking up large waves during storms, and they attract tourists who come to dive and snorkel.",
+        "When the water becomes too warm, corals push out the tiny algae that live inside them and give them their colour. This process, known as bleaching, leaves the coral white. Bleached coral is not dead, but if high temperatures continue for weeks, it may die."
+      ],
+      "questions": [
+        {"statement": "Coral reefs cover a large part of the ocean floor.", "answer": "F", "why": "Đoạn 1: \"less than one percent\" — dưới 1%, không phải phần lớn."},
+        {"statement": "Some young fish live on reefs before moving to deeper water.", "answer": "T", "why": "Đoạn 1: nhiều cá con lớn lên giữa san hô \"before moving to the open sea\"."},
+        {"statement": "Reefs can reduce the damage caused by storm waves.", "answer": "T", "why": "Đoạn 2: rạn san hô \"protect coastlines by breaking up large waves during storms\"."},
+        {"statement": "Most tourists who visit reefs come from Europe.", "answer": "NG", "why": "Bài chỉ nói có du khách tới lặn, không nói họ từ đâu."},
+        {"statement": "Bleached coral is always dead.", "answer": "F", "why": "Đoạn 3: \"Bleached coral is not dead\" — chỉ chết nếu nóng kéo dài nhiều tuần."}
+      ]
+    },
+    {
+      "id": "remote-work",
+      "emoji": "🏠",
+      "title": ["Làm việc từ xa", "Working from home"],
+      "passage": [
+        "Since 2020, millions of office workers have spent at least part of the week working from home. Many say they save time and money because they no longer travel to work every day.",
+        "Companies have mixed views. Some report that staff complete the same amount of work at home as in the office, and that they can rent smaller offices. Others worry that new employees learn more slowly when they cannot watch experienced colleagues.",
+        "As a result, a common arrangement today is the 'hybrid' model, in which employees spend two or three days in the office and the rest at home. Managers often choose the office days so that whole teams are present at the same time."
+      ],
+      "questions": [
+        {"statement": "Workers who stay at home say they spend less time travelling.", "answer": "T", "why": "Đoạn 1: họ tiết kiệm thời gian vì \"no longer travel to work every day\"."},
+        {"statement": "All companies agree that working from home is better.", "answer": "F", "why": "Đoạn 2: \"Companies have mixed views\" — có công ty lo ngại, không phải tất cả đồng ý."},
+        {"statement": "Some companies have been able to rent smaller offices.", "answer": "T", "why": "Đoạn 2: \"they can rent smaller offices\"."},
+        {"statement": "Hybrid workers earn more than people who work only in the office.", "answer": "NG", "why": "Bài không nói gì về lương. → Not Given."},
+        {"statement": "In the hybrid model, employees usually decide their own office days.", "answer": "F", "why": "Đoạn 3: thường là quản lý chọn ngày lên văn phòng (\"Managers often choose\")."}
+      ]
+    },
+    {
+      "id": "history-of-tea",
+      "emoji": "🍵",
+      "title": ["Lịch sử của trà", "A short history of tea"],
+      "passage": [
+        "Tea was drunk in China for many centuries before it became popular in other parts of the world. At first it was valued mainly as a medicine, and only later did it become an everyday drink.",
+        "In the seventeenth century, traders brought tea to Europe by sea. Because the journey was long and the drink was rare, it was expensive, and for many years only wealthy families could afford it.",
+        "Today tea is one of the most widely consumed drinks on Earth, second only to water by most estimates. The way it is prepared differs greatly: some people add milk and sugar, while others prefer it plain or with spices."
+      ],
+      "questions": [
+        {"statement": "Tea was first used mainly as a medicine in China.", "answer": "T", "why": "Đoạn 1: \"valued mainly as a medicine\" lúc đầu."},
+        {"statement": "Tea reached Europe in the seventeenth century by land.", "answer": "F", "why": "Đoạn 2: thương nhân mang trà tới châu Âu \"by sea\" — bằng đường biển."},
+        {"statement": "When tea first arrived in Europe, it was cheap.", "answer": "F", "why": "Đoạn 2: \"it was expensive\", chỉ nhà giàu mua nổi."},
+        {"statement": "Green tea is healthier than black tea.", "answer": "NG", "why": "Bài không so sánh trà xanh với trà đen."},
+        {"statement": "Most estimates say only water is drunk more widely than tea.", "answer": "T", "why": "Đoạn 3: \"second only to water by most estimates\"."}
+      ]
+    },
+    {
+      "id": "plastic-recycling",
+      "emoji": "♻️",
+      "title": ["Tái chế nhựa", "Recycling plastic"],
+      "passage": [
+        "Only a small share of the plastic produced each year is recycled. One reason is that there are many different types of plastic, and they usually cannot be melted down together. Sorting them by hand is slow and costly.",
+        "Food waste is another problem. A yogurt pot that has not been rinsed can spoil a whole batch of material, so recycling centres often reject dirty containers.",
+        "To reduce waste, several countries now charge a small deposit on plastic bottles, which is returned when the empty bottle is brought back. Where such schemes exist, return rates for bottles are often much higher than for other kinds of packaging."
+      ],
+      "questions": [
+        {"statement": "Most of the plastic made each year is recycled.", "answer": "F", "why": "Đoạn 1: \"Only a small share\" được tái chế."},
+        {"statement": "Different types of plastic are easy to melt down together.", "answer": "F", "why": "Đoạn 1: chúng \"usually cannot be melted down together\"."},
+        {"statement": "Dirty containers can cause problems at recycling centres.", "answer": "T", "why": "Đoạn 2: hộp chưa rửa có thể làm hỏng cả mẻ, nên thường bị từ chối."},
+        {"statement": "The deposit on a bottle is paid back when it is returned.", "answer": "T", "why": "Đoạn 3: tiền đặt cọc \"is returned when the empty bottle is brought back\"."},
+        {"statement": "Deposit schemes have been introduced in every country in Asia.", "answer": "NG", "why": "Bài chỉ nói \"several countries\", không nói về châu Á."}
+      ]
+    }
+  ]
+}

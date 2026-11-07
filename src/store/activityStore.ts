@@ -6,7 +6,7 @@ import { persist } from 'zustand/middleware'
 // path (lib/learningPath.ts) counts them; device-only like grammar progress,
 // and part of the backup file through the vocab. prefix.
 
-export type ActivityKind = 'dictation' | 'listen' | 'speaking' | 'order'
+export type ActivityKind = 'dictation' | 'listen' | 'speaking' | 'order' | 'ielts-reading'
 
 export type ActivityCounts = Partial<Record<ActivityKind, number>>
 

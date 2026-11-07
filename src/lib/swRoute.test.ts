@@ -277,6 +277,7 @@ describe('service worker — practice data warmed at install', () => {
   it('lists only files that ship, under data/, never audio', () => {
     expect(sw.EXTRA_DATA).toContain('data/toeic/en.json')
     expect(sw.EXTRA_DATA).toContain('data/hsk/zh.json')
+    expect(sw.EXTRA_DATA).toContain('data/ielts/en.json')
     for (const path of sw.EXTRA_DATA) {
       expect(path).toMatch(/^data\/[^/].*\.json$/)
       expect(existsSync(`public/${path}`), path).toBe(true)
