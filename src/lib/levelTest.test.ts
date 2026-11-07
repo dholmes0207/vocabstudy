@@ -2,13 +2,16 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { Word } from '@/types'
 import type { GrammarUnit } from './grammar'
-import { EN_PATH } from './learningPath'
+import { EN_PATH, ZH_PATH } from './learningPath'
 import { LIVES, TEST_SIZE, buildLevelTest, testScope, testWon } from './levelTest'
 import { TOEIC_WORDS } from './toeic'
 import { mulberry32 } from './sky'
 
 const words = JSON.parse(readFileSync('public/data/en.json', 'utf8')).words as Word[]
 const grammar = JSON.parse(readFileSync('public/data/grammar/en.json', 'utf8'))
+  .units as GrammarUnit[]
+const zhWords = JSON.parse(readFileSync('public/data/zh.json', 'utf8')).words as Word[]
+const zhGrammar = JSON.parse(readFileSync('public/data/grammar/zh.json', 'utf8'))
   .units as GrammarUnit[]
 
 describe('level tests', () => {
@@ -23,6 +26,19 @@ describe('level tests', () => {
           expect(q.answer, q.prompt).toBeGreaterThanOrEqual(0)
           expect(q.answer, q.prompt).toBeLessThan(q.options.length)
         }
+      }
+  })
+
+  it('work for every Chinese level too, from the HSK lists and the Chinese grammar', () => {
+    for (const level of ZH_PATH)
+      for (let seed = 1; seed <= 3; seed++) {
+        const qs = buildLevelTest(level, zhWords, zhGrammar, mulberry32(seed))
+        expect(qs, `zh level ${level.n}`).toHaveLength(TEST_SIZE)
+        expect(qs.filter((q) => q.kind === 'grammar').length).toBeGreaterThan(0)
+        const allowed = new Set(level.testWords)
+        const byId = new Map(zhWords.map((w) => [w.id, w.word]))
+        for (const q of qs)
+          if (q.kind === 'word') expect(allowed.has(byId.get(q.wordId!)!)).toBe(true)
       }
   })
 

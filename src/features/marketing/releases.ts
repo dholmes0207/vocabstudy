@@ -14,6 +14,20 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Lộ trình theo cấp cho tiếng Trung', 'A level path for Chinese'],
+    items: [
+      [
+        'Học tiếng Trung giờ cũng có lộ trình 4 cấp: pinyin & thanh điệu, HSK 1, HSK 2, HSK 3. Mỗi cấp gồm từ trong danh sách HSK, ngữ pháp, truyện, các trang luyện riêng (lượng từ, nghe số, bộ thủ, Hán Việt) và kết thúc bằng bài thi nhỏ.',
+        'Chinese now has a four-level path too: pinyin & tones, HSK 1, HSK 2, HSK 3. Each level has its HSK word list, grammar, stories, the special pages (measure words, numbers, radicals, Sino-Vietnamese) and ends with a mini test.',
+      ],
+      [
+        'Thi vượt cấp cũng dùng được với tiếng Trung: 12 câu từ HSK và ngữ pháp của cấp, 3 tim.',
+        'Level challenges work for Chinese as well: 12 questions on the level’s HSK words and grammar, 3 hearts.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Luyện nói IELTS', 'IELTS speaking practice'],
     items: [
       [

@@ -6,6 +6,7 @@ import { hanVietQuiz, hanVietTable, searchHanViet, type HanVietQuestion } from '
 import { pinyinXp } from '@/lib/pinyin'
 import { playCorrect, playWrong } from '@/lib/sound'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 import { prefetchAudio, pronounce, wordAudio } from '@/lib/audio'
 import { usePackSay, usePrefetchPackSay } from '@/hooks/usePackSay'
@@ -155,6 +156,7 @@ function GuessRound({ questions, onAgain }: { questions: HanVietQuestion[]; onAg
   const rate = useSettings((s) => s.ttsRate)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -196,6 +198,7 @@ function GuessRound({ questions, onAgain }: { questions: HanVietQuestion[]; onAg
     }
     const earned = pinyinXp(correct, questions.length)
     addPlayXp(code, earned)
+    logActivity(code, 'hanviet')
     setXp(earned)
   }
 

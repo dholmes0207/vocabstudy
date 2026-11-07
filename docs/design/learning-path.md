@@ -45,6 +45,23 @@ dẫn khi học, phong cách tránh nhàm chán."
   `store/pathStore.ts` lưu các cấp đã thắng; `usePathStates` mở cấp theo kết quả xếp lớp hoặc cấp cao
   nhất đã thắng.
 
+## 3b. Lộ trình tiếng Trung (08/11/2026)
+
+4 cấp, mỗi cấp kết thúc bằng bài thi nhỏ HSK của cấp đó (trừ cấp 1). Bài thi vượt cấp hỏi từ trong danh
+sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
+
+| Cấp | Tên                           | Bước                                                                                                                      |
+| --- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Làm quen: pinyin & thanh điệu | 3 lượt Pinyin; 60 từ HSK 1; 是, 不/没, 吗, 很; 2 truyện đầu                                                               |
+| 2   | HSK 1                         | 140/152 từ HSK 1; 8 bài ngữ pháp; 2 lượt lượng từ; 2 lượt nghe số; 40 câu dạng đề HSK 1; bài thi nhỏ 60%                  |
+| 3   | HSK 2                         | 130/147 từ HSK 2; 9 bài ngữ pháp; 2 lượt bộ thủ; 5 truyện; 40 câu dạng đề HSK 2; bài thi nhỏ 60%                          |
+| 4   | HSK 3                         | 270/298 từ HSK 3; 9 bài ngữ pháp B1; 2 lượt Hán Việt; 5 lượt nghe – chép; 9 truyện; 40 câu dạng đề HSK 3; bài thi nhỏ 60% |
+
+- Trang Pinyin, bộ thủ, lượng từ, nghe số, Hán Việt giờ ghi số lượt đã xong (`activityStore`), trước
+  đây chỉ cộng XP.
+- Số câu dạng đề HSK đọc từ `retryStore.hsk` (đếm theo cấp), điểm bài thi nhỏ từ `examStore`
+  (`hsk1-mini`…).
+
 ## 4. Dev
 
 - `lib/learningPath.ts` (thuần, có test): `EN_PATH`, `pathState` (tiến độ, mở khoá), `currentLevel`,
@@ -62,4 +79,3 @@ dẫn khi học, phong cách tránh nhàm chán."
 
 1. Luyện IELTS tiếp (`docs/design/ielts.md`): Nói Part 1–3 có ghi âm, khung bài Writing Task 1/2, Nghe
    điền thông tin.
-2. Lộ trình tiếng Trung: pinyin & thanh điệu → HSK 1 → HSK 2 → HSK 3.

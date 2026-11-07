@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import {
   CLEAR_AT,
   EN_PATH,
+  ZH_PATH,
   currentLevel,
   levelForPlacement,
   nextStep,
@@ -14,12 +15,18 @@ import { TOEIC_WORDS } from './toeic'
 
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'))
 const en = json('public/data/en.json') as { words: { word: string }[] }
-const grammarIds = new Set(
-  (json('public/data/grammar/en.json').units as { id: string }[]).map((u) => u.id)
-)
-const storyIds = new Set(
-  (json('public/data/reading/en.json').stories as { id: string }[]).map((s) => s.id)
-)
+const ids = (file: string, key: string) =>
+  new Set((json(file)[key] as { id: string }[]).map((x) => x.id))
+const content = {
+  en: {
+    grammar: ids('public/data/grammar/en.json', 'units'),
+    stories: ids('public/data/reading/en.json', 'stories'),
+  },
+  zh: {
+    grammar: ids('public/data/grammar/zh.json', 'units'),
+    stories: ids('public/data/reading/zh.json', 'stories'),
+  },
+}
 const routes = readFileSync('src/App.tsx', 'utf8')
 
 /** A learner who has done nothing yet, with overrides. */
@@ -32,6 +39,7 @@ function ctx(over: Partial<PathContext> = {}): PathContext {
     activity: () => 0,
     toeicPart: () => [0, 0],
     examBest: () => 0,
+    hskAnswered: () => 0,
     ...over,
   }
 }
@@ -45,11 +53,16 @@ const everything = ctx({
   activity: () => 99,
   toeicPart: () => [10, 10],
   examBest: () => 1,
+  hskAnswered: () => 999,
 })
 
-describe('the English path', () => {
-  it('points only at content and screens that exist', () => {
-    for (const level of EN_PATH)
+describe('the paths', () => {
+  it.each([
+    ['en', EN_PATH],
+    ['zh', ZH_PATH],
+  ] as const)('%s: points only at content and screens that exist', (code, path) => {
+    const { grammar: grammarIds, stories: storyIds } = content[code]
+    for (const level of path)
       for (const step of level.steps) {
         expect(routes, step.to).toContain(`path="${step.to}"`)
         const probe = { ...everything }
@@ -77,9 +90,16 @@ describe('the English path', () => {
     expect(TOEIC_WORDS.filter((w) => known.has(w)).length).toBeGreaterThanOrEqual(200)
   })
 
-  it('is the path of the English pack only, for now', () => {
+  it('belongs to English and Chinese, not yet Korean', () => {
     expect(pathFor('en')).toBe(EN_PATH)
+    expect(pathFor('zh')).toBe(ZH_PATH)
     expect(pathFor('ko')).toBeNull()
+  })
+
+  it('has unique step ids across both paths, and the Chinese levels test the HSK lists', () => {
+    const all = [...EN_PATH, ...ZH_PATH].flatMap((l) => l.steps.map((s) => s.id))
+    expect(new Set(all).size).toBe(all.length)
+    expect(ZH_PATH.every((l) => l.testWords && l.testWords.length > 0)).toBe(true)
   })
 })
 

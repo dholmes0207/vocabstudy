@@ -3,6 +3,7 @@ import { ArrowRight, Check, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import {
   MEASURES,
   measureOf,
@@ -88,6 +89,7 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const words = useMemo(() => new Map(pack.words.map((w) => [w.word, w])), [pack.words])
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
@@ -131,6 +133,7 @@ function Round({ questions, onAgain }: { questions: MeasureQuestion[]; onAgain: 
     }
     const earned = measureXp(correct, questions.length)
     addPlayXp(code, earned)
+    logActivity(code, 'measure')
     setXp(earned)
   }
 
