@@ -28,7 +28,7 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
-    title: ['Luyện nói IELTS', 'IELTS speaking practice'],
+    title: ['Luyện nói và viết IELTS', 'IELTS speaking and writing practice'],
     items: [
       [
         'Nói Part 1: giám khảo đọc 4 câu hỏi theo chủ đề (quê hương, đồ ăn, công nghệ…), bạn ghi âm câu trả lời và nghe lại.',
@@ -37,6 +37,10 @@ export const RELEASES: Release[] = [
       [
         'Nói Part 2 & 3: thẻ chủ đề, 1 phút chuẩn bị có ô ghi chú và gợi ý bố cục, 2 phút nói có đồng hồ, rồi 3 câu thảo luận.',
         'Speaking Parts 2 & 3: a task card, a minute to prepare with notes and a plan, two timed minutes to talk, then three discussion questions.',
+      ],
+      [
+        'Viết IELTS: khung 4 dạng bài Task 2, 10 câu luyện từ nối, từ tả xu hướng và văn phong học thuật, và viết thử bài 250 từ với thanh đếm từ và danh sách tự đánh dấu (đủ đoạn, đủ từ nối, không viết tắt).',
+        'IELTS writing: frames for the four kinds of Task 2 essay, a 10-question drill on linking words, trend words and academic style, and a 250-word practice essay with a word bar and a self-ticking checklist (paragraphs, linking words, no contractions).',
       ],
     ],
   },

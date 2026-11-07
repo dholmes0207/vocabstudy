@@ -54,10 +54,53 @@ export interface CueCard {
   part3: string[]
 }
 
+/** A kind of Task 2 essay, with how to build it. */
+export interface EssayType {
+  id: string
+  emoji: string
+  title: Pair
+  /** A question of this kind. */
+  sample: string
+  /** The words in a question that give the kind away. */
+  signal: string
+  /** One line per paragraph, in Vietnamese. */
+  plan: string[]
+  /** Sentence starters for those paragraphs. */
+  frames: string[]
+}
+
+export type DrillKind = 'link' | 'trend' | 'formal'
+
+export const DRILL_KIND: Record<DrillKind, Pair> = {
+  link: ['Từ nối', 'Linking words'],
+  trend: ['Tả xu hướng (Task 1)', 'Describing trends (Task 1)'],
+  formal: ['Văn phong học thuật', 'Academic style'],
+}
+
+export interface WritingDrill {
+  kind: DrillKind
+  prompt: string
+  options: string[]
+  answer: number
+  why: string
+}
+
+export interface EssayPrompt {
+  id: string
+  /** An EssayType id. */
+  type: string
+  text: string
+}
+
 export interface IeltsBank {
   version: string
   reading: readonly ReadingPassage[]
   speaking: { part1: readonly Part1Topic[]; part2: readonly CueCard[] }
+  writing: {
+    types: readonly EssayType[]
+    drills: readonly WritingDrill[]
+    prompts: readonly EssayPrompt[]
+  }
 }
 
 const check = checker('IELTS bank')
@@ -105,7 +148,43 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
     )
     check(strings(c.part3, 2), `cue card "${c.id}" needs Part 3 questions`)
   }
-  return { version: bank!.version ?? '0', reading: bank!.reading!, speaking: speaking! }
+  const writing = bank!.writing
+  check(
+    !!writing &&
+      Array.isArray(writing.types) &&
+      Array.isArray(writing.drills) &&
+      Array.isArray(writing.prompts),
+    '"writing" is missing'
+  )
+  const typeIds = new Set(writing!.types.map((w) => w.id))
+  for (const w of writing!.types) {
+    check(
+      text(w?.id) && strings(w.title, 2) && text(w.sample),
+      `essay type "${w?.id}" is incomplete`
+    )
+    check(
+      strings(w.plan, 3) && strings(w.frames, 3),
+      `essay type "${w.id}" needs a plan and frames`
+    )
+  }
+  for (const d of writing!.drills) {
+    check(d?.kind in DRILL_KIND, `drill "${d?.prompt}" has a bad kind`)
+    check(text(d.prompt) && strings(d.options, 3), `drill "${d.prompt}" needs options`)
+    check(new Set(d.options).size === d.options.length, `drill "${d.prompt}" repeats an option`)
+    check(
+      Number.isInteger(d.answer) && d.answer >= 0 && d.answer < d.options.length,
+      `drill "${d.prompt}" has a bad answer`
+    )
+    check(text(d.why), `drill "${d.prompt}" has no explanation`)
+  }
+  for (const pr of writing!.prompts)
+    check(text(pr?.text) && typeIds.has(pr.type), `essay prompt "${pr?.id}" has no known type`)
+  return {
+    version: bank!.version ?? '0',
+    reading: bank!.reading!,
+    speaking: speaking!,
+    writing: writing!,
+  }
 }
 
 export const loadIeltsBank = bankLoader('data/ielts/en.json', validateIeltsBank)
@@ -193,3 +272,72 @@ export function pickOther<T extends { id: string }>(
 /** "1:05" for 65 seconds. */
 export const clock = (seconds: number): string =>
   `${Math.floor(seconds / 60)}:${String(Math.max(0, seconds) % 60).padStart(2, '0')}`
+
+/** Ten drills in random order, each with its options shuffled. */
+export function drillRound(
+  drills: readonly WritingDrill[],
+  count = 10,
+  rand: () => number = Math.random
+): WritingDrill[] {
+  const shuffle = <T>(arr: readonly T[]): T[] => {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+  return shuffle(drills)
+    .slice(0, count)
+    .map((d) => {
+      const order = shuffle(d.options.map((_, i) => i))
+      return { ...d, options: order.map((i) => d.options[i]), answer: order.indexOf(d.answer) }
+    })
+}
+
+/** Words in an essay, as an examiner counts them roughly: runs of letters and digits. */
+export const wordCount = (essay: string): number =>
+  (essay.match(/[\p{L}\p{N}]+(?:['’-][\p{L}\p{N}]+)*/gu) ?? []).length
+
+/** Paragraphs: blocks of text separated by an empty line. */
+export const paragraphCount = (essay: string): number =>
+  essay.split(/\n\s*\n/).filter((p) => p.trim()).length
+
+/** Linking words a Task 2 essay is expected to use, longest first. */
+export const LINKERS = [
+  'on the other hand',
+  'in conclusion',
+  'as a result',
+  'for example',
+  'for instance',
+  'in addition',
+  'furthermore',
+  'moreover',
+  'however',
+  'therefore',
+  'although',
+  'whereas',
+  'firstly',
+  'secondly',
+  'finally',
+  'overall',
+  'such as',
+  'because',
+]
+
+/** The linking words an essay uses, each once. */
+export function linkersUsed(essay: string): string[] {
+  const lower = essay.toLowerCase()
+  return LINKERS.filter((l) => new RegExp(`\\b${l}\\b`).test(lower))
+}
+
+/** Spoken forms an IELTS essay should not have: contractions and slang. */
+export function informalBits(essay: string): string[] {
+  const found = essay.match(
+    /\b(?:\w+n['’]t|\w+['’](?:re|ll|ve|d|m)|it['’]s|that['’]s|gonna|wanna|gotta|kids|stuff|a lot of|lots of)\b/gi
+  )
+  return [...new Set((found ?? []).map((f) => f.toLowerCase()))]
+}
+
+/** The minimum length of a Task 2 essay. */
+export const TASK2_WORDS = 250
