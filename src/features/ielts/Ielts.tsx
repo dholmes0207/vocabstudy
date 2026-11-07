@@ -19,6 +19,7 @@ import {
 import { useT } from '@/lib/i18n'
 import TfngRound from './TfngRound'
 import HeadingsRound from './HeadingsRound'
+import SummaryRound from './SummaryRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
 import EssayPractice from './EssayPractice'
@@ -27,7 +28,8 @@ import ListeningChoiceRound from './ListeningChoiceRound'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
-// learners trip on most: True / False / Not Given, then Matching headings.
+// learners trip on most: True / False / Not Given, then Matching headings and
+// Summary completion.
 
 export default function Ielts() {
   const t = useT()
@@ -35,12 +37,19 @@ export default function Ielts() {
   const { bank, error, retry } = usePracticeBank(loadIeltsBank)
   const done = useIelts((s) => s.reading)
   const headingsDone = useIelts((s) => s.headings)
-  const [match, setMatch] = useState<{ n: number; passage: ReadingPassage } | null>(null)
-  const startMatch = () => {
+  const summaryDone = useIelts((s) => s.summary)
+  const [match, setMatch] = useState<{
+    n: number
+    kind: 'headings' | 'summary'
+    passage: ReadingPassage
+  } | null>(null)
+  const startMatch = (kind: 'headings' | 'summary') => {
+    const done = kind === 'headings' ? headingsDone : summaryDone
     if (bank)
       setMatch((r) => ({
         n: (r?.n ?? 0) + 1,
-        passage: pickPassage(bank.reading, (id) => !!headingsDone[id], r?.passage.id),
+        kind,
+        passage: pickPassage(bank.reading, (id) => !!done[id], r?.passage.id),
       }))
   }
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
@@ -125,15 +134,17 @@ export default function Ielts() {
         onExit={() => setSpeaking(null)}
       />
     )
-  if (match)
+  if (match) {
+    const Round = match.kind === 'headings' ? HeadingsRound : SummaryRound
     return (
-      <HeadingsRound
+      <Round
         key={match.n}
         passage={match.passage}
-        onAgain={startMatch}
+        onAgain={() => startMatch(match.kind)}
         onExit={() => setMatch(null)}
       />
     )
+  }
   if (round)
     return (
       <TfngRound
@@ -233,9 +244,17 @@ export default function Ielts() {
                 type="button"
                 className="btn-secondary h-11 w-full sm:w-auto"
                 disabled={!bank}
-                onClick={startMatch}
+                onClick={() => startMatch('headings')}
               >
                 🧩 {t('Nối tiêu đề (Matching headings)', 'Matching headings')}
+              </button>
+              <button
+                type="button"
+                className="btn-secondary h-11 w-full sm:w-auto"
+                disabled={!bank}
+                onClick={() => startMatch('summary')}
+              >
+                📝 {t('Điền tóm tắt (Summary completion)', 'Summary completion')}
               </button>
             </div>
             {bank && (
@@ -264,6 +283,14 @@ export default function Ielts() {
                             title={t('Nối tiêu đề', 'Matching headings')}
                           >
                             🧩 {headingsDone[p.id].best}/{headingsDone[p.id].total}
+                          </span>
+                        )}
+                        {summaryDone[p.id] && (
+                          <span
+                            className="text-xs font-bold text-violet-700 dark:text-violet-300"
+                            title={t('Điền tóm tắt', 'Summary completion')}
+                          >
+                            📝 {summaryDone[p.id].best}/{summaryDone[p.id].total}
                           </span>
                         )}
                       </button>

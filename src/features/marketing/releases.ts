@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['IELTS Reading: điền tóm tắt', 'IELTS Reading: summary completion'],
+    items: [
+      [
+        'Dạng bài điền tóm tắt: đoạn tóm tắt viết lại bài đọc với 4 chỗ trống, chọn từ trong hộp có từ bẫy. Kiểm tra xong mỗi ô chỉ rõ đoạn nào trong bài nói điều đó.',
+        'Summary completion: a summary of the passage in other words with four gaps, filled from a word box with traps. After checking, each gap shows which paragraph says it.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Cấu trúc câu tiếng Trung', 'Chinese sentence patterns'],
     items: [
       [

@@ -6,6 +6,7 @@ import {
   clock,
   drillRound,
   headingsRight,
+  summaryParts,
   informalBits,
   linkersUsed,
   paragraphCount,
@@ -40,6 +41,45 @@ describe('the IELTS bank', () => {
     expect(broken((b) => (b.reading[0].questions[0].answer = 'YES'))).toThrow(/bad answer/)
     expect(broken((b) => (b.reading[0].questions[0].why = ''))).toThrow(/no explanation/)
     expect(broken((b) => (b.reading[0].passage = []))).toThrow(/no text/)
+  })
+})
+
+describe('summary completion', () => {
+  const bank = validateIeltsBank(raw())
+
+  it('splits a summary into text and gaps', () => {
+    expect(summaryParts('Tea was a {0} and came by {1}.')).toEqual([
+      'Tea was a ',
+      0,
+      ' and came by ',
+      1,
+      '.',
+    ])
+    expect(summaryParts('{0} first')).toEqual([0, ' first'])
+  })
+
+  it('gives every passage a summary with spare words, its answers not in box order', () => {
+    for (const p of bank.reading) {
+      const sm = p.summary
+      expect(sm.box.length - sm.answers.length, p.id).toBeGreaterThanOrEqual(2)
+      expect(sm.answers, p.id).not.toEqual([...sm.answers].sort((a, b) => a - b))
+      // Each reason points to the paragraph that gives the word.
+      sm.answers.forEach((_, i) => expect(sm.why[i], `${p.id} gap ${i}`).toMatch(/Đoạn \d/))
+    }
+  })
+
+  it('turns down a summary whose gaps or box do not add up', () => {
+    const broken = (edit: (b: ReturnType<typeof raw>) => void) => {
+      const b = raw()
+      edit(b)
+      return () => validateIeltsBank(b)
+    }
+    const sm = (b: ReturnType<typeof raw>) => b.reading[0].summary
+    expect(broken((b) => (sm(b).text = 'No gaps here.'))).toThrow(/gaps \{0\}/)
+    expect(broken((b) => (sm(b).text = sm(b).text.replace('{1}', '{5}')))).toThrow(/in order/)
+    expect(broken((b) => (sm(b).box = sm(b).box.slice(0, 4)))).toThrow(/spare words/)
+    expect(broken((b) => (sm(b).answers = [0, 0, 1, 2]))).toThrow(/one word per gap/)
+    expect(broken((b) => sm(b).why.pop())).toThrow(/a reason per gap/)
   })
 })
 
