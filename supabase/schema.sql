@@ -158,6 +158,13 @@ language plpgsql
 security definer set search_path = public
 as $$
 begin
+  -- A flood of made-up errors must not push the real ones out of the 500 kept
+  -- below: past 50 new kinds in ten minutes, only known kinds are still counted.
+  if not exists (select 1 from public.client_errors where signature = left(p_signature, 16))
+     and (select count(*) from public.client_errors
+           where first_seen > now() - interval '10 minutes') >= 50 then
+    return;
+  end if;
   insert into public.client_errors as e (signature, message, stack, path, release, kind)
   values (left(p_signature, 16), left(p_message, 300), left(p_stack, 2000),
           left(p_path, 200), left(p_release, 40), left(p_kind, 12))

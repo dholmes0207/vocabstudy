@@ -42,9 +42,13 @@ khoản, thêm một bên nhận dữ liệu và thêm thư viện vào app.
 - `__BUILD_ID__` lấy từ biến `CF_PAGES_COMMIT_SHA` lúc build (`vite.config.ts` `define`).
 - `functions/api/errors.ts` (`POST`):
   - chặn yêu cầu có Origin lạ; body tối đa 8 KB;
+  - mỗi địa chỉ IP tối đa 30 báo cáo mỗi phút (`lib/rateLimit.ts`, đếm trong bộ nhớ của
+    từng isolate), quá thì trả 429; trình duyệt không đọc kết quả nên học viên không thấy gì;
   - luôn ghi `console.error('[client-error] …')`;
   - gọi RPC `report_client_error` (security definer, chỉ cho `service_role`) để gộp lỗi,
-    xoá bản ghi quá 30 ngày và giữ tối đa 500 dòng;
+    xoá bản ghi quá 30 ngày và giữ tối đa 500 dòng. Quá 50 loại lỗi mới trong 10 phút thì
+    chỉ còn đếm thêm các loại đã có, để một đợt spam không đẩy lỗi thật ra khỏi 500 dòng
+    (**cần chạy lại `supabase/schema.sql`** để áp dụng);
   - luôn trả 204. Nếu bảng chưa có (404), dòng nhật ký vẫn còn đó.
 - `functions/api/admin/errors.ts` (`GET`, chỉ admin): trả `{ enabled, errors }`.
   `enabled: false` khi bảng chưa tồn tại.
