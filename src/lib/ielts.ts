@@ -118,9 +118,21 @@ export interface ListeningSet {
   tip: string
 }
 
+/** Listening Parts 2–3: a talk or a discussion, and questions with three options. */
+export interface ListeningChoiceSet {
+  id: string
+  emoji: string
+  part: 2 | 3
+  title: Pair
+  lines: { speaker: 'W' | 'M'; text: string }[]
+  questions: { q: string; options: string[]; answer: number; why: string }[]
+  tip: string
+}
+
 export interface IeltsBank {
   version: string
   listening: readonly ListeningSet[]
+  listeningChoice: readonly ListeningChoiceSet[]
   reading: readonly ReadingPassage[]
   speaking: { part1: readonly Part1Topic[]; part2: readonly CueCard[] }
   writing: {
@@ -245,9 +257,36 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       `listening "${l.id}" needs a form of three fields`
     )
   }
+  const choice = bank!.listeningChoice
+  check(Array.isArray(choice) && choice.length > 0, '"listeningChoice" is missing')
+  for (const c of choice!) {
+    check(
+      text(c?.id) && (c.part === 2 || c.part === 3) && strings(c.title, 2) && text(c.tip),
+      `listening "${c?.id}" is incomplete`
+    )
+    check(
+      Array.isArray(c.lines) &&
+        c.lines.length > 0 &&
+        c.lines.every((x) => (x?.speaker === 'W' || x?.speaker === 'M') && text(x.text)),
+      `listening "${c.id}" has a bad line`
+    )
+    check(Array.isArray(c.questions) && c.questions.length >= 3, `"${c.id}" needs three questions`)
+    for (const q of c.questions)
+      check(
+        text(q?.q) &&
+          strings(q.options, 3) &&
+          new Set(q.options).size === q.options.length &&
+          Number.isInteger(q.answer) &&
+          q.answer >= 0 &&
+          q.answer < q.options.length &&
+          text(q.why),
+        `"${c.id}": "${q?.q}" is incomplete`
+      )
+  }
   return {
     version: bank!.version ?? '0',
     listening: listening!,
+    listeningChoice: choice!,
     reading: bank!.reading!,
     speaking: speaking!,
     writing: writing!,

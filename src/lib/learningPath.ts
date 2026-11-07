@@ -426,10 +426,10 @@ export const EN_PATH: PathLevel[] = [
         3,
         '🎧',
         '/ielts',
-        ['Nghe IELTS: điền phiếu', 'IELTS listening: form completion'],
+        ['Nghe IELTS: Part 1–3', 'IELTS listening: Parts 1–3'],
         [
-          'Nghe cuộc gọi đặt phòng, đăng ký, thuê đồ rồi điền tên, số, ngày giờ.',
-          'Hear a call to book, sign up or hire, then fill in names, numbers, dates and times.',
+          'Điền phiếu từ cuộc gọi, rồi chọn A/B/C khi nghe bài giới thiệu và hai bạn bàn bạc.',
+          'Fill in a form from a call, then pick A, B or C from a talk and a discussion.',
         ]
       ),
       sessions(
