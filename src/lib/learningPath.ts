@@ -281,11 +281,11 @@ export const EN_PATH: PathLevel[] = [
       words(1000, 1600, 'en4-words'),
       grammar(
         'en4-grammar',
-        ['passive', 'conditionals', 'relative-clauses', 'reported-speech'],
+        ['passive', 'conditionals', 'relative-clauses', 'reported-speech', 'gerund-infinitive'],
         ['Ngữ pháp B1', 'B1 grammar'],
         [
-          'Bị động, câu điều kiện, mệnh đề quan hệ, câu tường thuật: nền cho phần đọc của TOEIC và IELTS.',
-          'The passive, conditionals, relative clauses, reported speech: the base for TOEIC and IELTS reading.',
+          'Bị động, câu điều kiện, mệnh đề quan hệ, câu tường thuật, V-ing hay to V: nền cho phần đọc của TOEIC và IELTS.',
+          'The passive, conditionals, relative clauses, reported speech, -ing or to + verb: the base for TOEIC and IELTS reading.',
         ]
       ),
       sessions(
@@ -396,6 +396,15 @@ export const EN_PATH: PathLevel[] = [
     tone: 'from-rose-500 to-fuchsia-600',
     steps: [
       words(1600, 2500, 'en6-words'),
+      grammar(
+        'en6-grammar',
+        ['third-conditional', 'wish', 'modal-perfect', 'participle-clauses', 'inversion'],
+        ['Ngữ pháp B2', 'B2 grammar'],
+        [
+          'Điều kiện loại 3, wish, should have / must have, mệnh đề phân từ, đảo ngữ: câu phức cho band 6.5+.',
+          'Third conditionals, wish, should have / must have, participle clauses, inversion: complex sentences for band 6.5+.',
+        ]
+      ),
       sessions(
         'en6-ielts-reading',
         'ielts-reading',
