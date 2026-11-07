@@ -19,6 +19,7 @@ export type ActivityKind =
   | 'pinyin'
   | 'radicals'
   | 'measure'
+  | 'confusables'
   | 'numbers'
   | 'hanviet'
   | 'patterns'

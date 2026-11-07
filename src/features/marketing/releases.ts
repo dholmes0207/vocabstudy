@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Chữ Hán dễ nhầm', 'Look-alike Chinese characters'],
+    items: [
+      [
+        'Trang mới cho tiếng Trung: 8 nhóm chữ đọc giống hoặc nhìn giống nhau (在/再, 的/得/地, 他/她/它, 做/坐, 买/卖…), mỗi nhóm một mẹo phân biệt, rồi điền chữ vào câu. Có trong lộ trình HSK 3.',
+        'New for Chinese: eight groups of characters that sound or look alike (在/再, 的/得/地, 他/她/它, 做/坐, 买/卖…), each with a trick to tell them apart, then fill the gap in sentences. Part of the HSK 3 level of the path.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['IELTS Reading: điền tóm tắt', 'IELTS Reading: summary completion'],
     items: [
       [

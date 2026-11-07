@@ -74,6 +74,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-amber-500 to-red-500',
   },
   {
+    to: '/confusables',
+    icon: '🔍',
+    title: 'Chữ dễ nhầm',
+    desc: '在/再, 的/得/地, 他/她/它, 买/卖…: chữ đọc giống hoặc nhìn giống nhau, học mẹo phân biệt rồi điền vào câu.',
+    titleEn: 'Look-alike characters',
+    descEn:
+      '在/再, 的/得/地, 他/她/它, 买/卖…: characters that sound or look alike; learn the trick, then fill the gap.',
+    tone: 'from-violet-500 to-fuchsia-500',
+  },
+  {
     to: '/numbers',
     icon: '🔢',
     title: 'Nghe số',
