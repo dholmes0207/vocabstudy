@@ -200,6 +200,29 @@ describe('listening practice', () => {
     }
   })
 
+  it('has Part 2 talks and Part 3 discussions, each with a trap the recording mentions', () => {
+    const { listeningChoice } = validateIeltsBank(raw())
+    expect(new Set(listeningChoice.map((c) => c.part))).toEqual(new Set([2, 3]))
+    for (const c of listeningChoice) {
+      const said = c.lines.map((l) => l.text.toLowerCase()).join(' ')
+      // Part 2 is one voice, Part 3 two.
+      expect(new Set(c.lines.map((l) => l.speaker)).size, c.id).toBe(c.part === 2 ? 1 : 2)
+      // Most questions have a wrong option the recording says too, as in the real test.
+      const trapped = c.questions.filter((q) =>
+        q.options.some(
+          (o, j) => j !== q.answer && said.includes(o.toLowerCase().replace(/^(in|on|the|a) /, ''))
+        )
+      )
+      expect(trapped.length, c.id).toBeGreaterThanOrEqual(c.questions.length / 2)
+    }
+  })
+
+  it('turns down a question whose answer is out of range', () => {
+    const b = raw()
+    b.listeningChoice[0].questions[0].answer = 3
+    expect(() => validateIeltsBank(b)).toThrow(/is incomplete/)
+  })
+
   it('marks a blank right whatever the case, punctuation or spaces in a number', () => {
     const phone = { answer: '0796 328 514', accept: ['0796328514'] }
     expect(blankRight('0796328514', phone)).toBe(true)

@@ -66,15 +66,16 @@ function toeic(): string[] {
   ]
 }
 
-/** "Luyện IELTS": the examiner's questions and the listening calls. */
+/** "Luyện IELTS": the examiner's questions and the listening recordings. */
 function ielts(): string[] {
-  const { speaking, listening } = validateIeltsBank(
+  const { speaking, listening, listeningChoice } = validateIeltsBank(
     JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
   )
   return [
     ...speaking.part1.flatMap((tp) => tp.questions),
     ...speaking.part2.flatMap((c) => c.part3),
     ...listening.flatMap((l) => l.lines.map((x) => x.text)),
+    ...listeningChoice.flatMap((l) => l.lines.map((x) => x.text)),
   ]
 }
 
