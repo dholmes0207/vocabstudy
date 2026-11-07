@@ -636,6 +636,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh3-patterns',
+        'patterns',
+        3,
+        '🧱',
+        '/patterns',
+        ['Cấu trúc câu', 'Sentence patterns'],
+        [
+          '7 khung câu dạng khối màu: thời gian và 在 trước động từ, 比, 把, từ để hỏi giữ chỗ.',
+          'Seven frames as coloured blocks: time and 在 before the verb, 比, 把, question words in place.',
+        ]
+      ),
+      sessions(
         'zh3-radicals',
         'radicals',
         2,

@@ -37,10 +37,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/patterns',
     icon: '🧱',
     title: 'Cấu trúc câu',
-    desc: '8 khung câu tiếng Anh (chủ ngữ + động từ + tân ngữ, there is, câu hỏi Wh-, nơi chốn trước thời gian…) dạng khối màu, rồi tự xếp câu.',
+    desc: 'Khung câu dạng khối màu (chủ ngữ, động từ, tân ngữ, nơi chốn, thời gian…) cho tiếng Anh và tiếng Trung, rồi tự xếp câu.',
     titleEn: 'Sentence patterns',
     descEn:
-      'Eight English sentence frames (subject + verb + object, there is, Wh- questions, place before time…) as coloured blocks, then build sentences yourself.',
+      'Sentence frames as coloured blocks (subject, verb, object, place, time…) for English and Chinese, then build sentences yourself.',
     tone: 'from-sky-500 to-rose-500',
   },
   {

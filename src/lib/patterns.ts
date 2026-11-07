@@ -1,14 +1,15 @@
 import { bankLoader, checker, text } from './practiceBank'
 
 // "Cấu trúc câu" (docs/design/sentence-patterns.md): the sentence shapes of
-// English as coloured blocks — subject, verb, object, place, time… — so a
-// learner sees why the words go in that order, then builds sentences block by
-// block. Content in public/data/patterns/en.json, checked when it loads.
+// English and Chinese as coloured blocks — subject, verb, object, place,
+// time… — so a learner sees why the words go in that order, then builds
+// sentences block by block. Content in public/data/patterns/<pack>.json,
+// checked when it loads.
 
 export type Pair = [vi: string, en: string]
 
 /** The part a block plays in its sentence. */
-export type Role = 'S' | 'V' | 'O' | 'C' | 'P' | 'T' | 'Q' | 'A' | 'J' | 'M'
+export type Role = 'S' | 'V' | 'O' | 'C' | 'P' | 'T' | 'Q' | 'A' | 'J' | 'M' | 'K' | 'D'
 
 export const ROLES: Record<Role, { name: Pair; tone: string }> = {
   S: { name: ['Chủ ngữ', 'Subject'], tone: 'bg-sky-500' },
@@ -21,11 +22,15 @@ export const ROLES: Record<Role, { name: Pair; tone: string }> = {
   A: { name: ['Trợ động từ', 'Helper verb'], tone: 'bg-orange-500' },
   J: { name: ['Từ nối', 'Linking word'], tone: 'bg-slate-500' },
   M: { name: ['Tần suất', 'How often'], tone: 'bg-teal-500' },
+  K: { name: ['Cụm giới từ', 'Preposition phrase'], tone: 'bg-lime-600' },
+  D: { name: ['Phó từ', 'Adverb'], tone: 'bg-indigo-500' },
 }
 
 export interface PatternSentence {
   /** The sentence in blocks, in order: [text, role]. */
   chunks: [string, Role][]
+  /** Pinyin of the whole sentence (Chinese). */
+  py?: string
   vi: string
 }
 
@@ -69,6 +74,7 @@ export function validatePatterns(raw: unknown): PatternsBank {
     check(Array.isArray(p.sentences) && p.sentences.length >= 3, `"${p.id}" needs three sentences`)
     for (const s of p.sentences) {
       check(text(s?.vi), `"${p.id}": a sentence has no Vietnamese`)
+      check(s.py === undefined || text(s.py), `"${p.id}": "${s.vi}" has empty pinyin`)
       check(
         Array.isArray(s.chunks) &&
           s.chunks.length >= 3 &&
@@ -80,10 +86,27 @@ export function validatePatterns(raw: unknown): PatternsBank {
   return { version: bank!.version ?? '0', patterns: bank!.patterns! }
 }
 
-export const loadPatterns = bankLoader('data/patterns/en.json', validatePatterns)
+/** The packs with sentence patterns, and how each writes and reads them. */
+export const PATTERN_PACKS = {
+  en: { load: bankLoader('data/patterns/en.json', validatePatterns), speech: 'en-US', joiner: ' ' },
+  zh: { load: bankLoader('data/patterns/zh.json', validatePatterns), speech: 'zh-CN', joiner: '' },
+} as const
 
-/** The whole sentence, its blocks joined. */
-export const sentenceText = (s: PatternSentence): string => s.chunks.map(([t]) => t).join(' ')
+export type PatternPack = keyof typeof PATTERN_PACKS
+
+export const isPatternPack = (code: string): code is PatternPack => code in PATTERN_PACKS
+
+/** The whole sentence, its blocks joined (by spaces, or by nothing in Chinese). */
+export const sentenceText = (s: PatternSentence, joiner = ' '): string =>
+  s.chunks.map(([t]) => t).join(joiner)
+
+/** The roles a bank uses, in ROLES order, for its legend. */
+export const rolesUsed = (patterns: readonly SentencePattern[]): Role[] => {
+  const used = new Set(
+    patterns.flatMap((p) => p.sentences.flatMap((s) => s.chunks.map(([, r]) => r)))
+  )
+  return (Object.keys(ROLES) as Role[]).filter((r) => used.has(r))
+}
 
 export interface PatternItem {
   pattern: SentencePattern

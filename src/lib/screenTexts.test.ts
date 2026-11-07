@@ -79,11 +79,12 @@ function ielts(): string[] {
 }
 
 /** "Cấu trúc câu": each sentence is read once it is built. */
-function patterns(): string[] {
+function patterns(code: 'en' | 'zh'): string[] {
   const { patterns } = validatePatterns(
-    JSON.parse(readFileSync('public/data/patterns/en.json', 'utf8'))
+    JSON.parse(readFileSync(`public/data/patterns/${code}.json`, 'utf8'))
   )
-  return patterns.flatMap((p) => p.sentences.map(sentenceText))
+  const joiner = code === 'zh' ? '' : ' '
+  return patterns.flatMap((p) => p.sentences.map((s) => sentenceText(s, joiner)))
 }
 
 function english(): string[] {
@@ -92,7 +93,7 @@ function english(): string[] {
     ...ALL_STICKERS.map((s) => s.en),
     ...toeic(),
     ...ielts(),
-    ...patterns(),
+    ...patterns('en'),
   ]
 }
 
@@ -154,6 +155,7 @@ function chinese(): string[] {
     ...hsk.pictureDialogues.flatMap((d) => d.lines.map((l) => l.zh)),
     ...[...hsk.pairs.hsk1, ...hsk.pairs.hsk2, ...hsk.pairs.hsk3].flatMap((p) => [p.q, p.a]),
     ...hsk.readings.map((r) => r.text),
+    ...patterns('zh'),
   ]
 }
 
