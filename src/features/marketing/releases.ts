@@ -14,6 +14,20 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Luyện nói IELTS', 'IELTS speaking practice'],
+    items: [
+      [
+        'Nói Part 1: giám khảo đọc 4 câu hỏi theo chủ đề (quê hương, đồ ăn, công nghệ…), bạn ghi âm câu trả lời và nghe lại.',
+        'Speaking Part 1: the examiner reads four questions on a topic (hometown, food, technology…); record your answers and listen back.',
+      ],
+      [
+        'Nói Part 2 & 3: thẻ chủ đề, 1 phút chuẩn bị có ô ghi chú và gợi ý bố cục, 2 phút nói có đồng hồ, rồi 3 câu thảo luận.',
+        'Speaking Parts 2 & 3: a task card, a minute to prepare with notes and a plan, two timed minutes to talk, then three discussion questions.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Lộ trình theo cấp', 'A level path to climb'],
     items: [
       [

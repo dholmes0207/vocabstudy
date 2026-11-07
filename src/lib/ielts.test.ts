@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { pickPassage, readingRound, validateIeltsBank } from './ielts'
+import { clock, pickOther, pickPassage, readingRound, validateIeltsBank } from './ielts'
 import { mulberry32 } from './sky'
 
 const raw = () => JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
@@ -50,5 +50,36 @@ describe('picking a passage', () => {
     expect([...round.questions].sort((a, b) => a.statement.localeCompare(b.statement))).toEqual(
       [...p.questions].sort((a, b) => a.statement.localeCompare(b.statement))
     )
+  })
+})
+
+describe('speaking practice', () => {
+  const { speaking } = validateIeltsBank(raw())
+
+  it('has Part 1 topics and Part 2 cards with a plan, phrases and Part 3 questions', () => {
+    expect(speaking.part1.length).toBeGreaterThanOrEqual(6)
+    expect(speaking.part2.length).toBeGreaterThanOrEqual(6)
+    for (const c of speaking.part2) {
+      expect(c.cue, c.id).toMatch(/^Describe /)
+      expect(c.points.at(-1), c.id).toMatch(/^and explain/)
+    }
+    const ids = [...speaking.part1, ...speaking.part2].map((x) => x.id)
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+
+  it('turns down a card without its Part 3', () => {
+    const b = raw()
+    b.speaking.part2[0].part3 = []
+    expect(() => validateIeltsBank(b)).toThrow(/Part 3 questions/)
+    const c = raw()
+    delete c.speaking
+    expect(() => validateIeltsBank(c)).toThrow(/"speaking" is missing/)
+  })
+
+  it('never gives the same topic twice in a row, and shows time as m:ss', () => {
+    for (let seed = 1; seed < 10; seed++)
+      expect(pickOther(speaking.part1, 'food', mulberry32(seed)).id).not.toBe('food')
+    expect(clock(65)).toBe('1:05')
+    expect(clock(120)).toBe('2:00')
   })
 })

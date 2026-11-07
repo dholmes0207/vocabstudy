@@ -22,12 +22,14 @@ import { itemFor as zhNumber } from './zhNumbers'
 import { validateToeicBank } from './toeicBank'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
 import { validateHskBank } from './hskBank'
+import { validateIeltsBank } from './ielts'
 import { hanVietTable } from './hanVietFamily'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
 // table, the saying of the day, the day's sticker, the TOEIC listening parts
-// (public/data/toeic/en.json), the HSK dialogues, pairs and passages
+// (public/data/toeic/en.json), the IELTS speaking questions
+// (public/data/ielts/en.json), the HSK dialogues, pairs and passages
 // (public/data/hsk/zh.json) and word families. The script that records the
 // clips does not read any of these, so this test lists them into
 // scripts/audio-texts/screens.json, which scripts/generate_text_audio.py
@@ -63,8 +65,19 @@ function toeic(): string[] {
   ]
 }
 
+/** "Luyện IELTS": what the examiner reads aloud in the speaking practice. */
+function ielts(): string[] {
+  const { speaking } = validateIeltsBank(
+    JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
+  )
+  return [
+    ...speaking.part1.flatMap((tp) => tp.questions),
+    ...speaking.part2.flatMap((c) => c.part3),
+  ]
+}
+
 function english(): string[] {
-  return [...proverbs('en'), ...ALL_STICKERS.map((s) => s.en), ...toeic()]
+  return [...proverbs('en'), ...ALL_STICKERS.map((s) => s.en), ...toeic(), ...ielts()]
 }
 
 function korean(): string[] {
