@@ -7,7 +7,13 @@ import { persist } from 'zustand/middleware'
 // and part of the backup file through the vocab. prefix.
 
 export type ActivityKind =
-  'dictation' | 'listen' | 'speaking' | 'order' | 'ielts-reading' | 'ielts-speaking'
+  | 'dictation'
+  | 'listen'
+  | 'speaking'
+  | 'order'
+  | 'ielts-reading'
+  | 'ielts-speaking'
+  | 'ielts-writing'
 
 export type ActivityCounts = Partial<Record<ActivityKind, number>>
 

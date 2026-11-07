@@ -1,19 +1,24 @@
 import { useState } from 'react'
-import { ArrowRight, BookOpenText, Mic } from 'lucide-react'
+import { ArrowRight, BookOpenText, Mic, PenLine } from 'lucide-react'
 import { useIelts } from '@/store/ieltsStore'
 import { usePracticeBank } from '@/hooks/usePracticeBank'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
   IELTS_FORMAT,
+  drillRound,
   loadIeltsBank,
   pickOther,
   pickPassage,
   readingRound,
+  type EssayPrompt,
   type ReadingPassage,
+  type WritingDrill,
 } from '@/lib/ielts'
 import { useT } from '@/lib/i18n'
 import TfngRound from './TfngRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
+import WritingDrillRound from './WritingDrillRound'
+import EssayPractice from './EssayPractice'
 
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
@@ -26,6 +31,11 @@ export default function Ielts() {
   const done = useIelts((s) => s.reading)
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
   const [speaking, setSpeaking] = useState<{ n: number; task: SpeakingTask } | null>(null)
+  const [drills, setDrills] = useState<{ n: number; list: WritingDrill[] } | null>(null)
+  const startDrills = () => {
+    if (bank) setDrills((r) => ({ n: (r?.n ?? 0) + 1, list: drillRound(bank.writing.drills) }))
+  }
+  const [essay, setEssay] = useState<EssayPrompt | null>(null)
   const speak = (part: 1 | 2) => {
     if (!bank) return
     setSpeaking((r) => {
@@ -48,6 +58,18 @@ export default function Ielts() {
     }))
   }
 
+  if (drills)
+    return (
+      <WritingDrillRound
+        key={drills.n}
+        drills={drills.list}
+        onAgain={startDrills}
+        onExit={() => setDrills(null)}
+      />
+    )
+  const essayType = essay && bank?.writing.types.find((w) => w.id === essay.type)
+  if (essay && essayType)
+    return <EssayPractice prompt={essay} type={essayType} onExit={() => setEssay(null)} />
   if (speaking)
     return (
       <SpeakingRound
@@ -234,12 +256,87 @@ export default function Ielts() {
         </div>
       </section>
 
+      <section aria-labelledby="ielts-writing" className="card space-y-4 p-5">
+        <h2 id="ielts-writing" className="flex items-center gap-2 text-lg font-bold">
+          <PenLine className="h-5 w-5 text-amber-600 dark:text-amber-300" aria-hidden="true" />
+          {t('Viết: Task 2 và ngôn ngữ học thuật', 'Writing: Task 2 and academic language')}
+        </h2>
+        {bank && (
+          <div className="grid gap-2 sm:grid-cols-2">
+            {bank.writing.types.map((w) => (
+              <details
+                key={w.id}
+                className="rounded-2xl border border-slate-200 p-3 text-sm dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  <span aria-hidden="true">{w.emoji}</span> {t(...w.title)}
+                </summary>
+                <p className="mt-2 text-xs text-slate-500 dark:text-slate-400" lang="en">
+                  {t('Nhận ra qua câu: ', 'Spot it by: ')}
+                  {w.signal}
+                </p>
+                <ol className="mt-2 list-decimal space-y-1 pl-5">
+                  {w.plan.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ol>
+              </details>
+            ))}
+          </div>
+        )}
+        <div className="grid gap-3 sm:grid-cols-2">
+          <button
+            type="button"
+            disabled={!bank}
+            onClick={startDrills}
+            className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-amber-400 disabled:opacity-60 dark:border-slate-700"
+          >
+            <span className="block text-2xl" aria-hidden="true">
+              🔗
+            </span>
+            <span className="mt-1 block font-bold">
+              {t('10 câu từ nối & văn phong', '10 on linking & style')}
+            </span>
+            <span className="block text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                'However hay Moreover? Rose hay raised? Viết sao cho trang trọng?',
+                'However or moreover? Rose or raised? How to sound formal?'
+              )}
+            </span>
+          </button>
+          {bank && (
+            <div className="rounded-2xl border-2 border-slate-200 p-4 dark:border-slate-700">
+              <p className="text-2xl" aria-hidden="true">
+                📝
+              </p>
+              <p className="mt-1 font-bold">
+                {t('Viết thử một bài Task 2', 'Write a Task 2 essay')}
+              </p>
+              <ul className="mt-2 space-y-1">
+                {bank.writing.prompts.map((pr) => (
+                  <li key={pr.id}>
+                    <button
+                      type="button"
+                      onClick={() => setEssay(pr)}
+                      lang="en"
+                      className="w-full truncate rounded-lg px-2 py-1 text-left text-sm transition hover:bg-slate-50 dark:hover:bg-slate-800"
+                    >
+                      {pr.text}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+
       <section className="card p-5 text-sm text-slate-600 dark:text-slate-300">
         <p className="font-bold">{t('Đang viết tiếp', 'Coming next')}</p>
         <p className="mt-1">
           {t(
-            'Khung bài Writing Task 1 và Task 2, nghe điền thông tin.',
-            'Writing Task 1 and Task 2 frames, and listening form completion.'
+            'Nghe điền thông tin, thêm dạng đọc nối tiêu đề.',
+            'Listening form completion, and matching headings in reading.'
           )}
         </p>
       </section>

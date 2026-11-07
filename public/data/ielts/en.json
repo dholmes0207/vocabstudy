@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "reading": [
     {
       "id": "city-farms",
@@ -497,6 +497,300 @@
           "Are films a good way to learn about other cultures?",
           "Should films for children be educational?"
         ]
+      }
+    ]
+  },
+  "writing": {
+    "types": [
+      {
+        "id": "opinion",
+        "emoji": "⚖️",
+        "title": [
+          "Nêu quan điểm",
+          "Opinion"
+        ],
+        "sample": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?",
+        "signal": "To what extent do you agree or disagree? / Do you agree or disagree?",
+        "plan": [
+          "Mở bài: viết lại đề bằng từ khác (paraphrase) + nói rõ bạn đồng ý tới đâu.",
+          "Thân bài 1: lý do chính thứ nhất + giải thích + ví dụ.",
+          "Thân bài 2: lý do thứ hai (hoặc thừa nhận ý trái chiều rồi phản bác).",
+          "Kết bài: nhắc lại quan điểm bằng câu khác, không thêm ý mới."
+        ],
+        "frames": [
+          "It is often argued that…",
+          "I completely agree that… because…",
+          "Admittedly, … However, …",
+          "In conclusion, I firmly believe that…"
+        ]
+      },
+      {
+        "id": "discussion",
+        "emoji": "🗣️",
+        "title": [
+          "Thảo luận hai phía",
+          "Discuss both views"
+        ],
+        "sample": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion.",
+        "signal": "Discuss both views and give your own opinion.",
+        "plan": [
+          "Mở bài: giới thiệu hai quan điểm + nêu bạn nghiêng về bên nào.",
+          "Thân bài 1: quan điểm A, lý do và ví dụ.",
+          "Thân bài 2: quan điểm B, lý do và ví dụ.",
+          "Kết bài: tóm tắt hai bên và nhắc lại ý kiến của bạn."
+        ],
+        "frames": [
+          "On the one hand, some people argue that…",
+          "On the other hand, others believe that…",
+          "Personally, I side with… because…",
+          "In conclusion, while… , I believe that…"
+        ]
+      },
+      {
+        "id": "problem-solution",
+        "emoji": "🛠️",
+        "title": [
+          "Vấn đề – giải pháp",
+          "Problems and solutions"
+        ],
+        "sample": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?",
+        "signal": "What are the causes / problems… and what solutions / measures…?",
+        "plan": [
+          "Mở bài: paraphrase vấn đề + nói bài sẽ bàn nguyên nhân và giải pháp.",
+          "Thân bài 1: 2 nguyên nhân (hoặc vấn đề), mỗi cái có ví dụ.",
+          "Thân bài 2: 2 giải pháp tương ứng, nói rõ ai làm và vì sao hiệu quả.",
+          "Kết bài: tóm tắt nguyên nhân chính và giải pháp đáng làm nhất."
+        ],
+        "frames": [
+          "One major cause of this is…",
+          "This has led to…",
+          "One effective solution would be to…",
+          "If governments…, this problem could be reduced."
+        ]
+      },
+      {
+        "id": "advantages",
+        "emoji": "➕",
+        "title": [
+          "Lợi ích – bất lợi",
+          "Advantages and disadvantages"
+        ],
+        "sample": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?",
+        "signal": "Do the advantages outweigh the disadvantages? / What are the advantages and disadvantages?",
+        "plan": [
+          "Mở bài: paraphrase xu hướng + trả lời thẳng: lợi nhiều hơn hay hại nhiều hơn.",
+          "Thân bài 1: lợi ích (2 ý, có ví dụ).",
+          "Thân bài 2: bất lợi (2 ý, có ví dụ).",
+          "Kết bài: cân nhắc lại và khẳng định bên nào nặng hơn."
+        ],
+        "frames": [
+          "The main advantage of this is that…",
+          "Another benefit is…",
+          "However, there are also drawbacks, such as…",
+          "Overall, I believe the benefits clearly outweigh…"
+        ]
+      }
+    ],
+    "drills": [
+      {
+        "kind": "link",
+        "prompt": "Many students work part-time. ___, this can affect their studies.",
+        "options": [
+          "However",
+          "For example",
+          "Therefore",
+          "Similarly"
+        ],
+        "answer": 0,
+        "why": "Câu sau nói mặt trái của câu trước → However (tuy nhiên)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Public transport is cheap. ___, it reduces air pollution.",
+        "options": [
+          "In contrast",
+          "Moreover",
+          "Instead",
+          "Otherwise"
+        ],
+        "answer": 1,
+        "why": "Thêm một lợi ích nữa cùng chiều → Moreover (hơn nữa)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Prices have risen sharply. ___, many families are spending less.",
+        "options": [
+          "As a result",
+          "Although",
+          "In addition",
+          "For instance"
+        ],
+        "answer": 0,
+        "why": "Câu sau là hậu quả của câu trước → As a result (kết quả là)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Some jobs can be done online, ___ software design and translation.",
+        "options": [
+          "such as",
+          "however",
+          "whereas",
+          "because"
+        ],
+        "answer": 0,
+        "why": "Đưa ví dụ ngay sau danh từ → such as."
+      },
+      {
+        "kind": "link",
+        "prompt": "___ cars are convenient, they cause traffic jams.",
+        "options": [
+          "Because",
+          "Although",
+          "Therefore",
+          "Moreover"
+        ],
+        "answer": 1,
+        "why": "Hai ý trái ngược trong cùng một câu → Although (mặc dù)."
+      },
+      {
+        "kind": "link",
+        "prompt": "___, I believe that the benefits outweigh the drawbacks.",
+        "options": [
+          "For example",
+          "In conclusion",
+          "On the other hand",
+          "Firstly"
+        ],
+        "answer": 1,
+        "why": "Câu kết bài → In conclusion."
+      },
+      {
+        "kind": "trend",
+        "prompt": "Sales ___ from 200 to 500 units between 2010 and 2020.",
+        "options": [
+          "rose",
+          "raised",
+          "risen",
+          "rising"
+        ],
+        "answer": 0,
+        "why": "Rise (tăng, nội động từ) → quá khứ rose. Raise cần tân ngữ (raise prices)."
+      },
+      {
+        "kind": "trend",
+        "prompt": "There was a ___ fall in the number of visitors, from 90 to 88.",
+        "options": [
+          "dramatic",
+          "slight",
+          "sharp",
+          "huge"
+        ],
+        "answer": 1,
+        "why": "Giảm rất ít (90 → 88) → slight (nhẹ). Dramatic, sharp, huge là giảm mạnh."
+      },
+      {
+        "kind": "trend",
+        "prompt": "The figure ___ at around 30% for five years.",
+        "options": [
+          "remained stable",
+          "increased sharply",
+          "dropped",
+          "peaked"
+        ],
+        "answer": 0,
+        "why": "Không đổi suốt 5 năm → remained stable."
+      },
+      {
+        "kind": "trend",
+        "prompt": "Car use ___ in 2015 and then began to decline.",
+        "options": [
+          "peaked",
+          "fluctuated",
+          "bottomed",
+          "doubled up"
+        ],
+        "answer": 0,
+        "why": "Đạt đỉnh rồi giảm → peaked (lên mức cao nhất)."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"Lots of people think…\" → \"___ people think…\"",
+        "options": [
+          "A great deal of",
+          "Many",
+          "Loads of",
+          "Heaps of"
+        ],
+        "answer": 1,
+        "why": "Người đếm được → many. A great deal of đi với danh từ không đếm được; loads of, heaps of là văn nói."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"Kids should ___ more.\"",
+        "options": [
+          "get into reading",
+          "read a lot",
+          "be encouraged to read",
+          "read heaps"
+        ],
+        "answer": 2,
+        "why": "Văn viết học thuật tránh cụm thân mật (get into, heaps); câu bị động be encouraged to read trang trọng hơn."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"It's a big problem.\" → \"It is a ___ problem.\"",
+        "options": [
+          "huge",
+          "serious",
+          "massive",
+          "really bad"
+        ],
+        "answer": 1,
+        "why": "Serious là từ trang trọng, chính xác; huge, massive, really bad mang màu văn nói."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Which is better in an IELTS essay?",
+        "options": [
+          "Governments gotta act now.",
+          "Governments should take action now.",
+          "Governments wanna act now.",
+          "Govts should act now."
+        ],
+        "answer": 1,
+        "why": "Không viết tắt kiểu gotta, wanna, govts trong bài thi; dùng should take action."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "free-university",
+        "type": "opinion",
+        "text": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?"
+      },
+      {
+        "id": "early-school",
+        "type": "discussion",
+        "text": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion."
+      },
+      {
+        "id": "traffic",
+        "type": "problem-solution",
+        "text": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?"
+      },
+      {
+        "id": "work-from-home",
+        "type": "advantages",
+        "text": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?"
+      },
+      {
+        "id": "online-learning",
+        "type": "opinion",
+        "text": "Online courses will soon replace traditional classrooms. To what extent do you agree or disagree?"
+      },
+      {
+        "id": "plastic",
+        "type": "problem-solution",
+        "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?"
       }
     ]
   }
