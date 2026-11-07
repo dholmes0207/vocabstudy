@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "reading": [
     {
       "id": "city-farms",
@@ -793,5 +793,361 @@
         "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?"
       }
     ]
-  }
+  },
+  "listening": [
+    {
+      "id": "gym-membership",
+      "emoji": "🏋️",
+      "title": [
+        "Đăng ký phòng tập",
+        "Joining a gym"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good morning, City Fitness. How can I help you?"
+        },
+        {
+          "speaker": "W",
+          "text": "Hi, I'd like to join the gym, please."
+        },
+        {
+          "speaker": "M",
+          "text": "Of course. Can I have your surname, please?"
+        },
+        {
+          "speaker": "W",
+          "text": "It's Parker. P, A, R, K, E, R."
+        },
+        {
+          "speaker": "M",
+          "text": "Thank you. And which membership would you like, monthly or yearly?"
+        },
+        {
+          "speaker": "W",
+          "text": "Monthly, please. How much is that?"
+        },
+        {
+          "speaker": "M",
+          "text": "It's forty-five pounds a month. When would you like to start?"
+        },
+        {
+          "speaker": "W",
+          "text": "Next Monday, if possible."
+        },
+        {
+          "speaker": "M",
+          "text": "No problem. And finally, a phone number?"
+        },
+        {
+          "speaker": "W",
+          "text": "Sure, it's oh seven nine six, three two eight, five one four."
+        }
+      ],
+      "form": {
+        "title": "City Fitness: new member",
+        "fields": [
+          {
+            "label": "Surname",
+            "answer": "Parker"
+          },
+          {
+            "label": "Type of membership",
+            "answer": "monthly"
+          },
+          {
+            "label": "Price per month (£)",
+            "answer": "45",
+            "accept": [
+              "forty-five",
+              "forty five"
+            ]
+          },
+          {
+            "label": "Start day",
+            "answer": "Monday"
+          },
+          {
+            "label": "Phone",
+            "answer": "0796 328 514",
+            "accept": [
+              "0796328514"
+            ]
+          }
+        ]
+      },
+      "tip": "Tên riêng thường được đánh vần từng chữ; \"oh\" trong số điện thoại là số 0."
+    },
+    {
+      "id": "hotel-booking",
+      "emoji": "🏨",
+      "title": [
+        "Đặt phòng khách sạn",
+        "Booking a hotel room"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Riverside Hotel, reception. How may I help?"
+        },
+        {
+          "speaker": "M",
+          "text": "Hello, I'd like to book a room for two nights."
+        },
+        {
+          "speaker": "W",
+          "text": "Certainly. Which dates?"
+        },
+        {
+          "speaker": "M",
+          "text": "Arriving on the fifteenth of March."
+        },
+        {
+          "speaker": "W",
+          "text": "Would you like a single or a double room?"
+        },
+        {
+          "speaker": "M",
+          "text": "A double, please. With a view of the river if you have one."
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, we do. That's ninety pounds per night, breakfast included."
+        },
+        {
+          "speaker": "M",
+          "text": "Great. My name is Daniel Shaw. S, H, A, W."
+        },
+        {
+          "speaker": "W",
+          "text": "Thank you, Mr Shaw. Check-in is from two o'clock."
+        }
+      ],
+      "form": {
+        "title": "Riverside Hotel: booking",
+        "fields": [
+          {
+            "label": "Number of nights",
+            "answer": "2",
+            "accept": [
+              "two"
+            ]
+          },
+          {
+            "label": "Arrival date",
+            "answer": "15 March",
+            "accept": [
+              "15th March",
+              "March 15",
+              "march 15th",
+              "fifteenth of march"
+            ]
+          },
+          {
+            "label": "Room type",
+            "answer": "double"
+          },
+          {
+            "label": "Price per night (£)",
+            "answer": "90",
+            "accept": [
+              "ninety"
+            ]
+          },
+          {
+            "label": "Guest surname",
+            "answer": "Shaw"
+          },
+          {
+            "label": "Check-in from",
+            "answer": "2",
+            "accept": [
+              "2 o'clock",
+              "two",
+              "2:00",
+              "2pm",
+              "2 pm",
+              "two o'clock"
+            ]
+          }
+        ]
+      },
+      "tip": "Ngày tháng có thể viết 15 March hay March 15; đề IELTS chấp nhận cả hai nếu đúng chính tả."
+    },
+    {
+      "id": "library-card",
+      "emoji": "📚",
+      "title": [
+        "Làm thẻ thư viện",
+        "A library card"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Hello, I'd like to get a library card."
+        },
+        {
+          "speaker": "M",
+          "text": "Sure. Can you spell your first name for me?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, it's Linh. L, I, N, H."
+        },
+        {
+          "speaker": "M",
+          "text": "And your address?"
+        },
+        {
+          "speaker": "W",
+          "text": "Twenty-three Garden Road."
+        },
+        {
+          "speaker": "M",
+          "text": "Garden Road, thank you. You can borrow up to eight books at a time."
+        },
+        {
+          "speaker": "W",
+          "text": "For how long?"
+        },
+        {
+          "speaker": "M",
+          "text": "Three weeks. And the library closes at seven on weekdays."
+        }
+      ],
+      "form": {
+        "title": "Library card application",
+        "fields": [
+          {
+            "label": "First name",
+            "answer": "Linh"
+          },
+          {
+            "label": "House number",
+            "answer": "23",
+            "accept": [
+              "twenty-three",
+              "twenty three"
+            ]
+          },
+          {
+            "label": "Street",
+            "answer": "Garden Road"
+          },
+          {
+            "label": "Books at a time",
+            "answer": "8",
+            "accept": [
+              "eight"
+            ]
+          },
+          {
+            "label": "Loan period (weeks)",
+            "answer": "3",
+            "accept": [
+              "three"
+            ]
+          },
+          {
+            "label": "Closes on weekdays at",
+            "answer": "7",
+            "accept": [
+              "seven",
+              "7pm",
+              "7 pm",
+              "7:00"
+            ]
+          }
+        ]
+      },
+      "tip": "Viết đúng chính tả là bắt buộc: Garden Road phải viết đủ cả hai từ."
+    },
+    {
+      "id": "bike-hire",
+      "emoji": "🚲",
+      "title": [
+        "Thuê xe đạp",
+        "Hiring a bike"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Hi there. Can I help you?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, I'd like to hire a bike for the afternoon."
+        },
+        {
+          "speaker": "M",
+          "text": "For how many hours?"
+        },
+        {
+          "speaker": "W",
+          "text": "About four hours."
+        },
+        {
+          "speaker": "M",
+          "text": "That's twelve pounds. Would you like a helmet as well? It's free."
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, please. And a map of the cycle routes?"
+        },
+        {
+          "speaker": "M",
+          "text": "Here you are. Please bring the bike back before six. Can I see some ID?"
+        },
+        {
+          "speaker": "W",
+          "text": "Here's my passport."
+        }
+      ],
+      "form": {
+        "title": "Green Wheels: bike hire",
+        "fields": [
+          {
+            "label": "Hours",
+            "answer": "4",
+            "accept": [
+              "four"
+            ]
+          },
+          {
+            "label": "Price (£)",
+            "answer": "12",
+            "accept": [
+              "twelve"
+            ]
+          },
+          {
+            "label": "Free extra",
+            "answer": "helmet",
+            "accept": [
+              "a helmet"
+            ]
+          },
+          {
+            "label": "Return before",
+            "answer": "6",
+            "accept": [
+              "six",
+              "6pm",
+              "6 pm",
+              "6:00"
+            ]
+          },
+          {
+            "label": "ID shown",
+            "answer": "passport",
+            "accept": [
+              "her passport",
+              "a passport"
+            ]
+          }
+        ]
+      },
+      "tip": "Câu hỏi đi theo thứ tự lời nói; nghe thấy đáp án rồi thì chuyển ngay sang ô tiếp theo."
+    }
+  ]
 }

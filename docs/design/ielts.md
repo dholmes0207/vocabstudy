@@ -57,6 +57,13 @@ hoặc trong vòng 7 ngày.
     (`vocab.ielts.draft.<id>`). Nộp khi đủ 250 từ: +15 XP, ghi `ielts-writing` (cấp 6 thêm bước "Viết
     IELTS", 2 bài). Không chấm band: danh sách chỉ kiểm hình thức, không thay được giám khảo.
 
+- **Bước 4: Nghe điền phiếu** (Part 1). 4 cuộc gọi (đăng ký phòng tập, đặt khách sạn, làm thẻ thư viện,
+  thuê xe đạp), hai giọng nam – nữ. Đọc trước phiếu, bấm nghe (được nghe lại, khác phòng thi), điền dần,
+  rồi kiểm tra: ô sai hiện đáp án, có lời thoại và mẹo làm bài. Chấm không phân biệt hoa thường, dấu câu;
+  số điện thoại bỏ qua khoảng trắng; số có thể viết bằng chữ khi dữ liệu cho phép. Ghi `ielts-listening`
+  (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
+- Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
+
 ## 4. Dev
 
 - `public/data/ielts/en.json`, kiểm tra khi tải bằng `validateIeltsBank` (`lib/ielts.ts`, dùng
@@ -68,5 +75,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Nghe: điền thông tin vào phiếu (form completion) với giọng thu sẵn.
-2. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.
+1. Thêm dạng đọc: nối tiêu đề (matching headings), điền vào tóm tắt.
+2. Nghe Part 2–4: chọn đáp án, nối thông tin, bài giảng ngắn.
