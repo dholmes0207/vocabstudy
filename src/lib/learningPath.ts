@@ -43,6 +43,8 @@ export interface PathStep {
   unit: Pair
   /** For a words step: the slice of the learning order it covers, [from, to). */
   range?: [number, number]
+  /** For a grammar step: its units, which the level test asks about. */
+  units?: string[]
 }
 
 export interface PathLevel {
@@ -57,6 +59,8 @@ export interface PathLevel {
   steps: PathStep[]
   /** Shown but not finished yet: its practice is still being written. */
   soon?: boolean
+  /** Headwords the level test asks, when the level has no slice of the learning order. */
+  testWords?: readonly string[]
 }
 
 const words = (from: number, to: number, id: string): PathStep => ({
@@ -83,6 +87,7 @@ const grammar = (id: string, units: string[], title: Pair, desc: Pair): PathStep
   goal: units.length,
   measure: (ctx) => ctx.grammarPassed(units),
   unit: ['bài', 'units'],
+  units,
 })
 
 const stories = (id: string, ids: string[], title: Pair): PathStep => ({
@@ -321,6 +326,7 @@ export const EN_PATH: PathLevel[] = [
     ],
     cefr: 'B1',
     tone: 'from-indigo-500 to-sky-600',
+    testWords: TOEIC_WORDS,
     steps: [
       {
         id: 'en5-words',

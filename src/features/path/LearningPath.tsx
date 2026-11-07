@@ -1,26 +1,24 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, ChevronDown, Lock, Sparkles } from 'lucide-react'
+import { ArrowRight, Check, ChevronDown, Lock, Sparkles, Swords } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { usePlacement } from '@/store/placementStore'
-import { usePath } from '@/store/pathStore'
-import { usePathContext } from '@/hooks/usePathContext'
+import { NO_PASSED, usePath } from '@/store/pathStore'
+import { usePathStates } from '@/hooks/usePathContext'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
   CLEAR_AT,
   LEVEL_XP,
   currentLevel,
-  levelForPlacement,
   nextStep,
   pathFor,
-  pathState,
   type LevelState,
   type PathLevel,
 } from '@/lib/learningPath'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 import PackOnly from '@/components/PackOnly'
+import LevelTest from './LevelTest'
 
 // "Lộ trình theo cấp" (docs/design/learning-path.md): the levels as a trail to
 // climb, the next thing to do always one tap away, and each level showing what
@@ -38,10 +36,8 @@ export default function LearningPath() {
 function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
   const t = useT()
   useDocumentTitle(`${t('Lộ trình theo cấp', 'Level path')} · VocaStudy`)
-  const ctx = usePathContext(code)
-  const placedAt = usePlacement((s) => s.results[code]?.start ?? 0)
-  const openTo = levelForPlacement(levels, placedAt)
-  const states = useMemo(() => pathState(levels, ctx, openTo), [levels, ctx, openTo])
+  const states = usePathStates(code, levels)
+  const passed = usePath((s) => s.passed[code] ?? NO_PASSED)
   const current = currentLevel(states)
   const step = current && nextStep(current)
   const overall = states.reduce((n, s) => n + s.ratio, 0) / states.length
@@ -64,6 +60,19 @@ function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
 
   const [open, setOpen] = useState<number | null>(null)
   const shown = open ?? current?.level.n ?? 1
+  // The level whose challenge is being played (LevelTest), in place of the path.
+  const [testing, setTesting] = useState<PathLevel | null>(null)
+  if (testing)
+    return (
+      <LevelTest
+        level={testing}
+        isLast={testing.n === levels[levels.length - 1].n}
+        onExit={() => {
+          setTesting(null)
+          setOpen(null)
+        }}
+      />
+    )
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -156,7 +165,9 @@ function PathView({ code, levels }: { code: string; levels: PathLevel[] }) {
             state={s}
             current={s.level.n === current?.level.n}
             expanded={s.level.n === shown}
+            won={passed.includes(s.level.n)}
             onToggle={() => setOpen(s.level.n === shown ? 0 : s.level.n)}
+            onTest={() => setTesting(s.level)}
           />
         ))}
       </ol>
@@ -168,12 +179,17 @@ function LevelRow({
   state,
   current,
   expanded,
+  won,
   onToggle,
+  onTest,
 }: {
   state: LevelState
   current: boolean
   expanded: boolean
+  /** Its challenge was won. */
+  won: boolean
   onToggle: () => void
+  onTest: () => void
 }) {
   const t = useT()
   const { level, unlocked, ratio, complete } = state
@@ -207,6 +223,11 @@ function LevelRow({
               <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                 {level.cefr}
               </span>
+              {won && (
+                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-950 dark:text-amber-200">
+                  🏆 {t('Đã vượt', 'Beaten')}
+                </span>
+              )}
               {level.soon && (
                 <span className="rounded-full bg-fuchsia-100 px-2 py-0.5 text-xs font-semibold text-fuchsia-700 dark:bg-fuchsia-950 dark:text-fuchsia-200">
                   {t('Đang mở rộng', 'Growing')}
@@ -275,6 +296,18 @@ function LevelRow({
               )
             })}
           </ul>
+        )}
+        {expanded && unlocked && (
+          <button
+            type="button"
+            onClick={onTest}
+            className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-amber-300 p-3 font-semibold text-amber-800 transition hover:bg-amber-50 dark:border-amber-500/50 dark:text-amber-200 dark:hover:bg-amber-950/40"
+          >
+            <Swords className="h-4 w-4" aria-hidden="true" />
+            {won
+              ? t('Chơi lại thử thách cấp này', 'Replay this level’s challenge')
+              : t('Thi vượt cấp: 12 câu, 3 tim', 'Level challenge: 12 questions, 3 hearts')}
+          </button>
         )}
       </div>
     </li>
