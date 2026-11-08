@@ -88,7 +88,14 @@ function RoleplayView({ code }: { code: RoleplayPack }) {
                   {s.emoji}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-bold">{t(...s.title)}</span>
+                  <span className="block font-bold">
+                    {t(...s.title)}
+                    {s.tag && (
+                      <span className="ml-2 rounded-full bg-sky-100 px-2 py-0.5 text-xs font-bold text-sky-700 dark:bg-sky-950 dark:text-sky-200">
+                        {s.tag}
+                      </span>
+                    )}
+                  </span>
                   <span className="block text-sm text-slate-500 dark:text-slate-400">
                     {t(...s.setting)}
                   </span>

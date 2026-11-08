@@ -29,6 +29,14 @@ describe('role-play scenes', () => {
     }
   })
 
+  it('has workplace scenes marked for TOEIC', () => {
+    const { scenes } = validateRoleplay(raw('en'))
+    expect(scenes.filter((s) => s.tag === 'TOEIC').length).toBeGreaterThanOrEqual(3)
+    const b = raw('en')
+    b.scenes[0].tag = ''
+    expect(() => validateRoleplay(b)).toThrow(/empty tag/)
+  })
+
   it('turns down a scene with a bad line', () => {
     const b = raw('en')
     b.scenes[0].lines[0].who = 'me'

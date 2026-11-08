@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scenes": [
     {
       "id": "coffee",
@@ -484,6 +484,195 @@
           "voice": "W",
           "text": "Yes, we do. Here you are.",
           "vi": "Có ạ. Của anh đây."
+        }
+      ]
+    },
+    {
+      "id": "reschedule-meeting",
+      "emoji": "📆",
+      "tag": "TOEIC",
+      "title": [
+        "Dời lịch họp",
+        "Moving a meeting"
+      ],
+      "setting": [
+        "Bạn gọi cho khách hàng để dời cuộc họp.",
+        "You call a client to move a meeting."
+      ],
+      "them": [
+        "Khách hàng",
+        "Client"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Hello, Sarah Jones speaking.",
+          "vi": "Alô, Sarah Jones nghe đây."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Hi Sarah, it's Minh from Sunrise Travel. Is now a good time?",
+          "vi": "Chào chị Sarah, tôi là Minh ở Sunrise Travel. Bây giờ chị nói chuyện được không?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Yes, of course. What can I do for you?",
+          "vi": "Được chứ. Tôi giúp gì được anh?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "I'm afraid I need to move our meeting on Tuesday.",
+          "vi": "Tôi e là phải dời cuộc họp hôm thứ Ba của chúng ta."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "No problem. When would suit you?",
+          "vi": "Không sao. Khi nào thì tiện cho anh?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Would Thursday at ten work for you?",
+          "vi": "Thứ Năm lúc mười giờ có được không ạ?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Thursday at ten is fine. I'll update my calendar.",
+          "vi": "Thứ Năm mười giờ được. Tôi sẽ sửa lịch."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Thank you. I'll send you an email to confirm.",
+          "vi": "Cảm ơn chị. Tôi sẽ gửi email xác nhận."
+        }
+      ]
+    },
+    {
+      "id": "broken-printer",
+      "emoji": "🖨️",
+      "tag": "TOEIC",
+      "title": [
+        "Máy in hỏng",
+        "The printer is broken"
+      ],
+      "setting": [
+        "Máy in văn phòng không chạy, bạn hỏi đồng nghiệp.",
+        "The office printer isn't working, so you ask a colleague."
+      ],
+      "them": [
+        "Đồng nghiệp",
+        "Colleague"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Excuse me, do you know what's wrong with the printer?",
+          "vi": "Xin lỗi, anh có biết máy in bị làm sao không?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "I think it's out of paper again.",
+          "vi": "Tôi nghĩ nó lại hết giấy rồi."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Where do we keep the paper?",
+          "vi": "Mình để giấy ở đâu nhỉ?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "In the cupboard next to the kitchen.",
+          "vi": "Trong tủ cạnh phòng bếp."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "I need to print this report before the meeting.",
+          "vi": "Tôi cần in báo cáo này trước cuộc họp."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "You can use the printer on the third floor.",
+          "vi": "Chị có thể dùng máy in ở tầng ba."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Great idea. Thanks a lot.",
+          "vi": "Ý hay đấy. Cảm ơn anh nhiều."
+        }
+      ]
+    },
+    {
+      "id": "office-reception",
+      "emoji": "🏢",
+      "tag": "TOEIC",
+      "title": [
+        "Đón khách ở công ty",
+        "Welcoming a visitor"
+      ],
+      "setting": [
+        "Bạn làm lễ tân, một vị khách vừa tới.",
+        "You work at reception and a visitor arrives."
+      ],
+      "them": [
+        "Khách",
+        "Visitor"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Good morning. Welcome to Green Tech. How can I help you?",
+          "vi": "Chào buổi sáng. Chào mừng đến Green Tech. Tôi giúp gì được ạ?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "Hello, I have a meeting with Mr Lee at nine.",
+          "vi": "Chào chị, tôi có hẹn với ông Lee lúc chín giờ."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "May I have your name, please?",
+          "vi": "Cho tôi xin tên anh ạ?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "David Clark, from Blue Ocean Bank.",
+          "vi": "David Clark, ngân hàng Blue Ocean."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Thank you. Please take a seat. Mr Lee will be with you shortly.",
+          "vi": "Cảm ơn anh. Mời anh ngồi. Ông Lee sẽ ra ngay."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "Thanks. Could I have a glass of water?",
+          "vi": "Cảm ơn. Cho tôi xin cốc nước được không?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Of course. I'll bring it right away.",
+          "vi": "Tất nhiên. Tôi mang ra ngay."
         }
       ]
     }

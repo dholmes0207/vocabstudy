@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Nhập vai nơi công sở', 'Role-play at work'],
+    items: [
+      [
+        'Ba cảnh tiếng Anh nơi làm việc, gắn nhãn TOEIC: dời lịch họp qua điện thoại, máy in hỏng, đón khách ở lễ tân. Lộ trình cấp 5 (TOEIC) có thêm bước này.',
+        'Three English workplace scenes marked TOEIC: moving a meeting by phone, a broken printer, welcoming a visitor. Level 5 (TOEIC) of the path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Thêm cảnh nhập vai', 'More role-play scenes'],
     items: [
       [

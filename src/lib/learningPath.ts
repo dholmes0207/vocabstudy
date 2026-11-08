@@ -394,6 +394,18 @@ export const EN_PATH: PathLevel[] = [
         measure: (ctx) => (ctx.examBest('toeic-mini') >= 0.6 ? 1 : 0),
         unit: ['lần', 'pass'],
       },
+      sessions(
+        'en5-roleplay',
+        'roleplay',
+        6,
+        '🏢',
+        '/roleplay',
+        ['Nhập vai nơi công sở', 'Role-play at work'],
+        [
+          'Tổng cộng 6 cảnh nhập vai; thử các cảnh gắn nhãn TOEIC: dời lịch họp, máy in hỏng, đón khách.',
+          '6 role-play scenes in all; try the ones marked TOEIC: moving a meeting, a broken printer, a visitor.',
+        ]
+      ),
     ],
   },
   {

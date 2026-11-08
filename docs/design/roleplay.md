@@ -23,6 +23,8 @@ phong cách tránh nhàm chán".
 - Thêm cảnh (dữ liệu 1.1.0): tiếng Anh có thêm đặt bàn qua điện thoại, mua vé tàu, đổi hàng; tiếng Trung có
   thêm hỏi đường, nhận phòng khách sạn. Câu của người học tránh đánh vần từng chữ cái, vì nhận dạng giọng
   nói khó chấm đúng.
+- Cảnh công sở cho TOEIC (dữ liệu 1.2.0, nhãn `tag: "TOEIC"` hiện trên danh sách): dời lịch họp qua điện
+  thoại, máy in hỏng, đón khách ở lễ tân. Cấp 5 (TOEIC) thêm bước "Nhập vai nơi công sở" (tổng 6 cảnh).
 - Lộ trình: cấp 4 tiếng Anh (Nghe & nói) và cấp 2 tiếng Trung (HSK 1) thêm bước "Nhập vai hội thoại".
 
 ## 3. Dev
