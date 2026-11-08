@@ -758,6 +758,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh4-roleplay',
+        'roleplay',
+        4,
+        '🎭',
+        '/roleplay',
+        ['Nhập vai mức HSK 3', 'HSK 3 role-play'],
+        [
+          'Tổng cộng 4 cảnh nhập vai; thử các cảnh gắn nhãn HSK: đi khám, gọi đồ ăn, thuê nhà.',
+          '4 role-play scenes in all; try the ones marked HSK: the doctor, ordering food, renting a flat.',
+        ]
+      ),
+      sessions(
         'zh4-hanviet',
         'hanviet',
         2,

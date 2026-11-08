@@ -25,6 +25,8 @@ phong cách tránh nhàm chán".
   nói khó chấm đúng.
 - Cảnh công sở cho TOEIC (dữ liệu 1.2.0, nhãn `tag: "TOEIC"` hiện trên danh sách): dời lịch họp qua điện
   thoại, máy in hỏng, đón khách ở lễ tân. Cấp 5 (TOEIC) thêm bước "Nhập vai nơi công sở" (tổng 6 cảnh).
+- Cảnh tiếng Trung mức HSK 2–3 (dữ liệu 1.2.0, nhãn HSK): đi khám bệnh, gọi điện đặt đồ ăn, thuê nhà. Cấp 4 lộ
+  trình tiếng Trung (HSK 3) thêm bước "Nhập vai mức HSK 3" (tổng 4 cảnh).
 - Lộ trình: cấp 4 tiếng Anh (Nghe & nói) và cấp 2 tiếng Trung (HSK 1) thêm bước "Nhập vai hội thoại".
 
 ## 3. Dev
