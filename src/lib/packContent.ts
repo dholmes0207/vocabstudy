@@ -31,6 +31,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/exam': ['en', 'ko', 'zh'],
   // Workplace English for the TOEIC Listening & Reading test (lib/toeic.ts).
   '/toeic': ['en'],
+  // Three tasks of the TOEIC Speaking test (lib/toeicSpeaking.ts).
+  '/toeic-speaking': ['en'],
   // Academic reading and the other IELTS skills (lib/ielts.ts).
   '/ielts': ['en'],
   // English and Chinese sentence shapes as coloured role blocks (lib/patterns.ts).

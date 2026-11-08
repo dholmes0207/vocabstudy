@@ -44,6 +44,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-600 to-indigo-600',
   },
   {
+    to: '/toeic-speaking',
+    icon: '🎤',
+    title: 'TOEIC Speaking',
+    desc: 'Đọc to đoạn văn, trả lời câu hỏi qua điện thoại, nêu quan điểm 60 giây: đúng thời gian của đề, ghi âm rồi so với câu mẫu.',
+    titleEn: 'TOEIC Speaking',
+    descEn:
+      'Read a text aloud, answer survey questions, give a 60-second opinion: with the test’s timings, recorded and compared with a sample.',
+    tone: 'from-sky-500 to-blue-700',
+  },
+  {
     to: '/patterns',
     icon: '🧱',
     title: 'Cấu trúc câu',
