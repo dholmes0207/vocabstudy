@@ -69,6 +69,11 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 11: Câu trả lời mẫu cho Part 3.** Mỗi câu thảo luận Part 3 (6 thẻ × 3 câu) có câu trả lời mẫu dài
+  hơn Part 1: nêu quan điểm, giải thích, ví dụ, có khi nói cả phía bên kia; cụm tô là cách nêu ý kiến hay
+  nối ý (`In my opinion`, `To some extent`, `Having said that`…). Dữ liệu `part2[].part3Samples`, cùng
+  cách hiển thị và kiểm dữ liệu như Part 1.
+
 - **Bước 9: Bài đọc dài.** Thêm 2 bài 5 đoạn (ong mật trong thành phố, tuần làm việc bốn ngày), gần độ dài
   đề thật hơn; mỗi bài đủ 3 dạng: 6 câu True/False/Not Given (có bẫy suy luận), 7 tiêu đề cho 5 đoạn, đoạn
   tóm tắt 4 chỗ trống. Danh sách bài gắn nhãn "Bài dài · 5 đoạn".

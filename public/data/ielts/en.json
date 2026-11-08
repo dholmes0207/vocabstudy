@@ -1,5 +1,5 @@
 {
-  "version": "1.9.0",
+  "version": "1.10.0",
   "reading": [
     {
       "id": "city-farms",
@@ -906,6 +906,20 @@
           "Who usually helps young people more, family or friends?",
           "Do you think people today are less helpful than in the past?",
           "Should schools teach students to help others?"
+        ],
+        "part3Samples": [
+          {
+            "a": "I'd say it depends on the kind of help. Family usually give practical support, like money or advice about careers, whereas friends are better at emotional support, because young people often feel more comfortable sharing problems with someone their own age.",
+            "key": "whereas"
+          },
+          {
+            "a": "I don't think so, actually. People may be busier and know their neighbours less, but on the other hand, social media makes it much easier to help strangers, for example by raising money for someone who is ill.",
+            "key": "on the other hand"
+          },
+          {
+            "a": "Yes, I believe they should. If children take part in volunteer projects at school, they learn that helping others is normal, and that habit is likely to stay with them as adults.",
+            "key": "is likely to"
+          }
         ]
       },
       {
@@ -934,6 +948,20 @@
           "Why do people like to travel?",
           "How has tourism changed your country?",
           "Is it better to travel alone or in a group?"
+        ],
+        "part3Samples": [
+          {
+            "a": "I think the main reason is that travel gives people a break from their daily routine. It's also a chance to experience a different way of life, which can be both exciting and educational.",
+            "key": "gives people a break from"
+          },
+          {
+            "a": "It has changed enormously. Twenty years ago only a few places were well known, but now even small villages attract visitors, which brings jobs, although it can also damage the environment.",
+            "key": "It has changed enormously"
+          },
+          {
+            "a": "Personally, I prefer travelling in a small group. Travelling alone gives you more freedom, but sharing the experience with friends makes it more fun, and it's usually cheaper and safer too.",
+            "key": "Personally, I prefer"
+          }
         ]
       },
       {
@@ -962,6 +990,20 @@
           "What skills do young people need for the future?",
           "Is it better to learn skills at school or by yourself?",
           "Will computers replace some skills people learn today?"
+        ],
+        "part3Samples": [
+          {
+            "a": "In my opinion, the most important skills are digital skills and the ability to adapt. Jobs are changing so quickly that people will need to keep learning new things throughout their careers.",
+            "key": "In my opinion"
+          },
+          {
+            "a": "I think a combination of both is best. School gives you a solid foundation and some discipline, while learning by yourself, for instance through online courses, lets you follow your own interests.",
+            "key": "a combination of both"
+          },
+          {
+            "a": "To some extent, yes. Computers can already translate and do calculations, so those skills may become less important. However, skills like creativity and communication will still be needed.",
+            "key": "To some extent"
+          }
         ]
       },
       {
@@ -990,6 +1032,20 @@
           "Do cities need more green spaces?",
           "How do people in your country relax?",
           "Is it harder to relax today than in the past?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Definitely. Cities are becoming more crowded and polluted, so parks give people somewhere to exercise and breathe fresh air. Studies also suggest that green spaces are good for mental health.",
+            "key": "Studies also suggest that"
+          },
+          {
+            "a": "It varies from person to person. Older people often go for a walk or drink tea with friends, while younger people tend to relax by watching videos or going to cafés.",
+            "key": "It varies from person to person"
+          },
+          {
+            "a": "I'd say it is, mainly because of technology. We're always connected to our phones, so it's hard to switch off completely, even when we're on holiday.",
+            "key": "switch off completely"
+          }
         ]
       },
       {
@@ -1018,6 +1074,20 @@
           "Do young people make decisions too quickly?",
           "Should parents make important decisions for their children?",
           "What kinds of decisions are hardest to make?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Some of them do, especially when it comes to spending money online. That said, many young people are actually very careful and do a lot of research before making a big decision.",
+            "key": "That said"
+          },
+          {
+            "a": "Only when the children are very young. As they grow older, I think parents should give advice rather than decide for them, because people learn from making their own choices.",
+            "key": "give advice rather than"
+          },
+          {
+            "a": "The hardest ones are probably decisions about careers or relationships, because the consequences last a long time and you can't easily change your mind afterwards.",
+            "key": "the consequences last a long time"
+          }
         ]
       },
       {
@@ -1046,6 +1116,20 @@
           "Do people read fewer books today?",
           "Are films a good way to learn about other cultures?",
           "Should films for children be educational?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Yes, I think they do read fewer printed books. Having said that, many people read a lot on their phones, so it's more that the way we read has changed rather than reading itself disappearing.",
+            "key": "Having said that"
+          },
+          {
+            "a": "Absolutely. A good film can show you how people in another country live, what they eat and what they care about, which is far more memorable than reading facts in a textbook.",
+            "key": "far more memorable than"
+          },
+          {
+            "a": "Not necessarily. Children's films should mainly be entertaining, but the best ones manage to teach values like kindness or courage without feeling like a lesson.",
+            "key": "Not necessarily"
+          }
         ]
       }
     ]

@@ -66,8 +66,14 @@ export interface Part1Topic {
   emoji: string
   title: Pair
   questions: string[]
-  /** A band-7 answer to each question, with one phrase worth borrowing (`key` is part of `a`). */
-  samples: { a: string; key: string }[]
+  /** A band-7 answer to each question. */
+  samples: SampleAnswer[]
+}
+
+/** A model answer, with one phrase worth borrowing (`key` is part of `a`). */
+export interface SampleAnswer {
+  a: string
+  key: string
 }
 
 /** Speaking Part 2: a task card for the long turn, and Part 3 questions that follow it. */
@@ -84,6 +90,8 @@ export interface CueCard {
   phrases: string[]
   /** The discussion that follows (Part 3). */
   part3: string[]
+  /** A band-7 answer to each Part 3 question. */
+  part3Samples: SampleAnswer[]
 }
 
 /** A kind of Task 2 essay, with how to build it. */
@@ -253,14 +261,17 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
     '"speaking" is missing'
   )
   const strings = (v: unknown, min: number) => Array.isArray(v) && v.length >= min && v.every(text)
+  // One sample per question, each with its key phrase inside it.
+  const samplesFor = (v: unknown, questions: unknown[]) =>
+    Array.isArray(v) &&
+    v.length === questions.length &&
+    v.every((x: SampleAnswer) => text(x?.a) && text(x.key) && x.a.includes(x.key))
   for (const tp of speaking!.part1) {
     check(text(tp?.id) && text(tp.emoji), 'a Part 1 topic has no id')
     check(strings(tp.title, 2), `Part 1 "${tp.id}" has no title`)
     check(strings(tp.questions, 3), `Part 1 "${tp.id}" needs three questions`)
     check(
-      Array.isArray(tp.samples) &&
-        tp.samples.length === tp.questions.length &&
-        tp.samples.every((x) => text(x?.a) && text(x.key) && x.a.includes(x.key)),
+      samplesFor(tp.samples, tp.questions),
       `Part 1 "${tp.id}" needs a sample answer, with its key phrase, for every question`
     )
   }
@@ -272,6 +283,10 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       `cue card "${c.id}" needs a plan and phrases`
     )
     check(strings(c.part3, 2), `cue card "${c.id}" needs Part 3 questions`)
+    check(
+      samplesFor(c.part3Samples, c.part3),
+      `cue card "${c.id}" needs a sample answer, with its key phrase, for every Part 3 question`
+    )
   }
   const writing = bank!.writing
   check(

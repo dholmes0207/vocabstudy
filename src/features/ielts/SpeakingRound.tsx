@@ -271,7 +271,10 @@ export default function SpeakingRound({
               )}
         </p>
         <AnswerRecorder key={idx} />
-        {task.part === 1 && <SampleAnswer key={`s${idx}`} sample={task.topic.samples[idx]} />}
+        <SampleAnswer
+          key={`s${idx}`}
+          sample={task.part === 1 ? task.topic.samples[idx] : task.card.part3Samples[idx]}
+        />
       </section>
       <button type="button" className="btn-primary h-12 w-full" onClick={nextQuestion}>
         {idx + 1 < questions.length ? t('Câu tiếp', 'Next question') : t('Xong phần nói', 'Finish')}{' '}
