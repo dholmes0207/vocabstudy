@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Hôm nay thử gì mới?', 'Try something new today'],
+    items: [
+      [
+        'Trang chủ mỗi ngày gợi ý một kiểu luyện bạn chưa mở trên máy này: nhập vai, "Đúng hay sai?", cấu trúc câu, luyện thi… để việc học không lặp lại một màu.',
+        'Each day the home screen suggests a way to practise you have not opened on this device yet: role-play, True or false?, sentence patterns, exam practice… so studying never feels the same.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Lộ trình theo cấp cho tiếng Hàn', 'A level path for Korean'],
     items: [
       [
