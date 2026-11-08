@@ -30,8 +30,12 @@ describe('IELTS Writing Task 1', () => {
       </MemoryRouter>
     )
     expect(screen.getByRole('img', { name: chart.title[1] })).toBeInTheDocument()
-    // The figures are there for screen readers too.
-    expect(screen.getByRole('table')).toHaveTextContent(chart.series[0].name)
+    // The figures are there for screen readers too, in a visually hidden box
+    // (on the wrapper: a table ignores width: 1px and would widen the page).
+    const table = screen.getByRole('table')
+    expect(table).toHaveTextContent(chart.series[0].name)
+    expect(table.className).not.toContain('sr-only')
+    expect(table.parentElement).toHaveClass('sr-only')
 
     const wrong = (chart.overview.answer + 1) % chart.overview.options.length
     fireEvent.click(screen.getByRole('button', { name: chart.overview.options[wrong] }))
