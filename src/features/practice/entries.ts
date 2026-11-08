@@ -104,6 +104,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-rose-500 to-amber-500',
   },
   {
+    to: '/slang',
+    icon: '📱',
+    title: 'Tiếng lóng mạng',
+    desc: '内卷 nội quyển, 躺平, 学霸, 吃瓜…: từ giới trẻ Trung Quốc dùng trên Douyin, Weibo, kèm âm Hán Việt và câu ví dụ.',
+    titleEn: 'Internet slang',
+    descEn:
+      '内卷, 躺平, 学霸, 吃瓜…: the words young Chinese use on Douyin and Weibo, with Hán Việt sounds and examples.',
+    tone: 'from-pink-500 to-violet-600',
+  },
+  {
     to: '/numbers',
     icon: '🔢',
     title: 'Nghe số',

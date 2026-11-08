@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Tiếng lóng mạng tiếng Trung', 'Chinese internet slang'],
+    items: [
+      [
+        'Trang mới "Tiếng lóng mạng": 20 từ giới trẻ Trung Quốc hay dùng trên Douyin, Weibo như 内卷 (nội quyển), 躺平, 学霸, 吃瓜, kèm âm Hán Việt, câu ví dụ và lượt đoán nghĩa hai chiều.',
+        'New "Internet slang" page: 20 words young Chinese use on Douyin and Weibo, such as 内卷 (nội quyển), 躺平, 学霸 and 吃瓜, with Hán Việt sounds, examples and a two-way guessing round.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: [
       'Câu trả lời mẫu cho IELTS Speaking Part 3',
       'Sample answers for IELTS Speaking Part 3',

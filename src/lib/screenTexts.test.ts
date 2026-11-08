@@ -27,6 +27,7 @@ import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
+import { SLANG } from './netSlang'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { validateRoleplay } from './roleplay'
 
@@ -181,6 +182,8 @@ function chinese(): string[] {
     ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
     // "Thành ngữ": each idiom and its example sentence.
     ...CHENGYU.flatMap((it) => [it.zh, it.example.zh]),
+    // "Tiếng lóng mạng": each word and its example sentence.
+    ...SLANG.flatMap((it) => [it.zh, it.example.zh]),
   ]
 }
 
