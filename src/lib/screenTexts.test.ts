@@ -27,6 +27,7 @@ import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, filled } from './confusables'
 import { CHENGYU } from './chengyu'
+import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -107,6 +108,10 @@ function english(): string[] {
     ...ielts(),
     ...patterns('en'),
     ...roleplay('en'),
+    // "Cụm động từ": each sentence with its particle back in place.
+    ...PARTICLES.flatMap((particle) =>
+      particle.verbs.map((item) => phrasalFilled({ particle, item }))
+    ),
   ]
 }
 

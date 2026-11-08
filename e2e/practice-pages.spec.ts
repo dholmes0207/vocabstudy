@@ -29,6 +29,17 @@ test('a role-play scene reads the other side and waits for mine', async ({ page 
   await expect(page.getByText('“Cho tôi một ly latte nhé.”')).toBeVisible()
 })
 
+test('English phrasal verbs, by their particle', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/phrasal-verbs')
+  await page.getByRole('button', { name: 'Practise "off"' }).click()
+  await page.getByRole('button', { name: 'off', exact: true }).click()
+  await expect(page.getByText('Right!')).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')

@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Cụm động từ tiếng Anh', 'English phrasal verbs'],
+    items: [
+      [
+        'Trang mới "Cụm động từ": 30 cụm như give up, turn off, pick up, xếp theo nghĩa của tiểu từ up, out, off, on, down, back, rồi điền tiểu từ vào câu. Lộ trình tiếng Anh cấp 4 có thêm bước này.',
+        'New "Phrasal verbs" page: 30 verbs such as give up, turn off and pick up, grouped by what up, out, off, on, down and back add; then fill in the particle. Level 4 of the English path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Thành ngữ tiếng Trung qua âm Hán Việt', 'Chinese idioms through Hán Việt'],
     items: [
       [

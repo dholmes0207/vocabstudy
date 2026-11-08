@@ -44,6 +44,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-500 to-rose-500',
   },
   {
+    to: '/phrasal-verbs',
+    icon: '🧩',
+    title: 'Cụm động từ',
+    desc: 'Give up, turn off, pick up…: học theo nghĩa của tiểu từ up, out, off, on, down, back rồi điền vào câu. Gặp nhiều trong TOEIC, IELTS.',
+    titleEn: 'Phrasal verbs',
+    descEn:
+      'Give up, turn off, pick up…: learn what up, out, off, on, down and back add, then fill the gap. Common in TOEIC and IELTS.',
+    tone: 'from-teal-500 to-cyan-600',
+  },
+  {
     to: '/ielts',
     icon: '🎓',
     title: 'Luyện IELTS',
