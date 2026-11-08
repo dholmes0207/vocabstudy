@@ -40,6 +40,11 @@ test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) =>
   ).toBeLessThanOrEqual(0)
   await page.getByRole('button', { name: /Task 1: describe a chart/ }).click()
   await expect(page.locator('figure svg[role="img"]')).toBeVisible()
+  // The chart's hidden data table must not widen the page either (it did for
+  // the six-month chart before sr-only moved to a wrapper).
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
   // Every chart offers overview options starting "Overall, …"; pick one.
   await page
     .getByRole('button', { name: /^Overall,/ })
