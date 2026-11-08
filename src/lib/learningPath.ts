@@ -289,6 +289,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en4-phrasal',
+        'phrasal',
+        3,
+        '🧩',
+        '/phrasal-verbs',
+        ['Cụm động từ', 'Phrasal verbs'],
+        [
+          'Give up, turn off, pick up…: học theo nghĩa của tiểu từ rồi điền vào câu.',
+          'Give up, turn off, pick up…: learn what each particle adds, then fill the gap.',
+        ]
+      ),
+      sessions(
         'en4-listen',
         'listen',
         5,
