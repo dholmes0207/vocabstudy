@@ -49,6 +49,19 @@ test('English easily confused words share the look-alikes page', async ({ page }
   await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
 })
 
+test('English idioms: what the words say and what they mean', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/idioms')
+  await expect(page.getByText('Word for word: một miếng bánh')).toBeVisible()
+  await page.getByRole('button', { name: /Try 10 questions/ }).click()
+  await page.getByText('What does this idiom mean?').waitFor()
+  await page.locator('.card button').first().click()
+  await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')

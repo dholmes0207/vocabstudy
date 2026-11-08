@@ -29,6 +29,7 @@ import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
 import { SLANG } from './netSlang'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
+import { IDIOMS } from './idiomsEn'
 import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -113,6 +114,8 @@ function english(): string[] {
     ...PARTICLES.flatMap((particle) =>
       particle.verbs.map((item) => phrasalFilled({ particle, item }))
     ),
+    // "Thành ngữ tiếng Anh": each idiom and its example.
+    ...IDIOMS.flatMap((x) => [x.phrase, x.example.en]),
     // "Từ dễ nhầm": each sentence is read with its gap filled.
     ...CONFUSABLE_PACKS.en.flatMap((g) => g.sentences.map(filled)),
   ]
