@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scenes": [
     {
       "id": "zh-restaurant",
@@ -351,6 +351,196 @@
           "text": "好的，谢谢！",
           "vi": "Vâng, cảm ơn!",
           "read": "Hǎo de, xièxie!"
+        }
+      ]
+    },
+    {
+      "id": "zh-doctor",
+      "emoji": "🩺",
+      "tag": "HSK 3",
+      "title": [
+        "Đi khám bệnh",
+        "Seeing a doctor"
+      ],
+      "setting": [
+        "Bạn bị ốm và đi khám.",
+        "You feel ill and see a doctor."
+      ],
+      "them": [
+        "Bác sĩ",
+        "Doctor"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你哪儿不舒服？",
+          "vi": "Bạn khó chịu ở đâu?",
+          "read": "Nǐ nǎr bù shūfu?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "我头疼，还有点儿发烧。",
+          "vi": "Tôi đau đầu, còn hơi sốt.",
+          "read": "Wǒ tóu téng, hái yǒudiǎnr fāshāo."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "从什么时候开始的？",
+          "vi": "Bắt đầu từ khi nào?",
+          "read": "Cóng shénme shíhou kāishǐ de?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "从昨天晚上开始的。",
+          "vi": "Từ tối hôm qua.",
+          "read": "Cóng zuótiān wǎnshang kāishǐ de."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你感冒了。这个药一天吃三次。",
+          "vi": "Bạn bị cảm rồi. Thuốc này ngày uống ba lần.",
+          "read": "Nǐ gǎnmào le. Zhège yào yì tiān chī sān cì."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好的。我需要休息几天？",
+          "vi": "Vâng. Tôi cần nghỉ mấy ngày?",
+          "read": "Hǎo de. Wǒ xūyào xiūxi jǐ tiān?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "休息两天就好了，多喝水。",
+          "vi": "Nghỉ hai ngày là khỏi, uống nhiều nước nhé.",
+          "read": "Xiūxi liǎng tiān jiù hǎo le, duō hē shuǐ."
+        }
+      ]
+    },
+    {
+      "id": "zh-order-food",
+      "emoji": "🥡",
+      "tag": "HSK 2",
+      "title": [
+        "Gọi điện đặt đồ ăn",
+        "Ordering food by phone"
+      ],
+      "setting": [
+        "Bạn gọi điện đặt đồ ăn mang về nhà.",
+        "You call to order food for delivery."
+      ],
+      "them": [
+        "Nhà hàng",
+        "Restaurant"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "喂，你好！这里是北京饭店。",
+          "vi": "Alô, xin chào! Đây là nhà hàng Bắc Kinh.",
+          "read": "Wéi, nǐ hǎo! Zhèlǐ shì Běijīng fàndiàn."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "你好，我想要一碗米饭和一个鸡蛋汤。",
+          "vi": "Chào chị, tôi muốn một bát cơm và một bát canh trứng.",
+          "read": "Nǐ hǎo, wǒ xiǎng yào yì wǎn mǐfàn hé yí ge jīdàn tāng."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的。请问您住在哪儿？",
+          "vi": "Vâng. Xin hỏi anh ở đâu?",
+          "read": "Hǎo de. Qǐngwèn nín zhù zài nǎr?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我住在学校旁边，三号楼。",
+          "vi": "Tôi ở cạnh trường học, toà số ba.",
+          "read": "Wǒ zhù zài xuéxiào pángbiān, sān hào lóu."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "一共三十五块，半个小时送到。",
+          "vi": "Tổng cộng ba mươi lăm tệ, nửa tiếng sẽ giao tới.",
+          "read": "Yígòng sānshíwǔ kuài, bàn ge xiǎoshí sòng dào."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "好，谢谢！",
+          "vi": "Được, cảm ơn!",
+          "read": "Hǎo, xièxie!"
+        }
+      ]
+    },
+    {
+      "id": "zh-rent",
+      "emoji": "🏠",
+      "tag": "HSK 3",
+      "title": [
+        "Thuê nhà",
+        "Renting a flat"
+      ],
+      "setting": [
+        "Bạn đi xem một căn hộ cho thuê.",
+        "You go to see a flat to rent."
+      ],
+      "them": [
+        "Chủ nhà",
+        "Landlord"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "这就是那个房间，你看看。",
+          "vi": "Đây là căn phòng đó, bạn xem đi.",
+          "read": "Zhè jiù shì nàge fángjiān, nǐ kànkan."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "房间很干净，也很安静。",
+          "vi": "Phòng rất sạch, cũng rất yên tĩnh.",
+          "read": "Fángjiān hěn gānjìng, yě hěn ānjìng."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "离地铁站也很近，走路五分钟。",
+          "vi": "Cũng rất gần ga tàu điện ngầm, đi bộ năm phút.",
+          "read": "Lí dìtiě zhàn yě hěn jìn, zǒulù wǔ fēnzhōng."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "一个月多少钱？",
+          "vi": "Một tháng bao nhiêu tiền?",
+          "read": "Yí ge yuè duōshao qián?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "两千块，水电费另外算。",
+          "vi": "Hai nghìn tệ, tiền điện nước tính riêng.",
+          "read": "Liǎngqiān kuài, shuǐdiàn fèi lìngwài suàn."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好的，我想下个月就住进来。",
+          "vi": "Được, tôi muốn tháng sau dọn vào luôn.",
+          "read": "Hǎo de, wǒ xiǎng xià ge yuè jiù zhù jìnlai."
         }
       ]
     }

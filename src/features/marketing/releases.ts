@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Nhập vai tiếng Trung mức HSK 3', 'HSK 3 role-play in Chinese'],
+    items: [
+      [
+        'Ba cảnh mới kèm pinyin: đi khám bệnh, gọi điện đặt đồ ăn, thuê nhà. Lộ trình tiếng Trung cấp HSK 3 có thêm bước nhập vai.',
+        'Three new scenes with pinyin: seeing a doctor, ordering food by phone, renting a flat. The HSK 3 level of the Chinese path gains a role-play step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Hôm nay thử gì mới?', 'Try something new today'],
     items: [
       [
