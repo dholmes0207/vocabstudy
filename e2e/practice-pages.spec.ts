@@ -74,7 +74,7 @@ test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) =>
   await expect(page.getByRole('list', { name: 'Word box' })).toBeVisible()
 })
 
-test('Chinese look-alike characters, idioms and sentence patterns', async ({ page }) => {
+test('Chinese look-alike characters, idioms, slang and sentence patterns', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/confusables?lang=zh')
   await page.getByRole('button', { name: 'Practise this group' }).first().click()
@@ -90,6 +90,11 @@ test('Chinese look-alike characters, idioms and sentence patterns', async ({ pag
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
   ).toBeLessThanOrEqual(0)
+
+  await page.goto('/slang?lang=zh')
+  await expect(page.getByText('nội quyển', { exact: true })).toBeVisible()
+  await page.getByRole('button', { name: /Try 10 questions/ }).click()
+  await page.getByText('What does this word mean?').waitFor()
 
   await page.goto('/patterns?lang=zh')
   await expect(page.getByText('Preposition phrase').first()).toBeVisible()
