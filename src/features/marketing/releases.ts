@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Thành ngữ tiếng Anh', 'English idioms'],
+    items: [
+      [
+        'Trang mới "Thành ngữ tiếng Anh": 20 câu như a piece of cake (dễ như ăn kẹo), once in a blue moon (năm thì mười hoạ), có nghĩa đen, nghĩa thật, ví dụ và lượt đoán nghĩa, điền từ. Lộ trình IELTS có thêm bước này.',
+        'New "English idioms" page: 20 idioms such as a piece of cake and once in a blue moon, with what the words say, what they mean, examples and a round of meanings and missing words. The IELTS level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Tiếng lóng mạng tiếng Trung', 'Chinese internet slang'],
     items: [
       [

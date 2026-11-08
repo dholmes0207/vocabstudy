@@ -23,6 +23,7 @@ export type ActivityKind =
   | 'chengyu'
   | 'slang'
   | 'phrasal'
+  | 'idioms'
   | 'roleplay'
   | 'hangul'
   | 'numbers'

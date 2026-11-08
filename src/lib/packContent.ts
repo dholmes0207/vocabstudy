@@ -37,6 +37,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/patterns': ['en', 'zh'],
   // English phrasal verbs by their particle (lib/phrasalVerbs.ts).
   '/phrasal-verbs': ['en'],
+  // Everyday English idioms with their Vietnamese twins (lib/idiomsEn.ts).
+  '/idioms': ['en'],
   // Everyday scenes where the learner plays one side, out loud (lib/roleplay.ts).
   '/roleplay': ['en', 'zh'],
   // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).

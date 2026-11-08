@@ -466,6 +466,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en6-idioms',
+        'idioms',
+        2,
+        '🍰',
+        '/idioms',
+        ['Thành ngữ tiếng Anh', 'English idioms'],
+        [
+          'A piece of cake, break the ice, once in a blue moon…: dùng đúng chỗ để bài nói IELTS tự nhiên hơn.',
+          'A piece of cake, break the ice, once in a blue moon…: use them well to sound natural in IELTS Speaking.',
+        ]
+      ),
+      sessions(
         'en6-ielts-speaking',
         'ielts-speaking',
         4,

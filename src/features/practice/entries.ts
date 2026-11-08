@@ -54,6 +54,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-teal-500 to-cyan-600',
   },
   {
+    to: '/idioms',
+    icon: '🍰',
+    title: 'Thành ngữ tiếng Anh',
+    desc: 'A piece of cake = dễ như ăn kẹo, kill two birds with one stone = một công đôi việc…: nghĩa đen, nghĩa thật, câu ví dụ, giúp nói tự nhiên khi thi IELTS.',
+    titleEn: 'English idioms',
+    descEn:
+      'A piece of cake, kill two birds with one stone…: what the words say, what they mean, an example; sound natural in IELTS Speaking.',
+    tone: 'from-orange-400 to-pink-500',
+  },
+  {
     to: '/ielts',
     icon: '🎓',
     title: 'Luyện IELTS',
