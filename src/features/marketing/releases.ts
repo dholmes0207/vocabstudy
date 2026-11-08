@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Ngữ pháp tiếng Anh B2', 'B2 English grammar'],
+    items: [
+      [
+        '6 bài mới: V-ing hay to V, câu điều kiện loại 3 và hỗn hợp, wish / if only, should have / must have, mệnh đề phân từ, đảo ngữ. Có ví dụ, lỗi hay gặp và bài tập; nằm trong lộ trình cấp 4 và cấp 6 (IELTS).',
+        'Six new lessons: -ing or to + verb, third and mixed conditionals, wish / if only, should have / must have, participle clauses, inversion. With examples, common mistakes and exercises; part of levels 4 and 6 (IELTS) of the path.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Chữ Hán dễ nhầm', 'Look-alike Chinese characters'],
     items: [
       [
