@@ -37,13 +37,15 @@ export interface HeadingsTask {
  * Summary completion: a summary of the passage with gaps written {0}, {1}…,
  * and a box of words, some spare. `answers[i]` is the box word for gap i.
  */
-export interface SummaryTask {
+export interface GapTask {
   text: string
   box: string[]
   answers: number[]
-  /** Where the passage gives each gap, in Vietnamese. */
+  /** Why each gap takes its word, in Vietnamese. */
   why: string[]
 }
+
+export type SummaryTask = GapTask
 
 export interface ReadingPassage {
   id: string
@@ -113,6 +115,21 @@ export interface WritingDrill {
   why: string
 }
 
+/** Writing Task 1: a chart, the overview sentence to pick, a model report to complete. */
+export interface Task1Chart {
+  id: string
+  emoji: string
+  kind: 'line' | 'bar'
+  title: Pair
+  /** The task as on the paper. */
+  question: string
+  unit: string
+  labels: string[]
+  series: { name: string; values: number[] }[]
+  overview: { options: string[]; answer: number; why: string[] }
+  report: GapTask
+}
+
 export interface EssayPrompt {
   id: string
   /** An EssayType id. */
@@ -152,10 +169,36 @@ export interface IeltsBank {
     types: readonly EssayType[]
     drills: readonly WritingDrill[]
     prompts: readonly EssayPrompt[]
+    task1: readonly Task1Chart[]
   }
 }
 
 const check = checker('IELTS bank')
+
+/** A gap text: gaps {0}, {1}… in order, a box with spare words, one word and one reason per gap. */
+function checkGaps(name: string, task: GapTask | undefined) {
+  const gaps =
+    task && text(task.text) ? summaryParts(task.text).filter((x) => typeof x === 'number') : []
+  check(
+    gaps.length >= 3 && gaps.every((g, i) => g === i),
+    `${name} needs gaps {0}, {1}, {2}… in order`
+  )
+  check(
+    Array.isArray(task!.box) &&
+      task!.box.length > gaps.length &&
+      task!.box.every(text) &&
+      new Set(task!.box).size === task!.box.length &&
+      Array.isArray(task!.answers) &&
+      task!.answers.length === gaps.length &&
+      new Set(task!.answers).size === gaps.length &&
+      task!.answers.every((a) => Number.isInteger(a) && a >= 0 && a < task!.box.length),
+    `${name} needs a word box with spare words and one word per gap`
+  )
+  check(
+    Array.isArray(task!.why) && task!.why.length === gaps.length && task!.why.every(text),
+    `${name} needs a reason per gap`
+  )
+}
 
 export function validateIeltsBank(raw: unknown): IeltsBank {
   const bank = raw as Partial<IeltsBank> | null
@@ -200,28 +243,7 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       Array.isArray(h.why) && h.why.length === n && h.why.every(text),
       `"${r.id}" needs a reason per heading`
     )
-    const sm = r.summary
-    const gaps =
-      sm && text(sm.text) ? summaryParts(sm.text).filter((x) => typeof x === 'number') : []
-    check(
-      gaps.length >= 3 && gaps.every((g, i) => g === i),
-      `"${r.id}" needs a summary with gaps {0}, {1}, {2}… in order`
-    )
-    check(
-      Array.isArray(sm.box) &&
-        sm.box.length > gaps.length &&
-        sm.box.every(text) &&
-        new Set(sm.box).size === sm.box.length &&
-        Array.isArray(sm.answers) &&
-        sm.answers.length === gaps.length &&
-        new Set(sm.answers).size === gaps.length &&
-        sm.answers.every((a) => Number.isInteger(a) && a >= 0 && a < sm.box.length),
-      `"${r.id}" needs a word box with spare words and one word per gap`
-    )
-    check(
-      Array.isArray(sm.why) && sm.why.length === gaps.length && sm.why.every(text),
-      `"${r.id}" needs a reason per gap`
-    )
+    checkGaps(`"${r.id}" summary`, r.summary)
   }
   const speaking = bank!.speaking
   check(
@@ -271,6 +293,39 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       `drill "${d.prompt}" has a bad answer`
     )
     check(text(d.why), `drill "${d.prompt}" has no explanation`)
+  }
+  check(Array.isArray(writing!.task1) && writing!.task1.length > 0, '"writing.task1" is missing')
+  for (const c of writing!.task1) {
+    check(
+      text(c?.id) && strings(c.title, 2) && text(c.question) && text(c.unit),
+      `Task 1 "${c?.id}" is incomplete`
+    )
+    check(c.kind === 'line' || c.kind === 'bar', `Task 1 "${c.id}" has a bad chart kind`)
+    check(
+      strings(c.labels, 2) &&
+        Array.isArray(c.series) &&
+        c.series.length > 0 &&
+        c.series.every(
+          (x) =>
+            text(x?.name) &&
+            Array.isArray(x.values) &&
+            x.values.length === c.labels.length &&
+            x.values.every((v) => typeof v === 'number' && v >= 0)
+        ),
+      `Task 1 "${c.id}" needs one value per label in every series`
+    )
+    const o = c.overview
+    check(
+      !!o &&
+        strings(o.options, 3) &&
+        Number.isInteger(o.answer) &&
+        o.answer >= 0 &&
+        o.answer < o.options.length &&
+        strings(o.why, o.options.length) &&
+        o.why.length === o.options.length,
+      `Task 1 "${c.id}" needs overview options with a reason each`
+    )
+    checkGaps(`Task 1 "${c.id}" report`, c.report)
   }
   for (const pr of writing!.prompts)
     check(text(pr?.text) && typeIds.has(pr.type), `essay prompt "${pr?.id}" has no known type`)
@@ -515,4 +570,11 @@ export function blankRight(input: string, field: { answer: string; accept?: stri
     const want = normal(a)
     return typed === want || typed.replace(/ /g, '') === want.replace(/ /g, '')
   })
+}
+
+/** A round top for the y axis: 10, 20, 50, 100, 200, 500… above the biggest value. */
+export function axisMax(max: number): number {
+  const step = 10 ** Math.floor(Math.log10(Math.max(1, max)))
+  for (const k of [1, 2, 5, 10]) if (k * step >= max) return k * step
+  return 10 * step
 }

@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "reading": [
     {
       "id": "city-farms",
@@ -1043,6 +1043,257 @@
         "id": "plastic",
         "type": "problem-solution",
         "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?"
+      }
+    ],
+    "task1": [
+      {
+        "id": "internet-users",
+        "emoji": "🌐",
+        "kind": "line",
+        "title": [
+          "Người dùng Internet ở ba nước",
+          "Internet users in three countries"
+        ],
+        "question": "The graph shows the percentage of people using the internet in Vietnam, Japan and Brazil between 2000 and 2020.",
+        "unit": "%",
+        "labels": [
+          "2000",
+          "2005",
+          "2010",
+          "2015",
+          "2020"
+        ],
+        "series": [
+          {
+            "name": "Vietnam",
+            "values": [
+              0.3,
+              13,
+              31,
+              45,
+              70
+            ]
+          },
+          {
+            "name": "Japan",
+            "values": [
+              30,
+              67,
+              78,
+              83,
+              90
+            ]
+          },
+          {
+            "name": "Brazil",
+            "values": [
+              3,
+              21,
+              41,
+              59,
+              81
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "Overall, internet use rose in all three countries, and Japan had the highest rate throughout the period.",
+            "Overall, Vietnam had the largest share of internet users by 2020.",
+            "In 2000, 30% of people in Japan used the internet."
+          ],
+          "answer": 0,
+          "why": [
+            "Đúng: câu tổng quan nói xu hướng chung (cả ba đều tăng) và điểm nổi bật (Nhật luôn cao nhất), không có số liệu chi tiết.",
+            "Sai: năm 2020 Việt Nam 70%, thấp nhất trong ba nước.",
+            "Đây là một chi tiết số liệu, không phải tổng quan. Đoạn tổng quan không cần con số."
+          ]
+        },
+        "report": {
+          "text": "Between 2000 and 2020, the proportion of people using the internet rose in all three countries. Vietnam saw the most {0} growth, from under 1% to 70%. Japan began at a much higher level and reached a {1} of 90% in 2020. In Brazil, the figure grew {2}, by about 20 percentage points every five years, and ended {3} than in Vietnam.",
+          "box": [
+            "higher",
+            "lower",
+            "dramatic",
+            "steadily",
+            "peak",
+            "slight"
+          ],
+          "answers": [
+            2,
+            4,
+            3,
+            0
+          ],
+          "why": [
+            "Việt Nam tăng từ dưới 1% lên 70%: mức tăng lớn nhất → dramatic. \"slight\" (nhẹ) sai với số liệu.",
+            "reach a peak of: đạt đỉnh. Cần một danh từ sau \"a\".",
+            "Brazil tăng đều khoảng 20 điểm mỗi 5 năm → steadily (đều đặn).",
+            "Brazil 81% so với Việt Nam 70% → higher. \"lower\" là bẫy."
+          ]
+        }
+      },
+      {
+        "id": "travel-to-uni",
+        "emoji": "🚌",
+        "kind": "bar",
+        "title": [
+          "Sinh viên đi học bằng gì",
+          "How students travel to university"
+        ],
+        "question": "The chart shows how students travelled to a university in 2010 and 2020.",
+        "unit": "%",
+        "labels": [
+          "Bus",
+          "Car",
+          "Bicycle",
+          "Walking"
+        ],
+        "series": [
+          {
+            "name": "2010",
+            "values": [
+              40,
+              35,
+              10,
+              15
+            ]
+          },
+          {
+            "name": "2020",
+            "values": [
+              45,
+              20,
+              25,
+              10
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "In 2020, 45% of students took the bus to university.",
+            "Overall, the bus remained the most popular way to travel, while cycling became much more common and car use fell.",
+            "Overall, most students walked to university in both years."
+          ],
+          "answer": 1,
+          "why": [
+            "Đây là một chi tiết số liệu, không phải tổng quan.",
+            "Đúng: nêu điểm không đổi (xe buýt vẫn nhiều nhất) và hai thay đổi lớn nhất (xe đạp tăng, ô tô giảm).",
+            "Sai: đi bộ chỉ 15% rồi 10%, ít nhất."
+          ]
+        },
+        "report": {
+          "text": "The bus was the most popular choice in both years, rising {0} from 40% to 45%. By contrast, the share of students who drove {1} sharply, from 35% to 20%. Cycling showed the biggest change: it {2} from 10% to 25%. Walking was the {3} common option in 2020, at just 10%.",
+          "box": [
+            "rose",
+            "fell",
+            "least",
+            "slightly",
+            "most",
+            "more than doubled"
+          ],
+          "answers": [
+            3,
+            1,
+            5,
+            2
+          ],
+          "why": [
+            "40% lên 45%: tăng ít → slightly.",
+            "35% xuống 20% → fell. \"rose\" là bẫy.",
+            "10% lên 25% là hơn gấp đôi → more than doubled.",
+            "Năm 2020 đi bộ 10%, thấp nhất → the least common. \"most\" là bẫy."
+          ]
+        }
+      },
+      {
+        "id": "cafe-drinks",
+        "emoji": "🧋",
+        "kind": "line",
+        "title": [
+          "Đồ uống bán ở quán cà phê",
+          "Drinks sold at a café"
+        ],
+        "question": "The graph shows weekly sales of three drinks at a café from January to June.",
+        "unit": "cups",
+        "labels": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Coffee",
+            "values": [
+              300,
+              320,
+              310,
+              330,
+              320,
+              330
+            ]
+          },
+          {
+            "name": "Iced tea",
+            "values": [
+              100,
+              120,
+              180,
+              260,
+              340,
+              400
+            ]
+          },
+          {
+            "name": "Hot chocolate",
+            "values": [
+              250,
+              220,
+              170,
+              110,
+              60,
+              40
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "Overall, hot chocolate was the most popular drink.",
+            "In March, the café sold 310 cups of coffee a week.",
+            "Overall, iced tea sales rose sharply as hot chocolate sales declined, while coffee stayed fairly stable."
+          ],
+          "answer": 2,
+          "why": [
+            "Sai: sô-cô-la nóng giảm từ 250 xuống 40, chưa bao giờ cao nhất.",
+            "Đây là một chi tiết số liệu, không phải tổng quan.",
+            "Đúng: ba xu hướng chính của ba đường trong một câu, không có số."
+          ]
+        },
+        "report": {
+          "text": "Coffee sales {0} at around 300 to 330 cups a week throughout the period. Iced tea, by contrast, rose {1}, from 100 cups in January to 400 in June, {2} coffee in May. Hot chocolate showed the opposite trend, {3} from 250 to just 40 cups.",
+          "box": [
+            "overtaking",
+            "slightly",
+            "stayed",
+            "rising",
+            "falling",
+            "sharply"
+          ],
+          "answers": [
+            2,
+            5,
+            0,
+            4
+          ],
+          "why": [
+            "Cà phê dao động 300–330 → stayed (giữ ở mức).",
+            "100 lên 400 là tăng mạnh → sharply. \"slightly\" là bẫy.",
+            "Tháng 5 trà đá 340 > cà phê 320 → overtaking (vượt qua).",
+            "Sô-cô-la nóng giảm 250 → 40 → falling. \"rising\" là bẫy."
+          ]
+        }
       }
     ]
   },
