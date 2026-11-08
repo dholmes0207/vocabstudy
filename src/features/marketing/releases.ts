@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Luyện TOEIC Speaking', 'TOEIC Speaking practice'],
+    items: [
+      [
+        'Trang mới "TOEIC Speaking" với ba dạng của đề Nói: đọc to đoạn văn, trả lời câu hỏi phỏng vấn qua điện thoại, nêu quan điểm 60 giây. Đúng thời gian của đề, ghi âm rồi so với câu mẫu. Lộ trình TOEIC có thêm bước này.',
+        'New "TOEIC Speaking" page with three tasks of the test: read a text aloud, answer survey questions, give a 60-second opinion. With the test’s timings, recorded and compared with a sample. The TOEIC level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Luyện nói HSKK sơ cấp', 'HSKK Elementary speaking'],
     items: [
       [

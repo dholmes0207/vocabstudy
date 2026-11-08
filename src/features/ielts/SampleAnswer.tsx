@@ -8,7 +8,14 @@ import { useT } from '@/lib/i18n'
  * answers first. Opening it shows the answer with its key phrase marked, and
  * it can be heard aloud for shadowing.
  */
-export default function SampleAnswer({ sample }: { sample: { a: string; key: string } }) {
+export default function SampleAnswer({
+  sample,
+  label,
+}: {
+  sample: { a: string; key: string }
+  /** The heading over the answer; IELTS band 7 unless given. */
+  label?: [vi: string, en: string]
+}) {
   const t = useT()
   const [open, setOpen] = useState(false)
   if (!open)
@@ -26,7 +33,7 @@ export default function SampleAnswer({ sample }: { sample: { a: string; key: str
     <div className="space-y-2 rounded-xl bg-amber-50 p-3 dark:bg-amber-900/20">
       <div className="flex items-center justify-between gap-2">
         <p className="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
-          {t('Câu trả lời mẫu (band 7)', 'Sample answer (band 7)')}
+          {t(...(label ?? ['Câu trả lời mẫu (band 7)', 'Sample answer (band 7)']))}
         </p>
         <button
           type="button"

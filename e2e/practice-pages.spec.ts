@@ -62,6 +62,19 @@ test('English idioms: what the words say and what they mean', async ({ page }) =
   ).toBeLessThanOrEqual(0)
 })
 
+test('TOEIC Speaking times each answer', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/toeic-speaking')
+  await page
+    .getByRole('button', { name: /^Start/ })
+    .nth(1)
+    .click()
+  await expect(page.getByText(/15 seconds/)).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')

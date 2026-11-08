@@ -14,6 +14,7 @@ export type ActivityKind =
   | 'order'
   | 'ielts-reading'
   | 'ielts-speaking'
+  | 'toeic-speaking'
   | 'ielts-writing'
   | 'ielts-listening'
   | 'pinyin'

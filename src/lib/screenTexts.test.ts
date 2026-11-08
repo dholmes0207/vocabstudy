@@ -31,6 +31,7 @@ import { HSKK_PARTS } from './hskk'
 import { SLANG } from './netSlang'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { IDIOMS } from './idiomsEn'
+import { OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
 import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -115,6 +116,10 @@ function english(): string[] {
     ...PARTICLES.flatMap((particle) =>
       particle.verbs.map((item) => phrasalFilled({ particle, item }))
     ),
+    // "TOEIC Speaking": the texts to read, the questions and the sample answers.
+    ...READ_ALOUD.map((r) => r.text),
+    ...SURVEYS.flatMap((s) => s.questions.flatMap((x) => [x.q, x.sample.a])),
+    ...OPINIONS.flatMap((o) => [o.prompt, o.sample.a]),
     // "Thành ngữ tiếng Anh": each idiom and its example.
     ...IDIOMS.flatMap((x) => [x.phrase, x.example.en]),
     // "Từ dễ nhầm": each sentence is read with its gap filled.

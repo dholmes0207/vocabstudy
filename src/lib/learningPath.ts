@@ -419,6 +419,18 @@ export const EN_PATH: PathLevel[] = [
         unit: ['lần', 'pass'],
       },
       sessions(
+        'en5-speaking',
+        'toeic-speaking',
+        3,
+        '🎤',
+        '/toeic-speaking',
+        ['TOEIC Speaking', 'TOEIC Speaking'],
+        [
+          'Đọc to, trả lời câu hỏi, nêu quan điểm: ba dạng của đề Nói TOEIC, có ghi âm và câu mẫu.',
+          'Read aloud, respond to questions, give an opinion: three TOEIC Speaking tasks, recorded, with samples.',
+        ]
+      ),
+      sessions(
         'en5-roleplay',
         'roleplay',
         6,
