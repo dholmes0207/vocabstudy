@@ -40,6 +40,15 @@ test('English phrasal verbs, by their particle', async ({ page }) => {
   ).toBeLessThanOrEqual(0)
 })
 
+test('English easily confused words share the look-alikes page', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/confusables')
+  await expect(page.getByRole('heading', { name: /Easily confused words/ })).toBeVisible()
+  await page.getByRole('button', { name: 'Practise this group' }).first().click()
+  await page.getByRole('button', { name: 'make', exact: true }).click()
+  await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
+})
+
 test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')

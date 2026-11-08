@@ -242,6 +242,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en3-confusables',
+        'confusables',
+        2,
+        '🔍',
+        '/confusables',
+        ['Từ dễ nhầm', 'Easily confused words'],
+        [
+          'make hay do, say hay tell, borrow hay lend…: những cặp tiếng Việt chỉ có một từ.',
+          'make or do, say or tell, borrow or lend…: pairs Vietnamese says with one word.',
+        ]
+      ),
+      sessions(
         'en3-order',
         'order',
         3,

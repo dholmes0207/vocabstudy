@@ -24,3 +24,14 @@
   tra mỗi chữ trong nhóm có ít nhất một câu, mỗi câu có đúng một chỗ trống, chữ đều có trong gói tiếng Trung.
 - Trang `/confusables` (`features/confusables/`), chỉ cho gói tiếng Trung, mục trong trang Luyện tập.
   Câu đã điền chữ có trong `scripts/audio-texts/screens.json` để thu giọng.
+
+## 4. Tiếng Anh: từ dễ nhầm (08/11/2026)
+
+- Người Việt hay nhầm các cặp tiếng Anh mà tiếng Việt chỉ có một từ: "làm" (make/do), "nói" (say/tell),
+  "mượn" (borrow/lend), "mang" (bring/take), "mất/lỡ" (lose/miss), "chán" (bored/boring), "nghe"
+  (hear/listen), "vui" (fun/funny).
+- Cùng trang `/confusables`, gói tiếng Anh có tên "Từ dễ nhầm" với 8 cặp trên (`lib/confusablesEn.ts`). Câu
+  dùng dạng nguyên thể để chỗ trống nhận đúng từ trong cặp; viết để chỉ một từ là hợp. Không có dòng phiên âm.
+- Dữ liệu chung một kiểu: câu là `text`, phiên âm `reading` chỉ có ở tiếng Trung. `CONFUSABLE_PACKS` chọn
+  nhóm theo gói; `confusableRound` nhận nhóm của gói.
+- Lộ trình tiếng Anh, cấp 3 thêm bước "Từ dễ nhầm" (2 lượt, ghi `confusables`).

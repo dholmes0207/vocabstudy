@@ -86,11 +86,11 @@ export const PRACTICE: PracticeEntry[] = [
   {
     to: '/confusables',
     icon: '🔍',
-    title: 'Chữ dễ nhầm',
-    desc: '在/再, 的/得/地, 他/她/它, 买/卖…: chữ đọc giống hoặc nhìn giống nhau, học mẹo phân biệt rồi điền vào câu.',
-    titleEn: 'Look-alike characters',
+    title: 'Chữ, từ dễ nhầm',
+    desc: '在/再, 的/得/地, 买/卖… (tiếng Trung), make/do, say/tell, borrow/lend… (tiếng Anh): học mẹo phân biệt rồi điền vào câu.',
+    titleEn: 'Easily confused words',
     descEn:
-      '在/再, 的/得/地, 他/她/它, 买/卖…: characters that sound or look alike; learn the trick, then fill the gap.',
+      '在/再, 的/得/地, 买/卖… in Chinese, make/do, say/tell, borrow/lend… in English: learn the trick, then fill the gap.',
     tone: 'from-violet-500 to-fuchsia-500',
   },
   {
