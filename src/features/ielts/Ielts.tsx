@@ -14,6 +14,7 @@ import {
   type ListeningChoiceSet,
   type ListeningSet,
   type ReadingPassage,
+  type Task1Chart,
   type WritingDrill,
 } from '@/lib/ielts'
 import { useT } from '@/lib/i18n'
@@ -23,6 +24,7 @@ import SummaryRound from './SummaryRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
 import EssayPractice from './EssayPractice'
+import Task1Round from './Task1Round'
 import ListeningRound from './ListeningRound'
 import ListeningChoiceRound from './ListeningChoiceRound'
 
@@ -55,6 +57,11 @@ export default function Ielts() {
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
   const [speaking, setSpeaking] = useState<{ n: number; task: SpeakingTask } | null>(null)
   const [drills, setDrills] = useState<{ n: number; list: WritingDrill[] } | null>(null)
+  const [task1, setTask1] = useState<{ n: number; chart: Task1Chart } | null>(null)
+  const startTask1 = () => {
+    if (bank)
+      setTask1((r) => ({ n: (r?.n ?? 0) + 1, chart: pickOther(bank.writing.task1, r?.chart.id) }))
+  }
   const startDrills = () => {
     if (bank) setDrills((r) => ({ n: (r?.n ?? 0) + 1, list: drillRound(bank.writing.drills) }))
   }
@@ -111,6 +118,15 @@ export default function Ielts() {
         set={listening.set}
         onAgain={listen}
         onExit={() => setListening(null)}
+      />
+    )
+  if (task1)
+    return (
+      <Task1Round
+        key={task1.n}
+        chart={task1.chart}
+        onAgain={startTask1}
+        onExit={() => setTask1(null)}
       />
     )
   if (drills)
@@ -385,6 +401,25 @@ export default function Ielts() {
           </div>
         )}
         <div className="grid gap-3 sm:grid-cols-2">
+          <button
+            type="button"
+            disabled={!bank}
+            onClick={startTask1}
+            className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-sky-400 disabled:opacity-60 dark:border-slate-700"
+          >
+            <span className="block text-2xl" aria-hidden="true">
+              📈
+            </span>
+            <span className="mt-1 block font-bold">
+              {t('Task 1: tả biểu đồ', 'Task 1: describe a chart')}
+            </span>
+            <span className="block text-sm text-slate-500 dark:text-slate-400">
+              {t(
+                'Chọn câu tổng quan, rồi điền từ tả xu hướng: rose sharply, peak, overtaking…',
+                'Pick the overview, then fill in the trend words: rose sharply, peak, overtaking…'
+              )}
+            </span>
+          </button>
           <button
             type="button"
             disabled={!bank}

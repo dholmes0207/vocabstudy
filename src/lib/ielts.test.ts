@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import {
   TASK2_WORDS,
+  axisMax,
   blankRight,
   clock,
   drillRound,
@@ -273,5 +274,32 @@ describe('listening practice', () => {
     expect(blankRight('Garden', street)).toBe(false)
     expect(blankRight('', street)).toBe(false)
     expect(blankRight('forty-five', { answer: '45', accept: ['forty-five'] })).toBe(true)
+  })
+})
+
+describe('writing task 1', () => {
+  const { writing } = validateIeltsBank(raw())
+
+  it('has line and bar charts, each with one right overview and a report to complete', () => {
+    expect(new Set(writing.task1.map((c) => c.kind))).toEqual(new Set(['line', 'bar']))
+    for (const c of writing.task1) {
+      expect(c.overview.why[c.overview.answer], c.id).toMatch(/^Đúng/)
+      // The right overview gives no figures; the others are a detail or wrong.
+      expect(c.overview.options[c.overview.answer], c.id).not.toMatch(/\d/)
+      expect(c.report.box.length - c.report.answers.length, c.id).toBeGreaterThanOrEqual(2)
+    }
+  })
+
+  it('turns down a series that does not match its labels', () => {
+    const b = raw()
+    b.writing.task1[0].series[0].values.pop()
+    expect(() => validateIeltsBank(b)).toThrow(/one value per label/)
+    const c = raw()
+    c.writing.task1[0].overview.why.pop()
+    expect(() => validateIeltsBank(c)).toThrow(/overview options with a reason/)
+  })
+
+  it('rounds the chart axis up to 1, 2 or 5 times a power of ten', () => {
+    expect([90, 45, 400, 7, 0, 101].map(axisMax)).toEqual([100, 50, 500, 10, 1, 200])
   })
 })

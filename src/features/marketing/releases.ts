@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['IELTS Writing Task 1: tả biểu đồ', 'IELTS Writing Task 1: describing charts'],
+    items: [
+      [
+        'Luyện Task 1 trên biểu đồ đường và cột: chọn câu tổng quan đúng (xu hướng chính, không số liệu), rồi điền từ tả số liệu vào đoạn mẫu như rose sharply, reached a peak, overtaking. Mỗi lựa chọn có giải thích.',
+        'Task 1 practice on line and bar charts: pick the right overview (main trends, no figures), then fill in the data words in a model paragraph, like rose sharply, reached a peak, overtaking. Every choice is explained.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Ngữ pháp tiếng Anh B2', 'B2 English grammar'],
     items: [
       [

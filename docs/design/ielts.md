@@ -64,6 +64,14 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 8: Viết Task 1 (tả biểu đồ).** 3 biểu đồ (2 đường, 1 cột) vẽ bằng SVG từ dữ liệu, số liệu minh
+  hoạ (có ghi rõ). Bước 1 chọn câu tổng quan trong 3 câu: câu đúng nói xu hướng chính và không có số; hai
+  câu kia là một chi tiết số liệu hoặc nói sai biểu đồ, mỗi câu có lý do. Bước 2 hoàn thành đoạn chi tiết
+  bằng hộp từ tả số liệu (dramatic, steadily, peak, overtaking, more than doubled…), dùng chung ô điền với
+  Summary completion (`GapFill.tsx`, `useGapFill.ts`). +2 XP mỗi câu đúng, ghi `ielts-writing`. Số liệu có
+  bảng ẩn cho trình đọc màn hình. `validateIeltsBank` kiểm tra mỗi dãy số đủ nhãn, có lý do cho từng câu
+  tổng quan, đoạn điền đúng khuôn.
+
 - **Bước 7: Đọc, điền tóm tắt (Summary completion).** Mỗi bài đọc thêm một đoạn tóm tắt viết lại
   bằng từ khác, 4 chỗ trống, hộp 6 từ (2 từ bẫy: trái nghĩa, hoặc có trong bài nhưng sai ý). Chạm từ để
   điền vào ô đang mở (ô trống đầu tiên, hoặc ô vừa chạm), chạm ô đã điền để lấy từ ra. Kiểm tra khi đủ ô:
