@@ -10,6 +10,7 @@ import {
   summaryParts,
   informalBits,
   linkersUsed,
+  markLinkers,
   paragraphCount,
   pickOther,
   pickPassage,
@@ -205,6 +206,30 @@ describe('speaking practice', () => {
 
 describe('writing practice', () => {
   const { writing } = validateIeltsBank(raw())
+
+  it('gives every question a model answer that passes the page’s own checklist', () => {
+    for (const p of writing.prompts) {
+      const essay = p.model.join('\n\n')
+      expect(paragraphCount(essay), p.id).toBe(4)
+      expect(wordCount(essay), p.id).toBeGreaterThanOrEqual(TASK2_WORDS)
+      expect(linkersUsed(essay).length, p.id).toBeGreaterThanOrEqual(4)
+      expect(informalBits(essay), p.id).toEqual([])
+    }
+    const b = raw()
+    b.writing.prompts[0].model = b.writing.prompts[0].model.slice(0, 2)
+    expect(() => validateIeltsBank(b)).toThrow(/model answer in four paragraphs/)
+  })
+
+  it('marks the linking words of a paragraph without losing any text', () => {
+    const p = 'However, it rains. In conclusion, we stay in, because we can.'
+    const parts = markLinkers(p)
+    expect(parts.map((x) => x.text).join('')).toBe(p)
+    expect(parts.filter((x) => x.linker).map((x) => x.text)).toEqual([
+      'However',
+      'In conclusion',
+      'because',
+    ])
+  })
 
   it('has the four kinds of Task 2 essay, each with prompts to try', () => {
     expect(writing.types.map((w) => w.id).sort()).toEqual(

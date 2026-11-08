@@ -49,11 +49,28 @@ describe('IELTS writing', () => {
     expect(
       screen.getByText('4 paragraphs: intro, 2 body, conclusion (4)').closest('li')
     ).toHaveClass('bg-emerald-50')
+    expect(screen.queryByText(/Band 7 model answer/)).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: 'Hand it in' }))
     expect(screen.getByRole('status')).toHaveTextContent('All four boxes ticked!')
+    // Handing in opens the model answer, its linking words marked.
+    expect(screen.getByText(/Band 7 model answer/)).toBeInTheDocument()
+    expect(screen.getAllByText('However')[0].tagName).toBe('MARK')
     expect(useActivity.getState().counts.en?.['ielts-writing']).toBe(1)
     // The draft stays on the device.
     expect(localStorage.getItem(`vocab.ielts.draft.${prompt.id}`)).toBe(essay)
+  })
+
+  it('shows the model answer on request before writing', () => {
+    const prompt = writing.prompts[1]
+    const type = writing.types.find((w) => w.id === prompt.type)!
+    render(
+      <MemoryRouter>
+        <EssayPractice prompt={prompt} type={type} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    fireEvent.click(screen.getByRole('button', { name: /See the model answer/ }))
+    expect(screen.getByText('Introduction')).toBeInTheDocument()
+    expect(screen.getByText('Conclusion')).toBeInTheDocument()
   })
 
   it('flags spoken forms to replace', () => {
