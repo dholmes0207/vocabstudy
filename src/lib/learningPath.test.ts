@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import {
   CLEAR_AT,
   EN_PATH,
+  KO_PATH,
   ZH_PATH,
   currentLevel,
   levelForPlacement,
@@ -25,6 +26,10 @@ const content = {
   zh: {
     grammar: ids('public/data/grammar/zh.json', 'units'),
     stories: ids('public/data/reading/zh.json', 'stories'),
+  },
+  ko: {
+    grammar: ids('public/data/grammar/ko.json', 'units'),
+    stories: ids('public/data/reading/ko.json', 'stories'),
   },
 }
 const routes = readFileSync('src/App.tsx', 'utf8')
@@ -60,6 +65,7 @@ describe('the paths', () => {
   it.each([
     ['en', EN_PATH],
     ['zh', ZH_PATH],
+    ['ko', KO_PATH],
   ] as const)('%s: points only at content and screens that exist', (code, path) => {
     const { grammar: grammarIds, stories: storyIds } = content[code]
     for (const level of path)
@@ -90,14 +96,23 @@ describe('the paths', () => {
     expect(TOEIC_WORDS.filter((w) => known.has(w)).length).toBeGreaterThanOrEqual(200)
   })
 
-  it('belongs to English and Chinese, not yet Korean', () => {
+  it('belongs to English, Chinese and Korean', () => {
     expect(pathFor('en')).toBe(EN_PATH)
     expect(pathFor('zh')).toBe(ZH_PATH)
-    expect(pathFor('ko')).toBeNull()
+    expect(pathFor('ko')).toBe(KO_PATH)
+    expect(pathFor('fr')).toBeNull()
   })
 
-  it('has unique step ids across both paths, and the Chinese levels test the HSK lists', () => {
-    const all = [...EN_PATH, ...ZH_PATH].flatMap((l) => l.steps.map((s) => s.id))
+  it('walks the Korean words back to back to the end of the pack', () => {
+    const ko = json('public/data/ko.json') as { words: unknown[] }
+    const ranges = KO_PATH.flatMap((l) => l.steps.flatMap((s) => (s.range ? [s.range] : [])))
+    expect(ranges[0][0]).toBe(0)
+    for (let i = 1; i < ranges.length; i++) expect(ranges[i][0]).toBe(ranges[i - 1][1])
+    expect(ranges[ranges.length - 1][1]).toBe(ko.words.length)
+  })
+
+  it('has unique step ids across the paths, and the Chinese levels test the HSK lists', () => {
+    const all = [...EN_PATH, ...ZH_PATH, ...KO_PATH].flatMap((l) => l.steps.map((s) => s.id))
     expect(new Set(all).size).toBe(all.length)
     expect(ZH_PATH.every((l) => l.testWords && l.testWords.length > 0)).toBe(true)
   })

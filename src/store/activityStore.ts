@@ -21,6 +21,7 @@ export type ActivityKind =
   | 'measure'
   | 'confusables'
   | 'roleplay'
+  | 'hangul'
   | 'numbers'
   | 'hanviet'
   | 'patterns'

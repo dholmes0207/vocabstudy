@@ -73,6 +73,17 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 - Code: `lib/pathQuest.ts` (thuần, có test), `hooks/useDailyQuest.ts`, `pathStore.quests`,
   `features/stats/PathBadges.tsx`.
 
+## 3d. Lộ trình tiếng Hàn (08/11/2026)
+
+- Gói tiếng Hàn (253 từ, 14 bài ngữ pháp, 10 truyện) đủ cho phần nền TOPIK I, nên có lộ trình 3 cấp:
+  1. **Hangul & chào hỏi**: 3 lượt kiểm tra Hangul, 60 từ đầu, 이에요/예요, 은/는, 이/가, 아요/어요, 2 truyện.
+  2. **Câu hằng ngày**: từ 61–150, tiểu từ 을/를, 에/에서, phủ định 안/못, -(으)세요, 도/만, đơn vị đếm, nghe
+     số, 4 truyện.
+  3. **Quá khứ & tương lai**: từ 151 tới hết gói, 았/었어요, -고 싶어요, -(으)ㄹ 거예요, -지 않아요, từ Hán Hàn
+     – Hán Việt, luyện nói, 4 truyện A2.
+- Trang Hangul giờ ghi số lượt kiểm tra đã xong (`hangul` trong `activityStore`), trước đây chỉ cộng XP.
+- Thi vượt cấp, nhiệm vụ hôm nay, huy chương ở trang Thống kê dùng chung, không cần code riêng.
+
 ## 4. Dev
 
 - `lib/learningPath.ts` (thuần, có test): `EN_PATH`, `pathState` (tiến độ, mở khoá), `currentLevel`,
@@ -88,5 +99,5 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 
 ## 5. Tiếp theo
 
-1. Bài đọc IELTS dài hơn (3 đoạn → 5–6 đoạn), thêm cảnh nhập vai theo chủ đề TOEIC (công sở).
+1. Thêm bài đọc IELTS dài và cảnh nhập vai; thêm từ cho gói tiếng Hàn để lộ trình đi tới TOPIK I cấp 2 đầy đủ.
 2. Lộ trình tiếng Hàn theo cấp (TOPIK I).
