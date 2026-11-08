@@ -6,7 +6,7 @@ import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
-  CONFUSABLES,
+  CONFUSABLE_PACKS,
   GAP,
   confusableRound,
   confusableXp,
@@ -22,27 +22,38 @@ import SpeakButton from '@/components/SpeakButton'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
 // "Chữ dễ nhầm" (docs/design/confusables.md): the groups of Chinese characters
-// that sound or look alike, each with how to tell them apart, then sentences
-// with a gap: which one goes there?
+// that sound or look alike — or, for English, words one Vietnamese word
+// covers (make/do, borrow/lend) — each with how to tell them apart, then
+// sentences with a gap: which one goes there?
 
 const ROUND = 10
 
 export default function Confusables() {
   const code = useSettings((s) => s.currentLang)
-  if (code !== 'zh') return <PackOnly packs={['zh']} />
-  return <ConfusablesView />
+  if (!CONFUSABLE_PACKS[code]) return <PackOnly packs={Object.keys(CONFUSABLE_PACKS)} />
+  return <ConfusablesView key={code} code={code} />
 }
 
-function ConfusablesView() {
+/** The page's name: characters for Chinese, words for English. */
+const titleFor = (code: string): [string, string] =>
+  code === 'zh' ? ['Chữ dễ nhầm', 'Look-alike characters'] : ['Từ dễ nhầm', 'Easily confused words']
+
+function ConfusablesView({ code }: { code: string }) {
   const t = useT()
-  useDocumentTitle(`${t('Chữ dễ nhầm', 'Look-alike characters')} · VocaStudy`)
+  const groups = CONFUSABLE_PACKS[code]
+  const zh = code === 'zh'
+  useDocumentTitle(`${t(...titleFor(code))} · VocaStudy`)
   const [round, setRound] = useState<{
     n: number
     only?: string
     questions: ConfusableQuestion[]
   } | null>(null)
   const start = (only?: string) =>
-    setRound((r) => ({ n: (r?.n ?? 0) + 1, only, questions: confusableRound(ROUND, only) }))
+    setRound((r) => ({
+      n: (r?.n ?? 0) + 1,
+      only,
+      questions: confusableRound(ROUND, only, Math.random, groups),
+    }))
 
   if (round)
     return (
@@ -58,14 +69,19 @@ function ConfusablesView() {
     <div className="mx-auto max-w-2xl space-y-5 animate-fade-in">
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
-          <span className="text-aurora">{t('Chữ dễ nhầm', 'Look-alike characters')}</span>{' '}
-          <span lang="zh">在 · 再</span>
+          <span className="text-aurora">{t(...titleFor(code))}</span>{' '}
+          <span lang={code}>{zh ? '在 · 再' : 'make · do'}</span>
         </h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(
-            'Nhiều chữ đọc y hệt nhau (在 và 再 đều là zài) hoặc trông gần giống (买 và 卖). Nghe thì không phân biệt được, phải nhìn nghĩa trong câu. Học mẹo của từng nhóm rồi thử điền chữ.',
-            'Many characters sound exactly alike (在 and 再 are both zài) or look nearly the same (买 and 卖). Your ear can’t tell them apart; the sentence can. Learn each group’s trick, then fill the gaps.'
-          )}
+          {zh
+            ? t(
+                'Nhiều chữ đọc y hệt nhau (在 và 再 đều là zài) hoặc trông gần giống (买 và 卖). Nghe thì không phân biệt được, phải nhìn nghĩa trong câu. Học mẹo của từng nhóm rồi thử điền chữ.',
+                'Many characters sound exactly alike (在 and 再 are both zài) or look nearly the same (买 and 卖). Your ear can’t tell them apart; the sentence can. Learn each group’s trick, then fill the gaps.'
+              )
+            : t(
+                'Tiếng Việt nói "làm" cho cả make và do, "mượn" cho cả borrow và lend, nên người Việt hay dùng nhầm. Học mẹo của từng cặp rồi thử điền từ vào câu.',
+                'Vietnamese uses one word for both make and do ("làm"), borrow and lend ("mượn"), so these pairs trip learners up. Learn each pair’s trick, then fill the gaps.'
+              )}
         </p>
       </header>
 
@@ -75,7 +91,7 @@ function ConfusablesView() {
       </button>
 
       <ul className="grid gap-3 sm:grid-cols-2">
-        {CONFUSABLES.map((g) => (
+        {groups.map((g) => (
           <li key={g.id} className="card flex flex-col gap-3 p-4">
             <p className="flex flex-wrap items-center gap-2">
               <span aria-hidden="true">{g.emoji}</span>
@@ -84,10 +100,11 @@ function ConfusablesView() {
                   key={c.ch}
                   className="rounded-xl bg-slate-100 px-2 py-1 text-sm dark:bg-slate-800"
                 >
-                  <b lang="zh" className="text-xl">
+                  <b lang={code} className={zh ? 'text-xl' : 'text-base'}>
                     {c.ch}
                   </b>{' '}
-                  {c.pinyin} · {c.vi}
+                  {c.reading && `${c.reading} · `}
+                  {c.vi}
                 </span>
               ))}
             </p>
@@ -125,7 +142,8 @@ function Round({
   const [picked, setPicked] = useState<string | null>(null)
   const [correct, setCorrect] = useState(0)
   const [xp, setXp] = useState<number | null>(null)
-  const title = t('Chữ dễ nhầm', 'Look-alike characters')
+  const zh = code === 'zh'
+  const title = t(...titleFor(code))
 
   if (xp !== null)
     return (
@@ -145,7 +163,7 @@ function Round({
 
   const { group, sentence } = questions[idx]
   const answered = picked !== null
-  const [before, after] = sentence.zh.split(GAP)
+  const [before, after] = sentence.text.split(GAP)
   const whole = filled(sentence)
 
   const pick = (ch: string) => {
@@ -181,9 +199,14 @@ function Round({
       <div className="card space-y-5 p-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            {t('Chữ nào điền vào chỗ trống?', 'Which character fills the gap?')}
+            {zh
+              ? t('Chữ nào điền vào chỗ trống?', 'Which character fills the gap?')
+              : t('Từ nào điền vào chỗ trống?', 'Which word fills the gap?')}
           </p>
-          <p lang="zh" className="mt-3 text-3xl font-extrabold leading-relaxed">
+          <p
+            lang={code}
+            className={`mt-3 font-extrabold leading-relaxed ${zh ? 'text-3xl' : 'text-2xl'}`}
+          >
             {before}
             <span
               className={`mx-1 inline-block min-w-[1.6em] rounded-lg border-b-4 px-1 ${
@@ -216,7 +239,7 @@ function Round({
                 type="button"
                 onClick={() => pick(c.ch)}
                 disabled={answered}
-                aria-label={`${c.ch} ${c.pinyin}`}
+                aria-label={c.reading ? `${c.ch} ${c.reading}` : c.ch}
                 className={`flex flex-col items-center justify-center rounded-xl border-2 py-3 transition ${
                   state === 'right'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
@@ -225,14 +248,17 @@ function Round({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                <span lang="zh" className="flex items-center gap-1 text-3xl font-bold">
+                <span
+                  lang={code}
+                  className={`flex items-center gap-1 font-bold ${zh ? 'text-3xl' : 'text-xl'}`}
+                >
                   {c.ch}
                   {state === 'right' && <Check className="h-5 w-5" aria-hidden="true" />}
                   {state === 'wrong' && <X className="h-5 w-5" aria-hidden="true" />}
                 </span>
                 <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  {c.pinyin}
-                  {answered && ` · ${c.vi}`}
+                  {c.reading}
+                  {answered && `${c.reading ? ' · ' : ''}${c.vi}`}
                 </span>
               </button>
             )
@@ -254,10 +280,12 @@ function Round({
             <div className="flex items-center gap-3">
               <SpeakButton text={whole} lang={ttsLang} audioSrc={textAudio(whole)} size="sm" />
               <div>
-                <p lang="zh" className="text-lg font-bold">
+                <p lang={code} className="text-lg font-bold">
                   {whole}
                 </p>
-                <p className="text-slate-600 dark:text-slate-300">{sentence.pinyin}</p>
+                {sentence.reading && (
+                  <p className="text-slate-600 dark:text-slate-300">{sentence.reading}</p>
+                )}
               </div>
             </div>
             <p className="text-slate-600 dark:text-slate-300">💡 {t(...group.rule)}</p>

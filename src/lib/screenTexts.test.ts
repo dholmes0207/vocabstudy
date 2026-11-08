@@ -25,7 +25,7 @@ import { validateHskBank } from './hskBank'
 import { validateIeltsBank } from './ielts'
 import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
-import { CONFUSABLES, filled } from './confusables'
+import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { validateRoleplay } from './roleplay'
@@ -112,6 +112,8 @@ function english(): string[] {
     ...PARTICLES.flatMap((particle) =>
       particle.verbs.map((item) => phrasalFilled({ particle, item }))
     ),
+    // "Từ dễ nhầm": each sentence is read with its gap filled.
+    ...CONFUSABLE_PACKS.en.flatMap((g) => g.sentences.map(filled)),
   ]
 }
 

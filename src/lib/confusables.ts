@@ -1,23 +1,29 @@
 // "Chữ dễ nhầm" (docs/design/confusables.md): Chinese characters a Vietnamese
 // learner mixes up because they sound alike (在/再, 的/得/地, 他/她/它) or
-// look alike (买/卖, 已/以). Each group says how to tell them apart; the
-// practice puts one in a sentence gap and asks which. Pure; data inline like
-// lib/measureWords.ts.
+// look alike (买/卖, 已/以), and English words that one Vietnamese word
+// covers (make/do, say/tell, borrow/lend — lib/confusablesEn.ts). Each group
+// says how to tell them apart; the practice puts one in a sentence gap and
+// asks which. Pure; data inline like lib/measureWords.ts.
+
+import { EN_CONFUSABLES } from './confusablesEn'
 
 export type Pair = [vi: string, en: string]
 
 export interface ConfusableChar {
+  /** The character, or the English word. */
   ch: string
-  pinyin: string
+  /** Pinyin; none for English. */
+  reading?: string
   /** Its meaning or job, in a few words. */
   vi: string
 }
 
 export interface ConfusableSentence {
   /** The sentence with ＿ where the character goes. */
-  zh: string
+  text: string
   answer: string
-  pinyin: string
+  /** Pinyin of the whole sentence; none for English. */
+  reading?: string
   vi: string
 }
 
@@ -32,10 +38,10 @@ export interface ConfusableGroup {
 
 export const GAP = '＿'
 
-const s = (zh: string, answer: string, pinyin: string, vi: string): ConfusableSentence => ({
-  zh,
+const s = (text: string, answer: string, reading: string, vi: string): ConfusableSentence => ({
+  text,
   answer,
-  pinyin,
+  reading,
   vi,
 })
 
@@ -44,8 +50,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'zai',
     emoji: '📍',
     chars: [
-      { ch: '在', pinyin: 'zài', vi: 'ở; đang' },
-      { ch: '再', pinyin: 'zài', vi: 'lại, nữa (sau này)' },
+      { ch: '在', reading: 'zài', vi: 'ở; đang' },
+      { ch: '再', reading: 'zài', vi: 'lại, nữa (sau này)' },
     ],
     rule: [
       '在: ở đâu, hoặc đang làm gì. 再: làm lại / làm thêm, việc chưa xảy ra (再见 = hẹn gặp lại).',
@@ -63,9 +69,9 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'de',
     emoji: '🔗',
     chars: [
-      { ch: '的', pinyin: 'de', vi: 'của / … mà (trước danh từ)' },
-      { ch: '得', pinyin: 'de', vi: 'sau động từ, trước lời nhận xét' },
-      { ch: '地', pinyin: 'de', vi: 'trước động từ: làm một cách…' },
+      { ch: '的', reading: 'de', vi: 'của / … mà (trước danh từ)' },
+      { ch: '得', reading: 'de', vi: 'sau động từ, trước lời nhận xét' },
+      { ch: '地', reading: 'de', vi: 'trước động từ: làm một cách…' },
     ],
     rule: [
       'Nhìn từ đứng SAU: danh từ → 的 (我的书); sau động từ là lời nhận xét → 得 (跑得快); trước động từ, tả cách làm → 地 (高兴地说).',
@@ -94,9 +100,9 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'ta',
     emoji: '👥',
     chars: [
-      { ch: '他', pinyin: 'tā', vi: 'anh ấy (nam)' },
-      { ch: '她', pinyin: 'tā', vi: 'cô ấy (nữ)' },
-      { ch: '它', pinyin: 'tā', vi: 'nó (con vật, đồ vật)' },
+      { ch: '他', reading: 'tā', vi: 'anh ấy (nam)' },
+      { ch: '她', reading: 'tā', vi: 'cô ấy (nữ)' },
+      { ch: '它', reading: 'tā', vi: 'nó (con vật, đồ vật)' },
     ],
     rule: [
       'Cùng đọc tā. Bộ nhân 亻 cho người nam (hoặc chưa rõ), bộ nữ 女 cho người nữ, 它 cho con vật và đồ vật.',
@@ -139,8 +145,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'zuo',
     emoji: '🪑',
     chars: [
-      { ch: '做', pinyin: 'zuò', vi: 'làm' },
-      { ch: '坐', pinyin: 'zuò', vi: 'ngồi; đi (xe, tàu, máy bay)' },
+      { ch: '做', reading: 'zuò', vi: 'làm' },
+      { ch: '坐', reading: 'zuò', vi: 'ngồi; đi (xe, tàu, máy bay)' },
     ],
     rule: [
       '做: làm (做饭, 做作业). 坐: ngồi, và đi bằng phương tiện mình ngồi trên đó (坐飞机, 坐车). Mẹo: 坐 có hai người 人 ngồi trên đất 土.',
@@ -168,8 +174,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'hui',
     emoji: '🔁',
     chars: [
-      { ch: '会', pinyin: 'huì', vi: 'biết (làm); sẽ' },
-      { ch: '回', pinyin: 'huí', vi: 'về, quay lại' },
+      { ch: '会', reading: 'huì', vi: 'biết (làm); sẽ' },
+      { ch: '回', reading: 'huí', vi: 'về, quay lại' },
     ],
     rule: [
       'Gần âm nhưng khác thanh: 会 huì (thanh 4) là biết làm / sẽ; 回 huí (thanh 2) là quay về (回家, 回来).',
@@ -186,8 +192,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'mai',
     emoji: '🛒',
     chars: [
-      { ch: '买', pinyin: 'mǎi', vi: 'mua' },
-      { ch: '卖', pinyin: 'mài', vi: 'bán' },
+      { ch: '买', reading: 'mǎi', vi: 'mua' },
+      { ch: '卖', reading: 'mài', vi: 'bán' },
     ],
     rule: [
       '卖 = 十 + 买: có thêm 十 ở trên là bán. Thanh cũng khác: mǎi (mua, thanh 3), mài (bán, thanh 4).',
@@ -209,8 +215,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'jin',
     emoji: '🚪',
     chars: [
-      { ch: '进', pinyin: 'jìn', vi: 'vào' },
-      { ch: '近', pinyin: 'jìn', vi: 'gần' },
+      { ch: '进', reading: 'jìn', vi: 'vào' },
+      { ch: '近', reading: 'jìn', vi: 'gần' },
     ],
     rule: [
       'Cùng đọc jìn và cùng bộ 辶 (đi). 进 là đi vào (进来, 请进); 近 là gần, trái nghĩa với 远.',
@@ -227,8 +233,8 @@ export const CONFUSABLES: ConfusableGroup[] = [
     id: 'yi',
     emoji: '⏳',
     chars: [
-      { ch: '已', pinyin: 'yǐ', vi: 'đã (已经)' },
-      { ch: '以', pinyin: 'yǐ', vi: 'trong 可以, 以后, 以前' },
+      { ch: '已', reading: 'yǐ', vi: 'đã (已经)' },
+      { ch: '以', reading: 'yǐ', vi: 'trong 可以, 以后, 以前' },
     ],
     rule: [
       '已 gần như chỉ gặp trong 已经 (đã rồi). 以 đi trong 可以 (có thể), 以后 (sau này), 以前 (trước đây).',
@@ -248,13 +254,19 @@ export const CONFUSABLES: ConfusableGroup[] = [
   },
 ]
 
+/** The groups for a pack: Chinese characters, or English words. */
+export const CONFUSABLE_PACKS: Record<string, readonly ConfusableGroup[]> = {
+  zh: CONFUSABLES,
+  en: EN_CONFUSABLES,
+}
+
 export interface ConfusableQuestion {
   group: ConfusableGroup
   sentence: ConfusableSentence
 }
 
 /** The whole sentence, gap filled. */
-export const filled = (s: ConfusableSentence): string => s.zh.replace(GAP, s.answer)
+export const filled = (s: ConfusableSentence): string => s.text.replace(GAP, s.answer)
 
 /**
  * A round: `size` sentences, from one group or from all (spread over the
@@ -263,7 +275,8 @@ export const filled = (s: ConfusableSentence): string => s.zh.replace(GAP, s.ans
 export function confusableRound(
   size = 10,
   only?: string,
-  rand: () => number = Math.random
+  rand: () => number = Math.random,
+  pool: readonly ConfusableGroup[] = CONFUSABLES
 ): ConfusableQuestion[] {
   const shuffle = <T>(arr: readonly T[]): T[] => {
     const a = [...arr]
@@ -273,7 +286,7 @@ export function confusableRound(
     }
     return a
   }
-  const groups = CONFUSABLES.filter((g) => !only || g.id === only)
+  const groups = pool.filter((g) => !only || g.id === only)
   const decks = groups.map((group) =>
     shuffle(group.sentences).map((sentence) => ({ group, sentence }))
   )

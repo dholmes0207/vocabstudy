@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Từ dễ nhầm trong tiếng Anh', 'Easily confused English words'],
+    items: [
+      [
+        'Trang "Chữ dễ nhầm" có thêm 8 cặp tiếng Anh mà tiếng Việt chỉ có một từ: make/do, say/tell, borrow/lend, bring/take… kèm mẹo phân biệt và bài điền từ. Lộ trình tiếng Anh cấp 3 có thêm bước này.',
+        'The look-alikes page gains 8 English pairs Vietnamese says with one word: make/do, say/tell, borrow/lend, bring/take… with a trick for each and a gap-fill round. Level 3 of the English path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Cụm động từ tiếng Anh', 'English phrasal verbs'],
     items: [
       [

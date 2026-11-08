@@ -65,8 +65,23 @@ describe('Look-alike characters', () => {
     expect(useStudy.getState().progress.zh?.stats.xp).toBe(7)
   })
 
-  it('is for the Chinese pack only', () => {
+  it('has English pairs too, without a reading', () => {
     useSettings.setState({ currentLang: 'en' })
+    useData.setState({
+      pack: JSON.parse(readFileSync('public/data/en.json', 'utf8')) as LanguagePack,
+    })
+    render(
+      <MemoryRouter>
+        <Confusables />
+      </MemoryRouter>
+    )
+    expect(screen.getByRole('heading', { name: /Easily confused words/ })).toBeInTheDocument()
+    expect(screen.getByText(/carry out a task/)).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: 'Practise this group' }).length).toBe(8)
+  })
+
+  it('is for the Chinese and English packs only', () => {
+    useSettings.setState({ currentLang: 'ko' })
     render(
       <MemoryRouter>
         <Confusables />
