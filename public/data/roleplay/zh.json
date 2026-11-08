@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scenes": [
     {
       "id": "zh-restaurant",
@@ -231,6 +231,126 @@
           "text": "我也很高兴认识你。",
           "vi": "Mình cũng rất vui được làm quen với bạn.",
           "read": "Wǒ yě hěn gāoxìng rènshi nǐ."
+        }
+      ]
+    },
+    {
+      "id": "zh-directions",
+      "emoji": "🗺️",
+      "title": [
+        "Hỏi đường",
+        "Asking the way"
+      ],
+      "setting": [
+        "Bạn tìm ga tàu điện ngầm.",
+        "You are looking for the subway station."
+      ],
+      "them": [
+        "Người đi đường",
+        "Passer-by"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "请问，地铁站在哪儿？",
+          "vi": "Xin hỏi, ga tàu điện ngầm ở đâu?",
+          "read": "Qǐngwèn, dìtiě zhàn zài nǎr?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一直往前走，在银行的左边。",
+          "vi": "Cứ đi thẳng, ở bên trái ngân hàng.",
+          "read": "Yìzhí wǎng qián zǒu, zài yínháng de zuǒbian."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "远不远？",
+          "vi": "Có xa không?",
+          "read": "Yuǎn bu yuǎn?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "不远，走路五分钟。",
+          "vi": "Không xa, đi bộ năm phút.",
+          "read": "Bù yuǎn, zǒulù wǔ fēnzhōng."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "谢谢你！",
+          "vi": "Cảm ơn anh!",
+          "read": "Xièxie nǐ!"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "不客气。",
+          "vi": "Không có gì.",
+          "read": "Bú kèqi."
+        }
+      ]
+    },
+    {
+      "id": "zh-hotel",
+      "emoji": "🏨",
+      "title": [
+        "Nhận phòng khách sạn",
+        "Checking in at a hotel"
+      ],
+      "setting": [
+        "Bạn đến khách sạn, đã đặt phòng.",
+        "You arrive at your hotel with a booking."
+      ],
+      "them": [
+        "Lễ tân",
+        "Receptionist"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "您好！请问您有预订吗？",
+          "vi": "Xin chào! Xin hỏi anh có đặt phòng trước không?",
+          "read": "Nín hǎo! Qǐngwèn nín yǒu yùdìng ma?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "有，我叫李明。",
+          "vi": "Có, tôi tên Lý Minh.",
+          "read": "Yǒu, wǒ jiào Lǐ Míng."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的，请给我您的护照。",
+          "vi": "Vâng, xin anh đưa tôi hộ chiếu.",
+          "read": "Hǎo de, qǐng gěi wǒ nín de hùzhào."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "给你。早饭几点开始？",
+          "vi": "Đây ạ. Bữa sáng bắt đầu lúc mấy giờ?",
+          "read": "Gěi nǐ. Zǎofàn jǐ diǎn kāishǐ?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "早上七点。您的房间在五楼。",
+          "vi": "Bảy giờ sáng. Phòng của anh ở tầng năm.",
+          "read": "Zǎoshang qī diǎn. Nín de fángjiān zài wǔ lóu."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "好的，谢谢！",
+          "vi": "Vâng, cảm ơn!",
+          "read": "Hǎo de, xièxie!"
         }
       ]
     }
