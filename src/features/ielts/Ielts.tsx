@@ -410,7 +410,10 @@ export default function Ielts() {
             ))}
           </div>
         )}
-        <div className="grid gap-3 sm:grid-cols-2">
+        {/* grid-cols-1 is minmax(0, 1fr): the essay prompts below are cut with
+            an ellipsis, and an implicit column would grow to their full
+            length and push the page wider than a phone. */}
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <button
             type="button"
             disabled={!bank}
@@ -450,7 +453,7 @@ export default function Ielts() {
             </span>
           </button>
           {bank && (
-            <div className="rounded-2xl border-2 border-slate-200 p-4 dark:border-slate-700">
+            <div className="min-w-0 rounded-2xl border-2 border-slate-200 p-4 dark:border-slate-700">
               <p className="text-2xl" aria-hidden="true">
                 📝
               </p>
