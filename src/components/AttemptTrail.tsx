@@ -39,19 +39,22 @@ export default function AttemptTrail({ attempts }: { attempts: readonly Attempt[
             ` (${change > 0 ? '+' : ''}${change} since last time)`
           )}
       </figcaption>
-      <table className="sr-only">
-        <caption>{t('Các lần làm gần đây', 'Recent attempts')}</caption>
-        <tbody>
-          {attempts.map((a, i) => (
-            <tr key={i}>
-              <th scope="row">{t(`Lần ${i + 1}`, `Attempt ${i + 1}`)}</th>
-              <td>
-                {a.correct}/{a.total}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {/* sr-only on a wrapper: a table ignores width: 1px. */}
+      <div className="sr-only">
+        <table>
+          <caption>{t('Các lần làm gần đây', 'Recent attempts')}</caption>
+          <tbody>
+            {attempts.map((a, i) => (
+              <tr key={i}>
+                <th scope="row">{t(`Lần ${i + 1}`, `Attempt ${i + 1}`)}</th>
+                <td>
+                  {a.correct}/{a.total}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   )
 }

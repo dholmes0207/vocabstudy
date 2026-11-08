@@ -108,31 +108,35 @@ export default function Task1Chart({ chart }: { chart: Chart }) {
         ))}
         <span className="text-slate-500 dark:text-slate-400">({chart.unit})</span>
       </figcaption>
-      <table className="sr-only" lang="en">
-        <caption>{chart.title[1]}</caption>
-        <thead>
-          <tr>
-            <th scope="col" />
-            {chart.labels.map((l) => (
-              <th key={l} scope="col">
-                {l}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {chart.series.map((s) => (
-            <tr key={s.name}>
-              <th scope="row">{s.name}</th>
-              {s.values.map((v, i) => (
-                <td key={i}>
-                  {v} {chart.unit}
-                </td>
+      {/* sr-only goes on a wrapper: a table ignores width: 1px and would keep
+          its full width, widening the page on a phone. */}
+      <div className="sr-only">
+        <table lang="en">
+          <caption>{chart.title[1]}</caption>
+          <thead>
+            <tr>
+              <th scope="col" />
+              {chart.labels.map((l) => (
+                <th key={l} scope="col">
+                  {l}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {chart.series.map((s) => (
+              <tr key={s.name}>
+                <th scope="row">{s.name}</th>
+                {s.values.map((v, i) => (
+                  <td key={i}>
+                    {v} {chart.unit}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   )
 }
