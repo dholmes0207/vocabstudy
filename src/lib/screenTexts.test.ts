@@ -26,6 +26,7 @@ import { validateIeltsBank } from './ielts'
 import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, filled } from './confusables'
+import { CHENGYU } from './chengyu'
 import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
@@ -171,6 +172,8 @@ function chinese(): string[] {
     ...roleplay('zh'),
     // "Chữ dễ nhầm": each sentence is read with its gap filled.
     ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
+    // "Thành ngữ": each idiom and its example sentence.
+    ...CHENGYU.flatMap((it) => [it.zh, it.example.zh]),
   ]
 }
 

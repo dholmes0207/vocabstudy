@@ -54,12 +54,22 @@ test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) =>
   await expect(page.getByRole('list', { name: 'Word box' })).toBeVisible()
 })
 
-test('Chinese look-alike characters and sentence patterns', async ({ page }) => {
+test('Chinese look-alike characters, idioms and sentence patterns', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/confusables?lang=zh')
   await page.getByRole('button', { name: 'Practise this group' }).first().click()
   await page.getByRole('button', { name: '在 zài' }).click()
   await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
+
+  await page.goto('/chengyu?lang=zh')
+  await expect(page.getByText('bán tín bán nghi', { exact: true })).toBeVisible()
+  await page.getByRole('button', { name: /Try 10 questions/ }).click()
+  await page.getByText('What does this idiom mean?').waitFor()
+  await page.locator('.card button').first().click()
+  await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
 
   await page.goto('/patterns?lang=zh')
   await expect(page.getByText('Preposition phrase').first()).toBeVisible()

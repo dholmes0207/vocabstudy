@@ -15,6 +15,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/measure-words': ['zh', 'ko'],
   // Chinese characters that sound or look alike (lib/confusables.ts).
   '/confusables': ['zh'],
+  // Four-character idioms through their Hán Việt sounds (lib/chengyu.ts).
+  '/chengyu': ['zh'],
   '/numbers': ['zh', 'ko'],
   // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
   '/han-viet': ['zh', 'ko'],

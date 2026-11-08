@@ -758,6 +758,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh4-chengyu',
+        'chengyu',
+        2,
+        '🐉',
+        '/chengyu',
+        ['Thành ngữ bốn chữ', 'Four-character idioms'],
+        [
+          'Thành ngữ như 半信半疑 (bán tín bán nghi), 守株待兔 (ôm cây đợi thỏ): đọc âm Hán Việt để đoán nghĩa.',
+          'Idioms like 半信半疑 (bán tín bán nghi) and 守株待兔 (waiting by the stump): use the Hán Việt sounds to guess.',
+        ]
+      ),
+      sessions(
         'zh4-roleplay',
         'roleplay',
         4,

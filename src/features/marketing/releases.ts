@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Thành ngữ tiếng Trung qua âm Hán Việt', 'Chinese idioms through Hán Việt'],
+    items: [
+      [
+        'Trang mới "Thành ngữ": 23 thành ngữ bốn chữ như 半信半疑 (bán tín bán nghi), 守株待兔 (ôm cây đợi thỏ), kèm ví dụ, chuyện kể và lượt đoán nghĩa, điền chữ thiếu. Lộ trình HSK 3 có thêm bước này.',
+        'New "Chinese idioms" page: 23 four-character idioms such as 半信半疑 (bán tín bán nghi) and 守株待兔 (waiting by the stump), with examples, fables and a round of guessing meanings and missing characters. The HSK 3 path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Câu trả lời mẫu cho IELTS Speaking', 'Sample answers for IELTS Speaking'],
     items: [
       [

@@ -84,6 +84,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-violet-500 to-fuchsia-500',
   },
   {
+    to: '/chengyu',
+    icon: '🐉',
+    title: 'Thành ngữ',
+    desc: '半信半疑 = bán tín bán nghi: thành ngữ bốn chữ qua âm Hán Việt, kèm chuyện kể "ôm cây đợi thỏ", "vẽ rắn thêm chân"… rồi đoán nghĩa, điền chữ thiếu.',
+    titleEn: 'Chinese idioms',
+    descEn:
+      '半信半疑 = bán tín bán nghi: four-character idioms through their Sino-Vietnamese sounds, with the fables behind some; then guess the meaning, fill the missing character.',
+    tone: 'from-rose-500 to-amber-500',
+  },
+  {
     to: '/numbers',
     icon: '🔢',
     title: 'Nghe số',
