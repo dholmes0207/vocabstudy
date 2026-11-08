@@ -88,5 +88,5 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 
 ## 5. Tiếp theo
 
-1. Thêm cảnh nhập vai (`docs/design/roleplay.md`) và bài đọc IELTS dài hơn (3 đoạn → 5–6 đoạn).
+1. Bài đọc IELTS dài hơn (3 đoạn → 5–6 đoạn), thêm cảnh nhập vai theo chủ đề TOEIC (công sở).
 2. Lộ trình tiếng Hàn theo cấp (TOPIK I).

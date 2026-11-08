@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scenes": [
     {
       "id": "coffee",
@@ -304,6 +304,186 @@
           "voice": "M",
           "text": "Yes. When can I expect to hear from you?",
           "vi": "Có ạ. Khi nào tôi có thể nhận phản hồi?"
+        }
+      ]
+    },
+    {
+      "id": "restaurant-booking",
+      "emoji": "📞",
+      "title": [
+        "Đặt bàn qua điện thoại",
+        "Booking a table by phone"
+      ],
+      "setting": [
+        "Bạn gọi điện đặt bàn cho tối thứ Sáu.",
+        "You call to book a table for Friday evening."
+      ],
+      "them": [
+        "Nhà hàng",
+        "Restaurant"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Good afternoon, Bella Italia. How can I help?",
+          "vi": "Chào buổi chiều, nhà hàng Bella Italia xin nghe. Tôi giúp gì được ạ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Hi, I'd like to book a table for four on Friday.",
+          "vi": "Chào chị, tôi muốn đặt bàn cho bốn người vào thứ Sáu."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "What time would you like?",
+          "vi": "Anh muốn đặt lúc mấy giờ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Around seven thirty, if possible.",
+          "vi": "Khoảng bảy rưỡi, nếu được."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "That's fine. Can I take your name?",
+          "vi": "Được ạ. Cho tôi xin tên anh?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Yes, my name is Nam Tran.",
+          "vi": "Vâng, tôi tên là Nam Trần."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Lovely. See you on Friday!",
+          "vi": "Vâng. Hẹn gặp anh thứ Sáu!"
+        }
+      ]
+    },
+    {
+      "id": "train-ticket",
+      "emoji": "🚆",
+      "title": [
+        "Mua vé tàu",
+        "Buying a train ticket"
+      ],
+      "setting": [
+        "Bạn mua vé ở quầy nhà ga.",
+        "You buy a ticket at the station counter."
+      ],
+      "them": [
+        "Nhân viên bán vé",
+        "Ticket clerk"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Hello, a return ticket to Oxford, please.",
+          "vi": "Chào anh, cho tôi một vé khứ hồi đi Oxford."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "When are you coming back?",
+          "vi": "Khi nào chị quay về?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "This evening.",
+          "vi": "Tối nay."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "That's twenty-four pounds. The next train leaves at ten fifteen.",
+          "vi": "Hai mươi bốn bảng. Chuyến tiếp theo khởi hành lúc mười giờ mười lăm."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Which platform does it leave from?",
+          "vi": "Tàu đi từ sân ga số mấy?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "Platform three, over there on the left.",
+          "vi": "Sân ga số ba, đằng kia bên trái."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Thanks for your help.",
+          "vi": "Cảm ơn anh đã giúp."
+        }
+      ]
+    },
+    {
+      "id": "shop-return",
+      "emoji": "🧥",
+      "title": [
+        "Đổi hàng",
+        "Returning something to a shop"
+      ],
+      "setting": [
+        "Chiếc áo bạn mua bị chật, bạn mang ra đổi.",
+        "The jacket you bought is too small, so you take it back."
+      ],
+      "them": [
+        "Nhân viên cửa hàng",
+        "Shop assistant"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Hello, can I help you?",
+          "vi": "Chào anh, tôi giúp gì được ạ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Yes, I bought this jacket yesterday, but it's too small.",
+          "vi": "Vâng, hôm qua tôi mua chiếc áo này nhưng nó chật quá."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Do you have the receipt?",
+          "vi": "Anh có hoá đơn không ạ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Yes, here it is.",
+          "vi": "Có, đây ạ."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Would you like a bigger size or your money back?",
+          "vi": "Anh muốn đổi cỡ lớn hơn hay lấy lại tiền?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "A bigger size, please. Do you have a large?",
+          "vi": "Đổi cỡ lớn hơn nhé. Có cỡ L không ạ?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Yes, we do. Here you are.",
+          "vi": "Có ạ. Của anh đây."
         }
       ]
     }
