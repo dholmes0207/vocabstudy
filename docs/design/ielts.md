@@ -69,6 +69,12 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 12: Bài mẫu Task 2.** Mỗi đề Viết Task 2 (6 đề) có một bài mẫu band 7, 4 đoạn (mở, 2 thân, kết),
+  260–280 từ, đi đúng bố cục của dạng đề. Bài mẫu tự qua được checklist của trang (đủ 250 từ, 4 đoạn, ít nhất
+  4 từ nối, không viết tắt hay văn nói); test kiểm điều đó. Bài mẫu mở ra sau khi nộp bài, hoặc bấm "Xem bài
+  mẫu" nếu muốn xem trước; từ nối trong `LINKERS` được tô vàng, mỗi đoạn có nhãn. Dữ liệu
+  `writing.prompts[].model`.
+
 - **Bước 11: Câu trả lời mẫu cho Part 3.** Mỗi câu thảo luận Part 3 (6 thẻ × 3 câu) có câu trả lời mẫu dài
   hơn Part 1: nêu quan điểm, giải thích, ví dụ, có khi nói cả phía bên kia; cụm tô là cách nêu ý kiến hay
   nối ý (`In my opinion`, `To some extent`, `Having said that`…). Dữ liệu `part2[].part3Samples`, cùng

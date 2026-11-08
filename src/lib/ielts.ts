@@ -145,6 +145,8 @@ export interface EssayPrompt {
   /** An EssayType id. */
   type: string
   text: string
+  /** A band-7 model answer, one string per paragraph (intro, two bodies, conclusion). */
+  model: string[]
 }
 
 /** Listening Part 1: a call, and the form the learner fills from it. */
@@ -350,8 +352,10 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
     )
     checkGaps(`Task 1 "${c.id}" report`, c.report)
   }
-  for (const pr of writing!.prompts)
+  for (const pr of writing!.prompts) {
     check(text(pr?.text) && typeIds.has(pr.type), `essay prompt "${pr?.id}" has no known type`)
+    check(strings(pr.model, 4), `essay prompt "${pr.id}" needs a model answer in four paragraphs`)
+  }
   const listening = bank!.listening
   check(Array.isArray(listening) && listening.length > 0, '"listening" is missing')
   for (const l of listening!) {
@@ -560,6 +564,16 @@ export const LINKERS = [
 export function linkersUsed(essay: string): string[] {
   const lower = essay.toLowerCase()
   return LINKERS.filter((l) => new RegExp(`\\b${l}\\b`).test(lower))
+}
+
+const LINKER_RE = new RegExp(`\\b(${LINKERS.join('|')})\\b`, 'gi')
+
+/** A paragraph cut into plain text and linking words, to mark the linkers. */
+export function markLinkers(paragraph: string): { text: string; linker: boolean }[] {
+  return paragraph
+    .split(LINKER_RE)
+    .filter(Boolean)
+    .map((text) => ({ text, linker: LINKERS.includes(text.toLowerCase()) }))
 }
 
 /** Spoken forms an IELTS essay should not have: contractions and slang. */

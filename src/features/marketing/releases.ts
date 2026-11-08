@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Bài mẫu IELTS Writing Task 2', 'IELTS Writing Task 2 model answers'],
+    items: [
+      [
+        'Mỗi đề Viết Task 2 có bài mẫu band 7 bốn đoạn, tô sẵn các từ nối. Bài mẫu mở ra sau khi bạn nộp bài để so sánh, hoặc xem trước nếu cần gợi ý.',
+        'Every Task 2 question now has a four-paragraph band-7 model answer with the linking words marked. It opens after you hand in your essay, or earlier if you want a hint.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Thêm 10 thành ngữ tiếng Trung', '10 more Chinese idioms'],
     items: [
       [

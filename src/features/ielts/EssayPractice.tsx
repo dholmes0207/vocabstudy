@@ -15,6 +15,7 @@ import {
 } from '@/lib/ielts'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
+import ModelEssay from './ModelEssay'
 
 // "Viết thử Task 2": one question, the plan of its essay type beside the box,
 // a word count that fills towards 250, and a checklist the page ticks as the
@@ -48,6 +49,8 @@ export default function EssayPractice({
   const log = useActivity((s) => s.log)
   const [essay, setEssay] = useState(() => loadDraft(prompt.id))
   const [submitted, setSubmitted] = useState(false)
+  // The model answer opens once the essay is handed in, or on request.
+  const [showModel, setShowModel] = useState(false)
 
   useEffect(() => {
     try {
@@ -92,6 +95,7 @@ export default function EssayPractice({
     log(code, 'ielts-writing')
     if (checks.every((c) => c.ok)) celebrate(1.3)
     setSubmitted(true)
+    setShowModel(true)
   }
 
   return (
@@ -211,6 +215,18 @@ export default function EssayPractice({
           {ready
             ? t('Nộp bài', 'Hand it in')
             : t(`Còn ${TASK2_WORDS - words} từ nữa`, `${TASK2_WORDS - words} more words to go`)}
+        </button>
+      )}
+
+      {showModel ? (
+        <ModelEssay paragraphs={prompt.model} />
+      ) : (
+        <button
+          type="button"
+          className="btn-ghost w-full justify-center text-sm"
+          onClick={() => setShowModel(true)}
+        >
+          {t('Xem bài mẫu (nên tự viết trước)', 'See the model answer (try writing first)')}
         </button>
       )}
     </div>

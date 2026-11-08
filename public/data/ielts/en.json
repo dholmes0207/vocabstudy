@@ -1,5 +1,5 @@
 {
-  "version": "1.10.0",
+  "version": "1.11.0",
   "reading": [
     {
       "id": "city-farms",
@@ -1399,32 +1399,68 @@
       {
         "id": "free-university",
         "type": "opinion",
-        "text": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?"
+        "text": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?",
+        "model": [
+          "It is often argued that university education should be free for every student. Although this idea is attractive, I only partly agree, because free tuition for all would be extremely expensive and would not always help the people who need it most.",
+          "On the one hand, removing fees would clearly open doors for talented young people from poor families. In many countries, students graduate with large debts, and some capable teenagers do not even apply because they fear the cost. Free education would also benefit society as a whole, since a better educated workforce tends to be more productive and more innovative. For instance, Germany has offered free tuition at its public universities for years without lowering academic standards.",
+          "However, making every degree free would place a heavy burden on taxpayers. The money would have to come from other public services, such as hospitals or primary schools, which arguably matter even more. Furthermore, students from wealthy families, who could easily afford fees, would receive the same support as those in genuine need. A fairer system, therefore, would offer generous grants and low-interest loans based on family income, so that no one is excluded for financial reasons. Free places for all might also lead to overcrowded lecture halls and a fall in teaching quality if funding does not keep up.",
+          "In conclusion, I believe that higher education should be affordable rather than completely free. Governments should focus their limited budgets on students who would otherwise be unable to study, while those who can pay should continue to contribute. This balance would keep universities open to everyone without placing an unfair load on the public."
+        ]
       },
       {
         "id": "early-school",
         "type": "discussion",
-        "text": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion."
+        "text": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion.",
+        "model": [
+          "People disagree about the best age for children to begin formal education. While some believe that an early start gives children an advantage, others argue that young children learn better through play at home. This question matters because the first years of school can shape a child’s attitude to learning for life. This essay will discuss both views before giving my own opinion.",
+          "Those who support an early start point out that young children learn extremely quickly. At school they can develop basic reading and number skills, as well as social skills such as sharing and taking turns. In addition, an early school place allows both parents to return to work, which can be important for low-income families. Supporters also claim that children who start early find the move to primary school easier, because they are already used to a classroom routine.",
+          "On the other hand, many experts believe that very young children are not ready to sit still and follow a timetable. They argue that play is the most natural way for children to explore the world, and that pressure to perform too early may make them anxious or cause them to lose interest in learning. Childhood, they say, is short and should not be rushed. For example, in Finland children do not start formal school until the age of seven, yet the country has long performed well in international tests.",
+          "In conclusion, both sides make valid points. However, I believe that children should start formal lessons a little later, at around six or seven, because a relaxed and playful early childhood builds the curiosity they will need for the rest of their education."
+        ]
       },
       {
         "id": "traffic",
         "type": "problem-solution",
-        "text": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?"
+        "text": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?",
+        "model": [
+          "Traffic congestion has become a daily problem in many large cities, wasting time and polluting the air. This essay will examine the main causes of this situation and suggest some practical solutions.",
+          "The first cause is the rapid growth in the number of private vehicles. As incomes rise, more families can afford cars or motorbikes, and these vehicles quickly fill roads that were designed for far less traffic. Secondly, public transport in many cities is unreliable or uncomfortable, so people have little choice but to drive. Cheap fuel in some countries makes driving even more attractive. Poor urban planning also plays a part, because homes, offices and schools are often far apart, which forces residents to travel long distances every day.",
+          "Several measures could reduce the problem. Firstly, governments should invest in fast, affordable public transport, such as metro lines and dedicated bus lanes, so that leaving the car at home becomes the easier option. Furthermore, charging drivers a fee to enter the city centre at busy times has worked well in cities like London and Singapore. Finally, companies could allow flexible working hours, which would spread journeys more evenly throughout the day. Cities could also create safe cycle paths and pedestrian streets, which would encourage short journeys without a car.",
+          "In conclusion, traffic congestion is caused mainly by the growing number of vehicles and weak public transport. A combination of better transport services, road charges and flexible working would make city streets far less crowded. Although these steps require investment, the savings in time, health and fuel would be considerable."
+        ]
       },
       {
         "id": "work-from-home",
         "type": "advantages",
-        "text": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?"
+        "text": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?",
+        "model": [
+          "In recent years, a growing number of employees have started to work from home for at least part of the week. In my opinion, the benefits of this trend generally outweigh its drawbacks, as long as it is well managed. This essay will look at both sides of the issue.",
+          "The most obvious advantage is the time and money saved by not commuting. Workers who no longer spend two hours a day in traffic have more energy for their jobs and more time for their families. Fewer cars on the road also means less pollution, which benefits everyone. In addition, many people find that they can concentrate better at home, away from the noise and interruptions of a busy office. Employers also benefit, because they can rent smaller offices and hire talented staff who live far away.",
+          "However, working from home is not without problems. Some employees feel lonely and miss the informal conversations that help colleagues share ideas. Moreover, the line between work and private life can become unclear, so people may end up working longer hours than before. Managers may also find it harder to train new staff or check on their progress. These problems are real, but they can be reduced, for example by meeting in the office once or twice a week and agreeing on clear working hours.",
+          "In conclusion, although home working can lead to isolation and overwork, I believe its advantages are greater, particularly the time it saves and the freedom it gives. A flexible mix of home and office work seems to offer the best of both worlds."
+        ]
       },
       {
         "id": "online-learning",
         "type": "opinion",
-        "text": "Online courses will soon replace traditional classrooms. To what extent do you agree or disagree?"
+        "text": "Online courses will soon replace traditional classrooms. To what extent do you agree or disagree?",
+        "model": [
+          "With the rapid development of the internet, online courses have become popular all over the world, and some people predict that they will soon replace traditional classrooms completely. I disagree with this view, because I believe online and face-to-face learning will continue to exist side by side.",
+          "There is no doubt that online courses offer real benefits. Learners can study at any time and from any place, which is ideal for working adults or people living far from a university. Furthermore, many high-quality courses are available free of charge or at a low price, so education has become accessible to millions of people who could not otherwise afford it. Online platforms also allow students to replay lectures as many times as they need, which is especially helpful for those studying in a second language.",
+          "However, traditional classrooms provide things that a screen cannot easily replace. Teachers can notice immediately when a student is confused and adjust their explanation. Students also learn important social skills, such as working in teams and presenting ideas in front of others. For example, subjects like chemistry or nursing require hands-on practice in laboratories and hospitals. Moreover, many young learners lack the self-discipline to study alone, and they benefit from the routine of a school day.",
+          "In conclusion, online learning is a valuable addition to education, but it is unlikely to replace classrooms entirely. The most effective approach is probably a blended one, in which digital tools support, rather than replace, the work of teachers. Schools and universities should therefore use technology to enrich lessons, not to remove the human contact that makes learning meaningful."
+        ]
       },
       {
         "id": "plastic",
         "type": "problem-solution",
-        "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?"
+        "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?",
+        "model": [
+          "Huge quantities of plastic end up in the oceans every year, where they harm fish, seabirds and other marine life. The issue is urgent, as the oceans provide food and income for millions of people. This essay will outline the main causes of the problem and propose some solutions.",
+          "The main cause is the enormous amount of single-use plastic that modern society produces, such as bags, bottles and food packaging. These items are used for a few minutes and then thrown away. Because plastic takes hundreds of years to break down, the problem grows worse each year. In many countries, waste collection and recycling systems are inadequate, so rubbish is dumped near rivers and eventually carried out to sea. In addition, fishing nets that are lost or abandoned make up a significant share of the plastic in the ocean.",
+          "There are several ways to tackle this issue. Firstly, governments could ban or tax single-use items; for instance, charging for plastic bags has sharply reduced their use in several countries. Secondly, manufacturers should be required to use packaging that can be recycled or composted. Finally, wealthier nations could help developing countries build better waste management systems, because plastic released in one place can travel across the world. Individuals also have a role to play, for example by carrying reusable bottles and bags.",
+          "In conclusion, ocean plastic is caused mainly by our dependence on disposable products and by poor waste management. Therefore, a combination of laws, responsible industry and individual action is needed to protect marine life for future generations. If no action is taken, the damage to ocean life may become impossible to reverse."
+        ]
       }
     ],
     "task1": [
