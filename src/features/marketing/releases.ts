@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Câu trả lời mẫu cho IELTS Speaking', 'Sample answers for IELTS Speaking'],
+    items: [
+      [
+        'Mỗi câu hỏi Nói Part 1 có một câu trả lời mẫu band 7, tô sẵn một cụm nên học và nghe được để nói theo. Mẫu được gập lại để bạn tự trả lời trước.',
+        'Every Speaking Part 1 question now has a band-7 sample answer, with one phrase worth borrowing marked and audio to repeat after. It stays folded so you answer first.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Nhập vai tiếng Trung mức HSK 3', 'HSK 3 role-play in Chinese'],
     items: [
       [

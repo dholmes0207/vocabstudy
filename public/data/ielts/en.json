@@ -1,5 +1,5 @@
 {
-  "version": "1.8.0",
+  "version": "1.9.0",
   "reading": [
     {
       "id": "city-farms",
@@ -698,6 +698,24 @@
           "What do you like most about it?",
           "Has your hometown changed much in recent years?",
           "Would you like to live there in the future?"
+        ],
+        "samples": [
+          {
+            "a": "I'm from Da Nang, a coastal city in central Vietnam. It's about an hour's flight from Hanoi, and it's famous for its long sandy beaches.",
+            "key": "famous for"
+          },
+          {
+            "a": "What I like most is the pace of life. It's busy enough to be interesting, but people still have time to sit and chat over a coffee.",
+            "key": "What I like most is"
+          },
+          {
+            "a": "Yes, quite a lot. There are far more high-rise hotels than when I was a kid, so it feels more modern, although the traffic has got worse.",
+            "key": "far more"
+          },
+          {
+            "a": "I'd love to, actually. Maybe not right now, because my career is in Ho Chi Minh City, but I can definitely see myself settling down there later on.",
+            "key": "I can definitely see myself"
+          }
         ]
       },
       {
@@ -712,6 +730,24 @@
           "Why did you choose that job or subject?",
           "What is the most interesting part of it?",
           "What would you like to do in the future?"
+        ],
+        "samples": [
+          {
+            "a": "I'm a student at the moment. I'm in my third year of a business degree, and I also work part-time in a café at the weekends.",
+            "key": "at the moment"
+          },
+          {
+            "a": "Mainly because I've always been interested in how companies grow. My parents run a small shop, so I grew up watching them make decisions every day.",
+            "key": "Mainly because"
+          },
+          {
+            "a": "For me, it's the case studies. We look at real companies that succeeded or failed, and it's fascinating to work out what went right or wrong.",
+            "key": "it's fascinating to"
+          },
+          {
+            "a": "Ideally, I'd like to start my own business one day. Before that, though, I want to get a few years of experience in a big company.",
+            "key": "Ideally, I'd like to"
+          }
         ]
       },
       {
@@ -726,6 +762,24 @@
           "Do you prefer spending free time alone or with friends?",
           "Did you have the same hobbies as a child?",
           "Is there a new hobby you would like to try?"
+        ],
+        "samples": [
+          {
+            "a": "I usually go for a run in the park or watch a film at home. On Sunday mornings I also play badminton with a few old classmates.",
+            "key": "On Sunday mornings"
+          },
+          {
+            "a": "It depends on my mood, really. After a busy week I enjoy some time alone, but at weekends I'd rather be out with my friends.",
+            "key": "It depends on my mood, really"
+          },
+          {
+            "a": "Not exactly. As a child I spent most of my free time drawing, whereas these days I'm much more into sport.",
+            "key": "whereas"
+          },
+          {
+            "a": "Yes, I've been thinking about learning the guitar. A friend of mine plays really well, and it looks like a great way to relax.",
+            "key": "I've been thinking about"
+          }
         ]
       },
       {
@@ -740,6 +794,24 @@
           "Do you often cook at home?",
           "Is there any food you didn't like as a child?",
           "Do people in your country often eat out?"
+        ],
+        "samples": [
+          {
+            "a": "My favourite has to be pho, the Vietnamese noodle soup. I could honestly eat it every morning, especially on a cold day.",
+            "key": "has to be"
+          },
+          {
+            "a": "Not as often as I'd like. During the week I'm too busy, so I tend to cook only at weekends, usually something simple like fried rice.",
+            "key": "I tend to"
+          },
+          {
+            "a": "Yes, I couldn't stand bitter melon when I was little. Funnily enough, I quite like it now, especially in soup.",
+            "key": "Funnily enough"
+          },
+          {
+            "a": "Yes, very often. Street food is cheap and everywhere, so a lot of people eat out several times a week rather than cooking.",
+            "key": "rather than"
+          }
         ]
       },
       {
@@ -754,6 +826,24 @@
           "What do you mostly use the internet for?",
           "Do you think you spend too much time online?",
           "Which app could you not live without?"
+        ],
+        "samples": [
+          {
+            "a": "Pretty much all day, to be honest. I use it for work, for messages and for checking the news, so it's rarely out of my hand.",
+            "key": "to be honest"
+          },
+          {
+            "a": "Mostly for studying and keeping in touch with people. I also watch quite a lot of videos, mainly cooking and travel channels.",
+            "key": "keeping in touch with"
+          },
+          {
+            "a": "Probably, yes. I've noticed I often pick up my phone without a reason, so recently I've started turning off notifications in the evening.",
+            "key": "I've started"
+          },
+          {
+            "a": "I'd say my map app. I have a terrible sense of direction, so without it I'd get lost almost every time I went somewhere new.",
+            "key": "I'd say"
+          }
         ]
       },
       {
@@ -768,6 +858,24 @@
           "Which season do you like best?",
           "Does the weather change your mood?",
           "Do you check the weather forecast every day?"
+        ],
+        "samples": [
+          {
+            "a": "It's hot and humid for most of the year. We get a rainy season from about September to December, when there can be heavy storms.",
+            "key": "for most of the year"
+          },
+          {
+            "a": "I like spring best, because it's warm but not too hot. Everything looks green and fresh, and it's the perfect time to be outdoors.",
+            "key": "it's the perfect time to"
+          },
+          {
+            "a": "Definitely. When it's sunny I feel full of energy, but a few grey, rainy days in a row can make me feel a bit low.",
+            "key": "a few grey, rainy days in a row"
+          },
+          {
+            "a": "Not every day, but I always check it before a trip. It's annoying to get caught in the rain without an umbrella.",
+            "key": "It's annoying to"
+          }
         ]
       }
     ],

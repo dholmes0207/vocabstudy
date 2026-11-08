@@ -74,7 +74,7 @@ function ielts(): string[] {
     JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
   )
   return [
-    ...speaking.part1.flatMap((tp) => tp.questions),
+    ...speaking.part1.flatMap((tp) => [...tp.questions, ...tp.samples.map((x) => x.a)]),
     ...speaking.part2.flatMap((c) => c.part3),
     ...listening.flatMap((l) => l.lines.map((x) => x.text)),
     ...listeningChoice.flatMap((l) => l.lines.map((x) => x.text)),

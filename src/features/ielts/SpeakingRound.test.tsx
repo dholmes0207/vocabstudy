@@ -54,6 +54,21 @@ describe('IELTS speaking', () => {
     expect(useStudy.getState().progress.en?.stats.xp).toBe(10)
   })
 
+  it('Part 1: a sample answer stays folded until asked, marks its key phrase and reads aloud', () => {
+    const topic = speaking.part1[0]
+    renderTask({ part: 1, topic })
+    const { a, key } = topic.samples[0]
+    expect(screen.queryByText(key)).not.toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /See a sample answer/ }))
+    expect(screen.getByText(key).tagName).toBe('MARK')
+    fireEvent.click(screen.getByRole('button', { name: /Hear the sample answer/ }))
+    expect(asked.at(-1)).toBe(a)
+    // The next question starts folded again.
+    fireEvent.click(screen.getByRole('button', { name: /Next question/ }))
+    expect(screen.getByRole('button', { name: /See a sample answer/ })).toBeInTheDocument()
+    expect(screen.queryByText(key)).not.toBeInTheDocument()
+  })
+
   it('Part 2: a minute to prepare runs out into the talk, then Part 3', () => {
     vi.useFakeTimers()
     const card = speaking.part2[0]

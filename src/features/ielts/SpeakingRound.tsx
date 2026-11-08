@@ -9,6 +9,7 @@ import { PART2_PREP, PART2_TALK, clock, type CueCard, type Part1Topic } from '@/
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 import AnswerRecorder from './AnswerRecorder'
+import SampleAnswer from './SampleAnswer'
 
 // IELTS Speaking practice (docs/design/ielts.md). Part 1: the examiner asks a
 // few short questions on one topic. Part 2: a task card, a minute to prepare,
@@ -270,6 +271,7 @@ export default function SpeakingRound({
               )}
         </p>
         <AnswerRecorder key={idx} />
+        {task.part === 1 && <SampleAnswer key={`s${idx}`} sample={task.topic.samples[idx]} />}
       </section>
       <button type="button" className="btn-primary h-12 w-full" onClick={nextQuestion}>
         {idx + 1 < questions.length ? t('Câu tiếp', 'Next question') : t('Xong phần nói', 'Finish')}{' '}
