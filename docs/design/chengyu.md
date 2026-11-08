@@ -12,8 +12,8 @@ hứng thú, hấp dẫn khi học".
 
 ## 2. Cách làm
 
-- 23 thành ngữ thông dụng. Mỗi câu có pinyin (đã đổi thanh của 一 và 不), âm Hán Việt từng chữ, nghĩa hoặc
-  câu tiếng Việt tương đương, một câu ví dụ có pinyin và nghĩa; 6 câu có chuyện kể ngắn.
+- 33 thành ngữ thông dụng. Mỗi câu có pinyin (đã đổi thanh của 一 và 不), âm Hán Việt từng chữ, nghĩa hoặc
+  câu tiếng Việt tương đương, một câu ví dụ có pinyin và nghĩa; 11 câu có chuyện kể ngắn.
 - **Trang**: thẻ từng thành ngữ với nút nghe, âm Hán Việt tô màu, mở "Ví dụ & chuyện kể".
 - **Luyện 10 câu**, xen kẽ hai dạng, mỗi câu một thành ngữ khác nhau:
   - _Nghĩa là gì?_ Thấy chữ, pinyin, âm Hán Việt; chọn 1 trong 4 nghĩa.
@@ -31,6 +31,11 @@ hứng thú, hấp dẫn khi học".
 - Trang `/chengyu` (`features/chengyu/`), chỉ cho gói tiếng Trung, mục trong trang Luyện tập. Thành ngữ
   và câu ví dụ có trong `scripts/audio-texts/screens.json` để thu giọng. E2E ở `e2e/practice-pages.spec.ts`.
 
-## 4. Tiếp theo
+## 4. Đợt 2 (08/11/2026)
 
-1. Thêm thành ngữ mức HSK 4–5 và dạng "chọn thành ngữ hợp với câu".
+- Thêm 10 câu, phần lớn mức HSK 4–5 và có chuyện kể: 塞翁失马 (tái ông thất mã), 亡羊补牢, 掩耳盗铃,
+  狐假虎威 (cáo mượn oai hùm), 胸有成竹, cùng 车水马龙, 三心二意, 一言为定, 笨鸟先飞, 自言自语.
+
+## 5. Tiếp theo
+
+1. Dạng "chọn thành ngữ hợp với câu" (điền cả thành ngữ vào chỗ trống trong câu ví dụ).

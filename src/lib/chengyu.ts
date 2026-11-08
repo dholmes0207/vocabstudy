@@ -296,6 +296,136 @@ export const CHENGYU: Chengyu[] = [
       'A frog in a well thought the sky was as big as the well’s mouth, until a sea turtle told it about the ocean.',
     ]
   ),
+  c(
+    '塞翁失马',
+    'sài wēng shī mǎ',
+    'tái ông thất mã',
+    ['trong cái rủi có cái may', 'a loss may turn out to be a blessing'],
+    [
+      '没考上那所学校也许是塞翁失马。',
+      'Méi kǎoshàng nà suǒ xuéxiào yěxǔ shì sàiwēng-shīmǎ.',
+      'Không đỗ trường đó có khi lại là trong rủi có may.',
+    ],
+    [
+      'Ông lão ở biên ải mất con ngựa, ai cũng tiếc; ít lâu sau ngựa về dẫn theo một con ngựa quý. Con trai ông cưỡi ngựa quý ngã què chân, nhưng nhờ vậy không phải đi lính khi có chiến tranh.',
+      'An old man on the frontier lost his horse; soon it came back with a fine one. His son fell from the new horse and was lamed, and so was spared when war came.',
+    ]
+  ),
+  c(
+    '亡羊补牢',
+    'wáng yáng bǔ láo',
+    'vong dương bổ lao',
+    ['mất rồi mới sửa, vẫn còn kịp', 'fix the problem after a loss, before it gets worse'],
+    [
+      '这次没考好，亡羊补牢，现在努力还来得及。',
+      'Zhè cì méi kǎo hǎo, wángyáng-bǔláo, xiànzài nǔlì hái láidejí.',
+      'Lần này thi chưa tốt, giờ sửa ngay và cố gắng thì vẫn kịp.',
+    ],
+    [
+      'Một người mất cừu vì chuồng thủng, hàng xóm khuyên sửa, ông không nghe và lại mất thêm con nữa. Lúc ấy ông mới vá chuồng, và từ đó không mất con nào.',
+      'A man lost a sheep through a hole in the pen and ignored advice to mend it, then lost another. He mended it at last and never lost one again.',
+    ]
+  ),
+  c(
+    '掩耳盗铃',
+    'yǎn ěr dào líng',
+    'yểm nhĩ đạo linh',
+    ['bịt tai trộm chuông, tự lừa mình', 'fool yourself, bury your head in the sand'],
+    [
+      '不复习就去考试，这不是掩耳盗铃吗？',
+      'Bú fùxí jiù qù kǎoshì, zhè bú shì yǎn’ěr-dàolíng ma?',
+      'Không ôn mà đi thi, thế chẳng phải tự lừa mình sao?',
+    ],
+    [
+      'Tên trộm muốn lấy cái chuông nhưng sợ chuông kêu, bèn bịt tai mình lại, tưởng mình không nghe thì người khác cũng không nghe.',
+      'A thief wanted to steal a bell but feared its ring, so he covered his own ears, as if no one else could hear it either.',
+    ]
+  ),
+  c(
+    '狐假虎威',
+    'hú jiǎ hǔ wēi',
+    'hồ giả hổ uy',
+    ['cáo mượn oai hùm', 'borrow someone else’s power to scare people'],
+    [
+      '他狐假虎威，总拿经理的名字吓人。',
+      'Tā hújiǎ-hǔwēi, zǒng ná jīnglǐ de míngzi xià rén.',
+      'Anh ta cáo mượn oai hùm, suốt ngày lấy tên giám đốc ra doạ người khác.',
+    ],
+    [
+      'Con cáo bị hổ bắt, bèn nói mình là vua muôn loài, rủ hổ đi sau xem. Thú rừng thấy hổ thì chạy hết, hổ tưởng chúng sợ cáo.',
+      'Caught by a tiger, the fox claimed to be king of the beasts and told the tiger to follow him. The animals fled from the tiger, and the tiger thought they feared the fox.',
+    ]
+  ),
+  c(
+    '胸有成竹',
+    'xiōng yǒu chéng zhú',
+    'hung hữu thành trúc',
+    ['tính sẵn trong đầu, nắm chắc phần thắng', 'have a clear plan, feel sure of success'],
+    [
+      '他准备得很好，对这次考试胸有成竹。',
+      'Tā zhǔnbèi de hěn hǎo, duì zhè cì kǎoshì xiōngyǒu-chéngzhú.',
+      'Anh ấy chuẩn bị kỹ, rất tự tin với kỳ thi này.',
+    ],
+    [
+      'Hoạ sĩ Văn Đồng ngắm trúc mỗi ngày, nên khi cầm bút thì cây trúc đã có sẵn trong lòng, vẽ một mạch là xong.',
+      'The painter Wen Tong studied bamboo every day, so when he picked up the brush the whole plant was already in his mind.',
+    ]
+  ),
+  c(
+    '车水马龙',
+    'chē shuǐ mǎ lóng',
+    'xa thuỷ mã long',
+    ['xe cộ tấp nập', 'heavy, busy traffic'],
+    [
+      '晚上的大街上车水马龙。',
+      'Wǎnshang de dàjiē shang chēshuǐ-mǎlóng.',
+      'Buổi tối trên phố lớn xe cộ tấp nập.',
+    ]
+  ),
+  c(
+    '三心二意',
+    'sān xīn èr yì',
+    'tam tâm nhị ý',
+    ['không chuyên tâm, đứng núi này trông núi nọ', 'half-hearted, unable to commit'],
+    [
+      '学习不能三心二意。',
+      'Xuéxí bù néng sānxīn-èryì.',
+      'Học hành thì không được đứng núi này trông núi nọ.',
+    ]
+  ),
+  c(
+    '一言为定',
+    'yì yán wéi dìng',
+    'nhất ngôn vi định',
+    ['nói là làm, quyết vậy nhé', 'it’s a deal'],
+    [
+      '明天八点见，一言为定！',
+      'Míngtiān bā diǎn jiàn, yìyán-wéidìng!',
+      'Mai tám giờ gặp nhé, quyết vậy!',
+    ]
+  ),
+  c(
+    '笨鸟先飞',
+    'bèn niǎo xiān fēi',
+    'bổn điểu tiên phi',
+    ['chim vụng bay trước, cần cù bù thông minh', 'the slow must start early'],
+    [
+      '我学得慢，所以笨鸟先飞，每天早起读书。',
+      'Wǒ xué de màn, suǒyǐ bènniǎo-xiānfēi, měi tiān zǎo qǐ dú shū.',
+      'Tôi học chậm nên phải cần cù bù thông minh, ngày nào cũng dậy sớm đọc sách.',
+    ]
+  ),
+  c(
+    '自言自语',
+    'zì yán zì yǔ',
+    'tự ngôn tự ngữ',
+    ['lẩm bẩm một mình', 'talk to yourself'],
+    [
+      '他一边走一边自言自语。',
+      'Tā yìbiān zǒu yìbiān zìyán-zìyǔ.',
+      'Anh ấy vừa đi vừa lẩm bẩm một mình.',
+    ]
+  ),
 ]
 
 /** Gap marking the missing character. */

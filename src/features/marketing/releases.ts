@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Thêm 10 thành ngữ tiếng Trung', '10 more Chinese idioms'],
+    items: [
+      [
+        'Trang "Thành ngữ" có thêm 10 câu, nhiều câu kèm chuyện kể: 塞翁失马 (tái ông thất mã), 狐假虎威 (cáo mượn oai hùm), 掩耳盗铃 (bịt tai trộm chuông), 亡羊补牢…',
+        'The idioms page gains 10 more, many with their fables: 塞翁失马 (the old man who lost his horse), 狐假虎威 (the fox borrowing the tiger’s might), 掩耳盗铃, 亡羊补牢…',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Thành ngữ tiếng Anh', 'English idioms'],
     items: [
       [
