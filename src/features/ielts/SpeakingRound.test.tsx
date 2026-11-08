@@ -81,5 +81,8 @@ describe('IELTS speaking', () => {
     fireEvent.click(screen.getByRole('button', { name: /On to Part 3/ }))
     expect(screen.getByText(card.part3[0])).toBeInTheDocument()
     expect(asked.at(-1)).toBe(card.part3[0])
+    // Part 3 has its sample answers as well.
+    fireEvent.click(screen.getByRole('button', { name: /See a sample answer/ }))
+    expect(screen.getByText(card.part3Samples[0].key).tagName).toBe('MARK')
   })
 })

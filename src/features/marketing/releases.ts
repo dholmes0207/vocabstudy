@@ -14,6 +14,19 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: [
+      'Câu trả lời mẫu cho IELTS Speaking Part 3',
+      'Sample answers for IELTS Speaking Part 3',
+    ],
+    items: [
+      [
+        'Mỗi câu thảo luận Part 3 có câu trả lời mẫu band 7: nêu quan điểm, giải thích, ví dụ, tô sẵn cụm nêu ý kiến như "To some extent", "Having said that", nghe được để nói theo.',
+        'Every Part 3 discussion question now has a band-7 sample: a view, a reason, an example, with phrases like "To some extent" and "Having said that" marked, and audio to repeat after.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Từ dễ nhầm trong tiếng Anh', 'Easily confused English words'],
     items: [
       [

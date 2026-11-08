@@ -176,6 +176,16 @@ describe('speaking practice', () => {
     expect(() => validateIeltsBank(c)).toThrow(/sample answer/)
   })
 
+  it('gives every Part 3 question a sample answer too', () => {
+    for (const c of speaking.part2) {
+      expect(c.part3Samples.length, c.id).toBe(c.part3.length)
+      for (const x of c.part3Samples) expect(x.a, c.id).toContain(x.key)
+    }
+    const b = raw()
+    b.speaking.part2[0].part3Samples.pop()
+    expect(() => validateIeltsBank(b)).toThrow(/every Part 3 question/)
+  })
+
   it('turns down a card without its Part 3', () => {
     const b = raw()
     b.speaking.part2[0].part3 = []

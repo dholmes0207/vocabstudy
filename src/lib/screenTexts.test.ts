@@ -77,7 +77,7 @@ function ielts(): string[] {
   )
   return [
     ...speaking.part1.flatMap((tp) => [...tp.questions, ...tp.samples.map((x) => x.a)]),
-    ...speaking.part2.flatMap((c) => c.part3),
+    ...speaking.part2.flatMap((c) => [...c.part3, ...c.part3Samples.map((x) => x.a)]),
     ...listening.flatMap((l) => l.lines.map((x) => x.text)),
     ...listeningChoice.flatMap((l) => l.lines.map((x) => x.text)),
   ]
