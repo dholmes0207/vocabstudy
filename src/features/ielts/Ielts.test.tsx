@@ -129,4 +129,18 @@ describe('IELTS practice', () => {
     expect(useIelts.getState().summary[p.id]).toEqual({ best: n, total: n })
     expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
   })
+
+  it('marks the long passages', async () => {
+    render(
+      <MemoryRouter>
+        <Ielts />
+      </MemoryRouter>
+    )
+    const long = bank.reading.filter((r) => r.passage.length >= 5)
+    expect(long.length).toBeGreaterThanOrEqual(2)
+    for (const r of long)
+      expect(await screen.findByRole('button', { name: new RegExp(r.title[1]) })).toHaveTextContent(
+        `Long · ${r.passage.length} paragraphs`
+      )
+  })
 })

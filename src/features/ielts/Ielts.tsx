@@ -287,7 +287,17 @@ export default function Ielts() {
                         <span className="text-2xl" aria-hidden="true">
                           {p.emoji}
                         </span>
-                        <span className="min-w-0 flex-1 font-semibold">{t(...p.title)}</span>
+                        <span className="min-w-0 flex-1 font-semibold">
+                          {t(...p.title)}
+                          {p.passage.length >= 5 && (
+                            <span className="ml-2 rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-bold text-indigo-700 dark:bg-indigo-950 dark:text-indigo-200">
+                              {t(
+                                `Bài dài · ${p.passage.length} đoạn`,
+                                `Long · ${p.passage.length} paragraphs`
+                              )}
+                            </span>
+                          )}
+                        </span>
                         {rec && (
                           <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300">
                             ✓ {rec.best}/{rec.total}

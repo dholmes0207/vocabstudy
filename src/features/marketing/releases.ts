@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Bài đọc IELTS dài hơn', 'Longer IELTS passages'],
+    items: [
+      [
+        'Hai bài đọc 5 đoạn, gần độ dài đề thật: ong mật trong thành phố và tuần làm việc bốn ngày, đủ ba dạng True/False/Not Given, nối tiêu đề và điền tóm tắt.',
+        'Two five-paragraph passages, closer to the real test: bees in the city and the four-day week, each with True/False/Not Given, matching headings and summary completion.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Nhập vai hội thoại', 'Role-play conversations'],
     items: [
       [
