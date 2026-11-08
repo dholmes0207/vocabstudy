@@ -43,6 +43,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/roleplay': ['en', 'zh'],
   // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).
   '/hsk': ['zh'],
+  // The HSKK Elementary speaking test (lib/hskk.ts).
+  '/hskk': ['zh'],
 }
 
 /** The screen a path belongs to: "/reading/lans-morning" → "/reading". */

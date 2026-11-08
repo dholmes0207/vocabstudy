@@ -21,6 +21,7 @@ export type ActivityKind =
   | 'measure'
   | 'confusables'
   | 'chengyu'
+  | 'hskk'
   | 'slang'
   | 'phrasal'
   | 'idioms'

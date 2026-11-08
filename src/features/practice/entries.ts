@@ -24,6 +24,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-red-600 to-amber-500',
   },
   {
+    to: '/hskk',
+    icon: '🎙️',
+    title: 'Luyện nói HSKK sơ cấp',
+    desc: 'Ba phần của đề nói HSKK: nghe rồi nhắc lại, nghe rồi trả lời, nói 1,5 phút về một chủ đề. Ghi âm, nghe lại, so với câu mẫu.',
+    titleEn: 'HSKK Elementary speaking',
+    descEn:
+      'The three parts of the HSKK speaking test: repeat, answer, talk for 90 seconds. Record, play back, compare with a sample.',
+    tone: 'from-red-500 to-amber-500',
+  },
+  {
     to: '/toeic',
     icon: '💼',
     title: 'Luyện thi TOEIC',
