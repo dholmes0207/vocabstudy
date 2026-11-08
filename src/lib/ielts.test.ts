@@ -163,6 +163,19 @@ describe('speaking practice', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
+  it('gives every Part 1 question a sample answer with a key phrase inside it', () => {
+    for (const tp of speaking.part1) {
+      expect(tp.samples.length, tp.id).toBe(tp.questions.length)
+      for (const x of tp.samples) expect(x.a, tp.id).toContain(x.key)
+    }
+    const b = raw()
+    b.speaking.part1[0].samples[0].key = 'not in the answer'
+    expect(() => validateIeltsBank(b)).toThrow(/sample answer/)
+    const c = raw()
+    c.speaking.part1[0].samples.pop()
+    expect(() => validateIeltsBank(c)).toThrow(/sample answer/)
+  })
+
   it('turns down a card without its Part 3', () => {
     const b = raw()
     b.speaking.part2[0].part3 = []

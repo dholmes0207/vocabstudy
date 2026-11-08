@@ -64,6 +64,11 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 10: Câu trả lời mẫu cho Nói Part 1.** Mỗi câu hỏi Part 1 có một câu trả lời mẫu 2–3 câu
+  (mức band 7) theo đúng bố cục trả lời thẳng – lý do – ví dụ, và một cụm đáng học (`samples[].key`,
+  phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
+  nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
+
 - **Bước 9: Bài đọc dài.** Thêm 2 bài 5 đoạn (ong mật trong thành phố, tuần làm việc bốn ngày), gần độ dài
   đề thật hơn; mỗi bài đủ 3 dạng: 6 câu True/False/Not Given (có bẫy suy luận), 7 tiêu đề cho 5 đoạn, đoạn
   tóm tắt 4 chỗ trống. Danh sách bài gắn nhãn "Bài dài · 5 đoạn".

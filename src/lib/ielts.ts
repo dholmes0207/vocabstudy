@@ -66,6 +66,8 @@ export interface Part1Topic {
   emoji: string
   title: Pair
   questions: string[]
+  /** A band-7 answer to each question, with one phrase worth borrowing (`key` is part of `a`). */
+  samples: { a: string; key: string }[]
 }
 
 /** Speaking Part 2: a task card for the long turn, and Part 3 questions that follow it. */
@@ -255,6 +257,12 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
     check(text(tp?.id) && text(tp.emoji), 'a Part 1 topic has no id')
     check(strings(tp.title, 2), `Part 1 "${tp.id}" has no title`)
     check(strings(tp.questions, 3), `Part 1 "${tp.id}" needs three questions`)
+    check(
+      Array.isArray(tp.samples) &&
+        tp.samples.length === tp.questions.length &&
+        tp.samples.every((x) => text(x?.a) && text(x.key) && x.a.includes(x.key)),
+      `Part 1 "${tp.id}" needs a sample answer, with its key phrase, for every question`
+    )
   }
   for (const c of speaking!.part2) {
     check(text(c?.id) && text(c.cue), 'a cue card has no task')
