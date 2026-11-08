@@ -24,6 +24,16 @@ export const RELEASES: Release[] = [
   },
   {
     date: '2026-11-08',
+    title: ['Thêm cảnh nhập vai', 'More role-play scenes'],
+    items: [
+      [
+        'Tiếng Anh: đặt bàn qua điện thoại, mua vé tàu, đổi hàng ở cửa hàng. Tiếng Trung: hỏi đường, nhận phòng khách sạn.',
+        'English: booking a table by phone, buying a train ticket, returning something to a shop. Chinese: asking the way, checking in at a hotel.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Nhập vai hội thoại', 'Role-play conversations'],
     items: [
       [
