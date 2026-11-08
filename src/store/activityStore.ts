@@ -20,6 +20,7 @@ export type ActivityKind =
   | 'radicals'
   | 'measure'
   | 'confusables'
+  | 'chengyu'
   | 'roleplay'
   | 'hangul'
   | 'numbers'
