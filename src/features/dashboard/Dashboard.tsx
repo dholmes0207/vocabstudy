@@ -23,6 +23,7 @@ import { useTargetLang } from '@/hooks/useTargetLang'
 import { availableIn } from '@/lib/packContent'
 import GrammarReviewCard from '@/features/grammar/GrammarReviewCard'
 import PathCard from '@/features/path/PathCard'
+import DiscoverCard from './DiscoverCard'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -103,6 +104,7 @@ export default function Dashboard() {
       <WelcomeBack stats={stats} day={today()} due={s.due} />
       {stats && <Journey reviewsByDay={stats.reviewsByDay} day={today()} />}
       <PathCard />
+      <DiscoverCard />
 
       {/* A small goal, a streak one missed day can't break, and a sky to fill. */}
       <section className="grid gap-4 sm:grid-cols-2">

@@ -1,5 +1,8 @@
 import { Suspense, useEffect } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useVisited } from '@/store/visitedStore'
+import { practiceRoot } from '@/lib/discover'
+import { PRACTICE } from '@/features/practice/entries'
 import {
   BarChart3,
   BookOpen,
@@ -117,6 +120,8 @@ const isOn = (item: NavItem, pathname: string) =>
     ? pathname === '/home'
     : [item.to, ...(item.also ?? [])].some((p) => pathname === p || pathname.startsWith(p + '/'))
 
+const PRACTICE_PATHS = new Set(PRACTICE.map((e) => e.to))
+
 export default function Layout() {
   useProgressSync()
   useLangParam()
@@ -130,6 +135,12 @@ export default function Layout() {
   const stats = progress[currentLang]?.stats
   const dueCount = getDueCards(cardsOf(progress, currentLang), today()).length
   const { pathname } = useLocation()
+  // Remember the practice screens opened here, for "Hôm nay thử gì mới?".
+  const visit = useVisited((s) => s.visit)
+  useEffect(() => {
+    const root = practiceRoot(pathname)
+    if (PRACTICE_PATHS.has(root)) visit(root)
+  }, [pathname, visit])
   // Screens written for another pack drop out of the menus and the bottom bar.
   const nav = NAV.filter((item) => availableIn(item.to, currentLang))
   const hasSoundsPage = nav.some((item) => item.to === '/hangul' || item.to === '/pinyin')
