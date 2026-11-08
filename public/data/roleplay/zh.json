@@ -1,0 +1,238 @@
+{
+  "version": "1.0.0",
+  "scenes": [
+    {
+      "id": "zh-restaurant",
+      "emoji": "🍜",
+      "title": [
+        "Gọi món",
+        "Ordering food"
+      ],
+      "setting": [
+        "Bạn vào một quán mì ở Bắc Kinh.",
+        "You walk into a noodle shop in Beijing."
+      ],
+      "them": [
+        "Phục vụ",
+        "Waiter"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "欢迎光临！你们几位？",
+          "vi": "Chào mừng! Các bạn mấy người?",
+          "read": "Huānyíng guānglín! Nǐmen jǐ wèi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "两位。",
+          "vi": "Hai người.",
+          "read": "Liǎng wèi."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "请坐。你们想吃什么？",
+          "vi": "Mời ngồi. Các bạn muốn ăn gì?",
+          "read": "Qǐng zuò. Nǐmen xiǎng chī shénme?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我要一碗牛肉面。",
+          "vi": "Cho tôi một bát mì bò.",
+          "read": "Wǒ yào yì wǎn niúròu miàn."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的。喝什么？",
+          "vi": "Vâng. Uống gì ạ?",
+          "read": "Hǎo de. Hē shénme?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "一杯茶，谢谢。",
+          "vi": "Một cốc trà, cảm ơn.",
+          "read": "Yì bēi chá, xièxie."
+        }
+      ]
+    },
+    {
+      "id": "zh-shopping",
+      "emoji": "🛍️",
+      "title": [
+        "Mua đồ",
+        "Shopping"
+      ],
+      "setting": [
+        "Bạn mua áo ở chợ.",
+        "You are buying a shirt at a market."
+      ],
+      "them": [
+        "Người bán",
+        "Seller"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "这件衣服多少钱？",
+          "vi": "Cái áo này bao nhiêu tiền?",
+          "read": "Zhè jiàn yīfu duōshao qián?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一百五十块。",
+          "vi": "Một trăm năm mươi tệ.",
+          "read": "Yìbǎi wǔshí kuài."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "太贵了！便宜一点儿吧。",
+          "vi": "Đắt quá! Rẻ một chút đi.",
+          "read": "Tài guì le! Piányi yìdiǎnr ba."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一百二十块，怎么样？",
+          "vi": "Một trăm hai mươi tệ, được không?",
+          "read": "Yìbǎi èrshí kuài, zěnmeyàng?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好，我买了。",
+          "vi": "Được, tôi mua.",
+          "read": "Hǎo, wǒ mǎi le."
+        }
+      ]
+    },
+    {
+      "id": "zh-taxi",
+      "emoji": "🚕",
+      "title": [
+        "Đi taxi",
+        "Taking a taxi"
+      ],
+      "setting": [
+        "Bạn bắt taxi ra sân bay.",
+        "You take a taxi to the airport."
+      ],
+      "them": [
+        "Tài xế",
+        "Driver"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你好，去哪儿？",
+          "vi": "Chào bạn, đi đâu?",
+          "read": "Nǐ hǎo, qù nǎr?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "我去机场。",
+          "vi": "Tôi ra sân bay.",
+          "read": "Wǒ qù jīchǎng."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "好的。你几点的飞机？",
+          "vi": "Được. Máy bay của bạn mấy giờ?",
+          "read": "Hǎo de. Nǐ jǐ diǎn de fēijī?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "下午三点的。",
+          "vi": "Ba giờ chiều.",
+          "read": "Xiàwǔ sān diǎn de."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "没问题，四十分钟就到。",
+          "vi": "Không sao, bốn mươi phút là tới.",
+          "read": "Méi wèntí, sìshí fēnzhōng jiù dào."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "太好了，谢谢你！",
+          "vi": "Tốt quá, cảm ơn anh!",
+          "read": "Tài hǎo le, xièxie nǐ!"
+        }
+      ]
+    },
+    {
+      "id": "zh-friend",
+      "emoji": "👋",
+      "title": [
+        "Làm quen bạn mới",
+        "Meeting a new friend"
+      ],
+      "setting": [
+        "Bạn gặp một bạn học mới.",
+        "You meet a new classmate."
+      ],
+      "them": [
+        "Bạn học",
+        "Classmate"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "你好！你叫什么名字？",
+          "vi": "Chào bạn! Bạn tên là gì?",
+          "read": "Nǐ hǎo! Nǐ jiào shénme míngzi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我叫安。你呢？",
+          "vi": "Mình tên là An. Còn bạn?",
+          "read": "Wǒ jiào Ān. Nǐ ne?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "我叫王丽。你是哪国人？",
+          "vi": "Mình tên là Vương Lệ. Bạn là người nước nào?",
+          "read": "Wǒ jiào Wáng Lì. Nǐ shì nǎ guó rén?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我是越南人。",
+          "vi": "Mình là người Việt Nam.",
+          "read": "Wǒ shì Yuènán rén."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "认识你很高兴！",
+          "vi": "Rất vui được làm quen với bạn!",
+          "read": "Rènshi nǐ hěn gāoxìng!"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我也很高兴认识你。",
+          "vi": "Mình cũng rất vui được làm quen với bạn.",
+          "read": "Wǒ yě hěn gāoxìng rènshi nǐ."
+        }
+      ]
+    }
+  ]
+}

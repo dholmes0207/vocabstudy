@@ -14,6 +14,20 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Nhập vai hội thoại', 'Role-play conversations'],
+    items: [
+      [
+        'Đóng một vai trong tình huống thật: gọi cà phê, hỏi đường, đi khám, phỏng vấn (tiếng Anh); gọi món, mặc cả, đi taxi, làm quen (tiếng Trung). Người kia nói, bạn nói lời của mình, máy chấm từng câu và cho sao.',
+        'Play one part in a real situation: ordering coffee, asking the way, the doctor, a job interview (English); ordering food, haggling, a taxi, meeting someone (Chinese). They speak, you answer out loud, every line is checked and you earn stars.',
+      ],
+      [
+        'Chế độ thử thách ẩn câu của bạn, chỉ còn nghĩa tiếng Việt: tự nghĩ câu rồi nói.',
+        'Challenge mode hides your lines and leaves only their meaning: work out the sentence and say it.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['IELTS Writing Task 1: tả biểu đồ', 'IELTS Writing Task 1: describing charts'],
     items: [
       [

@@ -30,6 +30,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/ielts': ['en'],
   // English and Chinese sentence shapes as coloured role blocks (lib/patterns.ts).
   '/patterns': ['en', 'zh'],
+  // Everyday scenes where the learner plays one side, out loud (lib/roleplay.ts).
+  '/roleplay': ['en', 'zh'],
   // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).
   '/hsk': ['zh'],
 }

@@ -33,6 +33,7 @@ const Hangul = lazy(() => import('./features/hangul/Hangul'))
 const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
 const Confusables = lazy(() => import('./features/confusables/Confusables'))
+const Roleplay = lazy(() => import('./features/roleplay/Roleplay'))
 const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Radicals = lazy(() => import('./features/radicals/Radicals'))
 const Toeic = lazy(() => import('./features/toeic/Toeic'))
@@ -126,6 +127,7 @@ export default function App() {
               <Route path="/pinyin" element={<Pinyin />} />
               <Route path="/measure-words" element={<MeasureWords />} />
               <Route path="/confusables" element={<Confusables />} />
+              <Route path="/roleplay" element={<Roleplay />} />
               <Route path="/han-viet" element={<HanVietTable />} />
               <Route path="/radicals" element={<Radicals />} />
               <Route path="/numbers" element={<Numbers />} />

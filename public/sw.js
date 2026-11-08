@@ -32,6 +32,8 @@ const EXTRA_DATA = [
   'data/ielts/en.json',
   'data/patterns/en.json',
   'data/patterns/zh.json',
+  'data/roleplay/en.json',
+  'data/roleplay/zh.json',
 ]
 
 // Bump to invalidate every cache at once (e.g. after regenerating audio).

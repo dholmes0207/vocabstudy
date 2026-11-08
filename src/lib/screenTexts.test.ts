@@ -26,6 +26,7 @@ import { validateIeltsBank } from './ielts'
 import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, filled } from './confusables'
+import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
@@ -80,6 +81,14 @@ function ielts(): string[] {
   ]
 }
 
+/** "Nhập vai hội thoại": every line of every scene, in a woman's or a man's voice. */
+function roleplay(code: 'en' | 'zh'): string[] {
+  const { scenes } = validateRoleplay(
+    JSON.parse(readFileSync(`public/data/roleplay/${code}.json`, 'utf8'))
+  )
+  return scenes.flatMap((s) => s.lines.map((l) => l.text))
+}
+
 /** "Cấu trúc câu": each sentence is read once it is built. */
 function patterns(code: 'en' | 'zh'): string[] {
   const { patterns } = validatePatterns(
@@ -96,6 +105,7 @@ function english(): string[] {
     ...toeic(),
     ...ielts(),
     ...patterns('en'),
+    ...roleplay('en'),
   ]
 }
 
@@ -158,6 +168,7 @@ function chinese(): string[] {
     ...[...hsk.pairs.hsk1, ...hsk.pairs.hsk2, ...hsk.pairs.hsk3].flatMap((p) => [p.q, p.a]),
     ...hsk.readings.map((r) => r.text),
     ...patterns('zh'),
+    ...roleplay('zh'),
     // "Chữ dễ nhầm": each sentence is read with its gap filled.
     ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
   ]

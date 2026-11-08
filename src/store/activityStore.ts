@@ -20,6 +20,7 @@ export type ActivityKind =
   | 'radicals'
   | 'measure'
   | 'confusables'
+  | 'roleplay'
   | 'numbers'
   | 'hanviet'
   | 'patterns'

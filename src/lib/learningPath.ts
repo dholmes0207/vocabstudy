@@ -324,6 +324,18 @@ export const EN_PATH: PathLevel[] = [
           '8 speaking sessions in all; try the Medium or Hard setting.',
         ]
       ),
+      sessions(
+        'en4-roleplay',
+        'roleplay',
+        3,
+        '🎭',
+        '/roleplay',
+        ['Nhập vai hội thoại', 'Role-play'],
+        [
+          'Đóng một vai trong 3 tình huống thật: quán cà phê, hỏi đường, khách sạn, đi khám…',
+          'Play your part in 3 real situations: a café, asking the way, a hotel, the doctor…',
+        ]
+      ),
       stories(
         'en4-stories',
         ['trip-to-da-lat', 'at-the-doctor', 'a-job-interview', 'moving-house'],
@@ -606,6 +618,18 @@ export const ZH_PATH: PathLevel[] = [
         [
           'Nghe giá tiền, giờ, ngày tháng rồi chọn đúng, như phần nghe của đề HSK.',
           'Hear prices, times and dates and pick the right one, as in HSK listening.',
+        ]
+      ),
+      sessions(
+        'zh2-roleplay',
+        'roleplay',
+        2,
+        '🎭',
+        '/roleplay',
+        ['Nhập vai hội thoại', 'Role-play'],
+        [
+          'Gọi món, mua đồ, đi taxi, làm quen: nghe rồi tự nói lời của mình.',
+          'Ordering food, shopping, a taxi, meeting someone: listen, then say your part.',
         ]
       ),
       hskDrills('hsk1', 'HSK 1'),
