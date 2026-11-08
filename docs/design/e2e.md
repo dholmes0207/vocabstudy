@@ -28,6 +28,16 @@ bắt được lỗi chỉ hiện ra khi các phần ghép với nhau trên trì
    khoá; chơi thử thách cấp 1 tới màn kết quả rồi quay về lộ trình.
 2. Gói tiếng Trung có lộ trình riêng, bắt đầu bằng Pinyin & thanh điệu, tới cấp HSK 3.
 
+`e2e/practice-pages.spec.ts`, các trang luyện thêm cùng lộ trình (08/11/2026):
+
+1. "Đúng hay sai?": bấm bắt đầu, trả lời vài thẻ, thấy điểm và đồng hồ.
+2. Nhập vai: danh sách có cảnh gắn nhãn TOEIC; cảnh gọi cà phê đọc câu người bán rồi tới lượt mình.
+3. IELTS Task 1: trang IELTS không rộng hơn màn điện thoại (trước đây danh sách đề Task 2 cắt chữ bằng `…`
+   làm cột lưới giãn tới ~1200px và Chrome di động thu nhỏ cả trang); biểu đồ hiện, chọn câu tổng quan, sang
+   bước điền từ.
+4. Tiếng Trung: chữ dễ nhầm trả lời một câu; cấu trúc câu có vai "cụm giới từ" và vào được lượt trộn.
+5. Tiếng Hàn có lộ trình riêng, bắt đầu bằng Hangul, tới cấp 3.
+
 Hai test bài thi nhỏ không kiểm tra đáp án (test đơn vị đã làm), chỉ kiểm tra mọi phần ghép lại chạy
 được trên trình duyệt thật và đủ số câu.
 
