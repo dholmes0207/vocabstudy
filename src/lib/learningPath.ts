@@ -803,9 +803,158 @@ export const ZH_PATH: PathLevel[] = [
 ]
 
 /** The path of a language pack; null when it has none yet. */
+/** The Korean path: from Hangul to the words and grammar of TOPIK I. */
+export const KO_PATH: PathLevel[] = [
+  {
+    n: 1,
+    icon: '🔤',
+    title: ['Làm quen: Hangul & chào hỏi', 'First steps: Hangul & greetings'],
+    tagline: [
+      'Đọc được bảng chữ Hangul, chào hỏi, giới thiệu bản thân với 이에요/예요.',
+      'Read Hangul, greet people and introduce yourself with 이에요/예요.',
+    ],
+    cefr: 'TOPIK I · 1',
+    tone: 'from-sky-400 to-indigo-500',
+    steps: [
+      sessions(
+        'ko1-hangul',
+        'hangul',
+        3,
+        '🔤',
+        '/hangul',
+        ['Bảng chữ Hangul', 'The Hangul alphabet'],
+        [
+          'Học nguyên âm, phụ âm, cách ghép chữ, rồi làm 3 lượt kiểm tra đọc.',
+          'Vowels, consonants and how blocks are built, then 3 reading checks.',
+        ]
+      ),
+      words(0, 60, 'ko1-words'),
+      grammar(
+        'ko1-grammar',
+        ['ko-ieyo', 'ko-eun-neun', 'ko-i-ga', 'ko-ayo-eoyo'],
+        ['Câu đầu tiên', 'First sentences'],
+        [
+          'Bốn bài: 이에요/예요, tiểu từ chủ đề 은/는, chủ ngữ 이/가, đuôi câu 아요/어요. Đạt 80% mỗi bài.',
+          'Four units: 이에요/예요, topic 은/는, subject 이/가, the 아요/어요 ending. Score 80% in each.',
+        ]
+      ),
+      stories(
+        'ko1-stories',
+        ['ko-minsu-day', 'ko-new-friend'],
+        ['Hai truyện đầu tiên', 'Your first two stories']
+      ),
+    ],
+  },
+  {
+    n: 2,
+    icon: '🛍️',
+    title: ['Câu hằng ngày', 'Everyday sentences'],
+    tagline: [
+      'Mua sắm, hẹn giờ, nói ở đâu làm gì; đếm đồ vật và nghe số như đề TOPIK.',
+      'Shopping, times, where you do what; counting things and numbers by ear, as in TOPIK.',
+    ],
+    cefr: 'TOPIK I · 1',
+    tone: 'from-emerald-400 to-teal-500',
+    steps: [
+      words(60, 150, 'ko2-words'),
+      grammar(
+        'ko2-grammar',
+        ['ko-eul-reul', 'ko-e-eseo', 'ko-an', 'ko-mot', 'ko-seyo', 'ko-do-man'],
+        ['Tiểu từ và phủ định', 'Particles and negatives'],
+        [
+          'Sáu bài: tân ngữ 을/를, nơi chốn 에/에서, phủ định 안 và 못, lời mời -(으)세요, 도 và 만.',
+          'Six units: object 을/를, places 에/에서, 안 and 못, polite -(으)세요, 도 and 만.',
+        ]
+      ),
+      sessions(
+        'ko2-counters',
+        'measure',
+        2,
+        '🧮',
+        '/measure-words',
+        ['Đơn vị đếm', 'Counters'],
+        [
+          '개, 권, 잔, 명… đặt cạnh "cái, quyển, cốc, người" của tiếng Việt, 2 lượt luyện.',
+          '개, 권, 잔, 명… next to Vietnamese "cái, quyển, cốc, người", 2 rounds.',
+        ]
+      ),
+      sessions(
+        'ko2-numbers',
+        'numbers',
+        2,
+        '🔢',
+        '/numbers',
+        ['Nghe số', 'Numbers by ear'],
+        [
+          'Nghe giá tiền, giờ, ngày tháng (hai hệ số Hàn và Hán Hàn) rồi chọn đúng.',
+          'Hear prices, times and dates (native and Sino-Korean numbers) and pick the right one.',
+        ]
+      ),
+      stories(
+        'ko2-stories',
+        ['ko-market', 'ko-cafe', 'ko-rainy-day', 'ko-birthday'],
+        ['Truyện mua sắm, quán cà phê', 'Shopping and café stories']
+      ),
+    ],
+  },
+  {
+    n: 3,
+    icon: '🗓️',
+    title: ['Kể chuyện: quá khứ & tương lai', 'Telling stories: past & future'],
+    tagline: [
+      'Kể việc đã làm, nói điều muốn làm và sẽ làm: phần ngữ pháp chính của TOPIK I cấp 2.',
+      'Say what you did, want to do and will do: the core grammar of TOPIK I level 2.',
+    ],
+    cefr: 'TOPIK I · 2',
+    tone: 'from-amber-400 to-orange-600',
+    steps: [
+      words(150, 253, 'ko3-words'),
+      grammar(
+        'ko3-grammar',
+        ['ko-past', 'ko-want', 'ko-future', 'ko-ji-anayo'],
+        ['Quá khứ, mong muốn, tương lai', 'Past, wanting, future'],
+        [
+          'Bốn bài: quá khứ 았/었어요, muốn -고 싶어요, tương lai -(으)ㄹ 거예요, phủ định -지 않아요.',
+          'Four units: past 았/었어요, wanting -고 싶어요, future -(으)ㄹ 거예요, -지 않아요.',
+        ]
+      ),
+      sessions(
+        'ko3-hanviet',
+        'hanviet',
+        2,
+        '🈶',
+        '/han-viet',
+        ['Từ Hán Hàn và Hán Việt', 'Sino-Korean and Sino-Vietnamese'],
+        [
+          'Nhiều từ Hàn có gốc Hán đọc gần âm Hán Việt (학생 – học sinh): 2 lượt luyện.',
+          'Many Korean words share Chinese roots with Vietnamese (학생 – học sinh): 2 rounds.',
+        ]
+      ),
+      sessions(
+        'ko3-speaking',
+        'speaking',
+        3,
+        '🎙️',
+        '/speaking',
+        ['Luyện nói', 'Speaking'],
+        [
+          '3 lượt đọc từ vào micro và so với giọng mẫu.',
+          '3 rounds of saying words into the mic and comparing with the model.',
+        ]
+      ),
+      stories(
+        'ko3-stories',
+        ['ko-hospital', 'ko-last-weekend', 'ko-trip-plan', 'ko-library'],
+        ['Truyện A2', 'A2 stories']
+      ),
+    ],
+  },
+]
+
 export function pathFor(code: string): PathLevel[] | null {
   if (code === 'en') return EN_PATH
   if (code === 'zh') return ZH_PATH
+  if (code === 'ko') return KO_PATH
   return null
 }
 

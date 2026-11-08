@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Lộ trình theo cấp cho tiếng Hàn', 'A level path for Korean'],
+    items: [
+      [
+        'Tiếng Hàn giờ cũng có lộ trình 3 cấp hướng tới TOPIK I: Hangul & chào hỏi, câu hằng ngày (tiểu từ, đếm, nghe số), rồi kể chuyện quá khứ & tương lai. Có thi vượt cấp, nhiệm vụ hằng ngày và huy chương như tiếng Anh, tiếng Trung.',
+        'Korean now has a three-level path towards TOPIK I: Hangul & greetings, everyday sentences (particles, counting, numbers), then past & future. Level challenges, daily quests and medals work as in English and Chinese.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Nhập vai nơi công sở', 'Role-play at work'],
     items: [
       [

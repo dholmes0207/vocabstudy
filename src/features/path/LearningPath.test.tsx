@@ -204,7 +204,7 @@ describe('Level path', () => {
     expect(screen.getAllByText(/^Opens when level/)).toHaveLength(5)
   })
 
-  it('has a way in from the home screen, for English only', () => {
+  it('has a way in from the home screen, only for packs with a path', () => {
     render(
       <MemoryRouter>
         <PathCard />
@@ -215,7 +215,8 @@ describe('Level path', () => {
       '/path'
     )
     cleanup()
-    useSettings.setState({ currentLang: 'ko' })
+    // A pack with no path yet (none of the shipped ones: en, zh, ko all have one).
+    useSettings.setState({ currentLang: 'fr' })
     const { container } = render(
       <MemoryRouter>
         <PathCard />

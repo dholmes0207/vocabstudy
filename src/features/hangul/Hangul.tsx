@@ -3,6 +3,7 @@ import { ArrowRight, LogOut, Volume2 } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
 import { usePackSay, usePrefetchPackSay } from '@/hooks/usePackSay'
 import { buzz } from '@/lib/sound'
@@ -398,6 +399,7 @@ function Quiz({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -422,6 +424,7 @@ function Quiz({
     }
     const xp = hangulXp(correct, questions.length)
     addPlayXp(code, xp)
+    logActivity(code, 'hangul')
     setFinished({ xp })
   }
 
