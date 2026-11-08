@@ -109,6 +109,16 @@ test('Chinese look-alike characters, idioms, slang and sentence patterns', async
   await page.getByRole('button', { name: /Try 10 questions/ }).click()
   await page.getByText('What does this word mean?').waitFor()
 
+  await page.goto('/hskk?lang=zh')
+  await page
+    .getByRole('button', { name: /^Practise/ })
+    .first()
+    .click()
+  await expect(page.getByRole('button', { name: /Show the text/ })).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+
   await page.goto('/patterns?lang=zh')
   await expect(page.getByText('Preposition phrase').first()).toBeVisible()
   await page.getByRole('button', { name: /Mixed round/ }).click()

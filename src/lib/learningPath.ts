@@ -740,6 +740,18 @@ export const ZH_PATH: PathLevel[] = [
           'The common radicals by their Sino-Vietnamese names: new characters get easier to guess.',
         ]
       ),
+      sessions(
+        'zh3-hskk',
+        'hskk',
+        3,
+        '🎙️',
+        '/hskk',
+        ['Luyện nói HSKK sơ cấp', 'HSKK Elementary speaking'],
+        [
+          'Ba phần của đề nói HSKK: nghe nhắc lại, nghe trả lời, nói 1,5 phút; ghi âm rồi nghe lại.',
+          'The three parts of the HSKK speaking test: repeat, answer, talk for 90 seconds; record and play back.',
+        ]
+      ),
       stories(
         'zh3-stories',
         ['zh-rainy-day', 'zh-my-family', 'zh-sick-day', 'zh-beijing-trip', 'zh-restaurant'],

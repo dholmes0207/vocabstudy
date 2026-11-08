@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-08',
+    title: ['Luyện nói HSKK sơ cấp', 'HSKK Elementary speaking'],
+    items: [
+      [
+        'Trang mới "Luyện nói HSKK sơ cấp" theo đúng ba phần của đề: nghe rồi nhắc lại, nghe rồi trả lời, nói 1,5 phút về một chủ đề. Ghi âm, nghe lại, so với câu mẫu có pinyin. Lộ trình HSK 2 có thêm bước này.',
+        'New "HSKK Elementary speaking" page following the test’s three parts: repeat, answer, talk for 90 seconds. Record, play back and compare with a sample in pinyin. The HSK 2 level of the path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
     title: ['Bài mẫu IELTS Writing Task 2', 'IELTS Writing Task 2 model answers'],
     items: [
       [

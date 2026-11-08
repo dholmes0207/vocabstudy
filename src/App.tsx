@@ -34,6 +34,7 @@ const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
 const Confusables = lazy(() => import('./features/confusables/Confusables'))
 const Chengyu = lazy(() => import('./features/chengyu/Chengyu'))
+const Hskk = lazy(() => import('./features/hskk/Hskk'))
 const NetSlang = lazy(() => import('./features/slang/NetSlang'))
 const PhrasalVerbs = lazy(() => import('./features/phrasal/PhrasalVerbs'))
 const Idioms = lazy(() => import('./features/idioms/Idioms'))
@@ -132,6 +133,7 @@ export default function App() {
               <Route path="/measure-words" element={<MeasureWords />} />
               <Route path="/confusables" element={<Confusables />} />
               <Route path="/chengyu" element={<Chengyu />} />
+              <Route path="/hskk" element={<Hskk />} />
               <Route path="/slang" element={<NetSlang />} />
               <Route path="/phrasal-verbs" element={<PhrasalVerbs />} />
               <Route path="/idioms" element={<Idioms />} />
