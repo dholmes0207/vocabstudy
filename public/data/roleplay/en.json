@@ -1,0 +1,311 @@
+{
+  "version": "1.0.0",
+  "scenes": [
+    {
+      "id": "coffee",
+      "emoji": "☕",
+      "title": [
+        "Gọi đồ uống",
+        "Ordering a coffee"
+      ],
+      "setting": [
+        "Bạn vào một quán cà phê ở London.",
+        "You walk into a café in London."
+      ],
+      "them": [
+        "Nhân viên",
+        "Barista"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Hi there! What can I get you?",
+          "vi": "Chào bạn! Bạn dùng gì ạ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Can I have a latte, please?",
+          "vi": "Cho tôi một ly latte nhé."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Sure. What size would you like?",
+          "vi": "Vâng. Bạn muốn cỡ nào?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "A medium one, please.",
+          "vi": "Cỡ vừa nhé."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Is that to drink in or take away?",
+          "vi": "Bạn uống ở đây hay mang đi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "To take away, please.",
+          "vi": "Mang đi nhé."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "That's three fifty, please.",
+          "vi": "Của bạn ba bảng năm mươi."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Here you are. Thank you!",
+          "vi": "Gửi bạn. Cảm ơn nhé!"
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "emoji": "🗺️",
+      "title": [
+        "Hỏi đường",
+        "Asking for directions"
+      ],
+      "setting": [
+        "Bạn bị lạc và hỏi một người đi đường.",
+        "You are lost and ask someone on the street."
+      ],
+      "them": [
+        "Người đi đường",
+        "Passer-by"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Excuse me, how do I get to the train station?",
+          "vi": "Xin lỗi, cho hỏi đường ra ga tàu đi thế nào?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "Go straight on and turn left at the traffic lights.",
+          "vi": "Đi thẳng rồi rẽ trái ở chỗ đèn giao thông."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Is it far from here?",
+          "vi": "Có xa đây không ạ?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "No, it's about a ten-minute walk.",
+          "vi": "Không, đi bộ khoảng mười phút."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Thank you so much for your help.",
+          "vi": "Cảm ơn anh nhiều vì đã giúp."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "You're welcome. Have a nice day!",
+          "vi": "Không có gì. Chúc bạn một ngày tốt lành!"
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "emoji": "🏨",
+      "title": [
+        "Nhận phòng khách sạn",
+        "Checking in at a hotel"
+      ],
+      "setting": [
+        "Bạn tới quầy lễ tân, đã đặt phòng trước.",
+        "You arrive at the front desk with a booking."
+      ],
+      "them": [
+        "Lễ tân",
+        "Receptionist"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Good evening. Do you have a reservation?",
+          "vi": "Chào buổi tối. Anh có đặt phòng trước không ạ?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Yes, I booked a double room for two nights.",
+          "vi": "Có, tôi đặt một phòng đôi cho hai đêm."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Could I see your passport, please?",
+          "vi": "Cho tôi xem hộ chiếu của anh được không?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Of course. Here it is.",
+          "vi": "Tất nhiên. Đây ạ."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Thank you. Breakfast is from seven to ten.",
+          "vi": "Cảm ơn anh. Bữa sáng từ bảy đến mười giờ."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Great. What time is check-out?",
+          "vi": "Tốt quá. Mấy giờ phải trả phòng?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Check-out is at eleven. Enjoy your stay!",
+          "vi": "Trả phòng lúc mười một giờ. Chúc anh nghỉ vui vẻ!"
+        }
+      ]
+    },
+    {
+      "id": "doctor",
+      "emoji": "🩺",
+      "title": [
+        "Đi khám bệnh",
+        "At the doctor's"
+      ],
+      "setting": [
+        "Bạn bị ốm và đi khám.",
+        "You feel ill and see a doctor."
+      ],
+      "them": [
+        "Bác sĩ",
+        "Doctor"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "Hello. What seems to be the problem?",
+          "vi": "Chào chị. Chị bị làm sao?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "I have a sore throat and a headache.",
+          "vi": "Tôi bị đau họng và đau đầu."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "How long have you felt like this?",
+          "vi": "Chị bị như vậy bao lâu rồi?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Since yesterday morning.",
+          "vi": "Từ sáng hôm qua."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "I think it's a cold. Drink lots of water and rest.",
+          "vi": "Tôi nghĩ là cảm lạnh. Chị uống nhiều nước và nghỉ ngơi nhé."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "Should I take any medicine?",
+          "vi": "Tôi có cần uống thuốc gì không?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "You can take this twice a day after meals.",
+          "vi": "Chị uống thuốc này ngày hai lần sau bữa ăn."
+        }
+      ]
+    },
+    {
+      "id": "interview",
+      "emoji": "💼",
+      "title": [
+        "Phỏng vấn xin việc",
+        "A job interview"
+      ],
+      "setting": [
+        "Bạn phỏng vấn vị trí nhân viên văn phòng.",
+        "You are interviewing for an office job."
+      ],
+      "them": [
+        "Người phỏng vấn",
+        "Interviewer"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Thank you for coming. Could you tell me about yourself?",
+          "vi": "Cảm ơn bạn đã đến. Bạn giới thiệu về bản thân nhé?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "I graduated last year and I have worked in sales for one year.",
+          "vi": "Tôi tốt nghiệp năm ngoái và đã làm bán hàng được một năm."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Why do you want to work for us?",
+          "vi": "Vì sao bạn muốn làm việc cho chúng tôi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Your company is growing fast and I want to learn new skills.",
+          "vi": "Công ty đang phát triển nhanh và tôi muốn học kỹ năng mới."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "What is your greatest strength?",
+          "vi": "Điểm mạnh lớn nhất của bạn là gì?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "I am a good team player and I work hard.",
+          "vi": "Tôi làm việc nhóm tốt và chăm chỉ."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "Great. Do you have any questions for us?",
+          "vi": "Tốt lắm. Bạn có câu hỏi nào cho chúng tôi không?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "Yes. When can I expect to hear from you?",
+          "vi": "Có ạ. Khi nào tôi có thể nhận phản hồi?"
+        }
+      ]
+    }
+  ]
+}

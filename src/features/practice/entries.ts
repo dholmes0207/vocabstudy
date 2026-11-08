@@ -245,6 +245,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-pink-500 to-rose-600',
   },
   {
+    to: '/roleplay',
+    icon: '🎭',
+    title: 'Nhập vai hội thoại',
+    desc: 'Gọi đồ uống, hỏi đường, đi taxi, phỏng vấn…: người kia nói, bạn nói lời của mình, máy chấm từng câu.',
+    titleEn: 'Role-play',
+    descEn:
+      'Order a drink, ask the way, take a taxi, a job interview…: they speak, you answer out loud, every line checked.',
+    tone: 'from-fuchsia-500 to-purple-600',
+  },
+  {
     to: '/speaking',
     icon: Mic,
     title: 'Luyện nói',

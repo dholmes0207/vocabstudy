@@ -88,5 +88,5 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 
 ## 5. Tiếp theo
 
-1. Luyện IELTS tiếp (`docs/design/ielts.md`): Nói Part 1–3 có ghi âm, khung bài Writing Task 1/2, Nghe
-   điền thông tin.
+1. Thêm cảnh nhập vai (`docs/design/roleplay.md`) và bài đọc IELTS dài hơn (3 đoạn → 5–6 đoạn).
+2. Lộ trình tiếng Hàn theo cấp (TOPIK I).
