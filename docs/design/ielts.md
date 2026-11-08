@@ -64,6 +64,10 @@ hoặc trong vòng 7 ngày.
   (cấp 6 thêm bước "Nghe IELTS", 3 lượt). Lời thoại có trong `screens.json` để thu giọng.
 - Cấp 6 giờ có đủ 4 kỹ năng nên bỏ nhãn "Đang mở rộng".
 
+- **Bước 9: Bài đọc dài.** Thêm 2 bài 5 đoạn (ong mật trong thành phố, tuần làm việc bốn ngày), gần độ dài
+  đề thật hơn; mỗi bài đủ 3 dạng: 6 câu True/False/Not Given (có bẫy suy luận), 7 tiêu đề cho 5 đoạn, đoạn
+  tóm tắt 4 chỗ trống. Danh sách bài gắn nhãn "Bài dài · 5 đoạn".
+
 - **Bước 8: Viết Task 1 (tả biểu đồ).** 3 biểu đồ (2 đường, 1 cột) vẽ bằng SVG từ dữ liệu, số liệu minh
   hoạ (có ghi rõ). Bước 1 chọn câu tổng quan trong 3 câu: câu đúng nói xu hướng chính và không có số; hai
   câu kia là một chi tiết số liệu hoặc nói sai biểu đồ, mỗi câu có lý do. Bước 2 hoàn thành đoạn chi tiết

@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "reading": [
     {
       "id": "city-farms",
@@ -490,6 +490,196 @@
           "Đoạn 1: \"Sorting them by hand is slow and costly\".",
           "Đoạn 2: \"recycling centres often reject dirty containers\". \"washed\" là bẫy: bài nói hộp CHƯA rửa.",
           "Đoạn 3: \"charge a small deposit… which is returned\". \"tax\" không được trả lại."
+        ]
+      }
+    },
+    {
+      "id": "urban-bees",
+      "emoji": "🐝",
+      "title": [
+        "Ong mật trong thành phố",
+        "Bees in the city"
+      ],
+      "passage": [
+        "Over the past twenty years, beekeeping has spread from the countryside into the centre of many large cities. Hives can now be found on the roofs of hotels, offices and even museums in London, Paris and New York. Many of the new beekeepers are office workers who had never handled a bee before they took a short course.",
+        "One reason for this trend is public concern about falling bee numbers. In several countries, the number of managed hives fell sharply in the 1990s and early 2000s, and scientists linked the losses to disease, pesticides and a lack of wild flowers. Keeping bees in the city seemed to many people a simple way to help.",
+        "Surprisingly, city bees often do well. Parks, gardens and tree-lined streets offer a wide variety of flowers from early spring to late autumn, while farmland may provide only one crop that flowers for a few weeks. In addition, cities are usually a little warmer than the surrounding land, which allows bees to start foraging earlier in the year.",
+        "However, some ecologists warn that there can be too much of a good thing. Honeybees compete with wild bees for the same nectar and pollen, and in areas with very high numbers of hives, wild species may struggle to find enough food. A study in Paris found that the amount of food available per hive had fallen as the number of rooftop hives increased.",
+        "For this reason, experts now suggest that people who want to help bees should plant flowers rather than buy a hive. Native plants that flower at different times of the year support both honeybees and the hundreds of wild bee species that live in cities, and they require far less skill and equipment than beekeeping."
+      ],
+      "questions": [
+        {
+          "statement": "Most new city beekeepers had experience with bees before taking a course.",
+          "answer": "F",
+          "why": "Đoạn 1: nhiều người \"had never handled a bee before they took a short course\", tức chưa từng có kinh nghiệm."
+        },
+        {
+          "statement": "Disease was one of the causes linked to the fall in bee numbers.",
+          "answer": "T",
+          "why": "Đoạn 2: các nhà khoa học \"linked the losses to disease, pesticides and a lack of wild flowers\"."
+        },
+        {
+          "statement": "City honey tastes better than honey from the countryside.",
+          "answer": "NG",
+          "why": "Bài không so sánh mùi vị mật ong ở đâu cả → Not Given."
+        },
+        {
+          "statement": "Cities can provide flowers for a longer part of the year than farmland.",
+          "answer": "T",
+          "why": "Đoạn 3: hoa trong thành phố \"from early spring to late autumn\", còn nông trại chỉ một vụ \"for a few weeks\"."
+        },
+        {
+          "statement": "The Paris study found that each hive had more food as hive numbers grew.",
+          "answer": "F",
+          "why": "Đoạn 4 nói ngược lại: lượng thức ăn mỗi tổ \"had fallen\" khi số tổ tăng."
+        },
+        {
+          "statement": "Planting native flowers is cheaper than keeping bees.",
+          "answer": "NG",
+          "why": "Đoạn 5 nói trồng hoa cần ít kỹ năng và dụng cụ hơn, nhưng không nói gì về giá tiền → Not Given. Đây là bẫy suy luận."
+        }
+      ],
+      "headings": {
+        "options": [
+          "A threat to wild species",
+          "Why cities suit bees",
+          "The cost of running a hive",
+          "A better way to help",
+          "From farms to rooftops",
+          "Honey as a city business",
+          "A response to falling numbers"
+        ],
+        "answers": [
+          4,
+          6,
+          1,
+          0,
+          3
+        ],
+        "why": [
+          "Đoạn 1 kể việc nuôi ong lan từ nông thôn lên mái nhà thành phố → \"From farms to rooftops\".",
+          "Đoạn 2 giải thích người ta nuôi ong vì lo số lượng ong giảm → \"A response to falling numbers\".",
+          "Đoạn 3: hoa đa dạng và trời ấm hơn giúp ong sống tốt → \"Why cities suit bees\".",
+          "Đoạn 4: ong mật tranh thức ăn với ong hoang dã → \"A threat to wild species\".",
+          "Đoạn 5 khuyên trồng hoa thay vì mua tổ ong → \"A better way to help\". \"The cost of running a hive\" là bẫy: bài không nói chi phí."
+        ]
+      },
+      "summary": {
+        "text": "Beekeeping has moved into cities, where many new beekeepers are office workers with no {0}. City bees often do well because parks and gardens offer a wide {1} of flowers, and the slightly {2} temperatures let bees start work earlier. However, too many hives can leave wild bees without enough food, so experts advise planting {3} flowers instead.",
+        "box": [
+          "equipment",
+          "variety",
+          "experience",
+          "colder",
+          "native",
+          "warmer"
+        ],
+        "answers": [
+          2,
+          1,
+          5,
+          4
+        ],
+        "why": [
+          "Đoạn 1: \"had never handled a bee\" → không có kinh nghiệm (experience).",
+          "Đoạn 3: \"a wide variety of flowers\".",
+          "Đoạn 3: \"a little warmer than the surrounding land\". \"colder\" là bẫy trái nghĩa.",
+          "Đoạn 5: \"Native plants\". \"equipment\" có trong đoạn 5 nhưng không đi với \"flowers\"."
+        ]
+      }
+    },
+    {
+      "id": "four-day-week",
+      "emoji": "📅",
+      "title": [
+        "Tuần làm việc bốn ngày",
+        "The four-day working week"
+      ],
+      "passage": [
+        "The idea that people should work five days a week is less than a century old. In the early twentieth century, many factory workers had only Sunday off. The two-day weekend became common only after workers' groups campaigned for shorter hours and some large employers found that rested staff made fewer mistakes.",
+        "Today, a growing number of companies are testing a four-day week. In the best-known trials, staff keep the same pay but work around thirty-two hours instead of forty. The aim is not simply to give people more free time but to see whether they can achieve the same results in fewer hours by cutting unnecessary meetings and distractions.",
+        "The results so far have been largely positive. In a 2022 trial involving around sixty British companies, most firms reported that productivity stayed the same or improved, and staff said they felt less stressed and slept better. Nearly all of the companies chose to continue with the shorter week after the trial ended.",
+        "Critics, however, point out that the model does not suit every type of work. Hospitals, schools and shops need people present for fixed hours, so a shorter week for each worker may mean hiring more staff. There are also concerns that some employees simply squeeze five days of work into four, which could lead to longer and more tiring days.",
+        "Supporters accept these limits but argue that the trials show how much time is wasted in an ordinary working week. Even companies that do not adopt a four-day week, they say, can learn from the experiment by reducing meetings, protecting time for focused work and judging staff by results rather than by the hours they spend at their desks."
+      ],
+      "questions": [
+        {
+          "statement": "The two-day weekend has existed for several centuries.",
+          "answer": "F",
+          "why": "Đoạn 1: tuần làm 5 ngày \"less than a century old\", trước đó công nhân chỉ nghỉ Chủ nhật."
+        },
+        {
+          "statement": "In the best-known trials, staff earned less money.",
+          "answer": "F",
+          "why": "Đoạn 2: nhân viên \"keep the same pay\"."
+        },
+        {
+          "statement": "Around sixty British companies took part in the 2022 trial.",
+          "answer": "T",
+          "why": "Đoạn 3: \"a 2022 trial involving around sixty British companies\"."
+        },
+        {
+          "statement": "Staff in the trial took fewer days off sick.",
+          "answer": "NG",
+          "why": "Bài nói nhân viên bớt căng thẳng và ngủ ngon hơn, không nhắc số ngày nghỉ ốm → Not Given."
+        },
+        {
+          "statement": "A shorter week could mean hospitals need more workers.",
+          "answer": "T",
+          "why": "Đoạn 4: \"a shorter week for each worker may mean hiring more staff\"."
+        },
+        {
+          "statement": "Supporters believe every company should change to a four-day week.",
+          "answer": "NG",
+          "why": "Đoạn 5: người ủng hộ nói kể cả công ty không đổi cũng học được điều gì đó; bài không nói họ muốn mọi công ty phải đổi → Not Given."
+        }
+      ],
+      "headings": {
+        "options": [
+          "Lessons for every workplace",
+          "How the weekend began",
+          "Workers who want longer hours",
+          "Encouraging early results",
+          "Not a solution for everyone",
+          "The rules of a modern trial",
+          "Why shops open on Sundays"
+        ],
+        "answers": [
+          1,
+          5,
+          3,
+          4,
+          0
+        ],
+        "why": [
+          "Đoạn 1 kể lịch sử: kỳ nghỉ hai ngày ra đời thế nào → \"How the weekend began\".",
+          "Đoạn 2 nói cách thử nghiệm hiện nay: giữ lương, làm 32 giờ → \"The rules of a modern trial\".",
+          "Đoạn 3: năng suất giữ hoặc tăng, nhân viên bớt căng thẳng → \"Encouraging early results\".",
+          "Đoạn 4: bệnh viện, trường học, cửa hàng khó áp dụng → \"Not a solution for everyone\". \"Why shops open on Sundays\" là bẫy: chỉ lặp chữ \"shops\".",
+          "Đoạn 5: mọi công ty đều học được cách bớt lãng phí thời gian → \"Lessons for every workplace\"."
+        ]
+      },
+      "summary": {
+        "text": "In recent trials of a four-day week, staff keep the same {0} but work about thirty-two hours. Most firms in a large British trial found that productivity did not {1}, and nearly all chose to {2} afterwards. Critics say the model is hard for jobs with fixed hours, while supporters argue that any company can cut wasted time, for example by holding fewer {3}.",
+        "box": [
+          "continue",
+          "holidays",
+          "pay",
+          "meetings",
+          "fall",
+          "stop"
+        ],
+        "answers": [
+          2,
+          4,
+          0,
+          3
+        ],
+        "why": [
+          "Đoạn 2: \"keep the same pay\".",
+          "Đoạn 3: năng suất \"stayed the same or improved\" → không giảm (did not fall).",
+          "Đoạn 3: \"chose to continue with the shorter week\". \"stop\" là bẫy trái nghĩa.",
+          "Đoạn 5: \"reducing meetings\". \"holidays\" không có trong bài."
         ]
       }
     }
