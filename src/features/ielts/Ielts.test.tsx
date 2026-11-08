@@ -68,6 +68,12 @@ describe('IELTS practice', () => {
   })
 
   it('matches a heading to each paragraph, frees a heading taken twice, and explains', async () => {
+    // A three-paragraph passage: the long ones count as done, so a fresh short one is offered.
+    useIelts.setState({
+      headings: Object.fromEntries(
+        bank.reading.filter((r) => r.passage.length > 3).map((r) => [r.id, { best: 0, total: 5 }])
+      ),
+    })
     render(
       <MemoryRouter>
         <Ielts />

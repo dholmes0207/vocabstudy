@@ -24,6 +24,8 @@ export interface RoleScene {
   setting: Pair
   /** Who the learner talks to. */
   them: Pair
+  /** A label for scenes that train an exam, e.g. "TOEIC" for the workplace. */
+  tag?: string
   lines: RoleLine[]
 }
 
@@ -46,6 +48,7 @@ export function validateRoleplay(raw: unknown): RoleplayBank {
       text(s.emoji) && pair(s.title) && pair(s.setting) && pair(s.them),
       `"${s.id}" is incomplete`
     )
+    check(s.tag === undefined || text(s.tag), `"${s.id}" has an empty tag`)
     check(
       Array.isArray(s.lines) &&
         s.lines.length >= 4 &&
