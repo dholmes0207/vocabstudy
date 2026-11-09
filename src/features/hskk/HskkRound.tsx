@@ -7,9 +7,11 @@ import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
 import { pronounce, stopPronounce, textAudio } from '@/lib/audio'
 import {
-  HSKK_TOPIC_SECONDS,
+  HSKK_LEVELS,
+  HSKK_TITLES,
   HSKK_XP,
   type HskkItem,
+  type HskkLevel,
   type HskkLine,
   type HskkPart,
 } from '@/lib/hskk'
@@ -17,15 +19,15 @@ import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 import AnswerRecorder from '@/features/ielts/AnswerRecorder'
 
-// One part of the HSKK Elementary test (docs/design/hskk.md). Parts 1 and 2
-// are heard, not read: the line plays by itself and its text stays hidden
-// until asked for. Part 3 shows its question and gives a minute and a half.
+// One part of the HSKK test (docs/design/hskk.md). What is only heard (Part 1,
+// and Elementary Part 2) plays by itself and its text stays hidden until
+// asked for; the rest shows its question, and the picture for Intermediate
+// Part 2, with the test's time limit.
 
-const TITLES: Record<HskkPart, [string, string]> = {
-  1: ['Phần 1 · Nghe rồi nhắc lại', 'Part 1 · Listen and repeat'],
-  2: ['Phần 2 · Nghe rồi trả lời', 'Part 2 · Listen and answer'],
-  3: ['Phần 3 · Trả lời câu hỏi', 'Part 3 · Answer the question'],
-}
+const MID_PICTURE_TIP: [string, string] = [
+  'Nói khoảng 2 phút: tranh có ai, ở đâu, đang làm gì; đoán cảm xúc, lý do; kết bằng ý kiến của bạn.',
+  'Talk for about two minutes: who is there, where, what they are doing; guess how they feel and why; end with your view.',
+]
 
 const TIPS: Record<HskkPart, [string, string]> = {
   1: [
@@ -56,11 +58,13 @@ function Line({ line, big = false }: { line: HskkLine; big?: boolean }) {
 
 export default function HskkRound({
   part,
+  level = 'elementary',
   items,
   onAgain,
   onExit,
 }: {
   part: HskkPart
+  level?: HskkLevel
   items: HskkItem[]
   onAgain: () => void
   onExit: () => void
@@ -72,7 +76,11 @@ export default function HskkRound({
   const addPlayXp = useStudy((s) => s.addPlayXp)
   const log = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
-  const [shown, setShown] = useState(part === 3)
+  // Only what the test plays without printing starts hidden.
+  const heardOnly = part === 1 || (part === 2 && level === 'elementary')
+  const [shown, setShown] = useState(!heardOnly)
+  const seconds = HSKK_LEVELS[level].seconds[part]
+  const tip = part === 2 && level === 'intermediate' ? MID_PICTURE_TIP : TIPS[part]
   const [sampleShown, setSampleShown] = useState(false)
   const [done, setDone] = useState(false)
   const item = items[idx]
@@ -88,7 +96,7 @@ export default function HskkRound({
   const next = () => {
     if (idx + 1 < items.length) {
       setIdx(idx + 1)
-      setShown(part === 3)
+      setShown(!heardOnly)
       setSampleShown(false)
       return
     }
@@ -109,7 +117,7 @@ export default function HskkRound({
         <X className="h-5 w-5" />
       </button>
       <p className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        🎙️ HSKK · {t(...TITLES[part])}
+        🎙️ HSKK · {t(...HSKK_TITLES[level][part])}
       </p>
     </div>
   )
@@ -149,6 +157,14 @@ export default function HskkRound({
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t(`Câu ${idx + 1}/${items.length}`, `Question ${idx + 1}/${items.length}`)}
         </p>
+        {item.scene && (
+          <div className="rounded-xl bg-slate-50 p-4 text-center dark:bg-slate-800/60">
+            <p className="text-6xl" aria-hidden="true">
+              {item.scene}
+            </p>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{item.shows}</p>
+          </div>
+        )}
         <div className="flex items-start gap-3">
           <button
             type="button"
@@ -166,8 +182,8 @@ export default function HskkRound({
             </button>
           )}
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400">{t(...TIPS[part])}</p>
-        <AnswerRecorder key={idx} limit={part === 3 ? HSKK_TOPIC_SECONDS : undefined} />
+        <p className="text-sm text-slate-500 dark:text-slate-400">{t(...tip)}</p>
+        <AnswerRecorder key={idx} limit={seconds} />
         {item.sample &&
           (sampleShown ? (
             <div className="rounded-xl bg-amber-50 p-3 dark:bg-amber-900/20">

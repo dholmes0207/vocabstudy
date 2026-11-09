@@ -27,7 +27,7 @@ import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
-import { HSKK_PARTS } from './hskk'
+import { HSKK_LEVELS } from './hskk'
 import { SLANG } from './netSlang'
 import { HAN_VIET_TRAPS } from './hanVietTraps'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
@@ -196,8 +196,10 @@ function chinese(): string[] {
     // "Thành ngữ": each idiom and its example sentence.
     ...CHENGYU.flatMap((it) => [it.zh, it.example.zh]),
     // "Luyện nói HSKK": every line read out, and the sample answers.
-    ...Object.values(HSKK_PARTS).flatMap((items) =>
-      items.flatMap((it) => (it.sample ? [it.zh, it.sample.zh] : [it.zh]))
+    ...Object.values(HSKK_LEVELS).flatMap((lv) =>
+      Object.values(lv.parts).flatMap((items) =>
+        items.flatMap((it) => (it.sample ? [it.zh, it.sample.zh] : [it.zh]))
+      )
     ),
     // "Tiếng lóng mạng": each word and its example sentence.
     ...SLANG.flatMap((it) => [it.zh, it.example.zh]),

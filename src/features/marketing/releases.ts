@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Luyện nói HSKK trung cấp', 'HSKK Intermediate speaking'],
+    items: [
+      [
+        'Trang luyện nói HSKK có thêm thẻ Trung cấp 中级: nhắc lại câu dài, nhìn tranh nói 2 phút, trả lời câu hỏi 2 phút, mỗi phần có bài nói mẫu kèm pinyin. Lộ trình HSK 3 có thêm bước này.',
+        'HSKK speaking gains an Intermediate 中级 tab: repeat longer sentences, talk about a picture and answer questions for two minutes, each with a sample talk in pinyin. The HSK 3 level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['TOEIC Writing: viết câu theo tranh', 'TOEIC Writing: sentences about pictures'],
     items: [
       [
