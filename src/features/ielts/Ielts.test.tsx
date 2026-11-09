@@ -8,7 +8,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useIelts } from '@/store/ieltsStore'
 import { useActivity } from '@/store/activityStore'
-import { TFNG_LABEL, type IeltsBank } from '@/lib/ielts'
+import { TFNG_LABEL, YNNG_LABEL, type IeltsBank } from '@/lib/ielts'
 
 vi.mock('@/lib/confetti', () => ({ celebrate: () => {} }))
 const { default: Ielts } = await import('./Ielts')
@@ -18,7 +18,7 @@ const bank = JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8')) as Ie
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en', currentLang: 'en', soundEnabled: false })
   useStudy.setState({ progress: {} })
-  useIelts.setState({ reading: {}, headings: {}, summary: {} })
+  useIelts.setState({ reading: {}, headings: {}, summary: {}, opinion: {} })
   useActivity.setState({ counts: {} })
   vi.stubGlobal(
     'fetch',
@@ -65,6 +65,32 @@ describe('IELTS practice', () => {
     expect(useIelts.getState().reading['city-farms']).toEqual({ best: 5, total: 5 })
     expect(useActivity.getState().counts.en?.['ielts-reading']).toBe(1)
     expect(useStudy.getState().progress.en?.stats.xp).toBe(15)
+  })
+
+  it('asks Yes / No / Not Given about the writer’s views, and records it apart', async () => {
+    render(
+      <MemoryRouter>
+        <Ielts />
+      </MemoryRouter>
+    )
+    fireEvent.click(await screen.findByRole('button', { name: /Should museums be free/ }))
+    expect(screen.getByText('Does it agree with the writer’s views?')).toBeInTheDocument()
+    const p = bank.opinion.find((r) => r.id === 'free-museums')!
+    for (let i = 0; i < p.questions.length; i++) {
+      const statement = screen.getByText((_, el) =>
+        p.questions.some((q) => el?.tagName === 'P' && el.textContent === q.statement)
+      ).textContent
+      const q = p.questions.find((x) => x.statement === statement)!
+      // The first one wrongly, on purpose: answering YES for NO and so on.
+      const pick = i === 0 ? (q.answer === 'Y' ? 'N' : 'Y') : q.answer
+      fireEvent.click(screen.getByRole('button', { name: YNNG_LABEL[pick][1] }))
+      expect(screen.getByRole('status')).toHaveTextContent(q.why)
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)/ }))
+    }
+    expect(screen.getByText('4 of 5 right')).toBeInTheDocument()
+    expect(screen.getByText(/writer gives no view on it/)).toBeInTheDocument()
+    expect(useIelts.getState().opinion['free-museums']).toEqual({ best: 4, total: 5 })
+    expect(useIelts.getState().reading).toEqual({})
   })
 
   it('matches a heading to each paragraph, frees a heading taken twice, and explains', async () => {

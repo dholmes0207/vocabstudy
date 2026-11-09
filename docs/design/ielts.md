@@ -69,6 +69,15 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 16: Đọc, Yes / No / Not Given.** Người Việt hay nhầm dạng này với True / False / Not Given: TFNG
+  hỏi sự thật trong bài, YNNG hỏi ý kiến của tác giả. 4 bài nghị luận ngắn mới (bài tập về nhà cho trẻ nhỏ,
+  bảo tàng miễn phí, làn xe đạp, học ngoại ngữ sớm), tác giả xưng "I" và nêu quan điểm (I believe, in my
+  view, strikes me as…), mỗi bài 5 câu có đủ YES, NO, NOT GIVEN. Câu NOT GIVEN là điều bài có nhắc chủ đề
+  nhưng tác giả không bày tỏ ý kiến (giá xe đạp điện, bảo tàng đông đúc). Mục riêng trên trang `/ielts` giải
+  thích khác biệt, rồi chạy bằng `TfngRound` (thêm `scale="ynng"`: nhãn, câu hỏi, mẹo riêng). Điểm cao nhất
+  lưu riêng (`ieltsStore.opinion`). Dữ liệu `opinion[]` trong `en.json`; `validateIeltsBank` chỉ nhận
+  Y/N/NG, id không trùng bài đọc khác; test kiểm có đủ ba đáp án và bài viết ở ngôi thứ nhất.
+
 - **Bước 15: Đọc, điền câu (Sentence completion).** Mỗi bài đọc (8 bài) có 4–5 câu, mỗi câu một chỗ trống
   (`___`), điền KHÔNG QUÁ HAI TỪ lấy nguyên từ bài. Khác Summary completion: gõ tay, không có hộp từ, nên
   phải chép đúng chính tả của bài. Câu hỏi đi theo thứ tự bài đọc như đề thật; câu hỏi diễn đạt lại phần
@@ -147,5 +156,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Thêm dạng đọc: trắc nghiệm nhiều lựa chọn (chọn 2 trong 5), Yes / No / Not Given cho bài nêu quan điểm.
+1. Thêm dạng đọc: trắc nghiệm nhiều lựa chọn (chọn 2 trong 5).
 2. Nghe: dạng nối thông tin (matching) ở Part 2–3.

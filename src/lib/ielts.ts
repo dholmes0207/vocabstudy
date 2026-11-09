@@ -22,6 +22,27 @@ export interface TfngQuestion {
   why: string
 }
 
+/** The same three answers about the writer's views rather than facts. */
+export type Ynng = 'Y' | 'N' | 'NG'
+
+export const YNNG_LABEL: Record<Ynng, Pair> = {
+  Y: ['YES · Đúng ý tác giả', 'YES'],
+  N: ['NO · Trái ý tác giả', 'NO'],
+  NG: ['NOT GIVEN · Tác giả không nói', 'NOT GIVEN'],
+}
+
+/**
+ * A passage where the writer argues a case ("I believe…", "in my view…"),
+ * for Yes / No / Not Given: does a statement agree with the writer's views?
+ */
+export interface OpinionPassage {
+  id: string
+  emoji: string
+  title: Pair
+  passage: string[]
+  questions: { statement: string; answer: Ynng; why: string }[]
+}
+
 /**
  * Matching headings: more headings than paragraphs, one right per paragraph,
  * the rest there to tempt. `answers[i]` is the heading of paragraph i.
@@ -207,6 +228,7 @@ export interface IeltsBank {
   listening: readonly ListeningSet[]
   listeningChoice: readonly ListeningChoiceSet[]
   reading: readonly ReadingPassage[]
+  opinion: readonly OpinionPassage[]
   speaking: { part1: readonly Part1Topic[]; part2: readonly CueCard[] }
   writing: {
     types: readonly EssayType[]
@@ -314,6 +336,25 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
             (c.accept === undefined || (Array.isArray(c.accept) && c.accept.every(text)))
         ),
       `"${r.id}" needs three sentences to complete, each with one gap and an answer of at most two words from the passage`
+    )
+  }
+  check(Array.isArray(bank!.opinion) && bank!.opinion.length > 0, '"opinion" is missing')
+  for (const r of bank!.opinion!) {
+    check(text(r?.id) && !ids.has(r.id), `passage id "${r?.id}" is empty or repeated`)
+    ids.add(r.id)
+    check(
+      text(r.emoji) && Array.isArray(r.title) && r.title.length === 2 && r.title.every(text),
+      `"${r.id}" has no title`
+    )
+    check(
+      Array.isArray(r.passage) && r.passage.length > 0 && r.passage.every(text),
+      `"${r.id}" has no text`
+    )
+    check(
+      Array.isArray(r.questions) &&
+        r.questions.length >= 3 &&
+        r.questions.every((q) => text(q?.statement) && q.answer in YNNG_LABEL && text(q.why)),
+      `"${r.id}" needs three statements, each YES, NO or NOT GIVEN with a reason`
     )
   }
   const speaking = bank!.speaking
@@ -474,6 +515,7 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
     listening: listening!,
     listeningChoice: choice!,
     reading: bank!.reading!,
+    opinion: bank!.opinion!,
     speaking: speaking!,
     writing: writing!,
   }
@@ -482,7 +524,10 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
 export const loadIeltsBank = bankLoader('data/ielts/en.json', validateIeltsBank)
 
 /** A passage with its statements shuffled, so a second read is not a memory test. */
-export function readingRound(p: ReadingPassage, rand: () => number = Math.random): ReadingPassage {
+export function readingRound<P extends { questions: readonly unknown[] }>(
+  p: P,
+  rand: () => number = Math.random
+): P {
   const qs = [...p.questions]
   for (let i = qs.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1))
@@ -504,12 +549,12 @@ export const headingsRight = (h: HeadingsTask, picks: readonly (number | null)[]
   h.answers.filter((a, i) => picks[i] === a).length
 
 /** A passage to read: one not done yet when there is one, else any but the last. */
-export function pickPassage(
-  passages: readonly ReadingPassage[],
+export function pickPassage<P extends { id: string }>(
+  passages: readonly P[],
   done: (id: string) => boolean,
   lastId?: string,
   rand: () => number = Math.random
-): ReadingPassage {
+): P {
   const fresh = passages.filter((p) => !done(p.id) && p.id !== lastId)
   const pool = fresh.length ? fresh : passages.filter((p) => p.id !== lastId)
   const from = pool.length ? pool : passages

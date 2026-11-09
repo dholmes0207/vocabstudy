@@ -151,6 +151,29 @@ describe('sentence completion', () => {
   })
 })
 
+describe('yes / no / not given', () => {
+  const bank = validateIeltsBank(raw())
+
+  it('gives opinion passages in the writer’s own voice, with all three answers', () => {
+    expect(bank.opinion.length).toBeGreaterThanOrEqual(4)
+    for (const p of bank.opinion) {
+      expect(new Set(p.questions.map((q) => q.answer)), p.id).toEqual(new Set(['Y', 'N', 'NG']))
+      // An opinion passage says what the writer thinks, in the first person.
+      expect(p.passage.join(' '), p.id).toMatch(/\b(I|my|me)\b/)
+      expect(
+        bank.reading.some((r) => r.id === p.id),
+        p.id
+      ).toBe(false)
+    }
+  })
+
+  it('turns down a TRUE / FALSE answer in an opinion passage', () => {
+    const b = raw()
+    b.opinion[0].questions[0].answer = 'T'
+    expect(() => validateIeltsBank(b)).toThrow(/YES, NO or NOT GIVEN/)
+  })
+})
+
 describe('matching headings', () => {
   const bank = validateIeltsBank(raw())
 

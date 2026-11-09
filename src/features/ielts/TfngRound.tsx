@@ -5,25 +5,36 @@ import { useStudy } from '@/store/studyStore'
 import { useIelts } from '@/store/ieltsStore'
 import { useActivity } from '@/store/activityStore'
 import { useImmersive } from '@/store/uiStore'
-import { TFNG_LABEL, type ReadingPassage, type Tfng } from '@/lib/ielts'
+import {
+  TFNG_LABEL,
+  YNNG_LABEL,
+  type OpinionPassage,
+  type Pair,
+  type ReadingPassage,
+} from '@/lib/ielts'
 import { buzz } from '@/lib/sound'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 
 // One IELTS reading passage, its statements one at a time: TRUE, FALSE or NOT
-// GIVEN, and after each answer where the passage says it (or doesn't).
+// GIVEN about its facts, or (for an opinion passage) YES, NO or NOT GIVEN
+// about the writer's views; after each answer, where the passage says it (or
+// doesn't).
 
-const CHOICES: Tfng[] = ['T', 'F', 'NG']
+type Scale = 'tfng' | 'ynng'
+const LABELS: Record<Scale, Record<string, Pair>> = { tfng: TFNG_LABEL, ynng: YNNG_LABEL }
 
 /** XP per right answer, as in the other reading practice. */
 const XP_PER_RIGHT = 3
 
 export default function TfngRound({
   passage,
+  scale = 'tfng',
   onAgain,
   onExit,
 }: {
-  passage: ReadingPassage
+  passage: ReadingPassage | OpinionPassage
+  scale?: Scale
   onAgain: () => void
   onExit: () => void
 }) {
@@ -32,17 +43,19 @@ export default function TfngRound({
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
-  const record = useIelts((s) => s.recordReading)
+  const record = useIelts((s) => (scale === 'ynng' ? s.recordOpinion : s.recordReading))
   const log = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
-  const [picked, setPicked] = useState<Tfng | null>(null)
+  const [picked, setPicked] = useState<string | null>(null)
   const [right, setRight] = useState(0)
   const [finished, setFinished] = useState(false)
 
   const total = passage.questions.length
   const q = passage.questions[idx]
+  const labels = LABELS[scale]
+  const choices = Object.keys(labels)
 
-  const choose = (c: Tfng) => {
+  const choose = (c: string) => {
     if (picked) return
     setPicked(c)
     const ok = c === q.answer
@@ -74,10 +87,15 @@ export default function TfngRound({
         <p className="text-slate-600 dark:text-slate-300">
           {right === total
             ? t('Không sai câu nào. Phong độ band cao!', 'Not a single slip. High-band form!')
-            : t(
-                'Mẹo: câu NOT GIVEN là câu bài không hề nhắc. Nếu phải đoán thêm điều bài không nói, đó là NOT GIVEN.',
-                'Tip: NOT GIVEN means the passage never says it. If you need to add something it doesn’t say, it’s NOT GIVEN.'
-              )}{' '}
+            : scale === 'ynng'
+              ? t(
+                  'Mẹo: YES/NO hỏi ý kiến của tác giả (I believe, in my view, strikes me as…), không hỏi sự thật. Tác giả không bày tỏ ý kiến về điều đó thì là NOT GIVEN.',
+                  'Tip: YES/NO is about the writer’s views (I believe, in my view, strikes me as…), not facts. If the writer gives no view on it, it’s NOT GIVEN.'
+                )
+              : t(
+                  'Mẹo: câu NOT GIVEN là câu bài không hề nhắc. Nếu phải đoán thêm điều bài không nói, đó là NOT GIVEN.',
+                  'Tip: NOT GIVEN means the passage never says it. If you need to add something it doesn’t say, it’s NOT GIVEN.'
+                )}{' '}
           +{right * XP_PER_RIGHT} XP
         </p>
         <div className="flex gap-3">
@@ -127,13 +145,18 @@ export default function TfngRound({
 
       <div className="card space-y-3 p-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          {t('Câu này đúng với bài đọc không?', 'Does the passage agree?')}
+          {scale === 'ynng'
+            ? t(
+                'Câu này có khớp ý kiến của tác giả không?',
+                'Does it agree with the writer’s views?'
+              )
+            : t('Câu này đúng với bài đọc không?', 'Does the passage agree?')}
         </p>
         <p className="text-lg font-bold" lang="en">
           {q.statement}
         </p>
         <div className="grid gap-2 sm:grid-cols-3">
-          {CHOICES.map((c) => {
+          {choices.map((c) => {
             const state = !picked
               ? 'border-slate-200 hover:border-brand-400 dark:border-slate-700'
               : c === q.answer
@@ -149,7 +172,7 @@ export default function TfngRound({
                 onClick={() => choose(c)}
                 className={`rounded-xl border-2 p-3 font-bold transition ${state}`}
               >
-                {t(...TFNG_LABEL[c])}
+                {t(...labels[c])}
               </button>
             )
           })}
@@ -166,7 +189,7 @@ export default function TfngRound({
             <b>
               {picked === q.answer
                 ? t('Chính xác!', 'Right!')
-                : t(`Đáp án: ${TFNG_LABEL[q.answer][1]}.`, `Answer: ${TFNG_LABEL[q.answer][1]}.`)}
+                : t(`Đáp án: ${labels[q.answer][1]}.`, `Answer: ${labels[q.answer][1]}.`)}
             </b>{' '}
             {q.why}
           </p>
