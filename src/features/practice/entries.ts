@@ -94,6 +94,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-orange-400 to-pink-500',
   },
   {
+    to: '/collocations',
+    icon: '🧲',
+    title: 'Kết hợp từ',
+    desc: 'Mở đèn là turn on the light, không phải open the light; uống thuốc là take medicine: từ nào đi với từ nào, tránh dịch từng chữ từ tiếng Việt.',
+    titleEn: 'Collocations',
+    descEn:
+      'Turn on the light, not open the light; take medicine, not drink it: which words go together, so you don’t translate word for word.',
+    tone: 'from-lime-500 to-emerald-600',
+  },
+  {
     to: '/ielts',
     icon: '🎓',
     title: 'Luyện IELTS',

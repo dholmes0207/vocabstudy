@@ -62,6 +62,19 @@ test('English idioms: what the words say and what they mean', async ({ page }) =
   ).toBeLessThanOrEqual(0)
 })
 
+test('Collocations: the right partner, not the word-for-word one', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/collocations')
+  await expect(page.getByText('✓ turn on the light')).toBeVisible()
+  await page.getByRole('button', { name: 'Practise 6' }).first().click()
+  await page.getByText('Which word goes with it?').waitFor()
+  await page.locator('.card button').first().click()
+  await expect(page.getByText(/^(Right!|Not quite\.)$/)).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('TOEIC Speaking times each answer', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/toeic-speaking')
