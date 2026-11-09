@@ -69,6 +69,15 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 17: Đọc, trắc nghiệm chọn hai (Choose TWO letters, A–E).** Mỗi bài đọc (8 bài) có một câu hỏi 5
+  phương án, 2 đúng. Phương án sai là bẫy kiểu đề thật: nói ngược bài (ngủ trưa ngắn không giúp trí nhớ), hoặc
+  lấy lại chữ trong bài nhưng sai ý (bệnh và thuốc trừ sâu là lý do ong giảm, không phải lý do ong ở phố sống
+  tốt). Chấm như đề thật: mỗi chữ đúng một điểm, không cần thứ tự, chọn quá hai chữ là 0 điểm. Vì vậy vòng
+  luyện chỉ giữ tối đa hai chữ: chọn chữ thứ ba thì chữ cũ nhất bị bỏ. Chấm xong: đáp án, lý do chỉ rõ đoạn nào,
+  mẹo gạch phương án. +3 XP mỗi điểm, ghi `ielts-reading`, điểm cao nhất trong `ieltsStore.chooseTwo` (✌️ trên
+  danh sách bài). Dữ liệu `reading[].chooseTwo`; `validateIeltsBank` kiểm 5 phương án khác nhau và 2 đáp án tăng
+  dần; test kiểm cách chấm và cặp đáp án không phải lúc nào cũng cùng chữ.
+
 - **Bước 16: Đọc, Yes / No / Not Given.** Người Việt hay nhầm dạng này với True / False / Not Given: TFNG
   hỏi sự thật trong bài, YNNG hỏi ý kiến của tác giả. 4 bài nghị luận ngắn mới (bài tập về nhà cho trẻ nhỏ,
   bảo tàng miễn phí, làn xe đạp, học ngoại ngữ sớm), tác giả xưng "I" và nêu quan điểm (I believe, in my
@@ -156,5 +165,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Thêm dạng đọc: trắc nghiệm nhiều lựa chọn (chọn 2 trong 5).
+1. Thêm dạng đọc: trắc nghiệm một đáp án (A–D) và nối câu với người nói (matching features).
 2. Nghe: dạng nối thông tin (matching) ở Part 2–3.

@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['IELTS Reading: chọn hai đáp án', 'IELTS Reading: choose TWO'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng "Choose TWO letters, A–E": 5 phương án, 2 đúng, mỗi chữ đúng một điểm như đề thật. Phương án sai là bẫy hay gặp: nói ngược bài, hoặc lặp đúng chữ trong bài nhưng sai ý.',
+        'IELTS Reading gains "Choose TWO letters, A–E": five options, two right, a mark per right letter as in the test. The wrong options are the usual traps: the opposite of the passage, or its words with the wrong idea.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Kết hợp từ tiếng Anh', 'English collocations'],
     items: [
       [

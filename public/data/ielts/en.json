@@ -1,5 +1,5 @@
 {
-  "version": "1.15.0",
+  "version": "1.16.0",
   "reading": [
     {
       "id": "city-farms",
@@ -120,7 +120,22 @@
           "answer": "salad leaves",
           "why": "Đoạn C: \"high-value crops such as herbs and salad leaves rather than rice or potatoes\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO problems of rooftop farming does the writer mention?",
+        "options": [
+          "the cost of making roofs strong enough",
+          "complaints from people living nearby",
+          "the need to pump water up from the ground",
+          "a shortage of trained farmers",
+          "damage caused by birds"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn C: mái \"need to be strengthened\" (A) và \"water must be pumped up from the ground\" (C). Bài không nhắc hàng xóm, người trồng hay chim."
+      }
     },
     {
       "id": "sleep-memory",
@@ -241,7 +256,22 @@
           ],
           "why": "Đoạn C: \"sleep cannot replace practice\". \"take the place of\" = \"replace\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO statements about naps are made in the passage?",
+        "options": [
+          "naps of any length improve memory",
+          "a nap only helps memory if it includes deep sleep",
+          "a ten-minute nap can make people more alert",
+          "naps are better than a full night of sleep",
+          "children need more naps than adults"
+        ],
+        "answers": [
+          1,
+          2
+        ],
+        "why": "Đoạn C: \"only if they are long enough to include deep sleep\" (B) và \"a short nap of ten minutes may make people feel more alert\" (C). A trái với bài: ngủ ngắn \"does little for memory\"."
+      }
     },
     {
       "id": "coral-reefs",
@@ -359,7 +389,22 @@
           "answer": "algae",
           "why": "Đoạn C: \"corals push out the tiny algae that live inside them\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO ways in which reefs are useful to people are mentioned?",
+        "options": [
+          "they protect coastlines from storm waves",
+          "they are a source of new medicines",
+          "they bring tourists to the area",
+          "they produce much of the oxygen we breathe",
+          "they supply materials for building"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn B: \"protect coastlines by breaking up large waves\" (A) và \"attract tourists who come to dive\" (C). Thuốc, oxy, vật liệu xây dựng không có trong bài."
+      }
     },
     {
       "id": "remote-work",
@@ -477,7 +522,22 @@
           "answer": "teams",
           "why": "Đoạn C: \"so that whole teams are present at the same time\". \"there\" thay cho \"present\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO advantages of working from home are mentioned?",
+        "options": [
+          "employees save time and money on travel",
+          "staff take fewer days off sick",
+          "companies can rent smaller offices",
+          "new employees learn more quickly",
+          "teams communicate better"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn A: \"save time and money because they no longer travel\" (A); đoạn B: \"rent smaller offices\" (C). D trái với bài: nhân viên mới học chậm hơn."
+      }
     },
     {
       "id": "history-of-tea",
@@ -598,7 +658,22 @@
           "answer": "water",
           "why": "Đoạn C: \"second only to water\". Đề đảo câu: trà đứng thứ hai, vậy thứ nhất là nước."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO facts about tea arriving in Europe are given?",
+        "options": [
+          "it was brought by sea",
+          "it was first sold by doctors",
+          "it was expensive for many years",
+          "it was soon grown in southern Europe",
+          "it was more popular than coffee"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn B: \"traders brought tea to Europe by sea\" (A) và \"it was expensive… only wealthy families could afford it\" (C). Bài nói trà từng là thuốc ở Trung Quốc, không nói bác sĩ bán ở châu Âu."
+      }
     },
     {
       "id": "plastic-recycling",
@@ -719,7 +794,22 @@
           "answer": "bottle",
           "why": "Đoạn C: \"returned when the empty bottle is brought back\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO reasons why plastic is hard to recycle are given?",
+        "options": [
+          "different types usually cannot be melted together",
+          "dirty containers can spoil a whole batch",
+          "plastic is too light to collect easily",
+          "sorting machines are too expensive",
+          "many people do not know how to recycle"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn A: các loại nhựa \"cannot be melted down together\" (A); đoạn B: hộp chưa rửa \"can spoil a whole batch\" (B). D là bẫy: bài nói phân loại bằng tay chậm và tốn kém, không nói máy."
+      }
     },
     {
       "id": "urban-bees",
@@ -863,7 +953,22 @@
           "answer": "native",
           "why": "Đoạn E: \"Native plants that flower at different times of the year\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO reasons why bees often do well in cities are given?",
+        "options": [
+          "flowers are available for much of the year",
+          "cities are a little warmer than the countryside",
+          "there is less disease among city bees",
+          "city beekeepers are more experienced",
+          "fewer pesticides are used in cities"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn C: hoa \"from early spring to late autumn\" (A) và thành phố \"a little warmer\" (B). Bệnh và thuốc trừ sâu có trong đoạn B nhưng là lý do ong giảm, không phải lý do ong ở phố sống tốt."
+      }
     },
     {
       "id": "four-day-week",
@@ -1007,7 +1112,22 @@
           "answer": "results",
           "why": "Đoạn E: \"judging staff by results rather than by the hours they spend at their desks\"."
         }
-      ]
+      ],
+      "chooseTwo": {
+        "question": "Which TWO results of the 2022 British trial are reported?",
+        "options": [
+          "productivity stayed the same or improved at most firms",
+          "staff said they felt less stressed",
+          "companies saved money on office space",
+          "most firms went back to a five-day week",
+          "staff were paid more"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn C: \"productivity stayed the same or improved\" (A) và \"felt less stressed and slept better\" (B). D trái với bài: gần như tất cả công ty giữ tuần làm ngắn."
+      }
     }
   ],
   "speaking": {

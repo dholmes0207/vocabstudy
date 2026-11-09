@@ -5,6 +5,7 @@ import {
   COMPLETION_WORDS,
   TASK2_WORDS,
   answerWords,
+  chooseTwoMarks,
   axisMax,
   blankRight,
   clock,
@@ -148,6 +149,34 @@ describe('sentence completion', () => {
     const c = raw()
     c.reading[0].completion[0].text = 'No gap here.'
     expect(() => validateIeltsBank(c)).toThrow(/sentences to complete/)
+  })
+})
+
+describe('choose TWO', () => {
+  const { reading } = validateIeltsBank(raw())
+
+  it('gives every passage five options with two right, spread over the letters', () => {
+    for (const r of reading) {
+      expect(r.chooseTwo.options, r.id).toHaveLength(5)
+      expect(r.chooseTwo.answers[0], r.id).toBeLessThan(r.chooseTwo.answers[1])
+    }
+    // The right pair is not always the same letters.
+    expect(new Set(reading.map((r) => r.chooseTwo.answers.join())).size).toBeGreaterThan(1)
+  })
+
+  it('scores one mark per right letter, and nothing for a third letter', () => {
+    const task = reading[0].chooseTwo
+    const [a, b] = task.answers
+    const wrong = [0, 1, 2, 3, 4].find((i) => !task.answers.includes(i))!
+    expect(chooseTwoMarks(task, [a, b])).toBe(2)
+    expect(chooseTwoMarks(task, [a, wrong])).toBe(1)
+    expect(chooseTwoMarks(task, [a, b, wrong])).toBe(0)
+  })
+
+  it('turns down a question with the same answer twice', () => {
+    const b = raw()
+    b.reading[0].chooseTwo.answers = [1, 1]
+    expect(() => validateIeltsBank(b)).toThrow(/choose TWO/)
   })
 })
 

@@ -23,6 +23,7 @@ import TfngRound from './TfngRound'
 import HeadingsRound from './HeadingsRound'
 import MatchingRound from './MatchingRound'
 import CompletionRound from './CompletionRound'
+import ChooseTwoRound from './ChooseTwoRound'
 import SummaryRound from './SummaryRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
@@ -34,9 +35,9 @@ import ListeningChoiceRound from './ListeningChoiceRound'
 // "Luyện IELTS" (docs/design/ielts.md): what the test is made of, and practice
 // for the skills one by one, starting with the Reading question Vietnamese
 // learners trip on most: True / False / Not Given, then Matching headings and
-// Summary completion, Matching information and Sentence completion.
+// Summary completion, Matching information, Sentence completion and Choose TWO.
 
-type MatchKind = 'headings' | 'summary' | 'matching' | 'completion'
+type MatchKind = 'headings' | 'summary' | 'matching' | 'completion' | 'chooseTwo'
 
 export default function Ielts() {
   const t = useT()
@@ -47,6 +48,7 @@ export default function Ielts() {
   const summaryDone = useIelts((s) => s.summary)
   const matchingDone = useIelts((s) => s.matching)
   const completionDone = useIelts((s) => s.completion)
+  const chooseTwoDone = useIelts((s) => s.chooseTwo)
   const [match, setMatch] = useState<{
     n: number
     kind: MatchKind
@@ -58,6 +60,7 @@ export default function Ielts() {
       summary: summaryDone,
       matching: matchingDone,
       completion: completionDone,
+      chooseTwo: chooseTwoDone,
     }[kind]
     if (bank)
       setMatch((r) => ({
@@ -177,6 +180,7 @@ export default function Ielts() {
       summary: SummaryRound,
       matching: MatchingRound,
       completion: CompletionRound,
+      chooseTwo: ChooseTwoRound,
     }[match.kind]
     return (
       <Round
@@ -324,6 +328,14 @@ export default function Ielts() {
               >
                 ✍️ {t('Điền câu (Sentence completion)', 'Sentence completion')}
               </button>
+              <button
+                type="button"
+                className="btn-secondary h-11 w-full sm:w-auto"
+                disabled={!bank}
+                onClick={() => startMatch('chooseTwo')}
+              >
+                ✌️ {t('Chọn hai đáp án (Choose TWO)', 'Choose TWO')}
+              </button>
             </div>
             {bank && (
               <ul className="grid gap-2 sm:grid-cols-2">
@@ -385,6 +397,14 @@ export default function Ielts() {
                             title={t('Điền câu', 'Sentence completion')}
                           >
                             ✍️ {completionDone[p.id].best}/{completionDone[p.id].total}
+                          </span>
+                        )}
+                        {chooseTwoDone[p.id] && (
+                          <span
+                            className="text-xs font-bold text-sky-700 dark:text-sky-300"
+                            title={t('Chọn hai đáp án', 'Choose TWO')}
+                          >
+                            ✌️ {chooseTwoDone[p.id].best}/{chooseTwoDone[p.id].total}
                           </span>
                         )}
                       </button>

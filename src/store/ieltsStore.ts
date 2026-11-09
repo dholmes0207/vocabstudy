@@ -25,6 +25,9 @@ interface IeltsState {
   /** Best Sentence completion score per passage. */
   completion: Record<string, IeltsRecord>
   recordCompletion: (id: string, correct: number, total: number) => void
+  /** Best "Choose TWO" score per passage. */
+  chooseTwo: Record<string, IeltsRecord>
+  recordChooseTwo: (id: string, correct: number, total: number) => void
   /** Best Yes / No / Not Given score per opinion passage. */
   opinion: Record<string, IeltsRecord>
   recordOpinion: (id: string, correct: number, total: number) => void
@@ -63,6 +66,14 @@ export const useIelts = create<IeltsState>()(
           matching: {
             ...s.matching,
             [id]: { best: Math.max(correct, s.matching[id]?.best ?? 0), total },
+          },
+        })),
+      chooseTwo: {},
+      recordChooseTwo: (id, correct, total) =>
+        set((s) => ({
+          chooseTwo: {
+            ...s.chooseTwo,
+            [id]: { best: Math.max(correct, s.chooseTwo[id]?.best ?? 0), total },
           },
         })),
       completion: {},
