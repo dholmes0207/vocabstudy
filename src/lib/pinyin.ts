@@ -328,6 +328,8 @@ export type PinyinQuestion =
    * `pair` names its tones ("3-5" for xǐhuan), to tell which pairs get mixed up.
    */
   | { kind: 'ear'; prompt: string; options: string[]; answer: number; note: string; pair: string }
+  /** How a word is said once its tones change in speech (一, 不, 3 + 3). */
+  | { kind: 'sandhi'; prompt: string; options: string[]; answer: number; note: string }
 
 function shuffle<T>(arr: T[], rand: () => number): T[] {
   const a = [...arr]
@@ -539,4 +541,87 @@ export function missedPairs(results: { pair: string; ok: boolean }[]): [string, 
     .filter(([, [wrong]]) => wrong > 0)
     .map(([pair, [wrong, asked]]): [string, number, number] => [pair, wrong, asked])
     .sort((a, b) => b[1] / b[2] - a[1] / a[2] || b[1] - a[1])
+}
+
+// "Luyện biến điệu" (docs/design/chinese.md): how 一, 不 and two third tones
+// change in speech. Each item gives the spoken reading first, then the
+// readings a learner might say instead (the written tone among them).
+
+type SandhiRule = 'yi' | 'bu' | 'three'
+
+const SANDHI_NOTES: Record<SandhiRule, Pair> = {
+  yi: [
+    '一 trước thanh 4 đọc yí, trước thanh 1, 2, 3 đọc yì; đứng một mình, ở cuối hay chỉ số thứ tự thì giữ yī.',
+    '一 is yí before a fourth tone and yì before the others; alone, at the end or as a number in order it stays yī.',
+  ],
+  bu: [
+    '不 trước thanh 4 đọc bú; trước thanh 1, 2, 3 giữ bù.',
+    '不 is bú before a fourth tone; before the others it stays bù.',
+  ],
+  three: [
+    'Hai thanh 3 liền nhau: chữ đầu đọc thành thanh 2 (pinyin vẫn viết thanh 3).',
+    'Two third tones in a row: the first is said as a second tone (pinyin still writes a third).',
+  ],
+}
+
+/** Word, the rule it shows, its spoken reading, then wrong ones. */
+export const SANDHI_DRILL: { zh: string; rule: SandhiRule; said: string; wrong: string[] }[] = [
+  { zh: '一起', rule: 'yi', said: 'yìqǐ', wrong: ['yíqǐ', 'yīqǐ'] },
+  { zh: '一个', rule: 'yi', said: 'yí gè', wrong: ['yì gè', 'yī gè'] },
+  { zh: '一天', rule: 'yi', said: 'yì tiān', wrong: ['yí tiān', 'yī tiān'] },
+  { zh: '一年', rule: 'yi', said: 'yì nián', wrong: ['yí nián', 'yī nián'] },
+  { zh: '一样', rule: 'yi', said: 'yíyàng', wrong: ['yìyàng', 'yīyàng'] },
+  { zh: '一下', rule: 'yi', said: 'yíxià', wrong: ['yìxià', 'yīxià'] },
+  { zh: '一共', rule: 'yi', said: 'yígòng', wrong: ['yìgòng', 'yīgòng'] },
+  { zh: '一般', rule: 'yi', said: 'yìbān', wrong: ['yíbān', 'yībān'] },
+  { zh: '第一', rule: 'yi', said: 'dì yī', wrong: ['dì yí', 'dì yì'] },
+  { zh: '十一', rule: 'yi', said: 'shíyī', wrong: ['shíyí', 'shíyì'] },
+  { zh: '不是', rule: 'bu', said: 'bú shì', wrong: ['bù shì'] },
+  { zh: '不去', rule: 'bu', said: 'bú qù', wrong: ['bù qù'] },
+  { zh: '不对', rule: 'bu', said: 'bú duì', wrong: ['bù duì'] },
+  { zh: '不要', rule: 'bu', said: 'bú yào', wrong: ['bù yào'] },
+  { zh: '不好', rule: 'bu', said: 'bù hǎo', wrong: ['bú hǎo'] },
+  { zh: '不来', rule: 'bu', said: 'bù lái', wrong: ['bú lái'] },
+  { zh: '不吃', rule: 'bu', said: 'bù chī', wrong: ['bú chī'] },
+  { zh: '你好', rule: 'three', said: 'ní hǎo', wrong: ['nǐ hǎo', 'nǐ háo'] },
+  { zh: '很好', rule: 'three', said: 'hén hǎo', wrong: ['hěn hǎo', 'hěn háo'] },
+  { zh: '可以', rule: 'three', said: 'kéyǐ', wrong: ['kěyǐ', 'kěyí'] },
+  { zh: '水果', rule: 'three', said: 'shuíguǒ', wrong: ['shuǐguǒ', 'shuǐguó'] },
+  { zh: '老板', rule: 'three', said: 'láobǎn', wrong: ['lǎobǎn', 'lǎobán'] },
+]
+
+/**
+ * A round of `count` tone-change questions, spread over the three rules: the
+ * word, its spoken reading among the readings a learner might say instead.
+ */
+export function sandhiQuiz(
+  count = 10,
+  t: (vi: string, en: string) => string = (vi) => vi,
+  rand: () => number = Math.random
+): PinyinQuestion[] {
+  const shuffle = <T>(arr: readonly T[]): T[] => {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+  // Deal from each rule in turn so a round covers all three.
+  const decks = (['yi', 'bu', 'three'] as const).map((r) =>
+    shuffle(SANDHI_DRILL.filter((d) => d.rule === r))
+  )
+  const picked: typeof SANDHI_DRILL = []
+  for (let i = 0; picked.length < count && decks.some((d) => d.length > i); i++)
+    for (const d of decks) if (d[i] && picked.length < count) picked.push(d[i])
+  return shuffle(picked).map((d) => {
+    const options = shuffle([d.said, ...d.wrong])
+    return {
+      kind: 'sandhi',
+      prompt: d.zh,
+      options,
+      answer: options.indexOf(d.said),
+      note: `${d.said} · ${t(...SANDHI_NOTES[d.rule])}`,
+    }
+  })
 }

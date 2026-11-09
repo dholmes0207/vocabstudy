@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Luyện biến điệu tiếng Trung', 'Practise Chinese tone changes'],
+    items: [
+      [
+        'Trang Pinyin có thêm lượt "Luyện biến điệu": 一 đọc yí hay yì, 不 đọc bú hay bù, 你好 nói thành ní hǎo… chọn cách đọc đúng khi nói rồi nghe lại và xem quy tắc.',
+        'The pinyin page gains a tone-change round: is 一 yí or yì, 不 bú or bù, why 你好 is said ní hǎo… pick the spoken reading, hear it and see the rule.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['TOEIC Writing: trả lời email', 'TOEIC Writing: reply to an email'],
     items: [
       [

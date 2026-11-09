@@ -629,3 +629,12 @@ mình hay nhầm cặp thanh nào.
 
 Trang `/hsk` luyện đúng các dạng câu của đề HSK 1–3 (nghe hiểu, chọn từ điền chỗ trống, sắp xếp câu)
 và có bài thi nhỏ theo cấp. Chi tiết ở `toeic.md`, bước B1.
+
+## Bước 33: luyện biến điệu (09/11/2026)
+
+Thẻ "Biến điệu khi nói liền" chỉ có 3 ví dụ, chưa có chỗ luyện, trong khi đọc sai 一, 不 và hai thanh 3 liền
+nhau là lỗi rất hay gặp ở phần nói HSKK. Trang Pinyin thêm nút "Luyện biến điệu 一 · 不" (10 câu, dùng lại
+vòng "Kiểm tra nhanh", kiểu câu mới `sandhi`): thấy từ, chọn cách đọc khi nói trong 2–3 phương án (có cả cách
+đọc theo thanh gốc). Trả lời xong nghe từ và đọc quy tắc. Bộ 22 từ trong `SANDHI_DRILL` (`lib/pinyin.ts`): 10
+từ với 一 (kể cả 第一, 十一 giữ yī), 7 từ với 不, 5 từ hai thanh 3. Một lượt chia đều ba quy tắc. Test kiểm từng
+đáp án đúng theo quy tắc (thanh của chữ sau quyết định 一, 不; chữ đầu của cặp 3 + 3 thành thanh 2).
