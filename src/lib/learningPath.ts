@@ -829,6 +829,15 @@ export const ZH_PATH: PathLevel[] = [
           'Nine B1 units: 把, 被, 越…越, 虽然…但是, 一边…一边, 除了, result and direction complements, 如果.',
         ]
       ),
+      grammar(
+        'zh4-grammar-traps',
+        ['zh-shi-de', 'zh-zhe', 'zh-potential', 'zh-separable'],
+        ['Bốn điểm hay sai', 'Four common slips'],
+        [
+          '是…的, 着, bổ ngữ khả năng (听得懂 / 听不懂) và động từ ly hợp (跟朋友见面, không nói 见面朋友).',
+          '是…的, 着, potential complements (听得懂 / 听不懂) and separable verbs (跟朋友见面, never 见面朋友).',
+        ]
+      ),
       sessions(
         'zh4-confusables',
         'confusables',

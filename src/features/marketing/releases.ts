@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Ngữ pháp tiếng Trung: bốn điểm hay sai', 'Chinese grammar: four common slips'],
+    items: [
+      [
+        'Thêm 4 bài ngữ pháp tiếng Trung cho lỗi người Việt hay mắc: 是…的 (我是坐飞机来的), 着 (门开着), bổ ngữ khả năng (听得懂 / 听不懂) và động từ ly hợp (跟朋友见面, không nói 见面朋友). Lộ trình HSK 3 có thêm bước "Bốn điểm hay sai".',
+        'Four new Chinese grammar units for slips Vietnamese learners make: 是…的 (我是坐飞机来的), 着 (门开着), potential complements (听得懂 / 听不懂) and separable verbs (跟朋友见面, never 见面朋友). The HSK 3 path gains a "Four common slips" step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['IELTS Reading: Yes / No / Not Given', 'IELTS Reading: Yes / No / Not Given'],
     items: [
       [
