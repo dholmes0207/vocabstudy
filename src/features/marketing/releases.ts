@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['IELTS Reading: tìm thông tin', 'IELTS Reading: matching information'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng Matching information: mỗi bài đọc có vài câu diễn đạt lại một ý, chọn đoạn A–E chứa ý đó. Điểm cao nhất của từng bài hiện trên danh sách.',
+        'IELTS Reading gains Matching information: each passage comes with statements that paraphrase one of its ideas; choose the paragraph A–E that contains it. Your best score shows on the list.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['IELTS Listening Part 4', 'IELTS Listening Part 4'],
     items: [
       [

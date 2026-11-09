@@ -1,5 +1,5 @@
 {
-  "version": "1.12.0",
+  "version": "1.13.0",
   "reading": [
     {
       "id": "city-farms",
@@ -81,7 +81,21 @@
           "Đoạn 3: \"need to be strengthened\".",
           "Đoạn 3: \"high-value crops\" = valuable. \"cheap\" là bẫy vì bài nói \"not cheap\" về chi phí làm nông trại."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "a reason why rooftop farms rarely grow staple foods",
+          "para": 2
+        },
+        {
+          "statement": "an effect on the temperature inside buildings",
+          "para": 1
+        },
+        {
+          "statement": "a benefit of reducing how far food is carried",
+          "para": 0
+        }
+      ]
     },
     {
       "id": "sleep-memory",
@@ -163,7 +177,21 @@
           "Đoạn 3: \"feel more alert\".",
           "Đoạn 3: \"sleep cannot replace practice\"."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "the results of a test given the following day",
+          "para": 1
+        },
+        {
+          "statement": "a warning that rest is not enough on its own",
+          "para": 2
+        },
+        {
+          "statement": "a description of how a typical experiment is set up",
+          "para": 0
+        }
+      ]
     },
     {
       "id": "coral-reefs",
@@ -245,7 +273,21 @@
           "Đoạn 3: \"too warm\". \"cold\" là bẫy trái nghĩa.",
           "Đoạn 3: \"if high temperatures continue for weeks\"."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "how reefs reduce damage from storms",
+          "para": 1
+        },
+        {
+          "statement": "the reason coral can lose its colour",
+          "para": 2
+        },
+        {
+          "statement": "the share of sea life that depends on reefs",
+          "para": 0
+        }
+      ]
     },
     {
       "id": "remote-work",
@@ -327,7 +369,21 @@
           "Đoạn 2: \"learn more slowly\". \"quickly\" là bẫy trái nghĩa.",
           "Đoạn 3: \"the 'hybrid' model\"."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "a concern about how new staff learn",
+          "para": 1
+        },
+        {
+          "statement": "a working pattern that combines home and office",
+          "para": 2
+        },
+        {
+          "statement": "savings mentioned by employees",
+          "para": 0
+        }
+      ]
     },
     {
       "id": "history-of-tea",
@@ -409,7 +465,21 @@
           "Đoạn 2: \"it was expensive\".",
           "Đoạn 3: \"second only to water\". \"milk\" là bẫy: sữa chỉ là thứ người ta pha thêm vào trà."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "the original reason people drank tea",
+          "para": 0
+        },
+        {
+          "statement": "different ways of preparing the drink",
+          "para": 2
+        },
+        {
+          "statement": "why tea was once only for the rich",
+          "para": 1
+        }
+      ]
     },
     {
       "id": "plastic-recycling",
@@ -491,7 +561,21 @@
           "Đoạn 2: \"recycling centres often reject dirty containers\". \"washed\" là bẫy: bài nói hộp CHƯA rửa.",
           "Đoạn 3: \"charge a small deposit… which is returned\". \"tax\" không được trả lại."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "a scheme that gives people money back for returning bottles",
+          "para": 2
+        },
+        {
+          "statement": "why unwashed containers cause problems",
+          "para": 1
+        },
+        {
+          "statement": "the difficulty of separating different plastics",
+          "para": 0
+        }
+      ]
     },
     {
       "id": "urban-bees",
@@ -586,7 +670,29 @@
           "Đoạn 3: \"a little warmer than the surrounding land\". \"colder\" là bẫy trái nghĩa.",
           "Đoạn 5: \"Native plants\". \"equipment\" có trong đoạn 5 nhưng không đi với \"flowers\"."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "a comparison of flowers in cities and on farmland",
+          "para": 2
+        },
+        {
+          "statement": "evidence that the food available per hive has decreased",
+          "para": 3
+        },
+        {
+          "statement": "the kinds of buildings where hives are kept",
+          "para": 0
+        },
+        {
+          "statement": "a suggestion that needs less skill than keeping bees",
+          "para": 4
+        },
+        {
+          "statement": "causes of the fall in bee numbers",
+          "para": 1
+        }
+      ]
     },
     {
       "id": "four-day-week",
@@ -681,7 +787,29 @@
           "Đoạn 3: \"chose to continue with the shorter week\". \"stop\" là bẫy trái nghĩa.",
           "Đoạn 5: \"reducing meetings\". \"holidays\" không có trong bài."
         ]
-      }
+      },
+      "matching": [
+        {
+          "statement": "the number of hours staff work in the trials",
+          "para": 1
+        },
+        {
+          "statement": "jobs that need workers present at fixed times",
+          "para": 3
+        },
+        {
+          "statement": "the origin of the two-day weekend",
+          "para": 0
+        },
+        {
+          "statement": "lessons for companies that keep a five-day week",
+          "para": 4
+        },
+        {
+          "statement": "what most firms decided after a trial in Britain",
+          "para": 2
+        }
+      ]
     }
   ],
   "speaking": {

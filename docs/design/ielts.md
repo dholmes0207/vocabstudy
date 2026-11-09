@@ -69,6 +69,12 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 14: Đọc, tìm thông tin (Matching information).** Mỗi bài đọc (8 bài) có 3–5 câu diễn đạt lại một ý
+  ("a reason why…", "a comparison of…"); người học chọn đoạn A–E chứa ý đó. Như đề thật, một chữ có thể dùng
+  nhiều lần (ở đây mỗi đoạn là đáp án tối đa một lần, nên không đoán mò bằng cách loại trừ được). Chấm cả lượt,
+  điểm cao nhất mỗi bài lưu trong `ieltsStore.matching` và hiện 🔎 trên danh sách bài. Dữ liệu
+  `reading[].matching`.
+
 - **Bước 13: Nghe Part 4 (bài giảng, điền ghi chú).** Thêm 2 bài giảng một người nói (lịch sử cà phê, giấc ngủ
   và trí nhớ), mỗi bài 7 câu và một bảng ghi chú 6 chỗ trống, mỗi chỗ đúng một từ (hoặc một số) như đề thật. Dữ
   liệu nằm chung `listening` với `part: 4` (thiếu `part` là Part 1), dùng lại vòng điền phiếu của Part 1, tiêu đề
