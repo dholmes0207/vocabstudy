@@ -1,10 +1,10 @@
 import { wordCount } from './ielts'
 
-// "TOEIC Writing: trả lời email" (docs/design/toeic-writing.md): Questions 6–7
-// of the TOEIC Writing test. The learner reads an email and replies doing
-// exactly what the directions ask (ask two questions, make one suggestion…).
-// The page ticks a checklist as the reply grows and shows a model answer.
-// Pure; data inline like lib/toeicSpeaking.ts.
+// "TOEIC Writing" (docs/design/toeic-writing.md). Questions 1–5: write one
+// sentence about a picture using two given words. Questions 6–7: read an
+// email and reply doing exactly what the directions ask (ask two questions,
+// make one suggestion…). The page ticks a checklist as the answer grows and
+// shows a model. Pure; data inline like lib/toeicSpeaking.ts.
 
 export interface EmailTask {
   id: string
@@ -84,3 +84,152 @@ export function checkEmail(reply: string): EmailCheck {
 
 /** XP for handing in a reply. */
 export const EMAIL_XP = 10
+
+/** Questions 1–5: a picture (an emoji scene and what it shows) and two words to use. */
+export interface PictureTask {
+  id: string
+  scene: string
+  /** What the photo shows, in Vietnamese. */
+  shows: string
+  words: [string, string]
+  /** How each word may appear: its forms (prepare → preparing, box → boxes). */
+  forms: [string[], string[]]
+  model: string
+}
+
+const pic = (
+  id: string,
+  scene: string,
+  shows: string,
+  words: [string, string],
+  forms: [string[], string[]],
+  model: string
+): PictureTask => ({ id, scene, shows, words, forms, model })
+
+export const PICTURE_TASKS: PictureTask[] = [
+  pic(
+    'phone',
+    '👩‍💼📞',
+    'Một người phụ nữ đang nói điện thoại ở bàn làm việc.',
+    ['woman', 'phone'],
+    [['woman'], ['phone', 'phones']],
+    'The woman is talking on the phone at her desk.'
+  ),
+  pic(
+    'bus',
+    '🚏🌧️👥',
+    'Mấy người đứng chờ ở trạm xe buýt dưới trời mưa.',
+    ['bus', 'because'],
+    [['bus', 'buses'], ['because']],
+    'People are waiting at the bus stop because the bus is late.'
+  ),
+  pic(
+    'chef',
+    '👨‍🍳🍲',
+    'Một đầu bếp đang nấu ăn trong bếp nhà hàng.',
+    ['chef', 'prepare'],
+    [
+      ['chef', 'chefs'],
+      ['prepare', 'prepares', 'preparing', 'prepared'],
+    ],
+    'The chef is preparing a meal in the kitchen.'
+  ),
+  pic(
+    'library',
+    '🧑‍🎓📚',
+    'Hai sinh viên đang ngồi học trong thư viện.',
+    ['student', 'library'],
+    [['student', 'students'], ['library']],
+    'Two students are studying together in the library.'
+  ),
+  pic(
+    'market',
+    '🛒🍎',
+    'Một người đàn ông đang mua trái cây ở chợ.',
+    ['buy', 'fruit'],
+    [
+      ['buy', 'buys', 'buying', 'bought'],
+      ['fruit', 'fruits'],
+    ],
+    'A man is buying some fruit at the market.'
+  ),
+  pic(
+    'meeting',
+    '💼🗣️📝',
+    'Trong một cuộc họp, một người ghi chép còn những người khác đang nói.',
+    ['meeting', 'while'],
+    [['meeting', 'meetings'], ['while']],
+    'One man is taking notes while the others are talking in the meeting.'
+  ),
+  pic(
+    'park',
+    '🚲🌳',
+    'Một cô gái đạp xe trong công viên.',
+    ['ride', 'park'],
+    [['ride', 'rides', 'riding', 'rode'], ['park']],
+    'A girl is riding her bicycle in the park.'
+  ),
+  pic(
+    'airport',
+    '✈️🧳',
+    'Một hành khách kéo vali đi trong sân bay.',
+    ['suitcase', 'airport'],
+    [['suitcase', 'suitcases'], ['airport']],
+    'A traveler is pulling a suitcase through the airport.'
+  ),
+  pic(
+    'delivery',
+    '🚚📦',
+    'Một tài xế đang giao những thùng hàng tới văn phòng.',
+    ['deliver', 'box'],
+    [
+      ['deliver', 'delivers', 'delivering', 'delivered'],
+      ['box', 'boxes'],
+    ],
+    'The driver is delivering some boxes to the office.'
+  ),
+  pic(
+    'coffee',
+    '😴☕',
+    'Một người ngồi ở bàn làm việc, trông buồn ngủ, đang uống cà phê.',
+    ['tired', 'so'],
+    [['tired'], ['so']],
+    'He is very tired, so he is drinking a cup of coffee.'
+  ),
+]
+
+/** How many pictures a round takes, as in the test. */
+export const PICTURE_ROUND = 5
+
+export interface SentenceCheck {
+  /** Each given word, in one of its forms. */
+  used: [boolean, boolean]
+  /** Starts with a capital letter and ends with a full stop. */
+  shaped: boolean
+  /** One sentence, not a list of words. */
+  long: boolean
+}
+
+export function checkSentence(task: PictureTask, sentence: string): SentenceCheck {
+  const text = sentence.trim()
+  const words = (text.toLowerCase().match(/[a-z]+/g) ?? []) as string[]
+  const has = (forms: string[]) => forms.some((f) => words.includes(f))
+  return {
+    used: [has(task.forms[0]), has(task.forms[1])],
+    shaped:
+      /^[A-Z]/.test(text) &&
+      /[.!?]$/.test(text) &&
+      text.split(/[.!?](\s|$)/).filter((p) => p.trim()).length === 1,
+    long: words.length >= 5,
+  }
+}
+
+/** A round of pictures in random order. */
+export function pictureRound(rand: () => number = Math.random): PictureTask[] {
+  const a = [...PICTURE_TASKS]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a.slice(0, PICTURE_ROUND)
+}

@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/vitest'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
-import { EMAIL_TASKS } from '@/lib/toeicWriting'
+import { EMAIL_TASKS, PICTURE_TASKS } from '@/lib/toeicWriting'
 
 vi.mock('@/lib/confetti', () => ({ celebrate: () => {} }))
 const { default: ToeicWriting } = await import('./ToeicWriting')
@@ -41,6 +41,26 @@ describe('TOEIC Writing email', () => {
     expect(screen.getByText(/Model reply/)).toBeInTheDocument()
     expect(useActivity.getState().counts.en?.['toeic-writing']).toBe(1)
     expect(useStudy.getState().progress.en?.stats.xp).toBe(10)
+  })
+
+  it('writes a sentence per picture, ticking both words, then shows the model', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('button', { name: /Write 5 sentences/ }))
+    for (let i = 0; i < 5; i++) {
+      const task = PICTURE_TASKS.find((p) => screen.queryByText(`${p.words[0]} / ${p.words[1]}`))!
+      const box = screen.getByLabelText('Your sentence')
+      fireEvent.change(box, { target: { value: task.words[0] } })
+      expect(screen.getByText(`Uses "${task.words[0]}"`).closest('li')).toHaveClass('bg-emerald-50')
+      expect(screen.getByText(`Uses "${task.words[1]}"`).closest('li')).not.toHaveClass(
+        'bg-emerald-50'
+      )
+      fireEvent.change(box, { target: { value: task.model } })
+      fireEvent.click(screen.getByRole('button', { name: 'Check' }))
+      expect(screen.getByRole('status')).toHaveTextContent(task.model)
+      fireEvent.click(screen.getByRole('button', { name: /^(Next|See results)/ }))
+    }
+    expect(screen.getByText('5 of 5 sentences complete')).toBeInTheDocument()
+    expect(useActivity.getState().counts.en?.['toeic-writing']).toBe(1)
   })
 
   it('shows the model on request, and is for the English pack only', () => {

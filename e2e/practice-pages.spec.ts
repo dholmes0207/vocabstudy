@@ -78,6 +78,9 @@ test('TOEIC Speaking times each answer', async ({ page }) => {
 test('TOEIC Writing: reply to an email', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/toeic-writing')
+  await page.getByRole('button', { name: /Write 5 sentences/ }).click()
+  await expect(page.getByLabel('Your sentence')).toBeVisible()
+  await page.goto('/toeic-writing')
   await page
     .getByRole('button', { name: /Write a reply/ })
     .first()
