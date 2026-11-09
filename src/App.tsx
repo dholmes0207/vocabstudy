@@ -36,6 +36,7 @@ const Confusables = lazy(() => import('./features/confusables/Confusables'))
 const Chengyu = lazy(() => import('./features/chengyu/Chengyu'))
 const Hskk = lazy(() => import('./features/hskk/Hskk'))
 const NetSlang = lazy(() => import('./features/slang/NetSlang'))
+const HanVietTraps = lazy(() => import('./features/hanvietTraps/HanVietTraps'))
 const PhrasalVerbs = lazy(() => import('./features/phrasal/PhrasalVerbs'))
 const Idioms = lazy(() => import('./features/idioms/Idioms'))
 const Roleplay = lazy(() => import('./features/roleplay/Roleplay'))
@@ -137,6 +138,7 @@ export default function App() {
               <Route path="/chengyu" element={<Chengyu />} />
               <Route path="/hskk" element={<Hskk />} />
               <Route path="/slang" element={<NetSlang />} />
+              <Route path="/han-viet-traps" element={<HanVietTraps />} />
               <Route path="/phrasal-verbs" element={<PhrasalVerbs />} />
               <Route path="/idioms" element={<Idioms />} />
               <Route path="/roleplay" element={<Roleplay />} />

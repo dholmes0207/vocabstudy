@@ -753,6 +753,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh3-traps',
+        'hanviet-traps',
+        2,
+        '🪤',
+        '/han-viet-traps',
+        ['Bẫy Hán Việt', 'Hán Việt traps'],
+        [
+          '大家 không phải "đại gia", 便宜 không phải "tiện nghi": né những từ âm Hán Việt đánh lừa.',
+          '大家 is not a tycoon, 便宜 is not "comfortable": dodge the words whose Hán Việt sound misleads.',
+        ]
+      ),
+      sessions(
         'zh3-hskk',
         'hskk',
         3,

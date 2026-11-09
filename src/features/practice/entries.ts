@@ -134,6 +134,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-rose-500 to-amber-500',
   },
   {
+    to: '/han-viet-traps',
+    icon: '🪤',
+    title: 'Bẫy Hán Việt',
+    desc: '大家 đọc "đại gia" mà nghĩa là "mọi người", 便宜 "tiện nghi" mà là "rẻ": những từ âm Hán Việt đánh lừa người Việt, kèm ví dụ và lượt né bẫy.',
+    titleEn: 'Hán Việt traps',
+    descEn:
+      '大家 reads "đại gia" (tycoon) yet means everyone, 便宜 "tiện nghi" (comfortable) yet means cheap: words whose Hán Việt sound misleads, with examples and a round.',
+    tone: 'from-orange-500 to-red-600',
+  },
+  {
     to: '/slang',
     icon: '📱',
     title: 'Tiếng lóng mạng',
