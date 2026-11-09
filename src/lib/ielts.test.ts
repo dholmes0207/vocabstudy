@@ -85,6 +85,28 @@ describe('summary completion', () => {
   })
 })
 
+describe('matching information', () => {
+  const { reading } = validateIeltsBank(raw())
+
+  it('gives every passage statements that each point to one of its paragraphs', () => {
+    for (const r of reading) {
+      expect(r.matching.length, r.id).toBeGreaterThanOrEqual(3)
+      for (const m of r.matching) {
+        expect(m.para, r.id).toBeGreaterThanOrEqual(0)
+        expect(m.para, r.id).toBeLessThan(r.passage.length)
+      }
+      // Here each paragraph is the answer at most once, so no letter is a free guess.
+      expect(new Set(r.matching.map((m) => m.para)).size, r.id).toBe(r.matching.length)
+    }
+  })
+
+  it('turns down a statement that points past the last paragraph', () => {
+    const b = raw()
+    b.reading[0].matching[0].para = 9
+    expect(() => validateIeltsBank(b)).toThrow(/statements to match/)
+  })
+})
+
 describe('matching headings', () => {
   const bank = validateIeltsBank(raw())
 

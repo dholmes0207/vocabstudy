@@ -19,6 +19,9 @@ interface IeltsState {
   /** Best Summary completion score per passage. */
   summary: Record<string, IeltsRecord>
   recordSummary: (id: string, correct: number, total: number) => void
+  /** Best Matching information score per passage. */
+  matching: Record<string, IeltsRecord>
+  recordMatching: (id: string, correct: number, total: number) => void
 }
 
 export const useIelts = create<IeltsState>()(
@@ -46,6 +49,14 @@ export const useIelts = create<IeltsState>()(
           summary: {
             ...s.summary,
             [id]: { best: Math.max(correct, s.summary[id]?.best ?? 0), total },
+          },
+        })),
+      matching: {},
+      recordMatching: (id, correct, total) =>
+        set((s) => ({
+          matching: {
+            ...s.matching,
+            [id]: { best: Math.max(correct, s.matching[id]?.best ?? 0), total },
           },
         })),
     }),

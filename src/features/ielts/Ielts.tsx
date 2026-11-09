@@ -20,6 +20,7 @@ import {
 import { useT } from '@/lib/i18n'
 import TfngRound from './TfngRound'
 import HeadingsRound from './HeadingsRound'
+import MatchingRound from './MatchingRound'
 import SummaryRound from './SummaryRound'
 import SpeakingRound, { type SpeakingTask } from './SpeakingRound'
 import WritingDrillRound from './WritingDrillRound'
@@ -40,13 +41,15 @@ export default function Ielts() {
   const done = useIelts((s) => s.reading)
   const headingsDone = useIelts((s) => s.headings)
   const summaryDone = useIelts((s) => s.summary)
+  const matchingDone = useIelts((s) => s.matching)
   const [match, setMatch] = useState<{
     n: number
-    kind: 'headings' | 'summary'
+    kind: 'headings' | 'summary' | 'matching'
     passage: ReadingPassage
   } | null>(null)
-  const startMatch = (kind: 'headings' | 'summary') => {
-    const done = kind === 'headings' ? headingsDone : summaryDone
+  const startMatch = (kind: 'headings' | 'summary' | 'matching') => {
+    const done =
+      kind === 'headings' ? headingsDone : kind === 'summary' ? summaryDone : matchingDone
     if (bank)
       setMatch((r) => ({
         n: (r?.n ?? 0) + 1,
@@ -149,7 +152,12 @@ export default function Ielts() {
       />
     )
   if (match) {
-    const Round = match.kind === 'headings' ? HeadingsRound : SummaryRound
+    const Round =
+      match.kind === 'headings'
+        ? HeadingsRound
+        : match.kind === 'summary'
+          ? SummaryRound
+          : MatchingRound
     return (
       <Round
         key={match.n}
@@ -270,6 +278,14 @@ export default function Ielts() {
               >
                 📝 {t('Điền tóm tắt (Summary completion)', 'Summary completion')}
               </button>
+              <button
+                type="button"
+                className="btn-secondary h-11 w-full sm:w-auto"
+                disabled={!bank}
+                onClick={() => startMatch('matching')}
+              >
+                🔎 {t('Tìm thông tin (Matching information)', 'Matching information')}
+              </button>
             </div>
             {bank && (
               <ul className="grid gap-2 sm:grid-cols-2">
@@ -315,6 +331,14 @@ export default function Ielts() {
                             title={t('Điền tóm tắt', 'Summary completion')}
                           >
                             📝 {summaryDone[p.id].best}/{summaryDone[p.id].total}
+                          </span>
+                        )}
+                        {matchingDone[p.id] && (
+                          <span
+                            className="text-xs font-bold text-amber-700 dark:text-amber-300"
+                            title={t('Tìm thông tin', 'Matching information')}
+                          >
+                            🔎 {matchingDone[p.id].best}/{matchingDone[p.id].total}
                           </span>
                         )}
                       </button>

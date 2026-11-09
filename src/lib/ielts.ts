@@ -55,6 +55,8 @@ export interface ReadingPassage {
   questions: TfngQuestion[]
   headings: HeadingsTask
   summary: SummaryTask
+  /** Matching information: statements, each found in one paragraph (its index). */
+  matching: { statement: string; para: number }[]
 }
 
 /** Headings are listed i, ii, iii… as on the paper. */
@@ -259,6 +261,18 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
       `"${r.id}" needs a reason per heading`
     )
     checkGaps(`"${r.id}" summary`, r.summary)
+    check(
+      Array.isArray(r.matching) &&
+        r.matching.length >= 3 &&
+        r.matching.every(
+          (m) =>
+            text(m?.statement) &&
+            Number.isInteger(m.para) &&
+            m.para >= 0 &&
+            m.para < r.passage.length
+        ),
+      `"${r.id}" needs three statements to match to its paragraphs`
+    )
   }
   const speaking = bank!.speaking
   check(
