@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Thành ngữ: điền vào câu', 'Chinese idioms: fill the sentence'],
+    items: [
+      [
+        'Luyện thành ngữ có thêm dạng thứ ba: một câu ví dụ bị che mất thành ngữ, chọn thành ngữ hợp với câu trong 4 phương án. Lượt 10 câu xoay vòng nghĩa, chữ còn thiếu và điền vào câu.',
+        'Chinese idiom practice gains a third kind: an example sentence with its idiom blanked out; pick the one that fits from four. A round of ten now rotates meaning, missing character and fill the sentence.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Câu nói líu lưỡi', 'Tongue twisters'],
     items: [
       [

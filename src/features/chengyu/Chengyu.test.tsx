@@ -22,6 +22,7 @@ vi.mock('@/lib/chengyu', async (importOriginal) => {
   const by = (zh: string) => real.CHENGYU.find((x) => x.zh === zh)!
   const doubt = by('半信半疑')
   const hare = by('守株待兔')
+  const both = by('一举两得')
   return {
     ...real,
     chengyuRound: () => [
@@ -42,6 +43,13 @@ vi.mock('@/lib/chengyu', async (importOriginal) => {
           { ch: '蛙', hv: 'oa' },
         ],
         answer: 0,
+      },
+      {
+        kind: 'fill',
+        item: both,
+        sentence: '骑车上班又省钱又锻炼身体，真是＿＿＿＿。',
+        options: [by('半途而废'), both, by('人山人海'), by('一心一意')],
+        answer: 1,
       },
     ],
   }
@@ -85,10 +93,18 @@ describe('Chinese idioms', () => {
     expect(screen.getByText('Not quite.')).toBeInTheDocument()
     expect(screen.getByText('thủ chu đãi thố')).toBeInTheDocument()
     expect(screen.getByText(/A farmer saw a hare/)).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /^Next/ }))
+
+    // Which idiom fits the sentence? The gap is filled in once answered.
+    expect(screen.getByText('Which idiom fits this sentence?')).toBeInTheDocument()
+    expect(screen.getByText('骑车上班又省钱又锻炼身体，真是＿＿＿＿。')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: '一举两得' }))
+    expect(screen.getByText('Right!')).toBeInTheDocument()
+    expect(screen.queryByText('骑车上班又省钱又锻炼身体，真是＿＿＿＿。')).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: /^See results/ }))
-    expect(screen.getByText('1 of 2 right')).toBeInTheDocument()
+    expect(screen.getByText('2 of 3 right')).toBeInTheDocument()
     expect(useActivity.getState().counts.zh?.chengyu).toBe(1)
-    expect(useStudy.getState().progress.zh?.stats.xp).toBe(7)
+    expect(useStudy.getState().progress.zh?.stats.xp).toBe(9)
   })
 
   it('is for the Chinese pack only', () => {
