@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Câu nói líu lưỡi', 'Tongue twisters'],
+    items: [
+      [
+        'Trang mới "Câu nói líu lưỡi" cho tiếng Anh và tiếng Trung: "She sells seashells…", "四是四，十是十…", mỗi câu nhắm một cặp âm khó, nghe chậm rồi nhanh, ghi âm và nghe lại.',
+        'New "Tongue twisters" page for English and Chinese: "She sells seashells…", "四是四，十是十…", each aimed at a hard pair of sounds; hear it slowly then at speed, record and play back.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['IELTS Reading: tìm thông tin', 'IELTS Reading: matching information'],
     items: [
       [

@@ -23,6 +23,7 @@ export type ActivityKind =
   | 'measure'
   | 'confusables'
   | 'chengyu'
+  | 'twister'
   | 'hskk'
   | 'slang'
   | 'hanviet-traps'

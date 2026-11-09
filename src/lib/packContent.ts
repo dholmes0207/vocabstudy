@@ -18,6 +18,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/confusables': ['zh', 'en'],
   // Four-character idioms through their Hán Việt sounds (lib/chengyu.ts).
   '/chengyu': ['zh'],
+  // Tongue twisters for the hardest sounds (lib/tongueTwisters.ts).
+  '/tongue-twisters': ['en', 'zh'],
   // Chinese internet words of Douyin and Weibo (lib/netSlang.ts).
   '/slang': ['zh'],
   // Chinese words whose Hán Việt reading misleads (lib/hanVietTraps.ts).

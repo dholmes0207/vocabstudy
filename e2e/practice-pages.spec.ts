@@ -148,6 +148,9 @@ test('Chinese look-alike characters, idioms, slang and sentence patterns', async
   await page.getByRole('button', { name: /Tone changes/ }).click()
   await expect(page.getByText('How is this word said aloud?')).toBeVisible()
 
+  await page.goto('/tongue-twisters?lang=zh')
+  await expect(page.getByText('妈妈骑马，马慢，妈妈骂马。')).toBeVisible()
+
   await page.goto('/hskk?lang=zh')
   await page.getByRole('tab', { name: /Intermediate/ }).click()
   await expect(page.getByText(/Talk about a picture/)).toBeVisible()
