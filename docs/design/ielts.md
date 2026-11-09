@@ -69,6 +69,11 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 13: Nghe Part 4 (bài giảng, điền ghi chú).** Thêm 2 bài giảng một người nói (lịch sử cà phê, giấc ngủ
+  và trí nhớ), mỗi bài 7 câu và một bảng ghi chú 6 chỗ trống, mỗi chỗ đúng một từ (hoặc một số) như đề thật. Dữ
+  liệu nằm chung `listening` với `part: 4` (thiếu `part` là Part 1), dùng lại vòng điền phiếu của Part 1, tiêu đề
+  đổi thành "Part 4 · Điền ghi chú". Kiểm dữ liệu: Part 4 chỉ nhận đáp án một từ.
+
 - **Bước 12: Bài mẫu Task 2.** Mỗi đề Viết Task 2 (6 đề) có một bài mẫu band 7, 4 đoạn (mở, 2 thân, kết),
   260–280 từ, đi đúng bố cục của dạng đề. Bài mẫu tự qua được checklist của trang (đủ 250 từ, 4 đoạn, ít nhất
   4 từ nối, không viết tắt hay văn nói); test kiểm điều đó. Bài mẫu mở ra sau khi nộp bài, hoặc bấm "Xem bài

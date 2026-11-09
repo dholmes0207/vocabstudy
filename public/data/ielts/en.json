@@ -1,5 +1,5 @@
 {
-  "version": "1.11.0",
+  "version": "1.12.0",
   "reading": [
     {
       "id": "city-farms",
@@ -2069,6 +2069,150 @@
         ]
       },
       "tip": "Câu hỏi đi theo thứ tự lời nói; nghe thấy đáp án rồi thì chuyển ngay sang ô tiếp theo."
+    },
+    {
+      "id": "history-of-coffee",
+      "emoji": "☕",
+      "part": 4,
+      "title": [
+        "Bài giảng: lịch sử cà phê",
+        "Lecture: the history of coffee"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Good morning, everyone. Today I'm going to talk about the history of coffee, one of the most popular drinks in the world."
+        },
+        {
+          "speaker": "W",
+          "text": "According to legend, coffee was first discovered in Ethiopia, where a goat herder noticed that his goats became very energetic after eating certain red berries."
+        },
+        {
+          "speaker": "W",
+          "text": "By the fifteenth century, coffee was being grown in Yemen, and it soon became popular across the Middle East."
+        },
+        {
+          "speaker": "W",
+          "text": "The first coffee houses appeared in cities such as Istanbul and Cairo. People went there not only to drink coffee, but also to listen to music and discuss the news."
+        },
+        {
+          "speaker": "W",
+          "text": "In the seventeenth century, coffee reached Europe. At first some people were suspicious of it, but coffee houses quickly spread, especially in London."
+        },
+        {
+          "speaker": "W",
+          "text": "In fact, London coffee houses were sometimes called 'penny universities', because for the price of a cup of coffee, you could join interesting conversations."
+        },
+        {
+          "speaker": "W",
+          "text": "Today, Brazil is the largest producer of coffee, followed by Vietnam, which mainly grows a type of bean called robusta."
+        }
+      ],
+      "form": {
+        "title": "Lecture notes: the history of coffee",
+        "fields": [
+          {
+            "label": "First discovered in",
+            "answer": "Ethiopia"
+          },
+          {
+            "label": "The goats ate red",
+            "answer": "berries"
+          },
+          {
+            "label": "15th century: grown in",
+            "answer": "Yemen"
+          },
+          {
+            "label": "Early coffee houses: music and discussing the",
+            "answer": "news"
+          },
+          {
+            "label": "London coffee houses: 'penny …'",
+            "answer": "universities"
+          },
+          {
+            "label": "Vietnam mainly grows … beans",
+            "answer": "robusta"
+          }
+        ]
+      },
+      "tip": "Part 4 chỉ một người nói, không nghỉ giữa chừng. Đọc trước tiêu đề ghi chú để đoán loại từ cần điền (danh từ, tên nước, số…), và viết đúng chính tả: sai một chữ là mất điểm."
+    },
+    {
+      "id": "sleep-and-memory",
+      "emoji": "😴",
+      "part": 4,
+      "title": [
+        "Bài giảng: giấc ngủ và trí nhớ",
+        "Lecture: sleep and memory"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good afternoon. In today's lecture, we'll look at the connection between sleep and memory."
+        },
+        {
+          "speaker": "M",
+          "text": "Most adults need between seven and nine hours of sleep a night, but surveys show that many students get less than six."
+        },
+        {
+          "speaker": "M",
+          "text": "Scientists divide sleep into several stages. The deepest stage, known as slow-wave sleep, seems to be especially important for remembering facts."
+        },
+        {
+          "speaker": "M",
+          "text": "During this stage, the brain replays information from the day and moves it into long-term memory."
+        },
+        {
+          "speaker": "M",
+          "text": "Another stage, called REM sleep, is when most dreams happen. Research suggests that it helps us learn skills, such as playing a musical instrument."
+        },
+        {
+          "speaker": "M",
+          "text": "One interesting study found that students who slept after studying remembered twenty per cent more than those who stayed awake."
+        },
+        {
+          "speaker": "M",
+          "text": "So my advice is simple: don't stay up all night before an exam. A good night's sleep is one of the best ways to prepare."
+        }
+      ],
+      "form": {
+        "title": "Lecture notes: sleep and memory",
+        "fields": [
+          {
+            "label": "Many students sleep less than … hours",
+            "answer": "six",
+            "accept": [
+              "6"
+            ]
+          },
+          {
+            "label": "Slow-wave sleep: important for remembering",
+            "answer": "facts"
+          },
+          {
+            "label": "Information moves into long-term",
+            "answer": "memory"
+          },
+          {
+            "label": "REM sleep: when most … happen",
+            "answer": "dreams"
+          },
+          {
+            "label": "REM sleep helps us learn",
+            "answer": "skills"
+          },
+          {
+            "label": "Sleeping after study: … per cent more remembered",
+            "answer": "twenty",
+            "accept": [
+              "20"
+            ]
+          }
+        ]
+      },
+      "tip": "Số trong Part 4 hay đi kèm đơn vị (hours, per cent): viết số hay chữ đều được. Câu cuối bài giảng thường là lời khuyên hay kết luận, đừng bỏ qua."
     }
   ],
   "listeningChoice": [

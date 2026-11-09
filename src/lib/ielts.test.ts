@@ -277,10 +277,20 @@ describe('writing practice', () => {
 describe('listening practice', () => {
   const { listening } = validateIeltsBank(raw())
 
-  it('has calls with two speakers and a form of answers the call says', () => {
-    expect(listening.length).toBeGreaterThanOrEqual(4)
+  it('turns down a Part 4 gap that takes more than one word', () => {
+    const b = raw()
+    const lecture = b.listening.find((l: { part?: number }) => l.part === 4)
+    lecture.form.fields[0].answer = 'two words'
+    expect(() => validateIeltsBank(b)).toThrow(/one-word answers/)
+  })
+
+  it('has calls with two speakers, lectures with one, and answers the recording says', () => {
+    expect(listening.filter((l) => (l.part ?? 1) === 1).length).toBeGreaterThanOrEqual(4)
+    expect(listening.filter((l) => l.part === 4).length).toBeGreaterThanOrEqual(2)
     for (const l of listening) {
-      expect(new Set(l.lines.map((x) => x.speaker)), l.id).toEqual(new Set(['W', 'M']))
+      expect(new Set(l.lines.map((x) => x.speaker)).size, l.id).toBe(l.part === 4 ? 1 : 2)
+      if (l.part === 4)
+        for (const f of l.form.fields) expect(f.answer, `${l.id}: ${f.label}`).not.toMatch(/\s/)
       const said = l.lines.map((x) => x.text.toLowerCase()).join(' ')
       // Every word answer is heard (numbers may be said in words).
       for (const f of l.form.fields)

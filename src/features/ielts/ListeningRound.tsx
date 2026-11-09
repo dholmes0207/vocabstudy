@@ -55,7 +55,11 @@ export default function ListeningRound({
           <X className="h-5 w-5" />
         </button>
         <p className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          🎧 {t('Nghe điền phiếu', 'Form completion')} · {t(...set.title)}
+          🎧{' '}
+          {set.part === 4
+            ? t('Part 4 · Điền ghi chú', 'Part 4 · Note completion')
+            : t('Nghe điền phiếu', 'Form completion')}{' '}
+          · {t(...set.title)}
         </p>
       </div>
 

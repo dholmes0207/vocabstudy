@@ -67,12 +67,10 @@ export default function Ielts() {
   }
   const [essay, setEssay] = useState<EssayPrompt | null>(null)
   const [listening, setListening] = useState<{ n: number; set: ListeningSet } | null>(null)
-  const listen = () => {
-    if (bank)
-      setListening((r) => ({
-        n: (r?.n ?? 0) + 1,
-        set: pickOther(bank.listening, r?.set.id),
-      }))
+  const listen = (part: 1 | 4 = 1) => {
+    if (!bank) return
+    const pool = bank.listening.filter((l) => (l.part ?? 1) === part)
+    setListening((r) => ({ n: (r?.n ?? 0) + 1, set: pickOther(pool, r?.set.id) }))
   }
   const [choice, setChoice] = useState<{ n: number; set: ListeningChoiceSet } | null>(null)
   const listenChoice = (part: 2 | 3) => {
@@ -116,7 +114,7 @@ export default function Ielts() {
       <ListeningRound
         key={listening.n}
         set={listening.set}
-        onAgain={listen}
+        onAgain={() => listen(listening.set.part ?? 1)}
         onExit={() => setListening(null)}
       />
     )
@@ -482,7 +480,7 @@ export default function Ielts() {
       <section aria-labelledby="ielts-listening" className="card space-y-4 p-5">
         <h2 id="ielts-listening" className="flex items-center gap-2 text-lg font-bold">
           <Headphones className="h-5 w-5 text-sky-600 dark:text-sky-300" aria-hidden="true" />
-          {t('Nghe: Part 1, 2 và 3', 'Listening: Parts 1, 2 and 3')}
+          {t('Nghe: Part 1, 2, 3 và 4', 'Listening: Parts 1, 2, 3 and 4')}
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300">
           {t(
@@ -494,7 +492,7 @@ export default function Ielts() {
           type="button"
           className="btn-primary h-11 w-full sm:w-auto"
           disabled={!bank}
-          onClick={listen}
+          onClick={() => listen(1)}
         >
           {t('Part 1: nghe một cuộc gọi', 'Part 1: hear a call')} <ArrowRight className="h-4 w-4" />
         </button>
@@ -519,13 +517,22 @@ export default function Ielts() {
                   'Two students plan their work: ideas they drop are traps.',
                 ],
               ],
+              [
+                4,
+                '🎓',
+                ['Part 4: bài giảng', 'Part 4: a lecture'],
+                [
+                  'Một bài giảng ngắn, điền ghi chú, mỗi chỗ một từ.',
+                  'A short lecture: complete the notes, one word per gap.',
+                ],
+              ],
             ] as const
           ).map(([part, icon, title, desc]) => (
             <button
               key={part}
               type="button"
               disabled={!bank}
-              onClick={() => listenChoice(part)}
+              onClick={() => (part === 4 ? listen(4) : listenChoice(part))}
               className="rounded-2xl border-2 border-slate-200 p-4 text-left transition hover:border-sky-400 disabled:opacity-60 dark:border-slate-700"
             >
               <span className="block text-2xl" aria-hidden="true">

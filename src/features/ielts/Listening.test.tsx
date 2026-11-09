@@ -60,6 +60,17 @@ describe('IELTS listening', () => {
     expect(useActivity.getState().counts.en?.['ielts-listening']).toBe(1)
   })
 
+  it('labels a Part 4 lecture as note completion', () => {
+    const set = listening.find((l) => l.part === 4)!
+    render(
+      <MemoryRouter>
+        <ListeningRound set={set} onAgain={() => {}} onExit={() => {}} />
+      </MemoryRouter>
+    )
+    expect(screen.getByText(/Part 4 · Note completion/)).toBeInTheDocument()
+    expect(screen.getByText(set.form.title)).toBeInTheDocument()
+  })
+
   it('runs a Part 3 discussion: plays it, takes A/B/C answers, explains each and shows who said what', () => {
     const set = listeningChoice.find((c) => c.part === 3)!
     render(
