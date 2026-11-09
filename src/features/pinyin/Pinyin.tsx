@@ -17,6 +17,7 @@ import {
   missedPairs,
   pinyinQuiz,
   pinyinXp,
+  sandhiQuiz,
   tonePairTable,
   type PinyinQuestion,
   type Sound,
@@ -35,12 +36,16 @@ export default function Pinyin() {
   const t = useT()
   const words = useData((s) => s.pack?.words)
   const [quiz, setQuiz] = useState<{ n: number; questions: PinyinQuestion[] } | null>(null)
-  const [ear, setEar] = useState(false)
-  const start = (byEar = ear) => {
-    setEar(byEar)
+  // Which round "Again" repeats: reading, hearing tones, or tone changes in speech.
+  const [mode, setMode] = useState<'check' | 'ear' | 'sandhi'>('check')
+  const start = (next = mode) => {
+    setMode(next)
     setQuiz((q) => ({
       n: (q?.n ?? 0) + 1,
-      questions: (byEar ? earQuiz : pinyinQuiz)(words ?? [], QUIZ_SIZE),
+      questions:
+        next === 'sandhi'
+          ? sandhiQuiz(QUIZ_SIZE, t)
+          : (next === 'ear' ? earQuiz : pinyinQuiz)(words ?? [], QUIZ_SIZE),
     }))
   }
 
@@ -68,12 +73,18 @@ export default function Pinyin() {
           )}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <button className="btn-primary h-11" onClick={() => start(false)}>
+          <button className="btn-primary h-11" onClick={() => start('check')}>
             {t(`Kiểm tra nhanh (${QUIZ_SIZE} câu)`, `Quick check (${QUIZ_SIZE} questions)`)}
           </button>
-          <button className="btn-secondary h-11" onClick={() => start(true)}>
+          <button className="btn-secondary h-11" onClick={() => start('ear')}>
             <Volume2 className="h-4 w-4" />{' '}
             {t(`Nghe chọn thanh (${QUIZ_SIZE} câu)`, `Hear the tones (${QUIZ_SIZE} questions)`)}
+          </button>
+          <button className="btn-secondary h-11" onClick={() => start('sandhi')}>
+            {t(
+              `Luyện biến điệu 一 · 不 (${QUIZ_SIZE} câu)`,
+              `Tone changes 一 · 不 (${QUIZ_SIZE} questions)`
+            )}
           </button>
         </div>
       </header>
@@ -465,7 +476,9 @@ function Quiz({
             ? t('Chữ này mang thanh mấy?', 'Which tone does this character have?')
             : q.kind === 'ear'
               ? t('Nghe rồi chọn thanh đúng', 'Listen, then pick the tones')
-              : t('Từ này đọc là gì?', 'How do you read this word?')}
+              : q.kind === 'sandhi'
+                ? t('Khi nói, từ này đọc là gì?', 'How is this word said aloud?')
+                : t('Từ này đọc là gì?', 'How do you read this word?')}
         </p>
         {hidden ? (
           <button

@@ -45,6 +45,20 @@ describe('Pinyin', () => {
     expect(screen.getByRole('button', { name: /中国 — Trung Quốc/ })).toBeInTheDocument()
   })
 
+  it('drills tone changes in speech, explaining the rule after each answer', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('button', { name: /Luyện biến điệu/ }))
+    expect(screen.getByText('Khi nói, từ này đọc là gì?')).toBeInTheDocument()
+    for (let i = 0; i < 10; i++) {
+      const card = screen.getByText('Khi nói, từ này đọc là gì?').parentElement!
+      fireEvent.click(within(card).getAllByRole('button')[0])
+      if (i === 0) expect(screen.getByText(/thanh/, { selector: 'b' })).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: /Câu tiếp theo|Xem kết quả/ }))
+    }
+    expect(screen.getByText('Xong bài kiểm tra pinyin!')).toBeInTheDocument()
+    expect(useStudy.getState().progress.zh?.stats.xp).toBeGreaterThanOrEqual(5)
+  })
+
   it('runs the quick check to the end and gives XP', () => {
     vi.spyOn(Math, 'random').mockReturnValue(0.42)
     renderPage()

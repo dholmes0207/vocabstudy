@@ -14,7 +14,7 @@ import {
   VOWELS,
   compose,
 } from './hangul'
-import { INITIALS as PINYIN_INITIALS, SANDHI, TONES, TRICKY_FINALS } from './pinyin'
+import { INITIALS as PINYIN_INITIALS, SANDHI, SANDHI_DRILL, TONES, TRICKY_FINALS } from './pinyin'
 import { MEASURES, MEASURE_ITEMS, phrase } from './measureWords'
 import { COUNTERS, COUNTER_ITEMS, counterPhrase } from './koCounters'
 import { itemFor as koNumber } from './koNumbers'
@@ -179,6 +179,8 @@ function chinese(): string[] {
     ...TONES.map((t) => t.char),
     ...sounds,
     ...SANDHI.map((s) => s.example),
+    // "Luyện biến điệu": each word is read after the answer.
+    ...SANDHI_DRILL.map((d) => d.zh),
     ...MEASURES.map((m) => `一${m.ch}`),
     ...MEASURE_ITEMS.map((item) => phrase(item, '').zh),
     ...numbers,
