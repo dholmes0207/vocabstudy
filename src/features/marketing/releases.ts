@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['IELTS Reading: điền câu', 'IELTS Reading: sentence completion'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng Sentence completion: hoàn thành câu bằng không quá hai từ lấy từ bài đọc, gõ tay như đề thật. Gõ quá hai từ sẽ được nhắc ngay; chấm xong có đáp án và đoạn chứa nó.',
+        'IELTS Reading gains Sentence completion: finish each sentence with no more than two words from the passage, typed as in the test. Going over two words is flagged at once; after checking you see each answer and where it is.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Thành ngữ: điền vào câu', 'Chinese idioms: fill the sentence'],
     items: [
       [

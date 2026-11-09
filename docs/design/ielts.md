@@ -69,6 +69,16 @@ hoặc trong vòng 7 ngày.
   phải nằm trong câu mẫu) được tô màu. Mẫu gập sẵn để người học tự trả lời trước; mở ra thì nghe được để
   nói theo (shadowing). Câu mẫu vào `screens.json` để thu giọng. Kiểm dữ liệu: đủ một mẫu cho mỗi câu hỏi.
 
+- **Bước 15: Đọc, điền câu (Sentence completion).** Mỗi bài đọc (8 bài) có 4–5 câu, mỗi câu một chỗ trống
+  (`___`), điền KHÔNG QUÁ HAI TỪ lấy nguyên từ bài. Khác Summary completion: gõ tay, không có hộp từ, nên
+  phải chép đúng chính tả của bài. Câu hỏi đi theo thứ tự bài đọc như đề thật; câu hỏi diễn đạt lại phần
+  quanh chỗ trống ("greatest" thay "strongest"), còn từ cần điền giữ nguyên. Gõ quá hai từ thì ô viền vàng
+  và nhắc ngay; khi chấm, đáp án quá hai từ tính sai dù đúng ý. Chấp nhận vài cách viết khác (`accept`:
+  "17th", "practise"). Chấm cả lượt: đáp án và đoạn nào nói điều đó cho từng câu, mẹo dò từ khoá. +3 XP mỗi
+  câu đúng, ghi `ielts-reading`, điểm cao nhất trong `ieltsStore.completion` (hiện ✍️ trên danh sách bài).
+  Dữ liệu `reading[].completion`; `validateIeltsBank` kiểm mỗi câu có đúng một chỗ trống, đáp án tối đa hai
+  từ và có trong bài; test kiểm thêm các câu theo thứ tự bài, đáp án không trùng nhau.
+
 - **Bước 14: Đọc, tìm thông tin (Matching information).** Mỗi bài đọc (8 bài) có 3–5 câu diễn đạt lại một ý
   ("a reason why…", "a comparison of…"); người học chọn đoạn A–E chứa ý đó. Như đề thật, một chữ có thể dùng
   nhiều lần (ở đây mỗi đoạn là đáp án tối đa một lần, nên không đoán mò bằng cách loại trừ được). Chấm cả lượt,
@@ -137,5 +147,5 @@ hoặc trong vòng 7 ngày.
 
 ## 5. Tiếp theo
 
-1. Thêm dạng đọc: nối thông tin với đoạn (matching information), điền câu (sentence completion).
-2. Nghe Part 4 (bài giảng ngắn, điền ghi chú) và dạng nối thông tin (matching) ở Part 2–3.
+1. Thêm dạng đọc: trắc nghiệm nhiều lựa chọn (chọn 2 trong 5), Yes / No / Not Given cho bài nêu quan điểm.
+2. Nghe: dạng nối thông tin (matching) ở Part 2–3.

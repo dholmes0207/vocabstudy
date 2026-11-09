@@ -1,10 +1,14 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import {
+  COMPLETION_GAP,
+  COMPLETION_WORDS,
   TASK2_WORDS,
+  answerWords,
   axisMax,
   blankRight,
   clock,
+  completionParts,
   drillRound,
   headingsRight,
   summaryParts,
@@ -104,6 +108,46 @@ describe('matching information', () => {
     const b = raw()
     b.reading[0].matching[0].para = 9
     expect(() => validateIeltsBank(b)).toThrow(/statements to match/)
+  })
+})
+
+describe('sentence completion', () => {
+  const { reading } = validateIeltsBank(raw())
+
+  it('gives every passage sentences whose answers come from it, two words at most', () => {
+    for (const r of reading) {
+      expect(r.completion.length, r.id).toBeGreaterThanOrEqual(3)
+      const whole = r.passage.join(' ')
+      for (const c of r.completion) {
+        expect(answerWords(c.answer), c.text).toBeLessThanOrEqual(COMPLETION_WORDS)
+        expect(whole.toLowerCase(), c.text).toContain(c.answer.toLowerCase())
+        const [before, after] = completionParts(c.text)
+        expect(before + c.answer + after).not.toContain(COMPLETION_GAP)
+        expect(blankRight(c.answer.toUpperCase(), c), c.text).toBe(true)
+      }
+      // As in the test, the sentences follow the order of the passage.
+      let from = 0
+      for (const c of r.completion) {
+        from = whole.toLowerCase().indexOf(c.answer.toLowerCase(), from)
+        expect(from, `${r.id}: "${c.answer}" out of order`).toBeGreaterThanOrEqual(0)
+      }
+      // Answers differ, so one word cannot fill two gaps.
+      expect(new Set(r.completion.map((c) => c.answer)).size, r.id).toBe(r.completion.length)
+    }
+  })
+
+  it('counts words the way the word limit does', () => {
+    expect(answerWords('  open   sea ')).toBe(2)
+    expect(answerWords('')).toBe(0)
+  })
+
+  it('turns down an answer that is not in the passage or is too long', () => {
+    const b = raw()
+    b.reading[0].completion[0].answer = 'a word nowhere'
+    expect(() => validateIeltsBank(b)).toThrow(/sentences to complete/)
+    const c = raw()
+    c.reading[0].completion[0].text = 'No gap here.'
+    expect(() => validateIeltsBank(c)).toThrow(/sentences to complete/)
   })
 })
 
