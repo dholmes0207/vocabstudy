@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['TOEIC Writing: trả lời email', 'TOEIC Writing: reply to an email'],
+    items: [
+      [
+        'Trang mới luyện Câu 6–7 của đề Viết TOEIC: đọc email, viết thư trả lời đúng yêu cầu của đề, checklist tự đánh dấu lời chào, số câu hỏi, độ dài, lời kết, rồi so với thư mẫu. Lộ trình TOEIC có thêm bước này.',
+        'New page for Questions 6–7 of TOEIC Writing: read an email and reply as the directions ask, with a checklist for the greeting, questions, length and sign-off, then a model reply. The TOEIC level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: [
       'TOEIC Speaking: trả lời dựa trên thông tin',
       'TOEIC Speaking: respond using information',

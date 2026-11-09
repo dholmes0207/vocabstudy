@@ -431,6 +431,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en5-writing',
+        'toeic-writing',
+        2,
+        '✉️',
+        '/toeic-writing',
+        ['TOEIC Writing: email', 'TOEIC Writing: email'],
+        [
+          'Trả lời email đúng từng yêu cầu của đề, Câu 6–7 của phần Viết TOEIC.',
+          'Reply to an email doing each thing the directions ask: Questions 6–7 of TOEIC Writing.',
+        ]
+      ),
+      sessions(
         'en5-roleplay',
         'roleplay',
         6,
