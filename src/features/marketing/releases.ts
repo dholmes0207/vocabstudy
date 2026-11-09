@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['IELTS Listening Part 4', 'IELTS Listening Part 4'],
+    items: [
+      [
+        'Phần Nghe IELTS có thêm Part 4: nghe một bài giảng ngắn (lịch sử cà phê, giấc ngủ và trí nhớ) rồi điền ghi chú, mỗi chỗ một từ như đề thật.',
+        'IELTS Listening gains Part 4: hear a short lecture (the history of coffee, sleep and memory) and complete the notes, one word per gap as in the test.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Luyện nói HSKK trung cấp', 'HSKK Intermediate speaking'],
     items: [
       [

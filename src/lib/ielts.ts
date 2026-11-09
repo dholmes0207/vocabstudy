@@ -150,9 +150,12 @@ export interface EssayPrompt {
 }
 
 /** Listening Part 1: a call, and the form the learner fills from it. */
+/** Listening Part 1 (a call, a form) or Part 4 (a lecture, notes). */
 export interface ListeningSet {
   id: string
   emoji: string
+  /** 1 when left out. */
+  part?: 1 | 4
   title: Pair
   lines: { speaker: 'W' | 'M'; text: string }[]
   form: { title: string; fields: { label: string; answer: string; accept?: string[] }[] }
@@ -366,6 +369,16 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
         l.lines.every((x) => (x?.speaker === 'W' || x?.speaker === 'M') && text(x.text)),
       `listening "${l.id}" has a bad line`
     )
+    check(
+      l.part === undefined || l.part === 1 || l.part === 4,
+      `listening "${l.id}" has no known part`
+    )
+    // Part 4 notes take ONE WORD (or a number) per gap.
+    if (l.part === 4)
+      check(
+        Array.isArray(l.form?.fields) && l.form.fields.every((f) => !/\s/.test(f?.answer ?? '')),
+        `listening "${l.id}" (Part 4) needs one-word answers`
+      )
     check(
       text(l.form?.title) &&
         Array.isArray(l.form.fields) &&
