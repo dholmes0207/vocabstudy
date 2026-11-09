@@ -54,6 +54,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-500 to-blue-700',
   },
   {
+    to: '/toeic-writing',
+    icon: '✉️',
+    title: 'TOEIC Writing: trả lời email',
+    desc: 'Đọc email rồi viết thư trả lời đúng yêu cầu đề (hỏi 2 câu, đưa 1 đề xuất…), checklist tự đánh dấu, so với thư mẫu.',
+    titleEn: 'TOEIC Writing: reply to an email',
+    descEn:
+      'Read an email and reply doing what the directions ask (two questions, one suggestion…), with a checklist and a model reply.',
+    tone: 'from-cyan-500 to-blue-600',
+  },
+  {
     to: '/patterns',
     icon: '🧱',
     title: 'Cấu trúc câu',

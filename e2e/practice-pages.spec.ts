@@ -75,6 +75,20 @@ test('TOEIC Speaking times each answer', async ({ page }) => {
   ).toBeLessThanOrEqual(0)
 })
 
+test('TOEIC Writing: reply to an email', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/toeic-writing')
+  await page
+    .getByRole('button', { name: /Write a reply/ })
+    .first()
+    .click()
+  await page.getByLabel('Your reply').fill('Dear Ms. Park, will the pool be free?')
+  await expect(page.getByText(/Asks at least 2 questions \(1\)/)).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')
