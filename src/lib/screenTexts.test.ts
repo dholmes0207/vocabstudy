@@ -27,6 +27,7 @@ import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
 import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
+import { TWISTERS } from './tongueTwisters'
 import { HSKK_LEVELS } from './hskk'
 import { SLANG } from './netSlang'
 import { HAN_VIET_TRAPS } from './hanVietTraps'
@@ -122,6 +123,8 @@ function english(): string[] {
     ...SURVEYS.flatMap((s) => s.questions.flatMap((x) => [x.q, x.sample.a])),
     ...INFO_SETS.flatMap((s) => [s.intro, ...s.questions.flatMap((x) => [x.q, x.sample.a])]),
     ...OPINIONS.flatMap((o) => [o.prompt, o.sample.a]),
+    // "Câu nói líu lưỡi".
+    ...TWISTERS.en.map((x) => x.text),
     // "Thành ngữ tiếng Anh": each idiom and its example.
     ...IDIOMS.flatMap((x) => [x.phrase, x.example.en]),
     // "Từ dễ nhầm": each sentence is read with its gap filled.
@@ -195,6 +198,8 @@ function chinese(): string[] {
     ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
     // "Thành ngữ": each idiom and its example sentence.
     ...CHENGYU.flatMap((it) => [it.zh, it.example.zh]),
+    // "Câu nói líu lưỡi".
+    ...TWISTERS.zh.map((x) => x.text),
     // "Luyện nói HSKK": every line read out, and the sample answers.
     ...Object.values(HSKK_LEVELS).flatMap((lv) =>
       Object.values(lv.parts).flatMap((items) =>

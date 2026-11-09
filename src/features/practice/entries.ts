@@ -315,6 +315,16 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-sky-500 to-cyan-600',
   },
   {
+    to: '/tongue-twisters',
+    icon: '👅',
+    title: 'Câu nói líu lưỡi',
+    desc: '"She sells seashells…", "四是四，十是十…": luyện các cặp âm khó (s/sh, r/l, th, n/l, bốn thanh), nghe chậm, ghi âm rồi nghe lại.',
+    titleEn: 'Tongue twisters',
+    descEn:
+      '"She sells seashells…", "四是四，十是十…": drill the hard sounds (s/sh, r/l, th, n/l, the four tones), hear them slowly, record and play back.',
+    tone: 'from-pink-500 to-orange-500',
+  },
+  {
     to: '/sounds',
     icon: '👄',
     title: 'Âm khó cho người Việt',

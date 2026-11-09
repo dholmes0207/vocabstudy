@@ -34,6 +34,7 @@ const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
 const Confusables = lazy(() => import('./features/confusables/Confusables'))
 const Chengyu = lazy(() => import('./features/chengyu/Chengyu'))
+const TongueTwisters = lazy(() => import('./features/twisters/TongueTwisters'))
 const Hskk = lazy(() => import('./features/hskk/Hskk'))
 const NetSlang = lazy(() => import('./features/slang/NetSlang'))
 const HanVietTraps = lazy(() => import('./features/hanvietTraps/HanVietTraps'))
@@ -138,6 +139,7 @@ export default function App() {
               <Route path="/measure-words" element={<MeasureWords />} />
               <Route path="/confusables" element={<Confusables />} />
               <Route path="/chengyu" element={<Chengyu />} />
+              <Route path="/tongue-twisters" element={<TongueTwisters />} />
               <Route path="/hskk" element={<Hskk />} />
               <Route path="/slang" element={<NetSlang />} />
               <Route path="/han-viet-traps" element={<HanVietTraps />} />
