@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Kết hợp từ tiếng Anh', 'English collocations'],
+    items: [
+      [
+        'Trang mới "Kết hợp từ": mở đèn là turn on the light, không phải open the light; uống thuốc là take medicine. 24 cụm theo 4 chủ đề, từ đời sống tới IELTS (raise awareness, pose a threat), mỗi cụm có cách dịch từng chữ bị gạch đi và lý do. Luyện 10 câu hoặc từng chủ đề.',
+        'New "Collocations" page: turn on the light, not open the light; take medicine, not drink it. 24 phrases in 4 themes, from daily life to IELTS (raise awareness, pose a threat), each with the word-for-word slip crossed out and why. Practise 10 at a time or one theme.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Ngữ pháp tiếng Trung: bốn điểm hay sai', 'Chinese grammar: four common slips'],
     items: [
       [

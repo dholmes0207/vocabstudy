@@ -313,6 +313,18 @@ export const EN_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'en4-collocations',
+        'collocations',
+        2,
+        '🧲',
+        '/collocations',
+        ['Kết hợp từ', 'Collocations'],
+        [
+          'Turn on the light chứ không phải open the light: chọn đúng từ đi kèm, tránh dịch từng chữ.',
+          'Turn on the light, not open the light: pick the right partner instead of translating word for word.',
+        ]
+      ),
+      sessions(
         'en4-listen',
         'listen',
         5,

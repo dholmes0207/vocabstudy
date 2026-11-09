@@ -29,6 +29,7 @@ export type ActivityKind =
   | 'hanviet-traps'
   | 'phrasal'
   | 'idioms'
+  | 'collocations'
   | 'roleplay'
   | 'hangul'
   | 'numbers'

@@ -40,6 +40,7 @@ const NetSlang = lazy(() => import('./features/slang/NetSlang'))
 const HanVietTraps = lazy(() => import('./features/hanvietTraps/HanVietTraps'))
 const PhrasalVerbs = lazy(() => import('./features/phrasal/PhrasalVerbs'))
 const Idioms = lazy(() => import('./features/idioms/Idioms'))
+const Collocations = lazy(() => import('./features/collocations/Collocations'))
 const Roleplay = lazy(() => import('./features/roleplay/Roleplay'))
 const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Radicals = lazy(() => import('./features/radicals/Radicals'))
@@ -145,6 +146,7 @@ export default function App() {
               <Route path="/han-viet-traps" element={<HanVietTraps />} />
               <Route path="/phrasal-verbs" element={<PhrasalVerbs />} />
               <Route path="/idioms" element={<Idioms />} />
+              <Route path="/collocations" element={<Collocations />} />
               <Route path="/roleplay" element={<Roleplay />} />
               <Route path="/han-viet" element={<HanVietTable />} />
               <Route path="/radicals" element={<Radicals />} />

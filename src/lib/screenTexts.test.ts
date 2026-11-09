@@ -33,6 +33,7 @@ import { SLANG } from './netSlang'
 import { HAN_VIET_TRAPS } from './hanVietTraps'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { IDIOMS } from './idiomsEn'
+import { COLLOCATIONS, filled as collocationFilled } from './collocations'
 import { INFO_SETS, OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
 import { validateRoleplay } from './roleplay'
 
@@ -127,6 +128,8 @@ function english(): string[] {
     ...TWISTERS.en.map((x) => x.text),
     // "Thành ngữ tiếng Anh": each idiom and its example.
     ...IDIOMS.flatMap((x) => [x.phrase, x.example.en]),
+    // "Kết hợp từ": each natural phrase, and its sentence with the gap filled.
+    ...COLLOCATIONS.flatMap((x) => [x.right, collocationFilled(x)]),
     // "Từ dễ nhầm": each sentence is read with its gap filled.
     ...CONFUSABLE_PACKS.en.flatMap((g) => g.sentences.map(filled)),
   ]
