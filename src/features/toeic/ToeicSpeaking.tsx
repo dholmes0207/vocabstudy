@@ -8,6 +8,7 @@ import { useImmersive } from '@/store/uiStore'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { pronounce, stopPronounce, textAudio } from '@/lib/audio'
 import {
+  INFO_SETS,
   OPINIONS,
   OPINION_SECONDS,
   READ_ALOUD,
@@ -70,6 +71,19 @@ const TASKS: {
     ],
   },
   {
+    task: 'info',
+    emoji: '📋',
+    title: ['Trả lời dựa trên thông tin (Câu 8–10)', 'Respond using information (Questions 8–10)'],
+    desc: [
+      'Một lịch trình hay thông báo hiện trên màn hình, người gọi hỏi ba câu: 15, 15 rồi 30 giây.',
+      'A schedule or notice on screen, and a caller with three questions: 15, 15, then 30 seconds.',
+    ],
+    tip: [
+      'Đọc kỹ lịch trước, để ý chỗ bị huỷ, bị dời. Báo tin không như ý thì mở đầu lịch sự: I’m sorry, but… / Actually, … Câu 30 giây: liệt kê đủ các mục, nói giờ và người phụ trách.',
+      'Read the schedule first and spot anything cancelled or moved. Give bad news politely: I’m sorry, but… / Actually, … For the 30-second one, list every item with its time and who leads it.',
+    ],
+  },
+  {
     task: 'opinion',
     emoji: '💭',
     title: ['Nêu quan điểm (Câu 11)', 'Express an opinion (Question 11)'],
@@ -94,13 +108,30 @@ const pick = <T,>(arr: readonly T[], n: number): T[] => {
 }
 
 /** The steps of one practice round of a task, with the situation to show above them. */
-function stepsFor(task: ToeicSpeakingTask): { intro?: string; steps: Step[] } {
+function stepsFor(task: ToeicSpeakingTask): {
+  intro?: string
+  info?: { title: string; lines: string[] }
+  steps: Step[]
+} {
   if (task === 'read')
     return { steps: pick(READ_ALOUD, 2).map((r) => ({ text: r.text, seconds: READ_SECONDS })) }
   if (task === 'respond') {
     const [set] = pick(SURVEYS, 1)
     return {
       intro: set.intro,
+      steps: set.questions.map((x) => ({
+        text: x.q,
+        say: x.q,
+        seconds: x.seconds,
+        sample: x.sample,
+      })),
+    }
+  }
+  if (task === 'info') {
+    const [set] = pick(INFO_SETS, 1)
+    return {
+      intro: set.intro,
+      info: { title: set.title, lines: set.lines },
       steps: set.questions.map((x) => ({
         text: x.q,
         say: x.q,
@@ -126,6 +157,7 @@ function ToeicSpeakingView() {
     n: number
     task: ToeicSpeakingTask
     intro?: string
+    info?: { title: string; lines: string[] }
     steps: Step[]
   } | null>(null)
   const start = (task: ToeicSpeakingTask) =>
@@ -137,6 +169,7 @@ function ToeicSpeakingView() {
         key={round.n}
         task={round.task}
         intro={round.intro}
+        info={round.info}
         steps={round.steps}
         onAgain={() => start(round.task)}
         onExit={() => setRound(null)}
@@ -176,12 +209,15 @@ function ToeicSpeakingView() {
 function Round({
   task,
   intro,
+  info: shown,
   steps,
   onAgain,
   onExit,
 }: {
   task: ToeicSpeakingTask
   intro?: string
+  /** The schedule Questions 8–10 are about, kept on screen. */
+  info?: { title: string; lines: string[] }
   steps: Step[]
   onAgain: () => void
   onExit: () => void
@@ -254,6 +290,16 @@ function Round({
   return (
     <div className="mx-auto max-w-lg space-y-4 animate-fade-in">
       {top}
+      {shown && (
+        <section lang="en" className="card space-y-1 p-4 text-sm" aria-label={shown.title}>
+          <p className="font-bold">{shown.title}</p>
+          <ul className="space-y-0.5 text-slate-600 dark:text-slate-300">
+            {shown.lines.map((l) => (
+              <li key={l}>{l}</li>
+            ))}
+          </ul>
+        </section>
+      )}
       {intro && (
         <p lang="en" className="card p-4 text-sm text-slate-600 dark:text-slate-300">
           {intro}

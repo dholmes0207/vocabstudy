@@ -9,7 +9,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
-import { OPINIONS, SURVEYS } from '@/lib/toeicSpeaking'
+import { INFO_SETS, OPINIONS, SURVEYS } from '@/lib/toeicSpeaking'
 
 const said: string[] = []
 vi.mock('@/lib/audio', () => ({
@@ -74,9 +74,23 @@ describe('TOEIC Speaking', () => {
     expect(said).toHaveLength(1)
   })
 
-  it('gives an opinion in 60 seconds', () => {
+  it('answers a caller from a schedule kept on screen', () => {
     renderPage()
     fireEvent.click(screen.getAllByRole('button', { name: /^Start/ })[2])
+    const set = INFO_SETS.find((s) => screen.queryByText(s.title))!
+    expect(set).toBeTruthy()
+    expect(screen.getByText(set.lines[0])).toBeInTheDocument()
+    expect(screen.getByText(set.intro)).toBeInTheDocument()
+    expect(said.at(-1)).toBe(set.questions[0].q)
+    fireEvent.click(screen.getByRole('button', { name: /Next question/ }))
+    // The schedule stays while the next question is asked.
+    expect(screen.getByText(set.lines[0])).toBeInTheDocument()
+    expect(said.at(-1)).toBe(set.questions[1].q)
+  })
+
+  it('gives an opinion in 60 seconds', () => {
+    renderPage()
+    fireEvent.click(screen.getAllByRole('button', { name: /^Start/ })[3])
     expect(screen.getByText(/60 seconds/)).toBeInTheDocument()
     expect(OPINIONS.some((o) => said.at(-1) === o.prompt)).toBe(true)
   })
