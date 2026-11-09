@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['IELTS Reading: Yes / No / Not Given', 'IELTS Reading: Yes / No / Not Given'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm Yes / No / Not Given với 4 bài nghị luận mới. Dạng này hay bị nhầm với True / False / Not Given: ở đây câu hỏi là tác giả nghĩ gì, không phải bài nói gì. Trang có giải thích khác biệt và mẹo nhận ra ý kiến tác giả.',
+        'IELTS Reading gains Yes / No / Not Given, with four new opinion passages. It is easy to confuse with True / False / Not Given: here the question is what the writer thinks, not what the passage says. The page explains the difference and how to spot the writer’s views.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['IELTS Reading: điền câu', 'IELTS Reading: sentence completion'],
     items: [
       [

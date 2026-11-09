@@ -1,5 +1,5 @@
 {
-  "version": "1.14.0",
+  "version": "1.15.0",
   "reading": [
     {
       "id": "city-farms",
@@ -2849,6 +2849,168 @@
         }
       ],
       "tip": "Câu hỏi về \"ý kiến\" hay \"việc tiếp theo\" cần nghe ai là người nói. Chữ \"I'd rather\", \"I'd prefer\" báo hiệu lựa chọn thật của người đó."
+    }
+  ],
+  "opinion": [
+    {
+      "id": "homework",
+      "emoji": "📚",
+      "title": [
+        "Bài tập về nhà cho trẻ nhỏ",
+        "Homework for young children"
+      ],
+      "passage": [
+        "Few school habits are as widely accepted as homework, yet I believe that for children under ten it does more harm than good. Research has found little link between homework and test results at primary level, and the hours spent on worksheets are hours taken away from play, sleep and reading for pleasure.",
+        "This is not to say that practice is useless. Older students clearly benefit from reviewing what they learned in class, and in secondary school a modest amount of homework is, in my view, entirely reasonable. The problem is that the same approach is often applied to children of all ages.",
+        "Some parents argue that homework teaches discipline. That may be true, but discipline can be learned in many other ways, such as caring for a pet or practising a musical instrument. Schools would do better to encourage reading at home than to send children back with yet more exercises."
+      ],
+      "questions": [
+        {
+          "statement": "Homework is harmful for children under ten.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"I believe that for children under ten it does more harm than good\". \"I believe\" cho biết đây là ý kiến của tác giả."
+        },
+        {
+          "statement": "Secondary school students should be given no homework at all.",
+          "answer": "N",
+          "why": "Đoạn 2: tác giả cho rằng một ít bài tập ở cấp hai là \"entirely reasonable\", trái với câu hỏi."
+        },
+        {
+          "statement": "Most primary school teachers dislike setting homework.",
+          "answer": "NG",
+          "why": "Bài không nói giáo viên nghĩ gì về việc giao bài tập. Tác giả không có ý kiến về điều này."
+        },
+        {
+          "statement": "Homework is the only way for children to learn discipline.",
+          "answer": "N",
+          "why": "Đoạn 3: \"discipline can be learned in many other ways\" (nuôi thú cưng, tập nhạc cụ)."
+        },
+        {
+          "statement": "Schools should encourage children to read at home.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"Schools would do better to encourage reading at home\". \"would do better to\" là lời khuyên của tác giả."
+        }
+      ]
+    },
+    {
+      "id": "free-museums",
+      "emoji": "🏛️",
+      "title": [
+        "Bảo tàng có nên miễn phí?",
+        "Should museums be free?"
+      ],
+      "passage": [
+        "Many national museums charge an entrance fee, and their managers point out that old buildings and large collections are expensive to look after. I understand this argument, but I am convinced that public museums should be free to enter. They hold objects that belong, in a sense, to everyone, and a ticket price keeps away exactly the people who visit least often.",
+        "When several large museums stopped charging, visitor numbers rose sharply. Critics claim that most of the extra visitors were people who already went to museums regularly. Even if this is partly true, it does not seem to me a reason to bring fees back: a free museum still gives every family the chance to walk in.",
+        "Of course, free entry must be paid for somehow. A small charge for special exhibitions strikes me as a fair compromise, as long as the permanent collection remains open to all."
+      ],
+      "questions": [
+        {
+          "statement": "Public museums should not charge visitors to enter.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"I am convinced that public museums should be free to enter\"."
+        },
+        {
+          "statement": "Ticket prices make little difference to people who seldom visit museums.",
+          "answer": "N",
+          "why": "Đoạn 1: giá vé \"keeps away exactly the people who visit least often\", tức là ảnh hưởng nhiều nhất tới họ."
+        },
+        {
+          "statement": "Free entry has made museums too crowded to enjoy.",
+          "answer": "NG",
+          "why": "Bài nói số khách tăng nhưng tác giả không nói gì về chuyện đông đúc hay khó xem."
+        },
+        {
+          "statement": "The critics' point about the extra visitors is a good reason to bring fees back.",
+          "answer": "N",
+          "why": "Đoạn 2: \"it does not seem to me a reason to bring fees back\"."
+        },
+        {
+          "statement": "Charging for special exhibitions is a reasonable compromise.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"strikes me as a fair compromise\". \"fair\" ≈ \"reasonable\"."
+        }
+      ]
+    },
+    {
+      "id": "city-cycling",
+      "emoji": "🚲",
+      "title": [
+        "Chỗ cho xe đạp trong phố",
+        "Making room for bicycles"
+      ],
+      "passage": [
+        "City leaders often say they want more people to cycle, but they are rarely willing to take space away from cars. In my opinion, painting a line on a busy road is not enough. Most people will only ride a bicycle if they feel safe, and that requires lanes that are physically separated from traffic.",
+        "Opponents warn that removing car lanes will cause terrible traffic jams. The experience of several European cities suggests otherwise: when cycling becomes easy, many short car journeys simply disappear. I would also argue that local shops benefit, since cyclists find it easier to stop on the way than drivers do.",
+        "Electric bicycles have made cycling possible for older people and in hilly cities. Even so, I do not think every journey can or should be made by bike. Deliveries and people with disabilities will always need road space, and good planning must include them."
+      ],
+      "questions": [
+        {
+          "statement": "A painted line on the road is enough to make cyclists feel safe.",
+          "answer": "N",
+          "why": "Đoạn 1: \"painting a line on a busy road is not enough\"; cần làn tách hẳn khỏi xe cộ."
+        },
+        {
+          "statement": "Local shops can gain when more people cycle.",
+          "answer": "Y",
+          "why": "Đoạn 2: \"I would also argue that local shops benefit\". \"gain\" ≈ \"benefit\"."
+        },
+        {
+          "statement": "Electric bicycles are too expensive for most people.",
+          "answer": "NG",
+          "why": "Đoạn 3 nói xe đạp điện giúp người lớn tuổi và nơi đồi dốc, không nói gì về giá."
+        },
+        {
+          "statement": "Eventually, all trips in a city should be made by bicycle.",
+          "answer": "N",
+          "why": "Đoạn 3: \"I do not think every journey can or should be made by bike\"."
+        },
+        {
+          "statement": "City planning should take account of deliveries and disabled people.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"good planning must include them\" (giao hàng và người khuyết tật)."
+        }
+      ]
+    },
+    {
+      "id": "early-languages",
+      "emoji": "🧒",
+      "title": [
+        "Học ngoại ngữ từ sớm",
+        "Starting a language early"
+      ],
+      "passage": [
+        "It is often said that children learn languages faster than adults, and this is used to justify teaching English from the first year of primary school. I think the claim is only half true. Young children are certainly better at picking up the sounds of a new language, and they usually end up with a more natural accent.",
+        "However, in a classroom with two or three lessons a week, older learners often make faster progress, because they can understand grammar rules and use study strategies. An early start is therefore no guarantee of success. What matters most, in my view, is how many hours of real use a learner gets, not the age at which lessons begin.",
+        "This does not mean that early lessons are a waste of time. If they are enjoyable, they can give children a positive attitude towards other languages and cultures, and that attitude may be the most valuable thing a school can offer."
+      ],
+      "questions": [
+        {
+          "statement": "Children have an advantage over adults in learning the sounds of a language.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"Young children are certainly better at picking up the sounds\". \"certainly\" cho thấy tác giả đồng ý."
+        },
+        {
+          "statement": "Starting lessons early guarantees that a learner will succeed.",
+          "answer": "N",
+          "why": "Đoạn 2: \"An early start is therefore no guarantee of success\"."
+        },
+        {
+          "statement": "Most countries now teach English from the first year of primary school.",
+          "answer": "NG",
+          "why": "Bài chỉ nói lập luận này được dùng để dạy tiếng Anh từ lớp 1, không nói bao nhiêu nước làm vậy."
+        },
+        {
+          "statement": "The amount of real practice matters more than the age at which a learner starts.",
+          "answer": "Y",
+          "why": "Đoạn 2: \"What matters most, in my view, is how many hours of real use a learner gets, not the age\"."
+        },
+        {
+          "statement": "Early language lessons have no value.",
+          "answer": "N",
+          "why": "Đoạn 3: \"This does not mean that early lessons are a waste of time\"; chúng tạo thái độ tích cực."
+        }
+      ]
     }
   ]
 }

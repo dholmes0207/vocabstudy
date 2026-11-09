@@ -131,6 +131,18 @@ test('IELTS sentence completion types into gaps inside the sentences', async ({ 
   await expect(page.getByText(/Over two words/)).toBeVisible()
 })
 
+test('IELTS Yes / No / Not Given asks about the writer’s views', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/ielts')
+  await page.getByRole('button', { name: /Read an opinion passage/ }).click()
+  await expect(page.getByText('Does it agree with the writer’s views?')).toBeVisible()
+  await page.getByRole('button', { name: 'NOT GIVEN' }).click()
+  await expect(page.getByRole('status')).toBeVisible()
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('Chinese look-alike characters, idioms, slang and sentence patterns', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/confusables?lang=zh')

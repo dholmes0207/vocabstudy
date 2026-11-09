@@ -13,6 +13,7 @@ import {
   type EssayPrompt,
   type ListeningChoiceSet,
   type ListeningSet,
+  type OpinionPassage,
   type ReadingPassage,
   type Task1Chart,
   type WritingDrill,
@@ -66,6 +67,17 @@ export default function Ielts() {
       }))
   }
   const [round, setRound] = useState<{ n: number; passage: ReadingPassage } | null>(null)
+  const opinionDone = useIelts((s) => s.opinion)
+  const [opinion, setOpinion] = useState<{ n: number; passage: OpinionPassage } | null>(null)
+  const startOpinion = (passage?: OpinionPassage) => {
+    if (bank)
+      setOpinion((r) => ({
+        n: (r?.n ?? 0) + 1,
+        passage: readingRound(
+          passage ?? pickPassage(bank.opinion, (id) => !!opinionDone[id], r?.passage.id)
+        ),
+      }))
+  }
   const [speaking, setSpeaking] = useState<{ n: number; task: SpeakingTask } | null>(null)
   const [drills, setDrills] = useState<{ n: number; list: WritingDrill[] } | null>(null)
   const [task1, setTask1] = useState<{ n: number; chart: Task1Chart } | null>(null)
@@ -175,6 +187,16 @@ export default function Ielts() {
       />
     )
   }
+  if (opinion)
+    return (
+      <TfngRound
+        key={opinion.n}
+        scale="ynng"
+        passage={opinion.passage}
+        onAgain={() => startOpinion()}
+        onExit={() => setOpinion(null)}
+      />
+    )
   if (round)
     return (
       <TfngRound
@@ -369,6 +391,67 @@ export default function Ielts() {
                     </li>
                   )
                 })}
+              </ul>
+            )}
+          </>
+        )}
+      </section>
+
+      <section aria-labelledby="ielts-ynng" className="card space-y-4 p-5">
+        <h2 id="ielts-ynng" className="flex items-center gap-2 text-lg font-bold">
+          <span aria-hidden="true">💬</span>
+          {t('Đọc: Yes / No / Not Given', 'Reading: Yes / No / Not Given')}
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300">
+          {t(
+            'Trông giống True / False / Not Given nhưng hỏi khác: không hỏi sự thật mà hỏi ý kiến của tác giả. Bài đọc dạng này là bài nghị luận, tác giả nêu quan điểm (I believe, in my view, strikes me as…).',
+            'It looks like True / False / Not Given but asks something else: not the facts but the writer’s views. These passages argue a case, and the writer gives an opinion (I believe, in my view, strikes me as…).'
+          )}
+        </p>
+        <div className="grid gap-2 text-sm sm:grid-cols-3">
+          <p className="rounded-xl bg-emerald-50 p-3 dark:bg-emerald-950/40">
+            <b>YES</b>: {t('tác giả nghĩ đúng như vậy.', 'the writer thinks so.')}
+          </p>
+          <p className="rounded-xl bg-rose-50 p-3 dark:bg-rose-950/40">
+            <b>NO</b>: {t('tác giả nghĩ ngược lại.', 'the writer thinks the opposite.')}
+          </p>
+          <p className="rounded-xl bg-amber-50 p-3 dark:bg-amber-950/40">
+            <b>NOT GIVEN</b>:{' '}
+            {t('tác giả không nêu ý kiến về điều đó.', 'the writer gives no view on it.')}
+          </p>
+        </div>
+        {!error && (
+          <>
+            <button
+              type="button"
+              className="btn-primary h-11 w-full sm:w-auto"
+              disabled={!bank}
+              onClick={() => startOpinion()}
+            >
+              {t('Làm một bài nghị luận', 'Read an opinion passage')}{' '}
+              <ArrowRight className="h-4 w-4" />
+            </button>
+            {bank && (
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {bank.opinion.map((p) => (
+                  <li key={p.id}>
+                    <button
+                      type="button"
+                      onClick={() => startOpinion(p)}
+                      className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 p-3 text-left transition hover:border-brand-400 dark:border-slate-700"
+                    >
+                      <span className="text-2xl" aria-hidden="true">
+                        {p.emoji}
+                      </span>
+                      <span className="min-w-0 flex-1 font-semibold">{t(...p.title)}</span>
+                      {opinionDone[p.id] && (
+                        <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300">
+                          ✓ {opinionDone[p.id].best}/{opinionDone[p.id].total}
+                        </span>
+                      )}
+                    </button>
+                  </li>
+                ))}
               </ul>
             )}
           </>
