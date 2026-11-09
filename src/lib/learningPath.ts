@@ -789,6 +789,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh3-collocations',
+        'collocations',
+        2,
+        '🧲',
+        '/collocations',
+        ['Kết hợp từ', 'Collocations'],
+        [
+          'Uống thuốc là 吃药, đội mũ là 戴帽子, đá bóng là 踢足球: chọn đúng động từ đi với danh từ.',
+          'Medicine is 吃药, a hat is 戴, football is 踢: pick the verb each noun takes.',
+        ]
+      ),
+      sessions(
         'zh3-hskk',
         'hskk',
         3,

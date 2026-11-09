@@ -97,10 +97,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/collocations',
     icon: '🧲',
     title: 'Kết hợp từ',
-    desc: 'Mở đèn là turn on the light, không phải open the light; uống thuốc là take medicine: từ nào đi với từ nào, tránh dịch từng chữ từ tiếng Việt.',
+    desc: 'Turn on the light chứ không phải open the light (tiếng Anh), 吃药 chứ không phải 喝药 (tiếng Trung): từ nào đi với từ nào, tránh dịch từng chữ từ tiếng Việt.',
     titleEn: 'Collocations',
     descEn:
-      'Turn on the light, not open the light; take medicine, not drink it: which words go together, so you don’t translate word for word.',
+      'Turn on the light, not open the light (English); 吃药, not 喝药 (Chinese): which words go together, so you don’t translate word for word.',
     tone: 'from-lime-500 to-emerald-600',
   },
   {

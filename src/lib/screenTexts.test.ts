@@ -33,7 +33,7 @@ import { SLANG } from './netSlang'
 import { HAN_VIET_TRAPS } from './hanVietTraps'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { IDIOMS } from './idiomsEn'
-import { COLLOCATIONS, filled as collocationFilled } from './collocations'
+import { COLLOCATIONS, COLLOCATIONS_ZH, filled as collocationFilled } from './collocations'
 import { INFO_SETS, OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
 import { validateRoleplay } from './roleplay'
 
@@ -213,6 +213,8 @@ function chinese(): string[] {
     ...SLANG.flatMap((it) => [it.zh, it.example.zh]),
     // "Bẫy Hán Việt": each word and its example sentence.
     ...HAN_VIET_TRAPS.flatMap((it) => [it.zh, it.example.zh]),
+    // "Kết hợp từ": each natural phrase, and its sentence with the gap filled.
+    ...COLLOCATIONS_ZH.flatMap((x) => [x.right, collocationFilled(x)]),
   ]
 }
 
