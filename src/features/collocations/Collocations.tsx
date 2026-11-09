@@ -6,9 +6,8 @@ import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import {
-  COLLOCATIONS,
+  COLLOCATION_PACKS,
   GAP,
-  THEMES,
   collocationRound,
   collocationXp,
   filled,
@@ -23,20 +22,22 @@ import PackOnly from '@/components/PackOnly'
 import SpeakButton from '@/components/SpeakButton'
 import GameShell, { GameResult } from '@/features/games/GameShell'
 
-// "Kết hợp từ" (docs/design/collocations.md): English word partners that
-// word-for-word translation from Vietnamese gets wrong, by theme, each with
+// "Kết hợp từ" (docs/design/collocations.md): English and Chinese word partners
+// that word-for-word translation from Vietnamese gets wrong, by theme, each with
 // the slip crossed out; then a round that fills a sentence with the right
 // partner, the slip and one more wrong word on offer.
 
 const ROUND = 10
 
+type Code = keyof typeof COLLOCATION_PACKS
+
 export default function Collocations() {
   const code = useSettings((s) => s.currentLang)
-  if (code !== 'en') return <PackOnly packs={['en']} />
-  return <CollocationsView />
+  if (code !== 'en' && code !== 'zh') return <PackOnly packs={['en', 'zh']} />
+  return <CollocationsView code={code} />
 }
 
-function CollocationsView() {
+function CollocationsView({ code }: { code: Code }) {
   const t = useT()
   const ttsLang = useData((s) => s.pack!.meta.ttsLang)
   useDocumentTitle(`${t('Kết hợp từ', 'Collocations')} · VocaStudy`)
@@ -45,14 +46,20 @@ function CollocationsView() {
     theme?: CollocationTheme
     questions: CollocationQuestion[]
   } | null>(null)
+  const { themes, items: all } = COLLOCATION_PACKS[code]
   const start = (theme?: CollocationTheme) =>
-    setRound((r) => ({ n: (r?.n ?? 0) + 1, theme, questions: collocationRound(ROUND, theme) }))
+    setRound((r) => ({
+      n: (r?.n ?? 0) + 1,
+      theme,
+      questions: collocationRound(ROUND, theme, Math.random, all),
+    }))
 
   if (round)
     return (
       <Round
         key={round.n}
         questions={round.questions}
+        lang={code}
         onAgain={() => start(round.theme)}
         onExit={() => setRound(null)}
       />
@@ -63,13 +70,18 @@ function CollocationsView() {
       <header>
         <h1 className="text-2xl font-extrabold tracking-tight">
           <span className="text-aurora">{t('Kết hợp từ', 'Collocations')}</span>{' '}
-          <span lang="en">turn on the light</span>
+          <span lang={code}>{code === 'zh' ? '吃药' : 'turn on the light'}</span>
         </h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(
-            '"Mở đèn" không phải "open the light", "uống thuốc" không phải "drink medicine". Từ nào đi với từ nào là thói quen của người bản xứ, dịch từng chữ từ tiếng Việt sẽ lộ ngay. IELTS chấm phần này trong tiêu chí từ vựng (Lexical Resource).',
-            '"Mở đèn" isn’t "open the light", "uống thuốc" isn’t "drink medicine". Which words go together is a native habit, and translating word for word from Vietnamese gives you away. IELTS marks it under Lexical Resource.'
-          )}
+          {code === 'zh'
+            ? t(
+                '"Uống thuốc" tiếng Trung là 吃药 ("ăn thuốc"), "đội mũ" là 戴帽子 chứ không phải 穿, "kiếm tiền" là 挣钱 vì 找钱 là "thối tiền". Mỗi danh từ có động từ đi kèm riêng, dịch từng chữ từ tiếng Việt sẽ sai.',
+                '"Uống thuốc" is 吃药 in Chinese ("eat medicine"), a hat takes 戴 not 穿, and earning money is 挣钱 because 找钱 means giving change. Each noun has its own verb, and translating word for word from Vietnamese gets it wrong.'
+              )
+            : t(
+                '"Mở đèn" không phải "open the light", "uống thuốc" không phải "drink medicine". Từ nào đi với từ nào là thói quen của người bản xứ, dịch từng chữ từ tiếng Việt sẽ lộ ngay. IELTS chấm phần này trong tiêu chí từ vựng (Lexical Resource).',
+                '"Mở đèn" isn’t "open the light", "uống thuốc" isn’t "drink medicine". Which words go together is a native habit, and translating word for word from Vietnamese gives you away. IELTS marks it under Lexical Resource.'
+              )}
         </p>
       </header>
 
@@ -77,8 +89,8 @@ function CollocationsView() {
         {t(`Thử ${ROUND} câu`, `Try ${ROUND} questions`)} <ArrowRight className="h-5 w-5" />
       </button>
 
-      {THEMES.map((th) => {
-        const items = COLLOCATIONS.filter((x) => x.theme === th.id)
+      {themes.map((th) => {
+        const items = all.filter((x) => x.theme === th.id)
         return (
           <section key={th.id} aria-labelledby={`col-${th.id}`} className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -104,10 +116,13 @@ function CollocationsView() {
                   />
                   <div className="min-w-0 text-sm">
                     <p className="text-slate-500 dark:text-slate-400">{x.vi}</p>
-                    <p lang="en">
+                    <p lang={code}>
                       <b className="text-emerald-700 dark:text-emerald-300">✓ {x.right}</b>
+                      {x.reading && (
+                        <span className="ml-1 text-slate-500 dark:text-slate-400">{x.reading}</span>
+                      )}
                     </p>
-                    <p lang="en" className="text-rose-600 dark:text-rose-300">
+                    <p lang={code} className="text-rose-600 dark:text-rose-300">
                       ✗ <s>{x.slip}</s>
                     </p>
                   </div>
@@ -123,10 +138,12 @@ function CollocationsView() {
 
 function Round({
   questions,
+  lang,
   onAgain,
   onExit,
 }: {
   questions: CollocationQuestion[]
+  lang: Code
   onAgain: () => void
   onExit: () => void
 }) {
@@ -200,7 +217,7 @@ function Round({
             {t('Từ nào đi với cụm này?', 'Which word goes with it?')}
           </p>
           <p className="mt-2 font-semibold text-brand-700 dark:text-brand-300">{item.vi}</p>
-          <p lang="en" className="mt-3 text-xl font-bold leading-relaxed">
+          <p lang={lang} className="mt-3 text-xl font-bold leading-relaxed">
             {before}
             <span
               className={`mx-1 inline-block min-w-16 border-b-2 px-1 ${
@@ -228,7 +245,7 @@ function Round({
               <button
                 key={label}
                 type="button"
-                lang="en"
+                lang={lang}
                 onClick={() => pick(i)}
                 disabled={answered}
                 className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 px-3 py-2 text-center text-lg font-semibold transition ${
@@ -264,8 +281,11 @@ function Round({
                 audioSrc={textAudio(filled(item))}
                 size="sm"
               />
-              <p lang="en">
+              <p lang={lang}>
                 <b className="text-emerald-700 dark:text-emerald-300">✓ {item.right}</b>
+                {item.reading && (
+                  <span className="ml-1 text-slate-500 dark:text-slate-400">{item.reading}</span>
+                )}
                 <span className="mx-2 text-slate-400">·</span>
                 <span className="text-rose-600 dark:text-rose-300">
                   ✗ <s>{item.slip}</s>

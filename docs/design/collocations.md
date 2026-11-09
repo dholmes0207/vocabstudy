@@ -33,7 +33,19 @@ hứng thú, hấp dẫn khi học".
 - Trang `/collocations` (`features/collocations/`), chỉ cho gói tiếng Anh, mục trong trang Luyện tập. Cụm đúng
   và câu đã điền có trong `scripts/audio-texts/screens.json` để thu giọng. E2E ở `e2e/practice-pages.spec.ts`.
 
-## 4. Tiếp theo
+## 4. Tiếng Trung (09/11/2026)
+
+- Người Việt cũng dịch từng chữ sang tiếng Trung, nhất là động từ đi với danh từ: "uống thuốc" → 喝药 (đúng là
+  吃药), "đội mũ" → 穿帽子 (đúng là 戴帽子), "kiếm tiền" → 找钱 (找钱 là "thối tiền", đúng là 挣钱), "đánh đàn" → 打吉他
+  (đúng là 弹吉他), "tham gia kỳ thi" → 加入考试 (đúng là 参加考试).
+- 17 cụm, 3 chủ đề: đời sống, học tập và công việc, sở thích và thể thao. Mỗi cụm có pinyin của cách đúng, câu chữ
+  Hán có chỗ trống, lý do bằng tiếng Việt. Phương án sai đầu tiên là cách dịch từng chữ.
+- Cùng trang `/collocations`, dữ liệu theo gói (`COLLOCATION_PACKS` trong `lib/collocations.ts`). Lộ trình tiếng
+  Trung, cấp 3 (HSK 2) thêm bước "Kết hợp từ" sau "Bẫy Hán Việt".
+- Chỗ dễ nhập nhằng đã tránh: 喝药 vẫn dùng cho thuốc nước nên câu hỏi nói rõ thuốc viên (每次两片); 玩 không dùng
+  làm phương án cho bóng rổ, ghi-ta vì văn nói vẫn có người nói vậy.
+
+## 5. Tiếp theo
 
 1. Thêm chủ đề: sức khoẻ, công nghệ, du lịch (mỗi chủ đề 6 cụm).
 2. Dạng ngược: thấy câu tiếng Anh có collocation sai, tìm và sửa.

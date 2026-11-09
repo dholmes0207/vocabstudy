@@ -20,12 +20,16 @@ vi.mock('@/lib/confetti', () => ({ celebrate: () => {} }))
 vi.mock('@/lib/collocations', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/collocations')>()
   const by = (vi: string) => real.COLLOCATIONS.find((x) => x.vi === vi)!
+  const zh = (vi: string) => real.COLLOCATIONS_ZH.find((x) => x.vi === vi)!
   return {
     ...real,
-    collocationRound: () => [
-      { item: by('bật đèn'), options: ['open', 'turn on', 'start'], answer: 1 },
-      { item: by('uống thuốc'), options: ['take', 'drink', 'eat'], answer: 0 },
-    ],
+    collocationRound: (_n: number, _t: unknown, _r: unknown, pool: unknown) =>
+      pool === real.COLLOCATIONS_ZH
+        ? [{ item: zh('uống thuốc'), options: ['喝', '吃', '打'], answer: 1 }]
+        : [
+            { item: by('bật đèn'), options: ['open', 'turn on', 'start'], answer: 1 },
+            { item: by('uống thuốc'), options: ['take', 'drink', 'eat'], answer: 0 },
+          ],
   }
 })
 
@@ -69,8 +73,20 @@ describe('Collocations', () => {
     expect(useStudy.getState().progress.en?.stats.xp).toBe(7)
   })
 
-  it('is for the English pack only', () => {
+  it('has Chinese verbs too, with pinyin, where uống thuốc is 吃药', () => {
+    const zhPack = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
     useSettings.setState({ currentLang: 'zh' })
+    useData.setState({ pack: zhPack, status: 'ready' })
+    renderPage()
+    expect(screen.getByText('chī yào')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Try 10 questions/ }))
+    fireEvent.click(screen.getByRole('button', { name: '喝' }))
+    expect(screen.getByText('Not quite.')).toBeInTheDocument()
+    expect(screen.getByText(/Tiếng Trung nói 吃药/)).toBeInTheDocument()
+  })
+
+  it('is not for the Korean pack', () => {
+    useSettings.setState({ currentLang: 'ko' })
     renderPage()
     expect(screen.queryByRole('button', { name: /Try 10 questions/ })).toBeNull()
   })

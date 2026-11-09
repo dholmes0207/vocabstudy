@@ -7,9 +7,15 @@
 
 export type Pair = [vi: string, en: string]
 
-export type CollocationTheme = 'daily' | 'study' | 'work' | 'ielts'
+export type CollocationTheme = 'daily' | 'study' | 'work' | 'ielts' | 'hobby'
 
-export const THEMES: { id: CollocationTheme; emoji: string; title: Pair }[] = [
+export interface Theme {
+  id: CollocationTheme
+  emoji: string
+  title: Pair
+}
+
+export const THEMES: Theme[] = [
   { id: 'daily', emoji: '🏠', title: ['Đời sống hằng ngày', 'Everyday life'] },
   { id: 'study', emoji: '📚', title: ['Học hành, thi cử', 'Study and exams'] },
   { id: 'work', emoji: '💼', title: ['Công việc, tiền bạc', 'Work and money'] },
@@ -38,6 +44,8 @@ export interface Collocation {
   traps: [string, string]
   /** Why, in Vietnamese. */
   why: string
+  /** Pinyin of `right`, for Chinese. */
+  reading?: string
 }
 
 const c = (
@@ -297,6 +305,225 @@ export const COLLOCATIONS: Collocation[] = [
     'Bảo vệ môi trường là protect the environment. guard là canh gác (người, cửa).'
   ),
 ]
+
+// Chinese: the verb that goes with the noun, where Vietnamese picks another
+// ("uống thuốc" is 吃药, "đội mũ" is 戴帽子, "đánh đàn" is 弹吉他).
+export const THEMES_ZH: Theme[] = [
+  { id: 'daily', emoji: '🏠', title: ['Đời sống hằng ngày', 'Everyday life'] },
+  { id: 'study', emoji: '📚', title: ['Học tập, công việc', 'Study and work'] },
+  { id: 'hobby', emoji: '🎸', title: ['Sở thích, thể thao', 'Hobbies and sport'] },
+]
+
+const z = (
+  theme: CollocationTheme,
+  vi: string,
+  right: string,
+  reading: string,
+  slip: string,
+  sentence: string,
+  answer: string,
+  traps: [string, string],
+  why: string
+): Collocation => ({ theme, vi, right, reading, slip, sentence, answer, traps, why })
+
+export const COLLOCATIONS_ZH: Collocation[] = [
+  // Everyday life
+  z(
+    'daily',
+    'uống thuốc',
+    '吃药',
+    'chī yào',
+    '喝药',
+    '这种药一天___三次，每次两片。',
+    '吃',
+    ['喝', '打'],
+    'Tiếng Trung nói 吃药 ("ăn thuốc"), nhất là thuốc viên. 喝 chỉ dùng khi uống thuốc nước, như 喝中药.'
+  ),
+  z(
+    'daily',
+    'đội mũ',
+    '戴帽子',
+    'dài màozi',
+    '穿帽子',
+    '外面太阳很大，你___上帽子吧。',
+    '戴',
+    ['穿', '盖'],
+    '穿 dùng cho quần áo, giày dép. Mũ, kính, đồng hồ, khẩu trang thì dùng 戴: 戴帽子, 戴眼镜.'
+  ),
+  z(
+    'daily',
+    'đánh răng',
+    '刷牙',
+    'shuā yá',
+    '打牙',
+    '我每天早上起床以后先___牙。',
+    '刷',
+    ['打', '拍'],
+    'Đánh răng là 刷牙 ("chải răng"). 打 là "đánh" nhưng không đi với răng.'
+  ),
+  z(
+    'daily',
+    'gọi điện thoại',
+    '打电话',
+    'dǎ diànhuà',
+    '叫电话',
+    '到了以后给我___个电话。',
+    '打',
+    ['叫', '做'],
+    'Gọi điện là 打电话. 叫 là gọi tên, gọi người (叫他过来), không đi với 电话.'
+  ),
+  z(
+    'daily',
+    'đi xe đạp',
+    '骑自行车',
+    'qí zìxíngchē',
+    '开自行车',
+    '我每天___自行车上班。',
+    '骑',
+    ['开', '走'],
+    'Xe phải ngồi dạng chân (xe đạp, xe máy, ngựa) dùng 骑; ô tô, tàu dùng 开. "đi" không dịch thành 走.'
+  ),
+  z(
+    'daily',
+    'chụp ảnh',
+    '拍照片',
+    'pāi zhàopiàn',
+    '打照片',
+    '这里很漂亮，我们___张照片吧！',
+    '拍',
+    ['打', '做'],
+    'Chụp ảnh là 拍照 / 拍照片 (hoặc 照相). Không dùng 打 hay 做.'
+  ),
+  // Study and work
+  z(
+    'study',
+    'mắc lỗi',
+    '犯错误',
+    'fàn cuòwù',
+    '做错误',
+    '学外语的时候，谁都会___错误。',
+    '犯',
+    ['做', '打'],
+    'Mắc lỗi là 犯错误 (phạm lỗi). 做错 là làm sai một việc cụ thể: 这道题我做错了.'
+  ),
+  z(
+    'study',
+    'nâng cao trình độ',
+    '提高水平',
+    'tígāo shuǐpíng',
+    '升高水平',
+    '我想去中国留学，___我的汉语水平。',
+    '提高',
+    ['升高', '加高'],
+    'Nâng cao trình độ, chất lượng là 提高. 升高 dùng cho nhiệt độ, vị trí (温度升高); 加高 là xây cao thêm.'
+  ),
+  z(
+    'study',
+    'tham gia kỳ thi',
+    '参加考试',
+    'cānjiā kǎoshì',
+    '加入考试',
+    '下个月我要___HSK三级考试。',
+    '参加',
+    ['加入', '进入'],
+    'Tham gia hoạt động, kỳ thi là 参加. 加入 là gia nhập một tổ chức: 加入俱乐部.'
+  ),
+  z(
+    'study',
+    'kiếm tiền',
+    '挣钱',
+    'zhèng qián',
+    '找钱',
+    '他每天工作很累，就是为了多___钱。',
+    '挣',
+    ['找', '寻'],
+    'Kiếm tiền là 挣钱 hoặc 赚钱. 找钱 nghĩa là "thối tiền" khi mua hàng: 找您五块.'
+  ),
+  z(
+    'study',
+    'trả lời câu hỏi',
+    '回答问题',
+    'huídá wèntí',
+    '答应问题',
+    '请你___我的问题。',
+    '回答',
+    ['答应', '还'],
+    'Trả lời câu hỏi là 回答. 答应 là "đồng ý, nhận lời": 他答应帮我.'
+  ),
+  z(
+    'study',
+    'họp',
+    '开会',
+    'kāi huì',
+    '做会',
+    '我们每个星期一上午___会。',
+    '开',
+    ['做', '打'],
+    'Họp là 开会 ("mở cuộc họp"). Không dùng 做 hay 打.'
+  ),
+  // Hobbies and sport
+  z(
+    'hobby',
+    'đá bóng',
+    '踢足球',
+    'tī zúqiú',
+    '打足球',
+    '他很喜欢___足球，每个周末都去。',
+    '踢',
+    ['打', '弹'],
+    'Bóng đá dùng chân nên là 踢; bóng rổ, cầu lông, bóng bàn dùng tay hoặc vợt nên là 打: 打篮球.'
+  ),
+  z(
+    'hobby',
+    'đánh đàn ghi-ta',
+    '弹吉他',
+    'tán jítā',
+    '打吉他',
+    '他会___吉他，还会唱歌。',
+    '弹',
+    ['打', '拉'],
+    'Đàn gảy, đàn phím (ghi-ta, piano) dùng 弹; đàn kéo (violin, nhị) dùng 拉. "đánh đàn" không dịch thành 打.'
+  ),
+  z(
+    'hobby',
+    'chơi piano',
+    '弹钢琴',
+    'tán gāngqín',
+    '玩钢琴',
+    '她从五岁开始学___钢琴。',
+    '弹',
+    ['玩', '打'],
+    'Chơi đàn piano là 弹钢琴. 玩 là chơi đùa, chơi game, không dùng cho nhạc cụ khi học đàn.'
+  ),
+  z(
+    'hobby',
+    'thả diều',
+    '放风筝',
+    'fàng fēngzheng',
+    '飞风筝',
+    '春天到了，孩子们在公园里___风筝。',
+    '放',
+    ['飞', '打'],
+    'Thả diều là 放风筝 ("thả"). 飞 là "bay", chủ ngữ là cái diều: 风筝飞得很高.'
+  ),
+  z(
+    'hobby',
+    'tập thể dục',
+    '锻炼身体',
+    'duànliàn shēntǐ',
+    '练习身体',
+    '我每天早上去公园___身体。',
+    '锻炼',
+    ['练习', '学习'],
+    'Rèn luyện thân thể là 锻炼身体. 练习 là luyện một kỹ năng: 练习口语, 练习写字.'
+  ),
+]
+
+/** Each pack's themes and items. */
+export const COLLOCATION_PACKS: Record<'en' | 'zh', { themes: Theme[]; items: Collocation[] }> = {
+  en: { themes: THEMES, items: COLLOCATIONS },
+  zh: { themes: THEMES_ZH, items: COLLOCATIONS_ZH },
+}
 
 /** The sentence with its gap filled. */
 export const filled = (it: Collocation, word = it.answer): string => it.sentence.replace(GAP, word)

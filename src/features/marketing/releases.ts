@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Kết hợp từ tiếng Trung', 'Chinese collocations'],
+    items: [
+      [
+        'Trang "Kết hợp từ" có thêm tiếng Trung: uống thuốc là 吃药 chứ không phải 喝药, đội mũ là 戴帽子, kiếm tiền là 挣钱 vì 找钱 là "thối tiền". 17 cụm theo 3 chủ đề, có pinyin và lý do. Lộ trình HSK 2 thêm bước luyện.',
+        'The "Collocations" page now covers Chinese: medicine is 吃药 not 喝药, a hat is 戴帽子, and earning money is 挣钱 because 找钱 means giving change. 17 phrases in 3 themes, with pinyin and why. The HSK 2 path gains a step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['IELTS Reading: chọn hai đáp án', 'IELTS Reading: choose TWO'],
     items: [
       [
