@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-// "Luyện IELTS" progress: the best score per reading passage (True/False/Not Given, Matching headings, Summary completion), so the page can
+// "Luyện IELTS" progress: the best score per reading passage (True/False/Not Given, Matching headings, Summary completion, Matching information, Sentence completion), so the page can
 // tick the ones done and offer a fresh one first. Device-only; backed up
 // through the vocab. prefix.
 
@@ -22,6 +22,9 @@ interface IeltsState {
   /** Best Matching information score per passage. */
   matching: Record<string, IeltsRecord>
   recordMatching: (id: string, correct: number, total: number) => void
+  /** Best Sentence completion score per passage. */
+  completion: Record<string, IeltsRecord>
+  recordCompletion: (id: string, correct: number, total: number) => void
 }
 
 export const useIelts = create<IeltsState>()(
@@ -57,6 +60,14 @@ export const useIelts = create<IeltsState>()(
           matching: {
             ...s.matching,
             [id]: { best: Math.max(correct, s.matching[id]?.best ?? 0), total },
+          },
+        })),
+      completion: {},
+      recordCompletion: (id, correct, total) =>
+        set((s) => ({
+          completion: {
+            ...s.completion,
+            [id]: { best: Math.max(correct, s.completion[id]?.best ?? 0), total },
           },
         })),
     }),

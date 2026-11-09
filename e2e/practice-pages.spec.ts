@@ -117,6 +117,20 @@ test('IELTS Task 1 draws the chart and checks the overview', async ({ page }) =>
   await expect(page.getByRole('list', { name: 'Word box' })).toBeVisible()
 })
 
+test('IELTS sentence completion types into gaps inside the sentences', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/ielts')
+  await page.getByRole('button', { name: /Sentence completion/ }).click()
+  const gap = page.getByRole('textbox', { name: 'Gap in sentence 1' })
+  await expect(gap).toBeVisible()
+  // The gaps sit inside the sentences; they must not widen the page on a phone.
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+  await gap.fill('one two three')
+  await expect(page.getByText(/Over two words/)).toBeVisible()
+})
+
 test('Chinese look-alike characters, idioms, slang and sentence patterns', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/confusables?lang=zh')

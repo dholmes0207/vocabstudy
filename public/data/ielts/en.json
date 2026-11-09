@@ -1,5 +1,5 @@
 {
-  "version": "1.13.0",
+  "version": "1.14.0",
   "reading": [
     {
       "id": "city-farms",
@@ -94,6 +94,31 @@
         {
           "statement": "a benefit of reducing how far food is carried",
           "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Growing food near where people live can keep vegetables ___.",
+          "answer": "fresher",
+          "why": "Đoạn A: \"keep produce fresher\". Đề đổi \"produce\" thành \"vegetables\", từ cần điền giữ nguyên."
+        },
+        {
+          "text": "The cooling effect of rooftop farms is greatest on low buildings with ___.",
+          "answer": "flat roofs",
+          "why": "Đoạn B: \"strongest on low buildings with flat roofs\". \"greatest\" là cách nói khác của \"strongest\"."
+        },
+        {
+          "text": "Before farming starts, a roof may need extra strength to carry the weight of ___.",
+          "answer": "wet soil",
+          "accept": [
+            "soil"
+          ],
+          "why": "Đoạn C: \"carry the weight of wet soil\". Chỉ \"soil\" thì thiếu ý: đất ướt mới nặng."
+        },
+        {
+          "text": "Instead of rice or potatoes, most rooftop farms grow herbs and ___.",
+          "answer": "salad leaves",
+          "why": "Đoạn C: \"high-value crops such as herbs and salad leaves rather than rice or potatoes\"."
         }
       ]
     },
@@ -191,6 +216,31 @@
           "statement": "a description of how a typical experiment is set up",
           "para": 0
         }
+      ],
+      "completion": [
+        {
+          "text": "In a typical experiment, volunteers learn a list of new words in the ___.",
+          "answer": "evening",
+          "why": "Đoạn A: \"learn a list of new words in the evening\"."
+        },
+        {
+          "text": "Researchers think that the brain moves important information into long-term memory during ___.",
+          "answer": "deep sleep",
+          "why": "Đoạn B: \"during deep sleep, the brain replays… and moves important information into long-term memory\"."
+        },
+        {
+          "text": "A ten-minute nap may make people feel more ___, but it does little for memory.",
+          "answer": "alert",
+          "why": "Đoạn C: \"A short nap of ten minutes may make people feel more alert\"."
+        },
+        {
+          "text": "According to experts, sleep cannot take the place of ___.",
+          "answer": "practice",
+          "accept": [
+            "practise"
+          ],
+          "why": "Đoạn C: \"sleep cannot replace practice\". \"take the place of\" = \"replace\"."
+        }
       ]
     },
     {
@@ -286,6 +336,28 @@
         {
           "statement": "the share of sea life that depends on reefs",
           "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Although reefs cover less than one percent of the ocean floor, about a ___ of all marine species live there.",
+          "answer": "quarter",
+          "why": "Đoạn A: \"home to about a quarter of all marine species\"."
+        },
+        {
+          "text": "Many young fish grow up among the corals before they move to the ___.",
+          "answer": "open sea",
+          "why": "Đoạn A: \"before moving to the open sea\"."
+        },
+        {
+          "text": "During storms, reefs protect coastlines by breaking up large ___.",
+          "answer": "waves",
+          "why": "Đoạn B: \"breaking up large waves during storms\"."
+        },
+        {
+          "text": "Bleaching happens when corals push out the tiny ___ that live inside them.",
+          "answer": "algae",
+          "why": "Đoạn C: \"corals push out the tiny algae that live inside them\"."
         }
       ]
     },
@@ -383,6 +455,28 @@
           "statement": "savings mentioned by employees",
           "para": 0
         }
+      ],
+      "completion": [
+        {
+          "text": "Many people who work from home save time and money because they no longer ___ to work every day.",
+          "answer": "travel",
+          "why": "Đoạn A: \"they no longer travel to work every day\"."
+        },
+        {
+          "text": "Some companies find that, with staff at home, they can rent ___ offices.",
+          "answer": "smaller",
+          "why": "Đoạn B: \"they can rent smaller offices\"."
+        },
+        {
+          "text": "Some firms worry that new employees learn more slowly when they cannot watch ___ colleagues.",
+          "answer": "experienced",
+          "why": "Đoạn B: \"when they cannot watch experienced colleagues\"."
+        },
+        {
+          "text": "In the hybrid model, managers often choose the office days so that whole ___ are there at the same time.",
+          "answer": "teams",
+          "why": "Đoạn C: \"so that whole teams are present at the same time\". \"there\" thay cho \"present\"."
+        }
       ]
     },
     {
@@ -479,6 +573,31 @@
           "statement": "why tea was once only for the rich",
           "para": 1
         }
+      ],
+      "completion": [
+        {
+          "text": "When tea was first drunk in China, it was valued mainly as a ___.",
+          "answer": "medicine",
+          "why": "Đoạn A: \"At first it was valued mainly as a medicine\"."
+        },
+        {
+          "text": "Traders brought tea to Europe by sea in the ___ century.",
+          "answer": "seventeenth",
+          "accept": [
+            "17th"
+          ],
+          "why": "Đoạn B: \"In the seventeenth century\". Viết \"17th\" cũng được tính."
+        },
+        {
+          "text": "Because tea was rare and expensive, for many years only ___ families could afford it.",
+          "answer": "wealthy",
+          "why": "Đoạn B: \"only wealthy families could afford it\". \"rich\" đúng nghĩa nhưng không phải từ trong bài."
+        },
+        {
+          "text": "By most estimates, the only drink consumed more widely than tea is ___.",
+          "answer": "water",
+          "why": "Đoạn C: \"second only to water\". Đề đảo câu: trà đứng thứ hai, vậy thứ nhất là nước."
+        }
       ]
     },
     {
@@ -574,6 +693,31 @@
         {
           "statement": "the difficulty of separating different plastics",
           "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Different types of plastic usually cannot be ___ together.",
+          "answer": "melted down",
+          "accept": [
+            "melted"
+          ],
+          "why": "Đoạn A: \"they usually cannot be melted down together\"."
+        },
+        {
+          "text": "Sorting plastic by hand is slow and ___.",
+          "answer": "costly",
+          "why": "Đoạn A: \"Sorting them by hand is slow and costly\"."
+        },
+        {
+          "text": "A container that has not been rinsed can spoil a whole ___ of material.",
+          "answer": "batch",
+          "why": "Đoạn B: \"can spoil a whole batch of material\". Đề đổi \"yogurt pot\" thành \"container\"."
+        },
+        {
+          "text": "In a deposit scheme, the money is returned when the empty ___ is brought back.",
+          "answer": "bottle",
+          "why": "Đoạn C: \"returned when the empty bottle is brought back\"."
         }
       ]
     },
@@ -692,6 +836,33 @@
           "statement": "causes of the fall in bee numbers",
           "para": 1
         }
+      ],
+      "completion": [
+        {
+          "text": "Many of the new city beekeepers had never handled a bee before they took a ___.",
+          "answer": "short course",
+          "why": "Đoạn A: \"before they took a short course\"."
+        },
+        {
+          "text": "Scientists linked falling bee numbers to disease, pesticides and a lack of ___.",
+          "answer": "wild flowers",
+          "why": "Đoạn B: \"disease, pesticides and a lack of wild flowers\"."
+        },
+        {
+          "text": "Because cities are warmer than the land around them, bees can start ___ earlier in the year.",
+          "answer": "foraging",
+          "why": "Đoạn C: \"which allows bees to start foraging earlier in the year\"."
+        },
+        {
+          "text": "In Paris, the food available per hive fell as the number of ___ hives grew.",
+          "answer": "rooftop",
+          "why": "Đoạn D: \"as the number of rooftop hives increased\". \"grew\" = \"increased\"."
+        },
+        {
+          "text": "To help bees, experts suggest planting ___ plants that flower at different times of the year.",
+          "answer": "native",
+          "why": "Đoạn E: \"Native plants that flower at different times of the year\"."
+        }
       ]
     },
     {
@@ -808,6 +979,33 @@
         {
           "statement": "what most firms decided after a trial in Britain",
           "para": 2
+        }
+      ],
+      "completion": [
+        {
+          "text": "Some large employers found that rested staff made fewer ___.",
+          "answer": "mistakes",
+          "why": "Đoạn A: \"rested staff made fewer mistakes\"."
+        },
+        {
+          "text": "In the best-known trials, staff keep the same ___ but work around thirty-two hours.",
+          "answer": "pay",
+          "why": "Đoạn B: \"staff keep the same pay but work around thirty-two hours\"."
+        },
+        {
+          "text": "In the 2022 British trial, staff said they felt less stressed and ___ better.",
+          "answer": "slept",
+          "why": "Đoạn C: \"felt less stressed and slept better\"."
+        },
+        {
+          "text": "Hospitals, schools and shops need people to be present for ___ hours.",
+          "answer": "fixed",
+          "why": "Đoạn D: \"need people present for fixed hours\"."
+        },
+        {
+          "text": "Supporters say staff should be judged by their ___ rather than the hours spent at their desks.",
+          "answer": "results",
+          "why": "Đoạn E: \"judging staff by results rather than by the hours they spend at their desks\"."
         }
       ]
     }

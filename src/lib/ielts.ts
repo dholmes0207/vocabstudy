@@ -57,7 +57,33 @@ export interface ReadingPassage {
   summary: SummaryTask
   /** Matching information: statements, each found in one paragraph (its index). */
   matching: { statement: string; para: number }[]
+  /** Sentence completion: one gap (`___`) per sentence, filled from the passage. */
+  completion: CompletionItem[]
 }
+
+/** A sentence to finish with NO MORE THAN TWO WORDS taken from the passage. */
+export interface CompletionItem {
+  text: string
+  answer: string
+  /** Other spellings marked right ("17th" for "seventeenth"). */
+  accept?: string[]
+  why: string
+}
+
+/** The gap in a sentence-completion item. */
+export const COMPLETION_GAP = '___'
+/** The test's word limit for these answers. */
+export const COMPLETION_WORDS = 2
+
+/** The sentence split around its gap: [before, after]. */
+export const completionParts = (text: string): [string, string] => {
+  const at = text.indexOf(COMPLETION_GAP)
+  return [text.slice(0, at), text.slice(at + COMPLETION_GAP.length)]
+}
+
+/** How many words an answer has, as the examiner counts them. */
+export const answerWords = (answer: string): number =>
+  answer.trim() ? answer.trim().split(/\s+/).length : 0
 
 /** Headings are listed i, ii, iii… as on the paper. */
 export const ROMAN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii']
@@ -272,6 +298,22 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
             m.para < r.passage.length
         ),
       `"${r.id}" needs three statements to match to its paragraphs`
+    )
+    const whole = r.passage.join(' ').toLowerCase()
+    check(
+      Array.isArray(r.completion) &&
+        r.completion.length >= 3 &&
+        r.completion.every(
+          (c) =>
+            text(c?.text) &&
+            c.text.split(COMPLETION_GAP).length === 2 &&
+            text(c.answer) &&
+            answerWords(c.answer) <= COMPLETION_WORDS &&
+            whole.includes(c.answer.toLowerCase()) &&
+            text(c.why) &&
+            (c.accept === undefined || (Array.isArray(c.accept) && c.accept.every(text)))
+        ),
+      `"${r.id}" needs three sentences to complete, each with one gap and an answer of at most two words from the passage`
     )
   }
   const speaking = bank!.speaking
