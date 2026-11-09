@@ -80,7 +80,22 @@ export interface ReadingPassage {
   matching: { statement: string; para: number }[]
   /** Sentence completion: one gap (`___`) per sentence, filled from the passage. */
   completion: CompletionItem[]
+  /** Multiple choice, "Choose TWO letters, A–E". */
+  chooseTwo: ChooseTwoTask
 }
+
+/** One question with five options, two of them right; each right letter is a mark. */
+export interface ChooseTwoTask {
+  question: string
+  options: string[]
+  /** The two right options, in order. */
+  answers: [number, number]
+  why: string
+}
+
+/** Marks for a pick of letters: one per right letter, and no more than two letters count. */
+export const chooseTwoMarks = (task: ChooseTwoTask, picks: readonly number[]): number =>
+  picks.length > 2 ? 0 : picks.filter((p) => task.answers.includes(p)).length
 
 /** A sentence to finish with NO MORE THAN TWO WORDS taken from the passage. */
 export interface CompletionItem {
@@ -336,6 +351,21 @@ export function validateIeltsBank(raw: unknown): IeltsBank {
             (c.accept === undefined || (Array.isArray(c.accept) && c.accept.every(text)))
         ),
       `"${r.id}" needs three sentences to complete, each with one gap and an answer of at most two words from the passage`
+    )
+    const two = r.chooseTwo
+    check(
+      !!two &&
+        text(two.question) &&
+        Array.isArray(two.options) &&
+        two.options.length === 5 &&
+        two.options.every(text) &&
+        new Set(two.options).size === 5 &&
+        Array.isArray(two.answers) &&
+        two.answers.length === 2 &&
+        two.answers[0] < two.answers[1] &&
+        two.answers.every((a) => Number.isInteger(a) && a >= 0 && a < 5) &&
+        text(two.why),
+      `"${r.id}" needs a "choose TWO" question with five options and two answers`
     )
   }
   check(Array.isArray(bank!.opinion) && bank!.opinion.length > 0, '"opinion" is missing')

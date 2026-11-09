@@ -144,6 +144,20 @@ test('IELTS sentence completion types into gaps inside the sentences', async ({ 
   await expect(page.getByText(/Over two words/)).toBeVisible()
 })
 
+test('IELTS choose TWO keeps two letters and checks them', async ({ page }) => {
+  await choose(page, /English/)
+  await page.goto('/ielts')
+  await page.getByRole('button', { name: /Choose TWO/ }).click()
+  const options = page.getByRole('group', { name: 'Options' }).getByRole('button')
+  await options.nth(0).click()
+  await options.nth(1).click()
+  await page.getByRole('button', { name: 'Check' }).click()
+  await expect(page.getByRole('status')).toContainText('of 2 marks')
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  ).toBeLessThanOrEqual(0)
+})
+
 test('IELTS Yes / No / Not Given asks about the writer’s views', async ({ page }) => {
   await choose(page, /English/)
   await page.goto('/ielts')
