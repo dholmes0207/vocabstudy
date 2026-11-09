@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['TOEIC Writing: viết câu theo tranh', 'TOEIC Writing: sentences about pictures'],
+    items: [
+      [
+        'Trang TOEIC Writing có thêm Câu 1–5: mỗi tranh cho hai từ, viết một câu có cả hai từ; checklist tự đánh dấu và có câu mẫu để so.',
+        'TOEIC Writing gains Questions 1–5: each picture gives two words to use in one sentence, with a checklist and a model to compare.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Luyện biến điệu tiếng Trung', 'Practise Chinese tone changes'],
     items: [
       [

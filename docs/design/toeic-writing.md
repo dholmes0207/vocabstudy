@@ -23,6 +23,15 @@
 - Dữ liệu và `checkEmail` trong `lib/toeicWriting.ts` (dùng lại `wordCount` của IELTS). Test kiểm mọi thư mẫu
   qua checklist của chính nó.
 
-## 4. Tiếp theo
+## 4. Câu 1–5: viết câu theo tranh (09/11/2026)
 
-1. Câu 1–5: viết một câu theo tranh với hai từ cho sẵn.
+- Chưa có ảnh thật nên mỗi "tranh" là một cảnh emoji kèm một dòng tả ảnh bằng tiếng Việt, và hai từ phải dùng
+  (woman / phone, chef / prepare, tired / so…). 10 tranh, một lượt 5 câu như đề thật.
+- Checklist: có từ thứ nhất, có từ thứ hai (chấp nhận các dạng được liệt kê: prepare → preparing, box → boxes),
+  đúng một câu (viết hoa đầu, có dấu chấm cuối), ít nhất 5 từ. Bấm "Kiểm tra" thì hiện câu mẫu; xong lượt +10 XP,
+  ghi `toeic-writing`.
+- `PICTURE_TASKS`, `checkSentence` trong `lib/toeicWriting.ts`; test kiểm mọi câu mẫu qua checklist của chính nó.
+
+## 5. Tiếp theo
+
+1. Thay cảnh emoji bằng ảnh thật khi có nguồn ảnh được phép dùng.
