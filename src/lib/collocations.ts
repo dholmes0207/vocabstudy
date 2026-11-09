@@ -7,7 +7,8 @@
 
 export type Pair = [vi: string, en: string]
 
-export type CollocationTheme = 'daily' | 'study' | 'work' | 'ielts' | 'hobby'
+export type CollocationTheme =
+  'daily' | 'study' | 'work' | 'ielts' | 'hobby' | 'health' | 'tech' | 'travel'
 
 export interface Theme {
   id: CollocationTheme
@@ -24,6 +25,9 @@ export const THEMES: Theme[] = [
     emoji: '🌍',
     title: ['Xã hội, môi trường (IELTS)', 'Society and environment (IELTS)'],
   },
+  { id: 'health', emoji: '🩺', title: ['Sức khoẻ', 'Health'] },
+  { id: 'tech', emoji: '💻', title: ['Công nghệ', 'Technology'] },
+  { id: 'travel', emoji: '✈️', title: ['Du lịch', 'Travel'] },
 ]
 
 /** The gap in a practice sentence. */
@@ -303,6 +307,189 @@ export const COLLOCATIONS: Collocation[] = [
     'protect',
     ['guard', 'keep'],
     'Bảo vệ môi trường là protect the environment. guard là canh gác (người, cửa).'
+  ),
+  // Health
+  c(
+    'health',
+    'bị cảm',
+    'catch a cold',
+    'I was cold',
+    'I ___ a cold after walking home in the rain.',
+    'caught',
+    ['was', 'took'],
+    '"I was cold" là "tôi thấy lạnh". Bị cảm là catch a cold (hoặc have a cold).'
+  ),
+  c(
+    'health',
+    'đi khám bệnh',
+    'see a doctor',
+    'check a doctor',
+    'You should ___ a doctor about that cough.',
+    'see',
+    ['check', 'meet'],
+    'Đi khám là see a doctor (hoặc go to the doctor). Bác sĩ mới là người check you; meet a doctor là gặp gỡ xã giao.'
+  ),
+  c(
+    'health',
+    'tập thể dục',
+    'do exercise',
+    'practise exercise',
+    'I try to ___ some exercise every morning.',
+    'do',
+    ['practise', 'play'],
+    'Tập thể dục là do exercise (hoặc take exercise). practise dùng cho kỹ năng: practise the piano; play cho môn thể thao: play football.'
+  ),
+  c(
+    'health',
+    'ăn kiêng',
+    'go on a diet',
+    'eat a diet',
+    'She decided to ___ on a diet before the wedding.',
+    'go',
+    ['eat', 'make'],
+    'Bắt đầu ăn kiêng là go on a diet, đang ăn kiêng là be on a diet. "eat a diet" là dịch từng chữ.'
+  ),
+  c(
+    'health',
+    'sốt cao',
+    'a high fever',
+    'a big fever',
+    'The baby has a ___ fever, so we are going to the hospital.',
+    'high',
+    ['big', 'tall'],
+    'Sốt, huyết áp, nhiệt độ cao dùng high: a high fever, high blood pressure. Không dùng big.'
+  ),
+  c(
+    'health',
+    'thức khuya',
+    'stay up late',
+    'wake up late',
+    'I ___ up late to finish my essay.',
+    'stayed',
+    ['woke', 'opened'],
+    'Thức khuya là stay up late. wake up late là "dậy muộn", nghĩa ngược hẳn.'
+  ),
+  // Technology
+  c(
+    'tech',
+    'mở máy tính',
+    'turn on the computer',
+    'open the computer',
+    'Please ___ the computer before the lesson starts.',
+    'turn on',
+    ['open', 'light'],
+    'Bật máy là turn on / switch on. open the computer nghe như tháo vỏ máy ra.'
+  ),
+  c(
+    'tech',
+    'up ảnh lên mạng',
+    'post a photo',
+    'up a photo',
+    'She ___ a photo of her lunch on Instagram.',
+    'posted',
+    ['upped', 'raised'],
+    '"Up ảnh" là cách nói của tiếng Việt; tiếng Anh dùng post a photo, upload a photo, share a photo.'
+  ),
+  c(
+    'tech',
+    'đặt mật khẩu',
+    'set a password',
+    'put a password',
+    'You need to ___ a strong password for your account.',
+    'set',
+    ['put', 'place'],
+    'Đặt mật khẩu là set (hoặc create) a password. "đặt" ở đây không dịch thành put.'
+  ),
+  c(
+    'tech',
+    'lướt web',
+    'surf the internet',
+    'slide the web',
+    'He spends hours ___ the internet every evening.',
+    'surfing',
+    ['sliding', 'swimming'],
+    'Lướt mạng là surf the internet (hoặc browse the web), như lướt sóng. slide là trượt.'
+  ),
+  c(
+    'tech',
+    'hết pin',
+    'run out of battery',
+    'out of pin',
+    'My phone has ___ out of battery.',
+    'run',
+    ['gone', 'finished'],
+    '"Pin" là từ tiếng Việt; tiếng Anh là battery. Hết pin: run out of battery, hoặc my battery is dead / flat.'
+  ),
+  c(
+    'tech',
+    'bắt wifi',
+    'connect to the wifi',
+    'catch the wifi',
+    'I can’t ___ to the wifi in this café.',
+    'connect',
+    ['catch', 'hold'],
+    'Bắt wifi là connect to the wifi (get on the wifi). catch không dùng cho mạng.'
+  ),
+  // Travel
+  c(
+    'travel',
+    'đặt phòng khách sạn',
+    'book a room',
+    'order a room',
+    'We ___ a hotel room near the beach.',
+    'booked',
+    ['ordered', 'bought'],
+    'Đặt trước phòng, vé, bàn là book (hoặc reserve). order dùng cho đồ ăn, hàng hoá: order a pizza.'
+  ),
+  c(
+    'travel',
+    'lên máy bay',
+    'board the plane',
+    'go up the plane',
+    'Passengers can ___ the plane in ten minutes.',
+    'board',
+    ['climb', 'go'],
+    'Lên máy bay là board the plane hoặc get on the plane. "go up" là dịch chữ "lên".'
+  ),
+  c(
+    'travel',
+    'xếp hàng',
+    'stand in line',
+    'arrange a line',
+    'We had to ___ in line for an hour to get tickets.',
+    'stand',
+    ['arrange', 'put'],
+    'Xếp hàng là stand in line / queue (up). arrange là sắp xếp đồ vật, không dùng cho người xếp hàng.'
+  ),
+  c(
+    'travel',
+    'trả phòng',
+    'check out',
+    'return the room',
+    'We have to ___ out of the hotel by noon.',
+    'check',
+    ['return', 'give'],
+    'Nhận phòng là check in, trả phòng là check out. "return the room" là dịch từng chữ.'
+  ),
+  c(
+    'travel',
+    'hỏi đường',
+    'ask for directions',
+    'ask the road',
+    'We got lost, so we asked someone for ___.',
+    'directions',
+    ['the road', 'the street'],
+    'Hỏi đường là ask for directions (hoặc ask the way). "ask the road" là hỏi con đường, vô nghĩa.'
+  ),
+  c(
+    'travel',
+    'đi xe buýt',
+    'take the bus',
+    'sit the bus',
+    'I usually ___ the bus to work.',
+    'take',
+    ['sit', 'go'],
+    '"Ngồi xe buýt" là take the bus (hoặc go by bus). sit chỉ là ngồi; go phải có by: go by bus.'
   ),
 ]
 
