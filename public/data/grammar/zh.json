@@ -3549,6 +3549,488 @@
           "vi": "Nếu mai trời mưa thì tôi không đi nữa."
         }
       ]
+    },
+    {
+      "id": "zh-shi-de",
+      "emoji": "🕰️",
+      "level": "A2",
+      "title": [
+        "是…的: nhấn mạnh lúc nào, ở đâu, bằng gì",
+        "是…的: stressing when, where, how"
+      ],
+      "summary": [
+        "Việc đã xảy ra rồi, muốn hỏi hay nói rõ lúc nào, ở đâu, bằng cách nào, ai làm: đặt phần đó giữa 是 và 的. 你是怎么来的？我是坐飞机来的。",
+        "For something that has already happened, put the when, where, how or who between 是 and 的: 你是怎么来的？我是坐飞机来的。"
+      ],
+      "explain": [
+        "Dùng khi cả hai người đều biết việc đã xảy ra, chỉ hỏi hoặc nói rõ một chi tiết: lúc nào (昨天), ở đâu (在北京), bằng cách nào (坐飞机), với ai (跟妈妈), ai làm (我).",
+        "Phần được nhấn mạnh đứng ngay sau 是: 我是昨天来的 (tôi đến hôm qua, chứ không phải hôm nay).",
+        "Câu khẳng định có thể bỏ 是: 我昨天来的. Câu phủ định thì giữ 是 và thêm 不: 我不是坐飞机来的.",
+        "Khuôn này đi với 的, không đi với 了: nói 我是昨天来的, không nói 我是昨天来了."
+      ],
+      "patterns": [
+        "Chủ ngữ + 是 + lúc nào / ở đâu / bằng gì + động từ + 的",
+        "Chủ ngữ + 不是 + … + động từ + 的"
+      ],
+      "examples": [
+        {
+          "en": "你是怎么来的？",
+          "vi": "Bạn đến bằng gì?",
+          "read": "Nǐ shì zěnme lái de?"
+        },
+        {
+          "en": "我是坐飞机来的。",
+          "vi": "Tôi đi máy bay đến.",
+          "read": "Wǒ shì zuò fēijī lái de."
+        },
+        {
+          "en": "我是昨天来的。",
+          "vi": "Tôi đến hôm qua.",
+          "read": "Wǒ shì zuótiān lái de."
+        },
+        {
+          "en": "这本书是在北京买的。",
+          "vi": "Cuốn sách này mua ở Bắc Kinh.",
+          "read": "Zhè běn shū shì zài Běijīng mǎi de."
+        },
+        {
+          "en": "她不是一个人来的。",
+          "vi": "Cô ấy không đến một mình.",
+          "read": "Tā bú shì yí ge rén lái de."
+        },
+        {
+          "en": "这个菜是谁做的？",
+          "vi": "Món này ai nấu vậy?",
+          "read": "Zhège cài shì shéi zuò de?"
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我是昨天来了。",
+          "right": "我是昨天来的。",
+          "why": "是…的 đi với 的, không đi với 了."
+        },
+        {
+          "wrong": "我不坐飞机来的。",
+          "right": "我不是坐飞机来的。",
+          "why": "Phủ định là 不是…的; câu phủ định không bỏ được 是."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "你是怎么来___？",
+          "options": [
+            "的",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "Hỏi cách đến của việc đã xảy ra → 是…的."
+        },
+        {
+          "type": "choice",
+          "prompt": "我___坐飞机来的，是坐地铁来的。",
+          "options": [
+            "不是",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Phủ định khuôn 是…的 → 不是."
+        },
+        {
+          "type": "choice",
+          "prompt": "这本书是在哪儿买___？",
+          "options": [
+            "的",
+            "吗"
+          ],
+          "answer": 0,
+          "explain": "Hỏi nơi mua → 是在哪儿买的."
+        },
+        {
+          "type": "choice",
+          "prompt": "—— 你是___来的？—— 跟我妈妈。",
+          "options": [
+            "跟谁",
+            "什么"
+          ],
+          "answer": 0,
+          "explain": "Trả lời \"với mẹ\" → câu hỏi là 跟谁."
+        },
+        {
+          "type": "order",
+          "en": "我​是​昨天​来​的。",
+          "vi": "Tôi đến hôm qua."
+        },
+        {
+          "type": "order",
+          "en": "这​本​书​是​在​北京​买​的。",
+          "vi": "Cuốn sách này mua ở Bắc Kinh."
+        }
+      ]
+    },
+    {
+      "id": "zh-zhe",
+      "emoji": "🚪",
+      "level": "A2",
+      "title": [
+        "着: trạng thái đang còn nguyên",
+        "着: a state that lasts"
+      ],
+      "summary": [
+        "Động từ + 着 tả trạng thái kéo dài: 门开着 (cửa đang mở), 他穿着红衣服 (anh ấy đang mặc áo đỏ). Khác 在 + động từ (đang làm một việc).",
+        "Verb + 着 describes a state that lasts: 门开着 (the door is open), 他穿着红衣服 (he is wearing red). Unlike 在 + verb (in the middle of doing)."
+      ],
+      "explain": [
+        "在 + động từ: đang làm một việc (他在穿衣服: anh ấy đang mặc áo vào). Động từ + 着: kết quả của việc đó vẫn còn (他穿着红衣服: anh ấy đang mặc sẵn áo đỏ).",
+        "Hay gặp với 开 (mở), 关 (đóng), 穿 (mặc), 坐 (ngồi), 站 (đứng), 放 (đặt), 笑 (cười).",
+        "Tả cái gì ở đâu: nơi chốn + động từ + 着 + vật: 桌子上放着一本书 (trên bàn có một cuốn sách).",
+        "Hai việc cùng lúc: động từ 1 + 着 + động từ 2: 她笑着说 (cô ấy cười nói). Phủ định: 没 + động từ + 着: 门没开着."
+      ],
+      "patterns": [
+        "Động từ + 着 (+ tân ngữ)",
+        "Nơi chốn + động từ + 着 + vật",
+        "Động từ 1 + 着 + động từ 2"
+      ],
+      "examples": [
+        {
+          "en": "门开着。",
+          "vi": "Cửa đang mở.",
+          "read": "Mén kāizhe."
+        },
+        {
+          "en": "他穿着一件红衣服。",
+          "vi": "Anh ấy mặc một cái áo đỏ.",
+          "read": "Tā chuānzhe yí jiàn hóng yīfu."
+        },
+        {
+          "en": "桌子上放着一本书。",
+          "vi": "Trên bàn có một cuốn sách.",
+          "read": "Zhuōzi shang fàngzhe yì běn shū."
+        },
+        {
+          "en": "她笑着说：“没关系。”",
+          "vi": "Cô ấy cười nói: \"Không sao.\"",
+          "read": "Tā xiàozhe shuō: “Méi guānxi.”"
+        },
+        {
+          "en": "我们坐着等吧。",
+          "vi": "Mình ngồi đợi nhé.",
+          "read": "Wǒmen zuòzhe děng ba."
+        },
+        {
+          "en": "门没开着。",
+          "vi": "Cửa không mở.",
+          "read": "Mén méi kāizhe."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "门不开着。",
+          "right": "门没开着。",
+          "why": "Phủ định 着 dùng 没."
+        },
+        {
+          "wrong": "桌子上有放着一本书。",
+          "right": "桌子上放着一本书。",
+          "why": "Đã có 放着 thì không thêm 有."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "门开___，你进来吧。",
+          "options": [
+            "着",
+            "过"
+          ],
+          "answer": 0,
+          "explain": "Cửa đang mở (trạng thái) → 开着."
+        },
+        {
+          "type": "choice",
+          "prompt": "桌子上放___很多书。",
+          "options": [
+            "着",
+            "在"
+          ],
+          "answer": 0,
+          "explain": "Nơi chốn + động từ + 着 + vật."
+        },
+        {
+          "type": "choice",
+          "prompt": "门___开着。",
+          "options": [
+            "没",
+            "不"
+          ],
+          "answer": 0,
+          "explain": "Phủ định 着 → 没."
+        },
+        {
+          "type": "choice",
+          "prompt": "她笑___说：“谢谢你！”",
+          "options": [
+            "着",
+            "得"
+          ],
+          "answer": 0,
+          "explain": "Vừa cười vừa nói, hai việc cùng lúc → 笑着说."
+        },
+        {
+          "type": "order",
+          "en": "他​穿​着​一​件​红​衣服。",
+          "vi": "Anh ấy mặc một cái áo đỏ."
+        },
+        {
+          "type": "order",
+          "en": "桌子​上​放​着​一​本​书。",
+          "vi": "Trên bàn có một cuốn sách."
+        }
+      ]
+    },
+    {
+      "id": "zh-potential",
+      "emoji": "🔓",
+      "level": "B1",
+      "title": [
+        "Bổ ngữ khả năng: 听得懂, 听不懂",
+        "Potential complements: 听得懂, 听不懂"
+      ],
+      "summary": [
+        "Chèn 得 hoặc 不 vào giữa động từ và bổ ngữ: 听得懂 (nghe hiểu được), 听不懂 (nghe không hiểu), 看不见 (nhìn không thấy), 做不完 (làm không xong).",
+        "Put 得 or 不 between a verb and its complement: 听得懂 (can understand), 听不懂 (can’t understand), 看不见 (can’t see), 做不完 (can’t finish)."
+      ],
+      "explain": [
+        "Lấy bổ ngữ kết quả (听懂, 看见, 做完, 找到) chèn 得 vào giữa thành \"được\": 听得懂 = nghe hiểu được. Chèn 不 thành \"không… được\": 听不懂 = nghe không hiểu.",
+        "Tiếng Việt cũng đặt \"không\" vào giữa: \"nghe không hiểu\", \"làm không xong\", nên dạng 不 rất dễ nhớ.",
+        "Khác 没听懂: 没听懂 = lần này đã không hiểu (một việc đã xảy ra); 听不懂 = không hiểu nổi (vì quá khó, quá nhanh).",
+        "Không ghép 不能 với bổ ngữ: nói 我听不懂, không nói 我不能听懂. Câu hỏi: 你听得懂吗？"
+      ],
+      "patterns": [
+        "Động từ + 得 + bổ ngữ (… được)",
+        "Động từ + 不 + bổ ngữ (không … được)"
+      ],
+      "examples": [
+        {
+          "en": "老师说得太快，我听不懂。",
+          "vi": "Thầy nói nhanh quá, tôi nghe không hiểu.",
+          "read": "Lǎoshī shuō de tài kuài, wǒ tīngbudǒng."
+        },
+        {
+          "en": "你听得懂中文吗？",
+          "vi": "Bạn nghe hiểu được tiếng Trung không?",
+          "read": "Nǐ tīngdedǒng Zhōngwén ma?"
+        },
+        {
+          "en": "字太小了，我看不见。",
+          "vi": "Chữ nhỏ quá, tôi nhìn không thấy.",
+          "read": "Zì tài xiǎo le, wǒ kànbujiàn."
+        },
+        {
+          "en": "今天的作业太多，我做不完。",
+          "vi": "Bài tập hôm nay nhiều quá, tôi làm không xong.",
+          "read": "Jīntiān de zuòyè tài duō, wǒ zuòbuwán."
+        },
+        {
+          "en": "这么多菜，我们吃得完吗？",
+          "vi": "Nhiều món thế này, mình ăn hết được không?",
+          "read": "Zhème duō cài, wǒmen chīdewán ma?"
+        },
+        {
+          "en": "我找不到我的手机了。",
+          "vi": "Tôi không tìm thấy điện thoại đâu cả.",
+          "read": "Wǒ zhǎobudào wǒ de shǒujī le."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我不能听懂。",
+          "right": "我听不懂。",
+          "why": "Không hiểu nổi → 听不懂; không ghép 不能 với bổ ngữ."
+        },
+        {
+          "wrong": "我听没懂。",
+          "right": "我听不懂。",
+          "why": "没 không chen vào giữa: dùng 听不懂 (không hiểu nổi) hoặc 没听懂 (lần này đã không hiểu)."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "他说得太快了，我听___懂。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Không hiểu nổi vì nhanh quá → 听不懂."
+        },
+        {
+          "type": "choice",
+          "prompt": "字这么小，你看___见吗？",
+          "options": [
+            "得",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "Hỏi có nhìn thấy được không → 看得见."
+        },
+        {
+          "type": "choice",
+          "prompt": "作业太多了，今天我做___完。",
+          "options": [
+            "不",
+            "没"
+          ],
+          "answer": 0,
+          "explain": "Làm không xong nổi → 做不完."
+        },
+        {
+          "type": "choice",
+          "prompt": "我的手机呢？我找___到。",
+          "options": [
+            "不",
+            "了"
+          ],
+          "answer": 0,
+          "explain": "Không tìm thấy → 找不到."
+        },
+        {
+          "type": "order",
+          "en": "我​听​不​懂​他​说​的​话。",
+          "vi": "Tôi nghe không hiểu anh ấy nói gì."
+        },
+        {
+          "type": "order",
+          "en": "你​看​得​见​黑板​吗？",
+          "vi": "Bạn nhìn thấy bảng không?"
+        }
+      ]
+    },
+    {
+      "id": "zh-separable",
+      "emoji": "✂️",
+      "level": "B1",
+      "title": [
+        "Động từ ly hợp: 见面, 睡觉, 帮忙",
+        "Separable verbs: 见面, 睡觉, 帮忙"
+      ],
+      "summary": [
+        "Một số động từ hai chữ thực ra là động từ + tân ngữ: 见面 (gặp mặt), 睡觉 (ngủ), 帮忙 (giúp), 洗澡 (tắm), 结婚 (cưới). Không đặt thêm tân ngữ sau chúng; 了, 过, số lượng chen vào giữa.",
+        "Some two-character verbs are really verb + object: 见面 (meet), 睡觉 (sleep), 帮忙 (help), 洗澡 (bathe), 结婚 (marry). They take no object after them; 了, 过 and amounts go in the middle."
+      ],
+      "explain": [
+        "见面 = 见 (gặp) + 面 (mặt): tân ngữ đã có sẵn. Nên không nói 见面朋友 mà nói 跟朋友见面 (gặp mặt với bạn).",
+        "Người Việt hay sai vì tiếng Việt nói \"gặp bạn\", \"giúp tôi\", \"cưới anh ấy\". Với 帮忙: nói 帮我 hoặc 帮我一个忙, không nói 帮忙我. Với 结婚: 跟他结婚.",
+        "了, 过, số lần chen vào giữa: 见过一次面 (đã gặp một lần), 洗了澡 (tắm rồi), 帮了我很大的忙 (giúp tôi rất nhiều).",
+        "Hay gặp: 见面, 睡觉, 帮忙, 洗澡, 唱歌, 跳舞, 游泳, 结婚, 生气."
+      ],
+      "patterns": [
+        "跟 + người + 见面 / 结婚",
+        "Động từ + 了 / 过 / số lượng + phần sau (见过一次面, 帮我一个忙)"
+      ],
+      "examples": [
+        {
+          "en": "我明天跟朋友见面。",
+          "vi": "Mai tôi gặp bạn.",
+          "read": "Wǒ míngtiān gēn péngyou jiànmiàn."
+        },
+        {
+          "en": "你能帮我一个忙吗？",
+          "vi": "Bạn giúp tôi một việc được không?",
+          "read": "Nǐ néng bāng wǒ yí ge máng ma?"
+        },
+        {
+          "en": "我们见过一次面。",
+          "vi": "Chúng tôi đã gặp nhau một lần.",
+          "read": "Wǒmen jiànguo yí cì miàn."
+        },
+        {
+          "en": "他洗了澡就睡觉了。",
+          "vi": "Anh ấy tắm xong là đi ngủ.",
+          "read": "Tā xǐle zǎo jiù shuìjiào le."
+        },
+        {
+          "en": "她下个月跟他结婚。",
+          "vi": "Tháng sau cô ấy cưới anh ấy.",
+          "read": "Tā xià ge yuè gēn tā jiéhūn."
+        },
+        {
+          "en": "你别生我的气。",
+          "vi": "Bạn đừng giận tôi nhé.",
+          "read": "Nǐ bié shēng wǒ de qì."
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "我明天见面朋友。",
+          "right": "我明天跟朋友见面。",
+          "why": "见面 đã có tân ngữ 面; người gặp đặt trước, đi với 跟."
+        },
+        {
+          "wrong": "你可以帮忙我吗？",
+          "right": "你可以帮我吗？",
+          "why": "帮忙 không nhận tân ngữ phía sau: 帮我 hoặc 帮我一个忙."
+        },
+        {
+          "wrong": "她结婚他了。",
+          "right": "她跟他结婚了。",
+          "why": "结婚 cũng là ly hợp: 跟 + người + 结婚."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "prompt": "我下午要___老师见面。",
+          "options": [
+            "跟",
+            "见"
+          ],
+          "answer": 0,
+          "explain": "跟 + người + 见面."
+        },
+        {
+          "type": "choice",
+          "prompt": "你能帮___一个忙吗？",
+          "options": [
+            "我",
+            "忙"
+          ],
+          "answer": 0,
+          "explain": "帮 + người + 一个忙."
+        },
+        {
+          "type": "choice",
+          "prompt": "我们见___一次面。",
+          "options": [
+            "过",
+            "着"
+          ],
+          "answer": 0,
+          "explain": "过 chen vào giữa: 见过一次面."
+        },
+        {
+          "type": "choice",
+          "prompt": "她___他结婚了。",
+          "options": [
+            "跟",
+            "把"
+          ],
+          "answer": 0,
+          "explain": "跟 + người + 结婚."
+        },
+        {
+          "type": "order",
+          "en": "我​明天​跟​朋友​见面。",
+          "vi": "Mai tôi gặp bạn."
+        },
+        {
+          "type": "order",
+          "en": "你​能​帮​我​一​个​忙​吗？",
+          "vi": "Bạn giúp tôi một việc được không?"
+        }
+      ]
     }
   ]
 }

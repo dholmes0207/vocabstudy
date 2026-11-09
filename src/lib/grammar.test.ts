@@ -92,8 +92,21 @@ describe('the Chinese grammar pack', () => {
         'zh-result',
         'zh-direction',
         'zh-ruguo',
+        'zh-potential',
+        'zh-separable',
       ])
     )
+  })
+
+  it('teaches 是…的 and 着 at A2, each with a mistake learners make', () => {
+    for (const id of ['zh-shi-de', 'zh-zhe']) {
+      const u = zh.units.find((x) => x.id === id)!
+      expect(u.level, id).toBe('A2')
+      expect(u.mistakes.length, id).toBeGreaterThanOrEqual(2)
+    }
+    // Separable verbs: the classic slip is an object after 见面.
+    const sep = zh.units.find((x) => x.id === 'zh-separable')!
+    expect(sep.mistakes.map((m) => m.wrong)).toContain('我明天见面朋友。')
   })
 
   it('builds word-order tiles from invisible word breaks, never visible spaces', () => {

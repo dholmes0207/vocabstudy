@@ -638,3 +638,20 @@ vòng "Kiểm tra nhanh", kiểu câu mới `sandhi`): thấy từ, chọn cách
 đọc theo thanh gốc). Trả lời xong nghe từ và đọc quy tắc. Bộ 22 từ trong `SANDHI_DRILL` (`lib/pinyin.ts`): 10
 từ với 一 (kể cả 第一, 十一 giữ yī), 7 từ với 不, 5 từ hai thanh 3. Một lượt chia đều ba quy tắc. Test kiểm từng
 đáp án đúng theo quy tắc (thanh của chữ sau quyết định 一, 不; chữ đầu của cặp 3 + 3 thành thanh 2).
+
+## Bước 34: bốn điểm ngữ pháp hay sai (09/11/2026)
+
+31 bài ngữ pháp còn thiếu bốn điểm của HSK 2–3 mà người Việt hay nói sai, vì dịch từng chữ từ tiếng Việt:
+
+- **是…的** (`zh-shi-de`, A2): nhấn mạnh lúc nào, ở đâu, bằng gì của việc đã xảy ra (我是坐飞机来的). Lỗi
+  hay gặp: dùng 了 thay 的, bỏ 是 trong câu phủ định.
+- **着** (`zh-zhe`, A2): trạng thái còn nguyên (门开着), đặt cạnh 在 + động từ (đang làm); nơi chốn + động từ
+  - 着 + vật; 笑着说. Phủ định bằng 没.
+- **Bổ ngữ khả năng** (`zh-potential`, B1): 听得懂 / 听不懂, 看不见, 做不完, 找不到; phân biệt 听不懂 (không hiểu
+  nổi) với 没听懂 (lần này không hiểu); không nói 不能听懂.
+- **Động từ ly hợp** (`zh-separable`, B1): 见面, 帮忙, 结婚, 洗澡, 睡觉, 生气 đã có tân ngữ sẵn, nên nói 跟朋友见面,
+  帮我一个忙, 跟他结婚; 了, 过, số lần chen vào giữa (见过一次面).
+- Lộ trình tiếng Trung, cấp 4 (HSK 3) thêm bước "Bốn điểm hay sai" ngay sau "Ngữ pháp HSK 3". Bước cũ giữ nguyên
+  để tiến độ đã có không bị tính lại.
+- Như các bài trước: từ trong ví dụ lấy từ gói, mỗi câu chọn có phương án sai chắc chắn sai, câu xếp từ tách bằng
+  ký tự ngắt vô hình. Câu ví dụ được thêm vào danh sách thu giọng tự động.
