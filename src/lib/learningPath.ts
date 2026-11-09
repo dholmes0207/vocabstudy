@@ -854,6 +854,18 @@ export const ZH_PATH: PathLevel[] = [
         ]
       ),
       sessions(
+        'zh4-hskk',
+        'hskk',
+        5,
+        '🎙️',
+        '/hskk',
+        ['Luyện nói HSKK trung cấp', 'HSKK Intermediate speaking'],
+        [
+          'Thẻ Trung cấp 中级: nhắc lại câu dài, nhìn tranh nói 2 phút, trả lời câu hỏi 2 phút (5 lượt HSKK cộng dồn).',
+          'The Intermediate 中级 tab: repeat longer sentences, talk about a picture, answer for two minutes (5 HSKK rounds in all).',
+        ]
+      ),
+      sessions(
         'zh4-roleplay',
         'roleplay',
         4,

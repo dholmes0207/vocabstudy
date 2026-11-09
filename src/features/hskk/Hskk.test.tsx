@@ -9,7 +9,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useActivity } from '@/store/activityStore'
-import { HSKK_ANSWER, HSKK_REPEAT } from '@/lib/hskk'
+import { HSKK_ANSWER, HSKK_MID_PICTURES, HSKK_REPEAT } from '@/lib/hskk'
 
 const said: string[] = []
 vi.mock('@/lib/audio', () => ({
@@ -21,7 +21,11 @@ vi.mock('@/lib/audio', () => ({
 vi.mock('@/lib/confetti', () => ({ celebrate: () => {} }))
 vi.mock('@/lib/hskk', async (importOriginal) => {
   const real = await importOriginal<typeof import('@/lib/hskk')>()
-  return { ...real, hskkRound: (part: 1 | 2 | 3) => real.HSKK_PARTS[part].slice(0, 2) }
+  return {
+    ...real,
+    hskkRound: (part: 1 | 2 | 3, _rand: unknown, level: 'elementary' | 'intermediate') =>
+      real.HSKK_LEVELS[level].parts[part].slice(0, 2),
+  }
 })
 
 const { default: Hskk } = await import('./Hskk')
@@ -69,6 +73,20 @@ describe('HSKK speaking', () => {
     expect(screen.getByText(q.sample!.zh)).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Hear the sample answer' }))
     expect(said.at(-1)).toBe(q.sample!.zh)
+  })
+
+  it('Intermediate Part 2: shows the picture and the question, with a sample talk', () => {
+    renderPage()
+    fireEvent.click(screen.getByRole('tab', { name: /Intermediate/ }))
+    expect(screen.getByText(/Part 2 · Talk about a picture/)).toBeInTheDocument()
+    fireEvent.click(screen.getAllByRole('button', { name: /^Practise/ })[1])
+    const pic = HSKK_MID_PICTURES[0]
+    expect(screen.getByText(pic.shows!)).toBeInTheDocument()
+    expect(screen.getByText(pic.zh)).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Show the text/ })).toBeNull()
+    expect(said.at(-1)).toBe(pic.zh)
+    fireEvent.click(screen.getByRole('button', { name: /See a sample answer/ }))
+    expect(screen.getByText(pic.sample!.zh)).toBeInTheDocument()
   })
 
   it('is for the Chinese pack only', () => {

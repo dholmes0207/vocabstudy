@@ -32,6 +32,16 @@ tiếng Anh xong tiếng Trung".
   pinyin, nghĩa, có mẫu ở Phần 2–3, mẫu Phần 3 đủ 5 câu, không trùng câu, lượt không lặp.
 - Câu và câu mẫu có trong `scripts/audio-texts/screens.json` để thu giọng.
 
-## 5. Tiếp theo
+## 5. HSKK trung cấp (09/11/2026)
 
-1. HSKK trung cấp (中级): nghe nhắc lại câu dài, mô tả tranh, trả lời câu hỏi 2 phút.
+- Trang `/hskk` có hai thẻ: Sơ cấp 初级 (HSK 1–2) và Trung cấp 中级 (HSK 3–4). Đề trung cấp: nghe nhắc lại câu
+  dài (10 câu), nhìn tranh nói 2 phút (2 tranh), trả lời câu hỏi 2 phút (2 câu).
+- Ở đây: 10 câu nhắc lại có 如果…就, 虽然…但是, câu 把…; 3 tranh là cảnh emoji kèm dòng tả (chưa có ảnh thật),
+  câu hỏi hiện và được đọc lên; 3 câu hỏi Phần 3. Phần 2–3 ghi âm tối đa 120 giây, có bài nói mẫu từ 5 câu trở
+  lên kèm pinyin, nghĩa và nút nghe.
+- Dữ liệu chia theo cấp trong `HSKK_LEVELS` (`lib/hskk.ts`): câu của từng phần, số câu một lượt, giới hạn giây.
+  Lộ trình tiếng Trung cấp 4 (HSK 3) thêm bước "Luyện nói HSKK trung cấp" (5 lượt, cộng dồn với bước ở cấp 3).
+
+## 6. Tiếp theo
+
+1. Thay cảnh emoji bằng ảnh thật khi có nguồn ảnh được phép dùng.
