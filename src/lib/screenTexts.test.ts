@@ -29,6 +29,7 @@ import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
 import { CHENGYU } from './chengyu'
 import { HSKK_PARTS } from './hskk'
 import { SLANG } from './netSlang'
+import { HAN_VIET_TRAPS } from './hanVietTraps'
 import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
 import { IDIOMS } from './idiomsEn'
 import { OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
@@ -197,6 +198,8 @@ function chinese(): string[] {
     ),
     // "Tiếng lóng mạng": each word and its example sentence.
     ...SLANG.flatMap((it) => [it.zh, it.example.zh]),
+    // "Bẫy Hán Việt": each word and its example sentence.
+    ...HAN_VIET_TRAPS.flatMap((it) => [it.zh, it.example.zh]),
   ]
 }
 

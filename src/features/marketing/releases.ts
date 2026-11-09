@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-09',
+    title: ['Bẫy Hán Việt', 'Hán Việt traps'],
+    items: [
+      [
+        'Trang mới "Bẫy Hán Việt": 20 từ tiếng Trung mà âm Hán Việt dễ làm hiểu sai, như 大家 (đại gia) là "mọi người", 便宜 (tiện nghi) là "rẻ". Có ví dụ và lượt né bẫy; lộ trình HSK 2 có thêm bước này.',
+        'New "Hán Việt traps" page: 20 Chinese words whose Hán Việt sound misleads, like 大家 ("đại gia", tycoon) meaning everyone and 便宜 ("tiện nghi", comfortable) meaning cheap. With examples and a round of dodging traps; the HSK 2 level gains this step.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-08',
     title: ['Luyện TOEIC Speaking', 'TOEIC Speaking practice'],
     items: [

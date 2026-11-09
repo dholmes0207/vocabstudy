@@ -122,6 +122,11 @@ test('Chinese look-alike characters, idioms, slang and sentence patterns', async
   await page.getByRole('button', { name: /Try 10 questions/ }).click()
   await page.getByText('What does this word mean?').waitFor()
 
+  await page.goto('/han-viet-traps?lang=zh')
+  await page.getByRole('button', { name: /Try 10 questions/ }).click()
+  await page.locator('.card button').first().click()
+  await expect(page.getByText(/(dodged the trap|Caught by the trap|Not quite)/)).toBeVisible()
+
   await page.goto('/hskk?lang=zh')
   await page
     .getByRole('button', { name: /^Practise/ })

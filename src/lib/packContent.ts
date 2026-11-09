@@ -20,6 +20,8 @@ const ONLY: Record<string, readonly string[]> = {
   '/chengyu': ['zh'],
   // Chinese internet words of Douyin and Weibo (lib/netSlang.ts).
   '/slang': ['zh'],
+  // Chinese words whose Hán Việt reading misleads (lib/hanVietTraps.ts).
+  '/han-viet-traps': ['zh'],
   '/numbers': ['zh', 'ko'],
   // Words whose units line up with a Hán Việt reading (lib/hanVietFamily).
   '/han-viet': ['zh', 'ko'],

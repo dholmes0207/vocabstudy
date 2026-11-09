@@ -24,6 +24,7 @@ export type ActivityKind =
   | 'chengyu'
   | 'hskk'
   | 'slang'
+  | 'hanviet-traps'
   | 'phrasal'
   | 'idioms'
   | 'roleplay'
