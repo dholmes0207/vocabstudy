@@ -14,6 +14,19 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: [
+      'TOEIC Speaking: trả lời dựa trên thông tin',
+      'TOEIC Speaking: respond using information',
+    ],
+    items: [
+      [
+        'Trang TOEIC Speaking có thêm dạng Câu 8–10: đọc một lịch trình (hội nghị, lịch phỏng vấn, tour tham quan) rồi trả lời ba câu hỏi của người gọi trong 15, 15 và 30 giây, có câu mẫu.',
+        'TOEIC Speaking gains Questions 8–10: read a schedule (a conference, interviews, a city tour) and answer a caller’s three questions in 15, 15 and 30 seconds, with samples.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Bẫy Hán Việt', 'Hán Việt traps'],
     items: [
       [

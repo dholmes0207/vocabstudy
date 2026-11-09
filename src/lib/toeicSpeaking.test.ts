@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
+import { INFO_SETS, OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
 
 const words = (s: string) => s.trim().split(/\s+/).length
 
@@ -24,13 +24,25 @@ describe('TOEIC Speaking data', () => {
     }
   })
 
+  it('gives Questions 8–10 a schedule and a caller, timed 15, 15 and 30 seconds', () => {
+    expect(INFO_SETS.length).toBeGreaterThanOrEqual(3)
+    for (const s of INFO_SETS) {
+      expect(s.lines.length, s.id).toBeGreaterThanOrEqual(5)
+      expect(
+        s.questions.map((x) => x.seconds),
+        s.id
+      ).toEqual([15, 15, 30])
+      for (const x of s.questions) expect(x.sample.a, x.q).toContain(x.sample.key)
+    }
+  })
+
   it('gives each opinion question a sample of a minute’s talk', () => {
     expect(OPINIONS.length).toBeGreaterThanOrEqual(3)
     for (const o of OPINIONS) {
       expect(o.sample.a, o.id).toContain(o.sample.key)
       expect(words(o.sample.a), o.id).toBeGreaterThanOrEqual(70)
     }
-    const ids = [...READ_ALOUD, ...SURVEYS, ...OPINIONS].map((x) => x.id)
+    const ids = [...READ_ALOUD, ...SURVEYS, ...INFO_SETS, ...OPINIONS].map((x) => x.id)
     expect(new Set(ids).size).toBe(ids.length)
   })
 })

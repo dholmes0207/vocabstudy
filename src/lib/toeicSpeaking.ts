@@ -1,7 +1,8 @@
-// "TOEIC Speaking" (docs/design/toeic-speaking.md): three tasks of the TOEIC
+// "TOEIC Speaking" (docs/design/toeic-speaking.md): four tasks of the TOEIC
 // Speaking test. Read a short text aloud (Questions 1–2), answer three
-// questions on an everyday topic in a telephone survey (Questions 5–7), and
-// give an opinion with reasons (Question 11). Each answer is recorded; the
+// questions on an everyday topic in a telephone survey (Questions 5–7),
+// answer a caller from a schedule on screen (Questions 8–10), and give an
+// opinion with reasons (Question 11). Each answer is recorded; the
 // questions come with a sample answer and one phrase worth borrowing (`key`
 // is part of `a`). Pure; data inline like lib/hskk.ts.
 
@@ -22,13 +23,24 @@ export interface SurveySet {
   questions: { q: string; seconds: number; sample: SampleAnswer }[]
 }
 
+/** Questions 8–10: a schedule or notice on screen, and a caller asking about it. */
+export interface InfoSet {
+  id: string
+  title: string
+  /** The lines of the schedule, as the test shows them. */
+  lines: string[]
+  /** What the caller says before the questions. */
+  intro: string
+  questions: { q: string; seconds: number; sample: SampleAnswer }[]
+}
+
 export interface OpinionPrompt {
   id: string
   prompt: string
   sample: SampleAnswer
 }
 
-export type ToeicSpeakingTask = 'read' | 'respond' | 'opinion'
+export type ToeicSpeakingTask = 'read' | 'respond' | 'info' | 'opinion'
 
 /** Seconds to prepare and to speak, as in the test. */
 export const READ_SECONDS = 45
@@ -132,6 +144,110 @@ export const SURVEYS: SurveySet[] = [
         30,
         'First, I check the location, because I want to be close to the places I plan to visit. Then I read reviews from other guests to see if the rooms are clean and the staff are friendly. Finally, of course, I compare prices.',
         'First, I check'
+      ),
+    ],
+  },
+]
+
+export const INFO_SETS: InfoSet[] = [
+  {
+    id: 'conference',
+    title: 'Riverside Business Conference · Saturday, May 18 · Grand Hotel',
+    lines: [
+      '9:00 a.m. Registration and coffee',
+      '9:30 a.m. Opening talk: The Future of Online Shopping (Dr. Lisa Chen)',
+      '11:00 a.m. Workshop: Social Media Marketing (Tom Wright)',
+      '12:30 p.m. Lunch (included)',
+      '2:00 p.m. Panel: Starting a Small Business (cancelled)',
+      '3:30 p.m. Workshop: Writing a Business Plan (Maria Lopez)',
+      'Fee: $80 ($60 if you register before May 1)',
+    ],
+    intro:
+      'Hi, I’m thinking of going to the business conference, but I don’t have the schedule. Could you answer a few questions for me?',
+    questions: [
+      q(
+        'What time does the conference start, and where is it?',
+        15,
+        'The conference starts at nine a.m. with registration and coffee, and it’s being held at the Grand Hotel.',
+        'it’s being held at'
+      ),
+      q(
+        'I heard there’s a panel on starting a small business. Is that right?',
+        15,
+        'I’m sorry, but that panel has been cancelled. However, there’s a workshop on writing a business plan at three thirty, which might interest you.',
+        'I’m sorry, but'
+      ),
+      q(
+        'Could you tell me about the workshops on the schedule?',
+        30,
+        'Sure. There are two workshops. The first one is at eleven a.m. It’s about social media marketing, and it’s led by Tom Wright. The second one starts at three thirty in the afternoon, when Maria Lopez will talk about writing a business plan. Lunch at twelve thirty is included in the fee.',
+        'There are two workshops'
+      ),
+    ],
+  },
+  {
+    id: 'interviews',
+    title: 'Interview schedule · Brightway Marketing · Thursday, June 6 · Room 204',
+    lines: [
+      '9:00 a.m. Anna Kim (Sales Assistant)',
+      '10:00 a.m. David Park (Graphic Designer)',
+      '11:00 a.m. Sara Nguyen (Sales Assistant)',
+      '1:30 p.m. James Lee (Office Manager), moved to Friday',
+      '2:30 p.m. Emma Brown (Graphic Designer)',
+    ],
+    intro:
+      'Hi, this is Mr. Adams. I’m on the interview panel on Thursday, but I left the schedule at home. Can you help me?',
+    questions: [
+      q(
+        'Where will the interviews take place, and what time is the first one?',
+        15,
+        'The interviews will take place in Room 204, and the first one starts at nine a.m. with Anna Kim.',
+        'will take place in'
+      ),
+      q(
+        'I’ll be interviewing James Lee at one thirty, right?',
+        15,
+        'Actually, no. James Lee’s interview has been moved to Friday, so you’ll have a break at one thirty.',
+        'has been moved to'
+      ),
+      q(
+        'Who is applying for the graphic designer position?',
+        30,
+        'There are two candidates for the graphic designer position. The first is David Park, whose interview is at ten a.m. The second is Emma Brown, and her interview is at two thirty in the afternoon.',
+        'There are two candidates'
+      ),
+    ],
+  },
+  {
+    id: 'city-tour',
+    title: 'Green City Day Tour · Every Sunday · $45 per person',
+    lines: [
+      '8:00 a.m. Pick-up from the Central Hotel',
+      '9:00 a.m. Visit to the History Museum',
+      '11:30 a.m. Boat trip on the river',
+      '1:00 p.m. Lunch at a local restaurant (not included)',
+      '3:00 p.m. Shopping at the Old Town Market',
+      '5:00 p.m. Return to the hotel',
+    ],
+    intro: 'Hi, I saw your advertisement for the city tour, and I’d like some information.',
+    questions: [
+      q(
+        'How much does the tour cost, and where does it start?',
+        15,
+        'The tour costs forty-five dollars per person, and it starts with a pick-up from the Central Hotel at eight a.m.',
+        'per person'
+      ),
+      q(
+        'Is lunch included in the price?',
+        15,
+        'No, I’m afraid lunch isn’t included. You’ll stop at a local restaurant at one p.m., but you’ll need to pay for it yourself.',
+        'I’m afraid'
+      ),
+      q(
+        'What will we do in the morning?',
+        30,
+        'In the morning, you’ll be picked up from the Central Hotel at eight. At nine you’ll visit the History Museum, and then at eleven thirty there’s a boat trip on the river before lunch.',
+        'and then'
       ),
     ],
   },

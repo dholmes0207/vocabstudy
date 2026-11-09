@@ -15,7 +15,7 @@
 | 1–2  | Đọc to đoạn văn                    | 45 s chuẩn bị, 45 s | ✓        |
 | 3–4  | Tả tranh                           | 45 s, 30 s          | –        |
 | 5–7  | Trả lời câu hỏi                    | 15 s, 15 s, 30 s    | ✓        |
-| 8–10 | Trả lời dựa trên thông tin cho sẵn | 15 s, 15 s, 30 s    | –        |
+| 8–10 | Trả lời dựa trên thông tin cho sẵn | 15 s, 15 s, 30 s    | ✓        |
 | 11   | Nêu quan điểm                      | 45 s chuẩn bị, 60 s | ✓        |
 
 ## 3. Cách làm
@@ -25,6 +25,9 @@
     40–70 từ, ghi âm tối đa 45 giây, có nút nghe đọc mẫu và mẹo ngắt nghỉ, ngữ điệu liệt kê.
   - **Trả lời câu hỏi**: một bộ phỏng vấn qua điện thoại (mua sắm, tập thể dục, du lịch), ba câu được đọc lên,
     ghi âm 15 / 15 / 30 giây.
+  - **Trả lời dựa trên thông tin** (thêm 09/11/2026): một lịch trình hiện trên màn hình (hội nghị, lịch phỏng
+    vấn, tour tham quan) và lời người gọi; ba câu hỏi được đọc lên, ghi âm 15 / 15 / 30 giây. Lịch luôn nằm trên
+    màn hình trong lúc trả lời; mỗi bộ có một mục bị huỷ hoặc dời để luyện cách báo tin không như ý.
   - **Nêu quan điểm**: một đề, được đọc lên, ghi âm 60 giây.
 - Câu hỏi có câu trả lời mẫu gập sẵn (dùng lại `SampleAnswer` của IELTS, thêm nhãn riêng), tô một cụm đáng học.
 - Không chấm điểm; xong một dạng +10 XP, ghi `toeic-speaking`. Lộ trình tiếng Anh cấp 5 (TOEIC) thêm bước
@@ -38,5 +41,4 @@
 
 ## 5. Tiếp theo
 
-1. Câu 8–10: trả lời dựa trên lịch trình, thời khoá biểu cho sẵn.
-2. Phần Viết của TOEIC (viết câu theo tranh, trả lời email).
+1. Phần Viết của TOEIC (viết câu theo tranh, trả lời email).
