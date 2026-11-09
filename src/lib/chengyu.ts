@@ -441,6 +441,11 @@ export type ChengyuQuestion =
       options: { ch: string; hv: string }[]
       answer: number
     }
+  /** The example sentence with the whole idiom taken out: which idiom fits? */
+  | { kind: 'fill'; item: Chengyu; sentence: string; options: Chengyu[]; answer: number }
+
+/** Marks where the idiom goes in a "fill" sentence. */
+export const IDIOM_GAP = '＿＿＿＿'
 
 const syllables = (s: string) => s.split(' ')
 
@@ -456,9 +461,10 @@ export const withGap = (it: Chengyu, at: number): string =>
   [...it.zh].map((ch, i) => (i === at ? GAP : ch)).join('')
 
 /**
- * A round of `size` questions over different idioms, alternating "what does
- * it mean?" and "which character is missing?". Wrong options come from other
- * idioms; a missing-character option is never a character the idiom has.
+ * A round of `size` questions over different idioms, taking turns: "what does
+ * it mean?", "which character is missing?", "which idiom fits the sentence?".
+ * Wrong options come from other idioms; a missing-character option is never a
+ * character the idiom has.
  */
 export function chengyuRound(
   size = 10,
@@ -476,7 +482,17 @@ export function chengyuRound(
   const items = shuffle(pool).slice(0, size)
   return items.map((item, n): ChengyuQuestion => {
     const others = shuffle(pool.filter((o) => o.id !== item.id))
-    if (n % 2 === 0) {
+    if (n % 3 === 2) {
+      const options = shuffle([item, ...others.slice(0, 3)])
+      return {
+        kind: 'fill',
+        item,
+        sentence: item.example.zh.replace(item.zh, IDIOM_GAP),
+        options,
+        answer: options.indexOf(item),
+      }
+    }
+    if (n % 3 === 0) {
       const options = shuffle([item.meaning, ...others.slice(0, 3).map((o) => o.meaning)])
       return { kind: 'meaning', item, options, answer: options.indexOf(item.meaning) }
     }

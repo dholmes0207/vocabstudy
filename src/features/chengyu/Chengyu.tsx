@@ -162,7 +162,13 @@ function Round({
   const answered = picked !== null
   const right = picked === q.answer
   const labels =
-    q.kind === 'meaning' ? q.options.map((o) => t(...o)) : q.options.map((o) => `${o.ch} · ${o.hv}`)
+    q.kind === 'meaning'
+      ? q.options.map((o) => t(...o))
+      : q.kind === 'missing'
+        ? q.options.map((o) => `${o.ch} · ${o.hv}`)
+        : q.options.map((o) => o.zh)
+  // Options in characters: a missing character, or a whole idiom.
+  const zhOptions = q.kind !== 'meaning'
 
   const pick = (i: number) => {
     if (answered) return
@@ -208,12 +214,25 @@ function Round({
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             {q.kind === 'meaning'
               ? t('Thành ngữ này nghĩa là gì?', 'What does this idiom mean?')
-              : t('Chữ nào còn thiếu?', 'Which character is missing?')}
+              : q.kind === 'missing'
+                ? t('Chữ nào còn thiếu?', 'Which character is missing?')
+                : t('Thành ngữ nào hợp với câu này?', 'Which idiom fits this sentence?')}
           </p>
-          <p lang="zh" className="mt-3 text-4xl font-extrabold tracking-wider">
-            {q.kind === 'missing' && !answered ? withGap(item, q.at) : item.zh}
-          </p>
-          <p className="mt-2 font-semibold text-brand-700 dark:text-brand-300">{hv}</p>
+          {q.kind === 'fill' ? (
+            <>
+              <p lang="zh" className="mt-3 text-2xl font-bold leading-relaxed">
+                {answered ? item.example.zh : q.sentence}
+              </p>
+              <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{item.example.vi}</p>
+            </>
+          ) : (
+            <>
+              <p lang="zh" className="mt-3 text-4xl font-extrabold tracking-wider">
+                {q.kind === 'missing' && !answered ? withGap(item, q.at) : item.zh}
+              </p>
+              <p className="mt-2 font-semibold text-brand-700 dark:text-brand-300">{hv}</p>
+            </>
+          )}
           {q.kind === 'missing' && (
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t(...item.meaning)}</p>
           )}
@@ -235,7 +254,7 @@ function Round({
                 onClick={() => pick(i)}
                 disabled={answered}
                 className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 px-3 py-2 text-center font-semibold transition ${
-                  q.kind === 'missing' ? 'text-xl' : 'text-sm'
+                  zhOptions ? 'text-xl' : 'text-sm'
                 } ${
                   state === 'right'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
@@ -244,7 +263,7 @@ function Round({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                <span lang={q.kind === 'missing' ? 'zh' : undefined}>{label}</span>
+                <span lang={zhOptions ? 'zh' : undefined}>{label}</span>
                 {state === 'right' && <Check className="h-5 w-5" aria-hidden="true" />}
                 {state === 'wrong' && <X className="h-5 w-5" aria-hidden="true" />}
               </button>

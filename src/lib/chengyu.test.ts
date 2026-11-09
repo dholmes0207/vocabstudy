@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CHENGYU, GAP, charsOf, chengyuRound, chengyuXp, withGap } from './chengyu'
+import { CHENGYU, GAP, IDIOM_GAP, charsOf, chengyuRound, chengyuXp, withGap } from './chengyu'
 import { mulberry32 } from './sky'
 
 describe('chengyu data', () => {
@@ -33,16 +33,21 @@ describe('chengyuRound', () => {
       expect(qs).toHaveLength(10)
       expect(new Set(qs.map((q) => q.item.id)).size).toBe(10)
       qs.forEach((q, i) => {
-        expect(q.kind).toBe(i % 2 === 0 ? 'meaning' : 'missing')
+        expect(q.kind).toBe(['meaning', 'missing', 'fill'][i % 3])
         expect(q.options).toHaveLength(4)
         if (q.kind === 'meaning') {
           expect(q.options[q.answer]).toBe(q.item.meaning)
           expect(new Set(q.options.map((o) => o[0])).size).toBe(4)
-        } else {
+        } else if (q.kind === 'missing') {
           expect(q.options[q.answer].ch).toBe([...q.item.zh][q.at])
           const wrong = q.options.filter((_, j) => j !== q.answer)
           for (const o of wrong) expect(q.item.zh).not.toContain(o.ch)
           expect(new Set(q.options.map((o) => o.ch)).size).toBe(4)
+        } else {
+          expect(q.options[q.answer]).toBe(q.item)
+          expect(q.sentence).toContain(IDIOM_GAP)
+          expect(q.sentence).not.toContain(q.item.zh)
+          expect(new Set(q.options.map((o) => o.zh)).size).toBe(4)
         }
       })
     }

@@ -36,6 +36,10 @@ hứng thú, hấp dẫn khi học".
 - Thêm 10 câu, phần lớn mức HSK 4–5 và có chuyện kể: 塞翁失马 (tái ông thất mã), 亡羊补牢, 掩耳盗铃,
   狐假虎威 (cáo mượn oai hùm), 胸有成竹, cùng 车水马龙, 三心二意, 一言为定, 笨鸟先飞, 自言自语.
 
-## 5. Tiếp theo
+## 5. Đợt 3: chọn thành ngữ hợp với câu (09/11/2026)
 
-1. Dạng "chọn thành ngữ hợp với câu" (điền cả thành ngữ vào chỗ trống trong câu ví dụ).
+- Biết nghĩa chưa đủ, phải biết dùng: dạng thứ ba _Thành ngữ nào hợp với câu này?_ lấy câu ví dụ, thay
+  thành ngữ bằng ＿＿＿＿, kèm nghĩa tiếng Việt của câu; chọn 1 trong 4 thành ngữ. Trả lời xong hiện lại
+  câu đầy đủ.
+- Lượt 10 câu giờ xoay vòng ba dạng: nghĩa, chữ còn thiếu, điền vào câu. Test kiểm câu hỏi có chỗ trống,
+  không lộ thành ngữ và 4 phương án khác nhau.
