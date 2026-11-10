@@ -201,20 +201,20 @@ function Round({
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{q.item.vi}</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
-          {PARTICLES.map((p) => {
+        <div className="grid grid-cols-2 gap-3">
+          {q.options.map((id) => {
             const state = !answered
               ? 'idle'
-              : p.id === answer
+              : id === answer
                 ? 'right'
-                : p.id === picked
+                : id === picked
                   ? 'wrong'
                   : 'idle'
             return (
               <button
-                key={p.id}
+                key={id}
                 type="button"
-                onClick={() => pick(p.id)}
+                onClick={() => pick(id)}
                 disabled={answered}
                 lang="en"
                 className={`flex h-12 items-center justify-center gap-1 rounded-xl border-2 text-lg font-bold transition ${
@@ -225,7 +225,7 @@ function Round({
                       : 'border-slate-200 hover:border-brand-400 hover:bg-brand-50 dark:border-slate-700 dark:hover:bg-slate-800'
                 }`}
               >
-                {p.id}
+                {id}
                 {state === 'right' && <Check className="h-5 w-5" aria-hidden="true" />}
                 {state === 'wrong' && <X className="h-5 w-5" aria-hidden="true" />}
               </button>

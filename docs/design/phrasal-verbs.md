@@ -12,7 +12,7 @@ khi học".
 
 ## 2. Cách làm
 
-- 6 tiểu từ: up, out, off, on, down, back. Mỗi tiểu từ có một dòng "nghĩa thường thêm vào" và 5 cụm, mỗi cụm có
+- 6 tiểu từ ban đầu: up, out, off, on, down, back (đợt 2 thêm over, away). Mỗi tiểu từ có một dòng "nghĩa thường thêm vào" và 5 cụm, mỗi cụm có
   nghĩa tiếng Việt, nghĩa tiếng Anh đơn giản, một câu có chỗ trống và bản dịch.
 - Câu được viết để chỉ một tiểu từ trong 6 là hợp (ví dụ "It’s so dark in here — can you turn ＿ the light?"
   chỉ hợp với on), tránh các câu mà tiểu từ khác cũng đúng (put off / put back, call back / call up).
@@ -27,6 +27,17 @@ khi học".
 - Trang `/phrasal-verbs` (`features/phrasal/`), chỉ cho gói tiếng Anh, mục trong trang Luyện tập. Câu đã điền
   tiểu từ có trong `scripts/audio-texts/screens.json` để thu giọng.
 
-## 4. Tiếp theo
+## 4. Đợt 2: thêm over, away (10/11/2026)
 
-1. Thêm tiểu từ (over, in, away, through) và cụm động từ hay gặp trong TOEIC Part 5–6.
+- Thêm 2 tiểu từ hay gặp trong TOEIC Part 5–6, mỗi tiểu từ 5 cụm: **over** (take over, look over, get over, think
+  over, go over) và **away** (give away, throw away, run away, pass away, put away). Tổng cộng 8 tiểu từ, 40 cụm.
+- Nhiều tiểu từ hơn thì dễ có câu điền được hai đáp án: "turn ＿ your phones" nhận cả off lẫn over, "throw ＿
+  those boxes" nhận cả away lẫn out. Mỗi cụm nay có `alsoFits` ghi các tiểu từ khác cũng đúng ở câu đó; các
+  tiểu từ này không bao giờ được đưa ra làm phương án sai.
+- Mỗi câu chỉ đưa 4 phương án (đáp án và 3 tiểu từ chắc chắn sai) thay vì tất cả, gọn hơn trên điện thoại. Test
+  kiểm 4 phương án khác nhau, có đáp án và không chứa tiểu từ nào trong `alsoFits`.
+
+## 5. Tiếp theo
+
+1. Thêm tiểu từ in, through khi viết được câu chỉ nhận đúng một tiểu từ (in hay trùng nghĩa với out, on: fill
+   in/out, give in/up).
