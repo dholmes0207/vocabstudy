@@ -39,6 +39,31 @@ import ListeningChoiceRound from './ListeningChoiceRound'
 
 type MatchKind = 'headings' | 'summary' | 'matching' | 'completion' | 'chooseTwo'
 
+/** The reading rounds beyond True / False / Not Given, in the order the page lists them. */
+const READING_TYPES: { kind: MatchKind; emoji: string; label: [string, string] }[] = [
+  {
+    kind: 'headings',
+    emoji: '🧩',
+    label: ['Nối tiêu đề (Matching headings)', 'Matching headings'],
+  },
+  {
+    kind: 'summary',
+    emoji: '📝',
+    label: ['Điền tóm tắt (Summary completion)', 'Summary completion'],
+  },
+  {
+    kind: 'matching',
+    emoji: '🔎',
+    label: ['Tìm thông tin (Matching information)', 'Matching information'],
+  },
+  {
+    kind: 'completion',
+    emoji: '✍️',
+    label: ['Điền câu (Sentence completion)', 'Sentence completion'],
+  },
+  { kind: 'chooseTwo', emoji: '✌️', label: ['Chọn hai đáp án (Choose TWO)', 'Choose TWO'] },
+]
+
 export default function Ielts() {
   const t = useT()
   useDocumentTitle(`${t('Luyện IELTS', 'IELTS practice')} · VocaStudy`)
@@ -257,8 +282,14 @@ export default function Ielts() {
             className="h-5 w-5 text-emerald-600 dark:text-emerald-300"
             aria-hidden="true"
           />
-          {t('Đọc: True / False / Not Given', 'Reading: True / False / Not Given')}
+          {t('Luyện Đọc', 'Reading practice')}
         </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300">
+          {t(
+            'Dạng hay gặp nhất là True / False / Not Given. Bên dưới còn 5 dạng khác của đề thật, mỗi dạng một vòng riêng.',
+            'The most common type is True / False / Not Given. Below are five more types from the real test, each with its own round.'
+          )}
+        </p>
         <div className="grid gap-2 text-sm sm:grid-cols-3">
           <p className="rounded-xl bg-emerald-50 p-3 dark:bg-emerald-950/40">
             <b>TRUE</b>:{' '}
@@ -287,55 +318,31 @@ export default function Ielts() {
           </p>
         ) : (
           <>
-            <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                className="btn-primary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => start()}
-              >
-                {t('Làm một bài đọc', 'Read a passage')} <ArrowRight className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                className="btn-secondary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => startMatch('headings')}
-              >
-                🧩 {t('Nối tiêu đề (Matching headings)', 'Matching headings')}
-              </button>
-              <button
-                type="button"
-                className="btn-secondary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => startMatch('summary')}
-              >
-                📝 {t('Điền tóm tắt (Summary completion)', 'Summary completion')}
-              </button>
-              <button
-                type="button"
-                className="btn-secondary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => startMatch('matching')}
-              >
-                🔎 {t('Tìm thông tin (Matching information)', 'Matching information')}
-              </button>
-              <button
-                type="button"
-                className="btn-secondary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => startMatch('completion')}
-              >
-                ✍️ {t('Điền câu (Sentence completion)', 'Sentence completion')}
-              </button>
-              <button
-                type="button"
-                className="btn-secondary h-11 w-full sm:w-auto"
-                disabled={!bank}
-                onClick={() => startMatch('chooseTwo')}
-              >
-                ✌️ {t('Chọn hai đáp án (Choose TWO)', 'Choose TWO')}
-              </button>
+            <button
+              type="button"
+              className="btn-primary h-11 w-full sm:w-auto"
+              disabled={!bank}
+              onClick={() => start()}
+            >
+              {t('Làm một bài đọc', 'Read a passage')} <ArrowRight className="h-4 w-4" />
+            </button>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                {t('Dạng câu khác', 'More question types')}
+              </p>
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {READING_TYPES.map((r) => (
+                  <button
+                    key={r.kind}
+                    type="button"
+                    className="btn-secondary h-auto min-h-11 px-3 py-2 text-sm"
+                    disabled={!bank}
+                    onClick={() => startMatch(r.kind)}
+                  >
+                    <span aria-hidden="true">{r.emoji}</span> {t(...r.label)}
+                  </button>
+                ))}
+              </div>
             </div>
             {bank && (
               <ul className="grid gap-2 sm:grid-cols-2">
