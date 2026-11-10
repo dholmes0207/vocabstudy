@@ -53,7 +53,7 @@ npm run e2e          # playwright test -c e2e, tự mở vite preview ở cổng
 ```
 
 - Lần đầu trên máy mới: `npx playwright install chromium`.
-- CI chạy trong job riêng "E2E (Playwright)". Hỏng thì trace được lưu thành artifact `e2e-trace`;
+- CI chạy E2E ở cuối job duy nhất, dùng lại bản build vừa dựng (`ci.md`). Hỏng thì trace được lưu thành artifact `e2e-trace`;
   mở bằng `npx playwright show-trace <file>`.
 
 Đã thử cố ý tắt service worker (`DISABLED = true` trong `public/sw.js`): test ngoại tuyến báo đỏ
