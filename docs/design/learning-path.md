@@ -95,9 +95,11 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
   `useActivity.log` ở chỗ phiên kết thúc.
 - `store/pathStore.ts` (`vocab.path.v1`): cấp cao nhất đã ăn mừng, để pháo giấy và XP chỉ có một lần.
 - Trang `/path` (`features/path/LearningPath.tsx`), thẻ ở trang chủ (`PathCard.tsx`), mục menu
-  "Lộ trình theo cấp". Hiện chỉ có cho gói tiếng Anh (`lib/packContent.ts`).
+  "Lộ trình theo cấp". Có cho cả ba gói: tiếng Anh (6 cấp, A1 → IELTS), tiếng Trung (4 cấp, HSK 1 → 3) và
+  tiếng Hàn (3 cấp, TOPIK I).
 
 ## 5. Tiếp theo
 
-1. Thêm bài đọc IELTS dài và cảnh nhập vai; thêm từ cho gói tiếng Hàn để lộ trình đi tới TOPIK I cấp 2 đầy đủ.
-2. Lộ trình tiếng Hàn theo cấp (TOPIK I).
+Từ 10/11/2026 chỉ tiếp tục hoàn thiện tiếng Anh và tiếng Trung; gói tiếng Hàn giữ nguyên.
+
+1. Rà lại mô tả các bước khi một trang có thêm dạng bài, để lộ trình nói đúng những gì trang có.
