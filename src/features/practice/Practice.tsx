@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useProvideContext } from '@/store/contextStore'
-import { PRACTICE } from './entries'
+import { PRACTICE, entryDesc } from './entries'
 import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
 import { useSettings } from '@/store/settingsStore'
@@ -32,7 +32,7 @@ export default function Practice() {
       </header>
       <div className="grid gap-3 sm:grid-cols-2">
         {entries.map((e) => {
-          const desc = e.byPack?.[code] ?? e
+          const desc = entryDesc(e, code)
           return (
             <Link
               key={e.to}

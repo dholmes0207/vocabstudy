@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useVisited } from '@/store/visitedStore'
-import { PRACTICE } from '@/features/practice/entries'
+import { PRACTICE, entryDesc } from '@/features/practice/entries'
 import { availableIn } from '@/lib/packContent'
 import { pickDiscovery } from '@/lib/discover'
 import { today } from '@/lib/date'
@@ -25,6 +25,7 @@ export default function DiscoverCard() {
   )
   const entry = entries.find((e) => e.to === pick)
   if (!entry) return null
+  const desc = entryDesc(entry, code)
   return (
     <Link
       to={entry.to}
@@ -42,7 +43,7 @@ export default function DiscoverCard() {
         </span>
         <span className="block font-bold">{t(entry.title, entry.titleEn)}</span>
         <span className="block truncate text-sm text-slate-500 dark:text-slate-400">
-          {t(entry.desc, entry.descEn)}
+          {t(desc.desc, desc.descEn)}
         </span>
       </span>
       <ArrowRight className="h-5 w-5 shrink-0 text-slate-400" aria-hidden="true" />

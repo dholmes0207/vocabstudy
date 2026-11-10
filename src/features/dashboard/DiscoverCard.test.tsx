@@ -31,6 +31,17 @@ describe('DiscoverCard', () => {
     expect(PRACTICE.some((e) => e.to === to)).toBe(true)
   })
 
+  it('describes a shared screen with the current pack’s own examples', () => {
+    // Everything but the collocations page has been opened: it is today's pick.
+    useSettings.setState({ currentLang: 'zh' })
+    useVisited.setState({ seen: PRACTICE.map((e) => e.to).filter((to) => to !== '/collocations') })
+    show()
+    const link = screen.getByRole('link', { name: /Try something new today/ })
+    expect(link).toHaveAttribute('href', '/collocations')
+    expect(link).toHaveTextContent('吃药')
+    expect(link).not.toHaveTextContent('turn on the light')
+  })
+
   it('leaves once every screen has been opened', () => {
     useVisited.setState({ seen: PRACTICE.map((e) => e.to) })
     const { container } = show()
