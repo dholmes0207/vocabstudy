@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-09',
+    title: ['Kết hợp từ: sức khoẻ, công nghệ, du lịch', 'Collocations: health, tech, travel'],
+    items: [
+      [
+        'Trang "Kết hợp từ" tiếng Anh thêm 3 chủ đề, 18 cụm: bị cảm là catch a cold chứ không phải "I was cold", up ảnh là post a photo, bắt wifi là connect to the wifi, trả phòng là check out.',
+        'The English "Collocations" page adds 3 themes, 18 phrases: catch a cold, not "I was cold"; post a photo, not "up a photo"; connect to the wifi; check out, not "return the room".',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
     title: ['Kết hợp từ tiếng Trung', 'Chinese collocations'],
     items: [
       [

@@ -14,7 +14,7 @@ hứng thú, hấp dẫn khi học".
 
 ## 2. Cách làm
 
-- 24 cụm, chia 4 chủ đề (6 cụm mỗi chủ đề): đời sống hằng ngày, học hành thi cử, công việc tiền bạc, xã hội
+- 24 cụm ban đầu, chia 4 chủ đề (6 cụm mỗi chủ đề): đời sống hằng ngày, học hành thi cử, công việc tiền bạc, xã hội
   môi trường (IELTS). Mỗi cụm có cụm tiếng Việt, cách nói đúng, cách dịch từng chữ (gạch đi), một câu có chỗ
   trống và lý do bằng tiếng Việt.
 - **Trang**: theo chủ đề, mỗi thẻ có nút nghe cụm đúng, ✓ cách đúng, ✗ cách dịch từng chữ.
@@ -45,7 +45,14 @@ hứng thú, hấp dẫn khi học".
 - Chỗ dễ nhập nhằng đã tránh: 喝药 vẫn dùng cho thuốc nước nên câu hỏi nói rõ thuốc viên (每次两片); 玩 không dùng
   làm phương án cho bóng rổ, ghi-ta vì văn nói vẫn có người nói vậy.
 
-## 5. Tiếp theo
+## 5. Thêm chủ đề sức khoẻ, công nghệ, du lịch (09/11/2026)
 
-1. Thêm chủ đề: sức khoẻ, công nghệ, du lịch (mỗi chủ đề 6 cụm).
-2. Dạng ngược: thấy câu tiếng Anh có collocation sai, tìm và sửa.
+- Tiếng Anh thêm 18 cụm, lên 42 cụm trong 7 chủ đề. Mỗi chủ đề đều nhắm vào lỗi dịch từng chữ quen thuộc: bị cảm →
+  "I was cold" (đúng: caught a cold), thức khuya → "wake up late" (nghĩa ngược hẳn: dậy muộn), up ảnh → "up a photo"
+  (đúng: post a photo), hết pin → "out of pin", bắt wifi → "catch the wifi", ngồi xe buýt → "sit the bus" (đúng:
+  take the bus), trả phòng → "return the room" (đúng: check out).
+- Những từ cũng đúng không được đưa vào phương án: start the computer, sit up late, ride the bus, join a network.
+
+## 6. Tiếp theo
+
+1. Dạng ngược: thấy câu tiếng Anh có collocation sai, tìm và sửa.
