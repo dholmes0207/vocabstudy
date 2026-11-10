@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-10',
+    title: ['Kết hợp từ: câu nào tự nhiên hơn?', 'Collocations: which sentence sounds natural?'],
+    items: [
+      [
+        'Lượt luyện "Kết hợp từ" xen kẽ thêm dạng mới: hai câu, một câu đúng và một câu dịch từng chữ ("Can you open the light?"), chọn câu nghe tự nhiên. Có cho cả tiếng Anh và tiếng Trung.',
+        'The "Collocations" round now mixes in a new kind: two sentences, one natural and one translated word for word ("Can you open the light?"); pick the natural one. For both English and Chinese.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-09',
     title: ['Kết hợp từ: sức khoẻ, công nghệ, du lịch', 'Collocations: health, tech, travel'],
     items: [

@@ -214,25 +214,29 @@ function Round({
       <div className="card space-y-5 p-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            {t('Từ nào đi với cụm này?', 'Which word goes with it?')}
+            {q.kind === 'pick'
+              ? t('Câu nào tự nhiên hơn?', 'Which sentence sounds natural?')
+              : t('Từ nào đi với cụm này?', 'Which word goes with it?')}
           </p>
           <p className="mt-2 font-semibold text-brand-700 dark:text-brand-300">{item.vi}</p>
-          <p lang={lang} className="mt-3 text-xl font-bold leading-relaxed">
-            {before}
-            <span
-              className={`mx-1 inline-block min-w-16 border-b-2 px-1 ${
-                answered
-                  ? 'border-emerald-500 text-emerald-700 dark:text-emerald-300'
-                  : 'border-slate-400'
-              }`}
-            >
-              {answered ? item.answer : ' '}
-            </span>
-            {after}
-          </p>
+          {q.kind === 'fill' && (
+            <p lang={lang} className="mt-3 text-xl font-bold leading-relaxed">
+              {before}
+              <span
+                className={`mx-1 inline-block min-w-16 border-b-2 px-1 ${
+                  answered
+                    ? 'border-emerald-500 text-emerald-700 dark:text-emerald-300'
+                    : 'border-slate-400'
+                }`}
+              >
+                {answered ? item.answer : ' '}
+              </span>
+              {after}
+            </p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className={`grid grid-cols-1 gap-3 ${q.kind === 'pick' ? '' : 'sm:grid-cols-3'}`}>
           {q.options.map((label, i) => {
             const state = !answered
               ? 'idle'
@@ -248,7 +252,7 @@ function Round({
                 lang={lang}
                 onClick={() => pick(i)}
                 disabled={answered}
-                className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 px-3 py-2 text-center text-lg font-semibold transition ${
+                className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 px-3 py-2 text-center font-semibold transition ${q.kind === 'pick' ? 'text-base' : 'text-lg'} ${
                   state === 'right'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-200'
                     : state === 'wrong'

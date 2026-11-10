@@ -25,10 +25,18 @@ vi.mock('@/lib/collocations', async (importOriginal) => {
     ...real,
     collocationRound: (_n: number, _t: unknown, _r: unknown, pool: unknown) =>
       pool === real.COLLOCATIONS_ZH
-        ? [{ item: zh('uống thuốc'), options: ['喝', '吃', '打'], answer: 1 }]
+        ? [{ kind: 'fill', item: zh('uống thuốc'), options: ['喝', '吃', '打'], answer: 1 }]
         : [
-            { item: by('bật đèn'), options: ['open', 'turn on', 'start'], answer: 1 },
-            { item: by('uống thuốc'), options: ['take', 'drink', 'eat'], answer: 0 },
+            { kind: 'fill', item: by('bật đèn'), options: ['open', 'turn on', 'start'], answer: 1 },
+            {
+              kind: 'pick',
+              item: by('uống thuốc'),
+              options: [
+                'Don’t forget to drink your medicine after lunch.',
+                'Don’t forget to take your medicine after lunch.',
+              ],
+              answer: 1,
+            },
           ],
   }
 })
@@ -65,7 +73,11 @@ describe('Collocations', () => {
     expect(screen.getByText(/open chỉ dùng cho cửa/)).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /^Next/ }))
 
-    fireEvent.click(screen.getByRole('button', { name: 'take' }))
+    // The second kind: the natural sentence beside the word-for-word one.
+    expect(screen.getByText('Which sentence sounds natural?')).toBeInTheDocument()
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Don’t forget to take your medicine after lunch.' })
+    )
     expect(screen.getByText('Right!')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /^See results/ }))
     expect(screen.getByText('1 of 2 right')).toBeInTheDocument()

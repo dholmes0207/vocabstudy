@@ -53,6 +53,14 @@ hứng thú, hấp dẫn khi học".
   take the bus), trả phòng → "return the room" (đúng: check out).
 - Những từ cũng đúng không được đưa vào phương án: start the computer, sit up late, ride the bus, join a network.
 
-## 6. Tiếp theo
+## 6. Dạng "Câu nào tự nhiên hơn?" (10/11/2026)
 
-1. Dạng ngược: thấy câu tiếng Anh có collocation sai, tìm và sửa.
+- Lượt luyện xen kẽ hai dạng. Câu lẻ vẫn là điền chỗ trống (1 trong 3 từ). Câu chẵn hiện hai câu đầy đủ: một câu dùng
+  từ đúng, một câu dùng cách dịch từng chữ (bẫy đầu tiên), ví dụ "Can you turn on the light?" và "Can you open
+  the light?". Người học chọn câu nghe tự nhiên, giống lúc tự soát bài viết hoặc nghe người khác nói.
+- Không thêm dữ liệu: câu sai dựng từ câu ví dụ và `traps[0]`. Áp dụng cho cả tiếng Anh lẫn tiếng Trung.
+- Test kiểm hai dạng xen kẽ, câu đúng là câu ví dụ đã điền, câu còn lại là câu có bẫy dịch từng chữ.
+
+## 7. Tiếp theo
+
+1. Thêm cụm cho chủ đề còn ít (IELTS, sở thích tiếng Trung) khi có câu ví dụ chắc chắn, không bịa.
