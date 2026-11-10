@@ -34,3 +34,12 @@ nút thông báo cạnh nút đổi ngôn ngữ và giao diện, bấm vào mớ
     lên thì thả xuống từ chuông;
   - đóng bảng khi bấm ra ngoài, khi nhấn Esc hoặc khi chuyển trang.
 - Đã xoá `PolicyNotice` và `lib/policyNotice.ts`.
+
+## Tải sau trang (10/11/2026)
+
+- Chuông chỉ hiện 4 bản phát hành mới nhất nhưng trước đây nhập cả `releases.ts`, tức toàn bộ trang `/changelog`
+  (khoảng 37 KB nén), vào gói JS chính mà trang nào cũng tải. Nay chuông `import()` file này sau khi trang hiện
+  xong; trong lúc chờ (thường chưa tới một khung hình) chuông chỉ có thông báo chính sách.
+- Gói chính giảm từ khoảng 141 KB xuống 104 KB (nén gzip). Người mới vẫn có chuông im lặng: khi danh sách phát
+  hành tải xong, tất cả được đánh dấu đã đọc.
+- Cách thêm bản phát hành không đổi: vẫn ghi vào `src/features/marketing/releases.ts`.

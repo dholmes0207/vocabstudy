@@ -5,8 +5,13 @@ import { useT, useUiLang } from '@/lib/i18n'
 import { formatLongDate } from '@/lib/formatDate'
 import { POLICY_VERSION } from '@/lib/site'
 import { hasUsedApp } from '@/lib/entry'
-import { buildNotifications, markRead, readIds, unreadCount } from '@/lib/notifications'
-import { RELEASES } from '@/features/marketing/releases'
+import {
+  buildNotifications,
+  markRead,
+  readIds,
+  unreadCount,
+  type ReleaseLike,
+} from '@/lib/notifications'
 
 /**
  * The bell beside the language and theme buttons (docs/design/notifications.md).
@@ -16,7 +21,8 @@ import { RELEASES } from '@/features/marketing/releases'
 export default function NotificationBell() {
   const t = useT()
   const lang = useUiLang()
-  const list = useMemo(() => buildNotifications(RELEASES, POLICY_VERSION), [])
+  const [releases, setReleases] = useState<ReleaseLike[]>([])
+  const list = useMemo(() => buildNotifications(releases, POLICY_VERSION), [releases])
   // A newcomer starts with everything read — they are reading the current
   // policy and app for the first time anyway. Decided before Layout records
   // the visit, so it is only ever true on that very first render.
@@ -24,6 +30,31 @@ export default function NotificationBell() {
   const [read, setRead] = useState(() =>
     newcomer ? new Set(list.map((n) => n.id)) : readIds(localStorage, POLICY_VERSION)
   )
+  // The release history is long (it is the whole /changelog) and only the
+  // newest few are shown here, so it loads after the page instead of in the
+  // main bundle. Until then the bell lists the policy notice alone.
+  useEffect(() => {
+    let alive = true
+    void import('@/features/marketing/releases').then(({ RELEASES }) => {
+      if (!alive) return
+      setReleases(RELEASES)
+      // A newcomer's bell stays quiet for the releases too.
+      if (newcomer) {
+        const all = buildNotifications(RELEASES, POLICY_VERSION)
+        setRead(
+          markRead(
+            localStorage,
+            all.map((n) => n.id),
+            all,
+            POLICY_VERSION
+          )
+        )
+      }
+    })
+    return () => {
+      alive = false
+    }
+  }, [newcomer])
   const [open, setOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
