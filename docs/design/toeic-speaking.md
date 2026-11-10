@@ -41,4 +41,4 @@
 
 ## 5. Tiếp theo
 
-1. Phần Viết của TOEIC (viết câu theo tranh, trả lời email).
+1. Phần Viết của TOEIC đã làm xong (`toeic-writing.md`). Hiện không còn việc dang dở cho phần Nói.

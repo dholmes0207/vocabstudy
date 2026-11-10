@@ -107,10 +107,10 @@ export const PRACTICE: PracticeEntry[] = [
     to: '/ielts',
     icon: '🎓',
     title: 'Luyện IELTS',
-    desc: 'Đề gồm những gì, và luyện từng dạng câu: bắt đầu với bài đọc True / False / Not Given có giải thích từng câu.',
+    desc: 'Đủ 4 kỹ năng, từng dạng câu một: Đọc 7 dạng (True/False/Not Given, Yes/No/Not Given, nối tiêu đề, điền câu…), Nghe Part 1–4, Nói có câu mẫu và ghi âm, Viết Task 1–2 có bài mẫu.',
     titleEn: 'IELTS practice',
     descEn:
-      'What the test is made of, and practice one question type at a time, starting with True / False / Not Given reading with every answer explained.',
+      'All four skills, one question type at a time: 7 Reading types (True/False/Not Given, Yes/No/Not Given, headings, sentence completion…), Listening Parts 1–4, Speaking with sample answers and recording, Writing Tasks 1–2 with model answers.',
     tone: 'from-rose-500 to-fuchsia-600',
   },
   {

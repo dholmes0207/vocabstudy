@@ -495,10 +495,10 @@ export const EN_PATH: PathLevel[] = [
         4,
         '🎓',
         '/ielts',
-        ['Đọc IELTS: True / False / Not Given', 'IELTS reading: True / False / Not Given'],
+        ['Đọc IELTS', 'IELTS reading'],
         [
-          'Bài đọc học thuật ngắn, mỗi câu phải chọn Đúng, Sai hay Bài không nói.',
-          'Short academic passages: is each statement true, false or not given?',
+          'Bài đọc học thuật, làm dạng nào cũng được tính: True/False/Not Given, nối tiêu đề, điền câu, chọn hai đáp án…',
+          'Academic passages, any question type counts: True/False/Not Given, headings, sentence completion, choose two…',
         ]
       ),
       sessions(
