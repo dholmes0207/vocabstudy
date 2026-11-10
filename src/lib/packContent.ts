@@ -53,7 +53,7 @@ const ONLY: Record<string, readonly string[]> = {
   '/roleplay': ['en', 'zh'],
   // HSK 1–3 question types from the Chinese pack's examples (lib/hskPractice.ts).
   '/hsk': ['zh'],
-  // The HSKK Elementary speaking test (lib/hskk.ts).
+  // The HSKK speaking test, Elementary and Intermediate (lib/hskk.ts).
   '/hskk': ['zh'],
 }
 
