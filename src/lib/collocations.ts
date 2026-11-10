@@ -716,12 +716,20 @@ export const COLLOCATION_PACKS: Record<'en' | 'zh', { themes: Theme[]; items: Co
 export const filled = (it: Collocation, word = it.answer): string => it.sentence.replace(GAP, word)
 
 export interface CollocationQuestion {
+  /**
+   * "fill": the sentence with a gap, the partner beside two traps.
+   * "pick": two whole sentences, the natural one and the word-for-word slip.
+   */
+  kind: 'fill' | 'pick'
   item: Collocation
   options: string[]
   answer: number
 }
 
-/** A round: items from every theme (or one), each with its partner and two traps. */
+/**
+ * A round: items from every theme (or one), taking turns between filling the
+ * gap (the partner beside two traps) and picking the natural sentence of two.
+ */
 export function collocationRound(
   size = 10,
   theme?: CollocationTheme,
@@ -738,9 +746,14 @@ export function collocationRound(
   }
   return shuffle(pool.filter((x) => !theme || x.theme === theme))
     .slice(0, size)
-    .map((item) => {
+    .map((item, n): CollocationQuestion => {
+      if (n % 2 === 1) {
+        const right = filled(item)
+        const options = shuffle([right, filled(item, item.traps[0])])
+        return { kind: 'pick', item, options, answer: options.indexOf(right) }
+      }
       const options = shuffle([item.answer, ...item.traps])
-      return { item, options, answer: options.indexOf(item.answer) }
+      return { kind: 'fill', item, options, answer: options.indexOf(item.answer) }
     })
 }
 

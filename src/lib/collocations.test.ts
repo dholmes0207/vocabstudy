@@ -31,10 +31,20 @@ describe('collocations', () => {
     const round = collocationRound(10, undefined, mulberry32(3))
     expect(round).toHaveLength(10)
     expect(new Set(round.map((q) => q.item.vi)).size).toBe(10)
-    for (const q of round) {
-      expect(q.options).toHaveLength(3)
-      expect(q.options[q.answer]).toBe(q.item.answer)
-    }
+    round.forEach((q, n) => {
+      if (n % 2 === 0) {
+        // Fill the gap: the partner beside two traps.
+        expect(q.kind).toBe('fill')
+        expect(q.options).toHaveLength(3)
+        expect(q.options[q.answer]).toBe(q.item.answer)
+      } else {
+        // Pick the natural sentence: the slip is the other one.
+        expect(q.kind).toBe('pick')
+        expect(q.options).toHaveLength(2)
+        expect(q.options[q.answer]).toBe(filled(q.item))
+        expect(q.options[1 - q.answer]).toBe(filled(q.item, q.item.traps[0]))
+      }
+    })
   })
 
   it('keeps to one theme when asked', () => {
@@ -55,7 +65,13 @@ describe('collocations', () => {
       expect(new Set([x.answer, ...x.traps]).size, x.vi).toBe(3)
     }
     const round = collocationRound(10, undefined, mulberry32(7), COLLOCATIONS_ZH)
-    expect(round.every((q) => q.options[q.answer] === q.item.answer)).toBe(true)
+    expect(
+      round.every((q) =>
+        q.kind === 'fill'
+          ? q.options[q.answer] === q.item.answer
+          : q.options[q.answer] === filled(q.item)
+      )
+    ).toBe(true)
   })
 
   it('pays a bonus for a perfect round', () => {
