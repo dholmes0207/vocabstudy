@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-10',
+    title: ['Cụm động từ: thêm over, away', 'Phrasal verbs: over and away'],
+    items: [
+      [
+        'Trang "Cụm động từ" thêm 2 tiểu từ hay gặp trong TOEIC: over (take over, look over, get over…) và away (give away, throw away, pass away…). Mỗi câu giờ đưa 4 phương án chắc chắn chỉ có một đáp án đúng.',
+        'The "Phrasal verbs" page adds two particles common in TOEIC: over (take over, look over, get over…) and away (give away, throw away, pass away…). Each sentence now offers four choices with exactly one right answer.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-10',
     title: ['Kết hợp từ: câu nào tự nhiên hơn?', 'Collocations: which sentence sounds natural?'],
     items: [
       [

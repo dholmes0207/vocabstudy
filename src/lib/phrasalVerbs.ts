@@ -1,8 +1,8 @@
 // "Cụm động từ" (docs/design/phrasal-verbs.md): English phrasal verbs grouped
 // by their particle, because the particle carries a meaning of its own (up =
 // to the end, off = away or stopped, back = return). The practice hides the
-// particle in a sentence and offers all six. Pure; data inline like
-// lib/confusables.ts.
+// particle in a sentence and offers four of them: the answer and three that
+// cannot fit there. Pure; data inline like lib/confusables.ts.
 
 export type Pair = [vi: string, en: string]
 
@@ -14,6 +14,8 @@ export interface PhrasalVerb {
   /** A sentence with ＿ where the particle goes. */
   sentence: string
   vi: string
+  /** Other particles that also make a good sentence here: never offered as wrong. */
+  alsoFits?: string[]
 }
 
 export interface Particle {
@@ -26,12 +28,13 @@ export interface Particle {
 
 export const GAP = '＿'
 
-const v = (verb: string, meaning: Pair, sentence: string, vi: string): PhrasalVerb => ({
-  verb,
-  meaning,
-  sentence,
-  vi,
-})
+const v = (
+  verb: string,
+  meaning: Pair,
+  sentence: string,
+  vi: string,
+  alsoFits?: string[]
+): PhrasalVerb => ({ verb, meaning, sentence, vi, ...(alsoFits ? { alsoFits } : {}) })
 
 export const PARTICLES: Particle[] = [
   {
@@ -132,7 +135,8 @@ export const PARTICLES: Particle[] = [
         'turn off',
         ['tắt', 'switch off'],
         'Please turn ＿ your phones before the exam starts.',
-        'Vui lòng tắt điện thoại trước khi bắt đầu thi.'
+        'Vui lòng tắt điện thoại trước khi bắt đầu thi.',
+        ['over']
       ),
       v(
         'call off',
@@ -172,13 +176,15 @@ export const PARTICLES: Particle[] = [
         'put on',
         ['mặc vào, đội vào', 'dress in'],
         'It’s cold outside, so put ＿ your coat.',
-        'Ngoài trời lạnh đấy, mặc áo khoác vào.'
+        'Ngoài trời lạnh đấy, mặc áo khoác vào.',
+        ['away']
       ),
       v(
         'go on',
         ['tiếp tục', 'continue'],
         'Sorry for interrupting — please go ＿.',
-        'Xin lỗi vì ngắt lời, bạn nói tiếp đi.'
+        'Xin lỗi vì ngắt lời, bạn nói tiếp đi.',
+        ['away']
       ),
       v(
         'try on',
@@ -190,7 +196,8 @@ export const PARTICLES: Particle[] = [
         'get on',
         ['lên (xe buýt, tàu)', 'board a bus or train'],
         'The bus is here — quick, let’s get ＿!',
-        'Xe buýt tới rồi, nhanh lên xe nào!'
+        'Xe buýt tới rồi, nhanh lên xe nào!',
+        ['away']
       ),
     ],
   },
@@ -243,7 +250,8 @@ export const PARTICLES: Particle[] = [
         'come back',
         ['quay lại', 'return'],
         'I’m just popping to the shop — I’ll come ＿ in five minutes.',
-        'Tôi chạy ra cửa hàng chút, năm phút nữa quay lại.'
+        'Tôi chạy ra cửa hàng chút, năm phút nữa quay lại.',
+        ['over']
       ),
       v(
         'get back',
@@ -271,18 +279,108 @@ export const PARTICLES: Particle[] = [
       ),
     ],
   },
+  {
+    id: 'over',
+    emoji: '🔄',
+    sense: [
+      'Qua, từ đầu tới cuối; hoặc chuyển sang người khác.',
+      'Across, from start to finish; or passing to someone else.',
+    ],
+    verbs: [
+      v(
+        'take over',
+        ['tiếp quản', 'take control or responsibility'],
+        'Mai will take ＿ as manager when Tom retires.',
+        'Mai sẽ tiếp quản vị trí quản lý khi Tom nghỉ hưu.'
+      ),
+      v(
+        'look over',
+        ['xem qua, soát lại', 'check quickly'],
+        'Could you look ＿ my report before I send it?',
+        'Bạn xem qua giúp tôi bản báo cáo trước khi tôi gửi được không?'
+      ),
+      v(
+        'get over',
+        ['khỏi (bệnh), vượt qua', 'recover from'],
+        'It took her two weeks to get ＿ the flu.',
+        'Cô ấy mất hai tuần mới khỏi cúm.'
+      ),
+      v(
+        'think over',
+        ['cân nhắc kỹ', 'consider carefully'],
+        'Take a few days to think it ＿ before you decide.',
+        'Hãy dành vài ngày cân nhắc kỹ trước khi quyết định.'
+      ),
+      v(
+        'go over',
+        ['ôn lại, xem lại', 'review'],
+        'Let’s go ＿ the main points again before the test.',
+        'Mình ôn lại các ý chính một lần nữa trước khi kiểm tra nhé.'
+      ),
+    ],
+  },
+  {
+    id: 'away',
+    emoji: '👋',
+    sense: [
+      'Rời xa, đi khỏi; hoặc cho đi, bỏ đi.',
+      'Away from here; or giving or getting rid of something.',
+    ],
+    verbs: [
+      v(
+        'give away',
+        ['cho đi, tặng', 'give for free'],
+        'She gave ＿ all her old clothes to charity.',
+        'Cô ấy đem hết quần áo cũ cho từ thiện.'
+      ),
+      v(
+        'throw away',
+        ['vứt đi', 'put in the bin'],
+        'Don’t throw ＿ those boxes — we can use them again.',
+        'Đừng vứt mấy cái hộp đó, mình dùng lại được.',
+        ['out']
+      ),
+      v(
+        'run away',
+        ['bỏ chạy', 'escape'],
+        'The dog ran ＿ when it heard the fireworks.',
+        'Con chó bỏ chạy khi nghe tiếng pháo hoa.',
+        ['off']
+      ),
+      v(
+        'pass away',
+        ['qua đời', 'die (polite)'],
+        'His grandfather passed ＿ peacefully last year.',
+        'Ông của anh ấy qua đời thanh thản năm ngoái.',
+        ['on']
+      ),
+      v(
+        'put away',
+        ['cất đi', 'put in its place'],
+        'Please put ＿ your toys before dinner.',
+        'Con cất đồ chơi đi trước khi ăn tối nhé.',
+        ['back']
+      ),
+    ],
+  },
 ]
 
 export interface PhrasalQuestion {
   particle: Particle
   item: PhrasalVerb
+  /** The answer and three particles that cannot fill this gap, shuffled. */
+  options: string[]
 }
+
+/** How many particles a question offers. */
+export const OPTIONS = 4
 
 /** The particle that fills the gap. */
 export const answerOf = (q: PhrasalQuestion): string => q.particle.id
 
 /** The sentence with its particle back in place. */
-export const filled = (q: PhrasalQuestion): string => q.item.sentence.replace(GAP, q.particle.id)
+export const filled = (q: Pick<PhrasalQuestion, 'particle' | 'item'>): string =>
+  q.item.sentence.replace(GAP, q.particle.id)
 
 /**
  * A round: `size` sentences, from one particle or from all (spread over the
@@ -302,8 +400,14 @@ export function phrasalRound(
     return a
   }
   const groups = PARTICLES.filter((p) => !only || p.id === only)
+  const options = (particle: Particle, item: PhrasalVerb): string[] => {
+    const wrong = shuffle(
+      PARTICLES.map((p) => p.id).filter((id) => id !== particle.id && !item.alsoFits?.includes(id))
+    ).slice(0, OPTIONS - 1)
+    return shuffle([particle.id, ...wrong])
+  }
   const decks = groups.map((particle) =>
-    shuffle(particle.verbs).map((item) => ({ particle, item }))
+    shuffle(particle.verbs).map((item) => ({ particle, item, options: options(particle, item) }))
   )
   const out: PhrasalQuestion[] = []
   for (let layer = 0; out.length < size && decks.some((d) => d.length > layer); layer++)

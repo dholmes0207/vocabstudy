@@ -23,8 +23,8 @@ vi.mock('@/lib/phrasalVerbs', async (importOriginal) => {
   return {
     ...real,
     phrasalRound: () => [
-      { particle: up, item: up.verbs[0] },
-      { particle: off, item: off.verbs[1] },
+      { particle: up, item: up.verbs[0], options: ['out', 'up', 'down', 'back'] },
+      { particle: off, item: off.verbs[1], options: ['on', 'off', 'away', 'down'] },
     ],
   }
 })
