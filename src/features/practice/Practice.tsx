@@ -31,27 +31,30 @@ export default function Practice() {
         </p>
       </header>
       <div className="grid gap-3 sm:grid-cols-2">
-        {entries.map((e) => (
-          <Link
-            key={e.to}
-            to={e.to}
-            className="card tilt flex items-center gap-4 p-4 active:scale-[0.99]"
-            {...tilt}
-          >
-            <span
-              className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-2xl text-white shadow ${e.tone}`}
+        {entries.map((e) => {
+          const desc = e.byPack?.[code] ?? e
+          return (
+            <Link
+              key={e.to}
+              to={e.to}
+              className="card tilt flex items-center gap-4 p-4 active:scale-[0.99]"
+              {...tilt}
             >
-              {typeof e.icon === 'string' ? e.icon : <e.icon className="h-6 w-6" />}
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block font-bold">{t(e.title, e.titleEn)}</span>
-              <span className="block text-sm text-slate-500 dark:text-slate-400">
-                {t(e.desc, e.descEn)}
+              <span
+                className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-2xl text-white shadow ${e.tone}`}
+              >
+                {typeof e.icon === 'string' ? e.icon : <e.icon className="h-6 w-6" />}
               </span>
-            </span>
-            <ArrowRight className="h-5 w-5 shrink-0 text-slate-300" />
-          </Link>
-        ))}
+              <span className="min-w-0 flex-1">
+                <span className="block font-bold">{t(e.title, e.titleEn)}</span>
+                <span className="block text-sm text-slate-500 dark:text-slate-400">
+                  {t(desc.desc, desc.descEn)}
+                </span>
+              </span>
+              <ArrowRight className="h-5 w-5 shrink-0 text-slate-300" />
+            </Link>
+          )
+        })}
       </div>
     </div>
   )

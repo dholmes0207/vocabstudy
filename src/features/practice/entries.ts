@@ -7,6 +7,11 @@ export interface PracticeEntry {
   desc: string
   titleEn: string
   descEn: string
+  /**
+   * For a page several packs share: what to show for one pack, so learners of
+   * English do not read Chinese examples and the other way round.
+   */
+  byPack?: Partial<Record<string, { desc: string; descEn: string }>>
   tone: string
 }
 
@@ -26,11 +31,11 @@ export const PRACTICE: PracticeEntry[] = [
   {
     to: '/hskk',
     icon: '🎙️',
-    title: 'Luyện nói HSKK sơ cấp',
-    desc: 'Ba phần của đề nói HSKK: nghe rồi nhắc lại, nghe rồi trả lời, nói 1,5 phút về một chủ đề. Ghi âm, nghe lại, so với câu mẫu.',
-    titleEn: 'HSKK Elementary speaking',
+    title: 'Luyện nói HSKK',
+    desc: 'Sơ cấp và trung cấp, mỗi bậc ba phần như đề thật: nghe rồi nhắc lại, trả lời, nói về chủ đề hoặc tả tranh. Ghi âm, nghe lại, so với câu mẫu.',
+    titleEn: 'HSKK speaking',
     descEn:
-      'The three parts of the HSKK speaking test: repeat, answer, talk for 90 seconds. Record, play back, compare with a sample.',
+      'Elementary and Intermediate, three parts each as in the test: repeat, answer, talk on a topic or describe a picture. Record, play back, compare with a sample.',
     tone: 'from-red-500 to-amber-500',
   },
   {
@@ -101,6 +106,18 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Collocations',
     descEn:
       'Turn on the light, not open the light (English); 吃药, not 喝药 (Chinese): which words go together, so you don’t translate word for word.',
+    byPack: {
+      en: {
+        desc: 'Turn on the light chứ không phải open the light, take medicine chứ không phải drink medicine: từ nào đi với từ nào, tránh dịch từng chữ từ tiếng Việt.',
+        descEn:
+          'Turn on the light, not open the light; take medicine, not drink it: which words go together, so you don’t translate word for word.',
+      },
+      zh: {
+        desc: 'Uống thuốc là 吃药 chứ không phải 喝药, đội mũ là 戴帽子: động từ nào đi với danh từ nào, tránh dịch từng chữ từ tiếng Việt.',
+        descEn:
+          'Medicine is 吃药, not 喝药; a hat is 戴帽子: which verb each noun takes, so you don’t translate word for word.',
+      },
+    },
     tone: 'from-lime-500 to-emerald-600',
   },
   {
@@ -141,6 +158,17 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Easily confused words',
     descEn:
       '在/再, 的/得/地, 买/卖… in Chinese, make/do, say/tell, borrow/lend… in English: learn the trick, then fill the gap.',
+    byPack: {
+      en: {
+        desc: 'make/do, say/tell, borrow/lend, bored/boring…: học mẹo phân biệt rồi điền vào câu.',
+        descEn:
+          'make/do, say/tell, borrow/lend, bored/boring…: learn the trick, then fill the gap.',
+      },
+      zh: {
+        desc: '在/再, 的/得/地, 买/卖, 他/她/它…: học mẹo phân biệt rồi điền vào câu.',
+        descEn: '在/再, 的/得/地, 买/卖, 他/她/它…: learn the trick, then fill the gap.',
+      },
+    },
     tone: 'from-violet-500 to-fuchsia-500',
   },
   {
@@ -332,6 +360,18 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Tongue twisters',
     descEn:
       '"She sells seashells…", "四是四，十是十…": drill the hard sounds (s/sh, r/l, th, n/l, the four tones), hear them slowly, record and play back.',
+    byPack: {
+      en: {
+        desc: '"She sells seashells…", "Red lorry, yellow lorry": luyện các cặp âm khó (s/sh, r/l, th), nghe chậm, ghi âm rồi nghe lại.',
+        descEn:
+          '"She sells seashells…", "Red lorry, yellow lorry": drill the hard sounds (s/sh, r/l, th), hear them slowly, record and play back.',
+      },
+      zh: {
+        desc: '"四是四，十是十…": luyện các cặp âm khó (s/sh, n/l, bốn thanh), nghe chậm, ghi âm rồi nghe lại.',
+        descEn:
+          '"四是四，十是十…": drill the hard sounds (s/sh, n/l, the four tones), hear them slowly, record and play back.',
+      },
+    },
     tone: 'from-pink-500 to-orange-500',
   },
   {
@@ -342,6 +382,16 @@ export const PRACTICE: PracticeEntry[] = [
     titleEn: 'Tricky sounds for Vietnamese speakers',
     descEn:
       'th, ship/sheep in English; tones, zh/z in Chinese; tense consonants, final sounds in Korean… how to shape them, plus an ear test.',
+    byPack: {
+      en: {
+        desc: 'th, ship/sheep, âm cuối, trọng âm…: cách phát âm và trò thử tai phân biệt.',
+        descEn: 'th, ship/sheep, final sounds, word stress…: how to shape them, plus an ear test.',
+      },
+      zh: {
+        desc: 'Thanh điệu, zh/z, ü, âm uốn lưỡi…: cách phát âm và trò thử tai phân biệt.',
+        descEn: 'Tones, zh/z, ü, the retroflex sounds…: how to shape them, plus an ear test.',
+      },
+    },
     tone: 'from-pink-500 to-rose-600',
   },
   {
