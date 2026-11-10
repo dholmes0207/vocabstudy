@@ -15,6 +15,10 @@ export interface PracticeEntry {
   tone: string
 }
 
+/** What to say about an entry for one pack: its own words when it has them. */
+export const entryDesc = (e: PracticeEntry, code: string): { desc: string; descEn: string } =>
+  e.byPack?.[code] ?? e
+
 // Entries written for one pack only (grammar, topics, Hangul…) are listed in
 // lib/packContent.ts; the hub hides them for every other pack.
 export const PRACTICE: PracticeEntry[] = [
