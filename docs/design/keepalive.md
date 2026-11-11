@@ -23,6 +23,9 @@ phải tự bật lại."
   - chạy theo lịch hằng ngày lúc 03:17 UTC, có thêm `workflow_dispatch` để chạy tay;
   - thử lại 3 lần, mỗi lần cách 30 giây;
   - `permissions: {}`, không cần secret nào.
-- Repo là **private**. GitHub chỉ tự tắt lịch chạy sau 60 ngày không hoạt động với repo
-  public. Với repo private, mỗi lần chạy tốn khoảng 10 giây trong hạn mức Actions miễn
-  phí (2.000 phút/tháng).
+- Repo là **public** từ tháng 11/2026, nên Actions không còn tính phút. Đổi lại, GitHub tự
+  tắt lịch chạy khi repo public không có hoạt động trong 60 ngày. Nếu việc phát triển tạm
+  nghỉ lâu, lịch này sẽ ngừng và Supabase bị tạm dừng 7 ngày sau đó.
+  - Cách giảm: một dịch vụ giám sát bên ngoài gọi `/api/health` mỗi giờ (việc 0.6 trong
+    Phần 0 của `docs/PLAN.md`); workflow này giữ làm lớp thứ hai.
+  - Khi GitHub tắt lịch, chủ repo nhận email và bật lại ở tab Actions.
