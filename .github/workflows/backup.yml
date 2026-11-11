@@ -1,0 +1,77 @@
+# Weekly copy of the learners' data (docs/design/backup.md). The free Supabase
+# plan keeps no backups, so a dropped table or a deleted project would take
+# every account and every synced card with it.
+#
+# - Dumps the public schema (profiles, progress, AI usage, feedback, error
+#   reports) and the sign-in rows of auth.users / auth.identities.
+# - Encrypts the dump with BACKUP_PASSPHRASE and stores it in a PRIVATE R2
+#   bucket. Never as a workflow artifact: this repository is public, and
+#   anyone signed in to GitHub can download a public repository's artifacts.
+# - Keeps the newest 12 copies.
+#
+# Needs repository secrets SUPABASE_DB_URL and BACKUP_PASSPHRASE, the R2
+# secrets the audio workflows already use, and a bucket called
+# vocastudy-backup (or a variable R2_BACKUP_BUCKET). Without them the run only
+# warns, so the schedule stays green until the owner has set them up.
+name: Back up the database
+
+on:
+  schedule:
+    - cron: '41 19 * * 6' # every Sunday, 02:41 in Vietnam
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: db-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 does not take the default integrity checksums of recent AWS CLIs.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      BUCKET: ${{ vars.R2_BACKUP_BUCKET || 'vocastudy-backup' }}
+      KEEP: 12
+
+    steps:
+      - name: Dump, encrypt, upload
+        run: |
+          set -euo pipefail
+          if [ -z "$DB_URL" ] || [ -z "$BACKUP_PASSPHRASE" ] || [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$ACCOUNT_ID" ]; then
+            echo "::warning::Backup secrets are not set yet; nothing was backed up (see docs/design/backup.md)."
+            exit 0
+          fi
+          s3() { aws s3 "$@" --endpoint-url "https://$ACCOUNT_ID.r2.cloudflarestorage.com" --only-show-errors; }
+          # The client must not be older than the server; the image is newer
+          # than any Supabase project and the runner's own client may not be.
+          dump() { docker run --rm -e DB_URL postgres:17-alpine sh -c 'pg_dump "$DB_URL" --no-owner --no-privileges "$@"' pg_dump "$@"; }
+
+          stamp=$(date -u +%Y-%m-%dT%H%MZ)
+          mkdir out
+          dump --schema=public > out/public.sql
+          dump --data-only --table=auth.users --table=auth.identities > out/auth.sql
+          # A dump that stopped half way must not replace a good backup.
+          grep -q 'PostgreSQL database dump complete' out/public.sql
+          grep -q 'PostgreSQL database dump complete' out/auth.sql
+
+          tar -C out -czf - public.sql auth.sql |
+            gpg --batch --yes --pinentry-mode loopback --passphrase "$BACKUP_PASSPHRASE" \
+              --symmetric --cipher-algo AES256 -o "backup-$stamp.tar.gz.gpg"
+          size=$(stat -c %s "backup-$stamp.tar.gz.gpg")
+          s3 cp "backup-$stamp.tar.gz.gpg" "s3://$BUCKET/db/backup-$stamp.tar.gz.gpg"
+
+          # Names sort by time, so everything before the newest $KEEP is old.
+          aws s3 ls "s3://$BUCKET/db/" --endpoint-url "https://$ACCOUNT_ID.r2.cloudflarestorage.com" |
+            awk '{print $4}' | grep '^backup-' | sort | head -n "-$KEEP" > old.txt || true
+          while read -r f; do s3 rm "s3://$BUCKET/db/$f"; done < old.txt
+          echo "::notice::Backup $stamp stored ($size bytes); $(wc -l < old.txt) old copies removed."
