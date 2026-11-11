@@ -581,6 +581,28 @@ export const COLLOCATIONS_ZH: Collocation[] = [
     ['打', '做'],
     'Chụp ảnh là 拍照 / 拍照片 (hoặc 照相). Không dùng 打 hay 做.'
   ),
+  z(
+    'daily',
+    'gửi tin nhắn',
+    '发短信',
+    'fā duǎnxìn',
+    '送短信',
+    '我给妈妈___了一条短信，说我晚点回家。',
+    '发',
+    ['送', '寄'],
+    'Gửi tin nhắn, email là 发: 发短信, 发邮件, 发微信. 送 là đưa, tặng (送礼物); 寄 là gửi qua bưu điện (寄信).'
+  ),
+  z(
+    'daily',
+    'lên mạng',
+    '上网',
+    'shàng wǎng',
+    '进网',
+    '我晚上常常___网看新闻。',
+    '上',
+    ['进', '入'],
+    'Lên mạng là 上网, giống 上课, 上班. 进 là đi vào một chỗ có thật (进教室), không đi với 网.'
+  ),
   // Study and work
   z(
     'study',
@@ -648,6 +670,28 @@ export const COLLOCATIONS_ZH: Collocation[] = [
     ['做', '打'],
     'Họp là 开会 ("mở cuộc họp"). Không dùng 做 hay 打.'
   ),
+  z(
+    'study',
+    'xin nghỉ',
+    '请假',
+    'qǐng jià',
+    '求假',
+    '我发烧了，明天要向老师___假。',
+    '请',
+    ['求', '要'],
+    'Xin nghỉ học, nghỉ phép là 请假. 求 là "cầu xin" (求你帮帮我), không đi với 假.'
+  ),
+  z(
+    'study',
+    'tan làm',
+    '下班',
+    'xià bān',
+    '完班',
+    '我们公司六点___班，我六点半就到家了。',
+    '下',
+    ['完', '出'],
+    'Đi làm là 上班, tan làm là 下班 (học cũng vậy: 上课, 下课). Muốn nói "làm xong việc" thì là 做完工作.'
+  ),
   // Hobbies and sport
   z(
     'hobby',
@@ -703,6 +747,28 @@ export const COLLOCATIONS_ZH: Collocation[] = [
     '锻炼',
     ['练习', '学习'],
     'Rèn luyện thân thể là 锻炼身体. 练习 là luyện một kỹ năng: 练习口语, 练习写字.'
+  ),
+  z(
+    'hobby',
+    'đánh cờ',
+    '下棋',
+    'xià qí',
+    '打棋',
+    '爷爷每天下午在公园里跟朋友___棋。',
+    '下',
+    ['打', '做'],
+    'Chơi cờ (cờ tướng, cờ vây) là 下棋, "đặt quân cờ xuống". "đánh cờ" không dịch thành 打; 打 dùng cho bóng: 打篮球.'
+  ),
+  z(
+    'hobby',
+    'kéo đàn violin',
+    '拉小提琴',
+    'lā xiǎotíqín',
+    '弹小提琴',
+    '她从小学___小提琴，现在在乐团演奏。',
+    '拉',
+    ['弹', '打'],
+    'Đàn có cung kéo (violin, cello, đàn nhị) dùng 拉. 弹 dành cho đàn gảy, đàn phím: 弹吉他, 弹钢琴.'
   ),
 ]
 
