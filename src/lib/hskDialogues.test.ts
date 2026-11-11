@@ -2,16 +2,15 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import { HSK_LEVELS, levelWords } from './hskPractice'
-import {
-  dialogueRound,
-  HSK_DIALOGUES,
-  PICTURE_DIALOGUES,
-  pictureDialogueRound,
-} from './hskDialogues'
+import { dialogueRound, pictureDialogueRound } from './hskDialogues'
+import { validateHskBank } from './hskBank'
 import { PICTURE_WORDS } from './hskPractice'
 import { mulberry32 } from './sky'
 
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
+const { dialogues: HSK_DIALOGUES, pictureDialogues: PICTURE_DIALOGUES } = validateHskBank(
+  JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8'))
+)
 /** Every character of the words of a level and below, and of their examples. */
 const known = (upTo: 'hsk2' | 'hsk3') =>
   new Set(
@@ -47,7 +46,7 @@ describe('HSK dialogues', () => {
   })
 
   it('keeps the right option after shuffling', () => {
-    const round = dialogueRound('hsk2', 5, mulberry32(2))
+    const round = dialogueRound(HSK_DIALOGUES, 'hsk2', 5, mulberry32(2))
     expect(round.every((d) => d.level === 'hsk2')).toBe(true)
     expect(new Set(round.map((d) => d.id)).size).toBe(5)
     for (const d of round) {
@@ -83,7 +82,7 @@ describe('HSK 2 picture dialogues', () => {
       low.filter((w) => w.emoji && PICTURE_WORDS.includes(w.word)).map((w) => [w.emoji!, w.word])
     )
     for (let seed = 1; seed <= 5; seed++) {
-      const round = pictureDialogueRound(low, 10, mulberry32(seed))
+      const round = pictureDialogueRound(PICTURE_DIALOGUES, low, 10, mulberry32(seed))
       expect(round).toHaveLength(10)
       for (const d of round) {
         expect(new Set(d.options).size).toBe(5)

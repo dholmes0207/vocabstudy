@@ -1,5 +1,11 @@
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { PART1_BANK, PART1_ROUND, part1Round } from './toeicPart1'
+import { PART1_ROUND, part1Round } from './toeicPart1'
+import { validateToeicBank } from './toeicBank'
+
+const PART1_BANK = validateToeicBank(
+  JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8'))
+).part1
 
 describe('Part 1 scenes', () => {
   it('have four different statements, a scene and an explanation', () => {
@@ -11,7 +17,7 @@ describe('Part 1 scenes', () => {
   })
 
   it('make rounds of six with the right statement among four', () => {
-    const round = part1Round()
+    const round = part1Round(PART1_BANK)
     expect(round).toHaveLength(PART1_ROUND)
     for (const q of round) {
       expect(q.options).toHaveLength(4)

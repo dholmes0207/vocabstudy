@@ -10,7 +10,7 @@ vi.mock('@/lib/api', async () => {
   return { ...actual, api: { ...actual.api, adminRetention: () => adminRetention() } }
 })
 
-const { RetentionPanel } = await import('./AdminPage')
+const { RetentionPanel } = await import('./RetentionPanel')
 const { useSettings } = await import('@/store/settingsStore')
 
 beforeEach(() => useSettings.setState({ uiLang: 'vi' }))

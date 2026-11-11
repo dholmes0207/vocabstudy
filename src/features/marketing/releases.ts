@@ -13,13 +13,585 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
-    date: '2026-11-06',
-    title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
+    date: '2026-11-11',
+    title: ['HSK 2: thêm hội thoại chọn tranh', 'HSK 2: more picture dialogues'],
     items: [
       [
         'HSK 2 hội thoại chọn tranh lên 44 bài: thêm nước, cửa, nhà, táo, chó đi dạo và cà phê buổi sáng.',
         'HSK 2 picture dialogues now number 44: water, a door, home, apples, a dog walk and morning coffee.',
       ],
+    ],
+  },
+  {
+    date: '2026-11-11',
+    title: ['Kết hợp từ tiếng Trung: thêm 6 cụm', 'Chinese collocations: 6 more'],
+    items: [
+      [
+        'Trang "Kết hợp từ" tiếng Trung thêm 6 cụm, lên 23: gửi tin nhắn là 发短信 chứ không phải 送, xin nghỉ là 请假, tan làm là 下班, đánh cờ là 下棋 chứ không phải 打棋, kéo đàn violin là 拉 chứ không phải 弹.',
+        'The Chinese "Collocations" page adds 6 phrases, 23 in all: send a text is 发短信, not 送; ask for leave is 请假; finish work is 下班; play chess is 下棋, not 打棋; play the violin is 拉, not 弹.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-10',
+    title: ['Cụm động từ: thêm over, away', 'Phrasal verbs: over and away'],
+    items: [
+      [
+        'Trang "Cụm động từ" thêm 2 tiểu từ hay gặp trong TOEIC: over (take over, look over, get over…) và away (give away, throw away, pass away…). Mỗi câu giờ đưa 4 phương án chắc chắn chỉ có một đáp án đúng.',
+        'The "Phrasal verbs" page adds two particles common in TOEIC: over (take over, look over, get over…) and away (give away, throw away, pass away…). Each sentence now offers four choices with exactly one right answer.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-10',
+    title: ['Kết hợp từ: câu nào tự nhiên hơn?', 'Collocations: which sentence sounds natural?'],
+    items: [
+      [
+        'Lượt luyện "Kết hợp từ" xen kẽ thêm dạng mới: hai câu, một câu đúng và một câu dịch từng chữ ("Can you open the light?"), chọn câu nghe tự nhiên. Có cho cả tiếng Anh và tiếng Trung.',
+        'The "Collocations" round now mixes in a new kind: two sentences, one natural and one translated word for word ("Can you open the light?"); pick the natural one. For both English and Chinese.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Kết hợp từ: sức khoẻ, công nghệ, du lịch', 'Collocations: health, tech, travel'],
+    items: [
+      [
+        'Trang "Kết hợp từ" tiếng Anh thêm 3 chủ đề, 18 cụm: bị cảm là catch a cold chứ không phải "I was cold", up ảnh là post a photo, bắt wifi là connect to the wifi, trả phòng là check out.',
+        'The English "Collocations" page adds 3 themes, 18 phrases: catch a cold, not "I was cold"; post a photo, not "up a photo"; connect to the wifi; check out, not "return the room".',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Kết hợp từ tiếng Trung', 'Chinese collocations'],
+    items: [
+      [
+        'Trang "Kết hợp từ" có thêm tiếng Trung: uống thuốc là 吃药 chứ không phải 喝药, đội mũ là 戴帽子, kiếm tiền là 挣钱 vì 找钱 là "thối tiền". 17 cụm theo 3 chủ đề, có pinyin và lý do. Lộ trình HSK 2 thêm bước luyện.',
+        'The "Collocations" page now covers Chinese: medicine is 吃药 not 喝药, a hat is 戴帽子, and earning money is 挣钱 because 找钱 means giving change. 17 phrases in 3 themes, with pinyin and why. The HSK 2 path gains a step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['IELTS Reading: chọn hai đáp án', 'IELTS Reading: choose TWO'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng "Choose TWO letters, A–E": 5 phương án, 2 đúng, mỗi chữ đúng một điểm như đề thật. Phương án sai là bẫy hay gặp: nói ngược bài, hoặc lặp đúng chữ trong bài nhưng sai ý.',
+        'IELTS Reading gains "Choose TWO letters, A–E": five options, two right, a mark per right letter as in the test. The wrong options are the usual traps: the opposite of the passage, or its words with the wrong idea.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Kết hợp từ tiếng Anh', 'English collocations'],
+    items: [
+      [
+        'Trang mới "Kết hợp từ": mở đèn là turn on the light, không phải open the light; uống thuốc là take medicine. 24 cụm theo 4 chủ đề, từ đời sống tới IELTS (raise awareness, pose a threat), mỗi cụm có cách dịch từng chữ bị gạch đi và lý do. Luyện 10 câu hoặc từng chủ đề.',
+        'New "Collocations" page: turn on the light, not open the light; take medicine, not drink it. 24 phrases in 4 themes, from daily life to IELTS (raise awareness, pose a threat), each with the word-for-word slip crossed out and why. Practise 10 at a time or one theme.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Ngữ pháp tiếng Trung: bốn điểm hay sai', 'Chinese grammar: four common slips'],
+    items: [
+      [
+        'Thêm 4 bài ngữ pháp tiếng Trung cho lỗi người Việt hay mắc: 是…的 (我是坐飞机来的), 着 (门开着), bổ ngữ khả năng (听得懂 / 听不懂) và động từ ly hợp (跟朋友见面, không nói 见面朋友). Lộ trình HSK 3 có thêm bước "Bốn điểm hay sai".',
+        'Four new Chinese grammar units for slips Vietnamese learners make: 是…的 (我是坐飞机来的), 着 (门开着), potential complements (听得懂 / 听不懂) and separable verbs (跟朋友见面, never 见面朋友). The HSK 3 path gains a "Four common slips" step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['IELTS Reading: Yes / No / Not Given', 'IELTS Reading: Yes / No / Not Given'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm Yes / No / Not Given với 4 bài nghị luận mới. Dạng này hay bị nhầm với True / False / Not Given: ở đây câu hỏi là tác giả nghĩ gì, không phải bài nói gì. Trang có giải thích khác biệt và mẹo nhận ra ý kiến tác giả.',
+        'IELTS Reading gains Yes / No / Not Given, with four new opinion passages. It is easy to confuse with True / False / Not Given: here the question is what the writer thinks, not what the passage says. The page explains the difference and how to spot the writer’s views.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['IELTS Reading: điền câu', 'IELTS Reading: sentence completion'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng Sentence completion: hoàn thành câu bằng không quá hai từ lấy từ bài đọc, gõ tay như đề thật. Gõ quá hai từ sẽ được nhắc ngay; chấm xong có đáp án và đoạn chứa nó.',
+        'IELTS Reading gains Sentence completion: finish each sentence with no more than two words from the passage, typed as in the test. Going over two words is flagged at once; after checking you see each answer and where it is.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Thành ngữ: điền vào câu', 'Chinese idioms: fill the sentence'],
+    items: [
+      [
+        'Luyện thành ngữ có thêm dạng thứ ba: một câu ví dụ bị che mất thành ngữ, chọn thành ngữ hợp với câu trong 4 phương án. Lượt 10 câu xoay vòng nghĩa, chữ còn thiếu và điền vào câu.',
+        'Chinese idiom practice gains a third kind: an example sentence with its idiom blanked out; pick the one that fits from four. A round of ten now rotates meaning, missing character and fill the sentence.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Câu nói líu lưỡi', 'Tongue twisters'],
+    items: [
+      [
+        'Trang mới "Câu nói líu lưỡi" cho tiếng Anh và tiếng Trung: "She sells seashells…", "四是四，十是十…", mỗi câu nhắm một cặp âm khó, nghe chậm rồi nhanh, ghi âm và nghe lại.',
+        'New "Tongue twisters" page for English and Chinese: "She sells seashells…", "四是四，十是十…", each aimed at a hard pair of sounds; hear it slowly then at speed, record and play back.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['IELTS Reading: tìm thông tin', 'IELTS Reading: matching information'],
+    items: [
+      [
+        'Phần Đọc IELTS có thêm dạng Matching information: mỗi bài đọc có vài câu diễn đạt lại một ý, chọn đoạn A–E chứa ý đó. Điểm cao nhất của từng bài hiện trên danh sách.',
+        'IELTS Reading gains Matching information: each passage comes with statements that paraphrase one of its ideas; choose the paragraph A–E that contains it. Your best score shows on the list.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['IELTS Listening Part 4', 'IELTS Listening Part 4'],
+    items: [
+      [
+        'Phần Nghe IELTS có thêm Part 4: nghe một bài giảng ngắn (lịch sử cà phê, giấc ngủ và trí nhớ) rồi điền ghi chú, mỗi chỗ một từ như đề thật.',
+        'IELTS Listening gains Part 4: hear a short lecture (the history of coffee, sleep and memory) and complete the notes, one word per gap as in the test.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Luyện nói HSKK trung cấp', 'HSKK Intermediate speaking'],
+    items: [
+      [
+        'Trang luyện nói HSKK có thêm thẻ Trung cấp 中级: nhắc lại câu dài, nhìn tranh nói 2 phút, trả lời câu hỏi 2 phút, mỗi phần có bài nói mẫu kèm pinyin. Lộ trình HSK 3 có thêm bước này.',
+        'HSKK speaking gains an Intermediate 中级 tab: repeat longer sentences, talk about a picture and answer questions for two minutes, each with a sample talk in pinyin. The HSK 3 level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['TOEIC Writing: viết câu theo tranh', 'TOEIC Writing: sentences about pictures'],
+    items: [
+      [
+        'Trang TOEIC Writing có thêm Câu 1–5: mỗi tranh cho hai từ, viết một câu có cả hai từ; checklist tự đánh dấu và có câu mẫu để so.',
+        'TOEIC Writing gains Questions 1–5: each picture gives two words to use in one sentence, with a checklist and a model to compare.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Luyện biến điệu tiếng Trung', 'Practise Chinese tone changes'],
+    items: [
+      [
+        'Trang Pinyin có thêm lượt "Luyện biến điệu": 一 đọc yí hay yì, 不 đọc bú hay bù, 你好 nói thành ní hǎo… chọn cách đọc đúng khi nói rồi nghe lại và xem quy tắc.',
+        'The pinyin page gains a tone-change round: is 一 yí or yì, 不 bú or bù, why 你好 is said ní hǎo… pick the spoken reading, hear it and see the rule.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['TOEIC Writing: trả lời email', 'TOEIC Writing: reply to an email'],
+    items: [
+      [
+        'Trang mới luyện Câu 6–7 của đề Viết TOEIC: đọc email, viết thư trả lời đúng yêu cầu của đề, checklist tự đánh dấu lời chào, số câu hỏi, độ dài, lời kết, rồi so với thư mẫu. Lộ trình TOEIC có thêm bước này.',
+        'New page for Questions 6–7 of TOEIC Writing: read an email and reply as the directions ask, with a checklist for the greeting, questions, length and sign-off, then a model reply. The TOEIC level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: [
+      'TOEIC Speaking: trả lời dựa trên thông tin',
+      'TOEIC Speaking: respond using information',
+    ],
+    items: [
+      [
+        'Trang TOEIC Speaking có thêm dạng Câu 8–10: đọc một lịch trình (hội nghị, lịch phỏng vấn, tour tham quan) rồi trả lời ba câu hỏi của người gọi trong 15, 15 và 30 giây, có câu mẫu.',
+        'TOEIC Speaking gains Questions 8–10: read a schedule (a conference, interviews, a city tour) and answer a caller’s three questions in 15, 15 and 30 seconds, with samples.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-09',
+    title: ['Bẫy Hán Việt', 'Hán Việt traps'],
+    items: [
+      [
+        'Trang mới "Bẫy Hán Việt": 20 từ tiếng Trung mà âm Hán Việt dễ làm hiểu sai, như 大家 (đại gia) là "mọi người", 便宜 (tiện nghi) là "rẻ". Có ví dụ và lượt né bẫy; lộ trình HSK 2 có thêm bước này.',
+        'New "Hán Việt traps" page: 20 Chinese words whose Hán Việt sound misleads, like 大家 ("đại gia", tycoon) meaning everyone and 便宜 ("tiện nghi", comfortable) meaning cheap. With examples and a round of dodging traps; the HSK 2 level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Luyện TOEIC Speaking', 'TOEIC Speaking practice'],
+    items: [
+      [
+        'Trang mới "TOEIC Speaking" với ba dạng của đề Nói: đọc to đoạn văn, trả lời câu hỏi phỏng vấn qua điện thoại, nêu quan điểm 60 giây. Đúng thời gian của đề, ghi âm rồi so với câu mẫu. Lộ trình TOEIC có thêm bước này.',
+        'New "TOEIC Speaking" page with three tasks of the test: read a text aloud, answer survey questions, give a 60-second opinion. With the test’s timings, recorded and compared with a sample. The TOEIC level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Luyện nói HSKK sơ cấp', 'HSKK Elementary speaking'],
+    items: [
+      [
+        'Trang mới "Luyện nói HSKK sơ cấp" theo đúng ba phần của đề: nghe rồi nhắc lại, nghe rồi trả lời, nói 1,5 phút về một chủ đề. Ghi âm, nghe lại, so với câu mẫu có pinyin. Lộ trình HSK 2 có thêm bước này.',
+        'New "HSKK Elementary speaking" page following the test’s three parts: repeat, answer, talk for 90 seconds. Record, play back and compare with a sample in pinyin. The HSK 2 level of the path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Bài mẫu IELTS Writing Task 2', 'IELTS Writing Task 2 model answers'],
+    items: [
+      [
+        'Mỗi đề Viết Task 2 có bài mẫu band 7 bốn đoạn, tô sẵn các từ nối. Bài mẫu mở ra sau khi bạn nộp bài để so sánh, hoặc xem trước nếu cần gợi ý.',
+        'Every Task 2 question now has a four-paragraph band-7 model answer with the linking words marked. It opens after you hand in your essay, or earlier if you want a hint.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Thêm 10 thành ngữ tiếng Trung', '10 more Chinese idioms'],
+    items: [
+      [
+        'Trang "Thành ngữ" có thêm 10 câu, nhiều câu kèm chuyện kể: 塞翁失马 (tái ông thất mã), 狐假虎威 (cáo mượn oai hùm), 掩耳盗铃 (bịt tai trộm chuông), 亡羊补牢…',
+        'The idioms page gains 10 more, many with their fables: 塞翁失马 (the old man who lost his horse), 狐假虎威 (the fox borrowing the tiger’s might), 掩耳盗铃, 亡羊补牢…',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Thành ngữ tiếng Anh', 'English idioms'],
+    items: [
+      [
+        'Trang mới "Thành ngữ tiếng Anh": 20 câu như a piece of cake (dễ như ăn kẹo), once in a blue moon (năm thì mười hoạ), có nghĩa đen, nghĩa thật, ví dụ và lượt đoán nghĩa, điền từ. Lộ trình IELTS có thêm bước này.',
+        'New "English idioms" page: 20 idioms such as a piece of cake and once in a blue moon, with what the words say, what they mean, examples and a round of meanings and missing words. The IELTS level gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Tiếng lóng mạng tiếng Trung', 'Chinese internet slang'],
+    items: [
+      [
+        'Trang mới "Tiếng lóng mạng": 20 từ giới trẻ Trung Quốc hay dùng trên Douyin, Weibo như 内卷 (nội quyển), 躺平, 学霸, 吃瓜, kèm âm Hán Việt, câu ví dụ và lượt đoán nghĩa hai chiều.',
+        'New "Internet slang" page: 20 words young Chinese use on Douyin and Weibo, such as 内卷 (nội quyển), 躺平, 学霸 and 吃瓜, with Hán Việt sounds, examples and a two-way guessing round.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: [
+      'Câu trả lời mẫu cho IELTS Speaking Part 3',
+      'Sample answers for IELTS Speaking Part 3',
+    ],
+    items: [
+      [
+        'Mỗi câu thảo luận Part 3 có câu trả lời mẫu band 7: nêu quan điểm, giải thích, ví dụ, tô sẵn cụm nêu ý kiến như "To some extent", "Having said that", nghe được để nói theo.',
+        'Every Part 3 discussion question now has a band-7 sample: a view, a reason, an example, with phrases like "To some extent" and "Having said that" marked, and audio to repeat after.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Từ dễ nhầm trong tiếng Anh', 'Easily confused English words'],
+    items: [
+      [
+        'Trang "Chữ dễ nhầm" có thêm 8 cặp tiếng Anh mà tiếng Việt chỉ có một từ: make/do, say/tell, borrow/lend, bring/take… kèm mẹo phân biệt và bài điền từ. Lộ trình tiếng Anh cấp 3 có thêm bước này.',
+        'The look-alikes page gains 8 English pairs Vietnamese says with one word: make/do, say/tell, borrow/lend, bring/take… with a trick for each and a gap-fill round. Level 3 of the English path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Cụm động từ tiếng Anh', 'English phrasal verbs'],
+    items: [
+      [
+        'Trang mới "Cụm động từ": 30 cụm như give up, turn off, pick up, xếp theo nghĩa của tiểu từ up, out, off, on, down, back, rồi điền tiểu từ vào câu. Lộ trình tiếng Anh cấp 4 có thêm bước này.',
+        'New "Phrasal verbs" page: 30 verbs such as give up, turn off and pick up, grouped by what up, out, off, on, down and back add; then fill in the particle. Level 4 of the English path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Thành ngữ tiếng Trung qua âm Hán Việt', 'Chinese idioms through Hán Việt'],
+    items: [
+      [
+        'Trang mới "Thành ngữ": 23 thành ngữ bốn chữ như 半信半疑 (bán tín bán nghi), 守株待兔 (ôm cây đợi thỏ), kèm ví dụ, chuyện kể và lượt đoán nghĩa, điền chữ thiếu. Lộ trình HSK 3 có thêm bước này.',
+        'New "Chinese idioms" page: 23 four-character idioms such as 半信半疑 (bán tín bán nghi) and 守株待兔 (waiting by the stump), with examples, fables and a round of guessing meanings and missing characters. The HSK 3 path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Câu trả lời mẫu cho IELTS Speaking', 'Sample answers for IELTS Speaking'],
+    items: [
+      [
+        'Mỗi câu hỏi Nói Part 1 có một câu trả lời mẫu band 7, tô sẵn một cụm nên học và nghe được để nói theo. Mẫu được gập lại để bạn tự trả lời trước.',
+        'Every Speaking Part 1 question now has a band-7 sample answer, with one phrase worth borrowing marked and audio to repeat after. It stays folded so you answer first.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Nhập vai tiếng Trung mức HSK 3', 'HSK 3 role-play in Chinese'],
+    items: [
+      [
+        'Ba cảnh mới kèm pinyin: đi khám bệnh, gọi điện đặt đồ ăn, thuê nhà. Lộ trình tiếng Trung cấp HSK 3 có thêm bước nhập vai.',
+        'Three new scenes with pinyin: seeing a doctor, ordering food by phone, renting a flat. The HSK 3 level of the Chinese path gains a role-play step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Hôm nay thử gì mới?', 'Try something new today'],
+    items: [
+      [
+        'Trang chủ mỗi ngày gợi ý một kiểu luyện bạn chưa mở trên máy này: nhập vai, "Đúng hay sai?", cấu trúc câu, luyện thi… để việc học không lặp lại một màu.',
+        'Each day the home screen suggests a way to practise you have not opened on this device yet: role-play, True or false?, sentence patterns, exam practice… so studying never feels the same.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Lộ trình theo cấp cho tiếng Hàn', 'A level path for Korean'],
+    items: [
+      [
+        'Tiếng Hàn giờ cũng có lộ trình 3 cấp hướng tới TOPIK I: Hangul & chào hỏi, câu hằng ngày (tiểu từ, đếm, nghe số), rồi kể chuyện quá khứ & tương lai. Có thi vượt cấp, nhiệm vụ hằng ngày và huy chương như tiếng Anh, tiếng Trung.',
+        'Korean now has a three-level path towards TOPIK I: Hangul & greetings, everyday sentences (particles, counting, numbers), then past & future. Level challenges, daily quests and medals work as in English and Chinese.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Nhập vai nơi công sở', 'Role-play at work'],
+    items: [
+      [
+        'Ba cảnh tiếng Anh nơi làm việc, gắn nhãn TOEIC: dời lịch họp qua điện thoại, máy in hỏng, đón khách ở lễ tân. Lộ trình cấp 5 (TOEIC) có thêm bước này.',
+        'Three English workplace scenes marked TOEIC: moving a meeting by phone, a broken printer, welcoming a visitor. Level 5 (TOEIC) of the path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Bài đọc IELTS dài hơn', 'Longer IELTS passages'],
+    items: [
+      [
+        'Hai bài đọc 5 đoạn, gần độ dài đề thật: ong mật trong thành phố và tuần làm việc bốn ngày, đủ ba dạng True/False/Not Given, nối tiêu đề và điền tóm tắt.',
+        'Two five-paragraph passages, closer to the real test: bees in the city and the four-day week, each with True/False/Not Given, matching headings and summary completion.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Thêm cảnh nhập vai', 'More role-play scenes'],
+    items: [
+      [
+        'Tiếng Anh: đặt bàn qua điện thoại, mua vé tàu, đổi hàng ở cửa hàng. Tiếng Trung: hỏi đường, nhận phòng khách sạn.',
+        'English: booking a table by phone, buying a train ticket, returning something to a shop. Chinese: asking the way, checking in at a hotel.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Nhập vai hội thoại', 'Role-play conversations'],
+    items: [
+      [
+        'Đóng một vai trong tình huống thật: gọi cà phê, hỏi đường, đi khám, phỏng vấn (tiếng Anh); gọi món, mặc cả, đi taxi, làm quen (tiếng Trung). Người kia nói, bạn nói lời của mình, máy chấm từng câu và cho sao.',
+        'Play one part in a real situation: ordering coffee, asking the way, the doctor, a job interview (English); ordering food, haggling, a taxi, meeting someone (Chinese). They speak, you answer out loud, every line is checked and you earn stars.',
+      ],
+      [
+        'Chế độ thử thách ẩn câu của bạn, chỉ còn nghĩa tiếng Việt: tự nghĩ câu rồi nói.',
+        'Challenge mode hides your lines and leaves only their meaning: work out the sentence and say it.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['IELTS Writing Task 1: tả biểu đồ', 'IELTS Writing Task 1: describing charts'],
+    items: [
+      [
+        'Luyện Task 1 trên biểu đồ đường và cột: chọn câu tổng quan đúng (xu hướng chính, không số liệu), rồi điền từ tả số liệu vào đoạn mẫu như rose sharply, reached a peak, overtaking. Mỗi lựa chọn có giải thích.',
+        'Task 1 practice on line and bar charts: pick the right overview (main trends, no figures), then fill in the data words in a model paragraph, like rose sharply, reached a peak, overtaking. Every choice is explained.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Ngữ pháp tiếng Anh B2', 'B2 English grammar'],
+    items: [
+      [
+        '6 bài mới: V-ing hay to V, câu điều kiện loại 3 và hỗn hợp, wish / if only, should have / must have, mệnh đề phân từ, đảo ngữ. Có ví dụ, lỗi hay gặp và bài tập; nằm trong lộ trình cấp 4 và cấp 6 (IELTS).',
+        'Six new lessons: -ing or to + verb, third and mixed conditionals, wish / if only, should have / must have, participle clauses, inversion. With examples, common mistakes and exercises; part of levels 4 and 6 (IELTS) of the path.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Chữ Hán dễ nhầm', 'Look-alike Chinese characters'],
+    items: [
+      [
+        'Trang mới cho tiếng Trung: 8 nhóm chữ đọc giống hoặc nhìn giống nhau (在/再, 的/得/地, 他/她/它, 做/坐, 买/卖…), mỗi nhóm một mẹo phân biệt, rồi điền chữ vào câu. Có trong lộ trình HSK 3.',
+        'New for Chinese: eight groups of characters that sound or look alike (在/再, 的/得/地, 他/她/它, 做/坐, 买/卖…), each with a trick to tell them apart, then fill the gap in sentences. Part of the HSK 3 level of the path.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Trò chơi "Đúng hay sai?"', 'New game: True or false?'],
+    items: [
+      [
+        '60 giây: từ và nghĩa có khớp không? Đúng liền tay để nhân điểm tới ×4, sai bị trừ 3 giây. Có kỷ lục để phá, chơi được với mọi ngôn ngữ.',
+        '60 seconds: does the word match the meaning? Answer right in a row to multiply your points up to ×4; a miss costs 3 seconds. There is a record to beat, in every language.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['IELTS Reading: điền tóm tắt', 'IELTS Reading: summary completion'],
+    items: [
+      [
+        'Dạng bài điền tóm tắt: đoạn tóm tắt viết lại bài đọc với 4 chỗ trống, chọn từ trong hộp có từ bẫy. Kiểm tra xong mỗi ô chỉ rõ đoạn nào trong bài nói điều đó.',
+        'Summary completion: a summary of the passage in other words with four gaps, filled from a word box with traps. After checking, each gap shows which paragraph says it.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Cấu trúc câu tiếng Trung', 'Chinese sentence patterns'],
+    items: [
+      [
+        'Trang Cấu trúc câu giờ có cả tiếng Trung: 7 khung câu HSK (thời gian và 在 trước động từ, 比, 把, từ để hỏi giữ chỗ…) dạng khối màu. Xếp xong câu được đọc lên kèm pinyin. Lộ trình tiếng Trung cấp 3 có thêm bước này.',
+        'Sentence patterns now cover Chinese: seven HSK frames (time and 在 before the verb, 比, 把, question words in place…) as coloured blocks. Each sentence is read aloud with its pinyin once built. Level 3 of the Chinese path gains this step.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['IELTS Listening Part 2 và 3', 'IELTS listening Parts 2 and 3'],
+    items: [
+      [
+        'Nghe trắc nghiệm A/B/C: bài giới thiệu một người nói (Part 2) và hai sinh viên bàn bạc (Part 3). Bài nghe có bẫy như đề thật; kiểm tra xong mỗi câu chỉ rõ chữ nào cho đáp án và bẫy nằm ở đâu.',
+        'Multiple choice listening: a talk by one speaker (Part 2) and two students planning their work (Part 3). The recordings set traps like the real test; after checking, each question shows which words give the answer and where the trap was.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['IELTS Reading: nối tiêu đề', 'IELTS Reading: matching headings'],
+    items: [
+      [
+        'Dạng bài nối tiêu đề với đoạn văn: 5 tiêu đề cho 3 đoạn, có tiêu đề bẫy. Kiểm tra xong mỗi đoạn có lý do vì sao tiêu đề đó đúng, kèm mẹo tìm ý chính.',
+        'Match headings to paragraphs: five headings for three paragraphs, traps included. After checking, each paragraph says why its heading fits, with a tip for finding the main idea.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Nhiệm vụ hôm nay và huy chương lộ trình', 'Daily quests and path medals'],
+    items: [
+      [
+        'Mỗi ngày lộ trình giao một nhiệm vụ nhỏ: tiến thêm ở bước đang dở của cấp. Làm xong bấm nhận +15 XP kèm pháo giấy.',
+        'Each day the path sets one small quest: move the step you are on a little further. Finish it and claim +15 XP with confetti.',
+      ],
+      [
+        'Trang Thống kê có huy chương cho từng cấp của lộ trình, sáng lên khi qua cấp, có cúp khi thắng thử thách.',
+        'The stats page shows a medal for each level of the path, lit when you clear it, with a cup when you win its challenge.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Cấu trúc câu dạng khối màu', 'Sentence patterns as coloured blocks'],
+    items: [
+      [
+        'Trang Cấu trúc câu: 8 khung câu tiếng Anh (there is, câu hỏi Wh-, nơi chốn trước thời gian, tính từ trước danh từ…), mỗi phần của câu một màu. Xếp khối vào đúng vai để thành câu, xong câu được đọc lên.',
+        'Sentence patterns: eight English frames (there is, Wh- questions, place before time, adjectives before nouns…), each part of the sentence in its own colour. Snap the blocks into their roles to build the sentence, then hear it read.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Luyện nghe IELTS', 'IELTS listening practice'],
+    items: [
+      [
+        'Nghe điền phiếu như Part 1 của đề IELTS: nghe cuộc gọi đặt phòng, đăng ký, thuê đồ (giọng nam và nữ) rồi điền tên, số điện thoại, ngày giờ; kiểm tra xong có lời thoại và mẹo làm bài. Cấp 6 của lộ trình giờ đủ 4 kỹ năng.',
+        'Form completion like Part 1 of IELTS listening: hear a call to book, sign up or hire (a man’s and a woman’s voice), then fill in names, phone numbers, dates and times, with the transcript and a tip afterwards. Level 6 of the path now covers all four skills.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Lộ trình theo cấp cho tiếng Trung', 'A level path for Chinese'],
+    items: [
+      [
+        'Học tiếng Trung giờ cũng có lộ trình 4 cấp: pinyin & thanh điệu, HSK 1, HSK 2, HSK 3. Mỗi cấp gồm từ trong danh sách HSK, ngữ pháp, truyện, các trang luyện riêng (lượng từ, nghe số, bộ thủ, Hán Việt) và kết thúc bằng bài thi nhỏ.',
+        'Chinese now has a four-level path too: pinyin & tones, HSK 1, HSK 2, HSK 3. Each level has its HSK word list, grammar, stories, the special pages (measure words, numbers, radicals, Sino-Vietnamese) and ends with a mini test.',
+      ],
+      [
+        'Thi vượt cấp cũng dùng được với tiếng Trung: 12 câu từ HSK và ngữ pháp của cấp, 3 tim.',
+        'Level challenges work for Chinese as well: 12 questions on the level’s HSK words and grammar, 3 hearts.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Luyện nói và viết IELTS', 'IELTS speaking and writing practice'],
+    items: [
+      [
+        'Nói Part 1: giám khảo đọc 4 câu hỏi theo chủ đề (quê hương, đồ ăn, công nghệ…), bạn ghi âm câu trả lời và nghe lại.',
+        'Speaking Part 1: the examiner reads four questions on a topic (hometown, food, technology…); record your answers and listen back.',
+      ],
+      [
+        'Nói Part 2 & 3: thẻ chủ đề, 1 phút chuẩn bị có ô ghi chú và gợi ý bố cục, 2 phút nói có đồng hồ, rồi 3 câu thảo luận.',
+        'Speaking Parts 2 & 3: a task card, a minute to prepare with notes and a plan, two timed minutes to talk, then three discussion questions.',
+      ],
+      [
+        'Viết IELTS: khung 4 dạng bài Task 2, 10 câu luyện từ nối, từ tả xu hướng và văn phong học thuật, và viết thử bài 250 từ với thanh đếm từ và danh sách tự đánh dấu (đủ đoạn, đủ từ nối, không viết tắt).',
+        'IELTS writing: frames for the four kinds of Task 2 essay, a 10-question drill on linking words, trend words and academic style, and a 250-word practice essay with a word bar and a self-ticking checklist (paragraphs, linking words, no contractions).',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-08',
+    title: ['Lộ trình theo cấp', 'A level path to climb'],
+    items: [
+      [
+        'Trang Lộ trình theo cấp: 6 cấp từ những từ đầu tiên, các thì, cấu trúc câu, nghe – nói tới luyện thi TOEIC và hướng tới IELTS, nút "Làm tiếp" luôn chỉ đúng bước kế.',
+        'The Level path: six levels from the first words, tenses, sentence building, listening and speaking up to TOEIC and towards IELTS, with "Continue" always pointing at the next step.',
+      ],
+      [
+        'Mọi bài đã làm ở bất cứ đâu trong app đều được tính; qua 80% một cấp thì mở cấp sau, có pháo giấy và +30 XP.',
+        'Everything you do anywhere in the app counts; reach 80% of a level to open the next, with confetti and +30 XP.',
+      ],
+      [
+        'Đã làm bài xếp lớp thì các cấp tương ứng mở sẵn, không phải học lại từ đầu.',
+        'If you took the placement check, the matching levels are already open, so you don’t start from zero.',
+      ],
+      [
+        'Thi vượt cấp: 12 câu từ vựng và ngữ pháp của cấp, 3 tim. Thắng là mở luôn cấp sau và nhận +20 XP, người đã có nền leo nhanh mà không phải làm lại từng bước.',
+        'Level challenges: 12 questions on the level’s words and grammar, 3 hearts. Win to open the next level and earn +20 XP, so learners with a base climb fast without redoing every step.',
+      ],
+      [
+        'Trang Luyện IELTS: đề gồm những gì, và 6 bài đọc học thuật ngắn dạng True / False / Not Given, giải thích từng câu bằng tiếng Việt.',
+        'IELTS practice: what the test is made of, and six short academic passages for True / False / Not Given, every answer explained in Vietnamese.',
+      ],
+      [
+        'Ngữ pháp tiếng Anh thêm 6 bài A2–B1: hiện tại hoàn thành, quá khứ tiếp diễn, câu bị động, câu điều kiện loại 0–2, mệnh đề quan hệ, câu tường thuật. Mỗi bài có lỗi hay gặp và 9 câu luyện.',
+        'Six new English grammar units, A2–B1: present perfect, past continuous, the passive, conditionals 0–2, relative clauses and reported speech, each with common mistakes and nine exercises.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-06',
+    title: ['Thêm bài luyện thi TOEIC và HSK', 'More TOEIC and HSK practice'],
+    items: [
       [
         'TOEIC Part 7 lên 43 bài: thêm hai bài hai đoạn, quảng cáo giảm giá kèm email bị tính sai tiền và lịch hội thảo kèm email xin đổi buổi.',
         'TOEIC Part 7 now has 43 sets: two more double passages, a sale ad with an overcharge e-mail and a workshop schedule with a request to switch.',

@@ -2,10 +2,12 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
 import { levelWords } from './hskPractice'
-import { answerRound, PAIRS } from './hskAnswers'
+import { answerRound } from './hskAnswers'
+import { validateHskBank } from './hskBank'
 import { mulberry32 } from './sky'
 
 const zh = JSON.parse(readFileSync('public/data/zh.json', 'utf8')) as LanguagePack
+const PAIRS = validateHskBank(JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8'))).pairs
 /** Every character of the words of the level and below, and of their examples. */
 const known = (upTo: 'hsk1' | 'hsk2' | 'hsk3') =>
   new Set(
@@ -37,7 +39,7 @@ describe('HSK question and answer pairs', () => {
   it.each(['hsk1', 'hsk2', 'hsk3'] as const)(
     '%s: offers each answer among three others',
     (level) => {
-      const round = answerRound(level, 10, mulberry32(3))
+      const round = answerRound(PAIRS, level, 10, mulberry32(3))
       expect(round).toHaveLength(10)
       for (const q of round) {
         expect(new Set(q.options).size).toBe(4)

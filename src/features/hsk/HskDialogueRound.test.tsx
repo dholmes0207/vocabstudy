@@ -1,4 +1,5 @@
 /** @vitest-environment jsdom */
+import { readFileSync } from 'node:fs'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -7,6 +8,9 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { dialogueRound } from '@/lib/hskDialogues'
 import { mulberry32 } from '@/lib/sky'
+import { validateHskBank } from '@/lib/hskBank'
+
+const bank = validateHskBank(JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8')))
 
 const spoken: { src: string; onEnd?: () => void }[] = []
 vi.mock('@/lib/audio', () => ({
@@ -32,7 +36,7 @@ afterEach(() => {
 
 describe('HSK dialogue round', () => {
   it('reads each line in its speaker’s voice, then the question, and shows the transcript once answered', () => {
-    const dialogues = dialogueRound('hsk3', 2, mulberry32(4))
+    const dialogues = dialogueRound(bank.dialogues, 'hsk3', 2, mulberry32(4))
     render(
       <MemoryRouter>
         <HskDialogueRound

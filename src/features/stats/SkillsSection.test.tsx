@@ -20,6 +20,10 @@ const files: Record<string, string> = {
   'phrases/en.json': 'public/data/phrases/en.json',
 }
 
+/** How many entries a data file lists, so new lessons don't break the test. */
+const count = (file: string, key: string): number =>
+  JSON.parse(readFileSync(files[file], 'utf8'))[key].length
+
 beforeEach(() => {
   useSettings.setState({ uiLang: 'en' })
   useReading.setState({
@@ -62,8 +66,8 @@ describe('Beyond vocabulary', () => {
     ).toBeInTheDocument()
     await screen.findByRole('progressbar', { name: 'Phrases known' })
     await screen.findByRole('progressbar', { name: 'Stories read' })
-    expect(value('Stories read')).toBe('1/14')
-    expect(value('Grammar lessons passed')).toBe('1/12')
+    expect(value('Stories read')).toBe(`1/${count('reading/en.json', 'stories')}`)
+    expect(value('Grammar lessons passed')).toBe(`1/${count('grammar/en.json', 'units')}`)
     expect(value('Phrases known')).toBe('1/100')
   })
 

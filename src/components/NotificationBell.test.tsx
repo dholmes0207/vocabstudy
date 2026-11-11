@@ -1,12 +1,12 @@
 /** @vitest-environment jsdom */
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import '@testing-library/jest-dom/vitest'
 import NotificationBell from './NotificationBell'
 import { useSettings } from '@/store/settingsStore'
 import { ENTERED_KEY } from '@/lib/entry'
-import { READ_KEY } from '@/lib/notifications'
+import { READ_KEY, RELEASES_SHOWN } from '@/lib/notifications'
 
 // The header bell that replaced the policy card (docs/design/notifications.md).
 
@@ -24,11 +24,15 @@ function renderBell() {
   )
 }
 
+/** The releases load after the first render; wait until the bell counts them. */
+const loaded = () =>
+  screen.findByRole('button', { name: `Notifications — ${RELEASES_SHOWN + 1} new` })
+
 describe('NotificationBell', () => {
-  it('shows a count for someone who used the app before, and opens to the list', () => {
+  it('shows a count for someone who used the app before, and opens to the list', async () => {
     localStorage.setItem(ENTERED_KEY, '1')
     renderBell()
-    const bell = screen.getByRole('button', { name: /Notifications — \d+ new/ })
+    const bell = await loaded()
     fireEvent.click(bell)
     expect(screen.getByRole('dialog', { name: 'Notifications' })).toBeInTheDocument()
     expect(
@@ -36,9 +40,10 @@ describe('NotificationBell', () => {
     ).toBeInTheDocument()
   })
 
-  it('reveals the details on tap and counts the item as read', () => {
+  it('reveals the details on tap and counts the item as read', async () => {
     localStorage.setItem(ENTERED_KEY, '1')
     renderBell()
+    await loaded()
     const before = Number(
       /(\d+) new/.exec(screen.getByRole('button', { name: /new/ }).getAttribute('aria-label')!)![1]
     )
@@ -51,17 +56,21 @@ describe('NotificationBell', () => {
     expect(after === undefined ? 0 : Number(after)).toBe(before - 1)
   })
 
-  it('marks everything read in one go', () => {
+  it('marks everything read in one go', async () => {
     localStorage.setItem(ENTERED_KEY, '1')
     renderBell()
+    await loaded()
     fireEvent.click(screen.getByRole('button', { name: /Notifications/ }))
     fireEvent.click(screen.getByRole('button', { name: 'Mark all as read' }))
     expect(screen.getAllByRole('button')[0]).toHaveAccessibleName('Notifications')
   })
 
-  it('gives a newcomer a quiet bell, and remembers that', () => {
+  it('gives a newcomer a quiet bell, and remembers that, releases included', async () => {
     renderBell()
     expect(screen.getByRole('button', { name: 'Notifications' })).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem(READ_KEY)!).length).toBeGreaterThan(0)
+    await waitFor(() =>
+      expect(JSON.parse(localStorage.getItem(READ_KEY)!)).toHaveLength(RELEASES_SHOWN + 1)
+    )
+    expect(screen.getByRole('button', { name: 'Notifications' })).toBeInTheDocument()
   })
 })

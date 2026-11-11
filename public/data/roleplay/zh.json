@@ -1,0 +1,548 @@
+{
+  "version": "1.2.0",
+  "scenes": [
+    {
+      "id": "zh-restaurant",
+      "emoji": "🍜",
+      "title": [
+        "Gọi món",
+        "Ordering food"
+      ],
+      "setting": [
+        "Bạn vào một quán mì ở Bắc Kinh.",
+        "You walk into a noodle shop in Beijing."
+      ],
+      "them": [
+        "Phục vụ",
+        "Waiter"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "欢迎光临！你们几位？",
+          "vi": "Chào mừng! Các bạn mấy người?",
+          "read": "Huānyíng guānglín! Nǐmen jǐ wèi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "两位。",
+          "vi": "Hai người.",
+          "read": "Liǎng wèi."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "请坐。你们想吃什么？",
+          "vi": "Mời ngồi. Các bạn muốn ăn gì?",
+          "read": "Qǐng zuò. Nǐmen xiǎng chī shénme?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我要一碗牛肉面。",
+          "vi": "Cho tôi một bát mì bò.",
+          "read": "Wǒ yào yì wǎn niúròu miàn."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的。喝什么？",
+          "vi": "Vâng. Uống gì ạ?",
+          "read": "Hǎo de. Hē shénme?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "一杯茶，谢谢。",
+          "vi": "Một cốc trà, cảm ơn.",
+          "read": "Yì bēi chá, xièxie."
+        }
+      ]
+    },
+    {
+      "id": "zh-shopping",
+      "emoji": "🛍️",
+      "title": [
+        "Mua đồ",
+        "Shopping"
+      ],
+      "setting": [
+        "Bạn mua áo ở chợ.",
+        "You are buying a shirt at a market."
+      ],
+      "them": [
+        "Người bán",
+        "Seller"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "这件衣服多少钱？",
+          "vi": "Cái áo này bao nhiêu tiền?",
+          "read": "Zhè jiàn yīfu duōshao qián?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一百五十块。",
+          "vi": "Một trăm năm mươi tệ.",
+          "read": "Yìbǎi wǔshí kuài."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "太贵了！便宜一点儿吧。",
+          "vi": "Đắt quá! Rẻ một chút đi.",
+          "read": "Tài guì le! Piányi yìdiǎnr ba."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一百二十块，怎么样？",
+          "vi": "Một trăm hai mươi tệ, được không?",
+          "read": "Yìbǎi èrshí kuài, zěnmeyàng?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好，我买了。",
+          "vi": "Được, tôi mua.",
+          "read": "Hǎo, wǒ mǎi le."
+        }
+      ]
+    },
+    {
+      "id": "zh-taxi",
+      "emoji": "🚕",
+      "title": [
+        "Đi taxi",
+        "Taking a taxi"
+      ],
+      "setting": [
+        "Bạn bắt taxi ra sân bay.",
+        "You take a taxi to the airport."
+      ],
+      "them": [
+        "Tài xế",
+        "Driver"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你好，去哪儿？",
+          "vi": "Chào bạn, đi đâu?",
+          "read": "Nǐ hǎo, qù nǎr?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "我去机场。",
+          "vi": "Tôi ra sân bay.",
+          "read": "Wǒ qù jīchǎng."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "好的。你几点的飞机？",
+          "vi": "Được. Máy bay của bạn mấy giờ?",
+          "read": "Hǎo de. Nǐ jǐ diǎn de fēijī?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "下午三点的。",
+          "vi": "Ba giờ chiều.",
+          "read": "Xiàwǔ sān diǎn de."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "没问题，四十分钟就到。",
+          "vi": "Không sao, bốn mươi phút là tới.",
+          "read": "Méi wèntí, sìshí fēnzhōng jiù dào."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "太好了，谢谢你！",
+          "vi": "Tốt quá, cảm ơn anh!",
+          "read": "Tài hǎo le, xièxie nǐ!"
+        }
+      ]
+    },
+    {
+      "id": "zh-friend",
+      "emoji": "👋",
+      "title": [
+        "Làm quen bạn mới",
+        "Meeting a new friend"
+      ],
+      "setting": [
+        "Bạn gặp một bạn học mới.",
+        "You meet a new classmate."
+      ],
+      "them": [
+        "Bạn học",
+        "Classmate"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "你好！你叫什么名字？",
+          "vi": "Chào bạn! Bạn tên là gì?",
+          "read": "Nǐ hǎo! Nǐ jiào shénme míngzi?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我叫安。你呢？",
+          "vi": "Mình tên là An. Còn bạn?",
+          "read": "Wǒ jiào Ān. Nǐ ne?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "我叫王丽。你是哪国人？",
+          "vi": "Mình tên là Vương Lệ. Bạn là người nước nào?",
+          "read": "Wǒ jiào Wáng Lì. Nǐ shì nǎ guó rén?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我是越南人。",
+          "vi": "Mình là người Việt Nam.",
+          "read": "Wǒ shì Yuènán rén."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "认识你很高兴！",
+          "vi": "Rất vui được làm quen với bạn!",
+          "read": "Rènshi nǐ hěn gāoxìng!"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我也很高兴认识你。",
+          "vi": "Mình cũng rất vui được làm quen với bạn.",
+          "read": "Wǒ yě hěn gāoxìng rènshi nǐ."
+        }
+      ]
+    },
+    {
+      "id": "zh-directions",
+      "emoji": "🗺️",
+      "title": [
+        "Hỏi đường",
+        "Asking the way"
+      ],
+      "setting": [
+        "Bạn tìm ga tàu điện ngầm.",
+        "You are looking for the subway station."
+      ],
+      "them": [
+        "Người đi đường",
+        "Passer-by"
+      ],
+      "lines": [
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "请问，地铁站在哪儿？",
+          "vi": "Xin hỏi, ga tàu điện ngầm ở đâu?",
+          "read": "Qǐngwèn, dìtiě zhàn zài nǎr?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "一直往前走，在银行的左边。",
+          "vi": "Cứ đi thẳng, ở bên trái ngân hàng.",
+          "read": "Yìzhí wǎng qián zǒu, zài yínháng de zuǒbian."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "远不远？",
+          "vi": "Có xa không?",
+          "read": "Yuǎn bu yuǎn?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "不远，走路五分钟。",
+          "vi": "Không xa, đi bộ năm phút.",
+          "read": "Bù yuǎn, zǒulù wǔ fēnzhōng."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "谢谢你！",
+          "vi": "Cảm ơn anh!",
+          "read": "Xièxie nǐ!"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "不客气。",
+          "vi": "Không có gì.",
+          "read": "Bú kèqi."
+        }
+      ]
+    },
+    {
+      "id": "zh-hotel",
+      "emoji": "🏨",
+      "title": [
+        "Nhận phòng khách sạn",
+        "Checking in at a hotel"
+      ],
+      "setting": [
+        "Bạn đến khách sạn, đã đặt phòng.",
+        "You arrive at your hotel with a booking."
+      ],
+      "them": [
+        "Lễ tân",
+        "Receptionist"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "您好！请问您有预订吗？",
+          "vi": "Xin chào! Xin hỏi anh có đặt phòng trước không?",
+          "read": "Nín hǎo! Qǐngwèn nín yǒu yùdìng ma?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "有，我叫李明。",
+          "vi": "Có, tôi tên Lý Minh.",
+          "read": "Yǒu, wǒ jiào Lǐ Míng."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的，请给我您的护照。",
+          "vi": "Vâng, xin anh đưa tôi hộ chiếu.",
+          "read": "Hǎo de, qǐng gěi wǒ nín de hùzhào."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "给你。早饭几点开始？",
+          "vi": "Đây ạ. Bữa sáng bắt đầu lúc mấy giờ?",
+          "read": "Gěi nǐ. Zǎofàn jǐ diǎn kāishǐ?"
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "早上七点。您的房间在五楼。",
+          "vi": "Bảy giờ sáng. Phòng của anh ở tầng năm.",
+          "read": "Zǎoshang qī diǎn. Nín de fángjiān zài wǔ lóu."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "好的，谢谢！",
+          "vi": "Vâng, cảm ơn!",
+          "read": "Hǎo de, xièxie!"
+        }
+      ]
+    },
+    {
+      "id": "zh-doctor",
+      "emoji": "🩺",
+      "tag": "HSK 3",
+      "title": [
+        "Đi khám bệnh",
+        "Seeing a doctor"
+      ],
+      "setting": [
+        "Bạn bị ốm và đi khám.",
+        "You feel ill and see a doctor."
+      ],
+      "them": [
+        "Bác sĩ",
+        "Doctor"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你哪儿不舒服？",
+          "vi": "Bạn khó chịu ở đâu?",
+          "read": "Nǐ nǎr bù shūfu?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "我头疼，还有点儿发烧。",
+          "vi": "Tôi đau đầu, còn hơi sốt.",
+          "read": "Wǒ tóu téng, hái yǒudiǎnr fāshāo."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "从什么时候开始的？",
+          "vi": "Bắt đầu từ khi nào?",
+          "read": "Cóng shénme shíhou kāishǐ de?"
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "从昨天晚上开始的。",
+          "vi": "Từ tối hôm qua.",
+          "read": "Cóng zuótiān wǎnshang kāishǐ de."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "你感冒了。这个药一天吃三次。",
+          "vi": "Bạn bị cảm rồi. Thuốc này ngày uống ba lần.",
+          "read": "Nǐ gǎnmào le. Zhège yào yì tiān chī sān cì."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好的。我需要休息几天？",
+          "vi": "Vâng. Tôi cần nghỉ mấy ngày?",
+          "read": "Hǎo de. Wǒ xūyào xiūxi jǐ tiān?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "休息两天就好了，多喝水。",
+          "vi": "Nghỉ hai ngày là khỏi, uống nhiều nước nhé.",
+          "read": "Xiūxi liǎng tiān jiù hǎo le, duō hē shuǐ."
+        }
+      ]
+    },
+    {
+      "id": "zh-order-food",
+      "emoji": "🥡",
+      "tag": "HSK 2",
+      "title": [
+        "Gọi điện đặt đồ ăn",
+        "Ordering food by phone"
+      ],
+      "setting": [
+        "Bạn gọi điện đặt đồ ăn mang về nhà.",
+        "You call to order food for delivery."
+      ],
+      "them": [
+        "Nhà hàng",
+        "Restaurant"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "喂，你好！这里是北京饭店。",
+          "vi": "Alô, xin chào! Đây là nhà hàng Bắc Kinh.",
+          "read": "Wéi, nǐ hǎo! Zhèlǐ shì Běijīng fàndiàn."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "你好，我想要一碗米饭和一个鸡蛋汤。",
+          "vi": "Chào chị, tôi muốn một bát cơm và một bát canh trứng.",
+          "read": "Nǐ hǎo, wǒ xiǎng yào yì wǎn mǐfàn hé yí ge jīdàn tāng."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "好的。请问您住在哪儿？",
+          "vi": "Vâng. Xin hỏi anh ở đâu?",
+          "read": "Hǎo de. Qǐngwèn nín zhù zài nǎr?"
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "我住在学校旁边，三号楼。",
+          "vi": "Tôi ở cạnh trường học, toà số ba.",
+          "read": "Wǒ zhù zài xuéxiào pángbiān, sān hào lóu."
+        },
+        {
+          "who": "them",
+          "voice": "W",
+          "text": "一共三十五块，半个小时送到。",
+          "vi": "Tổng cộng ba mươi lăm tệ, nửa tiếng sẽ giao tới.",
+          "read": "Yígòng sānshíwǔ kuài, bàn ge xiǎoshí sòng dào."
+        },
+        {
+          "who": "you",
+          "voice": "M",
+          "text": "好，谢谢！",
+          "vi": "Được, cảm ơn!",
+          "read": "Hǎo, xièxie!"
+        }
+      ]
+    },
+    {
+      "id": "zh-rent",
+      "emoji": "🏠",
+      "tag": "HSK 3",
+      "title": [
+        "Thuê nhà",
+        "Renting a flat"
+      ],
+      "setting": [
+        "Bạn đi xem một căn hộ cho thuê.",
+        "You go to see a flat to rent."
+      ],
+      "them": [
+        "Chủ nhà",
+        "Landlord"
+      ],
+      "lines": [
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "这就是那个房间，你看看。",
+          "vi": "Đây là căn phòng đó, bạn xem đi.",
+          "read": "Zhè jiù shì nàge fángjiān, nǐ kànkan."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "房间很干净，也很安静。",
+          "vi": "Phòng rất sạch, cũng rất yên tĩnh.",
+          "read": "Fángjiān hěn gānjìng, yě hěn ānjìng."
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "离地铁站也很近，走路五分钟。",
+          "vi": "Cũng rất gần ga tàu điện ngầm, đi bộ năm phút.",
+          "read": "Lí dìtiě zhàn yě hěn jìn, zǒulù wǔ fēnzhōng."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "一个月多少钱？",
+          "vi": "Một tháng bao nhiêu tiền?",
+          "read": "Yí ge yuè duōshao qián?"
+        },
+        {
+          "who": "them",
+          "voice": "M",
+          "text": "两千块，水电费另外算。",
+          "vi": "Hai nghìn tệ, tiền điện nước tính riêng.",
+          "read": "Liǎngqiān kuài, shuǐdiàn fèi lìngwài suàn."
+        },
+        {
+          "who": "you",
+          "voice": "W",
+          "text": "好的，我想下个月就住进来。",
+          "vi": "Được, tôi muốn tháng sau dọn vào luôn.",
+          "read": "Hǎo de, wǒ xiǎng xià ge yuè jiù zhù jìnlai."
+        }
+      ]
+    }
+  ]
+}

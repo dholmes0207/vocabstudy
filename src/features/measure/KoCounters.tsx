@@ -3,6 +3,7 @@ import { ArrowRight, Check, X } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import {
   COUNTERS,
   counterMeaning,
@@ -79,6 +80,7 @@ function Round({ questions, onAgain }: { questions: CounterQuestion[]; onAgain: 
   const code = useSettings((s) => s.currentLang)
   const soundOn = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
@@ -119,6 +121,7 @@ function Round({ questions, onAgain }: { questions: CounterQuestion[]; onAgain: 
     }
     const earned = measureXp(correct, questions.length)
     addPlayXp(code, earned)
+    logActivity(code, 'measure')
     setXp(earned)
   }
 

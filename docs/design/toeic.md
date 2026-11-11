@@ -1003,8 +1003,44 @@ Part 7 bài hai đoạn từ 13 lên 15 (test giữ mức này), tổng 43 bài.
 - Lịch hội thảo buổi chiều + email xin đổi buổi: "the other workshop that takes place in Room A" là Pricing
   Strategies lúc 3:00 (bẫy Writing Better Sales E-mails cũng lúc 1:00).
 
-### Thêm hội thoại chọn tranh HSK 2 (06/11/2026, đợt sáu)
+### Dữ liệu bài luyện chuyển sang JSON (07/11/2026)
 
-`PICTURE_DIALOGUES` từ 38 lên 44 bài (test giữ mức này): nước, cửa, nhà (ba tranh cuối cùng của HSK 1–2 chưa có bài),
-táo, chó đi dạo, cà phê buổi sáng. Lời thoại tránh 水果, 大家, 门口 (chứa từ có tranh) và 马上 (马 là từ có tranh). Kiểm tra
-chữ Hán bắt được 鲜, 刚, 带, đã viết lại câu.
+Câu hỏi Part 1–7 viết tay không còn nằm trong code mà ở `public/data/toeic/en.json` (khoá `part1`, `part2`,
+`part5`, `reading` cho Part 6–7, `talks` cho Part 3–4). Trước đây chúng nằm trong gói JS của trang và làm gói lớn thêm
+sau mỗi đợt: gói trang TOEIC giảm từ 252 kB (79 kB gzip) xuống 49 kB (14 kB gzip); file dữ liệu 258 kB (76 kB gzip) sau
+khi thu gọn.
+
+- `lib/toeicPart*.ts`, `toeicReading.ts`, `toeicTalks.ts` chỉ còn kiểu dữ liệu và logic tạo lượt; các hàm nhận ngân hàng
+  câu làm tham số (`part1Round(bank.part1)`, `pickSet(bank.reading, 6)`…).
+- `lib/toeicBank.ts` tải file một lần mỗi lần mở app và kiểm tra cấu trúc (đủ 4 phương án, không trùng, có giải thích,
+  đáp án hợp lệ, id không trùng…). File JSON không còn được TypeScript kiểm tra, nên sửa sai sẽ báo lỗi ngay ở test
+  thay vì hiện câu hỏi hỏng.
+- Trang Luyện TOEIC hiện phần từ vựng ngay; nút luyện Part và bài thi nhỏ chờ dữ liệu tải xong, lỗi mạng thì có nút
+  "Thử lại".
+- Service worker tải sẵn file này khi cài, nên bài luyện vẫn dùng được offline ngay từ lần đầu như khi còn nằm trong code.
+- Bản build thu gọn mọi file JSON trong `public/data/`, kể cả thư mục con (trước đây chỉ thu gọn file ở cấp đầu).
+- Thêm bài mới: sửa `public/data/toeic/en.json`; câu Part 1–4 mới cần chạy lại
+  `WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts` để có giọng thu như trước.
+
+### Dữ liệu bài luyện HSK chuyển sang JSON (07/11/2026)
+
+Làm như với TOEIC: hội thoại HSK 2–3, hội thoại chọn tranh HSK 2, cặp hỏi – đáp HSK 1–3 và đoạn văn HSK 3 chuyển từ
+`lib/hskDialogues.ts`, `hskAnswers.ts`, `hskReadings.ts` sang `public/data/hsk/zh.json` (khoá `dialogues`,
+`pictureDialogues`, `pairs.hsk1`–`hsk3`, `readings`). Gói trang HSK giảm từ 127 kB (40 kB gzip) xuống 44 kB (12 kB
+gzip); file dữ liệu 94 kB (28 kB gzip) sau khi thu gọn.
+
+- `lib/hskBank.ts` tải và kiểm tra file (3 phương án không trùng, có giải thích, cấp hợp lệ, mỗi cấp đủ 4 cặp trở lên,
+  id không trùng…). Test cạnh `lib/hsk*.ts` vẫn kiểm tra mọi chữ Hán thuộc đúng cấp.
+- Phần tải và lưu tạm dùng chung cho TOEIC và HSK nằm ở `lib/practiceBank.ts`; hook `usePracticeBank` thay cho hook
+  riêng của TOEIC.
+- Trang Luyện thi HSK: các dạng câu sinh từ gói từ chạy ngay; bốn dạng cần file (nghe hội thoại, hội thoại chọn tranh,
+  hỏi – đáp, đọc đoạn văn) và bài thi nhỏ chờ file tải xong, lỗi mạng có nút "Thử lại".
+- Service worker tải sẵn file này khi cài, cùng file TOEIC.
+- Thêm bài mới: sửa `public/data/hsk/zh.json`, rồi chạy lại
+  `WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts` để có giọng thu như trước.
+
+### Thêm hội thoại chọn tranh HSK 2 (11/11/2026, đợt sáu)
+
+`pictureDialogues` trong `public/data/hsk/zh.json` từ 38 lên 44 bài (test giữ mức này): nước, cửa, nhà (ba tranh cuối
+cùng của HSK 1–2 chưa có bài), táo, chó đi dạo, cà phê buổi sáng. Lời thoại tránh 水果, 大家, 门口 (chứa từ có tranh) và
+马上 (马 là từ có tranh). Các bài này soạn ngày 06/11, khi hội thoại còn nằm trong code; khi gộp đã chuyển sang file JSON.

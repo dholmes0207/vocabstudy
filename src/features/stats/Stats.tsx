@@ -12,6 +12,7 @@ import { ALL_STICKERS, STICKER_SETS, collected } from '@/lib/stickers'
 import { evaluateAchievements } from '@/lib/achievements'
 import EmptyState from '@/components/EmptyState'
 import SkillsSection from './SkillsSection'
+import PathBadges from './PathBadges'
 import { useT, useUiLang } from '@/lib/i18n'
 
 const DAYS = 14
@@ -279,6 +280,8 @@ export default function Stats() {
           </span>
         </div>
       </section>
+
+      <PathBadges />
 
       {/* Achievements */}
       <section className="card p-6">

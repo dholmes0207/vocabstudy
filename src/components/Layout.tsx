@@ -1,5 +1,8 @@
 import { Suspense, useEffect } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useVisited } from '@/store/visitedStore'
+import { practiceRoot } from '@/lib/discover'
+import { PRACTICE } from '@/features/practice/entries'
 import {
   BarChart3,
   BookOpen,
@@ -14,6 +17,7 @@ import {
   GraduationCap,
   Languages,
   AudioWaveform,
+  Map as MapIcon,
 } from 'lucide-react'
 import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
@@ -61,6 +65,7 @@ interface NavItem {
 // and the header menu.
 const NAV: NavItem[] = [
   { to: '/home', label: ['Trang chủ', 'Home'], icon: Sparkles, primary: true },
+  { to: '/path', label: ['Lộ trình theo cấp', 'Level path'], icon: MapIcon },
   {
     to: '/learn',
     label: ['Học mới', 'Learn'],
@@ -115,6 +120,8 @@ const isOn = (item: NavItem, pathname: string) =>
     ? pathname === '/home'
     : [item.to, ...(item.also ?? [])].some((p) => pathname === p || pathname.startsWith(p + '/'))
 
+const PRACTICE_PATHS = new Set(PRACTICE.map((e) => e.to))
+
 export default function Layout() {
   useProgressSync()
   useLangParam()
@@ -128,6 +135,12 @@ export default function Layout() {
   const stats = progress[currentLang]?.stats
   const dueCount = getDueCards(cardsOf(progress, currentLang), today()).length
   const { pathname } = useLocation()
+  // Remember the practice screens opened here, for "Hôm nay thử gì mới?".
+  const visit = useVisited((s) => s.visit)
+  useEffect(() => {
+    const root = practiceRoot(pathname)
+    if (PRACTICE_PATHS.has(root)) visit(root)
+  }, [pathname, visit])
   // Screens written for another pack drop out of the menus and the bottom bar.
   const nav = NAV.filter((item) => availableIn(item.to, currentLang))
   const hasSoundsPage = nav.some((item) => item.to === '/hangul' || item.to === '/pinyin')

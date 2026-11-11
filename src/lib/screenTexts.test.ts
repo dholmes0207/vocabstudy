@@ -14,24 +14,36 @@ import {
   VOWELS,
   compose,
 } from './hangul'
-import { INITIALS as PINYIN_INITIALS, SANDHI, TONES, TRICKY_FINALS } from './pinyin'
+import { INITIALS as PINYIN_INITIALS, SANDHI, SANDHI_DRILL, TONES, TRICKY_FINALS } from './pinyin'
 import { MEASURES, MEASURE_ITEMS, phrase } from './measureWords'
 import { COUNTERS, COUNTER_ITEMS, counterPhrase } from './koCounters'
 import { itemFor as koNumber } from './koNumbers'
 import { itemFor as zhNumber } from './zhNumbers'
-import { PART1_BANK } from './toeicPart1'
-import { PART2_BANK } from './toeicPart2'
-import { TALK_SETS } from './toeicTalks'
+import { validateToeicBank } from './toeicBank'
 import { familySlots, WORD_FAMILIES } from './wordFamilies'
-import { HSK_DIALOGUES, PICTURE_DIALOGUES } from './hskDialogues'
-import { HSK1_PAIRS, HSK2_PAIRS, HSK3_PAIRS } from './hskAnswers'
-import { HSK3_READINGS } from './hskReadings'
+import { validateHskBank } from './hskBank'
+import { validateIeltsBank } from './ielts'
+import { sentenceText, validatePatterns } from './patterns'
 import { hanVietTable } from './hanVietFamily'
+import { CONFUSABLES, CONFUSABLE_PACKS, filled } from './confusables'
+import { CHENGYU } from './chengyu'
+import { TWISTERS } from './tongueTwisters'
+import { HSKK_LEVELS } from './hskk'
+import { SLANG } from './netSlang'
+import { HAN_VIET_TRAPS } from './hanVietTraps'
+import { PARTICLES, filled as phrasalFilled } from './phrasalVerbs'
+import { IDIOMS } from './idiomsEn'
+import { COLLOCATIONS, COLLOCATIONS_ZH, filled as collocationFilled } from './collocations'
+import { INFO_SETS, OPINIONS, READ_ALOUD, SURVEYS } from './toeicSpeaking'
+import { validateRoleplay } from './roleplay'
 
 // What the pack pages read aloud beyond words and sentences of public/data:
 // Hangul and Pinyin letters, measure words, the number rounds, the Hán Việt
 // table, the saying of the day, the day's sticker, the TOEIC listening parts
-// and word families. All of it is written in code, so this test lists it into
+// (public/data/toeic/en.json), the IELTS speaking questions
+// (public/data/ielts/en.json), the HSK dialogues, pairs and passages
+// (public/data/hsk/zh.json) and word families. The script that records the
+// clips does not read any of these, so this test lists them into
 // scripts/audio-texts/screens.json, which scripts/generate_text_audio.py
 // records. After changing any of it, rewrite the file with:  WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts
 
@@ -56,16 +68,71 @@ const calendar = () => range(1, 12).flatMap((mo) => range(1, 28).map((d) => [mo,
 
 /** "Luyện thi TOEIC": the listening parts and the word-family forms. */
 function toeic(): string[] {
+  const bank = validateToeicBank(JSON.parse(readFileSync('public/data/toeic/en.json', 'utf8')))
   return [
-    ...PART1_BANK.flatMap((it) => it.statements),
-    ...PART2_BANK.flatMap((it) => [it.prompt, ...it.responses]),
-    ...TALK_SETS.flatMap((set) => set.lines.map((l) => l.text)),
+    ...bank.part1.flatMap((it) => it.statements),
+    ...bank.part2.flatMap((it) => [it.prompt, ...it.responses]),
+    ...bank.talks.flatMap((set) => set.lines.map((l) => l.text)),
     ...WORD_FAMILIES.flatMap((fam) => familySlots(fam).map((s) => s.en)),
   ]
 }
 
+/** "Luyện IELTS": the examiner's questions and the listening recordings. */
+function ielts(): string[] {
+  const { speaking, listening, listeningChoice } = validateIeltsBank(
+    JSON.parse(readFileSync('public/data/ielts/en.json', 'utf8'))
+  )
+  return [
+    ...speaking.part1.flatMap((tp) => [...tp.questions, ...tp.samples.map((x) => x.a)]),
+    ...speaking.part2.flatMap((c) => [...c.part3, ...c.part3Samples.map((x) => x.a)]),
+    ...listening.flatMap((l) => l.lines.map((x) => x.text)),
+    ...listeningChoice.flatMap((l) => l.lines.map((x) => x.text)),
+  ]
+}
+
+/** "Nhập vai hội thoại": every line of every scene, in a woman's or a man's voice. */
+function roleplay(code: 'en' | 'zh'): string[] {
+  const { scenes } = validateRoleplay(
+    JSON.parse(readFileSync(`public/data/roleplay/${code}.json`, 'utf8'))
+  )
+  return scenes.flatMap((s) => s.lines.map((l) => l.text))
+}
+
+/** "Cấu trúc câu": each sentence is read once it is built. */
+function patterns(code: 'en' | 'zh'): string[] {
+  const { patterns } = validatePatterns(
+    JSON.parse(readFileSync(`public/data/patterns/${code}.json`, 'utf8'))
+  )
+  const joiner = code === 'zh' ? '' : ' '
+  return patterns.flatMap((p) => p.sentences.map((s) => sentenceText(s, joiner)))
+}
+
 function english(): string[] {
-  return [...proverbs('en'), ...ALL_STICKERS.map((s) => s.en), ...toeic()]
+  return [
+    ...proverbs('en'),
+    ...ALL_STICKERS.map((s) => s.en),
+    ...toeic(),
+    ...ielts(),
+    ...patterns('en'),
+    ...roleplay('en'),
+    // "Cụm động từ": each sentence with its particle back in place.
+    ...PARTICLES.flatMap((particle) =>
+      particle.verbs.map((item) => phrasalFilled({ particle, item }))
+    ),
+    // "TOEIC Speaking": the texts to read, the questions and the sample answers.
+    ...READ_ALOUD.map((r) => r.text),
+    ...SURVEYS.flatMap((s) => s.questions.flatMap((x) => [x.q, x.sample.a])),
+    ...INFO_SETS.flatMap((s) => [s.intro, ...s.questions.flatMap((x) => [x.q, x.sample.a])]),
+    ...OPINIONS.flatMap((o) => [o.prompt, o.sample.a]),
+    // "Câu nói líu lưỡi".
+    ...TWISTERS.en.map((x) => x.text),
+    // "Thành ngữ tiếng Anh": each idiom and its example.
+    ...IDIOMS.flatMap((x) => [x.phrase, x.example.en]),
+    // "Kết hợp từ": each natural phrase, and its sentence with the gap filled.
+    ...COLLOCATIONS.flatMap((x) => [x.right, collocationFilled(x)]),
+    // "Từ dễ nhầm": each sentence is read with its gap filled.
+    ...CONFUSABLE_PACKS.en.flatMap((g) => g.sentences.map(filled)),
+  ]
 }
 
 function korean(): string[] {
@@ -101,6 +168,7 @@ function korean(): string[] {
 }
 
 function chinese(): string[] {
+  const hsk = validateHskBank(JSON.parse(readFileSync('public/data/hsk/zh.json', 'utf8')))
   const sounds = [...PINYIN_INITIALS, ...TRICKY_FINALS].flatMap((s) =>
     s.word ? [s.char, s.word] : [s.char]
   )
@@ -117,14 +185,36 @@ function chinese(): string[] {
     ...TONES.map((t) => t.char),
     ...sounds,
     ...SANDHI.map((s) => s.example),
+    // "Luyện biến điệu": each word is read after the answer.
+    ...SANDHI_DRILL.map((d) => d.zh),
     ...MEASURES.map((m) => `一${m.ch}`),
     ...MEASURE_ITEMS.map((item) => phrase(item, '').zh),
     ...numbers,
     ...hanVietTable(words('zh')).map((e) => e.char),
-    ...HSK_DIALOGUES.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
-    ...PICTURE_DIALOGUES.flatMap((d) => d.lines.map((l) => l.zh)),
-    ...[...HSK1_PAIRS, ...HSK2_PAIRS, ...HSK3_PAIRS].flatMap((p) => [p.q, p.a]),
-    ...HSK3_READINGS.map((r) => r.text),
+    ...hsk.dialogues.flatMap((d) => [...d.lines.map((l) => l.zh), d.q]),
+    ...hsk.pictureDialogues.flatMap((d) => d.lines.map((l) => l.zh)),
+    ...[...hsk.pairs.hsk1, ...hsk.pairs.hsk2, ...hsk.pairs.hsk3].flatMap((p) => [p.q, p.a]),
+    ...hsk.readings.map((r) => r.text),
+    ...patterns('zh'),
+    ...roleplay('zh'),
+    // "Chữ dễ nhầm": each sentence is read with its gap filled.
+    ...CONFUSABLES.flatMap((g) => g.sentences.map(filled)),
+    // "Thành ngữ": each idiom and its example sentence.
+    ...CHENGYU.flatMap((it) => [it.zh, it.example.zh]),
+    // "Câu nói líu lưỡi".
+    ...TWISTERS.zh.map((x) => x.text),
+    // "Luyện nói HSKK": every line read out, and the sample answers.
+    ...Object.values(HSKK_LEVELS).flatMap((lv) =>
+      Object.values(lv.parts).flatMap((items) =>
+        items.flatMap((it) => (it.sample ? [it.zh, it.sample.zh] : [it.zh]))
+      )
+    ),
+    // "Tiếng lóng mạng": each word and its example sentence.
+    ...SLANG.flatMap((it) => [it.zh, it.example.zh]),
+    // "Bẫy Hán Việt": each word and its example sentence.
+    ...HAN_VIET_TRAPS.flatMap((it) => [it.zh, it.example.zh]),
+    // "Kết hợp từ": each natural phrase, and its sentence with the gap filled.
+    ...COLLOCATIONS_ZH.flatMap((x) => [x.right, collocationFilled(x)]),
   ]
 }
 

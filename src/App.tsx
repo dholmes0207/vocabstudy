@@ -21,6 +21,7 @@ const Speaking = lazy(() => import('./features/speaking/Speaking'))
 const Practice = lazy(() => import('./features/practice/Practice'))
 const MatchGame = lazy(() => import('./features/games/MatchGame'))
 const OrderGame = lazy(() => import('./features/games/OrderGame'))
+const BlitzGame = lazy(() => import('./features/games/BlitzGame'))
 const Listen = lazy(() => import('./features/listen/Listen'))
 const Sounds = lazy(() => import('./features/sounds/Sounds'))
 const Phrases = lazy(() => import('./features/phrases/Phrases'))
@@ -31,14 +32,29 @@ const Reading = lazy(() => import('./features/reading/Reading'))
 const Hangul = lazy(() => import('./features/hangul/Hangul'))
 const Pinyin = lazy(() => import('./features/pinyin/Pinyin'))
 const MeasureWords = lazy(() => import('./features/measure/MeasureWords'))
+const Confusables = lazy(() => import('./features/confusables/Confusables'))
+const Chengyu = lazy(() => import('./features/chengyu/Chengyu'))
+const TongueTwisters = lazy(() => import('./features/twisters/TongueTwisters'))
+const Hskk = lazy(() => import('./features/hskk/Hskk'))
+const NetSlang = lazy(() => import('./features/slang/NetSlang'))
+const HanVietTraps = lazy(() => import('./features/hanvietTraps/HanVietTraps'))
+const PhrasalVerbs = lazy(() => import('./features/phrasal/PhrasalVerbs'))
+const Idioms = lazy(() => import('./features/idioms/Idioms'))
+const Collocations = lazy(() => import('./features/collocations/Collocations'))
+const Roleplay = lazy(() => import('./features/roleplay/Roleplay'))
 const HanVietTable = lazy(() => import('./features/hanviet/HanVietTable'))
 const Radicals = lazy(() => import('./features/radicals/Radicals'))
 const Toeic = lazy(() => import('./features/toeic/Toeic'))
+const ToeicSpeaking = lazy(() => import('./features/toeic/ToeicSpeaking'))
+const ToeicWriting = lazy(() => import('./features/toeic/ToeicWriting'))
+const Ielts = lazy(() => import('./features/ielts/Ielts'))
+const Patterns = lazy(() => import('./features/patterns/Patterns'))
 const Hsk = lazy(() => import('./features/hsk/Hsk'))
 const Challenge = lazy(() => import('./features/challenge/Challenge'))
 const Numbers = lazy(() => import('./features/numbers/Numbers'))
 const Placement = lazy(() => import('./features/placement/Placement'))
 const Exam = lazy(() => import('./features/exam/Exam'))
+const LearningPath = lazy(() => import('./features/path/LearningPath'))
 const Browse = lazy(() => import('./features/browse/Browse'))
 const Stats = lazy(() => import('./features/stats/Stats'))
 const SettingsPage = lazy(() => import('./features/settings/SettingsPage'))
@@ -93,6 +109,7 @@ export default function App() {
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route element={<Layout />}>
               <Route path="/home" element={<Dashboard />} />
+              <Route path="/path" element={<LearningPath />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/placement" element={<Placement />} />
               <Route path="/review" element={<Review />} />
@@ -101,12 +118,17 @@ export default function App() {
               <Route path="/practice" element={<Practice />} />
               <Route path="/games/match" element={<MatchGame />} />
               <Route path="/games/order" element={<OrderGame />} />
+              <Route path="/games/blitz" element={<BlitzGame />} />
               <Route path="/listen" element={<Listen />} />
               <Route path="/sounds" element={<Sounds />} />
               <Route path="/phrases" element={<Phrases />} />
               <Route path="/topics" element={<Topics />} />
               <Route path="/exam" element={<Exam />} />
               <Route path="/toeic" element={<Toeic />} />
+              <Route path="/toeic-speaking" element={<ToeicSpeaking />} />
+              <Route path="/toeic-writing" element={<ToeicWriting />} />
+              <Route path="/ielts" element={<Ielts />} />
+              <Route path="/patterns" element={<Patterns />} />
               <Route path="/hsk" element={<Hsk />} />
               <Route path="/challenge" element={<Challenge />} />
               <Route path="/grammar" element={<Grammar />} />
@@ -116,6 +138,16 @@ export default function App() {
               <Route path="/hangul" element={<Hangul />} />
               <Route path="/pinyin" element={<Pinyin />} />
               <Route path="/measure-words" element={<MeasureWords />} />
+              <Route path="/confusables" element={<Confusables />} />
+              <Route path="/chengyu" element={<Chengyu />} />
+              <Route path="/tongue-twisters" element={<TongueTwisters />} />
+              <Route path="/hskk" element={<Hskk />} />
+              <Route path="/slang" element={<NetSlang />} />
+              <Route path="/han-viet-traps" element={<HanVietTraps />} />
+              <Route path="/phrasal-verbs" element={<PhrasalVerbs />} />
+              <Route path="/idioms" element={<Idioms />} />
+              <Route path="/collocations" element={<Collocations />} />
+              <Route path="/roleplay" element={<Roleplay />} />
               <Route path="/han-viet" element={<HanVietTable />} />
               <Route path="/radicals" element={<Radicals />} />
               <Route path="/numbers" element={<Numbers />} />

@@ -197,3 +197,29 @@ Hai điểm người mới gặp ngay ở trình độ TOPIK I, bổ sung vào 1
 
 **Dev**: thêm vào `UNITS` trong `scripts/build_grammar_ko.py`, chạy lại script để ghi
 `public/data/grammar/ko.json`.
+
+## Ngữ pháp tiếng Anh B1 (08/11/2026)
+
+Lộ trình theo cấp (`docs/design/learning-path.md`) cần ngữ pháp sau A2 cho cấp 3–4. Thêm 6 bài vào
+`public/data/grammar/en.json`, cùng khuôn với các bài cũ (giải thích tiếng Việt, mẫu câu, 5 ví dụ, 3
+lỗi hay gặp, 6 câu chọn + 3 câu xếp):
+
+- A2: `present-perfect` (phân biệt với quá khứ đơn, for / since), `past-continuous` (việc dài bị việc
+  ngắn xen vào, while).
+- B1: `passive` (bị động ở các thì và với must, rất hay gặp trong TOEIC, IELTS), `conditionals` (loại
+  0, 1, 2 và unless), `relative-clauses` (who, which, that, where, whose), `reported-speech` (lùi thì,
+  say / tell, câu hỏi tường thuật).
+
+## Ngữ pháp tiếng Anh B2 (08/11/2026)
+
+Lộ trình cấp 6 (IELTS) cần câu phức: giám khảo chấm "Grammatical range" muốn thấy nhiều kiểu câu chứ
+không chỉ đúng. Thêm 6 bài (dữ liệu 1.2.0), cùng khuôn với các bài cũ (giải thích, khung, 5 ví dụ, 3 lỗi
+hay gặp, 6 câu chọn + 3 câu xếp):
+
+- B1: `gerund-infinitive` (enjoy doing / want to do, sau giới từ dùng V-ing, stop / remember đổi nghĩa).
+  Thêm vào bước "Ngữ pháp B1" của cấp 4.
+- B2: `third-conditional` (loại 3, hỗn hợp, đảo Had I known), `wish` (wish / if only cho hiện tại, quá khứ,
+  wish + would; khác hope), `modal-perfect` (should / must / can't / might have + V3), `participle-clauses`
+  (V-ing, V3, Having + V3, rút gọn mệnh đề quan hệ; hai vế cùng chủ ngữ), `inversion` (Never have I…, Not
+  only did…, Only after… did…). Thành bước "Ngữ pháp B2" của cấp 6.
+- Câu ví dụ được `scripts/generate_text_audio.py` thu giọng như các bài khác.

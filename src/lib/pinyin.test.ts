@@ -1,6 +1,9 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import { mulberry32 } from './sky'
 import {
+  SANDHI_DRILL,
+  sandhiQuiz,
   INITIALS,
   SANDHI,
   TONES,
@@ -171,5 +174,36 @@ describe('tone pairs', () => {
       ['2-3', 2, 2],
       ['3-2', 1, 2],
     ])
+  })
+})
+
+describe('tone changes in speech', () => {
+  it('follows the rules: 一 and 不 by the next tone, the first of two third tones rises', () => {
+    for (const d of SANDHI_DRILL) {
+      expect(d.wrong.includes(d.said), d.zh).toBe(false)
+      expect(new Set([d.said, ...d.wrong]).size, d.zh).toBe(d.wrong.length + 1)
+      // toneOf reads the first tone mark, so the first syllable's tone.
+      if (d.rule === 'three') expect(toneOf(d.said), d.zh).toBe(2)
+      const lead = [...d.zh][0]
+      if (lead === '一' || lead === '不') {
+        const next = d.said.slice(2).trim()
+        expect(toneOf(d.said.slice(0, 2)), d.zh).toBe(toneOf(next) === 4 ? 2 : 4)
+      } else if (d.rule === 'yi') {
+        // 第一, 十一: 一 at the end keeps its first tone.
+        expect(d.said.endsWith('yī'), d.zh).toBe(true)
+      }
+    }
+  })
+
+  it('makes a round over all three rules with the spoken reading among the options', () => {
+    const qs = sandhiQuiz(10, (vi) => vi, mulberry32(7))
+    expect(qs).toHaveLength(10)
+    expect(new Set(qs.map((q) => q.prompt)).size).toBe(10)
+    const rules = new Set(qs.map((q) => SANDHI_DRILL.find((d) => d.zh === q.prompt)!.rule))
+    expect(rules.size).toBe(3)
+    for (const q of qs) {
+      if (q.kind !== 'sandhi') throw new Error(q.kind)
+      expect(q.options[q.answer]).toBe(SANDHI_DRILL.find((d) => d.zh === q.prompt)!.said)
+    }
   })
 })

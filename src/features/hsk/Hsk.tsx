@@ -38,12 +38,20 @@ import HskReadingRound from './HskReadingRound'
 import { readingRound, type ShuffledReading } from '@/lib/hskReadings'
 import { answerRound, type AnswerQuestion } from '@/lib/hskAnswers'
 import { dialogueRound, pictureDialogueRound, type ShuffledDialogue } from '@/lib/hskDialogues'
+import { loadHskBank } from '@/lib/hskBank'
+import { hskMiniPlan, type HskMiniStep, type HskSection } from '@/lib/hskMiniTest'
+import { usePracticeBank } from '@/hooks/usePracticeBank'
 
 // "Luyện thi HSK" (docs/design/toeic.md, giai đoạn B): for HSK 1–3, the
 // question types of the test cut from the level's own words, and a mini test
-// with a rough score on the real scale.
+// with a rough score on the real scale. The drills cut from the pack work at
+// once; the hand-written dialogues, pairs and passages (public/data/hsk/zh.json)
+// wait for their file.
 
 const ROUND = 10
+
+/** Drills whose questions come from public/data/hsk/zh.json, not from the pack. */
+const FROM_BANK: readonly Drill[] = ['match', 'talk', 'answer', 'read']
 
 type Drill =
   | 'judge'
@@ -73,15 +81,8 @@ type Run =
   | { kind: 'mini'; step: number; steps: MiniStep[]; scores: SectionScore[] }
   | null
 
-type Section = 'listen' | 'read' | 'write'
-
-/** A part of the mini test; HSK 3 writing has two (完成句子, then 写汉字). */
-type MiniStep =
-  | { section: Section; kind: 'choice'; questions: HskChoice[] }
-  | { section: 'write'; kind: 'order'; questions: HskOrder[] }
-  | { section: 'listen'; kind: 'talk'; dialogues: ShuffledDialogue[] }
-  | { section: 'read'; kind: 'answer'; questions: AnswerQuestion[] }
-  | { section: 'read'; kind: 'read'; questions: ShuffledReading[] }
+type Section = HskSection
+type MiniStep = HskMiniStep
 
 /** Right answers per section, in the order of the test. */
 type SectionScore = { section: Section; correct: number; total: number }
@@ -98,6 +99,7 @@ export default function Hsk() {
   const [result, setResult] = useState<{ scores: SectionScore[]; xp: number } | null>(null)
   const exam = examFor('zh', level)!
   const best = useExam((s) => s.records[`${level}-mini`])
+  const { bank, error: bankError, retry: retryBank } = usePracticeBank(loadHskBank)
 
   const words = useMemo(() => levelWords(level, pack.words), [level, pack.words])
   /** HSK 1–2 words: the pictures of the HSK 2 picture dialogues. */
@@ -252,16 +254,24 @@ export default function Hsk() {
 
   const startDrill = (drill: Drill) => {
     const n = (run && 'n' in run ? run.n : 0) + 1
+    if (FROM_BANK.includes(drill) && !bank) return
     if (drill === 'order')
       return setRun({ kind: 'order', n, questions: orderQuestions(level, pack.words, ROUND) })
-    if (drill === 'read') return setRun({ kind: 'read', n, questions: readingRound(5) })
+    if (drill === 'read')
+      return setRun({ kind: 'read', n, questions: readingRound(bank!.readings, 5) })
     if (drill === 'answer')
-      return setRun({ kind: 'answer', n, questions: answerRound(level, ROUND) })
+      return setRun({ kind: 'answer', n, questions: answerRound(bank!.pairs, level, ROUND) })
     if (drill === 'match')
-      return setRun({ kind: 'talk', drill, n, dialogues: pictureDialogueRound(lowWords, 5) })
+      return setRun({
+        kind: 'talk',
+        drill,
+        n,
+        dialogues: pictureDialogueRound(bank!.pictureDialogues, lowWords, 5),
+      })
     if (drill === 'talk') {
       // Shown for HSK 2 and 3 only (ALL_DRILLS levels).
-      if (level !== 'hsk1') setRun({ kind: 'talk', drill, n, dialogues: dialogueRound(level, 5) })
+      if (level !== 'hsk1')
+        setRun({ kind: 'talk', drill, n, dialogues: dialogueRound(bank!.dialogues, level, 5) })
       return
     }
     const make = {
@@ -277,74 +287,9 @@ export default function Hsk() {
   }
 
   const startMini = () => {
+    if (!bank) return
     setResult(null)
-    // HSK 1–2 listening opens with right-or-wrong pictures; HSK 3 has none.
-    const listen: MiniStep[] =
-      HSK_SCALE[level].sections === 3
-        ? [
-            { section: 'listen', kind: 'talk', dialogues: dialogueRound('hsk3', 5) },
-            { section: 'listen', kind: 'choice', questions: listenQuestions(level, pack.words, 5) },
-          ]
-        : level === 'hsk1'
-          ? [
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 4),
-              },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: pictureQuestions(level, pack.words, 3),
-              },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: listenQuestions(level, pack.words, 3),
-              },
-            ]
-          : [
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: judgeQuestions(level, pack.words, 3),
-              },
-              { section: 'listen', kind: 'talk', dialogues: pictureDialogueRound(lowWords, 2) },
-              { section: 'listen', kind: 'talk', dialogues: dialogueRound('hsk2', 3) },
-              {
-                section: 'listen',
-                kind: 'choice',
-                questions: listenQuestions(level, pack.words, 2),
-              },
-            ]
-    // Reading too: HSK 1–2 open with pictures, HSK 3 has none.
-    const read: MiniStep[] =
-      HSK_SCALE[level].sections === 3
-        ? [
-            { section: 'read', kind: 'answer', questions: answerRound('hsk3', 3) },
-            { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
-            { section: 'read', kind: 'read', questions: readingRound(4) },
-          ]
-        : level === 'hsk1'
-          ? [
-              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
-              { section: 'read', kind: 'choice', questions: seeQuestions(level, pack.words, 2) },
-              { section: 'read', kind: 'answer', questions: answerRound('hsk1', 2) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 2) },
-            ]
-          : [
-              { section: 'read', kind: 'choice', questions: lookQuestions(level, pack.words, 4) },
-              { section: 'read', kind: 'answer', questions: answerRound('hsk2', 3) },
-              { section: 'read', kind: 'choice', questions: fillQuestions(level, pack.words, 3) },
-            ]
-    const steps: MiniStep[] = [...listen, ...read]
-    // HSK 3 writing: five sentences to build, five characters to write.
-    if (HSK_SCALE[level].sections === 3)
-      steps.push(
-        { section: 'write', kind: 'order', questions: orderQuestions(level, pack.words, 5) },
-        { section: 'write', kind: 'choice', questions: charQuestions(level, pack.words, 5) }
-      )
-    setRun({ kind: 'mini', step: 0, steps, scores: [] })
+    setRun({ kind: 'mini', step: 0, steps: hskMiniPlan(level, pack.words, bank), scores: [] })
   }
 
   const exit = () => setRun(null)
@@ -582,6 +527,17 @@ export default function Hsk() {
         <h2 id="hsk-drills" className="text-lg font-bold">
           {t('Luyện theo dạng câu', 'Practise by question type')}
         </h2>
+        {bankError && (
+          <p role="alert" className="card flex flex-wrap items-center gap-3 p-4 text-sm">
+            {t(
+              'Chưa tải được bài hội thoại và bài đọc. Kiểm tra mạng rồi thử lại.',
+              "Couldn't load the dialogues and passages. Check your connection and try again."
+            )}
+            <button type="button" className="btn-secondary h-9 text-sm" onClick={retryBank}>
+              {t('Thử lại', 'Try again')}
+            </button>
+          </p>
+        )}
         {weakest && weakestDrill && (
           <p className="text-sm text-amber-700 dark:text-amber-300">
             {t(
@@ -600,6 +556,7 @@ export default function Hsk() {
               <button
                 type="button"
                 className="btn-primary h-10 text-sm"
+                disabled={FROM_BANK.includes(d.id) && !bank}
                 onClick={() => startDrill(d.id)}
               >
                 {t(`Luyện ${d.count ?? ROUND} câu`, `Practise ${d.count ?? ROUND} questions`)}
@@ -659,6 +616,7 @@ export default function Hsk() {
         <button
           type="button"
           className="btn-primary h-10 w-full text-sm sm:w-auto"
+          disabled={!bank}
           onClick={startMini}
         >
           {result ? t('Làm bài khác', 'Another test') : t('Làm bài thi nhỏ', 'Take the mini test')}

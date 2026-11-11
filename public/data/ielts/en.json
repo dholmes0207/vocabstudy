@@ -1,0 +1,3136 @@
+{
+  "version": "1.16.0",
+  "reading": [
+    {
+      "id": "city-farms",
+      "emoji": "🌿",
+      "title": [
+        "Nông trại trên mái nhà",
+        "Farms on city rooftops"
+      ],
+      "passage": [
+        "In many large cities, empty rooftops are being turned into small farms. Supporters argue that growing food close to where people live reduces the distance that vegetables travel, which can lower transport costs and keep produce fresher.",
+        "Rooftop farms also help to cool buildings. A layer of soil and plants absorbs heat during the day, so the floors below need less air conditioning in summer. Some studies have found that this effect is strongest on low buildings with flat roofs.",
+        "However, rooftop farming is not cheap. Roofs often need to be strengthened before they can carry the weight of wet soil, and water must be pumped up from the ground. For this reason, most rooftop farms grow high-value crops such as herbs and salad leaves rather than rice or potatoes."
+      ],
+      "questions": [
+        {
+          "statement": "Rooftop farms can reduce how far vegetables are transported.",
+          "answer": "T",
+          "why": "Đoạn 1: \"reduces the distance that vegetables travel\" — rút ngắn quãng đường rau được chở đi."
+        },
+        {
+          "statement": "Rooftop farms make buildings warmer in summer.",
+          "answer": "F",
+          "why": "Đoạn 2 nói ngược lại: đất và cây hấp thụ nhiệt nên tầng dưới mát hơn, cần ít điều hoà hơn."
+        },
+        {
+          "statement": "Most rooftop farms are owned by restaurants.",
+          "answer": "NG",
+          "why": "Bài không nhắc ai là chủ các nông trại trên mái. Không có thông tin → Not Given."
+        },
+        {
+          "statement": "Roofs sometimes have to be made stronger before farming begins.",
+          "answer": "T",
+          "why": "Đoạn 3: \"Roofs often need to be strengthened\" — thường phải gia cố mái."
+        },
+        {
+          "statement": "Rice is one of the most common crops on rooftop farms.",
+          "answer": "F",
+          "why": "Đoạn 3: phần lớn trồng rau thơm, xà lách \"rather than rice or potatoes\" — không trồng lúa."
+        }
+      ],
+      "headings": {
+        "options": [
+          "The high cost of farming on roofs",
+          "Why city children should learn to farm",
+          "Food grown nearer to the people who eat it",
+          "Which crops grow fastest on rooftops",
+          "A natural way to keep buildings cool"
+        ],
+        "answers": [
+          2,
+          4,
+          0
+        ],
+        "why": [
+          "Đoạn 1 nói trồng rau gần nơi người ở giúp rau đi quãng đường ngắn hơn, tươi hơn → \"nearer to the people who eat it\".",
+          "Đoạn 2: đất và cây hấp thụ nhiệt, tầng dưới cần ít điều hoà → \"keep buildings cool\".",
+          "Đoạn 3 mở bằng \"not cheap\": gia cố mái, bơm nước → \"high cost\". Câu về rau thơm chỉ là hệ quả, không phải ý chính nên tiêu đề \"crops grow fastest\" là bẫy."
+        ]
+      },
+      "summary": {
+        "text": "Growing vegetables on city rooftops shortens the {0} that food travels. The soil and plants also take in {1}, so the floors below need less air conditioning. However, roofs often have to be {2} first, which is why most rooftop farmers choose {3} crops.",
+        "box": [
+          "water",
+          "distance",
+          "cheap",
+          "valuable",
+          "heat",
+          "strengthened"
+        ],
+        "answers": [
+          1,
+          4,
+          5,
+          3
+        ],
+        "why": [
+          "Đoạn 1: \"reduces the distance that vegetables travel\".",
+          "Đoạn 2: \"absorbs heat\" = take in heat. \"water\" là bẫy: nước được bơm lên ở đoạn 3, không liên quan điều hoà.",
+          "Đoạn 3: \"need to be strengthened\".",
+          "Đoạn 3: \"high-value crops\" = valuable. \"cheap\" là bẫy vì bài nói \"not cheap\" về chi phí làm nông trại."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "a reason why rooftop farms rarely grow staple foods",
+          "para": 2
+        },
+        {
+          "statement": "an effect on the temperature inside buildings",
+          "para": 1
+        },
+        {
+          "statement": "a benefit of reducing how far food is carried",
+          "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Growing food near where people live can keep vegetables ___.",
+          "answer": "fresher",
+          "why": "Đoạn A: \"keep produce fresher\". Đề đổi \"produce\" thành \"vegetables\", từ cần điền giữ nguyên."
+        },
+        {
+          "text": "The cooling effect of rooftop farms is greatest on low buildings with ___.",
+          "answer": "flat roofs",
+          "why": "Đoạn B: \"strongest on low buildings with flat roofs\". \"greatest\" là cách nói khác của \"strongest\"."
+        },
+        {
+          "text": "Before farming starts, a roof may need extra strength to carry the weight of ___.",
+          "answer": "wet soil",
+          "accept": [
+            "soil"
+          ],
+          "why": "Đoạn C: \"carry the weight of wet soil\". Chỉ \"soil\" thì thiếu ý: đất ướt mới nặng."
+        },
+        {
+          "text": "Instead of rice or potatoes, most rooftop farms grow herbs and ___.",
+          "answer": "salad leaves",
+          "why": "Đoạn C: \"high-value crops such as herbs and salad leaves rather than rice or potatoes\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO problems of rooftop farming does the writer mention?",
+        "options": [
+          "the cost of making roofs strong enough",
+          "complaints from people living nearby",
+          "the need to pump water up from the ground",
+          "a shortage of trained farmers",
+          "damage caused by birds"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn C: mái \"need to be strengthened\" (A) và \"water must be pumped up from the ground\" (C). Bài không nhắc hàng xóm, người trồng hay chim."
+      }
+    },
+    {
+      "id": "sleep-memory",
+      "emoji": "😴",
+      "title": [
+        "Giấc ngủ và trí nhớ",
+        "Sleep and memory"
+      ],
+      "passage": [
+        "Scientists have long suspected that sleep plays a role in learning. In one well-known type of experiment, volunteers learn a list of new words in the evening. Half of them then sleep normally, while the other half stay awake all night.",
+        "When both groups are tested the next day, those who slept usually remember more words. Researchers believe that during deep sleep, the brain replays the day's experiences and moves important information into long-term memory.",
+        "Naps can help too, but only if they are long enough to include deep sleep. A short nap of ten minutes may make people feel more alert, yet it seems to do little for memory. Even so, experts warn that sleep cannot replace practice: students still need to review what they have learned."
+      ],
+      "questions": [
+        {
+          "statement": "In the experiments, all volunteers stayed awake for one night.",
+          "answer": "F",
+          "why": "Đoạn 1: chỉ một nửa thức trắng, nửa còn lại ngủ bình thường."
+        },
+        {
+          "statement": "Volunteers who slept generally remembered more words.",
+          "answer": "T",
+          "why": "Đoạn 2: \"those who slept usually remember more words\"."
+        },
+        {
+          "statement": "The volunteers were all university students.",
+          "answer": "NG",
+          "why": "Bài chỉ nói \"volunteers\", không nói họ là ai. → Not Given."
+        },
+        {
+          "statement": "A ten-minute nap greatly improves memory.",
+          "answer": "F",
+          "why": "Đoạn 3: ngủ trưa 10 phút giúp tỉnh táo nhưng \"does little for memory\"."
+        },
+        {
+          "statement": "According to experts, sleeping well means students do not need to review.",
+          "answer": "F",
+          "why": "Đoạn 3: \"sleep cannot replace practice\" — vẫn phải ôn lại."
+        }
+      ],
+      "headings": {
+        "options": [
+          "How sleep helps the brain store information",
+          "Why people need less sleep as they age",
+          "The limits of short naps",
+          "An experiment comparing sleepers and non-sleepers",
+          "Dreams and their meaning"
+        ],
+        "answers": [
+          3,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1 mô tả thí nghiệm: một nửa ngủ, một nửa thức → \"an experiment comparing\".",
+          "Đoạn 2 giải thích vì sao người ngủ nhớ hơn: não \"replays\" và chuyển vào trí nhớ dài hạn.",
+          "Đoạn 3: ngủ trưa chỉ giúp khi đủ dài, 10 phút gần như không giúp trí nhớ → \"limits of short naps\". Câu cuối về ôn tập chỉ là ý phụ."
+        ]
+      },
+      "summary": {
+        "text": "In the experiment, volunteers who {0} after learning a list of words usually remembered more of them. During {1} sleep, the brain seems to move important information into long-term memory. A ten-minute nap may make people more {2}, but it does little for memory, and sleep can never replace {3}.",
+        "box": [
+          "alert",
+          "practice",
+          "deep",
+          "light",
+          "tired",
+          "slept"
+        ],
+        "answers": [
+          5,
+          2,
+          0,
+          1
+        ],
+        "why": [
+          "Đoạn 2: \"those who slept usually remember more words\".",
+          "Đoạn 2: \"during deep sleep\". \"light\" không có trong bài.",
+          "Đoạn 3: \"feel more alert\".",
+          "Đoạn 3: \"sleep cannot replace practice\"."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "the results of a test given the following day",
+          "para": 1
+        },
+        {
+          "statement": "a warning that rest is not enough on its own",
+          "para": 2
+        },
+        {
+          "statement": "a description of how a typical experiment is set up",
+          "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "In a typical experiment, volunteers learn a list of new words in the ___.",
+          "answer": "evening",
+          "why": "Đoạn A: \"learn a list of new words in the evening\"."
+        },
+        {
+          "text": "Researchers think that the brain moves important information into long-term memory during ___.",
+          "answer": "deep sleep",
+          "why": "Đoạn B: \"during deep sleep, the brain replays… and moves important information into long-term memory\"."
+        },
+        {
+          "text": "A ten-minute nap may make people feel more ___, but it does little for memory.",
+          "answer": "alert",
+          "why": "Đoạn C: \"A short nap of ten minutes may make people feel more alert\"."
+        },
+        {
+          "text": "According to experts, sleep cannot take the place of ___.",
+          "answer": "practice",
+          "accept": [
+            "practise"
+          ],
+          "why": "Đoạn C: \"sleep cannot replace practice\". \"take the place of\" = \"replace\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO statements about naps are made in the passage?",
+        "options": [
+          "naps of any length improve memory",
+          "a nap only helps memory if it includes deep sleep",
+          "a ten-minute nap can make people more alert",
+          "naps are better than a full night of sleep",
+          "children need more naps than adults"
+        ],
+        "answers": [
+          1,
+          2
+        ],
+        "why": "Đoạn C: \"only if they are long enough to include deep sleep\" (B) và \"a short nap of ten minutes may make people feel more alert\" (C). A trái với bài: ngủ ngắn \"does little for memory\"."
+      }
+    },
+    {
+      "id": "coral-reefs",
+      "emoji": "🪸",
+      "title": [
+        "Rạn san hô",
+        "Coral reefs"
+      ],
+      "passage": [
+        "Coral reefs cover less than one percent of the ocean floor, but they are home to about a quarter of all marine species. Fish use reefs for food and shelter, and many young fish grow up among the corals before moving to the open sea.",
+        "Reefs are also valuable to people. They protect coastlines by breaking up large waves during storms, and they attract tourists who come to dive and snorkel.",
+        "When the water becomes too warm, corals push out the tiny algae that live inside them and give them their colour. This process, known as bleaching, leaves the coral white. Bleached coral is not dead, but if high temperatures continue for weeks, it may die."
+      ],
+      "questions": [
+        {
+          "statement": "Coral reefs cover a large part of the ocean floor.",
+          "answer": "F",
+          "why": "Đoạn 1: \"less than one percent\" — dưới 1%, không phải phần lớn."
+        },
+        {
+          "statement": "Some young fish live on reefs before moving to deeper water.",
+          "answer": "T",
+          "why": "Đoạn 1: nhiều cá con lớn lên giữa san hô \"before moving to the open sea\"."
+        },
+        {
+          "statement": "Reefs can reduce the damage caused by storm waves.",
+          "answer": "T",
+          "why": "Đoạn 2: rạn san hô \"protect coastlines by breaking up large waves during storms\"."
+        },
+        {
+          "statement": "Most tourists who visit reefs come from Europe.",
+          "answer": "NG",
+          "why": "Bài chỉ nói có du khách tới lặn, không nói họ từ đâu."
+        },
+        {
+          "statement": "Bleached coral is always dead.",
+          "answer": "F",
+          "why": "Đoạn 3: \"Bleached coral is not dead\" — chỉ chết nếu nóng kéo dài nhiều tuần."
+        }
+      ],
+      "headings": {
+        "options": [
+          "Reefs as a home for sea life",
+          "How divers damage reefs",
+          "What happens when corals lose their colour",
+          "The benefits reefs bring to people",
+          "Where the largest reefs are found"
+        ],
+        "answers": [
+          0,
+          3,
+          2
+        ],
+        "why": [
+          "Đoạn 1: một phần tư loài sinh vật biển sống ở rạn, cá tìm thức ăn và chỗ trú → \"home for sea life\".",
+          "Đoạn 2 bắt đầu \"also valuable to people\": chắn sóng, thu hút du khách. Có nhắc thợ lặn nhưng không nói họ làm hại → tiêu đề \"divers damage\" là bẫy.",
+          "Đoạn 3 nói về hiện tượng tẩy trắng (bleaching): san hô đẩy tảo ra và mất màu."
+        ]
+      },
+      "summary": {
+        "text": "Although reefs cover less than one percent of the ocean floor, about a {0} of all marine species live on them. Reefs also protect {1} by breaking up large waves. When the water becomes too {2}, corals push out their algae and turn white, and if this lasts for {3}, they may die.",
+        "box": [
+          "warm",
+          "cold",
+          "weeks",
+          "quarter",
+          "coastlines",
+          "half"
+        ],
+        "answers": [
+          3,
+          4,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1: \"about a quarter of all marine species\".",
+          "Đoạn 2: \"They protect coastlines\".",
+          "Đoạn 3: \"too warm\". \"cold\" là bẫy trái nghĩa.",
+          "Đoạn 3: \"if high temperatures continue for weeks\"."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "how reefs reduce damage from storms",
+          "para": 1
+        },
+        {
+          "statement": "the reason coral can lose its colour",
+          "para": 2
+        },
+        {
+          "statement": "the share of sea life that depends on reefs",
+          "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Although reefs cover less than one percent of the ocean floor, about a ___ of all marine species live there.",
+          "answer": "quarter",
+          "why": "Đoạn A: \"home to about a quarter of all marine species\"."
+        },
+        {
+          "text": "Many young fish grow up among the corals before they move to the ___.",
+          "answer": "open sea",
+          "why": "Đoạn A: \"before moving to the open sea\"."
+        },
+        {
+          "text": "During storms, reefs protect coastlines by breaking up large ___.",
+          "answer": "waves",
+          "why": "Đoạn B: \"breaking up large waves during storms\"."
+        },
+        {
+          "text": "Bleaching happens when corals push out the tiny ___ that live inside them.",
+          "answer": "algae",
+          "why": "Đoạn C: \"corals push out the tiny algae that live inside them\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO ways in which reefs are useful to people are mentioned?",
+        "options": [
+          "they protect coastlines from storm waves",
+          "they are a source of new medicines",
+          "they bring tourists to the area",
+          "they produce much of the oxygen we breathe",
+          "they supply materials for building"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn B: \"protect coastlines by breaking up large waves\" (A) và \"attract tourists who come to dive\" (C). Thuốc, oxy, vật liệu xây dựng không có trong bài."
+      }
+    },
+    {
+      "id": "remote-work",
+      "emoji": "🏠",
+      "title": [
+        "Làm việc từ xa",
+        "Working from home"
+      ],
+      "passage": [
+        "Since 2020, millions of office workers have spent at least part of the week working from home. Many say they save time and money because they no longer travel to work every day.",
+        "Companies have mixed views. Some report that staff complete the same amount of work at home as in the office, and that they can rent smaller offices. Others worry that new employees learn more slowly when they cannot watch experienced colleagues.",
+        "As a result, a common arrangement today is the 'hybrid' model, in which employees spend two or three days in the office and the rest at home. Managers often choose the office days so that whole teams are present at the same time."
+      ],
+      "questions": [
+        {
+          "statement": "Workers who stay at home say they spend less time travelling.",
+          "answer": "T",
+          "why": "Đoạn 1: họ tiết kiệm thời gian vì \"no longer travel to work every day\"."
+        },
+        {
+          "statement": "All companies agree that working from home is better.",
+          "answer": "F",
+          "why": "Đoạn 2: \"Companies have mixed views\" — có công ty lo ngại, không phải tất cả đồng ý."
+        },
+        {
+          "statement": "Some companies have been able to rent smaller offices.",
+          "answer": "T",
+          "why": "Đoạn 2: \"they can rent smaller offices\"."
+        },
+        {
+          "statement": "Hybrid workers earn more than people who work only in the office.",
+          "answer": "NG",
+          "why": "Bài không nói gì về lương. → Not Given."
+        },
+        {
+          "statement": "In the hybrid model, employees usually decide their own office days.",
+          "answer": "F",
+          "why": "Đoạn 3: thường là quản lý chọn ngày lên văn phòng (\"Managers often choose\")."
+        }
+      ],
+      "headings": {
+        "options": [
+          "Employers' different opinions",
+          "The rise in house prices outside cities",
+          "A popular compromise",
+          "Workers who save time and money at home",
+          "Technology that makes meetings easier"
+        ],
+        "answers": [
+          3,
+          0,
+          2
+        ],
+        "why": [
+          "Đoạn 1: người làm ở nhà nói tiết kiệm thời gian và tiền vì không phải đi làm.",
+          "Đoạn 2 mở bằng \"Companies have mixed views\": có công ty hài lòng, có công ty lo → \"different opinions\".",
+          "Đoạn 3: mô hình \"hybrid\", vài ngày ở văn phòng, vài ngày ở nhà → \"compromise\" (giải pháp dung hoà)."
+        ]
+      },
+      "summary": {
+        "text": "Many people who work from home say they save time and {0} because they no longer travel every day. Some companies can now rent {1} offices, while others worry that new employees learn more {2}. A common solution is the {3} model, with two or three office days a week.",
+        "box": [
+          "slowly",
+          "quickly",
+          "larger",
+          "smaller",
+          "money",
+          "hybrid"
+        ],
+        "answers": [
+          4,
+          3,
+          0,
+          5
+        ],
+        "why": [
+          "Đoạn 1: \"save time and money\".",
+          "Đoạn 2: \"rent smaller offices\".",
+          "Đoạn 2: \"learn more slowly\". \"quickly\" là bẫy trái nghĩa.",
+          "Đoạn 3: \"the 'hybrid' model\"."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "a concern about how new staff learn",
+          "para": 1
+        },
+        {
+          "statement": "a working pattern that combines home and office",
+          "para": 2
+        },
+        {
+          "statement": "savings mentioned by employees",
+          "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Many people who work from home save time and money because they no longer ___ to work every day.",
+          "answer": "travel",
+          "why": "Đoạn A: \"they no longer travel to work every day\"."
+        },
+        {
+          "text": "Some companies find that, with staff at home, they can rent ___ offices.",
+          "answer": "smaller",
+          "why": "Đoạn B: \"they can rent smaller offices\"."
+        },
+        {
+          "text": "Some firms worry that new employees learn more slowly when they cannot watch ___ colleagues.",
+          "answer": "experienced",
+          "why": "Đoạn B: \"when they cannot watch experienced colleagues\"."
+        },
+        {
+          "text": "In the hybrid model, managers often choose the office days so that whole ___ are there at the same time.",
+          "answer": "teams",
+          "why": "Đoạn C: \"so that whole teams are present at the same time\". \"there\" thay cho \"present\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO advantages of working from home are mentioned?",
+        "options": [
+          "employees save time and money on travel",
+          "staff take fewer days off sick",
+          "companies can rent smaller offices",
+          "new employees learn more quickly",
+          "teams communicate better"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn A: \"save time and money because they no longer travel\" (A); đoạn B: \"rent smaller offices\" (C). D trái với bài: nhân viên mới học chậm hơn."
+      }
+    },
+    {
+      "id": "history-of-tea",
+      "emoji": "🍵",
+      "title": [
+        "Lịch sử của trà",
+        "A short history of tea"
+      ],
+      "passage": [
+        "Tea was drunk in China for many centuries before it became popular in other parts of the world. At first it was valued mainly as a medicine, and only later did it become an everyday drink.",
+        "In the seventeenth century, traders brought tea to Europe by sea. Because the journey was long and the drink was rare, it was expensive, and for many years only wealthy families could afford it.",
+        "Today tea is one of the most widely consumed drinks on Earth, second only to water by most estimates. The way it is prepared differs greatly: some people add milk and sugar, while others prefer it plain or with spices."
+      ],
+      "questions": [
+        {
+          "statement": "Tea was first used mainly as a medicine in China.",
+          "answer": "T",
+          "why": "Đoạn 1: \"valued mainly as a medicine\" lúc đầu."
+        },
+        {
+          "statement": "Tea reached Europe in the seventeenth century by land.",
+          "answer": "F",
+          "why": "Đoạn 2: thương nhân mang trà tới châu Âu \"by sea\" — bằng đường biển."
+        },
+        {
+          "statement": "When tea first arrived in Europe, it was cheap.",
+          "answer": "F",
+          "why": "Đoạn 2: \"it was expensive\", chỉ nhà giàu mua nổi."
+        },
+        {
+          "statement": "Green tea is healthier than black tea.",
+          "answer": "NG",
+          "why": "Bài không so sánh trà xanh với trà đen."
+        },
+        {
+          "statement": "Most estimates say only water is drunk more widely than tea.",
+          "answer": "T",
+          "why": "Đoạn 3: \"second only to water by most estimates\"."
+        }
+      ],
+      "headings": {
+        "options": [
+          "A drink for the rich",
+          "How tea is grown",
+          "From medicine to daily drink",
+          "Tea and good health today",
+          "A global drink, made in many ways"
+        ],
+        "answers": [
+          2,
+          0,
+          4
+        ],
+        "why": [
+          "Đoạn 1: ban đầu trà được coi là thuốc, sau mới thành đồ uống hằng ngày.",
+          "Đoạn 2: trà đắt, chỉ nhà giàu mới mua nổi → \"a drink for the rich\".",
+          "Đoạn 3: trà phổ biến khắp thế giới, chỉ sau nước, mỗi nơi pha một kiểu. Tiêu đề \"good health today\" là bẫy: đoạn 3 không nói về sức khoẻ."
+        ]
+      },
+      "summary": {
+        "text": "In China, tea was valued at first as a {0} and only later became an everyday drink. Traders carried it to Europe by {1}, and because it was rare it was so {2} that only wealthy families could buy it. Today, by most estimates, only {3} is drunk more widely.",
+        "box": [
+          "sea",
+          "expensive",
+          "water",
+          "cheap",
+          "milk",
+          "medicine"
+        ],
+        "answers": [
+          5,
+          0,
+          1,
+          2
+        ],
+        "why": [
+          "Đoạn 1: \"valued mainly as a medicine\".",
+          "Đoạn 2: \"brought tea to Europe by sea\".",
+          "Đoạn 2: \"it was expensive\".",
+          "Đoạn 3: \"second only to water\". \"milk\" là bẫy: sữa chỉ là thứ người ta pha thêm vào trà."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "the original reason people drank tea",
+          "para": 0
+        },
+        {
+          "statement": "different ways of preparing the drink",
+          "para": 2
+        },
+        {
+          "statement": "why tea was once only for the rich",
+          "para": 1
+        }
+      ],
+      "completion": [
+        {
+          "text": "When tea was first drunk in China, it was valued mainly as a ___.",
+          "answer": "medicine",
+          "why": "Đoạn A: \"At first it was valued mainly as a medicine\"."
+        },
+        {
+          "text": "Traders brought tea to Europe by sea in the ___ century.",
+          "answer": "seventeenth",
+          "accept": [
+            "17th"
+          ],
+          "why": "Đoạn B: \"In the seventeenth century\". Viết \"17th\" cũng được tính."
+        },
+        {
+          "text": "Because tea was rare and expensive, for many years only ___ families could afford it.",
+          "answer": "wealthy",
+          "why": "Đoạn B: \"only wealthy families could afford it\". \"rich\" đúng nghĩa nhưng không phải từ trong bài."
+        },
+        {
+          "text": "By most estimates, the only drink consumed more widely than tea is ___.",
+          "answer": "water",
+          "why": "Đoạn C: \"second only to water\". Đề đảo câu: trà đứng thứ hai, vậy thứ nhất là nước."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO facts about tea arriving in Europe are given?",
+        "options": [
+          "it was brought by sea",
+          "it was first sold by doctors",
+          "it was expensive for many years",
+          "it was soon grown in southern Europe",
+          "it was more popular than coffee"
+        ],
+        "answers": [
+          0,
+          2
+        ],
+        "why": "Đoạn B: \"traders brought tea to Europe by sea\" (A) và \"it was expensive… only wealthy families could afford it\" (C). Bài nói trà từng là thuốc ở Trung Quốc, không nói bác sĩ bán ở châu Âu."
+      }
+    },
+    {
+      "id": "plastic-recycling",
+      "emoji": "♻️",
+      "title": [
+        "Tái chế nhựa",
+        "Recycling plastic"
+      ],
+      "passage": [
+        "Only a small share of the plastic produced each year is recycled. One reason is that there are many different types of plastic, and they usually cannot be melted down together. Sorting them by hand is slow and costly.",
+        "Food waste is another problem. A yogurt pot that has not been rinsed can spoil a whole batch of material, so recycling centres often reject dirty containers.",
+        "To reduce waste, several countries now charge a small deposit on plastic bottles, which is returned when the empty bottle is brought back. Where such schemes exist, return rates for bottles are often much higher than for other kinds of packaging."
+      ],
+      "questions": [
+        {
+          "statement": "Most of the plastic made each year is recycled.",
+          "answer": "F",
+          "why": "Đoạn 1: \"Only a small share\" được tái chế."
+        },
+        {
+          "statement": "Different types of plastic are easy to melt down together.",
+          "answer": "F",
+          "why": "Đoạn 1: chúng \"usually cannot be melted down together\"."
+        },
+        {
+          "statement": "Dirty containers can cause problems at recycling centres.",
+          "answer": "T",
+          "why": "Đoạn 2: hộp chưa rửa có thể làm hỏng cả mẻ, nên thường bị từ chối."
+        },
+        {
+          "statement": "The deposit on a bottle is paid back when it is returned.",
+          "answer": "T",
+          "why": "Đoạn 3: tiền đặt cọc \"is returned when the empty bottle is brought back\"."
+        },
+        {
+          "statement": "Deposit schemes have been introduced in every country in Asia.",
+          "answer": "NG",
+          "why": "Bài chỉ nói \"several countries\", không nói về châu Á."
+        }
+      ],
+      "headings": {
+        "options": [
+          "The problem of dirty containers",
+          "Paying people to bring bottles back",
+          "Why plastic is useful",
+          "Too many kinds of plastic",
+          "Banning plastic bags"
+        ],
+        "answers": [
+          3,
+          0,
+          1
+        ],
+        "why": [
+          "Đoạn 1: có nhiều loại nhựa, không nấu chảy chung được, phân loại tay chậm và tốn → \"too many kinds\".",
+          "Đoạn 2: hộp sữa chua chưa rửa làm hỏng cả mẻ, trung tâm từ chối hộp bẩn → \"dirty containers\".",
+          "Đoạn 3: đặt cọc chai, trả lại tiền khi mang chai về → \"paying people to bring bottles back\"."
+        ]
+      },
+      "summary": {
+        "text": "Only a small share of plastic is recycled, partly because different types cannot be {0} together and sorting them by hand is {1}. Containers that still have food in them are often {2} by recycling centres. Where people pay a {3} on bottles and get it back on return, many more bottles come back.",
+        "box": [
+          "slow",
+          "rejected",
+          "melted",
+          "deposit",
+          "tax",
+          "washed"
+        ],
+        "answers": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "why": [
+          "Đoạn 1: \"cannot be melted down together\".",
+          "Đoạn 1: \"Sorting them by hand is slow and costly\".",
+          "Đoạn 2: \"recycling centres often reject dirty containers\". \"washed\" là bẫy: bài nói hộp CHƯA rửa.",
+          "Đoạn 3: \"charge a small deposit… which is returned\". \"tax\" không được trả lại."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "a scheme that gives people money back for returning bottles",
+          "para": 2
+        },
+        {
+          "statement": "why unwashed containers cause problems",
+          "para": 1
+        },
+        {
+          "statement": "the difficulty of separating different plastics",
+          "para": 0
+        }
+      ],
+      "completion": [
+        {
+          "text": "Different types of plastic usually cannot be ___ together.",
+          "answer": "melted down",
+          "accept": [
+            "melted"
+          ],
+          "why": "Đoạn A: \"they usually cannot be melted down together\"."
+        },
+        {
+          "text": "Sorting plastic by hand is slow and ___.",
+          "answer": "costly",
+          "why": "Đoạn A: \"Sorting them by hand is slow and costly\"."
+        },
+        {
+          "text": "A container that has not been rinsed can spoil a whole ___ of material.",
+          "answer": "batch",
+          "why": "Đoạn B: \"can spoil a whole batch of material\". Đề đổi \"yogurt pot\" thành \"container\"."
+        },
+        {
+          "text": "In a deposit scheme, the money is returned when the empty ___ is brought back.",
+          "answer": "bottle",
+          "why": "Đoạn C: \"returned when the empty bottle is brought back\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO reasons why plastic is hard to recycle are given?",
+        "options": [
+          "different types usually cannot be melted together",
+          "dirty containers can spoil a whole batch",
+          "plastic is too light to collect easily",
+          "sorting machines are too expensive",
+          "many people do not know how to recycle"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn A: các loại nhựa \"cannot be melted down together\" (A); đoạn B: hộp chưa rửa \"can spoil a whole batch\" (B). D là bẫy: bài nói phân loại bằng tay chậm và tốn kém, không nói máy."
+      }
+    },
+    {
+      "id": "urban-bees",
+      "emoji": "🐝",
+      "title": [
+        "Ong mật trong thành phố",
+        "Bees in the city"
+      ],
+      "passage": [
+        "Over the past twenty years, beekeeping has spread from the countryside into the centre of many large cities. Hives can now be found on the roofs of hotels, offices and even museums in London, Paris and New York. Many of the new beekeepers are office workers who had never handled a bee before they took a short course.",
+        "One reason for this trend is public concern about falling bee numbers. In several countries, the number of managed hives fell sharply in the 1990s and early 2000s, and scientists linked the losses to disease, pesticides and a lack of wild flowers. Keeping bees in the city seemed to many people a simple way to help.",
+        "Surprisingly, city bees often do well. Parks, gardens and tree-lined streets offer a wide variety of flowers from early spring to late autumn, while farmland may provide only one crop that flowers for a few weeks. In addition, cities are usually a little warmer than the surrounding land, which allows bees to start foraging earlier in the year.",
+        "However, some ecologists warn that there can be too much of a good thing. Honeybees compete with wild bees for the same nectar and pollen, and in areas with very high numbers of hives, wild species may struggle to find enough food. A study in Paris found that the amount of food available per hive had fallen as the number of rooftop hives increased.",
+        "For this reason, experts now suggest that people who want to help bees should plant flowers rather than buy a hive. Native plants that flower at different times of the year support both honeybees and the hundreds of wild bee species that live in cities, and they require far less skill and equipment than beekeeping."
+      ],
+      "questions": [
+        {
+          "statement": "Most new city beekeepers had experience with bees before taking a course.",
+          "answer": "F",
+          "why": "Đoạn 1: nhiều người \"had never handled a bee before they took a short course\", tức chưa từng có kinh nghiệm."
+        },
+        {
+          "statement": "Disease was one of the causes linked to the fall in bee numbers.",
+          "answer": "T",
+          "why": "Đoạn 2: các nhà khoa học \"linked the losses to disease, pesticides and a lack of wild flowers\"."
+        },
+        {
+          "statement": "City honey tastes better than honey from the countryside.",
+          "answer": "NG",
+          "why": "Bài không so sánh mùi vị mật ong ở đâu cả → Not Given."
+        },
+        {
+          "statement": "Cities can provide flowers for a longer part of the year than farmland.",
+          "answer": "T",
+          "why": "Đoạn 3: hoa trong thành phố \"from early spring to late autumn\", còn nông trại chỉ một vụ \"for a few weeks\"."
+        },
+        {
+          "statement": "The Paris study found that each hive had more food as hive numbers grew.",
+          "answer": "F",
+          "why": "Đoạn 4 nói ngược lại: lượng thức ăn mỗi tổ \"had fallen\" khi số tổ tăng."
+        },
+        {
+          "statement": "Planting native flowers is cheaper than keeping bees.",
+          "answer": "NG",
+          "why": "Đoạn 5 nói trồng hoa cần ít kỹ năng và dụng cụ hơn, nhưng không nói gì về giá tiền → Not Given. Đây là bẫy suy luận."
+        }
+      ],
+      "headings": {
+        "options": [
+          "A threat to wild species",
+          "Why cities suit bees",
+          "The cost of running a hive",
+          "A better way to help",
+          "From farms to rooftops",
+          "Honey as a city business",
+          "A response to falling numbers"
+        ],
+        "answers": [
+          4,
+          6,
+          1,
+          0,
+          3
+        ],
+        "why": [
+          "Đoạn 1 kể việc nuôi ong lan từ nông thôn lên mái nhà thành phố → \"From farms to rooftops\".",
+          "Đoạn 2 giải thích người ta nuôi ong vì lo số lượng ong giảm → \"A response to falling numbers\".",
+          "Đoạn 3: hoa đa dạng và trời ấm hơn giúp ong sống tốt → \"Why cities suit bees\".",
+          "Đoạn 4: ong mật tranh thức ăn với ong hoang dã → \"A threat to wild species\".",
+          "Đoạn 5 khuyên trồng hoa thay vì mua tổ ong → \"A better way to help\". \"The cost of running a hive\" là bẫy: bài không nói chi phí."
+        ]
+      },
+      "summary": {
+        "text": "Beekeeping has moved into cities, where many new beekeepers are office workers with no {0}. City bees often do well because parks and gardens offer a wide {1} of flowers, and the slightly {2} temperatures let bees start work earlier. However, too many hives can leave wild bees without enough food, so experts advise planting {3} flowers instead.",
+        "box": [
+          "equipment",
+          "variety",
+          "experience",
+          "colder",
+          "native",
+          "warmer"
+        ],
+        "answers": [
+          2,
+          1,
+          5,
+          4
+        ],
+        "why": [
+          "Đoạn 1: \"had never handled a bee\" → không có kinh nghiệm (experience).",
+          "Đoạn 3: \"a wide variety of flowers\".",
+          "Đoạn 3: \"a little warmer than the surrounding land\". \"colder\" là bẫy trái nghĩa.",
+          "Đoạn 5: \"Native plants\". \"equipment\" có trong đoạn 5 nhưng không đi với \"flowers\"."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "a comparison of flowers in cities and on farmland",
+          "para": 2
+        },
+        {
+          "statement": "evidence that the food available per hive has decreased",
+          "para": 3
+        },
+        {
+          "statement": "the kinds of buildings where hives are kept",
+          "para": 0
+        },
+        {
+          "statement": "a suggestion that needs less skill than keeping bees",
+          "para": 4
+        },
+        {
+          "statement": "causes of the fall in bee numbers",
+          "para": 1
+        }
+      ],
+      "completion": [
+        {
+          "text": "Many of the new city beekeepers had never handled a bee before they took a ___.",
+          "answer": "short course",
+          "why": "Đoạn A: \"before they took a short course\"."
+        },
+        {
+          "text": "Scientists linked falling bee numbers to disease, pesticides and a lack of ___.",
+          "answer": "wild flowers",
+          "why": "Đoạn B: \"disease, pesticides and a lack of wild flowers\"."
+        },
+        {
+          "text": "Because cities are warmer than the land around them, bees can start ___ earlier in the year.",
+          "answer": "foraging",
+          "why": "Đoạn C: \"which allows bees to start foraging earlier in the year\"."
+        },
+        {
+          "text": "In Paris, the food available per hive fell as the number of ___ hives grew.",
+          "answer": "rooftop",
+          "why": "Đoạn D: \"as the number of rooftop hives increased\". \"grew\" = \"increased\"."
+        },
+        {
+          "text": "To help bees, experts suggest planting ___ plants that flower at different times of the year.",
+          "answer": "native",
+          "why": "Đoạn E: \"Native plants that flower at different times of the year\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO reasons why bees often do well in cities are given?",
+        "options": [
+          "flowers are available for much of the year",
+          "cities are a little warmer than the countryside",
+          "there is less disease among city bees",
+          "city beekeepers are more experienced",
+          "fewer pesticides are used in cities"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn C: hoa \"from early spring to late autumn\" (A) và thành phố \"a little warmer\" (B). Bệnh và thuốc trừ sâu có trong đoạn B nhưng là lý do ong giảm, không phải lý do ong ở phố sống tốt."
+      }
+    },
+    {
+      "id": "four-day-week",
+      "emoji": "📅",
+      "title": [
+        "Tuần làm việc bốn ngày",
+        "The four-day working week"
+      ],
+      "passage": [
+        "The idea that people should work five days a week is less than a century old. In the early twentieth century, many factory workers had only Sunday off. The two-day weekend became common only after workers' groups campaigned for shorter hours and some large employers found that rested staff made fewer mistakes.",
+        "Today, a growing number of companies are testing a four-day week. In the best-known trials, staff keep the same pay but work around thirty-two hours instead of forty. The aim is not simply to give people more free time but to see whether they can achieve the same results in fewer hours by cutting unnecessary meetings and distractions.",
+        "The results so far have been largely positive. In a 2022 trial involving around sixty British companies, most firms reported that productivity stayed the same or improved, and staff said they felt less stressed and slept better. Nearly all of the companies chose to continue with the shorter week after the trial ended.",
+        "Critics, however, point out that the model does not suit every type of work. Hospitals, schools and shops need people present for fixed hours, so a shorter week for each worker may mean hiring more staff. There are also concerns that some employees simply squeeze five days of work into four, which could lead to longer and more tiring days.",
+        "Supporters accept these limits but argue that the trials show how much time is wasted in an ordinary working week. Even companies that do not adopt a four-day week, they say, can learn from the experiment by reducing meetings, protecting time for focused work and judging staff by results rather than by the hours they spend at their desks."
+      ],
+      "questions": [
+        {
+          "statement": "The two-day weekend has existed for several centuries.",
+          "answer": "F",
+          "why": "Đoạn 1: tuần làm 5 ngày \"less than a century old\", trước đó công nhân chỉ nghỉ Chủ nhật."
+        },
+        {
+          "statement": "In the best-known trials, staff earned less money.",
+          "answer": "F",
+          "why": "Đoạn 2: nhân viên \"keep the same pay\"."
+        },
+        {
+          "statement": "Around sixty British companies took part in the 2022 trial.",
+          "answer": "T",
+          "why": "Đoạn 3: \"a 2022 trial involving around sixty British companies\"."
+        },
+        {
+          "statement": "Staff in the trial took fewer days off sick.",
+          "answer": "NG",
+          "why": "Bài nói nhân viên bớt căng thẳng và ngủ ngon hơn, không nhắc số ngày nghỉ ốm → Not Given."
+        },
+        {
+          "statement": "A shorter week could mean hospitals need more workers.",
+          "answer": "T",
+          "why": "Đoạn 4: \"a shorter week for each worker may mean hiring more staff\"."
+        },
+        {
+          "statement": "Supporters believe every company should change to a four-day week.",
+          "answer": "NG",
+          "why": "Đoạn 5: người ủng hộ nói kể cả công ty không đổi cũng học được điều gì đó; bài không nói họ muốn mọi công ty phải đổi → Not Given."
+        }
+      ],
+      "headings": {
+        "options": [
+          "Lessons for every workplace",
+          "How the weekend began",
+          "Workers who want longer hours",
+          "Encouraging early results",
+          "Not a solution for everyone",
+          "The rules of a modern trial",
+          "Why shops open on Sundays"
+        ],
+        "answers": [
+          1,
+          5,
+          3,
+          4,
+          0
+        ],
+        "why": [
+          "Đoạn 1 kể lịch sử: kỳ nghỉ hai ngày ra đời thế nào → \"How the weekend began\".",
+          "Đoạn 2 nói cách thử nghiệm hiện nay: giữ lương, làm 32 giờ → \"The rules of a modern trial\".",
+          "Đoạn 3: năng suất giữ hoặc tăng, nhân viên bớt căng thẳng → \"Encouraging early results\".",
+          "Đoạn 4: bệnh viện, trường học, cửa hàng khó áp dụng → \"Not a solution for everyone\". \"Why shops open on Sundays\" là bẫy: chỉ lặp chữ \"shops\".",
+          "Đoạn 5: mọi công ty đều học được cách bớt lãng phí thời gian → \"Lessons for every workplace\"."
+        ]
+      },
+      "summary": {
+        "text": "In recent trials of a four-day week, staff keep the same {0} but work about thirty-two hours. Most firms in a large British trial found that productivity did not {1}, and nearly all chose to {2} afterwards. Critics say the model is hard for jobs with fixed hours, while supporters argue that any company can cut wasted time, for example by holding fewer {3}.",
+        "box": [
+          "continue",
+          "holidays",
+          "pay",
+          "meetings",
+          "fall",
+          "stop"
+        ],
+        "answers": [
+          2,
+          4,
+          0,
+          3
+        ],
+        "why": [
+          "Đoạn 2: \"keep the same pay\".",
+          "Đoạn 3: năng suất \"stayed the same or improved\" → không giảm (did not fall).",
+          "Đoạn 3: \"chose to continue with the shorter week\". \"stop\" là bẫy trái nghĩa.",
+          "Đoạn 5: \"reducing meetings\". \"holidays\" không có trong bài."
+        ]
+      },
+      "matching": [
+        {
+          "statement": "the number of hours staff work in the trials",
+          "para": 1
+        },
+        {
+          "statement": "jobs that need workers present at fixed times",
+          "para": 3
+        },
+        {
+          "statement": "the origin of the two-day weekend",
+          "para": 0
+        },
+        {
+          "statement": "lessons for companies that keep a five-day week",
+          "para": 4
+        },
+        {
+          "statement": "what most firms decided after a trial in Britain",
+          "para": 2
+        }
+      ],
+      "completion": [
+        {
+          "text": "Some large employers found that rested staff made fewer ___.",
+          "answer": "mistakes",
+          "why": "Đoạn A: \"rested staff made fewer mistakes\"."
+        },
+        {
+          "text": "In the best-known trials, staff keep the same ___ but work around thirty-two hours.",
+          "answer": "pay",
+          "why": "Đoạn B: \"staff keep the same pay but work around thirty-two hours\"."
+        },
+        {
+          "text": "In the 2022 British trial, staff said they felt less stressed and ___ better.",
+          "answer": "slept",
+          "why": "Đoạn C: \"felt less stressed and slept better\"."
+        },
+        {
+          "text": "Hospitals, schools and shops need people to be present for ___ hours.",
+          "answer": "fixed",
+          "why": "Đoạn D: \"need people present for fixed hours\"."
+        },
+        {
+          "text": "Supporters say staff should be judged by their ___ rather than the hours spent at their desks.",
+          "answer": "results",
+          "why": "Đoạn E: \"judging staff by results rather than by the hours they spend at their desks\"."
+        }
+      ],
+      "chooseTwo": {
+        "question": "Which TWO results of the 2022 British trial are reported?",
+        "options": [
+          "productivity stayed the same or improved at most firms",
+          "staff said they felt less stressed",
+          "companies saved money on office space",
+          "most firms went back to a five-day week",
+          "staff were paid more"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "why": "Đoạn C: \"productivity stayed the same or improved\" (A) và \"felt less stressed and slept better\" (B). D trái với bài: gần như tất cả công ty giữ tuần làm ngắn."
+      }
+    }
+  ],
+  "speaking": {
+    "part1": [
+      {
+        "id": "hometown",
+        "emoji": "🏡",
+        "title": [
+          "Quê hương",
+          "Your hometown"
+        ],
+        "questions": [
+          "Where is your hometown?",
+          "What do you like most about it?",
+          "Has your hometown changed much in recent years?",
+          "Would you like to live there in the future?"
+        ],
+        "samples": [
+          {
+            "a": "I'm from Da Nang, a coastal city in central Vietnam. It's about an hour's flight from Hanoi, and it's famous for its long sandy beaches.",
+            "key": "famous for"
+          },
+          {
+            "a": "What I like most is the pace of life. It's busy enough to be interesting, but people still have time to sit and chat over a coffee.",
+            "key": "What I like most is"
+          },
+          {
+            "a": "Yes, quite a lot. There are far more high-rise hotels than when I was a kid, so it feels more modern, although the traffic has got worse.",
+            "key": "far more"
+          },
+          {
+            "a": "I'd love to, actually. Maybe not right now, because my career is in Ho Chi Minh City, but I can definitely see myself settling down there later on.",
+            "key": "I can definitely see myself"
+          }
+        ]
+      },
+      {
+        "id": "work-study",
+        "emoji": "🎒",
+        "title": [
+          "Công việc, học tập",
+          "Work or studies"
+        ],
+        "questions": [
+          "Do you work or are you a student?",
+          "Why did you choose that job or subject?",
+          "What is the most interesting part of it?",
+          "What would you like to do in the future?"
+        ],
+        "samples": [
+          {
+            "a": "I'm a student at the moment. I'm in my third year of a business degree, and I also work part-time in a café at the weekends.",
+            "key": "at the moment"
+          },
+          {
+            "a": "Mainly because I've always been interested in how companies grow. My parents run a small shop, so I grew up watching them make decisions every day.",
+            "key": "Mainly because"
+          },
+          {
+            "a": "For me, it's the case studies. We look at real companies that succeeded or failed, and it's fascinating to work out what went right or wrong.",
+            "key": "it's fascinating to"
+          },
+          {
+            "a": "Ideally, I'd like to start my own business one day. Before that, though, I want to get a few years of experience in a big company.",
+            "key": "Ideally, I'd like to"
+          }
+        ]
+      },
+      {
+        "id": "free-time",
+        "emoji": "🎮",
+        "title": [
+          "Thời gian rảnh",
+          "Free time"
+        ],
+        "questions": [
+          "What do you usually do in your free time?",
+          "Do you prefer spending free time alone or with friends?",
+          "Did you have the same hobbies as a child?",
+          "Is there a new hobby you would like to try?"
+        ],
+        "samples": [
+          {
+            "a": "I usually go for a run in the park or watch a film at home. On Sunday mornings I also play badminton with a few old classmates.",
+            "key": "On Sunday mornings"
+          },
+          {
+            "a": "It depends on my mood, really. After a busy week I enjoy some time alone, but at weekends I'd rather be out with my friends.",
+            "key": "It depends on my mood, really"
+          },
+          {
+            "a": "Not exactly. As a child I spent most of my free time drawing, whereas these days I'm much more into sport.",
+            "key": "whereas"
+          },
+          {
+            "a": "Yes, I've been thinking about learning the guitar. A friend of mine plays really well, and it looks like a great way to relax.",
+            "key": "I've been thinking about"
+          }
+        ]
+      },
+      {
+        "id": "food",
+        "emoji": "🍜",
+        "title": [
+          "Đồ ăn",
+          "Food"
+        ],
+        "questions": [
+          "What is your favourite food?",
+          "Do you often cook at home?",
+          "Is there any food you didn't like as a child?",
+          "Do people in your country often eat out?"
+        ],
+        "samples": [
+          {
+            "a": "My favourite has to be pho, the Vietnamese noodle soup. I could honestly eat it every morning, especially on a cold day.",
+            "key": "has to be"
+          },
+          {
+            "a": "Not as often as I'd like. During the week I'm too busy, so I tend to cook only at weekends, usually something simple like fried rice.",
+            "key": "I tend to"
+          },
+          {
+            "a": "Yes, I couldn't stand bitter melon when I was little. Funnily enough, I quite like it now, especially in soup.",
+            "key": "Funnily enough"
+          },
+          {
+            "a": "Yes, very often. Street food is cheap and everywhere, so a lot of people eat out several times a week rather than cooking.",
+            "key": "rather than"
+          }
+        ]
+      },
+      {
+        "id": "technology",
+        "emoji": "📱",
+        "title": [
+          "Công nghệ",
+          "Technology"
+        ],
+        "questions": [
+          "How often do you use your phone?",
+          "What do you mostly use the internet for?",
+          "Do you think you spend too much time online?",
+          "Which app could you not live without?"
+        ],
+        "samples": [
+          {
+            "a": "Pretty much all day, to be honest. I use it for work, for messages and for checking the news, so it's rarely out of my hand.",
+            "key": "to be honest"
+          },
+          {
+            "a": "Mostly for studying and keeping in touch with people. I also watch quite a lot of videos, mainly cooking and travel channels.",
+            "key": "keeping in touch with"
+          },
+          {
+            "a": "Probably, yes. I've noticed I often pick up my phone without a reason, so recently I've started turning off notifications in the evening.",
+            "key": "I've started"
+          },
+          {
+            "a": "I'd say my map app. I have a terrible sense of direction, so without it I'd get lost almost every time I went somewhere new.",
+            "key": "I'd say"
+          }
+        ]
+      },
+      {
+        "id": "weather",
+        "emoji": "🌦️",
+        "title": [
+          "Thời tiết",
+          "Weather"
+        ],
+        "questions": [
+          "What is the weather like in your hometown?",
+          "Which season do you like best?",
+          "Does the weather change your mood?",
+          "Do you check the weather forecast every day?"
+        ],
+        "samples": [
+          {
+            "a": "It's hot and humid for most of the year. We get a rainy season from about September to December, when there can be heavy storms.",
+            "key": "for most of the year"
+          },
+          {
+            "a": "I like spring best, because it's warm but not too hot. Everything looks green and fresh, and it's the perfect time to be outdoors.",
+            "key": "it's the perfect time to"
+          },
+          {
+            "a": "Definitely. When it's sunny I feel full of energy, but a few grey, rainy days in a row can make me feel a bit low.",
+            "key": "a few grey, rainy days in a row"
+          },
+          {
+            "a": "Not every day, but I always check it before a trip. It's annoying to get caught in the rain without an umbrella.",
+            "key": "It's annoying to"
+          }
+        ]
+      }
+    ],
+    "part2": [
+      {
+        "id": "helpful-person",
+        "emoji": "🤝",
+        "cue": "Describe a person who has helped you a lot.",
+        "points": [
+          "who this person is",
+          "how you know them",
+          "what they did to help you",
+          "and explain why their help was important to you"
+        ],
+        "plan": [
+          "Mở bài 1 câu: người đó là ai.",
+          "Kể quen nhau thế nào, ở đâu.",
+          "Kể một lần cụ thể họ giúp bạn (việc gì, ra sao).",
+          "Kết: vì sao điều đó quan trọng, bạn thay đổi thế nào."
+        ],
+        "phrases": [
+          "I'd like to talk about…",
+          "I first met her when…",
+          "What I remember most is…",
+          "Looking back, I realise that…"
+        ],
+        "part3": [
+          "Who usually helps young people more, family or friends?",
+          "Do you think people today are less helpful than in the past?",
+          "Should schools teach students to help others?"
+        ],
+        "part3Samples": [
+          {
+            "a": "I'd say it depends on the kind of help. Family usually give practical support, like money or advice about careers, whereas friends are better at emotional support, because young people often feel more comfortable sharing problems with someone their own age.",
+            "key": "whereas"
+          },
+          {
+            "a": "I don't think so, actually. People may be busier and know their neighbours less, but on the other hand, social media makes it much easier to help strangers, for example by raising money for someone who is ill.",
+            "key": "on the other hand"
+          },
+          {
+            "a": "Yes, I believe they should. If children take part in volunteer projects at school, they learn that helping others is normal, and that habit is likely to stay with them as adults.",
+            "key": "is likely to"
+          }
+        ]
+      },
+      {
+        "id": "memorable-trip",
+        "emoji": "🧳",
+        "cue": "Describe a trip you remember well.",
+        "points": [
+          "where you went",
+          "who you went with",
+          "what you did there",
+          "and explain why you remember it so well"
+        ],
+        "plan": [
+          "Nói nơi và thời điểm.",
+          "Đi với ai, đi bằng gì.",
+          "2 việc đáng nhớ nhất, có chi tiết (cảnh, món ăn, cảm giác).",
+          "Kết: vì sao nhớ mãi."
+        ],
+        "phrases": [
+          "A few years ago, I went to…",
+          "The highlight of the trip was…",
+          "I'll never forget…",
+          "That's why it still means a lot to me."
+        ],
+        "part3": [
+          "Why do people like to travel?",
+          "How has tourism changed your country?",
+          "Is it better to travel alone or in a group?"
+        ],
+        "part3Samples": [
+          {
+            "a": "I think the main reason is that travel gives people a break from their daily routine. It's also a chance to experience a different way of life, which can be both exciting and educational.",
+            "key": "gives people a break from"
+          },
+          {
+            "a": "It has changed enormously. Twenty years ago only a few places were well known, but now even small villages attract visitors, which brings jobs, although it can also damage the environment.",
+            "key": "It has changed enormously"
+          },
+          {
+            "a": "Personally, I prefer travelling in a small group. Travelling alone gives you more freedom, but sharing the experience with friends makes it more fun, and it's usually cheaper and safer too.",
+            "key": "Personally, I prefer"
+          }
+        ]
+      },
+      {
+        "id": "useful-skill",
+        "emoji": "🛠️",
+        "cue": "Describe a skill you learned that is useful to you.",
+        "points": [
+          "what the skill is",
+          "when and how you learned it",
+          "how difficult it was",
+          "and explain why it is useful to you"
+        ],
+        "plan": [
+          "Kỹ năng gì (nấu ăn, bơi, lập trình…).",
+          "Học khi nào, ai dạy, học ra sao.",
+          "Khó ở đâu, vượt qua thế nào.",
+          "Kết: giờ dùng nó vào việc gì."
+        ],
+        "phrases": [
+          "One skill that has really helped me is…",
+          "At first, I found it quite hard because…",
+          "Little by little, I…",
+          "Now I use it almost every day when…"
+        ],
+        "part3": [
+          "What skills do young people need for the future?",
+          "Is it better to learn skills at school or by yourself?",
+          "Will computers replace some skills people learn today?"
+        ],
+        "part3Samples": [
+          {
+            "a": "In my opinion, the most important skills are digital skills and the ability to adapt. Jobs are changing so quickly that people will need to keep learning new things throughout their careers.",
+            "key": "In my opinion"
+          },
+          {
+            "a": "I think a combination of both is best. School gives you a solid foundation and some discipline, while learning by yourself, for instance through online courses, lets you follow your own interests.",
+            "key": "a combination of both"
+          },
+          {
+            "a": "To some extent, yes. Computers can already translate and do calculations, so those skills may become less important. However, skills like creativity and communication will still be needed.",
+            "key": "To some extent"
+          }
+        ]
+      },
+      {
+        "id": "favourite-place",
+        "emoji": "🌳",
+        "cue": "Describe a place in your city where you like to relax.",
+        "points": [
+          "where it is",
+          "what it looks like",
+          "what you do there",
+          "and explain why it helps you relax"
+        ],
+        "plan": [
+          "Nơi đó ở đâu, đến bằng cách nào.",
+          "Tả 2–3 chi tiết (cây, hồ, tiếng ồn…).",
+          "Thường làm gì ở đó, đi với ai, vào lúc nào.",
+          "Kết: vì sao thấy thư giãn."
+        ],
+        "phrases": [
+          "There's a place near my home called…",
+          "What I love about it is…",
+          "I usually go there when…",
+          "It's the perfect place to…"
+        ],
+        "part3": [
+          "Do cities need more green spaces?",
+          "How do people in your country relax?",
+          "Is it harder to relax today than in the past?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Definitely. Cities are becoming more crowded and polluted, so parks give people somewhere to exercise and breathe fresh air. Studies also suggest that green spaces are good for mental health.",
+            "key": "Studies also suggest that"
+          },
+          {
+            "a": "It varies from person to person. Older people often go for a walk or drink tea with friends, while younger people tend to relax by watching videos or going to cafés.",
+            "key": "It varies from person to person"
+          },
+          {
+            "a": "I'd say it is, mainly because of technology. We're always connected to our phones, so it's hard to switch off completely, even when we're on holiday.",
+            "key": "switch off completely"
+          }
+        ]
+      },
+      {
+        "id": "good-decision",
+        "emoji": "✅",
+        "cue": "Describe a good decision you made.",
+        "points": [
+          "what the decision was",
+          "when you made it",
+          "how you made it",
+          "and explain why it was a good decision"
+        ],
+        "plan": [
+          "Quyết định gì, khi nào.",
+          "Lúc đó phân vân giữa những lựa chọn nào.",
+          "Ai cho lời khuyên, bạn cân nhắc ra sao.",
+          "Kết quả tốt thế nào."
+        ],
+        "phrases": [
+          "One of the best decisions I've ever made was…",
+          "At that time, I wasn't sure whether…",
+          "In the end, I decided to…",
+          "It turned out to be a great choice because…"
+        ],
+        "part3": [
+          "Do young people make decisions too quickly?",
+          "Should parents make important decisions for their children?",
+          "What kinds of decisions are hardest to make?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Some of them do, especially when it comes to spending money online. That said, many young people are actually very careful and do a lot of research before making a big decision.",
+            "key": "That said"
+          },
+          {
+            "a": "Only when the children are very young. As they grow older, I think parents should give advice rather than decide for them, because people learn from making their own choices.",
+            "key": "give advice rather than"
+          },
+          {
+            "a": "The hardest ones are probably decisions about careers or relationships, because the consequences last a long time and you can't easily change your mind afterwards.",
+            "key": "the consequences last a long time"
+          }
+        ]
+      },
+      {
+        "id": "book-or-film",
+        "emoji": "🎬",
+        "cue": "Describe a book or film that you enjoyed.",
+        "points": [
+          "what it was called",
+          "what it was about",
+          "when you read or watched it",
+          "and explain why you enjoyed it"
+        ],
+        "plan": [
+          "Tên, thể loại, ai giới thiệu.",
+          "Tóm tắt nội dung 2–3 câu (không kể hết).",
+          "Đọc/xem khi nào, ở đâu.",
+          "Kết: điều gì làm bạn thích (nhân vật, thông điệp)."
+        ],
+        "phrases": [
+          "The film I'd like to talk about is…",
+          "It's about a young man who…",
+          "What impressed me most was…",
+          "I'd recommend it to anyone who…"
+        ],
+        "part3": [
+          "Do people read fewer books today?",
+          "Are films a good way to learn about other cultures?",
+          "Should films for children be educational?"
+        ],
+        "part3Samples": [
+          {
+            "a": "Yes, I think they do read fewer printed books. Having said that, many people read a lot on their phones, so it's more that the way we read has changed rather than reading itself disappearing.",
+            "key": "Having said that"
+          },
+          {
+            "a": "Absolutely. A good film can show you how people in another country live, what they eat and what they care about, which is far more memorable than reading facts in a textbook.",
+            "key": "far more memorable than"
+          },
+          {
+            "a": "Not necessarily. Children's films should mainly be entertaining, but the best ones manage to teach values like kindness or courage without feeling like a lesson.",
+            "key": "Not necessarily"
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "types": [
+      {
+        "id": "opinion",
+        "emoji": "⚖️",
+        "title": [
+          "Nêu quan điểm",
+          "Opinion"
+        ],
+        "sample": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?",
+        "signal": "To what extent do you agree or disagree? / Do you agree or disagree?",
+        "plan": [
+          "Mở bài: viết lại đề bằng từ khác (paraphrase) + nói rõ bạn đồng ý tới đâu.",
+          "Thân bài 1: lý do chính thứ nhất + giải thích + ví dụ.",
+          "Thân bài 2: lý do thứ hai (hoặc thừa nhận ý trái chiều rồi phản bác).",
+          "Kết bài: nhắc lại quan điểm bằng câu khác, không thêm ý mới."
+        ],
+        "frames": [
+          "It is often argued that…",
+          "I completely agree that… because…",
+          "Admittedly, … However, …",
+          "In conclusion, I firmly believe that…"
+        ]
+      },
+      {
+        "id": "discussion",
+        "emoji": "🗣️",
+        "title": [
+          "Thảo luận hai phía",
+          "Discuss both views"
+        ],
+        "sample": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion.",
+        "signal": "Discuss both views and give your own opinion.",
+        "plan": [
+          "Mở bài: giới thiệu hai quan điểm + nêu bạn nghiêng về bên nào.",
+          "Thân bài 1: quan điểm A, lý do và ví dụ.",
+          "Thân bài 2: quan điểm B, lý do và ví dụ.",
+          "Kết bài: tóm tắt hai bên và nhắc lại ý kiến của bạn."
+        ],
+        "frames": [
+          "On the one hand, some people argue that…",
+          "On the other hand, others believe that…",
+          "Personally, I side with… because…",
+          "In conclusion, while… , I believe that…"
+        ]
+      },
+      {
+        "id": "problem-solution",
+        "emoji": "🛠️",
+        "title": [
+          "Vấn đề – giải pháp",
+          "Problems and solutions"
+        ],
+        "sample": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?",
+        "signal": "What are the causes / problems… and what solutions / measures…?",
+        "plan": [
+          "Mở bài: paraphrase vấn đề + nói bài sẽ bàn nguyên nhân và giải pháp.",
+          "Thân bài 1: 2 nguyên nhân (hoặc vấn đề), mỗi cái có ví dụ.",
+          "Thân bài 2: 2 giải pháp tương ứng, nói rõ ai làm và vì sao hiệu quả.",
+          "Kết bài: tóm tắt nguyên nhân chính và giải pháp đáng làm nhất."
+        ],
+        "frames": [
+          "One major cause of this is…",
+          "This has led to…",
+          "One effective solution would be to…",
+          "If governments…, this problem could be reduced."
+        ]
+      },
+      {
+        "id": "advantages",
+        "emoji": "➕",
+        "title": [
+          "Lợi ích – bất lợi",
+          "Advantages and disadvantages"
+        ],
+        "sample": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?",
+        "signal": "Do the advantages outweigh the disadvantages? / What are the advantages and disadvantages?",
+        "plan": [
+          "Mở bài: paraphrase xu hướng + trả lời thẳng: lợi nhiều hơn hay hại nhiều hơn.",
+          "Thân bài 1: lợi ích (2 ý, có ví dụ).",
+          "Thân bài 2: bất lợi (2 ý, có ví dụ).",
+          "Kết bài: cân nhắc lại và khẳng định bên nào nặng hơn."
+        ],
+        "frames": [
+          "The main advantage of this is that…",
+          "Another benefit is…",
+          "However, there are also drawbacks, such as…",
+          "Overall, I believe the benefits clearly outweigh…"
+        ]
+      }
+    ],
+    "drills": [
+      {
+        "kind": "link",
+        "prompt": "Many students work part-time. ___, this can affect their studies.",
+        "options": [
+          "However",
+          "For example",
+          "Therefore",
+          "Similarly"
+        ],
+        "answer": 0,
+        "why": "Câu sau nói mặt trái của câu trước → However (tuy nhiên)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Public transport is cheap. ___, it reduces air pollution.",
+        "options": [
+          "In contrast",
+          "Moreover",
+          "Instead",
+          "Otherwise"
+        ],
+        "answer": 1,
+        "why": "Thêm một lợi ích nữa cùng chiều → Moreover (hơn nữa)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Prices have risen sharply. ___, many families are spending less.",
+        "options": [
+          "As a result",
+          "Although",
+          "In addition",
+          "For instance"
+        ],
+        "answer": 0,
+        "why": "Câu sau là hậu quả của câu trước → As a result (kết quả là)."
+      },
+      {
+        "kind": "link",
+        "prompt": "Some jobs can be done online, ___ software design and translation.",
+        "options": [
+          "such as",
+          "however",
+          "whereas",
+          "because"
+        ],
+        "answer": 0,
+        "why": "Đưa ví dụ ngay sau danh từ → such as."
+      },
+      {
+        "kind": "link",
+        "prompt": "___ cars are convenient, they cause traffic jams.",
+        "options": [
+          "Because",
+          "Although",
+          "Therefore",
+          "Moreover"
+        ],
+        "answer": 1,
+        "why": "Hai ý trái ngược trong cùng một câu → Although (mặc dù)."
+      },
+      {
+        "kind": "link",
+        "prompt": "___, I believe that the benefits outweigh the drawbacks.",
+        "options": [
+          "For example",
+          "In conclusion",
+          "On the other hand",
+          "Firstly"
+        ],
+        "answer": 1,
+        "why": "Câu kết bài → In conclusion."
+      },
+      {
+        "kind": "trend",
+        "prompt": "Sales ___ from 200 to 500 units between 2010 and 2020.",
+        "options": [
+          "rose",
+          "raised",
+          "risen",
+          "rising"
+        ],
+        "answer": 0,
+        "why": "Rise (tăng, nội động từ) → quá khứ rose. Raise cần tân ngữ (raise prices)."
+      },
+      {
+        "kind": "trend",
+        "prompt": "There was a ___ fall in the number of visitors, from 90 to 88.",
+        "options": [
+          "dramatic",
+          "slight",
+          "sharp",
+          "huge"
+        ],
+        "answer": 1,
+        "why": "Giảm rất ít (90 → 88) → slight (nhẹ). Dramatic, sharp, huge là giảm mạnh."
+      },
+      {
+        "kind": "trend",
+        "prompt": "The figure ___ at around 30% for five years.",
+        "options": [
+          "remained stable",
+          "increased sharply",
+          "dropped",
+          "peaked"
+        ],
+        "answer": 0,
+        "why": "Không đổi suốt 5 năm → remained stable."
+      },
+      {
+        "kind": "trend",
+        "prompt": "Car use ___ in 2015 and then began to decline.",
+        "options": [
+          "peaked",
+          "fluctuated",
+          "bottomed",
+          "doubled up"
+        ],
+        "answer": 0,
+        "why": "Đạt đỉnh rồi giảm → peaked (lên mức cao nhất)."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"Lots of people think…\" → \"___ people think…\"",
+        "options": [
+          "A great deal of",
+          "Many",
+          "Loads of",
+          "Heaps of"
+        ],
+        "answer": 1,
+        "why": "Người đếm được → many. A great deal of đi với danh từ không đếm được; loads of, heaps of là văn nói."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"Kids should ___ more.\"",
+        "options": [
+          "get into reading",
+          "read a lot",
+          "be encouraged to read",
+          "read heaps"
+        ],
+        "answer": 2,
+        "why": "Văn viết học thuật tránh cụm thân mật (get into, heaps); câu bị động be encouraged to read trang trọng hơn."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Formal writing: \"It's a big problem.\" → \"It is a ___ problem.\"",
+        "options": [
+          "huge",
+          "serious",
+          "massive",
+          "really bad"
+        ],
+        "answer": 1,
+        "why": "Serious là từ trang trọng, chính xác; huge, massive, really bad mang màu văn nói."
+      },
+      {
+        "kind": "formal",
+        "prompt": "Which is better in an IELTS essay?",
+        "options": [
+          "Governments gotta act now.",
+          "Governments should take action now.",
+          "Governments wanna act now.",
+          "Govts should act now."
+        ],
+        "answer": 1,
+        "why": "Không viết tắt kiểu gotta, wanna, govts trong bài thi; dùng should take action."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "free-university",
+        "type": "opinion",
+        "text": "Some people think that university education should be free for everyone. To what extent do you agree or disagree?",
+        "model": [
+          "It is often argued that university education should be free for every student. Although this idea is attractive, I only partly agree, because free tuition for all would be extremely expensive and would not always help the people who need it most.",
+          "On the one hand, removing fees would clearly open doors for talented young people from poor families. In many countries, students graduate with large debts, and some capable teenagers do not even apply because they fear the cost. Free education would also benefit society as a whole, since a better educated workforce tends to be more productive and more innovative. For instance, Germany has offered free tuition at its public universities for years without lowering academic standards.",
+          "However, making every degree free would place a heavy burden on taxpayers. The money would have to come from other public services, such as hospitals or primary schools, which arguably matter even more. Furthermore, students from wealthy families, who could easily afford fees, would receive the same support as those in genuine need. A fairer system, therefore, would offer generous grants and low-interest loans based on family income, so that no one is excluded for financial reasons. Free places for all might also lead to overcrowded lecture halls and a fall in teaching quality if funding does not keep up.",
+          "In conclusion, I believe that higher education should be affordable rather than completely free. Governments should focus their limited budgets on students who would otherwise be unable to study, while those who can pay should continue to contribute. This balance would keep universities open to everyone without placing an unfair load on the public."
+        ]
+      },
+      {
+        "id": "early-school",
+        "type": "discussion",
+        "text": "Some people believe children should start school at a very early age, while others think they should wait until they are older. Discuss both views and give your own opinion.",
+        "model": [
+          "People disagree about the best age for children to begin formal education. While some believe that an early start gives children an advantage, others argue that young children learn better through play at home. This question matters because the first years of school can shape a child’s attitude to learning for life. This essay will discuss both views before giving my own opinion.",
+          "Those who support an early start point out that young children learn extremely quickly. At school they can develop basic reading and number skills, as well as social skills such as sharing and taking turns. In addition, an early school place allows both parents to return to work, which can be important for low-income families. Supporters also claim that children who start early find the move to primary school easier, because they are already used to a classroom routine.",
+          "On the other hand, many experts believe that very young children are not ready to sit still and follow a timetable. They argue that play is the most natural way for children to explore the world, and that pressure to perform too early may make them anxious or cause them to lose interest in learning. Childhood, they say, is short and should not be rushed. For example, in Finland children do not start formal school until the age of seven, yet the country has long performed well in international tests.",
+          "In conclusion, both sides make valid points. However, I believe that children should start formal lessons a little later, at around six or seven, because a relaxed and playful early childhood builds the curiosity they will need for the rest of their education."
+        ]
+      },
+      {
+        "id": "traffic",
+        "type": "problem-solution",
+        "text": "In many cities, traffic congestion is becoming a serious problem. What are the causes of this problem, and what measures could be taken to solve it?",
+        "model": [
+          "Traffic congestion has become a daily problem in many large cities, wasting time and polluting the air. This essay will examine the main causes of this situation and suggest some practical solutions.",
+          "The first cause is the rapid growth in the number of private vehicles. As incomes rise, more families can afford cars or motorbikes, and these vehicles quickly fill roads that were designed for far less traffic. Secondly, public transport in many cities is unreliable or uncomfortable, so people have little choice but to drive. Cheap fuel in some countries makes driving even more attractive. Poor urban planning also plays a part, because homes, offices and schools are often far apart, which forces residents to travel long distances every day.",
+          "Several measures could reduce the problem. Firstly, governments should invest in fast, affordable public transport, such as metro lines and dedicated bus lanes, so that leaving the car at home becomes the easier option. Furthermore, charging drivers a fee to enter the city centre at busy times has worked well in cities like London and Singapore. Finally, companies could allow flexible working hours, which would spread journeys more evenly throughout the day. Cities could also create safe cycle paths and pedestrian streets, which would encourage short journeys without a car.",
+          "In conclusion, traffic congestion is caused mainly by the growing number of vehicles and weak public transport. A combination of better transport services, road charges and flexible working would make city streets far less crowded. Although these steps require investment, the savings in time, health and fuel would be considerable."
+        ]
+      },
+      {
+        "id": "work-from-home",
+        "type": "advantages",
+        "text": "More and more people are working from home. Do the advantages of this trend outweigh the disadvantages?",
+        "model": [
+          "In recent years, a growing number of employees have started to work from home for at least part of the week. In my opinion, the benefits of this trend generally outweigh its drawbacks, as long as it is well managed. This essay will look at both sides of the issue.",
+          "The most obvious advantage is the time and money saved by not commuting. Workers who no longer spend two hours a day in traffic have more energy for their jobs and more time for their families. Fewer cars on the road also means less pollution, which benefits everyone. In addition, many people find that they can concentrate better at home, away from the noise and interruptions of a busy office. Employers also benefit, because they can rent smaller offices and hire talented staff who live far away.",
+          "However, working from home is not without problems. Some employees feel lonely and miss the informal conversations that help colleagues share ideas. Moreover, the line between work and private life can become unclear, so people may end up working longer hours than before. Managers may also find it harder to train new staff or check on their progress. These problems are real, but they can be reduced, for example by meeting in the office once or twice a week and agreeing on clear working hours.",
+          "In conclusion, although home working can lead to isolation and overwork, I believe its advantages are greater, particularly the time it saves and the freedom it gives. A flexible mix of home and office work seems to offer the best of both worlds."
+        ]
+      },
+      {
+        "id": "online-learning",
+        "type": "opinion",
+        "text": "Online courses will soon replace traditional classrooms. To what extent do you agree or disagree?",
+        "model": [
+          "With the rapid development of the internet, online courses have become popular all over the world, and some people predict that they will soon replace traditional classrooms completely. I disagree with this view, because I believe online and face-to-face learning will continue to exist side by side.",
+          "There is no doubt that online courses offer real benefits. Learners can study at any time and from any place, which is ideal for working adults or people living far from a university. Furthermore, many high-quality courses are available free of charge or at a low price, so education has become accessible to millions of people who could not otherwise afford it. Online platforms also allow students to replay lectures as many times as they need, which is especially helpful for those studying in a second language.",
+          "However, traditional classrooms provide things that a screen cannot easily replace. Teachers can notice immediately when a student is confused and adjust their explanation. Students also learn important social skills, such as working in teams and presenting ideas in front of others. For example, subjects like chemistry or nursing require hands-on practice in laboratories and hospitals. Moreover, many young learners lack the self-discipline to study alone, and they benefit from the routine of a school day.",
+          "In conclusion, online learning is a valuable addition to education, but it is unlikely to replace classrooms entirely. The most effective approach is probably a blended one, in which digital tools support, rather than replace, the work of teachers. Schools and universities should therefore use technology to enrich lessons, not to remove the human contact that makes learning meaningful."
+        ]
+      },
+      {
+        "id": "plastic",
+        "type": "problem-solution",
+        "text": "Plastic waste is harming the oceans. What are the main causes, and what can be done about it?",
+        "model": [
+          "Huge quantities of plastic end up in the oceans every year, where they harm fish, seabirds and other marine life. The issue is urgent, as the oceans provide food and income for millions of people. This essay will outline the main causes of the problem and propose some solutions.",
+          "The main cause is the enormous amount of single-use plastic that modern society produces, such as bags, bottles and food packaging. These items are used for a few minutes and then thrown away. Because plastic takes hundreds of years to break down, the problem grows worse each year. In many countries, waste collection and recycling systems are inadequate, so rubbish is dumped near rivers and eventually carried out to sea. In addition, fishing nets that are lost or abandoned make up a significant share of the plastic in the ocean.",
+          "There are several ways to tackle this issue. Firstly, governments could ban or tax single-use items; for instance, charging for plastic bags has sharply reduced their use in several countries. Secondly, manufacturers should be required to use packaging that can be recycled or composted. Finally, wealthier nations could help developing countries build better waste management systems, because plastic released in one place can travel across the world. Individuals also have a role to play, for example by carrying reusable bottles and bags.",
+          "In conclusion, ocean plastic is caused mainly by our dependence on disposable products and by poor waste management. Therefore, a combination of laws, responsible industry and individual action is needed to protect marine life for future generations. If no action is taken, the damage to ocean life may become impossible to reverse."
+        ]
+      }
+    ],
+    "task1": [
+      {
+        "id": "internet-users",
+        "emoji": "🌐",
+        "kind": "line",
+        "title": [
+          "Người dùng Internet ở ba nước",
+          "Internet users in three countries"
+        ],
+        "question": "The graph shows the percentage of people using the internet in Vietnam, Japan and Brazil between 2000 and 2020.",
+        "unit": "%",
+        "labels": [
+          "2000",
+          "2005",
+          "2010",
+          "2015",
+          "2020"
+        ],
+        "series": [
+          {
+            "name": "Vietnam",
+            "values": [
+              0.3,
+              13,
+              31,
+              45,
+              70
+            ]
+          },
+          {
+            "name": "Japan",
+            "values": [
+              30,
+              67,
+              78,
+              83,
+              90
+            ]
+          },
+          {
+            "name": "Brazil",
+            "values": [
+              3,
+              21,
+              41,
+              59,
+              81
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "Overall, internet use rose in all three countries, and Japan had the highest rate throughout the period.",
+            "Overall, Vietnam had the largest share of internet users by 2020.",
+            "In 2000, 30% of people in Japan used the internet."
+          ],
+          "answer": 0,
+          "why": [
+            "Đúng: câu tổng quan nói xu hướng chung (cả ba đều tăng) và điểm nổi bật (Nhật luôn cao nhất), không có số liệu chi tiết.",
+            "Sai: năm 2020 Việt Nam 70%, thấp nhất trong ba nước.",
+            "Đây là một chi tiết số liệu, không phải tổng quan. Đoạn tổng quan không cần con số."
+          ]
+        },
+        "report": {
+          "text": "Between 2000 and 2020, the proportion of people using the internet rose in all three countries. Vietnam saw the most {0} growth, from under 1% to 70%. Japan began at a much higher level and reached a {1} of 90% in 2020. In Brazil, the figure grew {2}, by about 20 percentage points every five years, and ended {3} than in Vietnam.",
+          "box": [
+            "higher",
+            "lower",
+            "dramatic",
+            "steadily",
+            "peak",
+            "slight"
+          ],
+          "answers": [
+            2,
+            4,
+            3,
+            0
+          ],
+          "why": [
+            "Việt Nam tăng từ dưới 1% lên 70%: mức tăng lớn nhất → dramatic. \"slight\" (nhẹ) sai với số liệu.",
+            "reach a peak of: đạt đỉnh. Cần một danh từ sau \"a\".",
+            "Brazil tăng đều khoảng 20 điểm mỗi 5 năm → steadily (đều đặn).",
+            "Brazil 81% so với Việt Nam 70% → higher. \"lower\" là bẫy."
+          ]
+        }
+      },
+      {
+        "id": "travel-to-uni",
+        "emoji": "🚌",
+        "kind": "bar",
+        "title": [
+          "Sinh viên đi học bằng gì",
+          "How students travel to university"
+        ],
+        "question": "The chart shows how students travelled to a university in 2010 and 2020.",
+        "unit": "%",
+        "labels": [
+          "Bus",
+          "Car",
+          "Bicycle",
+          "Walking"
+        ],
+        "series": [
+          {
+            "name": "2010",
+            "values": [
+              40,
+              35,
+              10,
+              15
+            ]
+          },
+          {
+            "name": "2020",
+            "values": [
+              45,
+              20,
+              25,
+              10
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "In 2020, 45% of students took the bus to university.",
+            "Overall, the bus remained the most popular way to travel, while cycling became much more common and car use fell.",
+            "Overall, most students walked to university in both years."
+          ],
+          "answer": 1,
+          "why": [
+            "Đây là một chi tiết số liệu, không phải tổng quan.",
+            "Đúng: nêu điểm không đổi (xe buýt vẫn nhiều nhất) và hai thay đổi lớn nhất (xe đạp tăng, ô tô giảm).",
+            "Sai: đi bộ chỉ 15% rồi 10%, ít nhất."
+          ]
+        },
+        "report": {
+          "text": "The bus was the most popular choice in both years, rising {0} from 40% to 45%. By contrast, the share of students who drove {1} sharply, from 35% to 20%. Cycling showed the biggest change: it {2} from 10% to 25%. Walking was the {3} common option in 2020, at just 10%.",
+          "box": [
+            "rose",
+            "fell",
+            "least",
+            "slightly",
+            "most",
+            "more than doubled"
+          ],
+          "answers": [
+            3,
+            1,
+            5,
+            2
+          ],
+          "why": [
+            "40% lên 45%: tăng ít → slightly.",
+            "35% xuống 20% → fell. \"rose\" là bẫy.",
+            "10% lên 25% là hơn gấp đôi → more than doubled.",
+            "Năm 2020 đi bộ 10%, thấp nhất → the least common. \"most\" là bẫy."
+          ]
+        }
+      },
+      {
+        "id": "cafe-drinks",
+        "emoji": "🧋",
+        "kind": "line",
+        "title": [
+          "Đồ uống bán ở quán cà phê",
+          "Drinks sold at a café"
+        ],
+        "question": "The graph shows weekly sales of three drinks at a café from January to June.",
+        "unit": "cups",
+        "labels": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Coffee",
+            "values": [
+              300,
+              320,
+              310,
+              330,
+              320,
+              330
+            ]
+          },
+          {
+            "name": "Iced tea",
+            "values": [
+              100,
+              120,
+              180,
+              260,
+              340,
+              400
+            ]
+          },
+          {
+            "name": "Hot chocolate",
+            "values": [
+              250,
+              220,
+              170,
+              110,
+              60,
+              40
+            ]
+          }
+        ],
+        "overview": {
+          "options": [
+            "Overall, hot chocolate was the most popular drink.",
+            "In March, the café sold 310 cups of coffee a week.",
+            "Overall, iced tea sales rose sharply as hot chocolate sales declined, while coffee stayed fairly stable."
+          ],
+          "answer": 2,
+          "why": [
+            "Sai: sô-cô-la nóng giảm từ 250 xuống 40, chưa bao giờ cao nhất.",
+            "Đây là một chi tiết số liệu, không phải tổng quan.",
+            "Đúng: ba xu hướng chính của ba đường trong một câu, không có số."
+          ]
+        },
+        "report": {
+          "text": "Coffee sales {0} at around 300 to 330 cups a week throughout the period. Iced tea, by contrast, rose {1}, from 100 cups in January to 400 in June, {2} coffee in May. Hot chocolate showed the opposite trend, {3} from 250 to just 40 cups.",
+          "box": [
+            "overtaking",
+            "slightly",
+            "stayed",
+            "rising",
+            "falling",
+            "sharply"
+          ],
+          "answers": [
+            2,
+            5,
+            0,
+            4
+          ],
+          "why": [
+            "Cà phê dao động 300–330 → stayed (giữ ở mức).",
+            "100 lên 400 là tăng mạnh → sharply. \"slightly\" là bẫy.",
+            "Tháng 5 trà đá 340 > cà phê 320 → overtaking (vượt qua).",
+            "Sô-cô-la nóng giảm 250 → 40 → falling. \"rising\" là bẫy."
+          ]
+        }
+      }
+    ]
+  },
+  "listening": [
+    {
+      "id": "gym-membership",
+      "emoji": "🏋️",
+      "title": [
+        "Đăng ký phòng tập",
+        "Joining a gym"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good morning, City Fitness. How can I help you?"
+        },
+        {
+          "speaker": "W",
+          "text": "Hi, I'd like to join the gym, please."
+        },
+        {
+          "speaker": "M",
+          "text": "Of course. Can I have your surname, please?"
+        },
+        {
+          "speaker": "W",
+          "text": "It's Parker. P, A, R, K, E, R."
+        },
+        {
+          "speaker": "M",
+          "text": "Thank you. And which membership would you like, monthly or yearly?"
+        },
+        {
+          "speaker": "W",
+          "text": "Monthly, please. How much is that?"
+        },
+        {
+          "speaker": "M",
+          "text": "It's forty-five pounds a month. When would you like to start?"
+        },
+        {
+          "speaker": "W",
+          "text": "Next Monday, if possible."
+        },
+        {
+          "speaker": "M",
+          "text": "No problem. And finally, a phone number?"
+        },
+        {
+          "speaker": "W",
+          "text": "Sure, it's oh seven nine six, three two eight, five one four."
+        }
+      ],
+      "form": {
+        "title": "City Fitness: new member",
+        "fields": [
+          {
+            "label": "Surname",
+            "answer": "Parker"
+          },
+          {
+            "label": "Type of membership",
+            "answer": "monthly"
+          },
+          {
+            "label": "Price per month (£)",
+            "answer": "45",
+            "accept": [
+              "forty-five",
+              "forty five"
+            ]
+          },
+          {
+            "label": "Start day",
+            "answer": "Monday"
+          },
+          {
+            "label": "Phone",
+            "answer": "0796 328 514",
+            "accept": [
+              "0796328514"
+            ]
+          }
+        ]
+      },
+      "tip": "Tên riêng thường được đánh vần từng chữ; \"oh\" trong số điện thoại là số 0."
+    },
+    {
+      "id": "hotel-booking",
+      "emoji": "🏨",
+      "title": [
+        "Đặt phòng khách sạn",
+        "Booking a hotel room"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Riverside Hotel, reception. How may I help?"
+        },
+        {
+          "speaker": "M",
+          "text": "Hello, I'd like to book a room for two nights."
+        },
+        {
+          "speaker": "W",
+          "text": "Certainly. Which dates?"
+        },
+        {
+          "speaker": "M",
+          "text": "Arriving on the fifteenth of March."
+        },
+        {
+          "speaker": "W",
+          "text": "Would you like a single or a double room?"
+        },
+        {
+          "speaker": "M",
+          "text": "A double, please. With a view of the river if you have one."
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, we do. That's ninety pounds per night, breakfast included."
+        },
+        {
+          "speaker": "M",
+          "text": "Great. My name is Daniel Shaw. S, H, A, W."
+        },
+        {
+          "speaker": "W",
+          "text": "Thank you, Mr Shaw. Check-in is from two o'clock."
+        }
+      ],
+      "form": {
+        "title": "Riverside Hotel: booking",
+        "fields": [
+          {
+            "label": "Number of nights",
+            "answer": "2",
+            "accept": [
+              "two"
+            ]
+          },
+          {
+            "label": "Arrival date",
+            "answer": "15 March",
+            "accept": [
+              "15th March",
+              "March 15",
+              "march 15th",
+              "fifteenth of march"
+            ]
+          },
+          {
+            "label": "Room type",
+            "answer": "double"
+          },
+          {
+            "label": "Price per night (£)",
+            "answer": "90",
+            "accept": [
+              "ninety"
+            ]
+          },
+          {
+            "label": "Guest surname",
+            "answer": "Shaw"
+          },
+          {
+            "label": "Check-in from",
+            "answer": "2",
+            "accept": [
+              "2 o'clock",
+              "two",
+              "2:00",
+              "2pm",
+              "2 pm",
+              "two o'clock"
+            ]
+          }
+        ]
+      },
+      "tip": "Ngày tháng có thể viết 15 March hay March 15; đề IELTS chấp nhận cả hai nếu đúng chính tả."
+    },
+    {
+      "id": "library-card",
+      "emoji": "📚",
+      "title": [
+        "Làm thẻ thư viện",
+        "A library card"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Hello, I'd like to get a library card."
+        },
+        {
+          "speaker": "M",
+          "text": "Sure. Can you spell your first name for me?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, it's Linh. L, I, N, H."
+        },
+        {
+          "speaker": "M",
+          "text": "And your address?"
+        },
+        {
+          "speaker": "W",
+          "text": "Twenty-three Garden Road."
+        },
+        {
+          "speaker": "M",
+          "text": "Garden Road, thank you. You can borrow up to eight books at a time."
+        },
+        {
+          "speaker": "W",
+          "text": "For how long?"
+        },
+        {
+          "speaker": "M",
+          "text": "Three weeks. And the library closes at seven on weekdays."
+        }
+      ],
+      "form": {
+        "title": "Library card application",
+        "fields": [
+          {
+            "label": "First name",
+            "answer": "Linh"
+          },
+          {
+            "label": "House number",
+            "answer": "23",
+            "accept": [
+              "twenty-three",
+              "twenty three"
+            ]
+          },
+          {
+            "label": "Street",
+            "answer": "Garden Road"
+          },
+          {
+            "label": "Books at a time",
+            "answer": "8",
+            "accept": [
+              "eight"
+            ]
+          },
+          {
+            "label": "Loan period (weeks)",
+            "answer": "3",
+            "accept": [
+              "three"
+            ]
+          },
+          {
+            "label": "Closes on weekdays at",
+            "answer": "7",
+            "accept": [
+              "seven",
+              "7pm",
+              "7 pm",
+              "7:00"
+            ]
+          }
+        ]
+      },
+      "tip": "Viết đúng chính tả là bắt buộc: Garden Road phải viết đủ cả hai từ."
+    },
+    {
+      "id": "bike-hire",
+      "emoji": "🚲",
+      "title": [
+        "Thuê xe đạp",
+        "Hiring a bike"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Hi there. Can I help you?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, I'd like to hire a bike for the afternoon."
+        },
+        {
+          "speaker": "M",
+          "text": "For how many hours?"
+        },
+        {
+          "speaker": "W",
+          "text": "About four hours."
+        },
+        {
+          "speaker": "M",
+          "text": "That's twelve pounds. Would you like a helmet as well? It's free."
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, please. And a map of the cycle routes?"
+        },
+        {
+          "speaker": "M",
+          "text": "Here you are. Please bring the bike back before six. Can I see some ID?"
+        },
+        {
+          "speaker": "W",
+          "text": "Here's my passport."
+        }
+      ],
+      "form": {
+        "title": "Green Wheels: bike hire",
+        "fields": [
+          {
+            "label": "Hours",
+            "answer": "4",
+            "accept": [
+              "four"
+            ]
+          },
+          {
+            "label": "Price (£)",
+            "answer": "12",
+            "accept": [
+              "twelve"
+            ]
+          },
+          {
+            "label": "Free extra",
+            "answer": "helmet",
+            "accept": [
+              "a helmet"
+            ]
+          },
+          {
+            "label": "Return before",
+            "answer": "6",
+            "accept": [
+              "six",
+              "6pm",
+              "6 pm",
+              "6:00"
+            ]
+          },
+          {
+            "label": "ID shown",
+            "answer": "passport",
+            "accept": [
+              "her passport",
+              "a passport"
+            ]
+          }
+        ]
+      },
+      "tip": "Câu hỏi đi theo thứ tự lời nói; nghe thấy đáp án rồi thì chuyển ngay sang ô tiếp theo."
+    },
+    {
+      "id": "history-of-coffee",
+      "emoji": "☕",
+      "part": 4,
+      "title": [
+        "Bài giảng: lịch sử cà phê",
+        "Lecture: the history of coffee"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Good morning, everyone. Today I'm going to talk about the history of coffee, one of the most popular drinks in the world."
+        },
+        {
+          "speaker": "W",
+          "text": "According to legend, coffee was first discovered in Ethiopia, where a goat herder noticed that his goats became very energetic after eating certain red berries."
+        },
+        {
+          "speaker": "W",
+          "text": "By the fifteenth century, coffee was being grown in Yemen, and it soon became popular across the Middle East."
+        },
+        {
+          "speaker": "W",
+          "text": "The first coffee houses appeared in cities such as Istanbul and Cairo. People went there not only to drink coffee, but also to listen to music and discuss the news."
+        },
+        {
+          "speaker": "W",
+          "text": "In the seventeenth century, coffee reached Europe. At first some people were suspicious of it, but coffee houses quickly spread, especially in London."
+        },
+        {
+          "speaker": "W",
+          "text": "In fact, London coffee houses were sometimes called 'penny universities', because for the price of a cup of coffee, you could join interesting conversations."
+        },
+        {
+          "speaker": "W",
+          "text": "Today, Brazil is the largest producer of coffee, followed by Vietnam, which mainly grows a type of bean called robusta."
+        }
+      ],
+      "form": {
+        "title": "Lecture notes: the history of coffee",
+        "fields": [
+          {
+            "label": "First discovered in",
+            "answer": "Ethiopia"
+          },
+          {
+            "label": "The goats ate red",
+            "answer": "berries"
+          },
+          {
+            "label": "15th century: grown in",
+            "answer": "Yemen"
+          },
+          {
+            "label": "Early coffee houses: music and discussing the",
+            "answer": "news"
+          },
+          {
+            "label": "London coffee houses: 'penny …'",
+            "answer": "universities"
+          },
+          {
+            "label": "Vietnam mainly grows … beans",
+            "answer": "robusta"
+          }
+        ]
+      },
+      "tip": "Part 4 chỉ một người nói, không nghỉ giữa chừng. Đọc trước tiêu đề ghi chú để đoán loại từ cần điền (danh từ, tên nước, số…), và viết đúng chính tả: sai một chữ là mất điểm."
+    },
+    {
+      "id": "sleep-and-memory",
+      "emoji": "😴",
+      "part": 4,
+      "title": [
+        "Bài giảng: giấc ngủ và trí nhớ",
+        "Lecture: sleep and memory"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good afternoon. In today's lecture, we'll look at the connection between sleep and memory."
+        },
+        {
+          "speaker": "M",
+          "text": "Most adults need between seven and nine hours of sleep a night, but surveys show that many students get less than six."
+        },
+        {
+          "speaker": "M",
+          "text": "Scientists divide sleep into several stages. The deepest stage, known as slow-wave sleep, seems to be especially important for remembering facts."
+        },
+        {
+          "speaker": "M",
+          "text": "During this stage, the brain replays information from the day and moves it into long-term memory."
+        },
+        {
+          "speaker": "M",
+          "text": "Another stage, called REM sleep, is when most dreams happen. Research suggests that it helps us learn skills, such as playing a musical instrument."
+        },
+        {
+          "speaker": "M",
+          "text": "One interesting study found that students who slept after studying remembered twenty per cent more than those who stayed awake."
+        },
+        {
+          "speaker": "M",
+          "text": "So my advice is simple: don't stay up all night before an exam. A good night's sleep is one of the best ways to prepare."
+        }
+      ],
+      "form": {
+        "title": "Lecture notes: sleep and memory",
+        "fields": [
+          {
+            "label": "Many students sleep less than … hours",
+            "answer": "six",
+            "accept": [
+              "6"
+            ]
+          },
+          {
+            "label": "Slow-wave sleep: important for remembering",
+            "answer": "facts"
+          },
+          {
+            "label": "Information moves into long-term",
+            "answer": "memory"
+          },
+          {
+            "label": "REM sleep: when most … happen",
+            "answer": "dreams"
+          },
+          {
+            "label": "REM sleep helps us learn",
+            "answer": "skills"
+          },
+          {
+            "label": "Sleeping after study: … per cent more remembered",
+            "answer": "twenty",
+            "accept": [
+              "20"
+            ]
+          }
+        ]
+      },
+      "tip": "Số trong Part 4 hay đi kèm đơn vị (hours, per cent): viết số hay chữ đều được. Câu cuối bài giảng thường là lời khuyên hay kết luận, đừng bỏ qua."
+    }
+  ],
+  "listeningChoice": [
+    {
+      "id": "museum-tour",
+      "emoji": "🏛️",
+      "part": 2,
+      "title": [
+        "Giới thiệu bảo tàng",
+        "A museum welcome talk"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Good morning, everyone, and welcome to the Riverside Museum. My name is Tom, and I'll be telling you a little about the building before you start exploring."
+        },
+        {
+          "speaker": "M",
+          "text": "The museum first opened in 1925 as a small library. The collection grew so quickly that it moved into this building in 1960, and it has been a museum ever since."
+        },
+        {
+          "speaker": "M",
+          "text": "Most visitors head straight for the dinosaur hall on the ground floor. But I'd suggest you start on the top floor, with our ship models. It's much quieter in the morning, and you'll get a wonderful view of the river."
+        },
+        {
+          "speaker": "M",
+          "text": "Photography is allowed everywhere, but please don't use a flash in the painting gallery, because strong light can damage the colours."
+        },
+        {
+          "speaker": "M",
+          "text": "The café on the first floor closes at four, half an hour before the museum itself. And if you need a break, the garden behind the shop is free to everyone."
+        }
+      ],
+      "questions": [
+        {
+          "q": "When did the museum move into its present building?",
+          "options": [
+            "In 1925",
+            "In 1960",
+            "In 1990"
+          ],
+          "answer": 1,
+          "why": "1925 là năm mở cửa (khi còn là thư viện), bẫy đầu tiên. Câu sau mới nói \"moved into this building in 1960\"."
+        },
+        {
+          "q": "Where does the speaker suggest starting the visit?",
+          "options": [
+            "The dinosaur hall",
+            "The painting gallery",
+            "The top floor"
+          ],
+          "answer": 2,
+          "why": "Khu khủng long được nhắc nhưng là nơi \"most visitors\" đến. Người nói khuyên \"start on the top floor\" vì vắng và có view sông."
+        },
+        {
+          "q": "What are visitors asked not to do in the painting gallery?",
+          "options": [
+            "Take photos with a flash",
+            "Touch the paintings",
+            "Bring food"
+          ],
+          "answer": 0,
+          "why": "Chụp ảnh được ở mọi nơi, chỉ \"don't use a flash in the painting gallery\" vì ánh sáng mạnh làm hỏng màu."
+        },
+        {
+          "q": "What time does the café close?",
+          "options": [
+            "3.30",
+            "4.00",
+            "4.30"
+          ],
+          "answer": 1,
+          "why": "Café đóng lúc 4 giờ; 4.30 là giờ bảo tàng đóng (\"half an hour before the museum\"). Bẫy là phép cộng/trừ thời gian."
+        }
+      ],
+      "tip": "Part 2 hay nhắc nhiều con số và địa điểm, nhưng chỉ một cái trả lời đúng câu hỏi. Nghe kỹ các chữ đổi ý như \"but\", \"I'd suggest\", \"before\"."
+    },
+    {
+      "id": "campus-library",
+      "emoji": "📚",
+      "part": 2,
+      "title": [
+        "Thư viện mới ở trường",
+        "The new campus library"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "Hello, and thanks for coming to this short talk about the new library, which opened last month."
+        },
+        {
+          "speaker": "W",
+          "text": "The biggest change is the opening hours. The old library closed at nine in the evening; the new one stays open until midnight from Monday to Friday, though at weekends it still closes at six."
+        },
+        {
+          "speaker": "W",
+          "text": "Students can now borrow up to twelve books at a time. That's double the old limit of six. Laptops can also be borrowed, but only for use inside the building."
+        },
+        {
+          "speaker": "W",
+          "text": "The silent study rooms are on the third floor. If you want to work in a group, please book one of the meeting rooms on the second floor online; they can't be booked at the front desk."
+        },
+        {
+          "speaker": "W",
+          "text": "Finally, a lot of you have asked about printing. It is no longer free, but it costs just five pence a page, and you can pay with your student card."
+        }
+      ],
+      "questions": [
+        {
+          "q": "On weekdays, the new library closes at",
+          "options": [
+            "6 pm",
+            "9 pm",
+            "midnight"
+          ],
+          "answer": 2,
+          "why": "9 giờ tối là giờ đóng của thư viện cũ, 6 giờ là cuối tuần. Ngày thường thư viện mới mở \"until midnight\"."
+        },
+        {
+          "q": "How many books can students borrow at one time now?",
+          "options": [
+            "Six",
+            "Ten",
+            "Twelve"
+          ],
+          "answer": 2,
+          "why": "\"up to twelve books… double the old limit of six\": sáu là giới hạn cũ."
+        },
+        {
+          "q": "How can students book a group meeting room?",
+          "options": [
+            "At the front desk",
+            "Online",
+            "On the third floor"
+          ],
+          "answer": 1,
+          "why": "\"please book… online; they can't be booked at the front desk\". Tầng 3 là phòng học im lặng."
+        },
+        {
+          "q": "What does the speaker say about printing?",
+          "options": [
+            "It is free for students",
+            "It costs five pence a page",
+            "It must be paid in cash"
+          ],
+          "answer": 1,
+          "why": "\"It is no longer free, but it costs just five pence a page\", trả bằng thẻ sinh viên chứ không phải tiền mặt."
+        }
+      ],
+      "tip": "Khi bài so sánh cái cũ với cái mới, đáp án thường là cái mới; số của cái cũ là bẫy. Đọc trước câu hỏi để biết cần nghe \"now\" hay \"before\"."
+    },
+    {
+      "id": "presentation-plan",
+      "emoji": "🗂️",
+      "part": 3,
+      "title": [
+        "Chuẩn bị bài thuyết trình",
+        "Planning a presentation"
+      ],
+      "lines": [
+        {
+          "speaker": "W",
+          "text": "So, Jack, we need to decide on a topic for our presentation. I was thinking about electric cars."
+        },
+        {
+          "speaker": "M",
+          "text": "Hmm, I think three other groups have already chosen that. What about city bicycles? There's lots of local data."
+        },
+        {
+          "speaker": "W",
+          "text": "Good point. Let's go with bicycles, then. How should we collect information?"
+        },
+        {
+          "speaker": "M",
+          "text": "We could do an online survey, but people often ignore those. Interviews at the bike stations would give us better answers."
+        },
+        {
+          "speaker": "W",
+          "text": "Agreed, although they'll take longer. When's the presentation, again? I thought it was on the fourteenth."
+        },
+        {
+          "speaker": "M",
+          "text": "It was, but the tutor moved it to the twenty-first, so we've got an extra week."
+        },
+        {
+          "speaker": "W",
+          "text": "Great. Then I'll do the interviews and you can make the slides, since you're better with charts."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why do they decide not to choose electric cars?",
+          "options": [
+            "There is not enough data",
+            "Other groups have chosen it",
+            "The tutor does not like it"
+          ],
+          "answer": 1,
+          "why": "Jack nói \"three other groups have already chosen that\". Số liệu (data) được nhắc khi nói về xe đạp, không phải lý do bỏ xe điện."
+        },
+        {
+          "q": "How will they collect information?",
+          "options": [
+            "An online survey",
+            "Interviews",
+            "Library books"
+          ],
+          "answer": 1,
+          "why": "Khảo sát online được nêu rồi bị loại (\"people often ignore those\"); cả hai đồng ý phỏng vấn ở trạm xe đạp."
+        },
+        {
+          "q": "When is the presentation now?",
+          "options": [
+            "On the 7th",
+            "On the 14th",
+            "On the 21st"
+          ],
+          "answer": 2,
+          "why": "Ngày 14 là lịch cũ; giảng viên đã dời sang ngày 21 (\"moved it to the twenty-first\")."
+        },
+        {
+          "q": "What will the man do?",
+          "options": [
+            "Make the slides",
+            "Do the interviews",
+            "Write the report"
+          ],
+          "answer": 0,
+          "why": "Người nữ nhận phỏng vấn, \"you can make the slides, since you're better with charts\"."
+        }
+      ],
+      "tip": "Part 3 là hai người bàn bạc: một ý được nêu ra rồi bị bác là bẫy quen thuộc. Chờ tới khi cả hai đồng ý (\"Agreed\", \"Let's go with…\")."
+    },
+    {
+      "id": "survey-results",
+      "emoji": "📊",
+      "part": 3,
+      "title": [
+        "Bàn về kết quả khảo sát",
+        "Discussing survey results"
+      ],
+      "lines": [
+        {
+          "speaker": "M",
+          "text": "Have you looked at the results of our survey on student breakfasts?"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes. I was surprised that only about a third of students eat breakfast every day. I expected it to be at least half."
+        },
+        {
+          "speaker": "M",
+          "text": "Me too. And the main reason they gave for skipping it wasn't money, as we'd guessed. It was not having enough time in the morning."
+        },
+        {
+          "speaker": "W",
+          "text": "Right. Mind you, our sample was quite small, only sixty students, and most of them were in their first year. So we should mention that as a weakness."
+        },
+        {
+          "speaker": "M",
+          "text": "Definitely. For the next step, should we survey more students?"
+        },
+        {
+          "speaker": "W",
+          "text": "I'd rather compare our results with a national study first. If they're similar, we can be more confident about them."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What proportion of students eat breakfast every day?",
+          "options": [
+            "About a third",
+            "About half",
+            "Most of them"
+          ],
+          "answer": 0,
+          "why": "\"only about a third\". \"At least half\" là điều cô ấy đã đoán, không phải kết quả."
+        },
+        {
+          "q": "What was the main reason for skipping breakfast?",
+          "options": [
+            "Cost",
+            "Lack of time",
+            "Not feeling hungry"
+          ],
+          "answer": 1,
+          "why": "\"wasn't money, as we'd guessed. It was not having enough time\"."
+        },
+        {
+          "q": "What weakness of the survey do they mention?",
+          "options": [
+            "The questions were unclear",
+            "The sample was small",
+            "It was done too late"
+          ],
+          "answer": 1,
+          "why": "\"our sample was quite small, only sixty students\", và phần lớn là sinh viên năm nhất."
+        },
+        {
+          "q": "What does the woman want to do next?",
+          "options": [
+            "Survey more students",
+            "Interview first-year students",
+            "Compare with a national study"
+          ],
+          "answer": 2,
+          "why": "Khảo sát thêm do người nam đề xuất; cô ấy muốn \"compare our results with a national study first\"."
+        }
+      ],
+      "tip": "Câu hỏi về \"ý kiến\" hay \"việc tiếp theo\" cần nghe ai là người nói. Chữ \"I'd rather\", \"I'd prefer\" báo hiệu lựa chọn thật của người đó."
+    }
+  ],
+  "opinion": [
+    {
+      "id": "homework",
+      "emoji": "📚",
+      "title": [
+        "Bài tập về nhà cho trẻ nhỏ",
+        "Homework for young children"
+      ],
+      "passage": [
+        "Few school habits are as widely accepted as homework, yet I believe that for children under ten it does more harm than good. Research has found little link between homework and test results at primary level, and the hours spent on worksheets are hours taken away from play, sleep and reading for pleasure.",
+        "This is not to say that practice is useless. Older students clearly benefit from reviewing what they learned in class, and in secondary school a modest amount of homework is, in my view, entirely reasonable. The problem is that the same approach is often applied to children of all ages.",
+        "Some parents argue that homework teaches discipline. That may be true, but discipline can be learned in many other ways, such as caring for a pet or practising a musical instrument. Schools would do better to encourage reading at home than to send children back with yet more exercises."
+      ],
+      "questions": [
+        {
+          "statement": "Homework is harmful for children under ten.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"I believe that for children under ten it does more harm than good\". \"I believe\" cho biết đây là ý kiến của tác giả."
+        },
+        {
+          "statement": "Secondary school students should be given no homework at all.",
+          "answer": "N",
+          "why": "Đoạn 2: tác giả cho rằng một ít bài tập ở cấp hai là \"entirely reasonable\", trái với câu hỏi."
+        },
+        {
+          "statement": "Most primary school teachers dislike setting homework.",
+          "answer": "NG",
+          "why": "Bài không nói giáo viên nghĩ gì về việc giao bài tập. Tác giả không có ý kiến về điều này."
+        },
+        {
+          "statement": "Homework is the only way for children to learn discipline.",
+          "answer": "N",
+          "why": "Đoạn 3: \"discipline can be learned in many other ways\" (nuôi thú cưng, tập nhạc cụ)."
+        },
+        {
+          "statement": "Schools should encourage children to read at home.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"Schools would do better to encourage reading at home\". \"would do better to\" là lời khuyên của tác giả."
+        }
+      ]
+    },
+    {
+      "id": "free-museums",
+      "emoji": "🏛️",
+      "title": [
+        "Bảo tàng có nên miễn phí?",
+        "Should museums be free?"
+      ],
+      "passage": [
+        "Many national museums charge an entrance fee, and their managers point out that old buildings and large collections are expensive to look after. I understand this argument, but I am convinced that public museums should be free to enter. They hold objects that belong, in a sense, to everyone, and a ticket price keeps away exactly the people who visit least often.",
+        "When several large museums stopped charging, visitor numbers rose sharply. Critics claim that most of the extra visitors were people who already went to museums regularly. Even if this is partly true, it does not seem to me a reason to bring fees back: a free museum still gives every family the chance to walk in.",
+        "Of course, free entry must be paid for somehow. A small charge for special exhibitions strikes me as a fair compromise, as long as the permanent collection remains open to all."
+      ],
+      "questions": [
+        {
+          "statement": "Public museums should not charge visitors to enter.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"I am convinced that public museums should be free to enter\"."
+        },
+        {
+          "statement": "Ticket prices make little difference to people who seldom visit museums.",
+          "answer": "N",
+          "why": "Đoạn 1: giá vé \"keeps away exactly the people who visit least often\", tức là ảnh hưởng nhiều nhất tới họ."
+        },
+        {
+          "statement": "Free entry has made museums too crowded to enjoy.",
+          "answer": "NG",
+          "why": "Bài nói số khách tăng nhưng tác giả không nói gì về chuyện đông đúc hay khó xem."
+        },
+        {
+          "statement": "The critics' point about the extra visitors is a good reason to bring fees back.",
+          "answer": "N",
+          "why": "Đoạn 2: \"it does not seem to me a reason to bring fees back\"."
+        },
+        {
+          "statement": "Charging for special exhibitions is a reasonable compromise.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"strikes me as a fair compromise\". \"fair\" ≈ \"reasonable\"."
+        }
+      ]
+    },
+    {
+      "id": "city-cycling",
+      "emoji": "🚲",
+      "title": [
+        "Chỗ cho xe đạp trong phố",
+        "Making room for bicycles"
+      ],
+      "passage": [
+        "City leaders often say they want more people to cycle, but they are rarely willing to take space away from cars. In my opinion, painting a line on a busy road is not enough. Most people will only ride a bicycle if they feel safe, and that requires lanes that are physically separated from traffic.",
+        "Opponents warn that removing car lanes will cause terrible traffic jams. The experience of several European cities suggests otherwise: when cycling becomes easy, many short car journeys simply disappear. I would also argue that local shops benefit, since cyclists find it easier to stop on the way than drivers do.",
+        "Electric bicycles have made cycling possible for older people and in hilly cities. Even so, I do not think every journey can or should be made by bike. Deliveries and people with disabilities will always need road space, and good planning must include them."
+      ],
+      "questions": [
+        {
+          "statement": "A painted line on the road is enough to make cyclists feel safe.",
+          "answer": "N",
+          "why": "Đoạn 1: \"painting a line on a busy road is not enough\"; cần làn tách hẳn khỏi xe cộ."
+        },
+        {
+          "statement": "Local shops can gain when more people cycle.",
+          "answer": "Y",
+          "why": "Đoạn 2: \"I would also argue that local shops benefit\". \"gain\" ≈ \"benefit\"."
+        },
+        {
+          "statement": "Electric bicycles are too expensive for most people.",
+          "answer": "NG",
+          "why": "Đoạn 3 nói xe đạp điện giúp người lớn tuổi và nơi đồi dốc, không nói gì về giá."
+        },
+        {
+          "statement": "Eventually, all trips in a city should be made by bicycle.",
+          "answer": "N",
+          "why": "Đoạn 3: \"I do not think every journey can or should be made by bike\"."
+        },
+        {
+          "statement": "City planning should take account of deliveries and disabled people.",
+          "answer": "Y",
+          "why": "Đoạn 3: \"good planning must include them\" (giao hàng và người khuyết tật)."
+        }
+      ]
+    },
+    {
+      "id": "early-languages",
+      "emoji": "🧒",
+      "title": [
+        "Học ngoại ngữ từ sớm",
+        "Starting a language early"
+      ],
+      "passage": [
+        "It is often said that children learn languages faster than adults, and this is used to justify teaching English from the first year of primary school. I think the claim is only half true. Young children are certainly better at picking up the sounds of a new language, and they usually end up with a more natural accent.",
+        "However, in a classroom with two or three lessons a week, older learners often make faster progress, because they can understand grammar rules and use study strategies. An early start is therefore no guarantee of success. What matters most, in my view, is how many hours of real use a learner gets, not the age at which lessons begin.",
+        "This does not mean that early lessons are a waste of time. If they are enjoyable, they can give children a positive attitude towards other languages and cultures, and that attitude may be the most valuable thing a school can offer."
+      ],
+      "questions": [
+        {
+          "statement": "Children have an advantage over adults in learning the sounds of a language.",
+          "answer": "Y",
+          "why": "Đoạn 1: \"Young children are certainly better at picking up the sounds\". \"certainly\" cho thấy tác giả đồng ý."
+        },
+        {
+          "statement": "Starting lessons early guarantees that a learner will succeed.",
+          "answer": "N",
+          "why": "Đoạn 2: \"An early start is therefore no guarantee of success\"."
+        },
+        {
+          "statement": "Most countries now teach English from the first year of primary school.",
+          "answer": "NG",
+          "why": "Bài chỉ nói lập luận này được dùng để dạy tiếng Anh từ lớp 1, không nói bao nhiêu nước làm vậy."
+        },
+        {
+          "statement": "The amount of real practice matters more than the age at which a learner starts.",
+          "answer": "Y",
+          "why": "Đoạn 2: \"What matters most, in my view, is how many hours of real use a learner gets, not the age\"."
+        },
+        {
+          "statement": "Early language lessons have no value.",
+          "answer": "N",
+          "why": "Đoạn 3: \"This does not mean that early lessons are a waste of time\"; chúng tạo thái độ tích cực."
+        }
+      ]
+    }
+  ]
+}

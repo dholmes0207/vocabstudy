@@ -5,6 +5,7 @@ import type { Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { NO_CARDS, useStudy } from '@/store/studyStore'
+import { useLogActivity } from '@/hooks/useLogActivity'
 import { useProvideContext } from '@/store/contextStore'
 import { isRecordingSupported } from '@/lib/recorder'
 import { isRecognitionSupported } from '@/lib/speech'
@@ -215,6 +216,7 @@ function SpeakingSession({
 
   const word = words[idx]
   const done = idx >= words.length
+  useLogActivity('speaking', done)
 
   useProvideContext(
     word ? `Đang luyện phát âm từ "${word.word}"` : 'Đang luyện nói',

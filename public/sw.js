@@ -22,6 +22,20 @@
 
 const DISABLED = false
 
+// Practice that is not part of a language pack but must work offline as soon as
+// the worker is installed, like the code it used to be compiled into (the TOEIC
+// and HSK questions, src/lib/toeicBank.ts and hskBank.ts, and the IELTS
+// passages, src/lib/ielts.ts). Small: a few hundred kB before compression.
+const EXTRA_DATA = [
+  'data/toeic/en.json',
+  'data/hsk/zh.json',
+  'data/ielts/en.json',
+  'data/patterns/en.json',
+  'data/patterns/zh.json',
+  'data/roleplay/en.json',
+  'data/roleplay/zh.json',
+]
+
 // Bump to invalidate every cache at once (e.g. after regenerating audio).
 // v2: the pack moved to stale-while-revalidate; flushing v1 hands every learner
 // the current pack on their next visit and drops example clips cached under
@@ -152,6 +166,7 @@ function chunkUrlsFrom(manifest, baseUrl) {
 // Expose the internals for the unit tests (a classic worker cannot `export`).
 self.__swInternals = {
   VERSION,
+  EXTRA_DATA,
   CACHES,
   strategyFor,
   assetUrlsFrom,
@@ -256,7 +271,8 @@ async function precacheShell() {
       const content = await caches.open(CONTENT_CACHE)
       await content.put(manifestUrl, manifestRes.clone())
       const packs = packUrlsFrom(await manifestRes.json(), shellUrl)
-      await Promise.all(packs.map((url) => warm(content, url)))
+      const extra = EXTRA_DATA.map((path) => new URL(path, shellUrl).href)
+      await Promise.all([...packs, ...extra].map((url) => warm(content, url)))
     }
   } catch (e) {
     /* no manifest, no problem — packs are still cached on first use */

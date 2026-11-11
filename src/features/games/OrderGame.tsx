@@ -13,6 +13,7 @@ import {
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
+import { useActivity } from '@/store/activityStore'
 import { useGames } from '@/store/gamesStore'
 import { useProvideContext } from '@/store/contextStore'
 import { exampleAudio, pronounce } from '@/lib/audio'
@@ -46,6 +47,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
   const code = useSettings((s) => s.currentLang)
   const soundEnabled = useSettings((s) => s.soundEnabled)
   const addPlayXp = useStudy((s) => s.addPlayXp)
+  const logActivity = useActivity((s) => s.log)
   const finishOrder = useGames((s) => s.finishOrder)
   const best = useGames((s) => s.bestOrderMistakes)
 
@@ -101,6 +103,7 @@ function OrderRound({ onAgain }: { onAgain: () => void }) {
     }
     const xp = orderXp(words.length, mistakes)
     addPlayXp(code, xp)
+    logActivity(code, 'order')
     const record = finishOrder(mistakes)
     setResult({ xp, record })
     celebrate(record ? 1.4 : 0.9)

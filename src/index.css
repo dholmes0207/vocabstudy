@@ -210,6 +210,10 @@
   :root.dark .sky-glow {
     animation: none;
   }
+  /* Jumps instead of gliding when the system asks for less motion. */
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Cards that lean toward the mouse with a moving glare (hooks/useTilt). */
