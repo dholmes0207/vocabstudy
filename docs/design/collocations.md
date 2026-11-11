@@ -61,6 +61,12 @@ hứng thú, hấp dẫn khi học".
 - Không thêm dữ liệu: câu sai dựng từ câu ví dụ và `traps[0]`. Áp dụng cho cả tiếng Anh lẫn tiếng Trung.
 - Test kiểm hai dạng xen kẽ, câu đúng là câu ví dụ đã điền, câu còn lại là câu có bẫy dịch từng chữ.
 
-## 7. Tiếp theo
+## 7. Thêm 6 cụm tiếng Trung (11/11/2026)
 
-1. Thêm cụm cho chủ đề còn ít (IELTS, sở thích tiếng Trung) khi có câu ví dụ chắc chắn, không bịa.
+- Tiếng Trung lên 23 cụm: mỗi chủ đề thêm 2. Đời sống: 发短信 (bẫy 送, 寄), 上网 (bẫy 进). Học tập, công việc: 请假
+  (bẫy 求), 下班 (bẫy 完). Sở thích: 下棋 (bẫy 打, vì "đánh cờ"), 拉小提琴 (bẫy 弹, nhầm với 弹钢琴).
+- Bỏ những cụm mà bẫy cũng đúng trong câu: 打游戏 (người Trung vẫn nói), 写作业, 给钱/交钱, 抓鱼/打鱼.
+
+## 8. Tiếp theo
+
+1. Thêm cụm cho chủ đề còn ít (IELTS) khi có câu ví dụ chắc chắn, không bịa.

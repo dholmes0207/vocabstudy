@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-11',
+    title: ['Kết hợp từ tiếng Trung: thêm 6 cụm', 'Chinese collocations: 6 more'],
+    items: [
+      [
+        'Trang "Kết hợp từ" tiếng Trung thêm 6 cụm, lên 23: gửi tin nhắn là 发短信 chứ không phải 送, xin nghỉ là 请假, tan làm là 下班, đánh cờ là 下棋 chứ không phải 打棋, kéo đàn violin là 拉 chứ không phải 弹.',
+        'The Chinese "Collocations" page adds 6 phrases, 23 in all: send a text is 发短信, not 送; ask for leave is 请假; finish work is 下班; play chess is 下棋, not 打棋; play the violin is 拉, not 弹.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-10',
     title: ['Cụm động từ: thêm over, away', 'Phrasal verbs: over and away'],
     items: [
