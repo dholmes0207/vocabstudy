@@ -1,5 +1,225 @@
 # KẾ HOẠCH DỰ ÁN — VocaStudy
 
+> Tài liệu có hai phần. **Phần 0** là kế hoạch dài hạn đang áp dụng (11/2026 – 10/2027), lập ngày 11/11/2026 và rà lại mỗi quý. **Phần A–I** phía sau là lịch sử: kế hoạch MVP ban đầu theo quy trình 3 vai và các đợt bổ sung. Nhiều chi tiết trong phần lịch sử đã đổi (app nay có tài khoản, đồng bộ và ba gói ngôn ngữ); khi hai phần khác nhau thì Phần 0 và `README.md` là bản đúng.
+
+---
+
+## PHẦN 0 — KẾ HOẠCH DÀI HẠN (11/2026 – 10/2027)
+
+### Bối cảnh
+
+VocaStudy đã rộng về tính năng sau nhiều đợt thêm nội dung liên tục: gần 60 đường dẫn, 36 mục luyện tập, ba gói ngôn ngữ. Nhưng app chưa đo được người học có quay lại hay không, trang chủ có quá nhiều khối, và tiến độ của người học dễ mất. Kế hoạch này dùng để quản trị và phát triển app trong 12 tháng, hướng tới dễ nhìn, dễ học, cuốn hút và giữ chân người học.
+
+Kế hoạch dựa trên bốn quyết định chủ dự án chốt ngày 11/11/2026:
+
+| Chủ đề    | Quyết định                                                                          |
+| --------- | ----------------------------------------------------------------------------------- |
+| Đăng ký   | Mở tự động (xác nhận email, chống bot); riêng trợ lý AI vẫn duyệt tay.              |
+| Đo lường  | Đo ẩn danh tự làm, gửi về máy chủ của chính VocaStudy, không dùng bên thứ ba.       |
+| Trọng tâm | Người mới, học đều mỗi ngày. Luyện thi giữ như hiện có, chỉ sửa lỗi và bổ sung nhỏ. |
+| Mô hình   | Phần học miễn phí mãi; sau này có gói trả phí cho phần tốn tiền.                    |
+
+Phạm vi ngôn ngữ giữ như đã chốt ngày 10/11: tiếng Anh và tiếng Trung; tiếng Hàn giữ nguyên.
+
+Kết quả mong muốn sau 12 tháng: biết chính xác bao nhiêu người học quay lại; người mới vào bài trong một phút và mỗi ngày chỉ cần bấm một nút; không ai mất tiến độ; có đủ số liệu và nền pháp lý để quyết định gói trả phí.
+
+### Hiện trạng (đọc từ mã nguồn ngày 11/11/2026)
+
+| Mảng              | Đang có                                                                                                                                                                   | Điểm yếu so với mục tiêu                                                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nội dung          | Tiếng Anh 4.515 từ (1.000 lõi, 3.515 B1), tiếng Trung 618, tiếng Hàn 253. Ngữ pháp 24 / 35 / 14 bài, truyện 14 / 16 / 10. TOEIC, IELTS, HSK, HSKK.                        | Đủ rộng. Việc cần làm là dẫn người học qua, không phải thêm trang.                                                                                                                                                   |
+| Vòng học          | Lặp lại ngắt quãng 1-2-5-14-30 ngày (`src/lib/srs.ts`), học nhóm 5 từ, ôn bằng tự nhớ lại.                                                                                | Từ đã "thành thạo" không bao giờ được hỏi lại (`getDueCards` bỏ qua bậc cuối). `dailyReviewLimit` mặc định 0, nên người nghỉ lâu quay lại gặp cả núi thẻ.                                                            |
+| Động lực          | Chuỗi ngày có khiên, mục tiêu nhỏ, nhãn dán, hành trình 7 ngày, nhiệm vụ lộ trình, thử thách hôm nay, từ của ngày.                                                        | Ba cơ chế hằng ngày chạy song song. Có hai chuỗi ngày; chuỗi thử thách về 0 khi lỡ một ngày, trái với giá trị "không phạt".                                                                                          |
+| Trang chủ         | `src/features/dashboard/Dashboard.tsx` xếp tới 16 khối.                                                                                                                   | Không có một nút chính. Người mới không biết bấm gì trước.                                                                                                                                                           |
+| Điều hướng        | `/practice` liệt kê phẳng 36 mục (`features/practice/entries.ts`). Có hai trang "lộ trình": `/path` và `/exam`.                                                           | Khó tìm, dễ ngợp.                                                                                                                                                                                                    |
+| Nhắc học          | Sự kiện lịch (`src/lib/reminder.ts`), lời mời cài app (`src/lib/install.ts`).                                                                                             | Không có thông báo đẩy, không có email.                                                                                                                                                                              |
+| Dữ liệu người học | Chỉ thẻ ôn (`vocab.progress.v1`) được đồng bộ (`src/hooks/useProgressSync.ts`).                                                                                           | 13 kho tiến độ khác chỉ nằm trên máy: ngữ pháp, truyện, lộ trình, bài thi, IELTS, hoạt động, từ đã lưu… Khách chưa được xin lưu trữ bền; Safari trên iPhone có thể xoá dữ liệu trang web sau khoảng 7 ngày không mở. |
+| Tài khoản         | Đăng ký phải chờ duyệt tay (`handle_new_user` trong `supabase/schema.sql`).                                                                                               | Người học phải chờ; ít tài khoản nên ít dữ liệu đo.                                                                                                                                                                  |
+| Đo lường          | Bảng "Người học quay lại" ở trang Quản trị (`functions/api/admin/retention.ts`, `src/lib/retention.ts`).                                                                  | Chỉ tính người đã đăng nhập. Không có số liệu nào về khách.                                                                                                                                                          |
+| Tốc độ            | Gói JS chính 104 kB (gzip). Gói từ tiếng Anh 313 kB, phần chi tiết 321 kB (gzip, bản build 11/11). Lần đầu vào trên 4G chậm: 4,7 giây (đo 29/10, khi gói từ còn nhỏ hơn). | Chưa có ngân sách hiệu năng trong CI; gói từ lớn dần theo nội dung.                                                                                                                                                  |
+| Chất lượng        | 1.271 test đơn vị, 22 test e2e, CI chạy trên mọi PR có mã.                                                                                                                | Chưa có kiểm tra truy cập (a11y) tự động.                                                                                                                                                                            |
+| Vận hành          | Repo công khai. Cloudflare Pages, Supabase gói miễn phí, R2 cho audio.                                                                                                    | `main` chưa bật bảo vệ nhánh. Chưa có cập nhật phụ thuộc tự động, chưa có sao lưu cơ sở dữ liệu. Keepalive dựa vào lịch GitHub Actions, mà GitHub tự tắt lịch khi repo công khai không có hoạt động 60 ngày.         |
+
+### Việc đang dở cần khép lại
+
+| Việc                                                                                          | Tình trạng                                                                                                                                                                                     | Hướng xử lý                                                               |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| PR #173: thêm 6 hội thoại chọn tranh HSK 2                                                    | Mở từ 06/11, lệch `main` 74 commit, 5 tệp (tính tới 11/11).                                                                                                                                    | Đưa `main` vào nhánh, kiểm tra đủ, merge (giai đoạn 0).                   |
+| Nhánh `chore/react-19`                                                                        | 2 commit ngày 07/11, chưa có PR; `package.json` trên `main` vẫn là React 18.                                                                                                                   | Áp lại lên `main` mới; đủ kiểm tra thì merge, không thì ghi lý do và xoá. |
+| 4 nhánh cũ: `feat/hsk-dung-sai`, `feat/toeic-part12-them`, `chore/audio-en`, `chore/audio-zh` | Lệch 160–188 commit; nội dung có vẻ đã lên `main` qua PR khác.                                                                                                                                 | Đối chiếu rồi xoá.                                                        |
+| Tài liệu lệch thực tế                                                                         | `docs/design/keepalive.md` và phần đầu tài liệu này đã sửa ngày 11/11. Ghi chú trong `public/_headers` còn ghi gói từ khoảng 430 KB.                                                           | Sửa ghi chú trong một PR có mã.                                           |
+| Các mục "Tiếp theo" trong `docs/design/`                                                      | IELTS (đọc A–D, matching features; nghe matching), phrasal verbs (in, through), collocations chủ đề IELTS, hoãn tải supabase-js (`latency.md`), tô màu từ trong truyện, viết chữ Hán theo nét. | Xếp vào giai đoạn 2 và 4.                                                 |
+| Việc chờ chủ dự án (ghi trong `docs/design/account.md`)                                       | SMTP riêng, mẫu email, Redirect URLs, đăng nhập Google. Trạng thái không đọc được từ repo.                                                                                                     | Cần xong trước khi mở đăng ký (giai đoạn 1).                              |
+
+### Mục tiêu và chỉ số
+
+Chỉ số chính: **số người học đều trong tuần**, tức số thiết bị hoặc tài khoản có ít nhất 3 ngày học trong 7 ngày gần nhất. Chỉ số này khớp với trọng tâm "người mới, học đều mỗi ngày".
+
+| Chỉ số                  | Định nghĩa                                                                    | Mục tiêu                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Xong bài đầu tiên       | Trong số người mở app lần đầu, tỉ lệ học xong nhóm 5 từ đầu tiên ngay hôm đó. | Từ 70% trở lên (mục tiêu đã ghi ở Phần B, mục 9 bên dưới).                 |
+| Quay lại hôm sau        | Như `src/lib/retention.ts` đang tính.                                         | Đề xuất tăng 20% so với mức đo đầu, sau giai đoạn 2.                       |
+| Quay lại trong tuần đầu | Như `src/lib/retention.ts` đang tính.                                         | Đề xuất tăng 20% so với mức đo đầu, sau giai đoạn 3.                       |
+| Còn học ở tuần thứ 4    | Có ít nhất một ngày học trong ngày 22–28 kể từ ngày đầu.                      | Đặt sau khi có 8 tuần số liệu.                                             |
+| Ôn đúng hạn             | Trong các ngày có từ đến hạn, tỉ lệ ngày người học có ôn.                     | Từ 40% trở lên (Phần B, mục 9).                                            |
+| Khách tạo tài khoản     | Trong số thiết bị học từ 3 ngày trở lên, tỉ lệ có đăng nhập.                  | Đặt sau khi đo.                                                            |
+| Sức khoẻ kỹ thuật       | Lần đầu vào trên 4G chậm; gói JS chính; loại lỗi mới ở trang Quản trị.        | Không quá 3,5 giây; không quá 110 kB (gzip); không lỗi nào tồn quá 7 ngày. |
+
+Các mục tiêu "đề xuất" được chốt lại sau 4 tuần đo đầu tiên ở giai đoạn 1.
+
+### Nguyên tắc ưu tiên
+
+1. Mỗi việc gắn với một chỉ số ở bảng trên. Việc không gắn được thì xếp sau.
+2. Đo trước, đổi sau: giai đoạn 1 phải xong trước khi thay trang chủ.
+3. Sửa và gộp trước, thêm sau. Muốn thêm một trang luyện mới thì phải gộp hoặc gỡ một trang cũ.
+4. Động viên, không phạt: không dùng tim, mạng hay cảnh báo mất chuỗi.
+5. Nội dung có thật và có test; không bịa số liệu hay lời chứng thực.
+6. Giữ quy tắc làm việc của repo: mỗi bước một PR nhỏ, đủ 6 lệnh kiểm tra, có tài liệu trong `docs/design/`, có ghi chú phát hành khi người học thấy được thay đổi.
+
+Không làm trong 12 tháng này: cộng đồng, gia sư hay chấm bài bằng người; app native; quảng cáo; ngôn ngữ mới hoặc mở lại tiếng Hàn trước mốc xem lại tháng 7/2027.
+
+### Lộ trình năm giai đoạn
+
+Mốc thời gian là ước lượng cho nhịp vừa phải, mỗi bước một PR nhỏ.
+
+#### Giai đoạn 0: Dọn nền (11 – 30/11/2026)
+
+Mục tiêu: không còn việc dở, repo công khai an toàn, kế hoạch nằm trong repo.
+
+| #   | Việc                                                                                                                                                                       | Tệp, công cụ                                                              | Ai làm                                               |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------- |
+| 0.1 | Đưa kế hoạch này vào đầu `docs/PLAN.md`, ghi rõ phần A–I là lịch sử. Sửa `docs/design/keepalive.md`. Đã xong ngày 11/11.                                                   | `docs/`                                                                   | Người thực hiện                                      |
+| 0.2 | Khép PR #173: đưa `main` vào nhánh (không ghi đè lịch sử), giải quyết xung đột, kiểm tra đủ, merge.                                                                        | `releases.ts`, `scripts/audio-texts/screens.json`, `docs/design/toeic.md` | Người thực hiện                                      |
+| 0.3 | Xử lý `chore/react-19` và xoá 4 nhánh cũ sau khi đối chiếu.                                                                                                                | `package.json`                                                            | Người thực hiện; xoá nhánh cần chủ dự án đồng ý      |
+| 0.4 | Bảo vệ `main`: bắt buộc PR và CI xanh; bật secret scanning và push protection. Sửa CI để PR chỉ có tài liệu vẫn nhận được kết quả (hiện `paths-ignore` làm CI không chạy). | GitHub Settings, `.github/workflows/ci.yml`                               | Chủ dự án bật; người thực hiện sửa CI                |
+| 0.5 | Cập nhật phụ thuộc tự động hằng tuần, gộp theo nhóm; chính sách báo lỗ hổng.                                                                                               | `.github/dependabot.yml`, `.github/SECURITY.md`                           | Người thực hiện                                      |
+| 0.6 | Giám sát ngoài gọi `https://vocastudy.app/api/health` mỗi giờ: giữ Supabase thức khi GitHub tắt lịch, và báo cho chủ dự án khi app chết.                                   | Một dịch vụ giám sát uptime miễn phí                                      | Chủ dự án                                            |
+| 0.7 | Sao lưu `profiles`, `progress`, `feedback` hằng tuần sang một bucket R2 riêng tư. Không dùng artifact của GitHub, vì repo công khai thì ai đăng nhập GitHub cũng tải được. | Workflow mới                                                              | Người thực hiện viết; chủ dự án tạo bucket và secret |
+| 0.8 | Quét lịch sử git tìm khoá bí mật một lần. Quyết định gỡ tệp PDF của bên thứ ba khỏi repo công khai, chỉ giữ trích dẫn nguồn.                                               | `docs/sources/`, `LICENSE`, `README.md`                                   | Người thực hiện quét; chủ dự án quyết                |
+
+Xong khi: không còn PR hay nhánh dở; `main` được bảo vệ; có cảnh báo khi app chết; có bản sao lưu đầu tiên.
+
+#### Giai đoạn 1: Đo được và mở cửa (12/2026 – giữa 01/2027)
+
+Mục tiêu: có số liệu về mọi người học, kể cả khách; ai cũng tạo được tài khoản.
+
+| #   | Việc                                                                                                                                                                                                                                                                                                      | Tệp chính và phần dùng lại                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1 | **Đo ẩn danh.** Mỗi ngày có học, app gửi một tín hiệu: mã thiết bị ngẫu nhiên, ngày, gói ngôn ngữ, số câu trả lời và số từ mới (theo khoảng), ba cờ (đã xong bài đầu, đã đăng nhập, đã cài app). Không lưu IP, email hay nội dung học. Có công tắc tắt trong Cài đặt và tôn trọng Global Privacy Control. | Mới: `docs/design/usage-metrics.md`, `src/lib/usagePing.ts` (thuần, có test), `functions/api/ping.ts`, bảng `usage_days` và hàm `record_usage_day` trong `supabase/schema.sql`. Dùng lại: cách gửi của `src/lib/reportError.ts`, cách chặn của `functions/api/errors.ts` và `src/lib/rateLimit.ts`, `today()` trong `src/lib/date.ts`. Mã thiết bị lưu ngoài tiền tố `vocab.` để không đi theo tệp sao lưu (`src/lib/backup.ts`). |
+| 1.2 | **Chính sách đi cùng.** Thêm mục về số liệu ẩn danh, tăng `POLICY_VERSION` để chuông thông báo báo cho người học; sửa câu "không theo dõi" thành mô tả đúng.                                                                                                                                              | `src/features/marketing/legal.ts`, `src/lib/site.ts`, `src/features/marketing/About.tsx`                                                                                                                                                                                                                                                                                                                                          |
+| 1.3 | **Bảng phễu và quay lại cho mọi thiết bị.** Bốn bước: mở app, xong bài đầu, quay lại hôm sau, học từ 3 ngày trong tuần đầu.                                                                                                                                                                               | `functions/api/admin/retention.ts`, `src/features/admin/RetentionPanel.tsx`; phần tính dùng lại `src/lib/retention.ts`                                                                                                                                                                                                                                                                                                            |
+| 1.4 | **Mở đăng ký, AI vẫn duyệt.** Tài khoản mới hoạt động ngay sau khi xác nhận email. Thêm quyền dùng AI riêng, admin duyệt; tài khoản đang hoạt động hiện có giữ quyền AI. Chống bot bằng CAPTCHA Turnstile của Supabase Auth.                                                                              | `supabase/schema.sql` (`handle_new_user`, cột `profiles.ai_access`), `src/lib/authz.ts`, `functions/_shared.ts`, `functions/api/ai/chat.ts`, `functions/api/ai/status.ts`, `src/features/auth/AuthPage.tsx`, `src/store/authStore.ts`, `src/features/admin/UsersTab.tsx`                                                                                                                                                          |
+| 1.5 | **Giữ tiến độ của khách.** Xin trình duyệt lưu trữ bền sau bài học đầu. Sau ngày học thứ ba hoặc 50 từ, mời tạo tài khoản một lần; từ chối thì 14 ngày sau mới hỏi lại.                                                                                                                                   | `src/components/SessionComplete.tsx`, trang chủ; quy tắc hỏi lại theo mẫu `shouldOfferInstall` trong `src/lib/install.ts`                                                                                                                                                                                                                                                                                                         |
+| 1.6 | Sau 4 tuần đo: chốt mục tiêu số cho bảng chỉ số.                                                                                                                                                                                                                                                          | `docs/PLAN.md`                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+Chủ dự án cần làm trước 1.4: SMTP riêng, khoá Turnstile, chạy lại `supabase/schema.sql`.
+
+Xong khi: trang Quản trị hiện phễu và tỉ lệ quay lại của cả khách; người mới tạo tài khoản và đồng bộ được trong vài phút.
+
+#### Giai đoạn 2: Dễ nhìn, dễ bắt đầu (01 – 03/2027)
+
+Mục tiêu: mỗi màn một việc chính; người mới vào bài trong một phút. Chỉ số: xong bài đầu tiên, quay lại hôm sau.
+
+| #   | Việc                                                                                                                                                                                                                                                                                                     | Tệp chính và phần dùng lại                                                                                                                                                                                                                 |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2.1 | **Trang chủ "Hôm nay".** Một thẻ lớn với một nút chính đổi theo tình trạng: ôn từ đến hạn, học 5 từ mới, làm nhiệm vụ lộ trình, hoặc "xong hôm nay". Ba vùng: Hôm nay, Lộ trình của bạn, Khám phá (gập lại). Bỏ khối "Tổng quan tiến độ" (đã có ở `/stats`) và lưới "Chơi mà học" (đã có ở `/practice`). | `Dashboard.tsx`, `Motivation.tsx`. Mới: `src/lib/todayPlan.ts` (thuần, có test), gom `summarize` (`src/lib/summary.ts`), `goalProgress`, `quickStartPath`, `energyOptions` (`src/lib/motivation.ts`), `questFor` (`src/lib/pathQuest.ts`). |
+| 2.2 | **Phiên hôm nay liền mạch.** Ôn, rồi 5 từ mới, rồi gợi ý một bài luyện của bước lộ trình đang dở. Khi tồn đọng lớn thì chia nhỏ theo ngày.                                                                                                                                                               | `features/review/Review.tsx`, `features/learn/LearnSession.tsx`, `SessionComplete.tsx`, `settingsStore.ts`                                                                                                                                 |
+| 2.3 | **Một chuỗi ngày duy nhất.** Thử thách hôm nay tính vào chuỗi học chung có khiên; bỏ chuỗi riêng về 0.                                                                                                                                                                                                   | `src/lib/dailyChallenge.ts`, `challengeStore.ts`, `DailyChallenge.tsx`, `nextStreak` trong `src/lib/motivation.ts`                                                                                                                         |
+| 2.4 | **Trang Luyện tập chia nhóm:** Luyện thi, Nghe, Nói, Đọc và viết, Từ và cụm từ, Chữ và âm, Trò chơi. Có mục "Gợi ý cho bạn" và số lượt đã làm.                                                                                                                                                           | `features/practice/entries.ts` (thêm `group`), `Practice.tsx`, `activityStore.ts`, `src/lib/discover.ts`                                                                                                                                   |
+| 2.5 | **Gộp hai "lộ trình".** Thông tin kỳ thi của `/exam` chuyển vào cấp tương ứng trong `/path`; menu chỉ còn một mục.                                                                                                                                                                                       | `features/exam/Exam.tsx`, `features/path/LearningPath.tsx`, `Layout.tsx`                                                                                                                                                                   |
+| 2.6 | **Người mới vào bài trong một phút.** Từ trang giới thiệu vào thẳng 5 từ đầu tiên; học xong mới hỏi mục tiêu, trình độ và giờ nhắc.                                                                                                                                                                      | `features/marketing/Landing.tsx`, `LanguagePicker.tsx`, `FirstSteps` trong `Motivation.tsx`, `features/placement/`, `ReminderSetup.tsx`                                                                                                    |
+| 2.7 | **Giao diện lần đầu theo ngôn ngữ của máy** (máy tiếng Việt thấy tiếng Việt). Cần chủ dự án đồng ý, vì mặc định tiếng Anh là lựa chọn trước đây (`docs/design/i18n.md`).                                                                                                                                 | `settingsStore.ts`, `src/lib/i18n.ts`                                                                                                                                                                                                      |
+| 2.8 | **Kiểm tra truy cập tự động** cho 6 màn chính; rà cỡ chữ, tương phản, vùng chạm ở 360 px.                                                                                                                                                                                                                | `e2e/`                                                                                                                                                                                                                                     |
+| 2.9 | **Tải nhanh hơn**, chỉ làm nếu số đo cho thấy người mới rời đi khi chờ: hoãn tải supabase-js, tách gói từ tiếng Anh theo chặng, ngân sách hiệu năng trong CI.                                                                                                                                            | `src/lib/supabase.ts`, plugin `minify-language-packs` trong `vite.config.ts`, `src/lib/dataLoader.ts`, `docs/design/latency.md`                                                                                                            |
+
+Xong khi: trang chủ có một nút chính ở mọi trạng thái; số đo "xong bài đầu tiên" và "quay lại hôm sau" được so trước và sau.
+
+#### Giai đoạn 3: Quay lại (04 – 05/2027)
+
+Mục tiêu: nhắc đúng lúc, không ai mất tiến độ. Chỉ số: quay lại trong tuần đầu, còn học ở tuần thứ 4.
+
+| #   | Việc                                                                                                                                                                | Tệp chính và phần dùng lại                                                                                                                                                                                  |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.1 | **Đồng bộ đầy đủ.** 13 kho tiến độ đang chỉ nằm trên máy được đồng bộ như thẻ ôn. Làm trước: hoạt động, ngữ pháp, truyện, lộ trình, bài thi, từ đã lưu, câu tự đặt. | Bảng `user_state` trong `supabase/schema.sql`; hàm gộp thuần theo cách của `src/lib/sync.ts` (số đếm lấy lớn nhất, điểm lấy cao nhất, tập hợp lấy hợp); mở rộng `src/hooks/useProgressSync.ts`              |
+| 3.2 | **Thông báo đẩy** cho Android và app đã cài trên iPhone: một lời nhắc mỗi ngày vào giờ người học chọn, lời lẽ dịu, tự ngừng sau 3 lần không mở.                     | `public/sw.js`, `functions/api/push/`, bảng `push_subscriptions`, một Cloudflare Worker chạy theo lịch (Pages Functions không tự chạy theo giờ), `ReminderSetup.tsx`. Lịch `.ics` hiện có giữ làm dự phòng. |
+| 3.3 | **Thư tóm tắt tuần** cho người có tài khoản và tự chọn nhận: số từ đã học, số từ chờ ôn, một nút vào học, một nút huỷ nhận.                                         | Worker ở 3.2, dịch vụ gửi thư, `legal.ts`                                                                                                                                                                   |
+| 3.4 | **Quay lại sau nghỉ dài:** ôn nhẹ lại theo từng ngày, tặng lại một khiên, lời chào không trách.                                                                     | `welcomeBack`, `nextStreak` trong `src/lib/motivation.ts`, `Motivation.tsx`                                                                                                                                 |
+
+Xong khi: đổi máy không mất gì; tỉ lệ bật nhắc và tỉ lệ quay lại trong tuần đầu được so trước và sau.
+
+#### Giai đoạn 4: Học sâu, nội dung theo lộ trình (06 – 08/2027)
+
+Mục tiêu: người học lâu vẫn có lý do mở app. Chỉ số: ôn đúng hạn, số ngày học mỗi tuần của người đã học trên 30 ngày.
+
+| #   | Việc                                                                                                                                                              | Tệp chính và phần dùng lại                                                                                   |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 4.1 | **Ôn duy trì.** Từ đã thành thạo quay lại theo lịch thưa 60, 120, 240 ngày, khoảng 5 thẻ mỗi ngày; sai thì về bậc ôn tập, không về 0.                             | `src/lib/srs.ts`, `src/lib/summary.ts`, `src/lib/practice.ts`, `src/lib/sync.ts`, `features/stats/Stats.tsx` |
+| 4.2 | **Lấp nội dung theo lộ trình, không thêm trang:** các mục "Tiếp theo" ở bảng việc đang dở; tiếng Trung mở rộng từ vựng lên HSK 4 khi có người học xong cấp HSK 3. | `public/data/`, `src/lib/learningPath.ts`, `docs/design/`                                                    |
+| 4.3 | **Đọc gắn với ôn:** tô màu từ trong truyện theo trạng thái đã học; luyện viết chữ Hán theo nét nếu có dữ liệu nét với giấy phép phù hợp.                          | `features/reading/Reading.tsx`, `savedWordsStore.ts`                                                         |
+| 4.4 | **Vòng chất lượng nội dung:** nút "Báo lỗi nội dung" ngay trên thẻ từ và câu hỏi; kiểm lại thông tin kỳ thi mỗi 6 tháng.                                          | `FeedbackDialog.tsx`, `functions/api/feedback.ts`, trường `checked` trong `src/lib/exams.ts`                 |
+| 4.5 | **Mốc xem lại tháng 7/2027:** mở lại tiếng Hàn hay thêm ngôn ngữ, dựa trên số người học từng gói.                                                                 | Số liệu giai đoạn 1                                                                                          |
+
+#### Giai đoạn 5: Chuẩn bị gói trả phí (09 – 10/2027)
+
+Điều kiện mở: chỉ số chính và tỉ lệ quay lại đạt ngưỡng chốt ở việc 1.6. Chưa đạt thì kéo dài giai đoạn 3 và 4.
+
+| #   | Việc                                                                                                                                                                                                                               | Tệp chính và phần dùng lại                                      |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 5.1 | **Ranh giới công khai.** Miễn phí mãi: học, ôn, lộ trình, mọi trang luyện, đồng bộ. Trả phí: phần tốn tiền theo lượt, như AI chấm bài viết và bài nói, hội thoại AI nhiều lượt.                                                    | `Landing.tsx`, `legal.ts`                                       |
+| 5.2 | **Rà pháp lý trước khi thu tiền:** quyền dùng thương mại của giọng đọc tạo bằng edge-tts (nếu không rõ thì thu lại bằng dịch vụ có giấy phép); nguồn dữ liệu từ vựng; ghi rõ không liên kết với tổ chức thi; điều khoản hoàn tiền. | `scripts/generate_audio.py`, `LICENSE`, `README.md`, `legal.ts` |
+| 5.3 | **Thăm dò trước khi xây:** trang "Gói Plus sắp có" với danh sách chờ và ba câu hỏi về nhu cầu.                                                                                                                                     | Cách gửi của `FeedbackDialog.tsx`                               |
+| 5.4 | **Quyền lợi phía máy chủ:** cột `profiles.plan`, kiểm theo mẫu `requireUser`; hạn mức AI theo gói dùng `ai_usage` và `bump_ai_usage` sẵn có. Cổng thanh toán chọn lúc làm, theo điều kiện cho người bán ở Việt Nam.                | `functions/_shared.ts`, `supabase/schema.sql`                   |
+
+### Quản trị
+
+#### Vai trò
+
+- **Chủ dự án:** quyết định hướng đi và các mốc; giữ tài khoản ngoài (GitHub, Cloudflare, Supabase, tên miền, email); duyệt quyền AI; trả lời góp ý.
+- **Người thực hiện:** làm từng PR nhỏ theo quy tắc của repo, báo số đo trước và sau, cập nhật tài liệu.
+
+#### Nhịp làm việc
+
+| Nhịp       | Việc                                                                                                                                   | Thời lượng |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Hằng tuần  | Mở trang Quản trị: người học quay lại, lỗi gần đây, góp ý, hạn mức AI, tài khoản chờ duyệt AI. Xem CI và cảnh báo giám sát.            | 15 phút    |
+| Hằng tháng | So chỉ số với mục tiêu; chọn 3–5 việc cho tháng tới từ giai đoạn hiện tại; merge các bản cập nhật phụ thuộc; xem hạn mức gói miễn phí. | 1 giờ      |
+| Hằng quý   | Rà kế hoạch và sửa `docs/PLAN.md`; thử khôi phục một bản sao lưu; mỗi 6 tháng kiểm lại thông tin kỳ thi.                               | 2 giờ      |
+
+#### Cổng chất lượng
+
+Giữ 6 lệnh hiện có (`format:check`, `lint`, `typecheck`, `test`, `build`, `e2e`). Thêm dần: kiểm tra truy cập tự động (việc 2.8), ngân sách hiệu năng (việc 2.9). Mỗi tính năng người học thấy được cần có tài liệu trong `docs/design/`, một ghi chú trong `src/features/marketing/releases.ts`, và một chỉ số dự kiến thay đổi.
+
+#### Rủi ro
+
+| Rủi ro                                                                    | Cách giảm                                                                                        |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Supabase tạm dừng vì GitHub tắt lịch keepalive                            | Giám sát ngoài gọi `/api/health` (việc 0.6).                                                     |
+| Người học mất tiến độ (trình duyệt xoá dữ liệu khách; cơ sở dữ liệu hỏng) | Lưu trữ bền và mời tạo tài khoản (1.5), đồng bộ đầy đủ (3.1), sao lưu tuần (0.7).                |
+| Vượt hạn mức gói miễn phí của Supabase, Cloudflare, R2                    | Xem hạn mức mỗi tháng; tới 70% thì lên phương án nâng gói. Gói trả phí bù chi phí (giai đoạn 5). |
+| Lạm dụng khi mở đăng ký                                                   | Turnstile, xác nhận email, AI vẫn duyệt tay, hạn mức 30 lượt AI mỗi ngày đã có.                  |
+| Chỉ có một quản trị viên                                                  | Thêm một admin dự phòng; ghi quy trình khôi phục vào `docs/DEPLOY.md`.                           |
+| Giấy phép nội dung (PDF nguồn, giọng đọc, tên kỳ thi)                     | Việc 0.8 và 5.2.                                                                                 |
+| Phình tính năng                                                           | Quy tắc gộp trước khi thêm (nguyên tắc 3); ngân sách hiệu năng.                                  |
+| Phụ thuộc lỗi thời hoặc có lỗ hổng                                        | Cập nhật tự động hằng tuần (0.5); mỗi quý một đợt nâng cấp lớn.                                  |
+| Đề thi thay đổi (HSK đang chuyển chuẩn mới)                               | Kiểm lại mỗi 6 tháng (4.4).                                                                      |
+
+#### Việc chỉ chủ dự án làm được
+
+Bật bảo vệ nhánh và secret scanning; tạo giám sát uptime; SMTP riêng và khoá Turnstile; tạo bucket R2 riêng tư và secret cho sao lưu; chạy lại `supabase/schema.sql` sau mỗi thay đổi lược đồ; quyết định về tệp PDF và về ngôn ngữ giao diện lần đầu; thử thông báo đẩy trên điện thoại thật.
+
+### Kiểm chứng
+
+- **Bản kế hoạch (việc 0.1):** `npm run format:check` qua; các con số ở mục 2 khớp với lệnh đếm (số từ từ `public/data/*.json`, số mục trong `entries.ts`, số test từ `npm test`).
+- **Mọi việc có mã:** phần logic thuần có test đơn vị; luồng chính có test e2e; đủ 6 lệnh kiểm tra; xem trên khổ điện thoại 360 px bằng ảnh chụp Playwright; ghi số đo trước và sau từ trang Quản trị.
+- **Giai đoạn 1:** trên bản xem trước Cloudflare, học một bài rồi thấy dòng mới trong `usage_days` và thiết bị khách trong bảng Quản trị. Đăng ký một tài khoản thử: đồng bộ chạy ngay, trợ lý AI bị chặn cho tới khi duyệt.
+- **Giai đoạn 2:** test e2e "người mới đi từ trang giới thiệu tới xong 5 từ đầu"; đo lại độ trễ theo cách của `docs/design/latency.md`.
+- **Giai đoạn 3:** test e2e hai trình duyệt cùng tài khoản thấy cùng tiến độ ngữ pháp; chủ dự án thử thông báo đẩy trên máy thật.
+- **Giai đoạn 4:** test `srs` cho lịch duy trì; `dataset.test.ts` và các test nội dung cho dữ liệu mới.
+
+---
+
+## LỊCH SỬ — KẾ HOẠCH MVP BAN ĐẦU
+
 > **Website học & ôn từ vựng đa ngôn ngữ**, khởi đầu với **1000 từ tiếng Anh thông dụng** (chuẩn Oxford & Cambridge) dành cho **người Việt học tiếng Anh**.
 >
 > Tài liệu này được xây dựng theo đúng quy trình 3 vai mà bạn yêu cầu:
