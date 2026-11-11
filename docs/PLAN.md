@@ -209,7 +209,7 @@ Bật bảo vệ nhánh và secret scanning; tạo giám sát uptime; SMTP riên
 
 ### Kiểm chứng
 
-- **Bản kế hoạch (việc 0.1):** `npm run format:check` qua; các con số ở mục 2 khớp với lệnh đếm (số từ từ `public/data/*.json`, số mục trong `entries.ts`, số test từ `npm test`).
+- **Bản kế hoạch (việc 0.1):** `npm run format:check` qua; các con số ở bảng hiện trạng khớp với lệnh đếm (số từ từ `public/data/*.json`, số mục trong `entries.ts`, số test từ `npm test`).
 - **Mọi việc có mã:** phần logic thuần có test đơn vị; luồng chính có test e2e; đủ 6 lệnh kiểm tra; xem trên khổ điện thoại 360 px bằng ảnh chụp Playwright; ghi số đo trước và sau từ trang Quản trị.
 - **Giai đoạn 1:** trên bản xem trước Cloudflare, học một bài rồi thấy dòng mới trong `usage_days` và thiết bị khách trong bảng Quản trị. Đăng ký một tài khoản thử: đồng bộ chạy ngay, trợ lý AI bị chặn cho tới khi duyệt.
 - **Giai đoạn 2:** test e2e "người mới đi từ trang giới thiệu tới xong 5 từ đầu"; đo lại độ trễ theo cách của `docs/design/latency.md`.
