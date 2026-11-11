@@ -1,0 +1,38 @@
+# Weekly dependency updates (docs/design/ci.md). Minor and patch releases
+# arrive grouped, so a normal week is two or three pull requests, each checked
+# by CI like any other. A major release comes alone and is merged by hand after
+# reading its notes.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '09:00'
+      timezone: Asia/Ho_Chi_Minh
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(deps)'
+    groups:
+      # What ships to learners: React, the router, Supabase, the store.
+      runtime:
+        dependency-type: production
+        update-types: [minor, patch]
+      # Build, lint and test tools.
+      tooling:
+        dependency-type: development
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '09:00'
+      timezone: Asia/Ho_Chi_Minh
+    commit-message:
+      prefix: 'chore(ci)'
+    groups:
+      actions:
+        patterns: ['*']
