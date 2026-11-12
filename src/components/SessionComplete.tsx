@@ -4,6 +4,7 @@ import { celebrate } from '@/lib/confetti'
 import { skyCelebrate } from '@/lib/skyEvents'
 import GoalNudge from './GoalNudge'
 import { useT } from '@/lib/i18n'
+import { requestPersistentStorage } from '@/lib/persistStorage'
 
 interface Props {
   title?: string
@@ -46,6 +47,12 @@ export default function SessionComplete({
   // Throw a little confetti to reward finishing. For learning sessions there's
   // no "score" to scale by, so give a generous, fixed celebration.
   useEffect(() => {
+    // Something worth keeping now exists: ask the browser not to clear it (once).
+    try {
+      void requestPersistentStorage(navigator.storage, localStorage)
+    } catch {
+      // localStorage blocked: nothing is kept anyway.
+    }
     if (showScore) {
       if (total > 0) {
         celebrate(0.6 + (pct / 100) * 0.8)
