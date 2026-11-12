@@ -16,7 +16,8 @@
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 # Language packs: new words should show up the same day, but a repeat visit
-# within the hour must not re-download the whole pack (~430 KB compressed).
+# within the hour must not re-download the whole pack (English: ~310 KB of
+# words plus ~320 KB of details, gzip, November 2026).
 /data/*
   Cache-Control: public, max-age=3600, stale-while-revalidate=604800
 
