@@ -353,7 +353,7 @@ function ActionCard({
         </p>
         <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{hint}</p>
         <div
-          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? 'text-slate-500' : 'text-brand-600 dark:text-brand-300'}`}
+          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? muted : 'text-brand-600 dark:text-brand-300'}`}
         >
           {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
         </div>
