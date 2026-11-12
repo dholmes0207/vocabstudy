@@ -41,4 +41,18 @@ thứ ba." Hiện bảng "Người học quay lại" ở trang Quản trị ch�
 
 1. Gắn vào app: gửi khi xong một phiên học, đọc số câu trả lời và từ mới của ngày; công tắc trong Cài đặt.
 2. Việc 1.2: thêm mục "Số liệu ẩn danh" vào chính sách, tăng `POLICY_VERSION`, sửa câu "không theo dõi".
-3. Việc 1.3: bảng phễu và tỉ lệ quay lại cho mọi thiết bị ở trang Quản trị, đọc từ `usage_days`.
+3. ~~Việc 1.3: bảng phễu cho mọi thiết bị ở trang Quản trị~~: xong, xem mục dưới.
+
+## Bảng phễu cho mọi thiết bị (việc 1.3)
+
+- Thẻ "Người học quay lại" ở trang Quản trị có thêm phần **Mọi thiết bị (số liệu ẩn danh)**, đọc từ `usage_days`.
+  Phần cũ (chỉ người đã đăng nhập) giữ nguyên để so.
+- Bốn bước:
+  1. thiết bị có học (ít nhất một ngày có tín hiệu);
+  2. xong nhóm 5 từ đầu tiên ngay ngày đầu (cờ `first_lesson` của ngày đầu tiên);
+  3. quay lại hôm sau, tính như phần người đã đăng nhập;
+  4. học từ 3 ngày khác nhau trong 7 ngày đầu, chỉ tính khi tuần đầu đã qua.
+- Phần tính nằm trong `src/lib/retention.ts` (`daysByDevice`, `deviceReport`, có test), dùng lại `retentionReport`.
+- `GET /api/admin/retention` trả thêm trường `devices`; trường này là `null` khi chưa có bảng, và thẻ hiện lời nhắc
+  chạy `supabase/schema.sql`.
+- Đọc cả bảng theo trang 1.000 dòng. Khi số dòng lớn (hàng trăm nghìn), chuyển phần đếm vào một hàm SQL.

@@ -1,6 +1,6 @@
 import { getAccessToken } from './supabase'
 import { tx } from './i18n'
-import type { RetentionReport } from './retention'
+import type { DeviceReport, RetentionReport } from './retention'
 
 // Client for the Cloudflare Pages Functions API (server-side pieces that must
 // hold secrets): the AI proxy and admin operations. Auth and progress talk to
@@ -125,7 +125,7 @@ export const api = {
   // Admin (Function uses the Supabase service-role key to bypass RLS)
   adminUsers: () => req<{ users: AdminUser[] }>('/admin/users'),
   adminAiUsage: () => req<AiUsageReport>('/admin/ai-usage'),
-  adminRetention: () => req<RetentionReport>('/admin/retention'),
+  adminRetention: () => req<RetentionReport & { devices: DeviceReport | null }>('/admin/retention'),
   adminFeedback: () => req<{ enabled: boolean; feedback: FeedbackRow[] }>('/admin/feedback'),
   adminFeatureFeedback: (id: string, featured: boolean) =>
     req<{ ok: true }>('/admin/feedback', {
