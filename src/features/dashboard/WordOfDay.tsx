@@ -48,7 +48,7 @@ export default function WordOfDay() {
         <span className="text-2xl font-extrabold">{w.word}</span>
         <SpeakButton text={w.word} lang={pack.meta.ttsLang} audioSrc={wordAudio(w.id)} size="sm" />
         {w.viRead && (
-          <span className="text-sm text-slate-500">
+          <span className="text-sm text-slate-500 dark:text-slate-400">
             {readLabel} {w.viRead}
           </span>
         )}
