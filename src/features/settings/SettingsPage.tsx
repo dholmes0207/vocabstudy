@@ -452,7 +452,7 @@ export default function SettingsPage() {
                   rate: settings.ttsRate,
                 })
               }
-              aria-label={t('Nghe thử phát âm', 'Play a sample')}
+              aria-label={t('Nghe thử phát âm', 'Try it: play a sample')}
             >
               <Volume2 className="h-4 w-4" /> {t('Nghe thử', 'Try it')}
             </button>

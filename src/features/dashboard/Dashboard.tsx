@@ -327,6 +327,7 @@ function ActionCard({
   const tilt = useTilt()
   const toneCls =
     tone === 'brand' ? 'from-brand-500 to-brand-700' : 'from-emerald-500 to-emerald-700'
+  const muted = disabled ? 'text-slate-500 dark:text-slate-400' : ''
   const inner = (
     <div
       className={`card relative overflow-hidden p-5 ${disabled ? '' : 'tilt'}`}
@@ -335,18 +336,19 @@ function ActionCard({
       <div
         className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${toneCls} opacity-10`}
       />
-      {/* Dim the content, not the card: a see-through card would show the sky. */}
-      <div className={disabled ? 'opacity-60' : ''}>
+      {/* Dim the icon and soften the text, not the card: a see-through card would
+          show the sky, and see-through text falls below readable contrast. */}
+      <div>
         <div className="flex items-center gap-3">
           <span
-            className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow`}
+            className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow ${disabled ? 'opacity-50 grayscale' : ''}`}
           >
             <Icon className="h-6 w-6" />
           </span>
-          <h3 className="text-lg font-bold">{title}</h3>
+          <h3 className={`text-lg font-bold ${muted}`}>{title}</h3>
         </div>
         <p className="mt-4">
-          <span className="text-4xl font-extrabold">{count}</span>{' '}
+          <span className={`text-4xl font-extrabold ${muted}`}>{count}</span>{' '}
           <span className="text-slate-500 dark:text-slate-400">{unit}</span>
         </p>
         <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{hint}</p>

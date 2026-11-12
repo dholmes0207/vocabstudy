@@ -58,3 +58,17 @@ npm run e2e          # playwright test -c e2e, tự mở vite preview ở cổng
 
 Đã thử cố ý tắt service worker (`DISABLED = true` trong `public/sw.js`): test ngoại tuyến báo đỏ
 như mong đợi.
+
+## Kiểm tra truy cập tự động (13/11/2026, việc 2.8 trong `docs/PLAN.md`)
+
+- `e2e/accessibility.spec.ts` chạy axe-core (`@axe-core/playwright`) trên 7 màn: trang giới thiệu, trang chủ, Học, Ôn,
+  Luyện tập, Thống kê, Cài đặt. Luật WCAG 2.0 và 2.1 mức A và AA, trên khổ điện thoại như các test khác.
+- Lỗi mức **serious** hoặc **critical** làm test đỏ; thông báo liệt kê luật và phần tử đầu tiên vi phạm.
+- Trước khi quét, test chờ mọi hiệu ứng có hồi kết chạy xong. Nội dung hiện dần (`animate-fade-in`), nên quét giữa
+  chừng thì chữ trông nhạt hơn thật và axe báo nhầm lỗi tương phản.
+- Lần chạy đầu đã sửa:
+  - thẻ hành động bị khoá ở trang chủ: chữ không còn mờ cả khối (`opacity-60` làm tương phản dưới 4,5:1), chỉ biểu
+    tượng mờ, chữ dùng màu xám đủ đậm;
+  - ba nút có tên đọc không chứa chữ hiển thị (WCAG 2.5.3): nút đổi ngôn ngữ giao diện ("EN"/"VI"), nút thử thách hôm
+    nay ("Làm ngay"/"Go"), nút nghe thử trong Cài đặt ("Try it").
+- Tiếp theo: quét cả giao diện tối, và các màn luyện tập khi đang làm bài.
