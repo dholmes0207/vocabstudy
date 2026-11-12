@@ -13,6 +13,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-13',
+    title: ['Giữ tiến độ an toàn hơn', 'Keeping your progress safer'],
+    items: [
+      [
+        'Học xong phiên đầu tiên, app xin trình duyệt giữ dữ liệu của bạn, để tiến độ không bị xoá khi máy đầy hay lâu không mở. Firefox có thể hỏi bạn một lần.',
+        'After your first session, the app asks your browser to keep its data, so your progress is not cleared when space runs low or after a long break. Firefox may ask you once.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-11',
     title: ['HSK 2: thêm hội thoại chọn tranh', 'HSK 2: more picture dialogues'],
     items: [
