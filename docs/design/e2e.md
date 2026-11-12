@@ -62,7 +62,8 @@ như mong đợi.
 ## Kiểm tra truy cập tự động (13/11/2026, việc 2.8 trong `docs/PLAN.md`)
 
 - `e2e/accessibility.spec.ts` chạy axe-core (`@axe-core/playwright`) trên 7 màn: trang giới thiệu, trang chủ, Học, Ôn,
-  Luyện tập, Thống kê, Cài đặt. Luật WCAG 2.0 và 2.1 mức A và AA, trên khổ điện thoại như các test khác.
+  Luyện tập, Thống kê, Cài đặt. Luật WCAG 2.0, 2.1 và 2.2 mức A và AA (gồm luật vùng chạm tối thiểu 24 px của 2.2),
+  trên khổ 360 px, máy hẹp nhất còn phổ biến. Trang cũng không được cuộn ngang ở khổ này.
 - Lỗi mức **serious** hoặc **critical** làm test đỏ; thông báo liệt kê luật và phần tử đầu tiên vi phạm.
 - Trước khi quét, test chờ mọi hiệu ứng có hồi kết chạy xong. Nội dung hiện dần (`animate-fade-in`), nên quét giữa
   chừng thì chữ trông nhạt hơn thật và axe báo nhầm lỗi tương phản.
@@ -71,4 +72,5 @@ như mong đợi.
     tượng mờ, chữ dùng màu xám đủ đậm;
   - ba nút có tên đọc không chứa chữ hiển thị (WCAG 2.5.3): nút đổi ngôn ngữ giao diện ("EN"/"VI"), nút thử thách hôm
     nay ("Làm ngay"/"Go"), nút nghe thử trong Cài đặt ("Try it").
+- 13/11: thêm luật vùng chạm và kiểm tra cuộn ngang ở 360 px; cả 7 màn đều đạt, không phải sửa gì.
 - Tiếp theo: quét cả giao diện tối, và các màn luyện tập khi đang làm bài.
