@@ -208,7 +208,7 @@ Tình hình (06/11/2026):
   - HSK 2: thêm nghe hội thoại – chọn tranh, nghe hội thoại – câu hỏi, đọc ghép câu;
   - HSK 3: nghe hội thoại – câu hỏi, đọc ghép câu, đọc đoạn văn ngắn, sắp xếp câu, viết chữ;
   - mọi cấp: nghe hiểu, điền từ. Bài thi nhỏ theo tỉ lệ từng cấp, có dãy điểm các lần làm.
-  - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 38 bài; hỏi – đáp
+  - Nội dung: hội thoại – câu hỏi HSK 2 36 bài, HSK 3 45 bài; hội thoại – chọn tranh 44 bài; hỏi – đáp
     28 cặp mỗi cấp; đoạn văn ngắn HSK 3 40 đoạn. Mọi chữ Hán nằm trong phạm vi cấp (test kiểm tra).
 - **Xuyên suốt:** Thử thách hôm nay, huy hiệu chủ đề, từ làm sai trong bài luyện quay lại lịch ôn;
   trang TOEIC và HSK chỉ ra Part hoặc dạng câu hay sai nhất.
@@ -1038,3 +1038,9 @@ gzip); file dữ liệu 94 kB (28 kB gzip) sau khi thu gọn.
 - Service worker tải sẵn file này khi cài, cùng file TOEIC.
 - Thêm bài mới: sửa `public/data/hsk/zh.json`, rồi chạy lại
   `WRITE_SCREEN_TEXTS=1 npx vitest run src/lib/screenTexts.test.ts` để có giọng thu như trước.
+
+### Thêm hội thoại chọn tranh HSK 2 (11/11/2026, đợt sáu)
+
+`pictureDialogues` trong `public/data/hsk/zh.json` từ 38 lên 44 bài (test giữ mức này): nước, cửa, nhà (ba tranh cuối
+cùng của HSK 1–2 chưa có bài), táo, chó đi dạo, cà phê buổi sáng. Lời thoại tránh 水果, 大家, 门口 (chứa từ có tranh) và
+马上 (马 là từ có tranh). Các bài này soạn ngày 06/11, khi hội thoại còn nằm trong code; khi gộp đã chuyển sang file JSON.

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dialogues": [
     {
       "id": "homework",
@@ -2552,6 +2552,102 @@
           "speaker": "W",
           "zh": "她今年六岁，明年上小学。",
           "vi": "Con bé năm nay sáu tuổi, sang năm vào tiểu học."
+        }
+      ]
+    },
+    {
+      "id": "want-water",
+      "picture": "水",
+      "lines": [
+        {
+          "speaker": "W",
+          "zh": "我很累，有水吗？",
+          "vi": "Tôi mệt quá, có nước không?"
+        },
+        {
+          "speaker": "M",
+          "zh": "有，桌子上有一杯，你喝吧。",
+          "vi": "Có, trên bàn có một cốc, chị uống đi."
+        }
+      ]
+    },
+    {
+      "id": "close-door",
+      "picture": "门",
+      "lines": [
+        {
+          "speaker": "M",
+          "zh": "外面很冷，请你关一下门。",
+          "vi": "Bên ngoài lạnh lắm, chị đóng cửa giúp nhé."
+        },
+        {
+          "speaker": "W",
+          "zh": "好的，我现在就关。",
+          "vi": "Được, tôi đóng ngay đây."
+        }
+      ]
+    },
+    {
+      "id": "go-home",
+      "picture": "家",
+      "lines": [
+        {
+          "speaker": "W",
+          "zh": "你几点回家？",
+          "vi": "Mấy giờ anh về nhà?"
+        },
+        {
+          "speaker": "M",
+          "zh": "六点，我下班以后就回去。",
+          "vi": "Sáu giờ, tan làm là tôi về."
+        }
+      ]
+    },
+    {
+      "id": "apples-tasty",
+      "picture": "苹果",
+      "lines": [
+        {
+          "speaker": "M",
+          "zh": "这些苹果好吃吗？",
+          "vi": "Những quả táo này có ngon không?"
+        },
+        {
+          "speaker": "W",
+          "zh": "很好吃，你买几个吧。",
+          "vi": "Rất ngon, anh mua vài quả đi."
+        }
+      ]
+    },
+    {
+      "id": "dog-walk",
+      "picture": "狗",
+      "lines": [
+        {
+          "speaker": "W",
+          "zh": "你每天早上做什么？",
+          "vi": "Sáng nào anh cũng làm gì?"
+        },
+        {
+          "speaker": "M",
+          "zh": "我和我的小狗出去走一走。",
+          "vi": "Tôi cùng con chó nhỏ của tôi ra ngoài đi dạo."
+        }
+      ]
+    },
+    {
+      "id": "coffee-morning",
+      "picture": "咖啡",
+      "lines": [
+        {
+          "speaker": "M",
+          "zh": "你早上喝什么？",
+          "vi": "Buổi sáng chị uống gì?"
+        },
+        {
+          "speaker": "W",
+          "zh": "我每天早上喝一杯咖啡。",
+          "vi": "Sáng nào tôi cũng uống một cốc cà phê."
         }
       ]
     }

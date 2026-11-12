@@ -14,6 +14,16 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-11',
+    title: ['HSK 2: thêm hội thoại chọn tranh', 'HSK 2: more picture dialogues'],
+    items: [
+      [
+        'HSK 2 hội thoại chọn tranh lên 44 bài: thêm nước, cửa, nhà, táo, chó đi dạo và cà phê buổi sáng.',
+        'HSK 2 picture dialogues now number 44: water, a door, home, apples, a dog walk and morning coffee.',
+      ],
+    ],
+  },
+  {
+    date: '2026-11-11',
     title: ['Kết hợp từ tiếng Trung: thêm 6 cụm', 'Chinese collocations: 6 more'],
     items: [
       [
