@@ -29,6 +29,18 @@
 - Thời gian chờ một lần CI dài hơn một chút (các bước chạy nối tiếp thay vì hai job song song), đổi lại ít phút
   hơn.
 
-## 4. Tiếp theo
+## 4. Cập nhật phụ thuộc tự động (11/11/2026)
+
+- `.github/dependabot.yml`: mỗi sáng thứ Hai, Dependabot mở PR cập nhật thư viện npm và các action của GitHub.
+  - Bản minor và patch được gộp: một PR cho thư viện chạy trên máy người học (`runtime`), một PR cho công cụ build,
+    lint, test (`tooling`), một PR cho action. Bản major đi riêng từng PR, đọc ghi chú phát hành rồi mới merge.
+  - Mỗi PR chạy CI như mọi PR khác; tối đa 5 PR npm mở cùng lúc.
+  - React 19 bị bỏ qua: đã thử ngày 07/11/2026, chạy được mà không sửa dòng code nào, nhưng gói JS chính tăng khoảng
+    23 kB (gzip) trong khi app chưa dùng tính năng mới nào. Xem lại khi React 18 hết được hỗ trợ hoặc khi cần tính năng
+    của bản 19.
+  - Tiêu đề PR do Dependabot đặt bằng tiếng Anh, có tiền tố `chore(deps)` hoặc `chore(ci)`.
+- `.github/SECURITY.md`: cách báo lỗ hổng qua email, không mở issue công khai. Cần vì repo đã công khai.
+
+## 5. Tiếp theo
 
 1. Nếu vẫn thiếu phút: chuyển thu giọng câu (`text-audio.yml`) sang chạy mỗi ngày một lần thay vì mỗi lần merge.
