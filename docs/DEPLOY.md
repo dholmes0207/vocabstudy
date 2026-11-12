@@ -35,7 +35,8 @@ Repo đã được push sẵn: **https://github.com/dholmes0207/vocabstudy** (pr
    - Framework preset: `None` (hoặc Vite)
    - **Build command:** `npm run build`
    - **Build output directory:** `dist`
-   - Node version: đặt biến `NODE_VERSION = 20` (Settings → Environment variables) nếu build cần.
+   - Node version: Cloudflare đọc `.nvmrc` (Node 22). Nếu đã đặt biến `NODE_VERSION` (Settings → Environment
+     variables) thì đổi thành `22`; Node 20 đã hết hỗ trợ từ 30/04/2026.
 3. **Environment variables** (Settings → Environment variables → thêm cho cả _Production_ và _Preview_):
    | Tên                         | Loại                 | Giá trị          |
    | --------------------------- | -------------------- | ---------------- |

@@ -79,7 +79,7 @@ Yêu cầu **đăng nhập** để dùng AI. Cấu hình key = biến `OPENAI_AP
 
 ## 🚀 Chạy dự án
 
-Yêu cầu: **Node.js ≥ 20.19** (hoặc ≥ 22.12 — mức Vite 8 đòi hỏi; `.nvmrc` đã ghi sẵn, dùng `nvm use`) và npm.
+Yêu cầu: **Node.js ≥ 22.12** (`.nvmrc` ghi sẵn Node 22, dùng `nvm use`) và npm.
 
 ```bash
 npm install
