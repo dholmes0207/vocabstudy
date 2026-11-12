@@ -16,7 +16,8 @@
 
 - **Chỉ chạy cho pull request.** PR được squash-merge nên `main` nhận đúng cây đã kiểm. Bỏ lần chạy lại sau
   merge. Vẫn chạy tay được bằng "Run workflow" (`workflow_dispatch`).
-- **PR chỉ sửa tài liệu thì bỏ qua** (`docs/**`, `*.md`). PR có cả code lẫn tài liệu vẫn chạy.
+- **PR chỉ sửa tài liệu thì bỏ qua** (`docs/**`, `*.md`). PR có cả code lẫn tài liệu vẫn chạy. Từ 12/11/2026 việc
+  bỏ qua làm trong job thay vì bằng `paths-ignore`, xem mục 5.
 - **Gộp hai job làm một**: checkout, `npm ci`, build chỉ làm một lần; E2E dùng luôn bản build vừa dựng. Mỗi
   lần chạy còn khoảng 8 phút tính tiền thay vì 10, và mỗi lần merge không tốn thêm 10 phút.
 - **`timeout-minutes: 20`** để một lần chạy bị treo không ăn hết phút.
@@ -41,6 +42,21 @@
   - Tiêu đề PR do Dependabot đặt bằng tiếng Anh, có tiền tố `chore(deps)` hoặc `chore(ci)`.
 - `.github/SECURITY.md`: cách báo lỗ hổng qua email, không mở issue công khai. Cần vì repo đã công khai.
 
-## 5. Tiếp theo
+## 5. PR chỉ có tài liệu vẫn có kết quả kiểm tra (12/11/2026)
+
+Việc 0.4 trong `docs/PLAN.md`: bảo vệ `main`, bắt buộc CI xanh trước khi merge.
+
+- **Vấn đề:** với `paths-ignore`, PR chỉ sửa tài liệu không chạy workflow nào, nên check "Lint · Typecheck · Test ·
+  Build · E2E" không bao giờ báo kết quả. Nếu luật bảo vệ nhánh bắt buộc check này, PR đó bị chặn mãi.
+- **Cách làm:** bỏ `paths-ignore`. Job vẫn chạy cho mọi PR; bước đầu `Scope` so commit merge của PR với nhánh gốc
+  (`git diff --name-only HEAD^1 HEAD`, checkout sâu 2 commit). Nếu mọi tệp đổi đều thuộc `docs/**` hoặc `*.md` thì các
+  bước sau được bỏ qua và job xanh trong khoảng nửa phút; còn lại chạy đủ như trước. Chạy tay ("Run workflow") luôn
+  chạy đủ.
+- **Chi phí:** mỗi PR chỉ có tài liệu tốn thêm khoảng 1 phút tính tiền (checkout và làm tròn lên phút).
+- **Việc của chủ dự án** (Settings → Branches → thêm luật cho `main`): bắt buộc PR, bắt buộc check
+  "Lint · Typecheck · Test · Build · E2E", không cho đẩy thẳng. Settings → Code security: bật Secret scanning và Push
+  protection.
+
+## 6. Tiếp theo
 
 1. Nếu vẫn thiếu phút: chuyển thu giọng câu (`text-audio.yml`) sang chạy mỗi ngày một lần thay vì mỗi lần merge.
