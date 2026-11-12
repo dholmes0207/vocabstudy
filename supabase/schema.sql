@@ -226,5 +226,70 @@ revoke execute on function public.submit_feedback(uuid, text, text, smallint, bo
 grant execute on function public.submit_feedback(uuid, text, text, smallint, boolean, text)
   to service_role;
 
+-- ---- anonymous usage signal (docs/design/usage-metrics.md) ---------------
+-- One row per random device id and local day: the language pack, rough counts
+-- (bucket indexes, never exact numbers) and three flags. No IP address, email,
+-- account id or learning content. Kept 400 days, enough for a year-on-year look.
+create table if not exists public.usage_days (
+  device       text not null,
+  day          date not null,
+  pack         text not null,
+  answers      smallint not null default 0,
+  new_words    smallint not null default 0,
+  first_lesson boolean not null default false,
+  signed_in    boolean not null default false,
+  installed    boolean not null default false,
+  first_seen   timestamptz not null default now(),
+  primary key (device, day)
+);
+
+create index if not exists usage_days_day_idx on public.usage_days (day);
+
+-- No policies: only the Pages Functions (service role) read or write it.
+alter table public.usage_days enable row level security;
+
+-- Record one signal. A device may send again the same day when it has done
+-- more; the highest values win, so a late or repeated signal never lowers a
+-- day. p_day is an epoch day (days since 1970-01-01, the learner's calendar).
+create or replace function public.record_usage_day(
+  p_device text, p_day integer, p_pack text, p_answers smallint, p_new_words smallint,
+  p_first_lesson boolean, p_signed_in boolean, p_installed boolean
+)
+returns void
+language plpgsql
+security definer set search_path = public
+as $$
+declare
+  d date := date '1970-01-01' + p_day;
+begin
+  -- A script inventing devices must not flood the table: past 2000 new device
+  -- days in ten minutes, only devices already seen today are still counted.
+  if not exists (select 1 from public.usage_days where device = p_device and day = d)
+     and (select count(*) from public.usage_days
+           where first_seen > now() - interval '10 minutes') >= 2000 then
+    return;
+  end if;
+  insert into public.usage_days as u
+    (device, day, pack, answers, new_words, first_lesson, signed_in, installed)
+  values (left(p_device, 40), d, left(p_pack, 4), least(greatest(p_answers, 0), 4),
+          least(greatest(p_new_words, 0), 4), p_first_lesson, p_signed_in, p_installed)
+  on conflict (device, day) do update
+    set pack = excluded.pack,
+        answers = greatest(u.answers, excluded.answers),
+        new_words = greatest(u.new_words, excluded.new_words),
+        first_lesson = u.first_lesson or excluded.first_lesson,
+        signed_in = u.signed_in or excluded.signed_in,
+        installed = u.installed or excluded.installed;
+  delete from public.usage_days where day < current_date - 400;
+end;
+$$;
+
+revoke execute on function public.record_usage_day(
+  text, integer, text, smallint, smallint, boolean, boolean, boolean
+) from public, anon, authenticated;
+grant execute on function public.record_usage_day(
+  text, integer, text, smallint, smallint, boolean, boolean, boolean
+) to service_role;
+
 -- Make PostgREST pick up new/changed functions right away.
 notify pgrst, 'reload schema';
