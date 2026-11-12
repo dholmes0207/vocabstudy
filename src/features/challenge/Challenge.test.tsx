@@ -65,7 +65,7 @@ describe("Today's challenge", () => {
         <DailyChallenge />
       </MemoryRouter>
     )
-    expect(screen.getByRole('link', { name: 'Làm thử thách' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Làm ngay thử thách' })).toHaveAttribute(
       'href',
       '/challenge'
     )

@@ -44,7 +44,7 @@ export default function DailyChallenge() {
         aria-label={
           done
             ? t('Làm lại thử thách', 'Retry the challenge')
-            : t('Làm thử thách', 'Take the challenge')
+            : t('Làm ngay thử thách', 'Go: take the challenge')
         }
       >
         {done ? t('Làm lại', 'Retry') : t('Làm ngay', 'Go')} <ArrowRight className="h-4 w-4" />

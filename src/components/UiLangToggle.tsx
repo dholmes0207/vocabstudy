@@ -11,8 +11,11 @@ export default function UiLangToggle({ className = '' }: { className?: string })
       type="button"
       onClick={() => setUiLang(next)}
       className={`btn-secondary h-10 gap-1 !px-2.5 text-xs font-bold ${className}`}
+      // Starts with the visible "EN"/"VI", so a voice-control user can say what they see.
       aria-label={
-        lang === 'vi' ? 'Switch the interface to English' : 'Chuyển giao diện sang tiếng Việt'
+        lang === 'vi'
+          ? 'EN: switch the interface to English'
+          : 'VI: chuyển giao diện sang tiếng Việt'
       }
       title={lang === 'vi' ? 'English' : 'Tiếng Việt'}
     >
