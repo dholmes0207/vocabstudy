@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest'
-import { activeDaysByLearner, percent, retentionReport, weekStart } from './retention'
+import {
+  activeDaysByLearner,
+  daysByDevice,
+  deviceReport,
+  percent,
+  retentionReport,
+  weekStart,
+  type DeviceDay,
+} from './retention'
 
 describe('activeDaysByLearner', () => {
   it('joins a learner’s languages and keeps only days with activity', () => {
@@ -58,5 +66,43 @@ describe('retentionReport', () => {
   it('shows no percentage until someone is eligible', () => {
     expect(percent({ eligible: 0, returned: 0 })).toBeNull()
     expect(percent({ eligible: 3, returned: 2 })).toBe('67%')
+  })
+})
+
+describe('deviceReport', () => {
+  const today = 20_100
+
+  it('groups rows by device, sorts days and reads the first day’s lesson flag', () => {
+    expect(
+      daysByDevice([
+        { device: 'b', day: 20_090, first_lesson: false },
+        { device: 'a', day: 20_092 },
+        { device: 'a', day: 20_090, first_lesson: true },
+        { device: 42, day: 20_090 },
+        { device: 'c', day: '20090' },
+      ])
+    ).toEqual([
+      { days: [20_090], firstLesson: false },
+      { days: [20_090, 20_092], firstLesson: true },
+    ])
+  })
+
+  it('builds the four funnel steps, counting a window only once it has passed', () => {
+    const rows: DeviceDay[] = [
+      // Steady: first lesson, back the next day, 3 days in the first week.
+      { device: 'a', day: 20_080, first_lesson: true },
+      { device: 'a', day: 20_081 },
+      { device: 'a', day: 20_085 },
+      // Gone after the first day, first lesson not finished.
+      { device: 'b', day: 20_080 },
+      // Started yesterday: already counts for "next day" (as signed-in learners do), not yet for the week.
+      { device: 'c', day: 20_099, first_lesson: true },
+    ]
+    const { funnel, retention } = deviceReport(rows, today)
+    expect(funnel.devices).toBe(3)
+    expect(funnel.firstLesson).toBe(2)
+    expect(funnel.nextDay).toEqual({ eligible: 3, returned: 1 })
+    expect(funnel.threeDaysFirstWeek).toEqual({ eligible: 2, returned: 1 })
+    expect(retention.learners).toBe(3)
   })
 })

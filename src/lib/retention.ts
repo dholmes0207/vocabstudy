@@ -106,3 +106,70 @@ export function retentionReport(learners: number[][], today: number, weeks = 8):
 export function percent(rate: Rate): string | null {
   return rate.eligible ? `${Math.round((100 * rate.returned) / rate.eligible)}%` : null
 }
+
+// ---- Every device, signed in or not (docs/design/usage-metrics.md) ----------
+// Read from the anonymous usage signal (public.usage_days): one row per random
+// device id and day the device was used for learning.
+
+/** One usage_days row as the admin endpoint reads it. */
+export interface DeviceDay {
+  device: unknown
+  /** Epoch day. */
+  day: unknown
+  first_lesson?: unknown
+}
+
+/** Four steps from a first learning day to a steady first week. */
+export interface Funnel {
+  /** Devices with at least one learning day. */
+  devices: number
+  /** Finished the first group of five words on their first day. */
+  firstLesson: number
+  /** Came back the day after their first day (once that day has passed). */
+  nextDay: Rate
+  /** Learned on at least 3 different days of their first 7 (once the week has passed). */
+  threeDaysFirstWeek: Rate
+}
+
+export interface DeviceReport {
+  retention: RetentionReport
+  funnel: Funnel
+}
+
+/** Learning days per device, and whether its first day finished the first lesson. */
+export function daysByDevice(rows: DeviceDay[]): { days: number[]; firstLesson: boolean }[] {
+  const by = new Map<string, Map<number, boolean>>()
+  for (const row of rows) {
+    if (typeof row.device !== 'string' || !row.device) continue
+    if (typeof row.day !== 'number' || !Number.isInteger(row.day)) continue
+    const days = by.get(row.device) ?? new Map<number, boolean>()
+    days.set(row.day, (days.get(row.day) ?? false) || row.first_lesson === true)
+    by.set(row.device, days)
+  }
+  return [...by.values()].map((m) => {
+    const days = [...m.keys()].sort((a, b) => a - b)
+    return { days, firstLesson: m.get(days[0]) === true }
+  })
+}
+
+export function deviceReport(rows: DeviceDay[], today: number, weeks = 8): DeviceReport {
+  const devices = daysByDevice(rows)
+  const learners = devices.map((d) => d.days)
+  const retention = retentionReport(learners, today, weeks)
+  const threeDaysFirstWeek: Rate = { eligible: 0, returned: 0 }
+  for (const days of learners) {
+    const first = days[0]
+    if (first + 6 >= today) continue
+    threeDaysFirstWeek.eligible++
+    if (days.filter((d) => d <= first + 6).length >= 3) threeDaysFirstWeek.returned++
+  }
+  return {
+    retention,
+    funnel: {
+      devices: devices.length,
+      firstLesson: devices.filter((d) => d.firstLesson).length,
+      nextDay: retention.nextDay,
+      threeDaysFirstWeek,
+    },
+  }
+}

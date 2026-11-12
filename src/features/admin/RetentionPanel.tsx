@@ -1,17 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { Repeat } from 'lucide-react'
 import { api } from '@/lib/api'
 import { tx, useT } from '@/lib/i18n'
 import { formatDay } from '@/lib/date'
-import { percent, type Rate, type RetentionReport } from '@/lib/retention'
+import { percent, type DeviceReport, type Rate, type RetentionReport } from '@/lib/retention'
 
 /**
  * Do learners come back? (docs/design/retention.md) Counted on the server from
- * synced progress, so it only sees learners who are signed in.
+ * synced progress, so the first part only sees learners who are signed in. The
+ * second part counts every device, from the anonymous usage signal
+ * (docs/design/usage-metrics.md).
  */
 export function RetentionPanel() {
   const t = useT()
-  const [report, setReport] = useState<RetentionReport | null>(null)
+  const [report, setReport] = useState<(RetentionReport & { devices: DeviceReport | null }) | null>(
+    null
+  )
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -109,8 +113,61 @@ export function RetentionPanel() {
               </tbody>
             </table>
           </div>
+
+          <DeviceFunnel devices={report.devices} rate={rate} />
         </>
       )}
     </section>
+  )
+}
+
+/** Every device, signed in or not: four steps from a first day to a steady week. */
+function DeviceFunnel({
+  devices,
+  rate,
+}: {
+  devices: DeviceReport | null
+  rate: (r: Rate) => ReactNode
+}) {
+  const t = useT()
+  return (
+    <div className="mt-4 border-t border-slate-100 pt-3 dark:border-slate-800">
+      <h3 className="text-sm font-bold">
+        {t('Mọi thiết bị (số liệu ẩn danh)', 'Every device (anonymous figures)')}
+      </h3>
+      {!devices ? (
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          {t(
+            'Chưa có số liệu: cần chạy lại supabase/schema.sql để tạo bảng usage_days, và app gửi tín hiệu (việc 1.1).',
+            'No figures yet: run supabase/schema.sql again to create usage_days, and let the app send the signal (task 1.1).'
+          )}
+        </p>
+      ) : (
+        <dl className="mt-2 grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
+          {(
+            [
+              [
+                t('Thiết bị có học', 'Devices that learned'),
+                <b key="d">{devices.funnel.devices}</b>,
+              ],
+              [
+                t('Xong bài đầu ngay ngày đầu', 'First lesson on day one'),
+                <b key="f">{devices.funnel.firstLesson}</b>,
+              ],
+              [t('Quay lại hôm sau', 'Back the next day'), rate(devices.funnel.nextDay)],
+              [
+                t('Học từ 3 ngày trong tuần đầu', '3+ days in the first week'),
+                rate(devices.funnel.threeDaysFirstWeek),
+              ],
+            ] as const
+          ).map(([label, value]) => (
+            <div key={label} className="rounded-xl bg-slate-50 px-3 py-2 dark:bg-slate-800/60">
+              <dt className="text-xs text-slate-500 dark:text-slate-400">{label}</dt>
+              <dd className="mt-0.5 text-base">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </div>
   )
 }
