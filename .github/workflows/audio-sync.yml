@@ -42,7 +42,7 @@ jobs:
       EVENT: ${{ github.event_name }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Upload to R2
         run: |
