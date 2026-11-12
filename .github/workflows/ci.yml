@@ -5,16 +5,17 @@ name: CI
 # (docs/design/ci.md):
 # - pull requests only: PRs are squash-merged, so main gets a tree that was
 #   already checked; "Run workflow" still starts it by hand on any branch;
-# - a PR that only touches docs (docs/**, *.md) skips it;
+# - a PR that only touches docs (docs/**, *.md) gets the same check, but it
+#   stops after checkout and passes, so a required check still reports;
 # - one job, so checkout, install and the production build happen once and the
 #   end-to-end tests reuse that build.
 on:
   # Every PR, including ones stacked on another feature branch: their base is
   # not main, but they still have to pass the same checks before merging.
+  # No paths-ignore: a skipped workflow reports nothing, and a branch rule that
+  # requires this check would then block docs-only PRs forever. The "Scope"
+  # step below skips the work instead.
   pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - '**/*.md'
   workflow_dispatch:
 
 # A new push to the same branch makes the previous run obsolete.
@@ -34,39 +35,64 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      # Two commits: the merge commit GitHub builds for a PR, and its first
+      # parent, the base branch. Their difference is exactly what the PR changes.
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Scope
+        id: scope
+        run: |
+          if [ "$GITHUB_EVENT_NAME" != pull_request ]; then
+            echo "code=true" >> "$GITHUB_OUTPUT"
+          elif git diff --name-only HEAD^1 HEAD | grep -qvE '^docs/|\.md$'; then
+            echo "code=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Only documentation changed; nothing to build or test."
+            echo "code=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-node@v5
+        if: steps.scope.outputs.code == 'true'
         with:
           node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
+        if: steps.scope.outputs.code == 'true'
         run: npm ci
 
       - name: Check formatting
+        if: steps.scope.outputs.code == 'true'
         run: npm run format:check
 
       - name: Lint
+        if: steps.scope.outputs.code == 'true'
         run: npm run lint
 
       - name: Typecheck
+        if: steps.scope.outputs.code == 'true'
         run: npm run typecheck
 
       - name: Unit tests
+        if: steps.scope.outputs.code == 'true'
         run: npm test
 
       # Builds without VITE_SUPABASE_* on purpose: the app must still compile
       # and fall back to guest mode when Supabase is not configured.
       - name: Build
+        if: steps.scope.outputs.code == 'true'
         run: npm run build
 
       # The main learning path in a real browser on the production build just
       # made (e2e/, docs/design/e2e.md): learn, reload, review days later, offline.
       - name: Install Chromium
+        if: steps.scope.outputs.code == 'true'
         run: npx playwright install --with-deps chromium
 
       - name: End-to-end tests
+        if: steps.scope.outputs.code == 'true'
         run: npm run e2e
 
       - name: Keep the trace of a failed run
