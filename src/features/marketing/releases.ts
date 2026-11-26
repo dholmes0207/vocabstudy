@@ -14,7 +14,10 @@ export interface Release {
 export const RELEASES: Release[] = [
   {
     date: '2026-11-26',
-    title: ['Một chuỗi học, lộ trình các thì rõ hơn', 'One study streak, clearer tenses path'],
+    title: [
+      'Một chuỗi học, Luyện tập chia nhóm, quay lại nhẹ nhàng',
+      'One streak, grouped practice, a gentle comeback',
+    ],
     items: [
       [
         'Thử thách hôm nay không còn chuỗi riêng: mọi màn hiện chung một chuỗi học có khiên, và chuỗi đã đứt hiện 0 ngay thay vì số cũ.',
@@ -27,6 +30,18 @@ export const RELEASES: Release[] = [
       [
         'Chính sách bảo mật thêm mục số liệu ẩn danh. App hỏi bạn một lần; chỉ khi bạn đồng ý mới gửi, tắt được trong Cài đặt.',
         'The privacy policy has a new section on anonymous usage data. The app asks you once; nothing is sent unless you agree, and you can turn it off in Settings.',
+      ],
+      [
+        'Trang Luyện tập chia 7 nhóm (Luyện thi, Nghe, Nói, Đọc và viết, Từ và cụm từ, Chữ và âm, Trò chơi), có gợi ý hôm nay và số lượt bạn đã làm.',
+        'The Practice page now has 7 groups (exams, listening, speaking, reading and writing, words and phrases, script and sounds, games), with a suggestion for today and how many sessions you have done.',
+      ],
+      [
+        'Quay lại sau một tuần nghỉ trở lên: chỉ cần ôn nhẹ 20 từ, và chuỗi mới được tặng 1 khiên.',
+        'Back after a week or more away: just review a gentle 20 words, and your new streak gets a shield.',
+      ],
+      [
+        'Thấy từ hay câu hỏi có lỗi? Bấm "Báo lỗi nội dung" ngay dưới thẻ từ hoặc sau khi trả lời.',
+        'Spotted a mistake in a word or a question? Tap "Report a content error" under the card or after you answer.',
       ],
     ],
   },

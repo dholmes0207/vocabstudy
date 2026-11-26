@@ -20,6 +20,7 @@ import WordInsight from './WordInsight'
 import { Contrast, CorrectEcho, Skeleton } from './QuizFeedback'
 import { useT, useUiLang } from '@/lib/i18n'
 import { useTargetLang } from '@/hooks/useTargetLang'
+import ReportContentButton from './ReportContentButton'
 
 // One question at a time, for every place the app asks something: the quiz,
 // the practice rounds of a learning session, and recall-based review.
@@ -558,6 +559,7 @@ export default function QuizRunner({
                 )}
               </>
             )}
+            <ReportContentButton word={word} where={`quiz:${q.mode}`} />
           </div>
         )}
 
