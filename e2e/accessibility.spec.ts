@@ -17,6 +17,9 @@ const SCREENS = [
   '/stats',
   '/settings',
   '/reading/lans-morning',
+  // In the middle of an exercise: the quick lesson's first word, a quiz question.
+  '/learn?quick=1',
+  '/quiz',
 ]
 
 for (const colorScheme of ['light', 'dark'] as const) {

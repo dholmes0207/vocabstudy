@@ -268,7 +268,7 @@ export default function QuizRunner({
           <button
             onClick={onExit}
             className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
-            aria-label={t('Kết thúc phiên', 'End session')}
+            aria-label={t('Thoát: kết thúc phiên', 'Exit: end the session')}
             title={t('Kết thúc (câu đã trả lời vẫn được lưu)', 'End (answers so far are saved)')}
           >
             <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}

@@ -228,21 +228,22 @@ khi đạt cả 5.
 4. **Người học được gì:** một câu nói rõ người học thấy gì tốt hơn (dễ hiểu hơn, hấp dẫn hơn, ít lỗi hơn).
 5. **Gọn:** không để code chết, tài liệu trong `docs/` đã cập nhật.
 
-| Ngày  | Việc                                                                        | PR   | 1   | 2   | 3   | 4                                                                            | 5   |
-| ----- | --------------------------------------------------------------------------- | ---- | --- | --- | --- | ---------------------------------------------------------------------------- | --- |
-| 26/11 | Lộ trình: cấp 2 mở đầu bằng hiện tại đơn                                    | #275 | Đạt | Đạt | Đạt | Các thì của cấp 2 đi đúng thứ tự, người xếp lớp không bị hổng                | Đạt |
-| 26/11 | 2.3: một chuỗi ngày duy nhất                                                | #276 | Đạt | Đạt | Đạt | Một con số chuỗi ở mọi màn, có khiên; chuỗi đứt không hiện sai               | Đạt |
-| 26/11 | 1.1 + 1.2: số liệu ẩn danh, hỏi một lần, đồng ý mới gửi                     | #277 | Đạt | Đạt | Đạt | Người học được hỏi rõ ràng một lần, tắt được; dự án biết ai quay lại         | Đạt |
-| 26/11 | 2.4: trang Luyện tập chia 7 nhóm, gợi ý hôm nay, số lượt                    | #278 | Đạt | Đạt | Đạt | 36 mục thành 7 nhóm dễ tìm; thấy ngay hôm nay nên thử gì và đã làm bao nhiêu | Đạt |
-| 26/11 | 3.4: quay lại sau nghỉ dài: ôn nhẹ 20 từ, tặng 1 khiên                      | #279 | Đạt | Đạt | Đạt | Nghỉ dài quay lại không bị dồn hàng trăm từ, chuỗi mới có khiên che          | Đạt |
-| 26/11 | 4.4: nút "Báo lỗi nội dung" trên thẻ từ và câu hỏi                          | #280 | Đạt | Đạt | Đạt | Thấy từ sai là báo được ngay tại chỗ, không phải tự ghi lại từ nào           | Đạt |
-| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó                 | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
-| 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị                   | #282 | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý         | Đạt |
-| 26/11 | 2.2: phiên liền mạch: ôn → 5 từ mới → bước lộ trình                         | #283 | Đạt | Đạt | Đạt | Xong một phần là thấy ngay phần tiếp theo, buổi học không dừng ở menu        | Đạt |
-| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ                      | #284 | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp      | Đạt |
-| 26/11 | 4.1: ôn duy trì 60/120/240 ngày, 5 từ mỗi ngày                              | #285 | Đạt | Đạt | Đạt | Từ đã thành thạo không bị quên âm thầm; người học lâu vẫn có việc mỗi ngày   | Đạt |
-| 26/11 | 4.3: tô màu từ trong truyện theo trạng thái học; quét truy cập trang truyện | #286 | Đạt | Đạt | Đạt | Đọc truyện thấy ngay từ nào đã học; từ ngắn dễ chạm hơn trên điện thoại      | Đạt |
-| 26/11 | 2.1: trang chủ "Hôm nay", một nút chính; "Khám phá" gập lại                 |      | Đạt | Đạt | Đạt | Mở app là biết ngay việc nên làm; trang chủ gọn, không còn khối trùng        | Đạt |
+| Ngày  | Việc                                                                                      | PR   | 1   | 2   | 3   | 4                                                                            | 5   |
+| ----- | ----------------------------------------------------------------------------------------- | ---- | --- | --- | --- | ---------------------------------------------------------------------------- | --- |
+| 26/11 | Lộ trình: cấp 2 mở đầu bằng hiện tại đơn                                                  | #275 | Đạt | Đạt | Đạt | Các thì của cấp 2 đi đúng thứ tự, người xếp lớp không bị hổng                | Đạt |
+| 26/11 | 2.3: một chuỗi ngày duy nhất                                                              | #276 | Đạt | Đạt | Đạt | Một con số chuỗi ở mọi màn, có khiên; chuỗi đứt không hiện sai               | Đạt |
+| 26/11 | 1.1 + 1.2: số liệu ẩn danh, hỏi một lần, đồng ý mới gửi                                   | #277 | Đạt | Đạt | Đạt | Người học được hỏi rõ ràng một lần, tắt được; dự án biết ai quay lại         | Đạt |
+| 26/11 | 2.4: trang Luyện tập chia 7 nhóm, gợi ý hôm nay, số lượt                                  | #278 | Đạt | Đạt | Đạt | 36 mục thành 7 nhóm dễ tìm; thấy ngay hôm nay nên thử gì và đã làm bao nhiêu | Đạt |
+| 26/11 | 3.4: quay lại sau nghỉ dài: ôn nhẹ 20 từ, tặng 1 khiên                                    | #279 | Đạt | Đạt | Đạt | Nghỉ dài quay lại không bị dồn hàng trăm từ, chuỗi mới có khiên che          | Đạt |
+| 26/11 | 4.4: nút "Báo lỗi nội dung" trên thẻ từ và câu hỏi                                        | #280 | Đạt | Đạt | Đạt | Thấy từ sai là báo được ngay tại chỗ, không phải tự ghi lại từ nào           | Đạt |
+| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó                               | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
+| 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị                                 | #282 | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý         | Đạt |
+| 26/11 | 2.2: phiên liền mạch: ôn → 5 từ mới → bước lộ trình                                       | #283 | Đạt | Đạt | Đạt | Xong một phần là thấy ngay phần tiếp theo, buổi học không dừng ở menu        | Đạt |
+| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ                                    | #284 | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp      | Đạt |
+| 26/11 | 4.1: ôn duy trì 60/120/240 ngày, 5 từ mỗi ngày                                            | #285 | Đạt | Đạt | Đạt | Từ đã thành thạo không bị quên âm thầm; người học lâu vẫn có việc mỗi ngày   | Đạt |
+| 26/11 | 4.3: tô màu từ trong truyện theo trạng thái học; quét truy cập trang truyện               | #286 | Đạt | Đạt | Đạt | Đọc truyện thấy ngay từ nào đã học; từ ngắn dễ chạm hơn trên điện thoại      | Đạt |
+| 26/11 | 2.1: trang chủ "Hôm nay", một nút chính; "Khám phá" gập lại                               | #287 | Đạt | Đạt | Đạt | Mở app là biết ngay việc nên làm; trang chủ gọn, không còn khối trùng        | Đạt |
+| 27/11 | 2.8 (tiếp): quét truy cập khi đang làm bài (bài học nhanh, quiz); sửa tên đọc nút "Thoát" |      | Đạt | Đạt | Đạt | Người dùng trình đọc màn hình nghe đúng chữ trên nút "Thoát" ở bốn màn       | Đạt |
 
 ---
 
