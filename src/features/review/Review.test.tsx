@@ -8,7 +8,7 @@ import type { LanguagePack, SRSCard } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { statsOf, useStudy } from '@/store/studyStore'
-import { newCard } from '@/lib/srs'
+import { MAINTENANCE_PER_DAY, MASTERED_BOX, newCard } from '@/lib/srs'
 import { today } from '@/lib/date'
 import { SESSION_CAP } from '@/lib/reviewSession'
 
@@ -57,6 +57,22 @@ const show = (n: number, path = '/review') => {
   )
 }
 
+/** `n` mastered words whose maintenance review is due, after `from` others. */
+function masteredDue(from: number, n: number): Record<number, SRSCard> {
+  const day = today()
+  return Object.fromEntries(
+    en.words.slice(from, from + n).map((w) => [
+      w.id,
+      {
+        ...newCard(w.id, day - 300),
+        box: MASTERED_BOX,
+        lastReviewedDay: day - 61,
+        dueDay: day - 1,
+      },
+    ])
+  )
+}
+
 describe('Review', () => {
   it('takes an ordinary day whole', () => {
     show(20)
@@ -75,5 +91,23 @@ describe('Review', () => {
   it('keeps the learner’s own limit and the comeback limit', () => {
     show(80, '/review?limit=20')
     expect(screen.getByText(/the 20 most overdue words first, 60 more/)).toBeInTheDocument()
+  })
+
+  it('adds the day’s few mastered words at the end, but not to a short comeback session', () => {
+    const cards = { ...dueCards(3), ...masteredDue(100, 8) }
+    useStudy.setState({ progress: { en: { cards, stats: statsOf({}, 'en') } } })
+    const { unmount } = render(
+      <MemoryRouter initialEntries={['/review']}>
+        <Review />
+      </MemoryRouter>
+    )
+    expect(screen.getByText(new RegExp(`${3 + MAINTENANCE_PER_DAY} words due`))).toBeInTheDocument()
+    unmount()
+    render(
+      <MemoryRouter initialEntries={['/review?limit=20']}>
+        <Review />
+      </MemoryRouter>
+    )
+    expect(screen.getByText(/3 words due/)).toBeInTheDocument()
   })
 })

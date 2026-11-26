@@ -5,7 +5,7 @@ import type { QuizQuestion, ReviewStyle, SRSCard, Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
-import { getDueCards } from '@/lib/srs'
+import { getDueCards, getMaintenanceCards } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { reviewSessionSize } from '@/lib/reviewSession'
 import { today } from '@/lib/date'
@@ -47,17 +47,21 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
 
   // Read progress once (not reactively) so recording answers doesn't reshuffle
   // the queue mid-session. A big pile is split (lib/reviewSession.ts): the most
-  // overdue words first, the rest in a later session.
+  // overdue words first, the rest in a later session. The day's few mastered
+  // words (maintenance, task 4.1) come at the end, except in a session the
+  // address keeps short on purpose (?limit=, the gentle comeback).
   const [{ due, waiting }] = useState(() => {
     const progress = useStudy.getState().progress[code]
     const cards = progress ? Object.values(progress.cards) : []
     const all = getDueCards(cards, today())
-    const list = all.slice(0, reviewSessionSize(all.length, reviewLimit, askedLimit))
+    const session = all.slice(0, reviewSessionSize(all.length, reviewLimit, askedLimit))
+    const maintenance = askedLimit > 0 ? [] : getMaintenanceCards(cards, today())
+    const list = [...session, ...maintenance]
     const due: { card: SRSCard; word: Word }[] = list.flatMap((card) => {
       const word = byId.get(card.id)
       return word ? [{ card, word }] : []
     })
-    return { due, waiting: all.length - list.length }
+    return { due, waiting: all.length - session.length }
   })
 
   // Stages before the first answer, for the end-of-session changes.
