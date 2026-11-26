@@ -31,6 +31,23 @@ export const INTERVALS: readonly number[] = [1, 2, 5, 14, 30]
  */
 export const MASTERED_BOX = INTERVALS.length + 1 // 6
 
+/**
+ * Maintenance (task 4.1 in docs/PLAN.md): a mastered word still comes back,
+ * sparsely, so it is not quietly forgotten — first MAINTENANCE_FIRST days after
+ * mastery, then each gap doubles up to MAINTENANCE_MAX. The gap is read from the
+ * card itself (dueDay − lastReviewedDay), so no new field is stored or synced.
+ */
+export const MAINTENANCE_FIRST = 60
+export const MAINTENANCE_MAX = 240
+/** Mastered words asked per day, on top of the ordinary reviews. */
+export const MAINTENANCE_PER_DAY = 5
+
+/** The next maintenance gap after one passed at `gap` days: 60 → 120 → 240 → 240. */
+export function nextMaintenanceGap(gap: number): number {
+  if (!(gap >= MAINTENANCE_FIRST)) return MAINTENANCE_FIRST
+  return Math.min(MAINTENANCE_MAX, gap * 2)
+}
+
 /** Create a fresh card for a word just introduced today. */
 export function newCard(id: number, day: number = today()): SRSCard {
   return {
@@ -77,6 +94,17 @@ export function review(card: SRSCard, correct: boolean, day: number = today()): 
     // Early and right: the learner gets the credit, the schedule stays put.
     return { ...card, lastReviewedDay: day, correctCount: card.correctCount + 1 }
   }
+  if (correct && card.box >= MASTERED_BOX) {
+    // A maintenance review passed: the next one comes back later still.
+    const gap = card.lastReviewedDay === null ? 0 : card.dueDay - card.lastReviewedDay
+    return {
+      ...card,
+      box: MASTERED_BOX,
+      dueDay: day + nextMaintenanceGap(gap),
+      lastReviewedDay: day,
+      correctCount: card.correctCount + 1,
+    }
+  }
   if (correct) {
     const nextBox = Math.min(card.box + 1, MASTERED_BOX)
     // Interval to wait is keyed by the box we just cleared.
@@ -84,15 +112,16 @@ export function review(card: SRSCard, correct: boolean, day: number = today()): 
     return {
       ...card,
       box: nextBox,
-      dueDay: nextBox >= MASTERED_BOX ? day + INTERVALS[INTERVALS.length - 1] : day + intervalDays,
+      dueDay: nextBox >= MASTERED_BOX ? day + MAINTENANCE_FIRST : day + intervalDays,
       lastReviewedDay: day,
       correctCount: card.correctCount + 1,
     }
   }
-  // Wrong: relearn from the start, due again today.
+  // Wrong: relearn from the start, due again today. A mastered word that slipped
+  // goes back to the review steps, not to the very beginning (task 4.1).
   return {
     ...card,
-    box: 0,
+    box: card.box >= MASTERED_BOX ? KNOWN_BOX : 0,
     dueDay: day,
     lastReviewedDay: day,
     wrongCount: card.wrongCount + 1,
@@ -124,4 +153,26 @@ export function getDueCards(cards: SRSCard[], day: number = today()): SRSCard[] 
   return cards
     .filter((c) => c.box < MASTERED_BOX && c.lastReviewedDay !== null && c.dueDay <= day)
     .sort((a, b) => a.dueDay - b.dueDay || a.box - b.box)
+}
+
+/**
+ * Mastered cards due for their maintenance review on `day`: the most overdue
+ * first, at most MAINTENANCE_PER_DAY a day counting those already answered today.
+ */
+export function getMaintenanceCards(
+  cards: SRSCard[],
+  day: number = today(),
+  perDay: number = MAINTENANCE_PER_DAY
+): SRSCard[] {
+  const mastered = cards.filter((c) => c.box >= MASTERED_BOX && c.lastReviewedDay !== null)
+  const doneToday = mastered.filter((c) => c.lastReviewedDay === day).length
+  return mastered
+    .filter((c) => c.dueDay <= day && c.lastReviewedDay !== day)
+    .sort((a, b) => a.dueDay - b.dueDay)
+    .slice(0, Math.max(0, perDay - doneToday))
+}
+
+/** Words to review on `day`: the due ones plus the day's few maintenance words. */
+export function dueCount(cards: SRSCard[], day: number = today()): number {
+  return getDueCards(cards, day).length + getMaintenanceCards(cards, day).length
 }

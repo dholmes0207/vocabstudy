@@ -20,7 +20,7 @@ import {
   type ListenStep,
 } from '@/lib/listen'
 import { quickStartPath } from '@/lib/motivation'
-import { getDueCards } from '@/lib/srs'
+import { dueCount } from '@/lib/srs'
 import { today } from '@/lib/date'
 import { Field, Segment } from '@/components/Choice'
 import EmptyState from '@/components/EmptyState'
@@ -86,7 +86,7 @@ export default function Listen() {
         pace={pace}
         ttsLang={pack.meta.ttsLang}
         viVoice={sayMeaning ? viVoice : null}
-        due={getDueCards(Object.values(cards), today()).length}
+        due={dueCount(Object.values(cards), today())}
         preview={source === 'upcoming'}
         onRestart={() => setPlaylist(null)}
       />
