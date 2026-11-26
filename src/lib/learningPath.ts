@@ -161,8 +161,8 @@ export const EN_PATH: PathLevel[] = [
     icon: '⏳',
     title: ['Các thì cơ bản', 'Basic tenses'],
     tagline: [
-      'Nói việc đang làm, đã làm và sẽ làm; hỏi và trả lời được.',
-      'Say what you are doing, did and will do; ask and answer.',
+      'Nói việc thường làm, đang làm, đã làm và sẽ làm; hỏi và trả lời được.',
+      'Say what you usually do, are doing, did and will do; ask and answer.',
     ],
     cefr: 'A1–A2',
     tone: 'from-sky-400 to-blue-500',
@@ -170,11 +170,16 @@ export const EN_PATH: PathLevel[] = [
       words(150, 500, 'en2-words'),
       grammar(
         'en2-grammar',
-        ['present-continuous', 'past-simple', 'future', 'questions'],
-        ['Hiện tại tiếp diễn, quá khứ, tương lai', 'Continuous, past and future'],
+        // Present simple comes back first, so the tenses read in order here; it
+        // counts as done for anyone who passed it in level 1.
+        ['present-simple', 'present-continuous', 'past-simple', 'future', 'questions'],
         [
-          'Bốn bài: hiện tại tiếp diễn, quá khứ đơn, tương lai, câu hỏi. Đạt 80% mỗi bài.',
-          'Four units: present continuous, past simple, future, questions. Score 80% in each.',
+          'Các thì: hiện tại đơn, tiếp diễn, quá khứ, tương lai',
+          'Tenses: present simple, continuous, past, future',
+        ],
+        [
+          'Năm bài: ôn lại hiện tại đơn (đã qua ở cấp 1 thì tính luôn), rồi hiện tại tiếp diễn, quá khứ đơn, tương lai, câu hỏi. Đạt 80% mỗi bài.',
+          'Five units: present simple again (already counted if you passed it in level 1), then present continuous, past simple, future, questions. Score 80% in each.',
         ]
       ),
       sessions(
