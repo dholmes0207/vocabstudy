@@ -9,6 +9,10 @@ import type { UiLang } from '@/types'
 export const SHIELD_EVERY = 7
 /** …and you can hold at most this many. */
 export const MAX_SHIELDS = 2
+/** Away this many days or more is a long break: the comeback is made gentle (task 3.4). */
+export const LONG_BREAK = 7
+/** Words to review on the day back after a long break, however many are due. */
+export const GENTLE_REVIEW = 20
 
 export interface StreakState {
   streak: number
@@ -48,6 +52,9 @@ export function nextStreak(s: StreakState, day: number): StreakUpdate {
     shieldUsedDay = day - 1
   } else {
     streak = 1
+    // Back after a long break: the new streak starts with a shield, so one busy
+    // day in the first week back does not undo the return (task 3.4).
+    if (last !== null && day - last >= LONG_BREAK) shields = Math.max(shields, 1)
   }
 
   // A new full week on the streak earns a shield (only when the streak grows).
@@ -174,6 +181,16 @@ export function nextMilestone(known: number): { target: number; left: number; fr
 /** Where the "2 phút" button goes: due reviews first, else five new words. */
 export function quickStartPath(due: number): string {
   return due > 0 ? '/review' : '/learn?quick=1'
+}
+
+/**
+ * Where the welcome-back card sends someone home after `away` days with `due`
+ * words waiting: a long break with a big pile reviews only GENTLE_REVIEW today,
+ * the rest come back on the following days as the schedule allows.
+ */
+export function comebackPath(away: number, due: number): string {
+  if (away >= LONG_BREAK && due > GENTLE_REVIEW) return `/review?limit=${GENTLE_REVIEW}`
+  return quickStartPath(due)
 }
 
 /** The text shared by "Khoe bầu trời" — progress in one friendly line. */

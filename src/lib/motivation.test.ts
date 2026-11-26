@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import {
+  GENTLE_REVIEW,
+  LONG_BREAK,
   MAX_SHIELDS,
+  comebackPath,
   coverageEstimate,
   daysAway,
   energyOptions,
@@ -44,6 +47,16 @@ describe('nextStreak', () => {
   it('a missed day with a shield keeps the streak and spends the shield', () => {
     const r = nextStreak({ streak: 9, lastStudyDay: 10, shields: 2 }, 12)
     expect(r).toMatchObject({ streak: 10, shields: 1, shieldUsedDay: 11 })
+  })
+
+  it('back after a long break, the new streak starts with one shield', () => {
+    const back = nextStreak({ streak: 20, lastStudyDay: 10, shields: 0 }, 10 + LONG_BREAK)
+    expect(back).toMatchObject({ streak: 1, shields: 1 })
+    // Not more than one, and not for a short gap.
+    expect(nextStreak({ streak: 20, lastStudyDay: 10, shields: 2 }, 30).shields).toBe(2)
+    expect(nextStreak({ streak: 20, lastStudyDay: 10, shields: 0 }, 15).shields).toBe(0)
+    // The very first study day is not a comeback.
+    expect(nextStreak({ streak: 0, lastStudyDay: null, shields: 0 }, 30).shields).toBe(0)
   })
 
   it('a missed day without a shield starts over', () => {
@@ -142,5 +155,18 @@ describe('energyOptions', () => {
   it('offers listening for tired days and puts due reviews first otherwise', () => {
     expect(energyOptions(0).map((o) => o.to)).toEqual(['/listen', '/learn?quick=1', '/learn'])
     expect(energyOptions(4).map((o) => o.to)).toEqual(['/listen', '/review', '/review'])
+  })
+})
+
+describe('comebackPath', () => {
+  it('reviews a gentle handful after a long break with a big pile', () => {
+    expect(comebackPath(LONG_BREAK, GENTLE_REVIEW + 1)).toBe(`/review?limit=${GENTLE_REVIEW}`)
+    expect(comebackPath(30, 300)).toBe(`/review?limit=${GENTLE_REVIEW}`)
+  })
+
+  it('goes the usual way after a short break or with a small pile', () => {
+    expect(comebackPath(3, 300)).toBe('/review')
+    expect(comebackPath(LONG_BREAK, GENTLE_REVIEW)).toBe('/review')
+    expect(comebackPath(LONG_BREAK, 0)).toBe('/learn?quick=1')
   })
 })

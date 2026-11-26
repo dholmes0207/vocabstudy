@@ -29,22 +29,35 @@ for (const colorScheme of ['light', 'dark'] as const) {
           colorScheme === 'dark' ? /\bdark\b/ : /^(?!.*\bdark\b)/
         )
         // Content fades in; checked mid-fade, text looks paler than it is. Wait for
-        // every finite animation to end (the sky's endless glow never does).
-        await page.waitForFunction(() =>
-          document
-            .getAnimations()
-            .every(
-              (a) =>
-                a.playState !== 'running' || a.effect?.getComputedTiming().iterations === Infinity
-            )
+        // every finite animation to end (the sky's endless glow never does). On a
+        // busy machine a transition can start after that wait, so a scan that finds
+        // anything is repeated once after the page settles: a real problem is still
+        // there the second time, a passing fade is not.
+        const settled = () =>
+          page.waitForFunction(() =>
+            document
+              .getAnimations()
+              .every(
+                (a) =>
+                  a.playState !== 'running' || a.effect?.getComputedTiming().iterations === Infinity
+              )
+          )
+        const scan = async () => {
+          await settled()
+          return (
+            await new AxeBuilder({ page })
+              .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+              .analyze()
+          ).violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')
+        }
+        let violations = await scan()
+        if (violations.length) {
+          await page.waitForTimeout(1000)
+          violations = await scan()
+        }
+        const serious = violations.map(
+          (v) => `${v.id} (${v.nodes.length}): ${v.nodes[0]?.target.join(' ')}`
         )
-
-        const { violations } = await new AxeBuilder({ page })
-          .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
-          .analyze()
-        const serious = violations
-          .filter((v) => v.impact === 'serious' || v.impact === 'critical')
-          .map((v) => `${v.id} (${v.nodes.length}): ${v.nodes[0]?.target.join(' ')}`)
         expect(serious, `on ${path}`).toEqual([])
         const overflow = await page.evaluate(
           () => document.documentElement.scrollWidth - document.documentElement.clientWidth

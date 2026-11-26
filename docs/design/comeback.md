@@ -62,3 +62,23 @@ có khiên. Hai con số khác nhau làm người học rối, và chuỗi riên
   `Motivation.tsx`, `Stats.tsx`, `DailyChallenge.tsx`, `Challenge.tsx`.
 - `src/lib/dailyChallenge.ts` bỏ `currentStreak` và trường `streak` của kết quả thử thách. Kết quả cũ đã lưu
   có trường này vẫn đọc được (trường thừa bị bỏ qua).
+
+## Quay lại sau nghỉ dài (26/11/2026, việc 3.4 trong `docs/PLAN.md`)
+
+**User**: Nghỉ một hai tuần rồi mở app thấy hàng trăm từ chờ ôn và chuỗi về 0, nên ngại học tiếp.
+
+**BA**
+
+- Lời chào không trách đã có (`welcomeBack`). Nghỉ từ 7 ngày trở lên (`LONG_BREAK`), thẻ chào mừng thêm:
+  - **Ôn nhẹ:** nếu chờ ôn nhiều hơn 20 từ, nút chính là "Ôn nhẹ 20 từ" (`/review?limit=20`), kèm câu nói rõ không
+    cần ôn hết hôm nay. Các ngày sau ôn như thường.
+  - **Tặng khiên:** ngày học đầu tiên sau kỳ nghỉ dài, chuỗi mới bắt đầu kèm 1 khiên (không cộng dồn nếu đã có), để một
+    ngày bận trong tuần đầu quay lại không xoá công sức quay lại. Thẻ chỉ hứa khiên khi người học chưa có khiên nào.
+
+**Dev**
+
+- `src/lib/motivation.ts`: `LONG_BREAK`, `GENTLE_REVIEW`, `comebackPath`; `nextStreak` tặng khiên khi `day - last >= 7`.
+  Có test.
+- `Review.tsx` đọc `?limit=N` để giới hạn một phiên (cộng với giới hạn ôn mỗi ngày trong Cài đặt, lấy số nhỏ hơn).
+- `WelcomeBack` trong `Motivation.tsx`, có test giao diện (`Motivation.test.tsx`).
+- Chưa làm: chia tồn đọng lớn qua nhiều ngày một cách tự động (việc 2.2).
