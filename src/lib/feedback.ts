@@ -56,6 +56,9 @@ export interface ContentRef {
   where: string
 }
 
+/** The tag that opens every content report. */
+export const CONTENT_TAG = '[Lỗi nội dung]'
+
 /** Learners must say what is wrong, not only press send. */
 export const CONTENT_NOTE_MIN = 3
 
@@ -65,5 +68,8 @@ export const CONTENT_NOTE_MIN = 3
  */
 export function contentReportPrefix(ref: ContentRef): string {
   const word = ref.word.replace(/\s+/g, ' ').trim().slice(0, 60)
-  return `[Lỗi nội dung] ${ref.pack} #${ref.wordId} "${word}" (${ref.where})`
+  return `${CONTENT_TAG} ${ref.pack} #${ref.wordId} "${word}" (${ref.where})`
 }
+
+/** Is this stored message a content report (for the admin inbox filter)? */
+export const isContentReport = (message: string): boolean => message.startsWith(CONTENT_TAG)

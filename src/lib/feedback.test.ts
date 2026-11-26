@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { FEEDBACK_MAX, checkFeedback, contentReportPrefix } from './feedback'
+import { FEEDBACK_MAX, checkFeedback, contentReportPrefix, isContentReport } from './feedback'
 
 describe('checkFeedback', () => {
   it('accepts a real message and tidies it', () => {
@@ -50,5 +50,13 @@ describe('contentReportPrefix', () => {
     expect(line).not.toContain('\n')
     expect(line.length).toBeLessThan(120)
     expect(checkFeedback({ message: `${line}\nSai nghĩa` }).ok).toBe(true)
+  })
+})
+
+describe('isContentReport', () => {
+  it('tells content reports from ordinary feedback', () => {
+    const line = contentReportPrefix({ pack: 'en', wordId: 1, word: 'a', where: 'quiz' })
+    expect(isContentReport(`${line}\nwrong`)).toBe(true)
+    expect(isContentReport('Great app! [Lỗi nội dung] is just quoted here')).toBe(false)
   })
 })

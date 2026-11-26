@@ -75,4 +75,5 @@ nào, ở đâu.
 - `reportContent(ref)` trong `src/store/feedbackStore.ts`; `FeedbackDialog` đổi giao diện khi có `about`.
 - `src/components/ReportContentButton.tsx`, dùng ở `Flashcard.tsx` (đặt ngoài thẻ, vì cả thẻ là một nút) và
   `QuizRunner.tsx`.
-- Tiếp theo: bộ lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị.
+- Trang Quản trị: thẻ góp ý có bộ lọc Tất cả / Lỗi nội dung / Góp ý (kèm số lượng), báo lỗi có nhãn "Lỗi nội dung"
+  (`isContentReport`, có test).
