@@ -123,6 +123,30 @@ test('a new learner learns five words, keeps them across a reload, and reviews t
   await answerUntil(page, words, meaning, /Reviews done for today!/)
 })
 
+test('a newcomer goes from the landing page to the first five words in one tap, then home offers the next step', async ({
+  page,
+}) => {
+  const meaning = await meanings(page)
+  await chooseEnglish(page)
+  // The first steps carry the only main button for a newcomer (docs/design/today.md).
+  await expect(page.getByRole('region', { name: /new words/ })).toHaveCount(0)
+  await page.getByRole('link', { name: 'Learn your first 5 words' }).click()
+  await expect(page).toHaveURL(/\/learn\?quick=1/)
+  const words: string[] = []
+  for (let i = 0; i < 5; i++) {
+    await expect(page.getByText(`${i + 1}/5`)).toBeVisible()
+    words.push((await page.locator('main h2').first().innerText()).trim())
+    await page.getByRole('button', { name: /^Next$|^Practise these 5 words/ }).click()
+  }
+  await answerUntil(page, words, meaning, /Lesson done!/)
+
+  // Back home, the "Today" card has taken over with one next step.
+  await page.goto('/home')
+  const today = page.getByRole('region', { name: 'Learn 5 new words' })
+  await expect(today).toBeVisible()
+  await expect(today.getByRole('link', { name: /Start/ })).toHaveAttribute('href', '/learn?quick=1')
+})
+
 test('the app opens and a lesson starts with no network once it has been visited', async ({
   page,
   context,

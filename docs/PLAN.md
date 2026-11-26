@@ -212,7 +212,7 @@ Bật bảo vệ nhánh và secret scanning; tạo giám sát uptime; SMTP riên
 - **Bản kế hoạch (việc 0.1):** `npm run format:check` qua; các con số ở bảng hiện trạng khớp với lệnh đếm (số từ từ `public/data/*.json`, số mục trong `entries.ts`, số test từ `npm test`).
 - **Mọi việc có mã:** phần logic thuần có test đơn vị; luồng chính có test e2e; đủ 6 lệnh kiểm tra; xem trên khổ điện thoại 360 px bằng ảnh chụp Playwright; ghi số đo trước và sau từ trang Quản trị.
 - **Giai đoạn 1:** trên bản xem trước Cloudflare, học một bài rồi thấy dòng mới trong `usage_days` và thiết bị khách trong bảng Quản trị. Đăng ký một tài khoản thử: đồng bộ chạy ngay, trợ lý AI bị chặn cho tới khi duyệt.
-- **Giai đoạn 2:** test e2e "người mới đi từ trang giới thiệu tới xong 5 từ đầu"; đo lại độ trễ theo cách của `docs/design/latency.md`.
+- **Giai đoạn 2:** test e2e "người mới đi từ trang giới thiệu tới xong 5 từ đầu" (có từ 27/11 trong `e2e/main-flow.spec.ts`, kiểm cả thẻ "Hôm nay" sau bài đầu); đo lại độ trễ theo cách của `docs/design/latency.md`.
 - **Giai đoạn 3:** test e2e hai trình duyệt cùng tài khoản thấy cùng tiến độ ngữ pháp; chủ dự án thử thông báo đẩy trên máy thật.
 - **Giai đoạn 4:** test `srs` cho lịch duy trì; `dataset.test.ts` và các test nội dung cho dữ liệu mới.
 
@@ -244,7 +244,8 @@ khi đạt cả 5.
 | 26/11 | 4.3: tô màu từ trong truyện theo trạng thái học; quét truy cập trang truyện               | #286 | Đạt | Đạt | Đạt | Đọc truyện thấy ngay từ nào đã học; từ ngắn dễ chạm hơn trên điện thoại           | Đạt |
 | 26/11 | 2.1: trang chủ "Hôm nay", một nút chính; "Khám phá" gập lại                               | #287 | Đạt | Đạt | Đạt | Mở app là biết ngay việc nên làm; trang chủ gọn, không còn khối trùng             | Đạt |
 | 27/11 | 2.8 (tiếp): quét truy cập khi đang làm bài (bài học nhanh, quiz); sửa tên đọc nút "Thoát" | #288 | Đạt | Đạt | Đạt | Người dùng trình đọc màn hình nghe đúng chữ trên nút "Thoát" ở bốn màn            | Đạt |
-| 27/11 | 4.4 (tiếp): nhắc kiểm lại thông tin kỳ thi sau 6 tháng ở trang Quản trị                   |      | Đạt | Đạt | Đạt | Thông tin đề thi người học đọc luôn được đối chiếu với nguồn, không cũ đi âm thầm | Đạt |
+| 27/11 | 4.4 (tiếp): nhắc kiểm lại thông tin kỳ thi sau 6 tháng ở trang Quản trị                   | #289 | Đạt | Đạt | Đạt | Thông tin đề thi người học đọc luôn được đối chiếu với nguồn, không cũ đi âm thầm | Đạt |
+| 27/11 | Kiểm chứng giai đoạn 2: e2e người mới từ trang giới thiệu tới xong 5 từ đầu               |      | Đạt | Đạt | Đạt | Luồng đầu tiên của người mới được giữ chắc bằng test, không vỡ khi sửa trang chủ  | Đạt |
 
 ---
 
