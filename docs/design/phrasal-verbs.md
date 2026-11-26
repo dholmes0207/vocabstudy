@@ -37,7 +37,16 @@ khi học".
 - Mỗi câu chỉ đưa 4 phương án (đáp án và 3 tiểu từ chắc chắn sai) thay vì tất cả, gọn hơn trên điện thoại. Test
   kiểm 4 phương án khác nhau, có đáp án và không chứa tiểu từ nào trong `alsoFits`.
 
-## 5. Tiếp theo
+## 5. Đợt 3: thêm through (27/11/2026)
 
-1. Thêm tiểu từ in, through khi viết được câu chỉ nhận đúng một tiểu từ (in hay trùng nghĩa với out, on: fill
-   in/out, give in/up).
+- Tiểu từ **through** (xuyên qua, từ đầu đến cuối, trải qua) với 5 cụm có câu chỉ nhận through: go through (trải qua
+  chuyện khó), fall through (đổ bể), get through (gọi điện được), see through (nhìn thấu), break through (xuyên qua).
+  Tổng cộng 9 tiểu từ, 45 cụm.
+- Thêm through cũng thêm một phương án sai cho các câu cũ. Bốn câu mà through cũng đúng được ghi `alsoFits`: look over
+  my report, get over the flu, think it over, go over the main points.
+- Câu mới đã có trong `scripts/audio-texts/screens.json`; workflow thu âm tự chạy khi merge vào main.
+
+## 6. Tiếp theo
+
+1. Thêm tiểu từ in khi viết được câu chỉ nhận đúng một tiểu từ (in hay trùng nghĩa với out, on: fill in/out, give
+   in/up).
