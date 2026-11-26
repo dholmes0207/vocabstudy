@@ -7,6 +7,7 @@ import { useStudy, cardsOf, statsOf } from '@/store/studyStore'
 import { INTERVALS, MASTERED_BOX } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
 import { today, formatDay } from '@/lib/date'
+import { liveStreak } from '@/lib/motivation'
 import { compareWeeks, recentCalendar, type WeekTotals } from '@/lib/calendar'
 import { ALL_STICKERS, STICKER_SETS, collected } from '@/lib/stickers'
 import { evaluateAchievements } from '@/lib/achievements'
@@ -112,7 +113,7 @@ export default function Stats() {
         <Kpi
           icon={Flame}
           tone="text-orange-500"
-          value={`${stats.streak}`}
+          value={`${liveStreak(stats, today())}`}
           label={t('Ngày liên tiếp', 'Day streak')}
         />
         <Kpi icon={Star} tone="text-amber-500" value={`${stats.xp}`} label={t('Điểm XP', 'XP')} />

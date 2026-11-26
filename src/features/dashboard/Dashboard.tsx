@@ -15,6 +15,7 @@ import { textAudio } from '@/lib/audio'
 import { proverbOfDay } from '@/lib/proverbs'
 import { DailyGoal, FirstSteps, Journey, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
+import { liveStreak } from '@/lib/motivation'
 import { useTilt } from '@/hooks/useTilt'
 import { useT } from '@/lib/i18n'
 import { usePhrases } from '@/store/phrasesStore'
@@ -32,6 +33,7 @@ export default function Dashboard() {
   const dailyGoal = useSettings((s) => s.dailyGoal)
   const progress = useStudy((s) => s.progress[code])
   const stats = progress?.stats
+  const streak = liveStreak(stats, today())
   const t = useT()
   const L = useTargetLang()
 
@@ -82,8 +84,7 @@ export default function Dashboard() {
         </div>
         <div className="card flex items-center gap-4 rounded-2xl px-4 py-2.5">
           <span className="text-sm" title={t('Chuỗi ngày học liên tục', 'Study streak')}>
-            🔥 <b className="text-lg">{stats?.streak ?? 0}</b>{' '}
-            {t('ngày', (stats?.streak ?? 0) === 1 ? 'day' : 'days')}
+            🔥 <b className="text-lg">{streak}</b> {t('ngày', streak === 1 ? 'day' : 'days')}
           </span>
           <span
             className="text-sm text-brand-600 dark:text-brand-300"
@@ -115,7 +116,7 @@ export default function Dashboard() {
           goal={dailyGoal}
           due={s.due}
         />
-        <MySky learned={s.learned} mastered={s.mastered} streak={stats?.streak ?? 0} />
+        <MySky learned={s.learned} mastered={s.mastered} streak={streak} />
       </section>
 
       <InstallPrompt />

@@ -4,7 +4,8 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { useChallenge } from '@/store/challengeStore'
-import { CHALLENGE_SIZE, challengeQuestions, currentStreak } from '@/lib/dailyChallenge'
+import { CHALLENGE_SIZE, challengeQuestions } from '@/lib/dailyChallenge'
+import { liveStreak } from '@/lib/motivation'
 import { today } from '@/lib/date'
 import { useT } from '@/lib/i18n'
 import QuizRunner from '@/components/QuizRunner'
@@ -12,7 +13,8 @@ import SessionComplete from '@/components/SessionComplete'
 
 // /challenge — "Thử thách hôm nay" (lib/dailyChallenge.ts): five questions,
 // the same for everyone today. Answers count for the review schedule like any
-// quiz; the result and the streak of days are kept per language.
+// quiz and keep the one study streak going (task 2.3 in docs/PLAN.md); the
+// result is kept per language.
 
 export default function Challenge() {
   const t = useT()
@@ -62,7 +64,7 @@ function ChallengeDone({
   // score and the same streak, so a second run of the effect changes nothing.
   // eslint-disable-next-line react-hooks/exhaustive-deps -- once per result
   useEffect(onRecord, [])
-  const streak = useChallenge((s) => currentStreak(s.records[code], today()))
+  const streak = useStudy((s) => liveStreak(s.progress[code]?.stats, today()))
   return (
     <SessionComplete
       emoji="🎯"
@@ -72,8 +74,8 @@ function ChallengeDone({
     >
       <p className="w-full text-sm font-semibold text-brand-600 dark:text-brand-300">
         {t(
-          `Chuỗi thử thách: ${streak} ngày liên tiếp 🔥 Ngày mai có ${CHALLENGE_SIZE} câu mới.`,
-          `Challenge streak: ${streak} day${streak === 1 ? '' : 's'} in a row 🔥 ${CHALLENGE_SIZE} new questions tomorrow.`
+          `Chuỗi học: ${streak} ngày liên tiếp 🔥 Ngày mai có ${CHALLENGE_SIZE} câu mới.`,
+          `Study streak: ${streak} day${streak === 1 ? '' : 's'} in a row 🔥 ${CHALLENGE_SIZE} new questions tomorrow.`
         )}
       </p>
       <Link to="/" className="btn-primary">

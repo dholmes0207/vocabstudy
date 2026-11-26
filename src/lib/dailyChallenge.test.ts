@@ -5,7 +5,6 @@ import {
   CHALLENGE_SIZE,
   challengeQuestions,
   challengeWords,
-  currentStreak,
   recordChallenge,
 } from './dailyChallenge'
 
@@ -26,15 +25,11 @@ describe('the daily challenge', () => {
     expect(qs.map((q) => q.mode)).toEqual(['en-to-vi', 'listen', 'vi-to-en', 'en-to-vi', 'listen'])
   })
 
-  it('counts the streak of days in a row, and keeps the better score of a day', () => {
+  it('keeps the better score of a day, and the best score ever', () => {
     let rec = recordChallenge(undefined, 10, 3, 5)
-    expect(rec.streak).toBe(1)
     rec = recordChallenge(rec, 11, 4, 5)
-    expect(rec.streak).toBe(2)
     rec = recordChallenge(rec, 11, 2, 5)
-    expect(rec).toMatchObject({ streak: 2, correct: 4, best: 4 })
-    expect(currentStreak(rec, 12)).toBe(2)
-    expect(currentStreak(rec, 13)).toBe(0)
-    expect(recordChallenge(rec, 14, 5, 5)).toMatchObject({ streak: 1, best: 5 })
+    expect(rec).toMatchObject({ day: 11, correct: 4, best: 4 })
+    expect(recordChallenge(rec, 14, 2, 5)).toMatchObject({ day: 14, correct: 2, best: 4 })
   })
 })

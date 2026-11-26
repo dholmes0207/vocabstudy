@@ -33,7 +33,7 @@ beforeEach(() => {
 afterEach(cleanup)
 
 describe("Today's challenge", () => {
-  it('asks the five questions of the day, then records the score and the streak', () => {
+  it('asks the five questions of the day, then records the score and keeps the one study streak', () => {
     render(
       <MemoryRouter initialEntries={['/challenge']}>
         <Routes>
@@ -51,15 +51,13 @@ describe("Today's challenge", () => {
       fireEvent.click(screen.getByRole('button', { name: /Câu tiếp theo|Xem kết quả/ }))
     }
     expect(screen.getByText('Xong thử thách hôm nay!')).toBeInTheDocument()
-    expect(screen.getByText(/Chuỗi thử thách: 1 ngày liên tiếp/)).toBeInTheDocument()
-    expect(useChallenge.getState().records.en).toMatchObject({
-      day: today(),
-      correct: 5,
-      streak: 1,
-    })
+    // The challenge's answers are study: they start the one study streak.
+    expect(screen.getByText(/Chuỗi học: 1 ngày liên tiếp/)).toBeInTheDocument()
+    expect(useStudy.getState().progress.en.stats.streak).toBe(1)
+    expect(useChallenge.getState().records.en).toMatchObject({ day: today(), correct: 5 })
   })
 
-  it('shows on the home page whether it is done today', () => {
+  it('shows on the home page whether it is done today, with the study streak', () => {
     const { rerender } = render(
       <MemoryRouter>
         <DailyChallenge />
@@ -69,12 +67,13 @@ describe("Today's challenge", () => {
       'href',
       '/challenge'
     )
+    useStudy.getState().recordAnswer('en', en.words[0].id, true)
     useChallenge.getState().finish('en', today(), 4, 5)
     rerender(
       <MemoryRouter>
         <DailyChallenge />
       </MemoryRouter>
     )
-    expect(screen.getByText(/Đã xong: đúng 4\/5. Chuỗi 1 ngày/)).toBeInTheDocument()
+    expect(screen.getByText(/Đã xong: đúng 4\/5. Chuỗi học 1 ngày/)).toBeInTheDocument()
   })
 })

@@ -64,6 +64,20 @@ export function nextStreak(s: StreakState, day: number): StreakUpdate {
   }
 }
 
+/**
+ * The one study streak as it stands on `day` (task 2.3 in docs/PLAN.md): every
+ * screen shows this number. Alive when the last study day was today or
+ * yesterday, or the day before with a shield left to forgive the gap (studying
+ * today keeps it, see nextStreak); otherwise it is broken and shows 0.
+ */
+export function liveStreak(s: StreakState | undefined, day: number): number {
+  if (!s || s.lastStudyDay === null || s.streak <= 0) return 0
+  const away = day - s.lastStudyDay
+  if (away <= 1) return s.streak
+  if (away === 2 && (s.shields ?? 0) > 0) return s.streak
+  return 0
+}
+
 /** Whole days since the last study day (null = never studied). */
 export function daysAway(lastStudyDay: number | null, day: number): number | null {
   return lastStudyDay === null ? null : Math.max(0, day - lastStudyDay)
