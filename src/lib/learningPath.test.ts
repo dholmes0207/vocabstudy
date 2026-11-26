@@ -13,6 +13,7 @@ import {
   type PathContext,
 } from './learningPath'
 import { TOEIC_WORDS } from './toeic'
+import { examsFor } from './exams'
 
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'))
 const en = json('public/data/en.json') as { words: { word: string }[] }
@@ -110,6 +111,19 @@ describe('the paths', () => {
     const passed = new Set(['present-simple'])
     const c = ctx({ grammarPassed: (ids) => ids.filter((id) => passed.has(id)).length })
     expect(tenses.measure(c)).toBe(1)
+  })
+
+  it('links each exam level to an exam of its own pack', () => {
+    for (const [code, path] of [
+      ['en', EN_PATH],
+      ['zh', ZH_PATH],
+      ['ko', KO_PATH],
+    ] as const) {
+      const ids = new Set(examsFor(code).map((e) => e.id))
+      const linked = path.flatMap((l) => (l.exam ? [l.exam] : []))
+      expect(linked.length, code).toBeGreaterThan(0)
+      for (const id of linked) expect(ids.has(id), `${code}: ${id}`).toBe(true)
+    }
   })
 
   it('belongs to English, Chinese and Korean', () => {

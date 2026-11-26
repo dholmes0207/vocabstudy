@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, ChevronDown, Gift, Lock, Sparkles, Swords } from 'lucide-react'
+import { ArrowRight, Check, ChevronDown, Gift, Lock, Sparkles, Swords, Target } from 'lucide-react'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { NO_PASSED, usePath } from '@/store/pathStore'
@@ -17,6 +17,7 @@ import {
   type PathLevel,
 } from '@/lib/learningPath'
 import { QUEST_XP } from '@/lib/pathQuest'
+import { examsFor } from '@/lib/exams'
 import { celebrate } from '@/lib/confetti'
 import { useT } from '@/lib/i18n'
 import PackOnly from '@/components/PackOnly'
@@ -367,6 +368,7 @@ function LevelRow({
             })}
           </ul>
         )}
+        {expanded && <ExamLink id={level.exam} />}
         {expanded && unlocked && (
           <button
             type="button"
@@ -381,6 +383,37 @@ function LevelRow({
         )}
       </div>
     </li>
+  )
+}
+
+/**
+ * The exam a level prepares for, linked from the level (task 2.5 in
+ * docs/PLAN.md): the exam roadmap is no longer a second path in the menu.
+ */
+function ExamLink({ id }: { id: PathLevel['exam'] }) {
+  const t = useT()
+  const code = useSettings((s) => s.currentLang)
+  const exam = id ? examsFor(code).find((e) => e.id === id) : undefined
+  if (!exam) return null
+  return (
+    <Link
+      to={`/exam?exam=${exam.id}`}
+      className="mt-3 flex items-center gap-3 rounded-2xl bg-sky-50 p-3 text-sm transition hover:bg-sky-100 dark:bg-sky-950/40 dark:hover:bg-sky-950/70"
+    >
+      <Target className="h-5 w-5 shrink-0 text-sky-700 dark:text-sky-300" aria-hidden="true" />
+      <span className="min-w-0 flex-1">
+        <span className="block font-semibold">
+          {t(`Kỳ thi của cấp này: ${exam.name}`, `This level's exam: ${exam.name}`)}
+        </span>
+        <span className="block text-slate-600 dark:text-slate-300">
+          {t(
+            'Cấu trúc đề, thang điểm, tiến độ theo danh sách từ và bài kiểm tra 20 câu.',
+            'The format, the scores, your progress through its word list and a 20-question check.'
+          )}
+        </span>
+      </span>
+      <ArrowRight className="h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+    </Link>
   )
 }
 

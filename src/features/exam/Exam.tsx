@@ -146,6 +146,12 @@ function Roadmap({ exam, levels }: { exam: ExamInfo; levels?: React.ReactNode })
   return (
     <div className="mx-auto max-w-3xl space-y-6 animate-fade-in">
       <header>
+        <Link
+          to="/path"
+          className="mb-2 inline-flex min-h-6 items-center text-sm font-semibold text-brand-600 hover:underline dark:text-brand-300"
+        >
+          {t('← Lộ trình theo cấp', '← Level path')}
+        </Link>
         <h1 className="text-2xl font-extrabold tracking-tight">
           <span className="text-aurora">
             {t(`Lộ trình luyện thi ${exam.name}`, `${exam.name} roadmap`)}

@@ -184,6 +184,16 @@ describe('Level path', () => {
     expect(screen.getByText('Dictation')).toBeInTheDocument()
   })
 
+  it('links a level to its exam, so the exam roadmap is not a second path', () => {
+    renderPage()
+    expect(screen.queryByRole('link', { name: /This level's exam/ })).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: /Level 3: Sentence building/ }))
+    expect(screen.getByRole('link', { name: /This level's exam: A2 Key/ })).toHaveAttribute(
+      'href',
+      '/exam?exam=a2key'
+    )
+  })
+
   it('opens the next level after a won challenge, with a trophy and its XP', async () => {
     renderPage()
     await playChallenge(2)
