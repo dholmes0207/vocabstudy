@@ -145,3 +145,22 @@ như phần "Nói thành tiếng" của bài ngữ pháp.
   chữ bị bỏ sót (`sentenceScore.test.ts`).
 - Câu tiếng Trung hiện kèm pinyin, để người mới vẫn đọc theo được.
 - Đọc đúng trọn câu thì được chấm ngay (`accept` của `listenOnce`, xem `practice-latency.md`).
+
+## Tô màu từ theo trạng thái học (26/11/2026, việc 4.3 trong `docs/PLAN.md`)
+
+**User**: Đọc truyện mà không thấy từ nào mình đã học, từ nào chưa; truyện và phần ôn từ như hai thứ tách rời.
+
+**BA**
+
+- Từ của khoá trong truyện được gạch chân theo màu trạng thái: chấm xám là chưa học, cam là đang học, xanh dương là đang
+  ôn, xanh lá là thành thạo. Di chuột hay giữ lâu thì hiện tên trạng thái.
+- Trên truyện có câu "Truyện có N từ của khoá; bạn đã học M từ" và chú thích màu kèm số từ mỗi loại.
+- Nút từ giữa câu rộng tối thiểu 24 px để dễ chạm trên điện thoại (WCAG 2.5.8); từ ngắn như "a", "is" có thêm chút khoảng
+  trống hai bên.
+
+**Dev**
+
+- `storyWords` và `phaseCounts` trong `src/lib/reading.ts` (có test); `PHASE_UNDERLINE`, `WordLegend` trong
+  `features/reading/Reading.tsx`, có test giao diện.
+- Trang truyện `/reading/lans-morning` được thêm vào bài kiểm tra truy cập tự động (`e2e/accessibility.spec.ts`), ở cả giao
+  diện sáng và tối. Lần quét đầu tìm ra 6 nút từ ngắn hẹp hơn 24 px (có từ trước), đã sửa bằng `min-w-6`.

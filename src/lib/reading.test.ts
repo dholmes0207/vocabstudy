@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { Word } from '@/types'
+import { MASTERED_BOX, newCard } from './srs'
 import { tokenize } from './games'
 import { HSK3 } from './exams'
 import {
@@ -12,6 +13,8 @@ import {
   recordReading,
   shuffleOptions,
   validateReadingPack,
+  phaseCounts,
+  storyWords,
 } from './reading'
 
 const shipped = JSON.parse(readFileSync('public/data/reading/en.json', 'utf8'))
@@ -57,6 +60,32 @@ describe('glossary', () => {
     expect(bareWord('"How')).toBe('how')
     expect(bareWord("Mai's")).toBe('mai')
     expect(bareWord('kilo,')).toBe('kilo')
+  })
+})
+
+describe('storyWords and phaseCounts', () => {
+  const glossary = buildGlossary(pack.words)
+  const byId = new Map(pack.words.map((w) => [w.id, w]))
+  const story = shipped.stories[0]
+
+  it('lists each course word of a story once, in reading order', () => {
+    const words = storyWords(story, glossary, byId)
+    expect(words.length).toBeGreaterThan(5)
+    expect(new Set(words.map((w) => w.id)).size).toBe(words.length)
+  })
+
+  it('counts them by how far the learner has got', () => {
+    const [a, b, ...rest] = storyWords(story, glossary, byId)
+    const cards = {
+      [a.id]: { ...newCard(a.id, 100), lastReviewedDay: 100 },
+      [b.id]: { ...newCard(b.id, 100), box: MASTERED_BOX, lastReviewedDay: 100 },
+    }
+    expect(phaseCounts([a, b, ...rest], cards)).toEqual({
+      new: rest.length,
+      learning: 1,
+      review: 0,
+      mastered: 1,
+    })
   })
 })
 

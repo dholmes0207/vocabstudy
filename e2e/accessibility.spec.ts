@@ -8,7 +8,16 @@ import AxeBuilder from '@axe-core/playwright'
 // Serious and critical findings fail the run; the list of what was found is in
 // the message, so a failure says what to fix. The page must not scroll sideways.
 
-const SCREENS = ['/', '/home', '/learn', '/review', '/practice', '/stats', '/settings']
+const SCREENS = [
+  '/',
+  '/home',
+  '/learn',
+  '/review',
+  '/practice',
+  '/stats',
+  '/settings',
+  '/reading/lans-morning',
+]
 
 for (const colorScheme of ['light', 'dark'] as const) {
   test.describe(`${colorScheme} theme`, () => {
