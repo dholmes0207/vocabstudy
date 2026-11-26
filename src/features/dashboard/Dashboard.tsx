@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BookOpen, GraduationCap, Library, Mic, Repeat2 } from 'lucide-react'
+import { ArrowRight, BookOpen, ChevronDown, GraduationCap, Library, Mic } from 'lucide-react'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
@@ -15,8 +15,7 @@ import { textAudio } from '@/lib/audio'
 import { proverbOfDay } from '@/lib/proverbs'
 import { DailyGoal, FirstSteps, Journey, MySky, WelcomeBack } from './Motivation'
 import { today } from '@/lib/date'
-import { liveStreak } from '@/lib/motivation'
-import { useTilt } from '@/hooks/useTilt'
+import { daysAway, liveStreak } from '@/lib/motivation'
 import { useT } from '@/lib/i18n'
 import { usePhrases } from '@/store/phrasesStore'
 import { isKnown, phraseInPack } from '@/lib/phrases'
@@ -25,6 +24,7 @@ import { availableIn } from '@/lib/packContent'
 import GrammarReviewCard from '@/features/grammar/GrammarReviewCard'
 import PathCard from '@/features/path/PathCard'
 import DiscoverCard from './DiscoverCard'
+import TodayCard from './TodayCard'
 
 export default function Dashboard() {
   const pack = useData((s) => s.pack)!
@@ -38,6 +38,9 @@ export default function Dashboard() {
   const L = useTargetLang()
 
   const s = summarize(pack.words, progress, dailyNewLimit)
+  const newcomer = s.learned === 0 && !stats?.lastStudyDay
+  // welcomeBack (lib/motivation.ts) greets anyone away two days or more.
+  const welcomingBack = (daysAway(stats?.lastStudyDay ?? null, today()) ?? 0) >= 2
   const masteredPct = s.total ? s.mastered / s.total : 0
   const learnedPct = s.total ? s.learned / s.total : 0
 
@@ -101,8 +104,11 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {s.learned === 0 && !stats?.lastStudyDay && <FirstSteps />}
+      {newcomer && <FirstSteps />}
       <WelcomeBack stats={stats} day={today()} due={s.due} />
+      {/* One main button at a time: a newcomer's first steps and the welcome
+          back after a break already carry today's. */}
+      {!newcomer && !welcomingBack && <TodayCard due={s.due} newLeft={s.newRemainingToday} />}
       {stats && <Journey reviewsByDay={stats.reviewsByDay} day={today()} />}
       <PathCard />
       <DiscoverCard />
@@ -121,46 +127,6 @@ export default function Dashboard() {
 
       <InstallPrompt />
 
-      {/* Today's plan */}
-      <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          {t('Kế hoạch hôm nay', "Today's plan")}
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <ActionCard
-            to="/review"
-            icon={Repeat2}
-            tone="brand"
-            title={t('Ôn tập', 'Review')}
-            count={s.due}
-            unit={t('từ cần ôn', 'words due')}
-            cta={
-              s.due > 0 ? t('Ôn ngay', 'Review now') : t('Chưa có từ đến hạn', 'Nothing due yet')
-            }
-            disabled={s.due === 0}
-            hint={t('Lặp lại ngắt quãng giúp nhớ lâu.', 'Spaced repetition makes words stick.')}
-          />
-          <ActionCard
-            to="/learn"
-            icon={BookOpen}
-            tone="emerald"
-            title={t('Học từ mới', 'Learn new words')}
-            count={s.newRemainingToday}
-            unit={t('từ mới hôm nay', 'new words today')}
-            cta={
-              s.newRemainingToday > 0
-                ? t('Bắt đầu học', 'Start learning')
-                : t('Đã đủ từ mới hôm nay', 'Done for today')
-            }
-            disabled={s.newRemainingToday === 0}
-            hint={t(
-              `Giới hạn ${dailyNewLimit} từ/ngày · đã học ${s.newDoneToday}`,
-              `Limit ${dailyNewLimit} words/day · learned ${s.newDoneToday}`
-            )}
-          />
-        </div>
-      </section>
-
       <GrammarReviewCard />
 
       {/* Beyond single words: ready-made sentences for real situations, or for
@@ -173,195 +139,151 @@ export default function Dashboard() {
         availableIn('/phrases', code) && <PhrasesCard code={code} />
       )}
 
-      {/* Progress overview */}
-      <section className="grid gap-4 sm:grid-cols-[auto,1fr]">
-        <div className="card flex items-center justify-center p-6">
-          <ProgressRing value={masteredPct} size={150} stroke={12}>
-            <div>
-              <p className="text-3xl font-extrabold">{Math.round(masteredPct * 100)}%</p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                {t('thành thạo', 'mastered')}
-              </p>
-            </div>
-          </ProgressRing>
-        </div>
-        <div className="card grid grid-cols-2 gap-3 p-6 sm:grid-cols-4">
-          <Metric
-            label={t('Đã học', 'Learned')}
-            value={s.learned}
-            total={s.total}
-            tone="text-brand-600"
-          />
-          <Metric
-            label={t('Thành thạo', 'Mastered')}
-            value={s.mastered}
-            total={s.total}
-            tone="text-emerald-600"
-          />
-          <Metric
-            label={t('Đang học', 'Learning')}
-            value={s.learning}
-            tone="text-amber-700 dark:text-amber-600"
-          />
-          <Metric
-            label={t('Chưa học', 'Not started')}
-            value={s.fresh}
-            tone="text-slate-500 dark:text-slate-400"
-          />
-          <div className="col-span-2 sm:col-span-4">
-            <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-              <div
-                className="h-full rounded-full bg-brand-500 transition-all"
-                style={{ width: `${learnedPct * 100}%` }}
-              />
-            </div>
-            <p className="mt-1.5 text-xs text-slate-500 dark:text-slate-400">
-              {t(
-                `Bạn đã chạm tới ${s.learned}/${s.total} từ.`,
-                `You've met ${s.learned}/${s.total} words.`
-              )}
-            </p>
-          </div>
-        </div>
-      </section>
-
       <DailyChallenge />
 
       <WordOfDay />
 
-      {/* Play & practise */}
-      <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          {t('Chơi mà học', 'Learn through play')}
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {/* The exam practice of the pack, when it has one (lib/packContent.ts). */}
-          {availableIn('/toeic', code) && (
-            <QuickLink
-              to="/toeic"
-              emoji="💼"
-              title={t('Luyện thi TOEIC', 'TOEIC practice')}
-              desc={t(
-                'Từ công sở theo chủ đề, đủ 7 Part và bài thi nhỏ.',
-                'Workplace words by theme, all 7 parts and a mini test.'
-              )}
-            />
-          )}
-          {availableIn('/hsk', code) && (
-            <QuickLink
-              to="/hsk"
-              emoji="🀄"
-              title={t('Luyện thi HSK', 'HSK practice')}
-              desc={t(
-                'Nghe, điền từ, sắp xếp câu theo cấp HSK 1–3.',
-                'Listening, gap-fill and sentence building for HSK 1–3.'
-              )}
-            />
-          )}
-          <QuickLink
-            to="/games/match"
-            emoji="🧩"
-            title={t('Ghép cặp', 'Match')}
-            desc={t(
-              '6 cặp từ – nghĩa, đua với đồng hồ.',
-              'Pair 6 words with meanings, beat the clock.'
-            )}
+      {/* Explore (task 2.1): the overview lives on /stats and the games on
+          /practice; here they wait, folded, for whoever wants them. */}
+      <details className="group">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between rounded-2xl px-1 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          {t('Khám phá: tiến độ và trò chơi', 'Explore: progress and games')}
+          <ChevronDown
+            className="h-4 w-4 transition-transform group-open:rotate-180"
+            aria-hidden="true"
           />
-          <QuickLink
-            to="/games/order"
-            emoji="🔤"
-            title={t('Xếp câu', 'Build a sentence')}
-            desc={t(`Xếp mảnh thành câu ${L.vi} đúng.`, 'Put the pieces into a correct sentence.')}
-          />
-          <QuickLink
-            to="/quiz"
-            icon={GraduationCap}
-            title={t('Kiểm tra nhanh', 'Quick quiz')}
-            desc={t(
-              '6 dạng câu hỏi: chọn nghĩa, nghe, điền câu…',
-              '6 question types: meanings, listening, gaps…'
-            )}
-          />
-          <QuickLink
-            to="/speaking"
-            icon={Mic}
-            title={t('Luyện nói', 'Speaking')}
-            desc={t(
-              'Đọc vào micro, so với giọng mẫu.',
-              'Speak into the mic, compare with the model.'
-            )}
-          />
-        </div>
-        <Link
-          to="/browse"
-          className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-300"
-        >
-          <Library className="h-4 w-4" /> {t('Tra cứu', 'Browse')} {pack.meta.count}{' '}
-          {t('từ', 'words')}
-        </Link>
-      </section>
-    </div>
-  )
-}
+        </summary>
+        <div className="mt-3 space-y-6">
+          {/* Progress overview */}
+          <section className="grid gap-4 sm:grid-cols-[auto,1fr]">
+            <div className="card flex items-center justify-center p-6">
+              <ProgressRing value={masteredPct} size={150} stroke={12}>
+                <div>
+                  <p className="text-3xl font-extrabold">{Math.round(masteredPct * 100)}%</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    {t('thành thạo', 'mastered')}
+                  </p>
+                </div>
+              </ProgressRing>
+            </div>
+            <div className="card grid grid-cols-2 gap-3 p-6 sm:grid-cols-4">
+              <Metric
+                label={t('Đã học', 'Learned')}
+                value={s.learned}
+                total={s.total}
+                tone="text-brand-600"
+              />
+              <Metric
+                label={t('Thành thạo', 'Mastered')}
+                value={s.mastered}
+                total={s.total}
+                tone="text-emerald-600"
+              />
+              <Metric
+                label={t('Đang học', 'Learning')}
+                value={s.learning}
+                tone="text-amber-700 dark:text-amber-600"
+              />
+              <Metric
+                label={t('Chưa học', 'Not started')}
+                value={s.fresh}
+                tone="text-slate-500 dark:text-slate-400"
+              />
+              <div className="col-span-2 sm:col-span-4">
+                <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+                  <div
+                    className="h-full rounded-full bg-brand-500 transition-all"
+                    style={{ width: `${learnedPct * 100}%` }}
+                  />
+                </div>
+                <p className="mt-1.5 text-xs text-slate-500 dark:text-slate-400">
+                  {t(
+                    `Bạn đã chạm tới ${s.learned}/${s.total} từ.`,
+                    `You've met ${s.learned}/${s.total} words.`
+                  )}
+                </p>
+              </div>
+            </div>
+          </section>
 
-function ActionCard({
-  to,
-  icon: Icon,
-  tone,
-  title,
-  count,
-  unit,
-  cta,
-  disabled,
-  hint,
-}: {
-  to: string
-  icon: typeof BookOpen
-  tone: 'brand' | 'emerald'
-  title: string
-  count: number
-  unit: string
-  cta: string
-  disabled: boolean
-  hint: string
-}) {
-  const tilt = useTilt()
-  const toneCls =
-    tone === 'brand' ? 'from-brand-500 to-brand-700' : 'from-emerald-500 to-emerald-700'
-  const muted = disabled ? 'text-slate-500 dark:text-slate-400' : ''
-  const inner = (
-    <div
-      className={`card relative overflow-hidden p-5 ${disabled ? '' : 'tilt'}`}
-      {...(disabled ? {} : tilt)}
-    >
-      <div
-        className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${toneCls} opacity-10`}
-      />
-      {/* Dim the icon and soften the text, not the card: a see-through card would
-          show the sky, and see-through text falls below readable contrast. */}
-      <div>
-        <div className="flex items-center gap-3">
-          <span
-            className={`grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${toneCls} text-white shadow ${disabled ? 'opacity-50 grayscale' : ''}`}
-          >
-            <Icon className="h-6 w-6" />
-          </span>
-          <h3 className={`text-lg font-bold ${muted}`}>{title}</h3>
+          {/* Play & practise */}
+          <section>
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              {t('Chơi mà học', 'Learn through play')}
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {/* The exam practice of the pack, when it has one (lib/packContent.ts). */}
+              {availableIn('/toeic', code) && (
+                <QuickLink
+                  to="/toeic"
+                  emoji="💼"
+                  title={t('Luyện thi TOEIC', 'TOEIC practice')}
+                  desc={t(
+                    'Từ công sở theo chủ đề, đủ 7 Part và bài thi nhỏ.',
+                    'Workplace words by theme, all 7 parts and a mini test.'
+                  )}
+                />
+              )}
+              {availableIn('/hsk', code) && (
+                <QuickLink
+                  to="/hsk"
+                  emoji="🀄"
+                  title={t('Luyện thi HSK', 'HSK practice')}
+                  desc={t(
+                    'Nghe, điền từ, sắp xếp câu theo cấp HSK 1–3.',
+                    'Listening, gap-fill and sentence building for HSK 1–3.'
+                  )}
+                />
+              )}
+              <QuickLink
+                to="/games/match"
+                emoji="🧩"
+                title={t('Ghép cặp', 'Match')}
+                desc={t(
+                  '6 cặp từ – nghĩa, đua với đồng hồ.',
+                  'Pair 6 words with meanings, beat the clock.'
+                )}
+              />
+              <QuickLink
+                to="/games/order"
+                emoji="🔤"
+                title={t('Xếp câu', 'Build a sentence')}
+                desc={t(
+                  `Xếp mảnh thành câu ${L.vi} đúng.`,
+                  'Put the pieces into a correct sentence.'
+                )}
+              />
+              <QuickLink
+                to="/quiz"
+                icon={GraduationCap}
+                title={t('Kiểm tra nhanh', 'Quick quiz')}
+                desc={t(
+                  '6 dạng câu hỏi: chọn nghĩa, nghe, điền câu…',
+                  '6 question types: meanings, listening, gaps…'
+                )}
+              />
+              <QuickLink
+                to="/speaking"
+                icon={Mic}
+                title={t('Luyện nói', 'Speaking')}
+                desc={t(
+                  'Đọc vào micro, so với giọng mẫu.',
+                  'Speak into the mic, compare with the model.'
+                )}
+              />
+            </div>
+            <Link
+              to="/browse"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-300"
+            >
+              <Library className="h-4 w-4" /> {t('Tra cứu', 'Browse')} {pack.meta.count}{' '}
+              {t('từ', 'words')}
+            </Link>
+          </section>
         </div>
-        <p className="mt-4">
-          <span className={`text-4xl font-extrabold ${muted}`}>{count}</span>{' '}
-          <span className="text-slate-500 dark:text-slate-400">{unit}</span>
-        </p>
-        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{hint}</p>
-        <div
-          className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${disabled ? muted : 'text-brand-600 dark:text-brand-300'}`}
-        >
-          {cta} {!disabled && <ArrowRight className="h-4 w-4" />}
-        </div>
-      </div>
+      </details>
     </div>
   )
-  return disabled ? <div>{inner}</div> : <Link to={to}>{inner}</Link>
 }
 
 function Metric({
