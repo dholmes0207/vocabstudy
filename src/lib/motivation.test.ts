@@ -5,12 +5,31 @@ import {
   daysAway,
   energyOptions,
   goalProgress,
+  liveStreak,
   nextMilestone,
   nextStreak,
   quickStartPath,
   shareText,
   welcomeBack,
 } from './motivation'
+
+describe('liveStreak', () => {
+  const s = (lastStudyDay: number | null, shields = 0) => ({ streak: 6, lastStudyDay, shields })
+
+  it('shows the streak while studying today keeps it going', () => {
+    expect(liveStreak(s(100), 100)).toBe(6)
+    expect(liveStreak(s(99), 100)).toBe(6)
+    // One missed day with a shield left: today's study is forgiven the gap.
+    expect(liveStreak(s(98, 1), 100)).toBe(6)
+  })
+
+  it('shows 0 once the streak is broken, never a stale number', () => {
+    expect(liveStreak(s(98), 100)).toBe(0)
+    expect(liveStreak(s(97, 2), 100)).toBe(0)
+    expect(liveStreak(s(null), 100)).toBe(0)
+    expect(liveStreak(undefined, 100)).toBe(0)
+  })
+})
 
 describe('nextStreak', () => {
   it('studying again the same day changes nothing', () => {

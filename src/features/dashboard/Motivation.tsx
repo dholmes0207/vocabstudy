@@ -17,6 +17,7 @@ import {
   daysAway,
   energyOptions,
   goalProgress,
+  liveStreak,
   nextMilestone,
   quickStartPath,
   shareText,
@@ -71,7 +72,7 @@ export function DailyGoal({
   const t = useT()
   const lang = useUiLang()
   const g = goalProgress(doneToday, goal)
-  const streak = stats?.lastStudyDay != null && day - stats.lastStudyDay <= 1 ? stats.streak : 0
+  const streak = liveStreak(stats, day)
   const shields = stats?.shields ?? 0
   const best = Math.max(stats?.bestStreak ?? 0, streak)
   const savedYesterday = stats?.shieldUsedDay != null && day - stats.shieldUsedDay <= 1

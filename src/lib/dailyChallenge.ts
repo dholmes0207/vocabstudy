@@ -4,8 +4,8 @@ import { mulberry32 } from './sky'
 
 // "Thử thách hôm nay" (docs/design/toeic.md, phần học từ vựng hấp dẫn hơn):
 // five questions a day, the same for everyone learning the same language that
-// day — picked by a generator seeded with the day and the pack — and a streak
-// of days on which the challenge was done.
+// day, picked by a generator seeded with the day and the pack. Its answers count
+// toward the one study streak (lib/motivation.ts liveStreak); it has none of its own.
 
 export const CHALLENGE_SIZE = 5
 
@@ -38,8 +38,6 @@ export interface ChallengeRecord {
   day: number
   correct: number
   total: number
-  /** Days in a row with the challenge done, the last one included. */
-  streak: number
   best: number
 }
 
@@ -52,12 +50,5 @@ export function recordChallenge(
 ): ChallengeRecord {
   if (prev?.day === day)
     return { ...prev, correct: Math.max(prev.correct, correct), best: Math.max(prev.best, correct) }
-  const streak = prev && prev.day === day - 1 ? prev.streak + 1 : 1
-  return { day, correct, total, streak, best: Math.max(prev?.best ?? 0, correct) }
-}
-
-/** The streak as it stands today: broken once a whole day has passed without the challenge. */
-export function currentStreak(rec: ChallengeRecord | undefined, day: number): number {
-  if (!rec) return 0
-  return rec.day === day || rec.day === day - 1 ? rec.streak : 0
+  return { day, correct, total, best: Math.max(prev?.best ?? 0, correct) }
 }

@@ -42,3 +42,23 @@ nào có học cũng tính là xong, nhiệm vụ chỉ là gợi ý. Về đíc
 cả bầu trời một lần, rồi thẻ tự ẩn.
 
 **Dev**: `src/lib/journey.ts` (thuần, có test), `Journey` trong `Motivation.tsx`.
+
+## Một chuỗi ngày duy nhất (26/11/2026, việc 2.3 trong `docs/PLAN.md`)
+
+**User**: Thẻ "Thử thách hôm nay" có chuỗi riêng, về 0 khi lỡ một ngày, trong khi đầu trang hiện chuỗi học
+có khiên. Hai con số khác nhau làm người học rối, và chuỗi riêng không tha ngày nào.
+
+**BA**
+
+- Chỉ còn **một chuỗi học**. Câu trả lời trong thử thách vốn đã tính vào chuỗi này; thẻ thử thách và màn
+  xong thử thách giờ hiện đúng con số đó ("Chuỗi học N ngày").
+- Mọi chỗ (đầu trang, trang chủ, Thống kê, thử thách) hiện **chuỗi hiện tại**: chuỗi đã đứt hiện 0 ngay,
+  không còn hiện số cũ cho tới lần học sau. Lỡ đúng một ngày mà còn khiên thì chuỗi vẫn hiện, vì học hôm nay
+  là khiên giữ chuỗi.
+
+**Dev**
+
+- `liveStreak(stats, day)` trong `src/lib/motivation.ts` (có test), dùng ở `Layout.tsx`, `Dashboard.tsx`,
+  `Motivation.tsx`, `Stats.tsx`, `DailyChallenge.tsx`, `Challenge.tsx`.
+- `src/lib/dailyChallenge.ts` bỏ `currentStreak` và trường `streak` của kết quả thử thách. Kết quả cũ đã lưu
+  có trường này vẫn đọc được (trường thừa bị bỏ qua).

@@ -25,6 +25,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useIsImmersive } from '@/store/uiStore'
 import { getDueCards } from '@/lib/srs'
 import { today } from '@/lib/date'
+import { liveStreak } from '@/lib/motivation'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import UserMenu from './UserMenu'
@@ -164,7 +165,7 @@ export default function Layout() {
             />
           ))}
         </nav>
-        <StreakPill streak={stats?.streak ?? 0} xp={stats?.xp ?? 0} />
+        <StreakPill streak={liveStreak(stats, today())} xp={stats?.xp ?? 0} />
       </aside>
 
       {/* Main column */}

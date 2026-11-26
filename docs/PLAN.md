@@ -124,7 +124,7 @@ Mục tiêu: mỗi màn một việc chính; người mới vào bài trong mộ
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 2.1 | **Trang chủ "Hôm nay".** Một thẻ lớn với một nút chính đổi theo tình trạng: ôn từ đến hạn, học 5 từ mới, làm nhiệm vụ lộ trình, hoặc "xong hôm nay". Ba vùng: Hôm nay, Lộ trình của bạn, Khám phá (gập lại). Bỏ khối "Tổng quan tiến độ" (đã có ở `/stats`) và lưới "Chơi mà học" (đã có ở `/practice`). | `Dashboard.tsx`, `Motivation.tsx`. Mới: `src/lib/todayPlan.ts` (thuần, có test), gom `summarize` (`src/lib/summary.ts`), `goalProgress`, `quickStartPath`, `energyOptions` (`src/lib/motivation.ts`), `questFor` (`src/lib/pathQuest.ts`). |
 | 2.2 | **Phiên hôm nay liền mạch.** Ôn, rồi 5 từ mới, rồi gợi ý một bài luyện của bước lộ trình đang dở. Khi tồn đọng lớn thì chia nhỏ theo ngày.                                                                                                                                                               | `features/review/Review.tsx`, `features/learn/LearnSession.tsx`, `SessionComplete.tsx`, `settingsStore.ts`                                                                                                                                 |
-| 2.3 | **Một chuỗi ngày duy nhất.** Thử thách hôm nay tính vào chuỗi học chung có khiên; bỏ chuỗi riêng về 0.                                                                                                                                                                                                   | `src/lib/dailyChallenge.ts`, `challengeStore.ts`, `DailyChallenge.tsx`, `nextStreak` trong `src/lib/motivation.ts`                                                                                                                         |
+| 2.3 | **Một chuỗi ngày duy nhất.** Thử thách hôm nay tính vào chuỗi học chung có khiên; bỏ chuỗi riêng về 0. Xong ngày 26/11: mọi màn hiện chung một chuỗi học, chuỗi đứt hiện 0 ngay (`liveStreak`).                                                                                                          | `src/lib/dailyChallenge.ts`, `challengeStore.ts`, `DailyChallenge.tsx`, `nextStreak` trong `src/lib/motivation.ts`                                                                                                                         |
 | 2.4 | **Trang Luyện tập chia nhóm:** Luyện thi, Nghe, Nói, Đọc và viết, Từ và cụm từ, Chữ và âm, Trò chơi. Có mục "Gợi ý cho bạn" và số lượt đã làm.                                                                                                                                                           | `features/practice/entries.ts` (thêm `group`), `Practice.tsx`, `activityStore.ts`, `src/lib/discover.ts`                                                                                                                                   |
 | 2.5 | **Gộp hai "lộ trình".** Thông tin kỳ thi của `/exam` chuyển vào cấp tương ứng trong `/path`; menu chỉ còn một mục.                                                                                                                                                                                       | `features/exam/Exam.tsx`, `features/path/LearningPath.tsx`, `Layout.tsx`                                                                                                                                                                   |
 | 2.6 | **Người mới vào bài trong một phút.** Từ trang giới thiệu vào thẳng 5 từ đầu tiên; học xong mới hỏi mục tiêu, trình độ và giờ nhắc.                                                                                                                                                                      | `features/marketing/Landing.tsx`, `LanguagePicker.tsx`, `FirstSteps` trong `Motivation.tsx`, `features/placement/`, `ReminderSetup.tsx`                                                                                                    |
@@ -215,6 +215,23 @@ Bật bảo vệ nhánh và secret scanning; tạo giám sát uptime; SMTP riên
 - **Giai đoạn 2:** test e2e "người mới đi từ trang giới thiệu tới xong 5 từ đầu"; đo lại độ trễ theo cách của `docs/design/latency.md`.
 - **Giai đoạn 3:** test e2e hai trình duyệt cùng tài khoản thấy cùng tiến độ ngữ pháp; chủ dự án thử thông báo đẩy trên máy thật.
 - **Giai đoạn 4:** test `srs` cho lịch duy trì; `dataset.test.ts` và các test nội dung cho dữ liệu mới.
+
+### Vòng cải tiến có đánh giá (từ 26/11/2026)
+
+Mỗi vòng làm **một** việc nhỏ trong kế hoạch, không cần chủ dự án quyết, rồi chấm theo 5 tiêu chí. Chỉ merge
+khi đạt cả 5.
+
+1. **Ổn định:** `format:check`, `lint`, `typecheck`, `npm test`, `build`, `e2e` (gồm kiểm tra truy cập 7 màn ở
+   cả giao diện sáng và tối) đều qua trên máy và trên CI.
+2. **Đúng:** quy tắc mới có test đơn vị; lỗi đã sửa có test giữ cho nó không quay lại.
+3. **Không mất dữ liệu:** dữ liệu cũ đã lưu (localStorage, bảng `progress`) vẫn đọc được, tiến độ không lùi.
+4. **Người học được gì:** một câu nói rõ người học thấy gì tốt hơn (dễ hiểu hơn, hấp dẫn hơn, ít lỗi hơn).
+5. **Gọn:** không để code chết, tài liệu trong `docs/` đã cập nhật.
+
+| Ngày  | Việc                                     | PR   | 1   | 2   | 3   | 4                                                              | 5   |
+| ----- | ---------------------------------------- | ---- | --- | --- | --- | -------------------------------------------------------------- | --- |
+| 26/11 | Lộ trình: cấp 2 mở đầu bằng hiện tại đơn | #275 | Đạt | Đạt | Đạt | Các thì của cấp 2 đi đúng thứ tự, người xếp lớp không bị hổng  | Đạt |
+| 26/11 | 2.3: một chuỗi ngày duy nhất             |      | Đạt | Đạt | Đạt | Một con số chuỗi ở mọi màn, có khiên; chuỗi đứt không hiện sai | Đạt |
 
 ---
 
