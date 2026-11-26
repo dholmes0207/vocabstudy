@@ -1,4 +1,5 @@
 import { GraduationCap, Mic } from 'lucide-react'
+import type { ActivityKind } from '@/store/activityStore'
 
 export interface PracticeEntry {
   to: string
@@ -418,3 +419,83 @@ export const PRACTICE: PracticeEntry[] = [
     tone: 'from-rose-500 to-rose-700',
   },
 ]
+
+/** The hub's groups, in the order they are shown (task 2.4 in docs/PLAN.md). */
+export type PracticeGroup = 'exam' | 'listen' | 'speak' | 'readwrite' | 'words' | 'script' | 'games'
+
+export const GROUPS: { id: PracticeGroup; title: string; titleEn: string }[] = [
+  { id: 'exam', title: 'Luyện thi', titleEn: 'Exam practice' },
+  { id: 'listen', title: 'Nghe', titleEn: 'Listening' },
+  { id: 'speak', title: 'Nói', titleEn: 'Speaking' },
+  { id: 'readwrite', title: 'Đọc và viết', titleEn: 'Reading and writing' },
+  { id: 'words', title: 'Từ và cụm từ', titleEn: 'Words and phrases' },
+  { id: 'script', title: 'Chữ và âm', titleEn: 'Script and sounds' },
+  { id: 'games', title: 'Trò chơi', titleEn: 'Games' },
+]
+
+/** Which group each entry sits in; the test checks every entry has one. */
+export const GROUP_OF: Record<string, PracticeGroup> = {
+  '/hsk': 'exam',
+  '/hskk': 'exam',
+  '/toeic': 'exam',
+  '/toeic-speaking': 'exam',
+  '/toeic-writing': 'exam',
+  '/ielts': 'exam',
+  '/exam': 'exam',
+  '/dictation': 'listen',
+  '/listen': 'listen',
+  '/speaking': 'speak',
+  '/roleplay': 'speak',
+  '/sounds': 'speak',
+  '/tongue-twisters': 'speak',
+  '/reading': 'readwrite',
+  '/grammar': 'readwrite',
+  '/patterns': 'readwrite',
+  '/phrases': 'words',
+  '/topics': 'words',
+  '/phrasal-verbs': 'words',
+  '/idioms': 'words',
+  '/collocations': 'words',
+  '/confusables': 'words',
+  '/slang': 'words',
+  '/chengyu': 'words',
+  '/measure-words': 'words',
+  '/han-viet-traps': 'words',
+  '/quiz': 'words',
+  '/quiz?scope=hard': 'words',
+  '/pinyin': 'script',
+  '/han-viet': 'script',
+  '/radicals': 'script',
+  '/hangul': 'script',
+  '/numbers': 'script',
+  '/games/blitz': 'games',
+  '/games/match': 'games',
+  '/games/order': 'games',
+}
+
+/** The finished-session counter (activityStore) behind an entry, where it keeps one. */
+export const KIND_OF: Partial<Record<string, ActivityKind>> = {
+  '/hskk': 'hskk',
+  '/toeic-speaking': 'toeic-speaking',
+  '/toeic-writing': 'toeic-writing',
+  '/dictation': 'dictation',
+  '/listen': 'listen',
+  '/speaking': 'speaking',
+  '/roleplay': 'roleplay',
+  '/tongue-twisters': 'twister',
+  '/patterns': 'patterns',
+  '/phrasal-verbs': 'phrasal',
+  '/idioms': 'idioms',
+  '/collocations': 'collocations',
+  '/confusables': 'confusables',
+  '/slang': 'slang',
+  '/chengyu': 'chengyu',
+  '/measure-words': 'measure',
+  '/han-viet-traps': 'hanviet-traps',
+  '/pinyin': 'pinyin',
+  '/han-viet': 'hanviet',
+  '/radicals': 'radicals',
+  '/hangul': 'hangul',
+  '/numbers': 'numbers',
+  '/games/order': 'order',
+}
