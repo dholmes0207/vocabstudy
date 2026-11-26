@@ -13,7 +13,7 @@ vi.mock('@/lib/api', async (importOriginal) => {
 })
 
 import FeedbackDialog from './FeedbackDialog'
-import { openFeedback, useFeedbackDialog } from '@/store/feedbackStore'
+import { openFeedback, reportContent, useFeedbackDialog } from '@/store/feedbackStore'
 import { useAuth } from '@/store/authStore'
 import { useSettings } from '@/store/settingsStore'
 import { ApiError } from '@/lib/api'
@@ -84,5 +84,32 @@ describe('FeedbackDialog', () => {
     expect(
       await screen.findByRole('link', { name: /Email contact@vocastudy\.app/ })
     ).toBeInTheDocument()
+  })
+
+  it('reports a content error about one word, without rating or quoting', async () => {
+    sendFeedback.mockResolvedValue({ ok: true })
+    act(() => reportContent({ pack: 'en', wordId: 42, word: 'improve', where: 'quiz:en-to-vi' }))
+    renderForm()
+    expect(screen.getByRole('heading', { name: 'Report a content error' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: '4 stars' })).toBeNull()
+    expect(screen.queryByLabelText(/Your name/)).toBeNull()
+    // Saying what is wrong is required, in more than a letter.
+    fireEvent.change(screen.getByLabelText('What is wrong?'), { target: { value: 'x' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+    expect(screen.getByText('Please say what is wrong.')).toBeInTheDocument()
+    expect(sendFeedback).not.toHaveBeenCalled()
+    fireEvent.change(screen.getByLabelText('What is wrong?'), {
+      target: { value: 'The meaning should be "cải thiện".' },
+    })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+    expect(await screen.findByText('We will check this word and fix it.')).toBeInTheDocument()
+    expect(sendFeedback).toHaveBeenCalledWith(
+      expect.objectContaining({
+        message:
+          '[Lỗi nội dung] en #42 "improve" (quiz:en-to-vi)\nThe meaning should be "cải thiện".',
+        rating: null,
+        allowQuote: false,
+      })
+    )
   })
 })

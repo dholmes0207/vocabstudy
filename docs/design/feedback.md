@@ -55,3 +55,24 @@
 - `functions/api/testimonials.ts` chỉ trả góp ý vừa `featured` vừa `allow_quote` (tối đa 6),
   cache 5 phút.
 - `lib/testimonials.ts` `parseTestimonials`; `features/marketing/Testimonials.tsx`.
+
+## Báo lỗi nội dung (26/11/2026, việc 4.4 trong `docs/PLAN.md`)
+
+**User**: Thấy một từ sai nghĩa hay câu ví dụ có lỗi thì không có cách báo ngay tại chỗ; phải mở hộp góp ý, tự ghi lại từ
+nào, ở đâu.
+
+**BA**
+
+- Dưới thẻ từ (khi đã lật) và trong phần giải thích sau mỗi câu hỏi có nút nhỏ **"Báo lỗi nội dung"**.
+- Bấm vào mở hộp góp ý ở chế độ báo lỗi: tiêu đề "Báo lỗi nội dung", hiện từ đang báo, một ô "Sai ở đâu?" (bắt buộc,
+  tối thiểu 3 ký tự). Không có chấm sao, không có tên, không trích dẫn công khai.
+- Không thêm dữ liệu mới: báo lỗi đi qua `/api/feedback` như góp ý thường, có tài khoản nếu đang đăng nhập.
+
+**Dev**
+
+- `contentReportPrefix` trong `src/lib/feedback.ts` (có test): dòng đầu của thư
+  `[Lỗi nội dung] <gói> #<mã từ> "<từ>" (<màn>)`, đủ để tìm từ trong `public/data` và lọc trên trang Quản trị.
+- `reportContent(ref)` trong `src/store/feedbackStore.ts`; `FeedbackDialog` đổi giao diện khi có `about`.
+- `src/components/ReportContentButton.tsx`, dùng ở `Flashcard.tsx` (đặt ngoài thẻ, vì cả thẻ là một nút) và
+  `QuizRunner.tsx`.
+- Tiếp theo: bộ lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị.

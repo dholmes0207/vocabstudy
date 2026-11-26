@@ -1,25 +1,36 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { MessageSquareHeart, Star, X } from 'lucide-react'
+import { Flag, MessageSquareHeart, Star, X } from 'lucide-react'
 import { useAuth } from '@/store/authStore'
 import { closeFeedback, useFeedbackDialog } from '@/store/feedbackStore'
 import { useT, useUiLang } from '@/lib/i18n'
 import { ApiError, api } from '@/lib/api'
 import { CONTACT_EMAIL, feedbackHref } from '@/lib/site'
-import { FEEDBACK_MAX, checkFeedback } from '@/lib/feedback'
+import {
+  CONTENT_NOTE_MIN,
+  FEEDBACK_MAX,
+  checkFeedback,
+  contentReportPrefix,
+  type ContentRef,
+} from '@/lib/feedback'
 import { DISPLAY_NAME_MAX } from '@/lib/displayName'
 import { Field, Notice, inputCls } from '@/features/auth/AuthShell'
 
 // The in-app "Send feedback" form (docs/design/feedback.md). Opened from the
-// account menu, the changelog and the site footer; mounted once in App.
+// account menu, the changelog and the site footer; mounted once in App. Opened
+// from a word card or a question, it is a content error report (task 4.4): the
+// word is named in the message, and there is no rating or quoting.
 
 export default function FeedbackDialog() {
   const open = useFeedbackDialog((s) => s.open)
+  const about = useFeedbackDialog((s) => s.about)
   if (!open) return null
-  return <FeedbackForm onClose={closeFeedback} />
+  return (
+    <FeedbackForm key={about ? about.wordId : 'general'} about={about} onClose={closeFeedback} />
+  )
 }
 
-function FeedbackForm({ onClose }: { onClose: () => void }) {
+function FeedbackForm({ about, onClose }: { about: ContentRef | null; onClose: () => void }) {
   const t = useT()
   const lang = useUiLang()
   const user = useAuth((s) => s.user)
@@ -35,13 +46,21 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
-    const checked = checkFeedback({
-      message,
-      name,
-      rating,
-      allowQuote,
-      page: window.location.pathname,
-    })
+    if (about && [...message.trim()].length < CONTENT_NOTE_MIN) {
+      setError(t('Bạn ghi giúp chỗ sai là gì nhé.', 'Please say what is wrong.'))
+      return
+    }
+    const checked = checkFeedback(
+      about
+        ? {
+            message: `${contentReportPrefix(about)}\n${message.trim()}`,
+            name: user?.name ?? '',
+            rating: null,
+            allowQuote: false,
+            page: window.location.pathname,
+          }
+        : { message, name, rating, allowQuote, page: window.location.pathname }
+    )
     if (!checked.ok) {
       setError(t(...checked.reason))
       return
@@ -85,8 +104,14 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
       >
         <div className="mb-3 flex items-start justify-between gap-3">
           <h2 id="feedback-title" className="flex items-center gap-2 text-lg font-extrabold">
-            <MessageSquareHeart className="h-5 w-5 text-brand-500" />
-            {t('Góp ý cho VocaStudy', 'Send feedback')}
+            {about ? (
+              <Flag className="h-5 w-5 text-rose-500" />
+            ) : (
+              <MessageSquareHeart className="h-5 w-5 text-brand-500" />
+            )}
+            {about
+              ? t('Báo lỗi nội dung', 'Report a content error')
+              : t('Góp ý cho VocaStudy', 'Send feedback')}
           </h2>
           <button
             type="button"
@@ -107,10 +132,12 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
               {t('Cảm ơn bạn đã góp ý!', 'Thank you for your feedback!')}
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t(
-                'Chúng tôi đọc từng góp ý để làm VocaStudy tốt hơn.',
-                'We read every message to make VocaStudy better.'
-              )}
+              {about
+                ? t('Chúng tôi sẽ kiểm tra và sửa từ này.', 'We will check this word and fix it.')
+                : t(
+                    'Chúng tôi đọc từng góp ý để làm VocaStudy tốt hơn.',
+                    'We read every message to make VocaStudy better.'
+                  )}
             </p>
             <button type="button" onClick={onClose} className="btn-primary w-full">
               {t('Đóng', 'Close')}
@@ -118,31 +145,41 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
           </div>
         ) : (
           <form onSubmit={submit} className="space-y-3">
-            <div>
-              <p className="mb-1 text-sm font-medium text-slate-600 dark:text-slate-300">
-                {t(
-                  'Bạn thấy VocaStudy thế nào? (tuỳ chọn)',
-                  'How do you like VocaStudy? (optional)'
-                )}
+            {about ? (
+              <p className="rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-800/60">
+                {t('Từ:', 'Word:')} <b>{about.word}</b>
               </p>
-              <div className="flex gap-1" role="group" aria-label={t('Chấm điểm', 'Rating')}>
-                {[1, 2, 3, 4, 5].map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    onClick={() => setRating((r) => (r === n ? null : n))}
-                    aria-pressed={rating === n}
-                    aria-label={t(`${n} sao`, `${n} star${n > 1 ? 's' : ''}`)}
-                    className="rounded-lg p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800"
-                  >
-                    <Star
-                      className={`h-7 w-7 ${rating !== null && n <= rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
-                    />
-                  </button>
-                ))}
+            ) : (
+              <div>
+                <p className="mb-1 text-sm font-medium text-slate-600 dark:text-slate-300">
+                  {t(
+                    'Bạn thấy VocaStudy thế nào? (tuỳ chọn)',
+                    'How do you like VocaStudy? (optional)'
+                  )}
+                </p>
+                <div className="flex gap-1" role="group" aria-label={t('Chấm điểm', 'Rating')}>
+                  {[1, 2, 3, 4, 5].map((n) => (
+                    <button
+                      key={n}
+                      type="button"
+                      onClick={() => setRating((r) => (r === n ? null : n))}
+                      aria-pressed={rating === n}
+                      aria-label={t(`${n} sao`, `${n} star${n > 1 ? 's' : ''}`)}
+                      className="rounded-lg p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    >
+                      <Star
+                        className={`h-7 w-7 ${rating !== null && n <= rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-            <Field label={t('Góp ý của bạn', 'Your feedback')}>
+            )}
+            <Field
+              label={
+                about ? t('Sai ở đâu?', 'What is wrong?') : t('Góp ý của bạn', 'Your feedback')
+              }
+            >
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -151,41 +188,52 @@ function FeedbackForm({ onClose }: { onClose: () => void }) {
                 maxLength={FEEDBACK_MAX}
                 autoFocus
                 className={`${inputCls} resize-y`}
-                placeholder={t(
-                  'Điều gì giúp ích cho bạn? Điều gì nên làm tốt hơn?',
-                  'What helps you? What should be better?'
-                )}
+                placeholder={
+                  about
+                    ? t(
+                        'Ví dụ: nghĩa chưa đúng, phát âm sai, câu ví dụ có lỗi…',
+                        'For example: a wrong meaning, a wrong pronunciation, a mistake in the example…'
+                      )
+                    : t(
+                        'Điều gì giúp ích cho bạn? Điều gì nên làm tốt hơn?',
+                        'What helps you? What should be better?'
+                      )
+                }
               />
             </Field>
-            <Field label={t('Tên của bạn (tuỳ chọn)', 'Your name (optional)')}>
-              <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                maxLength={DISPLAY_NAME_MAX}
-                autoComplete="name"
-                className={inputCls}
-              />
-            </Field>
-            <label className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-300">
-              <input
-                type="checkbox"
-                checked={allowQuote && name.trim() !== ''}
-                disabled={name.trim() === ''}
-                onChange={(e) => setAllowQuote(e.target.checked)}
-                className="mt-0.5 h-4 w-4 shrink-0 accent-brand-600"
-              />
-              <span>
-                {t(
-                  'Cho phép VocaStudy trích dẫn góp ý này kèm tên của tôi trên trang giới thiệu.',
-                  'VocaStudy may quote this feedback with my name on the website.'
-                )}
-                {name.trim() === '' && (
-                  <span className="block text-xs text-slate-500 dark:text-slate-400">
-                    {t('Cần nhập tên để được trích dẫn.', 'Add your name to allow quoting.')}
+            {!about && (
+              <>
+                <Field label={t('Tên của bạn (tuỳ chọn)', 'Your name (optional)')}>
+                  <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    maxLength={DISPLAY_NAME_MAX}
+                    autoComplete="name"
+                    className={inputCls}
+                  />
+                </Field>
+                <label className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                  <input
+                    type="checkbox"
+                    checked={allowQuote && name.trim() !== ''}
+                    disabled={name.trim() === ''}
+                    onChange={(e) => setAllowQuote(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-brand-600"
+                  />
+                  <span>
+                    {t(
+                      'Cho phép VocaStudy trích dẫn góp ý này kèm tên của tôi trên trang giới thiệu.',
+                      'VocaStudy may quote this feedback with my name on the website.'
+                    )}
+                    {name.trim() === '' && (
+                      <span className="block text-xs text-slate-500 dark:text-slate-400">
+                        {t('Cần nhập tên để được trích dẫn.', 'Add your name to allow quoting.')}
+                      </span>
+                    )}
                   </span>
-                )}
-              </span>
-            </label>
+                </label>
+              </>
+            )}
             {error && <Notice tone="error">{error}</Notice>}
             {fallback && (
               <a href={feedbackHref(lang)} className="btn-secondary w-full">

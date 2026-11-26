@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { FEEDBACK_MAX, checkFeedback } from './feedback'
+import { FEEDBACK_MAX, checkFeedback, contentReportPrefix } from './feedback'
 
 describe('checkFeedback', () => {
   it('accepts a real message and tidies it', () => {
@@ -30,5 +30,25 @@ describe('checkFeedback', () => {
   it('never quotes someone without a name, and ignores a bad rating', () => {
     const r = checkFeedback({ message: 'Mười ký tự trở lên', allowQuote: true, rating: 9 })
     expect(r.ok && r.value).toMatchObject({ allowQuote: false, rating: null, name: '' })
+  })
+})
+
+describe('contentReportPrefix', () => {
+  it('names the pack, the word and the screen, in one searchable line', () => {
+    expect(contentReportPrefix({ pack: 'en', wordId: 42, word: 'improve', where: 'quiz' })).toBe(
+      '[Lỗi nội dung] en #42 "improve" (quiz)'
+    )
+  })
+
+  it('keeps a long or oddly spaced word on one short line, and passes the server check', () => {
+    const line = contentReportPrefix({
+      pack: 'zh',
+      wordId: 7,
+      word: '  一 \n 二 ' + 'x'.repeat(100),
+      where: 'flashcard',
+    })
+    expect(line).not.toContain('\n')
+    expect(line.length).toBeLessThan(120)
+    expect(checkFeedback({ message: `${line}\nSai nghĩa` }).ok).toBe(true)
   })
 })

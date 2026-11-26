@@ -8,6 +8,7 @@ import { skyBurstAt } from '@/lib/skyEvents'
 import { useT } from '@/lib/i18n'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import HanViet from './HanViet'
+import ReportContentButton from './ReportContentButton'
 
 interface Props {
   word: Word
@@ -94,6 +95,12 @@ export default function Flashcard({ word, ttsLang, flipped, onFlip }: Props) {
           <WordInsight word={word} ttsLang={ttsLang} variant="details" className="mt-2 text-sm" />
         </div>
       </div>
+      {/* Outside the card, which is itself a button: no control inside a control. */}
+      {flipped && (
+        <div className="mt-2 text-center">
+          <ReportContentButton word={word} where="flashcard" />
+        </div>
+      )}
     </div>
   )
 }

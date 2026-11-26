@@ -46,3 +46,24 @@ export function checkFeedback(
     value: { message, name, rating, allowQuote: r.allowQuote === true && name !== '', page },
   }
 }
+
+/** What a content report is about (task 4.4 in docs/PLAN.md): one word of one pack, and where it was seen. */
+export interface ContentRef {
+  pack: string
+  wordId: number
+  word: string
+  /** The screen it was reported from, e.g. "flashcard" or "quiz". */
+  where: string
+}
+
+/** Learners must say what is wrong, not only press send. */
+export const CONTENT_NOTE_MIN = 3
+
+/**
+ * The first line of a content report: a tag the admin page can search for, and
+ * enough to find the word in public/data without a screenshot.
+ */
+export function contentReportPrefix(ref: ContentRef): string {
+  const word = ref.word.replace(/\s+/g, ' ').trim().slice(0, 60)
+  return `[Lỗi nội dung] ${ref.pack} #${ref.wordId} "${word}" (${ref.where})`
+}
