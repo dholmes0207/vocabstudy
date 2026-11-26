@@ -5,6 +5,7 @@ import { AiQuotaPanel } from './AiQuotaPanel'
 import { RetentionPanel } from './RetentionPanel'
 import { FeedbackInbox } from './FeedbackInbox'
 import { RecentErrors } from './RecentErrors'
+import { ExamChecks } from './ExamChecks'
 import { UsersTab } from './UsersTab'
 
 export default function AdminPage() {
@@ -57,6 +58,8 @@ export default function AdminPage() {
       <FeedbackInbox />
 
       <RecentErrors />
+
+      <ExamChecks />
 
       <UsersTab meId={me.id} />
     </div>

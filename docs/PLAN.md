@@ -151,13 +151,13 @@ Xong khi: đổi máy không mất gì; tỉ lệ bật nhắc và tỉ lệ qua
 
 Mục tiêu: người học lâu vẫn có lý do mở app. Chỉ số: ôn đúng hạn, số ngày học mỗi tuần của người đã học trên 30 ngày.
 
-| #   | Việc                                                                                                                                                                  | Tệp chính và phần dùng lại                                                                                   |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 4.1 | **Ôn duy trì.** Từ đã thành thạo quay lại theo lịch thưa 60, 120, 240 ngày, khoảng 5 thẻ mỗi ngày; sai thì về bậc ôn tập, không về 0. Xong ngày 26/11.                | `src/lib/srs.ts`, `src/lib/summary.ts`, `src/lib/practice.ts`, `src/lib/sync.ts`, `features/stats/Stats.tsx` |
-| 4.2 | **Lấp nội dung theo lộ trình, không thêm trang:** các mục "Tiếp theo" ở bảng việc đang dở; tiếng Trung mở rộng từ vựng lên HSK 4 khi có người học xong cấp HSK 3.     | `public/data/`, `src/lib/learningPath.ts`, `docs/design/`                                                    |
-| 4.3 | **Đọc gắn với ôn:** tô màu từ trong truyện theo trạng thái đã học; luyện viết chữ Hán theo nét nếu có dữ liệu nét với giấy phép phù hợp. Phần tô màu xong ngày 26/11. | `features/reading/Reading.tsx`, `savedWordsStore.ts`                                                         |
-| 4.4 | **Vòng chất lượng nội dung:** nút "Báo lỗi nội dung" ngay trên thẻ từ và câu hỏi; kiểm lại thông tin kỳ thi mỗi 6 tháng. Nút báo lỗi xong ngày 26/11.                 | `FeedbackDialog.tsx`, `functions/api/feedback.ts`, trường `checked` trong `src/lib/exams.ts`                 |
-| 4.5 | **Mốc xem lại tháng 7/2027:** mở lại tiếng Hàn hay thêm ngôn ngữ, dựa trên số người học từng gói.                                                                     | Số liệu giai đoạn 1                                                                                          |
+| #   | Việc                                                                                                                                                                                                         | Tệp chính và phần dùng lại                                                                                   |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| 4.1 | **Ôn duy trì.** Từ đã thành thạo quay lại theo lịch thưa 60, 120, 240 ngày, khoảng 5 thẻ mỗi ngày; sai thì về bậc ôn tập, không về 0. Xong ngày 26/11.                                                       | `src/lib/srs.ts`, `src/lib/summary.ts`, `src/lib/practice.ts`, `src/lib/sync.ts`, `features/stats/Stats.tsx` |
+| 4.2 | **Lấp nội dung theo lộ trình, không thêm trang:** các mục "Tiếp theo" ở bảng việc đang dở; tiếng Trung mở rộng từ vựng lên HSK 4 khi có người học xong cấp HSK 3.                                            | `public/data/`, `src/lib/learningPath.ts`, `docs/design/`                                                    |
+| 4.3 | **Đọc gắn với ôn:** tô màu từ trong truyện theo trạng thái đã học; luyện viết chữ Hán theo nét nếu có dữ liệu nét với giấy phép phù hợp. Phần tô màu xong ngày 26/11.                                        | `features/reading/Reading.tsx`, `savedWordsStore.ts`                                                         |
+| 4.4 | **Vòng chất lượng nội dung:** nút "Báo lỗi nội dung" ngay trên thẻ từ và câu hỏi; kiểm lại thông tin kỳ thi mỗi 6 tháng. Nút báo lỗi xong ngày 26/11; nhắc kiểm lại kỳ thi ở trang Quản trị xong ngày 27/11. | `FeedbackDialog.tsx`, `functions/api/feedback.ts`, trường `checked` trong `src/lib/exams.ts`                 |
+| 4.5 | **Mốc xem lại tháng 7/2027:** mở lại tiếng Hàn hay thêm ngôn ngữ, dựa trên số người học từng gói.                                                                                                            | Số liệu giai đoạn 1                                                                                          |
 
 #### Giai đoạn 5: Chuẩn bị gói trả phí (09 – 10/2027)
 
@@ -228,22 +228,23 @@ khi đạt cả 5.
 4. **Người học được gì:** một câu nói rõ người học thấy gì tốt hơn (dễ hiểu hơn, hấp dẫn hơn, ít lỗi hơn).
 5. **Gọn:** không để code chết, tài liệu trong `docs/` đã cập nhật.
 
-| Ngày  | Việc                                                                                      | PR   | 1   | 2   | 3   | 4                                                                            | 5   |
-| ----- | ----------------------------------------------------------------------------------------- | ---- | --- | --- | --- | ---------------------------------------------------------------------------- | --- |
-| 26/11 | Lộ trình: cấp 2 mở đầu bằng hiện tại đơn                                                  | #275 | Đạt | Đạt | Đạt | Các thì của cấp 2 đi đúng thứ tự, người xếp lớp không bị hổng                | Đạt |
-| 26/11 | 2.3: một chuỗi ngày duy nhất                                                              | #276 | Đạt | Đạt | Đạt | Một con số chuỗi ở mọi màn, có khiên; chuỗi đứt không hiện sai               | Đạt |
-| 26/11 | 1.1 + 1.2: số liệu ẩn danh, hỏi một lần, đồng ý mới gửi                                   | #277 | Đạt | Đạt | Đạt | Người học được hỏi rõ ràng một lần, tắt được; dự án biết ai quay lại         | Đạt |
-| 26/11 | 2.4: trang Luyện tập chia 7 nhóm, gợi ý hôm nay, số lượt                                  | #278 | Đạt | Đạt | Đạt | 36 mục thành 7 nhóm dễ tìm; thấy ngay hôm nay nên thử gì và đã làm bao nhiêu | Đạt |
-| 26/11 | 3.4: quay lại sau nghỉ dài: ôn nhẹ 20 từ, tặng 1 khiên                                    | #279 | Đạt | Đạt | Đạt | Nghỉ dài quay lại không bị dồn hàng trăm từ, chuỗi mới có khiên che          | Đạt |
-| 26/11 | 4.4: nút "Báo lỗi nội dung" trên thẻ từ và câu hỏi                                        | #280 | Đạt | Đạt | Đạt | Thấy từ sai là báo được ngay tại chỗ, không phải tự ghi lại từ nào           | Đạt |
-| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó                               | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
-| 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị                                 | #282 | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý         | Đạt |
-| 26/11 | 2.2: phiên liền mạch: ôn → 5 từ mới → bước lộ trình                                       | #283 | Đạt | Đạt | Đạt | Xong một phần là thấy ngay phần tiếp theo, buổi học không dừng ở menu        | Đạt |
-| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ                                    | #284 | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp      | Đạt |
-| 26/11 | 4.1: ôn duy trì 60/120/240 ngày, 5 từ mỗi ngày                                            | #285 | Đạt | Đạt | Đạt | Từ đã thành thạo không bị quên âm thầm; người học lâu vẫn có việc mỗi ngày   | Đạt |
-| 26/11 | 4.3: tô màu từ trong truyện theo trạng thái học; quét truy cập trang truyện               | #286 | Đạt | Đạt | Đạt | Đọc truyện thấy ngay từ nào đã học; từ ngắn dễ chạm hơn trên điện thoại      | Đạt |
-| 26/11 | 2.1: trang chủ "Hôm nay", một nút chính; "Khám phá" gập lại                               | #287 | Đạt | Đạt | Đạt | Mở app là biết ngay việc nên làm; trang chủ gọn, không còn khối trùng        | Đạt |
-| 27/11 | 2.8 (tiếp): quét truy cập khi đang làm bài (bài học nhanh, quiz); sửa tên đọc nút "Thoát" |      | Đạt | Đạt | Đạt | Người dùng trình đọc màn hình nghe đúng chữ trên nút "Thoát" ở bốn màn       | Đạt |
+| Ngày  | Việc                                                                                      | PR   | 1   | 2   | 3   | 4                                                                                 | 5   |
+| ----- | ----------------------------------------------------------------------------------------- | ---- | --- | --- | --- | --------------------------------------------------------------------------------- | --- |
+| 26/11 | Lộ trình: cấp 2 mở đầu bằng hiện tại đơn                                                  | #275 | Đạt | Đạt | Đạt | Các thì của cấp 2 đi đúng thứ tự, người xếp lớp không bị hổng                     | Đạt |
+| 26/11 | 2.3: một chuỗi ngày duy nhất                                                              | #276 | Đạt | Đạt | Đạt | Một con số chuỗi ở mọi màn, có khiên; chuỗi đứt không hiện sai                    | Đạt |
+| 26/11 | 1.1 + 1.2: số liệu ẩn danh, hỏi một lần, đồng ý mới gửi                                   | #277 | Đạt | Đạt | Đạt | Người học được hỏi rõ ràng một lần, tắt được; dự án biết ai quay lại              | Đạt |
+| 26/11 | 2.4: trang Luyện tập chia 7 nhóm, gợi ý hôm nay, số lượt                                  | #278 | Đạt | Đạt | Đạt | 36 mục thành 7 nhóm dễ tìm; thấy ngay hôm nay nên thử gì và đã làm bao nhiêu      | Đạt |
+| 26/11 | 3.4: quay lại sau nghỉ dài: ôn nhẹ 20 từ, tặng 1 khiên                                    | #279 | Đạt | Đạt | Đạt | Nghỉ dài quay lại không bị dồn hàng trăm từ, chuỗi mới có khiên che               | Đạt |
+| 26/11 | 4.4: nút "Báo lỗi nội dung" trên thẻ từ và câu hỏi                                        | #280 | Đạt | Đạt | Đạt | Thấy từ sai là báo được ngay tại chỗ, không phải tự ghi lại từ nào                | Đạt |
+| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó                               | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó             | Đạt |
+| 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị                                 | #282 | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý              | Đạt |
+| 26/11 | 2.2: phiên liền mạch: ôn → 5 từ mới → bước lộ trình                                       | #283 | Đạt | Đạt | Đạt | Xong một phần là thấy ngay phần tiếp theo, buổi học không dừng ở menu             | Đạt |
+| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ                                    | #284 | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp           | Đạt |
+| 26/11 | 4.1: ôn duy trì 60/120/240 ngày, 5 từ mỗi ngày                                            | #285 | Đạt | Đạt | Đạt | Từ đã thành thạo không bị quên âm thầm; người học lâu vẫn có việc mỗi ngày        | Đạt |
+| 26/11 | 4.3: tô màu từ trong truyện theo trạng thái học; quét truy cập trang truyện               | #286 | Đạt | Đạt | Đạt | Đọc truyện thấy ngay từ nào đã học; từ ngắn dễ chạm hơn trên điện thoại           | Đạt |
+| 26/11 | 2.1: trang chủ "Hôm nay", một nút chính; "Khám phá" gập lại                               | #287 | Đạt | Đạt | Đạt | Mở app là biết ngay việc nên làm; trang chủ gọn, không còn khối trùng             | Đạt |
+| 27/11 | 2.8 (tiếp): quét truy cập khi đang làm bài (bài học nhanh, quiz); sửa tên đọc nút "Thoát" | #288 | Đạt | Đạt | Đạt | Người dùng trình đọc màn hình nghe đúng chữ trên nút "Thoát" ở bốn màn            | Đạt |
+| 27/11 | 4.4 (tiếp): nhắc kiểm lại thông tin kỳ thi sau 6 tháng ở trang Quản trị                   |      | Đạt | Đạt | Đạt | Thông tin đề thi người học đọc luôn được đối chiếu với nguồn, không cũ đi âm thầm | Đạt |
 
 ---
 

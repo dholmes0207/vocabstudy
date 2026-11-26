@@ -199,3 +199,13 @@ Kế hoạch đầy đủ ở `toeic.md`. Bước đầu:
   ETS không công bố danh sách từ, trang ghi rõ điều đó.
 - Gói tiếng Anh thêm 75 từ (id 4441–4515, chặng 2) mà các chủ đề cần nhưng gói chưa có (hotel,
   payment, delivery…). Thẻ từ của các từ trong danh sách hiện nhãn "TOEIC".
+
+## Kiểm lại thông tin kỳ thi mỗi 6 tháng (27/11/2026, việc 4.4 trong `docs/PLAN.md`)
+
+- Cấu trúc đề và thang điểm có thể đổi. Mỗi kỳ thi có ngày kiểm (`checked`); sau `RECHECK_DAYS` (183 ngày) thì cần đối
+  chiếu lại với nguồn.
+- Trang Quản trị có thẻ **"Thông tin kỳ thi"** (`features/admin/ExamChecks.tsx`): liệt kê kỳ thi đến hạn kiểm, kiểm lần
+  cuối bao lâu rồi, kèm liên kết tới nguồn; không có kỳ nào đến hạn thì ghi "đều được kiểm trong 6 tháng qua".
+- `checkedDay` và `examsToRecheck` trong `src/lib/exams.ts` (có test). Test kiểm mọi ngày `checked` đều đọc được; ngày
+  viết sai được coi là đến hạn, để lỗi gõ không giấu mất một kỳ thi.
+- Không làm test tự đỏ khi quá hạn: như vậy sẽ chặn cả những PR không liên quan.
