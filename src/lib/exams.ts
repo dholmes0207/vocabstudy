@@ -418,3 +418,27 @@ export function examLabelFor(lang: string, word: Pick<Word, 'word'>): string | n
   }
   return null
 }
+
+/** Exam facts are checked against their sources again after this many days (task 4.4). */
+export const RECHECK_DAYS = 183
+
+/** The epoch day an exam's facts were last checked, read from `checked` ('dd/mm/yyyy'); null if unreadable. */
+export function checkedDay(exam: Exam): number | null {
+  const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(exam.checked[0])
+  if (!m) return null
+  const [, d, mo, y] = m.map(Number)
+  const ms = Date.UTC(y, mo - 1, d)
+  const back = new Date(ms)
+  if (back.getUTCDate() !== d || back.getUTCMonth() !== mo - 1) return null
+  return Math.floor(ms / 86_400_000)
+}
+
+/** Exams whose facts are due for a fresh check on `day`, the oldest check first. */
+export function examsToRecheck(day: number, exams: readonly Exam[] = EXAMS): Exam[] {
+  return exams
+    .filter((e) => {
+      const c = checkedDay(e)
+      return c === null || day - c >= RECHECK_DAYS
+    })
+    .sort((a, b) => (checkedDay(a) ?? -Infinity) - (checkedDay(b) ?? -Infinity))
+}

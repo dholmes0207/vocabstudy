@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import type { LanguagePack } from '@/types'
+import { epochDay } from './date'
 import {
   EXAMS,
   HSK1,
@@ -12,6 +13,9 @@ import {
   examWords,
   examsFor,
   mockQuestions,
+  RECHECK_DAYS,
+  checkedDay,
+  examsToRecheck,
 } from './exams'
 
 const pack = (code: string) =>
@@ -92,5 +96,31 @@ describe('mockQuestions', () => {
     expect(qs.slice(0, MOCK_SIZE / 2).every((q) => q.mode === 'listen')).toBe(true)
     expect(qs.slice(MOCK_SIZE / 2).some((q) => q.mode === 'listen')).toBe(false)
     for (const q of qs) expect(q.options.filter((o) => o.correct)).toHaveLength(1)
+  })
+})
+
+describe('rechecking exam facts', () => {
+  it('reads every exam’s check date, so none slips out of the reminder', () => {
+    for (const e of EXAMS) expect(checkedDay(e), e.id).not.toBeNull()
+  })
+
+  it('lists the exams checked more than six months ago, oldest first', () => {
+    const exam = EXAMS[0]
+    const checked = checkedDay(exam)!
+    expect(checkedDay(exam)).toBe(epochDay(Date.UTC(2026, 9, 17, 12)))
+    expect(examsToRecheck(checked + RECHECK_DAYS - 1, [exam])).toEqual([])
+    expect(examsToRecheck(checked + RECHECK_DAYS, [exam])).toEqual([exam])
+    const older = {
+      ...exam,
+      id: 'hsk2' as const,
+      checked: ['01/01/2026', '1 Jan 2026'] as [string, string],
+    }
+    expect(examsToRecheck(checked + 400, [exam, older]).map((e) => e.id)).toEqual(['hsk2', exam.id])
+  })
+
+  it('treats an unreadable date as due, so a typo cannot hide an exam', () => {
+    const typo = { ...EXAMS[0], checked: ['32/13/2026', '?'] as [string, string] }
+    expect(checkedDay(typo)).toBeNull()
+    expect(examsToRecheck(0, [typo])).toEqual([typo])
   })
 })
