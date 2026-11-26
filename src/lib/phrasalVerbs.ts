@@ -297,25 +297,29 @@ export const PARTICLES: Particle[] = [
         'look over',
         ['xem qua, soát lại', 'check quickly'],
         'Could you look ＿ my report before I send it?',
-        'Bạn xem qua giúp tôi bản báo cáo trước khi tôi gửi được không?'
+        'Bạn xem qua giúp tôi bản báo cáo trước khi tôi gửi được không?',
+        ['through']
       ),
       v(
         'get over',
         ['khỏi (bệnh), vượt qua', 'recover from'],
         'It took her two weeks to get ＿ the flu.',
-        'Cô ấy mất hai tuần mới khỏi cúm.'
+        'Cô ấy mất hai tuần mới khỏi cúm.',
+        ['through']
       ),
       v(
         'think over',
         ['cân nhắc kỹ', 'consider carefully'],
         'Take a few days to think it ＿ before you decide.',
-        'Hãy dành vài ngày cân nhắc kỹ trước khi quyết định.'
+        'Hãy dành vài ngày cân nhắc kỹ trước khi quyết định.',
+        ['through']
       ),
       v(
         'go over',
         ['ôn lại, xem lại', 'review'],
         'Let’s go ＿ the main points again before the test.',
-        'Mình ôn lại các ý chính một lần nữa trước khi kiểm tra nhé.'
+        'Mình ôn lại các ý chính một lần nữa trước khi kiểm tra nhé.',
+        ['through']
       ),
     ],
   },
@@ -360,6 +364,46 @@ export const PARTICLES: Particle[] = [
         'Please put ＿ your toys before dinner.',
         'Con cất đồ chơi đi trước khi ăn tối nhé.',
         ['back']
+      ),
+    ],
+  },
+  {
+    id: 'through',
+    emoji: '🚇',
+    sense: [
+      'Xuyên qua, đi từ đầu đến cuối; trải qua.',
+      'From one side to the other, or from start to finish; to live through.',
+    ],
+    verbs: [
+      v(
+        'go through',
+        ['trải qua (chuyện khó khăn)', 'live through something hard'],
+        'She went ＿ a hard time after she lost her job.',
+        'Cô ấy đã trải qua một thời gian khó khăn sau khi mất việc.'
+      ),
+      v(
+        'fall through',
+        ['đổ bể, không thành', 'fail to happen'],
+        'Our holiday plans fell ＿ when the hotel closed.',
+        'Kế hoạch đi nghỉ của chúng tôi đổ bể khi khách sạn đóng cửa.'
+      ),
+      v(
+        'get through',
+        ['gọi được (điện thoại)', 'reach someone by phone'],
+        'I called the bank all morning but couldn’t get ＿.',
+        'Tôi gọi ngân hàng cả buổi sáng mà không gọi được.'
+      ),
+      v(
+        'see through',
+        ['nhìn thấu (lời nói dối)', 'not be fooled by'],
+        'Don’t lie to her — she can see ＿ your excuses at once.',
+        'Đừng nói dối cô ấy, cô ấy nhìn thấu lời bao biện của bạn ngay.'
+      ),
+      v(
+        'break through',
+        ['xuyên qua, ló ra', 'push through something'],
+        'The sun broke ＿ the clouds after the storm.',
+        'Mặt trời xuyên qua những đám mây sau cơn bão.'
       ),
     ],
   },
