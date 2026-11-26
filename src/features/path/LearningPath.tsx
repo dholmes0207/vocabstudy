@@ -279,7 +279,9 @@ function LevelRow({
           </span>
         )}
       </span>
-      <div className={`card p-4 ${unlocked ? '' : 'opacity-70'}`}>
+      {/* A locked level is not faded as a whole: faded text falls below readable
+          contrast, and the line under the bar already says it is locked. */}
+      <div className="card p-4">
         <button
           type="button"
           onClick={onToggle}

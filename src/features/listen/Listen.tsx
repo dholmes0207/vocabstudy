@@ -125,7 +125,7 @@ export default function Listen() {
                 onClick={() => setSource(s.key)}
                 disabled={counts[s.key] === 0}
               >
-                {t(s.label, s.labelEn)} <span className="opacity-60">({counts[s.key]})</span>
+                {t(s.label, s.labelEn)} <span>({counts[s.key]})</span>
               </Segment>
             ))}
           </div>
