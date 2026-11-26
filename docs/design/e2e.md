@@ -82,3 +82,9 @@ như mong đợi.
 - 26/11: quét thêm hai màn đang làm bài: từ đầu tiên của bài học nhanh (`/learn?quick=1`) và một câu quiz (`/quiz`). Nút
   "Thoát" ở bốn nơi (bài học, thẻ lật, quiz, mẫu câu) có tên đọc "Kết thúc phiên" không chứa chữ hiển thị "Thoát"
   (WCAG 2.5.3); nay là "Thoát: kết thúc phiên…".
+
+## Người mới từ trang giới thiệu tới xong 5 từ đầu (27/11/2026)
+
+- `e2e/main-flow.spec.ts`: chọn tiếng Anh ở trang giới thiệu, trang chủ chỉ có một nút chính ("Học 5 từ đầu tiên"),
+  chạm vào là vào thẳng bài 5 từ, học và tự nhớ lại đến "Học xong rồi!", rồi về trang chủ thấy thẻ "Hôm nay" mời học 5 từ
+  mới (mục Kiểm chứng của giai đoạn 2 trong `docs/PLAN.md`).
