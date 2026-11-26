@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { Brain, Layers } from 'lucide-react'
 import type { QuizQuestion, ReviewStyle, SRSCard, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -7,6 +7,7 @@ import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { getDueCards } from '@/lib/srs'
 import { summarize } from '@/lib/summary'
+import { reviewSessionSize } from '@/lib/reviewSession'
 import { today } from '@/lib/date'
 import { makeQuestion } from '@/lib/quiz'
 import { reviewModeFor } from '@/lib/practice'
@@ -24,8 +25,10 @@ export default function Review() {
   const setStyle = useSettings((s) => s.setReviewStyle)
   // Switching style remounts the session with a queue rebuilt from the store:
   // words already answered correctly are no longer due and drop out, missed
-  // ones (due again today) stay in.
-  return <ReviewRun key={style} style={style} onStyle={setStyle} />
+  // ones (due again today) stay in. A new visit (the "Review more" button)
+  // remounts it too, with the next part of a big pile.
+  const { key } = useLocation()
+  return <ReviewRun key={`${style}:${key}`} style={style} onStyle={setStyle} />
 }
 
 function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: ReviewStyle) => void }) {
@@ -43,17 +46,18 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w] as const)), [pack.words])
 
   // Read progress once (not reactively) so recording answers doesn't reshuffle
-  // the queue mid-session.
-  const [due] = useState<{ card: SRSCard; word: Word }[]>(() => {
+  // the queue mid-session. A big pile is split (lib/reviewSession.ts): the most
+  // overdue words first, the rest in a later session.
+  const [{ due, waiting }] = useState(() => {
     const progress = useStudy.getState().progress[code]
     const cards = progress ? Object.values(progress.cards) : []
-    let list = getDueCards(cards, today())
-    if (reviewLimit > 0) list = list.slice(0, reviewLimit)
-    if (askedLimit > 0) list = list.slice(0, askedLimit)
-    return list.flatMap((card) => {
+    const all = getDueCards(cards, today())
+    const list = all.slice(0, reviewSessionSize(all.length, reviewLimit, askedLimit))
+    const due: { card: SRSCard; word: Word }[] = list.flatMap((card) => {
       const word = byId.get(card.id)
       return word ? [{ card, word }] : []
     })
+    return { due, waiting: all.length - list.length }
   })
 
   // Stages before the first answer, for the end-of-session changes.
@@ -101,11 +105,31 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   const complete = (correct: number, total: number) => (
     <SessionComplete
       emoji="🎉"
-      title={t('Ôn xong hôm nay!', 'Reviews done for today!')}
+      title={
+        waiting > 0
+          ? t('Xong một phần rồi!', 'One part done!')
+          : t('Ôn xong hôm nay!', 'Reviews done for today!')
+      }
       correct={correct}
       total={total}
     >
       <SessionChanges before={before} />
+      {waiting > 0 && (
+        <>
+          <p className="w-full text-sm text-slate-600 dark:text-slate-300">
+            {t(
+              `Còn ${waiting} từ chờ ôn. Không cần ôn hết một lần: ôn tiếp bây giờ, hoặc để lúc khác.`,
+              `${waiting} more words are waiting. No need to do them all at once: go on now, or come back later.`
+            )}
+          </p>
+          <button type="button" className="btn-primary" onClick={() => navigate('/review')}>
+            {t(
+              `Ôn tiếp ${reviewSessionSize(waiting, reviewLimit, 0)} từ`,
+              `Review ${reviewSessionSize(waiting, reviewLimit, 0)} more`
+            )}
+          </button>
+        </>
+      )}
       {correct < total && (
         <p className="w-full text-sm text-slate-500 dark:text-slate-400">
           {t(
@@ -115,12 +139,12 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
         </p>
       )}
       {/* Review, then five new words, then a step of the path (task 2.2). */}
-      {newLeft() > 0 && (
+      {newLeft() > 0 && waiting === 0 && (
         <Link to="/learn?quick=1" className="btn-primary">
           {t('Học 5 từ mới', 'Learn 5 new words')}
         </Link>
       )}
-      <Link to="/quiz" className={newLeft() > 0 ? 'btn-secondary' : 'btn-primary'}>
+      <Link to="/quiz" className={newLeft() > 0 || waiting > 0 ? 'btn-secondary' : 'btn-primary'}>
         {t('Kiểm tra với quiz', 'Take a quiz')}
       </Link>
       <NextOnPath />
@@ -135,7 +159,13 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
           <span aria-hidden="true">🔁</span>
         </h1>
         <p className="mt-1 text-slate-500 dark:text-slate-400">
-          {t(`${due.length} từ đến hạn`, `${due.length} words due`)} ·{' '}
+          {waiting > 0
+            ? t(
+                `${due.length} từ quá hạn lâu nhất trước, còn ${waiting} từ để phiên sau`,
+                `the ${due.length} most overdue words first, ${waiting} more for a later session`
+              )
+            : t(`${due.length} từ đến hạn`, `${due.length} words due`)}{' '}
+          ·{' '}
           {style === 'recall'
             ? t(
                 'từ càng "già" câu hỏi càng khó: chọn nghĩa → chọn từ → tự gõ ra.',
