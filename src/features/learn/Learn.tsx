@@ -26,6 +26,7 @@ import EmptyState from '@/components/EmptyState'
 import ProgressRing from '@/components/ProgressRing'
 import { Segment } from '@/components/Choice'
 import { useT } from '@/lib/i18n'
+import NextOnPath from '@/features/path/NextOnPath'
 
 /** The placement check is offered until this many words have been started. */
 const PLACEMENT_OFFER_BELOW = 30
@@ -156,6 +157,7 @@ export default function Learn() {
             <button className="btn-secondary" onClick={() => setSession(null)}>
               {t('Học tiếp', 'Keep learning')}
             </button>
+            <NextOnPath />
           </SessionComplete>
         )}
       />

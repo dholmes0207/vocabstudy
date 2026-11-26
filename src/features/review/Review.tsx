@@ -6,6 +6,7 @@ import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import { getDueCards } from '@/lib/srs'
+import { summarize } from '@/lib/summary'
 import { today } from '@/lib/date'
 import { makeQuestion } from '@/lib/quiz'
 import { reviewModeFor } from '@/lib/practice'
@@ -16,6 +17,7 @@ import EmptyState from '@/components/EmptyState'
 import SessionChanges from '@/components/SessionChanges'
 import { snapshotPhases } from '@/lib/sessionDelta'
 import { useT } from '@/lib/i18n'
+import NextOnPath from '@/features/path/NextOnPath'
 
 export default function Review() {
   const style = useSettings((s) => s.reviewStyle)
@@ -31,6 +33,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const reviewLimit = useSettings((s) => s.dailyReviewLimit)
+  const dailyNewLimit = useSettings((s) => s.dailyNewLimit)
   // ?limit=N caps this one session (the gentle comeback, lib/motivation.ts comebackPath).
   const [params] = useSearchParams()
   const askedLimit = Math.floor(Number(params.get('limit')))
@@ -92,6 +95,9 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
     )
   }
 
+  const newLeft = () =>
+    summarize(pack.words, useStudy.getState().progress[code], dailyNewLimit).newRemainingToday
+
   const complete = (correct: number, total: number) => (
     <SessionComplete
       emoji="🎉"
@@ -108,12 +114,16 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
           )}
         </p>
       )}
-      <Link to="/quiz" className="btn-primary">
+      {/* Review, then five new words, then a step of the path (task 2.2). */}
+      {newLeft() > 0 && (
+        <Link to="/learn?quick=1" className="btn-primary">
+          {t('Học 5 từ mới', 'Learn 5 new words')}
+        </Link>
+      )}
+      <Link to="/quiz" className={newLeft() > 0 ? 'btn-secondary' : 'btn-primary'}>
         {t('Kiểm tra với quiz', 'Take a quiz')}
       </Link>
-      <Link to="/learn" className="btn-secondary">
-        {t('Học từ mới', 'Learn new words')}
-      </Link>
+      <NextOnPath />
     </SessionComplete>
   )
 
