@@ -130,7 +130,9 @@ function UnitList({ pack }: { pack: GrammarPack }) {
                     {t(`Bài ${i + 1}`, `Lesson ${i + 1}`)} · {u.level}
                   </span>
                   <span className="block font-bold">{t(...u.title)}</span>
-                  <span className="block truncate text-sm text-slate-500">{t(...u.summary)}</span>
+                  <span className="block truncate text-sm text-slate-500 dark:text-slate-400">
+                    {t(...u.summary)}
+                  </span>
                 </span>
                 {(dueDay(rec) ?? Infinity) <= day ? (
                   <span className="shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-950/60 dark:text-amber-200">

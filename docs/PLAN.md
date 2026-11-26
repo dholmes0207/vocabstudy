@@ -261,6 +261,7 @@ khi đạt cả 5.
 | 27/11 | 4.4 (tiếp): nhắc kiểm lại thông tin kỳ thi sau 6 tháng ở trang Quản trị                   | #289 | Đạt | Đạt | Đạt | Thông tin đề thi người học đọc luôn được đối chiếu với nguồn, không cũ đi âm thầm | Đạt |
 | 27/11 | Kiểm chứng giai đoạn 2: e2e người mới từ trang giới thiệu tới xong 5 từ đầu               | #290 | Đạt | Đạt | Đạt | Luồng đầu tiên của người mới được giữ chắc bằng test, không vỡ khi sửa trang chủ  | Đạt |
 | 27/11 | 4.2: cụm động từ thêm tiểu từ through (5 cụm), rà lại câu cũ                              | #291 | Đạt | Đạt | Đạt | Thêm 5 cụm hay gặp (go/fall/get/see/break through), không câu nào có hai đáp án   | Đạt |
+| 27/11 | 2.8 (tiếp): quét truy cập thêm 8 màn, sửa 6 lỗi tương phản                                |      | Đạt | Đạt | Đạt | Chữ ở lộ trình, kỳ thi, nghe, ngữ pháp đọc rõ ở cả giao diện sáng và tối          | Đạt |
 
 ---
 

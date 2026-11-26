@@ -83,6 +83,13 @@ như mong đợi.
   "Thoát" ở bốn nơi (bài học, thẻ lật, quiz, mẫu câu) có tên đọc "Kết thúc phiên" không chứa chữ hiển thị "Thoát"
   (WCAG 2.5.3); nay là "Thoát: kết thúc phiên…".
 
+- 27/11: quét thêm 8 màn: lộ trình, ngữ pháp, mẫu câu, kỳ thi, thử thách hôm nay, nghe – chép, nghe thụ động, chủ đề.
+  Đã sửa 6 lỗi tương phản:
+  - thẻ cấp đang khoá ở `/path` không còn mờ cả thẻ (`opacity-70`);
+  - tab chưa chọn và dòng nguồn ở `/exam`;
+  - số đếm `opacity-60` ở `/listen`;
+  - tóm tắt bài ở `/grammar` thiếu màu cho nền tối.
+
 ## Người mới từ trang giới thiệu tới xong 5 từ đầu (27/11/2026)
 
 - `e2e/main-flow.spec.ts`: chọn tiếng Anh ở trang giới thiệu, trang chủ chỉ có một nút chính ("Học 5 từ đầu tiên"),

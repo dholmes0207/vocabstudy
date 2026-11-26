@@ -20,6 +20,15 @@ const SCREENS = [
   // In the middle of an exercise: the quick lesson's first word, a quiz question.
   '/learn?quick=1',
   '/quiz',
+  // The level path and the screens learners open most from it.
+  '/path',
+  '/grammar',
+  '/phrases',
+  '/exam',
+  '/challenge',
+  '/dictation',
+  '/listen',
+  '/topics',
 ]
 
 for (const colorScheme of ['light', 'dark'] as const) {
