@@ -13,13 +13,15 @@ import { journeyFor, journeyState, type Mission } from '@/lib/journey'
 import { useSettings } from '@/store/settingsStore'
 import { useStudy } from '@/store/studyStore'
 import {
+  GENTLE_REVIEW,
+  LONG_BREAK,
+  comebackPath,
   coverageEstimate,
   daysAway,
   energyOptions,
   goalProgress,
   liveStreak,
   nextMilestone,
-  quickStartPath,
   shareText,
   welcomeBack,
 } from '@/lib/motivation'
@@ -37,16 +39,42 @@ const GOAL_KEY = 'vocab.goalCelebrated'
 export function WelcomeBack({ stats, day, due }: { stats?: StudyStats; day: number; due: number }) {
   const t = useT()
   const lang = useUiLang()
-  const msg = welcomeBack(daysAway(stats?.lastStudyDay ?? null, day), lang)
-  if (!msg) return null
+  const away = daysAway(stats?.lastStudyDay ?? null, day)
+  const msg = welcomeBack(away, lang)
+  if (!msg || away === null) return null
+  const gentle = away >= LONG_BREAK && due > GENTLE_REVIEW
+  // nextStreak gives the shield on the first study day back; say so only when it is new.
+  const shieldLine =
+    (stats?.shields ?? 0) === 0
+      ? t(
+          ' Học hôm nay, bạn được tặng 1 khiên giữ chuỗi 🛡️',
+          ' Study today and you get a streak shield 🛡️'
+        )
+      : ''
   return (
     <section className="card relative overflow-hidden border-amber-200/70 p-5 dark:border-amber-500/20">
       <div className="absolute -left-8 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-amber-300 to-pink-400 opacity-20" />
       <p className="text-lg font-bold">{msg.title}</p>
       <p className="mt-1 text-slate-600 dark:text-slate-300">{msg.body}</p>
+      {away >= LONG_BREAK && (gentle || shieldLine) && (
+        <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+          {(gentle
+            ? t(
+                `Có ${due} từ chờ ôn, không cần ôn hết hôm nay: ${GENTLE_REVIEW} từ là đủ, phần còn lại để những ngày sau.`,
+                `${due} words are waiting, and you need not review them all today: ${GENTLE_REVIEW} is plenty, the rest can wait for the next days.`
+              )
+            : ''
+          )
+            .concat(shieldLine)
+            .trim()}
+        </p>
+      )}
       <div className="mt-4 flex flex-wrap gap-2">
-        <Link to={quickStartPath(due)} className="btn-primary">
-          <Zap className="h-4 w-4" /> {t('Học nhanh 2 phút', 'Quick 2-minute session')}
+        <Link to={comebackPath(away, due)} className="btn-primary">
+          <Zap className="h-4 w-4" />{' '}
+          {gentle
+            ? t(`Ôn nhẹ ${GENTLE_REVIEW} từ`, `Review just ${GENTLE_REVIEW}`)
+            : t('Học nhanh 2 phút', 'Quick 2-minute session')}
         </Link>
         <Link to="/listen" className="btn-secondary">
           🎧 {t('Chỉ nghe thôi', 'Just listen')}

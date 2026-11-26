@@ -76,4 +76,7 @@ như mong đợi.
 - 13/11: thêm luật vùng chạm và kiểm tra cuộn ngang ở 360 px; cả 7 màn đều đạt, không phải sửa gì.
 - 13/11: quét thêm giao diện tối. Có 2 chỗ chữ xám `text-slate-500` thiếu màu cho nền tối (tương phản 3,9:1) ở trang
   chủ: dòng "Chưa có từ đến hạn" của thẻ bị khoá và dòng "cách đọc" của Từ của ngày; đã thêm `dark:text-slate-400`.
+- 26/11: máy bận (chạy unit test cùng lúc) thì có lần quét /home giao diện tối gặp 35 lỗi tương phản giữa lúc hiệu
+  ứng chạy, chạy lại thì qua. Test nay quét lại một lần sau khi trang ổn định nếu lần đầu thấy lỗi; lỗi thật vẫn còn ở
+  lần quét thứ hai nên không bị bỏ sót.
 - Tiếp theo: các màn luyện tập khi đang làm bài.

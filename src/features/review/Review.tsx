@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { Brain, Layers } from 'lucide-react'
 import type { QuizQuestion, ReviewStyle, SRSCard, Word } from '@/types'
 import { useData } from '@/store/dataStore'
@@ -31,6 +31,9 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
   const pack = useData((s) => s.pack)!
   const code = useSettings((s) => s.currentLang)
   const reviewLimit = useSettings((s) => s.dailyReviewLimit)
+  // ?limit=N caps this one session (the gentle comeback, lib/motivation.ts comebackPath).
+  const [params] = useSearchParams()
+  const askedLimit = Math.floor(Number(params.get('limit')))
   const recordAnswer = useStudy((s) => s.recordAnswer)
   const t = useT()
 
@@ -43,6 +46,7 @@ function ReviewRun({ style, onStyle }: { style: ReviewStyle; onStyle: (s: Review
     const cards = progress ? Object.values(progress.cards) : []
     let list = getDueCards(cards, today())
     if (reviewLimit > 0) list = list.slice(0, reviewLimit)
+    if (askedLimit > 0) list = list.slice(0, askedLimit)
     return list.flatMap((card) => {
       const word = byId.get(card.id)
       return word ? [{ card, word }] : []
