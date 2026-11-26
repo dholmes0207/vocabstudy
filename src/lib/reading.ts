@@ -3,7 +3,8 @@
 // translation, words from the pack tappable for their meaning, then a few
 // comprehension questions.
 
-import type { Word } from '@/types'
+import type { CardPhase, SRSCard, Word } from '@/types'
+import { phaseOf } from './srs'
 import { surfaceForms } from './wordForms'
 import { tokenize } from './games'
 
@@ -126,6 +127,30 @@ export function glossInLine(
   const id = line.gloss?.[bareWord(token)]
   if (id !== undefined) return byId.get(id) ?? null
   return glossFor(token, glossary)
+}
+
+/** The course words a story uses (each once, in reading order): the ones a tap explains. */
+export function storyWords(story: Story, glossary: Glossary, byId: Map<number, Word>): Word[] {
+  const seen = new Map<number, Word>()
+  for (const line of story.sentences)
+    for (const token of tokenize(line.en)) {
+      const w = glossInLine(token, line, glossary, byId)
+      if (w && !seen.has(w.id)) seen.set(w.id, w)
+    }
+  return [...seen.values()]
+}
+
+/**
+ * How many of a story's words the learner already has, by stage (task 4.3 in
+ * docs/PLAN.md): reading then shows the words being learned working in context.
+ */
+export function phaseCounts(
+  words: readonly Word[],
+  cards: Readonly<Record<number, SRSCard>>
+): Record<CardPhase, number> {
+  const counts: Record<CardPhase, number> = { new: 0, learning: 0, review: 0, mastered: 0 }
+  for (const w of words) counts[phaseOf(cards[w.id])]++
+  return counts
 }
 
 // ---------------------------------------------------------------------------

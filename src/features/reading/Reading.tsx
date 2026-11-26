@@ -15,16 +15,18 @@ import {
   Volume2,
   X,
 } from 'lucide-react'
-import type { Word } from '@/types'
+import type { CardPhase, Word } from '@/types'
 import { useData } from '@/store/dataStore'
 import { useSettings } from '@/store/settingsStore'
-import { useStudy } from '@/store/studyStore'
+import { NO_CARDS, useStudy } from '@/store/studyStore'
 import { useReading } from '@/store/readingStore'
 import { prefetchAudio, pronounce, stopPronounce, textAudio, wordAudio } from '@/lib/audio'
 import {
   buildGlossary,
   glossInLine,
   loadReadingPack,
+  phaseCounts,
+  storyWords,
   readingXp,
   shuffleOptions,
   type ReadingPack,
@@ -40,6 +42,7 @@ import { DictationRound } from '@/features/dictation/Dictation'
 import SpeakAloud from '@/components/SpeakAloud'
 import { useReadingLabel } from '@/hooks/useReadingLabel'
 import { tokenize } from '@/lib/games'
+import { phaseOf } from '@/lib/srs'
 
 // "Đọc truyện ngắn" (docs/design/reading.md): short graded stories in the
 // language being learned (public/data/reading/<code>.json). Tap any word from
@@ -151,6 +154,55 @@ function StoryList({ pack }: { pack: ReadingPack }) {
   )
 }
 
+/** How a story word is underlined at each stage of learning it (task 4.3 in docs/PLAN.md). */
+const PHASE_UNDERLINE: Record<CardPhase, string> = {
+  new: 'decoration-slate-400 decoration-dotted',
+  learning: 'decoration-amber-500 decoration-2',
+  review: 'decoration-sky-500 decoration-2',
+  mastered: 'decoration-emerald-500 decoration-2',
+}
+const PHASE_DOT: Record<CardPhase, string> = {
+  new: 'bg-slate-400',
+  learning: 'bg-amber-500',
+  review: 'bg-sky-500',
+  mastered: 'bg-emerald-500',
+}
+const PHASE_LABEL: Record<CardPhase, [string, string]> = {
+  new: ['Chưa học', 'Not learned yet'],
+  learning: ['Đang học', 'Learning'],
+  review: ['Đang ôn', 'Reviewing'],
+  mastered: ['Thành thạo', 'Mastered'],
+}
+const PHASES: CardPhase[] = ['mastered', 'review', 'learning', 'new']
+
+/** "You know 12 of the 30 course words in this story", with the colour key. */
+function WordLegend({ counts, total }: { counts: Record<CardPhase, number>; total: number }) {
+  const t = useT()
+  if (total === 0) return null
+  const met = total - counts.new
+  return (
+    <div className="text-sm text-slate-600 dark:text-slate-300">
+      <p>
+        {t(
+          `Truyện có ${total} từ của khoá; bạn đã học ${met} từ.`,
+          `This story has ${total} course words; you have learned ${met}.`
+        )}
+      </p>
+      <ul
+        className="mt-1 flex flex-wrap gap-x-3 gap-y-1"
+        aria-label={t('Chú thích màu', 'Colour key')}
+      >
+        {PHASES.map((p) => (
+          <li key={p} className="inline-flex items-center gap-1.5">
+            <span className={`h-2 w-2 rounded-full ${PHASE_DOT[p]}`} aria-hidden="true" />
+            {t(...PHASE_LABEL[p])} ({counts[p]})
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 /** Read-aloud speed when "Đọc chậm" is on, relative to the learner's own rate. */
 const SLOW = 0.7
 
@@ -161,6 +213,11 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
   const rate = useSettings((s) => s.ttsRate)
   const glossary = useMemo(() => buildGlossary(pack.words), [pack.words])
   const byId = useMemo(() => new Map(pack.words.map((w) => [w.id, w])), [pack.words])
+  // Words coloured by how far the learner has got with them (task 4.3).
+  const code = useSettings((s) => s.currentLang)
+  const cards = useStudy((s) => s.progress[code]?.cards ?? NO_CARDS)
+  const words = useMemo(() => storyWords(story, glossary, byId), [story, glossary, byId])
+  const counts = phaseCounts(words, cards)
   const [showVi, setShowVi] = useState(false)
   // One sentence's translation at a time, for a reader who only needs help here
   // and there (Du Chinese's "sentence meaning").
@@ -342,6 +399,7 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
           'Tap an underlined word to see what it means.'
         )}
       </p>
+      <WordLegend counts={counts} total={words.length} />
 
       <section className="card space-y-4 p-5 text-lg leading-relaxed">
         {story.sentences.map((line, i) => (
@@ -364,7 +422,8 @@ function StoryView({ story, next }: { story: Story; next?: Story }) {
                       <button
                         type="button"
                         onClick={() => setGloss(w)}
-                        className="rounded underline decoration-brand-300 decoration-dotted underline-offset-4 hover:bg-brand-50 dark:hover:bg-brand-950"
+                        title={t(...PHASE_LABEL[phaseOf(cards[w.id])])}
+                        className={`min-w-6 rounded text-center underline underline-offset-4 hover:bg-brand-50 dark:hover:bg-brand-950 ${PHASE_UNDERLINE[phaseOf(cards[w.id])]}`}
                       >
                         {token}
                       </button>

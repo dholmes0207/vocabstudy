@@ -106,6 +106,17 @@ describe('Reading a story aloud', () => {
     expect(useSavedWords.getState().saved.en).toEqual([])
   })
 
+  it('colours the course words by how far the learner has got, with a key', async () => {
+    const drink = pack.words.find((w) => w.word === 'drink')!
+    useStudy.getState().recordAnswer('en', drink.id, true)
+    renderStory()
+    const drinks = await screen.findByRole('button', { name: 'drinks' })
+    expect(drinks).toHaveAttribute('title', 'Learning')
+    expect(drinks.className).toContain('decoration-amber-500')
+    expect(screen.getByText(/course words; you have learned 1\./)).toBeInTheDocument()
+    expect(screen.getByRole('list', { name: 'Colour key' })).toHaveTextContent('Learning (1)')
+  })
+
   it('offers no save button for a word already in the review schedule', async () => {
     const drink = pack.words.find((w) => w.word === 'drink')!
     useStudy.getState().recordAnswer('en', drink.id, true)
