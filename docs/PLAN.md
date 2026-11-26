@@ -42,14 +42,14 @@ Kết quả mong muốn sau 12 tháng: biết chính xác bao nhiêu người h�
 
 ### Việc đang dở cần khép lại
 
-| Việc                                                                                          | Tình trạng                                                                                                                                                                                     | Hướng xử lý                                  |
-| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| PR #173: thêm 6 hội thoại chọn tranh HSK 2                                                    | Đã merge ngày 12/11.                                                                                                                                                                           | Xong.                                        |
-| Nhánh `chore/react-19`                                                                        | Thử lại ngày 12/11: chạy được nhưng gói JS chính tăng khoảng 23 kB (gzip); không nâng.                                                                                                         | Chờ chủ dự án xoá nhánh.                     |
-| 4 nhánh cũ: `feat/hsk-dung-sai`, `feat/toeic-part12-them`, `chore/audio-en`, `chore/audio-zh` | Đã đối chiếu ngày 12/11: mọi commit nội dung đều có PR trên `main`, mọi tệp audio đều có trên `main`.                                                                                          | Chờ chủ dự án xoá nhánh.                     |
-| Tài liệu lệch thực tế                                                                         | `docs/design/keepalive.md` và phần đầu tài liệu này đã sửa ngày 11/11. Ghi chú cỡ gói từ trong `public/_headers` đã sửa ngày 12/11.                                                            | Sửa ghi chú trong một PR có mã.              |
-| Các mục "Tiếp theo" trong `docs/design/`                                                      | IELTS (đọc A–D, matching features; nghe matching), phrasal verbs (in, through), collocations chủ đề IELTS, hoãn tải supabase-js (`latency.md`), tô màu từ trong truyện, viết chữ Hán theo nét. | Xếp vào giai đoạn 2 và 4.                    |
-| Việc chờ chủ dự án (ghi trong `docs/design/account.md`)                                       | SMTP riêng, mẫu email, Redirect URLs, đăng nhập Google. Trạng thái không đọc được từ repo.                                                                                                     | Cần xong trước khi mở đăng ký (giai đoạn 1). |
+| Việc                                                                                          | Tình trạng                                                                                                                                                                                                           | Hướng xử lý                                  |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| PR #173: thêm 6 hội thoại chọn tranh HSK 2                                                    | Đã merge ngày 12/11.                                                                                                                                                                                                 | Xong.                                        |
+| Nhánh `chore/react-19`                                                                        | Thử lại ngày 12/11: chạy được nhưng gói JS chính tăng khoảng 23 kB (gzip); không nâng.                                                                                                                               | Chờ chủ dự án xoá nhánh.                     |
+| 4 nhánh cũ: `feat/hsk-dung-sai`, `feat/toeic-part12-them`, `chore/audio-en`, `chore/audio-zh` | Đã đối chiếu ngày 12/11: mọi commit nội dung đều có PR trên `main`, mọi tệp audio đều có trên `main`.                                                                                                                | Chờ chủ dự án xoá nhánh.                     |
+| Tài liệu lệch thực tế                                                                         | `docs/design/keepalive.md` và phần đầu tài liệu này đã sửa ngày 11/11. Ghi chú cỡ gói từ trong `public/_headers` đã sửa ngày 12/11.                                                                                  | Sửa ghi chú trong một PR có mã.              |
+| Các mục "Tiếp theo" trong `docs/design/`                                                      | IELTS (đọc A–D, matching features; nghe matching), phrasal verbs (in; through xong 27/11), collocations chủ đề IELTS, hoãn tải supabase-js (`latency.md`), viết chữ Hán theo nét. Tô màu từ trong truyện xong 26/11. | Xếp vào giai đoạn 2 và 4.                    |
+| Việc chờ chủ dự án (ghi trong `docs/design/account.md`)                                       | SMTP riêng, mẫu email, Redirect URLs, đăng nhập Google. Trạng thái không đọc được từ repo.                                                                                                                           | Cần xong trước khi mở đăng ký (giai đoạn 1). |
 
 ### Mục tiêu và chỉ số
 
@@ -205,7 +205,21 @@ Giữ 6 lệnh hiện có (`format:check`, `lint`, `typecheck`, `test`, `build`,
 
 #### Việc chỉ chủ dự án làm được
 
-Bật bảo vệ nhánh và secret scanning; tạo giám sát uptime; SMTP riêng và khoá Turnstile; tạo bucket R2 riêng tư và secret cho sao lưu; chạy lại `supabase/schema.sql` sau mỗi thay đổi lược đồ; quyết định về tệp PDF và về ngôn ngữ giao diện lần đầu; thử thông báo đẩy trên điện thoại thật.
+Danh sách cập nhật ngày 27/11/2026, việc cần làm trước đứng đầu:
+
+1. **Supabase: chạy lại `supabase/schema.sql`** để tạo bảng `usage_days` và hàm `record_usage_day` cho số liệu ẩn danh
+   (#260, #277). Cách chạy: Supabase Dashboard → SQL Editor → New query → dán toàn bộ nội dung tệp → Run. Tệp chạy lại
+   an toàn (mọi lệnh đều idempotent). Chưa chạy thì `/api/ping` nhận rồi bỏ qua, app không lỗi; thẻ phễu "Mọi thiết bị"
+   ở trang Quản trị hiện lời nhắc chạy tệp này.
+2. **Cloudflare Pages:** nếu đã đặt biến `NODE_VERSION`, đổi thành `22` (#263).
+3. **GitHub:** xoá 5 nhánh cũ (`feat/hsk-dung-sai`, `feat/toeic-part12-them`, `chore/audio-en`, `chore/audio-zh`,
+   `chore/react-19`); bật bảo vệ nhánh `main`, secret scanning và push protection.
+4. **Sao lưu (0.7):** tạo bucket R2 riêng tư `vocastudy-backup` và hai secret `SUPABASE_DB_URL`, `BACKUP_PASSPHRASE`.
+5. **Giám sát uptime (0.6):** một dịch vụ bên ngoài gọi `/api/health` mỗi giờ (`docs/design/keepalive.md`).
+6. **Mở đăng ký (1.4):** SMTP riêng, mẫu email, Redirect URLs, đăng nhập Google, khoá Turnstile (`docs/design/account.md`).
+7. **Quyết định:** tệp PDF trong `docs/sources/` (0.8); giao diện lần đầu theo ngôn ngữ của máy (2.7), vì trước đây chủ
+   dự án đã chọn mặc định tiếng Anh.
+8. Thử thông báo đẩy trên điện thoại thật khi làm 3.2.
 
 ### Kiểm chứng
 
@@ -246,7 +260,7 @@ khi đạt cả 5.
 | 27/11 | 2.8 (tiếp): quét truy cập khi đang làm bài (bài học nhanh, quiz); sửa tên đọc nút "Thoát" | #288 | Đạt | Đạt | Đạt | Người dùng trình đọc màn hình nghe đúng chữ trên nút "Thoát" ở bốn màn            | Đạt |
 | 27/11 | 4.4 (tiếp): nhắc kiểm lại thông tin kỳ thi sau 6 tháng ở trang Quản trị                   | #289 | Đạt | Đạt | Đạt | Thông tin đề thi người học đọc luôn được đối chiếu với nguồn, không cũ đi âm thầm | Đạt |
 | 27/11 | Kiểm chứng giai đoạn 2: e2e người mới từ trang giới thiệu tới xong 5 từ đầu               | #290 | Đạt | Đạt | Đạt | Luồng đầu tiên của người mới được giữ chắc bằng test, không vỡ khi sửa trang chủ  | Đạt |
-| 27/11 | 4.2: cụm động từ thêm tiểu từ through (5 cụm), rà lại câu cũ                              |      | Đạt | Đạt | Đạt | Thêm 5 cụm hay gặp (go/fall/get/see/break through), không câu nào có hai đáp án   | Đạt |
+| 27/11 | 4.2: cụm động từ thêm tiểu từ through (5 cụm), rà lại câu cũ                              | #291 | Đạt | Đạt | Đạt | Thêm 5 cụm hay gặp (go/fall/get/see/break through), không câu nào có hai đáp án   | Đạt |
 
 ---
 
