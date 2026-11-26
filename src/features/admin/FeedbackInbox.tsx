@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react'
 import { MessageSquareHeart, Star } from 'lucide-react'
 import { api, type FeedbackRow } from '@/lib/api'
 import { tx, useT } from '@/lib/i18n'
+import { isContentReport } from '@/lib/feedback'
 
 /**
  * What learners wrote (docs/design/feedback.md). A message whose author allowed
  * quoting can be shown on the homepage — the only source of testimonials.
+ * Content error reports (task 4.4) can be shown on their own, to fix the words.
  */
+
+type Show = 'all' | 'content' | 'other'
 export function FeedbackInbox() {
   const t = useT()
   const [state, setState] = useState<
@@ -15,6 +19,7 @@ export function FeedbackInbox() {
     | { kind: 'ready'; enabled: boolean; feedback: FeedbackRow[] }
   >({ kind: 'loading' })
   const [busy, setBusy] = useState<string | null>(null)
+  const [show, setShow] = useState<Show>('all')
 
   useEffect(() => {
     let alive = true
@@ -85,41 +90,79 @@ export function FeedbackInbox() {
         </p>
       )}
       {state.kind === 'ready' && state.feedback.length > 0 && (
-        <ul className="mt-3 divide-y divide-slate-100 dark:divide-slate-800">
-          {state.feedback.map((f) => (
-            <li key={f.id} className="py-3">
-              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
-                  {f.name || t('Ẩn danh', 'Anonymous')}
-                </span>
-                {f.rating && (
-                  <span className="inline-flex items-center gap-0.5 text-amber-500">
-                    {f.rating} <Star className="h-3 w-3 fill-current" />
-                  </span>
-                )}
-                <span>{new Date(f.created_at).toLocaleString(t('vi-VN', 'en-GB'))}</span>
-                {f.page && <span>· {f.page}</span>}
-                {f.allow_quote && (
-                  <span className="chip bg-emerald-100 px-2 py-0.5 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
-                    {t('Cho phép trích dẫn', 'Quotable')}
-                  </span>
-                )}
-              </div>
-              <p className="mt-1 whitespace-pre-line text-sm">{f.message}</p>
-              {f.allow_quote && (
-                <button
-                  type="button"
-                  disabled={busy === f.id}
-                  onClick={() => void feature(f)}
-                  className={`mt-2 text-xs font-semibold ${f.featured ? 'text-rose-600' : 'text-brand-600 dark:text-brand-300'} hover:underline`}
-                >
-                  {f.featured
-                    ? t('Bỏ khỏi trang chủ', 'Remove from homepage')
-                    : t('Hiện trên trang chủ', 'Show on homepage')}
-                </button>
-              )}
-            </li>
+        <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label={t('Lọc', 'Filter')}>
+          {(
+            [
+              ['all', t('Tất cả', 'All'), state.feedback.length],
+              [
+                'content',
+                t('Lỗi nội dung', 'Content errors'),
+                state.feedback.filter((f) => isContentReport(f.message)).length,
+              ],
+              [
+                'other',
+                t('Góp ý', 'Feedback'),
+                state.feedback.filter((f) => !isContentReport(f.message)).length,
+              ],
+            ] as const
+          ).map(([id, label, n]) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={show === id}
+              onClick={() => setShow(id)}
+              className={`chip px-3 py-1 text-xs font-semibold ${show === id ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200'}`}
+            >
+              {label} ({n})
+            </button>
           ))}
+        </div>
+      )}
+      {state.kind === 'ready' && state.feedback.length > 0 && (
+        <ul className="mt-3 divide-y divide-slate-100 dark:divide-slate-800">
+          {state.feedback
+            .filter((f) =>
+              show === 'all' ? true : (show === 'content') === isContentReport(f.message)
+            )
+            .map((f) => (
+              <li key={f.id} className="py-3">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                  <span className="font-semibold text-slate-600 dark:text-slate-300">
+                    {f.name || t('Ẩn danh', 'Anonymous')}
+                  </span>
+                  {f.rating && (
+                    <span className="inline-flex items-center gap-0.5 text-amber-500">
+                      {f.rating} <Star className="h-3 w-3 fill-current" />
+                    </span>
+                  )}
+                  <span>{new Date(f.created_at).toLocaleString(t('vi-VN', 'en-GB'))}</span>
+                  {f.page && <span>· {f.page}</span>}
+                  {isContentReport(f.message) && (
+                    <span className="chip bg-rose-100 px-2 py-0.5 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300">
+                      {t('Lỗi nội dung', 'Content error')}
+                    </span>
+                  )}
+                  {f.allow_quote && (
+                    <span className="chip bg-emerald-100 px-2 py-0.5 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+                      {t('Cho phép trích dẫn', 'Quotable')}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 whitespace-pre-line text-sm">{f.message}</p>
+                {f.allow_quote && (
+                  <button
+                    type="button"
+                    disabled={busy === f.id}
+                    onClick={() => void feature(f)}
+                    className={`mt-2 text-xs font-semibold ${f.featured ? 'text-rose-600' : 'text-brand-600 dark:text-brand-300'} hover:underline`}
+                  >
+                    {f.featured
+                      ? t('Bỏ khỏi trang chủ', 'Remove from homepage')
+                      : t('Hiện trên trang chủ', 'Show on homepage')}
+                  </button>
+                )}
+              </li>
+            ))}
         </ul>
       )}
     </section>

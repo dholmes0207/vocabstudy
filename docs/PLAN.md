@@ -236,7 +236,8 @@ khi đạt cả 5.
 | 26/11 | 2.4: trang Luyện tập chia 7 nhóm, gợi ý hôm nay, số lượt    | #278 | Đạt | Đạt | Đạt | 36 mục thành 7 nhóm dễ tìm; thấy ngay hôm nay nên thử gì và đã làm bao nhiêu | Đạt |
 | 26/11 | 3.4: quay lại sau nghỉ dài: ôn nhẹ 20 từ, tặng 1 khiên      | #279 | Đạt | Đạt | Đạt | Nghỉ dài quay lại không bị dồn hàng trăm từ, chuỗi mới có khiên che          | Đạt |
 | 26/11 | 4.4: nút "Báo lỗi nội dung" trên thẻ từ và câu hỏi          | #280 | Đạt | Đạt | Đạt | Thấy từ sai là báo được ngay tại chỗ, không phải tự ghi lại từ nào           | Đạt |
-| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó |      | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
+| 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
+| 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị   |      | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý         | Đạt |
 
 ---
 
