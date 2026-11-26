@@ -268,7 +268,7 @@ function MeetCards({
         <button
           onClick={onExit}
           className="btn-ghost h-8 shrink-0 gap-1 !px-2 text-xs text-slate-500 dark:text-slate-400"
-          aria-label={t('Kết thúc phiên học', 'End lesson')}
+          aria-label={t('Thoát: kết thúc phiên học', 'Exit: end the lesson')}
           title={t('Kết thúc (từ đã trả lời vẫn được lưu)', 'End (answered words are saved)')}
         >
           <LogOut className="h-4 w-4" /> {t('Thoát', 'Exit')}

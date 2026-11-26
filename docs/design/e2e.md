@@ -79,4 +79,6 @@ như mong đợi.
 - 26/11: máy bận (chạy unit test cùng lúc) thì có lần quét /home giao diện tối gặp 35 lỗi tương phản giữa lúc hiệu
   ứng chạy, chạy lại thì qua. Test nay quét lại một lần sau khi trang ổn định nếu lần đầu thấy lỗi; lỗi thật vẫn còn ở
   lần quét thứ hai nên không bị bỏ sót.
-- Tiếp theo: các màn luyện tập khi đang làm bài.
+- 26/11: quét thêm hai màn đang làm bài: từ đầu tiên của bài học nhanh (`/learn?quick=1`) và một câu quiz (`/quiz`). Nút
+  "Thoát" ở bốn nơi (bài học, thẻ lật, quiz, mẫu câu) có tên đọc "Kết thúc phiên" không chứa chữ hiển thị "Thoát"
+  (WCAG 2.5.3); nay là "Thoát: kết thúc phiên…".
