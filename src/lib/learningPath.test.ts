@@ -10,6 +10,7 @@ import {
   nextStep,
   pathFor,
   pathState,
+  practiceSuggestion,
   type PathContext,
 } from './learningPath'
 import { TOEIC_WORDS } from './toeic'
@@ -124,6 +125,20 @@ describe('the paths', () => {
       expect(linked.length, code).toBeGreaterThan(0)
       for (const id of linked) expect(ids.has(id), `${code}: ${id}`).toBe(true)
     }
+  })
+
+  it('suggests the next practice step of the current level, never more words', () => {
+    const fresh = pathState(EN_PATH, ctx(), 1)
+    expect(practiceSuggestion(fresh)?.step.id).toBe('en1-grammar')
+    // Grammar passed: the stories are next; words are never suggested.
+    const grammarDone = pathState(EN_PATH, ctx({ grammarPassed: (ids) => ids.length }), 1)
+    expect(practiceSuggestion(grammarDone)?.step.id).toBe('en1-stories')
+    const allPractice = pathState(
+      EN_PATH,
+      ctx({ grammarPassed: (ids) => ids.length, storiesRead: (ids) => ids.length }),
+      1
+    )
+    expect(practiceSuggestion(allPractice)?.step.to).not.toBe('/learn')
   })
 
   it('belongs to English, Chinese and Korean', () => {

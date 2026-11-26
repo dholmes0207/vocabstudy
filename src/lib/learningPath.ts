@@ -1183,6 +1183,16 @@ export function currentLevel(states: readonly LevelState[]): LevelState | undefi
   return open.find((s) => !s.complete) ?? open[open.length - 1]
 }
 
+/**
+ * What to practise after a lesson or a review (task 2.2 in docs/PLAN.md): the
+ * first unfinished step of the current level that is not learning or reviewing
+ * words, since the learner has just done that.
+ */
+export function practiceSuggestion(states: readonly LevelState[]): StepState | undefined {
+  const level = currentLevel(states)
+  return level?.steps.find((s) => !s.done && s.step.to !== '/learn' && s.step.to !== '/review')
+}
+
 /** The first unfinished step of a level, the one "Continue" opens. */
 export function nextStep(state: LevelState): StepState | undefined {
   return state.steps.find((s) => !s.done)

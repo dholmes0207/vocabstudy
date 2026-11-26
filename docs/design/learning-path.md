@@ -116,3 +116,13 @@ Từ 10/11/2026 chỉ tiếp tục hoàn thiện tiếng Anh và tiếng Trung; 
   `PathLevel`): tiếng Anh cấp 3 → A2 Key, cấp 4 → B1 Preliminary, cấp 5 → TOEIC; tiếng Trung cấp 2–4 → HSK 1–3; tiếng
   Hàn cấp 3 → TOPIK I. Test kiểm mỗi mã thuộc đúng gói.
 - Trang kỳ thi có liên kết "← Lộ trình theo cấp" ở đầu, vẫn vào được từ nhóm Luyện thi ở trang Luyện tập.
+
+## Phiên hôm nay liền mạch (26/11/2026, việc 2.2 trong `docs/PLAN.md`)
+
+- Ôn xong: nút chính là "Học 5 từ mới" (`/learn?quick=1`) khi hôm nay còn suất từ mới; hết suất thì "Kiểm tra với quiz"
+  lên làm nút chính.
+- Ôn xong và học xong đều có thẻ **"Tiếp theo trên lộ trình"** (`features/path/NextOnPath.tsx`): bước luyện chưa xong
+  đầu tiên của cấp đang học, bỏ qua bước học từ và ôn từ vì người học vừa làm xong (`practiceSuggestion`, có test). Gói
+  không có lộ trình thì không hiện.
+- Chưa làm: chia tồn đọng lớn qua nhiều ngày một cách tự động (hiện chỉ có ngày đầu quay lại sau nghỉ dài, xem
+  `comeback.md`).
