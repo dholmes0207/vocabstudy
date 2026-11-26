@@ -107,3 +107,12 @@ sách HSK của cấp và ngữ pháp tiếng Trung của cấp.
 Từ 10/11/2026 chỉ tiếp tục hoàn thiện tiếng Anh và tiếng Trung; gói tiếng Hàn giữ nguyên.
 
 1. Rà lại mô tả các bước khi một trang có thêm dạng bài, để lộ trình nói đúng những gì trang có.
+
+## Một lộ trình trong menu (26/11/2026, việc 2.5 trong `docs/PLAN.md`)
+
+- Trước đây menu có hai mục "Lộ trình theo cấp" (`/path`) và "Lộ trình luyện thi" (`/exam`), người học không rõ đi
+  theo cái nào. Nay menu chỉ còn "Lộ trình theo cấp"; ở `/exam` tab này vẫn sáng.
+- Cấp nào chuẩn bị cho một kỳ thi thì mở ra có thẻ "Kỳ thi của cấp này" dẫn tới `/exam?exam=<mã>` (trường `exam` của
+  `PathLevel`): tiếng Anh cấp 3 → A2 Key, cấp 4 → B1 Preliminary, cấp 5 → TOEIC; tiếng Trung cấp 2–4 → HSK 1–3; tiếng
+  Hàn cấp 3 → TOPIK I. Test kiểm mỗi mã thuộc đúng gói.
+- Trang kỳ thi có liên kết "← Lộ trình theo cấp" ở đầu, vẫn vào được từ nhóm Luyện thi ở trang Luyện tập.

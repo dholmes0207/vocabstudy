@@ -1,6 +1,8 @@
 import type { ActivityKind } from '@/store/activityStore'
 import { TOEIC_WORDS } from './toeic'
-import { HSK1, HSK2, HSK3 } from './exams'
+import { HSK1, HSK2, HSK3, type Exam } from './exams'
+
+type ExamId = Exam['id']
 
 // "Lộ trình theo cấp" (docs/design/learning-path.md): the pieces the app already
 // has (words, grammar, stories, listening, speaking, exam practice) in the order
@@ -64,6 +66,8 @@ export interface PathLevel {
   soon?: boolean
   /** Headwords the level test asks, when the level has no slice of the learning order. */
   testWords?: readonly string[]
+  /** The exam this level prepares for: its roadmap (/exam) is linked from the level (task 2.5). */
+  exam?: ExamId
 }
 
 const words = (from: number, to: number, id: string): PathStep => ({
@@ -205,6 +209,7 @@ export const EN_PATH: PathLevel[] = [
     n: 3,
     icon: '🧱',
     title: ['Cấu trúc câu', 'Sentence building'],
+    exam: 'a2key',
     tagline: [
       'Ghép câu dài hơn: so sánh, giới từ, động từ khuyết thiếu; nói thành tiếng.',
       'Longer sentences: comparisons, prepositions, modals; and say them out loud.',
@@ -288,6 +293,7 @@ export const EN_PATH: PathLevel[] = [
     n: 4,
     icon: '🎧',
     title: ['Nghe & nói', 'Listening & speaking'],
+    exam: 'b1prelim',
     tagline: [
       'Nghe hiểu ở tốc độ thật và nói tự tin hơn: chuẩn bị cho phần Nghe của đề thi.',
       'Understand real-speed English and speak with more confidence: ready for the listening paper.',
@@ -388,6 +394,7 @@ export const EN_PATH: PathLevel[] = [
     n: 5,
     icon: '💼',
     title: ['Luyện thi TOEIC', 'TOEIC'],
+    exam: 'toeic',
     tagline: [
       'Từ vựng công sở và đủ 7 Part của đề Listening & Reading, kết thúc bằng bài thi nhỏ.',
       'Workplace words and all seven parts of Listening & Reading, finished with a mini test.',
@@ -658,6 +665,7 @@ export const ZH_PATH: PathLevel[] = [
     n: 2,
     icon: '🏮',
     title: ['HSK 1', 'HSK 1'],
+    exam: 'hsk1',
     tagline: [
       'Đủ 150 từ và các mẫu câu của HSK 1, đếm số và lượng từ, sẵn sàng thi HSK 1.',
       'The 150 words and sentence patterns of HSK 1, numbers and measure words: ready for HSK 1.',
@@ -729,6 +737,7 @@ export const ZH_PATH: PathLevel[] = [
     n: 3,
     icon: '🐉',
     title: ['HSK 2', 'HSK 2'],
+    exam: 'hsk2',
     tagline: [
       'Thêm 150 từ, so sánh với 比, kinh nghiệm với 过, đọc truyện dài hơn và nhận mặt bộ thủ.',
       'Another 150 words, comparisons with 比, experience with 过, longer stories and the radicals.',
@@ -830,6 +839,7 @@ export const ZH_PATH: PathLevel[] = [
     n: 4,
     icon: '🏯',
     title: ['HSK 3', 'HSK 3'],
+    exam: 'hsk3',
     tagline: [
       'Câu 把 và 被, bổ ngữ kết quả và xu hướng, nghe – chép, đọc truyện B1 và bài thi HSK 3 có phần viết.',
       '把 and 被, result and direction complements, dictation, B1 stories and the HSK 3 test with writing.',
@@ -1059,6 +1069,7 @@ export const KO_PATH: PathLevel[] = [
     n: 3,
     icon: '🗓️',
     title: ['Kể chuyện: quá khứ & tương lai', 'Telling stories: past & future'],
+    exam: 'topik1',
     tagline: [
       'Kể việc đã làm, nói điều muốn làm và sẽ làm: phần ngữ pháp chính của TOPIK I cấp 2.',
       'Say what you did, want to do and will do: the core grammar of TOPIK I level 2.',
