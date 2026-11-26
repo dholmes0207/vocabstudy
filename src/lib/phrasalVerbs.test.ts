@@ -13,6 +13,7 @@ describe('phrasal verbs data', () => {
       'back',
       'over',
       'away',
+      'through',
     ])
     const verbs = PARTICLES.flatMap((p) => p.verbs)
     expect(new Set(verbs.map((v) => v.verb)).size).toBe(verbs.length)
@@ -52,9 +53,10 @@ describe('phrasalRound', () => {
 
   it('spreads a mixed round over every particle without repeats', () => {
     for (let seed = 1; seed <= 20; seed++) {
-      const qs = phrasalRound(16, undefined, mulberry32(seed))
-      expect(qs).toHaveLength(16)
-      expect(new Set(qs.map((q) => q.item.verb)).size).toBe(16)
+      const size = PARTICLES.length * 2
+      const qs = phrasalRound(size, undefined, mulberry32(seed))
+      expect(qs).toHaveLength(size)
+      expect(new Set(qs.map((q) => q.item.verb)).size).toBe(size)
       for (const p of PARTICLES)
         expect(qs.filter((q) => q.particle.id === p.id).length, p.id).toBe(2)
     }
