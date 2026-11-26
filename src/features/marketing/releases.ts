@@ -13,6 +13,24 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    date: '2026-11-26',
+    title: ['Một chuỗi học, lộ trình các thì rõ hơn', 'One study streak, clearer tenses path'],
+    items: [
+      [
+        'Thử thách hôm nay không còn chuỗi riêng: mọi màn hiện chung một chuỗi học có khiên, và chuỗi đã đứt hiện 0 ngay thay vì số cũ.',
+        'Today’s challenge no longer has its own streak: every screen shows the one study streak with its shields, and a broken streak shows 0 right away instead of an old number.',
+      ],
+      [
+        'Lộ trình tiếng Anh: cấp "Các thì cơ bản" mở đầu bằng hiện tại đơn (ôn lại), rồi tiếp diễn, quá khứ, tương lai.',
+        'English path: the "Basic tenses" level now starts with the present simple (a recap), then continuous, past and future.',
+      ],
+      [
+        'Chính sách bảo mật thêm mục số liệu ẩn danh. App hỏi bạn một lần; chỉ khi bạn đồng ý mới gửi, tắt được trong Cài đặt.',
+        'The privacy policy has a new section on anonymous usage data. The app asks you once; nothing is sent unless you agree, and you can turn it off in Settings.',
+      ],
+    ],
+  },
+  {
     date: '2026-11-13',
     title: ['Giữ tiến độ an toàn hơn', 'Keeping your progress safer'],
     items: [

@@ -15,9 +15,13 @@ thứ ba." Hiện bảng "Người học quay lại" ở trang Quản trị ch�
 - **Không lưu:** địa chỉ IP, email, mã tài khoản, từ đã học, câu trả lời, đường dẫn trang.
 - Chỉ gửi vào ngày có học (có câu trả lời hoặc từ mới). Cùng ngày chỉ gửi lại khi có thêm thông tin (khoảng cao
   hơn hoặc một cờ mới bật); máy chủ giữ giá trị cao nhất.
-- **Tắt được:** công tắc trong Cài đặt (việc tiếp theo); trình duyệt bật Global Privacy Control thì không gửi gì.
+- **Hỏi trước, đồng ý mới gửi** (việc 1.2, chốt ngày 26/11/2026): mục 9 của chính sách hứa người học được xác
+  nhận trước khi đổi cách thu thập dữ liệu, và luật dữ liệu cá nhân đòi sự đồng ý. App hỏi **một lần** ở cuối phiên học
+  đầu tiên ("Giúp VocaStudy tốt hơn?", nút Đồng ý / Không, cảm ơn). Trả lời gì cũng không hỏi lại; đổi được trong
+  Cài đặt → Dữ liệu & sao lưu. Trình duyệt bật Global Privacy Control thì không hỏi và không gửi gì.
 - Lưu 400 ngày, đủ để so cùng kỳ năm trước.
-- Chính sách bảo mật cần một mục mới trước khi app thật sự gửi (việc 1.2), nên PR đầu tiên **chưa gắn vào app**.
+- Chính sách bảo mật có mục "Số liệu ẩn danh" (mục 1, 2, 3); `POLICY_VERSION` lên `2026-11-26` nên chuông thông
+  báo báo cho người học.
 - **Cần chủ dự án:** chạy lại `supabase/schema.sql` để tạo bảng. Trước khi chạy, máy chủ nhận tín hiệu rồi bỏ qua.
 
 **Dev**
@@ -37,11 +41,18 @@ thứ ba." Hiện bảng "Người học quay lại" ở trang Quản trị ch�
   - quá 2.000 cặp thiết bị–ngày mới trong 10 phút thì chỉ nhận thiết bị đã có trong ngày, chống script bơm dữ liệu;
   - xoá dòng cũ hơn 400 ngày.
 
+- Gắn vào app (26/11/2026):
+  - `src/lib/usageClient.ts` (thuần, có test): lựa chọn đồng ý (`vs-usage-consent`), mã thiết bị, `nextPing` dựng tín
+    hiệu từ số liệu trong ngày và chỉ trả về khi đã đồng ý, có học, và có thông tin mới; `postPing` gửi bằng
+    `sendBeacon`. Mọi khoá nằm ngoài tiền tố `vocab.`.
+  - `src/hooks/useUsageConsent.ts`: `sendUsageToday` đọc store (số câu và từ mới hôm nay, số từ đã bắt đầu, đăng
+    nhập, app đã cài) và gửi; gọi ở `SessionComplete` mỗi khi xong một phiên.
+  - `src/components/UsageConsent.tsx`: thẻ hỏi một lần trong `SessionComplete`; công tắc trong `SettingsPage`.
+
 **Tiếp theo**
 
-1. Gắn vào app: gửi khi xong một phiên học, đọc số câu trả lời và từ mới của ngày; công tắc trong Cài đặt.
-2. Việc 1.2: thêm mục "Số liệu ẩn danh" vào chính sách, tăng `POLICY_VERSION`, sửa câu "không theo dõi".
-3. ~~Việc 1.3: bảng phễu cho mọi thiết bị ở trang Quản trị~~: xong, xem mục dưới.
+1. Chủ dự án chạy lại `supabase/schema.sql` để tạo bảng; trước đó máy chủ nhận rồi bỏ qua.
+2. ~~Việc 1.3: bảng phễu cho mọi thiết bị ở trang Quản trị~~: xong, xem mục dưới.
 
 ## Bảng phễu cho mọi thiết bị (việc 1.3)
 

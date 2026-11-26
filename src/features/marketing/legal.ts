@@ -29,7 +29,7 @@ export interface LegalDoc {
  * from POLICY_VERSION (lib/site.ts), which moves only for a change people must
  * be told about — that one drives consent records and the notification bell.
  */
-export const LAST_UPDATED = '2026-10-15'
+export const LAST_UPDATED = '2026-11-26'
 
 export const PRIVACY: LegalDoc = {
   title: ['Chính sách bảo mật', 'Privacy policy'],
@@ -78,6 +78,10 @@ export const PRIVACY: LegalDoc = {
           'Báo lỗi kỹ thuật: khi app gặp lỗi, trình duyệt gửi mô tả lỗi (thông báo lỗi, trang đang mở, phiên bản app) để chúng tôi sửa. Mô tả này đã được lược bỏ email, mã đăng nhập và phần chi tiết của địa chỉ web; không kèm tài khoản hay nội dung học của bạn. Lỗi giống nhau được gộp lại và tự xoá sau 30 ngày.',
           'Error reports: when the app hits an error, your browser sends a description of it (the error message, the page and the app version) so we can fix it. Emails, sign-in tokens and the detailed parts of web addresses are removed first, and it carries no account or learning content. Repeats are grouped and deleted after 30 days.',
         ],
+        [
+          'Số liệu ẩn danh (chỉ khi bạn đồng ý): app hỏi một lần sau buổi học đầu tiên. Nếu bạn đồng ý, mỗi ngày có học, trình duyệt gửi về máy chủ của chính VocaStudy một tín hiệu gồm: một mã ngẫu nhiên tạo trên máy (không gắn với tài khoản), ngày, ngôn ngữ đang học, số câu trả lời và số từ mới theo khoảng (ví dụ 10–29) chứ không phải số đúng, và ba dấu: đã học xong 5 từ đầu tiên, đang đăng nhập, đang dùng app đã cài. Không gửi email, địa chỉ IP, từ đã học hay câu trả lời. Không dùng dịch vụ phân tích bên thứ ba. Lưu 400 ngày. Tắt bất cứ lúc nào trong Cài đặt → Dữ liệu & sao lưu; trình duyệt bật Global Privacy Control thì không bao giờ gửi.',
+          'Anonymous usage data (only if you agree): the app asks once, after your first finished session. If you say yes, on each day you study your browser sends VocaStudy’s own server one signal: a random code made on your device (not linked to any account), the date, the language you are learning, how many answers and new words as a range (for example 10–29) rather than the exact number, and three flags: finished your first five words, signed in, using the installed app. No email, IP address, words learned or answers are sent. No third-party analytics service is used. Kept for 400 days. Turn it off any time in Settings → Data & backup; a browser with Global Privacy Control never sends it.',
+        ],
       ],
     },
     {
@@ -95,6 +99,10 @@ export const PRIVACY: LegalDoc = {
         ],
         ['Tìm và sửa lỗi của ứng dụng.', 'To find and fix bugs in the app.'],
         [
+          'Biết người học có quay lại hay không, từ số liệu ẩn danh khi bạn đồng ý gửi, để làm app tốt hơn.',
+          'To learn whether learners come back, from anonymous usage data when you agree to send it, so we can make the app better.',
+        ],
+        [
           'Đọc góp ý để cải thiện app, và trích dẫn trên trang giới thiệu khi bạn cho phép.',
           'To read feedback and improve the app, and to quote it on our website when you allow it.',
         ],
@@ -110,8 +118,8 @@ export const PRIVACY: LegalDoc = {
         ['Không bán hay cho thuê dữ liệu của bạn.', 'We do not sell or rent your data.'],
         ['Không chạy quảng cáo.', 'We do not run ads.'],
         [
-          'Không dùng cookie theo dõi hay quảng cáo, và không dùng công cụ phân tích hay thống kê của bên thứ ba. Chúng tôi chỉ dùng bộ nhớ cục bộ của trình duyệt cho mục đích kỹ thuật thiết yếu: giữ trạng thái đăng nhập, lưu cài đặt và giao diện, học khi mất mạng.',
-          'We use no tracking or advertising cookies and no third-party analytics. We only use your browser’s local storage for what the app needs to work: keeping you signed in, remembering settings and appearance, and learning offline.',
+          'Không dùng cookie theo dõi hay quảng cáo, và không dùng công cụ phân tích hay thống kê của bên thứ ba. Chúng tôi dùng bộ nhớ cục bộ của trình duyệt cho mục đích kỹ thuật thiết yếu (giữ trạng thái đăng nhập, lưu cài đặt và giao diện, học khi mất mạng) và để nhớ lựa chọn của bạn về số liệu ẩn danh ở mục 1.',
+          'We use no tracking or advertising cookies and no third-party analytics. We use your browser’s local storage for what the app needs to work (keeping you signed in, remembering settings and appearance, learning offline) and to remember your choice about the anonymous usage data in section 1.',
         ],
       ],
     },

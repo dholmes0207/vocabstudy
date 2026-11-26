@@ -13,7 +13,7 @@ export const CONTACT_EMAIL = 'contact@vocastudy.app'
  * informs — such a change needs it to ask for agreement (and to record it, as
  * sign-up does with consent_version) before shipping.
  */
-export const POLICY_VERSION = '2026-10-14'
+export const POLICY_VERSION = '2026-11-26'
 
 /** A ready-to-send feedback email (subject filled in, nothing else collected). */
 export function feedbackHref(lang: 'vi' | 'en'): string {
