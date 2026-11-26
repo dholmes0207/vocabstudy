@@ -43,6 +43,18 @@ export const RELEASES: Release[] = [
         'Thấy từ hay câu hỏi có lỗi? Bấm "Báo lỗi nội dung" ngay dưới thẻ từ hoặc sau khi trả lời.',
         'Spotted a mistake in a word or a question? Tap "Report a content error" under the card or after you answer.',
       ],
+      [
+        'Trang chủ mở đầu bằng thẻ "Hôm nay" với một nút chính: ôn từ đến hạn, học 5 từ mới, bước tiếp trên lộ trình, hoặc "Xong hôm nay".',
+        'The home page opens on a "Today" card with one main button: review what is due, learn 5 new words, the next step of your path, or "Done for today".',
+      ],
+      [
+        'Ôn tập: hơn 50 từ chờ ôn thì chia thành phiên 30 từ; từ đã thành thạo quay lại sau 60, 120, 240 ngày để không bị quên.',
+        'Reviews: more than 50 words waiting are split into sessions of 30; mastered words come back after 60, 120 and 240 days so they are not forgotten.',
+      ],
+      [
+        'Đọc truyện: từ được tô màu theo mức bạn đã học, kèm số từ bạn đã biết trong truyện.',
+        'Stories: words are coloured by how far you have learned them, with how many of the story’s words you know.',
+      ],
     ],
   },
   {
