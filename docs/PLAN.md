@@ -153,7 +153,7 @@ Mục tiêu: người học lâu vẫn có lý do mở app. Chỉ số: ôn đú
 
 | #   | Việc                                                                                                                                                              | Tệp chính và phần dùng lại                                                                                   |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 4.1 | **Ôn duy trì.** Từ đã thành thạo quay lại theo lịch thưa 60, 120, 240 ngày, khoảng 5 thẻ mỗi ngày; sai thì về bậc ôn tập, không về 0.                             | `src/lib/srs.ts`, `src/lib/summary.ts`, `src/lib/practice.ts`, `src/lib/sync.ts`, `features/stats/Stats.tsx` |
+| 4.1 | **Ôn duy trì.** Từ đã thành thạo quay lại theo lịch thưa 60, 120, 240 ngày, khoảng 5 thẻ mỗi ngày; sai thì về bậc ôn tập, không về 0. Xong ngày 26/11.            | `src/lib/srs.ts`, `src/lib/summary.ts`, `src/lib/practice.ts`, `src/lib/sync.ts`, `features/stats/Stats.tsx` |
 | 4.2 | **Lấp nội dung theo lộ trình, không thêm trang:** các mục "Tiếp theo" ở bảng việc đang dở; tiếng Trung mở rộng từ vựng lên HSK 4 khi có người học xong cấp HSK 3. | `public/data/`, `src/lib/learningPath.ts`, `docs/design/`                                                    |
 | 4.3 | **Đọc gắn với ôn:** tô màu từ trong truyện theo trạng thái đã học; luyện viết chữ Hán theo nét nếu có dữ liệu nét với giấy phép phù hợp.                          | `features/reading/Reading.tsx`, `savedWordsStore.ts`                                                         |
 | 4.4 | **Vòng chất lượng nội dung:** nút "Báo lỗi nội dung" ngay trên thẻ từ và câu hỏi; kiểm lại thông tin kỳ thi mỗi 6 tháng. Nút báo lỗi xong ngày 26/11.             | `FeedbackDialog.tsx`, `functions/api/feedback.ts`, trường `checked` trong `src/lib/exams.ts`                 |
@@ -239,7 +239,8 @@ khi đạt cả 5.
 | 26/11 | 2.5: một lộ trình trong menu, mỗi cấp dẫn tới kỳ thi của nó | #281 | Đạt | Đạt | Đạt | Không còn phân vân giữa hai "lộ trình"; kỳ thi hiện đúng ở cấp cần nó        | Đạt |
 | 26/11 | 4.4 (tiếp): lọc "Lỗi nội dung" ở thẻ góp ý trang Quản trị   | #282 | Đạt | Đạt | Đạt | Báo lỗi của người học được đọc và sửa nhanh hơn, không lẫn với góp ý         | Đạt |
 | 26/11 | 2.2: phiên liền mạch: ôn → 5 từ mới → bước lộ trình         | #283 | Đạt | Đạt | Đạt | Xong một phần là thấy ngay phần tiếp theo, buổi học không dừng ở menu        | Đạt |
-| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ      |      | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp      | Đạt |
+| 26/11 | 2.2 (tiếp): tồn đọng trên 50 từ chia thành phiên 30 từ      | #284 | Đạt | Đạt | Đạt | Hàng trăm từ chờ ôn không còn là một phiên dài một giờ; tự chọn ôn tiếp      | Đạt |
+| 26/11 | 4.1: ôn duy trì 60/120/240 ngày, 5 từ mỗi ngày              |      | Đạt | Đạt | Đạt | Từ đã thành thạo không bị quên âm thầm; người học lâu vẫn có việc mỗi ngày   | Đạt |
 
 ---
 

@@ -381,3 +381,29 @@ xếp chỗ bắt đầu một lần. Học vượt thì dùng được bất c�
   - dùng lại `QuizRunner`, với `onAnswer` không làm gì;
   - `TestOutResult` gọi `markKnown` cho từng từ mới khi đạt, có `useRef` để không chạy hai
     lần.
+
+## Ôn duy trì (26/11/2026, việc 4.1 trong `docs/PLAN.md`)
+
+**User**: Từ đã "thành thạo" (qua đủ 1 → 2 → 5 → 14 → 30 ngày) không bao giờ được hỏi lại, nên sau vài tháng quên mà
+không biết; người học lâu năm cũng không còn gì để ôn mỗi ngày.
+
+**BA**
+
+- Từ đã thành thạo quay lại theo lịch thưa: **60 ngày** sau khi thành thạo, rồi **120**, rồi **240** ngày, và cứ 240 ngày
+  sau đó.
+- Mỗi ngày tối đa **5 từ duy trì**, ngoài số từ ôn thường; từ quá hạn lâu nhất trước. Số "từ cần ôn" ở trang chủ và huy
+  hiệu menu Ôn tập tính cả 5 từ này.
+- Trả lời sai một từ đã thành thạo: từ về **bậc ôn tập** (bậc 3, hỏi lại hôm nay), không về đầu thang. Từ còn trên thang
+  thì sai vẫn về 0 như trước.
+
+**Dev**
+
+- `src/lib/srs.ts` (có test):
+  - `MAINTENANCE_FIRST`, `MAINTENANCE_MAX`, `MAINTENANCE_PER_DAY`;
+  - `nextMaintenanceGap`, `getMaintenanceCards`, `dueCount`;
+  - `review` xử lý thẻ đã thành thạo.
+- Không thêm trường mới: thẻ thành thạo vẫn ở `MASTERED_BOX`, khoảng chờ kế tiếp tính từ khoảng trước
+  (`dueDay − lastReviewedDay`). Thống kê, đồng bộ và sao lưu giữ nguyên.
+- Thẻ đã thành thạo trước thay đổi này có hạn ôn là 30 ngày sau khi thành thạo, nên sẽ vào lịch duy trì sớm hơn một
+  chút. Giới hạn 5 từ mỗi ngày giữ cho việc này không dồn thành đống.
+- `summary.ts`, `Layout.tsx`, `Listen.tsx` dùng `dueCount`; `Review.tsx` thêm các từ duy trì vào cuối phiên ôn.

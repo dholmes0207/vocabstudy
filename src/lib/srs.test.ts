@@ -1,6 +1,19 @@
 import { describe, expect, it } from 'vitest'
 import type { SRSCard } from '@/types'
-import { INTERVALS, MASTERED_BOX, getDueCards, newCard, phaseOf, review } from './srs'
+import {
+  INTERVALS,
+  KNOWN_BOX,
+  MAINTENANCE_FIRST,
+  MAINTENANCE_MAX,
+  MAINTENANCE_PER_DAY,
+  MASTERED_BOX,
+  getDueCards,
+  getMaintenanceCards,
+  newCard,
+  nextMaintenanceGap,
+  phaseOf,
+  review,
+} from './srs'
 
 const DAY = 20000 // arbitrary fixed epoch day, so tests never depend on the clock
 
@@ -130,7 +143,47 @@ describe('review', () => {
     const mastered: SRSCard = { ...newCard(1, DAY), box: MASTERED_BOX }
     const after = review(mastered, true, DAY)
     expect(after.box).toBe(MASTERED_BOX)
-    expect(after.dueDay).toBe(DAY + INTERVALS[INTERVALS.length - 1])
+    expect(after.dueDay).toBe(DAY + MAINTENANCE_FIRST)
+  })
+
+  it('brings a freshly mastered word back for maintenance after 60 days', () => {
+    const last: SRSCard = { ...newCard(1, DAY), box: MASTERED_BOX - 1, lastReviewedDay: DAY - 30 }
+    const mastered = review(last, true, DAY)
+    expect(mastered.box).toBe(MASTERED_BOX)
+    expect(mastered.dueDay).toBe(DAY + MAINTENANCE_FIRST)
+  })
+
+  it('spaces maintenance reviews out: 60, 120, 240 days, then 240', () => {
+    let c: SRSCard = {
+      ...newCard(1, DAY),
+      box: MASTERED_BOX,
+      lastReviewedDay: DAY,
+      dueDay: DAY + MAINTENANCE_FIRST,
+    }
+    const gaps: number[] = []
+    for (let i = 0; i < 4; i++) {
+      const day = c.dueDay
+      c = review(c, true, day)
+      gaps.push(c.dueDay - day)
+      expect(c.box).toBe(MASTERED_BOX)
+    }
+    expect(gaps).toEqual([120, 240, MAINTENANCE_MAX, MAINTENANCE_MAX])
+    expect(nextMaintenanceGap(30)).toBe(MAINTENANCE_FIRST)
+  })
+
+  it('sends a mastered word that slipped back to the review steps, not to the start', () => {
+    const mastered: SRSCard = {
+      ...newCard(1, DAY),
+      box: MASTERED_BOX,
+      lastReviewedDay: DAY - 60,
+      dueDay: DAY,
+    }
+    const after = review(mastered, false, DAY)
+    expect(after.box).toBe(KNOWN_BOX)
+    expect(phaseOf(after)).toBe('review')
+    expect(after.dueDay).toBe(DAY)
+    // A word still on the ladder starts over as before.
+    expect(review({ ...mastered, box: 2 }, false, DAY).box).toBe(0)
   })
 })
 
@@ -177,5 +230,31 @@ describe('getDueCards', () => {
       card({ id: 3, box: 1, dueDay: DAY, lastReviewedDay: DAY - 2 }),
     ]
     expect(getDueCards(cards, DAY).map((c) => c.id)).toEqual([2, 3, 1])
+  })
+})
+
+describe('getMaintenanceCards', () => {
+  const mastered = (id: number, dueDay: number, lastReviewedDay = dueDay - 60): SRSCard => ({
+    ...newCard(id, DAY - 200),
+    box: MASTERED_BOX,
+    dueDay,
+    lastReviewedDay,
+  })
+
+  it('asks the most overdue mastered words, a few a day', () => {
+    const cards = Array.from({ length: 9 }, (_, i) => mastered(i + 1, DAY - i))
+    const picked = getMaintenanceCards(cards, DAY)
+    expect(picked).toHaveLength(MAINTENANCE_PER_DAY)
+    expect(picked[0].id).toBe(9)
+    // Not yet due, or still learning: not maintenance.
+    expect(
+      getMaintenanceCards([mastered(1, DAY + 1), { ...mastered(2, DAY), box: 3 }], DAY)
+    ).toEqual([])
+  })
+
+  it('counts the ones already answered today against the day’s few', () => {
+    const done = Array.from({ length: 3 }, (_, i) => mastered(i + 1, DAY + 120, DAY))
+    const waiting = Array.from({ length: 6 }, (_, i) => mastered(i + 10, DAY - 1))
+    expect(getMaintenanceCards([...done, ...waiting], DAY)).toHaveLength(MAINTENANCE_PER_DAY - 3)
   })
 })

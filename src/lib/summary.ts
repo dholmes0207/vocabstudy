@@ -1,5 +1,5 @@
 import type { LanguageProgress, StudyStats, Word } from '@/types'
-import { getDueCards, phaseOf } from './srs'
+import { dueCount, phaseOf } from './srs'
 import { today as todayFn } from './date'
 
 export interface StudySummary {
@@ -10,7 +10,7 @@ export interface StudySummary {
   learning: number
   /** Words never studied. */
   fresh: number
-  /** Cards due for review today. */
+  /** Cards due for review today, with the day's few maintenance words (srs.dueCount). */
   due: number
   /** New words still allowed to be introduced today (capped by limit & availability). */
   newRemainingToday: number
@@ -41,7 +41,7 @@ export function summarize(
     else if (phase === 'learning' || phase === 'review') learning++
   }
 
-  const due = getDueCards(Object.values(cards), day).length
+  const due = dueCount(Object.values(cards), day)
   const fresh = words.length - learned
   const newDoneToday = stats?.newByDay?.[day] ?? 0
   const reviewsDoneToday = stats?.reviewsByDay?.[day] ?? 0

@@ -22,7 +22,7 @@ import AssistantFab, { AssistantHeaderButton } from './AssistantFab'
 import { useStudy, cardsOf } from '@/store/studyStore'
 import { useSettings } from '@/store/settingsStore'
 import { useIsImmersive } from '@/store/uiStore'
-import { getDueCards } from '@/lib/srs'
+import { dueCount as countDue } from '@/lib/srs'
 import { today } from '@/lib/date'
 import { liveStreak } from '@/lib/motivation'
 import ThemeToggle from './ThemeToggle'
@@ -134,7 +134,7 @@ export default function Layout() {
   const currentLang = useSettings((s) => s.currentLang)
   const progress = useStudy((s) => s.progress)
   const stats = progress[currentLang]?.stats
-  const dueCount = getDueCards(cardsOf(progress, currentLang), today()).length
+  const dueCount = countDue(cardsOf(progress, currentLang), today())
   const { pathname } = useLocation()
   // Remember the practice screens opened here, for "Hôm nay thử gì mới?".
   const visit = useVisited((s) => s.visit)
