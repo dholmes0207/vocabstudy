@@ -124,5 +124,6 @@ Từ 10/11/2026 chỉ tiếp tục hoàn thiện tiếng Anh và tiếng Trung; 
 - Ôn xong và học xong đều có thẻ **"Tiếp theo trên lộ trình"** (`features/path/NextOnPath.tsx`): bước luyện chưa xong
   đầu tiên của cấp đang học, bỏ qua bước học từ và ôn từ vì người học vừa làm xong (`practiceSuggestion`, có test). Gói
   không có lộ trình thì không hiện.
-- Chưa làm: chia tồn đọng lớn qua nhiều ngày một cách tự động (hiện chỉ có ngày đầu quay lại sau nghỉ dài, xem
-  `comeback.md`).
+- **Tồn đọng lớn chia nhỏ** (`src/lib/reviewSession.ts`, có test): không đặt giới hạn ôn mà chờ ôn hơn 50 từ thì mỗi
+  phiên ôn 30 từ quá hạn lâu nhất. Đầu trang Ôn tập ghi rõ còn bao nhiêu từ để phiên sau; ôn xong có nút "Ôn tiếp N từ"
+  hoặc để lúc khác. Giới hạn trong Cài đặt và `?limit=` (ngày quay lại sau nghỉ dài) vẫn được ưu tiên.
