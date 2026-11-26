@@ -19,7 +19,7 @@ dẫn khi học, phong cách tránh nhàm chán."
   | Cấp | Tên             | CEFR  | Bước                                                                                                                                                    |
   | --- | --------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | 1   | Khởi động       | A1    | Từ 1–150; to be, hiện tại đơn, đại từ, mạo từ; 2 truyện đầu                                                                                             |
-  | 2   | Các thì cơ bản  | A1–A2 | Từ 151–500; tiếp diễn, quá khứ, tương lai, câu hỏi; 3 lượt nghe – chép; 3 truyện A2                                                                     |
+  | 2   | Các thì cơ bản  | A1–A2 | Từ 151–500; ôn hiện tại đơn, rồi tiếp diễn, quá khứ, tương lai, câu hỏi; 3 lượt nghe – chép; 3 truyện A2                                                |
   | 3   | Cấu trúc câu    | A2    | Từ 501–1000; đếm được, giới từ, so sánh, can/must; hiện tại hoàn thành, quá khứ tiếp diễn; 3 lượt Cấu trúc câu; 3 lượt xếp câu; 3 lượt luyện nói        |
   | 4   | Nghe & nói      | A2–B1 | Từ 1001–1600; ngữ pháp B1 (bị động, điều kiện, mệnh đề quan hệ, tường thuật); 5 lượt nghe thụ động; tổng 8 lượt nghe – chép, 8 lượt nói; 4 truyện A2–B1 |
   | 5   | Luyện thi TOEIC | B1    | 200 từ TOEIC; ≥ 10 câu ở mỗi Part; bài thi nhỏ đạt 60%                                                                                                  |
@@ -28,6 +28,10 @@ dẫn khi học, phong cách tránh nhàm chán."
   chưa xong vẫn là cấp "Làm tiếp".
 - **Không bắt học lại**: kết quả bài xếp lớp (`/placement`) mở sẵn các cấp có phần từ vựng bắt đầu
   trước vị trí xếp lớp, và các từ trước vị trí đó tính là đã biết.
+- **Các thì đi liền nhau** (26/11/2026): người học phản ánh cấp 2 "Các thì cơ bản" mở đầu bằng hiện
+  tại tiếp diễn, không thấy hiện tại đơn (vì bài đó nằm ở cấp 1). Cấp 2 nay có thêm bài hiện tại đơn
+  ở đầu, ghi là ôn lại. Ai đã qua bài đó ở cấp 1 thì bước cấp 2 tính luôn, không phải làm lại; người
+  được xếp lớp thẳng vào cấp 2 thì gặp đủ các thì theo thứ tự. Thi vượt cấp 2 cũng hỏi cả hiện tại đơn.
 - **Hứng thú**: trang dạng đường đi với huy hiệu mỗi cấp; thẻ "Làm tiếp" màu của cấp; qua cấp có
   pháo giấy, dòng "Lên cấp!" và +30 XP (mỗi cấp một lần); thẻ lộ trình ở trang chủ.
 - Ghi chú: "Cấp" ở đây là cấp của lộ trình, khác "Cấp" XP ở đầu trang chủ.

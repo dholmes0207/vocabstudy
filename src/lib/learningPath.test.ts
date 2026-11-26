@@ -96,6 +96,22 @@ describe('the paths', () => {
     expect(TOEIC_WORDS.filter((w) => known.has(w)).length).toBeGreaterThanOrEqual(200)
   })
 
+  it('starts the tenses level with the present simple, so the tenses read in order', () => {
+    const tenses = EN_PATH[1].steps.find((s) => s.id === 'en2-grammar')!
+    expect(tenses.units).toEqual([
+      'present-simple',
+      'present-continuous',
+      'past-simple',
+      'future',
+      'questions',
+    ])
+    // Passed in level 1 already: it counts again here, nothing to redo.
+    expect(EN_PATH[0].steps.some((s) => s.units?.includes('present-simple'))).toBe(true)
+    const passed = new Set(['present-simple'])
+    const c = ctx({ grammarPassed: (ids) => ids.filter((id) => passed.has(id)).length })
+    expect(tenses.measure(c)).toBe(1)
+  })
+
   it('belongs to English, Chinese and Korean', () => {
     expect(pathFor('en')).toBe(EN_PATH)
     expect(pathFor('zh')).toBe(ZH_PATH)
