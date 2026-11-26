@@ -13,6 +13,7 @@ import { supabaseConfigured } from '@/lib/supabase'
 import { RESTORE_FLAG } from '@/hooks/useProgressSync'
 import { useEffectiveLevel } from '@/hooks/useEffectiveLevel'
 import ReminderSetup from '@/components/ReminderSetup'
+import { useUsageConsent } from '@/hooks/useUsageConsent'
 import { Row, Section, Segmented, Toggle } from './ui'
 import { AccountSection, DeleteAccountRow } from './AccountSection'
 import { useT } from '@/lib/i18n'
@@ -54,6 +55,7 @@ export default function SettingsPage() {
   const pack = useData((s) => s.pack)!
   const audioVoices = useData((s) => s.audioVoices)
   const settings = useSettings()
+  const [usageOn, setUsageOn, usageBlocked] = useUsageConsent()
   const user = useAuth((s) => s.user)
   const syncing = Boolean(user && supabaseConfigured)
   const effLevel = useEffectiveLevel()
@@ -581,6 +583,27 @@ export default function SettingsPage() {
               if (f) onImport(f)
               e.target.value = ''
             }}
+          />
+        </Row>
+        <Row
+          label={t('Gửi số liệu ẩn danh', 'Send anonymous usage data')}
+          hint={
+            usageBlocked
+              ? t(
+                  'Trình duyệt đang bật Global Privacy Control nên app không gửi gì.',
+                  'Your browser has Global Privacy Control on, so nothing is sent.'
+                )
+              : t(
+                  'Mỗi ngày học một tín hiệu: số câu và từ mới theo khoảng. Không email, không IP, không nội dung học.',
+                  'One signal per study day: answers and new words as ranges. No email, no IP address, nothing you learned.'
+                )
+          }
+        >
+          <Toggle
+            checked={usageOn && !usageBlocked}
+            onChange={setUsageOn}
+            label={t('Gửi số liệu ẩn danh', 'Send anonymous usage data')}
+            disabled={usageBlocked}
           />
         </Row>
       </Section>

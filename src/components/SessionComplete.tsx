@@ -5,6 +5,8 @@ import { skyCelebrate } from '@/lib/skyEvents'
 import GoalNudge from './GoalNudge'
 import { useT } from '@/lib/i18n'
 import { requestPersistentStorage } from '@/lib/persistStorage'
+import { UsageConsentCard } from './UsageConsent'
+import { sendUsageToday } from '@/hooks/useUsageConsent'
 
 interface Props {
   title?: string
@@ -53,6 +55,8 @@ export default function SessionComplete({
     } catch {
       // localStorage blocked: nothing is kept anyway.
     }
+    // Today's anonymous signal, only if the learner agreed (UsageConsent.tsx).
+    sendUsageToday()
     if (showScore) {
       if (total > 0) {
         celebrate(0.6 + (pct / 100) * 0.8)
@@ -88,6 +92,8 @@ export default function SessionComplete({
         )}
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">{children}</div>
+
+        <UsageConsentCard />
 
         <Link to="/home" className="btn-ghost mt-4 w-full">
           {t('Về trang chủ', 'Back to home')}

@@ -81,8 +81,8 @@ export default function About() {
       icon: Lock,
       title: t('Tôn trọng quyền riêng tư', 'Respect for privacy'),
       desc: t(
-        'Không quảng cáo, không bán dữ liệu, không theo dõi. Học được cả khi không có tài khoản.',
-        'No ads, no selling data, no tracking. You can learn without an account at all.'
+        'Không quảng cáo, không bán dữ liệu, không theo dõi để quảng cáo. Số liệu ẩn danh chỉ gửi khi bạn đồng ý. Học được cả khi không có tài khoản.',
+        'No ads, no selling data, no ad tracking. Anonymous usage data is sent only if you agree. You can learn without an account at all.'
       ),
     },
   ]
